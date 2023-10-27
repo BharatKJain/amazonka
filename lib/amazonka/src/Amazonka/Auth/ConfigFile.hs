@@ -208,7 +208,7 @@ mergeConfigs creds confs =
     (HashMap.fromList <$> stripProfiles confs)
   where
     stripProfiles :: HashMap Text v -> HashMap Text v
-    stripProfiles = HashMap.mapKeys $ Text.unwords . stripProfile . Text.words
+    stripProfiles = HashMap.fromList . map (\(k,v) -> (Text.unwords $ stripProfile $ Text.words k ,v)) . HashMap.toList
 
     stripProfile = \case
       [w] -> [w]
