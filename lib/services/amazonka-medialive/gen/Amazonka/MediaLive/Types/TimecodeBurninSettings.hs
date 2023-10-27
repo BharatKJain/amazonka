@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.TimecodeBurninSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.TimecodeBurninSettings where
@@ -90,7 +90,8 @@ instance Data.FromJSON TimecodeBurninSettings where
 
 instance Prelude.Hashable TimecodeBurninSettings where
   hashWithSalt _salt TimecodeBurninSettings' {..} =
-    _salt `Prelude.hashWithSalt` prefix
+    _salt
+      `Prelude.hashWithSalt` prefix
       `Prelude.hashWithSalt` position
       `Prelude.hashWithSalt` fontSize
 

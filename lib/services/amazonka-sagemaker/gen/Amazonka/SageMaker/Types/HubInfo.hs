@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.HubInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.HubInfo where
@@ -141,7 +141,8 @@ instance Data.FromJSON HubInfo where
           HubInfo'
             Prelude.<$> (x Data..:? "HubDescription")
             Prelude.<*> (x Data..:? "HubDisplayName")
-            Prelude.<*> ( x Data..:? "HubSearchKeywords"
+            Prelude.<*> ( x
+                            Data..:? "HubSearchKeywords"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "HubName")
@@ -153,7 +154,8 @@ instance Data.FromJSON HubInfo where
 
 instance Prelude.Hashable HubInfo where
   hashWithSalt _salt HubInfo' {..} =
-    _salt `Prelude.hashWithSalt` hubDescription
+    _salt
+      `Prelude.hashWithSalt` hubDescription
       `Prelude.hashWithSalt` hubDisplayName
       `Prelude.hashWithSalt` hubSearchKeywords
       `Prelude.hashWithSalt` hubName

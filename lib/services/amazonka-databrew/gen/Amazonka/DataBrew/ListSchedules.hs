@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataBrew.ListSchedules
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,18 +104,20 @@ instance Core.AWSPager ListSchedules where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listSchedulesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listSchedulesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listSchedulesResponse_schedules) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSchedules_nextToken
           Lens..~ rs
-          Lens.^? listSchedulesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listSchedulesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListSchedules where
   type
@@ -134,7 +136,8 @@ instance Core.AWSRequest ListSchedules where
 
 instance Prelude.Hashable ListSchedules where
   hashWithSalt _salt ListSchedules' {..} =
-    _salt `Prelude.hashWithSalt` jobName
+    _salt
+      `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

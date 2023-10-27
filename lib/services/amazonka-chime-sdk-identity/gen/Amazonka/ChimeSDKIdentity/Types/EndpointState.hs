@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSDKIdentity.Types.EndpointState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSDKIdentity.Types.EndpointState where
@@ -94,7 +94,8 @@ instance Data.FromJSON EndpointState where
 
 instance Prelude.Hashable EndpointState where
   hashWithSalt _salt EndpointState' {..} =
-    _salt `Prelude.hashWithSalt` statusReason
+    _salt
+      `Prelude.hashWithSalt` statusReason
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData EndpointState where

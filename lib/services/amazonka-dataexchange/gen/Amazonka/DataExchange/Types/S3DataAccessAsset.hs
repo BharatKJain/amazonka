@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.S3DataAccessAsset
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.S3DataAccessAsset where
@@ -118,7 +118,8 @@ instance Data.FromJSON S3DataAccessAsset where
 
 instance Prelude.Hashable S3DataAccessAsset where
   hashWithSalt _salt S3DataAccessAsset' {..} =
-    _salt `Prelude.hashWithSalt` keyPrefixes
+    _salt
+      `Prelude.hashWithSalt` keyPrefixes
       `Prelude.hashWithSalt` keys
       `Prelude.hashWithSalt` s3AccessPointAlias
       `Prelude.hashWithSalt` s3AccessPointArn

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchListPolicyAttachments
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchListPolicyAttachments where
@@ -79,7 +79,8 @@ batchListPolicyAttachments_policyReference = Lens.lens (\BatchListPolicyAttachme
 
 instance Prelude.Hashable BatchListPolicyAttachments where
   hashWithSalt _salt BatchListPolicyAttachments' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` policyReference
 

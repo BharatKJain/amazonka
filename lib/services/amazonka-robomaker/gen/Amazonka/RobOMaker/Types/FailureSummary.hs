@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RobOMaker.Types.FailureSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RobOMaker.Types.FailureSummary where
@@ -75,7 +75,8 @@ instance Data.FromJSON FailureSummary where
 
 instance Prelude.Hashable FailureSummary where
   hashWithSalt _salt FailureSummary' {..} =
-    _salt `Prelude.hashWithSalt` failures
+    _salt
+      `Prelude.hashWithSalt` failures
       `Prelude.hashWithSalt` totalFailureCount
 
 instance Prelude.NFData FailureSummary where

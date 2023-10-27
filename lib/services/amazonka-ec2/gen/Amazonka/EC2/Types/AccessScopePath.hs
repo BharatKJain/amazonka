@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.AccessScopePath
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.AccessScopePath where
@@ -79,14 +79,16 @@ instance Data.FromXML AccessScopePath where
     AccessScopePath'
       Prelude.<$> (x Data..@? "destination")
       Prelude.<*> (x Data..@? "source")
-      Prelude.<*> ( x Data..@? "throughResourceSet"
+      Prelude.<*> ( x
+                      Data..@? "throughResourceSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable AccessScopePath where
   hashWithSalt _salt AccessScopePath' {..} =
-    _salt `Prelude.hashWithSalt` destination
+    _salt
+      `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` source
       `Prelude.hashWithSalt` throughResources
 

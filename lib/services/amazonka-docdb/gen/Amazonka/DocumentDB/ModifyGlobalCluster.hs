@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DocumentDB.ModifyGlobalCluster
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -166,7 +166,8 @@ instance Core.AWSRequest ModifyGlobalCluster where
 
 instance Prelude.Hashable ModifyGlobalCluster where
   hashWithSalt _salt ModifyGlobalCluster' {..} =
-    _salt `Prelude.hashWithSalt` deletionProtection
+    _salt
+      `Prelude.hashWithSalt` deletionProtection
       `Prelude.hashWithSalt` newGlobalClusterIdentifier'
       `Prelude.hashWithSalt` globalClusterIdentifier
 

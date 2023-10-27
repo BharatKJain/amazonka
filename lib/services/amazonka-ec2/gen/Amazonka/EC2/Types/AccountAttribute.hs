@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.AccountAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.AccountAttribute where
@@ -68,14 +68,16 @@ instance Data.FromXML AccountAttribute where
   parseXML x =
     AccountAttribute'
       Prelude.<$> (x Data..@? "attributeName")
-      Prelude.<*> ( x Data..@? "attributeValueSet"
+      Prelude.<*> ( x
+                      Data..@? "attributeValueSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable AccountAttribute where
   hashWithSalt _salt AccountAttribute' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` attributeValues
 
 instance Prelude.NFData AccountAttribute where

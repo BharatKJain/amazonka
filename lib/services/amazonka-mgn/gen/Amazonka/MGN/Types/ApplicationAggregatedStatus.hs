@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.ApplicationAggregatedStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.ApplicationAggregatedStatus where
@@ -97,7 +97,8 @@ instance Data.FromJSON ApplicationAggregatedStatus where
 
 instance Prelude.Hashable ApplicationAggregatedStatus where
   hashWithSalt _salt ApplicationAggregatedStatus' {..} =
-    _salt `Prelude.hashWithSalt` healthStatus
+    _salt
+      `Prelude.hashWithSalt` healthStatus
       `Prelude.hashWithSalt` lastUpdateDateTime
       `Prelude.hashWithSalt` progressStatus
       `Prelude.hashWithSalt` totalSourceServers

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.GridLayoutConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.GridLayoutConfiguration where
@@ -80,7 +80,8 @@ instance Data.FromJSON GridLayoutConfiguration where
 
 instance Prelude.Hashable GridLayoutConfiguration where
   hashWithSalt _salt GridLayoutConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` canvasSizeOptions
+    _salt
+      `Prelude.hashWithSalt` canvasSizeOptions
       `Prelude.hashWithSalt` elements
 
 instance Prelude.NFData GridLayoutConfiguration where

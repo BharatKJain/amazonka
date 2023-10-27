@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Scheduler.ListScheduleGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,21 +114,21 @@ instance Core.AWSPager ListScheduleGroups where
     | Core.stop
         ( rs
             Lens.^? listScheduleGroupsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listScheduleGroupsResponse_scheduleGroups
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listScheduleGroups_nextToken
           Lens..~ rs
           Lens.^? listScheduleGroupsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListScheduleGroups where
   type
@@ -142,14 +142,16 @@ instance Core.AWSRequest ListScheduleGroups where
           ListScheduleGroupsResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "ScheduleGroups"
+            Prelude.<*> ( x
+                            Data..?> "ScheduleGroups"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListScheduleGroups where
   hashWithSalt _salt ListScheduleGroups' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` namePrefix
       `Prelude.hashWithSalt` nextToken
 

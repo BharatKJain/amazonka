@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.S3WordsList
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.S3WordsList where
@@ -79,7 +79,8 @@ instance Data.FromJSON S3WordsList where
 
 instance Prelude.Hashable S3WordsList where
   hashWithSalt _salt S3WordsList' {..} =
-    _salt `Prelude.hashWithSalt` bucketName
+    _salt
+      `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` objectKey
 
 instance Prelude.NFData S3WordsList where

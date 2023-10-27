@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.Spacing
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.Spacing where
@@ -94,7 +94,8 @@ instance Data.FromJSON Spacing where
 
 instance Prelude.Hashable Spacing where
   hashWithSalt _salt Spacing' {..} =
-    _salt `Prelude.hashWithSalt` bottom
+    _salt
+      `Prelude.hashWithSalt` bottom
       `Prelude.hashWithSalt` left
       `Prelude.hashWithSalt` right
       `Prelude.hashWithSalt` top

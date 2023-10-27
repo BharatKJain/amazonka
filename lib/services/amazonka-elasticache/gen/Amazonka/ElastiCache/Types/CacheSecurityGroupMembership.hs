@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.CacheSecurityGroupMembership
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.CacheSecurityGroupMembership where
@@ -80,7 +80,8 @@ instance
     CacheSecurityGroupMembership
   where
   hashWithSalt _salt CacheSecurityGroupMembership' {..} =
-    _salt `Prelude.hashWithSalt` cacheSecurityGroupName
+    _salt
+      `Prelude.hashWithSalt` cacheSecurityGroupName
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData CacheSecurityGroupMembership where

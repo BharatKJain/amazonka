@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Grafana.ListPermissions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -151,19 +151,19 @@ instance Core.AWSPager ListPermissions where
     | Core.stop
         ( rs
             Lens.^? listPermissionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listPermissionsResponse_permissions) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listPermissions_nextToken
           Lens..~ rs
           Lens.^? listPermissionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListPermissions where
   type
@@ -182,7 +182,8 @@ instance Core.AWSRequest ListPermissions where
 
 instance Prelude.Hashable ListPermissions where
   hashWithSalt _salt ListPermissions' {..} =
-    _salt `Prelude.hashWithSalt` groupId
+    _salt
+      `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` userId

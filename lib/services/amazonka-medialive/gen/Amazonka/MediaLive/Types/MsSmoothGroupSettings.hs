@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.MsSmoothGroupSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.MsSmoothGroupSettings where
@@ -347,7 +347,8 @@ instance Data.FromJSON MsSmoothGroupSettings where
 
 instance Prelude.Hashable MsSmoothGroupSettings where
   hashWithSalt _salt MsSmoothGroupSettings' {..} =
-    _salt `Prelude.hashWithSalt` acquisitionPointId
+    _salt
+      `Prelude.hashWithSalt` acquisitionPointId
       `Prelude.hashWithSalt` audioOnlyTimecodeControl
       `Prelude.hashWithSalt` certificateMode
       `Prelude.hashWithSalt` connectionRetryInterval

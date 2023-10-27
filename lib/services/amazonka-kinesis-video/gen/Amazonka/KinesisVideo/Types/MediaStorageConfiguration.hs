@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisVideo.Types.MediaStorageConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisVideo.Types.MediaStorageConfiguration where
@@ -79,7 +79,8 @@ instance Data.FromJSON MediaStorageConfiguration where
 
 instance Prelude.Hashable MediaStorageConfiguration where
   hashWithSalt _salt MediaStorageConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` streamARN
+    _salt
+      `Prelude.hashWithSalt` streamARN
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData MediaStorageConfiguration where

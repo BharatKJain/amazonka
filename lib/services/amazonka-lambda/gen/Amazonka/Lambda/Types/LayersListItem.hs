@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.LayersListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.LayersListItem where
@@ -87,7 +87,8 @@ instance Data.FromJSON LayersListItem where
 
 instance Prelude.Hashable LayersListItem where
   hashWithSalt _salt LayersListItem' {..} =
-    _salt `Prelude.hashWithSalt` latestMatchingVersion
+    _salt
+      `Prelude.hashWithSalt` latestMatchingVersion
       `Prelude.hashWithSalt` layerArn
       `Prelude.hashWithSalt` layerName
 

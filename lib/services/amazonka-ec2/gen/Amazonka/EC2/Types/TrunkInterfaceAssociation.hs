@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TrunkInterfaceAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TrunkInterfaceAssociation where
@@ -122,7 +122,9 @@ instance Data.FromXML TrunkInterfaceAssociation where
       Prelude.<*> (x Data..@? "branchInterfaceId")
       Prelude.<*> (x Data..@? "greKey")
       Prelude.<*> (x Data..@? "interfaceProtocol")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "trunkInterfaceId")
@@ -130,7 +132,8 @@ instance Data.FromXML TrunkInterfaceAssociation where
 
 instance Prelude.Hashable TrunkInterfaceAssociation where
   hashWithSalt _salt TrunkInterfaceAssociation' {..} =
-    _salt `Prelude.hashWithSalt` associationId
+    _salt
+      `Prelude.hashWithSalt` associationId
       `Prelude.hashWithSalt` branchInterfaceId
       `Prelude.hashWithSalt` greKey
       `Prelude.hashWithSalt` interfaceProtocol

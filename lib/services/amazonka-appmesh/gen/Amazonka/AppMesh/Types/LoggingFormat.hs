@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.LoggingFormat
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.LoggingFormat where
@@ -53,11 +53,9 @@ newLoggingFormat =
       text = Prelude.Nothing
     }
 
--- |
 loggingFormat_json :: Lens.Lens' LoggingFormat (Prelude.Maybe [JsonFormatRef])
 loggingFormat_json = Lens.lens (\LoggingFormat' {json} -> json) (\s@LoggingFormat' {} a -> s {json = a} :: LoggingFormat) Prelude.. Lens.mapping Lens.coerced
 
--- |
 loggingFormat_text :: Lens.Lens' LoggingFormat (Prelude.Maybe Prelude.Text)
 loggingFormat_text = Lens.lens (\LoggingFormat' {text} -> text) (\s@LoggingFormat' {} a -> s {text = a} :: LoggingFormat)
 
@@ -73,7 +71,8 @@ instance Data.FromJSON LoggingFormat where
 
 instance Prelude.Hashable LoggingFormat where
   hashWithSalt _salt LoggingFormat' {..} =
-    _salt `Prelude.hashWithSalt` json
+    _salt
+      `Prelude.hashWithSalt` json
       `Prelude.hashWithSalt` text
 
 instance Prelude.NFData LoggingFormat where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.DeleteRolePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest DeleteRolePolicy where
 
 instance Prelude.Hashable DeleteRolePolicy where
   hashWithSalt _salt DeleteRolePolicy' {..} =
-    _salt `Prelude.hashWithSalt` roleName
+    _salt
+      `Prelude.hashWithSalt` roleName
       `Prelude.hashWithSalt` policyName
 
 instance Prelude.NFData DeleteRolePolicy where

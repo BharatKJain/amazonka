@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Nimble.Types.LaunchProfileInitialization
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Nimble.Types.LaunchProfileInitialization where
@@ -152,17 +152,20 @@ instance Data.FromJSON LaunchProfileInitialization where
             Prelude.<*> (x Data..:? "launchPurpose")
             Prelude.<*> (x Data..:? "name")
             Prelude.<*> (x Data..:? "platform")
-            Prelude.<*> ( x Data..:? "systemInitializationScripts"
+            Prelude.<*> ( x
+                            Data..:? "systemInitializationScripts"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "userInitializationScripts"
+            Prelude.<*> ( x
+                            Data..:? "userInitializationScripts"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable LaunchProfileInitialization where
   hashWithSalt _salt LaunchProfileInitialization' {..} =
-    _salt `Prelude.hashWithSalt` activeDirectory
+    _salt
+      `Prelude.hashWithSalt` activeDirectory
       `Prelude.hashWithSalt` ec2SecurityGroupIds
       `Prelude.hashWithSalt` launchProfileId
       `Prelude.hashWithSalt` launchProfileProtocolVersion

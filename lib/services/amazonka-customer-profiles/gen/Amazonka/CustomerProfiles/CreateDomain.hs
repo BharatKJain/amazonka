@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CustomerProfiles.CreateDomain
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -220,7 +220,8 @@ instance Core.AWSRequest CreateDomain where
 
 instance Prelude.Hashable CreateDomain where
   hashWithSalt _salt CreateDomain' {..} =
-    _salt `Prelude.hashWithSalt` deadLetterQueueUrl
+    _salt
+      `Prelude.hashWithSalt` deadLetterQueueUrl
       `Prelude.hashWithSalt` defaultEncryptionKey
       `Prelude.hashWithSalt` matching
       `Prelude.hashWithSalt` tags

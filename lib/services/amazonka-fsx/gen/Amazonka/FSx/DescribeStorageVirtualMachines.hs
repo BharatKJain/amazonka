@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FSx.DescribeStorageVirtualMachines
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,22 +112,22 @@ instance Core.AWSPager DescribeStorageVirtualMachines where
     | Core.stop
         ( rs
             Lens.^? describeStorageVirtualMachinesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeStorageVirtualMachinesResponse_storageVirtualMachines
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeStorageVirtualMachines_nextToken
           Lens..~ rs
           Lens.^? describeStorageVirtualMachinesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -143,7 +143,8 @@ instance
       ( \s h x ->
           DescribeStorageVirtualMachinesResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "StorageVirtualMachines"
+            Prelude.<*> ( x
+                            Data..?> "StorageVirtualMachines"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -156,7 +157,8 @@ instance
   hashWithSalt
     _salt
     DescribeStorageVirtualMachines' {..} =
-      _salt `Prelude.hashWithSalt` filters
+      _salt
+        `Prelude.hashWithSalt` filters
         `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` storageVirtualMachineIds

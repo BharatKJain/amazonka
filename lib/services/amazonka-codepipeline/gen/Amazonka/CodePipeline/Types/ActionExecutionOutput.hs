@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ActionExecutionOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ActionExecutionOutput where
@@ -91,17 +91,20 @@ instance Data.FromJSON ActionExecutionOutput where
       ( \x ->
           ActionExecutionOutput'
             Prelude.<$> (x Data..:? "executionResult")
-            Prelude.<*> ( x Data..:? "outputArtifacts"
+            Prelude.<*> ( x
+                            Data..:? "outputArtifacts"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "outputVariables"
+            Prelude.<*> ( x
+                            Data..:? "outputVariables"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ActionExecutionOutput where
   hashWithSalt _salt ActionExecutionOutput' {..} =
-    _salt `Prelude.hashWithSalt` executionResult
+    _salt
+      `Prelude.hashWithSalt` executionResult
       `Prelude.hashWithSalt` outputArtifacts
       `Prelude.hashWithSalt` outputVariables
 

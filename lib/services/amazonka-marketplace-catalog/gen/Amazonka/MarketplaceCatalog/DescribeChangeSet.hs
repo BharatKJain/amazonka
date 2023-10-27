@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MarketplaceCatalog.DescribeChangeSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -126,7 +126,8 @@ instance Core.AWSRequest DescribeChangeSet where
 
 instance Prelude.Hashable DescribeChangeSet where
   hashWithSalt _salt DescribeChangeSet' {..} =
-    _salt `Prelude.hashWithSalt` catalog
+    _salt
+      `Prelude.hashWithSalt` catalog
       `Prelude.hashWithSalt` changeSetId
 
 instance Prelude.NFData DescribeChangeSet where

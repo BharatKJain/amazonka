@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.RateBasedStatementManagedKeysIPSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.RateBasedStatementManagedKeysIPSet where
@@ -85,7 +85,8 @@ instance
   hashWithSalt
     _salt
     RateBasedStatementManagedKeysIPSet' {..} =
-      _salt `Prelude.hashWithSalt` addresses
+      _salt
+        `Prelude.hashWithSalt` addresses
         `Prelude.hashWithSalt` iPAddressVersion
 
 instance

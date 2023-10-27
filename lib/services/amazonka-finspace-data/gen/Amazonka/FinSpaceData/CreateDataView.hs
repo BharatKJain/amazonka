@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FinSpaceData.CreateDataView
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -164,7 +164,8 @@ instance Core.AWSRequest CreateDataView where
 
 instance Prelude.Hashable CreateDataView where
   hashWithSalt _salt CreateDataView' {..} =
-    _salt `Prelude.hashWithSalt` asOfTimestamp
+    _salt
+      `Prelude.hashWithSalt` asOfTimestamp
       `Prelude.hashWithSalt` autoUpdate
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` partitionColumns

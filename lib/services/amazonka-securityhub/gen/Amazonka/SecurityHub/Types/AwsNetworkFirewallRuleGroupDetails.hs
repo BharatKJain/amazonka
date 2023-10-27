@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsNetworkFirewallRuleGroupDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsNetworkFirewallRuleGroupDetails where
@@ -139,7 +139,8 @@ instance
   hashWithSalt
     _salt
     AwsNetworkFirewallRuleGroupDetails' {..} =
-      _salt `Prelude.hashWithSalt` capacity
+      _salt
+        `Prelude.hashWithSalt` capacity
         `Prelude.hashWithSalt` description
         `Prelude.hashWithSalt` ruleGroup
         `Prelude.hashWithSalt` ruleGroupArn

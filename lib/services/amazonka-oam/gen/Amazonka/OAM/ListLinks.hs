@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OAM.ListLinks
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -99,17 +99,19 @@ instance Core.AWSPager ListLinks where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listLinksResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listLinksResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop (rs Lens.^. listLinksResponse_items) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listLinks_nextToken
           Lens..~ rs
-          Lens.^? listLinksResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listLinksResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListLinks where
   type AWSResponse ListLinks = ListLinksResponse
@@ -126,7 +128,8 @@ instance Core.AWSRequest ListLinks where
 
 instance Prelude.Hashable ListLinks where
   hashWithSalt _salt ListLinks' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListLinks where

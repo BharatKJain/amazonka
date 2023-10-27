@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.ProcessorFeature
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.ProcessorFeature where
@@ -113,11 +113,13 @@ processorFeature_value = Lens.lens (\ProcessorFeature' {value} -> value) (\s@Pro
 instance Data.FromXML ProcessorFeature where
   parseXML x =
     ProcessorFeature'
-      Prelude.<$> (x Data..@? "Name") Prelude.<*> (x Data..@? "Value")
+      Prelude.<$> (x Data..@? "Name")
+      Prelude.<*> (x Data..@? "Value")
 
 instance Prelude.Hashable ProcessorFeature where
   hashWithSalt _salt ProcessorFeature' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData ProcessorFeature where

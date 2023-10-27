@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.EC2ResourceDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.EC2ResourceDetails where
@@ -154,7 +154,8 @@ instance Data.FromJSON EC2ResourceDetails where
 
 instance Prelude.Hashable EC2ResourceDetails where
   hashWithSalt _salt EC2ResourceDetails' {..} =
-    _salt `Prelude.hashWithSalt` hourlyOnDemandRate
+    _salt
+      `Prelude.hashWithSalt` hourlyOnDemandRate
       `Prelude.hashWithSalt` instanceType
       `Prelude.hashWithSalt` memory
       `Prelude.hashWithSalt` networkPerformance

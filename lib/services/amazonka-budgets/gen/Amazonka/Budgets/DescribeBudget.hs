@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Budgets.DescribeBudget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest DescribeBudget where
 
 instance Prelude.Hashable DescribeBudget where
   hashWithSalt _salt DescribeBudget' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` budgetName
 
 instance Prelude.NFData DescribeBudget where

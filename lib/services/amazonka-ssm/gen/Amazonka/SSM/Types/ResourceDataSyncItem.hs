@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.ResourceDataSyncItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.ResourceDataSyncItem where
@@ -170,7 +170,8 @@ instance Data.FromJSON ResourceDataSyncItem where
 
 instance Prelude.Hashable ResourceDataSyncItem where
   hashWithSalt _salt ResourceDataSyncItem' {..} =
-    _salt `Prelude.hashWithSalt` lastStatus
+    _salt
+      `Prelude.hashWithSalt` lastStatus
       `Prelude.hashWithSalt` lastSuccessfulSyncTime
       `Prelude.hashWithSalt` lastSyncStatusMessage
       `Prelude.hashWithSalt` lastSyncTime

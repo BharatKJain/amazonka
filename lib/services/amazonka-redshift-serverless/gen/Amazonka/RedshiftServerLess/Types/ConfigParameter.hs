@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RedshiftServerLess.Types.ConfigParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RedshiftServerLess.Types.ConfigParameter where
@@ -81,7 +81,8 @@ instance Data.FromJSON ConfigParameter where
 
 instance Prelude.Hashable ConfigParameter where
   hashWithSalt _salt ConfigParameter' {..} =
-    _salt `Prelude.hashWithSalt` parameterKey
+    _salt
+      `Prelude.hashWithSalt` parameterKey
       `Prelude.hashWithSalt` parameterValue
 
 instance Prelude.NFData ConfigParameter where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstanceEventWindow
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstanceEventWindow where
@@ -121,16 +121,21 @@ instance Data.FromXML InstanceEventWindow where
       Prelude.<*> (x Data..@? "instanceEventWindowId")
       Prelude.<*> (x Data..@? "name")
       Prelude.<*> (x Data..@? "state")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "timeRangeSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "timeRangeSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable InstanceEventWindow where
   hashWithSalt _salt InstanceEventWindow' {..} =
-    _salt `Prelude.hashWithSalt` associationTarget
+    _salt
+      `Prelude.hashWithSalt` associationTarget
       `Prelude.hashWithSalt` cronExpression
       `Prelude.hashWithSalt` instanceEventWindowId
       `Prelude.hashWithSalt` name

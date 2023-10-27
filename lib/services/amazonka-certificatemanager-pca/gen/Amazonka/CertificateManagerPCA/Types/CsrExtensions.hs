@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.CsrExtensions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.CsrExtensions where
@@ -87,14 +87,16 @@ instance Data.FromJSON CsrExtensions where
       ( \x ->
           CsrExtensions'
             Prelude.<$> (x Data..:? "KeyUsage")
-            Prelude.<*> ( x Data..:? "SubjectInformationAccess"
+            Prelude.<*> ( x
+                            Data..:? "SubjectInformationAccess"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable CsrExtensions where
   hashWithSalt _salt CsrExtensions' {..} =
-    _salt `Prelude.hashWithSalt` keyUsage
+    _salt
+      `Prelude.hashWithSalt` keyUsage
       `Prelude.hashWithSalt` subjectInformationAccess
 
 instance Prelude.NFData CsrExtensions where

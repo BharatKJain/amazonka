@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.DnsRuleGroupPriorityConflictViolation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.DnsRuleGroupPriorityConflictViolation where
@@ -120,7 +120,8 @@ instance
           DnsRuleGroupPriorityConflictViolation'
             Prelude.<$> (x Data..:? "ConflictingPolicyId")
             Prelude.<*> (x Data..:? "ConflictingPriority")
-            Prelude.<*> ( x Data..:? "UnavailablePriorities"
+            Prelude.<*> ( x
+                            Data..:? "UnavailablePriorities"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ViolationTarget")
@@ -134,7 +135,8 @@ instance
   hashWithSalt
     _salt
     DnsRuleGroupPriorityConflictViolation' {..} =
-      _salt `Prelude.hashWithSalt` conflictingPolicyId
+      _salt
+        `Prelude.hashWithSalt` conflictingPolicyId
         `Prelude.hashWithSalt` conflictingPriority
         `Prelude.hashWithSalt` unavailablePriorities
         `Prelude.hashWithSalt` violationTarget

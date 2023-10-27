@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.CustomerGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.CustomerGateway where
@@ -144,7 +144,9 @@ instance Data.FromXML CustomerGateway where
     CustomerGateway'
       Prelude.<$> (x Data..@? "certificateArn")
       Prelude.<*> (x Data..@? "deviceName")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@ "bgpAsn")
@@ -155,7 +157,8 @@ instance Data.FromXML CustomerGateway where
 
 instance Prelude.Hashable CustomerGateway where
   hashWithSalt _salt CustomerGateway' {..} =
-    _salt `Prelude.hashWithSalt` certificateArn
+    _salt
+      `Prelude.hashWithSalt` certificateArn
       `Prelude.hashWithSalt` deviceName
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` bgpAsn

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.ThemeSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.ThemeSummary where
@@ -102,7 +102,8 @@ instance Data.FromJSON ThemeSummary where
 
 instance Prelude.Hashable ThemeSummary where
   hashWithSalt _salt ThemeSummary' {..} =
-    _salt `Prelude.hashWithSalt` appId
+    _salt
+      `Prelude.hashWithSalt` appId
       `Prelude.hashWithSalt` environmentName
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name

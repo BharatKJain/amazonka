@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.SpliceInsertMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.SpliceInsertMessage where
@@ -115,7 +115,8 @@ instance Data.FromJSON SpliceInsertMessage where
 
 instance Prelude.Hashable SpliceInsertMessage where
   hashWithSalt _salt SpliceInsertMessage' {..} =
-    _salt `Prelude.hashWithSalt` availNum
+    _salt
+      `Prelude.hashWithSalt` availNum
       `Prelude.hashWithSalt` availsExpected
       `Prelude.hashWithSalt` spliceEventId
       `Prelude.hashWithSalt` uniqueProgramId

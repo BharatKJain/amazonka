@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.ComponentRunWith
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.ComponentRunWith where
@@ -164,7 +164,8 @@ instance Data.FromJSON ComponentRunWith where
 
 instance Prelude.Hashable ComponentRunWith where
   hashWithSalt _salt ComponentRunWith' {..} =
-    _salt `Prelude.hashWithSalt` posixUser
+    _salt
+      `Prelude.hashWithSalt` posixUser
       `Prelude.hashWithSalt` systemResourceLimits
       `Prelude.hashWithSalt` windowsUser
 

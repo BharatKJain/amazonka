@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.AssetSourceEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.AssetSourceEntry where
@@ -69,12 +69,14 @@ instance Data.FromJSON AssetSourceEntry where
       "AssetSourceEntry"
       ( \x ->
           AssetSourceEntry'
-            Prelude.<$> (x Data..: "Bucket") Prelude.<*> (x Data..: "Key")
+            Prelude.<$> (x Data..: "Bucket")
+            Prelude.<*> (x Data..: "Key")
       )
 
 instance Prelude.Hashable AssetSourceEntry where
   hashWithSalt _salt AssetSourceEntry' {..} =
-    _salt `Prelude.hashWithSalt` bucket
+    _salt
+      `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` key
 
 instance Prelude.NFData AssetSourceEntry where

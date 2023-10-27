@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Inspector.AddAttributesToFindings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest AddAttributesToFindings where
 
 instance Prelude.Hashable AddAttributesToFindings where
   hashWithSalt _salt AddAttributesToFindings' {..} =
-    _salt `Prelude.hashWithSalt` findingArns
+    _salt
+      `Prelude.hashWithSalt` findingArns
       `Prelude.hashWithSalt` attributes
 
 instance Prelude.NFData AddAttributesToFindings where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PinpointEmail.Types.ReputationOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PinpointEmail.Types.ReputationOptions where
@@ -91,7 +91,8 @@ instance Data.FromJSON ReputationOptions where
 
 instance Prelude.Hashable ReputationOptions where
   hashWithSalt _salt ReputationOptions' {..} =
-    _salt `Prelude.hashWithSalt` lastFreshStart
+    _salt
+      `Prelude.hashWithSalt` lastFreshStart
       `Prelude.hashWithSalt` reputationMetricsEnabled
 
 instance Prelude.NFData ReputationOptions where

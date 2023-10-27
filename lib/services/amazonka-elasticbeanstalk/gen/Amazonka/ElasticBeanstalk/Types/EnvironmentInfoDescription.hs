@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.EnvironmentInfoDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.EnvironmentInfoDescription where
@@ -104,7 +104,8 @@ instance Data.FromXML EnvironmentInfoDescription where
 
 instance Prelude.Hashable EnvironmentInfoDescription where
   hashWithSalt _salt EnvironmentInfoDescription' {..} =
-    _salt `Prelude.hashWithSalt` ec2InstanceId
+    _salt
+      `Prelude.hashWithSalt` ec2InstanceId
       `Prelude.hashWithSalt` infoType
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` sampleTimestamp

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.ListSpaces
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,20 +137,23 @@ instance Core.AWSPager ListSpaces where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listSpacesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listSpacesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listSpacesResponse_spaces Prelude.. Lens._Just
+            Lens.^? listSpacesResponse_spaces
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSpaces_nextToken
           Lens..~ rs
-          Lens.^? listSpacesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listSpacesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListSpaces where
   type AWSResponse ListSpaces = ListSpacesResponse
@@ -167,7 +170,8 @@ instance Core.AWSRequest ListSpaces where
 
 instance Prelude.Hashable ListSpaces where
   hashWithSalt _salt ListSpaces' {..} =
-    _salt `Prelude.hashWithSalt` domainIdEquals
+    _salt
+      `Prelude.hashWithSalt` domainIdEquals
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` sortBy

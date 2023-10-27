@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.OidcIdentityProviderConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.OidcIdentityProviderConfig where
@@ -210,7 +210,8 @@ instance Data.FromJSON OidcIdentityProviderConfig where
 
 instance Prelude.Hashable OidcIdentityProviderConfig where
   hashWithSalt _salt OidcIdentityProviderConfig' {..} =
-    _salt `Prelude.hashWithSalt` clientId
+    _salt
+      `Prelude.hashWithSalt` clientId
       `Prelude.hashWithSalt` clusterName
       `Prelude.hashWithSalt` groupsClaim
       `Prelude.hashWithSalt` groupsPrefix

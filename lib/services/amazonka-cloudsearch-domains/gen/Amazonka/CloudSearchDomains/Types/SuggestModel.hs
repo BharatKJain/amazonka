@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudSearchDomains.Types.SuggestModel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudSearchDomains.Types.SuggestModel where
@@ -86,7 +86,8 @@ instance Data.FromJSON SuggestModel where
 
 instance Prelude.Hashable SuggestModel where
   hashWithSalt _salt SuggestModel' {..} =
-    _salt `Prelude.hashWithSalt` found
+    _salt
+      `Prelude.hashWithSalt` found
       `Prelude.hashWithSalt` query
       `Prelude.hashWithSalt` suggestions
 

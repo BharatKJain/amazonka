@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.BinaryColumnStatisticsData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.BinaryColumnStatisticsData where
@@ -94,7 +94,8 @@ instance Data.FromJSON BinaryColumnStatisticsData where
 
 instance Prelude.Hashable BinaryColumnStatisticsData where
   hashWithSalt _salt BinaryColumnStatisticsData' {..} =
-    _salt `Prelude.hashWithSalt` maximumLength
+    _salt
+      `Prelude.hashWithSalt` maximumLength
       `Prelude.hashWithSalt` averageLength
       `Prelude.hashWithSalt` numberOfNulls
 

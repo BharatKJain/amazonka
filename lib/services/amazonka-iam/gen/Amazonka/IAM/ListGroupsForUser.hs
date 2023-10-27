@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.ListGroupsForUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -156,21 +156,22 @@ instance Core.AWSPager ListGroupsForUser where
     | Core.stop
         ( rs
             Lens.^? listGroupsForUserResponse_isTruncated
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.isNothing
         ( rs
             Lens.^? listGroupsForUserResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listGroupsForUser_marker
           Lens..~ rs
-          Lens.^? listGroupsForUserResponse_marker Prelude.. Lens._Just
+          Lens.^? listGroupsForUserResponse_marker
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListGroupsForUser where
   type
@@ -186,14 +187,17 @@ instance Core.AWSRequest ListGroupsForUser where
             Prelude.<$> (x Data..@? "IsTruncated")
             Prelude.<*> (x Data..@? "Marker")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..@? "Groups" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "Groups"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Data.parseXMLList "member"
                         )
       )
 
 instance Prelude.Hashable ListGroupsForUser where
   hashWithSalt _salt ListGroupsForUser' {..} =
-    _salt `Prelude.hashWithSalt` marker
+    _salt
+      `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxItems
       `Prelude.hashWithSalt` userName
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeBuild.RetryBuildBatch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest RetryBuildBatch where
 
 instance Prelude.Hashable RetryBuildBatch where
   hashWithSalt _salt RetryBuildBatch' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` idempotencyToken
       `Prelude.hashWithSalt` retryType
 

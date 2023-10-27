@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.HostedZoneOwner
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.HostedZoneOwner where
@@ -104,7 +104,8 @@ instance Data.FromXML HostedZoneOwner where
 
 instance Prelude.Hashable HostedZoneOwner where
   hashWithSalt _salt HostedZoneOwner' {..} =
-    _salt `Prelude.hashWithSalt` owningAccount
+    _salt
+      `Prelude.hashWithSalt` owningAccount
       `Prelude.hashWithSalt` owningService
 
 instance Prelude.NFData HostedZoneOwner where

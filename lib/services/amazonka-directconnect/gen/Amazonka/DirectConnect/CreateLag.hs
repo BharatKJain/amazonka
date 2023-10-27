@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectConnect.CreateLag
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -241,7 +241,8 @@ instance Core.AWSRequest CreateLag where
 
 instance Prelude.Hashable CreateLag where
   hashWithSalt _salt CreateLag' {..} =
-    _salt `Prelude.hashWithSalt` childConnectionTags
+    _salt
+      `Prelude.hashWithSalt` childConnectionTags
       `Prelude.hashWithSalt` connectionId
       `Prelude.hashWithSalt` providerName
       `Prelude.hashWithSalt` requestMACSec

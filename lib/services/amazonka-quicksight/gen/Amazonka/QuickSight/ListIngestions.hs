@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.ListIngestions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,21 +120,22 @@ instance Core.AWSPager ListIngestions where
     | Core.stop
         ( rs
             Lens.^? listIngestionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listIngestionsResponse_ingestions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listIngestions_nextToken
           Lens..~ rs
-          Lens.^? listIngestionsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listIngestionsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListIngestions where
   type
@@ -154,7 +155,8 @@ instance Core.AWSRequest ListIngestions where
 
 instance Prelude.Hashable ListIngestions where
   hashWithSalt _salt ListIngestions' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` dataSetId
       `Prelude.hashWithSalt` awsAccountId

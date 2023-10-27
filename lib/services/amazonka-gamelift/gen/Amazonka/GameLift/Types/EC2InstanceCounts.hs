@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.EC2InstanceCounts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.EC2InstanceCounts where
@@ -139,7 +139,8 @@ instance Data.FromJSON EC2InstanceCounts where
 
 instance Prelude.Hashable EC2InstanceCounts where
   hashWithSalt _salt EC2InstanceCounts' {..} =
-    _salt `Prelude.hashWithSalt` active
+    _salt
+      `Prelude.hashWithSalt` active
       `Prelude.hashWithSalt` desired
       `Prelude.hashWithSalt` idle
       `Prelude.hashWithSalt` maximum

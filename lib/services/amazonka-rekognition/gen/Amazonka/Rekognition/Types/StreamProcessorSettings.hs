@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.StreamProcessorSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.StreamProcessorSettings where
@@ -79,7 +79,8 @@ instance Data.FromJSON StreamProcessorSettings where
 
 instance Prelude.Hashable StreamProcessorSettings where
   hashWithSalt _salt StreamProcessorSettings' {..} =
-    _salt `Prelude.hashWithSalt` connectedHome
+    _salt
+      `Prelude.hashWithSalt` connectedHome
       `Prelude.hashWithSalt` faceSearch
 
 instance Prelude.NFData StreamProcessorSettings where

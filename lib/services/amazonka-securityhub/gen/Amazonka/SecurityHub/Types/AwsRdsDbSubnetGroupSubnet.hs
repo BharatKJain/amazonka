@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsRdsDbSubnetGroupSubnet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsRdsDbSubnetGroupSubnet where
@@ -89,7 +89,8 @@ instance Data.FromJSON AwsRdsDbSubnetGroupSubnet where
 
 instance Prelude.Hashable AwsRdsDbSubnetGroupSubnet where
   hashWithSalt _salt AwsRdsDbSubnetGroupSubnet' {..} =
-    _salt `Prelude.hashWithSalt` subnetAvailabilityZone
+    _salt
+      `Prelude.hashWithSalt` subnetAvailabilityZone
       `Prelude.hashWithSalt` subnetIdentifier
       `Prelude.hashWithSalt` subnetStatus
 

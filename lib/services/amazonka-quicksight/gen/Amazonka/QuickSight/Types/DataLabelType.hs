@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DataLabelType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DataLabelType where
@@ -112,7 +112,8 @@ instance Data.FromJSON DataLabelType where
 
 instance Prelude.Hashable DataLabelType where
   hashWithSalt _salt DataLabelType' {..} =
-    _salt `Prelude.hashWithSalt` dataPathLabelType
+    _salt
+      `Prelude.hashWithSalt` dataPathLabelType
       `Prelude.hashWithSalt` fieldLabelType
       `Prelude.hashWithSalt` maximumLabelType
       `Prelude.hashWithSalt` minimumLabelType

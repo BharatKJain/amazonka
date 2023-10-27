@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexModels.GetBotAlias
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,7 +116,8 @@ instance Core.AWSRequest GetBotAlias where
 
 instance Prelude.Hashable GetBotAlias where
   hashWithSalt _salt GetBotAlias' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` botName
 
 instance Prelude.NFData GetBotAlias where

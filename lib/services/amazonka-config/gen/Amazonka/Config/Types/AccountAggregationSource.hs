@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.AccountAggregationSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.AccountAggregationSource where
@@ -87,7 +87,8 @@ instance Data.FromJSON AccountAggregationSource where
 
 instance Prelude.Hashable AccountAggregationSource where
   hashWithSalt _salt AccountAggregationSource' {..} =
-    _salt `Prelude.hashWithSalt` allAwsRegions
+    _salt
+      `Prelude.hashWithSalt` allAwsRegions
       `Prelude.hashWithSalt` awsRegions
       `Prelude.hashWithSalt` accountIds
 

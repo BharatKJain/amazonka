@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeVerifiedAccessGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,22 +148,22 @@ instance Core.AWSPager DescribeVerifiedAccessGroups where
     | Core.stop
         ( rs
             Lens.^? describeVerifiedAccessGroupsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeVerifiedAccessGroupsResponse_verifiedAccessGroups
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeVerifiedAccessGroups_nextToken
           Lens..~ rs
           Lens.^? describeVerifiedAccessGroupsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeVerifiedAccessGroups where
   type
@@ -176,7 +176,8 @@ instance Core.AWSRequest DescribeVerifiedAccessGroups where
       ( \s h x ->
           DescribeVerifiedAccessGroupsResponse'
             Prelude.<$> (x Data..@? "nextToken")
-            Prelude.<*> ( x Data..@? "verifiedAccessGroupSet"
+            Prelude.<*> ( x
+                            Data..@? "verifiedAccessGroupSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -188,7 +189,8 @@ instance
     DescribeVerifiedAccessGroups
   where
   hashWithSalt _salt DescribeVerifiedAccessGroups' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

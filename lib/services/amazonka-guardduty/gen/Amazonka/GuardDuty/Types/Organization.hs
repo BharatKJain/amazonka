@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.Organization
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.Organization where
@@ -98,7 +98,8 @@ instance Data.FromJSON Organization where
 
 instance Prelude.Hashable Organization where
   hashWithSalt _salt Organization' {..} =
-    _salt `Prelude.hashWithSalt` asn
+    _salt
+      `Prelude.hashWithSalt` asn
       `Prelude.hashWithSalt` asnOrg
       `Prelude.hashWithSalt` isp
       `Prelude.hashWithSalt` org

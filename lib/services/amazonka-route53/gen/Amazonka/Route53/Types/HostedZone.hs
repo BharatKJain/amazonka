@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.HostedZone
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.HostedZone where
@@ -155,7 +155,8 @@ instance Data.FromXML HostedZone where
 
 instance Prelude.Hashable HostedZone where
   hashWithSalt _salt HostedZone' {..} =
-    _salt `Prelude.hashWithSalt` config
+    _salt
+      `Prelude.hashWithSalt` config
       `Prelude.hashWithSalt` linkedService
       `Prelude.hashWithSalt` resourceRecordSetCount
       `Prelude.hashWithSalt` id

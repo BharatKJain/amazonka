@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.HyperParameterTrainingJobSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.HyperParameterTrainingJobSummary where
@@ -247,7 +247,8 @@ instance
             Prelude.<*> (x Data..: "TrainingJobArn")
             Prelude.<*> (x Data..: "CreationTime")
             Prelude.<*> (x Data..: "TrainingJobStatus")
-            Prelude.<*> ( x Data..:? "TunedHyperParameters"
+            Prelude.<*> ( x
+                            Data..:? "TunedHyperParameters"
                             Data..!= Prelude.mempty
                         )
       )
@@ -259,7 +260,8 @@ instance
   hashWithSalt
     _salt
     HyperParameterTrainingJobSummary' {..} =
-      _salt `Prelude.hashWithSalt` failureReason
+      _salt
+        `Prelude.hashWithSalt` failureReason
         `Prelude.hashWithSalt` finalHyperParameterTuningJobObjectiveMetric
         `Prelude.hashWithSalt` objectiveStatus
         `Prelude.hashWithSalt` trainingEndTime

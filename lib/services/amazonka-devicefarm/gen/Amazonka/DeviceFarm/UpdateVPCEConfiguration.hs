@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DeviceFarm.UpdateVPCEConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -149,7 +149,8 @@ instance Core.AWSRequest UpdateVPCEConfiguration where
 
 instance Prelude.Hashable UpdateVPCEConfiguration where
   hashWithSalt _salt UpdateVPCEConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` serviceDnsName
+    _salt
+      `Prelude.hashWithSalt` serviceDnsName
       `Prelude.hashWithSalt` vpceConfigurationDescription
       `Prelude.hashWithSalt` vpceConfigurationName
       `Prelude.hashWithSalt` vpceServiceName

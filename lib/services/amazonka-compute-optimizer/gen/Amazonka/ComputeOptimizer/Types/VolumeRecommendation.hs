@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.VolumeRecommendation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.VolumeRecommendation where
@@ -194,18 +194,21 @@ instance Data.FromJSON VolumeRecommendation where
             Prelude.<*> (x Data..:? "finding")
             Prelude.<*> (x Data..:? "lastRefreshTimestamp")
             Prelude.<*> (x Data..:? "lookBackPeriodInDays")
-            Prelude.<*> ( x Data..:? "utilizationMetrics"
+            Prelude.<*> ( x
+                            Data..:? "utilizationMetrics"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "volumeArn")
-            Prelude.<*> ( x Data..:? "volumeRecommendationOptions"
+            Prelude.<*> ( x
+                            Data..:? "volumeRecommendationOptions"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable VolumeRecommendation where
   hashWithSalt _salt VolumeRecommendation' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` currentConfiguration
       `Prelude.hashWithSalt` currentPerformanceRisk
       `Prelude.hashWithSalt` finding

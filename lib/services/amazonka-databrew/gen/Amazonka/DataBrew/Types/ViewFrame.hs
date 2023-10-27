@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.ViewFrame
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.ViewFrame where
@@ -115,7 +115,8 @@ viewFrame_startColumnIndex = Lens.lens (\ViewFrame' {startColumnIndex} -> startC
 
 instance Prelude.Hashable ViewFrame where
   hashWithSalt _salt ViewFrame' {..} =
-    _salt `Prelude.hashWithSalt` analytics
+    _salt
+      `Prelude.hashWithSalt` analytics
       `Prelude.hashWithSalt` columnRange
       `Prelude.hashWithSalt` hiddenColumns
       `Prelude.hashWithSalt` rowRange

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SWF.RecordActivityTaskHeartbeat
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -167,7 +167,8 @@ instance Core.AWSRequest RecordActivityTaskHeartbeat where
 
 instance Prelude.Hashable RecordActivityTaskHeartbeat where
   hashWithSalt _salt RecordActivityTaskHeartbeat' {..} =
-    _salt `Prelude.hashWithSalt` details
+    _salt
+      `Prelude.hashWithSalt` details
       `Prelude.hashWithSalt` taskToken
 
 instance Prelude.NFData RecordActivityTaskHeartbeat where

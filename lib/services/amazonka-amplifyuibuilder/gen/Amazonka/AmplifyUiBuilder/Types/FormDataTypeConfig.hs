@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.FormDataTypeConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.FormDataTypeConfig where
@@ -87,7 +87,8 @@ instance Data.FromJSON FormDataTypeConfig where
 
 instance Prelude.Hashable FormDataTypeConfig where
   hashWithSalt _salt FormDataTypeConfig' {..} =
-    _salt `Prelude.hashWithSalt` dataSourceType
+    _salt
+      `Prelude.hashWithSalt` dataSourceType
       `Prelude.hashWithSalt` dataTypeName
 
 instance Prelude.NFData FormDataTypeConfig where

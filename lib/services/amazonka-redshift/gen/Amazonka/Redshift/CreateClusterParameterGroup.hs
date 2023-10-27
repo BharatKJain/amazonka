@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.CreateClusterParameterGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -207,7 +207,8 @@ instance Core.AWSRequest CreateClusterParameterGroup where
 
 instance Prelude.Hashable CreateClusterParameterGroup where
   hashWithSalt _salt CreateClusterParameterGroup' {..} =
-    _salt `Prelude.hashWithSalt` tags
+    _salt
+      `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` parameterGroupName
       `Prelude.hashWithSalt` parameterGroupFamily
       `Prelude.hashWithSalt` description

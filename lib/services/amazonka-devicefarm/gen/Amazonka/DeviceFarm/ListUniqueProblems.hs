@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DeviceFarm.ListUniqueProblems
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,22 +109,22 @@ instance Core.AWSPager ListUniqueProblems where
     | Core.stop
         ( rs
             Lens.^? listUniqueProblemsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listUniqueProblemsResponse_uniqueProblems
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listUniqueProblems_nextToken
           Lens..~ rs
           Lens.^? listUniqueProblemsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListUniqueProblems where
   type
@@ -143,7 +143,8 @@ instance Core.AWSRequest ListUniqueProblems where
 
 instance Prelude.Hashable ListUniqueProblems where
   hashWithSalt _salt ListUniqueProblems' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` arn
 
 instance Prelude.NFData ListUniqueProblems where

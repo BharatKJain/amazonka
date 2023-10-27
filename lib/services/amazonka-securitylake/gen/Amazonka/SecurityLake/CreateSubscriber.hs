@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecurityLake.CreateSubscriber
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -172,7 +172,8 @@ instance Core.AWSRequest CreateSubscriber where
 
 instance Prelude.Hashable CreateSubscriber where
   hashWithSalt _salt CreateSubscriber' {..} =
-    _salt `Prelude.hashWithSalt` accessTypes
+    _salt
+      `Prelude.hashWithSalt` accessTypes
       `Prelude.hashWithSalt` subscriberDescription
       `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` externalId

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElastiCache.DescribeCacheClusters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -193,22 +193,22 @@ instance Core.AWSPager DescribeCacheClusters where
     | Core.stop
         ( rs
             Lens.^? describeCacheClustersResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeCacheClustersResponse_cacheClusters
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeCacheClusters_marker
           Lens..~ rs
           Lens.^? describeCacheClustersResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeCacheClusters where
   type
@@ -221,7 +221,9 @@ instance Core.AWSRequest DescribeCacheClusters where
       "DescribeCacheClustersResult"
       ( \s h x ->
           DescribeCacheClustersResponse'
-            Prelude.<$> ( x Data..@? "CacheClusters" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "CacheClusters"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "CacheCluster")
                         )
             Prelude.<*> (x Data..@? "Marker")
@@ -230,7 +232,8 @@ instance Core.AWSRequest DescribeCacheClusters where
 
 instance Prelude.Hashable DescribeCacheClusters where
   hashWithSalt _salt DescribeCacheClusters' {..} =
-    _salt `Prelude.hashWithSalt` cacheClusterId
+    _salt
+      `Prelude.hashWithSalt` cacheClusterId
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxRecords
       `Prelude.hashWithSalt` showCacheClustersNotInReplicationGroups

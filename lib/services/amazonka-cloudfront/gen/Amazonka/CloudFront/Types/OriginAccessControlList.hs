@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.OriginAccessControlList
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.OriginAccessControlList where
@@ -123,7 +123,9 @@ originAccessControlList_quantity = Lens.lens (\OriginAccessControlList' {quantit
 instance Data.FromXML OriginAccessControlList where
   parseXML x =
     OriginAccessControlList'
-      Prelude.<$> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may
                         (Data.parseXMLList "OriginAccessControlSummary")
                   )
@@ -135,7 +137,8 @@ instance Data.FromXML OriginAccessControlList where
 
 instance Prelude.Hashable OriginAccessControlList where
   hashWithSalt _salt OriginAccessControlList' {..} =
-    _salt `Prelude.hashWithSalt` items
+    _salt
+      `Prelude.hashWithSalt` items
       `Prelude.hashWithSalt` nextMarker
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxItems

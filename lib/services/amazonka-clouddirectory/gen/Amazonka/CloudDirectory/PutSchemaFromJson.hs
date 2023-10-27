@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudDirectory.PutSchemaFromJson
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest PutSchemaFromJson where
 
 instance Prelude.Hashable PutSchemaFromJson where
   hashWithSalt _salt PutSchemaFromJson' {..} =
-    _salt `Prelude.hashWithSalt` schemaArn
+    _salt
+      `Prelude.hashWithSalt` schemaArn
       `Prelude.hashWithSalt` document
 
 instance Prelude.NFData PutSchemaFromJson where

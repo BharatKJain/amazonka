@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.S3LogsConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.S3LogsConfig where
@@ -121,7 +121,8 @@ instance Data.FromJSON S3LogsConfig where
 
 instance Prelude.Hashable S3LogsConfig where
   hashWithSalt _salt S3LogsConfig' {..} =
-    _salt `Prelude.hashWithSalt` bucketOwnerAccess
+    _salt
+      `Prelude.hashWithSalt` bucketOwnerAccess
       `Prelude.hashWithSalt` encryptionDisabled
       `Prelude.hashWithSalt` location
       `Prelude.hashWithSalt` status

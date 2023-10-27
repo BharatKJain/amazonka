@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.M3u8Settings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.M3u8Settings where
@@ -386,7 +386,8 @@ instance Data.FromJSON M3u8Settings where
 
 instance Prelude.Hashable M3u8Settings where
   hashWithSalt _salt M3u8Settings' {..} =
-    _salt `Prelude.hashWithSalt` audioDuration
+    _salt
+      `Prelude.hashWithSalt` audioDuration
       `Prelude.hashWithSalt` audioFramesPerPes
       `Prelude.hashWithSalt` audioPids
       `Prelude.hashWithSalt` dataPTSControl

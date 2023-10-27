@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.TrainingSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.TrainingSpecification where
@@ -159,19 +159,23 @@ instance Data.FromJSON TrainingSpecification where
       "TrainingSpecification"
       ( \x ->
           TrainingSpecification'
-            Prelude.<$> ( x Data..:? "MetricDefinitions"
+            Prelude.<$> ( x
+                            Data..:? "MetricDefinitions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "SupportedHyperParameters"
+            Prelude.<*> ( x
+                            Data..:? "SupportedHyperParameters"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "SupportedTuningJobObjectiveMetrics"
+            Prelude.<*> ( x
+                            Data..:? "SupportedTuningJobObjectiveMetrics"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SupportsDistributedTraining")
             Prelude.<*> (x Data..:? "TrainingImageDigest")
             Prelude.<*> (x Data..: "TrainingImage")
-            Prelude.<*> ( x Data..:? "SupportedTrainingInstanceTypes"
+            Prelude.<*> ( x
+                            Data..:? "SupportedTrainingInstanceTypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "TrainingChannels")
@@ -179,7 +183,8 @@ instance Data.FromJSON TrainingSpecification where
 
 instance Prelude.Hashable TrainingSpecification where
   hashWithSalt _salt TrainingSpecification' {..} =
-    _salt `Prelude.hashWithSalt` metricDefinitions
+    _salt
+      `Prelude.hashWithSalt` metricDefinitions
       `Prelude.hashWithSalt` supportedHyperParameters
       `Prelude.hashWithSalt` supportedTuningJobObjectiveMetrics
       `Prelude.hashWithSalt` supportsDistributedTraining

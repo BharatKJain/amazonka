@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.MediaStream
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.MediaStream where
@@ -164,7 +164,8 @@ instance Data.FromJSON MediaStream where
 
 instance Prelude.Hashable MediaStream where
   hashWithSalt _salt MediaStream' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` clockRate
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` videoFormat

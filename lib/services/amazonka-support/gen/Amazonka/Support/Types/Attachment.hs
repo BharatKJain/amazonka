@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Support.Types.Attachment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Support.Types.Attachment where
@@ -83,7 +83,8 @@ instance Data.FromJSON Attachment where
 
 instance Prelude.Hashable Attachment where
   hashWithSalt _salt Attachment' {..} =
-    _salt `Prelude.hashWithSalt` data'
+    _salt
+      `Prelude.hashWithSalt` data'
       `Prelude.hashWithSalt` fileName
 
 instance Prelude.NFData Attachment where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.EventsBatch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.EventsBatch where
@@ -71,7 +71,8 @@ eventsBatch_events = Lens.lens (\EventsBatch' {events} -> events) (\s@EventsBatc
 
 instance Prelude.Hashable EventsBatch where
   hashWithSalt _salt EventsBatch' {..} =
-    _salt `Prelude.hashWithSalt` endpoint
+    _salt
+      `Prelude.hashWithSalt` endpoint
       `Prelude.hashWithSalt` events
 
 instance Prelude.NFData EventsBatch where

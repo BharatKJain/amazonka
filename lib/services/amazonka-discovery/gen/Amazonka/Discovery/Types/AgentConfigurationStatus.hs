@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Discovery.Types.AgentConfigurationStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Discovery.Types.AgentConfigurationStatus where
@@ -97,7 +97,8 @@ instance Data.FromJSON AgentConfigurationStatus where
 
 instance Prelude.Hashable AgentConfigurationStatus where
   hashWithSalt _salt AgentConfigurationStatus' {..} =
-    _salt `Prelude.hashWithSalt` agentId
+    _salt
+      `Prelude.hashWithSalt` agentId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` operationSucceeded
 

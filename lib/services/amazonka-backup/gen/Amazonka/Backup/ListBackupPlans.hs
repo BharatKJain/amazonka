@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Backup.ListBackupPlans
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,22 +117,22 @@ instance Core.AWSPager ListBackupPlans where
     | Core.stop
         ( rs
             Lens.^? listBackupPlansResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listBackupPlansResponse_backupPlansList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listBackupPlans_nextToken
           Lens..~ rs
           Lens.^? listBackupPlansResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListBackupPlans where
   type
@@ -144,7 +144,8 @@ instance Core.AWSRequest ListBackupPlans where
     Response.receiveJSON
       ( \s h x ->
           ListBackupPlansResponse'
-            Prelude.<$> ( x Data..?> "BackupPlansList"
+            Prelude.<$> ( x
+                            Data..?> "BackupPlansList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -153,7 +154,8 @@ instance Core.AWSRequest ListBackupPlans where
 
 instance Prelude.Hashable ListBackupPlans where
   hashWithSalt _salt ListBackupPlans' {..} =
-    _salt `Prelude.hashWithSalt` includeDeleted
+    _salt
+      `Prelude.hashWithSalt` includeDeleted
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

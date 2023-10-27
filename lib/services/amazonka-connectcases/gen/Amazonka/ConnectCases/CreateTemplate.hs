@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ConnectCases.CreateTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -155,7 +155,8 @@ instance Core.AWSRequest CreateTemplate where
 
 instance Prelude.Hashable CreateTemplate where
   hashWithSalt _salt CreateTemplate' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` layoutConfiguration
       `Prelude.hashWithSalt` requiredFields
       `Prelude.hashWithSalt` status

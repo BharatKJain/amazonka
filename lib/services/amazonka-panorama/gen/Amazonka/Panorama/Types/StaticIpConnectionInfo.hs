@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Panorama.Types.StaticIpConnectionInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Panorama.Types.StaticIpConnectionInfo where
@@ -104,7 +104,8 @@ instance Data.FromJSON StaticIpConnectionInfo where
 
 instance Prelude.Hashable StaticIpConnectionInfo where
   hashWithSalt _salt StaticIpConnectionInfo' {..} =
-    _salt `Prelude.hashWithSalt` defaultGateway
+    _salt
+      `Prelude.hashWithSalt` defaultGateway
       `Prelude.hashWithSalt` dns
       `Prelude.hashWithSalt` ipAddress
       `Prelude.hashWithSalt` mask

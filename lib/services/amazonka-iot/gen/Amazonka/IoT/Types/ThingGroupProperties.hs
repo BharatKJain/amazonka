@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.ThingGroupProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.ThingGroupProperties where
@@ -76,7 +76,8 @@ instance Data.FromJSON ThingGroupProperties where
 
 instance Prelude.Hashable ThingGroupProperties where
   hashWithSalt _salt ThingGroupProperties' {..} =
-    _salt `Prelude.hashWithSalt` attributePayload
+    _salt
+      `Prelude.hashWithSalt` attributePayload
       `Prelude.hashWithSalt` thingGroupDescription
 
 instance Prelude.NFData ThingGroupProperties where

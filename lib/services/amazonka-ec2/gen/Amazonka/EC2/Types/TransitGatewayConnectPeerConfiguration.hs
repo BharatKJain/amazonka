@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TransitGatewayConnectPeerConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TransitGatewayConnectPeerConfiguration where
@@ -100,11 +100,13 @@ instance
   where
   parseXML x =
     TransitGatewayConnectPeerConfiguration'
-      Prelude.<$> ( x Data..@? "bgpConfigurations"
+      Prelude.<$> ( x
+                      Data..@? "bgpConfigurations"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "insideCidrBlocks"
+      Prelude.<*> ( x
+                      Data..@? "insideCidrBlocks"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
@@ -119,7 +121,8 @@ instance
   hashWithSalt
     _salt
     TransitGatewayConnectPeerConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` bgpConfigurations
+      _salt
+        `Prelude.hashWithSalt` bgpConfigurations
         `Prelude.hashWithSalt` insideCidrBlocks
         `Prelude.hashWithSalt` peerAddress
         `Prelude.hashWithSalt` protocol

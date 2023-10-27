@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.RecommendationJobVpcConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.RecommendationJobVpcConfig where
@@ -91,7 +91,8 @@ instance Data.FromJSON RecommendationJobVpcConfig where
 
 instance Prelude.Hashable RecommendationJobVpcConfig where
   hashWithSalt _salt RecommendationJobVpcConfig' {..} =
-    _salt `Prelude.hashWithSalt` securityGroupIds
+    _salt
+      `Prelude.hashWithSalt` securityGroupIds
       `Prelude.hashWithSalt` subnets
 
 instance Prelude.NFData RecommendationJobVpcConfig where

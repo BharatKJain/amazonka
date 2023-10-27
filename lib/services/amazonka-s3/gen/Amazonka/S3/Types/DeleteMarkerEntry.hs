@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.DeleteMarkerEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.DeleteMarkerEntry where
@@ -105,7 +105,8 @@ instance Data.FromXML DeleteMarkerEntry where
 
 instance Prelude.Hashable DeleteMarkerEntry where
   hashWithSalt _salt DeleteMarkerEntry' {..} =
-    _salt `Prelude.hashWithSalt` isLatest
+    _salt
+      `Prelude.hashWithSalt` isLatest
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` lastModified
       `Prelude.hashWithSalt` owner

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DMS.DescribeFleetAdvisorSchemas
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -188,7 +188,8 @@ instance Core.AWSRequest DescribeFleetAdvisorSchemas where
     Response.receiveJSON
       ( \s h x ->
           DescribeFleetAdvisorSchemasResponse'
-            Prelude.<$> ( x Data..?> "FleetAdvisorSchemas"
+            Prelude.<$> ( x
+                            Data..?> "FleetAdvisorSchemas"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -197,7 +198,8 @@ instance Core.AWSRequest DescribeFleetAdvisorSchemas where
 
 instance Prelude.Hashable DescribeFleetAdvisorSchemas where
   hashWithSalt _salt DescribeFleetAdvisorSchemas' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxRecords
       `Prelude.hashWithSalt` nextToken
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAF.CreateSizeConstraintSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -142,7 +142,8 @@ instance Core.AWSRequest CreateSizeConstraintSet where
 
 instance Prelude.Hashable CreateSizeConstraintSet where
   hashWithSalt _salt CreateSizeConstraintSet' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` changeToken
 
 instance Prelude.NFData CreateSizeConstraintSet where

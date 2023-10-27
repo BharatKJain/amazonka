@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.LineItemGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.LineItemGroup where
@@ -83,7 +83,8 @@ instance Data.FromJSON LineItemGroup where
 
 instance Prelude.Hashable LineItemGroup where
   hashWithSalt _salt LineItemGroup' {..} =
-    _salt `Prelude.hashWithSalt` lineItemGroupIndex
+    _salt
+      `Prelude.hashWithSalt` lineItemGroupIndex
       `Prelude.hashWithSalt` lineItems
 
 instance Prelude.NFData LineItemGroup where

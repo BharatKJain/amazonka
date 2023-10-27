@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SNS.Types.BatchResultErrorEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SNS.Types.BatchResultErrorEntry where
@@ -99,7 +99,8 @@ instance Data.FromXML BatchResultErrorEntry where
 
 instance Prelude.Hashable BatchResultErrorEntry where
   hashWithSalt _salt BatchResultErrorEntry' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` senderFault

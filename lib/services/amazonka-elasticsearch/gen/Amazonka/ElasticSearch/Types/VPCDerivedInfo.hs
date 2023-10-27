@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.VPCDerivedInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.VPCDerivedInfo where
@@ -95,10 +95,12 @@ instance Data.FromJSON VPCDerivedInfo where
       "VPCDerivedInfo"
       ( \x ->
           VPCDerivedInfo'
-            Prelude.<$> ( x Data..:? "AvailabilityZones"
+            Prelude.<$> ( x
+                            Data..:? "AvailabilityZones"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "SecurityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "SecurityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SubnetIds" Data..!= Prelude.mempty)
@@ -107,7 +109,8 @@ instance Data.FromJSON VPCDerivedInfo where
 
 instance Prelude.Hashable VPCDerivedInfo where
   hashWithSalt _salt VPCDerivedInfo' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZones
+    _salt
+      `Prelude.hashWithSalt` availabilityZones
       `Prelude.hashWithSalt` securityGroupIds
       `Prelude.hashWithSalt` subnetIds
       `Prelude.hashWithSalt` vPCId

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.DescribeMatchmakingRuleSets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,21 +129,21 @@ instance Core.AWSPager DescribeMatchmakingRuleSets where
     | Core.stop
         ( rs
             Lens.^? describeMatchmakingRuleSetsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. describeMatchmakingRuleSetsResponse_ruleSets
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeMatchmakingRuleSets_nextToken
           Lens..~ rs
           Lens.^? describeMatchmakingRuleSetsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeMatchmakingRuleSets where
   type
@@ -162,7 +162,8 @@ instance Core.AWSRequest DescribeMatchmakingRuleSets where
 
 instance Prelude.Hashable DescribeMatchmakingRuleSets where
   hashWithSalt _salt DescribeMatchmakingRuleSets' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` names
       `Prelude.hashWithSalt` nextToken
 

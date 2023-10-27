@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.InstanceHardware
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.InstanceHardware where
@@ -85,7 +85,8 @@ instance Data.FromJSON InstanceHardware where
 
 instance Prelude.Hashable InstanceHardware where
   hashWithSalt _salt InstanceHardware' {..} =
-    _salt `Prelude.hashWithSalt` cpuCount
+    _salt
+      `Prelude.hashWithSalt` cpuCount
       `Prelude.hashWithSalt` disks
       `Prelude.hashWithSalt` ramSizeInGb
 

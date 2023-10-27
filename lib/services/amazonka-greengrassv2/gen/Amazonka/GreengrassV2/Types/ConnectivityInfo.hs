@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.ConnectivityInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.ConnectivityInfo where
@@ -107,7 +107,8 @@ instance Data.FromJSON ConnectivityInfo where
 
 instance Prelude.Hashable ConnectivityInfo where
   hashWithSalt _salt ConnectivityInfo' {..} =
-    _salt `Prelude.hashWithSalt` hostAddress
+    _salt
+      `Prelude.hashWithSalt` hostAddress
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` metadata
       `Prelude.hashWithSalt` portNumber

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.LambdaFunctionCompletedEventAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.LambdaFunctionCompletedEventAttributes where
@@ -113,7 +113,8 @@ instance
   hashWithSalt
     _salt
     LambdaFunctionCompletedEventAttributes' {..} =
-      _salt `Prelude.hashWithSalt` result
+      _salt
+        `Prelude.hashWithSalt` result
         `Prelude.hashWithSalt` scheduledEventId
         `Prelude.hashWithSalt` startedEventId
 

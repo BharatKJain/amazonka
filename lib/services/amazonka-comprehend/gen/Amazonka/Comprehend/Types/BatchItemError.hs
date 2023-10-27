@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.BatchItemError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.BatchItemError where
@@ -86,7 +86,8 @@ instance Data.FromJSON BatchItemError where
 
 instance Prelude.Hashable BatchItemError where
   hashWithSalt _salt BatchItemError' {..} =
-    _salt `Prelude.hashWithSalt` errorCode
+    _salt
+      `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` index
 

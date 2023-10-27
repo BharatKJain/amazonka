@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.TaskTemplateField
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.TaskTemplateField where
@@ -91,7 +91,8 @@ instance Data.FromJSON TaskTemplateField where
       ( \x ->
           TaskTemplateField'
             Prelude.<$> (x Data..:? "Description")
-            Prelude.<*> ( x Data..:? "SingleSelectOptions"
+            Prelude.<*> ( x
+                            Data..:? "SingleSelectOptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Type")
@@ -100,7 +101,8 @@ instance Data.FromJSON TaskTemplateField where
 
 instance Prelude.Hashable TaskTemplateField where
   hashWithSalt _salt TaskTemplateField' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` singleSelectOptions
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` id

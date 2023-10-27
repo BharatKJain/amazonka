@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.DomainDescriptionType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.DomainDescriptionType where
@@ -146,7 +146,8 @@ instance Data.FromJSON DomainDescriptionType where
 
 instance Prelude.Hashable DomainDescriptionType where
   hashWithSalt _salt DomainDescriptionType' {..} =
-    _salt `Prelude.hashWithSalt` aWSAccountId
+    _salt
+      `Prelude.hashWithSalt` aWSAccountId
       `Prelude.hashWithSalt` cloudFrontDistribution
       `Prelude.hashWithSalt` customDomainConfig
       `Prelude.hashWithSalt` domain

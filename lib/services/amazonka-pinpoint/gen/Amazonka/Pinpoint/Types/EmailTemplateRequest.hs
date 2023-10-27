@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.EmailTemplateRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.EmailTemplateRequest where
@@ -168,7 +168,8 @@ emailTemplateRequest_tags = Lens.lens (\EmailTemplateRequest' {tags} -> tags) (\
 
 instance Prelude.Hashable EmailTemplateRequest where
   hashWithSalt _salt EmailTemplateRequest' {..} =
-    _salt `Prelude.hashWithSalt` defaultSubstitutions
+    _salt
+      `Prelude.hashWithSalt` defaultSubstitutions
       `Prelude.hashWithSalt` htmlPart
       `Prelude.hashWithSalt` recommenderId
       `Prelude.hashWithSalt` subject

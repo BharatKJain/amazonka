@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.IcmpTypeCode
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.IcmpTypeCode where
@@ -69,11 +69,13 @@ icmpTypeCode_type = Lens.lens (\IcmpTypeCode' {type'} -> type') (\s@IcmpTypeCode
 instance Data.FromXML IcmpTypeCode where
   parseXML x =
     IcmpTypeCode'
-      Prelude.<$> (x Data..@? "code") Prelude.<*> (x Data..@? "type")
+      Prelude.<$> (x Data..@? "code")
+      Prelude.<*> (x Data..@? "type")
 
 instance Prelude.Hashable IcmpTypeCode where
   hashWithSalt _salt IcmpTypeCode' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData IcmpTypeCode where

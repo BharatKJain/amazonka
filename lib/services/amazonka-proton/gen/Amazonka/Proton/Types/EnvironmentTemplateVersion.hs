@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Proton.Types.EnvironmentTemplateVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Proton.Types.EnvironmentTemplateVersion where
@@ -194,7 +194,8 @@ instance Data.FromJSON EnvironmentTemplateVersion where
 
 instance Prelude.Hashable EnvironmentTemplateVersion where
   hashWithSalt _salt EnvironmentTemplateVersion' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` recommendedMinorVersion
       `Prelude.hashWithSalt` schema
       `Prelude.hashWithSalt` statusMessage

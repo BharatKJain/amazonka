@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ManifestFileLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ManifestFileLocation where
@@ -72,12 +72,14 @@ instance Data.FromJSON ManifestFileLocation where
       "ManifestFileLocation"
       ( \x ->
           ManifestFileLocation'
-            Prelude.<$> (x Data..: "Bucket") Prelude.<*> (x Data..: "Key")
+            Prelude.<$> (x Data..: "Bucket")
+            Prelude.<*> (x Data..: "Key")
       )
 
 instance Prelude.Hashable ManifestFileLocation where
   hashWithSalt _salt ManifestFileLocation' {..} =
-    _salt `Prelude.hashWithSalt` bucket
+    _salt
+      `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` key
 
 instance Prelude.NFData ManifestFileLocation where

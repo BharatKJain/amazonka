@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EKS.CreateAddon
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -291,7 +291,8 @@ instance Core.AWSRequest CreateAddon where
 
 instance Prelude.Hashable CreateAddon where
   hashWithSalt _salt CreateAddon' {..} =
-    _salt `Prelude.hashWithSalt` addonVersion
+    _salt
+      `Prelude.hashWithSalt` addonVersion
       `Prelude.hashWithSalt` clientRequestToken
       `Prelude.hashWithSalt` configurationValues
       `Prelude.hashWithSalt` resolveConflicts

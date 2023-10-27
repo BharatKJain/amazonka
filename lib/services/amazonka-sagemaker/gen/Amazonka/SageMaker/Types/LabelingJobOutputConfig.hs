@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.LabelingJobOutputConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.LabelingJobOutputConfig where
@@ -165,7 +165,8 @@ instance Data.FromJSON LabelingJobOutputConfig where
 
 instance Prelude.Hashable LabelingJobOutputConfig where
   hashWithSalt _salt LabelingJobOutputConfig' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyId
+    _salt
+      `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` snsTopicArn
       `Prelude.hashWithSalt` s3OutputPath
 

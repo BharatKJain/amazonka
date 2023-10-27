@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DocumentDB.Types.DBEngineVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DocumentDB.Types.DBEngineVersion where
@@ -135,19 +135,22 @@ instance Data.FromXML DBEngineVersion where
       Prelude.<*> (x Data..@? "DBParameterGroupFamily")
       Prelude.<*> (x Data..@? "Engine")
       Prelude.<*> (x Data..@? "EngineVersion")
-      Prelude.<*> ( x Data..@? "ExportableLogTypes"
+      Prelude.<*> ( x
+                      Data..@? "ExportableLogTypes"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "SupportsLogExportsToCloudwatchLogs")
-      Prelude.<*> ( x Data..@? "ValidUpgradeTarget"
+      Prelude.<*> ( x
+                      Data..@? "ValidUpgradeTarget"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "UpgradeTarget")
                   )
 
 instance Prelude.Hashable DBEngineVersion where
   hashWithSalt _salt DBEngineVersion' {..} =
-    _salt `Prelude.hashWithSalt` dbEngineDescription
+    _salt
+      `Prelude.hashWithSalt` dbEngineDescription
       `Prelude.hashWithSalt` dbEngineVersionDescription
       `Prelude.hashWithSalt` dbParameterGroupFamily
       `Prelude.hashWithSalt` engine

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataExchange.GetRevision
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,7 +124,8 @@ instance Core.AWSRequest GetRevision where
 
 instance Prelude.Hashable GetRevision where
   hashWithSalt _salt GetRevision' {..} =
-    _salt `Prelude.hashWithSalt` dataSetId
+    _salt
+      `Prelude.hashWithSalt` dataSetId
       `Prelude.hashWithSalt` revisionId
 
 instance Prelude.NFData GetRevision where

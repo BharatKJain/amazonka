@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StorageGateway.CancelRetrieval
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest CancelRetrieval where
 
 instance Prelude.Hashable CancelRetrieval where
   hashWithSalt _salt CancelRetrieval' {..} =
-    _salt `Prelude.hashWithSalt` gatewayARN
+    _salt
+      `Prelude.hashWithSalt` gatewayARN
       `Prelude.hashWithSalt` tapeARN
 
 instance Prelude.NFData CancelRetrieval where

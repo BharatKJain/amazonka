@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.AuroraPostgreSqlParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.AuroraPostgreSqlParameters where
@@ -93,7 +93,8 @@ instance Data.FromJSON AuroraPostgreSqlParameters where
 
 instance Prelude.Hashable AuroraPostgreSqlParameters where
   hashWithSalt _salt AuroraPostgreSqlParameters' {..} =
-    _salt `Prelude.hashWithSalt` host
+    _salt
+      `Prelude.hashWithSalt` host
       `Prelude.hashWithSalt` port
       `Prelude.hashWithSalt` database
 

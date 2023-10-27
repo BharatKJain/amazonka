@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.BlueprintRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.BlueprintRun where
@@ -203,7 +203,8 @@ instance Data.FromJSON BlueprintRun where
 
 instance Prelude.Hashable BlueprintRun where
   hashWithSalt _salt BlueprintRun' {..} =
-    _salt `Prelude.hashWithSalt` blueprintName
+    _salt
+      `Prelude.hashWithSalt` blueprintName
       `Prelude.hashWithSalt` completedOn
       `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` parameters

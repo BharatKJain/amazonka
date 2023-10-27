@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Inspector.StopAssessmentRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest StopAssessmentRun where
 
 instance Prelude.Hashable StopAssessmentRun where
   hashWithSalt _salt StopAssessmentRun' {..} =
-    _salt `Prelude.hashWithSalt` stopAction
+    _salt
+      `Prelude.hashWithSalt` stopAction
       `Prelude.hashWithSalt` assessmentRunArn
 
 instance Prelude.NFData StopAssessmentRun where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ColumnSort
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ColumnSort where
@@ -90,7 +90,8 @@ instance Data.FromJSON ColumnSort where
 
 instance Prelude.Hashable ColumnSort where
   hashWithSalt _salt ColumnSort' {..} =
-    _salt `Prelude.hashWithSalt` aggregationFunction
+    _salt
+      `Prelude.hashWithSalt` aggregationFunction
       `Prelude.hashWithSalt` sortBy
       `Prelude.hashWithSalt` direction
 

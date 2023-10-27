@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkMail.Types.ImpersonationRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkMail.Types.ImpersonationRule where
@@ -122,7 +122,8 @@ instance Data.FromJSON ImpersonationRule where
 
 instance Prelude.Hashable ImpersonationRule where
   hashWithSalt _salt ImpersonationRule' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` notTargetUsers
       `Prelude.hashWithSalt` targetUsers

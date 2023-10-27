@@ -14,7 +14,7 @@
 -- Module      : Amazonka.BillingConductor.Types.ListCustomLineItemChargeDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.BillingConductor.Types.ListCustomLineItemChargeDetails where
@@ -107,7 +107,8 @@ instance
   hashWithSalt
     _salt
     ListCustomLineItemChargeDetails' {..} =
-      _salt `Prelude.hashWithSalt` flat
+      _salt
+        `Prelude.hashWithSalt` flat
         `Prelude.hashWithSalt` percentage
         `Prelude.hashWithSalt` type'
 

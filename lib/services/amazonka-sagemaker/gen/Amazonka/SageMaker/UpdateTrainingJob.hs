@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.UpdateTrainingJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -133,7 +133,8 @@ instance Core.AWSRequest UpdateTrainingJob where
 
 instance Prelude.Hashable UpdateTrainingJob where
   hashWithSalt _salt UpdateTrainingJob' {..} =
-    _salt `Prelude.hashWithSalt` profilerConfig
+    _salt
+      `Prelude.hashWithSalt` profilerConfig
       `Prelude.hashWithSalt` profilerRuleConfigurations
       `Prelude.hashWithSalt` resourceConfig
       `Prelude.hashWithSalt` trainingJobName

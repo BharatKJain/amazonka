@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamQuery.Types.MultiMeasureMappings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamQuery.Types.MultiMeasureMappings where
@@ -94,7 +94,8 @@ instance Data.FromJSON MultiMeasureMappings where
 
 instance Prelude.Hashable MultiMeasureMappings where
   hashWithSalt _salt MultiMeasureMappings' {..} =
-    _salt `Prelude.hashWithSalt` targetMultiMeasureName
+    _salt
+      `Prelude.hashWithSalt` targetMultiMeasureName
       `Prelude.hashWithSalt` multiMeasureAttributeMappings
 
 instance Prelude.NFData MultiMeasureMappings where

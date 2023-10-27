@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataSync.DescribeTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,7 +103,8 @@ instance Core.AWSRequest DescribeTask where
             Prelude.<*> (x Data..?> "CreationTime")
             Prelude.<*> (x Data..?> "CurrentTaskExecutionArn")
             Prelude.<*> (x Data..?> "DestinationLocationArn")
-            Prelude.<*> ( x Data..?> "DestinationNetworkInterfaceArns"
+            Prelude.<*> ( x
+                            Data..?> "DestinationNetworkInterfaceArns"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "ErrorCode")
@@ -114,7 +115,8 @@ instance Core.AWSRequest DescribeTask where
             Prelude.<*> (x Data..?> "Options")
             Prelude.<*> (x Data..?> "Schedule")
             Prelude.<*> (x Data..?> "SourceLocationArn")
-            Prelude.<*> ( x Data..?> "SourceNetworkInterfaceArns"
+            Prelude.<*> ( x
+                            Data..?> "SourceNetworkInterfaceArns"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "Status")

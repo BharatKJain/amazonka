@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.PipeTargetHttpParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.PipeTargetHttpParameters where
@@ -88,20 +88,24 @@ instance Data.FromJSON PipeTargetHttpParameters where
       "PipeTargetHttpParameters"
       ( \x ->
           PipeTargetHttpParameters'
-            Prelude.<$> ( x Data..:? "HeaderParameters"
+            Prelude.<$> ( x
+                            Data..:? "HeaderParameters"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "PathParameterValues"
+            Prelude.<*> ( x
+                            Data..:? "PathParameterValues"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "QueryStringParameters"
+            Prelude.<*> ( x
+                            Data..:? "QueryStringParameters"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable PipeTargetHttpParameters where
   hashWithSalt _salt PipeTargetHttpParameters' {..} =
-    _salt `Prelude.hashWithSalt` headerParameters
+    _salt
+      `Prelude.hashWithSalt` headerParameters
       `Prelude.hashWithSalt` pathParameterValues
       `Prelude.hashWithSalt` queryStringParameters
 

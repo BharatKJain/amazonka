@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.PolicyAttachment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.PolicyAttachment where
@@ -87,7 +87,8 @@ instance Data.FromJSON PolicyAttachment where
 
 instance Prelude.Hashable PolicyAttachment where
   hashWithSalt _salt PolicyAttachment' {..} =
-    _salt `Prelude.hashWithSalt` objectIdentifier
+    _salt
+      `Prelude.hashWithSalt` objectIdentifier
       `Prelude.hashWithSalt` policyId
       `Prelude.hashWithSalt` policyType
 

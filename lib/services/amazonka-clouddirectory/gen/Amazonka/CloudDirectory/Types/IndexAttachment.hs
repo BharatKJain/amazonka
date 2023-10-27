@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.IndexAttachment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.IndexAttachment where
@@ -82,7 +82,8 @@ instance Data.FromJSON IndexAttachment where
       "IndexAttachment"
       ( \x ->
           IndexAttachment'
-            Prelude.<$> ( x Data..:? "IndexedAttributes"
+            Prelude.<$> ( x
+                            Data..:? "IndexedAttributes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ObjectIdentifier")
@@ -90,7 +91,8 @@ instance Data.FromJSON IndexAttachment where
 
 instance Prelude.Hashable IndexAttachment where
   hashWithSalt _salt IndexAttachment' {..} =
-    _salt `Prelude.hashWithSalt` indexedAttributes
+    _salt
+      `Prelude.hashWithSalt` indexedAttributes
       `Prelude.hashWithSalt` objectIdentifier
 
 instance Prelude.NFData IndexAttachment where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppRunner.DeleteAutoScalingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -55,8 +55,9 @@ data DeleteAutoScalingConfiguration = DeleteAutoScalingConfiguration'
     -- configuration that you want to delete.
     --
     -- The ARN can be a full auto scaling configuration ARN, or a partial ARN
-    -- ending with either @...\/name @ or @...\/name\/revision @. If a revision
-    -- isn\'t specified, the latest active revision is deleted.
+    -- ending with either @...\/@/@name@/@ @ or
+    -- @...\/@/@name@/@\/@/@revision@/@ @. If a revision isn\'t specified, the
+    -- latest active revision is deleted.
     autoScalingConfigurationArn :: Prelude.Text
   }
   deriving (Prelude.Eq, Prelude.Read, Prelude.Show, Prelude.Generic)
@@ -73,8 +74,9 @@ data DeleteAutoScalingConfiguration = DeleteAutoScalingConfiguration'
 -- configuration that you want to delete.
 --
 -- The ARN can be a full auto scaling configuration ARN, or a partial ARN
--- ending with either @...\/name @ or @...\/name\/revision @. If a revision
--- isn\'t specified, the latest active revision is deleted.
+-- ending with either @...\/@/@name@/@ @ or
+-- @...\/@/@name@/@\/@/@revision@/@ @. If a revision isn\'t specified, the
+-- latest active revision is deleted.
 newDeleteAutoScalingConfiguration ::
   -- | 'autoScalingConfigurationArn'
   Prelude.Text ->
@@ -90,8 +92,9 @@ newDeleteAutoScalingConfiguration
 -- configuration that you want to delete.
 --
 -- The ARN can be a full auto scaling configuration ARN, or a partial ARN
--- ending with either @...\/name @ or @...\/name\/revision @. If a revision
--- isn\'t specified, the latest active revision is deleted.
+-- ending with either @...\/@/@name@/@ @ or
+-- @...\/@/@name@/@\/@/@revision@/@ @. If a revision isn\'t specified, the
+-- latest active revision is deleted.
 deleteAutoScalingConfiguration_autoScalingConfigurationArn :: Lens.Lens' DeleteAutoScalingConfiguration Prelude.Text
 deleteAutoScalingConfiguration_autoScalingConfigurationArn = Lens.lens (\DeleteAutoScalingConfiguration' {autoScalingConfigurationArn} -> autoScalingConfigurationArn) (\s@DeleteAutoScalingConfiguration' {} a -> s {autoScalingConfigurationArn = a} :: DeleteAutoScalingConfiguration)
 

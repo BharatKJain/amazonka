@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectParticipant.Types.StartPosition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectParticipant.Types.StartPosition where
@@ -83,7 +83,8 @@ startPosition_mostRecent = Lens.lens (\StartPosition' {mostRecent} -> mostRecent
 
 instance Prelude.Hashable StartPosition where
   hashWithSalt _salt StartPosition' {..} =
-    _salt `Prelude.hashWithSalt` absoluteTime
+    _salt
+      `Prelude.hashWithSalt` absoluteTime
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` mostRecent
 

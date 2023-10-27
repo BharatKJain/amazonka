@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.LogSetup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.LogSetup where
@@ -85,7 +85,8 @@ instance Data.FromJSON LogSetup where
 
 instance Prelude.Hashable LogSetup where
   hashWithSalt _salt LogSetup' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` types
 
 instance Prelude.NFData LogSetup where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.SessionKeysAbpV1_1
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.SessionKeysAbpV1_1 where
@@ -94,7 +94,8 @@ instance Data.FromJSON SessionKeysAbpV1_1 where
 
 instance Prelude.Hashable SessionKeysAbpV1_1 where
   hashWithSalt _salt SessionKeysAbpV1_1' {..} =
-    _salt `Prelude.hashWithSalt` appSKey
+    _salt
+      `Prelude.hashWithSalt` appSKey
       `Prelude.hashWithSalt` fNwkSIntKey
       `Prelude.hashWithSalt` nwkSEncKey
       `Prelude.hashWithSalt` sNwkSIntKey

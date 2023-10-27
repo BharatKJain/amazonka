@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.UpdateClientCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest UpdateClientCertificate where
 
 instance Prelude.Hashable UpdateClientCertificate where
   hashWithSalt _salt UpdateClientCertificate' {..} =
-    _salt `Prelude.hashWithSalt` patchOperations
+    _salt
+      `Prelude.hashWithSalt` patchOperations
       `Prelude.hashWithSalt` clientCertificateId
 
 instance Prelude.NFData UpdateClientCertificate where

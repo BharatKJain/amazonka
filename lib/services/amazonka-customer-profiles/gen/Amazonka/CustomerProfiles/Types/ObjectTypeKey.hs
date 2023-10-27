@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CustomerProfiles.Types.ObjectTypeKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CustomerProfiles.Types.ObjectTypeKey where
@@ -98,14 +98,16 @@ instance Data.FromJSON ObjectTypeKey where
       ( \x ->
           ObjectTypeKey'
             Prelude.<$> (x Data..:? "FieldNames" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "StandardIdentifiers"
+            Prelude.<*> ( x
+                            Data..:? "StandardIdentifiers"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ObjectTypeKey where
   hashWithSalt _salt ObjectTypeKey' {..} =
-    _salt `Prelude.hashWithSalt` fieldNames
+    _salt
+      `Prelude.hashWithSalt` fieldNames
       `Prelude.hashWithSalt` standardIdentifiers
 
 instance Prelude.NFData ObjectTypeKey where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.GetVpnConnectionDeviceTypes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -150,22 +150,22 @@ instance Core.AWSPager GetVpnConnectionDeviceTypes where
     | Core.stop
         ( rs
             Lens.^? getVpnConnectionDeviceTypesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getVpnConnectionDeviceTypesResponse_vpnConnectionDeviceTypes
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getVpnConnectionDeviceTypes_nextToken
           Lens..~ rs
           Lens.^? getVpnConnectionDeviceTypesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetVpnConnectionDeviceTypes where
   type
@@ -178,7 +178,8 @@ instance Core.AWSRequest GetVpnConnectionDeviceTypes where
       ( \s h x ->
           GetVpnConnectionDeviceTypesResponse'
             Prelude.<$> (x Data..@? "nextToken")
-            Prelude.<*> ( x Data..@? "vpnConnectionDeviceTypeSet"
+            Prelude.<*> ( x
+                            Data..@? "vpnConnectionDeviceTypeSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -187,7 +188,8 @@ instance Core.AWSRequest GetVpnConnectionDeviceTypes where
 
 instance Prelude.Hashable GetVpnConnectionDeviceTypes where
   hashWithSalt _salt GetVpnConnectionDeviceTypes' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

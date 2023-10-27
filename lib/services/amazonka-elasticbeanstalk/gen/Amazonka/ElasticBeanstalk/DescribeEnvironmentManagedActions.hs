@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.DescribeEnvironmentManagedActions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,10 +112,12 @@ instance
       "DescribeEnvironmentManagedActionsResult"
       ( \s h x ->
           DescribeEnvironmentManagedActionsResponse'
-            Prelude.<$> ( x Data..@? "ManagedActions" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "ManagedActions"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList1 "member")
                         )
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -125,7 +127,8 @@ instance
   hashWithSalt
     _salt
     DescribeEnvironmentManagedActions' {..} =
-      _salt `Prelude.hashWithSalt` environmentId
+      _salt
+        `Prelude.hashWithSalt` environmentId
         `Prelude.hashWithSalt` environmentName
         `Prelude.hashWithSalt` status
 

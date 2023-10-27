@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruProfiler.Types.AgentConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruProfiler.Types.AgentConfiguration where
@@ -160,7 +160,8 @@ instance Data.FromJSON AgentConfiguration where
       "AgentConfiguration"
       ( \x ->
           AgentConfiguration'
-            Prelude.<$> ( x Data..:? "agentParameters"
+            Prelude.<$> ( x
+                            Data..:? "agentParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "periodInSeconds")
@@ -169,7 +170,8 @@ instance Data.FromJSON AgentConfiguration where
 
 instance Prelude.Hashable AgentConfiguration where
   hashWithSalt _salt AgentConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` agentParameters
+    _salt
+      `Prelude.hashWithSalt` agentParameters
       `Prelude.hashWithSalt` periodInSeconds
       `Prelude.hashWithSalt` shouldProfile
 

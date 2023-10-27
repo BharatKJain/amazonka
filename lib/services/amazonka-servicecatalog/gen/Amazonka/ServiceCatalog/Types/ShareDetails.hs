@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ShareDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ShareDetails where
@@ -70,14 +70,16 @@ instance Data.FromJSON ShareDetails where
       ( \x ->
           ShareDetails'
             Prelude.<$> (x Data..:? "ShareErrors" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "SuccessfulShares"
+            Prelude.<*> ( x
+                            Data..:? "SuccessfulShares"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ShareDetails where
   hashWithSalt _salt ShareDetails' {..} =
-    _salt `Prelude.hashWithSalt` shareErrors
+    _salt
+      `Prelude.hashWithSalt` shareErrors
       `Prelude.hashWithSalt` successfulShares
 
 instance Prelude.NFData ShareDetails where

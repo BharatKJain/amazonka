@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMContacts.Types.Receipt
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMContacts.Types.Receipt where
@@ -102,7 +102,8 @@ instance Data.FromJSON Receipt where
 
 instance Prelude.Hashable Receipt where
   hashWithSalt _salt Receipt' {..} =
-    _salt `Prelude.hashWithSalt` contactChannelArn
+    _salt
+      `Prelude.hashWithSalt` contactChannelArn
       `Prelude.hashWithSalt` receiptInfo
       `Prelude.hashWithSalt` receiptType
       `Prelude.hashWithSalt` receiptTime

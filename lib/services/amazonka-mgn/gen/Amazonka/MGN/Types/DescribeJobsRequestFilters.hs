@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.DescribeJobsRequestFilters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.DescribeJobsRequestFilters where
@@ -74,7 +74,8 @@ describeJobsRequestFilters_toDate = Lens.lens (\DescribeJobsRequestFilters' {toD
 
 instance Prelude.Hashable DescribeJobsRequestFilters where
   hashWithSalt _salt DescribeJobsRequestFilters' {..} =
-    _salt `Prelude.hashWithSalt` fromDate
+    _salt
+      `Prelude.hashWithSalt` fromDate
       `Prelude.hashWithSalt` jobIDs
       `Prelude.hashWithSalt` toDate
 

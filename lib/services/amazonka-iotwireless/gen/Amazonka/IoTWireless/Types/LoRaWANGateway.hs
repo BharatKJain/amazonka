@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.LoRaWANGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.LoRaWANGateway where
@@ -115,7 +115,8 @@ instance Data.FromJSON LoRaWANGateway where
 
 instance Prelude.Hashable LoRaWANGateway where
   hashWithSalt _salt LoRaWANGateway' {..} =
-    _salt `Prelude.hashWithSalt` beaconing
+    _salt
+      `Prelude.hashWithSalt` beaconing
       `Prelude.hashWithSalt` gatewayEui
       `Prelude.hashWithSalt` joinEuiFilters
       `Prelude.hashWithSalt` netIdFilters

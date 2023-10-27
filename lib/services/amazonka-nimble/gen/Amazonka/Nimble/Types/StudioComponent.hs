@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Nimble.Types.StudioComponent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Nimble.Types.StudioComponent where
@@ -272,15 +272,18 @@ instance Data.FromJSON StudioComponent where
             Prelude.<*> (x Data..:? "createdAt")
             Prelude.<*> (x Data..:? "createdBy")
             Prelude.<*> (x Data..:? "description")
-            Prelude.<*> ( x Data..:? "ec2SecurityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "ec2SecurityGroupIds"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "initializationScripts"
+            Prelude.<*> ( x
+                            Data..:? "initializationScripts"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "name")
             Prelude.<*> (x Data..:? "runtimeRoleArn")
-            Prelude.<*> ( x Data..:? "scriptParameters"
+            Prelude.<*> ( x
+                            Data..:? "scriptParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "secureInitializationRoleArn")
@@ -297,7 +300,8 @@ instance Data.FromJSON StudioComponent where
 
 instance Prelude.Hashable StudioComponent where
   hashWithSalt _salt StudioComponent' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` configuration
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` createdBy

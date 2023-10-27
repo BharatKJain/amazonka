@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppSync.ListApiKeys
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,20 +114,23 @@ instance Core.AWSPager ListApiKeys where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listApiKeysResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listApiKeysResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listApiKeysResponse_apiKeys Prelude.. Lens._Just
+            Lens.^? listApiKeysResponse_apiKeys
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listApiKeys_nextToken
           Lens..~ rs
-          Lens.^? listApiKeysResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listApiKeysResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListApiKeys where
   type AWSResponse ListApiKeys = ListApiKeysResponse
@@ -144,7 +147,8 @@ instance Core.AWSRequest ListApiKeys where
 
 instance Prelude.Hashable ListApiKeys where
   hashWithSalt _salt ListApiKeys' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` apiId
 

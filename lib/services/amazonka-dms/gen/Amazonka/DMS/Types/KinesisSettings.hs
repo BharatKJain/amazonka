@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.KinesisSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.KinesisSettings where
@@ -234,7 +234,8 @@ instance Data.FromJSON KinesisSettings where
 
 instance Prelude.Hashable KinesisSettings where
   hashWithSalt _salt KinesisSettings' {..} =
-    _salt `Prelude.hashWithSalt` includeControlDetails
+    _salt
+      `Prelude.hashWithSalt` includeControlDetails
       `Prelude.hashWithSalt` includeNullAndEmpty
       `Prelude.hashWithSalt` includePartitionValue
       `Prelude.hashWithSalt` includeTableAlterOperations

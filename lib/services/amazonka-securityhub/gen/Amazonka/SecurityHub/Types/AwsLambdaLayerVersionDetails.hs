@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsLambdaLayerVersionDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsLambdaLayerVersionDetails where
@@ -105,7 +105,8 @@ instance Data.FromJSON AwsLambdaLayerVersionDetails where
       "AwsLambdaLayerVersionDetails"
       ( \x ->
           AwsLambdaLayerVersionDetails'
-            Prelude.<$> ( x Data..:? "CompatibleRuntimes"
+            Prelude.<$> ( x
+                            Data..:? "CompatibleRuntimes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CreatedDate")
@@ -117,7 +118,8 @@ instance
     AwsLambdaLayerVersionDetails
   where
   hashWithSalt _salt AwsLambdaLayerVersionDetails' {..} =
-    _salt `Prelude.hashWithSalt` compatibleRuntimes
+    _salt
+      `Prelude.hashWithSalt` compatibleRuntimes
       `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` version
 

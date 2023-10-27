@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VpcIpv6CidrBlockAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VpcIpv6CidrBlockAssociation where
@@ -112,7 +112,8 @@ instance Data.FromXML VpcIpv6CidrBlockAssociation where
 
 instance Prelude.Hashable VpcIpv6CidrBlockAssociation where
   hashWithSalt _salt VpcIpv6CidrBlockAssociation' {..} =
-    _salt `Prelude.hashWithSalt` associationId
+    _salt
+      `Prelude.hashWithSalt` associationId
       `Prelude.hashWithSalt` ipv6CidrBlock
       `Prelude.hashWithSalt` ipv6CidrBlockState
       `Prelude.hashWithSalt` ipv6Pool

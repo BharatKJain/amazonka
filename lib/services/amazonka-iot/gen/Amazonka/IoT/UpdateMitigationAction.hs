@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.UpdateMitigationAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,8 @@ instance Core.AWSRequest UpdateMitigationAction where
 
 instance Prelude.Hashable UpdateMitigationAction where
   hashWithSalt _salt UpdateMitigationAction' {..} =
-    _salt `Prelude.hashWithSalt` actionParams
+    _salt
+      `Prelude.hashWithSalt` actionParams
       `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` actionName
 

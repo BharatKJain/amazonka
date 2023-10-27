@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.ExperimentReport
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.ExperimentReport where
@@ -95,7 +95,8 @@ instance Data.FromJSON ExperimentReport where
 
 instance Prelude.Hashable ExperimentReport where
   hashWithSalt _salt ExperimentReport' {..} =
-    _salt `Prelude.hashWithSalt` content
+    _salt
+      `Prelude.hashWithSalt` content
       `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` reportName
       `Prelude.hashWithSalt` treatmentName

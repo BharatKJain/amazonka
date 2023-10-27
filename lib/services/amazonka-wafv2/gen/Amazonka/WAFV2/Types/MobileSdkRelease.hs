@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.MobileSdkRelease
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.MobileSdkRelease where
@@ -102,7 +102,8 @@ instance Data.FromJSON MobileSdkRelease where
 
 instance Prelude.Hashable MobileSdkRelease where
   hashWithSalt _salt MobileSdkRelease' {..} =
-    _salt `Prelude.hashWithSalt` releaseNotes
+    _salt
+      `Prelude.hashWithSalt` releaseNotes
       `Prelude.hashWithSalt` releaseVersion
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` timestamp

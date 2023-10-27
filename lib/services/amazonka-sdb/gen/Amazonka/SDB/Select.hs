@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SDB.Select
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,20 +130,23 @@ instance Core.AWSPager Select where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? selectResponse_nextToken Prelude.. Lens._Just
+            Lens.^? selectResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? selectResponse_items Prelude.. Lens._Just
+            Lens.^? selectResponse_items
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& select_nextToken
           Lens..~ rs
-          Lens.^? selectResponse_nextToken Prelude.. Lens._Just
+          Lens.^? selectResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest Select where
   type AWSResponse Select = SelectResponse
@@ -161,7 +164,8 @@ instance Core.AWSRequest Select where
 
 instance Prelude.Hashable Select where
   hashWithSalt _salt Select' {..} =
-    _salt `Prelude.hashWithSalt` consistentRead
+    _salt
+      `Prelude.hashWithSalt` consistentRead
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` selectExpression
 

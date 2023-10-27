@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.MetricSetSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.MetricSetSummary where
@@ -128,7 +128,8 @@ instance Data.FromJSON MetricSetSummary where
 
 instance Prelude.Hashable MetricSetSummary where
   hashWithSalt _salt MetricSetSummary' {..} =
-    _salt `Prelude.hashWithSalt` anomalyDetectorArn
+    _salt
+      `Prelude.hashWithSalt` anomalyDetectorArn
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` lastModificationTime
       `Prelude.hashWithSalt` metricSetArn

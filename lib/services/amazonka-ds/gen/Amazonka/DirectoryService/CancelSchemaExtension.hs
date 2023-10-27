@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectoryService.CancelSchemaExtension
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest CancelSchemaExtension where
 
 instance Prelude.Hashable CancelSchemaExtension where
   hashWithSalt _salt CancelSchemaExtension' {..} =
-    _salt `Prelude.hashWithSalt` directoryId
+    _salt
+      `Prelude.hashWithSalt` directoryId
       `Prelude.hashWithSalt` schemaExtensionId
 
 instance Prelude.NFData CancelSchemaExtension where

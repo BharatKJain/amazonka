@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.Sample
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.Sample where
@@ -214,7 +214,8 @@ instance Data.FromJSON Sample where
 
 instance Prelude.Hashable Sample where
   hashWithSalt _salt Sample' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` url
 

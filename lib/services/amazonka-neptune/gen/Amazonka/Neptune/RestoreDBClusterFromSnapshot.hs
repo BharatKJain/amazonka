@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Neptune.RestoreDBClusterFromSnapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -476,7 +476,8 @@ instance
     RestoreDBClusterFromSnapshot
   where
   hashWithSalt _salt RestoreDBClusterFromSnapshot' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZones
+    _salt
+      `Prelude.hashWithSalt` availabilityZones
       `Prelude.hashWithSalt` copyTagsToSnapshot
       `Prelude.hashWithSalt` dbClusterParameterGroupName
       `Prelude.hashWithSalt` dbSubnetGroupName

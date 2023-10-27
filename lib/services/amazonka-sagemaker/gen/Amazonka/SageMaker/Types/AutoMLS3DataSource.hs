@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.AutoMLS3DataSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.AutoMLS3DataSource where
@@ -121,7 +121,8 @@ instance Data.FromJSON AutoMLS3DataSource where
 
 instance Prelude.Hashable AutoMLS3DataSource where
   hashWithSalt _salt AutoMLS3DataSource' {..} =
-    _salt `Prelude.hashWithSalt` s3DataType
+    _salt
+      `Prelude.hashWithSalt` s3DataType
       `Prelude.hashWithSalt` s3Uri
 
 instance Prelude.NFData AutoMLS3DataSource where

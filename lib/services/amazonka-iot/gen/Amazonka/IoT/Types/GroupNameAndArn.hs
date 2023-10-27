@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.GroupNameAndArn
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.GroupNameAndArn where
@@ -74,7 +74,8 @@ instance Data.FromJSON GroupNameAndArn where
 
 instance Prelude.Hashable GroupNameAndArn where
   hashWithSalt _salt GroupNameAndArn' {..} =
-    _salt `Prelude.hashWithSalt` groupArn
+    _salt
+      `Prelude.hashWithSalt` groupArn
       `Prelude.hashWithSalt` groupName
 
 instance Prelude.NFData GroupNameAndArn where

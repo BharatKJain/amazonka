@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.LaunchExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.LaunchExecution where
@@ -75,7 +75,8 @@ instance Data.FromJSON LaunchExecution where
 
 instance Prelude.Hashable LaunchExecution where
   hashWithSalt _salt LaunchExecution' {..} =
-    _salt `Prelude.hashWithSalt` endedTime
+    _salt
+      `Prelude.hashWithSalt` endedTime
       `Prelude.hashWithSalt` startedTime
 
 instance Prelude.NFData LaunchExecution where

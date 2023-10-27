@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.InstanceResizePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.InstanceResizePolicy where
@@ -89,10 +89,12 @@ instance Data.FromJSON InstanceResizePolicy where
       ( \x ->
           InstanceResizePolicy'
             Prelude.<$> (x Data..:? "InstanceTerminationTimeout")
-            Prelude.<*> ( x Data..:? "InstancesToProtect"
+            Prelude.<*> ( x
+                            Data..:? "InstancesToProtect"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "InstancesToTerminate"
+            Prelude.<*> ( x
+                            Data..:? "InstancesToTerminate"
                             Data..!= Prelude.mempty
                         )
       )

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.VoiceId.DeleteFraudster
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -95,7 +95,8 @@ instance Core.AWSRequest DeleteFraudster where
 
 instance Prelude.Hashable DeleteFraudster where
   hashWithSalt _salt DeleteFraudster' {..} =
-    _salt `Prelude.hashWithSalt` domainId
+    _salt
+      `Prelude.hashWithSalt` domainId
       `Prelude.hashWithSalt` fraudsterId
 
 instance Prelude.NFData DeleteFraudster where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.MixedInstancesPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.MixedInstancesPolicy where
@@ -83,7 +83,8 @@ instance Data.FromXML MixedInstancesPolicy where
 
 instance Prelude.Hashable MixedInstancesPolicy where
   hashWithSalt _salt MixedInstancesPolicy' {..} =
-    _salt `Prelude.hashWithSalt` instancesDistribution
+    _salt
+      `Prelude.hashWithSalt` instancesDistribution
       `Prelude.hashWithSalt` launchTemplate
 
 instance Prelude.NFData MixedInstancesPolicy where

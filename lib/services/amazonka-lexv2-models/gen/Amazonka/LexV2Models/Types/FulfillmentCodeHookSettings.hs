@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.FulfillmentCodeHookSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.FulfillmentCodeHookSettings where
@@ -119,7 +119,8 @@ instance Data.FromJSON FulfillmentCodeHookSettings where
 
 instance Prelude.Hashable FulfillmentCodeHookSettings where
   hashWithSalt _salt FulfillmentCodeHookSettings' {..} =
-    _salt `Prelude.hashWithSalt` active
+    _salt
+      `Prelude.hashWithSalt` active
       `Prelude.hashWithSalt` fulfillmentUpdatesSpecification
       `Prelude.hashWithSalt` postFulfillmentStatusSpecification
       `Prelude.hashWithSalt` enabled

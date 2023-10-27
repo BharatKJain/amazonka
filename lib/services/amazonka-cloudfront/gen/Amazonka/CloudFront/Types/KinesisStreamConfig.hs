@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.KinesisStreamConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.KinesisStreamConfig where
@@ -96,7 +96,8 @@ instance Data.FromXML KinesisStreamConfig where
 
 instance Prelude.Hashable KinesisStreamConfig where
   hashWithSalt _salt KinesisStreamConfig' {..} =
-    _salt `Prelude.hashWithSalt` roleARN
+    _salt
+      `Prelude.hashWithSalt` roleARN
       `Prelude.hashWithSalt` streamARN
 
 instance Prelude.NFData KinesisStreamConfig where

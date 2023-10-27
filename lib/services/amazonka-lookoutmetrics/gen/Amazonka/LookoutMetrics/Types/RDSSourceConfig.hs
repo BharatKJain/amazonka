@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.RDSSourceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.RDSSourceConfig where
@@ -140,7 +140,8 @@ instance Data.FromJSON RDSSourceConfig where
 
 instance Prelude.Hashable RDSSourceConfig where
   hashWithSalt _salt RDSSourceConfig' {..} =
-    _salt `Prelude.hashWithSalt` dbInstanceIdentifier
+    _salt
+      `Prelude.hashWithSalt` dbInstanceIdentifier
       `Prelude.hashWithSalt` databaseHost
       `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` databasePort

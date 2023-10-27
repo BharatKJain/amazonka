@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Proton.GetRepositorySyncStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -143,7 +143,8 @@ instance Core.AWSRequest GetRepositorySyncStatus where
 
 instance Prelude.Hashable GetRepositorySyncStatus where
   hashWithSalt _salt GetRepositorySyncStatus' {..} =
-    _salt `Prelude.hashWithSalt` branch
+    _salt
+      `Prelude.hashWithSalt` branch
       `Prelude.hashWithSalt` repositoryName
       `Prelude.hashWithSalt` repositoryProvider
       `Prelude.hashWithSalt` syncType

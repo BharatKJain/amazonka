@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GreengrassV2.ResolveComponentCandidates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest ResolveComponentCandidates where
     Response.receiveJSON
       ( \s h x ->
           ResolveComponentCandidatesResponse'
-            Prelude.<$> ( x Data..?> "resolvedComponentVersions"
+            Prelude.<$> ( x
+                            Data..?> "resolvedComponentVersions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -122,7 +123,8 @@ instance Core.AWSRequest ResolveComponentCandidates where
 
 instance Prelude.Hashable ResolveComponentCandidates where
   hashWithSalt _salt ResolveComponentCandidates' {..} =
-    _salt `Prelude.hashWithSalt` componentCandidates
+    _salt
+      `Prelude.hashWithSalt` componentCandidates
       `Prelude.hashWithSalt` platform
 
 instance Prelude.NFData ResolveComponentCandidates where

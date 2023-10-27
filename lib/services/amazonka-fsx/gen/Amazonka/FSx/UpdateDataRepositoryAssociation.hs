@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FSx.UpdateDataRepositoryAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -168,7 +168,8 @@ instance
   hashWithSalt
     _salt
     UpdateDataRepositoryAssociation' {..} =
-      _salt `Prelude.hashWithSalt` clientRequestToken
+      _salt
+        `Prelude.hashWithSalt` clientRequestToken
         `Prelude.hashWithSalt` importedFileChunkSize
         `Prelude.hashWithSalt` s3
         `Prelude.hashWithSalt` associationId

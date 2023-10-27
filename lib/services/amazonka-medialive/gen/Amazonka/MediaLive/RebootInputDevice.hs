@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaLive.RebootInputDevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,7 +117,8 @@ instance Core.AWSRequest RebootInputDevice' where
 
 instance Prelude.Hashable RebootInputDevice' where
   hashWithSalt _salt RebootInputDevice'' {..} =
-    _salt `Prelude.hashWithSalt` force
+    _salt
+      `Prelude.hashWithSalt` force
       `Prelude.hashWithSalt` inputDeviceId
 
 instance Prelude.NFData RebootInputDevice' where

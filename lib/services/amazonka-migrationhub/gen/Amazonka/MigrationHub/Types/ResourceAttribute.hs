@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHub.Types.ResourceAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHub.Types.ResourceAttribute where
@@ -88,12 +88,14 @@ instance Data.FromJSON ResourceAttribute where
       "ResourceAttribute"
       ( \x ->
           ResourceAttribute'
-            Prelude.<$> (x Data..: "Type") Prelude.<*> (x Data..: "Value")
+            Prelude.<$> (x Data..: "Type")
+            Prelude.<*> (x Data..: "Value")
       )
 
 instance Prelude.Hashable ResourceAttribute where
   hashWithSalt _salt ResourceAttribute' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData ResourceAttribute where

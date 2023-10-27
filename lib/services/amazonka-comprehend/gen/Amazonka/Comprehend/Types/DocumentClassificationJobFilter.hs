@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.DocumentClassificationJobFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.DocumentClassificationJobFilter where
@@ -106,7 +106,8 @@ instance
   hashWithSalt
     _salt
     DocumentClassificationJobFilter' {..} =
-      _salt `Prelude.hashWithSalt` jobName
+      _salt
+        `Prelude.hashWithSalt` jobName
         `Prelude.hashWithSalt` jobStatus
         `Prelude.hashWithSalt` submitTimeAfter
         `Prelude.hashWithSalt` submitTimeBefore

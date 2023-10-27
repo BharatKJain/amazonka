@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.VsamDetailAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.VsamDetailAttributes where
@@ -135,7 +135,8 @@ instance Data.FromJSON VsamDetailAttributes where
 
 instance Prelude.Hashable VsamDetailAttributes where
   hashWithSalt _salt VsamDetailAttributes' {..} =
-    _salt `Prelude.hashWithSalt` alternateKeys
+    _salt
+      `Prelude.hashWithSalt` alternateKeys
       `Prelude.hashWithSalt` cacheAtStartup
       `Prelude.hashWithSalt` compressed
       `Prelude.hashWithSalt` encoding

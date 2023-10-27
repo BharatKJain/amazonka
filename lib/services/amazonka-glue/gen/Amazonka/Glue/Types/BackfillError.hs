@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.BackfillError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.BackfillError where
@@ -97,7 +97,8 @@ instance Data.FromJSON BackfillError where
 
 instance Prelude.Hashable BackfillError where
   hashWithSalt _salt BackfillError' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` partitions
 
 instance Prelude.NFData BackfillError where

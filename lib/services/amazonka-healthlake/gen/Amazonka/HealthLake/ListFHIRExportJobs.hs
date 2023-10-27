@@ -16,7 +16,7 @@
 -- Module      : Amazonka.HealthLake.ListFHIRExportJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -171,14 +171,16 @@ instance Core.AWSRequest ListFHIRExportJobs where
           ListFHIRExportJobsResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "ExportJobPropertiesList"
+            Prelude.<*> ( x
+                            Data..?> "ExportJobPropertiesList"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListFHIRExportJobs where
   hashWithSalt _salt ListFHIRExportJobs' {..} =
-    _salt `Prelude.hashWithSalt` jobName
+    _salt
+      `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` jobStatus
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

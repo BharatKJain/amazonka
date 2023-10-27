@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ThirdPartyJobDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ThirdPartyJobDetails where
@@ -92,7 +92,8 @@ instance Data.FromJSON ThirdPartyJobDetails where
 
 instance Prelude.Hashable ThirdPartyJobDetails where
   hashWithSalt _salt ThirdPartyJobDetails' {..} =
-    _salt `Prelude.hashWithSalt` data'
+    _salt
+      `Prelude.hashWithSalt` data'
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` nonce
 

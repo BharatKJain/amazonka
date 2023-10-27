@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.IpamAddressHistoryRecord
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.IpamAddressHistoryRecord where
@@ -201,7 +201,8 @@ instance Data.FromXML IpamAddressHistoryRecord where
 
 instance Prelude.Hashable IpamAddressHistoryRecord where
   hashWithSalt _salt IpamAddressHistoryRecord' {..} =
-    _salt `Prelude.hashWithSalt` resourceCidr
+    _salt
+      `Prelude.hashWithSalt` resourceCidr
       `Prelude.hashWithSalt` resourceComplianceStatus
       `Prelude.hashWithSalt` resourceId
       `Prelude.hashWithSalt` resourceName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.EventVariableSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.EventVariableSummary where
@@ -85,7 +85,8 @@ instance Data.FromJSON EventVariableSummary where
 
 instance Prelude.Hashable EventVariableSummary where
   hashWithSalt _salt EventVariableSummary' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` source
       `Prelude.hashWithSalt` value
 

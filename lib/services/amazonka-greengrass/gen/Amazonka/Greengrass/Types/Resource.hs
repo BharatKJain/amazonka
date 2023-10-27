@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.Resource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.Resource where
@@ -104,7 +104,8 @@ instance Data.FromJSON Resource where
 
 instance Prelude.Hashable Resource where
   hashWithSalt _salt Resource' {..} =
-    _salt `Prelude.hashWithSalt` resourceDataContainer
+    _salt
+      `Prelude.hashWithSalt` resourceDataContainer
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name
 

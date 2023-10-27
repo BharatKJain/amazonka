@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.AudioLogSetting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.AudioLogSetting where
@@ -80,7 +80,8 @@ instance Data.FromJSON AudioLogSetting where
 
 instance Prelude.Hashable AudioLogSetting where
   hashWithSalt _salt AudioLogSetting' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` destination
 
 instance Prelude.NFData AudioLogSetting where

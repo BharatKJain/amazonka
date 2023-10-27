@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Panorama.Types.NodeInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Panorama.Types.NodeInstance where
@@ -129,7 +129,8 @@ instance Data.FromJSON NodeInstance where
 
 instance Prelude.Hashable NodeInstance where
   hashWithSalt _salt NodeInstance' {..} =
-    _salt `Prelude.hashWithSalt` nodeId
+    _salt
+      `Prelude.hashWithSalt` nodeId
       `Prelude.hashWithSalt` nodeName
       `Prelude.hashWithSalt` packageName
       `Prelude.hashWithSalt` packagePatchVersion

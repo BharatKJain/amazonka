@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.PresetSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.PresetSettings where
@@ -109,10 +109,12 @@ instance Data.FromJSON PresetSettings where
       "PresetSettings"
       ( \x ->
           PresetSettings'
-            Prelude.<$> ( x Data..:? "audioDescriptions"
+            Prelude.<$> ( x
+                            Data..:? "audioDescriptions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "captionDescriptions"
+            Prelude.<*> ( x
+                            Data..:? "captionDescriptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "containerSettings")
@@ -121,7 +123,8 @@ instance Data.FromJSON PresetSettings where
 
 instance Prelude.Hashable PresetSettings where
   hashWithSalt _salt PresetSettings' {..} =
-    _salt `Prelude.hashWithSalt` audioDescriptions
+    _salt
+      `Prelude.hashWithSalt` audioDescriptions
       `Prelude.hashWithSalt` captionDescriptions
       `Prelude.hashWithSalt` containerSettings
       `Prelude.hashWithSalt` videoDescription

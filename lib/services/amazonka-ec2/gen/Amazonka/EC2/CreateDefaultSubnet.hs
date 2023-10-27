@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.CreateDefaultSubnet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -131,7 +131,8 @@ instance Core.AWSRequest CreateDefaultSubnet where
 
 instance Prelude.Hashable CreateDefaultSubnet where
   hashWithSalt _salt CreateDefaultSubnet' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` ipv6Native
       `Prelude.hashWithSalt` availabilityZone
 

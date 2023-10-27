@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECRPublic.Types.RepositoryCatalogData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECRPublic.Types.RepositoryCatalogData where
@@ -143,7 +143,8 @@ instance Data.FromJSON RepositoryCatalogData where
             Prelude.<*> (x Data..:? "description")
             Prelude.<*> (x Data..:? "logoUrl")
             Prelude.<*> (x Data..:? "marketplaceCertified")
-            Prelude.<*> ( x Data..:? "operatingSystems"
+            Prelude.<*> ( x
+                            Data..:? "operatingSystems"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "usageText")
@@ -151,7 +152,8 @@ instance Data.FromJSON RepositoryCatalogData where
 
 instance Prelude.Hashable RepositoryCatalogData where
   hashWithSalt _salt RepositoryCatalogData' {..} =
-    _salt `Prelude.hashWithSalt` aboutText
+    _salt
+      `Prelude.hashWithSalt` aboutText
       `Prelude.hashWithSalt` architectures
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` logoUrl

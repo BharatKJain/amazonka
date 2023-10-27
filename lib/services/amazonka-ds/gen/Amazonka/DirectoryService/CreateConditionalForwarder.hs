@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectoryService.CreateConditionalForwarder
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -131,7 +131,8 @@ instance Core.AWSRequest CreateConditionalForwarder where
 
 instance Prelude.Hashable CreateConditionalForwarder where
   hashWithSalt _salt CreateConditionalForwarder' {..} =
-    _salt `Prelude.hashWithSalt` directoryId
+    _salt
+      `Prelude.hashWithSalt` directoryId
       `Prelude.hashWithSalt` remoteDomainName
       `Prelude.hashWithSalt` dnsIpAddrs
 

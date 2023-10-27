@@ -16,7 +16,7 @@
 -- Module      : Amazonka.S3.PutObjectLegalHold
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -250,7 +250,8 @@ instance Core.AWSRequest PutObjectLegalHold where
 
 instance Prelude.Hashable PutObjectLegalHold where
   hashWithSalt _salt PutObjectLegalHold' {..} =
-    _salt `Prelude.hashWithSalt` checksumAlgorithm
+    _salt
+      `Prelude.hashWithSalt` checksumAlgorithm
       `Prelude.hashWithSalt` contentMD5
       `Prelude.hashWithSalt` expectedBucketOwner
       `Prelude.hashWithSalt` legalHold

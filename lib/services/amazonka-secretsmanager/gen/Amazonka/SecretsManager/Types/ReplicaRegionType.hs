@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecretsManager.Types.ReplicaRegionType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecretsManager.Types.ReplicaRegionType where
@@ -71,7 +71,8 @@ replicaRegionType_region = Lens.lens (\ReplicaRegionType' {region} -> region) (\
 
 instance Prelude.Hashable ReplicaRegionType where
   hashWithSalt _salt ReplicaRegionType' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyId
+    _salt
+      `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` region
 
 instance Prelude.NFData ReplicaRegionType where

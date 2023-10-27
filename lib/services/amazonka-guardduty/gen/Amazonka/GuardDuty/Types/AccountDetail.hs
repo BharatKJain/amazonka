@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.AccountDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.AccountDetail where
@@ -68,7 +68,8 @@ accountDetail_email = Lens.lens (\AccountDetail' {email} -> email) (\s@AccountDe
 
 instance Prelude.Hashable AccountDetail where
   hashWithSalt _salt AccountDetail' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` email
 
 instance Prelude.NFData AccountDetail where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.SessionStickinessConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.SessionStickinessConfig where
@@ -99,7 +99,8 @@ instance Data.FromXML SessionStickinessConfig where
 
 instance Prelude.Hashable SessionStickinessConfig where
   hashWithSalt _salt SessionStickinessConfig' {..} =
-    _salt `Prelude.hashWithSalt` idleTTL
+    _salt
+      `Prelude.hashWithSalt` idleTTL
       `Prelude.hashWithSalt` maximumTTL
 
 instance Prelude.NFData SessionStickinessConfig where

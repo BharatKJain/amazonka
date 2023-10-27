@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MGN.DisassociateApplications
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,7 +103,8 @@ instance Core.AWSRequest DisassociateApplications where
 
 instance Prelude.Hashable DisassociateApplications where
   hashWithSalt _salt DisassociateApplications' {..} =
-    _salt `Prelude.hashWithSalt` applicationIDs
+    _salt
+      `Prelude.hashWithSalt` applicationIDs
       `Prelude.hashWithSalt` waveID
 
 instance Prelude.NFData DisassociateApplications where

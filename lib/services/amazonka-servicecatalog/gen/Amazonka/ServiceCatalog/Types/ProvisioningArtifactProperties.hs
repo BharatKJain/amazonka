@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ProvisioningArtifactProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ProvisioningArtifactProperties where
@@ -162,7 +162,8 @@ instance
   hashWithSalt
     _salt
     ProvisioningArtifactProperties' {..} =
-      _salt `Prelude.hashWithSalt` description
+      _salt
+        `Prelude.hashWithSalt` description
         `Prelude.hashWithSalt` disableTemplateValidation
         `Prelude.hashWithSalt` info
         `Prelude.hashWithSalt` name

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstanceEventWindowStateChange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstanceEventWindowStateChange where
@@ -78,7 +78,8 @@ instance
   hashWithSalt
     _salt
     InstanceEventWindowStateChange' {..} =
-      _salt `Prelude.hashWithSalt` instanceEventWindowId
+      _salt
+        `Prelude.hashWithSalt` instanceEventWindowId
         `Prelude.hashWithSalt` state
 
 instance

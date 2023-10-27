@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHub.Types.MigrationTaskSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHub.Types.MigrationTaskSummary where
@@ -126,7 +126,8 @@ instance Data.FromJSON MigrationTaskSummary where
 
 instance Prelude.Hashable MigrationTaskSummary where
   hashWithSalt _salt MigrationTaskSummary' {..} =
-    _salt `Prelude.hashWithSalt` migrationTaskName
+    _salt
+      `Prelude.hashWithSalt` migrationTaskName
       `Prelude.hashWithSalt` progressPercent
       `Prelude.hashWithSalt` progressUpdateStream
       `Prelude.hashWithSalt` status

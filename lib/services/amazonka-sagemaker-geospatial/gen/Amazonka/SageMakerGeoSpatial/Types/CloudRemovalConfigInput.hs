@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.CloudRemovalConfigInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.CloudRemovalConfigInput where
@@ -68,7 +68,6 @@ cloudRemovalConfigInput_algorithmName = Lens.lens (\CloudRemovalConfigInput' {al
 cloudRemovalConfigInput_interpolationValue :: Lens.Lens' CloudRemovalConfigInput (Prelude.Maybe Prelude.Text)
 cloudRemovalConfigInput_interpolationValue = Lens.lens (\CloudRemovalConfigInput' {interpolationValue} -> interpolationValue) (\s@CloudRemovalConfigInput' {} a -> s {interpolationValue = a} :: CloudRemovalConfigInput)
 
--- |
 cloudRemovalConfigInput_targetBands :: Lens.Lens' CloudRemovalConfigInput (Prelude.Maybe (Prelude.NonEmpty Prelude.Text))
 cloudRemovalConfigInput_targetBands = Lens.lens (\CloudRemovalConfigInput' {targetBands} -> targetBands) (\s@CloudRemovalConfigInput' {} a -> s {targetBands = a} :: CloudRemovalConfigInput) Prelude.. Lens.mapping Lens.coerced
 
@@ -85,7 +84,8 @@ instance Data.FromJSON CloudRemovalConfigInput where
 
 instance Prelude.Hashable CloudRemovalConfigInput where
   hashWithSalt _salt CloudRemovalConfigInput' {..} =
-    _salt `Prelude.hashWithSalt` algorithmName
+    _salt
+      `Prelude.hashWithSalt` algorithmName
       `Prelude.hashWithSalt` interpolationValue
       `Prelude.hashWithSalt` targetBands
 

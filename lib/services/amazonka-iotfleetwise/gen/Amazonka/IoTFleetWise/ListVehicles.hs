@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTFleetWise.ListVehicles
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,21 +128,23 @@ instance Core.AWSPager ListVehicles where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listVehiclesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listVehiclesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listVehiclesResponse_vehicleSummaries
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listVehicles_nextToken
           Lens..~ rs
-          Lens.^? listVehiclesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listVehiclesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListVehicles where
   type AWSResponse ListVehicles = ListVehiclesResponse
@@ -153,7 +155,8 @@ instance Core.AWSRequest ListVehicles where
       ( \s h x ->
           ListVehiclesResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "vehicleSummaries"
+            Prelude.<*> ( x
+                            Data..?> "vehicleSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -161,7 +164,8 @@ instance Core.AWSRequest ListVehicles where
 
 instance Prelude.Hashable ListVehicles where
   hashWithSalt _salt ListVehicles' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` modelManifestArn
       `Prelude.hashWithSalt` nextToken
 

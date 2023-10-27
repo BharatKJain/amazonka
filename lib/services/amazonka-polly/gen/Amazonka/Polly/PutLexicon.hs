@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Polly.PutLexicon
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance Core.AWSRequest PutLexicon where
 
 instance Prelude.Hashable PutLexicon where
   hashWithSalt _salt PutLexicon' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` content
 
 instance Prelude.NFData PutLexicon where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTWireless.PutResourceLogLevel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest PutResourceLogLevel where
 
 instance Prelude.Hashable PutResourceLogLevel where
   hashWithSalt _salt PutResourceLogLevel' {..} =
-    _salt `Prelude.hashWithSalt` resourceIdentifier
+    _salt
+      `Prelude.hashWithSalt` resourceIdentifier
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` logLevel
 

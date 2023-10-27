@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.QueryStage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.QueryStage where
@@ -150,7 +150,8 @@ instance Data.FromJSON QueryStage where
 
 instance Prelude.Hashable QueryStage where
   hashWithSalt _salt QueryStage' {..} =
-    _salt `Prelude.hashWithSalt` executionTime
+    _salt
+      `Prelude.hashWithSalt` executionTime
       `Prelude.hashWithSalt` inputBytes
       `Prelude.hashWithSalt` inputRows
       `Prelude.hashWithSalt` outputBytes

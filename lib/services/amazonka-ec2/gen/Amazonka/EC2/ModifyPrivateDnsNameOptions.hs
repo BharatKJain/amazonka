@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ModifyPrivateDnsNameOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -159,7 +159,8 @@ instance Core.AWSRequest ModifyPrivateDnsNameOptions where
 
 instance Prelude.Hashable ModifyPrivateDnsNameOptions where
   hashWithSalt _salt ModifyPrivateDnsNameOptions' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` enableResourceNameDnsAAAARecord
       `Prelude.hashWithSalt` enableResourceNameDnsARecord
       `Prelude.hashWithSalt` instanceId

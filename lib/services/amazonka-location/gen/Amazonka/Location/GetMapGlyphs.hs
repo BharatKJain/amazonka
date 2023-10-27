@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Location.GetMapGlyphs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -266,7 +266,8 @@ instance Core.AWSRequest GetMapGlyphs where
 
 instance Prelude.Hashable GetMapGlyphs where
   hashWithSalt _salt GetMapGlyphs' {..} =
-    _salt `Prelude.hashWithSalt` fontStack
+    _salt
+      `Prelude.hashWithSalt` fontStack
       `Prelude.hashWithSalt` fontUnicodeRange
       `Prelude.hashWithSalt` mapName
 

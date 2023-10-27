@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.JourneyDateRangeKpiResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.JourneyDateRangeKpiResponse where
@@ -179,7 +179,8 @@ instance Data.FromJSON JourneyDateRangeKpiResponse where
 
 instance Prelude.Hashable JourneyDateRangeKpiResponse where
   hashWithSalt _salt JourneyDateRangeKpiResponse' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` kpiResult
       `Prelude.hashWithSalt` kpiName
       `Prelude.hashWithSalt` journeyId

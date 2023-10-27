@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MemoryDb.UpdateACL
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest UpdateACL where
 
 instance Prelude.Hashable UpdateACL where
   hashWithSalt _salt UpdateACL' {..} =
-    _salt `Prelude.hashWithSalt` userNamesToAdd
+    _salt
+      `Prelude.hashWithSalt` userNamesToAdd
       `Prelude.hashWithSalt` userNamesToRemove
       `Prelude.hashWithSalt` aCLName
 

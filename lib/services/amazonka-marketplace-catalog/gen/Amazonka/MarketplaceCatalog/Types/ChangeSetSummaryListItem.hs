@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MarketplaceCatalog.Types.ChangeSetSummaryListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MarketplaceCatalog.Types.ChangeSetSummaryListItem where
@@ -165,7 +165,8 @@ instance Data.FromJSON ChangeSetSummaryListItem where
 
 instance Prelude.Hashable ChangeSetSummaryListItem where
   hashWithSalt _salt ChangeSetSummaryListItem' {..} =
-    _salt `Prelude.hashWithSalt` changeSetArn
+    _salt
+      `Prelude.hashWithSalt` changeSetArn
       `Prelude.hashWithSalt` changeSetId
       `Prelude.hashWithSalt` changeSetName
       `Prelude.hashWithSalt` endTime

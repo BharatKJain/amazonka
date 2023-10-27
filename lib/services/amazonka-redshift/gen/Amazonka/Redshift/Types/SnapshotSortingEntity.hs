@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.SnapshotSortingEntity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.SnapshotSortingEntity where
@@ -69,7 +69,8 @@ snapshotSortingEntity_attribute = Lens.lens (\SnapshotSortingEntity' {attribute}
 
 instance Prelude.Hashable SnapshotSortingEntity where
   hashWithSalt _salt SnapshotSortingEntity' {..} =
-    _salt `Prelude.hashWithSalt` sortOrder
+    _salt
+      `Prelude.hashWithSalt` sortOrder
       `Prelude.hashWithSalt` attribute
 
 instance Prelude.NFData SnapshotSortingEntity where

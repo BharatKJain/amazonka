@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.PrefixList
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.PrefixList where
@@ -75,7 +75,9 @@ prefixList_prefixListName = Lens.lens (\PrefixList' {prefixListName} -> prefixLi
 instance Data.FromXML PrefixList where
   parseXML x =
     PrefixList'
-      Prelude.<$> ( x Data..@? "cidrSet" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "cidrSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "prefixListId")
@@ -83,7 +85,8 @@ instance Data.FromXML PrefixList where
 
 instance Prelude.Hashable PrefixList where
   hashWithSalt _salt PrefixList' {..} =
-    _salt `Prelude.hashWithSalt` cidrs
+    _salt
+      `Prelude.hashWithSalt` cidrs
       `Prelude.hashWithSalt` prefixListId
       `Prelude.hashWithSalt` prefixListName
 

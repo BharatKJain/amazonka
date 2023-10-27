@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Synthetics.Types.VisualReferenceInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Synthetics.Types.VisualReferenceInput where
@@ -103,7 +103,8 @@ visualReferenceInput_baseCanaryRunId = Lens.lens (\VisualReferenceInput' {baseCa
 
 instance Prelude.Hashable VisualReferenceInput where
   hashWithSalt _salt VisualReferenceInput' {..} =
-    _salt `Prelude.hashWithSalt` baseScreenshots
+    _salt
+      `Prelude.hashWithSalt` baseScreenshots
       `Prelude.hashWithSalt` baseCanaryRunId
 
 instance Prelude.NFData VisualReferenceInput where

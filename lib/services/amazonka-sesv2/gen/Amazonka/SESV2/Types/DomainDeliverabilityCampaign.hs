@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.DomainDeliverabilityCampaign
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.DomainDeliverabilityCampaign where
@@ -246,7 +246,8 @@ instance
     DomainDeliverabilityCampaign
   where
   hashWithSalt _salt DomainDeliverabilityCampaign' {..} =
-    _salt `Prelude.hashWithSalt` campaignId
+    _salt
+      `Prelude.hashWithSalt` campaignId
       `Prelude.hashWithSalt` deleteRate
       `Prelude.hashWithSalt` esps
       `Prelude.hashWithSalt` firstSeenDateTime

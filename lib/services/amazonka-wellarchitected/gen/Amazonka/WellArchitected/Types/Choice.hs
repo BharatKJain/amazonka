@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.Choice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.Choice where
@@ -109,7 +109,8 @@ instance Data.FromJSON Choice where
       "Choice"
       ( \x ->
           Choice'
-            Prelude.<$> ( x Data..:? "AdditionalResources"
+            Prelude.<$> ( x
+                            Data..:? "AdditionalResources"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ChoiceId")
@@ -121,7 +122,8 @@ instance Data.FromJSON Choice where
 
 instance Prelude.Hashable Choice where
   hashWithSalt _salt Choice' {..} =
-    _salt `Prelude.hashWithSalt` additionalResources
+    _salt
+      `Prelude.hashWithSalt` additionalResources
       `Prelude.hashWithSalt` choiceId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` helpfulResource

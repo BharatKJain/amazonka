@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaPackageVOD.Types.DashPackage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaPackageVOD.Types.DashPackage where
@@ -173,7 +173,8 @@ instance Data.FromJSON DashPackage where
 
 instance Prelude.Hashable DashPackage where
   hashWithSalt _salt DashPackage' {..} =
-    _salt `Prelude.hashWithSalt` encryption
+    _salt
+      `Prelude.hashWithSalt` encryption
       `Prelude.hashWithSalt` includeEncoderConfigurationInSegments
       `Prelude.hashWithSalt` includeIframeOnlyStream
       `Prelude.hashWithSalt` periodTriggers

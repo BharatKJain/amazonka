@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsServiceDeploymentConfigurationDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsServiceDeploymentConfigurationDetails where
@@ -163,8 +163,8 @@ instance
       ( \x ->
           AwsEcsServiceDeploymentConfigurationDetails'
             Prelude.<$> (x Data..:? "DeploymentCircuitBreaker")
-              Prelude.<*> (x Data..:? "MaximumPercent")
-              Prelude.<*> (x Data..:? "MinimumHealthyPercent")
+            Prelude.<*> (x Data..:? "MaximumPercent")
+            Prelude.<*> (x Data..:? "MinimumHealthyPercent")
       )
 
 instance

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.CustomAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.CustomAttribute where
@@ -82,7 +82,8 @@ instance Data.FromJSON CustomAttribute where
 
 instance Prelude.Hashable CustomAttribute where
   hashWithSalt _salt CustomAttribute' {..} =
-    _salt `Prelude.hashWithSalt` objectIdentifier
+    _salt
+      `Prelude.hashWithSalt` objectIdentifier
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData CustomAttribute where

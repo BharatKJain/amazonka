@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Grafana.Types.IdpMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Grafana.Types.IdpMetadata where
@@ -72,12 +72,14 @@ instance Data.FromJSON IdpMetadata where
       "IdpMetadata"
       ( \x ->
           IdpMetadata'
-            Prelude.<$> (x Data..:? "url") Prelude.<*> (x Data..:? "xml")
+            Prelude.<$> (x Data..:? "url")
+            Prelude.<*> (x Data..:? "xml")
       )
 
 instance Prelude.Hashable IdpMetadata where
   hashWithSalt _salt IdpMetadata' {..} =
-    _salt `Prelude.hashWithSalt` url
+    _salt
+      `Prelude.hashWithSalt` url
       `Prelude.hashWithSalt` xml
 
 instance Prelude.NFData IdpMetadata where

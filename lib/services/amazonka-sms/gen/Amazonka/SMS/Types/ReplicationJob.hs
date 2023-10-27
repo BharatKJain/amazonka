@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SMS.Types.ReplicationJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SMS.Types.ReplicationJob where
@@ -271,7 +271,8 @@ instance Data.FromJSON ReplicationJob where
             Prelude.<*> (x Data..:? "nextReplicationRunStartTime")
             Prelude.<*> (x Data..:? "numberOfRecentAmisToKeep")
             Prelude.<*> (x Data..:? "replicationJobId")
-            Prelude.<*> ( x Data..:? "replicationRunList"
+            Prelude.<*> ( x
+                            Data..:? "replicationRunList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "roleName")
@@ -286,7 +287,8 @@ instance Data.FromJSON ReplicationJob where
 
 instance Prelude.Hashable ReplicationJob where
   hashWithSalt _salt ReplicationJob' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` encrypted
       `Prelude.hashWithSalt` frequency
       `Prelude.hashWithSalt` kmsKeyId

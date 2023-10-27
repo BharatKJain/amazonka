@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.HeatMapAggregatedFieldWells
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.HeatMapAggregatedFieldWells where
@@ -87,7 +87,8 @@ instance Data.FromJSON HeatMapAggregatedFieldWells where
 
 instance Prelude.Hashable HeatMapAggregatedFieldWells where
   hashWithSalt _salt HeatMapAggregatedFieldWells' {..} =
-    _salt `Prelude.hashWithSalt` columns
+    _salt
+      `Prelude.hashWithSalt` columns
       `Prelude.hashWithSalt` rows
       `Prelude.hashWithSalt` values
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.Resolver
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.Resolver where
@@ -221,7 +221,8 @@ instance Data.FromJSON Resolver where
 
 instance Prelude.Hashable Resolver where
   hashWithSalt _salt Resolver' {..} =
-    _salt `Prelude.hashWithSalt` cachingConfig
+    _salt
+      `Prelude.hashWithSalt` cachingConfig
       `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` dataSourceName
       `Prelude.hashWithSalt` fieldName

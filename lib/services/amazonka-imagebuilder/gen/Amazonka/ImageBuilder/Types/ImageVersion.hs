@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ImageBuilder.Types.ImageVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ImageBuilder.Types.ImageVersion where
@@ -286,7 +286,8 @@ instance Data.FromJSON ImageVersion where
 
 instance Prelude.Hashable ImageVersion where
   hashWithSalt _salt ImageVersion' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` buildType
       `Prelude.hashWithSalt` dateCreated
       `Prelude.hashWithSalt` name

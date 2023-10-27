@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.AudioNormalizationSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.AudioNormalizationSettings where
@@ -105,7 +105,8 @@ instance Data.FromJSON AudioNormalizationSettings where
 
 instance Prelude.Hashable AudioNormalizationSettings where
   hashWithSalt _salt AudioNormalizationSettings' {..} =
-    _salt `Prelude.hashWithSalt` algorithm
+    _salt
+      `Prelude.hashWithSalt` algorithm
       `Prelude.hashWithSalt` algorithmControl
       `Prelude.hashWithSalt` targetLkfs
 

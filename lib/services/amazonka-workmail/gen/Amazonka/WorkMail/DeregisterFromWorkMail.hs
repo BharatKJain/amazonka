@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkMail.DeregisterFromWorkMail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest DeregisterFromWorkMail where
 
 instance Prelude.Hashable DeregisterFromWorkMail where
   hashWithSalt _salt DeregisterFromWorkMail' {..} =
-    _salt `Prelude.hashWithSalt` organizationId
+    _salt
+      `Prelude.hashWithSalt` organizationId
       `Prelude.hashWithSalt` entityId
 
 instance Prelude.NFData DeregisterFromWorkMail where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DataPathSort
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DataPathSort where
@@ -78,7 +78,8 @@ instance Data.FromJSON DataPathSort where
 
 instance Prelude.Hashable DataPathSort where
   hashWithSalt _salt DataPathSort' {..} =
-    _salt `Prelude.hashWithSalt` direction
+    _salt
+      `Prelude.hashWithSalt` direction
       `Prelude.hashWithSalt` sortPaths
 
 instance Prelude.NFData DataPathSort where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.ResolvedTargets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.ResolvedTargets where
@@ -74,7 +74,8 @@ instance Data.FromJSON ResolvedTargets where
       "ResolvedTargets"
       ( \x ->
           ResolvedTargets'
-            Prelude.<$> ( x Data..:? "ParameterValues"
+            Prelude.<$> ( x
+                            Data..:? "ParameterValues"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Truncated")
@@ -82,7 +83,8 @@ instance Data.FromJSON ResolvedTargets where
 
 instance Prelude.Hashable ResolvedTargets where
   hashWithSalt _salt ResolvedTargets' {..} =
-    _salt `Prelude.hashWithSalt` parameterValues
+    _salt
+      `Prelude.hashWithSalt` parameterValues
       `Prelude.hashWithSalt` truncated
 
 instance Prelude.NFData ResolvedTargets where

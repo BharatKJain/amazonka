@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IVS.GetPlaybackKeyPair
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -154,7 +154,6 @@ newGetPlaybackKeyPairResponse pHttpStatus_ =
       httpStatus = pHttpStatus_
     }
 
--- |
 getPlaybackKeyPairResponse_keyPair :: Lens.Lens' GetPlaybackKeyPairResponse (Prelude.Maybe PlaybackKeyPair)
 getPlaybackKeyPairResponse_keyPair = Lens.lens (\GetPlaybackKeyPairResponse' {keyPair} -> keyPair) (\s@GetPlaybackKeyPairResponse' {} a -> s {keyPair = a} :: GetPlaybackKeyPairResponse)
 

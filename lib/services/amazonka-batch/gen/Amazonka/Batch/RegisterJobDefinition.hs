@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Batch.RegisterJobDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -403,7 +403,8 @@ instance Core.AWSRequest RegisterJobDefinition where
 
 instance Prelude.Hashable RegisterJobDefinition where
   hashWithSalt _salt RegisterJobDefinition' {..} =
-    _salt `Prelude.hashWithSalt` containerProperties
+    _salt
+      `Prelude.hashWithSalt` containerProperties
       `Prelude.hashWithSalt` eksProperties
       `Prelude.hashWithSalt` nodeProperties
       `Prelude.hashWithSalt` parameters

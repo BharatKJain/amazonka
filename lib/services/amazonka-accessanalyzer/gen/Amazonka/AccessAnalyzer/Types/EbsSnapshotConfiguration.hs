@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.EbsSnapshotConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.EbsSnapshotConfiguration where
@@ -194,7 +194,8 @@ instance Data.FromJSON EbsSnapshotConfiguration where
 
 instance Prelude.Hashable EbsSnapshotConfiguration where
   hashWithSalt _salt EbsSnapshotConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` groups
+    _salt
+      `Prelude.hashWithSalt` groups
       `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` userIds
 

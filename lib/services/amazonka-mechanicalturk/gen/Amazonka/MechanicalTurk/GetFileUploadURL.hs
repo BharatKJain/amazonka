@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MechanicalTurk.GetFileUploadURL
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest GetFileUploadURL where
 
 instance Prelude.Hashable GetFileUploadURL where
   hashWithSalt _salt GetFileUploadURL' {..} =
-    _salt `Prelude.hashWithSalt` assignmentId
+    _salt
+      `Prelude.hashWithSalt` assignmentId
       `Prelude.hashWithSalt` questionIdentifier
 
 instance Prelude.NFData GetFileUploadURL where

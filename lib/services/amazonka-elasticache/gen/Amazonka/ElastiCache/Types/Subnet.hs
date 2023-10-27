@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.Subnet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.Subnet where
@@ -100,14 +100,16 @@ instance Data.FromXML Subnet where
       Prelude.<$> (x Data..@? "SubnetAvailabilityZone")
       Prelude.<*> (x Data..@? "SubnetIdentifier")
       Prelude.<*> (x Data..@? "SubnetOutpost")
-      Prelude.<*> ( x Data..@? "SupportedNetworkTypes"
+      Prelude.<*> ( x
+                      Data..@? "SupportedNetworkTypes"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 
 instance Prelude.Hashable Subnet where
   hashWithSalt _salt Subnet' {..} =
-    _salt `Prelude.hashWithSalt` subnetAvailabilityZone
+    _salt
+      `Prelude.hashWithSalt` subnetAvailabilityZone
       `Prelude.hashWithSalt` subnetIdentifier
       `Prelude.hashWithSalt` subnetOutpost
       `Prelude.hashWithSalt` supportedNetworkTypes

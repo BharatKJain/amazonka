@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Rum.DeleteRumMetricsDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance Core.AWSRequest DeleteRumMetricsDestination where
 
 instance Prelude.Hashable DeleteRumMetricsDestination where
   hashWithSalt _salt DeleteRumMetricsDestination' {..} =
-    _salt `Prelude.hashWithSalt` destinationArn
+    _salt
+      `Prelude.hashWithSalt` destinationArn
       `Prelude.hashWithSalt` appMonitorName
       `Prelude.hashWithSalt` destination
 

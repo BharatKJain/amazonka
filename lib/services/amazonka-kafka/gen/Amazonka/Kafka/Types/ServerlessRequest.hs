@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.ServerlessRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.ServerlessRequest where
@@ -67,7 +67,8 @@ serverlessRequest_vpcConfigs = Lens.lens (\ServerlessRequest' {vpcConfigs} -> vp
 
 instance Prelude.Hashable ServerlessRequest where
   hashWithSalt _salt ServerlessRequest' {..} =
-    _salt `Prelude.hashWithSalt` clientAuthentication
+    _salt
+      `Prelude.hashWithSalt` clientAuthentication
       `Prelude.hashWithSalt` vpcConfigs
 
 instance Prelude.NFData ServerlessRequest where

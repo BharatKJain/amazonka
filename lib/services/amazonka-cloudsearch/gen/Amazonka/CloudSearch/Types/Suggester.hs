@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudSearch.Types.Suggester
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudSearch.Types.Suggester where
@@ -79,7 +79,8 @@ instance Data.FromXML Suggester where
 
 instance Prelude.Hashable Suggester where
   hashWithSalt _salt Suggester' {..} =
-    _salt `Prelude.hashWithSalt` suggesterName
+    _salt
+      `Prelude.hashWithSalt` suggesterName
       `Prelude.hashWithSalt` documentSuggesterOptions
 
 instance Prelude.NFData Suggester where

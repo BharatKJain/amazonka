@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.Ipam
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.Ipam where
@@ -202,7 +202,8 @@ instance Data.FromXML Ipam where
       Prelude.<*> (x Data..@? "ipamArn")
       Prelude.<*> (x Data..@? "ipamId")
       Prelude.<*> (x Data..@? "ipamRegion")
-      Prelude.<*> ( x Data..@? "operatingRegionSet"
+      Prelude.<*> ( x
+                      Data..@? "operatingRegionSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
@@ -211,13 +212,16 @@ instance Data.FromXML Ipam where
       Prelude.<*> (x Data..@? "publicDefaultScopeId")
       Prelude.<*> (x Data..@? "scopeCount")
       Prelude.<*> (x Data..@? "state")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable Ipam where
   hashWithSalt _salt Ipam' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` ipamArn
       `Prelude.hashWithSalt` ipamId
       `Prelude.hashWithSalt` ipamRegion

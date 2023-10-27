@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTSiteWise.CreateBulkImportJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -166,7 +166,8 @@ instance Core.AWSRequest CreateBulkImportJob where
 
 instance Prelude.Hashable CreateBulkImportJob where
   hashWithSalt _salt CreateBulkImportJob' {..} =
-    _salt `Prelude.hashWithSalt` jobName
+    _salt
+      `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` jobRoleArn
       `Prelude.hashWithSalt` files
       `Prelude.hashWithSalt` errorReportLocation

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PinpointEmail.Types.DedicatedIp
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PinpointEmail.Types.DedicatedIp where
@@ -132,7 +132,8 @@ instance Data.FromJSON DedicatedIp where
 
 instance Prelude.Hashable DedicatedIp where
   hashWithSalt _salt DedicatedIp' {..} =
-    _salt `Prelude.hashWithSalt` poolName
+    _salt
+      `Prelude.hashWithSalt` poolName
       `Prelude.hashWithSalt` ip
       `Prelude.hashWithSalt` warmupStatus
       `Prelude.hashWithSalt` warmupPercentage

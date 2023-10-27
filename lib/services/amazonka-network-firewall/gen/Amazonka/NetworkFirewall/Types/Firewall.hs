@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.Firewall
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.Firewall where
@@ -199,7 +199,6 @@ firewall_firewallPolicyChangeProtection = Lens.lens (\Firewall' {firewallPolicyC
 firewall_subnetChangeProtection :: Lens.Lens' Firewall (Prelude.Maybe Prelude.Bool)
 firewall_subnetChangeProtection = Lens.lens (\Firewall' {subnetChangeProtection} -> subnetChangeProtection) (\s@Firewall' {} a -> s {subnetChangeProtection = a} :: Firewall)
 
--- |
 firewall_tags :: Lens.Lens' Firewall (Prelude.Maybe (Prelude.NonEmpty Tag))
 firewall_tags = Lens.lens (\Firewall' {tags} -> tags) (\s@Firewall' {} a -> s {tags = a} :: Firewall) Prelude.. Lens.mapping Lens.coerced
 
@@ -246,7 +245,8 @@ instance Data.FromJSON Firewall where
 
 instance Prelude.Hashable Firewall where
   hashWithSalt _salt Firewall' {..} =
-    _salt `Prelude.hashWithSalt` deleteProtection
+    _salt
+      `Prelude.hashWithSalt` deleteProtection
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` encryptionConfiguration
       `Prelude.hashWithSalt` firewallArn

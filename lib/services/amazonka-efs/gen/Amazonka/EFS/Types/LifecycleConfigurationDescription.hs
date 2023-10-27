@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EFS.Types.LifecycleConfigurationDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EFS.Types.LifecycleConfigurationDescription where
@@ -65,7 +65,8 @@ instance
       "LifecycleConfigurationDescription"
       ( \x ->
           LifecycleConfigurationDescription'
-            Prelude.<$> ( x Data..:? "LifecyclePolicies"
+            Prelude.<$> ( x
+                            Data..:? "LifecyclePolicies"
                             Data..!= Prelude.mempty
                         )
       )

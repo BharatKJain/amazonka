@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsRdsPendingCloudWatchLogsExports
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsRdsPendingCloudWatchLogsExports where
@@ -72,10 +72,12 @@ instance
       "AwsRdsPendingCloudWatchLogsExports"
       ( \x ->
           AwsRdsPendingCloudWatchLogsExports'
-            Prelude.<$> ( x Data..:? "LogTypesToDisable"
+            Prelude.<$> ( x
+                            Data..:? "LogTypesToDisable"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "LogTypesToEnable"
+            Prelude.<*> ( x
+                            Data..:? "LogTypesToEnable"
                             Data..!= Prelude.mempty
                         )
       )
@@ -87,7 +89,8 @@ instance
   hashWithSalt
     _salt
     AwsRdsPendingCloudWatchLogsExports' {..} =
-      _salt `Prelude.hashWithSalt` logTypesToDisable
+      _salt
+        `Prelude.hashWithSalt` logTypesToDisable
         `Prelude.hashWithSalt` logTypesToEnable
 
 instance

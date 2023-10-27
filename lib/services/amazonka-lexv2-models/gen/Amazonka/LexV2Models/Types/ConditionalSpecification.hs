@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.ConditionalSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.ConditionalSpecification where
@@ -116,7 +116,8 @@ instance Data.FromJSON ConditionalSpecification where
 
 instance Prelude.Hashable ConditionalSpecification where
   hashWithSalt _salt ConditionalSpecification' {..} =
-    _salt `Prelude.hashWithSalt` active
+    _salt
+      `Prelude.hashWithSalt` active
       `Prelude.hashWithSalt` conditionalBranches
       `Prelude.hashWithSalt` defaultBranch
 

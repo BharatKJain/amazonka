@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.VCpuCountRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.VCpuCountRequest where
@@ -68,11 +68,13 @@ vCpuCountRequest_min = Lens.lens (\VCpuCountRequest' {min} -> min) (\s@VCpuCount
 instance Data.FromXML VCpuCountRequest where
   parseXML x =
     VCpuCountRequest'
-      Prelude.<$> (x Data..@? "Max") Prelude.<*> (x Data..@ "Min")
+      Prelude.<$> (x Data..@? "Max")
+      Prelude.<*> (x Data..@ "Min")
 
 instance Prelude.Hashable VCpuCountRequest where
   hashWithSalt _salt VCpuCountRequest' {..} =
-    _salt `Prelude.hashWithSalt` max
+    _salt
+      `Prelude.hashWithSalt` max
       `Prelude.hashWithSalt` min
 
 instance Prelude.NFData VCpuCountRequest where

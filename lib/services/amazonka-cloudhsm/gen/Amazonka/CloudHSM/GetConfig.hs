@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudHSM.GetConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest GetConfig where
 
 instance Prelude.Hashable GetConfig where
   hashWithSalt _salt GetConfig' {..} =
-    _salt `Prelude.hashWithSalt` clientArn
+    _salt
+      `Prelude.hashWithSalt` clientArn
       `Prelude.hashWithSalt` clientVersion
       `Prelude.hashWithSalt` hapgList
 

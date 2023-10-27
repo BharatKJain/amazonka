@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.Template
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.Template where
@@ -102,7 +102,8 @@ instance Data.FromXML Template where
 
 instance Prelude.Hashable Template where
   hashWithSalt _salt Template' {..} =
-    _salt `Prelude.hashWithSalt` htmlPart
+    _salt
+      `Prelude.hashWithSalt` htmlPart
       `Prelude.hashWithSalt` subjectPart
       `Prelude.hashWithSalt` textPart
       `Prelude.hashWithSalt` templateName

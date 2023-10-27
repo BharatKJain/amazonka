@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.CognitoConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.CognitoConfig where
@@ -95,7 +95,8 @@ instance Data.FromJSON CognitoConfig where
 
 instance Prelude.Hashable CognitoConfig where
   hashWithSalt _salt CognitoConfig' {..} =
-    _salt `Prelude.hashWithSalt` userPool
+    _salt
+      `Prelude.hashWithSalt` userPool
       `Prelude.hashWithSalt` clientId
 
 instance Prelude.NFData CognitoConfig where

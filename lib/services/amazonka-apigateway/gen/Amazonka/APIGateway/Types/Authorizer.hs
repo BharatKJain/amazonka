@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.Authorizer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.Authorizer where
@@ -303,7 +303,8 @@ instance Data.FromJSON Authorizer where
 
 instance Prelude.Hashable Authorizer where
   hashWithSalt _salt Authorizer' {..} =
-    _salt `Prelude.hashWithSalt` authType
+    _salt
+      `Prelude.hashWithSalt` authType
       `Prelude.hashWithSalt` authorizerCredentials
       `Prelude.hashWithSalt` authorizerResultTtlInSeconds
       `Prelude.hashWithSalt` authorizerUri

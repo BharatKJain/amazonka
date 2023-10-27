@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.GetKeyPairs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,21 +108,22 @@ instance Core.AWSPager GetKeyPairs where
     | Core.stop
         ( rs
             Lens.^? getKeyPairsResponse_nextPageToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? getKeyPairsResponse_keyPairs Prelude.. Lens._Just
+            Lens.^? getKeyPairsResponse_keyPairs
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getKeyPairs_pageToken
           Lens..~ rs
           Lens.^? getKeyPairsResponse_nextPageToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetKeyPairs where
   type AWSResponse GetKeyPairs = GetKeyPairsResponse
@@ -139,7 +140,8 @@ instance Core.AWSRequest GetKeyPairs where
 
 instance Prelude.Hashable GetKeyPairs where
   hashWithSalt _salt GetKeyPairs' {..} =
-    _salt `Prelude.hashWithSalt` includeDefaultKeyPair
+    _salt
+      `Prelude.hashWithSalt` includeDefaultKeyPair
       `Prelude.hashWithSalt` pageToken
 
 instance Prelude.NFData GetKeyPairs where

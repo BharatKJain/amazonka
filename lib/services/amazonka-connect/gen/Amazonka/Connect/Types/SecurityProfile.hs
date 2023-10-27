@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.SecurityProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.SecurityProfile where
@@ -132,7 +132,8 @@ instance Data.FromJSON SecurityProfile where
       "SecurityProfile"
       ( \x ->
           SecurityProfile'
-            Prelude.<$> ( x Data..:? "AllowedAccessControlTags"
+            Prelude.<$> ( x
+                            Data..:? "AllowedAccessControlTags"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Arn")
@@ -140,7 +141,8 @@ instance Data.FromJSON SecurityProfile where
             Prelude.<*> (x Data..:? "Id")
             Prelude.<*> (x Data..:? "OrganizationResourceId")
             Prelude.<*> (x Data..:? "SecurityProfileName")
-            Prelude.<*> ( x Data..:? "TagRestrictedResources"
+            Prelude.<*> ( x
+                            Data..:? "TagRestrictedResources"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Tags" Data..!= Prelude.mempty)

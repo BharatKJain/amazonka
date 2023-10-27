@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.DeliveryStreamDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.DeliveryStreamDescription where
@@ -254,7 +254,8 @@ instance Data.FromJSON DeliveryStreamDescription where
 
 instance Prelude.Hashable DeliveryStreamDescription where
   hashWithSalt _salt DeliveryStreamDescription' {..} =
-    _salt `Prelude.hashWithSalt` createTimestamp
+    _salt
+      `Prelude.hashWithSalt` createTimestamp
       `Prelude.hashWithSalt` deliveryStreamEncryptionConfiguration
       `Prelude.hashWithSalt` failureDescription
       `Prelude.hashWithSalt` lastUpdateTimestamp

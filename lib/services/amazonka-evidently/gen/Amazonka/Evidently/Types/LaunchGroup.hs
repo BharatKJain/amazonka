@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.LaunchGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.LaunchGroup where
@@ -81,7 +81,8 @@ instance Data.FromJSON LaunchGroup where
       ( \x ->
           LaunchGroup'
             Prelude.<$> (x Data..:? "description")
-            Prelude.<*> ( x Data..:? "featureVariations"
+            Prelude.<*> ( x
+                            Data..:? "featureVariations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "name")
@@ -89,7 +90,8 @@ instance Data.FromJSON LaunchGroup where
 
 instance Prelude.Hashable LaunchGroup where
   hashWithSalt _salt LaunchGroup' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` featureVariations
       `Prelude.hashWithSalt` name
 

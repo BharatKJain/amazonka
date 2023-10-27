@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.BatchStatementResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.BatchStatementResponse where
@@ -87,7 +87,8 @@ instance Data.FromJSON BatchStatementResponse where
 
 instance Prelude.Hashable BatchStatementResponse where
   hashWithSalt _salt BatchStatementResponse' {..} =
-    _salt `Prelude.hashWithSalt` error
+    _salt
+      `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` item
       `Prelude.hashWithSalt` tableName
 

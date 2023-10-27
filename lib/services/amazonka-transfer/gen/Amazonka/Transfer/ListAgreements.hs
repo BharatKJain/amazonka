@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Transfer.ListAgreements
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,18 +118,19 @@ instance Core.AWSPager ListAgreements where
     | Core.stop
         ( rs
             Lens.^? listAgreementsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listAgreementsResponse_agreements) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAgreements_nextToken
           Lens..~ rs
-          Lens.^? listAgreementsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listAgreementsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAgreements where
   type
@@ -148,7 +149,8 @@ instance Core.AWSRequest ListAgreements where
 
 instance Prelude.Hashable ListAgreements where
   hashWithSalt _salt ListAgreements' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` serverId
 

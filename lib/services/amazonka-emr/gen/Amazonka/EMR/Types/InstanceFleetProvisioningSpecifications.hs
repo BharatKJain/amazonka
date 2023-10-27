@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.InstanceFleetProvisioningSpecifications
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.InstanceFleetProvisioningSpecifications where
@@ -114,7 +114,8 @@ instance
   hashWithSalt
     _salt
     InstanceFleetProvisioningSpecifications' {..} =
-      _salt `Prelude.hashWithSalt` onDemandSpecification
+      _salt
+        `Prelude.hashWithSalt` onDemandSpecification
         `Prelude.hashWithSalt` spotSpecification
 
 instance

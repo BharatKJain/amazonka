@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.PhoneNumber
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.PhoneNumber where
@@ -75,12 +75,14 @@ instance Data.FromJSON PhoneNumber where
       "PhoneNumber"
       ( \x ->
           PhoneNumber'
-            Prelude.<$> (x Data..: "Number") Prelude.<*> (x Data..: "Type")
+            Prelude.<$> (x Data..: "Number")
+            Prelude.<*> (x Data..: "Type")
       )
 
 instance Prelude.Hashable PhoneNumber where
   hashWithSalt _salt PhoneNumber' {..} =
-    _salt `Prelude.hashWithSalt` number
+    _salt
+      `Prelude.hashWithSalt` number
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData PhoneNumber where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.AggregatedUtterancesFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.AggregatedUtterancesFilter where
@@ -96,7 +96,8 @@ aggregatedUtterancesFilter_operator = Lens.lens (\AggregatedUtterancesFilter' {o
 
 instance Prelude.Hashable AggregatedUtterancesFilter where
   hashWithSalt _salt AggregatedUtterancesFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
       `Prelude.hashWithSalt` operator
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.DocumentClassifierFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.DocumentClassifierFilter where
@@ -104,7 +104,8 @@ documentClassifierFilter_submitTimeBefore = Lens.lens (\DocumentClassifierFilter
 
 instance Prelude.Hashable DocumentClassifierFilter where
   hashWithSalt _salt DocumentClassifierFilter' {..} =
-    _salt `Prelude.hashWithSalt` documentClassifierName
+    _salt
+      `Prelude.hashWithSalt` documentClassifierName
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` submitTimeAfter
       `Prelude.hashWithSalt` submitTimeBefore

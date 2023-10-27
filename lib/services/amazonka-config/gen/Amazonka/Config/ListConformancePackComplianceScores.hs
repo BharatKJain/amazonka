@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Config.ListConformancePackComplianceScores
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -202,10 +202,11 @@ instance
       ( \s h x ->
           ListConformancePackComplianceScoresResponse'
             Prelude.<$> (x Data..?> "NextToken")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> ( x Data..?> "ConformancePackComplianceScores"
-                              Core..!@ Prelude.mempty
-                          )
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> ( x
+                            Data..?> "ConformancePackComplianceScores"
+                            Core..!@ Prelude.mempty
+                        )
       )
 
 instance
@@ -215,7 +216,8 @@ instance
   hashWithSalt
     _salt
     ListConformancePackComplianceScores' {..} =
-      _salt `Prelude.hashWithSalt` filters
+      _salt
+        `Prelude.hashWithSalt` filters
         `Prelude.hashWithSalt` limit
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` sortBy

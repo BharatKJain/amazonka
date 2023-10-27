@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.SettingEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.SettingEntry where
@@ -168,7 +168,8 @@ instance Data.FromJSON SettingEntry where
             Prelude.<*> (x Data..:? "LastRequestedDateTime")
             Prelude.<*> (x Data..:? "LastUpdatedDateTime")
             Prelude.<*> (x Data..:? "Name")
-            Prelude.<*> ( x Data..:? "RequestDetailedStatus"
+            Prelude.<*> ( x
+                            Data..:? "RequestDetailedStatus"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "RequestStatus")
@@ -179,7 +180,8 @@ instance Data.FromJSON SettingEntry where
 
 instance Prelude.Hashable SettingEntry where
   hashWithSalt _salt SettingEntry' {..} =
-    _salt `Prelude.hashWithSalt` allowedValues
+    _salt
+      `Prelude.hashWithSalt` allowedValues
       `Prelude.hashWithSalt` appliedValue
       `Prelude.hashWithSalt` lastRequestedDateTime
       `Prelude.hashWithSalt` lastUpdatedDateTime

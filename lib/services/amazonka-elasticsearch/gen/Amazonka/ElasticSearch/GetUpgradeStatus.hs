@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticSearch.GetUpgradeStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -50,7 +50,7 @@ import qualified Amazonka.Prelude as Prelude
 import qualified Amazonka.Request as Request
 import qualified Amazonka.Response as Response
 
--- | Container for request parameters to @ GetUpgradeStatus @ operation.
+-- | Container for request parameters to @ @@GetUpgradeStatus@@ @ operation.
 --
 -- /See:/ 'newGetUpgradeStatus' smart constructor.
 data GetUpgradeStatus = GetUpgradeStatus'
@@ -115,12 +115,12 @@ instance Data.ToPath GetUpgradeStatus where
 instance Data.ToQuery GetUpgradeStatus where
   toQuery = Prelude.const Prelude.mempty
 
--- | Container for response returned by @ GetUpgradeStatus @ operation.
+-- | Container for response returned by @ @@GetUpgradeStatus@@ @ operation.
 --
 -- /See:/ 'newGetUpgradeStatusResponse' smart constructor.
 data GetUpgradeStatusResponse = GetUpgradeStatusResponse'
   { -- | One of 4 statuses that a step can go through returned as part of the
-    -- @ GetUpgradeStatusResponse @ object. The status can take one of the
+    -- @ @@GetUpgradeStatusResponse@@ @ object. The status can take one of the
     -- following values:
     --
     -- -   In Progress
@@ -151,7 +151,7 @@ data GetUpgradeStatusResponse = GetUpgradeStatusResponse'
 -- for backwards compatibility:
 --
 -- 'stepStatus', 'getUpgradeStatusResponse_stepStatus' - One of 4 statuses that a step can go through returned as part of the
--- @ GetUpgradeStatusResponse @ object. The status can take one of the
+-- @ @@GetUpgradeStatusResponse@@ @ object. The status can take one of the
 -- following values:
 --
 -- -   In Progress
@@ -183,7 +183,7 @@ newGetUpgradeStatusResponse pHttpStatus_ =
     }
 
 -- | One of 4 statuses that a step can go through returned as part of the
--- @ GetUpgradeStatusResponse @ object. The status can take one of the
+-- @ @@GetUpgradeStatusResponse@@ @ object. The status can take one of the
 -- following values:
 --
 -- -   In Progress

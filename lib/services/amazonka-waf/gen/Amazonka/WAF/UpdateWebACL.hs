@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAF.UpdateWebACL
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -246,7 +246,8 @@ instance Core.AWSRequest UpdateWebACL where
 
 instance Prelude.Hashable UpdateWebACL where
   hashWithSalt _salt UpdateWebACL' {..} =
-    _salt `Prelude.hashWithSalt` defaultAction
+    _salt
+      `Prelude.hashWithSalt` defaultAction
       `Prelude.hashWithSalt` updates
       `Prelude.hashWithSalt` webACLId
       `Prelude.hashWithSalt` changeToken

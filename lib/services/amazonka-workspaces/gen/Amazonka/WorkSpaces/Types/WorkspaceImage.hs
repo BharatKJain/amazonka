@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpaces.Types.WorkspaceImage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpaces.Types.WorkspaceImage where
@@ -183,7 +183,8 @@ instance Data.FromJSON WorkspaceImage where
 
 instance Prelude.Hashable WorkspaceImage where
   hashWithSalt _salt WorkspaceImage' {..} =
-    _salt `Prelude.hashWithSalt` created
+    _salt
+      `Prelude.hashWithSalt` created
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` errorMessage

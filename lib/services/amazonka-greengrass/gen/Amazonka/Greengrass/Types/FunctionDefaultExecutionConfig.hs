@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.FunctionDefaultExecutionConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.FunctionDefaultExecutionConfig where
@@ -80,7 +80,8 @@ instance
   hashWithSalt
     _salt
     FunctionDefaultExecutionConfig' {..} =
-      _salt `Prelude.hashWithSalt` isolationMode
+      _salt
+        `Prelude.hashWithSalt` isolationMode
         `Prelude.hashWithSalt` runAs
 
 instance

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.Scan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.Scan where
@@ -192,7 +192,8 @@ instance Data.FromJSON Scan where
           Scan'
             Prelude.<$> (x Data..:? "accountId")
             Prelude.<*> (x Data..:? "adminDetectorId")
-            Prelude.<*> ( x Data..:? "attachedVolumes"
+            Prelude.<*> ( x
+                            Data..:? "attachedVolumes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "detectorId")
@@ -210,7 +211,8 @@ instance Data.FromJSON Scan where
 
 instance Prelude.Hashable Scan where
   hashWithSalt _salt Scan' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` adminDetectorId
       `Prelude.hashWithSalt` attachedVolumes
       `Prelude.hashWithSalt` detectorId

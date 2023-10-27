@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkMail.Types.OrganizationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkMail.Types.OrganizationSummary where
@@ -110,7 +110,8 @@ instance Data.FromJSON OrganizationSummary where
 
 instance Prelude.Hashable OrganizationSummary where
   hashWithSalt _salt OrganizationSummary' {..} =
-    _salt `Prelude.hashWithSalt` alias
+    _salt
+      `Prelude.hashWithSalt` alias
       `Prelude.hashWithSalt` defaultMailDomain
       `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` organizationId

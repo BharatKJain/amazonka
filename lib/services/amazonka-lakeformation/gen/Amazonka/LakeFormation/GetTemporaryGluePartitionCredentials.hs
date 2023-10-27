@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LakeFormation.GetTemporaryGluePartitionCredentials
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -169,10 +169,10 @@ instance
       ( \s h x ->
           GetTemporaryGluePartitionCredentialsResponse'
             Prelude.<$> (x Data..?> "AccessKeyId")
-              Prelude.<*> (x Data..?> "Expiration")
-              Prelude.<*> (x Data..?> "SecretAccessKey")
-              Prelude.<*> (x Data..?> "SessionToken")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "Expiration")
+            Prelude.<*> (x Data..?> "SecretAccessKey")
+            Prelude.<*> (x Data..?> "SessionToken")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -182,7 +182,8 @@ instance
   hashWithSalt
     _salt
     GetTemporaryGluePartitionCredentials' {..} =
-      _salt `Prelude.hashWithSalt` auditContext
+      _salt
+        `Prelude.hashWithSalt` auditContext
         `Prelude.hashWithSalt` durationSeconds
         `Prelude.hashWithSalt` permissions
         `Prelude.hashWithSalt` tableArn

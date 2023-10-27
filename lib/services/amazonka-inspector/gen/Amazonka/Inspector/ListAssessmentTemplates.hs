@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Inspector.ListAssessmentTemplates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -147,21 +147,21 @@ instance Core.AWSPager ListAssessmentTemplates where
     | Core.stop
         ( rs
             Lens.^? listAssessmentTemplatesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listAssessmentTemplatesResponse_assessmentTemplateArns
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAssessmentTemplates_nextToken
           Lens..~ rs
           Lens.^? listAssessmentTemplatesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAssessmentTemplates where
   type
@@ -175,14 +175,16 @@ instance Core.AWSRequest ListAssessmentTemplates where
           ListAssessmentTemplatesResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "assessmentTemplateArns"
+            Prelude.<*> ( x
+                            Data..?> "assessmentTemplateArns"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListAssessmentTemplates where
   hashWithSalt _salt ListAssessmentTemplates' {..} =
-    _salt `Prelude.hashWithSalt` assessmentTargetArns
+    _salt
+      `Prelude.hashWithSalt` assessmentTargetArns
       `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

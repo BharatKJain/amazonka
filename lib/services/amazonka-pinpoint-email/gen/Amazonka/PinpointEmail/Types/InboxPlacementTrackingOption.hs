@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PinpointEmail.Types.InboxPlacementTrackingOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PinpointEmail.Types.InboxPlacementTrackingOption where
@@ -84,7 +84,8 @@ instance
     InboxPlacementTrackingOption
   where
   hashWithSalt _salt InboxPlacementTrackingOption' {..} =
-    _salt `Prelude.hashWithSalt` global
+    _salt
+      `Prelude.hashWithSalt` global
       `Prelude.hashWithSalt` trackedIsps
 
 instance Prelude.NFData InboxPlacementTrackingOption where

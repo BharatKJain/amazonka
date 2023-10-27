@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.UpdateVoiceChannel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest UpdateVoiceChannel where
 
 instance Prelude.Hashable UpdateVoiceChannel where
   hashWithSalt _salt UpdateVoiceChannel' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` voiceChannelRequest
 
 instance Prelude.NFData UpdateVoiceChannel where

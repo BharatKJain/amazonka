@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResilienceHub.Types.UnsupportedResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResilienceHub.Types.UnsupportedResource where
@@ -96,7 +96,8 @@ instance Data.FromJSON UnsupportedResource where
 
 instance Prelude.Hashable UnsupportedResource where
   hashWithSalt _salt UnsupportedResource' {..} =
-    _salt `Prelude.hashWithSalt` logicalResourceId
+    _salt
+      `Prelude.hashWithSalt` logicalResourceId
       `Prelude.hashWithSalt` physicalResourceId
       `Prelude.hashWithSalt` resourceType
 

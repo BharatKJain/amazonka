@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53.ChangeCidrCollection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -177,7 +177,8 @@ instance Core.AWSRequest ChangeCidrCollection where
 
 instance Prelude.Hashable ChangeCidrCollection where
   hashWithSalt _salt ChangeCidrCollection' {..} =
-    _salt `Prelude.hashWithSalt` collectionVersion
+    _salt
+      `Prelude.hashWithSalt` collectionVersion
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` changes
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KMS.Sign
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -240,7 +240,8 @@ newSign pKeyId_ pMessage_ pSigningAlgorithm_ =
       messageType = Prelude.Nothing,
       keyId = pKeyId_,
       message =
-        Data._Sensitive Prelude.. Data._Base64
+        Data._Sensitive
+          Prelude.. Data._Base64
           Lens.# pMessage_,
       signingAlgorithm = pSigningAlgorithm_
     }
@@ -324,7 +325,8 @@ instance Core.AWSRequest Sign where
 
 instance Prelude.Hashable Sign where
   hashWithSalt _salt Sign' {..} =
-    _salt `Prelude.hashWithSalt` grantTokens
+    _salt
+      `Prelude.hashWithSalt` grantTokens
       `Prelude.hashWithSalt` messageType
       `Prelude.hashWithSalt` keyId
       `Prelude.hashWithSalt` message

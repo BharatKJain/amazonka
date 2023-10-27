@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.RegisterDevices
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,7 +103,8 @@ instance Core.AWSRequest RegisterDevices where
 
 instance Prelude.Hashable RegisterDevices where
   hashWithSalt _salt RegisterDevices' {..} =
-    _salt `Prelude.hashWithSalt` tags
+    _salt
+      `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` deviceFleetName
       `Prelude.hashWithSalt` devices
 

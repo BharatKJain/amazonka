@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.TypeFilters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.TypeFilters where
@@ -131,7 +131,8 @@ typeFilters_typeNamePrefix = Lens.lens (\TypeFilters' {typeNamePrefix} -> typeNa
 
 instance Prelude.Hashable TypeFilters where
   hashWithSalt _salt TypeFilters' {..} =
-    _salt `Prelude.hashWithSalt` category
+    _salt
+      `Prelude.hashWithSalt` category
       `Prelude.hashWithSalt` publisherId
       `Prelude.hashWithSalt` typeNamePrefix
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.DatasetContentDeliveryRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.DatasetContentDeliveryRule where
@@ -79,7 +79,8 @@ instance Data.FromJSON DatasetContentDeliveryRule where
 
 instance Prelude.Hashable DatasetContentDeliveryRule where
   hashWithSalt _salt DatasetContentDeliveryRule' {..} =
-    _salt `Prelude.hashWithSalt` entryName
+    _salt
+      `Prelude.hashWithSalt` entryName
       `Prelude.hashWithSalt` destination
 
 instance Prelude.NFData DatasetContentDeliveryRule where

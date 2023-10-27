@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AMP.Types.AlertManagerDefinitionStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AMP.Types.AlertManagerDefinitionStatus where
@@ -81,7 +81,8 @@ instance
     AlertManagerDefinitionStatus
   where
   hashWithSalt _salt AlertManagerDefinitionStatus' {..} =
-    _salt `Prelude.hashWithSalt` statusReason
+    _salt
+      `Prelude.hashWithSalt` statusReason
       `Prelude.hashWithSalt` statusCode
 
 instance Prelude.NFData AlertManagerDefinitionStatus where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.EndpointSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.EndpointSummary where
@@ -223,7 +223,8 @@ instance Data.FromJSON EndpointSummary where
 
 instance Prelude.Hashable EndpointSummary where
   hashWithSalt _salt EndpointSummary' {..} =
-    _salt `Prelude.hashWithSalt` endpointName
+    _salt
+      `Prelude.hashWithSalt` endpointName
       `Prelude.hashWithSalt` endpointArn
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` lastModifiedTime

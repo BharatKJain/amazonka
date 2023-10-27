@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.PlacementStrategy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.PlacementStrategy where
@@ -107,12 +107,14 @@ instance Data.FromJSON PlacementStrategy where
       "PlacementStrategy"
       ( \x ->
           PlacementStrategy'
-            Prelude.<$> (x Data..:? "field") Prelude.<*> (x Data..:? "type")
+            Prelude.<$> (x Data..:? "field")
+            Prelude.<*> (x Data..:? "type")
       )
 
 instance Prelude.Hashable PlacementStrategy where
   hashWithSalt _salt PlacementStrategy' {..} =
-    _salt `Prelude.hashWithSalt` field
+    _salt
+      `Prelude.hashWithSalt` field
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData PlacementStrategy where

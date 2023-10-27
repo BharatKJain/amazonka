@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.NamespaceError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.NamespaceError where
@@ -75,7 +75,8 @@ instance Data.FromJSON NamespaceError where
 
 instance Prelude.Hashable NamespaceError where
   hashWithSalt _salt NamespaceError' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData NamespaceError where

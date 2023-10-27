@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.InstanceAccessDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.InstanceAccessDetails where
@@ -212,7 +212,8 @@ instance Data.FromJSON InstanceAccessDetails where
 
 instance Prelude.Hashable InstanceAccessDetails where
   hashWithSalt _salt InstanceAccessDetails' {..} =
-    _salt `Prelude.hashWithSalt` certKey
+    _salt
+      `Prelude.hashWithSalt` certKey
       `Prelude.hashWithSalt` expiresAt
       `Prelude.hashWithSalt` hostKeys
       `Prelude.hashWithSalt` instanceName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.Specifications
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.Specifications where
@@ -84,7 +84,8 @@ instance Data.FromJSON Specifications where
 
 instance Prelude.Hashable Specifications where
   hashWithSalt _salt Specifications' {..} =
-    _salt `Prelude.hashWithSalt` slotTypeId
+    _salt
+      `Prelude.hashWithSalt` slotTypeId
       `Prelude.hashWithSalt` valueElicitationSetting
 
 instance Prelude.NFData Specifications where

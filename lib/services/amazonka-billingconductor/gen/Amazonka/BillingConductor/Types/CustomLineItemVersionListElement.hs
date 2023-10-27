@@ -14,7 +14,7 @@
 -- Module      : Amazonka.BillingConductor.Types.CustomLineItemVersionListElement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.BillingConductor.Types.CustomLineItemVersionListElement where
@@ -177,7 +177,8 @@ instance
   hashWithSalt
     _salt
     CustomLineItemVersionListElement' {..} =
-      _salt `Prelude.hashWithSalt` associationSize
+      _salt
+        `Prelude.hashWithSalt` associationSize
         `Prelude.hashWithSalt` billingGroupArn
         `Prelude.hashWithSalt` chargeDetails
         `Prelude.hashWithSalt` creationTime

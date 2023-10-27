@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsElbLoadBalancerPolicies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsElbLoadBalancerPolicies where
@@ -86,10 +86,12 @@ instance Data.FromJSON AwsElbLoadBalancerPolicies where
       "AwsElbLoadBalancerPolicies"
       ( \x ->
           AwsElbLoadBalancerPolicies'
-            Prelude.<$> ( x Data..:? "AppCookieStickinessPolicies"
+            Prelude.<$> ( x
+                            Data..:? "AppCookieStickinessPolicies"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "LbCookieStickinessPolicies"
+            Prelude.<*> ( x
+                            Data..:? "LbCookieStickinessPolicies"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "OtherPolicies" Data..!= Prelude.mempty)

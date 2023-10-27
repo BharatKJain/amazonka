@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamQuery.Types.S3Configuration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamQuery.Types.S3Configuration where
@@ -95,7 +95,8 @@ instance Data.FromJSON S3Configuration where
 
 instance Prelude.Hashable S3Configuration where
   hashWithSalt _salt S3Configuration' {..} =
-    _salt `Prelude.hashWithSalt` encryptionOption
+    _salt
+      `Prelude.hashWithSalt` encryptionOption
       `Prelude.hashWithSalt` objectKeyPrefix
       `Prelude.hashWithSalt` bucketName
 

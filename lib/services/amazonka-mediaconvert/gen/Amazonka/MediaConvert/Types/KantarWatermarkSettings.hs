@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.KantarWatermarkSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.KantarWatermarkSettings where
@@ -265,7 +265,8 @@ instance Data.FromJSON KantarWatermarkSettings where
 
 instance Prelude.Hashable KantarWatermarkSettings where
   hashWithSalt _salt KantarWatermarkSettings' {..} =
-    _salt `Prelude.hashWithSalt` channelName
+    _salt
+      `Prelude.hashWithSalt` channelName
       `Prelude.hashWithSalt` contentReference
       `Prelude.hashWithSalt` credentialsSecretName
       `Prelude.hashWithSalt` fileOffset

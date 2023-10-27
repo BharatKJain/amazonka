@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.DatasetTrigger
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.DatasetTrigger where
@@ -80,7 +80,8 @@ instance Data.FromJSON DatasetTrigger where
 
 instance Prelude.Hashable DatasetTrigger where
   hashWithSalt _salt DatasetTrigger' {..} =
-    _salt `Prelude.hashWithSalt` dataset
+    _salt
+      `Prelude.hashWithSalt` dataset
       `Prelude.hashWithSalt` schedule
 
 instance Prelude.NFData DatasetTrigger where

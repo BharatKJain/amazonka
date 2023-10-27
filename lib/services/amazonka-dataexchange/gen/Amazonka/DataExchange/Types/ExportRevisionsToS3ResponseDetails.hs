@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.ExportRevisionsToS3ResponseDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.ExportRevisionsToS3ResponseDetails where
@@ -97,7 +97,8 @@ instance
             Prelude.<$> (x Data..:? "Encryption")
             Prelude.<*> (x Data..:? "EventActionArn")
             Prelude.<*> (x Data..: "DataSetId")
-            Prelude.<*> ( x Data..:? "RevisionDestinations"
+            Prelude.<*> ( x
+                            Data..:? "RevisionDestinations"
                             Data..!= Prelude.mempty
                         )
       )
@@ -109,7 +110,8 @@ instance
   hashWithSalt
     _salt
     ExportRevisionsToS3ResponseDetails' {..} =
-      _salt `Prelude.hashWithSalt` encryption
+      _salt
+        `Prelude.hashWithSalt` encryption
         `Prelude.hashWithSalt` eventActionArn
         `Prelude.hashWithSalt` dataSetId
         `Prelude.hashWithSalt` revisionDestinations

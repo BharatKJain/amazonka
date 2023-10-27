@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.PrivateIp
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.PrivateIp where
@@ -76,7 +76,8 @@ instance Data.FromJSON PrivateIp where
 
 instance Prelude.Hashable PrivateIp where
   hashWithSalt _salt PrivateIp' {..} =
-    _salt `Prelude.hashWithSalt` privateDnsName
+    _salt
+      `Prelude.hashWithSalt` privateDnsName
       `Prelude.hashWithSalt` privateIpAddress
 
 instance Prelude.NFData PrivateIp where

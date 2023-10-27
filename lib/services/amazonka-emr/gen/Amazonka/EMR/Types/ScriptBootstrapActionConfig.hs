@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.ScriptBootstrapActionConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.ScriptBootstrapActionConfig where
@@ -67,7 +67,8 @@ scriptBootstrapActionConfig_path = Lens.lens (\ScriptBootstrapActionConfig' {pat
 
 instance Prelude.Hashable ScriptBootstrapActionConfig where
   hashWithSalt _salt ScriptBootstrapActionConfig' {..} =
-    _salt `Prelude.hashWithSalt` args
+    _salt
+      `Prelude.hashWithSalt` args
       `Prelude.hashWithSalt` path
 
 instance Prelude.NFData ScriptBootstrapActionConfig where

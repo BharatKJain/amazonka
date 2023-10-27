@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.VirtualGatewayListener
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.VirtualGatewayListener where
@@ -104,7 +104,8 @@ instance Data.FromJSON VirtualGatewayListener where
 
 instance Prelude.Hashable VirtualGatewayListener where
   hashWithSalt _salt VirtualGatewayListener' {..} =
-    _salt `Prelude.hashWithSalt` connectionPool
+    _salt
+      `Prelude.hashWithSalt` connectionPool
       `Prelude.hashWithSalt` healthCheck
       `Prelude.hashWithSalt` tls
       `Prelude.hashWithSalt` portMapping

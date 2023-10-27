@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.CoreNetworkChange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.CoreNetworkChange where
@@ -123,7 +123,8 @@ instance Data.FromJSON CoreNetworkChange where
 
 instance Prelude.Hashable CoreNetworkChange where
   hashWithSalt _salt CoreNetworkChange' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` identifier
       `Prelude.hashWithSalt` identifierPath
       `Prelude.hashWithSalt` newValues'

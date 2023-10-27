@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.AttachStaticIp
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest AttachStaticIp where
 
 instance Prelude.Hashable AttachStaticIp where
   hashWithSalt _salt AttachStaticIp' {..} =
-    _salt `Prelude.hashWithSalt` staticIpName
+    _salt
+      `Prelude.hashWithSalt` staticIpName
       `Prelude.hashWithSalt` instanceName
 
 instance Prelude.NFData AttachStaticIp where

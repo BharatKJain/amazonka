@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTSiteWise.DescribeGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -95,7 +95,8 @@ instance Core.AWSRequest DescribeGateway where
             Prelude.<*> (x Data..:> "gatewayId")
             Prelude.<*> (x Data..:> "gatewayName")
             Prelude.<*> (x Data..:> "gatewayArn")
-            Prelude.<*> ( x Data..?> "gatewayCapabilitySummaries"
+            Prelude.<*> ( x
+                            Data..?> "gatewayCapabilitySummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..:> "creationDate")

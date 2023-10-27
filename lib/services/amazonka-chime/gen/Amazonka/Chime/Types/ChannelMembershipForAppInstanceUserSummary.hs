@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.ChannelMembershipForAppInstanceUserSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.ChannelMembershipForAppInstanceUserSummary where
@@ -74,7 +74,7 @@ instance
       ( \x ->
           ChannelMembershipForAppInstanceUserSummary'
             Prelude.<$> (x Data..:? "AppInstanceUserMembershipSummary")
-              Prelude.<*> (x Data..:? "ChannelSummary")
+            Prelude.<*> (x Data..:? "ChannelSummary")
       )
 
 instance

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkFirewall.DeleteFirewallPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,7 +116,8 @@ instance Core.AWSRequest DeleteFirewallPolicy where
 
 instance Prelude.Hashable DeleteFirewallPolicy where
   hashWithSalt _salt DeleteFirewallPolicy' {..} =
-    _salt `Prelude.hashWithSalt` firewallPolicyArn
+    _salt
+      `Prelude.hashWithSalt` firewallPolicyArn
       `Prelude.hashWithSalt` firewallPolicyName
 
 instance Prelude.NFData DeleteFirewallPolicy where

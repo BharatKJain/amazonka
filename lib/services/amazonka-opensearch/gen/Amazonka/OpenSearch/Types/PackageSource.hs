@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.PackageSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.PackageSource where
@@ -64,7 +64,8 @@ packageSource_s3Key = Lens.lens (\PackageSource' {s3Key} -> s3Key) (\s@PackageSo
 
 instance Prelude.Hashable PackageSource where
   hashWithSalt _salt PackageSource' {..} =
-    _salt `Prelude.hashWithSalt` s3BucketName
+    _salt
+      `Prelude.hashWithSalt` s3BucketName
       `Prelude.hashWithSalt` s3Key
 
 instance Prelude.NFData PackageSource where

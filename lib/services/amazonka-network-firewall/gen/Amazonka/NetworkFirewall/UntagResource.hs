@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkFirewall.UntagResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -91,7 +91,6 @@ newUntagResource pResourceArn_ pTagKeys_ =
 untagResource_resourceArn :: Lens.Lens' UntagResource Prelude.Text
 untagResource_resourceArn = Lens.lens (\UntagResource' {resourceArn} -> resourceArn) (\s@UntagResource' {} a -> s {resourceArn = a} :: UntagResource)
 
--- |
 untagResource_tagKeys :: Lens.Lens' UntagResource (Prelude.NonEmpty Prelude.Text)
 untagResource_tagKeys = Lens.lens (\UntagResource' {tagKeys} -> tagKeys) (\s@UntagResource' {} a -> s {tagKeys = a} :: UntagResource) Prelude.. Lens.coerced
 
@@ -110,7 +109,8 @@ instance Core.AWSRequest UntagResource where
 
 instance Prelude.Hashable UntagResource where
   hashWithSalt _salt UntagResource' {..} =
-    _salt `Prelude.hashWithSalt` resourceArn
+    _salt
+      `Prelude.hashWithSalt` resourceArn
       `Prelude.hashWithSalt` tagKeys
 
 instance Prelude.NFData UntagResource where

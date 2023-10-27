@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.Types.UserSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpacesWeb.Types.UserSettings where
@@ -158,7 +158,8 @@ instance Data.FromJSON UserSettings where
       "UserSettings"
       ( \x ->
           UserSettings'
-            Prelude.<$> ( x Data..:? "associatedPortalArns"
+            Prelude.<$> ( x
+                            Data..:? "associatedPortalArns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "copyAllowed")
@@ -173,7 +174,8 @@ instance Data.FromJSON UserSettings where
 
 instance Prelude.Hashable UserSettings where
   hashWithSalt _salt UserSettings' {..} =
-    _salt `Prelude.hashWithSalt` associatedPortalArns
+    _salt
+      `Prelude.hashWithSalt` associatedPortalArns
       `Prelude.hashWithSalt` copyAllowed
       `Prelude.hashWithSalt` disconnectTimeoutInMinutes
       `Prelude.hashWithSalt` downloadAllowed

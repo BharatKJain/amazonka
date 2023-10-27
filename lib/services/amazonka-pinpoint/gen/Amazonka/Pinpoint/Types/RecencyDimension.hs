@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.RecencyDimension
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.RecencyDimension where
@@ -93,7 +93,8 @@ instance Data.FromJSON RecencyDimension where
 
 instance Prelude.Hashable RecencyDimension where
   hashWithSalt _salt RecencyDimension' {..} =
-    _salt `Prelude.hashWithSalt` duration
+    _salt
+      `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` recencyType
 
 instance Prelude.NFData RecencyDimension where

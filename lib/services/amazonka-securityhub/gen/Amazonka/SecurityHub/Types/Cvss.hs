@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.Cvss
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.Cvss where
@@ -105,7 +105,8 @@ instance Data.FromJSON Cvss where
 
 instance Prelude.Hashable Cvss where
   hashWithSalt _salt Cvss' {..} =
-    _salt `Prelude.hashWithSalt` adjustments
+    _salt
+      `Prelude.hashWithSalt` adjustments
       `Prelude.hashWithSalt` baseScore
       `Prelude.hashWithSalt` baseVector
       `Prelude.hashWithSalt` source

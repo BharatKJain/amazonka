@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataExchange.ListEventActions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,22 +105,22 @@ instance Core.AWSPager ListEventActions where
     | Core.stop
         ( rs
             Lens.^? listEventActionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listEventActionsResponse_eventActions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listEventActions_nextToken
           Lens..~ rs
           Lens.^? listEventActionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListEventActions where
   type
@@ -139,7 +139,8 @@ instance Core.AWSRequest ListEventActions where
 
 instance Prelude.Hashable ListEventActions where
   hashWithSalt _salt ListEventActions' {..} =
-    _salt `Prelude.hashWithSalt` eventSourceId
+    _salt
+      `Prelude.hashWithSalt` eventSourceId
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

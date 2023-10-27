@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.FirewallPolicyStatelessRuleGroupReferencesDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.FirewallPolicyStatelessRuleGroupReferencesDetails where
@@ -74,7 +74,7 @@ instance
       ( \x ->
           FirewallPolicyStatelessRuleGroupReferencesDetails'
             Prelude.<$> (x Data..:? "Priority")
-              Prelude.<*> (x Data..:? "ResourceArn")
+            Prelude.<*> (x Data..:? "ResourceArn")
       )
 
 instance
@@ -84,7 +84,8 @@ instance
   hashWithSalt
     _salt
     FirewallPolicyStatelessRuleGroupReferencesDetails' {..} =
-      _salt `Prelude.hashWithSalt` priority
+      _salt
+        `Prelude.hashWithSalt` priority
         `Prelude.hashWithSalt` resourceArn
 
 instance

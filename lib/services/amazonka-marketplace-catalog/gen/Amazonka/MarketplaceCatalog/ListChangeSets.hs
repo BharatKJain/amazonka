@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MarketplaceCatalog.ListChangeSets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -142,7 +142,8 @@ instance Core.AWSRequest ListChangeSets where
     Response.receiveJSON
       ( \s h x ->
           ListChangeSetsResponse'
-            Prelude.<$> ( x Data..?> "ChangeSetSummaryList"
+            Prelude.<$> ( x
+                            Data..?> "ChangeSetSummaryList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -151,7 +152,8 @@ instance Core.AWSRequest ListChangeSets where
 
 instance Prelude.Hashable ListChangeSets where
   hashWithSalt _salt ListChangeSets' {..} =
-    _salt `Prelude.hashWithSalt` filterList
+    _salt
+      `Prelude.hashWithSalt` filterList
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` sort

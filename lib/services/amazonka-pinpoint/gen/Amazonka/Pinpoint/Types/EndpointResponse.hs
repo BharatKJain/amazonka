@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.EndpointResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.EndpointResponse where
@@ -317,7 +317,8 @@ instance Data.FromJSON EndpointResponse where
 
 instance Prelude.Hashable EndpointResponse where
   hashWithSalt _salt EndpointResponse' {..} =
-    _salt `Prelude.hashWithSalt` address
+    _salt
+      `Prelude.hashWithSalt` address
       `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` channelType

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.FunctionEventInvokeConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.FunctionEventInvokeConfig where
@@ -140,7 +140,8 @@ instance Data.FromJSON FunctionEventInvokeConfig where
 
 instance Prelude.Hashable FunctionEventInvokeConfig where
   hashWithSalt _salt FunctionEventInvokeConfig' {..} =
-    _salt `Prelude.hashWithSalt` destinationConfig
+    _salt
+      `Prelude.hashWithSalt` destinationConfig
       `Prelude.hashWithSalt` functionArn
       `Prelude.hashWithSalt` lastModified
       `Prelude.hashWithSalt` maximumEventAgeInSeconds

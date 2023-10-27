@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.InventoryDeletionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.InventoryDeletionSummary where
@@ -89,7 +89,8 @@ instance Data.FromJSON InventoryDeletionSummary where
 
 instance Prelude.Hashable InventoryDeletionSummary where
   hashWithSalt _salt InventoryDeletionSummary' {..} =
-    _salt `Prelude.hashWithSalt` remainingCount
+    _salt
+      `Prelude.hashWithSalt` remainingCount
       `Prelude.hashWithSalt` summaryItems
       `Prelude.hashWithSalt` totalCount
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AlexaBusiness.UpdateDevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -96,7 +96,8 @@ instance Core.AWSRequest UpdateDevice where
 
 instance Prelude.Hashable UpdateDevice where
   hashWithSalt _salt UpdateDevice' {..} =
-    _salt `Prelude.hashWithSalt` deviceArn
+    _salt
+      `Prelude.hashWithSalt` deviceArn
       `Prelude.hashWithSalt` deviceName
 
 instance Prelude.NFData UpdateDevice where

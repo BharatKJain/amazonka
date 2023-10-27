@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.Decision
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.Decision where
@@ -192,29 +192,29 @@ import Amazonka.SWF.Types.StartTimerDecisionAttributes
 -- the above decision values, and then set the corresponding attributes
 -- field shown below:
 --
--- -   @ ScheduleActivityTaskDecisionAttributes @
+-- -   @ @@ScheduleActivityTaskDecisionAttributes@@ @
 --
--- -   @ RequestCancelActivityTaskDecisionAttributes @
+-- -   @ @@RequestCancelActivityTaskDecisionAttributes@@ @
 --
--- -   @ CompleteWorkflowExecutionDecisionAttributes @
+-- -   @ @@CompleteWorkflowExecutionDecisionAttributes@@ @
 --
--- -   @ FailWorkflowExecutionDecisionAttributes @
+-- -   @ @@FailWorkflowExecutionDecisionAttributes@@ @
 --
--- -   @ CancelWorkflowExecutionDecisionAttributes @
+-- -   @ @@CancelWorkflowExecutionDecisionAttributes@@ @
 --
--- -   @ ContinueAsNewWorkflowExecutionDecisionAttributes @
+-- -   @ @@ContinueAsNewWorkflowExecutionDecisionAttributes@@ @
 --
--- -   @ RecordMarkerDecisionAttributes @
+-- -   @ @@RecordMarkerDecisionAttributes@@ @
 --
--- -   @ StartTimerDecisionAttributes @
+-- -   @ @@StartTimerDecisionAttributes@@ @
 --
--- -   @ CancelTimerDecisionAttributes @
+-- -   @ @@CancelTimerDecisionAttributes@@ @
 --
--- -   @ SignalExternalWorkflowExecutionDecisionAttributes @
+-- -   @ @@SignalExternalWorkflowExecutionDecisionAttributes@@ @
 --
--- -   @ RequestCancelExternalWorkflowExecutionDecisionAttributes @
+-- -   @ @@RequestCancelExternalWorkflowExecutionDecisionAttributes@@ @
 --
--- -   @ StartChildWorkflowExecutionDecisionAttributes @
+-- -   @ @@StartChildWorkflowExecutionDecisionAttributes@@ @
 --
 -- /See:/ 'newDecision' smart constructor.
 data Decision = Decision'

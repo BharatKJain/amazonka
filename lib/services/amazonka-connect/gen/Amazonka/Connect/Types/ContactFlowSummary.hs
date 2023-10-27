@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.ContactFlowSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.ContactFlowSummary where
@@ -109,7 +109,8 @@ instance Data.FromJSON ContactFlowSummary where
 
 instance Prelude.Hashable ContactFlowSummary where
   hashWithSalt _salt ContactFlowSummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` contactFlowState
       `Prelude.hashWithSalt` contactFlowType
       `Prelude.hashWithSalt` id

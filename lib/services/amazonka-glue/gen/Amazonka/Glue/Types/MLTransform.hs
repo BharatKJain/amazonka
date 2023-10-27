@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.MLTransform
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.MLTransform where
@@ -478,7 +478,8 @@ instance Data.FromJSON MLTransform where
             Prelude.<*> (x Data..:? "Description")
             Prelude.<*> (x Data..:? "EvaluationMetrics")
             Prelude.<*> (x Data..:? "GlueVersion")
-            Prelude.<*> ( x Data..:? "InputRecordTables"
+            Prelude.<*> ( x
+                            Data..:? "InputRecordTables"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "LabelCount")
@@ -499,7 +500,8 @@ instance Data.FromJSON MLTransform where
 
 instance Prelude.Hashable MLTransform where
   hashWithSalt _salt MLTransform' {..} =
-    _salt `Prelude.hashWithSalt` createdOn
+    _salt
+      `Prelude.hashWithSalt` createdOn
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` evaluationMetrics
       `Prelude.hashWithSalt` glueVersion

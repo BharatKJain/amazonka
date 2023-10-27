@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.Anomaly
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.Anomaly where
@@ -167,7 +167,8 @@ instance Data.FromJSON Anomaly where
 
 instance Prelude.Hashable Anomaly where
   hashWithSalt _salt Anomaly' {..} =
-    _salt `Prelude.hashWithSalt` anomalyEndDate
+    _salt
+      `Prelude.hashWithSalt` anomalyEndDate
       `Prelude.hashWithSalt` anomalyStartDate
       `Prelude.hashWithSalt` dimensionValue
       `Prelude.hashWithSalt` feedback

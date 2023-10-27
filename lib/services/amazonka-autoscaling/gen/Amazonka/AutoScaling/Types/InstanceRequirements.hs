@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.InstanceRequirements
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.InstanceRequirements where
@@ -814,40 +814,48 @@ instance Data.FromXML InstanceRequirements where
   parseXML x =
     InstanceRequirements'
       Prelude.<$> (x Data..@? "AcceleratorCount")
-      Prelude.<*> ( x Data..@? "AcceleratorManufacturers"
+      Prelude.<*> ( x
+                      Data..@? "AcceleratorManufacturers"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "AcceleratorNames"
+      Prelude.<*> ( x
+                      Data..@? "AcceleratorNames"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "AcceleratorTotalMemoryMiB")
-      Prelude.<*> ( x Data..@? "AcceleratorTypes"
+      Prelude.<*> ( x
+                      Data..@? "AcceleratorTypes"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "AllowedInstanceTypes"
+      Prelude.<*> ( x
+                      Data..@? "AllowedInstanceTypes"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "BareMetal")
       Prelude.<*> (x Data..@? "BaselineEbsBandwidthMbps")
       Prelude.<*> (x Data..@? "BurstablePerformance")
-      Prelude.<*> ( x Data..@? "CpuManufacturers"
+      Prelude.<*> ( x
+                      Data..@? "CpuManufacturers"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "ExcludedInstanceTypes"
+      Prelude.<*> ( x
+                      Data..@? "ExcludedInstanceTypes"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "InstanceGenerations"
+      Prelude.<*> ( x
+                      Data..@? "InstanceGenerations"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "LocalStorage")
-      Prelude.<*> ( x Data..@? "LocalStorageTypes"
+      Prelude.<*> ( x
+                      Data..@? "LocalStorageTypes"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
@@ -865,7 +873,8 @@ instance Data.FromXML InstanceRequirements where
 
 instance Prelude.Hashable InstanceRequirements where
   hashWithSalt _salt InstanceRequirements' {..} =
-    _salt `Prelude.hashWithSalt` acceleratorCount
+    _salt
+      `Prelude.hashWithSalt` acceleratorCount
       `Prelude.hashWithSalt` acceleratorManufacturers
       `Prelude.hashWithSalt` acceleratorNames
       `Prelude.hashWithSalt` acceleratorTotalMemoryMiB

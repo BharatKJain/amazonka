@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GlobalAccelerator.Types.CidrAuthorizationContext
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GlobalAccelerator.Types.CidrAuthorizationContext where
@@ -74,7 +74,8 @@ cidrAuthorizationContext_signature = Lens.lens (\CidrAuthorizationContext' {sign
 
 instance Prelude.Hashable CidrAuthorizationContext where
   hashWithSalt _salt CidrAuthorizationContext' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` signature
 
 instance Prelude.NFData CidrAuthorizationContext where

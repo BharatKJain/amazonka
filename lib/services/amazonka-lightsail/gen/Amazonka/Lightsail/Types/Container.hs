@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.Container
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.Container where
@@ -138,7 +138,8 @@ instance Data.FromJSON Container where
 
 instance Prelude.Hashable Container where
   hashWithSalt _salt Container' {..} =
-    _salt `Prelude.hashWithSalt` command
+    _salt
+      `Prelude.hashWithSalt` command
       `Prelude.hashWithSalt` environment
       `Prelude.hashWithSalt` image
       `Prelude.hashWithSalt` ports

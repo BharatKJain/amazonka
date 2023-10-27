@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.PolicyQualifierInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.PolicyQualifierInfo where
@@ -78,7 +78,8 @@ policyQualifierInfo_qualifier = Lens.lens (\PolicyQualifierInfo' {qualifier} -> 
 
 instance Prelude.Hashable PolicyQualifierInfo where
   hashWithSalt _salt PolicyQualifierInfo' {..} =
-    _salt `Prelude.hashWithSalt` policyQualifierId
+    _salt
+      `Prelude.hashWithSalt` policyQualifierId
       `Prelude.hashWithSalt` qualifier
 
 instance Prelude.NFData PolicyQualifierInfo where

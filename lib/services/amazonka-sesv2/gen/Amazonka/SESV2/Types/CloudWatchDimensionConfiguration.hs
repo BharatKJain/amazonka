@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.CloudWatchDimensionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.CloudWatchDimensionConfiguration where
@@ -160,7 +160,8 @@ instance
   hashWithSalt
     _salt
     CloudWatchDimensionConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` dimensionName
+      _salt
+        `Prelude.hashWithSalt` dimensionName
         `Prelude.hashWithSalt` dimensionValueSource
         `Prelude.hashWithSalt` defaultDimensionValue
 

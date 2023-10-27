@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ModelInfrastructureConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ModelInfrastructureConfig where
@@ -97,7 +97,8 @@ instance Data.FromJSON ModelInfrastructureConfig where
 
 instance Prelude.Hashable ModelInfrastructureConfig where
   hashWithSalt _salt ModelInfrastructureConfig' {..} =
-    _salt `Prelude.hashWithSalt` infrastructureType
+    _salt
+      `Prelude.hashWithSalt` infrastructureType
       `Prelude.hashWithSalt` realTimeInferenceConfig
 
 instance Prelude.NFData ModelInfrastructureConfig where

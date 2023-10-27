@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.ReservedCacheNode
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.ReservedCacheNode where
@@ -485,7 +485,8 @@ instance Data.FromXML ReservedCacheNode where
       Prelude.<*> (x Data..@? "FixedPrice")
       Prelude.<*> (x Data..@? "OfferingType")
       Prelude.<*> (x Data..@? "ProductDescription")
-      Prelude.<*> ( x Data..@? "RecurringCharges"
+      Prelude.<*> ( x
+                      Data..@? "RecurringCharges"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "RecurringCharge")
                   )
@@ -498,7 +499,8 @@ instance Data.FromXML ReservedCacheNode where
 
 instance Prelude.Hashable ReservedCacheNode where
   hashWithSalt _salt ReservedCacheNode' {..} =
-    _salt `Prelude.hashWithSalt` cacheNodeCount
+    _salt
+      `Prelude.hashWithSalt` cacheNodeCount
       `Prelude.hashWithSalt` cacheNodeType
       `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` fixedPrice

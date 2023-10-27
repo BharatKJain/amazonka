@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.AssumedRole
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.AssumedRole where
@@ -120,7 +120,8 @@ instance Data.FromJSON AssumedRole where
 
 instance Prelude.Hashable AssumedRole where
   hashWithSalt _salt AssumedRole' {..} =
-    _salt `Prelude.hashWithSalt` accessKeyId
+    _salt
+      `Prelude.hashWithSalt` accessKeyId
       `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` principalId

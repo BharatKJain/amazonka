@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kafka.UpdateClusterConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -126,7 +126,8 @@ instance Core.AWSRequest UpdateClusterConfiguration where
 
 instance Prelude.Hashable UpdateClusterConfiguration where
   hashWithSalt _salt UpdateClusterConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` clusterArn
+    _salt
+      `Prelude.hashWithSalt` clusterArn
       `Prelude.hashWithSalt` currentVersion
       `Prelude.hashWithSalt` configurationInfo
 

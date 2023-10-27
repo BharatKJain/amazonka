@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.AssessmentRunStateChange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.AssessmentRunStateChange where
@@ -80,7 +80,8 @@ instance Data.FromJSON AssessmentRunStateChange where
 
 instance Prelude.Hashable AssessmentRunStateChange where
   hashWithSalt _salt AssessmentRunStateChange' {..} =
-    _salt `Prelude.hashWithSalt` stateChangedAt
+    _salt
+      `Prelude.hashWithSalt` stateChangedAt
       `Prelude.hashWithSalt` state
 
 instance Prelude.NFData AssessmentRunStateChange where

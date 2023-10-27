@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ClientVpnRoute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ClientVpnRoute where
@@ -135,7 +135,8 @@ instance Data.FromXML ClientVpnRoute where
 
 instance Prelude.Hashable ClientVpnRoute where
   hashWithSalt _salt ClientVpnRoute' {..} =
-    _salt `Prelude.hashWithSalt` clientVpnEndpointId
+    _salt
+      `Prelude.hashWithSalt` clientVpnEndpointId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` destinationCidr
       `Prelude.hashWithSalt` origin

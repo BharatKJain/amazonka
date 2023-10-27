@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaTailor.CreateVodSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest CreateVodSource where
           CreateVodSourceResponse'
             Prelude.<$> (x Data..?> "Arn")
             Prelude.<*> (x Data..?> "CreationTime")
-            Prelude.<*> ( x Data..?> "HttpPackageConfigurations"
+            Prelude.<*> ( x
+                            Data..?> "HttpPackageConfigurations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "LastModifiedTime")
@@ -149,7 +150,8 @@ instance Core.AWSRequest CreateVodSource where
 
 instance Prelude.Hashable CreateVodSource where
   hashWithSalt _salt CreateVodSource' {..} =
-    _salt `Prelude.hashWithSalt` tags
+    _salt
+      `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` httpPackageConfigurations
       `Prelude.hashWithSalt` sourceLocationName
       `Prelude.hashWithSalt` vodSourceName

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudControl.GetResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -63,7 +63,9 @@ data GetResource = GetResource'
     -- (IAM) role for Cloud Control API to use when performing this resource
     -- operation. The role specified must have the permissions required for
     -- this operation. The necessary permissions for each event handler are
-    -- defined in the @ handlers @ section of the
+    -- defined in the
+    -- @ @<https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers handlers>@ @
+    -- section of the
     -- <https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html resource type definition schema>.
     --
     -- If you do not specify a role, Cloud Control API uses a temporary session
@@ -110,7 +112,9 @@ data GetResource = GetResource'
 -- (IAM) role for Cloud Control API to use when performing this resource
 -- operation. The role specified must have the permissions required for
 -- this operation. The necessary permissions for each event handler are
--- defined in the @ handlers @ section of the
+-- defined in the
+-- @ @<https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers handlers>@ @
+-- section of the
 -- <https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html resource type definition schema>.
 --
 -- If you do not specify a role, Cloud Control API uses a temporary session
@@ -159,7 +163,9 @@ newGetResource pTypeName_ pIdentifier_ =
 -- (IAM) role for Cloud Control API to use when performing this resource
 -- operation. The role specified must have the permissions required for
 -- this operation. The necessary permissions for each event handler are
--- defined in the @ handlers @ section of the
+-- defined in the
+-- @ @<https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers handlers>@ @
+-- section of the
 -- <https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html resource type definition schema>.
 --
 -- If you do not specify a role, Cloud Control API uses a temporary session
@@ -214,7 +220,8 @@ instance Core.AWSRequest GetResource where
 
 instance Prelude.Hashable GetResource where
   hashWithSalt _salt GetResource' {..} =
-    _salt `Prelude.hashWithSalt` roleArn
+    _salt
+      `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` typeVersionId
       `Prelude.hashWithSalt` typeName
       `Prelude.hashWithSalt` identifier

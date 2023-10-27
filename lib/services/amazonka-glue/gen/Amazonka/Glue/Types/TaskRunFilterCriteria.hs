@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.TaskRunFilterCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.TaskRunFilterCriteria where
@@ -86,7 +86,8 @@ taskRunFilterCriteria_taskRunType = Lens.lens (\TaskRunFilterCriteria' {taskRunT
 
 instance Prelude.Hashable TaskRunFilterCriteria where
   hashWithSalt _salt TaskRunFilterCriteria' {..} =
-    _salt `Prelude.hashWithSalt` startedAfter
+    _salt
+      `Prelude.hashWithSalt` startedAfter
       `Prelude.hashWithSalt` startedBefore
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` taskRunType

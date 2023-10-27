@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkMail.PutAccessControlRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -226,7 +226,8 @@ instance Core.AWSRequest PutAccessControlRule where
 
 instance Prelude.Hashable PutAccessControlRule where
   hashWithSalt _salt PutAccessControlRule' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` impersonationRoleIds
       `Prelude.hashWithSalt` ipRanges
       `Prelude.hashWithSalt` notActions

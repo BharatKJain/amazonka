@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.CancelSpotInstanceRequests
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest CancelSpotInstanceRequests where
     Response.receiveXML
       ( \s h x ->
           CancelSpotInstanceRequestsResponse'
-            Prelude.<$> ( x Data..@? "spotInstanceRequestSet"
+            Prelude.<$> ( x
+                            Data..@? "spotInstanceRequestSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -118,7 +119,8 @@ instance Core.AWSRequest CancelSpotInstanceRequests where
 
 instance Prelude.Hashable CancelSpotInstanceRequests where
   hashWithSalt _salt CancelSpotInstanceRequests' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` spotInstanceRequestIds
 
 instance Prelude.NFData CancelSpotInstanceRequests where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ComputeOptimizer.GetECSServiceRecommendationProjectedMetrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -159,10 +159,11 @@ instance
     Response.receiveJSON
       ( \s h x ->
           GetECSServiceRecommendationProjectedMetricsResponse'
-            Prelude.<$> ( x Data..?> "recommendedOptionProjectedMetrics"
+            Prelude.<$> ( x
+                            Data..?> "recommendedOptionProjectedMetrics"
                             Core..!@ Prelude.mempty
                         )
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -172,7 +173,8 @@ instance
   hashWithSalt
     _salt
     GetECSServiceRecommendationProjectedMetrics' {..} =
-      _salt `Prelude.hashWithSalt` serviceArn
+      _salt
+        `Prelude.hashWithSalt` serviceArn
         `Prelude.hashWithSalt` stat
         `Prelude.hashWithSalt` period
         `Prelude.hashWithSalt` startTime

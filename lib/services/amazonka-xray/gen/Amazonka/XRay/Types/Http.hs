@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.Http
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.Http where
@@ -104,7 +104,8 @@ instance Data.FromJSON Http where
 
 instance Prelude.Hashable Http where
   hashWithSalt _salt Http' {..} =
-    _salt `Prelude.hashWithSalt` clientIp
+    _salt
+      `Prelude.hashWithSalt` clientIp
       `Prelude.hashWithSalt` httpMethod
       `Prelude.hashWithSalt` httpStatus
       `Prelude.hashWithSalt` httpURL

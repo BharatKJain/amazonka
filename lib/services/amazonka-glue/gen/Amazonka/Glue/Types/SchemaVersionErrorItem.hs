@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.SchemaVersionErrorItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.SchemaVersionErrorItem where
@@ -77,7 +77,8 @@ instance Data.FromJSON SchemaVersionErrorItem where
 
 instance Prelude.Hashable SchemaVersionErrorItem where
   hashWithSalt _salt SchemaVersionErrorItem' {..} =
-    _salt `Prelude.hashWithSalt` errorDetails
+    _salt
+      `Prelude.hashWithSalt` errorDetails
       `Prelude.hashWithSalt` versionNumber
 
 instance Prelude.NFData SchemaVersionErrorItem where

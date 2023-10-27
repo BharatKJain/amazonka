@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.ElasticsearchDomainStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.ElasticsearchDomainStatus where
@@ -366,7 +366,8 @@ instance Data.FromJSON ElasticsearchDomainStatus where
       ( \x ->
           ElasticsearchDomainStatus'
             Prelude.<$> (x Data..:? "AccessPolicies")
-            Prelude.<*> ( x Data..:? "AdvancedOptions"
+            Prelude.<*> ( x
+                            Data..:? "AdvancedOptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "AdvancedSecurityOptions")
@@ -381,7 +382,8 @@ instance Data.FromJSON ElasticsearchDomainStatus where
             Prelude.<*> (x Data..:? "EncryptionAtRestOptions")
             Prelude.<*> (x Data..:? "Endpoint")
             Prelude.<*> (x Data..:? "Endpoints" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "LogPublishingOptions"
+            Prelude.<*> ( x
+                            Data..:? "LogPublishingOptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "NodeToNodeEncryptionOptions")
@@ -398,7 +400,8 @@ instance Data.FromJSON ElasticsearchDomainStatus where
 
 instance Prelude.Hashable ElasticsearchDomainStatus where
   hashWithSalt _salt ElasticsearchDomainStatus' {..} =
-    _salt `Prelude.hashWithSalt` accessPolicies
+    _salt
+      `Prelude.hashWithSalt` accessPolicies
       `Prelude.hashWithSalt` advancedOptions
       `Prelude.hashWithSalt` advancedSecurityOptions
       `Prelude.hashWithSalt` autoTuneOptions

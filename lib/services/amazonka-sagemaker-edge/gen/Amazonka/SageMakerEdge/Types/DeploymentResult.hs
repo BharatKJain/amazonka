@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerEdge.Types.DeploymentResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerEdge.Types.DeploymentResult where
@@ -106,7 +106,8 @@ deploymentResult_deploymentStatusMessage = Lens.lens (\DeploymentResult' {deploy
 
 instance Prelude.Hashable DeploymentResult where
   hashWithSalt _salt DeploymentResult' {..} =
-    _salt `Prelude.hashWithSalt` deploymentEndTime
+    _salt
+      `Prelude.hashWithSalt` deploymentEndTime
       `Prelude.hashWithSalt` deploymentModels
       `Prelude.hashWithSalt` deploymentName
       `Prelude.hashWithSalt` deploymentStartTime

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.CreatePresignedDomainUrl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -167,7 +167,8 @@ instance Core.AWSRequest CreatePresignedDomainUrl where
 
 instance Prelude.Hashable CreatePresignedDomainUrl where
   hashWithSalt _salt CreatePresignedDomainUrl' {..} =
-    _salt `Prelude.hashWithSalt` expiresInSeconds
+    _salt
+      `Prelude.hashWithSalt` expiresInSeconds
       `Prelude.hashWithSalt` sessionExpirationDurationInSeconds
       `Prelude.hashWithSalt` spaceName
       `Prelude.hashWithSalt` domainId

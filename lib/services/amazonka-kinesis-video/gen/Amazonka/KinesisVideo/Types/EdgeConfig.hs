@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisVideo.Types.EdgeConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisVideo.Types.EdgeConfig where
@@ -121,7 +121,8 @@ instance Data.FromJSON EdgeConfig where
 
 instance Prelude.Hashable EdgeConfig where
   hashWithSalt _salt EdgeConfig' {..} =
-    _salt `Prelude.hashWithSalt` deletionConfig
+    _salt
+      `Prelude.hashWithSalt` deletionConfig
       `Prelude.hashWithSalt` uploaderConfig
       `Prelude.hashWithSalt` hubDeviceArn
       `Prelude.hashWithSalt` recorderConfig

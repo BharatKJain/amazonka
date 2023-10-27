@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Cloud9.DeleteEnvironmentMembership
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest DeleteEnvironmentMembership where
 
 instance Prelude.Hashable DeleteEnvironmentMembership where
   hashWithSalt _salt DeleteEnvironmentMembership' {..} =
-    _salt `Prelude.hashWithSalt` environmentId
+    _salt
+      `Prelude.hashWithSalt` environmentId
       `Prelude.hashWithSalt` userArn
 
 instance Prelude.NFData DeleteEnvironmentMembership where

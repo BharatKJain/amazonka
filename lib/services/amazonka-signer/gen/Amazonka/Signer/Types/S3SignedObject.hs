@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Signer.Types.S3SignedObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Signer.Types.S3SignedObject where
@@ -75,7 +75,8 @@ instance Data.FromJSON S3SignedObject where
 
 instance Prelude.Hashable S3SignedObject where
   hashWithSalt _salt S3SignedObject' {..} =
-    _salt `Prelude.hashWithSalt` bucketName
+    _salt
+      `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` key
 
 instance Prelude.NFData S3SignedObject where

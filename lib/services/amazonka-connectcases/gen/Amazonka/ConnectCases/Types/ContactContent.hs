@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCases.Types.ContactContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCases.Types.ContactContent where
@@ -97,7 +97,8 @@ instance Data.FromJSON ContactContent where
 
 instance Prelude.Hashable ContactContent where
   hashWithSalt _salt ContactContent' {..} =
-    _salt `Prelude.hashWithSalt` channel
+    _salt
+      `Prelude.hashWithSalt` channel
       `Prelude.hashWithSalt` connectedToSystemTime
       `Prelude.hashWithSalt` contactArn
 

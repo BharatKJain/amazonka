@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.StorageTypeLimit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.StorageTypeLimit where
@@ -138,7 +138,8 @@ instance Data.FromJSON StorageTypeLimit where
 
 instance Prelude.Hashable StorageTypeLimit where
   hashWithSalt _salt StorageTypeLimit' {..} =
-    _salt `Prelude.hashWithSalt` limitName
+    _salt
+      `Prelude.hashWithSalt` limitName
       `Prelude.hashWithSalt` limitValues
 
 instance Prelude.NFData StorageTypeLimit where

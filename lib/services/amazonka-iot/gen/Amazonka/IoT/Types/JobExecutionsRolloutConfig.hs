@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.JobExecutionsRolloutConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.JobExecutionsRolloutConfig where
@@ -82,7 +82,8 @@ instance Data.FromJSON JobExecutionsRolloutConfig where
 
 instance Prelude.Hashable JobExecutionsRolloutConfig where
   hashWithSalt _salt JobExecutionsRolloutConfig' {..} =
-    _salt `Prelude.hashWithSalt` exponentialRate
+    _salt
+      `Prelude.hashWithSalt` exponentialRate
       `Prelude.hashWithSalt` maximumPerMinute
 
 instance Prelude.NFData JobExecutionsRolloutConfig where

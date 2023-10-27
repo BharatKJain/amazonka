@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.StackEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.StackEvent where
@@ -295,7 +295,8 @@ instance Data.FromXML StackEvent where
 
 instance Prelude.Hashable StackEvent where
   hashWithSalt _salt StackEvent' {..} =
-    _salt `Prelude.hashWithSalt` clientRequestToken
+    _salt
+      `Prelude.hashWithSalt` clientRequestToken
       `Prelude.hashWithSalt` hookFailureMode
       `Prelude.hashWithSalt` hookInvocationPoint
       `Prelude.hashWithSalt` hookStatus

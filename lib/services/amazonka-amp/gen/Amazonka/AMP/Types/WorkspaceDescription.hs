@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AMP.Types.WorkspaceDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AMP.Types.WorkspaceDescription where
@@ -137,7 +137,8 @@ instance Data.FromJSON WorkspaceDescription where
 
 instance Prelude.Hashable WorkspaceDescription where
   hashWithSalt _salt WorkspaceDescription' {..} =
-    _salt `Prelude.hashWithSalt` alias
+    _salt
+      `Prelude.hashWithSalt` alias
       `Prelude.hashWithSalt` prometheusEndpoint
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` arn

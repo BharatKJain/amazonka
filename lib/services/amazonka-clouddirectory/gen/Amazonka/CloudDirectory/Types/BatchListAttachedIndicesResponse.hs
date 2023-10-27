@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchListAttachedIndicesResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchListAttachedIndicesResponse where
@@ -73,7 +73,8 @@ instance
       "BatchListAttachedIndicesResponse"
       ( \x ->
           BatchListAttachedIndicesResponse'
-            Prelude.<$> ( x Data..:? "IndexAttachments"
+            Prelude.<$> ( x
+                            Data..:? "IndexAttachments"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "NextToken")
@@ -86,7 +87,8 @@ instance
   hashWithSalt
     _salt
     BatchListAttachedIndicesResponse' {..} =
-      _salt `Prelude.hashWithSalt` indexAttachments
+      _salt
+        `Prelude.hashWithSalt` indexAttachments
         `Prelude.hashWithSalt` nextToken
 
 instance

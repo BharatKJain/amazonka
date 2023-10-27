@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.HistoryRecord
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.HistoryRecord where
@@ -113,7 +113,8 @@ instance Data.FromXML HistoryRecord where
 
 instance Prelude.Hashable HistoryRecord where
   hashWithSalt _salt HistoryRecord' {..} =
-    _salt `Prelude.hashWithSalt` eventInformation
+    _salt
+      `Prelude.hashWithSalt` eventInformation
       `Prelude.hashWithSalt` eventType
       `Prelude.hashWithSalt` timestamp
 

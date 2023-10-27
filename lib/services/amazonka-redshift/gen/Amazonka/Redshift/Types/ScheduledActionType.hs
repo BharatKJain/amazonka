@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.ScheduledActionType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.ScheduledActionType where
@@ -86,7 +86,8 @@ instance Data.FromXML ScheduledActionType where
 
 instance Prelude.Hashable ScheduledActionType where
   hashWithSalt _salt ScheduledActionType' {..} =
-    _salt `Prelude.hashWithSalt` pauseCluster
+    _salt
+      `Prelude.hashWithSalt` pauseCluster
       `Prelude.hashWithSalt` resizeCluster
       `Prelude.hashWithSalt` resumeCluster
 

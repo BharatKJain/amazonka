@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeAddresses
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -245,7 +245,9 @@ instance Core.AWSRequest DescribeAddresses where
     Response.receiveXML
       ( \s h x ->
           DescribeAddressesResponse'
-            Prelude.<$> ( x Data..@? "addressesSet" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "addressesSet"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -253,7 +255,8 @@ instance Core.AWSRequest DescribeAddresses where
 
 instance Prelude.Hashable DescribeAddresses where
   hashWithSalt _salt DescribeAddresses' {..} =
-    _salt `Prelude.hashWithSalt` allocationIds
+    _salt
+      `Prelude.hashWithSalt` allocationIds
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` publicIps

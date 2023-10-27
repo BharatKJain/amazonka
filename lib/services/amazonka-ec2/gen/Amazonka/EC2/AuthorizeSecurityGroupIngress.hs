@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.AuthorizeSecurityGroupIngress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -344,7 +344,8 @@ instance
       ( \s h x ->
           AuthorizeSecurityGroupIngressResponse'
             Prelude.<$> (x Data..@? "return")
-            Prelude.<*> ( x Data..@? "securityGroupRuleSet"
+            Prelude.<*> ( x
+                            Data..@? "securityGroupRuleSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -356,7 +357,8 @@ instance
     AuthorizeSecurityGroupIngress
   where
   hashWithSalt _salt AuthorizeSecurityGroupIngress' {..} =
-    _salt `Prelude.hashWithSalt` cidrIp
+    _salt
+      `Prelude.hashWithSalt` cidrIp
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` fromPort
       `Prelude.hashWithSalt` groupId

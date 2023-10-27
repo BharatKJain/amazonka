@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaTailor.CreateProgram
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -180,7 +180,8 @@ instance Core.AWSRequest CreateProgram where
 
 instance Prelude.Hashable CreateProgram where
   hashWithSalt _salt CreateProgram' {..} =
-    _salt `Prelude.hashWithSalt` adBreaks
+    _salt
+      `Prelude.hashWithSalt` adBreaks
       `Prelude.hashWithSalt` liveSourceName
       `Prelude.hashWithSalt` vodSourceName
       `Prelude.hashWithSalt` channelName

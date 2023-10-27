@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHub.Types.DiscoveredResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHub.Types.DiscoveredResource where
@@ -82,7 +82,8 @@ instance Data.FromJSON DiscoveredResource where
 
 instance Prelude.Hashable DiscoveredResource where
   hashWithSalt _salt DiscoveredResource' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` configurationId
 
 instance Prelude.NFData DiscoveredResource where

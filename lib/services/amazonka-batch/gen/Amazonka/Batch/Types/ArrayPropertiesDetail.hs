@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.ArrayPropertiesDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.ArrayPropertiesDetail where
@@ -93,7 +93,8 @@ instance Data.FromJSON ArrayPropertiesDetail where
 
 instance Prelude.Hashable ArrayPropertiesDetail where
   hashWithSalt _salt ArrayPropertiesDetail' {..} =
-    _salt `Prelude.hashWithSalt` index
+    _salt
+      `Prelude.hashWithSalt` index
       `Prelude.hashWithSalt` size
       `Prelude.hashWithSalt` statusSummary
 

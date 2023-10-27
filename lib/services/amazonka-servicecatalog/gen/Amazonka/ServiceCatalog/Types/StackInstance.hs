@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.StackInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.StackInstance where
@@ -143,7 +143,8 @@ instance Data.FromJSON StackInstance where
 
 instance Prelude.Hashable StackInstance where
   hashWithSalt _salt StackInstance' {..} =
-    _salt `Prelude.hashWithSalt` account
+    _salt
+      `Prelude.hashWithSalt` account
       `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` stackInstanceStatus
 

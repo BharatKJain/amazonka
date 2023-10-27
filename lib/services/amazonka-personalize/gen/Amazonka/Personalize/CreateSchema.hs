@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Personalize.CreateSchema
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest CreateSchema where
 
 instance Prelude.Hashable CreateSchema where
   hashWithSalt _salt CreateSchema' {..} =
-    _salt `Prelude.hashWithSalt` domain
+    _salt
+      `Prelude.hashWithSalt` domain
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` schema
 

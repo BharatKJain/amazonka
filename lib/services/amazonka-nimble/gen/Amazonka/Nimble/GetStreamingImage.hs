@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Nimble.GetStreamingImage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest GetStreamingImage where
 
 instance Prelude.Hashable GetStreamingImage where
   hashWithSalt _salt GetStreamingImage' {..} =
-    _salt `Prelude.hashWithSalt` streamingImageId
+    _salt
+      `Prelude.hashWithSalt` streamingImageId
       `Prelude.hashWithSalt` studioId
 
 instance Prelude.NFData GetStreamingImage where

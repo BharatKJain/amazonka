@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.EstimatedMonthlySavings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.EstimatedMonthlySavings where
@@ -82,7 +82,8 @@ instance Data.FromJSON EstimatedMonthlySavings where
 
 instance Prelude.Hashable EstimatedMonthlySavings where
   hashWithSalt _salt EstimatedMonthlySavings' {..} =
-    _salt `Prelude.hashWithSalt` currency
+    _salt
+      `Prelude.hashWithSalt` currency
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData EstimatedMonthlySavings where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IdentityStore.Types.UniqueAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IdentityStore.Types.UniqueAttribute where
@@ -75,7 +75,8 @@ uniqueAttribute_attributeValue = Lens.lens (\UniqueAttribute' {attributeValue} -
 
 instance Prelude.Hashable UniqueAttribute where
   hashWithSalt _salt UniqueAttribute' {..} =
-    _salt `Prelude.hashWithSalt` attributePath
+    _salt
+      `Prelude.hashWithSalt` attributePath
       `Prelude.hashWithSalt` attributeValue
 
 instance Prelude.NFData UniqueAttribute where

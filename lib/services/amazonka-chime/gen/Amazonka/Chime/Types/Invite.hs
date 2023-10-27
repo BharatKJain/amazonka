@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.Invite
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.Invite where
@@ -97,7 +97,8 @@ instance Data.FromJSON Invite where
 
 instance Prelude.Hashable Invite where
   hashWithSalt _salt Invite' {..} =
-    _salt `Prelude.hashWithSalt` emailAddress
+    _salt
+      `Prelude.hashWithSalt` emailAddress
       `Prelude.hashWithSalt` emailStatus
       `Prelude.hashWithSalt` inviteId
       `Prelude.hashWithSalt` status

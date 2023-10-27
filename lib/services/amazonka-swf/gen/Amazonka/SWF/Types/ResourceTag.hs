@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.ResourceTag
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.ResourceTag where
@@ -71,12 +71,14 @@ instance Data.FromJSON ResourceTag where
       "ResourceTag"
       ( \x ->
           ResourceTag'
-            Prelude.<$> (x Data..:? "value") Prelude.<*> (x Data..: "key")
+            Prelude.<$> (x Data..:? "value")
+            Prelude.<*> (x Data..: "key")
       )
 
 instance Prelude.Hashable ResourceTag where
   hashWithSalt _salt ResourceTag' {..} =
-    _salt `Prelude.hashWithSalt` value
+    _salt
+      `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` key
 
 instance Prelude.NFData ResourceTag where

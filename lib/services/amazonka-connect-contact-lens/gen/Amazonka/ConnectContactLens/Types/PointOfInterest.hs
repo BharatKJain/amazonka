@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectContactLens.Types.PointOfInterest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectContactLens.Types.PointOfInterest where
@@ -84,7 +84,8 @@ instance Data.FromJSON PointOfInterest where
 
 instance Prelude.Hashable PointOfInterest where
   hashWithSalt _salt PointOfInterest' {..} =
-    _salt `Prelude.hashWithSalt` beginOffsetMillis
+    _salt
+      `Prelude.hashWithSalt` beginOffsetMillis
       `Prelude.hashWithSalt` endOffsetMillis
 
 instance Prelude.NFData PointOfInterest where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.LinkAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.LinkAssociation where
@@ -95,7 +95,8 @@ instance Data.FromJSON LinkAssociation where
 
 instance Prelude.Hashable LinkAssociation where
   hashWithSalt _salt LinkAssociation' {..} =
-    _salt `Prelude.hashWithSalt` deviceId
+    _salt
+      `Prelude.hashWithSalt` deviceId
       `Prelude.hashWithSalt` globalNetworkId
       `Prelude.hashWithSalt` linkAssociationState
       `Prelude.hashWithSalt` linkId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.ApplyMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.ApplyMapping where
@@ -94,7 +94,8 @@ instance Data.FromJSON ApplyMapping where
 
 instance Prelude.Hashable ApplyMapping where
   hashWithSalt _salt ApplyMapping' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inputs
       `Prelude.hashWithSalt` mapping
 

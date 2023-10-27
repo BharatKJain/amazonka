@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AuditManager.GetAssessmentReportUrl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest GetAssessmentReportUrl where
 
 instance Prelude.Hashable GetAssessmentReportUrl where
   hashWithSalt _salt GetAssessmentReportUrl' {..} =
-    _salt `Prelude.hashWithSalt` assessmentReportId
+    _salt
+      `Prelude.hashWithSalt` assessmentReportId
       `Prelude.hashWithSalt` assessmentId
 
 instance Prelude.NFData GetAssessmentReportUrl where

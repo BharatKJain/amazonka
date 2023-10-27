@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.FileFormatConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.FileFormatConfiguration where
@@ -82,7 +82,8 @@ instance Data.FromJSON FileFormatConfiguration where
 
 instance Prelude.Hashable FileFormatConfiguration where
   hashWithSalt _salt FileFormatConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` jsonConfiguration
+    _salt
+      `Prelude.hashWithSalt` jsonConfiguration
       `Prelude.hashWithSalt` parquetConfiguration
 
 instance Prelude.NFData FileFormatConfiguration where

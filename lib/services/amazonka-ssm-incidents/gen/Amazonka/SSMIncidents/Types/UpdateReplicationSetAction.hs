@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.UpdateReplicationSetAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.UpdateReplicationSetAction where
@@ -73,7 +73,8 @@ updateReplicationSetAction_deleteRegionAction = Lens.lens (\UpdateReplicationSet
 
 instance Prelude.Hashable UpdateReplicationSetAction where
   hashWithSalt _salt UpdateReplicationSetAction' {..} =
-    _salt `Prelude.hashWithSalt` addRegionAction
+    _salt
+      `Prelude.hashWithSalt` addRegionAction
       `Prelude.hashWithSalt` deleteRegionAction
 
 instance Prelude.NFData UpdateReplicationSetAction where

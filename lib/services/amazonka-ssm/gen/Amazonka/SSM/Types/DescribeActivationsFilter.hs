@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.DescribeActivationsFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.DescribeActivationsFilter where
@@ -66,7 +66,8 @@ describeActivationsFilter_filterValues = Lens.lens (\DescribeActivationsFilter' 
 
 instance Prelude.Hashable DescribeActivationsFilter where
   hashWithSalt _salt DescribeActivationsFilter' {..} =
-    _salt `Prelude.hashWithSalt` filterKey
+    _salt
+      `Prelude.hashWithSalt` filterKey
       `Prelude.hashWithSalt` filterValues
 
 instance Prelude.NFData DescribeActivationsFilter where

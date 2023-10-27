@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.LogConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.LogConfiguration where
@@ -217,7 +217,8 @@ instance Data.FromJSON LogConfiguration where
 
 instance Prelude.Hashable LogConfiguration where
   hashWithSalt _salt LogConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` options
+    _salt
+      `Prelude.hashWithSalt` options
       `Prelude.hashWithSalt` secretOptions
       `Prelude.hashWithSalt` logDriver
 

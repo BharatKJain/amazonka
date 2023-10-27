@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerMetrics.Types.BatchPutMetricsError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerMetrics.Types.BatchPutMetricsError where
@@ -105,7 +105,8 @@ instance Data.FromJSON BatchPutMetricsError where
 
 instance Prelude.Hashable BatchPutMetricsError where
   hashWithSalt _salt BatchPutMetricsError' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` metricIndex
 
 instance Prelude.NFData BatchPutMetricsError where

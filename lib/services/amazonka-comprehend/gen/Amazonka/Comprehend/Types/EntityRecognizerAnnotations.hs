@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.EntityRecognizerAnnotations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.EntityRecognizerAnnotations where
@@ -89,7 +89,8 @@ instance Data.FromJSON EntityRecognizerAnnotations where
 
 instance Prelude.Hashable EntityRecognizerAnnotations where
   hashWithSalt _salt EntityRecognizerAnnotations' {..} =
-    _salt `Prelude.hashWithSalt` testS3Uri
+    _salt
+      `Prelude.hashWithSalt` testS3Uri
       `Prelude.hashWithSalt` s3Uri
 
 instance Prelude.NFData EntityRecognizerAnnotations where

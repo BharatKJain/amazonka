@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.SparkConnectorTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.SparkConnectorTarget where
@@ -133,7 +133,8 @@ instance Data.FromJSON SparkConnectorTarget where
       "SparkConnectorTarget"
       ( \x ->
           SparkConnectorTarget'
-            Prelude.<$> ( x Data..:? "AdditionalOptions"
+            Prelude.<$> ( x
+                            Data..:? "AdditionalOptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "OutputSchemas" Data..!= Prelude.mempty)
@@ -146,7 +147,8 @@ instance Data.FromJSON SparkConnectorTarget where
 
 instance Prelude.Hashable SparkConnectorTarget where
   hashWithSalt _salt SparkConnectorTarget' {..} =
-    _salt `Prelude.hashWithSalt` additionalOptions
+    _salt
+      `Prelude.hashWithSalt` additionalOptions
       `Prelude.hashWithSalt` outputSchemas
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inputs

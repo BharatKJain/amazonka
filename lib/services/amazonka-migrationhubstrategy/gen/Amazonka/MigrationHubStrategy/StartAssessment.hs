@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.StartAssessment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,7 +117,8 @@ instance Core.AWSRequest StartAssessment where
 
 instance Prelude.Hashable StartAssessment where
   hashWithSalt _salt StartAssessment' {..} =
-    _salt `Prelude.hashWithSalt` assessmentTargets
+    _salt
+      `Prelude.hashWithSalt` assessmentTargets
       `Prelude.hashWithSalt` s3bucketForAnalysisData
       `Prelude.hashWithSalt` s3bucketForReportData
 

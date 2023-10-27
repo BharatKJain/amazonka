@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ActionTypeSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ActionTypeSettings where
@@ -128,7 +128,8 @@ instance Data.FromJSON ActionTypeSettings where
 
 instance Prelude.Hashable ActionTypeSettings where
   hashWithSalt _salt ActionTypeSettings' {..} =
-    _salt `Prelude.hashWithSalt` entityUrlTemplate
+    _salt
+      `Prelude.hashWithSalt` entityUrlTemplate
       `Prelude.hashWithSalt` executionUrlTemplate
       `Prelude.hashWithSalt` revisionUrlTemplate
       `Prelude.hashWithSalt` thirdPartyConfigurationUrl

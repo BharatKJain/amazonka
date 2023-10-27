@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.S3Config
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.S3Config where
@@ -90,7 +90,8 @@ instance Data.FromJSON S3Config where
 
 instance Prelude.Hashable S3Config where
   hashWithSalt _salt S3Config' {..} =
-    _salt `Prelude.hashWithSalt` encryptionConfig
+    _salt
+      `Prelude.hashWithSalt` encryptionConfig
       `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` bucketPrefix
 

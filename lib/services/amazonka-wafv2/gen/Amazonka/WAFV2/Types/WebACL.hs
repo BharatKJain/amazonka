@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.WebACL
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.WebACL where
@@ -449,16 +449,19 @@ instance Data.FromJSON WebACL where
             Prelude.<$> (x Data..:? "Capacity")
             Prelude.<*> (x Data..:? "CaptchaConfig")
             Prelude.<*> (x Data..:? "ChallengeConfig")
-            Prelude.<*> ( x Data..:? "CustomResponseBodies"
+            Prelude.<*> ( x
+                            Data..:? "CustomResponseBodies"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Description")
             Prelude.<*> (x Data..:? "LabelNamespace")
             Prelude.<*> (x Data..:? "ManagedByFirewallManager")
-            Prelude.<*> ( x Data..:? "PostProcessFirewallManagerRuleGroups"
+            Prelude.<*> ( x
+                            Data..:? "PostProcessFirewallManagerRuleGroups"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "PreProcessFirewallManagerRuleGroups"
+            Prelude.<*> ( x
+                            Data..:? "PreProcessFirewallManagerRuleGroups"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Rules" Data..!= Prelude.mempty)
@@ -472,7 +475,8 @@ instance Data.FromJSON WebACL where
 
 instance Prelude.Hashable WebACL where
   hashWithSalt _salt WebACL' {..} =
-    _salt `Prelude.hashWithSalt` capacity
+    _salt
+      `Prelude.hashWithSalt` capacity
       `Prelude.hashWithSalt` captchaConfig
       `Prelude.hashWithSalt` challengeConfig
       `Prelude.hashWithSalt` customResponseBodies

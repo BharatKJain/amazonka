@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.ScanRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.ScanRange where
@@ -96,7 +96,8 @@ scanRange_start = Lens.lens (\ScanRange' {start} -> start) (\s@ScanRange' {} a -
 
 instance Prelude.Hashable ScanRange where
   hashWithSalt _salt ScanRange' {..} =
-    _salt `Prelude.hashWithSalt` end
+    _salt
+      `Prelude.hashWithSalt` end
       `Prelude.hashWithSalt` start
 
 instance Prelude.NFData ScanRange where

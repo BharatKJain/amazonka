@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.BoxConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.BoxConfiguration where
@@ -350,11 +350,13 @@ instance Data.FromJSON BoxConfiguration where
             Prelude.<*> (x Data..:? "CrawlComments")
             Prelude.<*> (x Data..:? "CrawlTasks")
             Prelude.<*> (x Data..:? "CrawlWebLinks")
-            Prelude.<*> ( x Data..:? "ExclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "ExclusionPatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "FileFieldMappings")
-            Prelude.<*> ( x Data..:? "InclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "InclusionPatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "TaskFieldMappings")
@@ -367,7 +369,8 @@ instance Data.FromJSON BoxConfiguration where
 
 instance Prelude.Hashable BoxConfiguration where
   hashWithSalt _salt BoxConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` commentFieldMappings
+    _salt
+      `Prelude.hashWithSalt` commentFieldMappings
       `Prelude.hashWithSalt` crawlComments
       `Prelude.hashWithSalt` crawlTasks
       `Prelude.hashWithSalt` crawlWebLinks

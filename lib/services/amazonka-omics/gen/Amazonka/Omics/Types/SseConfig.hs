@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.SseConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.SseConfig where
@@ -71,12 +71,14 @@ instance Data.FromJSON SseConfig where
       "SseConfig"
       ( \x ->
           SseConfig'
-            Prelude.<$> (x Data..:? "keyArn") Prelude.<*> (x Data..: "type")
+            Prelude.<$> (x Data..:? "keyArn")
+            Prelude.<*> (x Data..: "type")
       )
 
 instance Prelude.Hashable SseConfig where
   hashWithSalt _salt SseConfig' {..} =
-    _salt `Prelude.hashWithSalt` keyArn
+    _salt
+      `Prelude.hashWithSalt` keyArn
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData SseConfig where

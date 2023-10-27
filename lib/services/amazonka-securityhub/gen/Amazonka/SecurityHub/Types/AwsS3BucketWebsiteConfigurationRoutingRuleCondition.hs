@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsS3BucketWebsiteConfigurationRoutingRuleCondition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsS3BucketWebsiteConfigurationRoutingRuleCondition where
@@ -77,7 +77,7 @@ instance
       ( \x ->
           AwsS3BucketWebsiteConfigurationRoutingRuleCondition'
             Prelude.<$> (x Data..:? "HttpErrorCodeReturnedEquals")
-              Prelude.<*> (x Data..:? "KeyPrefixEquals")
+            Prelude.<*> (x Data..:? "KeyPrefixEquals")
       )
 
 instance

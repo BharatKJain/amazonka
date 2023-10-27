@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.CloudwatchLogsAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.CloudwatchLogsAction where
@@ -78,7 +78,8 @@ instance Data.FromJSON CloudwatchLogsAction where
 
 instance Prelude.Hashable CloudwatchLogsAction where
   hashWithSalt _salt CloudwatchLogsAction' {..} =
-    _salt `Prelude.hashWithSalt` roleArn
+    _salt
+      `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` logGroupName
 
 instance Prelude.NFData CloudwatchLogsAction where

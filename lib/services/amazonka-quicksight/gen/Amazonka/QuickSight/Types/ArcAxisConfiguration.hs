@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ArcAxisConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ArcAxisConfiguration where
@@ -75,7 +75,8 @@ instance Data.FromJSON ArcAxisConfiguration where
 
 instance Prelude.Hashable ArcAxisConfiguration where
   hashWithSalt _salt ArcAxisConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` range
+    _salt
+      `Prelude.hashWithSalt` range
       `Prelude.hashWithSalt` reserveRange
 
 instance Prelude.NFData ArcAxisConfiguration where

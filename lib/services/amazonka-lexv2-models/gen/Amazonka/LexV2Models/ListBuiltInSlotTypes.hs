@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexV2Models.ListBuiltInSlotTypes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,7 +148,8 @@ instance Core.AWSRequest ListBuiltInSlotTypes where
     Response.receiveJSON
       ( \s h x ->
           ListBuiltInSlotTypesResponse'
-            Prelude.<$> ( x Data..?> "builtInSlotTypeSummaries"
+            Prelude.<$> ( x
+                            Data..?> "builtInSlotTypeSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "localeId")
@@ -158,7 +159,8 @@ instance Core.AWSRequest ListBuiltInSlotTypes where
 
 instance Prelude.Hashable ListBuiltInSlotTypes where
   hashWithSalt _salt ListBuiltInSlotTypes' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` sortBy
       `Prelude.hashWithSalt` localeId

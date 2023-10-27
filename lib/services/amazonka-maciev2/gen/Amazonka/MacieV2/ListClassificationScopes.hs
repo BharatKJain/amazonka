@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MacieV2.ListClassificationScopes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -99,22 +99,22 @@ instance Core.AWSPager ListClassificationScopes where
     | Core.stop
         ( rs
             Lens.^? listClassificationScopesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listClassificationScopesResponse_classificationScopes
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listClassificationScopes_nextToken
           Lens..~ rs
           Lens.^? listClassificationScopesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListClassificationScopes where
   type
@@ -126,7 +126,8 @@ instance Core.AWSRequest ListClassificationScopes where
     Response.receiveJSON
       ( \s h x ->
           ListClassificationScopesResponse'
-            Prelude.<$> ( x Data..?> "classificationScopes"
+            Prelude.<$> ( x
+                            Data..?> "classificationScopes"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -135,7 +136,8 @@ instance Core.AWSRequest ListClassificationScopes where
 
 instance Prelude.Hashable ListClassificationScopes where
   hashWithSalt _salt ListClassificationScopes' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListClassificationScopes where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DrS.Types.StartRecoveryRequestSourceServer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DrS.Types.StartRecoveryRequestSourceServer where
@@ -75,7 +75,8 @@ instance
   hashWithSalt
     _salt
     StartRecoveryRequestSourceServer' {..} =
-      _salt `Prelude.hashWithSalt` recoverySnapshotID
+      _salt
+        `Prelude.hashWithSalt` recoverySnapshotID
         `Prelude.hashWithSalt` sourceServerID
 
 instance

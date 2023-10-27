@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.Principal
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.Principal where
@@ -71,7 +71,8 @@ principal_service = Lens.lens (\Principal' {service} -> service) (\s@Principal' 
 
 instance Prelude.Hashable Principal where
   hashWithSalt _salt Principal' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` service
 
 instance Prelude.NFData Principal where

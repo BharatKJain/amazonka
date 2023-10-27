@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.PipelineDeclaration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.PipelineDeclaration where
@@ -164,7 +164,8 @@ instance Data.FromJSON PipelineDeclaration where
 
 instance Prelude.Hashable PipelineDeclaration where
   hashWithSalt _salt PipelineDeclaration' {..} =
-    _salt `Prelude.hashWithSalt` artifactStore
+    _salt
+      `Prelude.hashWithSalt` artifactStore
       `Prelude.hashWithSalt` artifactStores
       `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` name

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsCloudFrontDistributionOriginCustomOriginConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsCloudFrontDistributionOriginCustomOriginConfig where
@@ -130,11 +130,11 @@ instance
       ( \x ->
           AwsCloudFrontDistributionOriginCustomOriginConfig'
             Prelude.<$> (x Data..:? "HttpPort")
-              Prelude.<*> (x Data..:? "HttpsPort")
-              Prelude.<*> (x Data..:? "OriginKeepaliveTimeout")
-              Prelude.<*> (x Data..:? "OriginProtocolPolicy")
-              Prelude.<*> (x Data..:? "OriginReadTimeout")
-              Prelude.<*> (x Data..:? "OriginSslProtocols")
+            Prelude.<*> (x Data..:? "HttpsPort")
+            Prelude.<*> (x Data..:? "OriginKeepaliveTimeout")
+            Prelude.<*> (x Data..:? "OriginProtocolPolicy")
+            Prelude.<*> (x Data..:? "OriginReadTimeout")
+            Prelude.<*> (x Data..:? "OriginSslProtocols")
       )
 
 instance
@@ -144,7 +144,8 @@ instance
   hashWithSalt
     _salt
     AwsCloudFrontDistributionOriginCustomOriginConfig' {..} =
-      _salt `Prelude.hashWithSalt` httpPort
+      _salt
+        `Prelude.hashWithSalt` httpPort
         `Prelude.hashWithSalt` httpsPort
         `Prelude.hashWithSalt` originKeepaliveTimeout
         `Prelude.hashWithSalt` originProtocolPolicy

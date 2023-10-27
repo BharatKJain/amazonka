@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.AmiAggregationResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.AmiAggregationResponse where
@@ -98,7 +98,8 @@ instance Data.FromJSON AmiAggregationResponse where
 
 instance Prelude.Hashable AmiAggregationResponse where
   hashWithSalt _salt AmiAggregationResponse' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` affectedInstances
       `Prelude.hashWithSalt` severityCounts
       `Prelude.hashWithSalt` ami

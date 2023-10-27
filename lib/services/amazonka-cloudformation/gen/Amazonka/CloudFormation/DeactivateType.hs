@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFormation.DeactivateType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -143,7 +143,8 @@ instance Core.AWSRequest DeactivateType where
 
 instance Prelude.Hashable DeactivateType where
   hashWithSalt _salt DeactivateType' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` typeName
 

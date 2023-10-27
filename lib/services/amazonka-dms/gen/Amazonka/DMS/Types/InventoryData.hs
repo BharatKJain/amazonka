@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.InventoryData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.InventoryData where
@@ -74,7 +74,8 @@ instance Data.FromJSON InventoryData where
 
 instance Prelude.Hashable InventoryData where
   hashWithSalt _salt InventoryData' {..} =
-    _salt `Prelude.hashWithSalt` numberOfDatabases
+    _salt
+      `Prelude.hashWithSalt` numberOfDatabases
       `Prelude.hashWithSalt` numberOfSchemas
 
 instance Prelude.NFData InventoryData where

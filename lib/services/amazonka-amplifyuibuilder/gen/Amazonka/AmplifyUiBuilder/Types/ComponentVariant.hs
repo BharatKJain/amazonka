@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.ComponentVariant
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.ComponentVariant where
@@ -84,7 +84,8 @@ instance Data.FromJSON ComponentVariant where
 
 instance Prelude.Hashable ComponentVariant where
   hashWithSalt _salt ComponentVariant' {..} =
-    _salt `Prelude.hashWithSalt` overrides
+    _salt
+      `Prelude.hashWithSalt` overrides
       `Prelude.hashWithSalt` variantValues
 
 instance Prelude.NFData ComponentVariant where

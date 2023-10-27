@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Proton.Types.ProvisionedResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Proton.Types.ProvisionedResource where
@@ -103,7 +103,8 @@ instance Data.FromJSON ProvisionedResource where
 
 instance Prelude.Hashable ProvisionedResource where
   hashWithSalt _salt ProvisionedResource' {..} =
-    _salt `Prelude.hashWithSalt` identifier
+    _salt
+      `Prelude.hashWithSalt` identifier
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` provisioningEngine
 

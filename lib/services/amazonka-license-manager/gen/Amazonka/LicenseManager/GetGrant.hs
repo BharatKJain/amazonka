@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LicenseManager.GetGrant
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,7 +100,8 @@ instance Core.AWSRequest GetGrant where
 
 instance Prelude.Hashable GetGrant where
   hashWithSalt _salt GetGrant' {..} =
-    _salt `Prelude.hashWithSalt` version
+    _salt
+      `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` grantArn
 
 instance Prelude.NFData GetGrant where

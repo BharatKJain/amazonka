@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.ResourceServerScopeType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.ResourceServerScopeType where
@@ -80,7 +80,8 @@ instance Data.FromJSON ResourceServerScopeType where
 
 instance Prelude.Hashable ResourceServerScopeType where
   hashWithSalt _salt ResourceServerScopeType' {..} =
-    _salt `Prelude.hashWithSalt` scopeName
+    _salt
+      `Prelude.hashWithSalt` scopeName
       `Prelude.hashWithSalt` scopeDescription
 
 instance Prelude.NFData ResourceServerScopeType where

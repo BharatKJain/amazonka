@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.DescribeFeatureMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest DescribeFeatureMetadata where
 
 instance Prelude.Hashable DescribeFeatureMetadata where
   hashWithSalt _salt DescribeFeatureMetadata' {..} =
-    _salt `Prelude.hashWithSalt` featureGroupName
+    _salt
+      `Prelude.hashWithSalt` featureGroupName
       `Prelude.hashWithSalt` featureName
 
 instance Prelude.NFData DescribeFeatureMetadata where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.EmailMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.EmailMessage where
@@ -124,7 +124,8 @@ emailMessage_substitutions = Lens.lens (\EmailMessage' {substitutions} -> substi
 
 instance Prelude.Hashable EmailMessage where
   hashWithSalt _salt EmailMessage' {..} =
-    _salt `Prelude.hashWithSalt` body
+    _salt
+      `Prelude.hashWithSalt` body
       `Prelude.hashWithSalt` feedbackForwardingAddress
       `Prelude.hashWithSalt` fromAddress
       `Prelude.hashWithSalt` rawEmail

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MigrationHubReFactorSpaces.GetRoute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,7 +138,8 @@ instance Core.AWSRequest GetRoute where
             Prelude.<*> (x Data..?> "LastUpdatedTime")
             Prelude.<*> (x Data..?> "Methods" Core..!@ Prelude.mempty)
             Prelude.<*> (x Data..?> "OwnerAccountId")
-            Prelude.<*> ( x Data..?> "PathResourceToId"
+            Prelude.<*> ( x
+                            Data..?> "PathResourceToId"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "RouteId")
@@ -152,7 +153,8 @@ instance Core.AWSRequest GetRoute where
 
 instance Prelude.Hashable GetRoute where
   hashWithSalt _salt GetRoute' {..} =
-    _salt `Prelude.hashWithSalt` applicationIdentifier
+    _salt
+      `Prelude.hashWithSalt` applicationIdentifier
       `Prelude.hashWithSalt` environmentIdentifier
       `Prelude.hashWithSalt` routeIdentifier
 

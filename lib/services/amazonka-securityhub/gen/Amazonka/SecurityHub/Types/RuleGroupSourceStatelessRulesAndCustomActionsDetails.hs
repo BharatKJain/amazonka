@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.RuleGroupSourceStatelessRulesAndCustomActionsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.RuleGroupSourceStatelessRulesAndCustomActionsDetails where
@@ -76,9 +76,10 @@ instance
       ( \x ->
           RuleGroupSourceStatelessRulesAndCustomActionsDetails'
             Prelude.<$> (x Data..:? "CustomActions" Data..!= Prelude.mempty)
-              Prelude.<*> ( x Data..:? "StatelessRules"
-                              Data..!= Prelude.mempty
-                          )
+            Prelude.<*> ( x
+                            Data..:? "StatelessRules"
+                            Data..!= Prelude.mempty
+                        )
       )
 
 instance
@@ -88,7 +89,8 @@ instance
   hashWithSalt
     _salt
     RuleGroupSourceStatelessRulesAndCustomActionsDetails' {..} =
-      _salt `Prelude.hashWithSalt` customActions
+      _salt
+        `Prelude.hashWithSalt` customActions
         `Prelude.hashWithSalt` statelessRules
 
 instance

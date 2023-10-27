@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFRegional.Types.SqlInjectionMatchSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFRegional.Types.SqlInjectionMatchSet where
@@ -127,14 +127,16 @@ instance Data.FromJSON SqlInjectionMatchSet where
           SqlInjectionMatchSet'
             Prelude.<$> (x Data..:? "Name")
             Prelude.<*> (x Data..: "SqlInjectionMatchSetId")
-            Prelude.<*> ( x Data..:? "SqlInjectionMatchTuples"
+            Prelude.<*> ( x
+                            Data..:? "SqlInjectionMatchTuples"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable SqlInjectionMatchSet where
   hashWithSalt _salt SqlInjectionMatchSet' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` sqlInjectionMatchSetId
       `Prelude.hashWithSalt` sqlInjectionMatchTuples
 

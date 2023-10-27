@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.AthenaError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.AthenaError where
@@ -129,7 +129,8 @@ instance Data.FromJSON AthenaError where
 
 instance Prelude.Hashable AthenaError where
   hashWithSalt _salt AthenaError' {..} =
-    _salt `Prelude.hashWithSalt` errorCategory
+    _salt
+      `Prelude.hashWithSalt` errorCategory
       `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` errorType
       `Prelude.hashWithSalt` retryable

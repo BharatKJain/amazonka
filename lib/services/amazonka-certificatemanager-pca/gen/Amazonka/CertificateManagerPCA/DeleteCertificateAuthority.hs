@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.DeleteCertificateAuthority
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -85,7 +85,7 @@ data DeleteCertificateAuthority = DeleteCertificateAuthority'
     -- <https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html CreateCertificateAuthority>.
     -- This must have the following form:
     --
-    -- @arn:aws:acm-pca:region:account:certificate-authority\/12345678-1234-1234-1234-123456789012 @.
+    -- @arn:aws:acm-pca:@/@region@/@:@/@account@/@:certificate-authority\/@/@12345678-1234-1234-1234-123456789012@/@ @.
     certificateAuthorityArn :: Prelude.Text
   }
   deriving (Prelude.Eq, Prelude.Read, Prelude.Show, Prelude.Generic)
@@ -105,7 +105,7 @@ data DeleteCertificateAuthority = DeleteCertificateAuthority'
 -- <https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html CreateCertificateAuthority>.
 -- This must have the following form:
 --
--- @arn:aws:acm-pca:region:account:certificate-authority\/12345678-1234-1234-1234-123456789012 @.
+-- @arn:aws:acm-pca:@/@region@/@:@/@account@/@:certificate-authority\/@/@12345678-1234-1234-1234-123456789012@/@ @.
 newDeleteCertificateAuthority ::
   -- | 'certificateAuthorityArn'
   Prelude.Text ->
@@ -128,7 +128,7 @@ deleteCertificateAuthority_permanentDeletionTimeInDays = Lens.lens (\DeleteCerti
 -- <https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html CreateCertificateAuthority>.
 -- This must have the following form:
 --
--- @arn:aws:acm-pca:region:account:certificate-authority\/12345678-1234-1234-1234-123456789012 @.
+-- @arn:aws:acm-pca:@/@region@/@:@/@account@/@:certificate-authority\/@/@12345678-1234-1234-1234-123456789012@/@ @.
 deleteCertificateAuthority_certificateAuthorityArn :: Lens.Lens' DeleteCertificateAuthority Prelude.Text
 deleteCertificateAuthority_certificateAuthorityArn = Lens.lens (\DeleteCertificateAuthority' {certificateAuthorityArn} -> certificateAuthorityArn) (\s@DeleteCertificateAuthority' {} a -> s {certificateAuthorityArn = a} :: DeleteCertificateAuthority)
 

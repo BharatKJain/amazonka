@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.ListFolders
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest ListFolders where
     Response.receiveJSON
       ( \s h x ->
           ListFoldersResponse'
-            Prelude.<$> ( x Data..?> "FolderSummaryList"
+            Prelude.<$> ( x
+                            Data..?> "FolderSummaryList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -119,7 +120,8 @@ instance Core.AWSRequest ListFolders where
 
 instance Prelude.Hashable ListFolders where
   hashWithSalt _salt ListFolders' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` awsAccountId
 

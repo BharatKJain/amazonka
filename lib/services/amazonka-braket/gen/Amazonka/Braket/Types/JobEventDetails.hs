@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Braket.Types.JobEventDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Braket.Types.JobEventDetails where
@@ -89,7 +89,8 @@ instance Data.FromJSON JobEventDetails where
 
 instance Prelude.Hashable JobEventDetails where
   hashWithSalt _salt JobEventDetails' {..} =
-    _salt `Prelude.hashWithSalt` eventType
+    _salt
+      `Prelude.hashWithSalt` eventType
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` timeOfEvent
 

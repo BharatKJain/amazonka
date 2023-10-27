@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StorageGateway.Types.Tape
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StorageGateway.Types.Tape where
@@ -219,7 +219,8 @@ instance Data.FromJSON Tape where
 
 instance Prelude.Hashable Tape where
   hashWithSalt _salt Tape' {..} =
-    _salt `Prelude.hashWithSalt` kmsKey
+    _salt
+      `Prelude.hashWithSalt` kmsKey
       `Prelude.hashWithSalt` poolEntryDate
       `Prelude.hashWithSalt` poolId
       `Prelude.hashWithSalt` progress

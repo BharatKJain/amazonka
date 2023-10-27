@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsRdsDbSecurityGroupEc2SecurityGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsRdsDbSecurityGroupEc2SecurityGroup where
@@ -108,7 +108,8 @@ instance
   hashWithSalt
     _salt
     AwsRdsDbSecurityGroupEc2SecurityGroup' {..} =
-      _salt `Prelude.hashWithSalt` ec2SecurityGroupId
+      _salt
+        `Prelude.hashWithSalt` ec2SecurityGroupId
         `Prelude.hashWithSalt` ec2SecurityGroupName
         `Prelude.hashWithSalt` ec2SecurityGroupOwnerId
         `Prelude.hashWithSalt` status

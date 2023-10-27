@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.EnvironmentResourceDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.EnvironmentResourceDescription where
@@ -128,28 +128,40 @@ environmentResourceDescription_triggers = Lens.lens (\EnvironmentResourceDescrip
 instance Data.FromXML EnvironmentResourceDescription where
   parseXML x =
     EnvironmentResourceDescription'
-      Prelude.<$> ( x Data..@? "AutoScalingGroups"
+      Prelude.<$> ( x
+                      Data..@? "AutoScalingGroups"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "EnvironmentName")
-      Prelude.<*> ( x Data..@? "Instances" Core..!@ Prelude.mempty
-                      Prelude.>>= Core.may (Data.parseXMLList "member")
-                  )
-      Prelude.<*> ( x Data..@? "LaunchConfigurations"
+      Prelude.<*> ( x
+                      Data..@? "Instances"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "LaunchTemplates" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "LaunchConfigurations"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "LoadBalancers" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "LaunchTemplates"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "Queues" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "LoadBalancers"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "Triggers" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Queues"
+                      Core..!@ Prelude.mempty
+                      Prelude.>>= Core.may (Data.parseXMLList "member")
+                  )
+      Prelude.<*> ( x
+                      Data..@? "Triggers"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 
@@ -160,7 +172,8 @@ instance
   hashWithSalt
     _salt
     EnvironmentResourceDescription' {..} =
-      _salt `Prelude.hashWithSalt` autoScalingGroups
+      _salt
+        `Prelude.hashWithSalt` autoScalingGroups
         `Prelude.hashWithSalt` environmentName
         `Prelude.hashWithSalt` instances
         `Prelude.hashWithSalt` launchConfigurations

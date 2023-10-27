@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.CreateFleetInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.CreateFleetInstance where
@@ -109,7 +109,9 @@ createFleetInstance_platform = Lens.lens (\CreateFleetInstance' {platform} -> pl
 instance Data.FromXML CreateFleetInstance where
   parseXML x =
     CreateFleetInstance'
-      Prelude.<$> ( x Data..@? "instanceIds" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "instanceIds"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "instanceType")
@@ -119,7 +121,8 @@ instance Data.FromXML CreateFleetInstance where
 
 instance Prelude.Hashable CreateFleetInstance where
   hashWithSalt _salt CreateFleetInstance' {..} =
-    _salt `Prelude.hashWithSalt` instanceIds
+    _salt
+      `Prelude.hashWithSalt` instanceIds
       `Prelude.hashWithSalt` instanceType
       `Prelude.hashWithSalt` launchTemplateAndOverrides
       `Prelude.hashWithSalt` lifecycle

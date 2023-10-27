@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.UserQuickConnectConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.UserQuickConnectConfig where
@@ -79,7 +79,8 @@ instance Data.FromJSON UserQuickConnectConfig where
 
 instance Prelude.Hashable UserQuickConnectConfig where
   hashWithSalt _salt UserQuickConnectConfig' {..} =
-    _salt `Prelude.hashWithSalt` userId
+    _salt
+      `Prelude.hashWithSalt` userId
       `Prelude.hashWithSalt` contactFlowId
 
 instance Prelude.NFData UserQuickConnectConfig where

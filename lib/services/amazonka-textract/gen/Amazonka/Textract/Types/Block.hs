@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.Block
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.Block where
@@ -427,7 +427,6 @@ block_id = Lens.lens (\Block' {id} -> id) (\s@Block' {} a -> s {id = a} :: Block
 block_page :: Lens.Lens' Block (Prelude.Maybe Prelude.Natural)
 block_page = Lens.lens (\Block' {page} -> page) (\s@Block' {} a -> s {page = a} :: Block)
 
--- |
 block_query :: Lens.Lens' Block (Prelude.Maybe Query)
 block_query = Lens.lens (\Block' {query} -> query) (\s@Block' {} a -> s {query = a} :: Block)
 
@@ -495,7 +494,8 @@ instance Data.FromJSON Block where
 
 instance Prelude.Hashable Block where
   hashWithSalt _salt Block' {..} =
-    _salt `Prelude.hashWithSalt` blockType
+    _salt
+      `Prelude.hashWithSalt` blockType
       `Prelude.hashWithSalt` columnIndex
       `Prelude.hashWithSalt` columnSpan
       `Prelude.hashWithSalt` confidence

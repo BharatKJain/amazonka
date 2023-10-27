@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.ClusterStateChangeReason
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.ClusterStateChangeReason where
@@ -75,7 +75,8 @@ instance Data.FromJSON ClusterStateChangeReason where
 
 instance Prelude.Hashable ClusterStateChangeReason where
   hashWithSalt _salt ClusterStateChangeReason' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData ClusterStateChangeReason where

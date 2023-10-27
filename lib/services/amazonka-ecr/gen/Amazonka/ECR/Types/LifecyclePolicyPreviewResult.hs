@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECR.Types.LifecyclePolicyPreviewResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECR.Types.LifecyclePolicyPreviewResult where
@@ -112,7 +112,8 @@ instance
     LifecyclePolicyPreviewResult
   where
   hashWithSalt _salt LifecyclePolicyPreviewResult' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` appliedRulePriority
       `Prelude.hashWithSalt` imageDigest
       `Prelude.hashWithSalt` imagePushedAt

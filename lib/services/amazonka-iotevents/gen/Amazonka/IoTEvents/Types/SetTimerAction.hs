@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.SetTimerAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.SetTimerAction where
@@ -105,7 +105,8 @@ instance Data.FromJSON SetTimerAction where
 
 instance Prelude.Hashable SetTimerAction where
   hashWithSalt _salt SetTimerAction' {..} =
-    _salt `Prelude.hashWithSalt` durationExpression
+    _salt
+      `Prelude.hashWithSalt` durationExpression
       `Prelude.hashWithSalt` seconds
       `Prelude.hashWithSalt` timerName
 

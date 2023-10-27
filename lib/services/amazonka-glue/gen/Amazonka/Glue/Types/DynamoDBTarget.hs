@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.DynamoDBTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.DynamoDBTarget where
@@ -126,7 +126,8 @@ instance Data.FromJSON DynamoDBTarget where
 
 instance Prelude.Hashable DynamoDBTarget where
   hashWithSalt _salt DynamoDBTarget' {..} =
-    _salt `Prelude.hashWithSalt` path
+    _salt
+      `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` scanAll
       `Prelude.hashWithSalt` scanRate
 

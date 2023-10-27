@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.ConnectionHeaderParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.ConnectionHeaderParameter where
@@ -87,7 +87,8 @@ instance Data.FromJSON ConnectionHeaderParameter where
 
 instance Prelude.Hashable ConnectionHeaderParameter where
   hashWithSalt _salt ConnectionHeaderParameter' {..} =
-    _salt `Prelude.hashWithSalt` isValueSecret
+    _salt
+      `Prelude.hashWithSalt` isValueSecret
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 

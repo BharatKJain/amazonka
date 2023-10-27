@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.APNSVoipChannelRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.APNSVoipChannelRequest where
@@ -137,7 +137,8 @@ aPNSVoipChannelRequest_tokenKeyId = Lens.lens (\APNSVoipChannelRequest' {tokenKe
 
 instance Prelude.Hashable APNSVoipChannelRequest where
   hashWithSalt _salt APNSVoipChannelRequest' {..} =
-    _salt `Prelude.hashWithSalt` bundleId
+    _salt
+      `Prelude.hashWithSalt` bundleId
       `Prelude.hashWithSalt` certificate
       `Prelude.hashWithSalt` defaultAuthenticationMethod
       `Prelude.hashWithSalt` enabled

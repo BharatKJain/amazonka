@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SWF.PollForActivityTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -182,7 +182,8 @@ instance Core.AWSRequest PollForActivityTask where
 
 instance Prelude.Hashable PollForActivityTask where
   hashWithSalt _salt PollForActivityTask' {..} =
-    _salt `Prelude.hashWithSalt` identity
+    _salt
+      `Prelude.hashWithSalt` identity
       `Prelude.hashWithSalt` domain
       `Prelude.hashWithSalt` taskList
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.UpdateCodeRepository
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -56,7 +56,7 @@ data UpdateCodeRepository = UpdateCodeRepository'
     -- secret must have a staging label of @AWSCURRENT@ and must be in the
     -- following format:
     --
-    -- @{\"username\": UserName, \"password\": Password}@
+    -- @{\"username\": @/@UserName@/@, \"password\": @/@Password@/@}@
     gitConfig :: Prelude.Maybe GitConfigForUpdate,
     -- | The name of the Git repository to update.
     codeRepositoryName :: Prelude.Text
@@ -77,7 +77,7 @@ data UpdateCodeRepository = UpdateCodeRepository'
 -- secret must have a staging label of @AWSCURRENT@ and must be in the
 -- following format:
 --
--- @{\"username\": UserName, \"password\": Password}@
+-- @{\"username\": @/@UserName@/@, \"password\": @/@Password@/@}@
 --
 -- 'codeRepositoryName', 'updateCodeRepository_codeRepositoryName' - The name of the Git repository to update.
 newUpdateCodeRepository ::
@@ -96,7 +96,7 @@ newUpdateCodeRepository pCodeRepositoryName_ =
 -- secret must have a staging label of @AWSCURRENT@ and must be in the
 -- following format:
 --
--- @{\"username\": UserName, \"password\": Password}@
+-- @{\"username\": @/@UserName@/@, \"password\": @/@Password@/@}@
 updateCodeRepository_gitConfig :: Lens.Lens' UpdateCodeRepository (Prelude.Maybe GitConfigForUpdate)
 updateCodeRepository_gitConfig = Lens.lens (\UpdateCodeRepository' {gitConfig} -> gitConfig) (\s@UpdateCodeRepository' {} a -> s {gitConfig = a} :: UpdateCodeRepository)
 
@@ -120,7 +120,8 @@ instance Core.AWSRequest UpdateCodeRepository where
 
 instance Prelude.Hashable UpdateCodeRepository where
   hashWithSalt _salt UpdateCodeRepository' {..} =
-    _salt `Prelude.hashWithSalt` gitConfig
+    _salt
+      `Prelude.hashWithSalt` gitConfig
       `Prelude.hashWithSalt` codeRepositoryName
 
 instance Prelude.NFData UpdateCodeRepository where

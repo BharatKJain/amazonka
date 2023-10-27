@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.CloudWatchLogs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.CloudWatchLogs where
@@ -72,7 +72,8 @@ instance Data.FromJSON CloudWatchLogs where
 
 instance Prelude.Hashable CloudWatchLogs where
   hashWithSalt _salt CloudWatchLogs' {..} =
-    _salt `Prelude.hashWithSalt` logGroup
+    _salt
+      `Prelude.hashWithSalt` logGroup
       `Prelude.hashWithSalt` enabled
 
 instance Prelude.NFData CloudWatchLogs where

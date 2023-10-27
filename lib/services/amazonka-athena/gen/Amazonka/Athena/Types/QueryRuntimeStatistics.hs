@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.QueryRuntimeStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.QueryRuntimeStatistics where
@@ -94,7 +94,8 @@ instance Data.FromJSON QueryRuntimeStatistics where
 
 instance Prelude.Hashable QueryRuntimeStatistics where
   hashWithSalt _salt QueryRuntimeStatistics' {..} =
-    _salt `Prelude.hashWithSalt` outputStage
+    _salt
+      `Prelude.hashWithSalt` outputStage
       `Prelude.hashWithSalt` rows
       `Prelude.hashWithSalt` timeline
 

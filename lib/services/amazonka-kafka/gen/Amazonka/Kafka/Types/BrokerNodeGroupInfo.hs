@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.BrokerNodeGroupInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.BrokerNodeGroupInfo where
@@ -172,7 +172,8 @@ instance Data.FromJSON BrokerNodeGroupInfo where
 
 instance Prelude.Hashable BrokerNodeGroupInfo where
   hashWithSalt _salt BrokerNodeGroupInfo' {..} =
-    _salt `Prelude.hashWithSalt` brokerAZDistribution
+    _salt
+      `Prelude.hashWithSalt` brokerAZDistribution
       `Prelude.hashWithSalt` connectivityInfo
       `Prelude.hashWithSalt` securityGroups
       `Prelude.hashWithSalt` storageInfo

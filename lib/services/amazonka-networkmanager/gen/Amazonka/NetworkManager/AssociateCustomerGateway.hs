@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkManager.AssociateCustomerGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -142,7 +142,8 @@ instance Core.AWSRequest AssociateCustomerGateway where
 
 instance Prelude.Hashable AssociateCustomerGateway where
   hashWithSalt _salt AssociateCustomerGateway' {..} =
-    _salt `Prelude.hashWithSalt` linkId
+    _salt
+      `Prelude.hashWithSalt` linkId
       `Prelude.hashWithSalt` customerGatewayArn
       `Prelude.hashWithSalt` globalNetworkId
       `Prelude.hashWithSalt` deviceId

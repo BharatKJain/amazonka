@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.S3
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.S3 where
@@ -81,7 +81,8 @@ instance Data.FromJSON S3 where
 
 instance Prelude.Hashable S3 where
   hashWithSalt _salt S3' {..} =
-    _salt `Prelude.hashWithSalt` bucket
+    _salt
+      `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` prefix
       `Prelude.hashWithSalt` enabled
 

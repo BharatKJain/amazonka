@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kinesis.UpdateShardCount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -216,7 +216,8 @@ instance Core.AWSRequest UpdateShardCount where
 
 instance Prelude.Hashable UpdateShardCount where
   hashWithSalt _salt UpdateShardCount' {..} =
-    _salt `Prelude.hashWithSalt` streamARN
+    _salt
+      `Prelude.hashWithSalt` streamARN
       `Prelude.hashWithSalt` streamName
       `Prelude.hashWithSalt` targetShardCount
       `Prelude.hashWithSalt` scalingType

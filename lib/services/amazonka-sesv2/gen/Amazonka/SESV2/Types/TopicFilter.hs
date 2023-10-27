@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.TopicFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.TopicFilter where
@@ -70,7 +70,8 @@ topicFilter_useDefaultIfPreferenceUnavailable = Lens.lens (\TopicFilter' {useDef
 
 instance Prelude.Hashable TopicFilter where
   hashWithSalt _salt TopicFilter' {..} =
-    _salt `Prelude.hashWithSalt` topicName
+    _salt
+      `Prelude.hashWithSalt` topicName
       `Prelude.hashWithSalt` useDefaultIfPreferenceUnavailable
 
 instance Prelude.NFData TopicFilter where

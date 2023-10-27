@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.OutputConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.OutputConfig where
@@ -91,7 +91,8 @@ outputConfig_s3Bucket = Lens.lens (\OutputConfig' {s3Bucket} -> s3Bucket) (\s@Ou
 
 instance Prelude.Hashable OutputConfig where
   hashWithSalt _salt OutputConfig' {..} =
-    _salt `Prelude.hashWithSalt` s3Prefix
+    _salt
+      `Prelude.hashWithSalt` s3Prefix
       `Prelude.hashWithSalt` s3Bucket
 
 instance Prelude.NFData OutputConfig where

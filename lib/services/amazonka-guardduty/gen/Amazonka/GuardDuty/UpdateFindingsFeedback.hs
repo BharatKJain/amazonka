@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GuardDuty.UpdateFindingsFeedback
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,8 @@ instance Core.AWSRequest UpdateFindingsFeedback where
 
 instance Prelude.Hashable UpdateFindingsFeedback where
   hashWithSalt _salt UpdateFindingsFeedback' {..} =
-    _salt `Prelude.hashWithSalt` comments
+    _salt
+      `Prelude.hashWithSalt` comments
       `Prelude.hashWithSalt` detectorId
       `Prelude.hashWithSalt` findingIds
       `Prelude.hashWithSalt` feedback

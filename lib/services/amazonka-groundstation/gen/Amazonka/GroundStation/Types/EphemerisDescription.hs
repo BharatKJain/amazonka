@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.EphemerisDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.EphemerisDescription where
@@ -76,7 +76,8 @@ instance Data.FromJSON EphemerisDescription where
 
 instance Prelude.Hashable EphemerisDescription where
   hashWithSalt _salt EphemerisDescription' {..} =
-    _salt `Prelude.hashWithSalt` ephemerisData
+    _salt
+      `Prelude.hashWithSalt` ephemerisData
       `Prelude.hashWithSalt` sourceS3Object
 
 instance Prelude.NFData EphemerisDescription where

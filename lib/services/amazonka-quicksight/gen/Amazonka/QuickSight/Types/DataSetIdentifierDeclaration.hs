@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DataSetIdentifierDeclaration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DataSetIdentifierDeclaration where
@@ -84,7 +84,8 @@ instance
     DataSetIdentifierDeclaration
   where
   hashWithSalt _salt DataSetIdentifierDeclaration' {..} =
-    _salt `Prelude.hashWithSalt` identifier
+    _salt
+      `Prelude.hashWithSalt` identifier
       `Prelude.hashWithSalt` dataSetArn
 
 instance Prelude.NFData DataSetIdentifierDeclaration where

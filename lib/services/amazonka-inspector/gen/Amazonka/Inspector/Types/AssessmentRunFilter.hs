@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.AssessmentRunFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.AssessmentRunFilter where
@@ -167,7 +167,8 @@ assessmentRunFilter_states = Lens.lens (\AssessmentRunFilter' {states} -> states
 
 instance Prelude.Hashable AssessmentRunFilter where
   hashWithSalt _salt AssessmentRunFilter' {..} =
-    _salt `Prelude.hashWithSalt` completionTimeRange
+    _salt
+      `Prelude.hashWithSalt` completionTimeRange
       `Prelude.hashWithSalt` durationRange
       `Prelude.hashWithSalt` namePattern
       `Prelude.hashWithSalt` rulesPackageArns

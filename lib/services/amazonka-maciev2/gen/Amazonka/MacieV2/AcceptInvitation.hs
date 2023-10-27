@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MacieV2.AcceptInvitation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,7 +124,8 @@ instance Core.AWSRequest AcceptInvitation where
 
 instance Prelude.Hashable AcceptInvitation where
   hashWithSalt _salt AcceptInvitation' {..} =
-    _salt `Prelude.hashWithSalt` administratorAccountId
+    _salt
+      `Prelude.hashWithSalt` administratorAccountId
       `Prelude.hashWithSalt` masterAccount
       `Prelude.hashWithSalt` invitationId
 

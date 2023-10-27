@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.ConfluenceConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.ConfluenceConfiguration where
@@ -306,10 +306,12 @@ instance Data.FromJSON ConfluenceConfiguration where
             Prelude.<$> (x Data..:? "AttachmentConfiguration")
             Prelude.<*> (x Data..:? "AuthenticationType")
             Prelude.<*> (x Data..:? "BlogConfiguration")
-            Prelude.<*> ( x Data..:? "ExclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "ExclusionPatterns"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "InclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "InclusionPatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "PageConfiguration")

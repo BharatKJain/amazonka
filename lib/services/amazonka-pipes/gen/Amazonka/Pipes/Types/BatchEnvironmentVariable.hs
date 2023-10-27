@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.BatchEnvironmentVariable
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.BatchEnvironmentVariable where
@@ -80,12 +80,14 @@ instance Data.FromJSON BatchEnvironmentVariable where
       "BatchEnvironmentVariable"
       ( \x ->
           BatchEnvironmentVariable'
-            Prelude.<$> (x Data..:? "Name") Prelude.<*> (x Data..:? "Value")
+            Prelude.<$> (x Data..:? "Name")
+            Prelude.<*> (x Data..:? "Value")
       )
 
 instance Prelude.Hashable BatchEnvironmentVariable where
   hashWithSalt _salt BatchEnvironmentVariable' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData BatchEnvironmentVariable where

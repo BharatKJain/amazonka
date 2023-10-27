@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.ValueMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.ValueMapping where
@@ -78,7 +78,8 @@ instance Data.FromJSON ValueMapping where
 
 instance Prelude.Hashable ValueMapping where
   hashWithSalt _salt ValueMapping' {..} =
-    _salt `Prelude.hashWithSalt` displayValue
+    _salt
+      `Prelude.hashWithSalt` displayValue
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData ValueMapping where

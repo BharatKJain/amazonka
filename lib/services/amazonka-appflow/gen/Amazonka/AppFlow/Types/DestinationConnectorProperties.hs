@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.DestinationConnectorProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.DestinationConnectorProperties where
@@ -204,7 +204,8 @@ instance
   hashWithSalt
     _salt
     DestinationConnectorProperties' {..} =
-      _salt `Prelude.hashWithSalt` customConnector
+      _salt
+        `Prelude.hashWithSalt` customConnector
         `Prelude.hashWithSalt` customerProfiles
         `Prelude.hashWithSalt` eventBridge
         `Prelude.hashWithSalt` honeycode

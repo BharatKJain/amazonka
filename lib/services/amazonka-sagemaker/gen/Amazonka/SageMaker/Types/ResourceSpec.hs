@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ResourceSpec
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ResourceSpec where
@@ -117,7 +117,8 @@ instance Data.FromJSON ResourceSpec where
 
 instance Prelude.Hashable ResourceSpec where
   hashWithSalt _salt ResourceSpec' {..} =
-    _salt `Prelude.hashWithSalt` instanceType
+    _salt
+      `Prelude.hashWithSalt` instanceType
       `Prelude.hashWithSalt` lifecycleConfigArn
       `Prelude.hashWithSalt` sageMakerImageArn
       `Prelude.hashWithSalt` sageMakerImageVersionArn

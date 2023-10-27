@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.AnomalyReportedTimeRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.AnomalyReportedTimeRange where
@@ -79,7 +79,8 @@ instance Data.FromJSON AnomalyReportedTimeRange where
 
 instance Prelude.Hashable AnomalyReportedTimeRange where
   hashWithSalt _salt AnomalyReportedTimeRange' {..} =
-    _salt `Prelude.hashWithSalt` closeTime
+    _salt
+      `Prelude.hashWithSalt` closeTime
       `Prelude.hashWithSalt` openTime
 
 instance Prelude.NFData AnomalyReportedTimeRange where

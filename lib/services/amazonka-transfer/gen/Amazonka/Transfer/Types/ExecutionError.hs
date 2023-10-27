@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.ExecutionError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.ExecutionError where
@@ -161,12 +161,14 @@ instance Data.FromJSON ExecutionError where
       "ExecutionError"
       ( \x ->
           ExecutionError'
-            Prelude.<$> (x Data..: "Type") Prelude.<*> (x Data..: "Message")
+            Prelude.<$> (x Data..: "Type")
+            Prelude.<*> (x Data..: "Message")
       )
 
 instance Prelude.Hashable ExecutionError where
   hashWithSalt _salt ExecutionError' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData ExecutionError where

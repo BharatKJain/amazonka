@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.KernelGatewayImageConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.KernelGatewayImageConfig where
@@ -83,7 +83,8 @@ instance Data.FromJSON KernelGatewayImageConfig where
 
 instance Prelude.Hashable KernelGatewayImageConfig where
   hashWithSalt _salt KernelGatewayImageConfig' {..} =
-    _salt `Prelude.hashWithSalt` fileSystemConfig
+    _salt
+      `Prelude.hashWithSalt` fileSystemConfig
       `Prelude.hashWithSalt` kernelSpecs
 
 instance Prelude.NFData KernelGatewayImageConfig where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ThemeConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ThemeConfiguration where
@@ -102,7 +102,8 @@ instance Data.FromJSON ThemeConfiguration where
 
 instance Prelude.Hashable ThemeConfiguration where
   hashWithSalt _salt ThemeConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` dataColorPalette
+    _salt
+      `Prelude.hashWithSalt` dataColorPalette
       `Prelude.hashWithSalt` sheet
       `Prelude.hashWithSalt` typography
       `Prelude.hashWithSalt` uIColorPalette

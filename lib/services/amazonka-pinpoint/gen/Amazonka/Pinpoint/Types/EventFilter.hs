@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.EventFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.EventFilter where
@@ -96,7 +96,8 @@ instance Data.FromJSON EventFilter where
 
 instance Prelude.Hashable EventFilter where
   hashWithSalt _salt EventFilter' {..} =
-    _salt `Prelude.hashWithSalt` filterType
+    _salt
+      `Prelude.hashWithSalt` filterType
       `Prelude.hashWithSalt` dimensions
 
 instance Prelude.NFData EventFilter where

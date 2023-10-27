@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.ProtectiveEquipmentBodyPart
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.ProtectiveEquipmentBodyPart where
@@ -89,7 +89,8 @@ instance Data.FromJSON ProtectiveEquipmentBodyPart where
       ( \x ->
           ProtectiveEquipmentBodyPart'
             Prelude.<$> (x Data..:? "Confidence")
-            Prelude.<*> ( x Data..:? "EquipmentDetections"
+            Prelude.<*> ( x
+                            Data..:? "EquipmentDetections"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Name")
@@ -97,7 +98,8 @@ instance Data.FromJSON ProtectiveEquipmentBodyPart where
 
 instance Prelude.Hashable ProtectiveEquipmentBodyPart where
   hashWithSalt _salt ProtectiveEquipmentBodyPart' {..} =
-    _salt `Prelude.hashWithSalt` confidence
+    _salt
+      `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` equipmentDetections
       `Prelude.hashWithSalt` name
 

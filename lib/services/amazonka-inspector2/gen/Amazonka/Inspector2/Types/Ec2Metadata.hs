@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.Ec2Metadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.Ec2Metadata where
@@ -85,7 +85,8 @@ instance Data.FromJSON Ec2Metadata where
 
 instance Prelude.Hashable Ec2Metadata where
   hashWithSalt _salt Ec2Metadata' {..} =
-    _salt `Prelude.hashWithSalt` amiId
+    _salt
+      `Prelude.hashWithSalt` amiId
       `Prelude.hashWithSalt` platform
       `Prelude.hashWithSalt` tags
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FIS.ListExperimentTemplates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,7 +102,8 @@ instance Core.AWSRequest ListExperimentTemplates where
     Response.receiveJSON
       ( \s h x ->
           ListExperimentTemplatesResponse'
-            Prelude.<$> ( x Data..?> "experimentTemplates"
+            Prelude.<$> ( x
+                            Data..?> "experimentTemplates"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -111,7 +112,8 @@ instance Core.AWSRequest ListExperimentTemplates where
 
 instance Prelude.Hashable ListExperimentTemplates where
   hashWithSalt _salt ListExperimentTemplates' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListExperimentTemplates where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.InstancePortInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.InstancePortInfo where
@@ -402,7 +402,8 @@ instance Data.FromJSON InstancePortInfo where
             Prelude.<$> (x Data..:? "accessDirection")
             Prelude.<*> (x Data..:? "accessFrom")
             Prelude.<*> (x Data..:? "accessType")
-            Prelude.<*> ( x Data..:? "cidrListAliases"
+            Prelude.<*> ( x
+                            Data..:? "cidrListAliases"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "cidrs" Data..!= Prelude.mempty)
@@ -415,7 +416,8 @@ instance Data.FromJSON InstancePortInfo where
 
 instance Prelude.Hashable InstancePortInfo where
   hashWithSalt _salt InstancePortInfo' {..} =
-    _salt `Prelude.hashWithSalt` accessDirection
+    _salt
+      `Prelude.hashWithSalt` accessDirection
       `Prelude.hashWithSalt` accessFrom
       `Prelude.hashWithSalt` accessType
       `Prelude.hashWithSalt` cidrListAliases

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.LFTagPolicyResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.LFTagPolicyResource where
@@ -100,7 +100,8 @@ instance Data.FromJSON LFTagPolicyResource where
 
 instance Prelude.Hashable LFTagPolicyResource where
   hashWithSalt _salt LFTagPolicyResource' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` expression
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.Search
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -166,20 +166,23 @@ instance Core.AWSPager Search where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? searchResponse_nextToken Prelude.. Lens._Just
+            Lens.^? searchResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? searchResponse_results Prelude.. Lens._Just
+            Lens.^? searchResponse_results
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& search_nextToken
           Lens..~ rs
-          Lens.^? searchResponse_nextToken Prelude.. Lens._Just
+          Lens.^? searchResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest Search where
   type AWSResponse Search = SearchResponse
@@ -196,7 +199,8 @@ instance Core.AWSRequest Search where
 
 instance Prelude.Hashable Search where
   hashWithSalt _salt Search' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` searchExpression
       `Prelude.hashWithSalt` sortBy

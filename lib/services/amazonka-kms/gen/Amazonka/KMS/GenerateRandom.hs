@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KMS.GenerateRandom
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -142,7 +142,8 @@ instance Core.AWSRequest GenerateRandom where
 
 instance Prelude.Hashable GenerateRandom where
   hashWithSalt _salt GenerateRandom' {..} =
-    _salt `Prelude.hashWithSalt` customKeyStoreId
+    _salt
+      `Prelude.hashWithSalt` customKeyStoreId
       `Prelude.hashWithSalt` numberOfBytes
 
 instance Prelude.NFData GenerateRandom where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.InputConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.InputConfig where
@@ -646,7 +646,8 @@ instance Data.FromJSON InputConfig where
 
 instance Prelude.Hashable InputConfig where
   hashWithSalt _salt InputConfig' {..} =
-    _salt `Prelude.hashWithSalt` frameworkVersion
+    _salt
+      `Prelude.hashWithSalt` frameworkVersion
       `Prelude.hashWithSalt` s3Uri
       `Prelude.hashWithSalt` dataInputConfig
       `Prelude.hashWithSalt` framework

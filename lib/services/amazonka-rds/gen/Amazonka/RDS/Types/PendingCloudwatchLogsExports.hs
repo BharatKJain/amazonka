@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.PendingCloudwatchLogsExports
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.PendingCloudwatchLogsExports where
@@ -74,11 +74,13 @@ pendingCloudwatchLogsExports_logTypesToEnable = Lens.lens (\PendingCloudwatchLog
 instance Data.FromXML PendingCloudwatchLogsExports where
   parseXML x =
     PendingCloudwatchLogsExports'
-      Prelude.<$> ( x Data..@? "LogTypesToDisable"
+      Prelude.<$> ( x
+                      Data..@? "LogTypesToDisable"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "LogTypesToEnable"
+      Prelude.<*> ( x
+                      Data..@? "LogTypesToEnable"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
@@ -88,7 +90,8 @@ instance
     PendingCloudwatchLogsExports
   where
   hashWithSalt _salt PendingCloudwatchLogsExports' {..} =
-    _salt `Prelude.hashWithSalt` logTypesToDisable
+    _salt
+      `Prelude.hashWithSalt` logTypesToDisable
       `Prelude.hashWithSalt` logTypesToEnable
 
 instance Prelude.NFData PendingCloudwatchLogsExports where

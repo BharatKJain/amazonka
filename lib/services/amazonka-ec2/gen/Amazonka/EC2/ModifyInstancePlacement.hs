@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ModifyInstancePlacement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -222,7 +222,8 @@ instance Core.AWSRequest ModifyInstancePlacement where
 
 instance Prelude.Hashable ModifyInstancePlacement where
   hashWithSalt _salt ModifyInstancePlacement' {..} =
-    _salt `Prelude.hashWithSalt` affinity
+    _salt
+      `Prelude.hashWithSalt` affinity
       `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` groupName
       `Prelude.hashWithSalt` hostId

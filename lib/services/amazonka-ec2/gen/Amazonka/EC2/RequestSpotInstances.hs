@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.RequestSpotInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -408,7 +408,8 @@ instance Core.AWSRequest RequestSpotInstances where
     Response.receiveXML
       ( \s h x ->
           RequestSpotInstancesResponse'
-            Prelude.<$> ( x Data..@? "spotInstanceRequestSet"
+            Prelude.<$> ( x
+                            Data..@? "spotInstanceRequestSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -417,7 +418,8 @@ instance Core.AWSRequest RequestSpotInstances where
 
 instance Prelude.Hashable RequestSpotInstances where
   hashWithSalt _salt RequestSpotInstances' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZoneGroup
+    _salt
+      `Prelude.hashWithSalt` availabilityZoneGroup
       `Prelude.hashWithSalt` blockDurationMinutes
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` dryRun

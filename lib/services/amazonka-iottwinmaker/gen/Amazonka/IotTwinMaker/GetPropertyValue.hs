@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IotTwinMaker.GetPropertyValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -188,7 +188,8 @@ instance Core.AWSRequest GetPropertyValue where
           GetPropertyValueResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (x Data..?> "propertyValues" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "tabularPropertyValues"
+            Prelude.<*> ( x
+                            Data..?> "tabularPropertyValues"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -196,7 +197,8 @@ instance Core.AWSRequest GetPropertyValue where
 
 instance Prelude.Hashable GetPropertyValue where
   hashWithSalt _salt GetPropertyValue' {..} =
-    _salt `Prelude.hashWithSalt` componentName
+    _salt
+      `Prelude.hashWithSalt` componentName
       `Prelude.hashWithSalt` componentTypeId
       `Prelude.hashWithSalt` entityId
       `Prelude.hashWithSalt` maxResults

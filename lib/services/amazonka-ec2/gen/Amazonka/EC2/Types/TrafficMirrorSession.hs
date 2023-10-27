@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TrafficMirrorSession
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TrafficMirrorSession where
@@ -169,7 +169,9 @@ instance Data.FromXML TrafficMirrorSession where
       Prelude.<*> (x Data..@? "ownerId")
       Prelude.<*> (x Data..@? "packetLength")
       Prelude.<*> (x Data..@? "sessionNumber")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "trafficMirrorFilterId")
@@ -179,7 +181,8 @@ instance Data.FromXML TrafficMirrorSession where
 
 instance Prelude.Hashable TrafficMirrorSession where
   hashWithSalt _salt TrafficMirrorSession' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` networkInterfaceId
       `Prelude.hashWithSalt` ownerId
       `Prelude.hashWithSalt` packetLength

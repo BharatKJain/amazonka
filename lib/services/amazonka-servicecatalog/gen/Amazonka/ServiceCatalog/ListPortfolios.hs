@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.ListPortfolios
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,22 +123,22 @@ instance Core.AWSPager ListPortfolios where
     | Core.stop
         ( rs
             Lens.^? listPortfoliosResponse_nextPageToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listPortfoliosResponse_portfolioDetails
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listPortfolios_pageToken
           Lens..~ rs
           Lens.^? listPortfoliosResponse_nextPageToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListPortfolios where
   type
@@ -151,7 +151,8 @@ instance Core.AWSRequest ListPortfolios where
       ( \s h x ->
           ListPortfoliosResponse'
             Prelude.<$> (x Data..?> "NextPageToken")
-            Prelude.<*> ( x Data..?> "PortfolioDetails"
+            Prelude.<*> ( x
+                            Data..?> "PortfolioDetails"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -159,7 +160,8 @@ instance Core.AWSRequest ListPortfolios where
 
 instance Prelude.Hashable ListPortfolios where
   hashWithSalt _salt ListPortfolios' {..} =
-    _salt `Prelude.hashWithSalt` acceptLanguage
+    _salt
+      `Prelude.hashWithSalt` acceptLanguage
       `Prelude.hashWithSalt` pageSize
       `Prelude.hashWithSalt` pageToken
 

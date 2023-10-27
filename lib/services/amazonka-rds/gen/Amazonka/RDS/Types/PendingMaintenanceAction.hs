@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.PendingMaintenanceAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.PendingMaintenanceAction where
@@ -155,7 +155,8 @@ instance Data.FromXML PendingMaintenanceAction where
 
 instance Prelude.Hashable PendingMaintenanceAction where
   hashWithSalt _salt PendingMaintenanceAction' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` autoAppliedAfterDate
       `Prelude.hashWithSalt` currentApplyDate
       `Prelude.hashWithSalt` description

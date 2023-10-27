@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.SessionManagerOutputUrl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.SessionManagerOutputUrl where
@@ -75,7 +75,8 @@ instance Data.FromJSON SessionManagerOutputUrl where
 
 instance Prelude.Hashable SessionManagerOutputUrl where
   hashWithSalt _salt SessionManagerOutputUrl' {..} =
-    _salt `Prelude.hashWithSalt` cloudWatchOutputUrl
+    _salt
+      `Prelude.hashWithSalt` cloudWatchOutputUrl
       `Prelude.hashWithSalt` s3OutputUrl
 
 instance Prelude.NFData SessionManagerOutputUrl where

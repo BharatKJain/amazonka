@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.AssociateEnclaveCertificateIamRole
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -142,9 +142,9 @@ instance
       ( \s h x ->
           AssociateEnclaveCertificateIamRoleResponse'
             Prelude.<$> (x Data..@? "certificateS3BucketName")
-              Prelude.<*> (x Data..@? "certificateS3ObjectKey")
-              Prelude.<*> (x Data..@? "encryptionKmsKeyId")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..@? "certificateS3ObjectKey")
+            Prelude.<*> (x Data..@? "encryptionKmsKeyId")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -154,7 +154,8 @@ instance
   hashWithSalt
     _salt
     AssociateEnclaveCertificateIamRole' {..} =
-      _salt `Prelude.hashWithSalt` certificateArn
+      _salt
+        `Prelude.hashWithSalt` certificateArn
         `Prelude.hashWithSalt` dryRun
         `Prelude.hashWithSalt` roleArn
 

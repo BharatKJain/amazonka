@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.DescribeLifecycleHooks
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,7 +102,9 @@ instance Core.AWSRequest DescribeLifecycleHooks where
       "DescribeLifecycleHooksResult"
       ( \s h x ->
           DescribeLifecycleHooksResponse'
-            Prelude.<$> ( x Data..@? "LifecycleHooks" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "LifecycleHooks"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -110,7 +112,8 @@ instance Core.AWSRequest DescribeLifecycleHooks where
 
 instance Prelude.Hashable DescribeLifecycleHooks where
   hashWithSalt _salt DescribeLifecycleHooks' {..} =
-    _salt `Prelude.hashWithSalt` lifecycleHookNames
+    _salt
+      `Prelude.hashWithSalt` lifecycleHookNames
       `Prelude.hashWithSalt` autoScalingGroupName
 
 instance Prelude.NFData DescribeLifecycleHooks where

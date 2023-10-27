@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.AvcIntraSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.AvcIntraSettings where
@@ -401,7 +401,8 @@ instance Data.FromJSON AvcIntraSettings where
 
 instance Prelude.Hashable AvcIntraSettings where
   hashWithSalt _salt AvcIntraSettings' {..} =
-    _salt `Prelude.hashWithSalt` avcIntraClass
+    _salt
+      `Prelude.hashWithSalt` avcIntraClass
       `Prelude.hashWithSalt` avcIntraUhdSettings
       `Prelude.hashWithSalt` framerateControl
       `Prelude.hashWithSalt` framerateConversionAlgorithm

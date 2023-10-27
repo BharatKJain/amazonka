@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManager.Types.ResourceInventory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManager.Types.ResourceInventory where
@@ -115,7 +115,8 @@ instance Data.FromJSON ResourceInventory where
 
 instance Prelude.Hashable ResourceInventory where
   hashWithSalt _salt ResourceInventory' {..} =
-    _salt `Prelude.hashWithSalt` platform
+    _salt
+      `Prelude.hashWithSalt` platform
       `Prelude.hashWithSalt` platformVersion
       `Prelude.hashWithSalt` resourceArn
       `Prelude.hashWithSalt` resourceId

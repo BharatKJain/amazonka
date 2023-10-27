@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.EvaluateCodeErrorDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.EvaluateCodeErrorDetail where
@@ -76,7 +76,8 @@ instance Data.FromJSON EvaluateCodeErrorDetail where
 
 instance Prelude.Hashable EvaluateCodeErrorDetail where
   hashWithSalt _salt EvaluateCodeErrorDetail' {..} =
-    _salt `Prelude.hashWithSalt` codeErrors
+    _salt
+      `Prelude.hashWithSalt` codeErrors
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData EvaluateCodeErrorDetail where

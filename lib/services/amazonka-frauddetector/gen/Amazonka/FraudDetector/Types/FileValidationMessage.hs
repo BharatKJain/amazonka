@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.FileValidationMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.FileValidationMessage where
@@ -84,7 +84,8 @@ instance Data.FromJSON FileValidationMessage where
 
 instance Prelude.Hashable FileValidationMessage where
   hashWithSalt _salt FileValidationMessage' {..} =
-    _salt `Prelude.hashWithSalt` content
+    _salt
+      `Prelude.hashWithSalt` content
       `Prelude.hashWithSalt` title
       `Prelude.hashWithSalt` type'
 

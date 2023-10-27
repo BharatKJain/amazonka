@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.IotSiteWiseAssetModelPropertyIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.IotSiteWiseAssetModelPropertyIdentifier where
@@ -77,7 +77,8 @@ instance
   hashWithSalt
     _salt
     IotSiteWiseAssetModelPropertyIdentifier' {..} =
-      _salt `Prelude.hashWithSalt` assetModelId
+      _salt
+        `Prelude.hashWithSalt` assetModelId
         `Prelude.hashWithSalt` propertyId
 
 instance

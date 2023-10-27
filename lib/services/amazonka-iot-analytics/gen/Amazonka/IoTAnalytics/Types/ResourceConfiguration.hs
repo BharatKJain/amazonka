@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.ResourceConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.ResourceConfiguration where
@@ -90,7 +90,8 @@ instance Data.FromJSON ResourceConfiguration where
 
 instance Prelude.Hashable ResourceConfiguration where
   hashWithSalt _salt ResourceConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` computeType
+    _salt
+      `Prelude.hashWithSalt` computeType
       `Prelude.hashWithSalt` volumeSizeInGB
 
 instance Prelude.NFData ResourceConfiguration where

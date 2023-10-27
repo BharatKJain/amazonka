@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.DestinationConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.DestinationConfig where
@@ -77,7 +77,8 @@ instance Data.FromJSON DestinationConfig where
 
 instance Prelude.Hashable DestinationConfig where
   hashWithSalt _salt DestinationConfig' {..} =
-    _salt `Prelude.hashWithSalt` onFailure
+    _salt
+      `Prelude.hashWithSalt` onFailure
       `Prelude.hashWithSalt` onSuccess
 
 instance Prelude.NFData DestinationConfig where

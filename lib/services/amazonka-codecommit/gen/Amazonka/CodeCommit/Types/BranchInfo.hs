@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.BranchInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.BranchInfo where
@@ -74,7 +74,8 @@ instance Data.FromJSON BranchInfo where
 
 instance Prelude.Hashable BranchInfo where
   hashWithSalt _salt BranchInfo' {..} =
-    _salt `Prelude.hashWithSalt` branchName
+    _salt
+      `Prelude.hashWithSalt` branchName
       `Prelude.hashWithSalt` commitId
 
 instance Prelude.NFData BranchInfo where

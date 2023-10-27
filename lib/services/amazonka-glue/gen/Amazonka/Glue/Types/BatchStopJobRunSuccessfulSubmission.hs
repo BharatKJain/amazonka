@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.BatchStopJobRunSuccessfulSubmission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.BatchStopJobRunSuccessfulSubmission where
@@ -83,7 +83,8 @@ instance
   hashWithSalt
     _salt
     BatchStopJobRunSuccessfulSubmission' {..} =
-      _salt `Prelude.hashWithSalt` jobName
+      _salt
+        `Prelude.hashWithSalt` jobName
         `Prelude.hashWithSalt` jobRunId
 
 instance

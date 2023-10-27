@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchGetObjectAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchGetObjectAttributes where
@@ -87,7 +87,8 @@ batchGetObjectAttributes_attributeNames = Lens.lens (\BatchGetObjectAttributes' 
 
 instance Prelude.Hashable BatchGetObjectAttributes where
   hashWithSalt _salt BatchGetObjectAttributes' {..} =
-    _salt `Prelude.hashWithSalt` objectReference
+    _salt
+      `Prelude.hashWithSalt` objectReference
       `Prelude.hashWithSalt` schemaFacet
       `Prelude.hashWithSalt` attributeNames
 

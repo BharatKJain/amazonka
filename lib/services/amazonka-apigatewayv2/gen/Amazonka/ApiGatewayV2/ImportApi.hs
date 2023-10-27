@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ApiGatewayV2.ImportApi
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -160,7 +160,8 @@ instance Core.AWSRequest ImportApi where
 
 instance Prelude.Hashable ImportApi where
   hashWithSalt _salt ImportApi' {..} =
-    _salt `Prelude.hashWithSalt` basepath
+    _salt
+      `Prelude.hashWithSalt` basepath
       `Prelude.hashWithSalt` failOnWarnings
       `Prelude.hashWithSalt` body
 

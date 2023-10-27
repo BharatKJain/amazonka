@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.KafkaStreamingSourceOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.KafkaStreamingSourceOptions where
@@ -268,7 +268,8 @@ instance Data.FromJSON KafkaStreamingSourceOptions where
 
 instance Prelude.Hashable KafkaStreamingSourceOptions where
   hashWithSalt _salt KafkaStreamingSourceOptions' {..} =
-    _salt `Prelude.hashWithSalt` assign
+    _salt
+      `Prelude.hashWithSalt` assign
       `Prelude.hashWithSalt` bootstrapServers
       `Prelude.hashWithSalt` classification
       `Prelude.hashWithSalt` connectionName

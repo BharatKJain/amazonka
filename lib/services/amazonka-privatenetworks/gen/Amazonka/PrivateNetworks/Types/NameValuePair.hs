@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PrivateNetworks.Types.NameValuePair
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PrivateNetworks.Types.NameValuePair where
@@ -70,12 +70,14 @@ instance Data.FromJSON NameValuePair where
       "NameValuePair"
       ( \x ->
           NameValuePair'
-            Prelude.<$> (x Data..:? "value") Prelude.<*> (x Data..: "name")
+            Prelude.<$> (x Data..:? "value")
+            Prelude.<*> (x Data..: "name")
       )
 
 instance Prelude.Hashable NameValuePair where
   hashWithSalt _salt NameValuePair' {..} =
-    _salt `Prelude.hashWithSalt` value
+    _salt
+      `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData NameValuePair where

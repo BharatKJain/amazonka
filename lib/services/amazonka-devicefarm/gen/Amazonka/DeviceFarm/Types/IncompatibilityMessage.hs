@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.IncompatibilityMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.IncompatibilityMessage where
@@ -117,7 +117,8 @@ instance Data.FromJSON IncompatibilityMessage where
 
 instance Prelude.Hashable IncompatibilityMessage where
   hashWithSalt _salt IncompatibilityMessage' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData IncompatibilityMessage where

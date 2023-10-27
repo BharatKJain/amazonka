@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScalingPlans.Types.Datapoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScalingPlans.Types.Datapoint where
@@ -75,7 +75,8 @@ instance Data.FromJSON Datapoint where
 
 instance Prelude.Hashable Datapoint where
   hashWithSalt _salt Datapoint' {..} =
-    _salt `Prelude.hashWithSalt` timestamp
+    _salt
+      `Prelude.hashWithSalt` timestamp
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData Datapoint where

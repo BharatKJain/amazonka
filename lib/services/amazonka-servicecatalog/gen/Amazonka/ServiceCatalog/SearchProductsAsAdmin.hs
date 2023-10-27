@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.SearchProductsAsAdmin
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -178,22 +178,22 @@ instance Core.AWSPager SearchProductsAsAdmin where
     | Core.stop
         ( rs
             Lens.^? searchProductsAsAdminResponse_nextPageToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? searchProductsAsAdminResponse_productViewDetails
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& searchProductsAsAdmin_pageToken
           Lens..~ rs
           Lens.^? searchProductsAsAdminResponse_nextPageToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest SearchProductsAsAdmin where
   type
@@ -206,7 +206,8 @@ instance Core.AWSRequest SearchProductsAsAdmin where
       ( \s h x ->
           SearchProductsAsAdminResponse'
             Prelude.<$> (x Data..?> "NextPageToken")
-            Prelude.<*> ( x Data..?> "ProductViewDetails"
+            Prelude.<*> ( x
+                            Data..?> "ProductViewDetails"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -214,7 +215,8 @@ instance Core.AWSRequest SearchProductsAsAdmin where
 
 instance Prelude.Hashable SearchProductsAsAdmin where
   hashWithSalt _salt SearchProductsAsAdmin' {..} =
-    _salt `Prelude.hashWithSalt` acceptLanguage
+    _salt
+      `Prelude.hashWithSalt` acceptLanguage
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` pageSize
       `Prelude.hashWithSalt` pageToken

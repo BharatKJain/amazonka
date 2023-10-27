@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatch.GetInsightRuleReport
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -303,13 +303,18 @@ instance Core.AWSRequest GetInsightRuleReport where
             Prelude.<$> (x Data..@? "AggregateValue")
             Prelude.<*> (x Data..@? "AggregationStatistic")
             Prelude.<*> (x Data..@? "ApproximateUniqueCount")
-            Prelude.<*> ( x Data..@? "Contributors" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "Contributors"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
-            Prelude.<*> ( x Data..@? "KeyLabels" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "KeyLabels"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
-            Prelude.<*> ( x Data..@? "MetricDatapoints"
+            Prelude.<*> ( x
+                            Data..@? "MetricDatapoints"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
@@ -318,7 +323,8 @@ instance Core.AWSRequest GetInsightRuleReport where
 
 instance Prelude.Hashable GetInsightRuleReport where
   hashWithSalt _salt GetInsightRuleReport' {..} =
-    _salt `Prelude.hashWithSalt` maxContributorCount
+    _salt
+      `Prelude.hashWithSalt` maxContributorCount
       `Prelude.hashWithSalt` metrics
       `Prelude.hashWithSalt` orderBy
       `Prelude.hashWithSalt` ruleName

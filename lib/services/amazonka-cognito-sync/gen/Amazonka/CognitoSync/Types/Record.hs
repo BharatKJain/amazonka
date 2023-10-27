@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoSync.Types.Record
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoSync.Types.Record where
@@ -114,7 +114,8 @@ instance Data.FromJSON Record where
 
 instance Prelude.Hashable Record where
   hashWithSalt _salt Record' {..} =
-    _salt `Prelude.hashWithSalt` deviceLastModifiedDate
+    _salt
+      `Prelude.hashWithSalt` deviceLastModifiedDate
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` lastModifiedBy
       `Prelude.hashWithSalt` lastModifiedDate

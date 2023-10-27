@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.ValidationConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.ValidationConfiguration where
@@ -93,7 +93,8 @@ instance Data.FromJSON ValidationConfiguration where
 
 instance Prelude.Hashable ValidationConfiguration where
   hashWithSalt _salt ValidationConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` validationMode
+    _salt
+      `Prelude.hashWithSalt` validationMode
       `Prelude.hashWithSalt` rulesetArn
 
 instance Prelude.NFData ValidationConfiguration where

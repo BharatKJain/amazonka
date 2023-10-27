@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApplicationAutoScaling.Types.ScalingPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApplicationAutoScaling.Types.ScalingPolicy where
@@ -603,7 +603,8 @@ instance Data.FromJSON ScalingPolicy where
 
 instance Prelude.Hashable ScalingPolicy where
   hashWithSalt _salt ScalingPolicy' {..} =
-    _salt `Prelude.hashWithSalt` alarms
+    _salt
+      `Prelude.hashWithSalt` alarms
       `Prelude.hashWithSalt` stepScalingPolicyConfiguration
       `Prelude.hashWithSalt` targetTrackingScalingPolicyConfiguration
       `Prelude.hashWithSalt` policyARN

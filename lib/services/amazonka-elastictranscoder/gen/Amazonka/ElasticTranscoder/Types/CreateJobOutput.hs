@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.CreateJobOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.CreateJobOutput where
@@ -522,7 +522,8 @@ createJobOutput_watermarks = Lens.lens (\CreateJobOutput' {watermarks} -> waterm
 
 instance Prelude.Hashable CreateJobOutput where
   hashWithSalt _salt CreateJobOutput' {..} =
-    _salt `Prelude.hashWithSalt` albumArt
+    _salt
+      `Prelude.hashWithSalt` albumArt
       `Prelude.hashWithSalt` captions
       `Prelude.hashWithSalt` composition
       `Prelude.hashWithSalt` encryption

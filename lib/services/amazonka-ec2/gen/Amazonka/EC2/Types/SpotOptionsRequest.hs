@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.SpotOptionsRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.SpotOptionsRequest where
@@ -366,7 +366,8 @@ spotOptionsRequest_singleInstanceType = Lens.lens (\SpotOptionsRequest' {singleI
 
 instance Prelude.Hashable SpotOptionsRequest where
   hashWithSalt _salt SpotOptionsRequest' {..} =
-    _salt `Prelude.hashWithSalt` allocationStrategy
+    _salt
+      `Prelude.hashWithSalt` allocationStrategy
       `Prelude.hashWithSalt` instanceInterruptionBehavior
       `Prelude.hashWithSalt` instancePoolsToUseCount
       `Prelude.hashWithSalt` maintenanceStrategies

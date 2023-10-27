@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRContainers.Types.ParametricConfigurationOverrides
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRContainers.Types.ParametricConfigurationOverrides where
@@ -76,7 +76,8 @@ instance
       "ParametricConfigurationOverrides"
       ( \x ->
           ParametricConfigurationOverrides'
-            Prelude.<$> ( x Data..:? "applicationConfiguration"
+            Prelude.<$> ( x
+                            Data..:? "applicationConfiguration"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "monitoringConfiguration")

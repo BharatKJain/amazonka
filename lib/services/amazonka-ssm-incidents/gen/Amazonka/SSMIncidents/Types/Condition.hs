@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.Condition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.Condition where
@@ -78,7 +78,8 @@ condition_equals = Lens.lens (\Condition' {equals} -> equals) (\s@Condition' {} 
 
 instance Prelude.Hashable Condition where
   hashWithSalt _salt Condition' {..} =
-    _salt `Prelude.hashWithSalt` after
+    _salt
+      `Prelude.hashWithSalt` after
       `Prelude.hashWithSalt` before
       `Prelude.hashWithSalt` equals
 

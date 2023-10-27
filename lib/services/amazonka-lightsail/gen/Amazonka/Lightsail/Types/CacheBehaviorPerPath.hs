@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.CacheBehaviorPerPath
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.CacheBehaviorPerPath where
@@ -207,7 +207,8 @@ instance Data.FromJSON CacheBehaviorPerPath where
 
 instance Prelude.Hashable CacheBehaviorPerPath where
   hashWithSalt _salt CacheBehaviorPerPath' {..} =
-    _salt `Prelude.hashWithSalt` behavior
+    _salt
+      `Prelude.hashWithSalt` behavior
       `Prelude.hashWithSalt` path
 
 instance Prelude.NFData CacheBehaviorPerPath where

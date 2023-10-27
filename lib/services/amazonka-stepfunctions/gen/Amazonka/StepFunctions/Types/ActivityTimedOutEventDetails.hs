@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StepFunctions.Types.ActivityTimedOutEventDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StepFunctions.Types.ActivityTimedOutEventDetails where
@@ -79,7 +79,8 @@ instance
     ActivityTimedOutEventDetails
   where
   hashWithSalt _salt ActivityTimedOutEventDetails' {..} =
-    _salt `Prelude.hashWithSalt` cause
+    _salt
+      `Prelude.hashWithSalt` cause
       `Prelude.hashWithSalt` error
 
 instance Prelude.NFData ActivityTimedOutEventDetails where

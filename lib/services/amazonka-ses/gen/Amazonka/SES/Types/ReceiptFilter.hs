@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.ReceiptFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.ReceiptFilter where
@@ -98,11 +98,13 @@ receiptFilter_ipFilter = Lens.lens (\ReceiptFilter' {ipFilter} -> ipFilter) (\s@
 instance Data.FromXML ReceiptFilter where
   parseXML x =
     ReceiptFilter'
-      Prelude.<$> (x Data..@ "Name") Prelude.<*> (x Data..@ "IpFilter")
+      Prelude.<$> (x Data..@ "Name")
+      Prelude.<*> (x Data..@ "IpFilter")
 
 instance Prelude.Hashable ReceiptFilter where
   hashWithSalt _salt ReceiptFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` ipFilter
 
 instance Prelude.NFData ReceiptFilter where

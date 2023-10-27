@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.HierarchyPathReference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.HierarchyPathReference where
@@ -106,7 +106,8 @@ instance Data.FromJSON HierarchyPathReference where
 
 instance Prelude.Hashable HierarchyPathReference where
   hashWithSalt _salt HierarchyPathReference' {..} =
-    _salt `Prelude.hashWithSalt` levelFive
+    _salt
+      `Prelude.hashWithSalt` levelFive
       `Prelude.hashWithSalt` levelFour
       `Prelude.hashWithSalt` levelOne
       `Prelude.hashWithSalt` levelThree

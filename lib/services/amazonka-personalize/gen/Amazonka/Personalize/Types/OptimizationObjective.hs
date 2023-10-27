@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.OptimizationObjective
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.OptimizationObjective where
@@ -87,7 +87,8 @@ instance Data.FromJSON OptimizationObjective where
 
 instance Prelude.Hashable OptimizationObjective where
   hashWithSalt _salt OptimizationObjective' {..} =
-    _salt `Prelude.hashWithSalt` itemAttribute
+    _salt
+      `Prelude.hashWithSalt` itemAttribute
       `Prelude.hashWithSalt` objectiveSensitivity
 
 instance Prelude.NFData OptimizationObjective where

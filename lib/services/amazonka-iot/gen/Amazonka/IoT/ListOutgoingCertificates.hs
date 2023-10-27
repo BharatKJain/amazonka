@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.ListOutgoingCertificates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,22 +112,22 @@ instance Core.AWSPager ListOutgoingCertificates where
     | Core.stop
         ( rs
             Lens.^? listOutgoingCertificatesResponse_nextMarker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listOutgoingCertificatesResponse_outgoingCertificates
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listOutgoingCertificates_marker
           Lens..~ rs
           Lens.^? listOutgoingCertificatesResponse_nextMarker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListOutgoingCertificates where
   type
@@ -140,7 +140,8 @@ instance Core.AWSRequest ListOutgoingCertificates where
       ( \s h x ->
           ListOutgoingCertificatesResponse'
             Prelude.<$> (x Data..?> "nextMarker")
-            Prelude.<*> ( x Data..?> "outgoingCertificates"
+            Prelude.<*> ( x
+                            Data..?> "outgoingCertificates"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -148,7 +149,8 @@ instance Core.AWSRequest ListOutgoingCertificates where
 
 instance Prelude.Hashable ListOutgoingCertificates where
   hashWithSalt _salt ListOutgoingCertificates' {..} =
-    _salt `Prelude.hashWithSalt` ascendingOrder
+    _salt
+      `Prelude.hashWithSalt` ascendingOrder
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` pageSize
 

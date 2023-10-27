@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.SessionTag
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.SessionTag where
@@ -68,7 +68,8 @@ sessionTag_value = Lens.lens (\SessionTag' {value} -> value) (\s@SessionTag' {} 
 
 instance Prelude.Hashable SessionTag where
   hashWithSalt _salt SessionTag' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData SessionTag where

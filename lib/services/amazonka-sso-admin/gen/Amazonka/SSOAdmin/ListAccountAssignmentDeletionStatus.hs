@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSOAdmin.ListAccountAssignmentDeletionStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -131,22 +131,22 @@ instance
     | Core.stop
         ( rs
             Lens.^? listAccountAssignmentDeletionStatusResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listAccountAssignmentDeletionStatusResponse_accountAssignmentsDeletionStatus
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAccountAssignmentDeletionStatus_nextToken
           Lens..~ rs
           Lens.^? listAccountAssignmentDeletionStatusResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -161,11 +161,12 @@ instance
     Response.receiveJSON
       ( \s h x ->
           ListAccountAssignmentDeletionStatusResponse'
-            Prelude.<$> ( x Data..?> "AccountAssignmentsDeletionStatus"
+            Prelude.<$> ( x
+                            Data..?> "AccountAssignmentsDeletionStatus"
                             Core..!@ Prelude.mempty
                         )
-              Prelude.<*> (x Data..?> "NextToken")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "NextToken")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -175,7 +176,8 @@ instance
   hashWithSalt
     _salt
     ListAccountAssignmentDeletionStatus' {..} =
-      _salt `Prelude.hashWithSalt` filter'
+      _salt
+        `Prelude.hashWithSalt` filter'
         `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` instanceArn

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.MonitoringConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.MonitoringConfiguration where
@@ -93,7 +93,8 @@ monitoringConfiguration_configurationType = Lens.lens (\MonitoringConfiguration'
 
 instance Prelude.Hashable MonitoringConfiguration where
   hashWithSalt _salt MonitoringConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` logLevel
+    _salt
+      `Prelude.hashWithSalt` logLevel
       `Prelude.hashWithSalt` metricsLevel
       `Prelude.hashWithSalt` configurationType
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.AuthorizerDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.AuthorizerDescription where
@@ -163,14 +163,16 @@ instance Data.FromJSON AuthorizerDescription where
             Prelude.<*> (x Data..:? "signingDisabled")
             Prelude.<*> (x Data..:? "status")
             Prelude.<*> (x Data..:? "tokenKeyName")
-            Prelude.<*> ( x Data..:? "tokenSigningPublicKeys"
+            Prelude.<*> ( x
+                            Data..:? "tokenSigningPublicKeys"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable AuthorizerDescription where
   hashWithSalt _salt AuthorizerDescription' {..} =
-    _salt `Prelude.hashWithSalt` authorizerArn
+    _salt
+      `Prelude.hashWithSalt` authorizerArn
       `Prelude.hashWithSalt` authorizerFunctionArn
       `Prelude.hashWithSalt` authorizerName
       `Prelude.hashWithSalt` creationDate

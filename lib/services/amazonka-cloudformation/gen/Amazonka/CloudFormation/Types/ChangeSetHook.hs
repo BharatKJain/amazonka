@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.ChangeSetHook
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.ChangeSetHook where
@@ -182,7 +182,8 @@ instance Data.FromXML ChangeSetHook where
 
 instance Prelude.Hashable ChangeSetHook where
   hashWithSalt _salt ChangeSetHook' {..} =
-    _salt `Prelude.hashWithSalt` failureMode
+    _salt
+      `Prelude.hashWithSalt` failureMode
       `Prelude.hashWithSalt` invocationPoint
       `Prelude.hashWithSalt` targetDetails
       `Prelude.hashWithSalt` typeConfigurationVersionId

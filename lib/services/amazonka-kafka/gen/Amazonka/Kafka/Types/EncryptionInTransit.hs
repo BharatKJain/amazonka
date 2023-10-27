@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.EncryptionInTransit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.EncryptionInTransit where
@@ -121,7 +121,8 @@ instance Data.FromJSON EncryptionInTransit where
 
 instance Prelude.Hashable EncryptionInTransit where
   hashWithSalt _salt EncryptionInTransit' {..} =
-    _salt `Prelude.hashWithSalt` clientBroker
+    _salt
+      `Prelude.hashWithSalt` clientBroker
       `Prelude.hashWithSalt` inCluster
 
 instance Prelude.NFData EncryptionInTransit where

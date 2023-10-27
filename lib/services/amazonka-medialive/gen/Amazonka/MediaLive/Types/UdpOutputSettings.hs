@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.UdpOutputSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.UdpOutputSettings where
@@ -123,7 +123,8 @@ instance Data.FromJSON UdpOutputSettings where
 
 instance Prelude.Hashable UdpOutputSettings where
   hashWithSalt _salt UdpOutputSettings' {..} =
-    _salt `Prelude.hashWithSalt` bufferMsec
+    _salt
+      `Prelude.hashWithSalt` bufferMsec
       `Prelude.hashWithSalt` fecOutputSettings
       `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` containerSettings

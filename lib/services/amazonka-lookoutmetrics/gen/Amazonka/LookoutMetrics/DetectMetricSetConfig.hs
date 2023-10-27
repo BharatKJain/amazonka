@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LookoutMetrics.DetectMetricSetConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest DetectMetricSetConfig where
 
 instance Prelude.Hashable DetectMetricSetConfig where
   hashWithSalt _salt DetectMetricSetConfig' {..} =
-    _salt `Prelude.hashWithSalt` anomalyDetectorArn
+    _salt
+      `Prelude.hashWithSalt` anomalyDetectorArn
       `Prelude.hashWithSalt` autoDetectionMetricSource
 
 instance Prelude.NFData DetectMetricSetConfig where

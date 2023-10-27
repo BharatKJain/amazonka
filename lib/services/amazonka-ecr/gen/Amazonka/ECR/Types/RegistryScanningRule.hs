@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECR.Types.RegistryScanningRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECR.Types.RegistryScanningRule where
@@ -89,14 +89,16 @@ instance Data.FromJSON RegistryScanningRule where
       ( \x ->
           RegistryScanningRule'
             Prelude.<$> (x Data..: "scanFrequency")
-            Prelude.<*> ( x Data..:? "repositoryFilters"
+            Prelude.<*> ( x
+                            Data..:? "repositoryFilters"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable RegistryScanningRule where
   hashWithSalt _salt RegistryScanningRule' {..} =
-    _salt `Prelude.hashWithSalt` scanFrequency
+    _salt
+      `Prelude.hashWithSalt` scanFrequency
       `Prelude.hashWithSalt` repositoryFilters
 
 instance Prelude.NFData RegistryScanningRule where

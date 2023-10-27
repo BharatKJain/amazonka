@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.DailyVolume
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.DailyVolume where
@@ -86,7 +86,8 @@ instance Data.FromJSON DailyVolume where
       "DailyVolume"
       ( \x ->
           DailyVolume'
-            Prelude.<$> ( x Data..:? "DomainIspPlacements"
+            Prelude.<$> ( x
+                            Data..:? "DomainIspPlacements"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "StartDate")
@@ -95,7 +96,8 @@ instance Data.FromJSON DailyVolume where
 
 instance Prelude.Hashable DailyVolume where
   hashWithSalt _salt DailyVolume' {..} =
-    _salt `Prelude.hashWithSalt` domainIspPlacements
+    _salt
+      `Prelude.hashWithSalt` domainIspPlacements
       `Prelude.hashWithSalt` startDate
       `Prelude.hashWithSalt` volumeStatistics
 

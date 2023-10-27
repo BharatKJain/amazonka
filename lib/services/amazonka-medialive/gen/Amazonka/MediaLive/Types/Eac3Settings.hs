@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.Eac3Settings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.Eac3Settings where
@@ -328,7 +328,8 @@ instance Data.FromJSON Eac3Settings where
 
 instance Prelude.Hashable Eac3Settings where
   hashWithSalt _salt Eac3Settings' {..} =
-    _salt `Prelude.hashWithSalt` attenuationControl
+    _salt
+      `Prelude.hashWithSalt` attenuationControl
       `Prelude.hashWithSalt` bitrate
       `Prelude.hashWithSalt` bitstreamMode
       `Prelude.hashWithSalt` codingMode

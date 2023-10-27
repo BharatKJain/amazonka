@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.Subscription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.Subscription where
@@ -120,7 +120,8 @@ instance Data.FromJSON Subscription where
 
 instance Prelude.Hashable Subscription where
   hashWithSalt _salt Subscription' {..} =
-    _salt `Prelude.hashWithSalt` target
+    _salt
+      `Prelude.hashWithSalt` target
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` subject
       `Prelude.hashWithSalt` source

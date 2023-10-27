@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.Detector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.Detector where
@@ -114,7 +114,8 @@ instance Data.FromJSON Detector where
 
 instance Prelude.Hashable Detector where
   hashWithSalt _salt Detector' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` detectorId

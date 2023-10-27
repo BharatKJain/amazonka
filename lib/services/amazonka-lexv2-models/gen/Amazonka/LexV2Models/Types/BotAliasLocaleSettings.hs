@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.BotAliasLocaleSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.BotAliasLocaleSettings where
@@ -82,7 +82,8 @@ instance Data.FromJSON BotAliasLocaleSettings where
 
 instance Prelude.Hashable BotAliasLocaleSettings where
   hashWithSalt _salt BotAliasLocaleSettings' {..} =
-    _salt `Prelude.hashWithSalt` codeHookSpecification
+    _salt
+      `Prelude.hashWithSalt` codeHookSpecification
       `Prelude.hashWithSalt` enabled
 
 instance Prelude.NFData BotAliasLocaleSettings where

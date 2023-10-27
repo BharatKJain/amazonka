@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.MediaStreamAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.MediaStreamAttributes where
@@ -71,12 +71,14 @@ instance Data.FromJSON MediaStreamAttributes where
       "MediaStreamAttributes"
       ( \x ->
           MediaStreamAttributes'
-            Prelude.<$> (x Data..:? "lang") Prelude.<*> (x Data..: "fmtp")
+            Prelude.<$> (x Data..:? "lang")
+            Prelude.<*> (x Data..: "fmtp")
       )
 
 instance Prelude.Hashable MediaStreamAttributes where
   hashWithSalt _salt MediaStreamAttributes' {..} =
-    _salt `Prelude.hashWithSalt` lang
+    _salt
+      `Prelude.hashWithSalt` lang
       `Prelude.hashWithSalt` fmtp
 
 instance Prelude.NFData MediaStreamAttributes where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VerifiedAccessEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VerifiedAccessEndpoint where
@@ -248,12 +248,15 @@ instance Data.FromXML VerifiedAccessEndpoint where
       Prelude.<*> (x Data..@? "lastUpdatedTime")
       Prelude.<*> (x Data..@? "loadBalancerOptions")
       Prelude.<*> (x Data..@? "networkInterfaceOptions")
-      Prelude.<*> ( x Data..@? "securityGroupIdSet"
+      Prelude.<*> ( x
+                      Data..@? "securityGroupIdSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "status")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "verifiedAccessEndpointId")
@@ -262,7 +265,8 @@ instance Data.FromXML VerifiedAccessEndpoint where
 
 instance Prelude.Hashable VerifiedAccessEndpoint where
   hashWithSalt _salt VerifiedAccessEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` applicationDomain
+    _salt
+      `Prelude.hashWithSalt` applicationDomain
       `Prelude.hashWithSalt` attachmentType
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` deletionTime

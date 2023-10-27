@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruProfiler.Types.AggregatedProfileTime
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruProfiler.Types.AggregatedProfileTime where
@@ -126,7 +126,8 @@ instance Data.FromJSON AggregatedProfileTime where
 
 instance Prelude.Hashable AggregatedProfileTime where
   hashWithSalt _salt AggregatedProfileTime' {..} =
-    _salt `Prelude.hashWithSalt` period
+    _salt
+      `Prelude.hashWithSalt` period
       `Prelude.hashWithSalt` start
 
 instance Prelude.NFData AggregatedProfileTime where

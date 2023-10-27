@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.GetDocumentationParts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -156,22 +156,22 @@ instance Core.AWSPager GetDocumentationParts where
     | Core.stop
         ( rs
             Lens.^? getDocumentationPartsResponse_position
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getDocumentationPartsResponse_items
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getDocumentationParts_position
           Lens..~ rs
           Lens.^? getDocumentationPartsResponse_position
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetDocumentationParts where
   type
@@ -190,7 +190,8 @@ instance Core.AWSRequest GetDocumentationParts where
 
 instance Prelude.Hashable GetDocumentationParts where
   hashWithSalt _salt GetDocumentationParts' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` locationStatus
       `Prelude.hashWithSalt` nameQuery
       `Prelude.hashWithSalt` path

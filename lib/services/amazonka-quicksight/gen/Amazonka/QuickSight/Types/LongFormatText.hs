@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.LongFormatText
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.LongFormatText where
@@ -77,7 +77,8 @@ instance Data.FromJSON LongFormatText where
 
 instance Prelude.Hashable LongFormatText where
   hashWithSalt _salt LongFormatText' {..} =
-    _salt `Prelude.hashWithSalt` plainText
+    _salt
+      `Prelude.hashWithSalt` plainText
       `Prelude.hashWithSalt` richText
 
 instance Prelude.NFData LongFormatText where

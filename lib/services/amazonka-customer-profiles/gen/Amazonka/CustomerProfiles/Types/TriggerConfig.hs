@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CustomerProfiles.Types.TriggerConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CustomerProfiles.Types.TriggerConfig where
@@ -78,7 +78,8 @@ triggerConfig_triggerType = Lens.lens (\TriggerConfig' {triggerType} -> triggerT
 
 instance Prelude.Hashable TriggerConfig where
   hashWithSalt _salt TriggerConfig' {..} =
-    _salt `Prelude.hashWithSalt` triggerProperties
+    _salt
+      `Prelude.hashWithSalt` triggerProperties
       `Prelude.hashWithSalt` triggerType
 
 instance Prelude.NFData TriggerConfig where

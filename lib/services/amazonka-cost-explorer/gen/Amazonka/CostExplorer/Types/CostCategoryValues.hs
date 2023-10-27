@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.CostCategoryValues
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.CostCategoryValues where
@@ -98,7 +98,8 @@ instance Data.FromJSON CostCategoryValues where
 
 instance Prelude.Hashable CostCategoryValues where
   hashWithSalt _salt CostCategoryValues' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` matchOptions
       `Prelude.hashWithSalt` values
 

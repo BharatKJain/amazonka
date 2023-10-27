@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.AttachUserPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest AttachUserPolicy where
 
 instance Prelude.Hashable AttachUserPolicy where
   hashWithSalt _salt AttachUserPolicy' {..} =
-    _salt `Prelude.hashWithSalt` userName
+    _salt
+      `Prelude.hashWithSalt` userName
       `Prelude.hashWithSalt` policyArn
 
 instance Prelude.NFData AttachUserPolicy where

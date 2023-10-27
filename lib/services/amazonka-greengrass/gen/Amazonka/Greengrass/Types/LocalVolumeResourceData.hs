@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.LocalVolumeResourceData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.LocalVolumeResourceData where
@@ -92,7 +92,8 @@ instance Data.FromJSON LocalVolumeResourceData where
 
 instance Prelude.Hashable LocalVolumeResourceData where
   hashWithSalt _salt LocalVolumeResourceData' {..} =
-    _salt `Prelude.hashWithSalt` destinationPath
+    _salt
+      `Prelude.hashWithSalt` destinationPath
       `Prelude.hashWithSalt` groupOwnerSetting
       `Prelude.hashWithSalt` sourcePath
 

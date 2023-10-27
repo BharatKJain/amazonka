@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.Connection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.Connection where
@@ -152,7 +152,8 @@ instance Data.FromJSON Connection where
 
 instance Prelude.Hashable Connection where
   hashWithSalt _salt Connection' {..} =
-    _salt `Prelude.hashWithSalt` endpointArn
+    _salt
+      `Prelude.hashWithSalt` endpointArn
       `Prelude.hashWithSalt` endpointIdentifier
       `Prelude.hashWithSalt` lastFailureMessage
       `Prelude.hashWithSalt` replicationInstanceArn

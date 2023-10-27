@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.SolutionVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.SolutionVersion where
@@ -328,7 +328,8 @@ instance Data.FromJSON SolutionVersion where
 
 instance Prelude.Hashable SolutionVersion where
   hashWithSalt _salt SolutionVersion' {..} =
-    _salt `Prelude.hashWithSalt` creationDateTime
+    _salt
+      `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` datasetGroupArn
       `Prelude.hashWithSalt` eventType
       `Prelude.hashWithSalt` failureReason

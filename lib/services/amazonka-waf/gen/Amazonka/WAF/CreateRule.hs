@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAF.CreateRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -152,7 +152,6 @@ newCreateRule pName_ pMetricName_ pChangeToken_ =
       changeToken = pChangeToken_
     }
 
--- |
 createRule_tags :: Lens.Lens' CreateRule (Prelude.Maybe (Prelude.NonEmpty Tag))
 createRule_tags = Lens.lens (\CreateRule' {tags} -> tags) (\s@CreateRule' {} a -> s {tags = a} :: CreateRule) Prelude.. Lens.mapping Lens.coerced
 
@@ -189,7 +188,8 @@ instance Core.AWSRequest CreateRule where
 
 instance Prelude.Hashable CreateRule where
   hashWithSalt _salt CreateRule' {..} =
-    _salt `Prelude.hashWithSalt` tags
+    _salt
+      `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` changeToken

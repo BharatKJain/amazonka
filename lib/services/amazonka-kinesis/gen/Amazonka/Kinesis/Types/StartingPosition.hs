@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kinesis.Types.StartingPosition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kinesis.Types.StartingPosition where
@@ -148,7 +148,8 @@ startingPosition_type = Lens.lens (\StartingPosition' {type'} -> type') (\s@Star
 
 instance Prelude.Hashable StartingPosition where
   hashWithSalt _salt StartingPosition' {..} =
-    _salt `Prelude.hashWithSalt` sequenceNumber
+    _salt
+      `Prelude.hashWithSalt` sequenceNumber
       `Prelude.hashWithSalt` timestamp
       `Prelude.hashWithSalt` type'
 

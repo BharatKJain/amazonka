@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.UpdateArtifact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest UpdateArtifact where
 
 instance Prelude.Hashable UpdateArtifact where
   hashWithSalt _salt UpdateArtifact' {..} =
-    _salt `Prelude.hashWithSalt` artifactName
+    _salt
+      `Prelude.hashWithSalt` artifactName
       `Prelude.hashWithSalt` properties
       `Prelude.hashWithSalt` propertiesToRemove
       `Prelude.hashWithSalt` artifactArn

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTDeviceAdvisor.Types.GroupResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTDeviceAdvisor.Types.GroupResult where
@@ -85,7 +85,8 @@ instance Data.FromJSON GroupResult where
 
 instance Prelude.Hashable GroupResult where
   hashWithSalt _salt GroupResult' {..} =
-    _salt `Prelude.hashWithSalt` groupId
+    _salt
+      `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` groupName
       `Prelude.hashWithSalt` tests
 

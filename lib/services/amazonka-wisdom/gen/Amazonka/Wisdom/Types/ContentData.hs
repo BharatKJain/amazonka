@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Wisdom.Types.ContentData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Wisdom.Types.ContentData where
@@ -237,7 +237,8 @@ instance Data.FromJSON ContentData where
 
 instance Prelude.Hashable ContentData where
   hashWithSalt _salt ContentData' {..} =
-    _salt `Prelude.hashWithSalt` linkOutUri
+    _salt
+      `Prelude.hashWithSalt` linkOutUri
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` contentArn
       `Prelude.hashWithSalt` contentId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.NodeDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.NodeDetails where
@@ -83,7 +83,8 @@ instance Data.FromJSON NodeDetails where
 
 instance Prelude.Hashable NodeDetails where
   hashWithSalt _salt NodeDetails' {..} =
-    _salt `Prelude.hashWithSalt` isMainNode
+    _salt
+      `Prelude.hashWithSalt` isMainNode
       `Prelude.hashWithSalt` nodeIndex
 
 instance Prelude.NFData NodeDetails where

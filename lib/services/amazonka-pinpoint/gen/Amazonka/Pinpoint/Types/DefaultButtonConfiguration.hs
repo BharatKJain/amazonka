@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.DefaultButtonConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.DefaultButtonConfiguration where
@@ -120,7 +120,8 @@ instance Data.FromJSON DefaultButtonConfiguration where
 
 instance Prelude.Hashable DefaultButtonConfiguration where
   hashWithSalt _salt DefaultButtonConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` backgroundColor
+    _salt
+      `Prelude.hashWithSalt` backgroundColor
       `Prelude.hashWithSalt` borderRadius
       `Prelude.hashWithSalt` link
       `Prelude.hashWithSalt` textColor

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.OutboundCrossClusterSearchConnectionStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.OutboundCrossClusterSearchConnectionStatus where
@@ -111,7 +111,7 @@ instance
       ( \x ->
           OutboundCrossClusterSearchConnectionStatus'
             Prelude.<$> (x Data..:? "Message")
-              Prelude.<*> (x Data..:? "StatusCode")
+            Prelude.<*> (x Data..:? "StatusCode")
       )
 
 instance
@@ -121,7 +121,8 @@ instance
   hashWithSalt
     _salt
     OutboundCrossClusterSearchConnectionStatus' {..} =
-      _salt `Prelude.hashWithSalt` message
+      _salt
+        `Prelude.hashWithSalt` message
         `Prelude.hashWithSalt` statusCode
 
 instance

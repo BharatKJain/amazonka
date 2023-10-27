@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.IncidentRecordSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.IncidentRecordSource where
@@ -107,7 +107,8 @@ instance Data.FromJSON IncidentRecordSource where
 
 instance Prelude.Hashable IncidentRecordSource where
   hashWithSalt _salt IncidentRecordSource' {..} =
-    _salt `Prelude.hashWithSalt` invokedBy
+    _salt
+      `Prelude.hashWithSalt` invokedBy
       `Prelude.hashWithSalt` resourceArn
       `Prelude.hashWithSalt` createdBy
       `Prelude.hashWithSalt` source

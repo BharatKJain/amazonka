@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.ByteMatchSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.ByteMatchSet where
@@ -132,14 +132,16 @@ instance Data.FromJSON ByteMatchSet where
           ByteMatchSet'
             Prelude.<$> (x Data..:? "Name")
             Prelude.<*> (x Data..: "ByteMatchSetId")
-            Prelude.<*> ( x Data..:? "ByteMatchTuples"
+            Prelude.<*> ( x
+                            Data..:? "ByteMatchTuples"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ByteMatchSet where
   hashWithSalt _salt ByteMatchSet' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` byteMatchSetId
       `Prelude.hashWithSalt` byteMatchTuples
 

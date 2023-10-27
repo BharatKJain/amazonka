@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.DialogCodeHookInvocationSetting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.DialogCodeHookInvocationSetting where
@@ -125,7 +125,8 @@ instance
   hashWithSalt
     _salt
     DialogCodeHookInvocationSetting' {..} =
-      _salt `Prelude.hashWithSalt` invocationLabel
+      _salt
+        `Prelude.hashWithSalt` invocationLabel
         `Prelude.hashWithSalt` enableCodeHookInvocation
         `Prelude.hashWithSalt` active
         `Prelude.hashWithSalt` postCodeHookSpecification

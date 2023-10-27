@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RobOMaker.ListSimulationJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -154,21 +154,21 @@ instance Core.AWSPager ListSimulationJobs where
     | Core.stop
         ( rs
             Lens.^? listSimulationJobsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listSimulationJobsResponse_simulationJobSummaries
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSimulationJobs_nextToken
           Lens..~ rs
           Lens.^? listSimulationJobsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListSimulationJobs where
   type
@@ -182,14 +182,16 @@ instance Core.AWSRequest ListSimulationJobs where
           ListSimulationJobsResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "simulationJobSummaries"
+            Prelude.<*> ( x
+                            Data..?> "simulationJobSummaries"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListSimulationJobs where
   hashWithSalt _salt ListSimulationJobs' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

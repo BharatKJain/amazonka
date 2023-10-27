@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.AutoTuneStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.AutoTuneStatus where
@@ -124,7 +124,8 @@ instance Data.FromJSON AutoTuneStatus where
 
 instance Prelude.Hashable AutoTuneStatus where
   hashWithSalt _salt AutoTuneStatus' {..} =
-    _salt `Prelude.hashWithSalt` errorMessage
+    _salt
+      `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` pendingDeletion
       `Prelude.hashWithSalt` updateVersion
       `Prelude.hashWithSalt` creationDate

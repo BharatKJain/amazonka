@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeCommit.UpdateComment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest UpdateComment where
 
 instance Prelude.Hashable UpdateComment where
   hashWithSalt _salt UpdateComment' {..} =
-    _salt `Prelude.hashWithSalt` commentId
+    _salt
+      `Prelude.hashWithSalt` commentId
       `Prelude.hashWithSalt` content
 
 instance Prelude.NFData UpdateComment where

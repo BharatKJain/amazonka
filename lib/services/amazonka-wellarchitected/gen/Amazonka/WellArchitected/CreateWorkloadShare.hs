@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WellArchitected.CreateWorkloadShare
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,7 +141,8 @@ instance Core.AWSRequest CreateWorkloadShare where
 
 instance Prelude.Hashable CreateWorkloadShare where
   hashWithSalt _salt CreateWorkloadShare' {..} =
-    _salt `Prelude.hashWithSalt` workloadId
+    _salt
+      `Prelude.hashWithSalt` workloadId
       `Prelude.hashWithSalt` sharedWith
       `Prelude.hashWithSalt` permissionType
       `Prelude.hashWithSalt` clientRequestToken

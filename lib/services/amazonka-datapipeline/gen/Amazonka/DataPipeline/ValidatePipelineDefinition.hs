@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataPipeline.ValidatePipelineDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,10 +125,12 @@ instance Core.AWSRequest ValidatePipelineDefinition where
     Response.receiveJSON
       ( \s h x ->
           ValidatePipelineDefinitionResponse'
-            Prelude.<$> ( x Data..?> "validationErrors"
+            Prelude.<$> ( x
+                            Data..?> "validationErrors"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "validationWarnings"
+            Prelude.<*> ( x
+                            Data..?> "validationWarnings"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -137,7 +139,8 @@ instance Core.AWSRequest ValidatePipelineDefinition where
 
 instance Prelude.Hashable ValidatePipelineDefinition where
   hashWithSalt _salt ValidatePipelineDefinition' {..} =
-    _salt `Prelude.hashWithSalt` parameterObjects
+    _salt
+      `Prelude.hashWithSalt` parameterObjects
       `Prelude.hashWithSalt` parameterValues
       `Prelude.hashWithSalt` pipelineId
       `Prelude.hashWithSalt` pipelineObjects

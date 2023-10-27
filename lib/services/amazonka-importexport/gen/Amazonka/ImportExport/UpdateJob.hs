@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ImportExport.UpdateJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,7 +138,9 @@ instance Core.AWSRequest UpdateJob where
       "UpdateJobResult"
       ( \s h x ->
           UpdateJobResponse'
-            Prelude.<$> ( x Data..@? "ArtifactList" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "ArtifactList"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (x Data..@? "Success")
@@ -148,7 +150,8 @@ instance Core.AWSRequest UpdateJob where
 
 instance Prelude.Hashable UpdateJob where
   hashWithSalt _salt UpdateJob' {..} =
-    _salt `Prelude.hashWithSalt` aPIVersion
+    _salt
+      `Prelude.hashWithSalt` aPIVersion
       `Prelude.hashWithSalt` jobId
       `Prelude.hashWithSalt` manifest
       `Prelude.hashWithSalt` jobType

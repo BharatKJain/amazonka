@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.AssetAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.AssetAttributes where
@@ -147,7 +147,8 @@ instance Data.FromJSON AssetAttributes where
             Prelude.<*> (x Data..:? "autoScalingGroup")
             Prelude.<*> (x Data..:? "hostname")
             Prelude.<*> (x Data..:? "ipv4Addresses" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "networkInterfaces"
+            Prelude.<*> ( x
+                            Data..:? "networkInterfaces"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "tags" Data..!= Prelude.mempty)
@@ -156,7 +157,8 @@ instance Data.FromJSON AssetAttributes where
 
 instance Prelude.Hashable AssetAttributes where
   hashWithSalt _salt AssetAttributes' {..} =
-    _salt `Prelude.hashWithSalt` agentId
+    _salt
+      `Prelude.hashWithSalt` agentId
       `Prelude.hashWithSalt` amiId
       `Prelude.hashWithSalt` autoScalingGroup
       `Prelude.hashWithSalt` hostname

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.Function
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.Function where
@@ -93,7 +93,8 @@ instance Data.FromJSON Function where
 
 instance Prelude.Hashable Function where
   hashWithSalt _salt Function' {..} =
-    _salt `Prelude.hashWithSalt` functionArn
+    _salt
+      `Prelude.hashWithSalt` functionArn
       `Prelude.hashWithSalt` functionConfiguration
       `Prelude.hashWithSalt` id
 

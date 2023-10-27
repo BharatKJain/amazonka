@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.CompatibleVersionsMap
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.CompatibleVersionsMap where
@@ -24,8 +24,8 @@ import qualified Amazonka.Core.Lens.Internal as Lens
 import qualified Amazonka.Data as Data
 import qualified Amazonka.Prelude as Prelude
 
--- | A map from an @ ElasticsearchVersion @ to a list of compatible
--- @ ElasticsearchVersion @ s to which the domain can be upgraded.
+-- | A map from an @ @@ElasticsearchVersion@@ @ to a list of compatible
+-- @ @@ElasticsearchVersion@@ @ s to which the domain can be upgraded.
 --
 -- /See:/ 'newCompatibleVersionsMap' smart constructor.
 data CompatibleVersionsMap = CompatibleVersionsMap'
@@ -70,14 +70,16 @@ instance Data.FromJSON CompatibleVersionsMap where
       ( \x ->
           CompatibleVersionsMap'
             Prelude.<$> (x Data..:? "SourceVersion")
-            Prelude.<*> ( x Data..:? "TargetVersions"
+            Prelude.<*> ( x
+                            Data..:? "TargetVersions"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable CompatibleVersionsMap where
   hashWithSalt _salt CompatibleVersionsMap' {..} =
-    _salt `Prelude.hashWithSalt` sourceVersion
+    _salt
+      `Prelude.hashWithSalt` sourceVersion
       `Prelude.hashWithSalt` targetVersions
 
 instance Prelude.NFData CompatibleVersionsMap where

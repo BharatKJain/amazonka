@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Grafana.Types.AssertionAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Grafana.Types.AssertionAttributes where
@@ -134,7 +134,8 @@ instance Data.FromJSON AssertionAttributes where
 
 instance Prelude.Hashable AssertionAttributes where
   hashWithSalt _salt AssertionAttributes' {..} =
-    _salt `Prelude.hashWithSalt` email
+    _salt
+      `Prelude.hashWithSalt` email
       `Prelude.hashWithSalt` groups
       `Prelude.hashWithSalt` login
       `Prelude.hashWithSalt` name

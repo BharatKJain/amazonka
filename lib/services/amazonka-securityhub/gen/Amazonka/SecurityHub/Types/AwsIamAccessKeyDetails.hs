@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsIamAccessKeyDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsIamAccessKeyDetails where
@@ -174,7 +174,8 @@ instance Data.FromJSON AwsIamAccessKeyDetails where
 
 instance Prelude.Hashable AwsIamAccessKeyDetails where
   hashWithSalt _salt AwsIamAccessKeyDetails' {..} =
-    _salt `Prelude.hashWithSalt` accessKeyId
+    _salt
+      `Prelude.hashWithSalt` accessKeyId
       `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` principalId

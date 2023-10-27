@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.CalculationStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.CalculationStatus where
@@ -156,7 +156,8 @@ instance Data.FromJSON CalculationStatus where
 
 instance Prelude.Hashable CalculationStatus where
   hashWithSalt _salt CalculationStatus' {..} =
-    _salt `Prelude.hashWithSalt` completionDateTime
+    _salt
+      `Prelude.hashWithSalt` completionDateTime
       `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` stateChangeReason
       `Prelude.hashWithSalt` submissionDateTime

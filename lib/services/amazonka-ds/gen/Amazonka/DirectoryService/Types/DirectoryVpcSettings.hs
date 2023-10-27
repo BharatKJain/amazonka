@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.DirectoryVpcSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.DirectoryVpcSettings where
@@ -83,7 +83,8 @@ instance Data.FromJSON DirectoryVpcSettings where
 
 instance Prelude.Hashable DirectoryVpcSettings where
   hashWithSalt _salt DirectoryVpcSettings' {..} =
-    _salt `Prelude.hashWithSalt` vpcId
+    _salt
+      `Prelude.hashWithSalt` vpcId
       `Prelude.hashWithSalt` subnetIds
 
 instance Prelude.NFData DirectoryVpcSettings where

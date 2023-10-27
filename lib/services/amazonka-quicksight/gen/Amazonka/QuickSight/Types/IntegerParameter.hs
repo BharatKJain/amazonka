@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.IntegerParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.IntegerParameter where
@@ -66,7 +66,8 @@ integerParameter_values = Lens.lens (\IntegerParameter' {values} -> values) (\s@
 
 instance Prelude.Hashable IntegerParameter where
   hashWithSalt _salt IntegerParameter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData IntegerParameter where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.CvssScoreDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.CvssScoreDetails where
@@ -130,7 +130,8 @@ instance Data.FromJSON CvssScoreDetails where
 
 instance Prelude.Hashable CvssScoreDetails where
   hashWithSalt _salt CvssScoreDetails' {..} =
-    _salt `Prelude.hashWithSalt` adjustments
+    _salt
+      `Prelude.hashWithSalt` adjustments
       `Prelude.hashWithSalt` cvssSource
       `Prelude.hashWithSalt` score
       `Prelude.hashWithSalt` scoreSource

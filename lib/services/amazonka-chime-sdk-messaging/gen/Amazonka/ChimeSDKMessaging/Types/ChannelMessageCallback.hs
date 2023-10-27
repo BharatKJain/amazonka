@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSDKMessaging.Types.ChannelMessageCallback
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSDKMessaging.Types.ChannelMessageCallback where
@@ -107,7 +107,8 @@ channelMessageCallback_messageId = Lens.lens (\ChannelMessageCallback' {messageI
 
 instance Prelude.Hashable ChannelMessageCallback where
   hashWithSalt _salt ChannelMessageCallback' {..} =
-    _salt `Prelude.hashWithSalt` content
+    _salt
+      `Prelude.hashWithSalt` content
       `Prelude.hashWithSalt` messageAttributes
       `Prelude.hashWithSalt` metadata
       `Prelude.hashWithSalt` pushNotification

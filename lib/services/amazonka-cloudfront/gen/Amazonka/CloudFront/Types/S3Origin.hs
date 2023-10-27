@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.S3Origin
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.S3Origin where
@@ -129,7 +129,8 @@ instance Data.FromXML S3Origin where
 
 instance Prelude.Hashable S3Origin where
   hashWithSalt _salt S3Origin' {..} =
-    _salt `Prelude.hashWithSalt` domainName
+    _salt
+      `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` originAccessIdentity
 
 instance Prelude.NFData S3Origin where

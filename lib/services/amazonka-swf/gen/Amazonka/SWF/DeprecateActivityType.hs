@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SWF.DeprecateActivityType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,7 +128,8 @@ instance Core.AWSRequest DeprecateActivityType where
 
 instance Prelude.Hashable DeprecateActivityType where
   hashWithSalt _salt DeprecateActivityType' {..} =
-    _salt `Prelude.hashWithSalt` domain
+    _salt
+      `Prelude.hashWithSalt` domain
       `Prelude.hashWithSalt` activityType
 
 instance Prelude.NFData DeprecateActivityType where

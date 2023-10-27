@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.ConnectPeer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.ConnectPeer where
@@ -137,7 +137,8 @@ instance Data.FromJSON ConnectPeer where
 
 instance Prelude.Hashable ConnectPeer where
   hashWithSalt _salt ConnectPeer' {..} =
-    _salt `Prelude.hashWithSalt` configuration
+    _salt
+      `Prelude.hashWithSalt` configuration
       `Prelude.hashWithSalt` connectAttachmentId
       `Prelude.hashWithSalt` connectPeerId
       `Prelude.hashWithSalt` coreNetworkId

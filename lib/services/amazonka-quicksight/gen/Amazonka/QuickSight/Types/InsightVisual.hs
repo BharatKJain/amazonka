@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.InsightVisual
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.InsightVisual where
@@ -132,7 +132,8 @@ instance Data.FromJSON InsightVisual where
 
 instance Prelude.Hashable InsightVisual where
   hashWithSalt _salt InsightVisual' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` insightConfiguration
       `Prelude.hashWithSalt` subtitle
       `Prelude.hashWithSalt` title

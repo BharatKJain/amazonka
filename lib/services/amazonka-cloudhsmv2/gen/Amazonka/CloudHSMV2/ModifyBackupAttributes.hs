@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudHSMV2.ModifyBackupAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,7 +116,8 @@ instance Core.AWSRequest ModifyBackupAttributes where
 
 instance Prelude.Hashable ModifyBackupAttributes where
   hashWithSalt _salt ModifyBackupAttributes' {..} =
-    _salt `Prelude.hashWithSalt` backupId
+    _salt
+      `Prelude.hashWithSalt` backupId
       `Prelude.hashWithSalt` neverExpires
 
 instance Prelude.NFData ModifyBackupAttributes where

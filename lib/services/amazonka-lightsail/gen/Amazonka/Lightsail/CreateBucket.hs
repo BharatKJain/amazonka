@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.CreateBucket
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -203,7 +203,8 @@ instance Core.AWSRequest CreateBucket where
 
 instance Prelude.Hashable CreateBucket where
   hashWithSalt _salt CreateBucket' {..} =
-    _salt `Prelude.hashWithSalt` enableObjectVersioning
+    _salt
+      `Prelude.hashWithSalt` enableObjectVersioning
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` bundleId

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElastiCache.CreateCacheCluster
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -1118,7 +1118,8 @@ instance Core.AWSRequest CreateCacheCluster where
 
 instance Prelude.Hashable CreateCacheCluster where
   hashWithSalt _salt CreateCacheCluster' {..} =
-    _salt `Prelude.hashWithSalt` aZMode
+    _salt
+      `Prelude.hashWithSalt` aZMode
       `Prelude.hashWithSalt` authToken
       `Prelude.hashWithSalt` autoMinorVersionUpgrade
       `Prelude.hashWithSalt` cacheNodeType

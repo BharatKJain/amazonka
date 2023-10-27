@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFormation.DetectStackDrift
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance Core.AWSRequest DetectStackDrift where
 
 instance Prelude.Hashable DetectStackDrift where
   hashWithSalt _salt DetectStackDrift' {..} =
-    _salt `Prelude.hashWithSalt` logicalResourceIds
+    _salt
+      `Prelude.hashWithSalt` logicalResourceIds
       `Prelude.hashWithSalt` stackName
 
 instance Prelude.NFData DetectStackDrift where

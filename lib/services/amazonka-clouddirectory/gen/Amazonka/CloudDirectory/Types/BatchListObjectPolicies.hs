@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchListObjectPolicies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchListObjectPolicies where
@@ -82,7 +82,8 @@ batchListObjectPolicies_objectReference = Lens.lens (\BatchListObjectPolicies' {
 
 instance Prelude.Hashable BatchListObjectPolicies where
   hashWithSalt _salt BatchListObjectPolicies' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` objectReference
 

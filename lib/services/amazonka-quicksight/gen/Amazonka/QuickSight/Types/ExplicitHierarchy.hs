@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ExplicitHierarchy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ExplicitHierarchy where
@@ -89,7 +89,8 @@ instance Data.FromJSON ExplicitHierarchy where
       "ExplicitHierarchy"
       ( \x ->
           ExplicitHierarchy'
-            Prelude.<$> ( x Data..:? "DrillDownFilters"
+            Prelude.<$> ( x
+                            Data..:? "DrillDownFilters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "HierarchyId")
@@ -98,7 +99,8 @@ instance Data.FromJSON ExplicitHierarchy where
 
 instance Prelude.Hashable ExplicitHierarchy where
   hashWithSalt _salt ExplicitHierarchy' {..} =
-    _salt `Prelude.hashWithSalt` drillDownFilters
+    _salt
+      `Prelude.hashWithSalt` drillDownFilters
       `Prelude.hashWithSalt` hierarchyId
       `Prelude.hashWithSalt` columns
 

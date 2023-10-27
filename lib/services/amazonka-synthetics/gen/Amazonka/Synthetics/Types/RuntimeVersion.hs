@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Synthetics.Types.RuntimeVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Synthetics.Types.RuntimeVersion where
@@ -105,7 +105,8 @@ instance Data.FromJSON RuntimeVersion where
 
 instance Prelude.Hashable RuntimeVersion where
   hashWithSalt _salt RuntimeVersion' {..} =
-    _salt `Prelude.hashWithSalt` deprecationDate
+    _salt
+      `Prelude.hashWithSalt` deprecationDate
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` releaseDate
       `Prelude.hashWithSalt` versionName

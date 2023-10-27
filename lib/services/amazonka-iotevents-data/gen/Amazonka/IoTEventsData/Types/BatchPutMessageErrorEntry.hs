@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEventsData.Types.BatchPutMessageErrorEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEventsData.Types.BatchPutMessageErrorEntry where
@@ -89,7 +89,8 @@ instance Data.FromJSON BatchPutMessageErrorEntry where
 
 instance Prelude.Hashable BatchPutMessageErrorEntry where
   hashWithSalt _salt BatchPutMessageErrorEntry' {..} =
-    _salt `Prelude.hashWithSalt` errorCode
+    _salt
+      `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` messageId
 

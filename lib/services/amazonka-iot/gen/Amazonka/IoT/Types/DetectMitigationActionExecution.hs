@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.DetectMitigationActionExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.DetectMitigationActionExecution where
@@ -154,7 +154,8 @@ instance
   hashWithSalt
     _salt
     DetectMitigationActionExecution' {..} =
-      _salt `Prelude.hashWithSalt` actionName
+      _salt
+        `Prelude.hashWithSalt` actionName
         `Prelude.hashWithSalt` errorCode
         `Prelude.hashWithSalt` executionEndDate
         `Prelude.hashWithSalt` executionStartDate

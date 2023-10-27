@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EFS.Types.FileSystemSize
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EFS.Types.FileSystemSize where
@@ -118,7 +118,8 @@ instance Data.FromJSON FileSystemSize where
 
 instance Prelude.Hashable FileSystemSize where
   hashWithSalt _salt FileSystemSize' {..} =
-    _salt `Prelude.hashWithSalt` timestamp
+    _salt
+      `Prelude.hashWithSalt` timestamp
       `Prelude.hashWithSalt` valueInIA
       `Prelude.hashWithSalt` valueInStandard
       `Prelude.hashWithSalt` value

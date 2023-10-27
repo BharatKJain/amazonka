@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.DeleteThingGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest DeleteThingGroup where
 
 instance Prelude.Hashable DeleteThingGroup where
   hashWithSalt _salt DeleteThingGroup' {..} =
-    _salt `Prelude.hashWithSalt` expectedVersion
+    _salt
+      `Prelude.hashWithSalt` expectedVersion
       `Prelude.hashWithSalt` thingGroupName
 
 instance Prelude.NFData DeleteThingGroup where

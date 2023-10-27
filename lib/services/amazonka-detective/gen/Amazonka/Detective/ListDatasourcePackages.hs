@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Detective.ListDatasourcePackages
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest ListDatasourcePackages where
     Response.receiveJSON
       ( \s h x ->
           ListDatasourcePackagesResponse'
-            Prelude.<$> ( x Data..?> "DatasourcePackages"
+            Prelude.<$> ( x
+                            Data..?> "DatasourcePackages"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -123,7 +124,8 @@ instance Core.AWSRequest ListDatasourcePackages where
 
 instance Prelude.Hashable ListDatasourcePackages where
   hashWithSalt _salt ListDatasourcePackages' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` graphArn
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LookoutMetrics.PutFeedback
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest PutFeedback where
 
 instance Prelude.Hashable PutFeedback where
   hashWithSalt _salt PutFeedback' {..} =
-    _salt `Prelude.hashWithSalt` anomalyDetectorArn
+    _salt
+      `Prelude.hashWithSalt` anomalyDetectorArn
       `Prelude.hashWithSalt` anomalyGroupTimeSeriesFeedback
 
 instance Prelude.NFData PutFeedback where

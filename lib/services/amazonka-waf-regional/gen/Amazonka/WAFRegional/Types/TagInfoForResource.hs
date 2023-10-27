@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFRegional.Types.TagInfoForResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFRegional.Types.TagInfoForResource where
@@ -72,11 +72,9 @@ newTagInfoForResource =
       tagList = Prelude.Nothing
     }
 
--- |
 tagInfoForResource_resourceARN :: Lens.Lens' TagInfoForResource (Prelude.Maybe Prelude.Text)
 tagInfoForResource_resourceARN = Lens.lens (\TagInfoForResource' {resourceARN} -> resourceARN) (\s@TagInfoForResource' {} a -> s {resourceARN = a} :: TagInfoForResource)
 
--- |
 tagInfoForResource_tagList :: Lens.Lens' TagInfoForResource (Prelude.Maybe (Prelude.NonEmpty Tag))
 tagInfoForResource_tagList = Lens.lens (\TagInfoForResource' {tagList} -> tagList) (\s@TagInfoForResource' {} a -> s {tagList = a} :: TagInfoForResource) Prelude.. Lens.mapping Lens.coerced
 
@@ -92,7 +90,8 @@ instance Data.FromJSON TagInfoForResource where
 
 instance Prelude.Hashable TagInfoForResource where
   hashWithSalt _salt TagInfoForResource' {..} =
-    _salt `Prelude.hashWithSalt` resourceARN
+    _salt
+      `Prelude.hashWithSalt` resourceARN
       `Prelude.hashWithSalt` tagList
 
 instance Prelude.NFData TagInfoForResource where

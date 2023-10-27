@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstanceUsage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstanceUsage where
@@ -77,7 +77,8 @@ instance Data.FromXML InstanceUsage where
 
 instance Prelude.Hashable InstanceUsage where
   hashWithSalt _salt InstanceUsage' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` usedInstanceCount
 
 instance Prelude.NFData InstanceUsage where

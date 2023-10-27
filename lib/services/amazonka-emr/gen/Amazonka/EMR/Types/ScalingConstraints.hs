@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.ScalingConstraints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.ScalingConstraints where
@@ -92,7 +92,8 @@ instance Data.FromJSON ScalingConstraints where
 
 instance Prelude.Hashable ScalingConstraints where
   hashWithSalt _salt ScalingConstraints' {..} =
-    _salt `Prelude.hashWithSalt` minCapacity
+    _salt
+      `Prelude.hashWithSalt` minCapacity
       `Prelude.hashWithSalt` maxCapacity
 
 instance Prelude.NFData ScalingConstraints where

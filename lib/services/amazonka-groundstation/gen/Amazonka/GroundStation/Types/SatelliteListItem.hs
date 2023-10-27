@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.SatelliteListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.SatelliteListItem where
@@ -109,7 +109,8 @@ instance Data.FromJSON SatelliteListItem where
 
 instance Prelude.Hashable SatelliteListItem where
   hashWithSalt _salt SatelliteListItem' {..} =
-    _salt `Prelude.hashWithSalt` currentEphemeris
+    _salt
+      `Prelude.hashWithSalt` currentEphemeris
       `Prelude.hashWithSalt` groundStations
       `Prelude.hashWithSalt` noradSatelliteID
       `Prelude.hashWithSalt` satelliteArn

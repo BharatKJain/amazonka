@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsS3ObjectDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsS3ObjectDetails where
@@ -141,7 +141,8 @@ instance Data.FromJSON AwsS3ObjectDetails where
 
 instance Prelude.Hashable AwsS3ObjectDetails where
   hashWithSalt _salt AwsS3ObjectDetails' {..} =
-    _salt `Prelude.hashWithSalt` contentType
+    _salt
+      `Prelude.hashWithSalt` contentType
       `Prelude.hashWithSalt` eTag
       `Prelude.hashWithSalt` lastModified
       `Prelude.hashWithSalt` sSEKMSKeyId

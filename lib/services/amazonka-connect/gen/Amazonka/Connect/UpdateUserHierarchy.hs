@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.UpdateUserHierarchy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest UpdateUserHierarchy where
 
 instance Prelude.Hashable UpdateUserHierarchy where
   hashWithSalt _salt UpdateUserHierarchy' {..} =
-    _salt `Prelude.hashWithSalt` hierarchyGroupId
+    _salt
+      `Prelude.hashWithSalt` hierarchyGroupId
       `Prelude.hashWithSalt` userId
       `Prelude.hashWithSalt` instanceId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubOrchestrator.Types.PluginSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubOrchestrator.Types.PluginSummary where
@@ -115,7 +115,8 @@ instance Data.FromJSON PluginSummary where
 
 instance Prelude.Hashable PluginSummary where
   hashWithSalt _salt PluginSummary' {..} =
-    _salt `Prelude.hashWithSalt` hostname
+    _salt
+      `Prelude.hashWithSalt` hostname
       `Prelude.hashWithSalt` ipAddress
       `Prelude.hashWithSalt` pluginId
       `Prelude.hashWithSalt` registeredTime

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.AdvancedOptionsStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.AdvancedOptionsStatus where
@@ -95,7 +95,8 @@ instance Data.FromJSON AdvancedOptionsStatus where
 
 instance Prelude.Hashable AdvancedOptionsStatus where
   hashWithSalt _salt AdvancedOptionsStatus' {..} =
-    _salt `Prelude.hashWithSalt` options
+    _salt
+      `Prelude.hashWithSalt` options
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData AdvancedOptionsStatus where

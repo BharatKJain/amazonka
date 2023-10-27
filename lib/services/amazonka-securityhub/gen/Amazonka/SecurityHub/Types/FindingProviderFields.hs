@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.FindingProviderFields
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.FindingProviderFields where
@@ -141,7 +141,8 @@ instance Data.FromJSON FindingProviderFields where
           FindingProviderFields'
             Prelude.<$> (x Data..:? "Confidence")
             Prelude.<*> (x Data..:? "Criticality")
-            Prelude.<*> ( x Data..:? "RelatedFindings"
+            Prelude.<*> ( x
+                            Data..:? "RelatedFindings"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Severity")
@@ -150,7 +151,8 @@ instance Data.FromJSON FindingProviderFields where
 
 instance Prelude.Hashable FindingProviderFields where
   hashWithSalt _salt FindingProviderFields' {..} =
-    _salt `Prelude.hashWithSalt` confidence
+    _salt
+      `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` criticality
       `Prelude.hashWithSalt` relatedFindings
       `Prelude.hashWithSalt` severity

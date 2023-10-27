@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.Session
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.Session where
@@ -86,7 +86,8 @@ session_id = Lens.lens (\Session' {id} -> id) (\s@Session' {} a -> s {id = a} ::
 
 instance Prelude.Hashable Session where
   hashWithSalt _salt Session' {..} =
-    _salt `Prelude.hashWithSalt` duration
+    _salt
+      `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` stopTimestamp
       `Prelude.hashWithSalt` startTimestamp
       `Prelude.hashWithSalt` id

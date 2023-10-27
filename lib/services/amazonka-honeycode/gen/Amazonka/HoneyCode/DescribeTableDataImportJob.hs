@@ -16,7 +16,7 @@
 -- Module      : Amazonka.HoneyCode.DescribeTableDataImportJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -157,7 +157,8 @@ instance Core.AWSRequest DescribeTableDataImportJob where
 
 instance Prelude.Hashable DescribeTableDataImportJob where
   hashWithSalt _salt DescribeTableDataImportJob' {..} =
-    _salt `Prelude.hashWithSalt` workbookId
+    _salt
+      `Prelude.hashWithSalt` workbookId
       `Prelude.hashWithSalt` tableId
       `Prelude.hashWithSalt` jobId
 

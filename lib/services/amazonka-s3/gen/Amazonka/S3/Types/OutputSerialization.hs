@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.OutputSerialization
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.OutputSerialization where
@@ -67,7 +67,8 @@ outputSerialization_json = Lens.lens (\OutputSerialization' {json} -> json) (\s@
 
 instance Prelude.Hashable OutputSerialization where
   hashWithSalt _salt OutputSerialization' {..} =
-    _salt `Prelude.hashWithSalt` csv
+    _salt
+      `Prelude.hashWithSalt` csv
       `Prelude.hashWithSalt` json
 
 instance Prelude.NFData OutputSerialization where

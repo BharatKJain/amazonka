@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.ConfigurationErrorDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.ConfigurationErrorDetails where
@@ -73,12 +73,14 @@ instance Data.FromJSON ConfigurationErrorDetails where
       "ConfigurationErrorDetails"
       ( \x ->
           ConfigurationErrorDetails'
-            Prelude.<$> (x Data..: "code") Prelude.<*> (x Data..: "message")
+            Prelude.<$> (x Data..: "code")
+            Prelude.<*> (x Data..: "message")
       )
 
 instance Prelude.Hashable ConfigurationErrorDetails where
   hashWithSalt _salt ConfigurationErrorDetails' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData ConfigurationErrorDetails where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Snowball.Types.LongTermPricingListEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Snowball.Types.LongTermPricingListEntry where
@@ -170,7 +170,8 @@ instance Data.FromJSON LongTermPricingListEntry where
 
 instance Prelude.Hashable LongTermPricingListEntry where
   hashWithSalt _salt LongTermPricingListEntry' {..} =
-    _salt `Prelude.hashWithSalt` currentActiveJob
+    _salt
+      `Prelude.hashWithSalt` currentActiveJob
       `Prelude.hashWithSalt` isLongTermPricingAutoRenew
       `Prelude.hashWithSalt` jobIds
       `Prelude.hashWithSalt` longTermPricingEndDate

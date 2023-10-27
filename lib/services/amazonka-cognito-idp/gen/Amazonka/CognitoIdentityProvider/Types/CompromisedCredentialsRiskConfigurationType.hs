@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.CompromisedCredentialsRiskConfigurationType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.CompromisedCredentialsRiskConfigurationType where
@@ -81,7 +81,7 @@ instance
       ( \x ->
           CompromisedCredentialsRiskConfigurationType'
             Prelude.<$> (x Data..:? "EventFilter" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..: "Actions")
+            Prelude.<*> (x Data..: "Actions")
       )
 
 instance
@@ -91,7 +91,8 @@ instance
   hashWithSalt
     _salt
     CompromisedCredentialsRiskConfigurationType' {..} =
-      _salt `Prelude.hashWithSalt` eventFilter
+      _salt
+        `Prelude.hashWithSalt` eventFilter
         `Prelude.hashWithSalt` actions
 
 instance

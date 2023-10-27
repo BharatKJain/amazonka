@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.OnDemandOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.OnDemandOptions where
@@ -189,7 +189,8 @@ instance Data.FromXML OnDemandOptions where
 
 instance Prelude.Hashable OnDemandOptions where
   hashWithSalt _salt OnDemandOptions' {..} =
-    _salt `Prelude.hashWithSalt` allocationStrategy
+    _salt
+      `Prelude.hashWithSalt` allocationStrategy
       `Prelude.hashWithSalt` capacityReservationOptions
       `Prelude.hashWithSalt` maxTotalPrice
       `Prelude.hashWithSalt` minTargetCapacity

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.CreateAuditSuppression
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -159,7 +159,8 @@ instance Core.AWSRequest CreateAuditSuppression where
 
 instance Prelude.Hashable CreateAuditSuppression where
   hashWithSalt _salt CreateAuditSuppression' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` expirationDate
       `Prelude.hashWithSalt` suppressIndefinitely
       `Prelude.hashWithSalt` checkName

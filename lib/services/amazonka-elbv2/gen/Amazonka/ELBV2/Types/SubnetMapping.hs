@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.SubnetMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.SubnetMapping where
@@ -88,7 +88,8 @@ subnetMapping_subnetId = Lens.lens (\SubnetMapping' {subnetId} -> subnetId) (\s@
 
 instance Prelude.Hashable SubnetMapping where
   hashWithSalt _salt SubnetMapping' {..} =
-    _salt `Prelude.hashWithSalt` allocationId
+    _salt
+      `Prelude.hashWithSalt` allocationId
       `Prelude.hashWithSalt` iPv6Address
       `Prelude.hashWithSalt` privateIPv4Address
       `Prelude.hashWithSalt` subnetId

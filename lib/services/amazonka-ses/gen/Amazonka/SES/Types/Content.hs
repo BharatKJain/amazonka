@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.Content
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.Content where
@@ -68,7 +68,8 @@ content_data = Lens.lens (\Content' {data'} -> data') (\s@Content' {} a -> s {da
 
 instance Prelude.Hashable Content where
   hashWithSalt _salt Content' {..} =
-    _salt `Prelude.hashWithSalt` charset
+    _salt
+      `Prelude.hashWithSalt` charset
       `Prelude.hashWithSalt` data'
 
 instance Prelude.NFData Content where

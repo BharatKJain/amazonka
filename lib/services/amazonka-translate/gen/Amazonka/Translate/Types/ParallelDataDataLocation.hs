@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Translate.Types.ParallelDataDataLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Translate.Types.ParallelDataDataLocation where
@@ -121,7 +121,8 @@ instance Data.FromJSON ParallelDataDataLocation where
 
 instance Prelude.Hashable ParallelDataDataLocation where
   hashWithSalt _salt ParallelDataDataLocation' {..} =
-    _salt `Prelude.hashWithSalt` repositoryType
+    _salt
+      `Prelude.hashWithSalt` repositoryType
       `Prelude.hashWithSalt` location
 
 instance Prelude.NFData ParallelDataDataLocation where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.ExportReadSetDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.ExportReadSetDetail where
@@ -90,7 +90,8 @@ instance Data.FromJSON ExportReadSetDetail where
 
 instance Prelude.Hashable ExportReadSetDetail where
   hashWithSalt _salt ExportReadSetDetail' {..} =
-    _salt `Prelude.hashWithSalt` statusMessage
+    _salt
+      `Prelude.hashWithSalt` statusMessage
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` status
 

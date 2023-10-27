@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.LaunchConfigurationTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.LaunchConfigurationTemplate where
@@ -232,7 +232,8 @@ instance Data.FromJSON LaunchConfigurationTemplate where
 
 instance Prelude.Hashable LaunchConfigurationTemplate where
   hashWithSalt _salt LaunchConfigurationTemplate' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` associatePublicIpAddress
       `Prelude.hashWithSalt` bootMode
       `Prelude.hashWithSalt` copyPrivateIp

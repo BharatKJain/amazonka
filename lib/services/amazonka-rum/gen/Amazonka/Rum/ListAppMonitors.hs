@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Rum.ListAppMonitors
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,22 +98,22 @@ instance Core.AWSPager ListAppMonitors where
     | Core.stop
         ( rs
             Lens.^? listAppMonitorsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listAppMonitorsResponse_appMonitorSummaries
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAppMonitors_nextToken
           Lens..~ rs
           Lens.^? listAppMonitorsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAppMonitors where
   type
@@ -125,7 +125,8 @@ instance Core.AWSRequest ListAppMonitors where
     Response.receiveJSON
       ( \s h x ->
           ListAppMonitorsResponse'
-            Prelude.<$> ( x Data..?> "AppMonitorSummaries"
+            Prelude.<$> ( x
+                            Data..?> "AppMonitorSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -134,7 +135,8 @@ instance Core.AWSRequest ListAppMonitors where
 
 instance Prelude.Hashable ListAppMonitors where
   hashWithSalt _salt ListAppMonitors' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListAppMonitors where

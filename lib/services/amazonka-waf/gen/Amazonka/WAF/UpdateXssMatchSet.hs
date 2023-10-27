@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAF.UpdateXssMatchSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -197,7 +197,8 @@ instance Core.AWSRequest UpdateXssMatchSet where
 
 instance Prelude.Hashable UpdateXssMatchSet where
   hashWithSalt _salt UpdateXssMatchSet' {..} =
-    _salt `Prelude.hashWithSalt` xssMatchSetId
+    _salt
+      `Prelude.hashWithSalt` xssMatchSetId
       `Prelude.hashWithSalt` changeToken
       `Prelude.hashWithSalt` updates
 

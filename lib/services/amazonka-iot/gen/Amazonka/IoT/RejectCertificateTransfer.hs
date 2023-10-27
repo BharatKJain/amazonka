@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.RejectCertificateTransfer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance Core.AWSRequest RejectCertificateTransfer where
 
 instance Prelude.Hashable RejectCertificateTransfer where
   hashWithSalt _salt RejectCertificateTransfer' {..} =
-    _salt `Prelude.hashWithSalt` rejectReason
+    _salt
+      `Prelude.hashWithSalt` rejectReason
       `Prelude.hashWithSalt` certificateId
 
 instance Prelude.NFData RejectCertificateTransfer where

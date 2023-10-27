@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FinSpaceData.Types.DataViewSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FinSpaceData.Types.DataViewSummary where
@@ -239,7 +239,8 @@ instance Data.FromJSON DataViewSummary where
             Prelude.<*> (x Data..:? "destinationTypeProperties")
             Prelude.<*> (x Data..:? "errorInfo")
             Prelude.<*> (x Data..:? "lastModifiedTime")
-            Prelude.<*> ( x Data..:? "partitionColumns"
+            Prelude.<*> ( x
+                            Data..:? "partitionColumns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "sortColumns" Data..!= Prelude.mempty)
@@ -248,7 +249,8 @@ instance Data.FromJSON DataViewSummary where
 
 instance Prelude.Hashable DataViewSummary where
   hashWithSalt _salt DataViewSummary' {..} =
-    _salt `Prelude.hashWithSalt` asOfTimestamp
+    _salt
+      `Prelude.hashWithSalt` asOfTimestamp
       `Prelude.hashWithSalt` autoUpdate
       `Prelude.hashWithSalt` createTime
       `Prelude.hashWithSalt` dataViewArn

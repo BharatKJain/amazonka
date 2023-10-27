@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.SamplingStatisticSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.SamplingStatisticSummary where
@@ -106,7 +106,8 @@ instance Data.FromJSON SamplingStatisticSummary where
 
 instance Prelude.Hashable SamplingStatisticSummary where
   hashWithSalt _salt SamplingStatisticSummary' {..} =
-    _salt `Prelude.hashWithSalt` borrowCount
+    _salt
+      `Prelude.hashWithSalt` borrowCount
       `Prelude.hashWithSalt` requestCount
       `Prelude.hashWithSalt` ruleName
       `Prelude.hashWithSalt` sampledCount

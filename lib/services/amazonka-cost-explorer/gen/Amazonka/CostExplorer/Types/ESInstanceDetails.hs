@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.ESInstanceDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.ESInstanceDetails where
@@ -109,7 +109,8 @@ instance Data.FromJSON ESInstanceDetails where
 
 instance Prelude.Hashable ESInstanceDetails where
   hashWithSalt _salt ESInstanceDetails' {..} =
-    _salt `Prelude.hashWithSalt` currentGeneration
+    _salt
+      `Prelude.hashWithSalt` currentGeneration
       `Prelude.hashWithSalt` instanceClass
       `Prelude.hashWithSalt` instanceSize
       `Prelude.hashWithSalt` region

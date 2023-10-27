@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticInference.Types.AcceleratorTypeOffering
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticInference.Types.AcceleratorTypeOffering where
@@ -104,7 +104,8 @@ instance Data.FromJSON AcceleratorTypeOffering where
 
 instance Prelude.Hashable AcceleratorTypeOffering where
   hashWithSalt _salt AcceleratorTypeOffering' {..} =
-    _salt `Prelude.hashWithSalt` acceleratorType
+    _salt
+      `Prelude.hashWithSalt` acceleratorType
       `Prelude.hashWithSalt` location
       `Prelude.hashWithSalt` locationType
 

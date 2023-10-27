@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DLM.Types.RetentionArchiveTier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DLM.Types.RetentionArchiveTier where
@@ -118,7 +118,8 @@ instance Data.FromJSON RetentionArchiveTier where
 
 instance Prelude.Hashable RetentionArchiveTier where
   hashWithSalt _salt RetentionArchiveTier' {..} =
-    _salt `Prelude.hashWithSalt` count
+    _salt
+      `Prelude.hashWithSalt` count
       `Prelude.hashWithSalt` interval
       `Prelude.hashWithSalt` intervalUnit
 

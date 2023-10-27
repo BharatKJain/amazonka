@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Schemas.Types.DiscovererSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Schemas.Types.DiscovererSummary where
@@ -116,7 +116,8 @@ instance Data.FromJSON DiscovererSummary where
 
 instance Prelude.Hashable DiscovererSummary where
   hashWithSalt _salt DiscovererSummary' {..} =
-    _salt `Prelude.hashWithSalt` crossAccount
+    _salt
+      `Prelude.hashWithSalt` crossAccount
       `Prelude.hashWithSalt` discovererArn
       `Prelude.hashWithSalt` discovererId
       `Prelude.hashWithSalt` sourceArn

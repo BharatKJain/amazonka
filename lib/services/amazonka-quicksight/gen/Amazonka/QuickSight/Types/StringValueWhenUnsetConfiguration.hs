@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.StringValueWhenUnsetConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.StringValueWhenUnsetConfiguration where
@@ -100,7 +100,8 @@ instance
   hashWithSalt
     _salt
     StringValueWhenUnsetConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` customValue
+      _salt
+        `Prelude.hashWithSalt` customValue
         `Prelude.hashWithSalt` valueWhenUnsetOption
 
 instance

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ModifyInstanceCreditSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,12 +136,12 @@ instance
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
-              Prelude.<*> ( x
-                              Data..@? "unsuccessfulInstanceCreditSpecificationSet"
-                              Core..!@ Prelude.mempty
-                              Prelude.>>= Core.may (Data.parseXMLList "item")
-                          )
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> ( x
+                            Data..@? "unsuccessfulInstanceCreditSpecificationSet"
+                            Core..!@ Prelude.mempty
+                            Prelude.>>= Core.may (Data.parseXMLList "item")
+                        )
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -151,7 +151,8 @@ instance
   hashWithSalt
     _salt
     ModifyInstanceCreditSpecification' {..} =
-      _salt `Prelude.hashWithSalt` clientToken
+      _salt
+        `Prelude.hashWithSalt` clientToken
         `Prelude.hashWithSalt` dryRun
         `Prelude.hashWithSalt` instanceCreditSpecifications
 

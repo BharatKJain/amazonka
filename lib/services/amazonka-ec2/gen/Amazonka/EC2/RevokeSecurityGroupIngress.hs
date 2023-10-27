@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.RevokeSecurityGroupIngress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -287,7 +287,8 @@ instance Core.AWSRequest RevokeSecurityGroupIngress where
       ( \s h x ->
           RevokeSecurityGroupIngressResponse'
             Prelude.<$> (x Data..@? "return")
-            Prelude.<*> ( x Data..@? "unknownIpPermissionSet"
+            Prelude.<*> ( x
+                            Data..@? "unknownIpPermissionSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -296,7 +297,8 @@ instance Core.AWSRequest RevokeSecurityGroupIngress where
 
 instance Prelude.Hashable RevokeSecurityGroupIngress where
   hashWithSalt _salt RevokeSecurityGroupIngress' {..} =
-    _salt `Prelude.hashWithSalt` cidrIp
+    _salt
+      `Prelude.hashWithSalt` cidrIp
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` fromPort
       `Prelude.hashWithSalt` groupId

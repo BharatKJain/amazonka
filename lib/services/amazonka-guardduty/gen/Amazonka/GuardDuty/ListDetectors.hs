@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GuardDuty.ListDetectors
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,18 +107,20 @@ instance Core.AWSPager ListDetectors where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listDetectorsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listDetectorsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listDetectorsResponse_detectorIds) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listDetectors_nextToken
           Lens..~ rs
-          Lens.^? listDetectorsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listDetectorsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListDetectors where
   type
@@ -137,7 +139,8 @@ instance Core.AWSRequest ListDetectors where
 
 instance Prelude.Hashable ListDetectors where
   hashWithSalt _salt ListDetectors' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListDetectors where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StorageGateway.Types.NFSFileShareInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StorageGateway.Types.NFSFileShareInfo where
@@ -457,7 +457,8 @@ instance Data.FromJSON NFSFileShareInfo where
 
 instance Prelude.Hashable NFSFileShareInfo where
   hashWithSalt _salt NFSFileShareInfo' {..} =
-    _salt `Prelude.hashWithSalt` auditDestinationARN
+    _salt
+      `Prelude.hashWithSalt` auditDestinationARN
       `Prelude.hashWithSalt` bucketRegion
       `Prelude.hashWithSalt` cacheAttributes
       `Prelude.hashWithSalt` clientList

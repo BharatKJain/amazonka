@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.ActivateReadSetFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.ActivateReadSetFilter where
@@ -75,7 +75,8 @@ activateReadSetFilter_status = Lens.lens (\ActivateReadSetFilter' {status} -> st
 
 instance Prelude.Hashable ActivateReadSetFilter where
   hashWithSalt _salt ActivateReadSetFilter' {..} =
-    _salt `Prelude.hashWithSalt` createdAfter
+    _salt
+      `Prelude.hashWithSalt` createdAfter
       `Prelude.hashWithSalt` createdBefore
       `Prelude.hashWithSalt` status
 

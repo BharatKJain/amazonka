@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.Recommender
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.Recommender where
@@ -212,7 +212,8 @@ instance Data.FromJSON Recommender where
 
 instance Prelude.Hashable Recommender where
   hashWithSalt _salt Recommender' {..} =
-    _salt `Prelude.hashWithSalt` creationDateTime
+    _salt
+      `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` datasetGroupArn
       `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` lastUpdatedDateTime

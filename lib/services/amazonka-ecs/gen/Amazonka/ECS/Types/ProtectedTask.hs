@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.ProtectedTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.ProtectedTask where
@@ -89,7 +89,8 @@ instance Data.FromJSON ProtectedTask where
 
 instance Prelude.Hashable ProtectedTask where
   hashWithSalt _salt ProtectedTask' {..} =
-    _salt `Prelude.hashWithSalt` expirationDate
+    _salt
+      `Prelude.hashWithSalt` expirationDate
       `Prelude.hashWithSalt` protectionEnabled
       `Prelude.hashWithSalt` taskArn
 

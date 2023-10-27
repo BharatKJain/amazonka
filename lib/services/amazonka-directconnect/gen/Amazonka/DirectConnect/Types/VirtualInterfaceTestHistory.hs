@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectConnect.Types.VirtualInterfaceTestHistory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectConnect.Types.VirtualInterfaceTestHistory where
@@ -138,7 +138,8 @@ instance Data.FromJSON VirtualInterfaceTestHistory where
 
 instance Prelude.Hashable VirtualInterfaceTestHistory where
   hashWithSalt _salt VirtualInterfaceTestHistory' {..} =
-    _salt `Prelude.hashWithSalt` bgpPeers
+    _salt
+      `Prelude.hashWithSalt` bgpPeers
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` ownerAccount
       `Prelude.hashWithSalt` startTime

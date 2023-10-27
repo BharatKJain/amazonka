@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.CognitoOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.CognitoOptions where
@@ -108,7 +108,8 @@ instance Data.FromJSON CognitoOptions where
 
 instance Prelude.Hashable CognitoOptions where
   hashWithSalt _salt CognitoOptions' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` identityPoolId
       `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` userPoolId

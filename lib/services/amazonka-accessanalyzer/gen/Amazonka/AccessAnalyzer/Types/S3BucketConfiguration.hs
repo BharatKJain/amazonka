@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.S3BucketConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.S3BucketConfiguration where
@@ -121,7 +121,8 @@ instance Data.FromJSON S3BucketConfiguration where
       ( \x ->
           S3BucketConfiguration'
             Prelude.<$> (x Data..:? "accessPoints" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "bucketAclGrants"
+            Prelude.<*> ( x
+                            Data..:? "bucketAclGrants"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "bucketPolicy")
@@ -130,7 +131,8 @@ instance Data.FromJSON S3BucketConfiguration where
 
 instance Prelude.Hashable S3BucketConfiguration where
   hashWithSalt _salt S3BucketConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` accessPoints
+    _salt
+      `Prelude.hashWithSalt` accessPoints
       `Prelude.hashWithSalt` bucketAclGrants
       `Prelude.hashWithSalt` bucketPolicy
       `Prelude.hashWithSalt` bucketPublicAccessBlock

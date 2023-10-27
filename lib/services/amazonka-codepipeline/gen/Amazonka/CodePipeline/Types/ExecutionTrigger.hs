@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ExecutionTrigger
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ExecutionTrigger where
@@ -87,7 +87,8 @@ instance Data.FromJSON ExecutionTrigger where
 
 instance Prelude.Hashable ExecutionTrigger where
   hashWithSalt _salt ExecutionTrigger' {..} =
-    _salt `Prelude.hashWithSalt` triggerDetail
+    _salt
+      `Prelude.hashWithSalt` triggerDetail
       `Prelude.hashWithSalt` triggerType
 
 instance Prelude.NFData ExecutionTrigger where

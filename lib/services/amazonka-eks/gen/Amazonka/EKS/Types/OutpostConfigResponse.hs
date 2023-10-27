@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.OutpostConfigResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.OutpostConfigResponse where
@@ -109,7 +109,8 @@ instance Data.FromJSON OutpostConfigResponse where
 
 instance Prelude.Hashable OutpostConfigResponse where
   hashWithSalt _salt OutpostConfigResponse' {..} =
-    _salt `Prelude.hashWithSalt` controlPlanePlacement
+    _salt
+      `Prelude.hashWithSalt` controlPlanePlacement
       `Prelude.hashWithSalt` outpostArns
       `Prelude.hashWithSalt` controlPlaneInstanceType
 

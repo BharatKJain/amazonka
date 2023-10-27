@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SMS.Types.SSMValidationParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SMS.Types.SSMValidationParameters where
@@ -119,7 +119,8 @@ instance Data.FromJSON SSMValidationParameters where
 
 instance Prelude.Hashable SSMValidationParameters where
   hashWithSalt _salt SSMValidationParameters' {..} =
-    _salt `Prelude.hashWithSalt` command
+    _salt
+      `Prelude.hashWithSalt` command
       `Prelude.hashWithSalt` executionTimeoutSeconds
       `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` outputS3BucketName

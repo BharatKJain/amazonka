@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.SageMakerMachineLearningModelResourceData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.SageMakerMachineLearningModelResourceData where
@@ -86,8 +86,8 @@ instance
       ( \x ->
           SageMakerMachineLearningModelResourceData'
             Prelude.<$> (x Data..:? "DestinationPath")
-              Prelude.<*> (x Data..:? "OwnerSetting")
-              Prelude.<*> (x Data..:? "SageMakerJobArn")
+            Prelude.<*> (x Data..:? "OwnerSetting")
+            Prelude.<*> (x Data..:? "SageMakerJobArn")
       )
 
 instance
@@ -97,7 +97,8 @@ instance
   hashWithSalt
     _salt
     SageMakerMachineLearningModelResourceData' {..} =
-      _salt `Prelude.hashWithSalt` destinationPath
+      _salt
+        `Prelude.hashWithSalt` destinationPath
         `Prelude.hashWithSalt` ownerSetting
         `Prelude.hashWithSalt` sageMakerJobArn
 

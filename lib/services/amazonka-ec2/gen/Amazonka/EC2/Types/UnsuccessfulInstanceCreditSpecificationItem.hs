@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.UnsuccessfulInstanceCreditSpecificationItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.UnsuccessfulInstanceCreditSpecificationItem where
@@ -76,7 +76,7 @@ instance
   parseXML x =
     UnsuccessfulInstanceCreditSpecificationItem'
       Prelude.<$> (x Data..@? "error")
-        Prelude.<*> (x Data..@? "instanceId")
+      Prelude.<*> (x Data..@? "instanceId")
 
 instance
   Prelude.Hashable
@@ -85,7 +85,8 @@ instance
   hashWithSalt
     _salt
     UnsuccessfulInstanceCreditSpecificationItem' {..} =
-      _salt `Prelude.hashWithSalt` error
+      _salt
+        `Prelude.hashWithSalt` error
         `Prelude.hashWithSalt` instanceId
 
 instance

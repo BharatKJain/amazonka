@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpaces.Types.ConnectionAlias
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpaces.Types.ConnectionAlias where
@@ -117,7 +117,8 @@ instance Data.FromJSON ConnectionAlias where
 
 instance Prelude.Hashable ConnectionAlias where
   hashWithSalt _salt ConnectionAlias' {..} =
-    _salt `Prelude.hashWithSalt` aliasId
+    _salt
+      `Prelude.hashWithSalt` aliasId
       `Prelude.hashWithSalt` associations
       `Prelude.hashWithSalt` connectionString
       `Prelude.hashWithSalt` ownerAccountId

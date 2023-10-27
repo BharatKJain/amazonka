@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TransitGatewayMulticastDomainAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TransitGatewayMulticastDomainAssociation where
@@ -105,10 +105,10 @@ instance
   parseXML x =
     TransitGatewayMulticastDomainAssociation'
       Prelude.<$> (x Data..@? "resourceId")
-        Prelude.<*> (x Data..@? "resourceOwnerId")
-        Prelude.<*> (x Data..@? "resourceType")
-        Prelude.<*> (x Data..@? "subnet")
-        Prelude.<*> (x Data..@? "transitGatewayAttachmentId")
+      Prelude.<*> (x Data..@? "resourceOwnerId")
+      Prelude.<*> (x Data..@? "resourceType")
+      Prelude.<*> (x Data..@? "subnet")
+      Prelude.<*> (x Data..@? "transitGatewayAttachmentId")
 
 instance
   Prelude.Hashable
@@ -117,7 +117,8 @@ instance
   hashWithSalt
     _salt
     TransitGatewayMulticastDomainAssociation' {..} =
-      _salt `Prelude.hashWithSalt` resourceId
+      _salt
+        `Prelude.hashWithSalt` resourceId
         `Prelude.hashWithSalt` resourceOwnerId
         `Prelude.hashWithSalt` resourceType
         `Prelude.hashWithSalt` subnet

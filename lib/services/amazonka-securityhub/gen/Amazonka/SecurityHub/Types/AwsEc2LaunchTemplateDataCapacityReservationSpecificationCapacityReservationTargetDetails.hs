@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataCapacityReservationSpecificationCapacityReservationTargetDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataCapacityReservationSpecificationCapacityReservationTargetDetails where
@@ -78,7 +78,7 @@ instance
       ( \x ->
           AwsEc2LaunchTemplateDataCapacityReservationSpecificationCapacityReservationTargetDetails'
             Prelude.<$> (x Data..:? "CapacityReservationId")
-              Prelude.<*> (x Data..:? "CapacityReservationResourceGroupArn")
+            Prelude.<*> (x Data..:? "CapacityReservationResourceGroupArn")
       )
 
 instance
@@ -88,7 +88,8 @@ instance
   hashWithSalt
     _salt
     AwsEc2LaunchTemplateDataCapacityReservationSpecificationCapacityReservationTargetDetails' {..} =
-      _salt `Prelude.hashWithSalt` capacityReservationId
+      _salt
+        `Prelude.hashWithSalt` capacityReservationId
         `Prelude.hashWithSalt` capacityReservationResourceGroupArn
 
 instance

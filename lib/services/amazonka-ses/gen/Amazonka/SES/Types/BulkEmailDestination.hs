@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.BulkEmailDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.BulkEmailDestination where
@@ -93,7 +93,8 @@ bulkEmailDestination_destination = Lens.lens (\BulkEmailDestination' {destinatio
 
 instance Prelude.Hashable BulkEmailDestination where
   hashWithSalt _salt BulkEmailDestination' {..} =
-    _salt `Prelude.hashWithSalt` replacementTags
+    _salt
+      `Prelude.hashWithSalt` replacementTags
       `Prelude.hashWithSalt` replacementTemplateData
       `Prelude.hashWithSalt` destination
 

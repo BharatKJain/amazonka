@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.PublicAccessBlockConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.PublicAccessBlockConfiguration where
@@ -189,7 +189,8 @@ instance
   hashWithSalt
     _salt
     PublicAccessBlockConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` blockPublicAcls
+      _salt
+        `Prelude.hashWithSalt` blockPublicAcls
         `Prelude.hashWithSalt` blockPublicPolicy
         `Prelude.hashWithSalt` ignorePublicAcls
         `Prelude.hashWithSalt` restrictPublicBuckets

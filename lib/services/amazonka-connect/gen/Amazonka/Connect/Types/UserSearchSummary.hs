@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.UserSearchSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.UserSearchSummary where
@@ -158,7 +158,8 @@ instance Data.FromJSON UserSearchSummary where
 
 instance Prelude.Hashable UserSearchSummary where
   hashWithSalt _salt UserSearchSummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` directoryUserId
       `Prelude.hashWithSalt` hierarchyGroupId
       `Prelude.hashWithSalt` id

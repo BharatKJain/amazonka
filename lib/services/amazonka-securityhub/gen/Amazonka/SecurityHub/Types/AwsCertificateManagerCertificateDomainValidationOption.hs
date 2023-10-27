@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsCertificateManagerCertificateDomainValidationOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsCertificateManagerCertificateDomainValidationOption where
@@ -130,13 +130,14 @@ instance
       ( \x ->
           AwsCertificateManagerCertificateDomainValidationOption'
             Prelude.<$> (x Data..:? "DomainName")
-              Prelude.<*> (x Data..:? "ResourceRecord")
-              Prelude.<*> (x Data..:? "ValidationDomain")
-              Prelude.<*> ( x Data..:? "ValidationEmails"
-                              Data..!= Prelude.mempty
-                          )
-              Prelude.<*> (x Data..:? "ValidationMethod")
-              Prelude.<*> (x Data..:? "ValidationStatus")
+            Prelude.<*> (x Data..:? "ResourceRecord")
+            Prelude.<*> (x Data..:? "ValidationDomain")
+            Prelude.<*> ( x
+                            Data..:? "ValidationEmails"
+                            Data..!= Prelude.mempty
+                        )
+            Prelude.<*> (x Data..:? "ValidationMethod")
+            Prelude.<*> (x Data..:? "ValidationStatus")
       )
 
 instance
@@ -146,7 +147,8 @@ instance
   hashWithSalt
     _salt
     AwsCertificateManagerCertificateDomainValidationOption' {..} =
-      _salt `Prelude.hashWithSalt` domainName
+      _salt
+        `Prelude.hashWithSalt` domainName
         `Prelude.hashWithSalt` resourceRecord
         `Prelude.hashWithSalt` validationDomain
         `Prelude.hashWithSalt` validationEmails

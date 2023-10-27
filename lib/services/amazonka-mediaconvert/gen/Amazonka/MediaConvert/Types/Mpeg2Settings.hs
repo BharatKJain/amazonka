@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.Mpeg2Settings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.Mpeg2Settings where
@@ -952,7 +952,8 @@ instance Data.FromJSON Mpeg2Settings where
 
 instance Prelude.Hashable Mpeg2Settings where
   hashWithSalt _salt Mpeg2Settings' {..} =
-    _salt `Prelude.hashWithSalt` adaptiveQuantization
+    _salt
+      `Prelude.hashWithSalt` adaptiveQuantization
       `Prelude.hashWithSalt` bitrate
       `Prelude.hashWithSalt` codecLevel
       `Prelude.hashWithSalt` codecProfile

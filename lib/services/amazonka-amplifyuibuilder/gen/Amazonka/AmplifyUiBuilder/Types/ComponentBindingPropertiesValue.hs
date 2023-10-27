@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.ComponentBindingPropertiesValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.ComponentBindingPropertiesValue where
@@ -97,7 +97,8 @@ instance
   hashWithSalt
     _salt
     ComponentBindingPropertiesValue' {..} =
-      _salt `Prelude.hashWithSalt` bindingProperties
+      _salt
+        `Prelude.hashWithSalt` bindingProperties
         `Prelude.hashWithSalt` defaultValue
         `Prelude.hashWithSalt` type'
 

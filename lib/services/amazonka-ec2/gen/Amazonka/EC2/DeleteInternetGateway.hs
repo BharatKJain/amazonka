@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DeleteInternetGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,7 +103,8 @@ instance Core.AWSRequest DeleteInternetGateway where
 
 instance Prelude.Hashable DeleteInternetGateway where
   hashWithSalt _salt DeleteInternetGateway' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` internetGatewayId
 
 instance Prelude.NFData DeleteInternetGateway where

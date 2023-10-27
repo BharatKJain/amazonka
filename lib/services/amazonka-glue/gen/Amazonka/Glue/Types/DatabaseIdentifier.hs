@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.DatabaseIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.DatabaseIdentifier where
@@ -74,7 +74,8 @@ instance Data.FromJSON DatabaseIdentifier where
 
 instance Prelude.Hashable DatabaseIdentifier where
   hashWithSalt _salt DatabaseIdentifier' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` databaseName
 
 instance Prelude.NFData DatabaseIdentifier where

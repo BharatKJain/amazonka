@@ -14,7 +14,7 @@
 -- Module      : Amazonka.STS.Types.AssumedRoleUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.STS.Types.AssumedRoleUser where
@@ -93,7 +93,8 @@ instance Data.FromXML AssumedRoleUser where
 
 instance Prelude.Hashable AssumedRoleUser where
   hashWithSalt _salt AssumedRoleUser' {..} =
-    _salt `Prelude.hashWithSalt` assumedRoleId
+    _salt
+      `Prelude.hashWithSalt` assumedRoleId
       `Prelude.hashWithSalt` arn
 
 instance Prelude.NFData AssumedRoleUser where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.S3.GetBucketAcl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,7 +118,8 @@ instance Core.AWSRequest GetBucketAcl where
     Response.receiveXML
       ( \s h x ->
           GetBucketAclResponse'
-            Prelude.<$> ( x Data..@? "AccessControlList"
+            Prelude.<$> ( x
+                            Data..@? "AccessControlList"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "Grant")
                         )
@@ -128,7 +129,8 @@ instance Core.AWSRequest GetBucketAcl where
 
 instance Prelude.Hashable GetBucketAcl where
   hashWithSalt _salt GetBucketAcl' {..} =
-    _salt `Prelude.hashWithSalt` expectedBucketOwner
+    _salt
+      `Prelude.hashWithSalt` expectedBucketOwner
       `Prelude.hashWithSalt` bucket
 
 instance Prelude.NFData GetBucketAcl where

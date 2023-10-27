@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.SingleInstanceHealth
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.SingleInstanceHealth where
@@ -159,7 +159,9 @@ instance Data.FromXML SingleInstanceHealth where
     SingleInstanceHealth'
       Prelude.<$> (x Data..@? "ApplicationMetrics")
       Prelude.<*> (x Data..@? "AvailabilityZone")
-      Prelude.<*> ( x Data..@? "Causes" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Causes"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "Color")
@@ -172,7 +174,8 @@ instance Data.FromXML SingleInstanceHealth where
 
 instance Prelude.Hashable SingleInstanceHealth where
   hashWithSalt _salt SingleInstanceHealth' {..} =
-    _salt `Prelude.hashWithSalt` applicationMetrics
+    _salt
+      `Prelude.hashWithSalt` applicationMetrics
       `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` causes
       `Prelude.hashWithSalt` color

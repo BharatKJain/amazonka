@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.DisassociateDataShareConsumer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -145,7 +145,8 @@ instance
     DisassociateDataShareConsumer
   where
   hashWithSalt _salt DisassociateDataShareConsumer' {..} =
-    _salt `Prelude.hashWithSalt` consumerArn
+    _salt
+      `Prelude.hashWithSalt` consumerArn
       `Prelude.hashWithSalt` consumerRegion
       `Prelude.hashWithSalt` disassociateEntireAccount
       `Prelude.hashWithSalt` dataShareArn

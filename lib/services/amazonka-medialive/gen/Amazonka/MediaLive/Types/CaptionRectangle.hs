@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.CaptionRectangle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.CaptionRectangle where
@@ -187,7 +187,8 @@ instance Data.FromJSON CaptionRectangle where
 
 instance Prelude.Hashable CaptionRectangle where
   hashWithSalt _salt CaptionRectangle' {..} =
-    _salt `Prelude.hashWithSalt` topOffset
+    _salt
+      `Prelude.hashWithSalt` topOffset
       `Prelude.hashWithSalt` height
       `Prelude.hashWithSalt` width
       `Prelude.hashWithSalt` leftOffset

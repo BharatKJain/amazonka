@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DeviceFarm.GetTestGridSession
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest GetTestGridSession where
 
 instance Prelude.Hashable GetTestGridSession where
   hashWithSalt _salt GetTestGridSession' {..} =
-    _salt `Prelude.hashWithSalt` projectArn
+    _salt
+      `Prelude.hashWithSalt` projectArn
       `Prelude.hashWithSalt` sessionArn
       `Prelude.hashWithSalt` sessionId
 

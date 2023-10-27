@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.ListBrowserSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,7 +98,8 @@ instance Core.AWSRequest ListBrowserSettings where
     Response.receiveJSON
       ( \s h x ->
           ListBrowserSettingsResponse'
-            Prelude.<$> ( x Data..?> "browserSettings"
+            Prelude.<$> ( x
+                            Data..?> "browserSettings"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -107,7 +108,8 @@ instance Core.AWSRequest ListBrowserSettings where
 
 instance Prelude.Hashable ListBrowserSettings where
   hashWithSalt _salt ListBrowserSettings' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListBrowserSettings where

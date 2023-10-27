@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QLDB.Types.KinesisConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QLDB.Types.KinesisConfiguration where
@@ -105,7 +105,8 @@ instance Data.FromJSON KinesisConfiguration where
 
 instance Prelude.Hashable KinesisConfiguration where
   hashWithSalt _salt KinesisConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` aggregationEnabled
+    _salt
+      `Prelude.hashWithSalt` aggregationEnabled
       `Prelude.hashWithSalt` streamArn
 
 instance Prelude.NFData KinesisConfiguration where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSOAdmin.Types.AttachedManagedPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSOAdmin.Types.AttachedManagedPolicy where
@@ -74,12 +74,14 @@ instance Data.FromJSON AttachedManagedPolicy where
       "AttachedManagedPolicy"
       ( \x ->
           AttachedManagedPolicy'
-            Prelude.<$> (x Data..:? "Arn") Prelude.<*> (x Data..:? "Name")
+            Prelude.<$> (x Data..:? "Arn")
+            Prelude.<*> (x Data..:? "Name")
       )
 
 instance Prelude.Hashable AttachedManagedPolicy where
   hashWithSalt _salt AttachedManagedPolicy' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData AttachedManagedPolicy where

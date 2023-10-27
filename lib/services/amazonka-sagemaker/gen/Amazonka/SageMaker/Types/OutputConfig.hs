@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.OutputConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.OutputConfig where
@@ -556,7 +556,8 @@ instance Data.FromJSON OutputConfig where
 
 instance Prelude.Hashable OutputConfig where
   hashWithSalt _salt OutputConfig' {..} =
-    _salt `Prelude.hashWithSalt` compilerOptions
+    _salt
+      `Prelude.hashWithSalt` compilerOptions
       `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` targetDevice
       `Prelude.hashWithSalt` targetPlatform

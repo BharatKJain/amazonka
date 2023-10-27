@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.ExecuteStatement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -187,7 +187,8 @@ instance Core.AWSRequest ExecuteStatement where
           ExecuteStatementResponse'
             Prelude.<$> (x Data..?> "ConsumedCapacity")
             Prelude.<*> (x Data..?> "Items" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "LastEvaluatedKey"
+            Prelude.<*> ( x
+                            Data..?> "LastEvaluatedKey"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -196,7 +197,8 @@ instance Core.AWSRequest ExecuteStatement where
 
 instance Prelude.Hashable ExecuteStatement where
   hashWithSalt _salt ExecuteStatement' {..} =
-    _salt `Prelude.hashWithSalt` consistentRead
+    _salt
+      `Prelude.hashWithSalt` consistentRead
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` parameters

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Omics.ListSequenceStores
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,21 +105,21 @@ instance Core.AWSPager ListSequenceStores where
     | Core.stop
         ( rs
             Lens.^? listSequenceStoresResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listSequenceStoresResponse_sequenceStores
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSequenceStores_nextToken
           Lens..~ rs
           Lens.^? listSequenceStoresResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListSequenceStores where
   type
@@ -133,14 +133,16 @@ instance Core.AWSRequest ListSequenceStores where
           ListSequenceStoresResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "sequenceStores"
+            Prelude.<*> ( x
+                            Data..?> "sequenceStores"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListSequenceStores where
   hashWithSalt _salt ListSequenceStores' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

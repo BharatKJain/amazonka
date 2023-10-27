@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LicenseManager.ListResourceInventory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -168,22 +168,22 @@ instance Core.AWSPager ListResourceInventory where
     | Core.stop
         ( rs
             Lens.^? listResourceInventoryResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listResourceInventoryResponse_resourceInventoryList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listResourceInventory_nextToken
           Lens..~ rs
           Lens.^? listResourceInventoryResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListResourceInventory where
   type
@@ -196,7 +196,8 @@ instance Core.AWSRequest ListResourceInventory where
       ( \s h x ->
           ListResourceInventoryResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "ResourceInventoryList"
+            Prelude.<*> ( x
+                            Data..?> "ResourceInventoryList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -204,7 +205,8 @@ instance Core.AWSRequest ListResourceInventory where
 
 instance Prelude.Hashable ListResourceInventory where
   hashWithSalt _salt ListResourceInventory' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

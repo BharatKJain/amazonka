@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.BucketSortCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.BucketSortCriteria where
@@ -82,7 +82,8 @@ bucketSortCriteria_orderBy = Lens.lens (\BucketSortCriteria' {orderBy} -> orderB
 
 instance Prelude.Hashable BucketSortCriteria where
   hashWithSalt _salt BucketSortCriteria' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` orderBy
 
 instance Prelude.NFData BucketSortCriteria where

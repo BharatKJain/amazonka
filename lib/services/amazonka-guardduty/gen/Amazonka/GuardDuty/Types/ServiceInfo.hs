@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.ServiceInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.ServiceInfo where
@@ -197,7 +197,8 @@ instance Data.FromJSON ServiceInfo where
 
 instance Prelude.Hashable ServiceInfo where
   hashWithSalt _salt ServiceInfo' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` additionalInfo
       `Prelude.hashWithSalt` archived
       `Prelude.hashWithSalt` count

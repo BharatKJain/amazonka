@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Snowball.Types.ClusterMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Snowball.Types.ClusterMetadata where
@@ -302,7 +302,8 @@ instance Data.FromJSON ClusterMetadata where
 
 instance Prelude.Hashable ClusterMetadata where
   hashWithSalt _salt ClusterMetadata' {..} =
-    _salt `Prelude.hashWithSalt` addressId
+    _salt
+      `Prelude.hashWithSalt` addressId
       `Prelude.hashWithSalt` clusterId
       `Prelude.hashWithSalt` clusterState
       `Prelude.hashWithSalt` creationDate

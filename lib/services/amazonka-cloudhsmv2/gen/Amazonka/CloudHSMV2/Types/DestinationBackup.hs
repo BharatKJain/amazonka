@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudHSMV2.Types.DestinationBackup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudHSMV2.Types.DestinationBackup where
@@ -105,7 +105,8 @@ instance Data.FromJSON DestinationBackup where
 
 instance Prelude.Hashable DestinationBackup where
   hashWithSalt _salt DestinationBackup' {..} =
-    _salt `Prelude.hashWithSalt` createTimestamp
+    _salt
+      `Prelude.hashWithSalt` createTimestamp
       `Prelude.hashWithSalt` sourceBackup
       `Prelude.hashWithSalt` sourceCluster
       `Prelude.hashWithSalt` sourceRegion

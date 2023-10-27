@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.AuditCheckDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.AuditCheckDetails where
@@ -145,7 +145,8 @@ instance Data.FromJSON AuditCheckDetails where
 
 instance Prelude.Hashable AuditCheckDetails where
   hashWithSalt _salt AuditCheckDetails' {..} =
-    _salt `Prelude.hashWithSalt` checkCompliant
+    _salt
+      `Prelude.hashWithSalt` checkCompliant
       `Prelude.hashWithSalt` checkRunStatus
       `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` message

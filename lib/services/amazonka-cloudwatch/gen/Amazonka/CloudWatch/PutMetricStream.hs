@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatch.PutMetricStream
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -360,7 +360,8 @@ instance Core.AWSRequest PutMetricStream where
 
 instance Prelude.Hashable PutMetricStream where
   hashWithSalt _salt PutMetricStream' {..} =
-    _salt `Prelude.hashWithSalt` excludeFilters
+    _salt
+      `Prelude.hashWithSalt` excludeFilters
       `Prelude.hashWithSalt` includeFilters
       `Prelude.hashWithSalt` statisticsConfigurations
       `Prelude.hashWithSalt` tags

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.DiskImageVolumeDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.DiskImageVolumeDescription where
@@ -66,11 +66,13 @@ diskImageVolumeDescription_size = Lens.lens (\DiskImageVolumeDescription' {size}
 instance Data.FromXML DiskImageVolumeDescription where
   parseXML x =
     DiskImageVolumeDescription'
-      Prelude.<$> (x Data..@? "id") Prelude.<*> (x Data..@? "size")
+      Prelude.<$> (x Data..@? "id")
+      Prelude.<*> (x Data..@? "size")
 
 instance Prelude.Hashable DiskImageVolumeDescription where
   hashWithSalt _salt DiskImageVolumeDescription' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` size
 
 instance Prelude.NFData DiskImageVolumeDescription where

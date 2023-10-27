@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTAnalytics.CreateDatastore
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -174,7 +174,8 @@ instance Core.AWSRequest CreateDatastore where
 
 instance Prelude.Hashable CreateDatastore where
   hashWithSalt _salt CreateDatastore' {..} =
-    _salt `Prelude.hashWithSalt` datastorePartitions
+    _salt
+      `Prelude.hashWithSalt` datastorePartitions
       `Prelude.hashWithSalt` datastoreStorage
       `Prelude.hashWithSalt` fileFormatConfiguration
       `Prelude.hashWithSalt` retentionPeriod

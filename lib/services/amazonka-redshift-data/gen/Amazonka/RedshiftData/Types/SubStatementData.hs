@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RedshiftData.Types.SubStatementData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RedshiftData.Types.SubStatementData where
@@ -203,7 +203,8 @@ instance Data.FromJSON SubStatementData where
 
 instance Prelude.Hashable SubStatementData where
   hashWithSalt _salt SubStatementData' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` hasResultSet

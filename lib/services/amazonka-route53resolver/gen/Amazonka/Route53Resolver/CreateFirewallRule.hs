@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53Resolver.CreateFirewallRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -332,7 +332,8 @@ instance Core.AWSRequest CreateFirewallRule where
 
 instance Prelude.Hashable CreateFirewallRule where
   hashWithSalt _salt CreateFirewallRule' {..} =
-    _salt `Prelude.hashWithSalt` blockOverrideDnsType
+    _salt
+      `Prelude.hashWithSalt` blockOverrideDnsType
       `Prelude.hashWithSalt` blockOverrideDomain
       `Prelude.hashWithSalt` blockOverrideTtl
       `Prelude.hashWithSalt` blockResponse

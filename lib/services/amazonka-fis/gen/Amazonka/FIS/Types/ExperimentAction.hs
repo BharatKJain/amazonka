@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FIS.Types.ExperimentAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FIS.Types.ExperimentAction where
@@ -135,7 +135,8 @@ instance Data.FromJSON ExperimentAction where
 
 instance Prelude.Hashable ExperimentAction where
   hashWithSalt _salt ExperimentAction' {..} =
-    _salt `Prelude.hashWithSalt` actionId
+    _salt
+      `Prelude.hashWithSalt` actionId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` parameters

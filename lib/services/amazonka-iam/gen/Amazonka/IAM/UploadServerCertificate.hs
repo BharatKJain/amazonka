@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.UploadServerCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -383,7 +383,9 @@ instance Core.AWSRequest UploadServerCertificate where
       ( \s h x ->
           UploadServerCertificateResponse'
             Prelude.<$> (x Data..@? "ServerCertificateMetadata")
-            Prelude.<*> ( x Data..@? "Tags" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "Tags"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -391,7 +393,8 @@ instance Core.AWSRequest UploadServerCertificate where
 
 instance Prelude.Hashable UploadServerCertificate where
   hashWithSalt _salt UploadServerCertificate' {..} =
-    _salt `Prelude.hashWithSalt` certificateChain
+    _salt
+      `Prelude.hashWithSalt` certificateChain
       `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` serverCertificateName

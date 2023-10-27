@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ProvisioningArtifactPreferences
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ProvisioningArtifactPreferences where
@@ -109,10 +109,12 @@ instance
       "ProvisioningArtifactPreferences"
       ( \x ->
           ProvisioningArtifactPreferences'
-            Prelude.<$> ( x Data..:? "StackSetAccounts"
+            Prelude.<$> ( x
+                            Data..:? "StackSetAccounts"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "StackSetRegions"
+            Prelude.<*> ( x
+                            Data..:? "StackSetRegions"
                             Data..!= Prelude.mempty
                         )
       )
@@ -124,7 +126,8 @@ instance
   hashWithSalt
     _salt
     ProvisioningArtifactPreferences' {..} =
-      _salt `Prelude.hashWithSalt` stackSetAccounts
+      _salt
+        `Prelude.hashWithSalt` stackSetAccounts
         `Prelude.hashWithSalt` stackSetRegions
 
 instance

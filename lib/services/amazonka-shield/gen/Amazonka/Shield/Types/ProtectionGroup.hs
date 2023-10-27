@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Shield.Types.ProtectionGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Shield.Types.ProtectionGroup where
@@ -204,7 +204,8 @@ instance Data.FromJSON ProtectionGroup where
 
 instance Prelude.Hashable ProtectionGroup where
   hashWithSalt _salt ProtectionGroup' {..} =
-    _salt `Prelude.hashWithSalt` protectionGroupArn
+    _salt
+      `Prelude.hashWithSalt` protectionGroupArn
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` protectionGroupId
       `Prelude.hashWithSalt` aggregation

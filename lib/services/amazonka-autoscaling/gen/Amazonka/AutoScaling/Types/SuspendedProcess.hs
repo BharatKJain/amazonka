@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.SuspendedProcess
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.SuspendedProcess where
@@ -74,7 +74,8 @@ instance Data.FromXML SuspendedProcess where
 
 instance Prelude.Hashable SuspendedProcess where
   hashWithSalt _salt SuspendedProcess' {..} =
-    _salt `Prelude.hashWithSalt` processName
+    _salt
+      `Prelude.hashWithSalt` processName
       `Prelude.hashWithSalt` suspensionReason
 
 instance Prelude.NFData SuspendedProcess where

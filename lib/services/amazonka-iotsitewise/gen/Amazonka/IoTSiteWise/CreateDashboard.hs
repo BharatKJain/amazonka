@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTSiteWise.CreateDashboard
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -175,7 +175,8 @@ instance Core.AWSRequest CreateDashboard where
 
 instance Prelude.Hashable CreateDashboard where
   hashWithSalt _salt CreateDashboard' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` dashboardDescription
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` projectId

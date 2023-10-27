@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FraudDetector.GetEventPrediction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -251,7 +251,8 @@ instance Core.AWSRequest GetEventPrediction where
     Response.receiveJSON
       ( \s h x ->
           GetEventPredictionResponse'
-            Prelude.<$> ( x Data..?> "externalModelOutputs"
+            Prelude.<$> ( x
+                            Data..?> "externalModelOutputs"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "modelScores" Core..!@ Prelude.mempty)
@@ -261,7 +262,8 @@ instance Core.AWSRequest GetEventPrediction where
 
 instance Prelude.Hashable GetEventPrediction where
   hashWithSalt _salt GetEventPrediction' {..} =
-    _salt `Prelude.hashWithSalt` detectorVersionId
+    _salt
+      `Prelude.hashWithSalt` detectorVersionId
       `Prelude.hashWithSalt` externalModelEndpointDataBlobs
       `Prelude.hashWithSalt` detectorId
       `Prelude.hashWithSalt` eventId

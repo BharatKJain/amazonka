@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PersonalizeEvents.Types.Item
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PersonalizeEvents.Types.Item where
@@ -92,7 +92,8 @@ item_itemId = Lens.lens (\Item' {itemId} -> itemId) (\s@Item' {} a -> s {itemId 
 
 instance Prelude.Hashable Item where
   hashWithSalt _salt Item' {..} =
-    _salt `Prelude.hashWithSalt` properties
+    _salt
+      `Prelude.hashWithSalt` properties
       `Prelude.hashWithSalt` itemId
 
 instance Prelude.NFData Item where

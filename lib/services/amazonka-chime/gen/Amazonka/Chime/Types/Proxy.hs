@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.Proxy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.Proxy where
@@ -93,7 +93,8 @@ instance Data.FromJSON Proxy where
             Prelude.<$> (x Data..:? "DefaultSessionExpiryMinutes")
             Prelude.<*> (x Data..:? "Disabled")
             Prelude.<*> (x Data..:? "FallBackPhoneNumber")
-            Prelude.<*> ( x Data..:? "PhoneNumberCountries"
+            Prelude.<*> ( x
+                            Data..:? "PhoneNumberCountries"
                             Data..!= Prelude.mempty
                         )
       )

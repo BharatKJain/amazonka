@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.IntelligentTieringAndOperator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.IntelligentTieringAndOperator where
@@ -76,7 +76,9 @@ instance Data.FromXML IntelligentTieringAndOperator where
   parseXML x =
     IntelligentTieringAndOperator'
       Prelude.<$> (x Data..@? "Prefix")
-      Prelude.<*> ( x Data..@? "Tag" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Tag"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Tag")
                   )
 
@@ -85,7 +87,8 @@ instance
     IntelligentTieringAndOperator
   where
   hashWithSalt _salt IntelligentTieringAndOperator' {..} =
-    _salt `Prelude.hashWithSalt` prefix
+    _salt
+      `Prelude.hashWithSalt` prefix
       `Prelude.hashWithSalt` tags
 
 instance Prelude.NFData IntelligentTieringAndOperator where

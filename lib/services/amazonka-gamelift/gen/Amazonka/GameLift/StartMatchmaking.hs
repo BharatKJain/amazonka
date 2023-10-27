@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.StartMatchmaking
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -169,7 +169,8 @@ instance Core.AWSRequest StartMatchmaking where
 
 instance Prelude.Hashable StartMatchmaking where
   hashWithSalt _salt StartMatchmaking' {..} =
-    _salt `Prelude.hashWithSalt` ticketId
+    _salt
+      `Prelude.hashWithSalt` ticketId
       `Prelude.hashWithSalt` configurationName
       `Prelude.hashWithSalt` players
 

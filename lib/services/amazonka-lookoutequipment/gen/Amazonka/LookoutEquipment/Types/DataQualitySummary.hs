@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutEquipment.Types.DataQualitySummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutEquipment.Types.DataQualitySummary where
@@ -147,7 +147,8 @@ instance Data.FromJSON DataQualitySummary where
 
 instance Prelude.Hashable DataQualitySummary where
   hashWithSalt _salt DataQualitySummary' {..} =
-    _salt `Prelude.hashWithSalt` insufficientSensorData
+    _salt
+      `Prelude.hashWithSalt` insufficientSensorData
       `Prelude.hashWithSalt` missingSensorData
       `Prelude.hashWithSalt` invalidSensorData
       `Prelude.hashWithSalt` unsupportedTimestamps

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AlexaBusiness.AssociateSkillWithSkillGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance
     AssociateSkillWithSkillGroup
   where
   hashWithSalt _salt AssociateSkillWithSkillGroup' {..} =
-    _salt `Prelude.hashWithSalt` skillGroupArn
+    _salt
+      `Prelude.hashWithSalt` skillGroupArn
       `Prelude.hashWithSalt` skillId
 
 instance Prelude.NFData AssociateSkillWithSkillGroup where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DrS.Types.StagingSourceServer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DrS.Types.StagingSourceServer where
@@ -85,7 +85,8 @@ instance Data.FromJSON StagingSourceServer where
 
 instance Prelude.Hashable StagingSourceServer where
   hashWithSalt _salt StagingSourceServer' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` hostname
       `Prelude.hashWithSalt` tags
 

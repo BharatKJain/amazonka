@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkSpaces.RegisterWorkspaceDirectory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -204,7 +204,8 @@ instance Core.AWSRequest RegisterWorkspaceDirectory where
 
 instance Prelude.Hashable RegisterWorkspaceDirectory where
   hashWithSalt _salt RegisterWorkspaceDirectory' {..} =
-    _salt `Prelude.hashWithSalt` enableSelfService
+    _salt
+      `Prelude.hashWithSalt` enableSelfService
       `Prelude.hashWithSalt` subnetIds
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` tenancy

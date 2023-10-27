@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ConnectionNotification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ConnectionNotification where
@@ -118,7 +118,8 @@ connectionNotification_vpcEndpointId = Lens.lens (\ConnectionNotification' {vpcE
 instance Data.FromXML ConnectionNotification where
   parseXML x =
     ConnectionNotification'
-      Prelude.<$> ( x Data..@? "connectionEvents"
+      Prelude.<$> ( x
+                      Data..@? "connectionEvents"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
@@ -131,7 +132,8 @@ instance Data.FromXML ConnectionNotification where
 
 instance Prelude.Hashable ConnectionNotification where
   hashWithSalt _salt ConnectionNotification' {..} =
-    _salt `Prelude.hashWithSalt` connectionEvents
+    _salt
+      `Prelude.hashWithSalt` connectionEvents
       `Prelude.hashWithSalt` connectionNotificationArn
       `Prelude.hashWithSalt` connectionNotificationId
       `Prelude.hashWithSalt` connectionNotificationState

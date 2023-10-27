@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.TopicRuleListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.TopicRuleListItem where
@@ -104,7 +104,8 @@ instance Data.FromJSON TopicRuleListItem where
 
 instance Prelude.Hashable TopicRuleListItem where
   hashWithSalt _salt TopicRuleListItem' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` ruleArn
       `Prelude.hashWithSalt` ruleDisabled
       `Prelude.hashWithSalt` ruleName

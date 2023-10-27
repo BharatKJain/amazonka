@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.PipelineExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.PipelineExecution where
@@ -182,7 +182,8 @@ instance Data.FromJSON PipelineExecution where
       "PipelineExecution"
       ( \x ->
           PipelineExecution'
-            Prelude.<$> ( x Data..:? "artifactRevisions"
+            Prelude.<$> ( x
+                            Data..:? "artifactRevisions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "pipelineExecutionId")
@@ -194,7 +195,8 @@ instance Data.FromJSON PipelineExecution where
 
 instance Prelude.Hashable PipelineExecution where
   hashWithSalt _salt PipelineExecution' {..} =
-    _salt `Prelude.hashWithSalt` artifactRevisions
+    _salt
+      `Prelude.hashWithSalt` artifactRevisions
       `Prelude.hashWithSalt` pipelineExecutionId
       `Prelude.hashWithSalt` pipelineName
       `Prelude.hashWithSalt` pipelineVersion

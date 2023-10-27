@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SimSpaceWeaver.Types.Domain
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SimSpaceWeaver.Types.Domain where
@@ -128,7 +128,8 @@ instance Data.FromJSON Domain where
 
 instance Prelude.Hashable Domain where
   hashWithSalt _salt Domain' {..} =
-    _salt `Prelude.hashWithSalt` lifecycle
+    _salt
+      `Prelude.hashWithSalt` lifecycle
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData Domain where

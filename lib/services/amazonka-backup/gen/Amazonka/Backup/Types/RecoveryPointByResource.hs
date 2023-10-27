@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.RecoveryPointByResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.RecoveryPointByResource where
@@ -182,7 +182,8 @@ instance Data.FromJSON RecoveryPointByResource where
 
 instance Prelude.Hashable RecoveryPointByResource where
   hashWithSalt _salt RecoveryPointByResource' {..} =
-    _salt `Prelude.hashWithSalt` backupSizeBytes
+    _salt
+      `Prelude.hashWithSalt` backupSizeBytes
       `Prelude.hashWithSalt` backupVaultName
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` encryptionKeyArn

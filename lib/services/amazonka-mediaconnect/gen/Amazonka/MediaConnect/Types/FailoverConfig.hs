@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.FailoverConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.FailoverConfig where
@@ -105,7 +105,8 @@ instance Data.FromJSON FailoverConfig where
 
 instance Prelude.Hashable FailoverConfig where
   hashWithSalt _salt FailoverConfig' {..} =
-    _salt `Prelude.hashWithSalt` failoverMode
+    _salt
+      `Prelude.hashWithSalt` failoverMode
       `Prelude.hashWithSalt` recoveryWindow
       `Prelude.hashWithSalt` sourcePriority
       `Prelude.hashWithSalt` state

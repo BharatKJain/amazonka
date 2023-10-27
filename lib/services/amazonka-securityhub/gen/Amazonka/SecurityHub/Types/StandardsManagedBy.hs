@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.StandardsManagedBy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.StandardsManagedBy where
@@ -83,7 +83,8 @@ instance Data.FromJSON StandardsManagedBy where
 
 instance Prelude.Hashable StandardsManagedBy where
   hashWithSalt _salt StandardsManagedBy' {..} =
-    _salt `Prelude.hashWithSalt` company
+    _salt
+      `Prelude.hashWithSalt` company
       `Prelude.hashWithSalt` product
 
 instance Prelude.NFData StandardsManagedBy where

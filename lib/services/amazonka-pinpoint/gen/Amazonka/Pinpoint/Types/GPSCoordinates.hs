@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.GPSCoordinates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.GPSCoordinates where
@@ -78,7 +78,8 @@ instance Data.FromJSON GPSCoordinates where
 
 instance Prelude.Hashable GPSCoordinates where
   hashWithSalt _salt GPSCoordinates' {..} =
-    _salt `Prelude.hashWithSalt` latitude
+    _salt
+      `Prelude.hashWithSalt` latitude
       `Prelude.hashWithSalt` longitude
 
 instance Prelude.NFData GPSCoordinates where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.SkillsStoreSkill
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.SkillsStoreSkill where
@@ -115,7 +115,8 @@ instance Data.FromJSON SkillsStoreSkill where
       ( \x ->
           SkillsStoreSkill'
             Prelude.<$> (x Data..:? "IconUrl")
-            Prelude.<*> ( x Data..:? "SampleUtterances"
+            Prelude.<*> ( x
+                            Data..:? "SampleUtterances"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ShortDescription")
@@ -127,7 +128,8 @@ instance Data.FromJSON SkillsStoreSkill where
 
 instance Prelude.Hashable SkillsStoreSkill where
   hashWithSalt _salt SkillsStoreSkill' {..} =
-    _salt `Prelude.hashWithSalt` iconUrl
+    _salt
+      `Prelude.hashWithSalt` iconUrl
       `Prelude.hashWithSalt` sampleUtterances
       `Prelude.hashWithSalt` shortDescription
       `Prelude.hashWithSalt` skillDetails

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEventsData.Types.DetectorSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEventsData.Types.DetectorSummary where
@@ -118,7 +118,8 @@ instance Data.FromJSON DetectorSummary where
 
 instance Prelude.Hashable DetectorSummary where
   hashWithSalt _salt DetectorSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` detectorModelName
       `Prelude.hashWithSalt` detectorModelVersion
       `Prelude.hashWithSalt` keyValue

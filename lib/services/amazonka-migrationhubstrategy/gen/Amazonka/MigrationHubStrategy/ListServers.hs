@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.ListServers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,20 +158,23 @@ instance Core.AWSPager ListServers where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listServersResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listServersResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listServersResponse_serverInfos Prelude.. Lens._Just
+            Lens.^? listServersResponse_serverInfos
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listServers_nextToken
           Lens..~ rs
-          Lens.^? listServersResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listServersResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListServers where
   type AWSResponse ListServers = ListServersResponse
@@ -188,7 +191,8 @@ instance Core.AWSRequest ListServers where
 
 instance Prelude.Hashable ListServers where
   hashWithSalt _salt ListServers' {..} =
-    _salt `Prelude.hashWithSalt` filterValue
+    _salt
+      `Prelude.hashWithSalt` filterValue
       `Prelude.hashWithSalt` groupIdFilter
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

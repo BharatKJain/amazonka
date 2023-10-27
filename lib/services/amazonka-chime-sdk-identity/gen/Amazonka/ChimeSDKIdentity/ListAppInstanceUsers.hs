@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSDKIdentity.ListAppInstanceUsers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest ListAppInstanceUsers where
       ( \s h x ->
           ListAppInstanceUsersResponse'
             Prelude.<$> (x Data..?> "AppInstanceArn")
-            Prelude.<*> ( x Data..?> "AppInstanceUsers"
+            Prelude.<*> ( x
+                            Data..?> "AppInstanceUsers"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -121,7 +122,8 @@ instance Core.AWSRequest ListAppInstanceUsers where
 
 instance Prelude.Hashable ListAppInstanceUsers where
   hashWithSalt _salt ListAppInstanceUsers' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` appInstanceArn
 

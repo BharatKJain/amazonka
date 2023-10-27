@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSDKIdentity.CreateAppInstanceAdmin
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,7 +116,8 @@ instance Core.AWSRequest CreateAppInstanceAdmin where
 
 instance Prelude.Hashable CreateAppInstanceAdmin where
   hashWithSalt _salt CreateAppInstanceAdmin' {..} =
-    _salt `Prelude.hashWithSalt` appInstanceAdminArn
+    _salt
+      `Prelude.hashWithSalt` appInstanceAdminArn
       `Prelude.hashWithSalt` appInstanceArn
 
 instance Prelude.NFData CreateAppInstanceAdmin where

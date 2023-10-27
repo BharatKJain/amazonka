@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.FilterExpression
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.FilterExpression where
@@ -88,7 +88,8 @@ instance Data.FromJSON FilterExpression where
 
 instance Prelude.Hashable FilterExpression where
   hashWithSalt _salt FilterExpression' {..} =
-    _salt `Prelude.hashWithSalt` negated
+    _salt
+      `Prelude.hashWithSalt` negated
       `Prelude.hashWithSalt` operation
       `Prelude.hashWithSalt` values
 

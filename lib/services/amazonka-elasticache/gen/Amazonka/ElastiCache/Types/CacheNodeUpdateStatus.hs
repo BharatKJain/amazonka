@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.CacheNodeUpdateStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.CacheNodeUpdateStatus where
@@ -136,7 +136,8 @@ instance Data.FromXML CacheNodeUpdateStatus where
 
 instance Prelude.Hashable CacheNodeUpdateStatus where
   hashWithSalt _salt CacheNodeUpdateStatus' {..} =
-    _salt `Prelude.hashWithSalt` cacheNodeId
+    _salt
+      `Prelude.hashWithSalt` cacheNodeId
       `Prelude.hashWithSalt` nodeDeletionDate
       `Prelude.hashWithSalt` nodeUpdateEndDate
       `Prelude.hashWithSalt` nodeUpdateInitiatedBy

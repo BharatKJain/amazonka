@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.FindingsFilterListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.FindingsFilterListItem where
@@ -114,7 +114,8 @@ instance Data.FromJSON FindingsFilterListItem where
 
 instance Prelude.Hashable FindingsFilterListItem where
   hashWithSalt _salt FindingsFilterListItem' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name

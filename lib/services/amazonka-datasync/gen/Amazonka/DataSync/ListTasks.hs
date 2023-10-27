@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataSync.ListTasks
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,20 +115,23 @@ instance Core.AWSPager ListTasks where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listTasksResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listTasksResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listTasksResponse_tasks Prelude.. Lens._Just
+            Lens.^? listTasksResponse_tasks
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listTasks_nextToken
           Lens..~ rs
-          Lens.^? listTasksResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listTasksResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListTasks where
   type AWSResponse ListTasks = ListTasksResponse
@@ -145,7 +148,8 @@ instance Core.AWSRequest ListTasks where
 
 instance Prelude.Hashable ListTasks where
   hashWithSalt _salt ListTasks' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

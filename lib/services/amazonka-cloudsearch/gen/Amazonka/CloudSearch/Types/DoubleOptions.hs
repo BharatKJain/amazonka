@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudSearch.Types.DoubleOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudSearch.Types.DoubleOptions where
@@ -118,7 +118,8 @@ instance Data.FromXML DoubleOptions where
 
 instance Prelude.Hashable DoubleOptions where
   hashWithSalt _salt DoubleOptions' {..} =
-    _salt `Prelude.hashWithSalt` defaultValue
+    _salt
+      `Prelude.hashWithSalt` defaultValue
       `Prelude.hashWithSalt` facetEnabled
       `Prelude.hashWithSalt` returnEnabled
       `Prelude.hashWithSalt` searchEnabled

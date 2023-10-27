@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaPackageVOD.Types.HlsManifest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaPackageVOD.Types.HlsManifest where
@@ -154,7 +154,8 @@ instance Data.FromJSON HlsManifest where
 
 instance Prelude.Hashable HlsManifest where
   hashWithSalt _salt HlsManifest' {..} =
-    _salt `Prelude.hashWithSalt` adMarkers
+    _salt
+      `Prelude.hashWithSalt` adMarkers
       `Prelude.hashWithSalt` includeIframeOnlyStream
       `Prelude.hashWithSalt` manifestName
       `Prelude.hashWithSalt` programDateTimeIntervalSeconds

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.WriteOperation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.WriteOperation where
@@ -66,7 +66,8 @@ writeOperation_deleteObject = Lens.lens (\WriteOperation' {deleteObject} -> dele
 
 instance Prelude.Hashable WriteOperation where
   hashWithSalt _salt WriteOperation' {..} =
-    _salt `Prelude.hashWithSalt` addObject
+    _salt
+      `Prelude.hashWithSalt` addObject
       `Prelude.hashWithSalt` deleteObject
 
 instance Prelude.NFData WriteOperation where

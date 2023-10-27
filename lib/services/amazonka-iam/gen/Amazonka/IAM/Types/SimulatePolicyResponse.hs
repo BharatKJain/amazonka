@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.SimulatePolicyResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.SimulatePolicyResponse where
@@ -101,7 +101,8 @@ simulatePolicyResponse_marker = Lens.lens (\SimulatePolicyResponse' {marker} -> 
 instance Data.FromXML SimulatePolicyResponse where
   parseXML x =
     SimulatePolicyResponse'
-      Prelude.<$> ( x Data..@? "EvaluationResults"
+      Prelude.<$> ( x
+                      Data..@? "EvaluationResults"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
@@ -110,7 +111,8 @@ instance Data.FromXML SimulatePolicyResponse where
 
 instance Prelude.Hashable SimulatePolicyResponse where
   hashWithSalt _salt SimulatePolicyResponse' {..} =
-    _salt `Prelude.hashWithSalt` evaluationResults
+    _salt
+      `Prelude.hashWithSalt` evaluationResults
       `Prelude.hashWithSalt` isTruncated
       `Prelude.hashWithSalt` marker
 

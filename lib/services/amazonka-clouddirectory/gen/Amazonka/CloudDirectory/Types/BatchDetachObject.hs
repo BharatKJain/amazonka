@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchDetachObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchDetachObject where
@@ -88,7 +88,8 @@ batchDetachObject_linkName = Lens.lens (\BatchDetachObject' {linkName} -> linkNa
 
 instance Prelude.Hashable BatchDetachObject where
   hashWithSalt _salt BatchDetachObject' {..} =
-    _salt `Prelude.hashWithSalt` batchReferenceName
+    _salt
+      `Prelude.hashWithSalt` batchReferenceName
       `Prelude.hashWithSalt` parentReference
       `Prelude.hashWithSalt` linkName
 

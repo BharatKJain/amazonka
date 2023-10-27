@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.WorkflowExecutionOpenCounts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.WorkflowExecutionOpenCounts where
@@ -125,7 +125,8 @@ instance Data.FromJSON WorkflowExecutionOpenCounts where
 
 instance Prelude.Hashable WorkflowExecutionOpenCounts where
   hashWithSalt _salt WorkflowExecutionOpenCounts' {..} =
-    _salt `Prelude.hashWithSalt` openLambdaFunctions
+    _salt
+      `Prelude.hashWithSalt` openLambdaFunctions
       `Prelude.hashWithSalt` openActivityTasks
       `Prelude.hashWithSalt` openDecisionTasks
       `Prelude.hashWithSalt` openTimers

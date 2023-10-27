@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.DeploymentConfigInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.DeploymentConfigInfo where
@@ -124,7 +124,8 @@ instance Data.FromJSON DeploymentConfigInfo where
 
 instance Prelude.Hashable DeploymentConfigInfo where
   hashWithSalt _salt DeploymentConfigInfo' {..} =
-    _salt `Prelude.hashWithSalt` computePlatform
+    _salt
+      `Prelude.hashWithSalt` computePlatform
       `Prelude.hashWithSalt` createTime
       `Prelude.hashWithSalt` deploymentConfigId
       `Prelude.hashWithSalt` deploymentConfigName

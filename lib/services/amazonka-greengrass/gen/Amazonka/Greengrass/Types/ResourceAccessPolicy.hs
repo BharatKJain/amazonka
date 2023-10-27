@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.ResourceAccessPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.ResourceAccessPolicy where
@@ -83,7 +83,8 @@ instance Data.FromJSON ResourceAccessPolicy where
 
 instance Prelude.Hashable ResourceAccessPolicy where
   hashWithSalt _salt ResourceAccessPolicy' {..} =
-    _salt `Prelude.hashWithSalt` permission
+    _salt
+      `Prelude.hashWithSalt` permission
       `Prelude.hashWithSalt` resourceId
 
 instance Prelude.NFData ResourceAccessPolicy where

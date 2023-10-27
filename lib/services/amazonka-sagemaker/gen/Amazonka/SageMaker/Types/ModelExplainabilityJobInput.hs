@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ModelExplainabilityJobInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ModelExplainabilityJobInput where
@@ -76,7 +76,8 @@ instance Data.FromJSON ModelExplainabilityJobInput where
 
 instance Prelude.Hashable ModelExplainabilityJobInput where
   hashWithSalt _salt ModelExplainabilityJobInput' {..} =
-    _salt `Prelude.hashWithSalt` batchTransformInput
+    _salt
+      `Prelude.hashWithSalt` batchTransformInput
       `Prelude.hashWithSalt` endpointInput
 
 instance Prelude.NFData ModelExplainabilityJobInput where

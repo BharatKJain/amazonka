@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.DescribeFleetLocationAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -166,7 +166,8 @@ instance
           DescribeFleetLocationAttributesResponse'
             Prelude.<$> (x Data..?> "FleetArn")
             Prelude.<*> (x Data..?> "FleetId")
-            Prelude.<*> ( x Data..?> "LocationAttributes"
+            Prelude.<*> ( x
+                            Data..?> "LocationAttributes"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -180,7 +181,8 @@ instance
   hashWithSalt
     _salt
     DescribeFleetLocationAttributes' {..} =
-      _salt `Prelude.hashWithSalt` limit
+      _salt
+        `Prelude.hashWithSalt` limit
         `Prelude.hashWithSalt` locations
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` fleetId

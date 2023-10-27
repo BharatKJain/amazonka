@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IVS.CreateRecordingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -179,7 +179,8 @@ instance
     CreateRecordingConfiguration
   where
   hashWithSalt _salt CreateRecordingConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` recordingReconnectWindowSeconds
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` thumbnailConfiguration
@@ -258,7 +259,6 @@ newCreateRecordingConfigurationResponse pHttpStatus_ =
       httpStatus = pHttpStatus_
     }
 
--- |
 createRecordingConfigurationResponse_recordingConfiguration :: Lens.Lens' CreateRecordingConfigurationResponse (Prelude.Maybe RecordingConfiguration)
 createRecordingConfigurationResponse_recordingConfiguration = Lens.lens (\CreateRecordingConfigurationResponse' {recordingConfiguration} -> recordingConfiguration) (\s@CreateRecordingConfigurationResponse' {} a -> s {recordingConfiguration = a} :: CreateRecordingConfigurationResponse)
 

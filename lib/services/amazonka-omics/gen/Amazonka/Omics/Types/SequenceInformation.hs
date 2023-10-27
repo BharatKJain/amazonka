@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.SequenceInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.SequenceInformation where
@@ -94,7 +94,8 @@ instance Data.FromJSON SequenceInformation where
 
 instance Prelude.Hashable SequenceInformation where
   hashWithSalt _salt SequenceInformation' {..} =
-    _salt `Prelude.hashWithSalt` alignment
+    _salt
+      `Prelude.hashWithSalt` alignment
       `Prelude.hashWithSalt` generatedFrom
       `Prelude.hashWithSalt` totalBaseCount
       `Prelude.hashWithSalt` totalReadCount

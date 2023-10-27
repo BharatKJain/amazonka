@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.SearchGameSessions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -423,22 +423,22 @@ instance Core.AWSPager SearchGameSessions where
     | Core.stop
         ( rs
             Lens.^? searchGameSessionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? searchGameSessionsResponse_gameSessions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& searchGameSessions_nextToken
           Lens..~ rs
           Lens.^? searchGameSessionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest SearchGameSessions where
   type
@@ -457,7 +457,8 @@ instance Core.AWSRequest SearchGameSessions where
 
 instance Prelude.Hashable SearchGameSessions where
   hashWithSalt _salt SearchGameSessions' {..} =
-    _salt `Prelude.hashWithSalt` aliasId
+    _salt
+      `Prelude.hashWithSalt` aliasId
       `Prelude.hashWithSalt` filterExpression
       `Prelude.hashWithSalt` fleetId
       `Prelude.hashWithSalt` limit

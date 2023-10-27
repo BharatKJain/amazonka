@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.AccountSharingInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.AccountSharingInfo where
@@ -75,7 +75,8 @@ instance Data.FromJSON AccountSharingInfo where
 
 instance Prelude.Hashable AccountSharingInfo where
   hashWithSalt _salt AccountSharingInfo' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` sharedDocumentVersion
 
 instance Prelude.NFData AccountSharingInfo where

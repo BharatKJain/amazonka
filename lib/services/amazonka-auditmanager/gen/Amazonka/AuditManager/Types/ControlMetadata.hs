@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.ControlMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.ControlMetadata where
@@ -118,7 +118,8 @@ instance Data.FromJSON ControlMetadata where
 
 instance Prelude.Hashable ControlMetadata where
   hashWithSalt _salt ControlMetadata' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` controlSources
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` id

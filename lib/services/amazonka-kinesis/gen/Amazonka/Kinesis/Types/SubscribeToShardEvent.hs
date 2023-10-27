@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kinesis.Types.SubscribeToShardEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kinesis.Types.SubscribeToShardEvent where
@@ -95,7 +95,6 @@ newSubscribeToShardEvent
 subscribeToShardEvent_childShards :: Lens.Lens' SubscribeToShardEvent (Prelude.Maybe [ChildShard])
 subscribeToShardEvent_childShards = Lens.lens (\SubscribeToShardEvent' {childShards} -> childShards) (\s@SubscribeToShardEvent' {} a -> s {childShards = a} :: SubscribeToShardEvent) Prelude.. Lens.mapping Lens.coerced
 
--- |
 subscribeToShardEvent_records :: Lens.Lens' SubscribeToShardEvent [Record]
 subscribeToShardEvent_records = Lens.lens (\SubscribeToShardEvent' {records} -> records) (\s@SubscribeToShardEvent' {} a -> s {records = a} :: SubscribeToShardEvent) Prelude.. Lens.coerced
 
@@ -128,7 +127,8 @@ instance Data.FromJSON SubscribeToShardEvent where
 
 instance Prelude.Hashable SubscribeToShardEvent where
   hashWithSalt _salt SubscribeToShardEvent' {..} =
-    _salt `Prelude.hashWithSalt` childShards
+    _salt
+      `Prelude.hashWithSalt` childShards
       `Prelude.hashWithSalt` records
       `Prelude.hashWithSalt` continuationSequenceNumber
       `Prelude.hashWithSalt` millisBehindLatest

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.ReferenceStoreFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.ReferenceStoreFilter where
@@ -74,7 +74,8 @@ referenceStoreFilter_name = Lens.lens (\ReferenceStoreFilter' {name} -> name) (\
 
 instance Prelude.Hashable ReferenceStoreFilter where
   hashWithSalt _salt ReferenceStoreFilter' {..} =
-    _salt `Prelude.hashWithSalt` createdAfter
+    _salt
+      `Prelude.hashWithSalt` createdAfter
       `Prelude.hashWithSalt` createdBefore
       `Prelude.hashWithSalt` name
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.VoiceId.Types.FraudsterRegistrationJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.VoiceId.Types.FraudsterRegistrationJob where
@@ -217,7 +217,8 @@ instance Data.FromJSON FraudsterRegistrationJob where
 
 instance Prelude.Hashable FraudsterRegistrationJob where
   hashWithSalt _salt FraudsterRegistrationJob' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` dataAccessRoleArn
       `Prelude.hashWithSalt` domainId
       `Prelude.hashWithSalt` endedAt

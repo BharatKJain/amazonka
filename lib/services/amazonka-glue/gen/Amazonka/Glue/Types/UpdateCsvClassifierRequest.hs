@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.UpdateCsvClassifierRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.UpdateCsvClassifierRequest where
@@ -137,7 +137,8 @@ updateCsvClassifierRequest_name = Lens.lens (\UpdateCsvClassifierRequest' {name}
 
 instance Prelude.Hashable UpdateCsvClassifierRequest where
   hashWithSalt _salt UpdateCsvClassifierRequest' {..} =
-    _salt `Prelude.hashWithSalt` allowSingleColumn
+    _salt
+      `Prelude.hashWithSalt` allowSingleColumn
       `Prelude.hashWithSalt` containsHeader
       `Prelude.hashWithSalt` customDatatypeConfigured
       `Prelude.hashWithSalt` customDatatypes

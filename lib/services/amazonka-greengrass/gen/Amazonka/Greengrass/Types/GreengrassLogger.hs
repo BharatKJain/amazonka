@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.GreengrassLogger
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.GreengrassLogger where
@@ -124,7 +124,8 @@ instance Data.FromJSON GreengrassLogger where
 
 instance Prelude.Hashable GreengrassLogger where
   hashWithSalt _salt GreengrassLogger' {..} =
-    _salt `Prelude.hashWithSalt` space
+    _salt
+      `Prelude.hashWithSalt` space
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` level
       `Prelude.hashWithSalt` id

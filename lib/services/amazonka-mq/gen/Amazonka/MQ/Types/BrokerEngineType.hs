@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MQ.Types.BrokerEngineType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MQ.Types.BrokerEngineType where
@@ -71,14 +71,16 @@ instance Data.FromJSON BrokerEngineType where
       ( \x ->
           BrokerEngineType'
             Prelude.<$> (x Data..:? "engineType")
-            Prelude.<*> ( x Data..:? "engineVersions"
+            Prelude.<*> ( x
+                            Data..:? "engineVersions"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable BrokerEngineType where
   hashWithSalt _salt BrokerEngineType' {..} =
-    _salt `Prelude.hashWithSalt` engineType
+    _salt
+      `Prelude.hashWithSalt` engineType
       `Prelude.hashWithSalt` engineVersions
 
 instance Prelude.NFData BrokerEngineType where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.ClassificationResultStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.ClassificationResultStatus where
@@ -371,7 +371,8 @@ instance Data.FromJSON ClassificationResultStatus where
 
 instance Prelude.Hashable ClassificationResultStatus where
   hashWithSalt _salt ClassificationResultStatus' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` reason
 
 instance Prelude.NFData ClassificationResultStatus where

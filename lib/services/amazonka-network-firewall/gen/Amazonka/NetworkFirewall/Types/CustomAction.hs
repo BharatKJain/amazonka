@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.CustomAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.CustomAction where
@@ -101,7 +101,8 @@ instance Data.FromJSON CustomAction where
 
 instance Prelude.Hashable CustomAction where
   hashWithSalt _salt CustomAction' {..} =
-    _salt `Prelude.hashWithSalt` actionName
+    _salt
+      `Prelude.hashWithSalt` actionName
       `Prelude.hashWithSalt` actionDefinition
 
 instance Prelude.NFData CustomAction where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.InstanceFleetModifyConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.InstanceFleetModifyConfig where
@@ -85,7 +85,8 @@ instanceFleetModifyConfig_instanceFleetId = Lens.lens (\InstanceFleetModifyConfi
 
 instance Prelude.Hashable InstanceFleetModifyConfig where
   hashWithSalt _salt InstanceFleetModifyConfig' {..} =
-    _salt `Prelude.hashWithSalt` targetOnDemandCapacity
+    _salt
+      `Prelude.hashWithSalt` targetOnDemandCapacity
       `Prelude.hashWithSalt` targetSpotCapacity
       `Prelude.hashWithSalt` instanceFleetId
 

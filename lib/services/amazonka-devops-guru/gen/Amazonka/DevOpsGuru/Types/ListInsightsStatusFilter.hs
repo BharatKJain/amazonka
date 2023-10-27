@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.ListInsightsStatusFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.ListInsightsStatusFilter where
@@ -85,7 +85,8 @@ listInsightsStatusFilter_ongoing = Lens.lens (\ListInsightsStatusFilter' {ongoin
 
 instance Prelude.Hashable ListInsightsStatusFilter where
   hashWithSalt _salt ListInsightsStatusFilter' {..} =
-    _salt `Prelude.hashWithSalt` any
+    _salt
+      `Prelude.hashWithSalt` any
       `Prelude.hashWithSalt` closed
       `Prelude.hashWithSalt` ongoing
 

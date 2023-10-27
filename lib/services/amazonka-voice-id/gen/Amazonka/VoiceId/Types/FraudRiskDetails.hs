@@ -14,7 +14,7 @@
 -- Module      : Amazonka.VoiceId.Types.FraudRiskDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.VoiceId.Types.FraudRiskDetails where
@@ -90,7 +90,8 @@ instance Data.FromJSON FraudRiskDetails where
 
 instance Prelude.Hashable FraudRiskDetails where
   hashWithSalt _salt FraudRiskDetails' {..} =
-    _salt `Prelude.hashWithSalt` knownFraudsterRisk
+    _salt
+      `Prelude.hashWithSalt` knownFraudsterRisk
       `Prelude.hashWithSalt` voiceSpoofingRisk
 
 instance Prelude.NFData FraudRiskDetails where

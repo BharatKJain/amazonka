@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManager.Types.GrantedLicense
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManager.Types.GrantedLicense where
@@ -202,7 +202,8 @@ instance Data.FromJSON GrantedLicense where
             Prelude.<*> (x Data..:? "HomeRegion")
             Prelude.<*> (x Data..:? "Issuer")
             Prelude.<*> (x Data..:? "LicenseArn")
-            Prelude.<*> ( x Data..:? "LicenseMetadata"
+            Prelude.<*> ( x
+                            Data..:? "LicenseMetadata"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "LicenseName")
@@ -216,7 +217,8 @@ instance Data.FromJSON GrantedLicense where
 
 instance Prelude.Hashable GrantedLicense where
   hashWithSalt _salt GrantedLicense' {..} =
-    _salt `Prelude.hashWithSalt` beneficiary
+    _salt
+      `Prelude.hashWithSalt` beneficiary
       `Prelude.hashWithSalt` consumptionConfiguration
       `Prelude.hashWithSalt` createTime
       `Prelude.hashWithSalt` entitlements

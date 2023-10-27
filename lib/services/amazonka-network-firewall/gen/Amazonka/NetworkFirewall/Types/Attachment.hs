@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.Attachment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.Attachment where
@@ -142,7 +142,8 @@ instance Data.FromJSON Attachment where
 
 instance Prelude.Hashable Attachment where
   hashWithSalt _salt Attachment' {..} =
-    _salt `Prelude.hashWithSalt` endpointId
+    _salt
+      `Prelude.hashWithSalt` endpointId
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` statusMessage
       `Prelude.hashWithSalt` subnetId

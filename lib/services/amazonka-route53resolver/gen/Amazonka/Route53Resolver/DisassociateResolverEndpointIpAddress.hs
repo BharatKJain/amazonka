@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53Resolver.DisassociateResolverEndpointIpAddress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,7 @@ instance
       ( \s h x ->
           DisassociateResolverEndpointIpAddressResponse'
             Prelude.<$> (x Data..?> "ResolverEndpoint")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -124,7 +124,8 @@ instance
   hashWithSalt
     _salt
     DisassociateResolverEndpointIpAddress' {..} =
-      _salt `Prelude.hashWithSalt` resolverEndpointId
+      _salt
+        `Prelude.hashWithSalt` resolverEndpointId
         `Prelude.hashWithSalt` ipAddress
 
 instance

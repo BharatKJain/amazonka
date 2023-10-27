@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kafka.UpdateStorage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,8 @@ instance Core.AWSRequest UpdateStorage where
 
 instance Prelude.Hashable UpdateStorage where
   hashWithSalt _salt UpdateStorage' {..} =
-    _salt `Prelude.hashWithSalt` provisionedThroughput
+    _salt
+      `Prelude.hashWithSalt` provisionedThroughput
       `Prelude.hashWithSalt` storageMode
       `Prelude.hashWithSalt` volumeSizeGB
       `Prelude.hashWithSalt` clusterArn

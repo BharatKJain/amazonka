@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StorageGateway.UpdateNFSFileShare
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -422,7 +422,8 @@ instance Core.AWSRequest UpdateNFSFileShare where
 
 instance Prelude.Hashable UpdateNFSFileShare where
   hashWithSalt _salt UpdateNFSFileShare' {..} =
-    _salt `Prelude.hashWithSalt` auditDestinationARN
+    _salt
+      `Prelude.hashWithSalt` auditDestinationARN
       `Prelude.hashWithSalt` cacheAttributes
       `Prelude.hashWithSalt` clientList
       `Prelude.hashWithSalt` defaultStorageClass

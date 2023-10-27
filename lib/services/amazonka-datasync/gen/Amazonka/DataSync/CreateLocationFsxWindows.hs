@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataSync.CreateLocationFsxWindows
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -230,7 +230,8 @@ instance Core.AWSRequest CreateLocationFsxWindows where
 
 instance Prelude.Hashable CreateLocationFsxWindows where
   hashWithSalt _salt CreateLocationFsxWindows' {..} =
-    _salt `Prelude.hashWithSalt` domain
+    _salt
+      `Prelude.hashWithSalt` domain
       `Prelude.hashWithSalt` subdirectory
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` fsxFilesystemArn

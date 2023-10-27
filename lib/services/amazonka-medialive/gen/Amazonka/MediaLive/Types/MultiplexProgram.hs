@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.MultiplexProgram
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.MultiplexProgram where
@@ -113,7 +113,8 @@ instance Data.FromJSON MultiplexProgram where
             Prelude.<$> (x Data..:? "channelId")
             Prelude.<*> (x Data..:? "multiplexProgramSettings")
             Prelude.<*> (x Data..:? "packetIdentifiersMap")
-            Prelude.<*> ( x Data..:? "pipelineDetails"
+            Prelude.<*> ( x
+                            Data..:? "pipelineDetails"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "programName")
@@ -121,7 +122,8 @@ instance Data.FromJSON MultiplexProgram where
 
 instance Prelude.Hashable MultiplexProgram where
   hashWithSalt _salt MultiplexProgram' {..} =
-    _salt `Prelude.hashWithSalt` channelId
+    _salt
+      `Prelude.hashWithSalt` channelId
       `Prelude.hashWithSalt` multiplexProgramSettings
       `Prelude.hashWithSalt` packetIdentifiersMap
       `Prelude.hashWithSalt` pipelineDetails

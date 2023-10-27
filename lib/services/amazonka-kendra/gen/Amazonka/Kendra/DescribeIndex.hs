@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kendra.DescribeIndex
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -101,7 +101,8 @@ instance Core.AWSRequest DescribeIndex where
             Prelude.<$> (x Data..?> "CapacityUnits")
             Prelude.<*> (x Data..?> "CreatedAt")
             Prelude.<*> (x Data..?> "Description")
-            Prelude.<*> ( x Data..?> "DocumentMetadataConfigurations"
+            Prelude.<*> ( x
+                            Data..?> "DocumentMetadataConfigurations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "Edition")
@@ -115,7 +116,8 @@ instance Core.AWSRequest DescribeIndex where
             Prelude.<*> (x Data..?> "UpdatedAt")
             Prelude.<*> (x Data..?> "UserContextPolicy")
             Prelude.<*> (x Data..?> "UserGroupResolutionConfiguration")
-            Prelude.<*> ( x Data..?> "UserTokenConfigurations"
+            Prelude.<*> ( x
+                            Data..?> "UserTokenConfigurations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

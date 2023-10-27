@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFront.UpdateRealtimeLogConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -171,7 +171,8 @@ instance Core.AWSRequest UpdateRealtimeLogConfig where
 
 instance Prelude.Hashable UpdateRealtimeLogConfig where
   hashWithSalt _salt UpdateRealtimeLogConfig' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` endPoints
       `Prelude.hashWithSalt` fields
       `Prelude.hashWithSalt` name

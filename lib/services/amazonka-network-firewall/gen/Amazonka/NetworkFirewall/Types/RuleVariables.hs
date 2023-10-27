@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.RuleVariables
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.RuleVariables where
@@ -77,7 +77,8 @@ instance Data.FromJSON RuleVariables where
 
 instance Prelude.Hashable RuleVariables where
   hashWithSalt _salt RuleVariables' {..} =
-    _salt `Prelude.hashWithSalt` iPSets
+    _salt
+      `Prelude.hashWithSalt` iPSets
       `Prelude.hashWithSalt` portSets
 
 instance Prelude.NFData RuleVariables where

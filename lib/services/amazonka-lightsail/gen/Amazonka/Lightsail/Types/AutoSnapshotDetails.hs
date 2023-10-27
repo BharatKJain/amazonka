@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.AutoSnapshotDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.AutoSnapshotDetails where
@@ -93,7 +93,8 @@ instance Data.FromJSON AutoSnapshotDetails where
           AutoSnapshotDetails'
             Prelude.<$> (x Data..:? "createdAt")
             Prelude.<*> (x Data..:? "date")
-            Prelude.<*> ( x Data..:? "fromAttachedDisks"
+            Prelude.<*> ( x
+                            Data..:? "fromAttachedDisks"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "status")
@@ -101,7 +102,8 @@ instance Data.FromJSON AutoSnapshotDetails where
 
 instance Prelude.Hashable AutoSnapshotDetails where
   hashWithSalt _salt AutoSnapshotDetails' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` date
       `Prelude.hashWithSalt` fromAttachedDisks
       `Prelude.hashWithSalt` status

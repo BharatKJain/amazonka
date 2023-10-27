@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.Query
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -1040,15 +1040,17 @@ instance Core.AWSPager Query where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? queryResponse_lastEvaluatedKey Prelude.. Lens._Just
+            Lens.^? queryResponse_lastEvaluatedKey
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& query_exclusiveStartKey
           Lens..~ rs
-          Lens.^? queryResponse_lastEvaluatedKey Prelude.. Lens._Just
+          Lens.^? queryResponse_lastEvaluatedKey
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest Query where
   type AWSResponse Query = QueryResponse
@@ -1060,7 +1062,8 @@ instance Core.AWSRequest Query where
           QueryResponse'
             Prelude.<$> (x Data..?> "ConsumedCapacity")
             Prelude.<*> (x Data..?> "Count")
-            Prelude.<*> ( x Data..?> "LastEvaluatedKey"
+            Prelude.<*> ( x
+                            Data..?> "LastEvaluatedKey"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "ScannedCount")
@@ -1070,7 +1073,8 @@ instance Core.AWSRequest Query where
 
 instance Prelude.Hashable Query where
   hashWithSalt _salt Query' {..} =
-    _salt `Prelude.hashWithSalt` attributesToGet
+    _salt
+      `Prelude.hashWithSalt` attributesToGet
       `Prelude.hashWithSalt` conditionalOperator
       `Prelude.hashWithSalt` consistentRead
       `Prelude.hashWithSalt` exclusiveStartKey

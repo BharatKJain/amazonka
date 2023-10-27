@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PinpointSmsVoiceV2.Types.SenderIdInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PinpointSmsVoiceV2.Types.SenderIdInformation where
@@ -129,7 +129,8 @@ instance Data.FromJSON SenderIdInformation where
 
 instance Prelude.Hashable SenderIdInformation where
   hashWithSalt _salt SenderIdInformation' {..} =
-    _salt `Prelude.hashWithSalt` senderIdArn
+    _salt
+      `Prelude.hashWithSalt` senderIdArn
       `Prelude.hashWithSalt` senderId
       `Prelude.hashWithSalt` isoCountryCode
       `Prelude.hashWithSalt` messageTypes

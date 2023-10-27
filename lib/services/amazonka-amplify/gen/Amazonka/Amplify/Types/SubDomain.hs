@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Amplify.Types.SubDomain
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Amplify.Types.SubDomain where
@@ -94,7 +94,8 @@ instance Data.FromJSON SubDomain where
 
 instance Prelude.Hashable SubDomain where
   hashWithSalt _salt SubDomain' {..} =
-    _salt `Prelude.hashWithSalt` subDomainSetting
+    _salt
+      `Prelude.hashWithSalt` subDomainSetting
       `Prelude.hashWithSalt` verified
       `Prelude.hashWithSalt` dnsRecord
 

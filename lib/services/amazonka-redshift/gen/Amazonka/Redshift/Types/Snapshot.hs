@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.Snapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.Snapshot where
@@ -482,7 +482,8 @@ snapshot_vpcId = Lens.lens (\Snapshot' {vpcId} -> vpcId) (\s@Snapshot' {} a -> s
 instance Data.FromXML Snapshot where
   parseXML x =
     Snapshot'
-      Prelude.<$> ( x Data..@? "AccountsWithRestoreAccess"
+      Prelude.<$> ( x
+                      Data..@? "AccountsWithRestoreAccess"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may
                         (Data.parseXMLList "AccountWithRestoreAccess")
@@ -510,7 +511,8 @@ instance Data.FromXML Snapshot where
       Prelude.<*> (x Data..@? "NumberOfNodes")
       Prelude.<*> (x Data..@? "OwnerAccount")
       Prelude.<*> (x Data..@? "Port")
-      Prelude.<*> ( x Data..@? "RestorableNodeTypes"
+      Prelude.<*> ( x
+                      Data..@? "RestorableNodeTypes"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "NodeType")
                   )
@@ -520,7 +522,9 @@ instance Data.FromXML Snapshot where
       Prelude.<*> (x Data..@? "SnapshotType")
       Prelude.<*> (x Data..@? "SourceRegion")
       Prelude.<*> (x Data..@? "Status")
-      Prelude.<*> ( x Data..@? "Tags" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Tags"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Tag")
                   )
       Prelude.<*> (x Data..@? "TotalBackupSizeInMegaBytes")

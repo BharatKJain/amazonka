@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ConditionalFormattingColor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ConditionalFormattingColor where
@@ -77,7 +77,8 @@ instance Data.FromJSON ConditionalFormattingColor where
 
 instance Prelude.Hashable ConditionalFormattingColor where
   hashWithSalt _salt ConditionalFormattingColor' {..} =
-    _salt `Prelude.hashWithSalt` gradient
+    _salt
+      `Prelude.hashWithSalt` gradient
       `Prelude.hashWithSalt` solid
 
 instance Prelude.NFData ConditionalFormattingColor where

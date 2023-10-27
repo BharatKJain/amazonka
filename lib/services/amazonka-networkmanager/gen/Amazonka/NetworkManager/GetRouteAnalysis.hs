@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkManager.GetRouteAnalysis
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest GetRouteAnalysis where
 
 instance Prelude.Hashable GetRouteAnalysis where
   hashWithSalt _salt GetRouteAnalysis' {..} =
-    _salt `Prelude.hashWithSalt` globalNetworkId
+    _salt
+      `Prelude.hashWithSalt` globalNetworkId
       `Prelude.hashWithSalt` routeAnalysisId
 
 instance Prelude.NFData GetRouteAnalysis where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResourceGroups.Types.Group
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResourceGroups.Types.Group where
@@ -100,7 +100,8 @@ instance Data.FromJSON Group where
 
 instance Prelude.Hashable Group where
   hashWithSalt _salt Group' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` groupArn
       `Prelude.hashWithSalt` name
 

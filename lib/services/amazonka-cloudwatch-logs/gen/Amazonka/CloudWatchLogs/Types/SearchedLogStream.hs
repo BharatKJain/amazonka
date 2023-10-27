@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchLogs.Types.SearchedLogStream
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchLogs.Types.SearchedLogStream where
@@ -74,7 +74,8 @@ instance Data.FromJSON SearchedLogStream where
 
 instance Prelude.Hashable SearchedLogStream where
   hashWithSalt _salt SearchedLogStream' {..} =
-    _salt `Prelude.hashWithSalt` logStreamName
+    _salt
+      `Prelude.hashWithSalt` logStreamName
       `Prelude.hashWithSalt` searchedCompletely
 
 instance Prelude.NFData SearchedLogStream where

@@ -11,7 +11,7 @@
 -- Module      : Amazonka.EMR.Waiters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Waiters where
@@ -121,7 +121,8 @@ newStepComplete =
         [ Core.matchAll
             "COMPLETED"
             Core.AcceptSuccess
-            ( describeStepResponse_step Prelude.. Lens._Just
+            ( describeStepResponse_step
+                Prelude.. Lens._Just
                 Prelude.. step_status
                 Prelude.. Lens._Just
                 Prelude.. stepStatus_state
@@ -131,7 +132,8 @@ newStepComplete =
           Core.matchAll
             "FAILED"
             Core.AcceptFailure
-            ( describeStepResponse_step Prelude.. Lens._Just
+            ( describeStepResponse_step
+                Prelude.. Lens._Just
                 Prelude.. step_status
                 Prelude.. Lens._Just
                 Prelude.. stepStatus_state
@@ -141,7 +143,8 @@ newStepComplete =
           Core.matchAll
             "CANCELLED"
             Core.AcceptFailure
-            ( describeStepResponse_step Prelude.. Lens._Just
+            ( describeStepResponse_step
+                Prelude.. Lens._Just
                 Prelude.. step_status
                 Prelude.. Lens._Just
                 Prelude.. stepStatus_state

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.SavingsPlansUtilization
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.SavingsPlansUtilization where
@@ -107,7 +107,8 @@ instance Data.FromJSON SavingsPlansUtilization where
 
 instance Prelude.Hashable SavingsPlansUtilization where
   hashWithSalt _salt SavingsPlansUtilization' {..} =
-    _salt `Prelude.hashWithSalt` totalCommitment
+    _salt
+      `Prelude.hashWithSalt` totalCommitment
       `Prelude.hashWithSalt` unusedCommitment
       `Prelude.hashWithSalt` usedCommitment
       `Prelude.hashWithSalt` utilizationPercentage

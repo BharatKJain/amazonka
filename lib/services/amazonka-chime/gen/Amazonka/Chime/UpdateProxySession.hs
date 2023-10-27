@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.UpdateProxySession
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,7 +128,8 @@ instance Core.AWSRequest UpdateProxySession where
 
 instance Prelude.Hashable UpdateProxySession where
   hashWithSalt _salt UpdateProxySession' {..} =
-    _salt `Prelude.hashWithSalt` expiryMinutes
+    _salt
+      `Prelude.hashWithSalt` expiryMinutes
       `Prelude.hashWithSalt` capabilities
       `Prelude.hashWithSalt` voiceConnectorId
       `Prelude.hashWithSalt` proxySessionId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Proton.Types.Environment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Proton.Types.Environment where
@@ -331,7 +331,8 @@ instance Data.FromJSON Environment where
 
 instance Prelude.Hashable Environment where
   hashWithSalt _salt Environment' {..} =
-    _salt `Prelude.hashWithSalt` codebuildRoleArn
+    _salt
+      `Prelude.hashWithSalt` codebuildRoleArn
       `Prelude.hashWithSalt` componentRoleArn
       `Prelude.hashWithSalt` deploymentStatusMessage
       `Prelude.hashWithSalt` description

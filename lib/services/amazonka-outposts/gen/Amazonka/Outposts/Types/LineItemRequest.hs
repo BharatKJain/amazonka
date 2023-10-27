@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Outposts.Types.LineItemRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Outposts.Types.LineItemRequest where
@@ -64,7 +64,8 @@ lineItemRequest_quantity = Lens.lens (\LineItemRequest' {quantity} -> quantity) 
 
 instance Prelude.Hashable LineItemRequest where
   hashWithSalt _salt LineItemRequest' {..} =
-    _salt `Prelude.hashWithSalt` catalogItemId
+    _salt
+      `Prelude.hashWithSalt` catalogItemId
       `Prelude.hashWithSalt` quantity
 
 instance Prelude.NFData LineItemRequest where

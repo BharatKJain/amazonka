@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PrivateNetworks.Types.DeviceIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PrivateNetworks.Types.DeviceIdentifier where
@@ -154,7 +154,8 @@ instance Data.FromJSON DeviceIdentifier where
 
 instance Prelude.Hashable DeviceIdentifier where
   hashWithSalt _salt DeviceIdentifier' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` deviceIdentifierArn
       `Prelude.hashWithSalt` iccid
       `Prelude.hashWithSalt` imsi

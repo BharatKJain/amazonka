@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.Control
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.Control where
@@ -212,7 +212,8 @@ instance Data.FromJSON Control where
 
 instance Prelude.Hashable Control where
   hashWithSalt _salt Control' {..} =
-    _salt `Prelude.hashWithSalt` actionPlanInstructions
+    _salt
+      `Prelude.hashWithSalt` actionPlanInstructions
       `Prelude.hashWithSalt` actionPlanTitle
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` controlMappingSources

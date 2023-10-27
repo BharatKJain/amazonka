@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT1ClickProjects.DeletePlacement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest DeletePlacement where
 
 instance Prelude.Hashable DeletePlacement where
   hashWithSalt _salt DeletePlacement' {..} =
-    _salt `Prelude.hashWithSalt` placementName
+    _salt
+      `Prelude.hashWithSalt` placementName
       `Prelude.hashWithSalt` projectName
 
 instance Prelude.NFData DeletePlacement where

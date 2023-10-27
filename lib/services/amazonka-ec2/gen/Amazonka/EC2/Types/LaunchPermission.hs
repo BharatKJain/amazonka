@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.LaunchPermission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.LaunchPermission where
@@ -101,7 +101,8 @@ instance Data.FromXML LaunchPermission where
 
 instance Prelude.Hashable LaunchPermission where
   hashWithSalt _salt LaunchPermission' {..} =
-    _salt `Prelude.hashWithSalt` group'
+    _salt
+      `Prelude.hashWithSalt` group'
       `Prelude.hashWithSalt` organizationArn
       `Prelude.hashWithSalt` organizationalUnitArn
       `Prelude.hashWithSalt` userId

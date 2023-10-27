@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.S3Location
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.S3Location where
@@ -84,7 +84,8 @@ instance Data.FromJSON S3Location where
 
 instance Prelude.Hashable S3Location where
   hashWithSalt _salt S3Location' {..} =
-    _salt `Prelude.hashWithSalt` bucket
+    _salt
+      `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` version
 

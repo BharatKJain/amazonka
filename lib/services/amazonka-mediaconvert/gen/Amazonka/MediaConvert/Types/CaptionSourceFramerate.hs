@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.CaptionSourceFramerate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.CaptionSourceFramerate where
@@ -100,7 +100,8 @@ instance Data.FromJSON CaptionSourceFramerate where
 
 instance Prelude.Hashable CaptionSourceFramerate where
   hashWithSalt _salt CaptionSourceFramerate' {..} =
-    _salt `Prelude.hashWithSalt` framerateDenominator
+    _salt
+      `Prelude.hashWithSalt` framerateDenominator
       `Prelude.hashWithSalt` framerateNumerator
 
 instance Prelude.NFData CaptionSourceFramerate where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.InstanceTypeConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.InstanceTypeConfig where
@@ -164,7 +164,8 @@ instanceTypeConfig_instanceType = Lens.lens (\InstanceTypeConfig' {instanceType}
 
 instance Prelude.Hashable InstanceTypeConfig where
   hashWithSalt _salt InstanceTypeConfig' {..} =
-    _salt `Prelude.hashWithSalt` bidPrice
+    _salt
+      `Prelude.hashWithSalt` bidPrice
       `Prelude.hashWithSalt` bidPriceAsPercentageOfOnDemandPrice
       `Prelude.hashWithSalt` configurations
       `Prelude.hashWithSalt` customAmiId

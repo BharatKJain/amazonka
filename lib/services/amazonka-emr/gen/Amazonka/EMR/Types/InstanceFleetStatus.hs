@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.InstanceFleetStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.InstanceFleetStatus where
@@ -159,7 +159,8 @@ instance Data.FromJSON InstanceFleetStatus where
 
 instance Prelude.Hashable InstanceFleetStatus where
   hashWithSalt _salt InstanceFleetStatus' {..} =
-    _salt `Prelude.hashWithSalt` state
+    _salt
+      `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` stateChangeReason
       `Prelude.hashWithSalt` timeline
 

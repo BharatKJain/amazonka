@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CustomerProfiles.GetWorkflow
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,7 +116,8 @@ instance Core.AWSRequest GetWorkflow where
 
 instance Prelude.Hashable GetWorkflow where
   hashWithSalt _salt GetWorkflow' {..} =
-    _salt `Prelude.hashWithSalt` domainName
+    _salt
+      `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` workflowId
 
 instance Prelude.NFData GetWorkflow where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.M2.GetEnvironment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest GetEnvironment where
             Prelude.<*> (x Data..?> "preferredMaintenanceWindow")
             Prelude.<*> (x Data..?> "publiclyAccessible")
             Prelude.<*> (x Data..?> "statusReason")
-            Prelude.<*> ( x Data..?> "storageConfigurations"
+            Prelude.<*> ( x
+                            Data..?> "storageConfigurations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "tags" Core..!@ Prelude.mempty)
@@ -126,7 +127,8 @@ instance Core.AWSRequest GetEnvironment where
             Prelude.<*> (x Data..:> "environmentId")
             Prelude.<*> (x Data..:> "instanceType")
             Prelude.<*> (x Data..:> "name")
-            Prelude.<*> ( x Data..?> "securityGroupIds"
+            Prelude.<*> ( x
+                            Data..?> "securityGroupIds"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..:> "status")

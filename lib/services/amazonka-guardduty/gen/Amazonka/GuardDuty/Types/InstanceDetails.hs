@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.InstanceDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.InstanceDetails where
@@ -183,7 +183,8 @@ instance Data.FromJSON InstanceDetails where
             Prelude.<*> (x Data..:? "instanceState")
             Prelude.<*> (x Data..:? "instanceType")
             Prelude.<*> (x Data..:? "launchTime")
-            Prelude.<*> ( x Data..:? "networkInterfaces"
+            Prelude.<*> ( x
+                            Data..:? "networkInterfaces"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "outpostArn")
@@ -194,7 +195,8 @@ instance Data.FromJSON InstanceDetails where
 
 instance Prelude.Hashable InstanceDetails where
   hashWithSalt _salt InstanceDetails' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZone
+    _salt
+      `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` iamInstanceProfile
       `Prelude.hashWithSalt` imageDescription
       `Prelude.hashWithSalt` imageId

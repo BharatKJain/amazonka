@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.CpuOptionsRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.CpuOptionsRequest where
@@ -72,7 +72,8 @@ cpuOptionsRequest_threadsPerCore = Lens.lens (\CpuOptionsRequest' {threadsPerCor
 
 instance Prelude.Hashable CpuOptionsRequest where
   hashWithSalt _salt CpuOptionsRequest' {..} =
-    _salt `Prelude.hashWithSalt` coreCount
+    _salt
+      `Prelude.hashWithSalt` coreCount
       `Prelude.hashWithSalt` threadsPerCore
 
 instance Prelude.NFData CpuOptionsRequest where

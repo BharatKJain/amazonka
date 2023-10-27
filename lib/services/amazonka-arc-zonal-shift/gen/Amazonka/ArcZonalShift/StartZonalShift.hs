@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ArcZonalShift.StartZonalShift
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -220,7 +220,8 @@ instance Core.AWSRequest StartZonalShift where
 
 instance Prelude.Hashable StartZonalShift where
   hashWithSalt _salt StartZonalShift' {..} =
-    _salt `Prelude.hashWithSalt` awayFrom
+    _salt
+      `Prelude.hashWithSalt` awayFrom
       `Prelude.hashWithSalt` comment
       `Prelude.hashWithSalt` expiresIn
       `Prelude.hashWithSalt` resourceIdentifier

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KMS.ListKeyPolicies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -184,22 +184,22 @@ instance Core.AWSPager ListKeyPolicies where
     | Core.stop
         ( rs
             Lens.^? listKeyPoliciesResponse_truncated
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.isNothing
         ( rs
             Lens.^? listKeyPoliciesResponse_nextMarker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listKeyPolicies_marker
           Lens..~ rs
           Lens.^? listKeyPoliciesResponse_nextMarker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListKeyPolicies where
   type
@@ -219,7 +219,8 @@ instance Core.AWSRequest ListKeyPolicies where
 
 instance Prelude.Hashable ListKeyPolicies where
   hashWithSalt _salt ListKeyPolicies' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` keyId
 

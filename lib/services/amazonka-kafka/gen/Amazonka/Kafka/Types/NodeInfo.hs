@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.NodeInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.NodeInfo where
@@ -117,7 +117,8 @@ instance Data.FromJSON NodeInfo where
 
 instance Prelude.Hashable NodeInfo where
   hashWithSalt _salt NodeInfo' {..} =
-    _salt `Prelude.hashWithSalt` addedToClusterTime
+    _salt
+      `Prelude.hashWithSalt` addedToClusterTime
       `Prelude.hashWithSalt` brokerNodeInfo
       `Prelude.hashWithSalt` instanceType
       `Prelude.hashWithSalt` nodeARN

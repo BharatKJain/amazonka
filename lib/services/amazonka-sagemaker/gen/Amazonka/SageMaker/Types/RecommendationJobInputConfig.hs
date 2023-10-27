@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.RecommendationJobInputConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.RecommendationJobInputConfig where
@@ -269,7 +269,8 @@ instance
     RecommendationJobInputConfig
   where
   hashWithSalt _salt RecommendationJobInputConfig' {..} =
-    _salt `Prelude.hashWithSalt` containerConfig
+    _salt
+      `Prelude.hashWithSalt` containerConfig
       `Prelude.hashWithSalt` endpointConfigurations
       `Prelude.hashWithSalt` endpoints
       `Prelude.hashWithSalt` jobDurationInSeconds

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Account.GetAlternateContact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -185,7 +185,8 @@ instance Core.AWSRequest GetAlternateContact where
 
 instance Prelude.Hashable GetAlternateContact where
   hashWithSalt _salt GetAlternateContact' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` alternateContactType
 
 instance Prelude.NFData GetAlternateContact where

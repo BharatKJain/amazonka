@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Budgets.Types.ActionHistory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Budgets.Types.ActionHistory where
@@ -112,7 +112,8 @@ instance Data.FromJSON ActionHistory where
 
 instance Prelude.Hashable ActionHistory where
   hashWithSalt _salt ActionHistory' {..} =
-    _salt `Prelude.hashWithSalt` timestamp
+    _salt
+      `Prelude.hashWithSalt` timestamp
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` eventType
       `Prelude.hashWithSalt` actionHistoryDetails

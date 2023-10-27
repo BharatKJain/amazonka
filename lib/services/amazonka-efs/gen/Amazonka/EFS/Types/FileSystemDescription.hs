@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EFS.Types.FileSystemDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EFS.Types.FileSystemDescription where
@@ -49,7 +49,7 @@ data FileSystemDescription = FileSystemDescription'
     -- encrypted.
     encrypted :: Prelude.Maybe Prelude.Bool,
     -- | The Amazon Resource Name (ARN) for the EFS file system, in the format
-    -- @arn:aws:elasticfilesystem:region:account-id:file-system\/file-system-id @.
+    -- @arn:aws:elasticfilesystem:@/@region@/@:@/@account-id@/@:file-system\/@/@file-system-id@/@ @.
     -- Example with sample data:
     -- @arn:aws:elasticfilesystem:us-west-2:1111333322228888:file-system\/fs-01234567@
     fileSystemArn :: Prelude.Maybe Prelude.Text,
@@ -126,7 +126,7 @@ data FileSystemDescription = FileSystemDescription'
 -- encrypted.
 --
 -- 'fileSystemArn', 'fileSystemDescription_fileSystemArn' - The Amazon Resource Name (ARN) for the EFS file system, in the format
--- @arn:aws:elasticfilesystem:region:account-id:file-system\/file-system-id @.
+-- @arn:aws:elasticfilesystem:@/@region@/@:@/@account-id@/@:file-system\/@/@file-system-id@/@ @.
 -- Example with sample data:
 -- @arn:aws:elasticfilesystem:us-west-2:1111333322228888:file-system\/fs-01234567@
 --
@@ -245,7 +245,7 @@ fileSystemDescription_encrypted :: Lens.Lens' FileSystemDescription (Prelude.May
 fileSystemDescription_encrypted = Lens.lens (\FileSystemDescription' {encrypted} -> encrypted) (\s@FileSystemDescription' {} a -> s {encrypted = a} :: FileSystemDescription)
 
 -- | The Amazon Resource Name (ARN) for the EFS file system, in the format
--- @arn:aws:elasticfilesystem:region:account-id:file-system\/file-system-id @.
+-- @arn:aws:elasticfilesystem:@/@region@/@:@/@account-id@/@:file-system\/@/@file-system-id@/@ @.
 -- Example with sample data:
 -- @arn:aws:elasticfilesystem:us-west-2:1111333322228888:file-system\/fs-01234567@
 fileSystemDescription_fileSystemArn :: Lens.Lens' FileSystemDescription (Prelude.Maybe Prelude.Text)
@@ -350,7 +350,8 @@ instance Data.FromJSON FileSystemDescription where
 
 instance Prelude.Hashable FileSystemDescription where
   hashWithSalt _salt FileSystemDescription' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZoneId
+    _salt
+      `Prelude.hashWithSalt` availabilityZoneId
       `Prelude.hashWithSalt` availabilityZoneName
       `Prelude.hashWithSalt` encrypted
       `Prelude.hashWithSalt` fileSystemArn

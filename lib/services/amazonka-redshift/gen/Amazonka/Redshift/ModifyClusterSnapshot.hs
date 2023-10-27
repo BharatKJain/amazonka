@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.ModifyClusterSnapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest ModifyClusterSnapshot where
 
 instance Prelude.Hashable ModifyClusterSnapshot where
   hashWithSalt _salt ModifyClusterSnapshot' {..} =
-    _salt `Prelude.hashWithSalt` force
+    _salt
+      `Prelude.hashWithSalt` force
       `Prelude.hashWithSalt` manualSnapshotRetentionPeriod
       `Prelude.hashWithSalt` snapshotIdentifier
 

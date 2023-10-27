@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.VirtualGatewayHealthCheckPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.VirtualGatewayHealthCheckPolicy where
@@ -174,7 +174,8 @@ instance
   hashWithSalt
     _salt
     VirtualGatewayHealthCheckPolicy' {..} =
-      _salt `Prelude.hashWithSalt` path
+      _salt
+        `Prelude.hashWithSalt` path
         `Prelude.hashWithSalt` port
         `Prelude.hashWithSalt` healthyThreshold
         `Prelude.hashWithSalt` intervalMillis

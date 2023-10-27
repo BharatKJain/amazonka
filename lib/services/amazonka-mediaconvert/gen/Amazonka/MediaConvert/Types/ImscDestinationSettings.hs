@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.ImscDestinationSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.ImscDestinationSettings where
@@ -116,7 +116,8 @@ instance Data.FromJSON ImscDestinationSettings where
 
 instance Prelude.Hashable ImscDestinationSettings where
   hashWithSalt _salt ImscDestinationSettings' {..} =
-    _salt `Prelude.hashWithSalt` accessibility
+    _salt
+      `Prelude.hashWithSalt` accessibility
       `Prelude.hashWithSalt` stylePassthrough
 
 instance Prelude.NFData ImscDestinationSettings where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.SchemaAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.SchemaAttribute where
@@ -90,7 +90,8 @@ instance Data.FromJSON SchemaAttribute where
 
 instance Prelude.Hashable SchemaAttribute where
   hashWithSalt _salt SchemaAttribute' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` attributeType
 
 instance Prelude.NFData SchemaAttribute where

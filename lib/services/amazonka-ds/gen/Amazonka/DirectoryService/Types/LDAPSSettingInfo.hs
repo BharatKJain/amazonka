@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.LDAPSSettingInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.LDAPSSettingInfo where
@@ -85,7 +85,8 @@ instance Data.FromJSON LDAPSSettingInfo where
 
 instance Prelude.Hashable LDAPSSettingInfo where
   hashWithSalt _salt LDAPSSettingInfo' {..} =
-    _salt `Prelude.hashWithSalt` lDAPSStatus
+    _salt
+      `Prelude.hashWithSalt` lDAPSStatus
       `Prelude.hashWithSalt` lDAPSStatusReason
       `Prelude.hashWithSalt` lastUpdatedDateTime
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.BatchSuspendUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,7 +118,8 @@ instance Core.AWSRequest BatchSuspendUser where
 
 instance Prelude.Hashable BatchSuspendUser where
   hashWithSalt _salt BatchSuspendUser' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` userIdList
 
 instance Prelude.NFData BatchSuspendUser where

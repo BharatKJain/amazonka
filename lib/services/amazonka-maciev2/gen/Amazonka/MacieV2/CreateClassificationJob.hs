@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MacieV2.CreateClassificationJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -405,7 +405,8 @@ instance Core.AWSRequest CreateClassificationJob where
 
 instance Prelude.Hashable CreateClassificationJob where
   hashWithSalt _salt CreateClassificationJob' {..} =
-    _salt `Prelude.hashWithSalt` allowListIds
+    _salt
+      `Prelude.hashWithSalt` allowListIds
       `Prelude.hashWithSalt` customDataIdentifierIds
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` initialRun

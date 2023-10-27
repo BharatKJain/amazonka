@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkMail.UpdateResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,7 +128,8 @@ instance Core.AWSRequest UpdateResource where
 
 instance Prelude.Hashable UpdateResource where
   hashWithSalt _salt UpdateResource' {..} =
-    _salt `Prelude.hashWithSalt` bookingOptions
+    _salt
+      `Prelude.hashWithSalt` bookingOptions
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` organizationId
       `Prelude.hashWithSalt` resourceId

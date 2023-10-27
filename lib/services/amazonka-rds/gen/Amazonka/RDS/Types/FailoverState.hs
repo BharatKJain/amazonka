@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.FailoverState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.FailoverState where
@@ -138,7 +138,8 @@ instance Data.FromXML FailoverState where
 
 instance Prelude.Hashable FailoverState where
   hashWithSalt _salt FailoverState' {..} =
-    _salt `Prelude.hashWithSalt` fromDbClusterArn
+    _salt
+      `Prelude.hashWithSalt` fromDbClusterArn
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` toDbClusterArn
 

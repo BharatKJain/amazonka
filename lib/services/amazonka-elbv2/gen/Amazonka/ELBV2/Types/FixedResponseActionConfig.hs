@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.FixedResponseActionConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.FixedResponseActionConfig where
@@ -92,7 +92,8 @@ instance Data.FromXML FixedResponseActionConfig where
 
 instance Prelude.Hashable FixedResponseActionConfig where
   hashWithSalt _salt FixedResponseActionConfig' {..} =
-    _salt `Prelude.hashWithSalt` contentType
+    _salt
+      `Prelude.hashWithSalt` contentType
       `Prelude.hashWithSalt` messageBody
       `Prelude.hashWithSalt` statusCode
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.UserBucket
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.UserBucket where
@@ -65,7 +65,8 @@ userBucket_s3Key = Lens.lens (\UserBucket' {s3Key} -> s3Key) (\s@UserBucket' {} 
 
 instance Prelude.Hashable UserBucket where
   hashWithSalt _salt UserBucket' {..} =
-    _salt `Prelude.hashWithSalt` s3Bucket
+    _salt
+      `Prelude.hashWithSalt` s3Bucket
       `Prelude.hashWithSalt` s3Key
 
 instance Prelude.NFData UserBucket where

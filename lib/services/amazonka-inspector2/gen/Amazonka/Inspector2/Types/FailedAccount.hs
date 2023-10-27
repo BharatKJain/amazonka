@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.FailedAccount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.FailedAccount where
@@ -126,7 +126,8 @@ instance Data.FromJSON FailedAccount where
 
 instance Prelude.Hashable FailedAccount where
   hashWithSalt _salt FailedAccount' {..} =
-    _salt `Prelude.hashWithSalt` resourceStatus
+    _salt
+      `Prelude.hashWithSalt` resourceStatus
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` errorCode

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.GetMLTaskRuns
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -147,7 +147,8 @@ instance Core.AWSRequest GetMLTaskRuns where
 
 instance Prelude.Hashable GetMLTaskRuns where
   hashWithSalt _salt GetMLTaskRuns' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` sort

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.ApiKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.ApiKey where
@@ -145,7 +145,8 @@ instance Data.FromJSON ApiKey where
 
 instance Prelude.Hashable ApiKey where
   hashWithSalt _salt ApiKey' {..} =
-    _salt `Prelude.hashWithSalt` deletes
+    _salt
+      `Prelude.hashWithSalt` deletes
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` expires
       `Prelude.hashWithSalt` id

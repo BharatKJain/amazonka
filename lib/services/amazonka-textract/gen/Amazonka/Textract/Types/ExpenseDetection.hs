@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.ExpenseDetection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.ExpenseDetection where
@@ -85,7 +85,8 @@ instance Data.FromJSON ExpenseDetection where
 
 instance Prelude.Hashable ExpenseDetection where
   hashWithSalt _salt ExpenseDetection' {..} =
-    _salt `Prelude.hashWithSalt` confidence
+    _salt
+      `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` geometry
       `Prelude.hashWithSalt` text
 

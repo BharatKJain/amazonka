@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.EgressOnlyInternetGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.EgressOnlyInternetGateway where
@@ -78,17 +78,22 @@ egressOnlyInternetGateway_tags = Lens.lens (\EgressOnlyInternetGateway' {tags} -
 instance Data.FromXML EgressOnlyInternetGateway where
   parseXML x =
     EgressOnlyInternetGateway'
-      Prelude.<$> ( x Data..@? "attachmentSet" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "attachmentSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "egressOnlyInternetGatewayId")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable EgressOnlyInternetGateway where
   hashWithSalt _salt EgressOnlyInternetGateway' {..} =
-    _salt `Prelude.hashWithSalt` attachments
+    _salt
+      `Prelude.hashWithSalt` attachments
       `Prelude.hashWithSalt` egressOnlyInternetGatewayId
       `Prelude.hashWithSalt` tags
 

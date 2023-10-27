@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.ListedUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.ListedUser where
@@ -195,7 +195,8 @@ instance Data.FromJSON ListedUser where
 
 instance Prelude.Hashable ListedUser where
   hashWithSalt _salt ListedUser' {..} =
-    _salt `Prelude.hashWithSalt` homeDirectory
+    _salt
+      `Prelude.hashWithSalt` homeDirectory
       `Prelude.hashWithSalt` homeDirectoryType
       `Prelude.hashWithSalt` role'
       `Prelude.hashWithSalt` sshPublicKeyCount

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.App
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.App where
@@ -236,7 +236,8 @@ instance Data.FromJSON App where
 
 instance Prelude.Hashable App where
   hashWithSalt _salt App' {..} =
-    _salt `Prelude.hashWithSalt` appId
+    _salt
+      `Prelude.hashWithSalt` appId
       `Prelude.hashWithSalt` appSource
       `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` createdAt

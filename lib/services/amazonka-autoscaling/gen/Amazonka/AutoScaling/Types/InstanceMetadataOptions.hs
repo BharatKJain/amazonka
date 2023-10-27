@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.InstanceMetadataOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.InstanceMetadataOptions where
@@ -151,7 +151,8 @@ instance Data.FromXML InstanceMetadataOptions where
 
 instance Prelude.Hashable InstanceMetadataOptions where
   hashWithSalt _salt InstanceMetadataOptions' {..} =
-    _salt `Prelude.hashWithSalt` httpEndpoint
+    _salt
+      `Prelude.hashWithSalt` httpEndpoint
       `Prelude.hashWithSalt` httpPutResponseHopLimit
       `Prelude.hashWithSalt` httpTokens
 

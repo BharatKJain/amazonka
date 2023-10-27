@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.GroundStationData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.GroundStationData where
@@ -85,7 +85,8 @@ instance Data.FromJSON GroundStationData where
 
 instance Prelude.Hashable GroundStationData where
   hashWithSalt _salt GroundStationData' {..} =
-    _salt `Prelude.hashWithSalt` groundStationId
+    _salt
+      `Prelude.hashWithSalt` groundStationId
       `Prelude.hashWithSalt` groundStationName
       `Prelude.hashWithSalt` region
 

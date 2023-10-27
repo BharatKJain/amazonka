@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.ResourceCountFilters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.ResourceCountFilters where
@@ -75,7 +75,8 @@ resourceCountFilters_resourceType = Lens.lens (\ResourceCountFilters' {resourceT
 
 instance Prelude.Hashable ResourceCountFilters where
   hashWithSalt _salt ResourceCountFilters' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` resourceType
 

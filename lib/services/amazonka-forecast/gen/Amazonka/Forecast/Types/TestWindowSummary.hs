@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.TestWindowSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.TestWindowSummary where
@@ -113,7 +113,8 @@ instance Data.FromJSON TestWindowSummary where
 
 instance Prelude.Hashable TestWindowSummary where
   hashWithSalt _salt TestWindowSummary' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` testWindowEnd
       `Prelude.hashWithSalt` testWindowStart

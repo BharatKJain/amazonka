@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCases.Types.RelatedItemTypeFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCases.Types.RelatedItemTypeFilter where
@@ -67,7 +67,8 @@ relatedItemTypeFilter_contact = Lens.lens (\RelatedItemTypeFilter' {contact} -> 
 
 instance Prelude.Hashable RelatedItemTypeFilter where
   hashWithSalt _salt RelatedItemTypeFilter' {..} =
-    _salt `Prelude.hashWithSalt` comment
+    _salt
+      `Prelude.hashWithSalt` comment
       `Prelude.hashWithSalt` contact
 
 instance Prelude.NFData RelatedItemTypeFilter where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsElasticBeanstalkEnvironmentEnvironmentLink
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsElasticBeanstalkEnvironmentEnvironmentLink where
@@ -74,7 +74,7 @@ instance
       ( \x ->
           AwsElasticBeanstalkEnvironmentEnvironmentLink'
             Prelude.<$> (x Data..:? "EnvironmentName")
-              Prelude.<*> (x Data..:? "LinkName")
+            Prelude.<*> (x Data..:? "LinkName")
       )
 
 instance
@@ -84,7 +84,8 @@ instance
   hashWithSalt
     _salt
     AwsElasticBeanstalkEnvironmentEnvironmentLink' {..} =
-      _salt `Prelude.hashWithSalt` environmentName
+      _salt
+        `Prelude.hashWithSalt` environmentName
         `Prelude.hashWithSalt` linkName
 
 instance

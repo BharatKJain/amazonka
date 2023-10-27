@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.CaptionFormat
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.CaptionFormat where
@@ -215,7 +215,8 @@ instance Data.FromJSON CaptionFormat where
 
 instance Prelude.Hashable CaptionFormat where
   hashWithSalt _salt CaptionFormat' {..} =
-    _salt `Prelude.hashWithSalt` encryption
+    _salt
+      `Prelude.hashWithSalt` encryption
       `Prelude.hashWithSalt` format
       `Prelude.hashWithSalt` pattern'
 

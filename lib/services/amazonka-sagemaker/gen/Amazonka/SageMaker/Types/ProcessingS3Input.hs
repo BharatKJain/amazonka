@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ProcessingS3Input
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ProcessingS3Input where
@@ -186,7 +186,8 @@ instance Data.FromJSON ProcessingS3Input where
 
 instance Prelude.Hashable ProcessingS3Input where
   hashWithSalt _salt ProcessingS3Input' {..} =
-    _salt `Prelude.hashWithSalt` localPath
+    _salt
+      `Prelude.hashWithSalt` localPath
       `Prelude.hashWithSalt` s3CompressionType
       `Prelude.hashWithSalt` s3DataDistributionType
       `Prelude.hashWithSalt` s3InputMode

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.ListLabelingJobsForWorkteam
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -176,21 +176,21 @@ instance Core.AWSPager ListLabelingJobsForWorkteam where
     | Core.stop
         ( rs
             Lens.^? listLabelingJobsForWorkteamResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listLabelingJobsForWorkteamResponse_labelingJobSummaryList
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listLabelingJobsForWorkteam_nextToken
           Lens..~ rs
           Lens.^? listLabelingJobsForWorkteamResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListLabelingJobsForWorkteam where
   type
@@ -204,14 +204,16 @@ instance Core.AWSRequest ListLabelingJobsForWorkteam where
           ListLabelingJobsForWorkteamResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "LabelingJobSummaryList"
+            Prelude.<*> ( x
+                            Data..?> "LabelingJobSummaryList"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListLabelingJobsForWorkteam where
   hashWithSalt _salt ListLabelingJobsForWorkteam' {..} =
-    _salt `Prelude.hashWithSalt` creationTimeAfter
+    _salt
+      `Prelude.hashWithSalt` creationTimeAfter
       `Prelude.hashWithSalt` creationTimeBefore
       `Prelude.hashWithSalt` jobReferenceCodeContains
       `Prelude.hashWithSalt` maxResults

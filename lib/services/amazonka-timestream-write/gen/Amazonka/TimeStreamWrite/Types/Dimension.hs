@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamWrite.Types.Dimension
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamWrite.Types.Dimension where
@@ -95,7 +95,8 @@ dimension_value = Lens.lens (\Dimension' {value} -> value) (\s@Dimension' {} a -
 
 instance Prelude.Hashable Dimension where
   hashWithSalt _salt Dimension' {..} =
-    _salt `Prelude.hashWithSalt` dimensionValueType
+    _salt
+      `Prelude.hashWithSalt` dimensionValueType
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.DescribeFleetCapacity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -157,22 +157,22 @@ instance Core.AWSPager DescribeFleetCapacity where
     | Core.stop
         ( rs
             Lens.^? describeFleetCapacityResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeFleetCapacityResponse_fleetCapacity
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeFleetCapacity_nextToken
           Lens..~ rs
           Lens.^? describeFleetCapacityResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeFleetCapacity where
   type
@@ -191,7 +191,8 @@ instance Core.AWSRequest DescribeFleetCapacity where
 
 instance Prelude.Hashable DescribeFleetCapacity where
   hashWithSalt _salt DescribeFleetCapacity' {..} =
-    _salt `Prelude.hashWithSalt` fleetIds
+    _salt
+      `Prelude.hashWithSalt` fleetIds
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextToken
 

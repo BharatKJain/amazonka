@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FinSpaceData.Types.Dataset
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FinSpaceData.Types.Dataset where
@@ -181,7 +181,8 @@ instance Data.FromJSON Dataset where
 
 instance Prelude.Hashable Dataset where
   hashWithSalt _salt Dataset' {..} =
-    _salt `Prelude.hashWithSalt` alias
+    _salt
+      `Prelude.hashWithSalt` alias
       `Prelude.hashWithSalt` createTime
       `Prelude.hashWithSalt` datasetArn
       `Prelude.hashWithSalt` datasetDescription

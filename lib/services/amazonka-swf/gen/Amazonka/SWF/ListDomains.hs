@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SWF.ListDomains
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -174,19 +174,19 @@ instance Core.AWSPager ListDomains where
     | Core.stop
         ( rs
             Lens.^? listDomainsResponse_nextPageToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listDomainsResponse_domainInfos) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listDomains_nextPageToken
           Lens..~ rs
           Lens.^? listDomainsResponse_nextPageToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListDomains where
   type AWSResponse ListDomains = ListDomainsResponse
@@ -203,7 +203,8 @@ instance Core.AWSRequest ListDomains where
 
 instance Prelude.Hashable ListDomains where
   hashWithSalt _salt ListDomains' {..} =
-    _salt `Prelude.hashWithSalt` maximumPageSize
+    _salt
+      `Prelude.hashWithSalt` maximumPageSize
       `Prelude.hashWithSalt` nextPageToken
       `Prelude.hashWithSalt` reverseOrder
       `Prelude.hashWithSalt` registrationStatus

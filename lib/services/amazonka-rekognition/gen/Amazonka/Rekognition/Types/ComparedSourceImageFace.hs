@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.ComparedSourceImageFace
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.ComparedSourceImageFace where
@@ -80,7 +80,8 @@ instance Data.FromJSON ComparedSourceImageFace where
 
 instance Prelude.Hashable ComparedSourceImageFace where
   hashWithSalt _salt ComparedSourceImageFace' {..} =
-    _salt `Prelude.hashWithSalt` boundingBox
+    _salt
+      `Prelude.hashWithSalt` boundingBox
       `Prelude.hashWithSalt` confidence
 
 instance Prelude.NFData ComparedSourceImageFace where

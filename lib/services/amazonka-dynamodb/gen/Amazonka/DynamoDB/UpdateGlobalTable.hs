@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.UpdateGlobalTable
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest UpdateGlobalTable where
 
 instance Prelude.Hashable UpdateGlobalTable where
   hashWithSalt _salt UpdateGlobalTable' {..} =
-    _salt `Prelude.hashWithSalt` globalTableName
+    _salt
+      `Prelude.hashWithSalt` globalTableName
       `Prelude.hashWithSalt` replicaUpdates
 
 instance Prelude.NFData UpdateGlobalTable where

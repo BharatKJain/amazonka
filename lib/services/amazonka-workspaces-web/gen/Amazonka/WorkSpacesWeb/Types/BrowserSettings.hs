@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.Types.BrowserSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpacesWeb.Types.BrowserSettings where
@@ -86,7 +86,8 @@ instance Data.FromJSON BrowserSettings where
       "BrowserSettings"
       ( \x ->
           BrowserSettings'
-            Prelude.<$> ( x Data..:? "associatedPortalArns"
+            Prelude.<$> ( x
+                            Data..:? "associatedPortalArns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "browserPolicy")
@@ -95,7 +96,8 @@ instance Data.FromJSON BrowserSettings where
 
 instance Prelude.Hashable BrowserSettings where
   hashWithSalt _salt BrowserSettings' {..} =
-    _salt `Prelude.hashWithSalt` associatedPortalArns
+    _salt
+      `Prelude.hashWithSalt` associatedPortalArns
       `Prelude.hashWithSalt` browserPolicy
       `Prelude.hashWithSalt` browserSettingsArn
 

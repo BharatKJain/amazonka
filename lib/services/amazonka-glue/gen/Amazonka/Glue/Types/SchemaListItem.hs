@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.SchemaListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.SchemaListItem where
@@ -125,7 +125,8 @@ instance Data.FromJSON SchemaListItem where
 
 instance Prelude.Hashable SchemaListItem where
   hashWithSalt _salt SchemaListItem' {..} =
-    _salt `Prelude.hashWithSalt` createdTime
+    _salt
+      `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` registryName
       `Prelude.hashWithSalt` schemaArn

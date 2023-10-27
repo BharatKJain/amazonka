@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.ViewOffNadirInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.ViewOffNadirInput where
@@ -56,11 +56,9 @@ newViewOffNadirInput pLowerBound_ pUpperBound_ =
       upperBound = pUpperBound_
     }
 
--- |
 viewOffNadirInput_lowerBound :: Lens.Lens' ViewOffNadirInput Prelude.Double
 viewOffNadirInput_lowerBound = Lens.lens (\ViewOffNadirInput' {lowerBound} -> lowerBound) (\s@ViewOffNadirInput' {} a -> s {lowerBound = a} :: ViewOffNadirInput)
 
--- |
 viewOffNadirInput_upperBound :: Lens.Lens' ViewOffNadirInput Prelude.Double
 viewOffNadirInput_upperBound = Lens.lens (\ViewOffNadirInput' {upperBound} -> upperBound) (\s@ViewOffNadirInput' {} a -> s {upperBound = a} :: ViewOffNadirInput)
 
@@ -76,7 +74,8 @@ instance Data.FromJSON ViewOffNadirInput where
 
 instance Prelude.Hashable ViewOffNadirInput where
   hashWithSalt _salt ViewOffNadirInput' {..} =
-    _salt `Prelude.hashWithSalt` lowerBound
+    _salt
+      `Prelude.hashWithSalt` lowerBound
       `Prelude.hashWithSalt` upperBound
 
 instance Prelude.NFData ViewOffNadirInput where

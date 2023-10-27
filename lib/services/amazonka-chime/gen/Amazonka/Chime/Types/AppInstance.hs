@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.AppInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.AppInstance where
@@ -105,7 +105,8 @@ instance Data.FromJSON AppInstance where
 
 instance Prelude.Hashable AppInstance where
   hashWithSalt _salt AppInstance' {..} =
-    _salt `Prelude.hashWithSalt` appInstanceArn
+    _salt
+      `Prelude.hashWithSalt` appInstanceArn
       `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` lastUpdatedTimestamp
       `Prelude.hashWithSalt` metadata

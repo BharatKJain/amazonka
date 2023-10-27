@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.TypedLinkAttributeDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.TypedLinkAttributeDefinition where
@@ -131,7 +131,8 @@ instance
     TypedLinkAttributeDefinition
   where
   hashWithSalt _salt TypedLinkAttributeDefinition' {..} =
-    _salt `Prelude.hashWithSalt` defaultValue
+    _salt
+      `Prelude.hashWithSalt` defaultValue
       `Prelude.hashWithSalt` isImmutable
       `Prelude.hashWithSalt` rules
       `Prelude.hashWithSalt` name

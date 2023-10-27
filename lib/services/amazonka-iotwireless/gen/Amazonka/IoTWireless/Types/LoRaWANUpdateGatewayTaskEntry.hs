@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.LoRaWANUpdateGatewayTaskEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.LoRaWANUpdateGatewayTaskEntry where
@@ -79,7 +79,8 @@ instance
     LoRaWANUpdateGatewayTaskEntry
   where
   hashWithSalt _salt LoRaWANUpdateGatewayTaskEntry' {..} =
-    _salt `Prelude.hashWithSalt` currentVersion
+    _salt
+      `Prelude.hashWithSalt` currentVersion
       `Prelude.hashWithSalt` updateVersion
 
 instance Prelude.NFData LoRaWANUpdateGatewayTaskEntry where

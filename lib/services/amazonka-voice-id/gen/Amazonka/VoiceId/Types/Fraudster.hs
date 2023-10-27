@@ -14,7 +14,7 @@
 -- Module      : Amazonka.VoiceId.Types.Fraudster
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.VoiceId.Types.Fraudster where
@@ -84,7 +84,8 @@ instance Data.FromJSON Fraudster where
 
 instance Prelude.Hashable Fraudster where
   hashWithSalt _salt Fraudster' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` domainId
       `Prelude.hashWithSalt` generatedFraudsterId
 

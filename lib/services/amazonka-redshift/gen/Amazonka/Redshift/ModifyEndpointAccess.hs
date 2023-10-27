@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.ModifyEndpointAccess
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest ModifyEndpointAccess where
 
 instance Prelude.Hashable ModifyEndpointAccess where
   hashWithSalt _salt ModifyEndpointAccess' {..} =
-    _salt `Prelude.hashWithSalt` vpcSecurityGroupIds
+    _salt
+      `Prelude.hashWithSalt` vpcSecurityGroupIds
       `Prelude.hashWithSalt` endpointName
 
 instance Prelude.NFData ModifyEndpointAccess where

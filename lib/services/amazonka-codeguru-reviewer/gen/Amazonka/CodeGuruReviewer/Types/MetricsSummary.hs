@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.MetricsSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.MetricsSummary where
@@ -159,7 +159,8 @@ instance Data.FromJSON MetricsSummary where
 
 instance Prelude.Hashable MetricsSummary where
   hashWithSalt _salt MetricsSummary' {..} =
-    _salt `Prelude.hashWithSalt` findingsCount
+    _salt
+      `Prelude.hashWithSalt` findingsCount
       `Prelude.hashWithSalt` meteredLinesOfCodeCount
       `Prelude.hashWithSalt` suppressedLinesOfCodeCount
 

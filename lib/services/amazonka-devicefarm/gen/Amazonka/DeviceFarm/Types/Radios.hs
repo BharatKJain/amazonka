@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.Radios
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.Radios where
@@ -98,7 +98,8 @@ instance Data.FromJSON Radios where
 
 instance Prelude.Hashable Radios where
   hashWithSalt _salt Radios' {..} =
-    _salt `Prelude.hashWithSalt` bluetooth
+    _salt
+      `Prelude.hashWithSalt` bluetooth
       `Prelude.hashWithSalt` gps
       `Prelude.hashWithSalt` nfc
       `Prelude.hashWithSalt` wifi

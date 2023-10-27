@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatch.Types.StatisticSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatch.Types.StatisticSet where
@@ -94,7 +94,8 @@ statisticSet_maximum = Lens.lens (\StatisticSet' {maximum} -> maximum) (\s@Stati
 
 instance Prelude.Hashable StatisticSet where
   hashWithSalt _salt StatisticSet' {..} =
-    _salt `Prelude.hashWithSalt` sampleCount
+    _salt
+      `Prelude.hashWithSalt` sampleCount
       `Prelude.hashWithSalt` sum
       `Prelude.hashWithSalt` minimum
       `Prelude.hashWithSalt` maximum

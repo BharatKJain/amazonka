@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.ProjectSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.ProjectSource where
@@ -472,7 +472,8 @@ instance Data.FromJSON ProjectSource where
 
 instance Prelude.Hashable ProjectSource where
   hashWithSalt _salt ProjectSource' {..} =
-    _salt `Prelude.hashWithSalt` auth
+    _salt
+      `Prelude.hashWithSalt` auth
       `Prelude.hashWithSalt` buildStatusConfig
       `Prelude.hashWithSalt` buildspec
       `Prelude.hashWithSalt` gitCloneDepth

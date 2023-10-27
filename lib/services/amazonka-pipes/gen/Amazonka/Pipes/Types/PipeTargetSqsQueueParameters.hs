@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.PipeTargetSqsQueueParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.PipeTargetSqsQueueParameters where
@@ -84,7 +84,8 @@ instance
     PipeTargetSqsQueueParameters
   where
   hashWithSalt _salt PipeTargetSqsQueueParameters' {..} =
-    _salt `Prelude.hashWithSalt` messageDeduplicationId
+    _salt
+      `Prelude.hashWithSalt` messageDeduplicationId
       `Prelude.hashWithSalt` messageGroupId
 
 instance Prelude.NFData PipeTargetSqsQueueParameters where

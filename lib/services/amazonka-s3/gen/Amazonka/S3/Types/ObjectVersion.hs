@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.ObjectVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.ObjectVersion where
@@ -147,7 +147,8 @@ instance Data.FromXML ObjectVersion where
 
 instance Prelude.Hashable ObjectVersion where
   hashWithSalt _salt ObjectVersion' {..} =
-    _salt `Prelude.hashWithSalt` checksumAlgorithm
+    _salt
+      `Prelude.hashWithSalt` checksumAlgorithm
       `Prelude.hashWithSalt` eTag
       `Prelude.hashWithSalt` isLatest
       `Prelude.hashWithSalt` key

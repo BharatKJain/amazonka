@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Transfer.UpdateServer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -709,7 +709,8 @@ instance Core.AWSRequest UpdateServer where
 
 instance Prelude.Hashable UpdateServer where
   hashWithSalt _salt UpdateServer' {..} =
-    _salt `Prelude.hashWithSalt` certificate
+    _salt
+      `Prelude.hashWithSalt` certificate
       `Prelude.hashWithSalt` endpointDetails
       `Prelude.hashWithSalt` endpointType
       `Prelude.hashWithSalt` hostKey

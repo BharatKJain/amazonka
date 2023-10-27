@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeStar.Types.S3Location
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeStar.Types.S3Location where
@@ -71,7 +71,8 @@ s3Location_bucketName = Lens.lens (\S3Location' {bucketName} -> bucketName) (\s@
 
 instance Prelude.Hashable S3Location where
   hashWithSalt _salt S3Location' {..} =
-    _salt `Prelude.hashWithSalt` bucketKey
+    _salt
+      `Prelude.hashWithSalt` bucketKey
       `Prelude.hashWithSalt` bucketName
 
 instance Prelude.NFData S3Location where

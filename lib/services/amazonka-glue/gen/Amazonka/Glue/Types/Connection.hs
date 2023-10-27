@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Connection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Connection where
@@ -563,7 +563,8 @@ instance Data.FromJSON Connection where
       "Connection"
       ( \x ->
           Connection'
-            Prelude.<$> ( x Data..:? "ConnectionProperties"
+            Prelude.<$> ( x
+                            Data..:? "ConnectionProperties"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ConnectionType")
@@ -578,7 +579,8 @@ instance Data.FromJSON Connection where
 
 instance Prelude.Hashable Connection where
   hashWithSalt _salt Connection' {..} =
-    _salt `Prelude.hashWithSalt` connectionProperties
+    _salt
+      `Prelude.hashWithSalt` connectionProperties
       `Prelude.hashWithSalt` connectionType
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` description

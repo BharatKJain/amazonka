@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.DescribeModelExplainabilityJobDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,17 +109,17 @@ instance
       ( \s h x ->
           DescribeModelExplainabilityJobDefinitionResponse'
             Prelude.<$> (x Data..?> "ModelExplainabilityBaselineConfig")
-              Prelude.<*> (x Data..?> "NetworkConfig")
-              Prelude.<*> (x Data..?> "StoppingCondition")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> (x Data..:> "JobDefinitionArn")
-              Prelude.<*> (x Data..:> "JobDefinitionName")
-              Prelude.<*> (x Data..:> "CreationTime")
-              Prelude.<*> (x Data..:> "ModelExplainabilityAppSpecification")
-              Prelude.<*> (x Data..:> "ModelExplainabilityJobInput")
-              Prelude.<*> (x Data..:> "ModelExplainabilityJobOutputConfig")
-              Prelude.<*> (x Data..:> "JobResources")
-              Prelude.<*> (x Data..:> "RoleArn")
+            Prelude.<*> (x Data..?> "NetworkConfig")
+            Prelude.<*> (x Data..?> "StoppingCondition")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..:> "JobDefinitionArn")
+            Prelude.<*> (x Data..:> "JobDefinitionName")
+            Prelude.<*> (x Data..:> "CreationTime")
+            Prelude.<*> (x Data..:> "ModelExplainabilityAppSpecification")
+            Prelude.<*> (x Data..:> "ModelExplainabilityJobInput")
+            Prelude.<*> (x Data..:> "ModelExplainabilityJobOutputConfig")
+            Prelude.<*> (x Data..:> "JobResources")
+            Prelude.<*> (x Data..:> "RoleArn")
       )
 
 instance

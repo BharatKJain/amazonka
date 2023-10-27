@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.ResourceTagSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.ResourceTagSet where
@@ -91,13 +91,16 @@ instance Data.FromXML ResourceTagSet where
     ResourceTagSet'
       Prelude.<$> (x Data..@? "ResourceId")
       Prelude.<*> (x Data..@? "ResourceType")
-      Prelude.<*> ( x Data..@? "Tags" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Tags"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList1 "Tag")
                   )
 
 instance Prelude.Hashable ResourceTagSet where
   hashWithSalt _salt ResourceTagSet' {..} =
-    _salt `Prelude.hashWithSalt` resourceId
+    _salt
+      `Prelude.hashWithSalt` resourceId
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` tags
 

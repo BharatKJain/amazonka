@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.BoundingBox
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.BoundingBox where
@@ -116,7 +116,8 @@ instance Data.FromJSON BoundingBox where
 
 instance Prelude.Hashable BoundingBox where
   hashWithSalt _salt BoundingBox' {..} =
-    _salt `Prelude.hashWithSalt` height
+    _salt
+      `Prelude.hashWithSalt` height
       `Prelude.hashWithSalt` left
       `Prelude.hashWithSalt` top
       `Prelude.hashWithSalt` width

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.Offering
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.Offering where
@@ -177,7 +177,8 @@ instance Data.FromJSON Offering where
 
 instance Prelude.Hashable Offering where
   hashWithSalt _salt Offering' {..} =
-    _salt `Prelude.hashWithSalt` currencyCode
+    _salt
+      `Prelude.hashWithSalt` currencyCode
       `Prelude.hashWithSalt` offeringArn
       `Prelude.hashWithSalt` offeringDescription
       `Prelude.hashWithSalt` durationUnits

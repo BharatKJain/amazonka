@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruProfiler.Types.FrameMetric
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruProfiler.Types.FrameMetric where
@@ -105,7 +105,8 @@ instance Data.FromJSON FrameMetric where
 
 instance Prelude.Hashable FrameMetric where
   hashWithSalt _salt FrameMetric' {..} =
-    _salt `Prelude.hashWithSalt` frameName
+    _salt
+      `Prelude.hashWithSalt` frameName
       `Prelude.hashWithSalt` threadStates
       `Prelude.hashWithSalt` type'
 

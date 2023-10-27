@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.JourneyLimits
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.JourneyLimits where
@@ -107,7 +107,8 @@ instance Data.FromJSON JourneyLimits where
 
 instance Prelude.Hashable JourneyLimits where
   hashWithSalt _salt JourneyLimits' {..} =
-    _salt `Prelude.hashWithSalt` dailyCap
+    _salt
+      `Prelude.hashWithSalt` dailyCap
       `Prelude.hashWithSalt` endpointReentryCap
       `Prelude.hashWithSalt` endpointReentryInterval
       `Prelude.hashWithSalt` messagesPerSecond

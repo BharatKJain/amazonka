@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.PublicIpv4Pool
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.PublicIpv4Pool where
@@ -121,12 +121,15 @@ instance Data.FromXML PublicIpv4Pool where
     PublicIpv4Pool'
       Prelude.<$> (x Data..@? "description")
       Prelude.<*> (x Data..@? "networkBorderGroup")
-      Prelude.<*> ( x Data..@? "poolAddressRangeSet"
+      Prelude.<*> ( x
+                      Data..@? "poolAddressRangeSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "poolId")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "totalAddressCount")
@@ -134,7 +137,8 @@ instance Data.FromXML PublicIpv4Pool where
 
 instance Prelude.Hashable PublicIpv4Pool where
   hashWithSalt _salt PublicIpv4Pool' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` networkBorderGroup
       `Prelude.hashWithSalt` poolAddressRanges
       `Prelude.hashWithSalt` poolId

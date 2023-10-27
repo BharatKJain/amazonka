@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.DescribeProvisioningArtifact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -167,7 +167,8 @@ instance
     DescribeProvisioningArtifact
   where
   hashWithSalt _salt DescribeProvisioningArtifact' {..} =
-    _salt `Prelude.hashWithSalt` acceptLanguage
+    _salt
+      `Prelude.hashWithSalt` acceptLanguage
       `Prelude.hashWithSalt` productId
       `Prelude.hashWithSalt` productName
       `Prelude.hashWithSalt` provisioningArtifactId

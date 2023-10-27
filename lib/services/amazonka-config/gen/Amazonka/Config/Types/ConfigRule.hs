@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.ConfigRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.ConfigRule where
@@ -319,7 +319,8 @@ instance Data.FromJSON ConfigRule where
             Prelude.<*> (x Data..:? "ConfigRuleState")
             Prelude.<*> (x Data..:? "CreatedBy")
             Prelude.<*> (x Data..:? "Description")
-            Prelude.<*> ( x Data..:? "EvaluationModes"
+            Prelude.<*> ( x
+                            Data..:? "EvaluationModes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "InputParameters")
@@ -330,7 +331,8 @@ instance Data.FromJSON ConfigRule where
 
 instance Prelude.Hashable ConfigRule where
   hashWithSalt _salt ConfigRule' {..} =
-    _salt `Prelude.hashWithSalt` configRuleArn
+    _salt
+      `Prelude.hashWithSalt` configRuleArn
       `Prelude.hashWithSalt` configRuleId
       `Prelude.hashWithSalt` configRuleName
       `Prelude.hashWithSalt` configRuleState

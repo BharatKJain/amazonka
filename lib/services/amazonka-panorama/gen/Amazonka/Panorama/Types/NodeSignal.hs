@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Panorama.Types.NodeSignal
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Panorama.Types.NodeSignal where
@@ -69,7 +69,8 @@ nodeSignal_signal = Lens.lens (\NodeSignal' {signal} -> signal) (\s@NodeSignal' 
 
 instance Prelude.Hashable NodeSignal where
   hashWithSalt _salt NodeSignal' {..} =
-    _salt `Prelude.hashWithSalt` nodeInstanceId
+    _salt
+      `Prelude.hashWithSalt` nodeInstanceId
       `Prelude.hashWithSalt` signal
 
 instance Prelude.NFData NodeSignal where

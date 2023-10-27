@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.CodeReviewSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.CodeReviewSummary where
@@ -235,7 +235,8 @@ instance Data.FromJSON CodeReviewSummary where
 
 instance Prelude.Hashable CodeReviewSummary where
   hashWithSalt _salt CodeReviewSummary' {..} =
-    _salt `Prelude.hashWithSalt` codeReviewArn
+    _salt
+      `Prelude.hashWithSalt` codeReviewArn
       `Prelude.hashWithSalt` createdTimeStamp
       `Prelude.hashWithSalt` lastUpdatedTimeStamp
       `Prelude.hashWithSalt` metricsSummary

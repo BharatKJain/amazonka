@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.TaskTemplateMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.TaskTemplateMetadata where
@@ -134,7 +134,8 @@ instance Data.FromJSON TaskTemplateMetadata where
 
 instance Prelude.Hashable TaskTemplateMetadata where
   hashWithSalt _salt TaskTemplateMetadata' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` id

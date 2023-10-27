@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.AutoDetectionS3SourceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.AutoDetectionS3SourceConfig where
@@ -65,7 +65,8 @@ autoDetectionS3SourceConfig_templatedPathList = Lens.lens (\AutoDetectionS3Sourc
 
 instance Prelude.Hashable AutoDetectionS3SourceConfig where
   hashWithSalt _salt AutoDetectionS3SourceConfig' {..} =
-    _salt `Prelude.hashWithSalt` historicalDataPathList
+    _salt
+      `Prelude.hashWithSalt` historicalDataPathList
       `Prelude.hashWithSalt` templatedPathList
 
 instance Prelude.NFData AutoDetectionS3SourceConfig where

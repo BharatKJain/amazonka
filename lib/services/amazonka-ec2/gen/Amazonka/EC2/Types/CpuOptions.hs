@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.CpuOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.CpuOptions where
@@ -71,7 +71,8 @@ instance Data.FromXML CpuOptions where
 
 instance Prelude.Hashable CpuOptions where
   hashWithSalt _salt CpuOptions' {..} =
-    _salt `Prelude.hashWithSalt` coreCount
+    _salt
+      `Prelude.hashWithSalt` coreCount
       `Prelude.hashWithSalt` threadsPerCore
 
 instance Prelude.NFData CpuOptions where

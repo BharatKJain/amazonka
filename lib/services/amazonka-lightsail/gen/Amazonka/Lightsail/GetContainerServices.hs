@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.GetContainerServices
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -95,7 +95,8 @@ instance Core.AWSRequest GetContainerServices where
     Response.receiveJSON
       ( \s h x ->
           GetContainerServicesResponse'
-            Prelude.<$> ( x Data..?> "containerServices"
+            Prelude.<$> ( x
+                            Data..?> "containerServices"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

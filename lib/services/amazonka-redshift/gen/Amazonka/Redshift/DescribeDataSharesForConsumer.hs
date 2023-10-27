@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.DescribeDataSharesForConsumer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -150,22 +150,22 @@ instance Core.AWSPager DescribeDataSharesForConsumer where
     | Core.stop
         ( rs
             Lens.^? describeDataSharesForConsumerResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeDataSharesForConsumerResponse_dataShares
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeDataSharesForConsumer_marker
           Lens..~ rs
           Lens.^? describeDataSharesForConsumerResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -181,7 +181,9 @@ instance
       "DescribeDataSharesForConsumerResult"
       ( \s h x ->
           DescribeDataSharesForConsumerResponse'
-            Prelude.<$> ( x Data..@? "DataShares" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "DataShares"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (x Data..@? "Marker")
@@ -193,7 +195,8 @@ instance
     DescribeDataSharesForConsumer
   where
   hashWithSalt _salt DescribeDataSharesForConsumer' {..} =
-    _salt `Prelude.hashWithSalt` consumerArn
+    _salt
+      `Prelude.hashWithSalt` consumerArn
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxRecords
       `Prelude.hashWithSalt` status

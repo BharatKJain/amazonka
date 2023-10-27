@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53Resolver.ImportFirewallDomains
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -161,7 +161,8 @@ instance Core.AWSRequest ImportFirewallDomains where
 
 instance Prelude.Hashable ImportFirewallDomains where
   hashWithSalt _salt ImportFirewallDomains' {..} =
-    _salt `Prelude.hashWithSalt` firewallDomainListId
+    _salt
+      `Prelude.hashWithSalt` firewallDomainListId
       `Prelude.hashWithSalt` operation
       `Prelude.hashWithSalt` domainFileUrl
 
@@ -259,7 +260,6 @@ importFirewallDomainsResponse_id = Lens.lens (\ImportFirewallDomainsResponse' {i
 importFirewallDomainsResponse_name :: Lens.Lens' ImportFirewallDomainsResponse (Prelude.Maybe Prelude.Text)
 importFirewallDomainsResponse_name = Lens.lens (\ImportFirewallDomainsResponse' {name} -> name) (\s@ImportFirewallDomainsResponse' {} a -> s {name = a} :: ImportFirewallDomainsResponse)
 
--- |
 importFirewallDomainsResponse_status :: Lens.Lens' ImportFirewallDomainsResponse (Prelude.Maybe FirewallDomainListStatus)
 importFirewallDomainsResponse_status = Lens.lens (\ImportFirewallDomainsResponse' {status} -> status) (\s@ImportFirewallDomainsResponse' {} a -> s {status = a} :: ImportFirewallDomainsResponse)
 

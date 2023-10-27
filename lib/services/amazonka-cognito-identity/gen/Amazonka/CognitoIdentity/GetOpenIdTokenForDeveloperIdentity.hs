@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentity.GetOpenIdTokenForDeveloperIdentity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -211,8 +211,8 @@ instance
       ( \s h x ->
           GetOpenIdTokenForDeveloperIdentityResponse'
             Prelude.<$> (x Data..?> "IdentityId")
-              Prelude.<*> (x Data..?> "Token")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "Token")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -222,7 +222,8 @@ instance
   hashWithSalt
     _salt
     GetOpenIdTokenForDeveloperIdentity' {..} =
-      _salt `Prelude.hashWithSalt` identityId
+      _salt
+        `Prelude.hashWithSalt` identityId
         `Prelude.hashWithSalt` principalTags
         `Prelude.hashWithSalt` tokenDuration
         `Prelude.hashWithSalt` identityPoolId

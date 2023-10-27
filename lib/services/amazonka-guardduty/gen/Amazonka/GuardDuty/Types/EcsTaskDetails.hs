@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.EcsTaskDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.EcsTaskDetails where
@@ -157,7 +157,8 @@ instance Data.FromJSON EcsTaskDetails where
 
 instance Prelude.Hashable EcsTaskDetails where
   hashWithSalt _salt EcsTaskDetails' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` containers
       `Prelude.hashWithSalt` definitionArn
       `Prelude.hashWithSalt` group'

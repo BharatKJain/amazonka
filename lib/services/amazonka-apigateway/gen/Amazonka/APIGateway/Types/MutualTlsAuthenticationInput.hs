@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.MutualTlsAuthenticationInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.MutualTlsAuthenticationInput where
@@ -89,7 +89,8 @@ instance
     MutualTlsAuthenticationInput
   where
   hashWithSalt _salt MutualTlsAuthenticationInput' {..} =
-    _salt `Prelude.hashWithSalt` truststoreUri
+    _salt
+      `Prelude.hashWithSalt` truststoreUri
       `Prelude.hashWithSalt` truststoreVersion
 
 instance Prelude.NFData MutualTlsAuthenticationInput where

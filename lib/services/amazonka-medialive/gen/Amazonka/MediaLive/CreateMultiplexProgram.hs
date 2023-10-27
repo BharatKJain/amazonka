@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaLive.CreateMultiplexProgram
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -139,7 +139,8 @@ instance Core.AWSRequest CreateMultiplexProgram' where
 
 instance Prelude.Hashable CreateMultiplexProgram' where
   hashWithSalt _salt CreateMultiplexProgram'' {..} =
-    _salt `Prelude.hashWithSalt` multiplexId
+    _salt
+      `Prelude.hashWithSalt` multiplexId
       `Prelude.hashWithSalt` requestId
       `Prelude.hashWithSalt` multiplexProgramSettings
       `Prelude.hashWithSalt` programName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.EcsClusterDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.EcsClusterDetails where
@@ -140,7 +140,8 @@ instance Data.FromJSON EcsClusterDetails where
 
 instance Prelude.Hashable EcsClusterDetails where
   hashWithSalt _salt EcsClusterDetails' {..} =
-    _salt `Prelude.hashWithSalt` activeServicesCount
+    _salt
+      `Prelude.hashWithSalt` activeServicesCount
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` registeredContainerInstancesCount

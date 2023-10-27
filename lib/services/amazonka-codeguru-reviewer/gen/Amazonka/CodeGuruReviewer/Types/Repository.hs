@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.Repository
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.Repository where
@@ -88,7 +88,8 @@ repository_s3Bucket = Lens.lens (\Repository' {s3Bucket} -> s3Bucket) (\s@Reposi
 
 instance Prelude.Hashable Repository where
   hashWithSalt _salt Repository' {..} =
-    _salt `Prelude.hashWithSalt` bitbucket
+    _salt
+      `Prelude.hashWithSalt` bitbucket
       `Prelude.hashWithSalt` codeCommit
       `Prelude.hashWithSalt` gitHubEnterpriseServer
       `Prelude.hashWithSalt` s3Bucket

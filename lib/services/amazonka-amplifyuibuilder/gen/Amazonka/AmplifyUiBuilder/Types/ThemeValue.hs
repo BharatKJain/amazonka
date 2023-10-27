@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.ThemeValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.ThemeValue where
@@ -75,7 +75,8 @@ instance Data.FromJSON ThemeValue where
 
 instance Prelude.Hashable ThemeValue where
   hashWithSalt _salt ThemeValue' {..} =
-    _salt `Prelude.hashWithSalt` children
+    _salt
+      `Prelude.hashWithSalt` children
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData ThemeValue where

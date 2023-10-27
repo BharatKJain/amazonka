@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ActionTypeId
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ActionTypeId where
@@ -171,7 +171,8 @@ instance Data.FromJSON ActionTypeId where
 
 instance Prelude.Hashable ActionTypeId where
   hashWithSalt _salt ActionTypeId' {..} =
-    _salt `Prelude.hashWithSalt` category
+    _salt
+      `Prelude.hashWithSalt` category
       `Prelude.hashWithSalt` owner
       `Prelude.hashWithSalt` provider
       `Prelude.hashWithSalt` version

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.ResourceSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.ResourceSpecification where
@@ -78,7 +78,8 @@ instance Data.FromJSON ResourceSpecification where
 
 instance Prelude.Hashable ResourceSpecification where
   hashWithSalt _salt ResourceSpecification' {..} =
-    _salt `Prelude.hashWithSalt` reservedBitrate
+    _salt
+      `Prelude.hashWithSalt` reservedBitrate
       `Prelude.hashWithSalt` resourceType
 
 instance Prelude.NFData ResourceSpecification where

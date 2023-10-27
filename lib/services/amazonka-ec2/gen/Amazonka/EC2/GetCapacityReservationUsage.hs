@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.GetCapacityReservationUsage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -156,7 +156,8 @@ instance Core.AWSRequest GetCapacityReservationUsage where
             Prelude.<$> (x Data..@? "availableInstanceCount")
             Prelude.<*> (x Data..@? "capacityReservationId")
             Prelude.<*> (x Data..@? "instanceType")
-            Prelude.<*> ( x Data..@? "instanceUsageSet"
+            Prelude.<*> ( x
+                            Data..@? "instanceUsageSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -168,7 +169,8 @@ instance Core.AWSRequest GetCapacityReservationUsage where
 
 instance Prelude.Hashable GetCapacityReservationUsage where
   hashWithSalt _salt GetCapacityReservationUsage' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` capacityReservationId

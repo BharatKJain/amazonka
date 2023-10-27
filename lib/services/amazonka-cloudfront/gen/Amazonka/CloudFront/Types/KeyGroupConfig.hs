@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.KeyGroupConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.KeyGroupConfig where
@@ -84,13 +84,16 @@ instance Data.FromXML KeyGroupConfig where
     KeyGroupConfig'
       Prelude.<$> (x Data..@? "Comment")
       Prelude.<*> (x Data..@ "Name")
-      Prelude.<*> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Data.parseXMLList "PublicKey"
                   )
 
 instance Prelude.Hashable KeyGroupConfig where
   hashWithSalt _salt KeyGroupConfig' {..} =
-    _salt `Prelude.hashWithSalt` comment
+    _salt
+      `Prelude.hashWithSalt` comment
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` items
 

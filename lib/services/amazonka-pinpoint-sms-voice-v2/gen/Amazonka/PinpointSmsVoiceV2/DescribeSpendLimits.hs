@@ -16,7 +16,7 @@
 -- Module      : Amazonka.PinpointSmsVoiceV2.DescribeSpendLimits
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,22 +102,22 @@ instance Core.AWSPager DescribeSpendLimits where
     | Core.stop
         ( rs
             Lens.^? describeSpendLimitsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeSpendLimitsResponse_spendLimits
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeSpendLimits_nextToken
           Lens..~ rs
           Lens.^? describeSpendLimitsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeSpendLimits where
   type
@@ -136,7 +136,8 @@ instance Core.AWSRequest DescribeSpendLimits where
 
 instance Prelude.Hashable DescribeSpendLimits where
   hashWithSalt _salt DescribeSpendLimits' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData DescribeSpendLimits where

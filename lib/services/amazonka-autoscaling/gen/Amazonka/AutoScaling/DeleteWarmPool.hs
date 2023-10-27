@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.DeleteWarmPool
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest DeleteWarmPool where
 
 instance Prelude.Hashable DeleteWarmPool where
   hashWithSalt _salt DeleteWarmPool' {..} =
-    _salt `Prelude.hashWithSalt` forceDelete
+    _salt
+      `Prelude.hashWithSalt` forceDelete
       `Prelude.hashWithSalt` autoScalingGroupName
 
 instance Prelude.NFData DeleteWarmPool where

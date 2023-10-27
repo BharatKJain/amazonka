@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexRuntime.Types.GenericAttachment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexRuntime.Types.GenericAttachment where
@@ -107,7 +107,8 @@ instance Data.FromJSON GenericAttachment where
 
 instance Prelude.Hashable GenericAttachment where
   hashWithSalt _salt GenericAttachment' {..} =
-    _salt `Prelude.hashWithSalt` attachmentLinkUrl
+    _salt
+      `Prelude.hashWithSalt` attachmentLinkUrl
       `Prelude.hashWithSalt` buttons
       `Prelude.hashWithSalt` imageUrl
       `Prelude.hashWithSalt` subTitle

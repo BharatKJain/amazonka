@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.ContainerService
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.ContainerService where
@@ -457,7 +457,8 @@ instance Data.FromJSON ContainerService where
             Prelude.<*> (x Data..:? "principalArn")
             Prelude.<*> (x Data..:? "privateDomainName")
             Prelude.<*> (x Data..:? "privateRegistryAccess")
-            Prelude.<*> ( x Data..:? "publicDomainNames"
+            Prelude.<*> ( x
+                            Data..:? "publicDomainNames"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "resourceType")
@@ -470,7 +471,8 @@ instance Data.FromJSON ContainerService where
 
 instance Prelude.Hashable ContainerService where
   hashWithSalt _salt ContainerService' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` containerServiceName
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` currentDeployment

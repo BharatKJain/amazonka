@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.StartWorkflowRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,7 +102,8 @@ instance Core.AWSRequest StartWorkflowRun where
 
 instance Prelude.Hashable StartWorkflowRun where
   hashWithSalt _salt StartWorkflowRun' {..} =
-    _salt `Prelude.hashWithSalt` runProperties
+    _salt
+      `Prelude.hashWithSalt` runProperties
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData StartWorkflowRun where

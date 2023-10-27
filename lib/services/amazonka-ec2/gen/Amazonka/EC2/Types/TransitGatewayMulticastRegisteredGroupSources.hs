@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TransitGatewayMulticastRegisteredGroupSources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TransitGatewayMulticastRegisteredGroupSources where
@@ -86,11 +86,12 @@ instance
   parseXML x =
     TransitGatewayMulticastRegisteredGroupSources'
       Prelude.<$> (x Data..@? "groupIpAddress")
-        Prelude.<*> ( x Data..@? "registeredNetworkInterfaceIds"
-                        Core..!@ Prelude.mempty
-                        Prelude.>>= Core.may (Data.parseXMLList "item")
-                    )
-        Prelude.<*> (x Data..@? "transitGatewayMulticastDomainId")
+      Prelude.<*> ( x
+                      Data..@? "registeredNetworkInterfaceIds"
+                      Core..!@ Prelude.mempty
+                      Prelude.>>= Core.may (Data.parseXMLList "item")
+                  )
+      Prelude.<*> (x Data..@? "transitGatewayMulticastDomainId")
 
 instance
   Prelude.Hashable
@@ -99,7 +100,8 @@ instance
   hashWithSalt
     _salt
     TransitGatewayMulticastRegisteredGroupSources' {..} =
-      _salt `Prelude.hashWithSalt` groupIpAddress
+      _salt
+        `Prelude.hashWithSalt` groupIpAddress
         `Prelude.hashWithSalt` registeredNetworkInterfaceIds
         `Prelude.hashWithSalt` transitGatewayMulticastDomainId
 

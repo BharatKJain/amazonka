@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.DominantLanguage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.DominantLanguage where
@@ -88,7 +88,8 @@ instance Data.FromJSON DominantLanguage where
 
 instance Prelude.Hashable DominantLanguage where
   hashWithSalt _salt DominantLanguage' {..} =
-    _salt `Prelude.hashWithSalt` languageCode
+    _salt
+      `Prelude.hashWithSalt` languageCode
       `Prelude.hashWithSalt` score
 
 instance Prelude.NFData DominantLanguage where

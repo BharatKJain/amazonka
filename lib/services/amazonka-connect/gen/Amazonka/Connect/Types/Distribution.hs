@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.Distribution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.Distribution where
@@ -78,7 +78,8 @@ instance Data.FromJSON Distribution where
 
 instance Prelude.Hashable Distribution where
   hashWithSalt _salt Distribution' {..} =
-    _salt `Prelude.hashWithSalt` region
+    _salt
+      `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` percentage
 
 instance Prelude.NFData Distribution where

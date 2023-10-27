@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.GaugeChartFieldWells
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.GaugeChartFieldWells where
@@ -76,7 +76,8 @@ instance Data.FromJSON GaugeChartFieldWells where
 
 instance Prelude.Hashable GaugeChartFieldWells where
   hashWithSalt _salt GaugeChartFieldWells' {..} =
-    _salt `Prelude.hashWithSalt` targetValues
+    _salt
+      `Prelude.hashWithSalt` targetValues
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData GaugeChartFieldWells where

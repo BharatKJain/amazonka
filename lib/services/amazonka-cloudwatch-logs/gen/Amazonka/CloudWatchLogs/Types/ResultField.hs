@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchLogs.Types.ResultField
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchLogs.Types.ResultField where
@@ -79,7 +79,8 @@ instance Data.FromJSON ResultField where
 
 instance Prelude.Hashable ResultField where
   hashWithSalt _salt ResultField' {..} =
-    _salt `Prelude.hashWithSalt` field
+    _salt
+      `Prelude.hashWithSalt` field
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData ResultField where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SMS.Types.ServerGroupReplicationConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SMS.Types.ServerGroupReplicationConfiguration where
@@ -78,7 +78,8 @@ instance
       ( \x ->
           ServerGroupReplicationConfiguration'
             Prelude.<$> (x Data..:? "serverGroupId")
-            Prelude.<*> ( x Data..:? "serverReplicationConfigurations"
+            Prelude.<*> ( x
+                            Data..:? "serverReplicationConfigurations"
                             Data..!= Prelude.mempty
                         )
       )
@@ -90,7 +91,8 @@ instance
   hashWithSalt
     _salt
     ServerGroupReplicationConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` serverGroupId
+      _salt
+        `Prelude.hashWithSalt` serverGroupId
         `Prelude.hashWithSalt` serverReplicationConfigurations
 
 instance

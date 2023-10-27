@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.OnlineAbConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.OnlineAbConfig where
@@ -83,7 +83,8 @@ onlineAbConfig_treatmentWeights = Lens.lens (\OnlineAbConfig' {treatmentWeights}
 
 instance Prelude.Hashable OnlineAbConfig where
   hashWithSalt _salt OnlineAbConfig' {..} =
-    _salt `Prelude.hashWithSalt` controlTreatmentName
+    _salt
+      `Prelude.hashWithSalt` controlTreatmentName
       `Prelude.hashWithSalt` treatmentWeights
 
 instance Prelude.NFData OnlineAbConfig where

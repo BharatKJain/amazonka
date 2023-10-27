@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ComputeOptimizer.GetECSServiceRecommendations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -181,7 +181,8 @@ instance Core.AWSRequest GetECSServiceRecommendations where
     Response.receiveJSON
       ( \s h x ->
           GetECSServiceRecommendationsResponse'
-            Prelude.<$> ( x Data..?> "ecsServiceRecommendations"
+            Prelude.<$> ( x
+                            Data..?> "ecsServiceRecommendations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "errors" Core..!@ Prelude.mempty)
@@ -194,7 +195,8 @@ instance
     GetECSServiceRecommendations
   where
   hashWithSalt _salt GetECSServiceRecommendations' {..} =
-    _salt `Prelude.hashWithSalt` accountIds
+    _salt
+      `Prelude.hashWithSalt` accountIds
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.IntegerParameterRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.IntegerParameterRange where
@@ -157,7 +157,8 @@ instance Data.FromJSON IntegerParameterRange where
 
 instance Prelude.Hashable IntegerParameterRange where
   hashWithSalt _salt IntegerParameterRange' {..} =
-    _salt `Prelude.hashWithSalt` scalingType
+    _salt
+      `Prelude.hashWithSalt` scalingType
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` minValue
       `Prelude.hashWithSalt` maxValue

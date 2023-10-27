@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.ListGeofenceResponseEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.ListGeofenceResponseEntry where
@@ -166,7 +166,8 @@ instance Data.FromJSON ListGeofenceResponseEntry where
 
 instance Prelude.Hashable ListGeofenceResponseEntry where
   hashWithSalt _salt ListGeofenceResponseEntry' {..} =
-    _salt `Prelude.hashWithSalt` createTime
+    _salt
+      `Prelude.hashWithSalt` createTime
       `Prelude.hashWithSalt` geofenceId
       `Prelude.hashWithSalt` geometry
       `Prelude.hashWithSalt` status

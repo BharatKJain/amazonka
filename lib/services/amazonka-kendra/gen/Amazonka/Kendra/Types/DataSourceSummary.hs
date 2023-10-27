@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.DataSourceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.DataSourceSummary where
@@ -138,7 +138,8 @@ instance Data.FromJSON DataSourceSummary where
 
 instance Prelude.Hashable DataSourceSummary where
   hashWithSalt _salt DataSourceSummary' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` languageCode
       `Prelude.hashWithSalt` name

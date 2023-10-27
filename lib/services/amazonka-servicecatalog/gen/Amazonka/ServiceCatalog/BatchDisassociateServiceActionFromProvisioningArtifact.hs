@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.BatchDisassociateServiceActionFromProvisioningArtifact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -126,10 +126,11 @@ instance
     Response.receiveJSON
       ( \s h x ->
           BatchDisassociateServiceActionFromProvisioningArtifactResponse'
-            Prelude.<$> ( x Data..?> "FailedServiceActionAssociations"
+            Prelude.<$> ( x
+                            Data..?> "FailedServiceActionAssociations"
                             Core..!@ Prelude.mempty
                         )
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -139,7 +140,8 @@ instance
   hashWithSalt
     _salt
     BatchDisassociateServiceActionFromProvisioningArtifact' {..} =
-      _salt `Prelude.hashWithSalt` acceptLanguage
+      _salt
+        `Prelude.hashWithSalt` acceptLanguage
         `Prelude.hashWithSalt` serviceActionAssociations
 
 instance

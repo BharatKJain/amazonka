@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeGuruProfiler.GetRecommendations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -227,14 +227,16 @@ instance Core.AWSRequest GetRecommendations where
             Prelude.<*> (x Data..:> "profileEndTime")
             Prelude.<*> (x Data..:> "profileStartTime")
             Prelude.<*> (x Data..:> "profilingGroupName")
-            Prelude.<*> ( x Data..?> "recommendations"
+            Prelude.<*> ( x
+                            Data..?> "recommendations"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable GetRecommendations where
   hashWithSalt _salt GetRecommendations' {..} =
-    _salt `Prelude.hashWithSalt` locale
+    _salt
+      `Prelude.hashWithSalt` locale
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` profilingGroupName
       `Prelude.hashWithSalt` startTime

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.InstanceInformationFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.InstanceInformationFilter where
@@ -76,7 +76,8 @@ instanceInformationFilter_valueSet = Lens.lens (\InstanceInformationFilter' {val
 
 instance Prelude.Hashable InstanceInformationFilter where
   hashWithSalt _salt InstanceInformationFilter' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` valueSet
 
 instance Prelude.NFData InstanceInformationFilter where

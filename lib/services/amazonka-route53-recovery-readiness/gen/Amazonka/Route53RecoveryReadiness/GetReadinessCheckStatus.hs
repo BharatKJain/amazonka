@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53RecoveryReadiness.GetReadinessCheckStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,22 +110,22 @@ instance Core.AWSPager GetReadinessCheckStatus where
     | Core.stop
         ( rs
             Lens.^? getReadinessCheckStatusResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getReadinessCheckStatusResponse_resources
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getReadinessCheckStatus_nextToken
           Lens..~ rs
           Lens.^? getReadinessCheckStatusResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetReadinessCheckStatus where
   type
@@ -146,7 +146,8 @@ instance Core.AWSRequest GetReadinessCheckStatus where
 
 instance Prelude.Hashable GetReadinessCheckStatus where
   hashWithSalt _salt GetReadinessCheckStatus' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` readinessCheckName
 

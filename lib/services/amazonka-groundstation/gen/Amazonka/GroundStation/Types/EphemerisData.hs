@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.EphemerisData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.EphemerisData where
@@ -64,7 +64,8 @@ ephemerisData_tle = Lens.lens (\EphemerisData' {tle} -> tle) (\s@EphemerisData' 
 
 instance Prelude.Hashable EphemerisData where
   hashWithSalt _salt EphemerisData' {..} =
-    _salt `Prelude.hashWithSalt` oem
+    _salt
+      `Prelude.hashWithSalt` oem
       `Prelude.hashWithSalt` tle
 
 instance Prelude.NFData EphemerisData where

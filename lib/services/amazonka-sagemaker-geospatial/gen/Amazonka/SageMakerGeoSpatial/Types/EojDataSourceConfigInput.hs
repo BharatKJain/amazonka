@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.EojDataSourceConfigInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.EojDataSourceConfigInput where
@@ -47,7 +47,6 @@ newEojDataSourceConfigInput ::
 newEojDataSourceConfigInput =
   EojDataSourceConfigInput' {s3Data = Prelude.Nothing}
 
--- |
 eojDataSourceConfigInput_s3Data :: Lens.Lens' EojDataSourceConfigInput (Prelude.Maybe S3DataInput)
 eojDataSourceConfigInput_s3Data = Lens.lens (\EojDataSourceConfigInput' {s3Data} -> s3Data) (\s@EojDataSourceConfigInput' {} a -> s {s3Data = a} :: EojDataSourceConfigInput)
 

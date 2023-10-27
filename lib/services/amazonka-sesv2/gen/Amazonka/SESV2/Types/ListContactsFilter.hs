@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.ListContactsFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.ListContactsFilter where
@@ -67,7 +67,8 @@ listContactsFilter_topicFilter = Lens.lens (\ListContactsFilter' {topicFilter} -
 
 instance Prelude.Hashable ListContactsFilter where
   hashWithSalt _salt ListContactsFilter' {..} =
-    _salt `Prelude.hashWithSalt` filteredStatus
+    _salt
+      `Prelude.hashWithSalt` filteredStatus
       `Prelude.hashWithSalt` topicFilter
 
 instance Prelude.NFData ListContactsFilter where

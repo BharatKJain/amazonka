@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.DeploymentOverview
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.DeploymentOverview where
@@ -121,7 +121,8 @@ instance Data.FromJSON DeploymentOverview where
 
 instance Prelude.Hashable DeploymentOverview where
   hashWithSalt _salt DeploymentOverview' {..} =
-    _salt `Prelude.hashWithSalt` failed
+    _salt
+      `Prelude.hashWithSalt` failed
       `Prelude.hashWithSalt` inProgress
       `Prelude.hashWithSalt` pending
       `Prelude.hashWithSalt` ready

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AMP.Types.RuleGroupsNamespaceStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AMP.Types.RuleGroupsNamespaceStatus where
@@ -78,7 +78,8 @@ instance Data.FromJSON RuleGroupsNamespaceStatus where
 
 instance Prelude.Hashable RuleGroupsNamespaceStatus where
   hashWithSalt _salt RuleGroupsNamespaceStatus' {..} =
-    _salt `Prelude.hashWithSalt` statusReason
+    _salt
+      `Prelude.hashWithSalt` statusReason
       `Prelude.hashWithSalt` statusCode
 
 instance Prelude.NFData RuleGroupsNamespaceStatus where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.EbsVolumeScanDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.EbsVolumeScanDetails where
@@ -116,7 +116,8 @@ instance Data.FromJSON EbsVolumeScanDetails where
 
 instance Prelude.Hashable EbsVolumeScanDetails where
   hashWithSalt _salt EbsVolumeScanDetails' {..} =
-    _salt `Prelude.hashWithSalt` scanCompletedAt
+    _salt
+      `Prelude.hashWithSalt` scanCompletedAt
       `Prelude.hashWithSalt` scanDetections
       `Prelude.hashWithSalt` scanId
       `Prelude.hashWithSalt` scanStartedAt

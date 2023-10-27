@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.SourceSchema
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.SourceSchema where
@@ -95,7 +95,8 @@ instance Data.FromJSON SourceSchema where
 
 instance Prelude.Hashable SourceSchema where
   hashWithSalt _salt SourceSchema' {..} =
-    _salt `Prelude.hashWithSalt` recordEncoding
+    _salt
+      `Prelude.hashWithSalt` recordEncoding
       `Prelude.hashWithSalt` recordFormat
       `Prelude.hashWithSalt` recordColumns
 

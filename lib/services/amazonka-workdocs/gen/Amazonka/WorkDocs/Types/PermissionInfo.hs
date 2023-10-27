@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkDocs.Types.PermissionInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkDocs.Types.PermissionInfo where
@@ -70,12 +70,14 @@ instance Data.FromJSON PermissionInfo where
       "PermissionInfo"
       ( \x ->
           PermissionInfo'
-            Prelude.<$> (x Data..:? "Role") Prelude.<*> (x Data..:? "Type")
+            Prelude.<$> (x Data..:? "Role")
+            Prelude.<*> (x Data..:? "Type")
       )
 
 instance Prelude.Hashable PermissionInfo where
   hashWithSalt _salt PermissionInfo' {..} =
-    _salt `Prelude.hashWithSalt` role'
+    _salt
+      `Prelude.hashWithSalt` role'
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData PermissionInfo where

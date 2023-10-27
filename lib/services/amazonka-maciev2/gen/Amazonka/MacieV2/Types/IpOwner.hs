@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.IpOwner
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.IpOwner where
@@ -106,7 +106,8 @@ instance Data.FromJSON IpOwner where
 
 instance Prelude.Hashable IpOwner where
   hashWithSalt _salt IpOwner' {..} =
-    _salt `Prelude.hashWithSalt` asn
+    _salt
+      `Prelude.hashWithSalt` asn
       `Prelude.hashWithSalt` asnOrg
       `Prelude.hashWithSalt` isp
       `Prelude.hashWithSalt` org

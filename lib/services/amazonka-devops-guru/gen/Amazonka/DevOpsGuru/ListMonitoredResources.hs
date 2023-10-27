@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DevOpsGuru.ListMonitoredResources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,21 +115,21 @@ instance Core.AWSPager ListMonitoredResources where
     | Core.stop
         ( rs
             Lens.^? listMonitoredResourcesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listMonitoredResourcesResponse_monitoredResourceIdentifiers
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listMonitoredResources_nextToken
           Lens..~ rs
           Lens.^? listMonitoredResourcesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListMonitoredResources where
   type
@@ -143,14 +143,16 @@ instance Core.AWSRequest ListMonitoredResources where
           ListMonitoredResourcesResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "MonitoredResourceIdentifiers"
+            Prelude.<*> ( x
+                            Data..?> "MonitoredResourceIdentifiers"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListMonitoredResources where
   hashWithSalt _salt ListMonitoredResources' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.StageKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.StageKey where
@@ -65,7 +65,8 @@ stageKey_stageName = Lens.lens (\StageKey' {stageName} -> stageName) (\s@StageKe
 
 instance Prelude.Hashable StageKey where
   hashWithSalt _salt StageKey' {..} =
-    _salt `Prelude.hashWithSalt` restApiId
+    _salt
+      `Prelude.hashWithSalt` restApiId
       `Prelude.hashWithSalt` stageName
 
 instance Prelude.NFData StageKey where

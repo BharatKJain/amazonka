@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.XssMatchSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.XssMatchSet where
@@ -120,14 +120,16 @@ instance Data.FromJSON XssMatchSet where
           XssMatchSet'
             Prelude.<$> (x Data..:? "Name")
             Prelude.<*> (x Data..: "XssMatchSetId")
-            Prelude.<*> ( x Data..:? "XssMatchTuples"
+            Prelude.<*> ( x
+                            Data..:? "XssMatchTuples"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable XssMatchSet where
   hashWithSalt _salt XssMatchSet' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` xssMatchSetId
       `Prelude.hashWithSalt` xssMatchTuples
 

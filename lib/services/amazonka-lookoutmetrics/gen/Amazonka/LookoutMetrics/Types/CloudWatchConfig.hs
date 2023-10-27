@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.CloudWatchConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.CloudWatchConfig where
@@ -79,7 +79,8 @@ instance Data.FromJSON CloudWatchConfig where
 
 instance Prelude.Hashable CloudWatchConfig where
   hashWithSalt _salt CloudWatchConfig' {..} =
-    _salt `Prelude.hashWithSalt` backTestConfiguration
+    _salt
+      `Prelude.hashWithSalt` backTestConfiguration
       `Prelude.hashWithSalt` roleArn
 
 instance Prelude.NFData CloudWatchConfig where

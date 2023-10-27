@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.ThreatIntelIndicator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.ThreatIntelIndicator where
@@ -137,7 +137,8 @@ instance Data.FromJSON ThreatIntelIndicator where
 
 instance Prelude.Hashable ThreatIntelIndicator where
   hashWithSalt _salt ThreatIntelIndicator' {..} =
-    _salt `Prelude.hashWithSalt` category
+    _salt
+      `Prelude.hashWithSalt` category
       `Prelude.hashWithSalt` lastObservedAt
       `Prelude.hashWithSalt` source
       `Prelude.hashWithSalt` sourceUrl

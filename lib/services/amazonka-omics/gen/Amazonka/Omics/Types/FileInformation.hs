@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.FileInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.FileInformation where
@@ -84,7 +84,8 @@ instance Data.FromJSON FileInformation where
 
 instance Prelude.Hashable FileInformation where
   hashWithSalt _salt FileInformation' {..} =
-    _salt `Prelude.hashWithSalt` contentLength
+    _salt
+      `Prelude.hashWithSalt` contentLength
       `Prelude.hashWithSalt` partSize
       `Prelude.hashWithSalt` totalParts
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.PublicAccess
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.PublicAccess where
@@ -82,7 +82,8 @@ instance Data.FromJSON PublicAccess where
 
 instance Prelude.Hashable PublicAccess where
   hashWithSalt _salt PublicAccess' {..} =
-    _salt `Prelude.hashWithSalt` effectivePermission
+    _salt
+      `Prelude.hashWithSalt` effectivePermission
       `Prelude.hashWithSalt` permissionConfiguration
 
 instance Prelude.NFData PublicAccess where

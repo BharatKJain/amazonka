@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRContainers.Types.TemplateParameterConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRContainers.Types.TemplateParameterConfiguration where
@@ -84,7 +84,8 @@ instance
   hashWithSalt
     _salt
     TemplateParameterConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` defaultValue
+      _salt
+        `Prelude.hashWithSalt` defaultValue
         `Prelude.hashWithSalt` type'
 
 instance

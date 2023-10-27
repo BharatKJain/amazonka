@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeArtifact.Types.LicenseInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeArtifact.Types.LicenseInfo where
@@ -68,12 +68,14 @@ instance Data.FromJSON LicenseInfo where
       "LicenseInfo"
       ( \x ->
           LicenseInfo'
-            Prelude.<$> (x Data..:? "name") Prelude.<*> (x Data..:? "url")
+            Prelude.<$> (x Data..:? "name")
+            Prelude.<*> (x Data..:? "url")
       )
 
 instance Prelude.Hashable LicenseInfo where
   hashWithSalt _salt LicenseInfo' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` url
 
 instance Prelude.NFData LicenseInfo where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudDirectory.UpdateTypedLinkFacet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,7 +153,8 @@ instance Core.AWSRequest UpdateTypedLinkFacet where
 
 instance Prelude.Hashable UpdateTypedLinkFacet where
   hashWithSalt _salt UpdateTypedLinkFacet' {..} =
-    _salt `Prelude.hashWithSalt` schemaArn
+    _salt
+      `Prelude.hashWithSalt` schemaArn
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` attributeUpdates
       `Prelude.hashWithSalt` identityAttributeOrder

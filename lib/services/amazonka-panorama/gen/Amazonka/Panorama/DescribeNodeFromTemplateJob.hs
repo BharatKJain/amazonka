@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Panorama.DescribeNodeFromTemplateJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest DescribeNodeFromTemplateJob where
             Prelude.<*> (x Data..:> "OutputPackageVersion")
             Prelude.<*> (x Data..:> "Status")
             Prelude.<*> (x Data..:> "StatusMessage")
-            Prelude.<*> ( x Data..?> "TemplateParameters"
+            Prelude.<*> ( x
+                            Data..?> "TemplateParameters"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..:> "TemplateType")

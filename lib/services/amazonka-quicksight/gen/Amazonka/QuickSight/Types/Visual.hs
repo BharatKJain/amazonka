@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.Visual
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.Visual where
@@ -551,7 +551,8 @@ instance Data.FromJSON Visual where
 
 instance Prelude.Hashable Visual where
   hashWithSalt _salt Visual' {..} =
-    _salt `Prelude.hashWithSalt` barChartVisual
+    _salt
+      `Prelude.hashWithSalt` barChartVisual
       `Prelude.hashWithSalt` boxPlotVisual
       `Prelude.hashWithSalt` comboChartVisual
       `Prelude.hashWithSalt` customContentVisual

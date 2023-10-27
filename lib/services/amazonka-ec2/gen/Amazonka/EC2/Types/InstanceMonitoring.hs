@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstanceMonitoring
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstanceMonitoring where
@@ -72,7 +72,8 @@ instance Data.FromXML InstanceMonitoring where
 
 instance Prelude.Hashable InstanceMonitoring where
   hashWithSalt _salt InstanceMonitoring' {..} =
-    _salt `Prelude.hashWithSalt` instanceId
+    _salt
+      `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` monitoring
 
 instance Prelude.NFData InstanceMonitoring where

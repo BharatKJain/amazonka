@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.StartMatchBackfill
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -242,7 +242,8 @@ instance Core.AWSRequest StartMatchBackfill where
 
 instance Prelude.Hashable StartMatchBackfill where
   hashWithSalt _salt StartMatchBackfill' {..} =
-    _salt `Prelude.hashWithSalt` gameSessionArn
+    _salt
+      `Prelude.hashWithSalt` gameSessionArn
       `Prelude.hashWithSalt` ticketId
       `Prelude.hashWithSalt` configurationName
       `Prelude.hashWithSalt` players

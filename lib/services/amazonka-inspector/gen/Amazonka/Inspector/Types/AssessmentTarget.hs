@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.AssessmentTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.AssessmentTarget where
@@ -122,7 +122,8 @@ instance Data.FromJSON AssessmentTarget where
 
 instance Prelude.Hashable AssessmentTarget where
   hashWithSalt _salt AssessmentTarget' {..} =
-    _salt `Prelude.hashWithSalt` resourceGroupArn
+    _salt
+      `Prelude.hashWithSalt` resourceGroupArn
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` createdAt

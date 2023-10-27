@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.IpPermission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.IpPermission where
@@ -157,24 +157,33 @@ instance Data.FromXML IpPermission where
   parseXML x =
     IpPermission'
       Prelude.<$> (x Data..@? "fromPort")
-      Prelude.<*> ( x Data..@? "ipRanges" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "ipRanges"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "ipv6Ranges" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "ipv6Ranges"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "prefixListIds" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "prefixListIds"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "toPort")
-      Prelude.<*> ( x Data..@? "groups" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "groups"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@ "ipProtocol")
 
 instance Prelude.Hashable IpPermission where
   hashWithSalt _salt IpPermission' {..} =
-    _salt `Prelude.hashWithSalt` fromPort
+    _salt
+      `Prelude.hashWithSalt` fromPort
       `Prelude.hashWithSalt` ipRanges
       `Prelude.hashWithSalt` ipv6Ranges
       `Prelude.hashWithSalt` prefixListIds

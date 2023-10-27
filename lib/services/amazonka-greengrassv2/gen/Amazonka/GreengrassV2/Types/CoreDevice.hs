@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.CoreDevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.CoreDevice where
@@ -110,7 +110,8 @@ instance Data.FromJSON CoreDevice where
 
 instance Prelude.Hashable CoreDevice where
   hashWithSalt _salt CoreDevice' {..} =
-    _salt `Prelude.hashWithSalt` coreDeviceThingName
+    _salt
+      `Prelude.hashWithSalt` coreDeviceThingName
       `Prelude.hashWithSalt` lastStatusUpdateTimestamp
       `Prelude.hashWithSalt` status
 

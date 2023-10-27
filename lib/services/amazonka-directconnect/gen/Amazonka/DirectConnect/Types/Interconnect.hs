@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectConnect.Types.Interconnect
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectConnect.Types.Interconnect where
@@ -267,7 +267,8 @@ instance Data.FromJSON Interconnect where
 
 instance Prelude.Hashable Interconnect where
   hashWithSalt _salt Interconnect' {..} =
-    _salt `Prelude.hashWithSalt` awsDevice
+    _salt
+      `Prelude.hashWithSalt` awsDevice
       `Prelude.hashWithSalt` awsDeviceV2
       `Prelude.hashWithSalt` awsLogicalDeviceId
       `Prelude.hashWithSalt` bandwidth

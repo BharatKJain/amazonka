@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.EventSubscription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.EventSubscription where
@@ -82,7 +82,8 @@ instance Data.FromJSON EventSubscription where
 
 instance Prelude.Hashable EventSubscription where
   hashWithSalt _salt EventSubscription' {..} =
-    _salt `Prelude.hashWithSalt` event
+    _salt
+      `Prelude.hashWithSalt` event
       `Prelude.hashWithSalt` subscribedAt
 
 instance Prelude.NFData EventSubscription where

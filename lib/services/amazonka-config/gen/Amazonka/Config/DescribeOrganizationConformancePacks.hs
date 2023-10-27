@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Config.DescribeOrganizationConformancePacks
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,22 +138,22 @@ instance
     | Core.stop
         ( rs
             Lens.^? describeOrganizationConformancePacksResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeOrganizationConformancePacksResponse_organizationConformancePacks
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeOrganizationConformancePacks_nextToken
           Lens..~ rs
-            Lens.^? describeOrganizationConformancePacksResponse_nextToken
-              Prelude.. Lens._Just
+          Lens.^? describeOrganizationConformancePacksResponse_nextToken
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -169,10 +169,11 @@ instance
       ( \s h x ->
           DescribeOrganizationConformancePacksResponse'
             Prelude.<$> (x Data..?> "NextToken")
-              Prelude.<*> ( x Data..?> "OrganizationConformancePacks"
-                              Core..!@ Prelude.mempty
-                          )
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> ( x
+                            Data..?> "OrganizationConformancePacks"
+                            Core..!@ Prelude.mempty
+                        )
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -182,7 +183,8 @@ instance
   hashWithSalt
     _salt
     DescribeOrganizationConformancePacks' {..} =
-      _salt `Prelude.hashWithSalt` limit
+      _salt
+        `Prelude.hashWithSalt` limit
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` organizationConformancePackNames
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppStream.StartImageBuilder
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest StartImageBuilder where
 
 instance Prelude.Hashable StartImageBuilder where
   hashWithSalt _salt StartImageBuilder' {..} =
-    _salt `Prelude.hashWithSalt` appstreamAgentVersion
+    _salt
+      `Prelude.hashWithSalt` appstreamAgentVersion
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData StartImageBuilder where

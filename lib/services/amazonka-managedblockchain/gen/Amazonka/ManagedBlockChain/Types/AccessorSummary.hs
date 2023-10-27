@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ManagedBlockChain.Types.AccessorSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ManagedBlockChain.Types.AccessorSummary where
@@ -126,7 +126,8 @@ instance Data.FromJSON AccessorSummary where
 
 instance Prelude.Hashable AccessorSummary where
   hashWithSalt _salt AccessorSummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` status

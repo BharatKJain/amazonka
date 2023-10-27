@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.DeliverabilityTestReport
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.DeliverabilityTestReport where
@@ -138,7 +138,8 @@ instance Data.FromJSON DeliverabilityTestReport where
 
 instance Prelude.Hashable DeliverabilityTestReport where
   hashWithSalt _salt DeliverabilityTestReport' {..} =
-    _salt `Prelude.hashWithSalt` createDate
+    _salt
+      `Prelude.hashWithSalt` createDate
       `Prelude.hashWithSalt` deliverabilityTestStatus
       `Prelude.hashWithSalt` fromEmailAddress
       `Prelude.hashWithSalt` reportId

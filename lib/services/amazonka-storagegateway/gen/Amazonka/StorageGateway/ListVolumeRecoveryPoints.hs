@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StorageGateway.ListVolumeRecoveryPoints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -95,7 +95,8 @@ instance Core.AWSRequest ListVolumeRecoveryPoints where
       ( \s h x ->
           ListVolumeRecoveryPointsResponse'
             Prelude.<$> (x Data..?> "GatewayARN")
-            Prelude.<*> ( x Data..?> "VolumeRecoveryPointInfos"
+            Prelude.<*> ( x
+                            Data..?> "VolumeRecoveryPointInfos"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

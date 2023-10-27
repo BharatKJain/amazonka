@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.MemorySizeConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.MemorySizeConfiguration where
@@ -74,7 +74,8 @@ instance Data.FromJSON MemorySizeConfiguration where
 
 instance Prelude.Hashable MemorySizeConfiguration where
   hashWithSalt _salt MemorySizeConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` memory
+    _salt
+      `Prelude.hashWithSalt` memory
       `Prelude.hashWithSalt` memoryReservation
 
 instance Prelude.NFData MemorySizeConfiguration where

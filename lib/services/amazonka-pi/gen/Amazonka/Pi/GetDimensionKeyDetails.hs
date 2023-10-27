@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pi.GetDimensionKeyDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -226,7 +226,8 @@ instance Core.AWSRequest GetDimensionKeyDetails where
 
 instance Prelude.Hashable GetDimensionKeyDetails where
   hashWithSalt _salt GetDimensionKeyDetails' {..} =
-    _salt `Prelude.hashWithSalt` requestedDimensions
+    _salt
+      `Prelude.hashWithSalt` requestedDimensions
       `Prelude.hashWithSalt` serviceType
       `Prelude.hashWithSalt` identifier
       `Prelude.hashWithSalt` group'

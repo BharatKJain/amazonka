@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatch.Types.Metric
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatch.Types.Metric where
@@ -75,7 +75,9 @@ metric_namespace = Lens.lens (\Metric' {namespace} -> namespace) (\s@Metric' {} 
 instance Data.FromXML Metric where
   parseXML x =
     Metric'
-      Prelude.<$> ( x Data..@? "Dimensions" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Dimensions"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "MetricName")
@@ -83,7 +85,8 @@ instance Data.FromXML Metric where
 
 instance Prelude.Hashable Metric where
   hashWithSalt _salt Metric' {..} =
-    _salt `Prelude.hashWithSalt` dimensions
+    _salt
+      `Prelude.hashWithSalt` dimensions
       `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` namespace
 

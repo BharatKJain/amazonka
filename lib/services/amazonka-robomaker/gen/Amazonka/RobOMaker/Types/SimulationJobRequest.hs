@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RobOMaker.Types.SimulationJobRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RobOMaker.Types.SimulationJobRequest where
@@ -235,7 +235,8 @@ instance Data.FromJSON SimulationJobRequest where
 
 instance Prelude.Hashable SimulationJobRequest where
   hashWithSalt _salt SimulationJobRequest' {..} =
-    _salt `Prelude.hashWithSalt` compute
+    _salt
+      `Prelude.hashWithSalt` compute
       `Prelude.hashWithSalt` dataSources
       `Prelude.hashWithSalt` failureBehavior
       `Prelude.hashWithSalt` iamRole

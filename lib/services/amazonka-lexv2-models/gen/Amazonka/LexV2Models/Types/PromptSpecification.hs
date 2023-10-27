@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.PromptSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.PromptSpecification where
@@ -113,7 +113,8 @@ instance Data.FromJSON PromptSpecification where
           PromptSpecification'
             Prelude.<$> (x Data..:? "allowInterrupt")
             Prelude.<*> (x Data..:? "messageSelectionStrategy")
-            Prelude.<*> ( x Data..:? "promptAttemptsSpecification"
+            Prelude.<*> ( x
+                            Data..:? "promptAttemptsSpecification"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "messageGroups")
@@ -122,7 +123,8 @@ instance Data.FromJSON PromptSpecification where
 
 instance Prelude.Hashable PromptSpecification where
   hashWithSalt _salt PromptSpecification' {..} =
-    _salt `Prelude.hashWithSalt` allowInterrupt
+    _salt
+      `Prelude.hashWithSalt` allowInterrupt
       `Prelude.hashWithSalt` messageSelectionStrategy
       `Prelude.hashWithSalt` promptAttemptsSpecification
       `Prelude.hashWithSalt` messageGroups

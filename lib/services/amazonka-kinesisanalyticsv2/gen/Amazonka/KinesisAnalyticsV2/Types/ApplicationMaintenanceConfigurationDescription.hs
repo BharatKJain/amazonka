@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.ApplicationMaintenanceConfigurationDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.ApplicationMaintenanceConfigurationDescription where
@@ -80,7 +80,7 @@ instance
       ( \x ->
           ApplicationMaintenanceConfigurationDescription'
             Prelude.<$> (x Data..: "ApplicationMaintenanceWindowStartTime")
-              Prelude.<*> (x Data..: "ApplicationMaintenanceWindowEndTime")
+            Prelude.<*> (x Data..: "ApplicationMaintenanceWindowEndTime")
       )
 
 instance

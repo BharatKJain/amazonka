@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.AccessDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.AccessDetail where
@@ -210,7 +210,8 @@ instance Data.FromXML AccessDetail where
 
 instance Prelude.Hashable AccessDetail where
   hashWithSalt _salt AccessDetail' {..} =
-    _salt `Prelude.hashWithSalt` entityPath
+    _salt
+      `Prelude.hashWithSalt` entityPath
       `Prelude.hashWithSalt` lastAuthenticatedTime
       `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` totalAuthenticatedEntities

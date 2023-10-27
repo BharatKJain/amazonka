@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SESV2.CreateConfigurationSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -191,7 +191,8 @@ instance Core.AWSRequest CreateConfigurationSet where
 
 instance Prelude.Hashable CreateConfigurationSet where
   hashWithSalt _salt CreateConfigurationSet' {..} =
-    _salt `Prelude.hashWithSalt` deliveryOptions
+    _salt
+      `Prelude.hashWithSalt` deliveryOptions
       `Prelude.hashWithSalt` reputationOptions
       `Prelude.hashWithSalt` sendingOptions
       `Prelude.hashWithSalt` suppressionOptions

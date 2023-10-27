@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.WcdmaObj
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.WcdmaObj where
@@ -129,7 +129,8 @@ wcdmaObj_utranCid = Lens.lens (\WcdmaObj' {utranCid} -> utranCid) (\s@WcdmaObj' 
 
 instance Prelude.Hashable WcdmaObj where
   hashWithSalt _salt WcdmaObj' {..} =
-    _salt `Prelude.hashWithSalt` lac
+    _salt
+      `Prelude.hashWithSalt` lac
       `Prelude.hashWithSalt` pathLoss
       `Prelude.hashWithSalt` rscp
       `Prelude.hashWithSalt` wcdmaLocalId

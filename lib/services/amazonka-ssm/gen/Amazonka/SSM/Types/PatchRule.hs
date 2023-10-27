@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.PatchRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.PatchRule where
@@ -141,7 +141,8 @@ instance Data.FromJSON PatchRule where
 
 instance Prelude.Hashable PatchRule where
   hashWithSalt _salt PatchRule' {..} =
-    _salt `Prelude.hashWithSalt` approveAfterDays
+    _salt
+      `Prelude.hashWithSalt` approveAfterDays
       `Prelude.hashWithSalt` approveUntilDate
       `Prelude.hashWithSalt` complianceLevel
       `Prelude.hashWithSalt` enableNonSecurity

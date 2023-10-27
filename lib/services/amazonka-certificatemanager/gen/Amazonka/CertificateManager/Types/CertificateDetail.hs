@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManager.Types.CertificateDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManager.Types.CertificateDetail where
@@ -476,7 +476,8 @@ instance Data.FromJSON CertificateDetail where
             Prelude.<*> (x Data..:? "CreatedAt")
             Prelude.<*> (x Data..:? "DomainName")
             Prelude.<*> (x Data..:? "DomainValidationOptions")
-            Prelude.<*> ( x Data..:? "ExtendedKeyUsages"
+            Prelude.<*> ( x
+                            Data..:? "ExtendedKeyUsages"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "FailureReason")
@@ -503,7 +504,8 @@ instance Data.FromJSON CertificateDetail where
 
 instance Prelude.Hashable CertificateDetail where
   hashWithSalt _salt CertificateDetail' {..} =
-    _salt `Prelude.hashWithSalt` certificateArn
+    _salt
+      `Prelude.hashWithSalt` certificateArn
       `Prelude.hashWithSalt` certificateAuthorityArn
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` domainName

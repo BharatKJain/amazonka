@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VpcCidrBlockAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VpcCidrBlockAssociation where
@@ -83,7 +83,8 @@ instance Data.FromXML VpcCidrBlockAssociation where
 
 instance Prelude.Hashable VpcCidrBlockAssociation where
   hashWithSalt _salt VpcCidrBlockAssociation' {..} =
-    _salt `Prelude.hashWithSalt` associationId
+    _salt
+      `Prelude.hashWithSalt` associationId
       `Prelude.hashWithSalt` cidrBlock
       `Prelude.hashWithSalt` cidrBlockState
 

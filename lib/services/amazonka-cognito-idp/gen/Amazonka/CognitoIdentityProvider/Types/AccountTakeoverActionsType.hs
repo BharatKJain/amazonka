@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.AccountTakeoverActionsType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.AccountTakeoverActionsType where
@@ -86,7 +86,8 @@ instance Data.FromJSON AccountTakeoverActionsType where
 
 instance Prelude.Hashable AccountTakeoverActionsType where
   hashWithSalt _salt AccountTakeoverActionsType' {..} =
-    _salt `Prelude.hashWithSalt` highAction
+    _salt
+      `Prelude.hashWithSalt` highAction
       `Prelude.hashWithSalt` lowAction
       `Prelude.hashWithSalt` mediumAction
 

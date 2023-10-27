@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.HPOObjective
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.HPOObjective where
@@ -87,7 +87,8 @@ instance Data.FromJSON HPOObjective where
 
 instance Prelude.Hashable HPOObjective where
   hashWithSalt _salt HPOObjective' {..} =
-    _salt `Prelude.hashWithSalt` metricName
+    _salt
+      `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` metricRegex
       `Prelude.hashWithSalt` type'
 

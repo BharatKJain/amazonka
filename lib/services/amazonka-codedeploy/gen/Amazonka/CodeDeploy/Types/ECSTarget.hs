@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.ECSTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.ECSTarget where
@@ -124,7 +124,8 @@ instance Data.FromJSON ECSTarget where
           ECSTarget'
             Prelude.<$> (x Data..:? "deploymentId")
             Prelude.<*> (x Data..:? "lastUpdatedAt")
-            Prelude.<*> ( x Data..:? "lifecycleEvents"
+            Prelude.<*> ( x
+                            Data..:? "lifecycleEvents"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "status")
@@ -135,7 +136,8 @@ instance Data.FromJSON ECSTarget where
 
 instance Prelude.Hashable ECSTarget where
   hashWithSalt _salt ECSTarget' {..} =
-    _salt `Prelude.hashWithSalt` deploymentId
+    _salt
+      `Prelude.hashWithSalt` deploymentId
       `Prelude.hashWithSalt` lastUpdatedAt
       `Prelude.hashWithSalt` lifecycleEvents
       `Prelude.hashWithSalt` status

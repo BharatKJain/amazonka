@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.Studio
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.Studio where
@@ -257,7 +257,8 @@ instance Data.FromJSON Studio where
 
 instance Prelude.Hashable Studio where
   hashWithSalt _salt Studio' {..} =
-    _salt `Prelude.hashWithSalt` authMode
+    _salt
+      `Prelude.hashWithSalt` authMode
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` defaultS3Location
       `Prelude.hashWithSalt` description

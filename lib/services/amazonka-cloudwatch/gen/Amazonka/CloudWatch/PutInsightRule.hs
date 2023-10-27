@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatch.PutInsightRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -178,7 +178,8 @@ instance Core.AWSRequest PutInsightRule where
 
 instance Prelude.Hashable PutInsightRule where
   hashWithSalt _salt PutInsightRule' {..} =
-    _salt `Prelude.hashWithSalt` ruleState
+    _salt
+      `Prelude.hashWithSalt` ruleState
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` ruleName
       `Prelude.hashWithSalt` ruleDefinition

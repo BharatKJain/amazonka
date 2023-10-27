@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.CopyJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.CopyJob where
@@ -305,7 +305,8 @@ instance Data.FromJSON CopyJob where
           CopyJob'
             Prelude.<$> (x Data..:? "AccountId")
             Prelude.<*> (x Data..:? "BackupSizeInBytes")
-            Prelude.<*> ( x Data..:? "ChildJobsInState"
+            Prelude.<*> ( x
+                            Data..:? "ChildJobsInState"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CompletionDate")
@@ -329,7 +330,8 @@ instance Data.FromJSON CopyJob where
 
 instance Prelude.Hashable CopyJob where
   hashWithSalt _salt CopyJob' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` backupSizeInBytes
       `Prelude.hashWithSalt` childJobsInState
       `Prelude.hashWithSalt` completionDate

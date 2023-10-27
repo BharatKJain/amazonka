@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.PipeSourceSqsQueueParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.PipeSourceSqsQueueParameters where
@@ -79,7 +79,8 @@ instance
     PipeSourceSqsQueueParameters
   where
   hashWithSalt _salt PipeSourceSqsQueueParameters' {..} =
-    _salt `Prelude.hashWithSalt` batchSize
+    _salt
+      `Prelude.hashWithSalt` batchSize
       `Prelude.hashWithSalt` maximumBatchingWindowInSeconds
 
 instance Prelude.NFData PipeSourceSqsQueueParameters where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.DocumentationVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.DocumentationVersion where
@@ -85,7 +85,8 @@ instance Data.FromJSON DocumentationVersion where
 
 instance Prelude.Hashable DocumentationVersion where
   hashWithSalt _salt DocumentationVersion' {..} =
-    _salt `Prelude.hashWithSalt` createdDate
+    _salt
+      `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` version
 

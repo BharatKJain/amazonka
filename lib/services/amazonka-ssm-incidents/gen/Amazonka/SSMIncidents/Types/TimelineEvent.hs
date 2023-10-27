@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.TimelineEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.TimelineEvent where
@@ -139,7 +139,8 @@ instance Data.FromJSON TimelineEvent where
       "TimelineEvent"
       ( \x ->
           TimelineEvent'
-            Prelude.<$> ( x Data..:? "eventReferences"
+            Prelude.<$> ( x
+                            Data..:? "eventReferences"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "eventData")
@@ -152,7 +153,8 @@ instance Data.FromJSON TimelineEvent where
 
 instance Prelude.Hashable TimelineEvent where
   hashWithSalt _salt TimelineEvent' {..} =
-    _salt `Prelude.hashWithSalt` eventReferences
+    _salt
+      `Prelude.hashWithSalt` eventReferences
       `Prelude.hashWithSalt` eventData
       `Prelude.hashWithSalt` eventId
       `Prelude.hashWithSalt` eventTime

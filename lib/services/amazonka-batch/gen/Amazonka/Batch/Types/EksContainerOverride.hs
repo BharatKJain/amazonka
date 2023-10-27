@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.EksContainerOverride
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.EksContainerOverride where
@@ -148,7 +148,8 @@ eksContainerOverride_resources = Lens.lens (\EksContainerOverride' {resources} -
 
 instance Prelude.Hashable EksContainerOverride where
   hashWithSalt _salt EksContainerOverride' {..} =
-    _salt `Prelude.hashWithSalt` args
+    _salt
+      `Prelude.hashWithSalt` args
       `Prelude.hashWithSalt` command
       `Prelude.hashWithSalt` env
       `Prelude.hashWithSalt` image

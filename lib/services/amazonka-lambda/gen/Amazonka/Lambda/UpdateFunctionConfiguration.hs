@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lambda.UpdateFunctionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -450,7 +450,8 @@ instance Core.AWSRequest UpdateFunctionConfiguration where
 
 instance Prelude.Hashable UpdateFunctionConfiguration where
   hashWithSalt _salt UpdateFunctionConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` deadLetterConfig
+    _salt
+      `Prelude.hashWithSalt` deadLetterConfig
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` environment
       `Prelude.hashWithSalt` ephemeralStorage

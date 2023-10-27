@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Scheduler.Types.ScheduleGroupSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Scheduler.Types.ScheduleGroupSummary where
@@ -105,7 +105,8 @@ instance Data.FromJSON ScheduleGroupSummary where
 
 instance Prelude.Hashable ScheduleGroupSummary where
   hashWithSalt _salt ScheduleGroupSummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` lastModificationDate
       `Prelude.hashWithSalt` name

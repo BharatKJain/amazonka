@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SWF.CountPendingDecisionTasks
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,8 @@ instance Core.AWSRequest CountPendingDecisionTasks where
 
 instance Prelude.Hashable CountPendingDecisionTasks where
   hashWithSalt _salt CountPendingDecisionTasks' {..} =
-    _salt `Prelude.hashWithSalt` domain
+    _salt
+      `Prelude.hashWithSalt` domain
       `Prelude.hashWithSalt` taskList
 
 instance Prelude.NFData CountPendingDecisionTasks where

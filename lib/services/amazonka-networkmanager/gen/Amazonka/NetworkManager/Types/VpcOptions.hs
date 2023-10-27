@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.VpcOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.VpcOptions where
@@ -83,7 +83,8 @@ instance Data.FromJSON VpcOptions where
 
 instance Prelude.Hashable VpcOptions where
   hashWithSalt _salt VpcOptions' {..} =
-    _salt `Prelude.hashWithSalt` applianceModeSupport
+    _salt
+      `Prelude.hashWithSalt` applianceModeSupport
       `Prelude.hashWithSalt` ipv6Support
 
 instance Prelude.NFData VpcOptions where

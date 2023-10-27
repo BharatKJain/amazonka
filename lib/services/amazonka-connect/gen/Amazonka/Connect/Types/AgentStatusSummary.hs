@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.AgentStatusSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.AgentStatusSummary where
@@ -95,7 +95,8 @@ instance Data.FromJSON AgentStatusSummary where
 
 instance Prelude.Hashable AgentStatusSummary where
   hashWithSalt _salt AgentStatusSummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'

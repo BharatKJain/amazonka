@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.GetServiceLastAccessedDetailsWithEntities
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -225,16 +225,17 @@ instance
       ( \s h x ->
           GetServiceLastAccessedDetailsWithEntitiesResponse'
             Prelude.<$> (x Data..@? "Error")
-              Prelude.<*> (x Data..@? "IsTruncated")
-              Prelude.<*> (x Data..@? "Marker")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> (x Data..@ "JobStatus")
-              Prelude.<*> (x Data..@ "JobCreationDate")
-              Prelude.<*> (x Data..@ "JobCompletionDate")
-              Prelude.<*> ( x Data..@? "EntityDetailsList"
-                              Core..!@ Prelude.mempty
-                              Prelude.>>= Data.parseXMLList "member"
-                          )
+            Prelude.<*> (x Data..@? "IsTruncated")
+            Prelude.<*> (x Data..@? "Marker")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..@ "JobStatus")
+            Prelude.<*> (x Data..@ "JobCreationDate")
+            Prelude.<*> (x Data..@ "JobCompletionDate")
+            Prelude.<*> ( x
+                            Data..@? "EntityDetailsList"
+                            Core..!@ Prelude.mempty
+                            Prelude.>>= Data.parseXMLList "member"
+                        )
       )
 
 instance
@@ -244,7 +245,8 @@ instance
   hashWithSalt
     _salt
     GetServiceLastAccessedDetailsWithEntities' {..} =
-      _salt `Prelude.hashWithSalt` marker
+      _salt
+        `Prelude.hashWithSalt` marker
         `Prelude.hashWithSalt` maxItems
         `Prelude.hashWithSalt` jobId
         `Prelude.hashWithSalt` serviceNamespace

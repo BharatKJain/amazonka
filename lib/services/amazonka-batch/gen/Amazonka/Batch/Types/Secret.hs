@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.Secret
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.Secret where
@@ -113,7 +113,8 @@ instance Data.FromJSON Secret where
 
 instance Prelude.Hashable Secret where
   hashWithSalt _salt Secret' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` valueFrom
 
 instance Prelude.NFData Secret where

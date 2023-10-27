@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.TagMeeting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -92,7 +92,8 @@ instance Core.AWSRequest TagMeeting where
 
 instance Prelude.Hashable TagMeeting where
   hashWithSalt _salt TagMeeting' {..} =
-    _salt `Prelude.hashWithSalt` meetingId
+    _salt
+      `Prelude.hashWithSalt` meetingId
       `Prelude.hashWithSalt` tags
 
 instance Prelude.NFData TagMeeting where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ActionConfigurationProperty
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ActionConfigurationProperty where
@@ -180,7 +180,8 @@ instance Data.FromJSON ActionConfigurationProperty where
 
 instance Prelude.Hashable ActionConfigurationProperty where
   hashWithSalt _salt ActionConfigurationProperty' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` queryable
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` name

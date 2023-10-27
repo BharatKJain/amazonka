@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.AssociatedRole
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.AssociatedRole where
@@ -104,7 +104,8 @@ instance Data.FromXML AssociatedRole where
 
 instance Prelude.Hashable AssociatedRole where
   hashWithSalt _salt AssociatedRole' {..} =
-    _salt `Prelude.hashWithSalt` associatedRoleArn
+    _salt
+      `Prelude.hashWithSalt` associatedRoleArn
       `Prelude.hashWithSalt` certificateS3BucketName
       `Prelude.hashWithSalt` certificateS3ObjectKey
       `Prelude.hashWithSalt` encryptionKmsKeyId

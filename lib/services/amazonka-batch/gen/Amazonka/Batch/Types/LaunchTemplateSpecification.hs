@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.LaunchTemplateSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.LaunchTemplateSpecification where
@@ -152,7 +152,8 @@ instance Data.FromJSON LaunchTemplateSpecification where
 
 instance Prelude.Hashable LaunchTemplateSpecification where
   hashWithSalt _salt LaunchTemplateSpecification' {..} =
-    _salt `Prelude.hashWithSalt` launchTemplateId
+    _salt
+      `Prelude.hashWithSalt` launchTemplateId
       `Prelude.hashWithSalt` launchTemplateName
       `Prelude.hashWithSalt` version
 

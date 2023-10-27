@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.AuthorizationConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.AuthorizationConfig where
@@ -86,7 +86,8 @@ instance Data.FromJSON AuthorizationConfig where
 
 instance Prelude.Hashable AuthorizationConfig where
   hashWithSalt _salt AuthorizationConfig' {..} =
-    _salt `Prelude.hashWithSalt` awsIamConfig
+    _salt
+      `Prelude.hashWithSalt` awsIamConfig
       `Prelude.hashWithSalt` authorizationType
 
 instance Prelude.NFData AuthorizationConfig where

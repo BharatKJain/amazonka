@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.DescribedSecurityPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.DescribedSecurityPolicy where
@@ -136,7 +136,8 @@ instance Data.FromJSON DescribedSecurityPolicy where
 
 instance Prelude.Hashable DescribedSecurityPolicy where
   hashWithSalt _salt DescribedSecurityPolicy' {..} =
-    _salt `Prelude.hashWithSalt` fips
+    _salt
+      `Prelude.hashWithSalt` fips
       `Prelude.hashWithSalt` sshCiphers
       `Prelude.hashWithSalt` sshKexs
       `Prelude.hashWithSalt` sshMacs

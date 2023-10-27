@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53Resolver.UpdateResolverRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest UpdateResolverRule where
 
 instance Prelude.Hashable UpdateResolverRule where
   hashWithSalt _salt UpdateResolverRule' {..} =
-    _salt `Prelude.hashWithSalt` resolverRuleId
+    _salt
+      `Prelude.hashWithSalt` resolverRuleId
       `Prelude.hashWithSalt` config
 
 instance Prelude.NFData UpdateResolverRule where

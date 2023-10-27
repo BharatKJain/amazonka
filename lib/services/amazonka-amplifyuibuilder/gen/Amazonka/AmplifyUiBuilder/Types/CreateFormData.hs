@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.CreateFormData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.CreateFormData where
@@ -154,7 +154,8 @@ createFormData_style = Lens.lens (\CreateFormData' {style} -> style) (\s@CreateF
 
 instance Prelude.Hashable CreateFormData where
   hashWithSalt _salt CreateFormData' {..} =
-    _salt `Prelude.hashWithSalt` cta
+    _salt
+      `Prelude.hashWithSalt` cta
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` dataType
       `Prelude.hashWithSalt` fields

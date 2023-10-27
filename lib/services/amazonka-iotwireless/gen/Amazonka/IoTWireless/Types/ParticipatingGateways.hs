@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.ParticipatingGateways
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.ParticipatingGateways where
@@ -106,7 +106,8 @@ instance Data.FromJSON ParticipatingGateways where
 
 instance Prelude.Hashable ParticipatingGateways where
   hashWithSalt _salt ParticipatingGateways' {..} =
-    _salt `Prelude.hashWithSalt` downlinkMode
+    _salt
+      `Prelude.hashWithSalt` downlinkMode
       `Prelude.hashWithSalt` gatewayList
       `Prelude.hashWithSalt` transmissionInterval
 

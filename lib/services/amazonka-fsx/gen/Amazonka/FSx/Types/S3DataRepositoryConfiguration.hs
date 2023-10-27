@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.S3DataRepositoryConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.S3DataRepositoryConfiguration where
@@ -97,7 +97,8 @@ instance
     S3DataRepositoryConfiguration
   where
   hashWithSalt _salt S3DataRepositoryConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` autoExportPolicy
+    _salt
+      `Prelude.hashWithSalt` autoExportPolicy
       `Prelude.hashWithSalt` autoImportPolicy
 
 instance Prelude.NFData S3DataRepositoryConfiguration where

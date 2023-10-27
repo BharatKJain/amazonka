@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.NetworkPathComponent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.NetworkPathComponent where
@@ -102,7 +102,8 @@ instance Data.FromJSON NetworkPathComponent where
 
 instance Prelude.Hashable NetworkPathComponent where
   hashWithSalt _salt NetworkPathComponent' {..} =
-    _salt `Prelude.hashWithSalt` componentId
+    _salt
+      `Prelude.hashWithSalt` componentId
       `Prelude.hashWithSalt` componentType
       `Prelude.hashWithSalt` egress
       `Prelude.hashWithSalt` ingress

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.CreateGlobalTable
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,7 +148,8 @@ instance Core.AWSRequest CreateGlobalTable where
 
 instance Prelude.Hashable CreateGlobalTable where
   hashWithSalt _salt CreateGlobalTable' {..} =
-    _salt `Prelude.hashWithSalt` globalTableName
+    _salt
+      `Prelude.hashWithSalt` globalTableName
       `Prelude.hashWithSalt` replicationGroup
 
 instance Prelude.NFData CreateGlobalTable where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubOrchestrator.Types.StepAutomationConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubOrchestrator.Types.StepAutomationConfiguration where
@@ -109,7 +109,8 @@ instance Data.FromJSON StepAutomationConfiguration where
 
 instance Prelude.Hashable StepAutomationConfiguration where
   hashWithSalt _salt StepAutomationConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` command
+    _salt
+      `Prelude.hashWithSalt` command
       `Prelude.hashWithSalt` runEnvironment
       `Prelude.hashWithSalt` scriptLocationS3Bucket
       `Prelude.hashWithSalt` scriptLocationS3Key

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ReferenceLine
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ReferenceLine where
@@ -113,7 +113,8 @@ instance Data.FromJSON ReferenceLine where
 
 instance Prelude.Hashable ReferenceLine where
   hashWithSalt _salt ReferenceLine' {..} =
-    _salt `Prelude.hashWithSalt` labelConfiguration
+    _salt
+      `Prelude.hashWithSalt` labelConfiguration
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` styleConfiguration
       `Prelude.hashWithSalt` dataConfiguration

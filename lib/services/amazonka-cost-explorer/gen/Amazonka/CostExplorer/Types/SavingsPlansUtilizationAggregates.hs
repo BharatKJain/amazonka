@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.SavingsPlansUtilizationAggregates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.SavingsPlansUtilizationAggregates where
@@ -113,7 +113,8 @@ instance
   hashWithSalt
     _salt
     SavingsPlansUtilizationAggregates' {..} =
-      _salt `Prelude.hashWithSalt` amortizedCommitment
+      _salt
+        `Prelude.hashWithSalt` amortizedCommitment
         `Prelude.hashWithSalt` savings
         `Prelude.hashWithSalt` utilization
 

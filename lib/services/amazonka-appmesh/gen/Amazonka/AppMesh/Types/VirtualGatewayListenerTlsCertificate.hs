@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.VirtualGatewayListenerTlsCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.VirtualGatewayListenerTlsCertificate where
@@ -103,7 +103,8 @@ instance
   hashWithSalt
     _salt
     VirtualGatewayListenerTlsCertificate' {..} =
-      _salt `Prelude.hashWithSalt` acm
+      _salt
+        `Prelude.hashWithSalt` acm
         `Prelude.hashWithSalt` file
         `Prelude.hashWithSalt` sds
 

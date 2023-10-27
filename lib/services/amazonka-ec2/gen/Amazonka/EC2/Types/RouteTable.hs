@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.RouteTable
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.RouteTable where
@@ -118,26 +118,34 @@ routeTable_vpcId = Lens.lens (\RouteTable' {vpcId} -> vpcId) (\s@RouteTable' {} 
 instance Data.FromXML RouteTable where
   parseXML x =
     RouteTable'
-      Prelude.<$> ( x Data..@? "associationSet" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "associationSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "ownerId")
-      Prelude.<*> ( x Data..@? "propagatingVgwSet"
+      Prelude.<*> ( x
+                      Data..@? "propagatingVgwSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "routeTableId")
-      Prelude.<*> ( x Data..@? "routeSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "routeSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "vpcId")
 
 instance Prelude.Hashable RouteTable where
   hashWithSalt _salt RouteTable' {..} =
-    _salt `Prelude.hashWithSalt` associations
+    _salt
+      `Prelude.hashWithSalt` associations
       `Prelude.hashWithSalt` ownerId
       `Prelude.hashWithSalt` propagatingVgws
       `Prelude.hashWithSalt` routeTableId

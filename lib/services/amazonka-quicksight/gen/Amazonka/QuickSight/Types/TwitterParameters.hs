@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TwitterParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TwitterParameters where
@@ -78,7 +78,8 @@ instance Data.FromJSON TwitterParameters where
 
 instance Prelude.Hashable TwitterParameters where
   hashWithSalt _salt TwitterParameters' {..} =
-    _salt `Prelude.hashWithSalt` query
+    _salt
+      `Prelude.hashWithSalt` query
       `Prelude.hashWithSalt` maxRows
 
 instance Prelude.NFData TwitterParameters where

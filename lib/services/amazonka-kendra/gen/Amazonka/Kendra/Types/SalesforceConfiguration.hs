@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.SalesforceConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.SalesforceConfiguration where
@@ -264,10 +264,12 @@ instance Data.FromJSON SalesforceConfiguration where
           SalesforceConfiguration'
             Prelude.<$> (x Data..:? "ChatterFeedConfiguration")
             Prelude.<*> (x Data..:? "CrawlAttachments")
-            Prelude.<*> ( x Data..:? "ExcludeAttachmentFilePatterns"
+            Prelude.<*> ( x
+                            Data..:? "ExcludeAttachmentFilePatterns"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "IncludeAttachmentFilePatterns"
+            Prelude.<*> ( x
+                            Data..:? "IncludeAttachmentFilePatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "KnowledgeArticleConfiguration")

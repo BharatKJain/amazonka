@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.ContainerServiceLogEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.ContainerServiceLogEvent where
@@ -76,7 +76,8 @@ instance Data.FromJSON ContainerServiceLogEvent where
 
 instance Prelude.Hashable ContainerServiceLogEvent where
   hashWithSalt _salt ContainerServiceLogEvent' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData ContainerServiceLogEvent where

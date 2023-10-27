@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.StringParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.StringParameter where
@@ -66,7 +66,8 @@ stringParameter_values = Lens.lens (\StringParameter' {values} -> values) (\s@St
 
 instance Prelude.Hashable StringParameter where
   hashWithSalt _salt StringParameter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData StringParameter where

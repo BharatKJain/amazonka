@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.VpcPeeringConnectionStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.VpcPeeringConnectionStatus where
@@ -77,7 +77,8 @@ instance Data.FromJSON VpcPeeringConnectionStatus where
 
 instance Prelude.Hashable VpcPeeringConnectionStatus where
   hashWithSalt _salt VpcPeeringConnectionStatus' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData VpcPeeringConnectionStatus where

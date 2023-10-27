@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53Domains.GetDomainSuggestions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -192,7 +192,8 @@ instance Core.AWSRequest GetDomainSuggestions where
     Response.receiveJSON
       ( \s h x ->
           GetDomainSuggestionsResponse'
-            Prelude.<$> ( x Data..?> "SuggestionsList"
+            Prelude.<$> ( x
+                            Data..?> "SuggestionsList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -200,7 +201,8 @@ instance Core.AWSRequest GetDomainSuggestions where
 
 instance Prelude.Hashable GetDomainSuggestions where
   hashWithSalt _salt GetDomainSuggestions' {..} =
-    _salt `Prelude.hashWithSalt` domainName
+    _salt
+      `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` suggestionCount
       `Prelude.hashWithSalt` onlyAvailable
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.DateColumnStatisticsData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.DateColumnStatisticsData where
@@ -101,7 +101,8 @@ instance Data.FromJSON DateColumnStatisticsData where
 
 instance Prelude.Hashable DateColumnStatisticsData where
   hashWithSalt _salt DateColumnStatisticsData' {..} =
-    _salt `Prelude.hashWithSalt` maximumValue
+    _salt
+      `Prelude.hashWithSalt` maximumValue
       `Prelude.hashWithSalt` minimumValue
       `Prelude.hashWithSalt` numberOfNulls
       `Prelude.hashWithSalt` numberOfDistinctValues

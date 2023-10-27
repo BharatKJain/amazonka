@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkMediaPipelines.Types.LiveConnectorRTMPConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkMediaPipelines.Types.LiveConnectorRTMPConfiguration where
@@ -93,7 +93,8 @@ instance
   hashWithSalt
     _salt
     LiveConnectorRTMPConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` audioChannels
+      _salt
+        `Prelude.hashWithSalt` audioChannels
         `Prelude.hashWithSalt` audioSampleRate
         `Prelude.hashWithSalt` url
 

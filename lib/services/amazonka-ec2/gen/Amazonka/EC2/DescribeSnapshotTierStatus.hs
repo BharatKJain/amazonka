@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeSnapshotTierStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -161,22 +161,22 @@ instance Core.AWSPager DescribeSnapshotTierStatus where
     | Core.stop
         ( rs
             Lens.^? describeSnapshotTierStatusResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeSnapshotTierStatusResponse_snapshotTierStatuses
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeSnapshotTierStatus_nextToken
           Lens..~ rs
           Lens.^? describeSnapshotTierStatusResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeSnapshotTierStatus where
   type
@@ -189,7 +189,8 @@ instance Core.AWSRequest DescribeSnapshotTierStatus where
       ( \s h x ->
           DescribeSnapshotTierStatusResponse'
             Prelude.<$> (x Data..@? "nextToken")
-            Prelude.<*> ( x Data..@? "snapshotTierStatusSet"
+            Prelude.<*> ( x
+                            Data..@? "snapshotTierStatusSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -198,7 +199,8 @@ instance Core.AWSRequest DescribeSnapshotTierStatus where
 
 instance Prelude.Hashable DescribeSnapshotTierStatus where
   hashWithSalt _salt DescribeSnapshotTierStatus' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

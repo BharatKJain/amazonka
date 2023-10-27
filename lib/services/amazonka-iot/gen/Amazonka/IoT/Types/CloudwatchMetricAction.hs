@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.CloudwatchMetricAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.CloudwatchMetricAction where
@@ -139,7 +139,8 @@ instance Data.FromJSON CloudwatchMetricAction where
 
 instance Prelude.Hashable CloudwatchMetricAction where
   hashWithSalt _salt CloudwatchMetricAction' {..} =
-    _salt `Prelude.hashWithSalt` metricTimestamp
+    _salt
+      `Prelude.hashWithSalt` metricTimestamp
       `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` metricNamespace
       `Prelude.hashWithSalt` metricName

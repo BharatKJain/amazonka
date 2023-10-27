@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.AxisLinearScale
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.AxisLinearScale where
@@ -77,7 +77,8 @@ instance Data.FromJSON AxisLinearScale where
 
 instance Prelude.Hashable AxisLinearScale where
   hashWithSalt _salt AxisLinearScale' {..} =
-    _salt `Prelude.hashWithSalt` stepCount
+    _salt
+      `Prelude.hashWithSalt` stepCount
       `Prelude.hashWithSalt` stepSize
 
 instance Prelude.NFData AxisLinearScale where

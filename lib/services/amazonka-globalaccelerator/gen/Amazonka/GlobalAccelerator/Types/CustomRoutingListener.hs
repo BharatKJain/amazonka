@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GlobalAccelerator.Types.CustomRoutingListener
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GlobalAccelerator.Types.CustomRoutingListener where
@@ -88,7 +88,8 @@ instance Data.FromJSON CustomRoutingListener where
 
 instance Prelude.Hashable CustomRoutingListener where
   hashWithSalt _salt CustomRoutingListener' {..} =
-    _salt `Prelude.hashWithSalt` listenerArn
+    _salt
+      `Prelude.hashWithSalt` listenerArn
       `Prelude.hashWithSalt` portRanges
 
 instance Prelude.NFData CustomRoutingListener where

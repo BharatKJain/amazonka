@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.CodeContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.CodeContent where
@@ -92,7 +92,8 @@ codeContent_zipFileContent = Lens.lens (\CodeContent' {zipFileContent} -> zipFil
 
 instance Prelude.Hashable CodeContent where
   hashWithSalt _salt CodeContent' {..} =
-    _salt `Prelude.hashWithSalt` s3ContentLocation
+    _salt
+      `Prelude.hashWithSalt` s3ContentLocation
       `Prelude.hashWithSalt` textContent
       `Prelude.hashWithSalt` zipFileContent
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.ResumeWorkflowRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest ResumeWorkflowRun where
 
 instance Prelude.Hashable ResumeWorkflowRun where
   hashWithSalt _salt ResumeWorkflowRun' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` runId
       `Prelude.hashWithSalt` nodeIds
 

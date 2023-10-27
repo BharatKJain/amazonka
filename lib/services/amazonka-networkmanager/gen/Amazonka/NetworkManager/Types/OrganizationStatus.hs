@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.OrganizationStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.OrganizationStatus where
@@ -101,7 +101,8 @@ instance Data.FromJSON OrganizationStatus where
       "OrganizationStatus"
       ( \x ->
           OrganizationStatus'
-            Prelude.<$> ( x Data..:? "AccountStatusList"
+            Prelude.<$> ( x
+                            Data..:? "AccountStatusList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "OrganizationAwsServiceAccessStatus")
@@ -111,7 +112,8 @@ instance Data.FromJSON OrganizationStatus where
 
 instance Prelude.Hashable OrganizationStatus where
   hashWithSalt _salt OrganizationStatus' {..} =
-    _salt `Prelude.hashWithSalt` accountStatusList
+    _salt
+      `Prelude.hashWithSalt` accountStatusList
       `Prelude.hashWithSalt` organizationAwsServiceAccessStatus
       `Prelude.hashWithSalt` organizationId
       `Prelude.hashWithSalt` sLRDeploymentStatus

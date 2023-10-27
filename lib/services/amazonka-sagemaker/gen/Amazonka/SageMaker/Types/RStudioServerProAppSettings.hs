@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.RStudioServerProAppSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.RStudioServerProAppSettings where
@@ -89,7 +89,8 @@ instance Data.FromJSON RStudioServerProAppSettings where
 
 instance Prelude.Hashable RStudioServerProAppSettings where
   hashWithSalt _salt RStudioServerProAppSettings' {..} =
-    _salt `Prelude.hashWithSalt` accessStatus
+    _salt
+      `Prelude.hashWithSalt` accessStatus
       `Prelude.hashWithSalt` userGroup
 
 instance Prelude.NFData RStudioServerProAppSettings where

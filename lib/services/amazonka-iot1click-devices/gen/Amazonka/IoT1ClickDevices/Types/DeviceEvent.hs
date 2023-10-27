@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT1ClickDevices.Types.DeviceEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT1ClickDevices.Types.DeviceEvent where
@@ -73,7 +73,8 @@ instance Data.FromJSON DeviceEvent where
 
 instance Prelude.Hashable DeviceEvent where
   hashWithSalt _salt DeviceEvent' {..} =
-    _salt `Prelude.hashWithSalt` device
+    _salt
+      `Prelude.hashWithSalt` device
       `Prelude.hashWithSalt` stdEvent
 
 instance Prelude.NFData DeviceEvent where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Schemas.Types.SearchSchemaSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Schemas.Types.SearchSchemaSummary where
@@ -89,14 +89,16 @@ instance Data.FromJSON SearchSchemaSummary where
             Prelude.<$> (x Data..:? "RegistryName")
             Prelude.<*> (x Data..:? "SchemaArn")
             Prelude.<*> (x Data..:? "SchemaName")
-            Prelude.<*> ( x Data..:? "SchemaVersions"
+            Prelude.<*> ( x
+                            Data..:? "SchemaVersions"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable SearchSchemaSummary where
   hashWithSalt _salt SearchSchemaSummary' {..} =
-    _salt `Prelude.hashWithSalt` registryName
+    _salt
+      `Prelude.hashWithSalt` registryName
       `Prelude.hashWithSalt` schemaArn
       `Prelude.hashWithSalt` schemaName
       `Prelude.hashWithSalt` schemaVersions

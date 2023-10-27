@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.UpdateTrafficDistribution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest UpdateTrafficDistribution where
 
 instance Prelude.Hashable UpdateTrafficDistribution where
   hashWithSalt _salt UpdateTrafficDistribution' {..} =
-    _salt `Prelude.hashWithSalt` telephonyConfig
+    _salt
+      `Prelude.hashWithSalt` telephonyConfig
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData UpdateTrafficDistribution where

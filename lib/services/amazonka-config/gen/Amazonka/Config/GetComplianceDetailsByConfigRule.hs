@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Config.GetComplianceDetailsByConfigRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,22 +141,22 @@ instance
     | Core.stop
         ( rs
             Lens.^? getComplianceDetailsByConfigRuleResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getComplianceDetailsByConfigRuleResponse_evaluationResults
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getComplianceDetailsByConfigRule_nextToken
           Lens..~ rs
           Lens.^? getComplianceDetailsByConfigRuleResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -171,7 +171,8 @@ instance
     Response.receiveJSON
       ( \s h x ->
           GetComplianceDetailsByConfigRuleResponse'
-            Prelude.<$> ( x Data..?> "EvaluationResults"
+            Prelude.<$> ( x
+                            Data..?> "EvaluationResults"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -185,7 +186,8 @@ instance
   hashWithSalt
     _salt
     GetComplianceDetailsByConfigRule' {..} =
-      _salt `Prelude.hashWithSalt` complianceTypes
+      _salt
+        `Prelude.hashWithSalt` complianceTypes
         `Prelude.hashWithSalt` limit
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` configRuleName

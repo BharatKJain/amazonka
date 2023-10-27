@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.PropertyFilters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.PropertyFilters where
@@ -54,11 +54,9 @@ newPropertyFilters =
       properties = Prelude.Nothing
     }
 
--- |
 propertyFilters_logicalOperator :: Lens.Lens' PropertyFilters (Prelude.Maybe LogicalOperator)
 propertyFilters_logicalOperator = Lens.lens (\PropertyFilters' {logicalOperator} -> logicalOperator) (\s@PropertyFilters' {} a -> s {logicalOperator = a} :: PropertyFilters)
 
--- |
 propertyFilters_properties :: Lens.Lens' PropertyFilters (Prelude.Maybe [PropertyFilter])
 propertyFilters_properties = Lens.lens (\PropertyFilters' {properties} -> properties) (\s@PropertyFilters' {} a -> s {properties = a} :: PropertyFilters) Prelude.. Lens.mapping Lens.coerced
 
@@ -74,7 +72,8 @@ instance Data.FromJSON PropertyFilters where
 
 instance Prelude.Hashable PropertyFilters where
   hashWithSalt _salt PropertyFilters' {..} =
-    _salt `Prelude.hashWithSalt` logicalOperator
+    _salt
+      `Prelude.hashWithSalt` logicalOperator
       `Prelude.hashWithSalt` properties
 
 instance Prelude.NFData PropertyFilters where

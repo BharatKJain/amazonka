@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRContainers.Types.Configuration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRContainers.Types.Configuration where
@@ -94,7 +94,8 @@ instance Data.FromJSON Configuration where
 
 instance Prelude.Hashable Configuration where
   hashWithSalt _salt Configuration' {..} =
-    _salt `Prelude.hashWithSalt` configurations
+    _salt
+      `Prelude.hashWithSalt` configurations
       `Prelude.hashWithSalt` properties
       `Prelude.hashWithSalt` classification
 

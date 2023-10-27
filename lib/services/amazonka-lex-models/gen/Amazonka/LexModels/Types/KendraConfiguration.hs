@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexModels.Types.KendraConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexModels.Types.KendraConfiguration where
@@ -129,7 +129,8 @@ instance Data.FromJSON KendraConfiguration where
 
 instance Prelude.Hashable KendraConfiguration where
   hashWithSalt _salt KendraConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` queryFilterString
+    _salt
+      `Prelude.hashWithSalt` queryFilterString
       `Prelude.hashWithSalt` kendraIndex
       `Prelude.hashWithSalt` role'
 

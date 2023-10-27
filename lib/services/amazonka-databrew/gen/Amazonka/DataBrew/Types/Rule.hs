@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.Rule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.Rule where
@@ -185,7 +185,8 @@ instance Data.FromJSON Rule where
           Rule'
             Prelude.<$> (x Data..:? "ColumnSelectors")
             Prelude.<*> (x Data..:? "Disabled")
-            Prelude.<*> ( x Data..:? "SubstitutionMap"
+            Prelude.<*> ( x
+                            Data..:? "SubstitutionMap"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Threshold")
@@ -195,7 +196,8 @@ instance Data.FromJSON Rule where
 
 instance Prelude.Hashable Rule where
   hashWithSalt _salt Rule' {..} =
-    _salt `Prelude.hashWithSalt` columnSelectors
+    _salt
+      `Prelude.hashWithSalt` columnSelectors
       `Prelude.hashWithSalt` disabled
       `Prelude.hashWithSalt` substitutionMap
       `Prelude.hashWithSalt` threshold

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RolesAnywhere.Types.ProfileDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RolesAnywhere.Types.ProfileDetail where
@@ -180,7 +180,8 @@ instance Data.FromJSON ProfileDetail where
             Prelude.<*> (x Data..:? "createdBy")
             Prelude.<*> (x Data..:? "durationSeconds")
             Prelude.<*> (x Data..:? "enabled")
-            Prelude.<*> ( x Data..:? "managedPolicyArns"
+            Prelude.<*> ( x
+                            Data..:? "managedPolicyArns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "name")
@@ -194,7 +195,8 @@ instance Data.FromJSON ProfileDetail where
 
 instance Prelude.Hashable ProfileDetail where
   hashWithSalt _salt ProfileDetail' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` createdBy
       `Prelude.hashWithSalt` durationSeconds
       `Prelude.hashWithSalt` enabled

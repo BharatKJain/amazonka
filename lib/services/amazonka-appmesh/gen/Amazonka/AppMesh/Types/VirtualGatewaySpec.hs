@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.VirtualGatewaySpec
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.VirtualGatewaySpec where
@@ -90,7 +90,8 @@ instance Data.FromJSON VirtualGatewaySpec where
 
 instance Prelude.Hashable VirtualGatewaySpec where
   hashWithSalt _salt VirtualGatewaySpec' {..} =
-    _salt `Prelude.hashWithSalt` backendDefaults
+    _salt
+      `Prelude.hashWithSalt` backendDefaults
       `Prelude.hashWithSalt` logging
       `Prelude.hashWithSalt` listeners
 

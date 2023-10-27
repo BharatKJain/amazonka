@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IVS.PutMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -101,7 +101,8 @@ instance Core.AWSRequest PutMetadata where
 
 instance Prelude.Hashable PutMetadata where
   hashWithSalt _salt PutMetadata' {..} =
-    _salt `Prelude.hashWithSalt` channelArn
+    _salt
+      `Prelude.hashWithSalt` channelArn
       `Prelude.hashWithSalt` metadata
 
 instance Prelude.NFData PutMetadata where

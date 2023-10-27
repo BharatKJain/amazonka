@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.GetSegmentVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,7 +124,8 @@ instance Core.AWSRequest GetSegmentVersion where
 
 instance Prelude.Hashable GetSegmentVersion where
   hashWithSalt _salt GetSegmentVersion' {..} =
-    _salt `Prelude.hashWithSalt` segmentId
+    _salt
+      `Prelude.hashWithSalt` segmentId
       `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` applicationId
 

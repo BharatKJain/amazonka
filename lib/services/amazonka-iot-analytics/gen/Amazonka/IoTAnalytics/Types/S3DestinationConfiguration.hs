@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.S3DestinationConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.S3DestinationConfiguration where
@@ -172,7 +172,8 @@ instance Data.FromJSON S3DestinationConfiguration where
 
 instance Prelude.Hashable S3DestinationConfiguration where
   hashWithSalt _salt S3DestinationConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` glueConfiguration
+    _salt
+      `Prelude.hashWithSalt` glueConfiguration
       `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` roleArn

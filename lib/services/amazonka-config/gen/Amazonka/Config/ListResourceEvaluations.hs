@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Config.ListResourceEvaluations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,22 +111,22 @@ instance Core.AWSPager ListResourceEvaluations where
     | Core.stop
         ( rs
             Lens.^? listResourceEvaluationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listResourceEvaluationsResponse_resourceEvaluations
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listResourceEvaluations_nextToken
           Lens..~ rs
           Lens.^? listResourceEvaluationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListResourceEvaluations where
   type
@@ -139,7 +139,8 @@ instance Core.AWSRequest ListResourceEvaluations where
       ( \s h x ->
           ListResourceEvaluationsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "ResourceEvaluations"
+            Prelude.<*> ( x
+                            Data..?> "ResourceEvaluations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -147,7 +148,8 @@ instance Core.AWSRequest ListResourceEvaluations where
 
 instance Prelude.Hashable ListResourceEvaluations where
   hashWithSalt _salt ListResourceEvaluations' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextToken
 

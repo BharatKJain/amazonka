@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Outposts.Types.Site
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Outposts.Types.Site where
@@ -166,7 +166,8 @@ instance Data.FromJSON Site where
 
 instance Prelude.Hashable Site where
   hashWithSalt _salt Site' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` notes

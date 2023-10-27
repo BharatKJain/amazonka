@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DashboardSearchFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DashboardSearchFilter where
@@ -218,7 +218,8 @@ dashboardSearchFilter_operator = Lens.lens (\DashboardSearchFilter' {operator} -
 
 instance Prelude.Hashable DashboardSearchFilter where
   hashWithSalt _salt DashboardSearchFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` operator
 

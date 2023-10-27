@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.CustomConnectorDestinationProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.CustomConnectorDestinationProperties where
@@ -119,7 +119,8 @@ instance
       "CustomConnectorDestinationProperties"
       ( \x ->
           CustomConnectorDestinationProperties'
-            Prelude.<$> ( x Data..:? "customProperties"
+            Prelude.<$> ( x
+                            Data..:? "customProperties"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "errorHandlingConfig")
@@ -135,7 +136,8 @@ instance
   hashWithSalt
     _salt
     CustomConnectorDestinationProperties' {..} =
-      _salt `Prelude.hashWithSalt` customProperties
+      _salt
+        `Prelude.hashWithSalt` customProperties
         `Prelude.hashWithSalt` errorHandlingConfig
         `Prelude.hashWithSalt` idFieldNames
         `Prelude.hashWithSalt` writeOperationType

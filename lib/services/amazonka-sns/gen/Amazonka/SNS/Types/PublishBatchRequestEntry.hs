@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SNS.Types.PublishBatchRequestEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SNS.Types.PublishBatchRequestEntry where
@@ -380,7 +380,8 @@ publishBatchRequestEntry_message = Lens.lens (\PublishBatchRequestEntry' {messag
 
 instance Prelude.Hashable PublishBatchRequestEntry where
   hashWithSalt _salt PublishBatchRequestEntry' {..} =
-    _salt `Prelude.hashWithSalt` messageAttributes
+    _salt
+      `Prelude.hashWithSalt` messageAttributes
       `Prelude.hashWithSalt` messageDeduplicationId
       `Prelude.hashWithSalt` messageGroupId
       `Prelude.hashWithSalt` messageStructure

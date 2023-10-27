@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.WriteJourneyRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.WriteJourneyRequest where
@@ -351,7 +351,8 @@ writeJourneyRequest_name = Lens.lens (\WriteJourneyRequest' {name} -> name) (\s@
 
 instance Prelude.Hashable WriteJourneyRequest where
   hashWithSalt _salt WriteJourneyRequest' {..} =
-    _salt `Prelude.hashWithSalt` activities
+    _salt
+      `Prelude.hashWithSalt` activities
       `Prelude.hashWithSalt` closedDays
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` journeyChannelSettings

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.GrpcGatewayRoute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.GrpcGatewayRoute where
@@ -74,12 +74,14 @@ instance Data.FromJSON GrpcGatewayRoute where
       "GrpcGatewayRoute"
       ( \x ->
           GrpcGatewayRoute'
-            Prelude.<$> (x Data..: "action") Prelude.<*> (x Data..: "match")
+            Prelude.<$> (x Data..: "action")
+            Prelude.<*> (x Data..: "match")
       )
 
 instance Prelude.Hashable GrpcGatewayRoute where
   hashWithSalt _salt GrpcGatewayRoute' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` match
 
 instance Prelude.NFData GrpcGatewayRoute where

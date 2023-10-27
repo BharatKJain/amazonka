@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.StandardsControl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.StandardsControl where
@@ -174,7 +174,8 @@ instance Data.FromJSON StandardsControl where
             Prelude.<*> (x Data..:? "ControlStatusUpdatedAt")
             Prelude.<*> (x Data..:? "Description")
             Prelude.<*> (x Data..:? "DisabledReason")
-            Prelude.<*> ( x Data..:? "RelatedRequirements"
+            Prelude.<*> ( x
+                            Data..:? "RelatedRequirements"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "RemediationUrl")
@@ -185,7 +186,8 @@ instance Data.FromJSON StandardsControl where
 
 instance Prelude.Hashable StandardsControl where
   hashWithSalt _salt StandardsControl' {..} =
-    _salt `Prelude.hashWithSalt` controlId
+    _salt
+      `Prelude.hashWithSalt` controlId
       `Prelude.hashWithSalt` controlStatus
       `Prelude.hashWithSalt` controlStatusUpdatedAt
       `Prelude.hashWithSalt` description

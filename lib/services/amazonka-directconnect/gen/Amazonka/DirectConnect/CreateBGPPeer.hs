@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectConnect.CreateBGPPeer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest CreateBGPPeer where
 
 instance Prelude.Hashable CreateBGPPeer where
   hashWithSalt _salt CreateBGPPeer' {..} =
-    _salt `Prelude.hashWithSalt` newBGPPeer'
+    _salt
+      `Prelude.hashWithSalt` newBGPPeer'
       `Prelude.hashWithSalt` virtualInterfaceId
 
 instance Prelude.NFData CreateBGPPeer where

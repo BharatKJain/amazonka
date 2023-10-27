@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.AccountLevelBpaSync
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.AccountLevelBpaSync where
@@ -276,7 +276,8 @@ instance Data.FromJSON AccountLevelBpaSync where
 
 instance Prelude.Hashable AccountLevelBpaSync where
   hashWithSalt _salt AccountLevelBpaSync' {..} =
-    _salt `Prelude.hashWithSalt` bpaImpactsLightsail
+    _salt
+      `Prelude.hashWithSalt` bpaImpactsLightsail
       `Prelude.hashWithSalt` lastSyncedAt
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` status

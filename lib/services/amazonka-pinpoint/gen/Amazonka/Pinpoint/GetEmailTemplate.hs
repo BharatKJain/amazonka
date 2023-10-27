@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.GetEmailTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -175,7 +175,8 @@ instance Core.AWSRequest GetEmailTemplate where
 
 instance Prelude.Hashable GetEmailTemplate where
   hashWithSalt _salt GetEmailTemplate' {..} =
-    _salt `Prelude.hashWithSalt` version
+    _salt
+      `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` templateName
 
 instance Prelude.NFData GetEmailTemplate where

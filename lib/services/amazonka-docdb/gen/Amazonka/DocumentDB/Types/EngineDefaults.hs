@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DocumentDB.Types.EngineDefaults
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DocumentDB.Types.EngineDefaults where
@@ -88,13 +88,16 @@ instance Data.FromXML EngineDefaults where
     EngineDefaults'
       Prelude.<$> (x Data..@? "DBParameterGroupFamily")
       Prelude.<*> (x Data..@? "Marker")
-      Prelude.<*> ( x Data..@? "Parameters" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Parameters"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Parameter")
                   )
 
 instance Prelude.Hashable EngineDefaults where
   hashWithSalt _salt EngineDefaults' {..} =
-    _salt `Prelude.hashWithSalt` dbParameterGroupFamily
+    _salt
+      `Prelude.hashWithSalt` dbParameterGroupFamily
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` parameters
 

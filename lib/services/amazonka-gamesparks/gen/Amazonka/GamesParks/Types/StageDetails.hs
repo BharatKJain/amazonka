@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GamesParks.Types.StageDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GamesParks.Types.StageDetails where
@@ -167,7 +167,8 @@ instance Data.FromJSON StageDetails where
 
 instance Prelude.Hashable StageDetails where
   hashWithSalt _salt StageDetails' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` created
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` gameKey

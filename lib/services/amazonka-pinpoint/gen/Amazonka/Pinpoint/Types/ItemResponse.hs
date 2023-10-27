@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.ItemResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.ItemResponse where
@@ -79,14 +79,16 @@ instance Data.FromJSON ItemResponse where
       ( \x ->
           ItemResponse'
             Prelude.<$> (x Data..:? "EndpointItemResponse")
-            Prelude.<*> ( x Data..:? "EventsItemResponse"
+            Prelude.<*> ( x
+                            Data..:? "EventsItemResponse"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ItemResponse where
   hashWithSalt _salt ItemResponse' {..} =
-    _salt `Prelude.hashWithSalt` endpointItemResponse
+    _salt
+      `Prelude.hashWithSalt` endpointItemResponse
       `Prelude.hashWithSalt` eventsItemResponse
 
 instance Prelude.NFData ItemResponse where

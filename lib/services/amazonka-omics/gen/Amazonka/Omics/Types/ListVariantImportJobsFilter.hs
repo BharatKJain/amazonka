@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.ListVariantImportJobsFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.ListVariantImportJobsFilter where
@@ -66,7 +66,8 @@ listVariantImportJobsFilter_storeName = Lens.lens (\ListVariantImportJobsFilter'
 
 instance Prelude.Hashable ListVariantImportJobsFilter where
   hashWithSalt _salt ListVariantImportJobsFilter' {..} =
-    _salt `Prelude.hashWithSalt` status
+    _salt
+      `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` storeName
 
 instance Prelude.NFData ListVariantImportJobsFilter where

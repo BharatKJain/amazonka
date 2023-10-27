@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFront.CreateFunction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,7 +116,8 @@ newCreateFunction
       { name = pName_,
         functionConfig = pFunctionConfig_,
         functionCode =
-          Data._Sensitive Prelude.. Data._Base64
+          Data._Sensitive
+            Prelude.. Data._Base64
             Lens.# pFunctionCode_
       }
 
@@ -158,7 +159,8 @@ instance Core.AWSRequest CreateFunction where
 
 instance Prelude.Hashable CreateFunction where
   hashWithSalt _salt CreateFunction' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` functionConfig
       `Prelude.hashWithSalt` functionCode
 

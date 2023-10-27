@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.CommitDiffSourceCodeType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.CommitDiffSourceCodeType where
@@ -95,7 +95,8 @@ instance Data.FromJSON CommitDiffSourceCodeType where
 
 instance Prelude.Hashable CommitDiffSourceCodeType where
   hashWithSalt _salt CommitDiffSourceCodeType' {..} =
-    _salt `Prelude.hashWithSalt` destinationCommit
+    _salt
+      `Prelude.hashWithSalt` destinationCommit
       `Prelude.hashWithSalt` mergeBaseCommit
       `Prelude.hashWithSalt` sourceCommit
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.AlgorithmStatusDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.AlgorithmStatusDetails where
@@ -70,17 +70,20 @@ instance Data.FromJSON AlgorithmStatusDetails where
       "AlgorithmStatusDetails"
       ( \x ->
           AlgorithmStatusDetails'
-            Prelude.<$> ( x Data..:? "ImageScanStatuses"
+            Prelude.<$> ( x
+                            Data..:? "ImageScanStatuses"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "ValidationStatuses"
+            Prelude.<*> ( x
+                            Data..:? "ValidationStatuses"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable AlgorithmStatusDetails where
   hashWithSalt _salt AlgorithmStatusDetails' {..} =
-    _salt `Prelude.hashWithSalt` imageScanStatuses
+    _salt
+      `Prelude.hashWithSalt` imageScanStatuses
       `Prelude.hashWithSalt` validationStatuses
 
 instance Prelude.NFData AlgorithmStatusDetails where

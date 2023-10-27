@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.UpdateTrustStore
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,8 @@ instance Core.AWSRequest UpdateTrustStore where
 
 instance Prelude.Hashable UpdateTrustStore where
   hashWithSalt _salt UpdateTrustStore' {..} =
-    _salt `Prelude.hashWithSalt` certificatesToAdd
+    _salt
+      `Prelude.hashWithSalt` certificatesToAdd
       `Prelude.hashWithSalt` certificatesToDelete
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` trustStoreArn

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeStarNotifications.Types.ListEventTypesFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeStarNotifications.Types.ListEventTypesFilter where
@@ -73,7 +73,8 @@ listEventTypesFilter_value = Lens.lens (\ListEventTypesFilter' {value} -> value)
 
 instance Prelude.Hashable ListEventTypesFilter where
   hashWithSalt _salt ListEventTypesFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData ListEventTypesFilter where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.LocalSecondaryIndexInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.LocalSecondaryIndexInfo where
@@ -141,7 +141,8 @@ instance Data.FromJSON LocalSecondaryIndexInfo where
 
 instance Prelude.Hashable LocalSecondaryIndexInfo where
   hashWithSalt _salt LocalSecondaryIndexInfo' {..} =
-    _salt `Prelude.hashWithSalt` indexName
+    _salt
+      `Prelude.hashWithSalt` indexName
       `Prelude.hashWithSalt` keySchema
       `Prelude.hashWithSalt` projection
 

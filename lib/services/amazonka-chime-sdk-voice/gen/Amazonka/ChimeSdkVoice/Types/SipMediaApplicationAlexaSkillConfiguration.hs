@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkVoice.Types.SipMediaApplicationAlexaSkillConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkVoice.Types.SipMediaApplicationAlexaSkillConfiguration where
@@ -78,7 +78,7 @@ instance
       ( \x ->
           SipMediaApplicationAlexaSkillConfiguration'
             Prelude.<$> (x Data..: "AlexaSkillStatus")
-              Prelude.<*> (x Data..: "AlexaSkillIds")
+            Prelude.<*> (x Data..: "AlexaSkillIds")
       )
 
 instance
@@ -88,7 +88,8 @@ instance
   hashWithSalt
     _salt
     SipMediaApplicationAlexaSkillConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` alexaSkillStatus
+      _salt
+        `Prelude.hashWithSalt` alexaSkillStatus
         `Prelude.hashWithSalt` alexaSkillIds
 
 instance

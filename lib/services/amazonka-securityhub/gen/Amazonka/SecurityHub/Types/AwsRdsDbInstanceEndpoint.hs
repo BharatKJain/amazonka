@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsRdsDbInstanceEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsRdsDbInstanceEndpoint where
@@ -88,7 +88,8 @@ instance Data.FromJSON AwsRdsDbInstanceEndpoint where
 
 instance Prelude.Hashable AwsRdsDbInstanceEndpoint where
   hashWithSalt _salt AwsRdsDbInstanceEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` address
+    _salt
+      `Prelude.hashWithSalt` address
       `Prelude.hashWithSalt` hostedZoneId
       `Prelude.hashWithSalt` port
 

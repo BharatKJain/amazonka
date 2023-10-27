@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.DvbSubDestinationSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.DvbSubDestinationSettings where
@@ -759,7 +759,8 @@ instance Data.FromJSON DvbSubDestinationSettings where
 
 instance Prelude.Hashable DvbSubDestinationSettings where
   hashWithSalt _salt DvbSubDestinationSettings' {..} =
-    _salt `Prelude.hashWithSalt` alignment
+    _salt
+      `Prelude.hashWithSalt` alignment
       `Prelude.hashWithSalt` applyFontColor
       `Prelude.hashWithSalt` backgroundColor
       `Prelude.hashWithSalt` backgroundOpacity

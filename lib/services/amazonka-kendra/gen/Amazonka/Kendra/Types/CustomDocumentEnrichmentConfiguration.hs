@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.CustomDocumentEnrichmentConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.CustomDocumentEnrichmentConfiguration where
@@ -140,7 +140,8 @@ instance
       "CustomDocumentEnrichmentConfiguration"
       ( \x ->
           CustomDocumentEnrichmentConfiguration'
-            Prelude.<$> ( x Data..:? "InlineConfigurations"
+            Prelude.<$> ( x
+                            Data..:? "InlineConfigurations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "PostExtractionHookConfiguration")
@@ -155,7 +156,8 @@ instance
   hashWithSalt
     _salt
     CustomDocumentEnrichmentConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` inlineConfigurations
+      _salt
+        `Prelude.hashWithSalt` inlineConfigurations
         `Prelude.hashWithSalt` postExtractionHookConfiguration
         `Prelude.hashWithSalt` preExtractionHookConfiguration
         `Prelude.hashWithSalt` roleArn

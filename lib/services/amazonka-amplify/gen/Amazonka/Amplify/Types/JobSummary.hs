@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Amplify.Types.JobSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Amplify.Types.JobSummary where
@@ -179,7 +179,8 @@ instance Data.FromJSON JobSummary where
 
 instance Prelude.Hashable JobSummary where
   hashWithSalt _salt JobSummary' {..} =
-    _salt `Prelude.hashWithSalt` endTime
+    _salt
+      `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` jobArn
       `Prelude.hashWithSalt` jobId
       `Prelude.hashWithSalt` commitId

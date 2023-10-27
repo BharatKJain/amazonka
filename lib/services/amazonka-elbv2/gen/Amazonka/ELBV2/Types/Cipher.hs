@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.Cipher
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.Cipher where
@@ -70,7 +70,8 @@ instance Data.FromXML Cipher where
 
 instance Prelude.Hashable Cipher where
   hashWithSalt _salt Cipher' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` priority
 
 instance Prelude.NFData Cipher where

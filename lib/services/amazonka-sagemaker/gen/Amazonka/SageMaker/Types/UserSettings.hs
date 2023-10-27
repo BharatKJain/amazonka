@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.UserSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.UserSettings where
@@ -194,7 +194,8 @@ instance Data.FromJSON UserSettings where
 
 instance Prelude.Hashable UserSettings where
   hashWithSalt _salt UserSettings' {..} =
-    _salt `Prelude.hashWithSalt` canvasAppSettings
+    _salt
+      `Prelude.hashWithSalt` canvasAppSettings
       `Prelude.hashWithSalt` executionRole
       `Prelude.hashWithSalt` jupyterServerAppSettings
       `Prelude.hashWithSalt` kernelGatewayAppSettings

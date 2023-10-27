@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.CidrBlockSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.CidrBlockSummary where
@@ -71,7 +71,8 @@ instance Data.FromXML CidrBlockSummary where
 
 instance Prelude.Hashable CidrBlockSummary where
   hashWithSalt _salt CidrBlockSummary' {..} =
-    _salt `Prelude.hashWithSalt` cidrBlock
+    _salt
+      `Prelude.hashWithSalt` cidrBlock
       `Prelude.hashWithSalt` locationName
 
 instance Prelude.NFData CidrBlockSummary where

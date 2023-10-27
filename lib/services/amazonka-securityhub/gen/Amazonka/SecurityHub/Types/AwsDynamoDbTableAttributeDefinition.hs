@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsDynamoDbTableAttributeDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsDynamoDbTableAttributeDefinition where
@@ -83,7 +83,8 @@ instance
   hashWithSalt
     _salt
     AwsDynamoDbTableAttributeDefinition' {..} =
-      _salt `Prelude.hashWithSalt` attributeName
+      _salt
+        `Prelude.hashWithSalt` attributeName
         `Prelude.hashWithSalt` attributeType
 
 instance

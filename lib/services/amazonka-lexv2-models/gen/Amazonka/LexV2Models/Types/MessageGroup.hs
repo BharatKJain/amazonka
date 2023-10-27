@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.MessageGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.MessageGroup where
@@ -83,7 +83,8 @@ instance Data.FromJSON MessageGroup where
 
 instance Prelude.Hashable MessageGroup where
   hashWithSalt _salt MessageGroup' {..} =
-    _salt `Prelude.hashWithSalt` variations
+    _salt
+      `Prelude.hashWithSalt` variations
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData MessageGroup where

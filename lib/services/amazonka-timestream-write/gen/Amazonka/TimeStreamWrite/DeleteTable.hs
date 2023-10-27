@@ -16,7 +16,7 @@
 -- Module      : Amazonka.TimeStreamWrite.DeleteTable
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,7 +102,8 @@ instance Core.AWSRequest DeleteTable where
 
 instance Prelude.Hashable DeleteTable where
   hashWithSalt _salt DeleteTable' {..} =
-    _salt `Prelude.hashWithSalt` databaseName
+    _salt
+      `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` tableName
 
 instance Prelude.NFData DeleteTable where

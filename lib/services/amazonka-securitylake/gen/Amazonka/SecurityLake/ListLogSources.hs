@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecurityLake.ListLogSources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,20 +153,21 @@ instance Core.AWSPager ListLogSources where
     | Core.stop
         ( rs
             Lens.^? listLogSourcesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listLogSourcesResponse_regionSourceTypesAccountsList
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listLogSources_nextToken
           Lens..~ rs
-          Lens.^? listLogSourcesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listLogSourcesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListLogSources where
   type
@@ -180,14 +181,16 @@ instance Core.AWSRequest ListLogSources where
           ListLogSourcesResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "regionSourceTypesAccountsList"
+            Prelude.<*> ( x
+                            Data..?> "regionSourceTypesAccountsList"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListLogSources where
   hashWithSalt _salt ListLogSources' {..} =
-    _salt `Prelude.hashWithSalt` inputOrder
+    _salt
+      `Prelude.hashWithSalt` inputOrder
       `Prelude.hashWithSalt` listAllDimensions
       `Prelude.hashWithSalt` listSingleDimension
       `Prelude.hashWithSalt` listTwoDimensions

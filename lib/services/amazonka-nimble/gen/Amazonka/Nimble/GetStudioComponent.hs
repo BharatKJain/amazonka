@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Nimble.GetStudioComponent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest GetStudioComponent where
 
 instance Prelude.Hashable GetStudioComponent where
   hashWithSalt _salt GetStudioComponent' {..} =
-    _salt `Prelude.hashWithSalt` studioComponentId
+    _salt
+      `Prelude.hashWithSalt` studioComponentId
       `Prelude.hashWithSalt` studioId
 
 instance Prelude.NFData GetStudioComponent where

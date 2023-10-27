@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WellArchitected.DisassociateLenses
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -101,7 +101,8 @@ instance Core.AWSRequest DisassociateLenses where
 
 instance Prelude.Hashable DisassociateLenses where
   hashWithSalt _salt DisassociateLenses' {..} =
-    _salt `Prelude.hashWithSalt` workloadId
+    _salt
+      `Prelude.hashWithSalt` workloadId
       `Prelude.hashWithSalt` lensAliases
 
 instance Prelude.NFData DisassociateLenses where

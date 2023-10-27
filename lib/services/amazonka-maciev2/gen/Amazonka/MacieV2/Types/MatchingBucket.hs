@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.MatchingBucket
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.MatchingBucket where
@@ -345,7 +345,8 @@ instance Data.FromJSON MatchingBucket where
 
 instance Prelude.Hashable MatchingBucket where
   hashWithSalt _salt MatchingBucket' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` classifiableObjectCount
       `Prelude.hashWithSalt` classifiableSizeInBytes

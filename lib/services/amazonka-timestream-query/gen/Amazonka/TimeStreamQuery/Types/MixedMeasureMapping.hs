@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamQuery.Types.MixedMeasureMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamQuery.Types.MixedMeasureMapping where
@@ -124,7 +124,8 @@ instance Data.FromJSON MixedMeasureMapping where
 
 instance Prelude.Hashable MixedMeasureMapping where
   hashWithSalt _salt MixedMeasureMapping' {..} =
-    _salt `Prelude.hashWithSalt` measureName
+    _salt
+      `Prelude.hashWithSalt` measureName
       `Prelude.hashWithSalt` multiMeasureAttributeMappings
       `Prelude.hashWithSalt` sourceColumn
       `Prelude.hashWithSalt` targetMeasureName

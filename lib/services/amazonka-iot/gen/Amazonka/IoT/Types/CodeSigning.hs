@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.CodeSigning
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.CodeSigning where
@@ -86,7 +86,8 @@ instance Data.FromJSON CodeSigning where
 
 instance Prelude.Hashable CodeSigning where
   hashWithSalt _salt CodeSigning' {..} =
-    _salt `Prelude.hashWithSalt` awsSignerJobId
+    _salt
+      `Prelude.hashWithSalt` awsSignerJobId
       `Prelude.hashWithSalt` customCodeSigning
       `Prelude.hashWithSalt` startSigningJobParameter
 

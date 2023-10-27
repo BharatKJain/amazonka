@@ -16,7 +16,7 @@
 -- Module      : Amazonka.TimeStreamWrite.CreateDatabase
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance Core.AWSRequest CreateDatabase where
 
 instance Prelude.Hashable CreateDatabase where
   hashWithSalt _salt CreateDatabase' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyId
+    _salt
+      `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` databaseName
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.FirewallPolicyStatelessCustomActionsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.FirewallPolicyStatelessCustomActionsDetails where
@@ -74,7 +74,7 @@ instance
       ( \x ->
           FirewallPolicyStatelessCustomActionsDetails'
             Prelude.<$> (x Data..:? "ActionDefinition")
-              Prelude.<*> (x Data..:? "ActionName")
+            Prelude.<*> (x Data..:? "ActionName")
       )
 
 instance
@@ -84,7 +84,8 @@ instance
   hashWithSalt
     _salt
     FirewallPolicyStatelessCustomActionsDetails' {..} =
-      _salt `Prelude.hashWithSalt` actionDefinition
+      _salt
+        `Prelude.hashWithSalt` actionDefinition
         `Prelude.hashWithSalt` actionName
 
 instance

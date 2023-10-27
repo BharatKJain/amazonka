@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.AcceptReservedNodeExchange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest AcceptReservedNodeExchange where
 
 instance Prelude.Hashable AcceptReservedNodeExchange where
   hashWithSalt _salt AcceptReservedNodeExchange' {..} =
-    _salt `Prelude.hashWithSalt` reservedNodeId
+    _salt
+      `Prelude.hashWithSalt` reservedNodeId
       `Prelude.hashWithSalt` targetReservedNodeOfferingId
 
 instance Prelude.NFData AcceptReservedNodeExchange where
@@ -176,7 +177,6 @@ newAcceptReservedNodeExchangeResponse pHttpStatus_ =
       httpStatus = pHttpStatus_
     }
 
--- |
 acceptReservedNodeExchangeResponse_exchangedReservedNode :: Lens.Lens' AcceptReservedNodeExchangeResponse (Prelude.Maybe ReservedNode)
 acceptReservedNodeExchangeResponse_exchangedReservedNode = Lens.lens (\AcceptReservedNodeExchangeResponse' {exchangedReservedNode} -> exchangedReservedNode) (\s@AcceptReservedNodeExchangeResponse' {} a -> s {exchangedReservedNode = a} :: AcceptReservedNodeExchangeResponse)
 

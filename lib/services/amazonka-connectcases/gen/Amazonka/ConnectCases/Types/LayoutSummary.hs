@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCases.Types.LayoutSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCases.Types.LayoutSummary where
@@ -90,7 +90,8 @@ instance Data.FromJSON LayoutSummary where
 
 instance Prelude.Hashable LayoutSummary where
   hashWithSalt _salt LayoutSummary' {..} =
-    _salt `Prelude.hashWithSalt` layoutArn
+    _salt
+      `Prelude.hashWithSalt` layoutArn
       `Prelude.hashWithSalt` layoutId
       `Prelude.hashWithSalt` name
 

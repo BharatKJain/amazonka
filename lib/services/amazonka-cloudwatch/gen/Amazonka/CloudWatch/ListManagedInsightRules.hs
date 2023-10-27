@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatch.ListManagedInsightRules
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,9 @@ instance Core.AWSRequest ListManagedInsightRules where
       "ListManagedInsightRulesResult"
       ( \s h x ->
           ListManagedInsightRulesResponse'
-            Prelude.<$> ( x Data..@? "ManagedRules" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "ManagedRules"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (x Data..@? "NextToken")
@@ -128,7 +130,8 @@ instance Core.AWSRequest ListManagedInsightRules where
 
 instance Prelude.Hashable ListManagedInsightRules where
   hashWithSalt _salt ListManagedInsightRules' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` resourceARN
 

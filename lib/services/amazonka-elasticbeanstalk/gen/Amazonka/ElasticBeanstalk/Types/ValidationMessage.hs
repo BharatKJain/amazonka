@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.ValidationMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.ValidationMessage where
@@ -109,7 +109,8 @@ instance Data.FromXML ValidationMessage where
 
 instance Prelude.Hashable ValidationMessage where
   hashWithSalt _salt ValidationMessage' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` namespace
       `Prelude.hashWithSalt` optionName
       `Prelude.hashWithSalt` severity

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.ShareTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.ShareTarget where
@@ -66,7 +66,8 @@ shareTarget_type = Lens.lens (\ShareTarget' {type'} -> type') (\s@ShareTarget' {
 
 instance Prelude.Hashable ShareTarget where
   hashWithSalt _salt ShareTarget' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData ShareTarget where

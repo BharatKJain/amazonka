@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53RecoveryReadiness.Types.ReadinessCheckSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53RecoveryReadiness.Types.ReadinessCheckSummary where
@@ -76,7 +76,8 @@ instance Data.FromJSON ReadinessCheckSummary where
 
 instance Prelude.Hashable ReadinessCheckSummary where
   hashWithSalt _salt ReadinessCheckSummary' {..} =
-    _salt `Prelude.hashWithSalt` readiness
+    _salt
+      `Prelude.hashWithSalt` readiness
       `Prelude.hashWithSalt` readinessCheckName
 
 instance Prelude.NFData ReadinessCheckSummary where

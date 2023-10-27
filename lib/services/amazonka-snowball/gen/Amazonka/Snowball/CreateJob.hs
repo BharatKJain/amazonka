@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Snowball.CreateJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -544,7 +544,8 @@ instance Core.AWSRequest CreateJob where
 
 instance Prelude.Hashable CreateJob where
   hashWithSalt _salt CreateJob' {..} =
-    _salt `Prelude.hashWithSalt` addressId
+    _salt
+      `Prelude.hashWithSalt` addressId
       `Prelude.hashWithSalt` clusterId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` deviceConfiguration

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.InsightFeedback
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.InsightFeedback where
@@ -75,7 +75,8 @@ instance Data.FromJSON InsightFeedback where
 
 instance Prelude.Hashable InsightFeedback where
   hashWithSalt _salt InsightFeedback' {..} =
-    _salt `Prelude.hashWithSalt` feedback
+    _salt
+      `Prelude.hashWithSalt` feedback
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData InsightFeedback where

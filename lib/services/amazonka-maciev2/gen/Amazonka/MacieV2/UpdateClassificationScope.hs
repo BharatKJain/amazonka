@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MacieV2.UpdateClassificationScope
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest UpdateClassificationScope where
 
 instance Prelude.Hashable UpdateClassificationScope where
   hashWithSalt _salt UpdateClassificationScope' {..} =
-    _salt `Prelude.hashWithSalt` s3
+    _salt
+      `Prelude.hashWithSalt` s3
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData UpdateClassificationScope where

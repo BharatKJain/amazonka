@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Transfer.CreateAccess
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,7 @@ data CreateAccess = CreateAccess'
     -- Transfer Family. If you know the group name, you can view the SID values
     -- by running the following command using Windows PowerShell.
     --
-    -- @Get-ADGroup -Filter {samAccountName -like \"YourGroupName*\"} -Properties * | Select SamAccountName,ObjectSid@
+    -- @Get-ADGroup -Filter {samAccountName -like \"@/@YourGroupName@/@*\"} -Properties * | Select SamAccountName,ObjectSid@
     --
     -- In that command, replace /YourGroupName/ with the name of your Active
     -- Directory group.
@@ -230,7 +230,7 @@ data CreateAccess = CreateAccess'
 -- Transfer Family. If you know the group name, you can view the SID values
 -- by running the following command using Windows PowerShell.
 --
--- @Get-ADGroup -Filter {samAccountName -like \"YourGroupName*\"} -Properties * | Select SamAccountName,ObjectSid@
+-- @Get-ADGroup -Filter {samAccountName -like \"@/@YourGroupName@/@*\"} -Properties * | Select SamAccountName,ObjectSid@
 --
 -- In that command, replace /YourGroupName/ with the name of your Active
 -- Directory group.
@@ -347,7 +347,7 @@ createAccess_serverId = Lens.lens (\CreateAccess' {serverId} -> serverId) (\s@Cr
 -- Transfer Family. If you know the group name, you can view the SID values
 -- by running the following command using Windows PowerShell.
 --
--- @Get-ADGroup -Filter {samAccountName -like \"YourGroupName*\"} -Properties * | Select SamAccountName,ObjectSid@
+-- @Get-ADGroup -Filter {samAccountName -like \"@/@YourGroupName@/@*\"} -Properties * | Select SamAccountName,ObjectSid@
 --
 -- In that command, replace /YourGroupName/ with the name of your Active
 -- Directory group.
@@ -374,7 +374,8 @@ instance Core.AWSRequest CreateAccess where
 
 instance Prelude.Hashable CreateAccess where
   hashWithSalt _salt CreateAccess' {..} =
-    _salt `Prelude.hashWithSalt` homeDirectory
+    _salt
+      `Prelude.hashWithSalt` homeDirectory
       `Prelude.hashWithSalt` homeDirectoryMappings
       `Prelude.hashWithSalt` homeDirectoryType
       `Prelude.hashWithSalt` policy

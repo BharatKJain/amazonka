@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectoryService.CreateLogSubscription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest CreateLogSubscription where
 
 instance Prelude.Hashable CreateLogSubscription where
   hashWithSalt _salt CreateLogSubscription' {..} =
-    _salt `Prelude.hashWithSalt` directoryId
+    _salt
+      `Prelude.hashWithSalt` directoryId
       `Prelude.hashWithSalt` logGroupName
 
 instance Prelude.NFData CreateLogSubscription where

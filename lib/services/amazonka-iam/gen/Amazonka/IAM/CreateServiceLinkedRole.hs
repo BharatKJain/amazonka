@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.CreateServiceLinkedRole
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -176,7 +176,8 @@ instance Core.AWSRequest CreateServiceLinkedRole where
 
 instance Prelude.Hashable CreateServiceLinkedRole where
   hashWithSalt _salt CreateServiceLinkedRole' {..} =
-    _salt `Prelude.hashWithSalt` customSuffix
+    _salt
+      `Prelude.hashWithSalt` customSuffix
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` aWSServiceName
 

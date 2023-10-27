@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.DeleteFleetSuccessItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.DeleteFleetSuccessItem where
@@ -83,7 +83,8 @@ instance Data.FromXML DeleteFleetSuccessItem where
 
 instance Prelude.Hashable DeleteFleetSuccessItem where
   hashWithSalt _salt DeleteFleetSuccessItem' {..} =
-    _salt `Prelude.hashWithSalt` currentFleetState
+    _salt
+      `Prelude.hashWithSalt` currentFleetState
       `Prelude.hashWithSalt` fleetId
       `Prelude.hashWithSalt` previousFleetState
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.TestGridSessionArtifact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.TestGridSessionArtifact where
@@ -90,7 +90,8 @@ instance Data.FromJSON TestGridSessionArtifact where
 
 instance Prelude.Hashable TestGridSessionArtifact where
   hashWithSalt _salt TestGridSessionArtifact' {..} =
-    _salt `Prelude.hashWithSalt` filename
+    _salt
+      `Prelude.hashWithSalt` filename
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` url
 

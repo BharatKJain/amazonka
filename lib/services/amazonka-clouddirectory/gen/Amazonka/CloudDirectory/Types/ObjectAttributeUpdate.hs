@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.ObjectAttributeUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.ObjectAttributeUpdate where
@@ -67,7 +67,8 @@ objectAttributeUpdate_objectAttributeKey = Lens.lens (\ObjectAttributeUpdate' {o
 
 instance Prelude.Hashable ObjectAttributeUpdate where
   hashWithSalt _salt ObjectAttributeUpdate' {..} =
-    _salt `Prelude.hashWithSalt` objectAttributeAction
+    _salt
+      `Prelude.hashWithSalt` objectAttributeAction
       `Prelude.hashWithSalt` objectAttributeKey
 
 instance Prelude.NFData ObjectAttributeUpdate where

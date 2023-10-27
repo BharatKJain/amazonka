@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AlexaBusiness.AssociateDeviceWithRoom
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,7 +102,8 @@ instance Core.AWSRequest AssociateDeviceWithRoom where
 
 instance Prelude.Hashable AssociateDeviceWithRoom where
   hashWithSalt _salt AssociateDeviceWithRoom' {..} =
-    _salt `Prelude.hashWithSalt` deviceArn
+    _salt
+      `Prelude.hashWithSalt` deviceArn
       `Prelude.hashWithSalt` roomArn
 
 instance Prelude.NFData AssociateDeviceWithRoom where

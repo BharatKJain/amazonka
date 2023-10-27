@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.LambdaTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.LambdaTarget where
@@ -123,7 +123,8 @@ instance Data.FromJSON LambdaTarget where
             Prelude.<$> (x Data..:? "deploymentId")
             Prelude.<*> (x Data..:? "lambdaFunctionInfo")
             Prelude.<*> (x Data..:? "lastUpdatedAt")
-            Prelude.<*> ( x Data..:? "lifecycleEvents"
+            Prelude.<*> ( x
+                            Data..:? "lifecycleEvents"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "status")
@@ -133,7 +134,8 @@ instance Data.FromJSON LambdaTarget where
 
 instance Prelude.Hashable LambdaTarget where
   hashWithSalt _salt LambdaTarget' {..} =
-    _salt `Prelude.hashWithSalt` deploymentId
+    _salt
+      `Prelude.hashWithSalt` deploymentId
       `Prelude.hashWithSalt` lambdaFunctionInfo
       `Prelude.hashWithSalt` lastUpdatedAt
       `Prelude.hashWithSalt` lifecycleEvents

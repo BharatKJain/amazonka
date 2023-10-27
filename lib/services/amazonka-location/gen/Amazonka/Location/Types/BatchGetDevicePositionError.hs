@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.BatchGetDevicePositionError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.BatchGetDevicePositionError where
@@ -79,7 +79,8 @@ instance Data.FromJSON BatchGetDevicePositionError where
 
 instance Prelude.Hashable BatchGetDevicePositionError where
   hashWithSalt _salt BatchGetDevicePositionError' {..} =
-    _salt `Prelude.hashWithSalt` deviceId
+    _salt
+      `Prelude.hashWithSalt` deviceId
       `Prelude.hashWithSalt` error
 
 instance Prelude.NFData BatchGetDevicePositionError where

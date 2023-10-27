@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SNS.RemovePermission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -101,7 +101,8 @@ instance Core.AWSRequest RemovePermission where
 
 instance Prelude.Hashable RemovePermission where
   hashWithSalt _salt RemovePermission' {..} =
-    _salt `Prelude.hashWithSalt` topicArn
+    _salt
+      `Prelude.hashWithSalt` topicArn
       `Prelude.hashWithSalt` label
 
 instance Prelude.NFData RemovePermission where

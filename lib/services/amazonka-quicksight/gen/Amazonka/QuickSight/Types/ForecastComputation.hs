@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ForecastComputation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ForecastComputation where
@@ -187,7 +187,8 @@ instance Data.FromJSON ForecastComputation where
 
 instance Prelude.Hashable ForecastComputation where
   hashWithSalt _salt ForecastComputation' {..} =
-    _salt `Prelude.hashWithSalt` customSeasonalityValue
+    _salt
+      `Prelude.hashWithSalt` customSeasonalityValue
       `Prelude.hashWithSalt` lowerBoundary
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` periodsBackward

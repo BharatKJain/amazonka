@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KMS.GetKeyPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -150,7 +150,8 @@ instance Core.AWSRequest GetKeyPolicy where
 
 instance Prelude.Hashable GetKeyPolicy where
   hashWithSalt _salt GetKeyPolicy' {..} =
-    _salt `Prelude.hashWithSalt` keyId
+    _salt
+      `Prelude.hashWithSalt` keyId
       `Prelude.hashWithSalt` policyName
 
 instance Prelude.NFData GetKeyPolicy where

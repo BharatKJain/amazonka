@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.EdgePackagingJobSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.EdgePackagingJobSummary where
@@ -145,7 +145,8 @@ instance Data.FromJSON EdgePackagingJobSummary where
 
 instance Prelude.Hashable EdgePackagingJobSummary where
   hashWithSalt _salt EdgePackagingJobSummary' {..} =
-    _salt `Prelude.hashWithSalt` compilationJobName
+    _salt
+      `Prelude.hashWithSalt` compilationJobName
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` lastModifiedTime
       `Prelude.hashWithSalt` modelName

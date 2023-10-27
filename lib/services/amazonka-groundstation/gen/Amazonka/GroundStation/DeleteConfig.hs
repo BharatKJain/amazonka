@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GroundStation.DeleteConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -101,7 +101,8 @@ instance Core.AWSRequest DeleteConfig where
 
 instance Prelude.Hashable DeleteConfig where
   hashWithSalt _salt DeleteConfig' {..} =
-    _salt `Prelude.hashWithSalt` configId
+    _salt
+      `Prelude.hashWithSalt` configId
       `Prelude.hashWithSalt` configType
 
 instance Prelude.NFData DeleteConfig where

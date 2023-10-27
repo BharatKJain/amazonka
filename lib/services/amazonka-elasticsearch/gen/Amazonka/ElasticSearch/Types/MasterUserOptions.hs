@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.MasterUserOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.MasterUserOptions where
@@ -79,7 +79,8 @@ masterUserOptions_masterUserPassword = Lens.lens (\MasterUserOptions' {masterUse
 
 instance Prelude.Hashable MasterUserOptions where
   hashWithSalt _salt MasterUserOptions' {..} =
-    _salt `Prelude.hashWithSalt` masterUserARN
+    _salt
+      `Prelude.hashWithSalt` masterUserARN
       `Prelude.hashWithSalt` masterUserName
       `Prelude.hashWithSalt` masterUserPassword
 

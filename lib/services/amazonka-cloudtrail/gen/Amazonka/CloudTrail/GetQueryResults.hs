@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudTrail.GetQueryResults
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -126,7 +126,8 @@ instance Core.AWSRequest GetQueryResults where
           GetQueryResultsResponse'
             Prelude.<$> (x Data..?> "ErrorMessage")
             Prelude.<*> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "QueryResultRows"
+            Prelude.<*> ( x
+                            Data..?> "QueryResultRows"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "QueryStatistics")
@@ -136,7 +137,8 @@ instance Core.AWSRequest GetQueryResults where
 
 instance Prelude.Hashable GetQueryResults where
   hashWithSalt _salt GetQueryResults' {..} =
-    _salt `Prelude.hashWithSalt` eventDataStore
+    _salt
+      `Prelude.hashWithSalt` eventDataStore
       `Prelude.hashWithSalt` maxQueryResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` queryId

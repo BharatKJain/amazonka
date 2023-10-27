@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.AssetValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.AssetValue where
@@ -45,7 +45,6 @@ newAssetValue ::
   AssetValue
 newAssetValue = AssetValue' {href = Prelude.Nothing}
 
--- |
 assetValue_href :: Lens.Lens' AssetValue (Prelude.Maybe Prelude.Text)
 assetValue_href = Lens.lens (\AssetValue' {href} -> href) (\s@AssetValue' {} a -> s {href = a} :: AssetValue)
 

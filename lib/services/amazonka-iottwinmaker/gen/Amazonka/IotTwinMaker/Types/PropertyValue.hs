@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.PropertyValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.PropertyValue where
@@ -163,7 +163,8 @@ instance Data.FromJSON PropertyValue where
 
 instance Prelude.Hashable PropertyValue where
   hashWithSalt _salt PropertyValue' {..} =
-    _salt `Prelude.hashWithSalt` time
+    _salt
+      `Prelude.hashWithSalt` time
       `Prelude.hashWithSalt` timestamp
       `Prelude.hashWithSalt` value
 

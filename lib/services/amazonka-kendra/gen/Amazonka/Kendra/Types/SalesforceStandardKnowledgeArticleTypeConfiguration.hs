@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.SalesforceStandardKnowledgeArticleTypeConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.SalesforceStandardKnowledgeArticleTypeConfiguration where
@@ -104,8 +104,8 @@ instance
       ( \x ->
           SalesforceStandardKnowledgeArticleTypeConfiguration'
             Prelude.<$> (x Data..:? "DocumentTitleFieldName")
-              Prelude.<*> (x Data..:? "FieldMappings")
-              Prelude.<*> (x Data..: "DocumentDataFieldName")
+            Prelude.<*> (x Data..:? "FieldMappings")
+            Prelude.<*> (x Data..: "DocumentDataFieldName")
       )
 
 instance
@@ -115,7 +115,8 @@ instance
   hashWithSalt
     _salt
     SalesforceStandardKnowledgeArticleTypeConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` documentTitleFieldName
+      _salt
+        `Prelude.hashWithSalt` documentTitleFieldName
         `Prelude.hashWithSalt` fieldMappings
         `Prelude.hashWithSalt` documentDataFieldName
 

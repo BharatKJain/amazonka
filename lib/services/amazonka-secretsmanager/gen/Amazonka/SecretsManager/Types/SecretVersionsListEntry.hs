@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecretsManager.Types.SecretVersionsListEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecretsManager.Types.SecretVersionsListEntry where
@@ -114,7 +114,8 @@ instance Data.FromJSON SecretVersionsListEntry where
 
 instance Prelude.Hashable SecretVersionsListEntry where
   hashWithSalt _salt SecretVersionsListEntry' {..} =
-    _salt `Prelude.hashWithSalt` createdDate
+    _salt
+      `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` kmsKeyIds
       `Prelude.hashWithSalt` lastAccessedDate
       `Prelude.hashWithSalt` versionId

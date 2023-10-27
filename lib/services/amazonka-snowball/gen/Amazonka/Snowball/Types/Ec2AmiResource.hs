@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Snowball.Types.Ec2AmiResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Snowball.Types.Ec2AmiResource where
@@ -79,7 +79,8 @@ instance Data.FromJSON Ec2AmiResource where
 
 instance Prelude.Hashable Ec2AmiResource where
   hashWithSalt _salt Ec2AmiResource' {..} =
-    _salt `Prelude.hashWithSalt` snowballAmiId
+    _salt
+      `Prelude.hashWithSalt` snowballAmiId
       `Prelude.hashWithSalt` amiId
 
 instance Prelude.NFData Ec2AmiResource where

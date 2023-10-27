@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.Tmpfs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.Tmpfs where
@@ -97,7 +97,8 @@ instance Data.FromJSON Tmpfs where
 
 instance Prelude.Hashable Tmpfs where
   hashWithSalt _salt Tmpfs' {..} =
-    _salt `Prelude.hashWithSalt` mountOptions
+    _salt
+      `Prelude.hashWithSalt` mountOptions
       `Prelude.hashWithSalt` containerPath
       `Prelude.hashWithSalt` size
 

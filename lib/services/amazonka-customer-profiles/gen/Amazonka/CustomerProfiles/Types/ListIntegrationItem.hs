@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CustomerProfiles.Types.ListIntegrationItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CustomerProfiles.Types.ListIntegrationItem where
@@ -170,7 +170,8 @@ instance Data.FromJSON ListIntegrationItem where
           ListIntegrationItem'
             Prelude.<$> (x Data..:? "IsUnstructured")
             Prelude.<*> (x Data..:? "ObjectTypeName")
-            Prelude.<*> ( x Data..:? "ObjectTypeNames"
+            Prelude.<*> ( x
+                            Data..:? "ObjectTypeNames"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Tags" Data..!= Prelude.mempty)
@@ -183,7 +184,8 @@ instance Data.FromJSON ListIntegrationItem where
 
 instance Prelude.Hashable ListIntegrationItem where
   hashWithSalt _salt ListIntegrationItem' {..} =
-    _salt `Prelude.hashWithSalt` isUnstructured
+    _salt
+      `Prelude.hashWithSalt` isUnstructured
       `Prelude.hashWithSalt` objectTypeName
       `Prelude.hashWithSalt` objectTypeNames
       `Prelude.hashWithSalt` tags

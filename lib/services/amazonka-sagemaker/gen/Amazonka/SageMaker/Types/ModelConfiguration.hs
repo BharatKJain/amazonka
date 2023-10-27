@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ModelConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ModelConfiguration where
@@ -80,7 +80,8 @@ instance Data.FromJSON ModelConfiguration where
 
 instance Prelude.Hashable ModelConfiguration where
   hashWithSalt _salt ModelConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` environmentParameters
+    _salt
+      `Prelude.hashWithSalt` environmentParameters
       `Prelude.hashWithSalt` inferenceSpecificationName
 
 instance Prelude.NFData ModelConfiguration where

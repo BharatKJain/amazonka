@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.SegmentationDescriptor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.SegmentationDescriptor where
@@ -220,7 +220,8 @@ instance Data.FromJSON SegmentationDescriptor where
 
 instance Prelude.Hashable SegmentationDescriptor where
   hashWithSalt _salt SegmentationDescriptor' {..} =
-    _salt `Prelude.hashWithSalt` segmentNum
+    _salt
+      `Prelude.hashWithSalt` segmentNum
       `Prelude.hashWithSalt` segmentationEventId
       `Prelude.hashWithSalt` segmentationTypeId
       `Prelude.hashWithSalt` segmentationUpid

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.Parameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.Parameter where
@@ -72,12 +72,14 @@ instance Data.FromJSON Parameter where
       "Parameter"
       ( \x ->
           Parameter'
-            Prelude.<$> (x Data..: "Name") Prelude.<*> (x Data..: "Value")
+            Prelude.<$> (x Data..: "Name")
+            Prelude.<*> (x Data..: "Value")
       )
 
 instance Prelude.Hashable Parameter where
   hashWithSalt _salt Parameter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData Parameter where

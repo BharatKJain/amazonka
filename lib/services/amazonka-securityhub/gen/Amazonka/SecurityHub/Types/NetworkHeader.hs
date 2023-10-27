@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.NetworkHeader
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.NetworkHeader where
@@ -86,7 +86,8 @@ instance Data.FromJSON NetworkHeader where
 
 instance Prelude.Hashable NetworkHeader where
   hashWithSalt _salt NetworkHeader' {..} =
-    _salt `Prelude.hashWithSalt` destination
+    _salt
+      `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` protocol
       `Prelude.hashWithSalt` source
 

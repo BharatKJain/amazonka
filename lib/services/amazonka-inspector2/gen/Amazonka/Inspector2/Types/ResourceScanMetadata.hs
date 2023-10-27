@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.ResourceScanMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.ResourceScanMetadata where
@@ -105,7 +105,8 @@ instance Data.FromJSON ResourceScanMetadata where
 
 instance Prelude.Hashable ResourceScanMetadata where
   hashWithSalt _salt ResourceScanMetadata' {..} =
-    _salt `Prelude.hashWithSalt` ec2
+    _salt
+      `Prelude.hashWithSalt` ec2
       `Prelude.hashWithSalt` ecrImage
       `Prelude.hashWithSalt` ecrRepository
       `Prelude.hashWithSalt` lambdaFunction

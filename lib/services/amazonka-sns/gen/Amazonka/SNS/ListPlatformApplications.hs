@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SNS.ListPlatformApplications
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,22 +102,22 @@ instance Core.AWSPager ListPlatformApplications where
     | Core.stop
         ( rs
             Lens.^? listPlatformApplicationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listPlatformApplicationsResponse_platformApplications
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listPlatformApplications_nextToken
           Lens..~ rs
           Lens.^? listPlatformApplicationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListPlatformApplications where
   type
@@ -131,7 +131,8 @@ instance Core.AWSRequest ListPlatformApplications where
       ( \s h x ->
           ListPlatformApplicationsResponse'
             Prelude.<$> (x Data..@? "NextToken")
-            Prelude.<*> ( x Data..@? "PlatformApplications"
+            Prelude.<*> ( x
+                            Data..@? "PlatformApplications"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )

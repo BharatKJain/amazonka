@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.CodeGenConfigurationNode
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.CodeGenConfigurationNode where
@@ -719,7 +719,8 @@ instance Data.FromJSON CodeGenConfigurationNode where
 
 instance Prelude.Hashable CodeGenConfigurationNode where
   hashWithSalt _salt CodeGenConfigurationNode' {..} =
-    _salt `Prelude.hashWithSalt` aggregate
+    _salt
+      `Prelude.hashWithSalt` aggregate
       `Prelude.hashWithSalt` applyMapping
       `Prelude.hashWithSalt` athenaConnectorSource
       `Prelude.hashWithSalt` catalogKafkaSource

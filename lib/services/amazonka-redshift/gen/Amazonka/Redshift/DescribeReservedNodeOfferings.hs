@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.DescribeReservedNodeOfferings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -154,22 +154,22 @@ instance Core.AWSPager DescribeReservedNodeOfferings where
     | Core.stop
         ( rs
             Lens.^? describeReservedNodeOfferingsResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeReservedNodeOfferingsResponse_reservedNodeOfferings
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeReservedNodeOfferings_marker
           Lens..~ rs
           Lens.^? describeReservedNodeOfferingsResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -186,7 +186,8 @@ instance
       ( \s h x ->
           DescribeReservedNodeOfferingsResponse'
             Prelude.<$> (x Data..@? "Marker")
-            Prelude.<*> ( x Data..@? "ReservedNodeOfferings"
+            Prelude.<*> ( x
+                            Data..@? "ReservedNodeOfferings"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "ReservedNodeOffering")
                         )
@@ -198,7 +199,8 @@ instance
     DescribeReservedNodeOfferings
   where
   hashWithSalt _salt DescribeReservedNodeOfferings' {..} =
-    _salt `Prelude.hashWithSalt` marker
+    _salt
+      `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxRecords
       `Prelude.hashWithSalt` reservedNodeOfferingId
 

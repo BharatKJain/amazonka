@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ExportTransitGatewayRoutes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -225,7 +225,8 @@ instance Core.AWSRequest ExportTransitGatewayRoutes where
 
 instance Prelude.Hashable ExportTransitGatewayRoutes where
   hashWithSalt _salt ExportTransitGatewayRoutes' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` transitGatewayRouteTableId
       `Prelude.hashWithSalt` s3Bucket

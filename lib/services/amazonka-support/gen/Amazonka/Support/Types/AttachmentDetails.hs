@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Support.Types.AttachmentDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Support.Types.AttachmentDetails where
@@ -76,7 +76,8 @@ instance Data.FromJSON AttachmentDetails where
 
 instance Prelude.Hashable AttachmentDetails where
   hashWithSalt _salt AttachmentDetails' {..} =
-    _salt `Prelude.hashWithSalt` attachmentId
+    _salt
+      `Prelude.hashWithSalt` attachmentId
       `Prelude.hashWithSalt` fileName
 
 instance Prelude.NFData AttachmentDetails where

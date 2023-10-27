@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.CreateS3DataAccessFromS3BucketResponseDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.CreateS3DataAccessFromS3BucketResponseDetails where
@@ -93,8 +93,8 @@ instance
       ( \x ->
           CreateS3DataAccessFromS3BucketResponseDetails'
             Prelude.<$> (x Data..: "AssetSource")
-              Prelude.<*> (x Data..: "DataSetId")
-              Prelude.<*> (x Data..: "RevisionId")
+            Prelude.<*> (x Data..: "DataSetId")
+            Prelude.<*> (x Data..: "RevisionId")
       )
 
 instance
@@ -104,7 +104,8 @@ instance
   hashWithSalt
     _salt
     CreateS3DataAccessFromS3BucketResponseDetails' {..} =
-      _salt `Prelude.hashWithSalt` assetSource
+      _salt
+        `Prelude.hashWithSalt` assetSource
         `Prelude.hashWithSalt` dataSetId
         `Prelude.hashWithSalt` revisionId
 

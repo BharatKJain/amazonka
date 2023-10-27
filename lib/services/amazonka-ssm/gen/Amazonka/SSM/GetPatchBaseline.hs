@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.GetPatchBaseline
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest GetPatchBaseline where
       ( \s h x ->
           GetPatchBaselineResponse'
             Prelude.<$> (x Data..?> "ApprovalRules")
-            Prelude.<*> ( x Data..?> "ApprovedPatches"
+            Prelude.<*> ( x
+                            Data..?> "ApprovedPatches"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "ApprovedPatchesComplianceLevel")
@@ -133,7 +134,8 @@ instance Core.AWSRequest GetPatchBaseline where
             Prelude.<*> (x Data..?> "Name")
             Prelude.<*> (x Data..?> "OperatingSystem")
             Prelude.<*> (x Data..?> "PatchGroups" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "RejectedPatches"
+            Prelude.<*> ( x
+                            Data..?> "RejectedPatches"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "RejectedPatchesAction")

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.ImageResponseCard
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.ImageResponseCard where
@@ -119,7 +119,8 @@ instance Data.FromJSON ImageResponseCard where
 
 instance Prelude.Hashable ImageResponseCard where
   hashWithSalt _salt ImageResponseCard' {..} =
-    _salt `Prelude.hashWithSalt` buttons
+    _salt
+      `Prelude.hashWithSalt` buttons
       `Prelude.hashWithSalt` imageUrl
       `Prelude.hashWithSalt` subtitle
       `Prelude.hashWithSalt` title

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.EventFeedbackType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.EventFeedbackType where
@@ -89,7 +89,8 @@ instance Data.FromJSON EventFeedbackType where
 
 instance Prelude.Hashable EventFeedbackType where
   hashWithSalt _salt EventFeedbackType' {..} =
-    _salt `Prelude.hashWithSalt` feedbackDate
+    _salt
+      `Prelude.hashWithSalt` feedbackDate
       `Prelude.hashWithSalt` feedbackValue
       `Prelude.hashWithSalt` provider
 

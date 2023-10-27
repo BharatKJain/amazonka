@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.GetDataQualityRulesetEvaluationRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,20 +105,20 @@ instance
       ( \s h x ->
           GetDataQualityRulesetEvaluationRunResponse'
             Prelude.<$> (x Data..?> "AdditionalRunOptions")
-              Prelude.<*> (x Data..?> "CompletedOn")
-              Prelude.<*> (x Data..?> "DataSource")
-              Prelude.<*> (x Data..?> "ErrorString")
-              Prelude.<*> (x Data..?> "ExecutionTime")
-              Prelude.<*> (x Data..?> "LastModifiedOn")
-              Prelude.<*> (x Data..?> "NumberOfWorkers")
-              Prelude.<*> (x Data..?> "ResultIds")
-              Prelude.<*> (x Data..?> "Role")
-              Prelude.<*> (x Data..?> "RulesetNames")
-              Prelude.<*> (x Data..?> "RunId")
-              Prelude.<*> (x Data..?> "StartedOn")
-              Prelude.<*> (x Data..?> "Status")
-              Prelude.<*> (x Data..?> "Timeout")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "CompletedOn")
+            Prelude.<*> (x Data..?> "DataSource")
+            Prelude.<*> (x Data..?> "ErrorString")
+            Prelude.<*> (x Data..?> "ExecutionTime")
+            Prelude.<*> (x Data..?> "LastModifiedOn")
+            Prelude.<*> (x Data..?> "NumberOfWorkers")
+            Prelude.<*> (x Data..?> "ResultIds")
+            Prelude.<*> (x Data..?> "Role")
+            Prelude.<*> (x Data..?> "RulesetNames")
+            Prelude.<*> (x Data..?> "RunId")
+            Prelude.<*> (x Data..?> "StartedOn")
+            Prelude.<*> (x Data..?> "Status")
+            Prelude.<*> (x Data..?> "Timeout")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance

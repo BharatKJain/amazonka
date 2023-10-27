@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RedshiftData.ListTables
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -276,20 +276,23 @@ instance Core.AWSPager ListTables where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listTablesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listTablesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listTablesResponse_tables Prelude.. Lens._Just
+            Lens.^? listTablesResponse_tables
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listTables_nextToken
           Lens..~ rs
-          Lens.^? listTablesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listTablesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListTables where
   type AWSResponse ListTables = ListTablesResponse
@@ -306,7 +309,8 @@ instance Core.AWSRequest ListTables where
 
 instance Prelude.Hashable ListTables where
   hashWithSalt _salt ListTables' {..} =
-    _salt `Prelude.hashWithSalt` clusterIdentifier
+    _salt
+      `Prelude.hashWithSalt` clusterIdentifier
       `Prelude.hashWithSalt` connectedDatabase
       `Prelude.hashWithSalt` dbUser
       `Prelude.hashWithSalt` maxResults

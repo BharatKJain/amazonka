@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.ViewSunElevationInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.ViewSunElevationInput where
@@ -78,7 +78,8 @@ instance Data.FromJSON ViewSunElevationInput where
 
 instance Prelude.Hashable ViewSunElevationInput where
   hashWithSalt _salt ViewSunElevationInput' {..} =
-    _salt `Prelude.hashWithSalt` lowerBound
+    _salt
+      `Prelude.hashWithSalt` lowerBound
       `Prelude.hashWithSalt` upperBound
 
 instance Prelude.NFData ViewSunElevationInput where

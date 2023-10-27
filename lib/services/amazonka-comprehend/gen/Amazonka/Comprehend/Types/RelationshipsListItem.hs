@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.RelationshipsListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.RelationshipsListItem where
@@ -75,7 +75,8 @@ instance Data.FromJSON RelationshipsListItem where
 
 instance Prelude.Hashable RelationshipsListItem where
   hashWithSalt _salt RelationshipsListItem' {..} =
-    _salt `Prelude.hashWithSalt` ids
+    _salt
+      `Prelude.hashWithSalt` ids
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData RelationshipsListItem where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Braket.Types.InputFileConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Braket.Types.InputFileConfig where
@@ -90,7 +90,8 @@ instance Data.FromJSON InputFileConfig where
 
 instance Prelude.Hashable InputFileConfig where
   hashWithSalt _salt InputFileConfig' {..} =
-    _salt `Prelude.hashWithSalt` contentType
+    _salt
+      `Prelude.hashWithSalt` contentType
       `Prelude.hashWithSalt` channelName
       `Prelude.hashWithSalt` dataSource
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecurityHub.UpdateStandardsControl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest UpdateStandardsControl where
 
 instance Prelude.Hashable UpdateStandardsControl where
   hashWithSalt _salt UpdateStandardsControl' {..} =
-    _salt `Prelude.hashWithSalt` controlStatus
+    _salt
+      `Prelude.hashWithSalt` controlStatus
       `Prelude.hashWithSalt` disabledReason
       `Prelude.hashWithSalt` standardsControlArn
 

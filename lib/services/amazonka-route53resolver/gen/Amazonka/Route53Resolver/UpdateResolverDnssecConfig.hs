@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53Resolver.UpdateResolverDnssecConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,7 +117,8 @@ instance Core.AWSRequest UpdateResolverDnssecConfig where
 
 instance Prelude.Hashable UpdateResolverDnssecConfig where
   hashWithSalt _salt UpdateResolverDnssecConfig' {..} =
-    _salt `Prelude.hashWithSalt` resourceId
+    _salt
+      `Prelude.hashWithSalt` resourceId
       `Prelude.hashWithSalt` validation
 
 instance Prelude.NFData UpdateResolverDnssecConfig where

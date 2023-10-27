@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.RemoteAccountDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.RemoteAccountDetails where
@@ -84,7 +84,8 @@ instance Data.FromJSON RemoteAccountDetails where
 
 instance Prelude.Hashable RemoteAccountDetails where
   hashWithSalt _salt RemoteAccountDetails' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` affiliated
 
 instance Prelude.NFData RemoteAccountDetails where

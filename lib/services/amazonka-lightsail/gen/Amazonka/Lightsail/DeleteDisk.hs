@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.DeleteDisk
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest DeleteDisk where
 
 instance Prelude.Hashable DeleteDisk where
   hashWithSalt _salt DeleteDisk' {..} =
-    _salt `Prelude.hashWithSalt` forceDeleteAddOns
+    _salt
+      `Prelude.hashWithSalt` forceDeleteAddOns
       `Prelude.hashWithSalt` diskName
 
 instance Prelude.NFData DeleteDisk where

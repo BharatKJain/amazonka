@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.InstanceInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.InstanceInformation where
@@ -373,7 +373,8 @@ instance Data.FromJSON InstanceInformation where
 
 instance Prelude.Hashable InstanceInformation where
   hashWithSalt _salt InstanceInformation' {..} =
-    _salt `Prelude.hashWithSalt` activationId
+    _salt
+      `Prelude.hashWithSalt` activationId
       `Prelude.hashWithSalt` agentVersion
       `Prelude.hashWithSalt` associationOverview
       `Prelude.hashWithSalt` associationStatus

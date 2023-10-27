@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DMS.CreateReplicationTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -403,7 +403,8 @@ instance Core.AWSRequest CreateReplicationTask where
 
 instance Prelude.Hashable CreateReplicationTask where
   hashWithSalt _salt CreateReplicationTask' {..} =
-    _salt `Prelude.hashWithSalt` cdcStartPosition
+    _salt
+      `Prelude.hashWithSalt` cdcStartPosition
       `Prelude.hashWithSalt` cdcStartTime
       `Prelude.hashWithSalt` cdcStopPosition
       `Prelude.hashWithSalt` replicationTaskSettings

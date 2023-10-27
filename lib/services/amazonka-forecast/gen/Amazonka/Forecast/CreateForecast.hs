@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Forecast.CreateForecast
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -302,7 +302,8 @@ instance Core.AWSRequest CreateForecast where
 
 instance Prelude.Hashable CreateForecast where
   hashWithSalt _salt CreateForecast' {..} =
-    _salt `Prelude.hashWithSalt` forecastTypes
+    _salt
+      `Prelude.hashWithSalt` forecastTypes
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` timeSeriesSelector
       `Prelude.hashWithSalt` forecastName

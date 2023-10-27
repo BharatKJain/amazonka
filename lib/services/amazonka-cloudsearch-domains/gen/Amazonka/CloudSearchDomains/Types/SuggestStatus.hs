@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudSearchDomains.Types.SuggestStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudSearchDomains.Types.SuggestStatus where
@@ -69,12 +69,14 @@ instance Data.FromJSON SuggestStatus where
       "SuggestStatus"
       ( \x ->
           SuggestStatus'
-            Prelude.<$> (x Data..:? "rid") Prelude.<*> (x Data..:? "timems")
+            Prelude.<$> (x Data..:? "rid")
+            Prelude.<*> (x Data..:? "timems")
       )
 
 instance Prelude.Hashable SuggestStatus where
   hashWithSalt _salt SuggestStatus' {..} =
-    _salt `Prelude.hashWithSalt` rid
+    _salt
+      `Prelude.hashWithSalt` rid
       `Prelude.hashWithSalt` timems
 
 instance Prelude.NFData SuggestStatus where

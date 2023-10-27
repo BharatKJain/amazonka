@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SQS.Types.ChangeMessageVisibilityBatchRequestEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SQS.Types.ChangeMessageVisibilityBatchRequestEntry where
@@ -25,7 +25,7 @@ import qualified Amazonka.Data as Data
 import qualified Amazonka.Prelude as Prelude
 
 -- | Encloses a receipt handle and an entry id for each message in
--- @ ChangeMessageVisibilityBatch.@
+-- @ @@ChangeMessageVisibilityBatch@@.@
 --
 -- All of the following list parameters must be prefixed with
 -- @ChangeMessageVisibilityBatchRequestEntry.n@, where @n@ is an integer
@@ -115,7 +115,8 @@ instance
   hashWithSalt
     _salt
     ChangeMessageVisibilityBatchRequestEntry' {..} =
-      _salt `Prelude.hashWithSalt` visibilityTimeout
+      _salt
+        `Prelude.hashWithSalt` visibilityTimeout
         `Prelude.hashWithSalt` id
         `Prelude.hashWithSalt` receiptHandle
 

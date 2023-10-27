@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FraudDetector.ListEventPredictions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -163,7 +163,8 @@ instance Core.AWSRequest ListEventPredictions where
     Response.receiveJSON
       ( \s h x ->
           ListEventPredictionsResponse'
-            Prelude.<$> ( x Data..?> "eventPredictionSummaries"
+            Prelude.<$> ( x
+                            Data..?> "eventPredictionSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -172,7 +173,8 @@ instance Core.AWSRequest ListEventPredictions where
 
 instance Prelude.Hashable ListEventPredictions where
   hashWithSalt _salt ListEventPredictions' {..} =
-    _salt `Prelude.hashWithSalt` detectorId
+    _salt
+      `Prelude.hashWithSalt` detectorId
       `Prelude.hashWithSalt` detectorVersionId
       `Prelude.hashWithSalt` eventId
       `Prelude.hashWithSalt` eventType

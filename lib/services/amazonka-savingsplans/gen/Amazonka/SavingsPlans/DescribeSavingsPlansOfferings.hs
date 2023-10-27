@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SavingsPlans.DescribeSavingsPlansOfferings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -222,7 +222,8 @@ instance
     DescribeSavingsPlansOfferings
   where
   hashWithSalt _salt DescribeSavingsPlansOfferings' {..} =
-    _salt `Prelude.hashWithSalt` currencies
+    _salt
+      `Prelude.hashWithSalt` currencies
       `Prelude.hashWithSalt` descriptions
       `Prelude.hashWithSalt` durations
       `Prelude.hashWithSalt` filters

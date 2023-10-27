@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.RemoveAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,7 +158,8 @@ instance Core.AWSRequest RemoveAttributes where
 
 instance Prelude.Hashable RemoveAttributes where
   hashWithSalt _salt RemoveAttributes' {..} =
-    _salt `Prelude.hashWithSalt` attributeType
+    _salt
+      `Prelude.hashWithSalt` attributeType
       `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` updateAttributesRequest
 

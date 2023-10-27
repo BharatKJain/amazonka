@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Wisdom.Types.Highlight
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Wisdom.Types.Highlight where
@@ -75,7 +75,8 @@ instance Data.FromJSON Highlight where
 
 instance Prelude.Hashable Highlight where
   hashWithSalt _salt Highlight' {..} =
-    _salt `Prelude.hashWithSalt` beginOffsetInclusive
+    _salt
+      `Prelude.hashWithSalt` beginOffsetInclusive
       `Prelude.hashWithSalt` endOffsetExclusive
 
 instance Prelude.NFData Highlight where

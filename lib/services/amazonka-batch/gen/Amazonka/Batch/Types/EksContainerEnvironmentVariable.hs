@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.EksContainerEnvironmentVariable
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.EksContainerEnvironmentVariable where
@@ -74,7 +74,8 @@ instance
       "EksContainerEnvironmentVariable"
       ( \x ->
           EksContainerEnvironmentVariable'
-            Prelude.<$> (x Data..:? "value") Prelude.<*> (x Data..: "name")
+            Prelude.<$> (x Data..:? "value")
+            Prelude.<*> (x Data..: "name")
       )
 
 instance
@@ -84,7 +85,8 @@ instance
   hashWithSalt
     _salt
     EksContainerEnvironmentVariable' {..} =
-      _salt `Prelude.hashWithSalt` value
+      _salt
+        `Prelude.hashWithSalt` value
         `Prelude.hashWithSalt` name
 
 instance

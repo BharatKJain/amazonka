@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.OutboundCrossClusterSearchConnection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.OutboundCrossClusterSearchConnection where
@@ -129,7 +129,8 @@ instance
   hashWithSalt
     _salt
     OutboundCrossClusterSearchConnection' {..} =
-      _salt `Prelude.hashWithSalt` connectionAlias
+      _salt
+        `Prelude.hashWithSalt` connectionAlias
         `Prelude.hashWithSalt` connectionStatus
         `Prelude.hashWithSalt` crossClusterSearchConnectionId
         `Prelude.hashWithSalt` destinationDomainInfo

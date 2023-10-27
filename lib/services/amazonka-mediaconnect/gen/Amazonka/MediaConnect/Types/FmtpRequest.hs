@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.FmtpRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.FmtpRequest where
@@ -122,7 +122,8 @@ fmtpRequest_tcs = Lens.lens (\FmtpRequest' {tcs} -> tcs) (\s@FmtpRequest' {} a -
 
 instance Prelude.Hashable FmtpRequest where
   hashWithSalt _salt FmtpRequest' {..} =
-    _salt `Prelude.hashWithSalt` channelOrder
+    _salt
+      `Prelude.hashWithSalt` channelOrder
       `Prelude.hashWithSalt` colorimetry
       `Prelude.hashWithSalt` exactFramerate
       `Prelude.hashWithSalt` par

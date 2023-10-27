@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.InsightResults
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.InsightResults where
@@ -98,7 +98,8 @@ instance Data.FromJSON InsightResults where
 
 instance Prelude.Hashable InsightResults where
   hashWithSalt _salt InsightResults' {..} =
-    _salt `Prelude.hashWithSalt` insightArn
+    _salt
+      `Prelude.hashWithSalt` insightArn
       `Prelude.hashWithSalt` groupByAttribute
       `Prelude.hashWithSalt` resultValues
 

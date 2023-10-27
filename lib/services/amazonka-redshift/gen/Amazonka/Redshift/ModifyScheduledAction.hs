@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.ModifyScheduledAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -184,7 +184,8 @@ instance Core.AWSRequest ModifyScheduledAction where
 
 instance Prelude.Hashable ModifyScheduledAction where
   hashWithSalt _salt ModifyScheduledAction' {..} =
-    _salt `Prelude.hashWithSalt` enable
+    _salt
+      `Prelude.hashWithSalt` enable
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` iamRole
       `Prelude.hashWithSalt` schedule

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectConnect.Types.RouterType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectConnect.Types.RouterType where
@@ -117,7 +117,8 @@ instance Data.FromJSON RouterType where
 
 instance Prelude.Hashable RouterType where
   hashWithSalt _salt RouterType' {..} =
-    _salt `Prelude.hashWithSalt` platform
+    _salt
+      `Prelude.hashWithSalt` platform
       `Prelude.hashWithSalt` routerTypeIdentifier
       `Prelude.hashWithSalt` software
       `Prelude.hashWithSalt` vendor

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FSx.CreateSnapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -151,7 +151,8 @@ instance Core.AWSRequest CreateSnapshot where
 
 instance Prelude.Hashable CreateSnapshot where
   hashWithSalt _salt CreateSnapshot' {..} =
-    _salt `Prelude.hashWithSalt` clientRequestToken
+    _salt
+      `Prelude.hashWithSalt` clientRequestToken
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` volumeId

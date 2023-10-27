@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsSecurityFinding
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsSecurityFinding where
@@ -742,23 +742,27 @@ instance Data.FromJSON AwsSecurityFinding where
             Prelude.<*> (x Data..:? "ProductName")
             Prelude.<*> (x Data..:? "RecordState")
             Prelude.<*> (x Data..:? "Region")
-            Prelude.<*> ( x Data..:? "RelatedFindings"
+            Prelude.<*> ( x
+                            Data..:? "RelatedFindings"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Remediation")
             Prelude.<*> (x Data..:? "Sample")
             Prelude.<*> (x Data..:? "Severity")
             Prelude.<*> (x Data..:? "SourceUrl")
-            Prelude.<*> ( x Data..:? "ThreatIntelIndicators"
+            Prelude.<*> ( x
+                            Data..:? "ThreatIntelIndicators"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Threats" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "Types" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "UserDefinedFields"
+            Prelude.<*> ( x
+                            Data..:? "UserDefinedFields"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "VerificationState")
-            Prelude.<*> ( x Data..:? "Vulnerabilities"
+            Prelude.<*> ( x
+                            Data..:? "Vulnerabilities"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Workflow")
@@ -777,7 +781,8 @@ instance Data.FromJSON AwsSecurityFinding where
 
 instance Prelude.Hashable AwsSecurityFinding where
   hashWithSalt _salt AwsSecurityFinding' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` companyName
       `Prelude.hashWithSalt` compliance
       `Prelude.hashWithSalt` confidence

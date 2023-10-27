@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ProcessingJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ProcessingJob where
@@ -282,7 +282,8 @@ instance Data.FromJSON ProcessingJob where
             Prelude.<*> (x Data..:? "MonitoringScheduleArn")
             Prelude.<*> (x Data..:? "NetworkConfig")
             Prelude.<*> (x Data..:? "ProcessingEndTime")
-            Prelude.<*> ( x Data..:? "ProcessingInputs"
+            Prelude.<*> ( x
+                            Data..:? "ProcessingInputs"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ProcessingJobArn")
@@ -299,7 +300,8 @@ instance Data.FromJSON ProcessingJob where
 
 instance Prelude.Hashable ProcessingJob where
   hashWithSalt _salt ProcessingJob' {..} =
-    _salt `Prelude.hashWithSalt` appSpecification
+    _salt
+      `Prelude.hashWithSalt` appSpecification
       `Prelude.hashWithSalt` autoMLJobArn
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` environment

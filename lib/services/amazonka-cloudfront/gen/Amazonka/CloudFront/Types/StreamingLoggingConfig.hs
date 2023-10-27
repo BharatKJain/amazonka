@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.StreamingLoggingConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.StreamingLoggingConfig where
@@ -117,7 +117,8 @@ instance Data.FromXML StreamingLoggingConfig where
 
 instance Prelude.Hashable StreamingLoggingConfig where
   hashWithSalt _salt StreamingLoggingConfig' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` prefix
 

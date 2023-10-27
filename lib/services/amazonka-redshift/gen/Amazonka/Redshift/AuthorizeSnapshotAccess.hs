@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.AuthorizeSnapshotAccess
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,7 +153,8 @@ instance Core.AWSRequest AuthorizeSnapshotAccess where
 
 instance Prelude.Hashable AuthorizeSnapshotAccess where
   hashWithSalt _salt AuthorizeSnapshotAccess' {..} =
-    _salt `Prelude.hashWithSalt` snapshotArn
+    _salt
+      `Prelude.hashWithSalt` snapshotArn
       `Prelude.hashWithSalt` snapshotClusterIdentifier
       `Prelude.hashWithSalt` snapshotIdentifier
       `Prelude.hashWithSalt` accountWithRestoreAccess

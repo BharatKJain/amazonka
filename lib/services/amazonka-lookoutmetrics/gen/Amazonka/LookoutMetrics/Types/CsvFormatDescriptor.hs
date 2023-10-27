@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.CsvFormatDescriptor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.CsvFormatDescriptor where
@@ -116,7 +116,8 @@ instance Data.FromJSON CsvFormatDescriptor where
 
 instance Prelude.Hashable CsvFormatDescriptor where
   hashWithSalt _salt CsvFormatDescriptor' {..} =
-    _salt `Prelude.hashWithSalt` charset
+    _salt
+      `Prelude.hashWithSalt` charset
       `Prelude.hashWithSalt` containsHeader
       `Prelude.hashWithSalt` delimiter
       `Prelude.hashWithSalt` fileCompression

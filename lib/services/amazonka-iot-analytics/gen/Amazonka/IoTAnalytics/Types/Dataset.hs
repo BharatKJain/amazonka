@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.Dataset
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.Dataset where
@@ -191,7 +191,8 @@ instance Data.FromJSON Dataset where
           Dataset'
             Prelude.<$> (x Data..:? "actions")
             Prelude.<*> (x Data..:? "arn")
-            Prelude.<*> ( x Data..:? "contentDeliveryRules"
+            Prelude.<*> ( x
+                            Data..:? "contentDeliveryRules"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "creationTime")
@@ -206,7 +207,8 @@ instance Data.FromJSON Dataset where
 
 instance Prelude.Hashable Dataset where
   hashWithSalt _salt Dataset' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` contentDeliveryRules
       `Prelude.hashWithSalt` creationTime

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SESV2.CreateEmailIdentityPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -156,7 +156,8 @@ instance Core.AWSRequest CreateEmailIdentityPolicy where
 
 instance Prelude.Hashable CreateEmailIdentityPolicy where
   hashWithSalt _salt CreateEmailIdentityPolicy' {..} =
-    _salt `Prelude.hashWithSalt` emailIdentity
+    _salt
+      `Prelude.hashWithSalt` emailIdentity
       `Prelude.hashWithSalt` policyName
       `Prelude.hashWithSalt` policy
 

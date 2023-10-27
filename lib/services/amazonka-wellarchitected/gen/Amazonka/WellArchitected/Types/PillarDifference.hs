@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.PillarDifference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.PillarDifference where
@@ -90,14 +90,16 @@ instance Data.FromJSON PillarDifference where
             Prelude.<$> (x Data..:? "DifferenceStatus")
             Prelude.<*> (x Data..:? "PillarId")
             Prelude.<*> (x Data..:? "PillarName")
-            Prelude.<*> ( x Data..:? "QuestionDifferences"
+            Prelude.<*> ( x
+                            Data..:? "QuestionDifferences"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable PillarDifference where
   hashWithSalt _salt PillarDifference' {..} =
-    _salt `Prelude.hashWithSalt` differenceStatus
+    _salt
+      `Prelude.hashWithSalt` differenceStatus
       `Prelude.hashWithSalt` pillarId
       `Prelude.hashWithSalt` pillarName
       `Prelude.hashWithSalt` questionDifferences

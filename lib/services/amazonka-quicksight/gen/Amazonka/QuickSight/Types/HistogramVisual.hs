@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.HistogramVisual
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.HistogramVisual where
@@ -120,7 +120,8 @@ instance Data.FromJSON HistogramVisual where
 
 instance Prelude.Hashable HistogramVisual where
   hashWithSalt _salt HistogramVisual' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` chartConfiguration
       `Prelude.hashWithSalt` subtitle
       `Prelude.hashWithSalt` title

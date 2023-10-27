@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.Ec2Configuration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.Ec2Configuration where
@@ -258,7 +258,8 @@ instance Data.FromJSON Ec2Configuration where
 
 instance Prelude.Hashable Ec2Configuration where
   hashWithSalt _salt Ec2Configuration' {..} =
-    _salt `Prelude.hashWithSalt` imageIdOverride
+    _salt
+      `Prelude.hashWithSalt` imageIdOverride
       `Prelude.hashWithSalt` imageKubernetesVersion
       `Prelude.hashWithSalt` imageType
 

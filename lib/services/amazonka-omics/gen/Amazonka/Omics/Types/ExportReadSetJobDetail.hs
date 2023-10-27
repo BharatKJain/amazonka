@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.ExportReadSetJobDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.ExportReadSetJobDetail where
@@ -131,7 +131,8 @@ instance Data.FromJSON ExportReadSetJobDetail where
 
 instance Prelude.Hashable ExportReadSetJobDetail where
   hashWithSalt _salt ExportReadSetJobDetail' {..} =
-    _salt `Prelude.hashWithSalt` completionTime
+    _salt
+      `Prelude.hashWithSalt` completionTime
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` id

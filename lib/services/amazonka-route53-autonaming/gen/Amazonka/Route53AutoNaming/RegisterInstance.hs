@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53AutoNaming.RegisterInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -558,7 +558,8 @@ instance Core.AWSRequest RegisterInstance where
 
 instance Prelude.Hashable RegisterInstance where
   hashWithSalt _salt RegisterInstance' {..} =
-    _salt `Prelude.hashWithSalt` creatorRequestId
+    _salt
+      `Prelude.hashWithSalt` creatorRequestId
       `Prelude.hashWithSalt` serviceId
       `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` attributes

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.SqlInjectionMatchSetUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.SqlInjectionMatchSetUpdate where
@@ -97,7 +97,8 @@ sqlInjectionMatchSetUpdate_sqlInjectionMatchTuple = Lens.lens (\SqlInjectionMatc
 
 instance Prelude.Hashable SqlInjectionMatchSetUpdate where
   hashWithSalt _salt SqlInjectionMatchSetUpdate' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` sqlInjectionMatchTuple
 
 instance Prelude.NFData SqlInjectionMatchSetUpdate where

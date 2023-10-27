@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.ReplicationConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.ReplicationConfiguration where
@@ -93,7 +93,8 @@ instance Data.FromXML ReplicationConfiguration where
 
 instance Prelude.Hashable ReplicationConfiguration where
   hashWithSalt _salt ReplicationConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` role'
+    _salt
+      `Prelude.hashWithSalt` role'
       `Prelude.hashWithSalt` rules
 
 instance Prelude.NFData ReplicationConfiguration where

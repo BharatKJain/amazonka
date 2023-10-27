@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.SnapshotOptionsStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.SnapshotOptionsStatus where
@@ -81,7 +81,8 @@ instance Data.FromJSON SnapshotOptionsStatus where
 
 instance Prelude.Hashable SnapshotOptionsStatus where
   hashWithSalt _salt SnapshotOptionsStatus' {..} =
-    _salt `Prelude.hashWithSalt` options
+    _salt
+      `Prelude.hashWithSalt` options
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData SnapshotOptionsStatus where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.DescribeFleetError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.DescribeFleetError where
@@ -114,7 +114,8 @@ instance Data.FromXML DescribeFleetError where
 
 instance Prelude.Hashable DescribeFleetError where
   hashWithSalt _salt DescribeFleetError' {..} =
-    _salt `Prelude.hashWithSalt` errorCode
+    _salt
+      `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` launchTemplateAndOverrides
       `Prelude.hashWithSalt` lifecycle

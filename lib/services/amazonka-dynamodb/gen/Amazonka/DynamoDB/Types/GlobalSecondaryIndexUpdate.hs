@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.GlobalSecondaryIndexUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.GlobalSecondaryIndexUpdate where
@@ -123,7 +123,8 @@ globalSecondaryIndexUpdate_update = Lens.lens (\GlobalSecondaryIndexUpdate' {upd
 
 instance Prelude.Hashable GlobalSecondaryIndexUpdate where
   hashWithSalt _salt GlobalSecondaryIndexUpdate' {..} =
-    _salt `Prelude.hashWithSalt` create
+    _salt
+      `Prelude.hashWithSalt` create
       `Prelude.hashWithSalt` delete'
       `Prelude.hashWithSalt` update
 

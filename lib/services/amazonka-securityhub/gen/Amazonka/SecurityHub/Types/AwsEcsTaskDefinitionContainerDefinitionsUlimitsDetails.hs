@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsUlimitsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsUlimitsDetails where
@@ -174,8 +174,8 @@ instance
       ( \x ->
           AwsEcsTaskDefinitionContainerDefinitionsUlimitsDetails'
             Prelude.<$> (x Data..:? "HardLimit")
-              Prelude.<*> (x Data..:? "Name")
-              Prelude.<*> (x Data..:? "SoftLimit")
+            Prelude.<*> (x Data..:? "Name")
+            Prelude.<*> (x Data..:? "SoftLimit")
       )
 
 instance
@@ -185,7 +185,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsTaskDefinitionContainerDefinitionsUlimitsDetails' {..} =
-      _salt `Prelude.hashWithSalt` hardLimit
+      _salt
+        `Prelude.hashWithSalt` hardLimit
         `Prelude.hashWithSalt` name
         `Prelude.hashWithSalt` softLimit
 

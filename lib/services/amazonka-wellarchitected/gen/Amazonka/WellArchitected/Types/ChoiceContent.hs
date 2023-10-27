@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.ChoiceContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.ChoiceContent where
@@ -74,7 +74,8 @@ instance Data.FromJSON ChoiceContent where
 
 instance Prelude.Hashable ChoiceContent where
   hashWithSalt _salt ChoiceContent' {..} =
-    _salt `Prelude.hashWithSalt` displayText
+    _salt
+      `Prelude.hashWithSalt` displayText
       `Prelude.hashWithSalt` url
 
 instance Prelude.NFData ChoiceContent where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppMesh.ListVirtualGateways
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,21 +153,21 @@ instance Core.AWSPager ListVirtualGateways where
     | Core.stop
         ( rs
             Lens.^? listVirtualGatewaysResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listVirtualGatewaysResponse_virtualGateways
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listVirtualGateways_nextToken
           Lens..~ rs
           Lens.^? listVirtualGatewaysResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListVirtualGateways where
   type
@@ -181,14 +181,16 @@ instance Core.AWSRequest ListVirtualGateways where
           ListVirtualGatewaysResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "virtualGateways"
+            Prelude.<*> ( x
+                            Data..?> "virtualGateways"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListVirtualGateways where
   hashWithSalt _salt ListVirtualGateways' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` meshOwner
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` meshName

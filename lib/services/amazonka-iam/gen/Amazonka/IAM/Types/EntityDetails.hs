@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.EntityDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.EntityDetails where
@@ -102,7 +102,8 @@ instance Data.FromXML EntityDetails where
 
 instance Prelude.Hashable EntityDetails where
   hashWithSalt _salt EntityDetails' {..} =
-    _salt `Prelude.hashWithSalt` lastAuthenticated
+    _salt
+      `Prelude.hashWithSalt` lastAuthenticated
       `Prelude.hashWithSalt` entityInfo
 
 instance Prelude.NFData EntityDetails where

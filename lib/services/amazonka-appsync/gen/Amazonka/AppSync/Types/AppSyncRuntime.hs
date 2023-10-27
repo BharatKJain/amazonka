@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.AppSyncRuntime
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.AppSyncRuntime where
@@ -88,7 +88,8 @@ instance Data.FromJSON AppSyncRuntime where
 
 instance Prelude.Hashable AppSyncRuntime where
   hashWithSalt _salt AppSyncRuntime' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` runtimeVersion
 
 instance Prelude.NFData AppSyncRuntime where

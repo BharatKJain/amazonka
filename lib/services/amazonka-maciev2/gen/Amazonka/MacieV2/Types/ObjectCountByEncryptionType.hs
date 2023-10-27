@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.ObjectCountByEncryptionType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.ObjectCountByEncryptionType where
@@ -128,7 +128,8 @@ instance Data.FromJSON ObjectCountByEncryptionType where
 
 instance Prelude.Hashable ObjectCountByEncryptionType where
   hashWithSalt _salt ObjectCountByEncryptionType' {..} =
-    _salt `Prelude.hashWithSalt` customerManaged
+    _salt
+      `Prelude.hashWithSalt` customerManaged
       `Prelude.hashWithSalt` kmsManaged
       `Prelude.hashWithSalt` s3Managed
       `Prelude.hashWithSalt` unencrypted

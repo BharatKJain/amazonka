@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.RecipeStep
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.RecipeStep where
@@ -81,7 +81,8 @@ instance Data.FromJSON RecipeStep where
       "RecipeStep"
       ( \x ->
           RecipeStep'
-            Prelude.<$> ( x Data..:? "ConditionExpressions"
+            Prelude.<$> ( x
+                            Data..:? "ConditionExpressions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "Action")
@@ -89,7 +90,8 @@ instance Data.FromJSON RecipeStep where
 
 instance Prelude.Hashable RecipeStep where
   hashWithSalt _salt RecipeStep' {..} =
-    _salt `Prelude.hashWithSalt` conditionExpressions
+    _salt
+      `Prelude.hashWithSalt` conditionExpressions
       `Prelude.hashWithSalt` action
 
 instance Prelude.NFData RecipeStep where

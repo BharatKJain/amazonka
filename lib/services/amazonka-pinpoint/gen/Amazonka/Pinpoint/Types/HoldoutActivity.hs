@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.HoldoutActivity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.HoldoutActivity where
@@ -95,7 +95,8 @@ instance Data.FromJSON HoldoutActivity where
 
 instance Prelude.Hashable HoldoutActivity where
   hashWithSalt _salt HoldoutActivity' {..} =
-    _salt `Prelude.hashWithSalt` nextActivity
+    _salt
+      `Prelude.hashWithSalt` nextActivity
       `Prelude.hashWithSalt` percentage
 
 instance Prelude.NFData HoldoutActivity where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.DomainPackageDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.DomainPackageDetails where
@@ -155,7 +155,8 @@ instance Data.FromJSON DomainPackageDetails where
 
 instance Prelude.Hashable DomainPackageDetails where
   hashWithSalt _salt DomainPackageDetails' {..} =
-    _salt `Prelude.hashWithSalt` domainName
+    _salt
+      `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` domainPackageStatus
       `Prelude.hashWithSalt` errorDetails
       `Prelude.hashWithSalt` lastUpdated

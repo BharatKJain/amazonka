@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.KPIVisual
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.KPIVisual where
@@ -133,7 +133,8 @@ instance Data.FromJSON KPIVisual where
           KPIVisual'
             Prelude.<$> (x Data..:? "Actions" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "ChartConfiguration")
-            Prelude.<*> ( x Data..:? "ColumnHierarchies"
+            Prelude.<*> ( x
+                            Data..:? "ColumnHierarchies"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ConditionalFormatting")
@@ -144,7 +145,8 @@ instance Data.FromJSON KPIVisual where
 
 instance Prelude.Hashable KPIVisual where
   hashWithSalt _salt KPIVisual' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` chartConfiguration
       `Prelude.hashWithSalt` columnHierarchies
       `Prelude.hashWithSalt` conditionalFormatting

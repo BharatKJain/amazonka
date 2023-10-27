@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.VpcDestinationConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.VpcDestinationConfiguration where
@@ -91,7 +91,8 @@ vpcDestinationConfiguration_roleArn = Lens.lens (\VpcDestinationConfiguration' {
 
 instance Prelude.Hashable VpcDestinationConfiguration where
   hashWithSalt _salt VpcDestinationConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` securityGroups
+    _salt
+      `Prelude.hashWithSalt` securityGroups
       `Prelude.hashWithSalt` subnetIds
       `Prelude.hashWithSalt` vpcId
       `Prelude.hashWithSalt` roleArn

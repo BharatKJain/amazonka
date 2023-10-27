@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.KinesisStreamsOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.KinesisStreamsOutput where
@@ -77,7 +77,8 @@ kinesisStreamsOutput_roleARN = Lens.lens (\KinesisStreamsOutput' {roleARN} -> ro
 
 instance Prelude.Hashable KinesisStreamsOutput where
   hashWithSalt _salt KinesisStreamsOutput' {..} =
-    _salt `Prelude.hashWithSalt` resourceARN
+    _salt
+      `Prelude.hashWithSalt` resourceARN
       `Prelude.hashWithSalt` roleARN
 
 instance Prelude.NFData KinesisStreamsOutput where

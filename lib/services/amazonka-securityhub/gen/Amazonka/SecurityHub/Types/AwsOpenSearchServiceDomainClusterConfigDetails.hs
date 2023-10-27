@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsOpenSearchServiceDomainClusterConfigDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsOpenSearchServiceDomainClusterConfigDetails where
@@ -201,15 +201,15 @@ instance
       ( \x ->
           AwsOpenSearchServiceDomainClusterConfigDetails'
             Prelude.<$> (x Data..:? "DedicatedMasterCount")
-              Prelude.<*> (x Data..:? "DedicatedMasterEnabled")
-              Prelude.<*> (x Data..:? "DedicatedMasterType")
-              Prelude.<*> (x Data..:? "InstanceCount")
-              Prelude.<*> (x Data..:? "InstanceType")
-              Prelude.<*> (x Data..:? "WarmCount")
-              Prelude.<*> (x Data..:? "WarmEnabled")
-              Prelude.<*> (x Data..:? "WarmType")
-              Prelude.<*> (x Data..:? "ZoneAwarenessConfig")
-              Prelude.<*> (x Data..:? "ZoneAwarenessEnabled")
+            Prelude.<*> (x Data..:? "DedicatedMasterEnabled")
+            Prelude.<*> (x Data..:? "DedicatedMasterType")
+            Prelude.<*> (x Data..:? "InstanceCount")
+            Prelude.<*> (x Data..:? "InstanceType")
+            Prelude.<*> (x Data..:? "WarmCount")
+            Prelude.<*> (x Data..:? "WarmEnabled")
+            Prelude.<*> (x Data..:? "WarmType")
+            Prelude.<*> (x Data..:? "ZoneAwarenessConfig")
+            Prelude.<*> (x Data..:? "ZoneAwarenessEnabled")
       )
 
 instance
@@ -219,7 +219,8 @@ instance
   hashWithSalt
     _salt
     AwsOpenSearchServiceDomainClusterConfigDetails' {..} =
-      _salt `Prelude.hashWithSalt` dedicatedMasterCount
+      _salt
+        `Prelude.hashWithSalt` dedicatedMasterCount
         `Prelude.hashWithSalt` dedicatedMasterEnabled
         `Prelude.hashWithSalt` dedicatedMasterType
         `Prelude.hashWithSalt` instanceCount

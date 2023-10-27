@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.ApplicationResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.ApplicationResponse where
@@ -123,7 +123,8 @@ instance Data.FromJSON ApplicationResponse where
 
 instance Prelude.Hashable ApplicationResponse where
   hashWithSalt _salt ApplicationResponse' {..} =
-    _salt `Prelude.hashWithSalt` creationDate
+    _salt
+      `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` arn

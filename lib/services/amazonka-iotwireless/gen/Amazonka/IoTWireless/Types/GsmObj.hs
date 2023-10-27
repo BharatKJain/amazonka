@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.GsmObj
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.GsmObj where
@@ -134,7 +134,8 @@ gsmObj_geranCid = Lens.lens (\GsmObj' {geranCid} -> geranCid) (\s@GsmObj' {} a -
 
 instance Prelude.Hashable GsmObj where
   hashWithSalt _salt GsmObj' {..} =
-    _salt `Prelude.hashWithSalt` gsmLocalId
+    _salt
+      `Prelude.hashWithSalt` gsmLocalId
       `Prelude.hashWithSalt` gsmNmr
       `Prelude.hashWithSalt` gsmTimingAdvance
       `Prelude.hashWithSalt` rxLevel

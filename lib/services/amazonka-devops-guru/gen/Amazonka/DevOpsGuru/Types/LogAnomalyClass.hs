@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.LogAnomalyClass
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.LogAnomalyClass where
@@ -137,7 +137,8 @@ instance Data.FromJSON LogAnomalyClass where
 
 instance Prelude.Hashable LogAnomalyClass where
   hashWithSalt _salt LogAnomalyClass' {..} =
-    _salt `Prelude.hashWithSalt` explanation
+    _salt
+      `Prelude.hashWithSalt` explanation
       `Prelude.hashWithSalt` logAnomalyToken
       `Prelude.hashWithSalt` logAnomalyType
       `Prelude.hashWithSalt` logEventId

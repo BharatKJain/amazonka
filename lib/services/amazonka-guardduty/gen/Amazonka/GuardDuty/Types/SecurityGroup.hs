@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.SecurityGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.SecurityGroup where
@@ -75,7 +75,8 @@ instance Data.FromJSON SecurityGroup where
 
 instance Prelude.Hashable SecurityGroup where
   hashWithSalt _salt SecurityGroup' {..} =
-    _salt `Prelude.hashWithSalt` groupId
+    _salt
+      `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` groupName
 
 instance Prelude.NFData SecurityGroup where

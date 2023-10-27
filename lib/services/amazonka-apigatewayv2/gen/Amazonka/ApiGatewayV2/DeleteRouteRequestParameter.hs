@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ApiGatewayV2.DeleteRouteRequestParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest DeleteRouteRequestParameter where
 
 instance Prelude.Hashable DeleteRouteRequestParameter where
   hashWithSalt _salt DeleteRouteRequestParameter' {..} =
-    _salt `Prelude.hashWithSalt` requestParameterKey
+    _salt
+      `Prelude.hashWithSalt` requestParameterKey
       `Prelude.hashWithSalt` apiId
       `Prelude.hashWithSalt` routeId
 

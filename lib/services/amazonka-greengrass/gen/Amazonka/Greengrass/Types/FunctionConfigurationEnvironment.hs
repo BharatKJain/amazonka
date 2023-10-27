@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.FunctionConfigurationEnvironment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.FunctionConfigurationEnvironment where
@@ -112,7 +112,8 @@ instance
           FunctionConfigurationEnvironment'
             Prelude.<$> (x Data..:? "AccessSysfs")
             Prelude.<*> (x Data..:? "Execution")
-            Prelude.<*> ( x Data..:? "ResourceAccessPolicies"
+            Prelude.<*> ( x
+                            Data..:? "ResourceAccessPolicies"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Variables" Data..!= Prelude.mempty)
@@ -125,7 +126,8 @@ instance
   hashWithSalt
     _salt
     FunctionConfigurationEnvironment' {..} =
-      _salt `Prelude.hashWithSalt` accessSysfs
+      _salt
+        `Prelude.hashWithSalt` accessSysfs
         `Prelude.hashWithSalt` execution
         `Prelude.hashWithSalt` resourceAccessPolicies
         `Prelude.hashWithSalt` variables

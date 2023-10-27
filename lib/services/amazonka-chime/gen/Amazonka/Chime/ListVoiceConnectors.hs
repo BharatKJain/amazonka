@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.ListVoiceConnectors
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -97,7 +97,8 @@ instance Core.AWSRequest ListVoiceConnectors where
       ( \s h x ->
           ListVoiceConnectorsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "VoiceConnectors"
+            Prelude.<*> ( x
+                            Data..?> "VoiceConnectors"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -105,7 +106,8 @@ instance Core.AWSRequest ListVoiceConnectors where
 
 instance Prelude.Hashable ListVoiceConnectors where
   hashWithSalt _salt ListVoiceConnectors' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListVoiceConnectors where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.Fleet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.Fleet where
@@ -694,7 +694,8 @@ instance Data.FromJSON Fleet where
             Prelude.<*> (x Data..:? "Platform")
             Prelude.<*> (x Data..:? "SessionScriptS3Location")
             Prelude.<*> (x Data..:? "StreamView")
-            Prelude.<*> ( x Data..:? "UsbDeviceFilterStrings"
+            Prelude.<*> ( x
+                            Data..:? "UsbDeviceFilterStrings"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "VpcConfig")
@@ -707,7 +708,8 @@ instance Data.FromJSON Fleet where
 
 instance Prelude.Hashable Fleet where
   hashWithSalt _salt Fleet' {..} =
-    _salt `Prelude.hashWithSalt` createdTime
+    _salt
+      `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` disconnectTimeoutInSeconds
       `Prelude.hashWithSalt` displayName

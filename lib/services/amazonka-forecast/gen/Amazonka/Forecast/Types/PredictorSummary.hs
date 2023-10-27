@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.PredictorSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.PredictorSummary where
@@ -219,7 +219,8 @@ instance Data.FromJSON PredictorSummary where
 
 instance Prelude.Hashable PredictorSummary where
   hashWithSalt _salt PredictorSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` datasetGroupArn
       `Prelude.hashWithSalt` isAutoPredictor
       `Prelude.hashWithSalt` lastModificationTime

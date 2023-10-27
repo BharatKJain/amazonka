@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.CustomActionURLOperation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.CustomActionURLOperation where
@@ -104,7 +104,8 @@ instance Data.FromJSON CustomActionURLOperation where
 
 instance Prelude.Hashable CustomActionURLOperation where
   hashWithSalt _salt CustomActionURLOperation' {..} =
-    _salt `Prelude.hashWithSalt` uRLTemplate
+    _salt
+      `Prelude.hashWithSalt` uRLTemplate
       `Prelude.hashWithSalt` uRLTarget
 
 instance Prelude.NFData CustomActionURLOperation where

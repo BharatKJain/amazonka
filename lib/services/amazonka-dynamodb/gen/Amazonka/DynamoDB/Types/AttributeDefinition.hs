@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.AttributeDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.AttributeDefinition where
@@ -103,7 +103,8 @@ instance Data.FromJSON AttributeDefinition where
 
 instance Prelude.Hashable AttributeDefinition where
   hashWithSalt _salt AttributeDefinition' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` attributeType
 
 instance Prelude.NFData AttributeDefinition where

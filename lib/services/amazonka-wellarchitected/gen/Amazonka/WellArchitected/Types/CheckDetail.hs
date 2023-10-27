@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.CheckDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.CheckDetail where
@@ -183,7 +183,8 @@ instance Data.FromJSON CheckDetail where
 
 instance Prelude.Hashable CheckDetail where
   hashWithSalt _salt CheckDetail' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` choiceId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` flaggedResources

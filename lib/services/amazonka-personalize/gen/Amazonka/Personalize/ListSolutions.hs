@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Personalize.ListSolutions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,20 +109,23 @@ instance Core.AWSPager ListSolutions where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listSolutionsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listSolutionsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listSolutionsResponse_solutions Prelude.. Lens._Just
+            Lens.^? listSolutionsResponse_solutions
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSolutions_nextToken
           Lens..~ rs
-          Lens.^? listSolutionsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listSolutionsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListSolutions where
   type
@@ -141,7 +144,8 @@ instance Core.AWSRequest ListSolutions where
 
 instance Prelude.Hashable ListSolutions where
   hashWithSalt _salt ListSolutions' {..} =
-    _salt `Prelude.hashWithSalt` datasetGroupArn
+    _salt
+      `Prelude.hashWithSalt` datasetGroupArn
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsWafWebAclRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsWafWebAclRule where
@@ -186,7 +186,8 @@ instance Data.FromJSON AwsWafWebAclRule where
 
 instance Prelude.Hashable AwsWafWebAclRule where
   hashWithSalt _salt AwsWafWebAclRule' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` excludedRules
       `Prelude.hashWithSalt` overrideAction
       `Prelude.hashWithSalt` priority

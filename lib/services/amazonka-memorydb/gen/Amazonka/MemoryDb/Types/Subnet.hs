@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MemoryDb.Types.Subnet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MemoryDb.Types.Subnet where
@@ -77,7 +77,8 @@ instance Data.FromJSON Subnet where
 
 instance Prelude.Hashable Subnet where
   hashWithSalt _salt Subnet' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZone
+    _salt
+      `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` identifier
 
 instance Prelude.NFData Subnet where

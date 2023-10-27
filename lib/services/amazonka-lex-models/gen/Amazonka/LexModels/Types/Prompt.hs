@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexModels.Types.Prompt
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexModels.Types.Prompt where
@@ -108,7 +108,8 @@ instance Data.FromJSON Prompt where
 
 instance Prelude.Hashable Prompt where
   hashWithSalt _salt Prompt' {..} =
-    _salt `Prelude.hashWithSalt` responseCard
+    _salt
+      `Prelude.hashWithSalt` responseCard
       `Prelude.hashWithSalt` messages
       `Prelude.hashWithSalt` maxAttempts
 

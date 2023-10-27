@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.DescribePolicies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -147,22 +147,22 @@ instance Core.AWSPager DescribePolicies where
     | Core.stop
         ( rs
             Lens.^? describePoliciesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describePoliciesResponse_scalingPolicies
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describePolicies_nextToken
           Lens..~ rs
           Lens.^? describePoliciesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribePolicies where
   type
@@ -176,7 +176,9 @@ instance Core.AWSRequest DescribePolicies where
       ( \s h x ->
           DescribePoliciesResponse'
             Prelude.<$> (x Data..@? "NextToken")
-            Prelude.<*> ( x Data..@? "ScalingPolicies" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "ScalingPolicies"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -184,7 +186,8 @@ instance Core.AWSRequest DescribePolicies where
 
 instance Prelude.Hashable DescribePolicies where
   hashWithSalt _salt DescribePolicies' {..} =
-    _salt `Prelude.hashWithSalt` autoScalingGroupName
+    _salt
+      `Prelude.hashWithSalt` autoScalingGroupName
       `Prelude.hashWithSalt` maxRecords
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` policyNames

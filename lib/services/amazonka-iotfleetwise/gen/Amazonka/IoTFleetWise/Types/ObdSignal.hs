@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTFleetWise.Types.ObdSignal
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTFleetWise.Types.ObdSignal where
@@ -166,7 +166,8 @@ instance Data.FromJSON ObdSignal where
 
 instance Prelude.Hashable ObdSignal where
   hashWithSalt _salt ObdSignal' {..} =
-    _salt `Prelude.hashWithSalt` bitMaskLength
+    _salt
+      `Prelude.hashWithSalt` bitMaskLength
       `Prelude.hashWithSalt` bitRightShift
       `Prelude.hashWithSalt` pidResponseLength
       `Prelude.hashWithSalt` serviceMode

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubReFactorSpaces.Types.UrlEndpointSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubReFactorSpaces.Types.UrlEndpointSummary where
@@ -101,7 +101,8 @@ instance Data.FromJSON UrlEndpointSummary where
 
 instance Prelude.Hashable UrlEndpointSummary where
   hashWithSalt _salt UrlEndpointSummary' {..} =
-    _salt `Prelude.hashWithSalt` healthUrl
+    _salt
+      `Prelude.hashWithSalt` healthUrl
       `Prelude.hashWithSalt` url
 
 instance Prelude.NFData UrlEndpointSummary where

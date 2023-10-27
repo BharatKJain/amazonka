@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Budgets.Types.Notification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Budgets.Types.Notification where
@@ -176,7 +176,8 @@ instance Data.FromJSON Notification where
 
 instance Prelude.Hashable Notification where
   hashWithSalt _salt Notification' {..} =
-    _salt `Prelude.hashWithSalt` notificationState
+    _salt
+      `Prelude.hashWithSalt` notificationState
       `Prelude.hashWithSalt` thresholdType
       `Prelude.hashWithSalt` notificationType
       `Prelude.hashWithSalt` comparisonOperator

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstanceEventWindowAssociationTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstanceEventWindowAssociationTarget where
@@ -83,14 +83,19 @@ instance
   where
   parseXML x =
     InstanceEventWindowAssociationTarget'
-      Prelude.<$> ( x Data..@? "dedicatedHostIdSet"
+      Prelude.<$> ( x
+                      Data..@? "dedicatedHostIdSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "instanceIdSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "instanceIdSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
@@ -101,7 +106,8 @@ instance
   hashWithSalt
     _salt
     InstanceEventWindowAssociationTarget' {..} =
-      _salt `Prelude.hashWithSalt` dedicatedHostIds
+      _salt
+        `Prelude.hashWithSalt` dedicatedHostIds
         `Prelude.hashWithSalt` instanceIds
         `Prelude.hashWithSalt` tags
 

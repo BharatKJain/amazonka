@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.XavcSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.XavcSettings where
@@ -574,7 +574,8 @@ instance Data.FromJSON XavcSettings where
 
 instance Prelude.Hashable XavcSettings where
   hashWithSalt _salt XavcSettings' {..} =
-    _salt `Prelude.hashWithSalt` adaptiveQuantization
+    _salt
+      `Prelude.hashWithSalt` adaptiveQuantization
       `Prelude.hashWithSalt` entropyEncoding
       `Prelude.hashWithSalt` framerateControl
       `Prelude.hashWithSalt` framerateConversionAlgorithm

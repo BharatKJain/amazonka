@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.PortRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.PortRange where
@@ -66,11 +66,13 @@ portRange_to = Lens.lens (\PortRange' {to} -> to) (\s@PortRange' {} a -> s {to =
 instance Data.FromXML PortRange where
   parseXML x =
     PortRange'
-      Prelude.<$> (x Data..@? "from") Prelude.<*> (x Data..@? "to")
+      Prelude.<$> (x Data..@? "from")
+      Prelude.<*> (x Data..@? "to")
 
 instance Prelude.Hashable PortRange where
   hashWithSalt _salt PortRange' {..} =
-    _salt `Prelude.hashWithSalt` from
+    _salt
+      `Prelude.hashWithSalt` from
       `Prelude.hashWithSalt` to
 
 instance Prelude.NFData PortRange where

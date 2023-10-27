@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.SchemaChangePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.SchemaChangePolicy where
@@ -77,7 +77,8 @@ instance Data.FromJSON SchemaChangePolicy where
 
 instance Prelude.Hashable SchemaChangePolicy where
   hashWithSalt _salt SchemaChangePolicy' {..} =
-    _salt `Prelude.hashWithSalt` deleteBehavior
+    _salt
+      `Prelude.hashWithSalt` deleteBehavior
       `Prelude.hashWithSalt` updateBehavior
 
 instance Prelude.NFData SchemaChangePolicy where

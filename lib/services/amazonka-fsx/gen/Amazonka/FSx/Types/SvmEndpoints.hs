@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.SvmEndpoints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.SvmEndpoints where
@@ -106,7 +106,8 @@ instance Data.FromJSON SvmEndpoints where
 
 instance Prelude.Hashable SvmEndpoints where
   hashWithSalt _salt SvmEndpoints' {..} =
-    _salt `Prelude.hashWithSalt` iscsi
+    _salt
+      `Prelude.hashWithSalt` iscsi
       `Prelude.hashWithSalt` management
       `Prelude.hashWithSalt` nfs
       `Prelude.hashWithSalt` smb

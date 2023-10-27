@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.DomainJoinInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.DomainJoinInfo where
@@ -79,7 +79,8 @@ instance Data.FromJSON DomainJoinInfo where
 
 instance Prelude.Hashable DomainJoinInfo where
   hashWithSalt _salt DomainJoinInfo' {..} =
-    _salt `Prelude.hashWithSalt` directoryName
+    _salt
+      `Prelude.hashWithSalt` directoryName
       `Prelude.hashWithSalt` organizationalUnitDistinguishedName
 
 instance Prelude.NFData DomainJoinInfo where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.MembershipItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.MembershipItem where
@@ -65,7 +65,8 @@ membershipItem_role = Lens.lens (\MembershipItem' {role'} -> role') (\s@Membersh
 
 instance Prelude.Hashable MembershipItem where
   hashWithSalt _salt MembershipItem' {..} =
-    _salt `Prelude.hashWithSalt` memberId
+    _salt
+      `Prelude.hashWithSalt` memberId
       `Prelude.hashWithSalt` role'
 
 instance Prelude.NFData MembershipItem where

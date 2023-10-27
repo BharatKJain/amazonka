@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT1ClickProjects.DescribePlacement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest DescribePlacement where
 
 instance Prelude.Hashable DescribePlacement where
   hashWithSalt _salt DescribePlacement' {..} =
-    _salt `Prelude.hashWithSalt` placementName
+    _salt
+      `Prelude.hashWithSalt` placementName
       `Prelude.hashWithSalt` projectName
 
 instance Prelude.NFData DescribePlacement where

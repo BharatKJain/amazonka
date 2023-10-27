@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Comprehend.BatchDetectKeyPhrases
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -86,7 +86,8 @@ newBatchDetectKeyPhrases ::
 newBatchDetectKeyPhrases pTextList_ pLanguageCode_ =
   BatchDetectKeyPhrases'
     { textList =
-        Data._Sensitive Prelude.. Lens.coerced
+        Data._Sensitive
+          Prelude.. Lens.coerced
           Lens.# pTextList_,
       languageCode = pLanguageCode_
     }
@@ -120,7 +121,8 @@ instance Core.AWSRequest BatchDetectKeyPhrases where
 
 instance Prelude.Hashable BatchDetectKeyPhrases where
   hashWithSalt _salt BatchDetectKeyPhrases' {..} =
-    _salt `Prelude.hashWithSalt` textList
+    _salt
+      `Prelude.hashWithSalt` textList
       `Prelude.hashWithSalt` languageCode
 
 instance Prelude.NFData BatchDetectKeyPhrases where

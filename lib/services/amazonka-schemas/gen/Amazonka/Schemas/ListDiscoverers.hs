@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Schemas.ListDiscoverers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,22 +124,22 @@ instance Core.AWSPager ListDiscoverers where
     | Core.stop
         ( rs
             Lens.^? listDiscoverersResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listDiscoverersResponse_discoverers
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listDiscoverers_nextToken
           Lens..~ rs
           Lens.^? listDiscoverersResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListDiscoverers where
   type
@@ -158,7 +158,8 @@ instance Core.AWSRequest ListDiscoverers where
 
 instance Prelude.Hashable ListDiscoverers where
   hashWithSalt _salt ListDiscoverers' {..} =
-    _salt `Prelude.hashWithSalt` discovererIdPrefix
+    _salt
+      `Prelude.hashWithSalt` discovererIdPrefix
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` sourceArnPrefix

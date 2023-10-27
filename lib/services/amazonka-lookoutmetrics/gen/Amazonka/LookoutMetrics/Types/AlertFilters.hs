@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.AlertFilters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.AlertFilters where
@@ -79,7 +79,8 @@ instance Data.FromJSON AlertFilters where
 
 instance Prelude.Hashable AlertFilters where
   hashWithSalt _salt AlertFilters' {..} =
-    _salt `Prelude.hashWithSalt` dimensionFilterList
+    _salt
+      `Prelude.hashWithSalt` dimensionFilterList
       `Prelude.hashWithSalt` metricList
 
 instance Prelude.NFData AlertFilters where

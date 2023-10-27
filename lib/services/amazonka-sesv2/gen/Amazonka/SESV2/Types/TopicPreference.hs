@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.TopicPreference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.TopicPreference where
@@ -82,7 +82,8 @@ instance Data.FromJSON TopicPreference where
 
 instance Prelude.Hashable TopicPreference where
   hashWithSalt _salt TopicPreference' {..} =
-    _salt `Prelude.hashWithSalt` topicName
+    _salt
+      `Prelude.hashWithSalt` topicName
       `Prelude.hashWithSalt` subscriptionStatus
 
 instance Prelude.NFData TopicPreference where

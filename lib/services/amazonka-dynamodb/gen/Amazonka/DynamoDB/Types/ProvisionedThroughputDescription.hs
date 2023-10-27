@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.ProvisionedThroughputDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.ProvisionedThroughputDescription where
@@ -150,7 +150,8 @@ instance
   hashWithSalt
     _salt
     ProvisionedThroughputDescription' {..} =
-      _salt `Prelude.hashWithSalt` lastDecreaseDateTime
+      _salt
+        `Prelude.hashWithSalt` lastDecreaseDateTime
         `Prelude.hashWithSalt` lastIncreaseDateTime
         `Prelude.hashWithSalt` numberOfDecreasesToday
         `Prelude.hashWithSalt` readCapacityUnits

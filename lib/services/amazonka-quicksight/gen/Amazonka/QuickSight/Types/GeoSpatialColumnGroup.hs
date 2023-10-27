@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.GeoSpatialColumnGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.GeoSpatialColumnGroup where
@@ -90,7 +90,8 @@ instance Data.FromJSON GeoSpatialColumnGroup where
 
 instance Prelude.Hashable GeoSpatialColumnGroup where
   hashWithSalt _salt GeoSpatialColumnGroup' {..} =
-    _salt `Prelude.hashWithSalt` countryCode
+    _salt
+      `Prelude.hashWithSalt` countryCode
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` columns
 

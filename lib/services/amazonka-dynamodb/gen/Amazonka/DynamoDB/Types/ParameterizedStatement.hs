@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.ParameterizedStatement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.ParameterizedStatement where
@@ -69,7 +69,8 @@ parameterizedStatement_statement = Lens.lens (\ParameterizedStatement' {statemen
 
 instance Prelude.Hashable ParameterizedStatement where
   hashWithSalt _salt ParameterizedStatement' {..} =
-    _salt `Prelude.hashWithSalt` parameters
+    _salt
+      `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` statement
 
 instance Prelude.NFData ParameterizedStatement where

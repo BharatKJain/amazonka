@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.ComponentDependencyRequirement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.ComponentDependencyRequirement where
@@ -102,7 +102,8 @@ instance
   hashWithSalt
     _salt
     ComponentDependencyRequirement' {..} =
-      _salt `Prelude.hashWithSalt` dependencyType
+      _salt
+        `Prelude.hashWithSalt` dependencyType
         `Prelude.hashWithSalt` versionRequirement
 
 instance

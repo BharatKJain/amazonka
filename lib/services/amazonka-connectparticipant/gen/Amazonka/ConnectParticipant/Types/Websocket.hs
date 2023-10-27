@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectParticipant.Types.Websocket
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectParticipant.Types.Websocket where
@@ -83,7 +83,8 @@ instance Data.FromJSON Websocket where
 
 instance Prelude.Hashable Websocket where
   hashWithSalt _salt Websocket' {..} =
-    _salt `Prelude.hashWithSalt` connectionExpiry
+    _salt
+      `Prelude.hashWithSalt` connectionExpiry
       `Prelude.hashWithSalt` url
 
 instance Prelude.NFData Websocket where

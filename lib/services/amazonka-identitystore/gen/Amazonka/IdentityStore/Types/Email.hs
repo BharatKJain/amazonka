@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IdentityStore.Types.Email
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IdentityStore.Types.Email where
@@ -90,7 +90,8 @@ instance Data.FromJSON Email where
 
 instance Prelude.Hashable Email where
   hashWithSalt _salt Email' {..} =
-    _salt `Prelude.hashWithSalt` primary
+    _salt
+      `Prelude.hashWithSalt` primary
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` value
 

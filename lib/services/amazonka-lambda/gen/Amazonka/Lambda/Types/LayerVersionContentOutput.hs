@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.LayerVersionContentOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.LayerVersionContentOutput where
@@ -106,7 +106,8 @@ instance Data.FromJSON LayerVersionContentOutput where
 
 instance Prelude.Hashable LayerVersionContentOutput where
   hashWithSalt _salt LayerVersionContentOutput' {..} =
-    _salt `Prelude.hashWithSalt` codeSha256
+    _salt
+      `Prelude.hashWithSalt` codeSha256
       `Prelude.hashWithSalt` codeSize
       `Prelude.hashWithSalt` location
       `Prelude.hashWithSalt` signingJobArn

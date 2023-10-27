@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.JoinEventConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.JoinEventConfiguration where
@@ -82,7 +82,8 @@ instance Data.FromJSON JoinEventConfiguration where
 
 instance Prelude.Hashable JoinEventConfiguration where
   hashWithSalt _salt JoinEventConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` loRaWAN
+    _salt
+      `Prelude.hashWithSalt` loRaWAN
       `Prelude.hashWithSalt` wirelessDeviceIdEventTopic
 
 instance Prelude.NFData JoinEventConfiguration where

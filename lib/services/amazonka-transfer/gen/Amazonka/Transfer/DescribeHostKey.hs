@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Transfer.DescribeHostKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest DescribeHostKey where
 
 instance Prelude.Hashable DescribeHostKey where
   hashWithSalt _salt DescribeHostKey' {..} =
-    _salt `Prelude.hashWithSalt` serverId
+    _salt
+      `Prelude.hashWithSalt` serverId
       `Prelude.hashWithSalt` hostKeyId
 
 instance Prelude.NFData DescribeHostKey where

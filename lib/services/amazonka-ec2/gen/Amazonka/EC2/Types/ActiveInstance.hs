@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ActiveInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ActiveInstance where
@@ -101,7 +101,8 @@ instance Data.FromXML ActiveInstance where
 
 instance Prelude.Hashable ActiveInstance where
   hashWithSalt _salt ActiveInstance' {..} =
-    _salt `Prelude.hashWithSalt` instanceHealth
+    _salt
+      `Prelude.hashWithSalt` instanceHealth
       `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` instanceType
       `Prelude.hashWithSalt` spotInstanceRequestId

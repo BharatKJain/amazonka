@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.UpdateBucketBundle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest UpdateBucketBundle where
 
 instance Prelude.Hashable UpdateBucketBundle where
   hashWithSalt _salt UpdateBucketBundle' {..} =
-    _salt `Prelude.hashWithSalt` bucketName
+    _salt
+      `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` bundleId
 
 instance Prelude.NFData UpdateBucketBundle where

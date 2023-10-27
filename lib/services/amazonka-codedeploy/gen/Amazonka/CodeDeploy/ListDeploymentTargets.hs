@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeDeploy.ListDeploymentTargets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,22 +130,22 @@ instance Core.AWSPager ListDeploymentTargets where
     | Core.stop
         ( rs
             Lens.^? listDeploymentTargetsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listDeploymentTargetsResponse_targetIds
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listDeploymentTargets_nextToken
           Lens..~ rs
           Lens.^? listDeploymentTargetsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListDeploymentTargets where
   type
@@ -164,7 +164,8 @@ instance Core.AWSRequest ListDeploymentTargets where
 
 instance Prelude.Hashable ListDeploymentTargets where
   hashWithSalt _salt ListDeploymentTargets' {..} =
-    _salt `Prelude.hashWithSalt` deploymentId
+    _salt
+      `Prelude.hashWithSalt` deploymentId
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` targetFilters
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.GetAssociatedEnclaveCertificateIamRoles
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,11 +115,12 @@ instance
     Response.receiveXML
       ( \s h x ->
           GetAssociatedEnclaveCertificateIamRolesResponse'
-            Prelude.<$> ( x Data..@? "associatedRoleSet"
+            Prelude.<$> ( x
+                            Data..@? "associatedRoleSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -129,7 +130,8 @@ instance
   hashWithSalt
     _salt
     GetAssociatedEnclaveCertificateIamRoles' {..} =
-      _salt `Prelude.hashWithSalt` certificateArn
+      _salt
+        `Prelude.hashWithSalt` certificateArn
         `Prelude.hashWithSalt` dryRun
 
 instance

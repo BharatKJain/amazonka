@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.RelationalDatabaseDataSourceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.RelationalDatabaseDataSourceConfig where
@@ -95,7 +95,8 @@ instance
   hashWithSalt
     _salt
     RelationalDatabaseDataSourceConfig' {..} =
-      _salt `Prelude.hashWithSalt` rdsHttpEndpointConfig
+      _salt
+        `Prelude.hashWithSalt` rdsHttpEndpointConfig
         `Prelude.hashWithSalt` relationalDatabaseSourceType
 
 instance

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.ReshardingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.ReshardingConfiguration where
@@ -69,7 +69,8 @@ reshardingConfiguration_preferredAvailabilityZones = Lens.lens (\ReshardingConfi
 
 instance Prelude.Hashable ReshardingConfiguration where
   hashWithSalt _salt ReshardingConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` nodeGroupId
+    _salt
+      `Prelude.hashWithSalt` nodeGroupId
       `Prelude.hashWithSalt` preferredAvailabilityZones
 
 instance Prelude.NFData ReshardingConfiguration where

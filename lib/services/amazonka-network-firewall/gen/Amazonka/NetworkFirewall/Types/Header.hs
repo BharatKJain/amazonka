@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.Header
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.Header where
@@ -259,7 +259,8 @@ instance Data.FromJSON Header where
 
 instance Prelude.Hashable Header where
   hashWithSalt _salt Header' {..} =
-    _salt `Prelude.hashWithSalt` protocol
+    _salt
+      `Prelude.hashWithSalt` protocol
       `Prelude.hashWithSalt` source
       `Prelude.hashWithSalt` sourcePort
       `Prelude.hashWithSalt` direction

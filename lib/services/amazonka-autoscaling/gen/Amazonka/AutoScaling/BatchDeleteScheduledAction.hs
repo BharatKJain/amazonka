@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.BatchDeleteScheduledAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,7 +102,8 @@ instance Core.AWSRequest BatchDeleteScheduledAction where
       "BatchDeleteScheduledActionResult"
       ( \s h x ->
           BatchDeleteScheduledActionResponse'
-            Prelude.<$> ( x Data..@? "FailedScheduledActions"
+            Prelude.<$> ( x
+                            Data..@? "FailedScheduledActions"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
@@ -111,7 +112,8 @@ instance Core.AWSRequest BatchDeleteScheduledAction where
 
 instance Prelude.Hashable BatchDeleteScheduledAction where
   hashWithSalt _salt BatchDeleteScheduledAction' {..} =
-    _salt `Prelude.hashWithSalt` autoScalingGroupName
+    _salt
+      `Prelude.hashWithSalt` autoScalingGroupName
       `Prelude.hashWithSalt` scheduledActionNames
 
 instance Prelude.NFData BatchDeleteScheduledAction where

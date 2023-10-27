@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppStream.DescribeDirectoryConfigs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,22 +113,22 @@ instance Core.AWSPager DescribeDirectoryConfigs where
     | Core.stop
         ( rs
             Lens.^? describeDirectoryConfigsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeDirectoryConfigsResponse_directoryConfigs
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeDirectoryConfigs_nextToken
           Lens..~ rs
           Lens.^? describeDirectoryConfigsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeDirectoryConfigs where
   type
@@ -140,7 +140,8 @@ instance Core.AWSRequest DescribeDirectoryConfigs where
     Response.receiveJSON
       ( \s h x ->
           DescribeDirectoryConfigsResponse'
-            Prelude.<$> ( x Data..?> "DirectoryConfigs"
+            Prelude.<$> ( x
+                            Data..?> "DirectoryConfigs"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -149,7 +150,8 @@ instance Core.AWSRequest DescribeDirectoryConfigs where
 
 instance Prelude.Hashable DescribeDirectoryConfigs where
   hashWithSalt _salt DescribeDirectoryConfigs' {..} =
-    _salt `Prelude.hashWithSalt` directoryNames
+    _salt
+      `Prelude.hashWithSalt` directoryNames
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

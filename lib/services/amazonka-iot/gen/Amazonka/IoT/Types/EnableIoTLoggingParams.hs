@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.EnableIoTLoggingParams
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.EnableIoTLoggingParams where
@@ -83,7 +83,8 @@ instance Data.FromJSON EnableIoTLoggingParams where
 
 instance Prelude.Hashable EnableIoTLoggingParams where
   hashWithSalt _salt EnableIoTLoggingParams' {..} =
-    _salt `Prelude.hashWithSalt` roleArnForLogging
+    _salt
+      `Prelude.hashWithSalt` roleArnForLogging
       `Prelude.hashWithSalt` logLevel
 
 instance Prelude.NFData EnableIoTLoggingParams where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.ListEntitiesFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.ListEntitiesFilter where
@@ -77,7 +77,8 @@ listEntitiesFilter_parentEntityId = Lens.lens (\ListEntitiesFilter' {parentEntit
 
 instance Prelude.Hashable ListEntitiesFilter where
   hashWithSalt _salt ListEntitiesFilter' {..} =
-    _salt `Prelude.hashWithSalt` componentTypeId
+    _salt
+      `Prelude.hashWithSalt` componentTypeId
       `Prelude.hashWithSalt` externalId
       `Prelude.hashWithSalt` parentEntityId
 

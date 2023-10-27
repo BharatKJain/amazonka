@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.ParameterStringFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.ParameterStringFilter where
@@ -142,7 +142,8 @@ parameterStringFilter_key = Lens.lens (\ParameterStringFilter' {key} -> key) (\s
 
 instance Prelude.Hashable ParameterStringFilter where
   hashWithSalt _salt ParameterStringFilter' {..} =
-    _salt `Prelude.hashWithSalt` option
+    _salt
+      `Prelude.hashWithSalt` option
       `Prelude.hashWithSalt` values
       `Prelude.hashWithSalt` key
 

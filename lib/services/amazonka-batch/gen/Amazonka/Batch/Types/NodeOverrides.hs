@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.NodeOverrides
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.NodeOverrides where
@@ -107,7 +107,8 @@ nodeOverrides_numNodes = Lens.lens (\NodeOverrides' {numNodes} -> numNodes) (\s@
 
 instance Prelude.Hashable NodeOverrides where
   hashWithSalt _salt NodeOverrides' {..} =
-    _salt `Prelude.hashWithSalt` nodePropertyOverrides
+    _salt
+      `Prelude.hashWithSalt` nodePropertyOverrides
       `Prelude.hashWithSalt` numNodes
 
 instance Prelude.NFData NodeOverrides where

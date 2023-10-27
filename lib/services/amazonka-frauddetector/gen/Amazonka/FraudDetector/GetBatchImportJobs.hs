@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FraudDetector.GetBatchImportJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,7 +118,8 @@ instance Core.AWSRequest GetBatchImportJobs where
 
 instance Prelude.Hashable GetBatchImportJobs where
   hashWithSalt _salt GetBatchImportJobs' {..} =
-    _salt `Prelude.hashWithSalt` jobId
+    _salt
+      `Prelude.hashWithSalt` jobId
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

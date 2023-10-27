@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeVpcClassicLink
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -157,7 +157,9 @@ instance Core.AWSRequest DescribeVpcClassicLink where
     Response.receiveXML
       ( \s h x ->
           DescribeVpcClassicLinkResponse'
-            Prelude.<$> ( x Data..@? "vpcSet" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "vpcSet"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -165,7 +167,8 @@ instance Core.AWSRequest DescribeVpcClassicLink where
 
 instance Prelude.Hashable DescribeVpcClassicLink where
   hashWithSalt _salt DescribeVpcClassicLink' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` vpcIds
 

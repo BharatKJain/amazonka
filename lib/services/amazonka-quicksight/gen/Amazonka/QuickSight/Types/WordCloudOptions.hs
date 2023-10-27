@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.WordCloudOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.WordCloudOptions where
@@ -131,7 +131,8 @@ instance Data.FromJSON WordCloudOptions where
 
 instance Prelude.Hashable WordCloudOptions where
   hashWithSalt _salt WordCloudOptions' {..} =
-    _salt `Prelude.hashWithSalt` cloudLayout
+    _salt
+      `Prelude.hashWithSalt` cloudLayout
       `Prelude.hashWithSalt` maximumStringLength
       `Prelude.hashWithSalt` wordCasing
       `Prelude.hashWithSalt` wordOrientation

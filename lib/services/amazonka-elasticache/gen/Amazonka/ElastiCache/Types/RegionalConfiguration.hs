@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.RegionalConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.RegionalConfiguration where
@@ -84,7 +84,8 @@ regionalConfiguration_reshardingConfiguration = Lens.lens (\RegionalConfiguratio
 
 instance Prelude.Hashable RegionalConfiguration where
   hashWithSalt _salt RegionalConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` replicationGroupId
+    _salt
+      `Prelude.hashWithSalt` replicationGroupId
       `Prelude.hashWithSalt` replicationGroupRegion
       `Prelude.hashWithSalt` reshardingConfiguration
 

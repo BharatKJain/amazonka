@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.DefaultConditionalBranch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.DefaultConditionalBranch where
@@ -77,7 +77,8 @@ instance Data.FromJSON DefaultConditionalBranch where
 
 instance Prelude.Hashable DefaultConditionalBranch where
   hashWithSalt _salt DefaultConditionalBranch' {..} =
-    _salt `Prelude.hashWithSalt` nextStep
+    _salt
+      `Prelude.hashWithSalt` nextStep
       `Prelude.hashWithSalt` response
 
 instance Prelude.NFData DefaultConditionalBranch where

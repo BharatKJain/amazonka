@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.InputDecryptionSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.InputDecryptionSettings where
@@ -129,7 +129,8 @@ instance Data.FromJSON InputDecryptionSettings where
 
 instance Prelude.Hashable InputDecryptionSettings where
   hashWithSalt _salt InputDecryptionSettings' {..} =
-    _salt `Prelude.hashWithSalt` decryptionMode
+    _salt
+      `Prelude.hashWithSalt` decryptionMode
       `Prelude.hashWithSalt` encryptedDecryptionKey
       `Prelude.hashWithSalt` initializationVector
       `Prelude.hashWithSalt` kmsKeyRegion

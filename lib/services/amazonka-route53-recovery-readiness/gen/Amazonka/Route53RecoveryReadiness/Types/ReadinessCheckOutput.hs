@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53RecoveryReadiness.Types.ReadinessCheckOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53RecoveryReadiness.Types.ReadinessCheckOutput where
@@ -100,7 +100,8 @@ instance Data.FromJSON ReadinessCheckOutput where
 
 instance Prelude.Hashable ReadinessCheckOutput where
   hashWithSalt _salt ReadinessCheckOutput' {..} =
-    _salt `Prelude.hashWithSalt` readinessCheckName
+    _salt
+      `Prelude.hashWithSalt` readinessCheckName
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` readinessCheckArn
       `Prelude.hashWithSalt` resourceSet

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeCommit.TestRepositoryTriggers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,10 +103,12 @@ instance Core.AWSRequest TestRepositoryTriggers where
     Response.receiveJSON
       ( \s h x ->
           TestRepositoryTriggersResponse'
-            Prelude.<$> ( x Data..?> "failedExecutions"
+            Prelude.<$> ( x
+                            Data..?> "failedExecutions"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "successfulExecutions"
+            Prelude.<*> ( x
+                            Data..?> "successfulExecutions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -114,7 +116,8 @@ instance Core.AWSRequest TestRepositoryTriggers where
 
 instance Prelude.Hashable TestRepositoryTriggers where
   hashWithSalt _salt TestRepositoryTriggers' {..} =
-    _salt `Prelude.hashWithSalt` repositoryName
+    _salt
+      `Prelude.hashWithSalt` repositoryName
       `Prelude.hashWithSalt` triggers
 
 instance Prelude.NFData TestRepositoryTriggers where

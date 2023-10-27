@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.BotSortBy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.BotSortBy where
@@ -70,7 +70,8 @@ botSortBy_order = Lens.lens (\BotSortBy' {order} -> order) (\s@BotSortBy' {} a -
 
 instance Prelude.Hashable BotSortBy where
   hashWithSalt _salt BotSortBy' {..} =
-    _salt `Prelude.hashWithSalt` attribute
+    _salt
+      `Prelude.hashWithSalt` attribute
       `Prelude.hashWithSalt` order
 
 instance Prelude.NFData BotSortBy where

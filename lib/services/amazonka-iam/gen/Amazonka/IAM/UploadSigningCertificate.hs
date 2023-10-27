@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.UploadSigningCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -181,7 +181,8 @@ instance Core.AWSRequest UploadSigningCertificate where
 
 instance Prelude.Hashable UploadSigningCertificate where
   hashWithSalt _salt UploadSigningCertificate' {..} =
-    _salt `Prelude.hashWithSalt` userName
+    _salt
+      `Prelude.hashWithSalt` userName
       `Prelude.hashWithSalt` certificateBody
 
 instance Prelude.NFData UploadSigningCertificate where

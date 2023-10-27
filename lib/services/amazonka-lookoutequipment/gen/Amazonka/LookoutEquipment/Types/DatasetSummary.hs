@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutEquipment.Types.DatasetSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutEquipment.Types.DatasetSummary where
@@ -99,7 +99,8 @@ instance Data.FromJSON DatasetSummary where
 
 instance Prelude.Hashable DatasetSummary where
   hashWithSalt _salt DatasetSummary' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` datasetArn
       `Prelude.hashWithSalt` datasetName
       `Prelude.hashWithSalt` status

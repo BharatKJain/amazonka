@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.StartExportTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -303,7 +303,8 @@ instance Core.AWSRequest StartExportTask where
 
 instance Prelude.Hashable StartExportTask where
   hashWithSalt _salt StartExportTask' {..} =
-    _salt `Prelude.hashWithSalt` exportOnly
+    _salt
+      `Prelude.hashWithSalt` exportOnly
       `Prelude.hashWithSalt` s3Prefix
       `Prelude.hashWithSalt` exportTaskIdentifier
       `Prelude.hashWithSalt` sourceArn

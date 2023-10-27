@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.AccountDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.AccountDetail where
@@ -69,7 +69,8 @@ accountDetail_accountId = Lens.lens (\AccountDetail' {accountId} -> accountId) (
 
 instance Prelude.Hashable AccountDetail where
   hashWithSalt _salt AccountDetail' {..} =
-    _salt `Prelude.hashWithSalt` email
+    _salt
+      `Prelude.hashWithSalt` email
       `Prelude.hashWithSalt` accountId
 
 instance Prelude.NFData AccountDetail where

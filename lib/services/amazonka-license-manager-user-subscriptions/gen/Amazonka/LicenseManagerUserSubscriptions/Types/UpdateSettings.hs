@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManagerUserSubscriptions.Types.UpdateSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManagerUserSubscriptions.Types.UpdateSettings where
@@ -83,7 +83,8 @@ updateSettings_removeSubnets = Lens.lens (\UpdateSettings' {removeSubnets} -> re
 
 instance Prelude.Hashable UpdateSettings where
   hashWithSalt _salt UpdateSettings' {..} =
-    _salt `Prelude.hashWithSalt` securityGroupId
+    _salt
+      `Prelude.hashWithSalt` securityGroupId
       `Prelude.hashWithSalt` addSubnets
       `Prelude.hashWithSalt` removeSubnets
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ELBV2.SetSubnets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -227,7 +227,8 @@ instance Core.AWSRequest SetSubnets where
       "SetSubnetsResult"
       ( \s h x ->
           SetSubnetsResponse'
-            Prelude.<$> ( x Data..@? "AvailabilityZones"
+            Prelude.<$> ( x
+                            Data..@? "AvailabilityZones"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
@@ -237,7 +238,8 @@ instance Core.AWSRequest SetSubnets where
 
 instance Prelude.Hashable SetSubnets where
   hashWithSalt _salt SetSubnets' {..} =
-    _salt `Prelude.hashWithSalt` ipAddressType
+    _salt
+      `Prelude.hashWithSalt` ipAddressType
       `Prelude.hashWithSalt` subnetMappings
       `Prelude.hashWithSalt` subnets
       `Prelude.hashWithSalt` loadBalancerArn

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.ListCompute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,20 +129,23 @@ instance Core.AWSPager ListCompute where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listComputeResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listComputeResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listComputeResponse_computeList Prelude.. Lens._Just
+            Lens.^? listComputeResponse_computeList
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listCompute_nextToken
           Lens..~ rs
-          Lens.^? listComputeResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listComputeResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListCompute where
   type AWSResponse ListCompute = ListComputeResponse
@@ -159,7 +162,8 @@ instance Core.AWSRequest ListCompute where
 
 instance Prelude.Hashable ListCompute where
   hashWithSalt _salt ListCompute' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` location
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` fleetId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.GeoRestriction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.GeoRestriction where
@@ -153,7 +153,9 @@ geoRestriction_quantity = Lens.lens (\GeoRestriction' {quantity} -> quantity) (\
 instance Data.FromXML GeoRestriction where
   parseXML x =
     GeoRestriction'
-      Prelude.<$> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Location")
                   )
       Prelude.<*> (x Data..@ "RestrictionType")
@@ -161,7 +163,8 @@ instance Data.FromXML GeoRestriction where
 
 instance Prelude.Hashable GeoRestriction where
   hashWithSalt _salt GeoRestriction' {..} =
-    _salt `Prelude.hashWithSalt` items
+    _salt
+      `Prelude.hashWithSalt` items
       `Prelude.hashWithSalt` restrictionType
       `Prelude.hashWithSalt` quantity
 

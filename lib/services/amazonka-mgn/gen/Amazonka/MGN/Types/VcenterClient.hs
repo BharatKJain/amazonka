@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.VcenterClient
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.VcenterClient where
@@ -126,7 +126,8 @@ instance Data.FromJSON VcenterClient where
             Prelude.<*> (x Data..:? "datacenterName")
             Prelude.<*> (x Data..:? "hostname")
             Prelude.<*> (x Data..:? "lastSeenDatetime")
-            Prelude.<*> ( x Data..:? "sourceServerTags"
+            Prelude.<*> ( x
+                            Data..:? "sourceServerTags"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "tags" Data..!= Prelude.mempty)
@@ -136,7 +137,8 @@ instance Data.FromJSON VcenterClient where
 
 instance Prelude.Hashable VcenterClient where
   hashWithSalt _salt VcenterClient' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` datacenterName
       `Prelude.hashWithSalt` hostname
       `Prelude.hashWithSalt` lastSeenDatetime

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KMS.Types.XksProxyConfigurationType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KMS.Types.XksProxyConfigurationType where
@@ -146,7 +146,8 @@ instance Data.FromJSON XksProxyConfigurationType where
 
 instance Prelude.Hashable XksProxyConfigurationType where
   hashWithSalt _salt XksProxyConfigurationType' {..} =
-    _salt `Prelude.hashWithSalt` accessKeyId
+    _salt
+      `Prelude.hashWithSalt` accessKeyId
       `Prelude.hashWithSalt` connectivity
       `Prelude.hashWithSalt` uriEndpoint
       `Prelude.hashWithSalt` uriPath

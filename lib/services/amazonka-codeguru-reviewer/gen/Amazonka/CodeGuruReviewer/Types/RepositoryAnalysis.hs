@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.RepositoryAnalysis
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.RepositoryAnalysis where
@@ -75,7 +75,8 @@ repositoryAnalysis_sourceCodeType = Lens.lens (\RepositoryAnalysis' {sourceCodeT
 
 instance Prelude.Hashable RepositoryAnalysis where
   hashWithSalt _salt RepositoryAnalysis' {..} =
-    _salt `Prelude.hashWithSalt` repositoryHead
+    _salt
+      `Prelude.hashWithSalt` repositoryHead
       `Prelude.hashWithSalt` sourceCodeType
 
 instance Prelude.NFData RepositoryAnalysis where

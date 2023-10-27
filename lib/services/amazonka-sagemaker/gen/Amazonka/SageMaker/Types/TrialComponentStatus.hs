@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.TrialComponentStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.TrialComponentStatus where
@@ -75,7 +75,8 @@ instance Data.FromJSON TrialComponentStatus where
 
 instance Prelude.Hashable TrialComponentStatus where
   hashWithSalt _salt TrialComponentStatus' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` primaryStatus
 
 instance Prelude.NFData TrialComponentStatus where

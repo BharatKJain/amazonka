@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.DatasetExportJobSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.DatasetExportJobSummary where
@@ -136,7 +136,8 @@ instance Data.FromJSON DatasetExportJobSummary where
 
 instance Prelude.Hashable DatasetExportJobSummary where
   hashWithSalt _salt DatasetExportJobSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationDateTime
+    _salt
+      `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` datasetExportJobArn
       `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` jobName

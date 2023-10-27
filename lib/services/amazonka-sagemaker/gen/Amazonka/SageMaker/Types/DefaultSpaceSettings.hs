@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.DefaultSpaceSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.DefaultSpaceSettings where
@@ -93,14 +93,16 @@ instance Data.FromJSON DefaultSpaceSettings where
             Prelude.<$> (x Data..:? "ExecutionRole")
             Prelude.<*> (x Data..:? "JupyterServerAppSettings")
             Prelude.<*> (x Data..:? "KernelGatewayAppSettings")
-            Prelude.<*> ( x Data..:? "SecurityGroups"
+            Prelude.<*> ( x
+                            Data..:? "SecurityGroups"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable DefaultSpaceSettings where
   hashWithSalt _salt DefaultSpaceSettings' {..} =
-    _salt `Prelude.hashWithSalt` executionRole
+    _salt
+      `Prelude.hashWithSalt` executionRole
       `Prelude.hashWithSalt` jupyterServerAppSettings
       `Prelude.hashWithSalt` kernelGatewayAppSettings
       `Prelude.hashWithSalt` securityGroups

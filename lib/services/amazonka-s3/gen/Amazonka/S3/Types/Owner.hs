@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.Owner
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.Owner where
@@ -71,7 +71,8 @@ instance Data.FromXML Owner where
 
 instance Prelude.Hashable Owner where
   hashWithSalt _salt Owner' {..} =
-    _salt `Prelude.hashWithSalt` displayName
+    _salt
+      `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData Owner where

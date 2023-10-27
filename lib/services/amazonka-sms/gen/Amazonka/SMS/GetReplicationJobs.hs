@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SMS.GetReplicationJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,22 +108,22 @@ instance Core.AWSPager GetReplicationJobs where
     | Core.stop
         ( rs
             Lens.^? getReplicationJobsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getReplicationJobsResponse_replicationJobList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getReplicationJobs_nextToken
           Lens..~ rs
           Lens.^? getReplicationJobsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetReplicationJobs where
   type
@@ -136,7 +136,8 @@ instance Core.AWSRequest GetReplicationJobs where
       ( \s h x ->
           GetReplicationJobsResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "replicationJobList"
+            Prelude.<*> ( x
+                            Data..?> "replicationJobList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -144,7 +145,8 @@ instance Core.AWSRequest GetReplicationJobs where
 
 instance Prelude.Hashable GetReplicationJobs where
   hashWithSalt _salt GetReplicationJobs' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` replicationJobId
 

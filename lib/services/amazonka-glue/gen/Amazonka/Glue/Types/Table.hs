@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Table
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Table where
@@ -292,7 +292,8 @@ instance Data.FromJSON Table where
 
 instance Prelude.Hashable Table where
   hashWithSalt _salt Table' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` createTime
       `Prelude.hashWithSalt` createdBy
       `Prelude.hashWithSalt` databaseName

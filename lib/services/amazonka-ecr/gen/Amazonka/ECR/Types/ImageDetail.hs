@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECR.Types.ImageDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECR.Types.ImageDetail where
@@ -227,7 +227,8 @@ instance Data.FromJSON ImageDetail where
 
 instance Prelude.Hashable ImageDetail where
   hashWithSalt _salt ImageDetail' {..} =
-    _salt `Prelude.hashWithSalt` artifactMediaType
+    _salt
+      `Prelude.hashWithSalt` artifactMediaType
       `Prelude.hashWithSalt` imageDigest
       `Prelude.hashWithSalt` imageManifestMediaType
       `Prelude.hashWithSalt` imagePushedAt

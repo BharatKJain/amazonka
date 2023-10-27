@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.BackupSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.BackupSummary where
@@ -197,7 +197,8 @@ instance Data.FromJSON BackupSummary where
 
 instance Prelude.Hashable BackupSummary where
   hashWithSalt _salt BackupSummary' {..} =
-    _salt `Prelude.hashWithSalt` backupArn
+    _salt
+      `Prelude.hashWithSalt` backupArn
       `Prelude.hashWithSalt` backupCreationDateTime
       `Prelude.hashWithSalt` backupExpiryDateTime
       `Prelude.hashWithSalt` backupName

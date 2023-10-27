@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CustomerProfiles.GetIdentityResolutionJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,7 +130,8 @@ instance Core.AWSRequest GetIdentityResolutionJob where
 
 instance Prelude.Hashable GetIdentityResolutionJob where
   hashWithSalt _salt GetIdentityResolutionJob' {..} =
-    _salt `Prelude.hashWithSalt` domainName
+    _salt
+      `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` jobId
 
 instance Prelude.NFData GetIdentityResolutionJob where

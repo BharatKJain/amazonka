@@ -16,7 +16,7 @@
 -- Module      : Amazonka.STS.AssumeRoleWithWebIdentity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -611,7 +611,8 @@ instance Core.AWSRequest AssumeRoleWithWebIdentity where
 
 instance Prelude.Hashable AssumeRoleWithWebIdentity where
   hashWithSalt _salt AssumeRoleWithWebIdentity' {..} =
-    _salt `Prelude.hashWithSalt` durationSeconds
+    _salt
+      `Prelude.hashWithSalt` durationSeconds
       `Prelude.hashWithSalt` policy
       `Prelude.hashWithSalt` policyArns
       `Prelude.hashWithSalt` providerId

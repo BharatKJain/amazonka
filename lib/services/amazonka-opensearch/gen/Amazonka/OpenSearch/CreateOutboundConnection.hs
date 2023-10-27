@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpenSearch.CreateOutboundConnection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest CreateOutboundConnection where
 
 instance Prelude.Hashable CreateOutboundConnection where
   hashWithSalt _salt CreateOutboundConnection' {..} =
-    _salt `Prelude.hashWithSalt` localDomainInfo
+    _salt
+      `Prelude.hashWithSalt` localDomainInfo
       `Prelude.hashWithSalt` remoteDomainInfo
       `Prelude.hashWithSalt` connectionAlias
 

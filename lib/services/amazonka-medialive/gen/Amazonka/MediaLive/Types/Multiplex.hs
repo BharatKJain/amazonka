@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.Multiplex
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.Multiplex where
@@ -144,7 +144,8 @@ instance Data.FromJSON Multiplex where
       ( \x ->
           Multiplex'
             Prelude.<$> (x Data..:? "arn")
-            Prelude.<*> ( x Data..:? "availabilityZones"
+            Prelude.<*> ( x
+                            Data..:? "availabilityZones"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "destinations" Data..!= Prelude.mempty)
@@ -159,7 +160,8 @@ instance Data.FromJSON Multiplex where
 
 instance Prelude.Hashable Multiplex where
   hashWithSalt _salt Multiplex' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` availabilityZones
       `Prelude.hashWithSalt` destinations
       `Prelude.hashWithSalt` id

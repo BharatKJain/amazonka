@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.ContinuousDeploymentPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.ContinuousDeploymentPolicy where
@@ -91,7 +91,8 @@ instance Data.FromXML ContinuousDeploymentPolicy where
 
 instance Prelude.Hashable ContinuousDeploymentPolicy where
   hashWithSalt _salt ContinuousDeploymentPolicy' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` lastModifiedTime
       `Prelude.hashWithSalt` continuousDeploymentPolicyConfig
 

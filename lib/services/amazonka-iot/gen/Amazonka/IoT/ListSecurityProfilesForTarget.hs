@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.ListSecurityProfilesForTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,22 +125,22 @@ instance Core.AWSPager ListSecurityProfilesForTarget where
     | Core.stop
         ( rs
             Lens.^? listSecurityProfilesForTargetResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listSecurityProfilesForTargetResponse_securityProfileTargetMappings
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSecurityProfilesForTarget_nextToken
           Lens..~ rs
           Lens.^? listSecurityProfilesForTargetResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -156,7 +156,8 @@ instance
       ( \s h x ->
           ListSecurityProfilesForTargetResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "securityProfileTargetMappings"
+            Prelude.<*> ( x
+                            Data..?> "securityProfileTargetMappings"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -167,7 +168,8 @@ instance
     ListSecurityProfilesForTarget
   where
   hashWithSalt _salt ListSecurityProfilesForTarget' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` recursive
       `Prelude.hashWithSalt` securityProfileTargetArn

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.UpdateBucket
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -175,7 +175,8 @@ instance Core.AWSRequest UpdateBucket where
 
 instance Prelude.Hashable UpdateBucket where
   hashWithSalt _salt UpdateBucket' {..} =
-    _salt `Prelude.hashWithSalt` accessLogConfig
+    _salt
+      `Prelude.hashWithSalt` accessLogConfig
       `Prelude.hashWithSalt` accessRules
       `Prelude.hashWithSalt` readonlyAccessAccounts
       `Prelude.hashWithSalt` versioning

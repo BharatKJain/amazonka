@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53.ListGeoLocations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -207,7 +207,8 @@ instance Core.AWSRequest ListGeoLocations where
             Prelude.<*> (x Data..@? "NextCountryCode")
             Prelude.<*> (x Data..@? "NextSubdivisionCode")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..@? "GeoLocationDetailsList"
+            Prelude.<*> ( x
+                            Data..@? "GeoLocationDetailsList"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Data.parseXMLList "GeoLocationDetails"
                         )
@@ -217,7 +218,8 @@ instance Core.AWSRequest ListGeoLocations where
 
 instance Prelude.Hashable ListGeoLocations where
   hashWithSalt _salt ListGeoLocations' {..} =
-    _salt `Prelude.hashWithSalt` maxItems
+    _salt
+      `Prelude.hashWithSalt` maxItems
       `Prelude.hashWithSalt` startContinentCode
       `Prelude.hashWithSalt` startCountryCode
       `Prelude.hashWithSalt` startSubdivisionCode

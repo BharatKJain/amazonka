@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.StoreImageTaskResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.StoreImageTaskResult where
@@ -125,7 +125,8 @@ instance Data.FromXML StoreImageTaskResult where
 
 instance Prelude.Hashable StoreImageTaskResult where
   hashWithSalt _salt StoreImageTaskResult' {..} =
-    _salt `Prelude.hashWithSalt` amiId
+    _salt
+      `Prelude.hashWithSalt` amiId
       `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` progressPercentage
       `Prelude.hashWithSalt` s3objectKey

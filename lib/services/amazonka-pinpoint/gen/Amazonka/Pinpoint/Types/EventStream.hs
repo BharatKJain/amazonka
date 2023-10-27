@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.EventStream
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.EventStream where
@@ -160,7 +160,8 @@ instance Data.FromJSON EventStream where
 
 instance Prelude.Hashable EventStream where
   hashWithSalt _salt EventStream' {..} =
-    _salt `Prelude.hashWithSalt` externalId
+    _salt
+      `Prelude.hashWithSalt` externalId
       `Prelude.hashWithSalt` lastModifiedDate
       `Prelude.hashWithSalt` lastUpdatedBy
       `Prelude.hashWithSalt` applicationId

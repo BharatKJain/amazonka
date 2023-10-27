@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Textract.DetectDocumentText
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -208,7 +208,6 @@ newDetectDocumentTextResponse pHttpStatus_ =
 detectDocumentTextResponse_blocks :: Lens.Lens' DetectDocumentTextResponse (Prelude.Maybe [Block])
 detectDocumentTextResponse_blocks = Lens.lens (\DetectDocumentTextResponse' {blocks} -> blocks) (\s@DetectDocumentTextResponse' {} a -> s {blocks = a} :: DetectDocumentTextResponse) Prelude.. Lens.mapping Lens.coerced
 
--- |
 detectDocumentTextResponse_detectDocumentTextModelVersion :: Lens.Lens' DetectDocumentTextResponse (Prelude.Maybe Prelude.Text)
 detectDocumentTextResponse_detectDocumentTextModelVersion = Lens.lens (\DetectDocumentTextResponse' {detectDocumentTextModelVersion} -> detectDocumentTextModelVersion) (\s@DetectDocumentTextResponse' {} a -> s {detectDocumentTextModelVersion = a} :: DetectDocumentTextResponse)
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.WorkflowGraph
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.WorkflowGraph where
@@ -84,7 +84,8 @@ instance Data.FromJSON WorkflowGraph where
 
 instance Prelude.Hashable WorkflowGraph where
   hashWithSalt _salt WorkflowGraph' {..} =
-    _salt `Prelude.hashWithSalt` edges
+    _salt
+      `Prelude.hashWithSalt` edges
       `Prelude.hashWithSalt` nodes
 
 instance Prelude.NFData WorkflowGraph where

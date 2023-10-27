@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.ScheduledWindowExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.ScheduledWindowExecution where
@@ -88,7 +88,8 @@ instance Data.FromJSON ScheduledWindowExecution where
 
 instance Prelude.Hashable ScheduledWindowExecution where
   hashWithSalt _salt ScheduledWindowExecution' {..} =
-    _salt `Prelude.hashWithSalt` executionTime
+    _salt
+      `Prelude.hashWithSalt` executionTime
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` windowId
 

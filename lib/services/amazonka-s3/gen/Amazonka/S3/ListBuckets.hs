@@ -16,7 +16,7 @@
 -- Module      : Amazonka.S3.ListBuckets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -70,7 +70,9 @@ instance Core.AWSRequest ListBuckets where
     Response.receiveXML
       ( \s h x ->
           ListBucketsResponse'
-            Prelude.<$> ( x Data..@? "Buckets" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "Buckets"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "Bucket")
                         )
             Prelude.<*> (x Data..@? "Owner")

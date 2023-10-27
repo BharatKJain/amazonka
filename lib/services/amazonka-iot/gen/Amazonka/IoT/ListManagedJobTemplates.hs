@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.ListManagedJobTemplates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest ListManagedJobTemplates where
     Response.receiveJSON
       ( \s h x ->
           ListManagedJobTemplatesResponse'
-            Prelude.<$> ( x Data..?> "managedJobTemplates"
+            Prelude.<$> ( x
+                            Data..?> "managedJobTemplates"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -121,7 +122,8 @@ instance Core.AWSRequest ListManagedJobTemplates where
 
 instance Prelude.Hashable ListManagedJobTemplates where
   hashWithSalt _salt ListManagedJobTemplates' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` templateName
 

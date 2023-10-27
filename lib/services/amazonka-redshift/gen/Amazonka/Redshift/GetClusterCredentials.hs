@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.GetClusterCredentials
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -378,7 +378,8 @@ instance Core.AWSRequest GetClusterCredentials where
 
 instance Prelude.Hashable GetClusterCredentials where
   hashWithSalt _salt GetClusterCredentials' {..} =
-    _salt `Prelude.hashWithSalt` autoCreate
+    _salt
+      `Prelude.hashWithSalt` autoCreate
       `Prelude.hashWithSalt` dbGroups
       `Prelude.hashWithSalt` dbName
       `Prelude.hashWithSalt` durationSeconds

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTFleetWise.Types.SignalInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTFleetWise.Types.SignalInformation where
@@ -99,7 +99,8 @@ instance Data.FromJSON SignalInformation where
 
 instance Prelude.Hashable SignalInformation where
   hashWithSalt _salt SignalInformation' {..} =
-    _salt `Prelude.hashWithSalt` maxSampleCount
+    _salt
+      `Prelude.hashWithSalt` maxSampleCount
       `Prelude.hashWithSalt` minimumSamplingIntervalMs
       `Prelude.hashWithSalt` name
 

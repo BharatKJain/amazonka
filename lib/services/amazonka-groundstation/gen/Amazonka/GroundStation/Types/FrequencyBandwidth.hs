@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.FrequencyBandwidth
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.FrequencyBandwidth where
@@ -103,12 +103,14 @@ instance Data.FromJSON FrequencyBandwidth where
       "FrequencyBandwidth"
       ( \x ->
           FrequencyBandwidth'
-            Prelude.<$> (x Data..: "units") Prelude.<*> (x Data..: "value")
+            Prelude.<$> (x Data..: "units")
+            Prelude.<*> (x Data..: "value")
       )
 
 instance Prelude.Hashable FrequencyBandwidth where
   hashWithSalt _salt FrequencyBandwidth' {..} =
-    _salt `Prelude.hashWithSalt` units
+    _salt
+      `Prelude.hashWithSalt` units
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData FrequencyBandwidth where

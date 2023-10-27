@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.UnaggregatedField
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.UnaggregatedField where
@@ -91,7 +91,8 @@ instance Data.FromJSON UnaggregatedField where
 
 instance Prelude.Hashable UnaggregatedField where
   hashWithSalt _salt UnaggregatedField' {..} =
-    _salt `Prelude.hashWithSalt` formatConfiguration
+    _salt
+      `Prelude.hashWithSalt` formatConfiguration
       `Prelude.hashWithSalt` fieldId
       `Prelude.hashWithSalt` column
 

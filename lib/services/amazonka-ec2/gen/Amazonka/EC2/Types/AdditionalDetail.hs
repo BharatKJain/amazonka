@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.AdditionalDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.AdditionalDetail where
@@ -73,7 +73,8 @@ instance Data.FromXML AdditionalDetail where
 
 instance Prelude.Hashable AdditionalDetail where
   hashWithSalt _salt AdditionalDetail' {..} =
-    _salt `Prelude.hashWithSalt` additionalDetailType
+    _salt
+      `Prelude.hashWithSalt` additionalDetailType
       `Prelude.hashWithSalt` component
 
 instance Prelude.NFData AdditionalDetail where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MechanicalTurk.Types.QualificationRequirement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MechanicalTurk.Types.QualificationRequirement where
@@ -278,7 +278,8 @@ instance Data.FromJSON QualificationRequirement where
 
 instance Prelude.Hashable QualificationRequirement where
   hashWithSalt _salt QualificationRequirement' {..} =
-    _salt `Prelude.hashWithSalt` actionsGuarded
+    _salt
+      `Prelude.hashWithSalt` actionsGuarded
       `Prelude.hashWithSalt` integerValues
       `Prelude.hashWithSalt` localeValues
       `Prelude.hashWithSalt` requiredToPreview

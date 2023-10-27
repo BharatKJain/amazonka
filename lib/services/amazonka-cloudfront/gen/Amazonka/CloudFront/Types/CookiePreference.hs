@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.CookiePreference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.CookiePreference where
@@ -227,7 +227,8 @@ instance Data.FromXML CookiePreference where
 
 instance Prelude.Hashable CookiePreference where
   hashWithSalt _salt CookiePreference' {..} =
-    _salt `Prelude.hashWithSalt` whitelistedNames
+    _salt
+      `Prelude.hashWithSalt` whitelistedNames
       `Prelude.hashWithSalt` forward
 
 instance Prelude.NFData CookiePreference where

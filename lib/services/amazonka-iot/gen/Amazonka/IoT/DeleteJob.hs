@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.DeleteJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -76,7 +76,7 @@ data DeleteJob = DeleteJob'
     -- Core sends jobs notifications to MQTT topics that contain the value in
     -- the following format.
     --
-    -- @$aws\/things\/THING_NAME\/jobs\/JOB_ID\/notify-namespace-NAMESPACE_ID\/@
+    -- @$aws\/things\/@/@THING_NAME@/@\/jobs\/@/@JOB_ID@/@\/notify-namespace-@/@NAMESPACE_ID@/@\/@
     --
     -- The @namespaceId@ feature is in public preview.
     namespaceId :: Prelude.Maybe Prelude.Text,
@@ -113,7 +113,7 @@ data DeleteJob = DeleteJob'
 -- Core sends jobs notifications to MQTT topics that contain the value in
 -- the following format.
 --
--- @$aws\/things\/THING_NAME\/jobs\/JOB_ID\/notify-namespace-NAMESPACE_ID\/@
+-- @$aws\/things\/@/@THING_NAME@/@\/jobs\/@/@JOB_ID@/@\/notify-namespace-@/@NAMESPACE_ID@/@\/@
 --
 -- The @namespaceId@ feature is in public preview.
 --
@@ -151,7 +151,7 @@ deleteJob_force = Lens.lens (\DeleteJob' {force} -> force) (\s@DeleteJob' {} a -
 -- Core sends jobs notifications to MQTT topics that contain the value in
 -- the following format.
 --
--- @$aws\/things\/THING_NAME\/jobs\/JOB_ID\/notify-namespace-NAMESPACE_ID\/@
+-- @$aws\/things\/@/@THING_NAME@/@\/jobs\/@/@JOB_ID@/@\/notify-namespace-@/@NAMESPACE_ID@/@\/@
 --
 -- The @namespaceId@ feature is in public preview.
 deleteJob_namespaceId :: Lens.Lens' DeleteJob (Prelude.Maybe Prelude.Text)
@@ -173,7 +173,8 @@ instance Core.AWSRequest DeleteJob where
 
 instance Prelude.Hashable DeleteJob where
   hashWithSalt _salt DeleteJob' {..} =
-    _salt `Prelude.hashWithSalt` force
+    _salt
+      `Prelude.hashWithSalt` force
       `Prelude.hashWithSalt` namespaceId
       `Prelude.hashWithSalt` jobId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.LocalGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.LocalGateway where
@@ -98,13 +98,16 @@ instance Data.FromXML LocalGateway where
       Prelude.<*> (x Data..@? "outpostArn")
       Prelude.<*> (x Data..@? "ownerId")
       Prelude.<*> (x Data..@? "state")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable LocalGateway where
   hashWithSalt _salt LocalGateway' {..} =
-    _salt `Prelude.hashWithSalt` localGatewayId
+    _salt
+      `Prelude.hashWithSalt` localGatewayId
       `Prelude.hashWithSalt` outpostArn
       `Prelude.hashWithSalt` ownerId
       `Prelude.hashWithSalt` state

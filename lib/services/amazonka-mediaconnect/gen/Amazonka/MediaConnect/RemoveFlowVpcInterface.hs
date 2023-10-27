@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaConnect.RemoveFlowVpcInterface
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest RemoveFlowVpcInterface where
       ( \s h x ->
           RemoveFlowVpcInterfaceResponse'
             Prelude.<$> (x Data..?> "flowArn")
-            Prelude.<*> ( x Data..?> "nonDeletedNetworkInterfaceIds"
+            Prelude.<*> ( x
+                            Data..?> "nonDeletedNetworkInterfaceIds"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "vpcInterfaceName")
@@ -116,7 +117,8 @@ instance Core.AWSRequest RemoveFlowVpcInterface where
 
 instance Prelude.Hashable RemoveFlowVpcInterface where
   hashWithSalt _salt RemoveFlowVpcInterface' {..} =
-    _salt `Prelude.hashWithSalt` flowArn
+    _salt
+      `Prelude.hashWithSalt` flowArn
       `Prelude.hashWithSalt` vpcInterfaceName
 
 instance Prelude.NFData RemoveFlowVpcInterface where

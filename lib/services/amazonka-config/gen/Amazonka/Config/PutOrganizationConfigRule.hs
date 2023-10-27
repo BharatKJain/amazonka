@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Config.PutOrganizationConfigRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -243,7 +243,8 @@ instance Core.AWSRequest PutOrganizationConfigRule where
 
 instance Prelude.Hashable PutOrganizationConfigRule where
   hashWithSalt _salt PutOrganizationConfigRule' {..} =
-    _salt `Prelude.hashWithSalt` excludedAccounts
+    _salt
+      `Prelude.hashWithSalt` excludedAccounts
       `Prelude.hashWithSalt` organizationCustomPolicyRuleMetadata
       `Prelude.hashWithSalt` organizationCustomRuleMetadata
       `Prelude.hashWithSalt` organizationManagedRuleMetadata

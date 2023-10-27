@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataBrew.ListRulesets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,18 +117,20 @@ instance Core.AWSPager ListRulesets where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listRulesetsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listRulesetsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listRulesetsResponse_rulesets) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listRulesets_nextToken
           Lens..~ rs
-          Lens.^? listRulesetsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listRulesetsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListRulesets where
   type AWSResponse ListRulesets = ListRulesetsResponse
@@ -145,7 +147,8 @@ instance Core.AWSRequest ListRulesets where
 
 instance Prelude.Hashable ListRulesets where
   hashWithSalt _salt ListRulesets' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` targetArn
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.ModifyOptionGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,7 +153,8 @@ instance Core.AWSRequest ModifyOptionGroup where
 
 instance Prelude.Hashable ModifyOptionGroup where
   hashWithSalt _salt ModifyOptionGroup' {..} =
-    _salt `Prelude.hashWithSalt` applyImmediately
+    _salt
+      `Prelude.hashWithSalt` applyImmediately
       `Prelude.hashWithSalt` optionsToInclude
       `Prelude.hashWithSalt` optionsToRemove
       `Prelude.hashWithSalt` optionGroupName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.Volume
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.Volume where
@@ -209,7 +209,8 @@ instance Data.FromJSON Volume where
       "Volume"
       ( \x ->
           Volume'
-            Prelude.<$> ( x Data..:? "AdministrativeActions"
+            Prelude.<$> ( x
+                            Data..:? "AdministrativeActions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CreationTime")
@@ -227,7 +228,8 @@ instance Data.FromJSON Volume where
 
 instance Prelude.Hashable Volume where
   hashWithSalt _salt Volume' {..} =
-    _salt `Prelude.hashWithSalt` administrativeActions
+    _salt
+      `Prelude.hashWithSalt` administrativeActions
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` fileSystemId
       `Prelude.hashWithSalt` lifecycle

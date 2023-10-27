@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.ServiceLimit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.ServiceLimit where
@@ -91,7 +91,8 @@ instance Data.FromJSON ServiceLimit where
 
 instance Prelude.Hashable ServiceLimit where
   hashWithSalt _salt ServiceLimit' {..} =
-    _salt `Prelude.hashWithSalt` isServiceLimited
+    _salt
+      `Prelude.hashWithSalt` isServiceLimited
       `Prelude.hashWithSalt` unit
       `Prelude.hashWithSalt` value
 

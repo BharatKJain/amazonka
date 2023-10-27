@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2VpnConnectionOptionsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2VpnConnectionOptionsDetails where
@@ -84,7 +84,8 @@ instance
   hashWithSalt
     _salt
     AwsEc2VpnConnectionOptionsDetails' {..} =
-      _salt `Prelude.hashWithSalt` staticRoutesOnly
+      _salt
+        `Prelude.hashWithSalt` staticRoutesOnly
         `Prelude.hashWithSalt` tunnelOptions
 
 instance

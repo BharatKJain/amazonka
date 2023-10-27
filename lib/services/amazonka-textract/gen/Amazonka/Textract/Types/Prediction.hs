@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.Prediction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.Prediction where
@@ -76,7 +76,8 @@ instance Data.FromJSON Prediction where
 
 instance Prelude.Hashable Prediction where
   hashWithSalt _salt Prediction' {..} =
-    _salt `Prelude.hashWithSalt` confidence
+    _salt
+      `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData Prediction where

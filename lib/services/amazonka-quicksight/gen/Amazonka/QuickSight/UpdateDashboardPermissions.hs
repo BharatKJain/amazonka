@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.UpdateDashboardPermissions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,7 +158,8 @@ instance Core.AWSRequest UpdateDashboardPermissions where
 
 instance Prelude.Hashable UpdateDashboardPermissions where
   hashWithSalt _salt UpdateDashboardPermissions' {..} =
-    _salt `Prelude.hashWithSalt` grantLinkPermissions
+    _salt
+      `Prelude.hashWithSalt` grantLinkPermissions
       `Prelude.hashWithSalt` grantPermissions
       `Prelude.hashWithSalt` revokeLinkPermissions
       `Prelude.hashWithSalt` revokePermissions

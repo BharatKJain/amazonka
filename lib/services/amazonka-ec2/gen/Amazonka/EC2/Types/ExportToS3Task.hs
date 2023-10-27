@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ExportToS3Task
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ExportToS3Task where
@@ -111,7 +111,8 @@ instance Data.FromXML ExportToS3Task where
 
 instance Prelude.Hashable ExportToS3Task where
   hashWithSalt _salt ExportToS3Task' {..} =
-    _salt `Prelude.hashWithSalt` containerFormat
+    _salt
+      `Prelude.hashWithSalt` containerFormat
       `Prelude.hashWithSalt` diskImageFormat
       `Prelude.hashWithSalt` s3Bucket
       `Prelude.hashWithSalt` s3Key

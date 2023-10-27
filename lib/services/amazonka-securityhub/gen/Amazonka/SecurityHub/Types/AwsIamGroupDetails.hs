@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsIamGroupDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsIamGroupDetails where
@@ -122,13 +122,15 @@ instance Data.FromJSON AwsIamGroupDetails where
       "AwsIamGroupDetails"
       ( \x ->
           AwsIamGroupDetails'
-            Prelude.<$> ( x Data..:? "AttachedManagedPolicies"
+            Prelude.<$> ( x
+                            Data..:? "AttachedManagedPolicies"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CreateDate")
             Prelude.<*> (x Data..:? "GroupId")
             Prelude.<*> (x Data..:? "GroupName")
-            Prelude.<*> ( x Data..:? "GroupPolicyList"
+            Prelude.<*> ( x
+                            Data..:? "GroupPolicyList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Path")

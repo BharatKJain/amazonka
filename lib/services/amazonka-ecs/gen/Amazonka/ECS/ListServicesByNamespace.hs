@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECS.ListServicesByNamespace
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -175,22 +175,22 @@ instance Core.AWSPager ListServicesByNamespace where
     | Core.stop
         ( rs
             Lens.^? listServicesByNamespaceResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listServicesByNamespaceResponse_serviceArns
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listServicesByNamespace_nextToken
           Lens..~ rs
           Lens.^? listServicesByNamespaceResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListServicesByNamespace where
   type
@@ -209,7 +209,8 @@ instance Core.AWSRequest ListServicesByNamespace where
 
 instance Prelude.Hashable ListServicesByNamespace where
   hashWithSalt _salt ListServicesByNamespace' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` namespace
 

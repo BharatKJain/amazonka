@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.CreateVpcEndpointServiceConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -211,8 +211,8 @@ instance
       ( \s h x ->
           CreateVpcEndpointServiceConfigurationResponse'
             Prelude.<$> (x Data..@? "clientToken")
-              Prelude.<*> (x Data..@? "serviceConfiguration")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..@? "serviceConfiguration")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -222,7 +222,8 @@ instance
   hashWithSalt
     _salt
     CreateVpcEndpointServiceConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` acceptanceRequired
+      _salt
+        `Prelude.hashWithSalt` acceptanceRequired
         `Prelude.hashWithSalt` clientToken
         `Prelude.hashWithSalt` dryRun
         `Prelude.hashWithSalt` gatewayLoadBalancerArns

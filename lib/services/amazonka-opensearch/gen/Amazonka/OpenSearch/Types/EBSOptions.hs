@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.EBSOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.EBSOptions where
@@ -118,7 +118,8 @@ instance Data.FromJSON EBSOptions where
 
 instance Prelude.Hashable EBSOptions where
   hashWithSalt _salt EBSOptions' {..} =
-    _salt `Prelude.hashWithSalt` eBSEnabled
+    _salt
+      `Prelude.hashWithSalt` eBSEnabled
       `Prelude.hashWithSalt` iops
       `Prelude.hashWithSalt` throughput
       `Prelude.hashWithSalt` volumeSize

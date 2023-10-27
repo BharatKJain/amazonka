@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.JobExecutionSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.JobExecutionSettings where
@@ -148,7 +148,8 @@ instance Data.FromJSON JobExecutionSettings where
 
 instance Prelude.Hashable JobExecutionSettings where
   hashWithSalt _salt JobExecutionSettings' {..} =
-    _salt `Prelude.hashWithSalt` allowDeferredExecution
+    _salt
+      `Prelude.hashWithSalt` allowDeferredExecution
       `Prelude.hashWithSalt` dataAccessRoleArn
 
 instance Prelude.NFData JobExecutionSettings where

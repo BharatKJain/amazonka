@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.ExecutionTimeFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.ExecutionTimeFilter where
@@ -70,7 +70,8 @@ executionTimeFilter_oldestDate = Lens.lens (\ExecutionTimeFilter' {oldestDate} -
 
 instance Prelude.Hashable ExecutionTimeFilter where
   hashWithSalt _salt ExecutionTimeFilter' {..} =
-    _salt `Prelude.hashWithSalt` latestDate
+    _salt
+      `Prelude.hashWithSalt` latestDate
       `Prelude.hashWithSalt` oldestDate
 
 instance Prelude.NFData ExecutionTimeFilter where

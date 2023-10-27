@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DMS.DescribeEndpointTypes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,22 +137,22 @@ instance Core.AWSPager DescribeEndpointTypes where
     | Core.stop
         ( rs
             Lens.^? describeEndpointTypesResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeEndpointTypesResponse_supportedEndpointTypes
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeEndpointTypes_marker
           Lens..~ rs
           Lens.^? describeEndpointTypesResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeEndpointTypes where
   type
@@ -165,7 +165,8 @@ instance Core.AWSRequest DescribeEndpointTypes where
       ( \s h x ->
           DescribeEndpointTypesResponse'
             Prelude.<$> (x Data..?> "Marker")
-            Prelude.<*> ( x Data..?> "SupportedEndpointTypes"
+            Prelude.<*> ( x
+                            Data..?> "SupportedEndpointTypes"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -173,7 +174,8 @@ instance Core.AWSRequest DescribeEndpointTypes where
 
 instance Prelude.Hashable DescribeEndpointTypes where
   hashWithSalt _salt DescribeEndpointTypes' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxRecords
 

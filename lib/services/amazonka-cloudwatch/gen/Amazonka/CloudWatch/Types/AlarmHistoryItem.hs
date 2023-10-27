@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatch.Types.AlarmHistoryItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatch.Types.AlarmHistoryItem where
@@ -112,7 +112,8 @@ instance Data.FromXML AlarmHistoryItem where
 
 instance Prelude.Hashable AlarmHistoryItem where
   hashWithSalt _salt AlarmHistoryItem' {..} =
-    _salt `Prelude.hashWithSalt` alarmName
+    _salt
+      `Prelude.hashWithSalt` alarmName
       `Prelude.hashWithSalt` alarmType
       `Prelude.hashWithSalt` historyData
       `Prelude.hashWithSalt` historyItemType

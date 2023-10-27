@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.SourceBuildInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.SourceBuildInformation where
@@ -142,7 +142,8 @@ instance Data.FromXML SourceBuildInformation where
 
 instance Prelude.Hashable SourceBuildInformation where
   hashWithSalt _salt SourceBuildInformation' {..} =
-    _salt `Prelude.hashWithSalt` sourceType
+    _salt
+      `Prelude.hashWithSalt` sourceType
       `Prelude.hashWithSalt` sourceRepository
       `Prelude.hashWithSalt` sourceLocation
 

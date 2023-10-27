@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManagerUserSubscriptions.Types.Settings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManagerUserSubscriptions.Types.Settings where
@@ -88,7 +88,8 @@ instance Data.FromJSON Settings where
 
 instance Prelude.Hashable Settings where
   hashWithSalt _salt Settings' {..} =
-    _salt `Prelude.hashWithSalt` securityGroupId
+    _salt
+      `Prelude.hashWithSalt` securityGroupId
       `Prelude.hashWithSalt` subnets
 
 instance Prelude.NFData Settings where

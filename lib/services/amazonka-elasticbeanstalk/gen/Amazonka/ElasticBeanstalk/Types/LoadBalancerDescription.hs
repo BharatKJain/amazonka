@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.LoadBalancerDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.LoadBalancerDescription where
@@ -76,14 +76,17 @@ instance Data.FromXML LoadBalancerDescription where
   parseXML x =
     LoadBalancerDescription'
       Prelude.<$> (x Data..@? "Domain")
-      Prelude.<*> ( x Data..@? "Listeners" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Listeners"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "LoadBalancerName")
 
 instance Prelude.Hashable LoadBalancerDescription where
   hashWithSalt _salt LoadBalancerDescription' {..} =
-    _salt `Prelude.hashWithSalt` domain
+    _salt
+      `Prelude.hashWithSalt` domain
       `Prelude.hashWithSalt` listeners
       `Prelude.hashWithSalt` loadBalancerName
 

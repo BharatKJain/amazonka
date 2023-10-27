@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.ForecastResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.ForecastResult where
@@ -95,7 +95,8 @@ instance Data.FromJSON ForecastResult where
 
 instance Prelude.Hashable ForecastResult where
   hashWithSalt _salt ForecastResult' {..} =
-    _salt `Prelude.hashWithSalt` meanValue
+    _salt
+      `Prelude.hashWithSalt` meanValue
       `Prelude.hashWithSalt` predictionIntervalLowerBound
       `Prelude.hashWithSalt` predictionIntervalUpperBound
       `Prelude.hashWithSalt` timePeriod

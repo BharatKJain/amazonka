@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.CloseInstancePublicPorts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest CloseInstancePublicPorts where
 
 instance Prelude.Hashable CloseInstancePublicPorts where
   hashWithSalt _salt CloseInstancePublicPorts' {..} =
-    _salt `Prelude.hashWithSalt` portInfo
+    _salt
+      `Prelude.hashWithSalt` portInfo
       `Prelude.hashWithSalt` instanceName
 
 instance Prelude.NFData CloseInstancePublicPorts where

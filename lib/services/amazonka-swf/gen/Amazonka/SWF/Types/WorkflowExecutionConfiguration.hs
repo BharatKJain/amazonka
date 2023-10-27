@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.WorkflowExecutionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.WorkflowExecutionConfiguration where
@@ -226,7 +226,8 @@ instance
   hashWithSalt
     _salt
     WorkflowExecutionConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` lambdaRole
+      _salt
+        `Prelude.hashWithSalt` lambdaRole
         `Prelude.hashWithSalt` taskPriority
         `Prelude.hashWithSalt` taskStartToCloseTimeout
         `Prelude.hashWithSalt` executionStartToCloseTimeout

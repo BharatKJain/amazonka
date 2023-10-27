@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Greengrass.GetGroupCertificateAuthority
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance
     GetGroupCertificateAuthority
   where
   hashWithSalt _salt GetGroupCertificateAuthority' {..} =
-    _salt `Prelude.hashWithSalt` certificateAuthorityId
+    _salt
+      `Prelude.hashWithSalt` certificateAuthorityId
       `Prelude.hashWithSalt` groupId
 
 instance Prelude.NFData GetGroupCertificateAuthority where

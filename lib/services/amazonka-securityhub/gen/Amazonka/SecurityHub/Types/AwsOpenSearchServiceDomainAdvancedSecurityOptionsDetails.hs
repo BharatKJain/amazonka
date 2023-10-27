@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsOpenSearchServiceDomainAdvancedSecurityOptionsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsOpenSearchServiceDomainAdvancedSecurityOptionsDetails where
@@ -85,8 +85,8 @@ instance
       ( \x ->
           AwsOpenSearchServiceDomainAdvancedSecurityOptionsDetails'
             Prelude.<$> (x Data..:? "Enabled")
-              Prelude.<*> (x Data..:? "InternalUserDatabaseEnabled")
-              Prelude.<*> (x Data..:? "MasterUserOptions")
+            Prelude.<*> (x Data..:? "InternalUserDatabaseEnabled")
+            Prelude.<*> (x Data..:? "MasterUserOptions")
       )
 
 instance
@@ -96,7 +96,8 @@ instance
   hashWithSalt
     _salt
     AwsOpenSearchServiceDomainAdvancedSecurityOptionsDetails' {..} =
-      _salt `Prelude.hashWithSalt` enabled
+      _salt
+        `Prelude.hashWithSalt` enabled
         `Prelude.hashWithSalt` internalUserDatabaseEnabled
         `Prelude.hashWithSalt` masterUserOptions
 

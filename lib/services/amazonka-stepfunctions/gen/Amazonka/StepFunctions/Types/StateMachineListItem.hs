@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StepFunctions.Types.StateMachineListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StepFunctions.Types.StateMachineListItem where
@@ -130,7 +130,6 @@ stateMachineListItem_stateMachineArn = Lens.lens (\StateMachineListItem' {stateM
 stateMachineListItem_name :: Lens.Lens' StateMachineListItem Prelude.Text
 stateMachineListItem_name = Lens.lens (\StateMachineListItem' {name} -> name) (\s@StateMachineListItem' {} a -> s {name = a} :: StateMachineListItem)
 
--- |
 stateMachineListItem_type :: Lens.Lens' StateMachineListItem StateMachineType
 stateMachineListItem_type = Lens.lens (\StateMachineListItem' {type'} -> type') (\s@StateMachineListItem' {} a -> s {type' = a} :: StateMachineListItem)
 
@@ -152,7 +151,8 @@ instance Data.FromJSON StateMachineListItem where
 
 instance Prelude.Hashable StateMachineListItem where
   hashWithSalt _salt StateMachineListItem' {..} =
-    _salt `Prelude.hashWithSalt` stateMachineArn
+    _salt
+      `Prelude.hashWithSalt` stateMachineArn
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` creationDate

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.HoursOfOperation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.HoursOfOperation where
@@ -128,7 +128,8 @@ instance Data.FromJSON HoursOfOperation where
 
 instance Prelude.Hashable HoursOfOperation where
   hashWithSalt _salt HoursOfOperation' {..} =
-    _salt `Prelude.hashWithSalt` config
+    _salt
+      `Prelude.hashWithSalt` config
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` hoursOfOperationArn
       `Prelude.hashWithSalt` hoursOfOperationId

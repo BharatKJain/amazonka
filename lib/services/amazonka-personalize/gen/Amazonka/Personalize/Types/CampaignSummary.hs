@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.CampaignSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.CampaignSummary where
@@ -135,7 +135,8 @@ instance Data.FromJSON CampaignSummary where
 
 instance Prelude.Hashable CampaignSummary where
   hashWithSalt _salt CampaignSummary' {..} =
-    _salt `Prelude.hashWithSalt` campaignArn
+    _salt
+      `Prelude.hashWithSalt` campaignArn
       `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` lastUpdatedDateTime

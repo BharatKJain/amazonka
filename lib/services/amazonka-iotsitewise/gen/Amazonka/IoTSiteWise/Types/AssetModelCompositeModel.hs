@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.AssetModelCompositeModel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.AssetModelCompositeModel where
@@ -115,7 +115,8 @@ instance Data.FromJSON AssetModelCompositeModel where
 
 instance Prelude.Hashable AssetModelCompositeModel where
   hashWithSalt _salt AssetModelCompositeModel' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` properties
       `Prelude.hashWithSalt` name

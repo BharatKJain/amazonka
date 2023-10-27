@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ModifyClientVpnEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -326,7 +326,8 @@ instance Core.AWSRequest ModifyClientVpnEndpoint where
 
 instance Prelude.Hashable ModifyClientVpnEndpoint where
   hashWithSalt _salt ModifyClientVpnEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` clientConnectOptions
+    _salt
+      `Prelude.hashWithSalt` clientConnectOptions
       `Prelude.hashWithSalt` clientLoginBannerOptions
       `Prelude.hashWithSalt` connectionLogOptions
       `Prelude.hashWithSalt` description

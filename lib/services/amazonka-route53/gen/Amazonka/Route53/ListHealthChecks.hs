@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53.ListHealthChecks
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,20 +134,20 @@ instance Core.AWSPager ListHealthChecks where
   page rq rs
     | Core.stop
         (rs Lens.^. listHealthChecksResponse_isTruncated) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.isNothing
         ( rs
             Lens.^? listHealthChecksResponse_nextMarker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listHealthChecks_marker
           Lens..~ rs
           Lens.^? listHealthChecksResponse_nextMarker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListHealthChecks where
   type
@@ -161,7 +161,9 @@ instance Core.AWSRequest ListHealthChecks where
           ListHealthChecksResponse'
             Prelude.<$> (x Data..@? "NextMarker")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..@? "HealthChecks" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "HealthChecks"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Data.parseXMLList "HealthCheck"
                         )
             Prelude.<*> (x Data..@ "Marker")
@@ -171,7 +173,8 @@ instance Core.AWSRequest ListHealthChecks where
 
 instance Prelude.Hashable ListHealthChecks where
   hashWithSalt _salt ListHealthChecks' {..} =
-    _salt `Prelude.hashWithSalt` marker
+    _salt
+      `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxItems
 
 instance Prelude.NFData ListHealthChecks where

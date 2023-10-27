@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.CACertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.CACertificate where
@@ -101,7 +101,8 @@ instance Data.FromJSON CACertificate where
 
 instance Prelude.Hashable CACertificate where
   hashWithSalt _salt CACertificate' {..} =
-    _salt `Prelude.hashWithSalt` certificateArn
+    _salt
+      `Prelude.hashWithSalt` certificateArn
       `Prelude.hashWithSalt` certificateId
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` status

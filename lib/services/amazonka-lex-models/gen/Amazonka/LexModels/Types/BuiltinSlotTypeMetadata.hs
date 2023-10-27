@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexModels.Types.BuiltinSlotTypeMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexModels.Types.BuiltinSlotTypeMetadata where
@@ -80,14 +80,16 @@ instance Data.FromJSON BuiltinSlotTypeMetadata where
       ( \x ->
           BuiltinSlotTypeMetadata'
             Prelude.<$> (x Data..:? "signature")
-            Prelude.<*> ( x Data..:? "supportedLocales"
+            Prelude.<*> ( x
+                            Data..:? "supportedLocales"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable BuiltinSlotTypeMetadata where
   hashWithSalt _salt BuiltinSlotTypeMetadata' {..} =
-    _salt `Prelude.hashWithSalt` signature
+    _salt
+      `Prelude.hashWithSalt` signature
       `Prelude.hashWithSalt` supportedLocales
 
 instance Prelude.NFData BuiltinSlotTypeMetadata where

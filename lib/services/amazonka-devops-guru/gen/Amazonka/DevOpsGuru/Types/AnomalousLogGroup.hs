@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.AnomalousLogGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.AnomalousLogGroup where
@@ -105,7 +105,8 @@ instance Data.FromJSON AnomalousLogGroup where
           AnomalousLogGroup'
             Prelude.<$> (x Data..:? "ImpactEndTime")
             Prelude.<*> (x Data..:? "ImpactStartTime")
-            Prelude.<*> ( x Data..:? "LogAnomalyShowcases"
+            Prelude.<*> ( x
+                            Data..:? "LogAnomalyShowcases"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "LogGroupName")
@@ -114,7 +115,8 @@ instance Data.FromJSON AnomalousLogGroup where
 
 instance Prelude.Hashable AnomalousLogGroup where
   hashWithSalt _salt AnomalousLogGroup' {..} =
-    _salt `Prelude.hashWithSalt` impactEndTime
+    _salt
+      `Prelude.hashWithSalt` impactEndTime
       `Prelude.hashWithSalt` impactStartTime
       `Prelude.hashWithSalt` logAnomalyShowcases
       `Prelude.hashWithSalt` logGroupName

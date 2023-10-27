@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rum.Types.RumEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rum.Types.RumEvent where
@@ -112,7 +112,8 @@ rumEvent_type = Lens.lens (\RumEvent' {type'} -> type') (\s@RumEvent' {} a -> s 
 
 instance Prelude.Hashable RumEvent where
   hashWithSalt _salt RumEvent' {..} =
-    _salt `Prelude.hashWithSalt` metadata
+    _salt
+      `Prelude.hashWithSalt` metadata
       `Prelude.hashWithSalt` details
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` timestamp

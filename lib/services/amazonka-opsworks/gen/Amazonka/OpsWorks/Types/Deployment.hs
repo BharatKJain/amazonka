@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.Deployment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.Deployment where
@@ -217,7 +217,8 @@ instance Data.FromJSON Deployment where
 
 instance Prelude.Hashable Deployment where
   hashWithSalt _salt Deployment' {..} =
-    _salt `Prelude.hashWithSalt` appId
+    _salt
+      `Prelude.hashWithSalt` appId
       `Prelude.hashWithSalt` command
       `Prelude.hashWithSalt` comment
       `Prelude.hashWithSalt` completedAt

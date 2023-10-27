@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Outposts.Types.ShipmentInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Outposts.Types.ShipmentInformation where
@@ -76,7 +76,8 @@ instance Data.FromJSON ShipmentInformation where
 
 instance Prelude.Hashable ShipmentInformation where
   hashWithSalt _salt ShipmentInformation' {..} =
-    _salt `Prelude.hashWithSalt` shipmentCarrier
+    _salt
+      `Prelude.hashWithSalt` shipmentCarrier
       `Prelude.hashWithSalt` shipmentTrackingNumber
 
 instance Prelude.NFData ShipmentInformation where

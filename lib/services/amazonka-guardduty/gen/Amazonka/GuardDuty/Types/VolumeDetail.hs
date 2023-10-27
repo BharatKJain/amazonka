@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.VolumeDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.VolumeDetail where
@@ -124,7 +124,8 @@ instance Data.FromJSON VolumeDetail where
 
 instance Prelude.Hashable VolumeDetail where
   hashWithSalt _salt VolumeDetail' {..} =
-    _salt `Prelude.hashWithSalt` deviceName
+    _salt
+      `Prelude.hashWithSalt` deviceName
       `Prelude.hashWithSalt` encryptionType
       `Prelude.hashWithSalt` kmsKeyArn
       `Prelude.hashWithSalt` snapshotArn

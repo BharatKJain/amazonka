@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.SNSTopicPublishAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.SNSTopicPublishAction where
@@ -80,7 +80,8 @@ instance Data.FromJSON SNSTopicPublishAction where
 
 instance Prelude.Hashable SNSTopicPublishAction where
   hashWithSalt _salt SNSTopicPublishAction' {..} =
-    _salt `Prelude.hashWithSalt` payload
+    _salt
+      `Prelude.hashWithSalt` payload
       `Prelude.hashWithSalt` targetArn
 
 instance Prelude.NFData SNSTopicPublishAction where

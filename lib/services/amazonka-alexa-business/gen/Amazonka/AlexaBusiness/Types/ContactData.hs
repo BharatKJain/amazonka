@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.ContactData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.ContactData where
@@ -135,7 +135,8 @@ instance Data.FromJSON ContactData where
 
 instance Prelude.Hashable ContactData where
   hashWithSalt _salt ContactData' {..} =
-    _salt `Prelude.hashWithSalt` contactArn
+    _salt
+      `Prelude.hashWithSalt` contactArn
       `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` firstName
       `Prelude.hashWithSalt` lastName

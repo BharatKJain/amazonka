@@ -14,7 +14,7 @@
 -- Module      : Amazonka.HoneyCode.Types.UpsertRowsResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.HoneyCode.Types.UpsertRowsResult where
@@ -92,7 +92,8 @@ instance Data.FromJSON UpsertRowsResult where
 
 instance Prelude.Hashable UpsertRowsResult where
   hashWithSalt _salt UpsertRowsResult' {..} =
-    _salt `Prelude.hashWithSalt` rowIds
+    _salt
+      `Prelude.hashWithSalt` rowIds
       `Prelude.hashWithSalt` upsertAction
 
 instance Prelude.NFData UpsertRowsResult where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.CoreNetworkChangeEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.CoreNetworkChangeEvent where
@@ -125,7 +125,8 @@ instance Data.FromJSON CoreNetworkChangeEvent where
 
 instance Prelude.Hashable CoreNetworkChangeEvent where
   hashWithSalt _salt CoreNetworkChangeEvent' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` eventTime
       `Prelude.hashWithSalt` identifierPath
       `Prelude.hashWithSalt` status

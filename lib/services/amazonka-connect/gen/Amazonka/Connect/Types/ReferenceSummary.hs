@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.ReferenceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.ReferenceSummary where
@@ -140,7 +140,8 @@ instance Data.FromJSON ReferenceSummary where
 
 instance Prelude.Hashable ReferenceSummary where
   hashWithSalt _salt ReferenceSummary' {..} =
-    _salt `Prelude.hashWithSalt` attachment
+    _salt
+      `Prelude.hashWithSalt` attachment
       `Prelude.hashWithSalt` date
       `Prelude.hashWithSalt` email
       `Prelude.hashWithSalt` number

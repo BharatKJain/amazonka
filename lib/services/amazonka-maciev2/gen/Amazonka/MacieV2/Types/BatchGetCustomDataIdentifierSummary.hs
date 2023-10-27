@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.BatchGetCustomDataIdentifierSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.BatchGetCustomDataIdentifierSummary where
@@ -132,7 +132,8 @@ instance
   hashWithSalt
     _salt
     BatchGetCustomDataIdentifierSummary' {..} =
-      _salt `Prelude.hashWithSalt` arn
+      _salt
+        `Prelude.hashWithSalt` arn
         `Prelude.hashWithSalt` createdAt
         `Prelude.hashWithSalt` deleted
         `Prelude.hashWithSalt` description

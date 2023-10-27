@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatchLogs.PutQueryDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -186,7 +186,8 @@ instance Core.AWSRequest PutQueryDefinition where
 
 instance Prelude.Hashable PutQueryDefinition where
   hashWithSalt _salt PutQueryDefinition' {..} =
-    _salt `Prelude.hashWithSalt` logGroupNames
+    _salt
+      `Prelude.hashWithSalt` logGroupNames
       `Prelude.hashWithSalt` queryDefinitionId
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` queryString

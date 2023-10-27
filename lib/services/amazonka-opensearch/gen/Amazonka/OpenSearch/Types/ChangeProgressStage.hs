@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.ChangeProgressStage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.ChangeProgressStage where
@@ -94,7 +94,8 @@ instance Data.FromJSON ChangeProgressStage where
 
 instance Prelude.Hashable ChangeProgressStage where
   hashWithSalt _salt ChangeProgressStage' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` lastUpdated
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` status

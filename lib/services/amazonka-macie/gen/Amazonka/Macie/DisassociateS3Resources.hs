@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Macie.DisassociateS3Resources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest DisassociateS3Resources where
     Response.receiveJSON
       ( \s h x ->
           DisassociateS3ResourcesResponse'
-            Prelude.<$> ( x Data..?> "failedS3Resources"
+            Prelude.<$> ( x
+                            Data..?> "failedS3Resources"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -114,7 +115,8 @@ instance Core.AWSRequest DisassociateS3Resources where
 
 instance Prelude.Hashable DisassociateS3Resources where
   hashWithSalt _salt DisassociateS3Resources' {..} =
-    _salt `Prelude.hashWithSalt` memberAccountId
+    _salt
+      `Prelude.hashWithSalt` memberAccountId
       `Prelude.hashWithSalt` associatedS3Resources
 
 instance Prelude.NFData DisassociateS3Resources where

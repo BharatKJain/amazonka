@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.DynamoDBAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.DynamoDBAction where
@@ -331,7 +331,8 @@ instance Data.FromJSON DynamoDBAction where
 
 instance Prelude.Hashable DynamoDBAction where
   hashWithSalt _salt DynamoDBAction' {..} =
-    _salt `Prelude.hashWithSalt` hashKeyType
+    _salt
+      `Prelude.hashWithSalt` hashKeyType
       `Prelude.hashWithSalt` operation
       `Prelude.hashWithSalt` payload
       `Prelude.hashWithSalt` payloadField

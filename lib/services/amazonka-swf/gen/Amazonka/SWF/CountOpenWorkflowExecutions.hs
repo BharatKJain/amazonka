@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SWF.CountOpenWorkflowExecutions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -203,7 +203,8 @@ instance Core.AWSRequest CountOpenWorkflowExecutions where
 
 instance Prelude.Hashable CountOpenWorkflowExecutions where
   hashWithSalt _salt CountOpenWorkflowExecutions' {..} =
-    _salt `Prelude.hashWithSalt` executionFilter
+    _salt
+      `Prelude.hashWithSalt` executionFilter
       `Prelude.hashWithSalt` tagFilter
       `Prelude.hashWithSalt` typeFilter
       `Prelude.hashWithSalt` domain

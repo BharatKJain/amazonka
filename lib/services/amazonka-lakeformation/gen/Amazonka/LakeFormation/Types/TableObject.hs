@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.TableObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.TableObject where
@@ -87,7 +87,8 @@ instance Data.FromJSON TableObject where
 
 instance Prelude.Hashable TableObject where
   hashWithSalt _salt TableObject' {..} =
-    _salt `Prelude.hashWithSalt` eTag
+    _salt
+      `Prelude.hashWithSalt` eTag
       `Prelude.hashWithSalt` size
       `Prelude.hashWithSalt` uri
 

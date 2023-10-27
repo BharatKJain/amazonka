@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.BotImportSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.BotImportSpecification where
@@ -154,7 +154,8 @@ instance Data.FromJSON BotImportSpecification where
           BotImportSpecification'
             Prelude.<$> (x Data..:? "botTags" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "idleSessionTTLInSeconds")
-            Prelude.<*> ( x Data..:? "testBotAliasTags"
+            Prelude.<*> ( x
+                            Data..:? "testBotAliasTags"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "botName")
@@ -164,7 +165,8 @@ instance Data.FromJSON BotImportSpecification where
 
 instance Prelude.Hashable BotImportSpecification where
   hashWithSalt _salt BotImportSpecification' {..} =
-    _salt `Prelude.hashWithSalt` botTags
+    _salt
+      `Prelude.hashWithSalt` botTags
       `Prelude.hashWithSalt` idleSessionTTLInSeconds
       `Prelude.hashWithSalt` testBotAliasTags
       `Prelude.hashWithSalt` botName

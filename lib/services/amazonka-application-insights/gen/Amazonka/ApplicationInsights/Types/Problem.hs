@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApplicationInsights.Types.Problem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApplicationInsights.Types.Problem where
@@ -181,7 +181,8 @@ instance Data.FromJSON Problem where
 
 instance Prelude.Hashable Problem where
   hashWithSalt _salt Problem' {..} =
-    _salt `Prelude.hashWithSalt` affectedResource
+    _salt
+      `Prelude.hashWithSalt` affectedResource
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` feedback
       `Prelude.hashWithSalt` id

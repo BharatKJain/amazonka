@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CostExplorer.GetCostForecast
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -349,7 +349,8 @@ instance Core.AWSRequest GetCostForecast where
     Response.receiveJSON
       ( \s h x ->
           GetCostForecastResponse'
-            Prelude.<$> ( x Data..?> "ForecastResultsByTime"
+            Prelude.<$> ( x
+                            Data..?> "ForecastResultsByTime"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "Total")
@@ -358,7 +359,8 @@ instance Core.AWSRequest GetCostForecast where
 
 instance Prelude.Hashable GetCostForecast where
   hashWithSalt _salt GetCostForecast' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` predictionIntervalLevel
       `Prelude.hashWithSalt` timePeriod
       `Prelude.hashWithSalt` metric

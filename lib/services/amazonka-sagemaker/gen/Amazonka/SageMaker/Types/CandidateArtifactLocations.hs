@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.CandidateArtifactLocations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.CandidateArtifactLocations where
@@ -83,7 +83,8 @@ instance Data.FromJSON CandidateArtifactLocations where
 
 instance Prelude.Hashable CandidateArtifactLocations where
   hashWithSalt _salt CandidateArtifactLocations' {..} =
-    _salt `Prelude.hashWithSalt` modelInsights
+    _salt
+      `Prelude.hashWithSalt` modelInsights
       `Prelude.hashWithSalt` explainability
 
 instance Prelude.NFData CandidateArtifactLocations where

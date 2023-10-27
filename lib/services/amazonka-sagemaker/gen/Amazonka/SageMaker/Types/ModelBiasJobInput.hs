@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ModelBiasJobInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ModelBiasJobInput where
@@ -89,7 +89,8 @@ instance Data.FromJSON ModelBiasJobInput where
 
 instance Prelude.Hashable ModelBiasJobInput where
   hashWithSalt _salt ModelBiasJobInput' {..} =
-    _salt `Prelude.hashWithSalt` batchTransformInput
+    _salt
+      `Prelude.hashWithSalt` batchTransformInput
       `Prelude.hashWithSalt` endpointInput
       `Prelude.hashWithSalt` groundTruthS3Input
 

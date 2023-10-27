@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.Emotion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.Emotion where
@@ -80,7 +80,8 @@ instance Data.FromJSON Emotion where
 
 instance Prelude.Hashable Emotion where
   hashWithSalt _salt Emotion' {..} =
-    _salt `Prelude.hashWithSalt` confidence
+    _salt
+      `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData Emotion where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManager.Types.RenewalSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManager.Types.RenewalSummary where
@@ -132,7 +132,8 @@ instance Data.FromJSON RenewalSummary where
 
 instance Prelude.Hashable RenewalSummary where
   hashWithSalt _salt RenewalSummary' {..} =
-    _salt `Prelude.hashWithSalt` renewalStatusReason
+    _salt
+      `Prelude.hashWithSalt` renewalStatusReason
       `Prelude.hashWithSalt` renewalStatus
       `Prelude.hashWithSalt` domainValidationOptions
       `Prelude.hashWithSalt` updatedAt

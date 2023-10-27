@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.DeleteVpcPeeringConnection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest DeleteVpcPeeringConnection where
 
 instance Prelude.Hashable DeleteVpcPeeringConnection where
   hashWithSalt _salt DeleteVpcPeeringConnection' {..} =
-    _salt `Prelude.hashWithSalt` fleetId
+    _salt
+      `Prelude.hashWithSalt` fleetId
       `Prelude.hashWithSalt` vpcPeeringConnectionId
 
 instance Prelude.NFData DeleteVpcPeeringConnection where

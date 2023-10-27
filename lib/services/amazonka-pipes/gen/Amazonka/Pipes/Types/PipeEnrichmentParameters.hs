@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.PipeEnrichmentParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.PipeEnrichmentParameters where
@@ -106,7 +106,8 @@ instance Data.FromJSON PipeEnrichmentParameters where
 
 instance Prelude.Hashable PipeEnrichmentParameters where
   hashWithSalt _salt PipeEnrichmentParameters' {..} =
-    _salt `Prelude.hashWithSalt` httpParameters
+    _salt
+      `Prelude.hashWithSalt` httpParameters
       `Prelude.hashWithSalt` inputTemplate
 
 instance Prelude.NFData PipeEnrichmentParameters where

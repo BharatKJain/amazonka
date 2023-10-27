@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StepFunctions.Types.ExecutionFailedEventDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StepFunctions.Types.ExecutionFailedEventDetails where
@@ -75,7 +75,8 @@ instance Data.FromJSON ExecutionFailedEventDetails where
 
 instance Prelude.Hashable ExecutionFailedEventDetails where
   hashWithSalt _salt ExecutionFailedEventDetails' {..} =
-    _salt `Prelude.hashWithSalt` cause
+    _salt
+      `Prelude.hashWithSalt` cause
       `Prelude.hashWithSalt` error
 
 instance Prelude.NFData ExecutionFailedEventDetails where

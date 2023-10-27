@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFV2.PutLoggingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,6 @@ newPutLoggingConfiguration pLoggingConfiguration_ =
         pLoggingConfiguration_
     }
 
--- |
 putLoggingConfiguration_loggingConfiguration :: Lens.Lens' PutLoggingConfiguration LoggingConfiguration
 putLoggingConfiguration_loggingConfiguration = Lens.lens (\PutLoggingConfiguration' {loggingConfiguration} -> loggingConfiguration) (\s@PutLoggingConfiguration' {} a -> s {loggingConfiguration = a} :: PutLoggingConfiguration)
 
@@ -200,7 +199,6 @@ newPutLoggingConfigurationResponse pHttpStatus_ =
       httpStatus = pHttpStatus_
     }
 
--- |
 putLoggingConfigurationResponse_loggingConfiguration :: Lens.Lens' PutLoggingConfigurationResponse (Prelude.Maybe LoggingConfiguration)
 putLoggingConfigurationResponse_loggingConfiguration = Lens.lens (\PutLoggingConfigurationResponse' {loggingConfiguration} -> loggingConfiguration) (\s@PutLoggingConfigurationResponse' {} a -> s {loggingConfiguration = a} :: PutLoggingConfigurationResponse)
 

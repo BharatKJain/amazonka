@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.LoadBalancerTlsCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.LoadBalancerTlsCertificate where
@@ -556,7 +556,8 @@ instance Data.FromJSON LoadBalancerTlsCertificate where
             Prelude.<$> (x Data..:? "arn")
             Prelude.<*> (x Data..:? "createdAt")
             Prelude.<*> (x Data..:? "domainName")
-            Prelude.<*> ( x Data..:? "domainValidationRecords"
+            Prelude.<*> ( x
+                            Data..:? "domainValidationRecords"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "failureReason")
@@ -577,7 +578,8 @@ instance Data.FromJSON LoadBalancerTlsCertificate where
             Prelude.<*> (x Data..:? "signatureAlgorithm")
             Prelude.<*> (x Data..:? "status")
             Prelude.<*> (x Data..:? "subject")
-            Prelude.<*> ( x Data..:? "subjectAlternativeNames"
+            Prelude.<*> ( x
+                            Data..:? "subjectAlternativeNames"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "supportCode")
@@ -586,7 +588,8 @@ instance Data.FromJSON LoadBalancerTlsCertificate where
 
 instance Prelude.Hashable LoadBalancerTlsCertificate where
   hashWithSalt _salt LoadBalancerTlsCertificate' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` domainValidationRecords

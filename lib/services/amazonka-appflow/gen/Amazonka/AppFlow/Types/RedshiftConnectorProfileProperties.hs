@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.RedshiftConnectorProfileProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.RedshiftConnectorProfileProperties where
@@ -186,7 +186,8 @@ instance
   hashWithSalt
     _salt
     RedshiftConnectorProfileProperties' {..} =
-      _salt `Prelude.hashWithSalt` bucketPrefix
+      _salt
+        `Prelude.hashWithSalt` bucketPrefix
         `Prelude.hashWithSalt` clusterIdentifier
         `Prelude.hashWithSalt` dataApiRoleArn
         `Prelude.hashWithSalt` databaseName

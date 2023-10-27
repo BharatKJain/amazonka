@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.Sample
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.Sample where
@@ -69,12 +69,14 @@ instance Data.FromJSON Sample where
       "Sample"
       ( \x ->
           Sample'
-            Prelude.<$> (x Data..:? "Size") Prelude.<*> (x Data..: "Type")
+            Prelude.<$> (x Data..:? "Size")
+            Prelude.<*> (x Data..: "Type")
       )
 
 instance Prelude.Hashable Sample where
   hashWithSalt _salt Sample' {..} =
-    _salt `Prelude.hashWithSalt` size
+    _salt
+      `Prelude.hashWithSalt` size
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData Sample where

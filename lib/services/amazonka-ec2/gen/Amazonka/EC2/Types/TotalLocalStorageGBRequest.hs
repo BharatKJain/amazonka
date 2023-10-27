@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TotalLocalStorageGBRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TotalLocalStorageGBRequest where
@@ -71,7 +71,8 @@ totalLocalStorageGBRequest_min = Lens.lens (\TotalLocalStorageGBRequest' {min} -
 
 instance Prelude.Hashable TotalLocalStorageGBRequest where
   hashWithSalt _salt TotalLocalStorageGBRequest' {..} =
-    _salt `Prelude.hashWithSalt` max
+    _salt
+      `Prelude.hashWithSalt` max
       `Prelude.hashWithSalt` min
 
 instance Prelude.NFData TotalLocalStorageGBRequest where

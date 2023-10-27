@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.TerminateProvisionedProduct
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -196,7 +196,8 @@ instance Core.AWSRequest TerminateProvisionedProduct where
 
 instance Prelude.Hashable TerminateProvisionedProduct where
   hashWithSalt _salt TerminateProvisionedProduct' {..} =
-    _salt `Prelude.hashWithSalt` acceptLanguage
+    _salt
+      `Prelude.hashWithSalt` acceptLanguage
       `Prelude.hashWithSalt` ignoreErrors
       `Prelude.hashWithSalt` provisionedProductId
       `Prelude.hashWithSalt` provisionedProductName

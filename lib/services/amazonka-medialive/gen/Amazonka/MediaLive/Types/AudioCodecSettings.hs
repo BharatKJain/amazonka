@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.AudioCodecSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.AudioCodecSettings where
@@ -124,7 +124,8 @@ instance Data.FromJSON AudioCodecSettings where
 
 instance Prelude.Hashable AudioCodecSettings where
   hashWithSalt _salt AudioCodecSettings' {..} =
-    _salt `Prelude.hashWithSalt` aacSettings
+    _salt
+      `Prelude.hashWithSalt` aacSettings
       `Prelude.hashWithSalt` ac3Settings
       `Prelude.hashWithSalt` eac3AtmosSettings
       `Prelude.hashWithSalt` eac3Settings

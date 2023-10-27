@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.AttributeDimension
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.AttributeDimension where
@@ -146,7 +146,8 @@ instance Data.FromJSON AttributeDimension where
 
 instance Prelude.Hashable AttributeDimension where
   hashWithSalt _salt AttributeDimension' {..} =
-    _salt `Prelude.hashWithSalt` attributeType
+    _salt
+      `Prelude.hashWithSalt` attributeType
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData AttributeDimension where

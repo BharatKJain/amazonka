@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.Fmtp
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.Fmtp where
@@ -137,7 +137,8 @@ instance Data.FromJSON Fmtp where
 
 instance Prelude.Hashable Fmtp where
   hashWithSalt _salt Fmtp' {..} =
-    _salt `Prelude.hashWithSalt` channelOrder
+    _salt
+      `Prelude.hashWithSalt` channelOrder
       `Prelude.hashWithSalt` colorimetry
       `Prelude.hashWithSalt` exactFramerate
       `Prelude.hashWithSalt` par

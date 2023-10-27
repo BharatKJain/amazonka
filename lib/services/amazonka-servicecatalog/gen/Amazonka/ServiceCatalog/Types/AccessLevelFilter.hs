@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.AccessLevelFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.AccessLevelFilter where
@@ -89,7 +89,8 @@ accessLevelFilter_value = Lens.lens (\AccessLevelFilter' {value} -> value) (\s@A
 
 instance Prelude.Hashable AccessLevelFilter where
   hashWithSalt _salt AccessLevelFilter' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData AccessLevelFilter where

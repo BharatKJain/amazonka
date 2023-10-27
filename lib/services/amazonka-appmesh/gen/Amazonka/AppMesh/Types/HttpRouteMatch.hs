@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.HttpRouteMatch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.HttpRouteMatch where
@@ -148,7 +148,8 @@ instance Data.FromJSON HttpRouteMatch where
 
 instance Prelude.Hashable HttpRouteMatch where
   hashWithSalt _salt HttpRouteMatch' {..} =
-    _salt `Prelude.hashWithSalt` headers
+    _salt
+      `Prelude.hashWithSalt` headers
       `Prelude.hashWithSalt` method
       `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` port

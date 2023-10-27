@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.MaintenanceWindowTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.MaintenanceWindowTask where
@@ -352,7 +352,8 @@ instance Data.FromJSON MaintenanceWindowTask where
 
 instance Prelude.Hashable MaintenanceWindowTask where
   hashWithSalt _salt MaintenanceWindowTask' {..} =
-    _salt `Prelude.hashWithSalt` alarmConfiguration
+    _salt
+      `Prelude.hashWithSalt` alarmConfiguration
       `Prelude.hashWithSalt` cutoffBehavior
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` loggingInfo

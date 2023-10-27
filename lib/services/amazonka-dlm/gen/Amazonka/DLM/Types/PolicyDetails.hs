@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DLM.Types.PolicyDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DLM.Types.PolicyDetails where
@@ -239,7 +239,8 @@ instance Data.FromJSON PolicyDetails where
 
 instance Prelude.Hashable PolicyDetails where
   hashWithSalt _salt PolicyDetails' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` eventSource
       `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` policyType

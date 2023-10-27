@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.PolicyUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.PolicyUser where
@@ -86,7 +86,8 @@ instance Data.FromXML PolicyUser where
 
 instance Prelude.Hashable PolicyUser where
   hashWithSalt _salt PolicyUser' {..} =
-    _salt `Prelude.hashWithSalt` userId
+    _salt
+      `Prelude.hashWithSalt` userId
       `Prelude.hashWithSalt` userName
 
 instance Prelude.NFData PolicyUser where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LakeFormation.ListResources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance Core.AWSRequest ListResources where
       ( \s h x ->
           ListResourcesResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "ResourceInfoList"
+            Prelude.<*> ( x
+                            Data..?> "ResourceInfoList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -121,7 +122,8 @@ instance Core.AWSRequest ListResources where
 
 instance Prelude.Hashable ListResources where
   hashWithSalt _salt ListResources' {..} =
-    _salt `Prelude.hashWithSalt` filterConditionList
+    _salt
+      `Prelude.hashWithSalt` filterConditionList
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

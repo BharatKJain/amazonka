@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudHSMV2.Types.Backup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudHSMV2.Types.Backup where
@@ -191,7 +191,8 @@ instance Data.FromJSON Backup where
 
 instance Prelude.Hashable Backup where
   hashWithSalt _salt Backup' {..} =
-    _salt `Prelude.hashWithSalt` backupState
+    _salt
+      `Prelude.hashWithSalt` backupState
       `Prelude.hashWithSalt` clusterId
       `Prelude.hashWithSalt` copyTimestamp
       `Prelude.hashWithSalt` createTimestamp

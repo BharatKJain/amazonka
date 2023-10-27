@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.TableInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.TableInput where
@@ -198,7 +198,8 @@ tableInput_name = Lens.lens (\TableInput' {name} -> name) (\s@TableInput' {} a -
 
 instance Prelude.Hashable TableInput where
   hashWithSalt _salt TableInput' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` lastAccessTime
       `Prelude.hashWithSalt` lastAnalyzedTime
       `Prelude.hashWithSalt` owner

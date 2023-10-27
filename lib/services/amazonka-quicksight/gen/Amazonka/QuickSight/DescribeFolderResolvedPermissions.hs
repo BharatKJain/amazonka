@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.DescribeFolderResolvedPermissions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,10 +110,10 @@ instance
       ( \s h x ->
           DescribeFolderResolvedPermissionsResponse'
             Prelude.<$> (x Data..?> "Arn")
-              Prelude.<*> (x Data..?> "FolderId")
-              Prelude.<*> (x Data..?> "Permissions")
-              Prelude.<*> (x Data..?> "RequestId")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "FolderId")
+            Prelude.<*> (x Data..?> "Permissions")
+            Prelude.<*> (x Data..?> "RequestId")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -123,7 +123,8 @@ instance
   hashWithSalt
     _salt
     DescribeFolderResolvedPermissions' {..} =
-      _salt `Prelude.hashWithSalt` awsAccountId
+      _salt
+        `Prelude.hashWithSalt` awsAccountId
         `Prelude.hashWithSalt` folderId
 
 instance

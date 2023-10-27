@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LookoutEquipment.StartDataIngestionJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -145,7 +145,8 @@ instance Core.AWSRequest StartDataIngestionJob where
 
 instance Prelude.Hashable StartDataIngestionJob where
   hashWithSalt _salt StartDataIngestionJob' {..} =
-    _salt `Prelude.hashWithSalt` datasetName
+    _salt
+      `Prelude.hashWithSalt` datasetName
       `Prelude.hashWithSalt` ingestionInputConfiguration
       `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` clientToken

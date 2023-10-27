@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectoryService.EnableSso
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -143,7 +143,8 @@ instance Core.AWSRequest EnableSso where
 
 instance Prelude.Hashable EnableSso where
   hashWithSalt _salt EnableSso' {..} =
-    _salt `Prelude.hashWithSalt` password
+    _salt
+      `Prelude.hashWithSalt` password
       `Prelude.hashWithSalt` userName
       `Prelude.hashWithSalt` directoryId
 

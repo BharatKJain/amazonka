@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.Bumper
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.Bumper where
@@ -77,7 +77,8 @@ instance Data.FromJSON Bumper where
 
 instance Prelude.Hashable Bumper where
   hashWithSalt _salt Bumper' {..} =
-    _salt `Prelude.hashWithSalt` endUrl
+    _salt
+      `Prelude.hashWithSalt` endUrl
       `Prelude.hashWithSalt` startUrl
 
 instance Prelude.NFData Bumper where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.PutWarmPool
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -219,7 +219,8 @@ instance Core.AWSRequest PutWarmPool where
 
 instance Prelude.Hashable PutWarmPool where
   hashWithSalt _salt PutWarmPool' {..} =
-    _salt `Prelude.hashWithSalt` instanceReusePolicy
+    _salt
+      `Prelude.hashWithSalt` instanceReusePolicy
       `Prelude.hashWithSalt` maxGroupPreparedCapacity
       `Prelude.hashWithSalt` minSize
       `Prelude.hashWithSalt` poolState

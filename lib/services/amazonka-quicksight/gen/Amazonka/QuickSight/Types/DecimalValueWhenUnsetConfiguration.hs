@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DecimalValueWhenUnsetConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DecimalValueWhenUnsetConfiguration where
@@ -100,7 +100,8 @@ instance
   hashWithSalt
     _salt
     DecimalValueWhenUnsetConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` customValue
+      _salt
+        `Prelude.hashWithSalt` customValue
         `Prelude.hashWithSalt` valueWhenUnsetOption
 
 instance

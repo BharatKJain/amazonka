@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.AppInstanceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.AppInstanceSummary where
@@ -85,7 +85,8 @@ instance Data.FromJSON AppInstanceSummary where
 
 instance Prelude.Hashable AppInstanceSummary where
   hashWithSalt _salt AppInstanceSummary' {..} =
-    _salt `Prelude.hashWithSalt` appInstanceArn
+    _salt
+      `Prelude.hashWithSalt` appInstanceArn
       `Prelude.hashWithSalt` metadata
       `Prelude.hashWithSalt` name
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.CreateMaintenanceWindow
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -354,7 +354,8 @@ instance Core.AWSRequest CreateMaintenanceWindow where
 
 instance Prelude.Hashable CreateMaintenanceWindow where
   hashWithSalt _salt CreateMaintenanceWindow' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` endDate
       `Prelude.hashWithSalt` scheduleOffset

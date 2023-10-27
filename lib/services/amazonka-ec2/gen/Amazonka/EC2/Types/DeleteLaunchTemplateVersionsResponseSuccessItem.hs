@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.DeleteLaunchTemplateVersionsResponseSuccessItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.DeleteLaunchTemplateVersionsResponseSuccessItem where
@@ -82,8 +82,8 @@ instance
   parseXML x =
     DeleteLaunchTemplateVersionsResponseSuccessItem'
       Prelude.<$> (x Data..@? "launchTemplateId")
-        Prelude.<*> (x Data..@? "launchTemplateName")
-        Prelude.<*> (x Data..@? "versionNumber")
+      Prelude.<*> (x Data..@? "launchTemplateName")
+      Prelude.<*> (x Data..@? "versionNumber")
 
 instance
   Prelude.Hashable
@@ -92,7 +92,8 @@ instance
   hashWithSalt
     _salt
     DeleteLaunchTemplateVersionsResponseSuccessItem' {..} =
-      _salt `Prelude.hashWithSalt` launchTemplateId
+      _salt
+        `Prelude.hashWithSalt` launchTemplateId
         `Prelude.hashWithSalt` launchTemplateName
         `Prelude.hashWithSalt` versionNumber
 

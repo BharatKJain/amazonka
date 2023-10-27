@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Amplify.GetDomainAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest GetDomainAssociation where
 
 instance Prelude.Hashable GetDomainAssociation where
   hashWithSalt _salt GetDomainAssociation' {..} =
-    _salt `Prelude.hashWithSalt` appId
+    _salt
+      `Prelude.hashWithSalt` appId
       `Prelude.hashWithSalt` domainName
 
 instance Prelude.NFData GetDomainAssociation where

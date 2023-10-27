@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ModelQualityJobInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ModelQualityJobInput where
@@ -90,7 +90,8 @@ instance Data.FromJSON ModelQualityJobInput where
 
 instance Prelude.Hashable ModelQualityJobInput where
   hashWithSalt _salt ModelQualityJobInput' {..} =
-    _salt `Prelude.hashWithSalt` batchTransformInput
+    _salt
+      `Prelude.hashWithSalt` batchTransformInput
       `Prelude.hashWithSalt` endpointInput
       `Prelude.hashWithSalt` groundTruthS3Input
 

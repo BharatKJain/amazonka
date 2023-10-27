@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FIS.StartExperiment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest StartExperiment where
 
 instance Prelude.Hashable StartExperiment where
   hashWithSalt _salt StartExperiment' {..} =
-    _salt `Prelude.hashWithSalt` tags
+    _salt
+      `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` experimentTemplateId
 

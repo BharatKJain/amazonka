@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.AllowListCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.AllowListCriteria where
@@ -83,7 +83,8 @@ instance Data.FromJSON AllowListCriteria where
 
 instance Prelude.Hashable AllowListCriteria where
   hashWithSalt _salt AllowListCriteria' {..} =
-    _salt `Prelude.hashWithSalt` regex
+    _salt
+      `Prelude.hashWithSalt` regex
       `Prelude.hashWithSalt` s3WordsList
 
 instance Prelude.NFData AllowListCriteria where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.Alert
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.Alert where
@@ -171,7 +171,8 @@ instance Data.FromJSON Alert where
 
 instance Prelude.Hashable Alert where
   hashWithSalt _salt Alert' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` alertArn
       `Prelude.hashWithSalt` alertDescription
       `Prelude.hashWithSalt` alertFilters

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EMRContainers.DescribeJobRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest DescribeJobRun where
 
 instance Prelude.Hashable DescribeJobRun where
   hashWithSalt _salt DescribeJobRun' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` virtualClusterId
 
 instance Prelude.NFData DescribeJobRun where

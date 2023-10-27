@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Discovery.Types.CustomerConnectorInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Discovery.Types.CustomerConnectorInfo where
@@ -146,7 +146,8 @@ instance Data.FromJSON CustomerConnectorInfo where
 
 instance Prelude.Hashable CustomerConnectorInfo where
   hashWithSalt _salt CustomerConnectorInfo' {..} =
-    _salt `Prelude.hashWithSalt` activeConnectors
+    _salt
+      `Prelude.hashWithSalt` activeConnectors
       `Prelude.hashWithSalt` healthyConnectors
       `Prelude.hashWithSalt` blackListedConnectors
       `Prelude.hashWithSalt` shutdownConnectors

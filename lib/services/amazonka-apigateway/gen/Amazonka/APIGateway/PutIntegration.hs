@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.PutIntegration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -427,7 +427,8 @@ instance Core.AWSRequest PutIntegration where
 
 instance Prelude.Hashable PutIntegration where
   hashWithSalt _salt PutIntegration' {..} =
-    _salt `Prelude.hashWithSalt` cacheKeyParameters
+    _salt
+      `Prelude.hashWithSalt` cacheKeyParameters
       `Prelude.hashWithSalt` cacheNamespace
       `Prelude.hashWithSalt` connectionId
       `Prelude.hashWithSalt` connectionType

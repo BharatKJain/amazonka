@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SDB.Types.ReplaceableAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SDB.Types.ReplaceableAttribute where
@@ -80,7 +80,8 @@ replaceableAttribute_value = Lens.lens (\ReplaceableAttribute' {value} -> value)
 
 instance Prelude.Hashable ReplaceableAttribute where
   hashWithSalt _salt ReplaceableAttribute' {..} =
-    _salt `Prelude.hashWithSalt` replace
+    _salt
+      `Prelude.hashWithSalt` replace
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 

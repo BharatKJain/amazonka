@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.NotebookMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.NotebookMetadata where
@@ -116,7 +116,8 @@ instance Data.FromJSON NotebookMetadata where
 
 instance Prelude.Hashable NotebookMetadata where
   hashWithSalt _salt NotebookMetadata' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` lastModifiedTime
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` notebookId

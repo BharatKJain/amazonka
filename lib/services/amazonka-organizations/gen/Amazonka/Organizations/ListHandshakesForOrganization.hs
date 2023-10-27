@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Organizations.ListHandshakesForOrganization
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -177,22 +177,22 @@ instance Core.AWSPager ListHandshakesForOrganization where
     | Core.stop
         ( rs
             Lens.^? listHandshakesForOrganizationResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listHandshakesForOrganizationResponse_handshakes
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listHandshakesForOrganization_nextToken
           Lens..~ rs
           Lens.^? listHandshakesForOrganizationResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -217,7 +217,8 @@ instance
     ListHandshakesForOrganization
   where
   hashWithSalt _salt ListHandshakesForOrganization' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

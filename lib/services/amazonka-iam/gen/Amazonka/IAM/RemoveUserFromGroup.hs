@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.RemoveUserFromGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,8 @@ instance Core.AWSRequest RemoveUserFromGroup where
 
 instance Prelude.Hashable RemoveUserFromGroup where
   hashWithSalt _salt RemoveUserFromGroup' {..} =
-    _salt `Prelude.hashWithSalt` groupName
+    _salt
+      `Prelude.hashWithSalt` groupName
       `Prelude.hashWithSalt` userName
 
 instance Prelude.NFData RemoveUserFromGroup where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ExecutionDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ExecutionDetails where
@@ -81,7 +81,8 @@ executionDetails_summary = Lens.lens (\ExecutionDetails' {summary} -> summary) (
 
 instance Prelude.Hashable ExecutionDetails where
   hashWithSalt _salt ExecutionDetails' {..} =
-    _salt `Prelude.hashWithSalt` externalExecutionId
+    _salt
+      `Prelude.hashWithSalt` externalExecutionId
       `Prelude.hashWithSalt` percentComplete
       `Prelude.hashWithSalt` summary
 

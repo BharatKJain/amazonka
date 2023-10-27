@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpsWorksCM.UpdateServerEngineAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance
     UpdateServerEngineAttributes
   where
   hashWithSalt _salt UpdateServerEngineAttributes' {..} =
-    _salt `Prelude.hashWithSalt` attributeValue
+    _salt
+      `Prelude.hashWithSalt` attributeValue
       `Prelude.hashWithSalt` serverName
       `Prelude.hashWithSalt` attributeName
 

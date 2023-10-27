@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.Action
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.Action where
@@ -346,7 +346,8 @@ instance Data.FromJSON Action where
 
 instance Prelude.Hashable Action where
   hashWithSalt _salt Action' {..} =
-    _salt `Prelude.hashWithSalt` cloudwatchAlarm
+    _salt
+      `Prelude.hashWithSalt` cloudwatchAlarm
       `Prelude.hashWithSalt` cloudwatchLogs
       `Prelude.hashWithSalt` cloudwatchMetric
       `Prelude.hashWithSalt` dynamoDB

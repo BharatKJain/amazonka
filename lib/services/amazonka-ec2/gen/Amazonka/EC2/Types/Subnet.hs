@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.Subnet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.Subnet where
@@ -296,7 +296,8 @@ instance Data.FromXML Subnet where
       Prelude.<*> (x Data..@? "defaultForAz")
       Prelude.<*> (x Data..@? "enableDns64")
       Prelude.<*> (x Data..@? "enableLniAtDeviceIndex")
-      Prelude.<*> ( x Data..@? "ipv6CidrBlockAssociationSet"
+      Prelude.<*> ( x
+                      Data..@? "ipv6CidrBlockAssociationSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
@@ -307,7 +308,9 @@ instance Data.FromXML Subnet where
       Prelude.<*> (x Data..@? "ownerId")
       Prelude.<*> (x Data..@? "privateDnsNameOptionsOnLaunch")
       Prelude.<*> (x Data..@? "subnetArn")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@ "availabilityZone")

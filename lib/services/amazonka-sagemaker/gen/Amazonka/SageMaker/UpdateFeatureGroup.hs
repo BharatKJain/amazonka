@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.UpdateFeatureGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest UpdateFeatureGroup where
 
 instance Prelude.Hashable UpdateFeatureGroup where
   hashWithSalt _salt UpdateFeatureGroup' {..} =
-    _salt `Prelude.hashWithSalt` featureAdditions
+    _salt
+      `Prelude.hashWithSalt` featureAdditions
       `Prelude.hashWithSalt` featureGroupName
 
 instance Prelude.NFData UpdateFeatureGroup where

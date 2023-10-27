@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.DTMFSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.DTMFSpecification where
@@ -115,7 +115,8 @@ instance Data.FromJSON DTMFSpecification where
 
 instance Prelude.Hashable DTMFSpecification where
   hashWithSalt _salt DTMFSpecification' {..} =
-    _salt `Prelude.hashWithSalt` maxLength
+    _salt
+      `Prelude.hashWithSalt` maxLength
       `Prelude.hashWithSalt` endTimeoutMs
       `Prelude.hashWithSalt` deletionCharacter
       `Prelude.hashWithSalt` endCharacter

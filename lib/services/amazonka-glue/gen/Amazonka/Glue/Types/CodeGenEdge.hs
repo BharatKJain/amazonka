@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.CodeGenEdge
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.CodeGenEdge where
@@ -88,7 +88,8 @@ instance Data.FromJSON CodeGenEdge where
 
 instance Prelude.Hashable CodeGenEdge where
   hashWithSalt _salt CodeGenEdge' {..} =
-    _salt `Prelude.hashWithSalt` targetParameter
+    _salt
+      `Prelude.hashWithSalt` targetParameter
       `Prelude.hashWithSalt` source
       `Prelude.hashWithSalt` target
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.CloudWatchLogsLogStream
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.CloudWatchLogsLogStream where
@@ -266,7 +266,8 @@ instance Data.FromJSON CloudWatchLogsLogStream where
 
 instance Prelude.Hashable CloudWatchLogsLogStream where
   hashWithSalt _salt CloudWatchLogsLogStream' {..} =
-    _salt `Prelude.hashWithSalt` batchCount
+    _salt
+      `Prelude.hashWithSalt` batchCount
       `Prelude.hashWithSalt` batchSize
       `Prelude.hashWithSalt` bufferDuration
       `Prelude.hashWithSalt` datetimeFormat

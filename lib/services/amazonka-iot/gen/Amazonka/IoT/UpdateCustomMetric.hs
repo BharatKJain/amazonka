@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.UpdateCustomMetric
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,7 +124,8 @@ instance Core.AWSRequest UpdateCustomMetric where
 
 instance Prelude.Hashable UpdateCustomMetric where
   hashWithSalt _salt UpdateCustomMetric' {..} =
-    _salt `Prelude.hashWithSalt` metricName
+    _salt
+      `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` displayName
 
 instance Prelude.NFData UpdateCustomMetric where

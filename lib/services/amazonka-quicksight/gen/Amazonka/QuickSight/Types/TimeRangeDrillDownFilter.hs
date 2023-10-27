@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TimeRangeDrillDownFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TimeRangeDrillDownFilter where
@@ -108,7 +108,8 @@ instance Data.FromJSON TimeRangeDrillDownFilter where
 
 instance Prelude.Hashable TimeRangeDrillDownFilter where
   hashWithSalt _salt TimeRangeDrillDownFilter' {..} =
-    _salt `Prelude.hashWithSalt` column
+    _salt
+      `Prelude.hashWithSalt` column
       `Prelude.hashWithSalt` rangeMinimum
       `Prelude.hashWithSalt` rangeMaximum
       `Prelude.hashWithSalt` timeGranularity

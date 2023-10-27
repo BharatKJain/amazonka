@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.GetUICustomization
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest GetUICustomization where
 
 instance Prelude.Hashable GetUICustomization where
   hashWithSalt _salt GetUICustomization' {..} =
-    _salt `Prelude.hashWithSalt` clientId
+    _salt
+      `Prelude.hashWithSalt` clientId
       `Prelude.hashWithSalt` userPoolId
 
 instance Prelude.NFData GetUICustomization where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.StackResourceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.StackResourceSummary where
@@ -174,7 +174,8 @@ instance Data.FromXML StackResourceSummary where
 
 instance Prelude.Hashable StackResourceSummary where
   hashWithSalt _salt StackResourceSummary' {..} =
-    _salt `Prelude.hashWithSalt` driftInformation
+    _salt
+      `Prelude.hashWithSalt` driftInformation
       `Prelude.hashWithSalt` moduleInfo
       `Prelude.hashWithSalt` physicalResourceId
       `Prelude.hashWithSalt` resourceStatusReason

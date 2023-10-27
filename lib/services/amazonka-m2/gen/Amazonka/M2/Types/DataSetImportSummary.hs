@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.DataSetImportSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.DataSetImportSummary where
@@ -119,7 +119,8 @@ instance Data.FromJSON DataSetImportSummary where
 
 instance Prelude.Hashable DataSetImportSummary where
   hashWithSalt _salt DataSetImportSummary' {..} =
-    _salt `Prelude.hashWithSalt` failed
+    _salt
+      `Prelude.hashWithSalt` failed
       `Prelude.hashWithSalt` inProgress
       `Prelude.hashWithSalt` pending
       `Prelude.hashWithSalt` succeeded

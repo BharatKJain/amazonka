@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.BufferingHints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.BufferingHints where
@@ -113,7 +113,8 @@ instance Data.FromJSON BufferingHints where
 
 instance Prelude.Hashable BufferingHints where
   hashWithSalt _salt BufferingHints' {..} =
-    _salt `Prelude.hashWithSalt` intervalInSeconds
+    _salt
+      `Prelude.hashWithSalt` intervalInSeconds
       `Prelude.hashWithSalt` sizeInMBs
 
 instance Prelude.NFData BufferingHints where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRContainers.Types.ParametricCloudWatchMonitoringConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRContainers.Types.ParametricCloudWatchMonitoringConfiguration where
@@ -76,7 +76,7 @@ instance
       ( \x ->
           ParametricCloudWatchMonitoringConfiguration'
             Prelude.<$> (x Data..:? "logGroupName")
-              Prelude.<*> (x Data..:? "logStreamNamePrefix")
+            Prelude.<*> (x Data..:? "logStreamNamePrefix")
       )
 
 instance
@@ -86,7 +86,8 @@ instance
   hashWithSalt
     _salt
     ParametricCloudWatchMonitoringConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` logGroupName
+      _salt
+        `Prelude.hashWithSalt` logGroupName
         `Prelude.hashWithSalt` logStreamNamePrefix
 
 instance

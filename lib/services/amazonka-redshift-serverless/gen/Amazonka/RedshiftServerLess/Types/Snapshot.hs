@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RedshiftServerLess.Types.Snapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RedshiftServerLess.Types.Snapshot where
@@ -246,10 +246,12 @@ instance Data.FromJSON Snapshot where
       "Snapshot"
       ( \x ->
           Snapshot'
-            Prelude.<$> ( x Data..:? "accountsWithProvisionedRestoreAccess"
+            Prelude.<$> ( x
+                            Data..:? "accountsWithProvisionedRestoreAccess"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "accountsWithRestoreAccess"
+            Prelude.<*> ( x
+                            Data..:? "accountsWithRestoreAccess"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "actualIncrementalBackupSizeInMegaBytes")

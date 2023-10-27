@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.ConfigListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.ConfigListItem where
@@ -95,7 +95,8 @@ instance Data.FromJSON ConfigListItem where
 
 instance Prelude.Hashable ConfigListItem where
   hashWithSalt _salt ConfigListItem' {..} =
-    _salt `Prelude.hashWithSalt` configArn
+    _salt
+      `Prelude.hashWithSalt` configArn
       `Prelude.hashWithSalt` configId
       `Prelude.hashWithSalt` configType
       `Prelude.hashWithSalt` name

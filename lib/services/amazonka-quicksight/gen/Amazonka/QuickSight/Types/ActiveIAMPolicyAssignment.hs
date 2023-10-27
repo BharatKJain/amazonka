@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ActiveIAMPolicyAssignment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ActiveIAMPolicyAssignment where
@@ -75,7 +75,8 @@ instance Data.FromJSON ActiveIAMPolicyAssignment where
 
 instance Prelude.Hashable ActiveIAMPolicyAssignment where
   hashWithSalt _salt ActiveIAMPolicyAssignment' {..} =
-    _salt `Prelude.hashWithSalt` assignmentName
+    _salt
+      `Prelude.hashWithSalt` assignmentName
       `Prelude.hashWithSalt` policyArn
 
 instance Prelude.NFData ActiveIAMPolicyAssignment where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.DeleteCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest DeleteCertificate where
 
 instance Prelude.Hashable DeleteCertificate where
   hashWithSalt _salt DeleteCertificate' {..} =
-    _salt `Prelude.hashWithSalt` forceDelete
+    _salt
+      `Prelude.hashWithSalt` forceDelete
       `Prelude.hashWithSalt` certificateId
 
 instance Prelude.NFData DeleteCertificate where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.CidrCollectionChange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.CidrCollectionChange where
@@ -86,7 +86,8 @@ cidrCollectionChange_cidrList = Lens.lens (\CidrCollectionChange' {cidrList} -> 
 
 instance Prelude.Hashable CidrCollectionChange where
   hashWithSalt _salt CidrCollectionChange' {..} =
-    _salt `Prelude.hashWithSalt` locationName
+    _salt
+      `Prelude.hashWithSalt` locationName
       `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` cidrList
 

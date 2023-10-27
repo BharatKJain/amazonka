@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PinpointEmail.Types.DkimAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PinpointEmail.Types.DkimAttributes where
@@ -170,7 +170,8 @@ instance Data.FromJSON DkimAttributes where
 
 instance Prelude.Hashable DkimAttributes where
   hashWithSalt _salt DkimAttributes' {..} =
-    _salt `Prelude.hashWithSalt` signingEnabled
+    _salt
+      `Prelude.hashWithSalt` signingEnabled
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` tokens
 

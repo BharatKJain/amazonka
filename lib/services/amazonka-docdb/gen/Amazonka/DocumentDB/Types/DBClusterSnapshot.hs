@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DocumentDB.Types.DBClusterSnapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DocumentDB.Types.DBClusterSnapshot where
@@ -225,7 +225,8 @@ dbClusterSnapshot_vpcId = Lens.lens (\DBClusterSnapshot' {vpcId} -> vpcId) (\s@D
 instance Data.FromXML DBClusterSnapshot where
   parseXML x =
     DBClusterSnapshot'
-      Prelude.<$> ( x Data..@? "AvailabilityZones"
+      Prelude.<$> ( x
+                      Data..@? "AvailabilityZones"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "AvailabilityZone")
                   )
@@ -248,7 +249,8 @@ instance Data.FromXML DBClusterSnapshot where
 
 instance Prelude.Hashable DBClusterSnapshot where
   hashWithSalt _salt DBClusterSnapshot' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZones
+    _salt
+      `Prelude.hashWithSalt` availabilityZones
       `Prelude.hashWithSalt` clusterCreateTime
       `Prelude.hashWithSalt` dbClusterIdentifier
       `Prelude.hashWithSalt` dbClusterSnapshotArn

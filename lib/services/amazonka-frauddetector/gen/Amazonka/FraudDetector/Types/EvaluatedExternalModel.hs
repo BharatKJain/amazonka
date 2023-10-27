@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.EvaluatedExternalModel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.EvaluatedExternalModel where
@@ -90,7 +90,8 @@ instance Data.FromJSON EvaluatedExternalModel where
           EvaluatedExternalModel'
             Prelude.<$> (x Data..:? "inputVariables" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "modelEndpoint")
-            Prelude.<*> ( x Data..:? "outputVariables"
+            Prelude.<*> ( x
+                            Data..:? "outputVariables"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "useEventVariables")
@@ -98,7 +99,8 @@ instance Data.FromJSON EvaluatedExternalModel where
 
 instance Prelude.Hashable EvaluatedExternalModel where
   hashWithSalt _salt EvaluatedExternalModel' {..} =
-    _salt `Prelude.hashWithSalt` inputVariables
+    _salt
+      `Prelude.hashWithSalt` inputVariables
       `Prelude.hashWithSalt` modelEndpoint
       `Prelude.hashWithSalt` outputVariables
       `Prelude.hashWithSalt` useEventVariables

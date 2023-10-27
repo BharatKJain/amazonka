@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.GrpcRouteMatch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.GrpcRouteMatch where
@@ -101,7 +101,8 @@ instance Data.FromJSON GrpcRouteMatch where
 
 instance Prelude.Hashable GrpcRouteMatch where
   hashWithSalt _salt GrpcRouteMatch' {..} =
-    _salt `Prelude.hashWithSalt` metadata
+    _salt
+      `Prelude.hashWithSalt` metadata
       `Prelude.hashWithSalt` methodName
       `Prelude.hashWithSalt` port
       `Prelude.hashWithSalt` serviceName

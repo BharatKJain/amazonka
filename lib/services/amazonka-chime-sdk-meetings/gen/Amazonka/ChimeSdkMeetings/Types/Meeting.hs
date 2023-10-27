@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkMeetings.Types.Meeting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkMeetings.Types.Meeting where
@@ -170,7 +170,8 @@ instance Data.FromJSON Meeting where
 
 instance Prelude.Hashable Meeting where
   hashWithSalt _salt Meeting' {..} =
-    _salt `Prelude.hashWithSalt` externalMeetingId
+    _salt
+      `Prelude.hashWithSalt` externalMeetingId
       `Prelude.hashWithSalt` mediaPlacement
       `Prelude.hashWithSalt` mediaRegion
       `Prelude.hashWithSalt` meetingArn

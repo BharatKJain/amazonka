@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.ArchiveOutputSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.ArchiveOutputSettings where
@@ -93,7 +93,8 @@ instance Data.FromJSON ArchiveOutputSettings where
 
 instance Prelude.Hashable ArchiveOutputSettings where
   hashWithSalt _salt ArchiveOutputSettings' {..} =
-    _salt `Prelude.hashWithSalt` extension
+    _salt
+      `Prelude.hashWithSalt` extension
       `Prelude.hashWithSalt` nameModifier
       `Prelude.hashWithSalt` containerSettings
 

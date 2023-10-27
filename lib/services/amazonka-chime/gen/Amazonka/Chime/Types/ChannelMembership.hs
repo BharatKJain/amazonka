@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.ChannelMembership
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.ChannelMembership where
@@ -116,7 +116,8 @@ instance Data.FromJSON ChannelMembership where
 
 instance Prelude.Hashable ChannelMembership where
   hashWithSalt _salt ChannelMembership' {..} =
-    _salt `Prelude.hashWithSalt` channelArn
+    _salt
+      `Prelude.hashWithSalt` channelArn
       `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` invitedBy
       `Prelude.hashWithSalt` lastUpdatedTimestamp

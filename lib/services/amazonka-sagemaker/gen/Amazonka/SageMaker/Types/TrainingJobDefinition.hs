@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.TrainingJobDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.TrainingJobDefinition where
@@ -152,7 +152,8 @@ instance Data.FromJSON TrainingJobDefinition where
       "TrainingJobDefinition"
       ( \x ->
           TrainingJobDefinition'
-            Prelude.<$> ( x Data..:? "HyperParameters"
+            Prelude.<$> ( x
+                            Data..:? "HyperParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "TrainingInputMode")
@@ -164,7 +165,8 @@ instance Data.FromJSON TrainingJobDefinition where
 
 instance Prelude.Hashable TrainingJobDefinition where
   hashWithSalt _salt TrainingJobDefinition' {..} =
-    _salt `Prelude.hashWithSalt` hyperParameters
+    _salt
+      `Prelude.hashWithSalt` hyperParameters
       `Prelude.hashWithSalt` trainingInputMode
       `Prelude.hashWithSalt` inputDataConfig
       `Prelude.hashWithSalt` outputDataConfig

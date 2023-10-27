@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.CreateEventSubscription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -294,7 +294,8 @@ instance Core.AWSRequest CreateEventSubscription where
 
 instance Prelude.Hashable CreateEventSubscription where
   hashWithSalt _salt CreateEventSubscription' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` eventCategories
       `Prelude.hashWithSalt` severity
       `Prelude.hashWithSalt` sourceIds

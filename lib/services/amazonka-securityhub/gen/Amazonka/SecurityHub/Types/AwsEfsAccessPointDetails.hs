@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEfsAccessPointDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEfsAccessPointDetails where
@@ -129,7 +129,8 @@ instance Data.FromJSON AwsEfsAccessPointDetails where
 
 instance Prelude.Hashable AwsEfsAccessPointDetails where
   hashWithSalt _salt AwsEfsAccessPointDetails' {..} =
-    _salt `Prelude.hashWithSalt` accessPointId
+    _salt
+      `Prelude.hashWithSalt` accessPointId
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` fileSystemId

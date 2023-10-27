@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.CsvOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.CsvOptions where
@@ -81,7 +81,8 @@ instance Data.FromJSON CsvOptions where
 
 instance Prelude.Hashable CsvOptions where
   hashWithSalt _salt CsvOptions' {..} =
-    _salt `Prelude.hashWithSalt` delimiter
+    _salt
+      `Prelude.hashWithSalt` delimiter
       `Prelude.hashWithSalt` headerRow
 
 instance Prelude.NFData CsvOptions where

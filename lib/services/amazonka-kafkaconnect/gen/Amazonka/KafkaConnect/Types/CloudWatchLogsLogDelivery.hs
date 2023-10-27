@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.CloudWatchLogsLogDelivery
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.CloudWatchLogsLogDelivery where
@@ -70,7 +70,8 @@ cloudWatchLogsLogDelivery_enabled = Lens.lens (\CloudWatchLogsLogDelivery' {enab
 
 instance Prelude.Hashable CloudWatchLogsLogDelivery where
   hashWithSalt _salt CloudWatchLogsLogDelivery' {..} =
-    _salt `Prelude.hashWithSalt` logGroup
+    _salt
+      `Prelude.hashWithSalt` logGroup
       `Prelude.hashWithSalt` enabled
 
 instance Prelude.NFData CloudWatchLogsLogDelivery where

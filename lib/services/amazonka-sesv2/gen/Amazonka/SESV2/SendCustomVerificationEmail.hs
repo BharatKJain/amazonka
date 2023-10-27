@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SESV2.SendCustomVerificationEmail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest SendCustomVerificationEmail where
 
 instance Prelude.Hashable SendCustomVerificationEmail where
   hashWithSalt _salt SendCustomVerificationEmail' {..} =
-    _salt `Prelude.hashWithSalt` configurationSetName
+    _salt
+      `Prelude.hashWithSalt` configurationSetName
       `Prelude.hashWithSalt` emailAddress
       `Prelude.hashWithSalt` templateName
 

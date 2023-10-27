@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KeySpaces.Types.KeyspaceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KeySpaces.Types.KeyspaceSummary where
@@ -81,7 +81,8 @@ instance Data.FromJSON KeyspaceSummary where
 
 instance Prelude.Hashable KeyspaceSummary where
   hashWithSalt _salt KeyspaceSummary' {..} =
-    _salt `Prelude.hashWithSalt` keyspaceName
+    _salt
+      `Prelude.hashWithSalt` keyspaceName
       `Prelude.hashWithSalt` resourceArn
 
 instance Prelude.NFData KeyspaceSummary where

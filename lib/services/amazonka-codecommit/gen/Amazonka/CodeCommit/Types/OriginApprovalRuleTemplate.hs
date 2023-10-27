@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.OriginApprovalRuleTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.OriginApprovalRuleTemplate where
@@ -76,7 +76,8 @@ instance Data.FromJSON OriginApprovalRuleTemplate where
 
 instance Prelude.Hashable OriginApprovalRuleTemplate where
   hashWithSalt _salt OriginApprovalRuleTemplate' {..} =
-    _salt `Prelude.hashWithSalt` approvalRuleTemplateId
+    _salt
+      `Prelude.hashWithSalt` approvalRuleTemplateId
       `Prelude.hashWithSalt` approvalRuleTemplateName
 
 instance Prelude.NFData OriginApprovalRuleTemplate where

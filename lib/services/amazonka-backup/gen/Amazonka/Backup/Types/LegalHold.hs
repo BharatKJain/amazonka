@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.LegalHold
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.LegalHold where
@@ -141,7 +141,8 @@ instance Data.FromJSON LegalHold where
 
 instance Prelude.Hashable LegalHold where
   hashWithSalt _salt LegalHold' {..} =
-    _salt `Prelude.hashWithSalt` cancellationDate
+    _salt
+      `Prelude.hashWithSalt` cancellationDate
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` legalHoldArn

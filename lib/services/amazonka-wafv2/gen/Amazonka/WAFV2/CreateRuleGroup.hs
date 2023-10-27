@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFV2.CreateRuleGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -308,7 +308,8 @@ instance Core.AWSRequest CreateRuleGroup where
 
 instance Prelude.Hashable CreateRuleGroup where
   hashWithSalt _salt CreateRuleGroup' {..} =
-    _salt `Prelude.hashWithSalt` customResponseBodies
+    _salt
+      `Prelude.hashWithSalt` customResponseBodies
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` rules
       `Prelude.hashWithSalt` tags

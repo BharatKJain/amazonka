@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.SearchQueues
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,20 +148,23 @@ instance Core.AWSPager SearchQueues where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? searchQueuesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? searchQueuesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? searchQueuesResponse_queues Prelude.. Lens._Just
+            Lens.^? searchQueuesResponse_queues
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& searchQueues_nextToken
           Lens..~ rs
-          Lens.^? searchQueuesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? searchQueuesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest SearchQueues where
   type AWSResponse SearchQueues = SearchQueuesResponse
@@ -179,7 +182,8 @@ instance Core.AWSRequest SearchQueues where
 
 instance Prelude.Hashable SearchQueues where
   hashWithSalt _salt SearchQueues' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` searchCriteria
       `Prelude.hashWithSalt` searchFilter

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.OrganizationConformancePack
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.OrganizationConformancePack where
@@ -146,12 +146,14 @@ instance Data.FromJSON OrganizationConformancePack where
       "OrganizationConformancePack"
       ( \x ->
           OrganizationConformancePack'
-            Prelude.<$> ( x Data..:? "ConformancePackInputParameters"
+            Prelude.<$> ( x
+                            Data..:? "ConformancePackInputParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "DeliveryS3Bucket")
             Prelude.<*> (x Data..:? "DeliveryS3KeyPrefix")
-            Prelude.<*> ( x Data..:? "ExcludedAccounts"
+            Prelude.<*> ( x
+                            Data..:? "ExcludedAccounts"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "OrganizationConformancePackName")

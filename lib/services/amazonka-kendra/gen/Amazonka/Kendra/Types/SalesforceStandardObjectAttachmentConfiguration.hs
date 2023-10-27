@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.SalesforceStandardObjectAttachmentConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.SalesforceStandardObjectAttachmentConfiguration where
@@ -79,7 +79,7 @@ instance
       ( \x ->
           SalesforceStandardObjectAttachmentConfiguration'
             Prelude.<$> (x Data..:? "DocumentTitleFieldName")
-              Prelude.<*> (x Data..:? "FieldMappings")
+            Prelude.<*> (x Data..:? "FieldMappings")
       )
 
 instance
@@ -89,7 +89,8 @@ instance
   hashWithSalt
     _salt
     SalesforceStandardObjectAttachmentConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` documentTitleFieldName
+      _salt
+        `Prelude.hashWithSalt` documentTitleFieldName
         `Prelude.hashWithSalt` fieldMappings
 
 instance

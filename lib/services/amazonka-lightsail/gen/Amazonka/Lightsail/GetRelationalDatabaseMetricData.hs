@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.GetRelationalDatabaseMetricData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -472,7 +472,8 @@ instance
   hashWithSalt
     _salt
     GetRelationalDatabaseMetricData' {..} =
-      _salt `Prelude.hashWithSalt` relationalDatabaseName
+      _salt
+        `Prelude.hashWithSalt` relationalDatabaseName
         `Prelude.hashWithSalt` metricName
         `Prelude.hashWithSalt` period
         `Prelude.hashWithSalt` startTime

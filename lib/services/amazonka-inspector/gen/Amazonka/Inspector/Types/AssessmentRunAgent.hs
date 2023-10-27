@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.AssessmentRunAgent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.AssessmentRunAgent where
@@ -142,14 +142,16 @@ instance Data.FromJSON AssessmentRunAgent where
             Prelude.<*> (x Data..: "assessmentRunArn")
             Prelude.<*> (x Data..: "agentHealth")
             Prelude.<*> (x Data..: "agentHealthCode")
-            Prelude.<*> ( x Data..:? "telemetryMetadata"
+            Prelude.<*> ( x
+                            Data..:? "telemetryMetadata"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable AssessmentRunAgent where
   hashWithSalt _salt AssessmentRunAgent' {..} =
-    _salt `Prelude.hashWithSalt` agentHealthDetails
+    _salt
+      `Prelude.hashWithSalt` agentHealthDetails
       `Prelude.hashWithSalt` autoScalingGroup
       `Prelude.hashWithSalt` agentId
       `Prelude.hashWithSalt` assessmentRunArn

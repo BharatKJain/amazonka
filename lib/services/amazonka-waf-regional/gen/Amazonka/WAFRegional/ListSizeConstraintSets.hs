@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFRegional.ListSizeConstraintSets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest ListSizeConstraintSets where
       ( \s h x ->
           ListSizeConstraintSetsResponse'
             Prelude.<$> (x Data..?> "NextMarker")
-            Prelude.<*> ( x Data..?> "SizeConstraintSets"
+            Prelude.<*> ( x
+                            Data..?> "SizeConstraintSets"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -143,7 +144,8 @@ instance Core.AWSRequest ListSizeConstraintSets where
 
 instance Prelude.Hashable ListSizeConstraintSets where
   hashWithSalt _salt ListSizeConstraintSets' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextMarker
 
 instance Prelude.NFData ListSizeConstraintSets where

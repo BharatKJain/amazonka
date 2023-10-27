@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.S3LocationDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.S3LocationDescription where
@@ -84,7 +84,8 @@ instance Data.FromJSON S3LocationDescription where
 
 instance Prelude.Hashable S3LocationDescription where
   hashWithSalt _salt S3LocationDescription' {..} =
-    _salt `Prelude.hashWithSalt` bucketArn
+    _salt
+      `Prelude.hashWithSalt` bucketArn
       `Prelude.hashWithSalt` fileKey
       `Prelude.hashWithSalt` objectVersion
 

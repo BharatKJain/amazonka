@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.DeleteUserPoolDomain
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest DeleteUserPoolDomain where
 
 instance Prelude.Hashable DeleteUserPoolDomain where
   hashWithSalt _salt DeleteUserPoolDomain' {..} =
-    _salt `Prelude.hashWithSalt` domain
+    _salt
+      `Prelude.hashWithSalt` domain
       `Prelude.hashWithSalt` userPoolId
 
 instance Prelude.NFData DeleteUserPoolDomain where

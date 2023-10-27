@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.BatchJobDependency
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.BatchJobDependency where
@@ -69,12 +69,14 @@ instance Data.FromJSON BatchJobDependency where
       "BatchJobDependency"
       ( \x ->
           BatchJobDependency'
-            Prelude.<$> (x Data..:? "JobId") Prelude.<*> (x Data..:? "Type")
+            Prelude.<$> (x Data..:? "JobId")
+            Prelude.<*> (x Data..:? "Type")
       )
 
 instance Prelude.Hashable BatchJobDependency where
   hashWithSalt _salt BatchJobDependency' {..} =
-    _salt `Prelude.hashWithSalt` jobId
+    _salt
+      `Prelude.hashWithSalt` jobId
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData BatchJobDependency where

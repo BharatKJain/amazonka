@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.Administrator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.Administrator where
@@ -100,7 +100,8 @@ instance Data.FromJSON Administrator where
 
 instance Prelude.Hashable Administrator where
   hashWithSalt _salt Administrator' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` invitationId
       `Prelude.hashWithSalt` invitedAt
       `Prelude.hashWithSalt` relationshipStatus

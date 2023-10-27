@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.GameServerInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.GameServerInstance where
@@ -120,7 +120,8 @@ instance Data.FromJSON GameServerInstance where
 
 instance Prelude.Hashable GameServerInstance where
   hashWithSalt _salt GameServerInstance' {..} =
-    _salt `Prelude.hashWithSalt` gameServerGroupArn
+    _salt
+      `Prelude.hashWithSalt` gameServerGroupArn
       `Prelude.hashWithSalt` gameServerGroupName
       `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` instanceStatus

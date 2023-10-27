@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.BackupPlansListMember
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.BackupPlansListMember where
@@ -187,7 +187,8 @@ instance Data.FromJSON BackupPlansListMember where
       "BackupPlansListMember"
       ( \x ->
           BackupPlansListMember'
-            Prelude.<$> ( x Data..:? "AdvancedBackupSettings"
+            Prelude.<$> ( x
+                            Data..:? "AdvancedBackupSettings"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "BackupPlanArn")
@@ -202,7 +203,8 @@ instance Data.FromJSON BackupPlansListMember where
 
 instance Prelude.Hashable BackupPlansListMember where
   hashWithSalt _salt BackupPlansListMember' {..} =
-    _salt `Prelude.hashWithSalt` advancedBackupSettings
+    _salt
+      `Prelude.hashWithSalt` advancedBackupSettings
       `Prelude.hashWithSalt` backupPlanArn
       `Prelude.hashWithSalt` backupPlanId
       `Prelude.hashWithSalt` backupPlanName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ProcessingClusterConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ProcessingClusterConfig where
@@ -183,7 +183,8 @@ instance Data.FromJSON ProcessingClusterConfig where
 
 instance Prelude.Hashable ProcessingClusterConfig where
   hashWithSalt _salt ProcessingClusterConfig' {..} =
-    _salt `Prelude.hashWithSalt` volumeKmsKeyId
+    _salt
+      `Prelude.hashWithSalt` volumeKmsKeyId
       `Prelude.hashWithSalt` instanceCount
       `Prelude.hashWithSalt` instanceType
       `Prelude.hashWithSalt` volumeSizeInGB

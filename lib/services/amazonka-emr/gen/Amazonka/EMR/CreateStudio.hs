@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EMR.CreateStudio
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -313,7 +313,8 @@ instance Core.AWSRequest CreateStudio where
 
 instance Prelude.Hashable CreateStudio where
   hashWithSalt _salt CreateStudio' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` idpAuthUrl
       `Prelude.hashWithSalt` idpRelayStateParameterName
       `Prelude.hashWithSalt` tags

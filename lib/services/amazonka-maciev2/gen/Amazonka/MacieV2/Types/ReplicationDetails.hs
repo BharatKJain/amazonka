@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.ReplicationDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.ReplicationDetails where
@@ -96,14 +96,16 @@ instance Data.FromJSON ReplicationDetails where
           ReplicationDetails'
             Prelude.<$> (x Data..:? "replicated")
             Prelude.<*> (x Data..:? "replicatedExternally")
-            Prelude.<*> ( x Data..:? "replicationAccounts"
+            Prelude.<*> ( x
+                            Data..:? "replicationAccounts"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ReplicationDetails where
   hashWithSalt _salt ReplicationDetails' {..} =
-    _salt `Prelude.hashWithSalt` replicated
+    _salt
+      `Prelude.hashWithSalt` replicated
       `Prelude.hashWithSalt` replicatedExternally
       `Prelude.hashWithSalt` replicationAccounts
 

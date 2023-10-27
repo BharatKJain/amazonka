@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RolesAnywhere.Types.SourceData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RolesAnywhere.Types.SourceData where
@@ -86,7 +86,8 @@ instance Data.FromJSON SourceData where
 
 instance Prelude.Hashable SourceData where
   hashWithSalt _salt SourceData' {..} =
-    _salt `Prelude.hashWithSalt` acmPcaArn
+    _salt
+      `Prelude.hashWithSalt` acmPcaArn
       `Prelude.hashWithSalt` x509CertificateData
 
 instance Prelude.NFData SourceData where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VpnConnectionDeviceType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VpnConnectionDeviceType where
@@ -96,7 +96,8 @@ instance Data.FromXML VpnConnectionDeviceType where
 
 instance Prelude.Hashable VpnConnectionDeviceType where
   hashWithSalt _salt VpnConnectionDeviceType' {..} =
-    _salt `Prelude.hashWithSalt` platform
+    _salt
+      `Prelude.hashWithSalt` platform
       `Prelude.hashWithSalt` software
       `Prelude.hashWithSalt` vendor
       `Prelude.hashWithSalt` vpnConnectionDeviceTypeId

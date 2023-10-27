@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.RecordDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.RecordDetail where
@@ -260,7 +260,8 @@ instance Data.FromJSON RecordDetail where
 
 instance Prelude.Hashable RecordDetail where
   hashWithSalt _salt RecordDetail' {..} =
-    _salt `Prelude.hashWithSalt` createdTime
+    _salt
+      `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` launchRoleArn
       `Prelude.hashWithSalt` pathId
       `Prelude.hashWithSalt` productId

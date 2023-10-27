@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.ClusterSubnetGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.ClusterSubnetGroup where
@@ -111,17 +111,22 @@ instance Data.FromXML ClusterSubnetGroup where
       Prelude.<$> (x Data..@? "ClusterSubnetGroupName")
       Prelude.<*> (x Data..@? "Description")
       Prelude.<*> (x Data..@? "SubnetGroupStatus")
-      Prelude.<*> ( x Data..@? "Subnets" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Subnets"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Subnet")
                   )
-      Prelude.<*> ( x Data..@? "Tags" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Tags"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Tag")
                   )
       Prelude.<*> (x Data..@? "VpcId")
 
 instance Prelude.Hashable ClusterSubnetGroup where
   hashWithSalt _salt ClusterSubnetGroup' {..} =
-    _salt `Prelude.hashWithSalt` clusterSubnetGroupName
+    _salt
+      `Prelude.hashWithSalt` clusterSubnetGroupName
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` subnetGroupStatus
       `Prelude.hashWithSalt` subnets

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.PrivateNetworks.CreateNetworkSite
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -182,7 +182,8 @@ instance Core.AWSRequest CreateNetworkSite where
 
 instance Prelude.Hashable CreateNetworkSite where
   hashWithSalt _salt CreateNetworkSite' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZone
+    _salt
+      `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` availabilityZoneId
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` description

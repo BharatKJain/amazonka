@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.ResourceStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.ResourceStatistics where
@@ -207,7 +207,8 @@ instance Data.FromJSON ResourceStatistics where
 
 instance Prelude.Hashable ResourceStatistics where
   hashWithSalt _salt ResourceStatistics' {..} =
-    _salt `Prelude.hashWithSalt` totalBytesClassified
+    _salt
+      `Prelude.hashWithSalt` totalBytesClassified
       `Prelude.hashWithSalt` totalDetections
       `Prelude.hashWithSalt` totalDetectionsSuppressed
       `Prelude.hashWithSalt` totalItemsClassified

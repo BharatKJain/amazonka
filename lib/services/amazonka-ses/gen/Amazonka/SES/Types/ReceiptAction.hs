@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.ReceiptAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.ReceiptAction where
@@ -150,7 +150,8 @@ instance Data.FromXML ReceiptAction where
 
 instance Prelude.Hashable ReceiptAction where
   hashWithSalt _salt ReceiptAction' {..} =
-    _salt `Prelude.hashWithSalt` addHeaderAction
+    _salt
+      `Prelude.hashWithSalt` addHeaderAction
       `Prelude.hashWithSalt` bounceAction
       `Prelude.hashWithSalt` lambdaAction
       `Prelude.hashWithSalt` s3Action

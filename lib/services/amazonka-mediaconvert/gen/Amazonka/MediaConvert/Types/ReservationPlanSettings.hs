@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.ReservationPlanSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.ReservationPlanSettings where
@@ -115,7 +115,8 @@ reservationPlanSettings_renewalType = Lens.lens (\ReservationPlanSettings' {rene
 
 instance Prelude.Hashable ReservationPlanSettings where
   hashWithSalt _salt ReservationPlanSettings' {..} =
-    _salt `Prelude.hashWithSalt` commitment
+    _salt
+      `Prelude.hashWithSalt` commitment
       `Prelude.hashWithSalt` reservedSlots
       `Prelude.hashWithSalt` renewalType
 

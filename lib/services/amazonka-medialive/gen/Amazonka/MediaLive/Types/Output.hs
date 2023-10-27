@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.Output
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.Output where
@@ -104,10 +104,12 @@ instance Data.FromJSON Output where
       "Output"
       ( \x ->
           Output'
-            Prelude.<$> ( x Data..:? "audioDescriptionNames"
+            Prelude.<$> ( x
+                            Data..:? "audioDescriptionNames"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "captionDescriptionNames"
+            Prelude.<*> ( x
+                            Data..:? "captionDescriptionNames"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "outputName")
@@ -117,7 +119,8 @@ instance Data.FromJSON Output where
 
 instance Prelude.Hashable Output where
   hashWithSalt _salt Output' {..} =
-    _salt `Prelude.hashWithSalt` audioDescriptionNames
+    _salt
+      `Prelude.hashWithSalt` audioDescriptionNames
       `Prelude.hashWithSalt` captionDescriptionNames
       `Prelude.hashWithSalt` outputName
       `Prelude.hashWithSalt` videoDescriptionName

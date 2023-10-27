@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.UsagePlanKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.UsagePlanKey where
@@ -97,7 +97,8 @@ instance Data.FromJSON UsagePlanKey where
 
 instance Prelude.Hashable UsagePlanKey where
   hashWithSalt _salt UsagePlanKey' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` value

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.DirectoryConnectSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.DirectoryConnectSettings where
@@ -119,7 +119,8 @@ directoryConnectSettings_customerUserName = Lens.lens (\DirectoryConnectSettings
 
 instance Prelude.Hashable DirectoryConnectSettings where
   hashWithSalt _salt DirectoryConnectSettings' {..} =
-    _salt `Prelude.hashWithSalt` vpcId
+    _salt
+      `Prelude.hashWithSalt` vpcId
       `Prelude.hashWithSalt` subnetIds
       `Prelude.hashWithSalt` customerDnsIps
       `Prelude.hashWithSalt` customerUserName

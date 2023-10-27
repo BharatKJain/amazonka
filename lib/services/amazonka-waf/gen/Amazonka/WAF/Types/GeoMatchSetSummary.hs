@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.GeoMatchSetSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.GeoMatchSetSummary where
@@ -94,7 +94,8 @@ instance Data.FromJSON GeoMatchSetSummary where
 
 instance Prelude.Hashable GeoMatchSetSummary where
   hashWithSalt _salt GeoMatchSetSummary' {..} =
-    _salt `Prelude.hashWithSalt` geoMatchSetId
+    _salt
+      `Prelude.hashWithSalt` geoMatchSetId
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData GeoMatchSetSummary where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.CachePolicyHeadersConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.CachePolicyHeadersConfig where
@@ -112,7 +112,8 @@ instance Data.FromXML CachePolicyHeadersConfig where
 
 instance Prelude.Hashable CachePolicyHeadersConfig where
   hashWithSalt _salt CachePolicyHeadersConfig' {..} =
-    _salt `Prelude.hashWithSalt` headers
+    _salt
+      `Prelude.hashWithSalt` headers
       `Prelude.hashWithSalt` headerBehavior
 
 instance Prelude.NFData CachePolicyHeadersConfig where

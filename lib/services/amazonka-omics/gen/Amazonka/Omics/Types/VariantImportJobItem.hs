@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.VariantImportJobItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.VariantImportJobItem where
@@ -154,7 +154,8 @@ instance Data.FromJSON VariantImportJobItem where
 
 instance Prelude.Hashable VariantImportJobItem where
   hashWithSalt _salt VariantImportJobItem' {..} =
-    _salt `Prelude.hashWithSalt` completionTime
+    _salt
+      `Prelude.hashWithSalt` completionTime
       `Prelude.hashWithSalt` runLeftNormalization
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` destinationName

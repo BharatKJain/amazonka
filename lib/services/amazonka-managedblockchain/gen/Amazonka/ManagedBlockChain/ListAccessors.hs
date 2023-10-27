@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ManagedBlockChain.ListAccessors
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,20 +98,23 @@ instance Core.AWSPager ListAccessors where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listAccessorsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listAccessorsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listAccessorsResponse_accessors Prelude.. Lens._Just
+            Lens.^? listAccessorsResponse_accessors
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAccessors_nextToken
           Lens..~ rs
-          Lens.^? listAccessorsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listAccessorsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAccessors where
   type
@@ -130,7 +133,8 @@ instance Core.AWSRequest ListAccessors where
 
 instance Prelude.Hashable ListAccessors where
   hashWithSalt _salt ListAccessors' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListAccessors where

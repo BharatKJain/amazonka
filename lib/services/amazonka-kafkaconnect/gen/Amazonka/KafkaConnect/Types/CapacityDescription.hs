@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.CapacityDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.CapacityDescription where
@@ -76,7 +76,8 @@ instance Data.FromJSON CapacityDescription where
 
 instance Prelude.Hashable CapacityDescription where
   hashWithSalt _salt CapacityDescription' {..} =
-    _salt `Prelude.hashWithSalt` autoScaling
+    _salt
+      `Prelude.hashWithSalt` autoScaling
       `Prelude.hashWithSalt` provisionedCapacity
 
 instance Prelude.NFData CapacityDescription where

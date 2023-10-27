@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.InsertableImage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.InsertableImage where
@@ -240,7 +240,8 @@ instance Data.FromJSON InsertableImage where
 
 instance Prelude.Hashable InsertableImage where
   hashWithSalt _salt InsertableImage' {..} =
-    _salt `Prelude.hashWithSalt` duration
+    _salt
+      `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` fadeIn
       `Prelude.hashWithSalt` fadeOut
       `Prelude.hashWithSalt` height

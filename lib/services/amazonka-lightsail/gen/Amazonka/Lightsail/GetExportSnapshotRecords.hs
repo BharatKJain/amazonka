@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.GetExportSnapshotRecords
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,22 +104,22 @@ instance Core.AWSPager GetExportSnapshotRecords where
     | Core.stop
         ( rs
             Lens.^? getExportSnapshotRecordsResponse_nextPageToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getExportSnapshotRecordsResponse_exportSnapshotRecords
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getExportSnapshotRecords_pageToken
           Lens..~ rs
           Lens.^? getExportSnapshotRecordsResponse_nextPageToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetExportSnapshotRecords where
   type
@@ -131,7 +131,8 @@ instance Core.AWSRequest GetExportSnapshotRecords where
     Response.receiveJSON
       ( \s h x ->
           GetExportSnapshotRecordsResponse'
-            Prelude.<$> ( x Data..?> "exportSnapshotRecords"
+            Prelude.<$> ( x
+                            Data..?> "exportSnapshotRecords"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextPageToken")

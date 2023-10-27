@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RobOMaker.Types.DataSourceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RobOMaker.Types.DataSourceConfig where
@@ -159,7 +159,8 @@ instance Data.FromJSON DataSourceConfig where
 
 instance Prelude.Hashable DataSourceConfig where
   hashWithSalt _salt DataSourceConfig' {..} =
-    _salt `Prelude.hashWithSalt` destination
+    _salt
+      `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` s3Bucket

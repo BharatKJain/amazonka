@@ -16,7 +16,7 @@
 -- Module      : Amazonka.HealthLake.StartFHIRImportJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -164,7 +164,8 @@ instance Core.AWSRequest StartFHIRImportJob where
 
 instance Prelude.Hashable StartFHIRImportJob where
   hashWithSalt _salt StartFHIRImportJob' {..} =
-    _salt `Prelude.hashWithSalt` jobName
+    _salt
+      `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` inputDataConfig
       `Prelude.hashWithSalt` jobOutputDataConfig
       `Prelude.hashWithSalt` datastoreId

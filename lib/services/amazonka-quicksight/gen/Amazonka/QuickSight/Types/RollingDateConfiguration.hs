@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.RollingDateConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.RollingDateConfiguration where
@@ -77,7 +77,8 @@ instance Data.FromJSON RollingDateConfiguration where
 
 instance Prelude.Hashable RollingDateConfiguration where
   hashWithSalt _salt RollingDateConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` dataSetIdentifier
+    _salt
+      `Prelude.hashWithSalt` dataSetIdentifier
       `Prelude.hashWithSalt` expression
 
 instance Prelude.NFData RollingDateConfiguration where

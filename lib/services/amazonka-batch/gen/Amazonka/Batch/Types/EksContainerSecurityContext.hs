@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.EksContainerSecurityContext
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.EksContainerSecurityContext where
@@ -179,7 +179,8 @@ instance Data.FromJSON EksContainerSecurityContext where
 
 instance Prelude.Hashable EksContainerSecurityContext where
   hashWithSalt _salt EksContainerSecurityContext' {..} =
-    _salt `Prelude.hashWithSalt` privileged
+    _salt
+      `Prelude.hashWithSalt` privileged
       `Prelude.hashWithSalt` readOnlyRootFilesystem
       `Prelude.hashWithSalt` runAsGroup
       `Prelude.hashWithSalt` runAsNonRoot

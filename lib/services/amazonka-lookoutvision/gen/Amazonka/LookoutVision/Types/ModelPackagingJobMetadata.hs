@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutVision.Types.ModelPackagingJobMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutVision.Types.ModelPackagingJobMetadata where
@@ -156,7 +156,8 @@ instance Data.FromJSON ModelPackagingJobMetadata where
 
 instance Prelude.Hashable ModelPackagingJobMetadata where
   hashWithSalt _salt ModelPackagingJobMetadata' {..} =
-    _salt `Prelude.hashWithSalt` creationTimestamp
+    _salt
+      `Prelude.hashWithSalt` creationTimestamp
       `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` lastUpdatedTimestamp
       `Prelude.hashWithSalt` modelPackagingJobDescription

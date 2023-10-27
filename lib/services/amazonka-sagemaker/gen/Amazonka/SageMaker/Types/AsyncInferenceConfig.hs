@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.AsyncInferenceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.AsyncInferenceConfig where
@@ -86,7 +86,8 @@ instance Data.FromJSON AsyncInferenceConfig where
 
 instance Prelude.Hashable AsyncInferenceConfig where
   hashWithSalt _salt AsyncInferenceConfig' {..} =
-    _salt `Prelude.hashWithSalt` clientConfig
+    _salt
+      `Prelude.hashWithSalt` clientConfig
       `Prelude.hashWithSalt` outputConfig
 
 instance Prelude.NFData AsyncInferenceConfig where

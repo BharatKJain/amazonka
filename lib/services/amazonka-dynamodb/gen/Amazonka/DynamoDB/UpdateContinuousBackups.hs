@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.UpdateContinuousBackups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest UpdateContinuousBackups where
 
 instance Prelude.Hashable UpdateContinuousBackups where
   hashWithSalt _salt UpdateContinuousBackups' {..} =
-    _salt `Prelude.hashWithSalt` tableName
+    _salt
+      `Prelude.hashWithSalt` tableName
       `Prelude.hashWithSalt` pointInTimeRecoverySpecification
 
 instance Prelude.NFData UpdateContinuousBackups where

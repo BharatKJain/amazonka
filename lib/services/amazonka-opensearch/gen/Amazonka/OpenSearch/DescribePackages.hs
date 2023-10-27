@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpenSearch.DescribePackages
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,8 @@ instance Core.AWSRequest DescribePackages where
       ( \s h x ->
           DescribePackagesResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "PackageDetailsList"
+            Prelude.<*> ( x
+                            Data..?> "PackageDetailsList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -133,7 +134,8 @@ instance Core.AWSRequest DescribePackages where
 
 instance Prelude.Hashable DescribePackages where
   hashWithSalt _salt DescribePackages' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

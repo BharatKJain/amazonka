@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.ApplicationMetrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.ApplicationMetrics where
@@ -110,7 +110,8 @@ instance Data.FromXML ApplicationMetrics where
 
 instance Prelude.Hashable ApplicationMetrics where
   hashWithSalt _salt ApplicationMetrics' {..} =
-    _salt `Prelude.hashWithSalt` duration
+    _salt
+      `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` latency
       `Prelude.hashWithSalt` requestCount
       `Prelude.hashWithSalt` statusCodes

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.ClickFeedback
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.ClickFeedback where
@@ -70,7 +70,8 @@ clickFeedback_clickTime = Lens.lens (\ClickFeedback' {clickTime} -> clickTime) (
 
 instance Prelude.Hashable ClickFeedback where
   hashWithSalt _salt ClickFeedback' {..} =
-    _salt `Prelude.hashWithSalt` resultId
+    _salt
+      `Prelude.hashWithSalt` resultId
       `Prelude.hashWithSalt` clickTime
 
 instance Prelude.NFData ClickFeedback where

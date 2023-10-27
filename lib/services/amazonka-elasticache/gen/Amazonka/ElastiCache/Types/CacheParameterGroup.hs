@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.CacheParameterGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.CacheParameterGroup where
@@ -118,7 +118,8 @@ instance Data.FromXML CacheParameterGroup where
 
 instance Prelude.Hashable CacheParameterGroup where
   hashWithSalt _salt CacheParameterGroup' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` cacheParameterGroupFamily
       `Prelude.hashWithSalt` cacheParameterGroupName
       `Prelude.hashWithSalt` description

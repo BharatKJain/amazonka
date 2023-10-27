@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServerlessApplicationRepository.Types.ParameterValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServerlessApplicationRepository.Types.ParameterValue where
@@ -71,7 +71,8 @@ parameterValue_name = Lens.lens (\ParameterValue' {name} -> name) (\s@ParameterV
 
 instance Prelude.Hashable ParameterValue where
   hashWithSalt _salt ParameterValue' {..} =
-    _salt `Prelude.hashWithSalt` value
+    _salt
+      `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData ParameterValue where

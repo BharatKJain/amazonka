@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkMail.GetMailboxDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest GetMailboxDetails where
 
 instance Prelude.Hashable GetMailboxDetails where
   hashWithSalt _salt GetMailboxDetails' {..} =
-    _salt `Prelude.hashWithSalt` organizationId
+    _salt
+      `Prelude.hashWithSalt` organizationId
       `Prelude.hashWithSalt` userId
 
 instance Prelude.NFData GetMailboxDetails where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AuditManager.StartAssessmentFrameworkShare
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -177,7 +177,8 @@ instance
     StartAssessmentFrameworkShare
   where
   hashWithSalt _salt StartAssessmentFrameworkShare' {..} =
-    _salt `Prelude.hashWithSalt` comment
+    _salt
+      `Prelude.hashWithSalt` comment
       `Prelude.hashWithSalt` frameworkId
       `Prelude.hashWithSalt` destinationAccount
       `Prelude.hashWithSalt` destinationRegion

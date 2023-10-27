@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.ExternalEventsDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.ExternalEventsDetail where
@@ -84,7 +84,8 @@ instance Data.FromJSON ExternalEventsDetail where
 
 instance Prelude.Hashable ExternalEventsDetail where
   hashWithSalt _salt ExternalEventsDetail' {..} =
-    _salt `Prelude.hashWithSalt` dataLocation
+    _salt
+      `Prelude.hashWithSalt` dataLocation
       `Prelude.hashWithSalt` dataAccessRoleArn
 
 instance Prelude.NFData ExternalEventsDetail where

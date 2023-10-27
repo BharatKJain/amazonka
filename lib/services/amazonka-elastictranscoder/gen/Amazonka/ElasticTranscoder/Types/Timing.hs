@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.Timing
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.Timing where
@@ -87,7 +87,8 @@ instance Data.FromJSON Timing where
 
 instance Prelude.Hashable Timing where
   hashWithSalt _salt Timing' {..} =
-    _salt `Prelude.hashWithSalt` finishTimeMillis
+    _salt
+      `Prelude.hashWithSalt` finishTimeMillis
       `Prelude.hashWithSalt` startTimeMillis
       `Prelude.hashWithSalt` submitTimeMillis
 

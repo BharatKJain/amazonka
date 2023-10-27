@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.IncidentTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.IncidentTemplate where
@@ -127,7 +127,8 @@ instance Data.FromJSON IncidentTemplate where
           IncidentTemplate'
             Prelude.<$> (x Data..:? "dedupeString")
             Prelude.<*> (x Data..:? "incidentTags" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "notificationTargets"
+            Prelude.<*> ( x
+                            Data..:? "notificationTargets"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "summary")
@@ -137,7 +138,8 @@ instance Data.FromJSON IncidentTemplate where
 
 instance Prelude.Hashable IncidentTemplate where
   hashWithSalt _salt IncidentTemplate' {..} =
-    _salt `Prelude.hashWithSalt` dedupeString
+    _salt
+      `Prelude.hashWithSalt` dedupeString
       `Prelude.hashWithSalt` incidentTags
       `Prelude.hashWithSalt` notificationTargets
       `Prelude.hashWithSalt` summary

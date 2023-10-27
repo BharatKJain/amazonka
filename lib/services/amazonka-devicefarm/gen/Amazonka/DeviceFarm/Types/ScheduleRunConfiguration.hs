@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.ScheduleRunConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.ScheduleRunConfiguration where
@@ -157,7 +157,8 @@ scheduleRunConfiguration_vpceConfigurationArns = Lens.lens (\ScheduleRunConfigur
 
 instance Prelude.Hashable ScheduleRunConfiguration where
   hashWithSalt _salt ScheduleRunConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` auxiliaryApps
+    _salt
+      `Prelude.hashWithSalt` auxiliaryApps
       `Prelude.hashWithSalt` billingMethod
       `Prelude.hashWithSalt` customerArtifactPaths
       `Prelude.hashWithSalt` extraDataPackageArn

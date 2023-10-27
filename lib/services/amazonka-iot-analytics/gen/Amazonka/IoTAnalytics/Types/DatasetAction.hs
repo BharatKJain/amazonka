@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.DatasetAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.DatasetAction where
@@ -99,7 +99,8 @@ instance Data.FromJSON DatasetAction where
 
 instance Prelude.Hashable DatasetAction where
   hashWithSalt _salt DatasetAction' {..} =
-    _salt `Prelude.hashWithSalt` actionName
+    _salt
+      `Prelude.hashWithSalt` actionName
       `Prelude.hashWithSalt` containerAction
       `Prelude.hashWithSalt` queryAction
 

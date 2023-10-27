@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.CreateGameSessionQueue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -300,7 +300,8 @@ instance Core.AWSRequest CreateGameSessionQueue where
 
 instance Prelude.Hashable CreateGameSessionQueue where
   hashWithSalt _salt CreateGameSessionQueue' {..} =
-    _salt `Prelude.hashWithSalt` customEventData
+    _salt
+      `Prelude.hashWithSalt` customEventData
       `Prelude.hashWithSalt` destinations
       `Prelude.hashWithSalt` filterConfiguration
       `Prelude.hashWithSalt` notificationTarget

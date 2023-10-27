@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsRdsDbClusterSnapshotDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsRdsDbClusterSnapshotDetails where
@@ -264,7 +264,8 @@ instance Data.FromJSON AwsRdsDbClusterSnapshotDetails where
       ( \x ->
           AwsRdsDbClusterSnapshotDetails'
             Prelude.<$> (x Data..:? "AllocatedStorage")
-            Prelude.<*> ( x Data..:? "AvailabilityZones"
+            Prelude.<*> ( x
+                            Data..:? "AvailabilityZones"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ClusterCreateTime")
@@ -292,7 +293,8 @@ instance
   hashWithSalt
     _salt
     AwsRdsDbClusterSnapshotDetails' {..} =
-      _salt `Prelude.hashWithSalt` allocatedStorage
+      _salt
+        `Prelude.hashWithSalt` allocatedStorage
         `Prelude.hashWithSalt` availabilityZones
         `Prelude.hashWithSalt` clusterCreateTime
         `Prelude.hashWithSalt` dbClusterIdentifier

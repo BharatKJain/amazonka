@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutEquipment.Types.DataIngestionJobSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutEquipment.Types.DataIngestionJobSummary where
@@ -114,7 +114,8 @@ instance Data.FromJSON DataIngestionJobSummary where
 
 instance Prelude.Hashable DataIngestionJobSummary where
   hashWithSalt _salt DataIngestionJobSummary' {..} =
-    _salt `Prelude.hashWithSalt` datasetArn
+    _salt
+      `Prelude.hashWithSalt` datasetArn
       `Prelude.hashWithSalt` datasetName
       `Prelude.hashWithSalt` ingestionInputConfiguration
       `Prelude.hashWithSalt` jobId

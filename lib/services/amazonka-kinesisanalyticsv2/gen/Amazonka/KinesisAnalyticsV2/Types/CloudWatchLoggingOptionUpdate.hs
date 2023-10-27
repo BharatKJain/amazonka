@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.CloudWatchLoggingOptionUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.CloudWatchLoggingOptionUpdate where
@@ -75,7 +75,8 @@ instance
     CloudWatchLoggingOptionUpdate
   where
   hashWithSalt _salt CloudWatchLoggingOptionUpdate' {..} =
-    _salt `Prelude.hashWithSalt` logStreamARNUpdate
+    _salt
+      `Prelude.hashWithSalt` logStreamARNUpdate
       `Prelude.hashWithSalt` cloudWatchLoggingOptionId
 
 instance Prelude.NFData CloudWatchLoggingOptionUpdate where

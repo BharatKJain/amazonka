@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Amplify.Types.BackendEnvironment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Amplify.Types.BackendEnvironment where
@@ -136,7 +136,8 @@ instance Data.FromJSON BackendEnvironment where
 
 instance Prelude.Hashable BackendEnvironment where
   hashWithSalt _salt BackendEnvironment' {..} =
-    _salt `Prelude.hashWithSalt` deploymentArtifacts
+    _salt
+      `Prelude.hashWithSalt` deploymentArtifacts
       `Prelude.hashWithSalt` stackName
       `Prelude.hashWithSalt` backendEnvironmentArn
       `Prelude.hashWithSalt` environmentName

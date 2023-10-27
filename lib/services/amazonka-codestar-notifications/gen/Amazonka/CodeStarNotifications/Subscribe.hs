@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeStarNotifications.Subscribe
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest Subscribe where
 
 instance Prelude.Hashable Subscribe where
   hashWithSalt _salt Subscribe' {..} =
-    _salt `Prelude.hashWithSalt` clientRequestToken
+    _salt
+      `Prelude.hashWithSalt` clientRequestToken
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` target
 

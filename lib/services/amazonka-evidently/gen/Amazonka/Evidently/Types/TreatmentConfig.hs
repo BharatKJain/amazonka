@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.TreatmentConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.TreatmentConfig where
@@ -89,7 +89,8 @@ treatmentConfig_variation = Lens.lens (\TreatmentConfig' {variation} -> variatio
 
 instance Prelude.Hashable TreatmentConfig where
   hashWithSalt _salt TreatmentConfig' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` feature
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` variation

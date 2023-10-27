@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.AllocateAddress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -269,7 +269,8 @@ instance Core.AWSRequest AllocateAddress where
 
 instance Prelude.Hashable AllocateAddress where
   hashWithSalt _salt AllocateAddress' {..} =
-    _salt `Prelude.hashWithSalt` address
+    _salt
+      `Prelude.hashWithSalt` address
       `Prelude.hashWithSalt` customerOwnedIpv4Pool
       `Prelude.hashWithSalt` domain
       `Prelude.hashWithSalt` dryRun

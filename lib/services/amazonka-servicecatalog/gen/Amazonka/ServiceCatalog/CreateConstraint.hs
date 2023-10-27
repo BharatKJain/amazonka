@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.CreateConstraint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -399,7 +399,8 @@ instance Core.AWSRequest CreateConstraint where
 
 instance Prelude.Hashable CreateConstraint where
   hashWithSalt _salt CreateConstraint' {..} =
-    _salt `Prelude.hashWithSalt` acceptLanguage
+    _salt
+      `Prelude.hashWithSalt` acceptLanguage
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` portfolioId
       `Prelude.hashWithSalt` productId

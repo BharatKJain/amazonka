@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.LineChartSeriesSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.LineChartSeriesSettings where
@@ -78,7 +78,8 @@ instance Data.FromJSON LineChartSeriesSettings where
 
 instance Prelude.Hashable LineChartSeriesSettings where
   hashWithSalt _salt LineChartSeriesSettings' {..} =
-    _salt `Prelude.hashWithSalt` lineStyleSettings
+    _salt
+      `Prelude.hashWithSalt` lineStyleSettings
       `Prelude.hashWithSalt` markerStyleSettings
 
 instance Prelude.NFData LineChartSeriesSettings where

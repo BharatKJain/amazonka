@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ErrorInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ErrorInfo where
@@ -75,7 +75,8 @@ instance Data.FromJSON ErrorInfo where
 
 instance Prelude.Hashable ErrorInfo where
   hashWithSalt _salt ErrorInfo' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData ErrorInfo where

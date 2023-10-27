@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTDeviceAdvisor.Types.TestCaseScenario
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTDeviceAdvisor.Types.TestCaseScenario where
@@ -140,7 +140,6 @@ testCaseScenario_failure = Lens.lens (\TestCaseScenario' {failure} -> failure) (
 testCaseScenario_status :: Lens.Lens' TestCaseScenario (Prelude.Maybe TestCaseScenarioStatus)
 testCaseScenario_status = Lens.lens (\TestCaseScenario' {status} -> status) (\s@TestCaseScenario' {} a -> s {status = a} :: TestCaseScenario)
 
--- |
 testCaseScenario_systemMessage :: Lens.Lens' TestCaseScenario (Prelude.Maybe Prelude.Text)
 testCaseScenario_systemMessage = Lens.lens (\TestCaseScenario' {systemMessage} -> systemMessage) (\s@TestCaseScenario' {} a -> s {systemMessage = a} :: TestCaseScenario)
 
@@ -171,7 +170,8 @@ instance Data.FromJSON TestCaseScenario where
 
 instance Prelude.Hashable TestCaseScenario where
   hashWithSalt _salt TestCaseScenario' {..} =
-    _salt `Prelude.hashWithSalt` failure
+    _salt
+      `Prelude.hashWithSalt` failure
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` systemMessage
       `Prelude.hashWithSalt` testCaseScenarioId

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.ListScheduledAudits
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -96,22 +96,22 @@ instance Core.AWSPager ListScheduledAudits where
     | Core.stop
         ( rs
             Lens.^? listScheduledAuditsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listScheduledAuditsResponse_scheduledAudits
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listScheduledAudits_nextToken
           Lens..~ rs
           Lens.^? listScheduledAuditsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListScheduledAudits where
   type
@@ -124,7 +124,8 @@ instance Core.AWSRequest ListScheduledAudits where
       ( \s h x ->
           ListScheduledAuditsResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "scheduledAudits"
+            Prelude.<*> ( x
+                            Data..?> "scheduledAudits"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -132,7 +133,8 @@ instance Core.AWSRequest ListScheduledAudits where
 
 instance Prelude.Hashable ListScheduledAudits where
   hashWithSalt _salt ListScheduledAudits' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListScheduledAudits where

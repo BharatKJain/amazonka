@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeConversionTasks
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,9 @@ instance Core.AWSRequest DescribeConversionTasks where
     Response.receiveXML
       ( \s h x ->
           DescribeConversionTasksResponse'
-            Prelude.<$> ( x Data..@? "conversionTasks" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "conversionTasks"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -118,7 +120,8 @@ instance Core.AWSRequest DescribeConversionTasks where
 
 instance Prelude.Hashable DescribeConversionTasks where
   hashWithSalt _salt DescribeConversionTasks' {..} =
-    _salt `Prelude.hashWithSalt` conversionTaskIds
+    _salt
+      `Prelude.hashWithSalt` conversionTaskIds
       `Prelude.hashWithSalt` dryRun
 
 instance Prelude.NFData DescribeConversionTasks where

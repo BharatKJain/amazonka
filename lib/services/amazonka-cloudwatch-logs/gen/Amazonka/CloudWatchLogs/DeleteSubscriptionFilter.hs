@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatchLogs.DeleteSubscriptionFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -99,7 +99,8 @@ instance Core.AWSRequest DeleteSubscriptionFilter where
 
 instance Prelude.Hashable DeleteSubscriptionFilter where
   hashWithSalt _salt DeleteSubscriptionFilter' {..} =
-    _salt `Prelude.hashWithSalt` logGroupName
+    _salt
+      `Prelude.hashWithSalt` logGroupName
       `Prelude.hashWithSalt` filterName
 
 instance Prelude.NFData DeleteSubscriptionFilter where

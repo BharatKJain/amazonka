@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexModels.Types.FollowUpPrompt
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexModels.Types.FollowUpPrompt where
@@ -88,7 +88,8 @@ instance Data.FromJSON FollowUpPrompt where
 
 instance Prelude.Hashable FollowUpPrompt where
   hashWithSalt _salt FollowUpPrompt' {..} =
-    _salt `Prelude.hashWithSalt` prompt
+    _salt
+      `Prelude.hashWithSalt` prompt
       `Prelude.hashWithSalt` rejectionStatement
 
 instance Prelude.NFData FollowUpPrompt where

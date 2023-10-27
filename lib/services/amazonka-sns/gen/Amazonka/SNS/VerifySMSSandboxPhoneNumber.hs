@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SNS.VerifySMSSandboxPhoneNumber
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest VerifySMSSandboxPhoneNumber where
 
 instance Prelude.Hashable VerifySMSSandboxPhoneNumber where
   hashWithSalt _salt VerifySMSSandboxPhoneNumber' {..} =
-    _salt `Prelude.hashWithSalt` phoneNumber
+    _salt
+      `Prelude.hashWithSalt` phoneNumber
       `Prelude.hashWithSalt` oneTimePassword
 
 instance Prelude.NFData VerifySMSSandboxPhoneNumber where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.HealthCheck
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.HealthCheck where
@@ -264,7 +264,8 @@ instance Data.FromJSON HealthCheck where
 
 instance Prelude.Hashable HealthCheck where
   hashWithSalt _salt HealthCheck' {..} =
-    _salt `Prelude.hashWithSalt` interval
+    _salt
+      `Prelude.hashWithSalt` interval
       `Prelude.hashWithSalt` retries
       `Prelude.hashWithSalt` startPeriod
       `Prelude.hashWithSalt` timeout

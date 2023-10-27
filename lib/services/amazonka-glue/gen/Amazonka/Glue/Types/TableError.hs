@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.TableError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.TableError where
@@ -78,7 +78,8 @@ instance Data.FromJSON TableError where
 
 instance Prelude.Hashable TableError where
   hashWithSalt _salt TableError' {..} =
-    _salt `Prelude.hashWithSalt` errorDetail
+    _salt
+      `Prelude.hashWithSalt` errorDetail
       `Prelude.hashWithSalt` tableName
 
 instance Prelude.NFData TableError where

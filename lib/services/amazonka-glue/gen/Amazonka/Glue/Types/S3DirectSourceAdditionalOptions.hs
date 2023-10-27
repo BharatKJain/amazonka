@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.S3DirectSourceAdditionalOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.S3DirectSourceAdditionalOptions where
@@ -109,7 +109,8 @@ instance
   hashWithSalt
     _salt
     S3DirectSourceAdditionalOptions' {..} =
-      _salt `Prelude.hashWithSalt` boundedFiles
+      _salt
+        `Prelude.hashWithSalt` boundedFiles
         `Prelude.hashWithSalt` boundedSize
         `Prelude.hashWithSalt` enableSamplePath
         `Prelude.hashWithSalt` samplePath

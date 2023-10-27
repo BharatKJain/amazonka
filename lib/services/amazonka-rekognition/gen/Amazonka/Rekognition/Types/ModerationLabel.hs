@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.ModerationLabel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.ModerationLabel where
@@ -106,7 +106,8 @@ instance Data.FromJSON ModerationLabel where
 
 instance Prelude.Hashable ModerationLabel where
   hashWithSalt _salt ModerationLabel' {..} =
-    _salt `Prelude.hashWithSalt` confidence
+    _salt
+      `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` parentName
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.S3.PutBucketInventoryConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -200,7 +200,8 @@ instance
   hashWithSalt
     _salt
     PutBucketInventoryConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` expectedBucketOwner
+      _salt
+        `Prelude.hashWithSalt` expectedBucketOwner
         `Prelude.hashWithSalt` bucket
         `Prelude.hashWithSalt` id
         `Prelude.hashWithSalt` inventoryConfiguration

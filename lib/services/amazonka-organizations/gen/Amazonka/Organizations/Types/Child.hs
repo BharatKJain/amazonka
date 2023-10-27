@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Organizations.Types.Child
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Organizations.Types.Child where
@@ -99,12 +99,14 @@ instance Data.FromJSON Child where
       "Child"
       ( \x ->
           Child'
-            Prelude.<$> (x Data..:? "Id") Prelude.<*> (x Data..:? "Type")
+            Prelude.<$> (x Data..:? "Id")
+            Prelude.<*> (x Data..:? "Type")
       )
 
 instance Prelude.Hashable Child where
   hashWithSalt _salt Child' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData Child where

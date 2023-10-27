@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.APNSMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.APNSMessage where
@@ -588,7 +588,8 @@ aPNSMessage_url = Lens.lens (\APNSMessage' {url} -> url) (\s@APNSMessage' {} a -
 
 instance Prelude.Hashable APNSMessage where
   hashWithSalt _salt APNSMessage' {..} =
-    _salt `Prelude.hashWithSalt` aPNSPushType
+    _salt
+      `Prelude.hashWithSalt` aPNSPushType
       `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` badge
       `Prelude.hashWithSalt` body

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EKS.DescribeUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,7 +138,8 @@ instance Core.AWSRequest DescribeUpdate where
 
 instance Prelude.Hashable DescribeUpdate where
   hashWithSalt _salt DescribeUpdate' {..} =
-    _salt `Prelude.hashWithSalt` addonName
+    _salt
+      `Prelude.hashWithSalt` addonName
       `Prelude.hashWithSalt` nodegroupName
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` updateId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rum.Types.TimeRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rum.Types.TimeRange where
@@ -73,7 +73,8 @@ timeRange_after = Lens.lens (\TimeRange' {after} -> after) (\s@TimeRange' {} a -
 
 instance Prelude.Hashable TimeRange where
   hashWithSalt _salt TimeRange' {..} =
-    _salt `Prelude.hashWithSalt` before
+    _salt
+      `Prelude.hashWithSalt` before
       `Prelude.hashWithSalt` after
 
 instance Prelude.NFData TimeRange where

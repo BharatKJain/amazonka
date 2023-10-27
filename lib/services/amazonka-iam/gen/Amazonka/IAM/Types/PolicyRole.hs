@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.PolicyRole
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.PolicyRole where
@@ -86,7 +86,8 @@ instance Data.FromXML PolicyRole where
 
 instance Prelude.Hashable PolicyRole where
   hashWithSalt _salt PolicyRole' {..} =
-    _salt `Prelude.hashWithSalt` roleId
+    _salt
+      `Prelude.hashWithSalt` roleId
       `Prelude.hashWithSalt` roleName
 
 instance Prelude.NFData PolicyRole where

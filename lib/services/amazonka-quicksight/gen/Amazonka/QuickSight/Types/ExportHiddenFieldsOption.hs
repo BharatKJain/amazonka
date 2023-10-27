@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ExportHiddenFieldsOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ExportHiddenFieldsOption where
@@ -50,7 +50,6 @@ newExportHiddenFieldsOption =
         Prelude.Nothing
     }
 
--- |
 exportHiddenFieldsOption_availabilityStatus :: Lens.Lens' ExportHiddenFieldsOption (Prelude.Maybe DashboardBehavior)
 exportHiddenFieldsOption_availabilityStatus = Lens.lens (\ExportHiddenFieldsOption' {availabilityStatus} -> availabilityStatus) (\s@ExportHiddenFieldsOption' {} a -> s {availabilityStatus = a} :: ExportHiddenFieldsOption)
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.SalesforceMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.SalesforceMetadata where
@@ -73,7 +73,8 @@ instance Data.FromJSON SalesforceMetadata where
       "SalesforceMetadata"
       ( \x ->
           SalesforceMetadata'
-            Prelude.<$> ( x Data..:? "dataTransferApis"
+            Prelude.<$> ( x
+                            Data..:? "dataTransferApis"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "oAuthScopes" Data..!= Prelude.mempty)
@@ -81,7 +82,8 @@ instance Data.FromJSON SalesforceMetadata where
 
 instance Prelude.Hashable SalesforceMetadata where
   hashWithSalt _salt SalesforceMetadata' {..} =
-    _salt `Prelude.hashWithSalt` dataTransferApis
+    _salt
+      `Prelude.hashWithSalt` dataTransferApis
       `Prelude.hashWithSalt` oAuthScopes
 
 instance Prelude.NFData SalesforceMetadata where

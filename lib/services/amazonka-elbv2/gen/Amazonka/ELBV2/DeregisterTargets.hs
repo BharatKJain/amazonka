@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ELBV2.DeregisterTargets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest DeregisterTargets where
 
 instance Prelude.Hashable DeregisterTargets where
   hashWithSalt _salt DeregisterTargets' {..} =
-    _salt `Prelude.hashWithSalt` targetGroupArn
+    _salt
+      `Prelude.hashWithSalt` targetGroupArn
       `Prelude.hashWithSalt` targets
 
 instance Prelude.NFData DeregisterTargets where

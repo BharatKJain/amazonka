@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppIntegrationS.Types.DataIntegrationAssociationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppIntegrationS.Types.DataIntegrationAssociationSummary where
@@ -97,7 +97,8 @@ instance
   hashWithSalt
     _salt
     DataIntegrationAssociationSummary' {..} =
-      _salt `Prelude.hashWithSalt` clientId
+      _salt
+        `Prelude.hashWithSalt` clientId
         `Prelude.hashWithSalt` dataIntegrationArn
         `Prelude.hashWithSalt` dataIntegrationAssociationArn
 

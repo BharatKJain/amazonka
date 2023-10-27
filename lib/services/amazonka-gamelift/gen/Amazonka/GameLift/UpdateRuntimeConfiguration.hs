@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.UpdateRuntimeConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -139,7 +139,8 @@ instance Core.AWSRequest UpdateRuntimeConfiguration where
 
 instance Prelude.Hashable UpdateRuntimeConfiguration where
   hashWithSalt _salt UpdateRuntimeConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` fleetId
+    _salt
+      `Prelude.hashWithSalt` fleetId
       `Prelude.hashWithSalt` runtimeConfiguration
 
 instance Prelude.NFData UpdateRuntimeConfiguration where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Translate.Types.TextTranslationJobProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Translate.Types.TextTranslationJobProperties where
@@ -233,14 +233,16 @@ instance Data.FromJSON TextTranslationJobProperties where
             Prelude.<*> (x Data..:? "JobStatus")
             Prelude.<*> (x Data..:? "Message")
             Prelude.<*> (x Data..:? "OutputDataConfig")
-            Prelude.<*> ( x Data..:? "ParallelDataNames"
+            Prelude.<*> ( x
+                            Data..:? "ParallelDataNames"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Settings")
             Prelude.<*> (x Data..:? "SourceLanguageCode")
             Prelude.<*> (x Data..:? "SubmittedTime")
             Prelude.<*> (x Data..:? "TargetLanguageCodes")
-            Prelude.<*> ( x Data..:? "TerminologyNames"
+            Prelude.<*> ( x
+                            Data..:? "TerminologyNames"
                             Data..!= Prelude.mempty
                         )
       )
@@ -250,7 +252,8 @@ instance
     TextTranslationJobProperties
   where
   hashWithSalt _salt TextTranslationJobProperties' {..} =
-    _salt `Prelude.hashWithSalt` dataAccessRoleArn
+    _salt
+      `Prelude.hashWithSalt` dataAccessRoleArn
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` inputDataConfig
       `Prelude.hashWithSalt` jobDetails

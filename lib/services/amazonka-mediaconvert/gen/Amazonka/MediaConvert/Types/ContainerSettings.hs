@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.ContainerSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.ContainerSettings where
@@ -201,7 +201,8 @@ instance Data.FromJSON ContainerSettings where
 
 instance Prelude.Hashable ContainerSettings where
   hashWithSalt _salt ContainerSettings' {..} =
-    _salt `Prelude.hashWithSalt` cmfcSettings
+    _salt
+      `Prelude.hashWithSalt` cmfcSettings
       `Prelude.hashWithSalt` container
       `Prelude.hashWithSalt` f4vSettings
       `Prelude.hashWithSalt` m2tsSettings

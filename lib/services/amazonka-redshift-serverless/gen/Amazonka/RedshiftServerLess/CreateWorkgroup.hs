@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RedshiftServerLess.CreateWorkgroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -205,7 +205,8 @@ instance Core.AWSRequest CreateWorkgroup where
 
 instance Prelude.Hashable CreateWorkgroup where
   hashWithSalt _salt CreateWorkgroup' {..} =
-    _salt `Prelude.hashWithSalt` baseCapacity
+    _salt
+      `Prelude.hashWithSalt` baseCapacity
       `Prelude.hashWithSalt` configParameters
       `Prelude.hashWithSalt` enhancedVpcRouting
       `Prelude.hashWithSalt` port

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ApplicationCostProfiler.PutReportDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -151,7 +151,8 @@ instance Core.AWSRequest PutReportDefinition where
 
 instance Prelude.Hashable PutReportDefinition where
   hashWithSalt _salt PutReportDefinition' {..} =
-    _salt `Prelude.hashWithSalt` reportId
+    _salt
+      `Prelude.hashWithSalt` reportId
       `Prelude.hashWithSalt` reportDescription
       `Prelude.hashWithSalt` reportFrequency
       `Prelude.hashWithSalt` format

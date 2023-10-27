@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GuardDuty.UpdateMemberDetectors
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,14 +110,16 @@ instance Core.AWSRequest UpdateMemberDetectors where
       ( \s h x ->
           UpdateMemberDetectorsResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "unprocessedAccounts"
+            Prelude.<*> ( x
+                            Data..?> "unprocessedAccounts"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable UpdateMemberDetectors where
   hashWithSalt _salt UpdateMemberDetectors' {..} =
-    _salt `Prelude.hashWithSalt` dataSources
+    _salt
+      `Prelude.hashWithSalt` dataSources
       `Prelude.hashWithSalt` detectorId
       `Prelude.hashWithSalt` accountIds
 

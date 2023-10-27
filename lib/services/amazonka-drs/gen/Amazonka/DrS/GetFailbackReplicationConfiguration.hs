@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DrS.GetFailbackReplicationConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -99,10 +99,10 @@ instance
       ( \s h x ->
           GetFailbackReplicationConfigurationResponse'
             Prelude.<$> (x Data..?> "bandwidthThrottling")
-              Prelude.<*> (x Data..?> "name")
-              Prelude.<*> (x Data..?> "usePrivateIP")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> (x Data..:> "recoveryInstanceID")
+            Prelude.<*> (x Data..?> "name")
+            Prelude.<*> (x Data..?> "usePrivateIP")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..:> "recoveryInstanceID")
       )
 
 instance

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.DatasetLabelStats
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.DatasetLabelStats where
@@ -79,7 +79,8 @@ instance Data.FromJSON DatasetLabelStats where
 
 instance Prelude.Hashable DatasetLabelStats where
   hashWithSalt _salt DatasetLabelStats' {..} =
-    _salt `Prelude.hashWithSalt` boundingBoxCount
+    _salt
+      `Prelude.hashWithSalt` boundingBoxCount
       `Prelude.hashWithSalt` entryCount
 
 instance Prelude.NFData DatasetLabelStats where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SMS.UpdateReplicationJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -216,7 +216,8 @@ instance Core.AWSRequest UpdateReplicationJob where
 
 instance Prelude.Hashable UpdateReplicationJob where
   hashWithSalt _salt UpdateReplicationJob' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` encrypted
       `Prelude.hashWithSalt` frequency
       `Prelude.hashWithSalt` kmsKeyId

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.CreateEdgePackagingJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -186,7 +186,8 @@ instance Core.AWSRequest CreateEdgePackagingJob where
 
 instance Prelude.Hashable CreateEdgePackagingJob where
   hashWithSalt _salt CreateEdgePackagingJob' {..} =
-    _salt `Prelude.hashWithSalt` resourceKey
+    _salt
+      `Prelude.hashWithSalt` resourceKey
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` edgePackagingJobName
       `Prelude.hashWithSalt` compilationJobName

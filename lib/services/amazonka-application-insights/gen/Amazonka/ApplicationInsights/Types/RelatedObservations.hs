@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApplicationInsights.Types.RelatedObservations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApplicationInsights.Types.RelatedObservations where
@@ -61,7 +61,8 @@ instance Data.FromJSON RelatedObservations where
       "RelatedObservations"
       ( \x ->
           RelatedObservations'
-            Prelude.<$> ( x Data..:? "ObservationList"
+            Prelude.<$> ( x
+                            Data..:? "ObservationList"
                             Data..!= Prelude.mempty
                         )
       )

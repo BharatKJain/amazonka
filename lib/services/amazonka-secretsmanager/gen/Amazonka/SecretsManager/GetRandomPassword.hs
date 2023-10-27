@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecretsManager.GetRandomPassword
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -204,7 +204,8 @@ instance Core.AWSRequest GetRandomPassword where
 
 instance Prelude.Hashable GetRandomPassword where
   hashWithSalt _salt GetRandomPassword' {..} =
-    _salt `Prelude.hashWithSalt` excludeCharacters
+    _salt
+      `Prelude.hashWithSalt` excludeCharacters
       `Prelude.hashWithSalt` excludeLowercase
       `Prelude.hashWithSalt` excludeNumbers
       `Prelude.hashWithSalt` excludePunctuation

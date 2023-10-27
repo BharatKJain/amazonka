@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.IoTJobAbortCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.IoTJobAbortCriteria where
@@ -132,7 +132,8 @@ instance Data.FromJSON IoTJobAbortCriteria where
 
 instance Prelude.Hashable IoTJobAbortCriteria where
   hashWithSalt _salt IoTJobAbortCriteria' {..} =
-    _salt `Prelude.hashWithSalt` failureType
+    _salt
+      `Prelude.hashWithSalt` failureType
       `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` thresholdPercentage
       `Prelude.hashWithSalt` minNumberOfExecutedThings

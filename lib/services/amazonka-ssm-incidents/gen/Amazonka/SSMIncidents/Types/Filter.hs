@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.Filter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.Filter where
@@ -69,7 +69,8 @@ filter_key = Lens.lens (\Filter' {key} -> key) (\s@Filter' {} a -> s {key = a} :
 
 instance Prelude.Hashable Filter where
   hashWithSalt _salt Filter' {..} =
-    _salt `Prelude.hashWithSalt` condition
+    _salt
+      `Prelude.hashWithSalt` condition
       `Prelude.hashWithSalt` key
 
 instance Prelude.NFData Filter where

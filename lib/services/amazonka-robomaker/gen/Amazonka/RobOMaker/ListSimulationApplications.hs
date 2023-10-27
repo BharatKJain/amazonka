@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RobOMaker.ListSimulationApplications
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -156,22 +156,22 @@ instance Core.AWSPager ListSimulationApplications where
     | Core.stop
         ( rs
             Lens.^? listSimulationApplicationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listSimulationApplicationsResponse_simulationApplicationSummaries
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSimulationApplications_nextToken
           Lens..~ rs
           Lens.^? listSimulationApplicationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListSimulationApplications where
   type
@@ -184,7 +184,8 @@ instance Core.AWSRequest ListSimulationApplications where
       ( \s h x ->
           ListSimulationApplicationsResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "simulationApplicationSummaries"
+            Prelude.<*> ( x
+                            Data..?> "simulationApplicationSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -192,7 +193,8 @@ instance Core.AWSRequest ListSimulationApplications where
 
 instance Prelude.Hashable ListSimulationApplications where
   hashWithSalt _salt ListSimulationApplications' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` versionQualifier

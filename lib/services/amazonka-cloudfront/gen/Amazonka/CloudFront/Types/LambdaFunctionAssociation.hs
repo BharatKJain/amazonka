@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.LambdaFunctionAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.LambdaFunctionAssociation where
@@ -163,7 +163,8 @@ instance Data.FromXML LambdaFunctionAssociation where
 
 instance Prelude.Hashable LambdaFunctionAssociation where
   hashWithSalt _salt LambdaFunctionAssociation' {..} =
-    _salt `Prelude.hashWithSalt` includeBody
+    _salt
+      `Prelude.hashWithSalt` includeBody
       `Prelude.hashWithSalt` lambdaFunctionARN
       `Prelude.hashWithSalt` eventType
 

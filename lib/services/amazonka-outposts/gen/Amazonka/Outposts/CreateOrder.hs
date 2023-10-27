@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Outposts.CreateOrder
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,7 +127,8 @@ instance Core.AWSRequest CreateOrder where
 
 instance Prelude.Hashable CreateOrder where
   hashWithSalt _salt CreateOrder' {..} =
-    _salt `Prelude.hashWithSalt` paymentTerm
+    _salt
+      `Prelude.hashWithSalt` paymentTerm
       `Prelude.hashWithSalt` outpostIdentifier
       `Prelude.hashWithSalt` lineItems
       `Prelude.hashWithSalt` paymentOption

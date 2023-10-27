@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.FunctionRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.FunctionRequest where
@@ -75,7 +75,8 @@ functionRequest_scope = Lens.lens (\FunctionRequest' {scope} -> scope) (\s@Funct
 
 instance Prelude.Hashable FunctionRequest where
   hashWithSalt _salt FunctionRequest' {..} =
-    _salt `Prelude.hashWithSalt` implementedBy
+    _salt
+      `Prelude.hashWithSalt` implementedBy
       `Prelude.hashWithSalt` requiredProperties
       `Prelude.hashWithSalt` scope
 

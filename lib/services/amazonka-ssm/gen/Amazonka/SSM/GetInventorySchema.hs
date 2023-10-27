@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.GetInventorySchema
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,22 +141,22 @@ instance Core.AWSPager GetInventorySchema where
     | Core.stop
         ( rs
             Lens.^? getInventorySchemaResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getInventorySchemaResponse_schemas
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getInventorySchema_nextToken
           Lens..~ rs
           Lens.^? getInventorySchemaResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetInventorySchema where
   type
@@ -175,7 +175,8 @@ instance Core.AWSRequest GetInventorySchema where
 
 instance Prelude.Hashable GetInventorySchema where
   hashWithSalt _salt GetInventorySchema' {..} =
-    _salt `Prelude.hashWithSalt` aggregator
+    _salt
+      `Prelude.hashWithSalt` aggregator
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` subType

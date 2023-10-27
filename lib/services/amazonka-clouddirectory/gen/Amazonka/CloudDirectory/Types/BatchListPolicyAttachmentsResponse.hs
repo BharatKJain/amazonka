@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchListPolicyAttachmentsResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchListPolicyAttachmentsResponse where
@@ -73,7 +73,8 @@ instance
       ( \x ->
           BatchListPolicyAttachmentsResponse'
             Prelude.<$> (x Data..:? "NextToken")
-            Prelude.<*> ( x Data..:? "ObjectIdentifiers"
+            Prelude.<*> ( x
+                            Data..:? "ObjectIdentifiers"
                             Data..!= Prelude.mempty
                         )
       )
@@ -85,7 +86,8 @@ instance
   hashWithSalt
     _salt
     BatchListPolicyAttachmentsResponse' {..} =
-      _salt `Prelude.hashWithSalt` nextToken
+      _salt
+        `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` objectIdentifiers
 
 instance

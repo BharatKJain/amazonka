@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.JourneyChannelSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.JourneyChannelSettings where
@@ -78,7 +78,8 @@ instance Data.FromJSON JourneyChannelSettings where
 
 instance Prelude.Hashable JourneyChannelSettings where
   hashWithSalt _salt JourneyChannelSettings' {..} =
-    _salt `Prelude.hashWithSalt` connectCampaignArn
+    _salt
+      `Prelude.hashWithSalt` connectCampaignArn
       `Prelude.hashWithSalt` connectCampaignExecutionRoleArn
 
 instance Prelude.NFData JourneyChannelSettings where

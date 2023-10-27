@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Shield.Types.ProtectionGroupLimits
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Shield.Types.ProtectionGroupLimits where
@@ -85,7 +85,8 @@ instance Data.FromJSON ProtectionGroupLimits where
 
 instance Prelude.Hashable ProtectionGroupLimits where
   hashWithSalt _salt ProtectionGroupLimits' {..} =
-    _salt `Prelude.hashWithSalt` maxProtectionGroups
+    _salt
+      `Prelude.hashWithSalt` maxProtectionGroups
       `Prelude.hashWithSalt` patternTypeLimits
 
 instance Prelude.NFData ProtectionGroupLimits where

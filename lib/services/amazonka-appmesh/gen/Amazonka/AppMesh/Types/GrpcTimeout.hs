@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.GrpcTimeout
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.GrpcTimeout where
@@ -93,7 +93,8 @@ instance Data.FromJSON GrpcTimeout where
 
 instance Prelude.Hashable GrpcTimeout where
   hashWithSalt _salt GrpcTimeout' {..} =
-    _salt `Prelude.hashWithSalt` idle
+    _salt
+      `Prelude.hashWithSalt` idle
       `Prelude.hashWithSalt` perRequest
 
 instance Prelude.NFData GrpcTimeout where

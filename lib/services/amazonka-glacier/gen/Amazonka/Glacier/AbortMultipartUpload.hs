@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glacier.AbortMultipartUpload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -152,7 +152,8 @@ instance Core.AWSRequest AbortMultipartUpload where
 
 instance Prelude.Hashable AbortMultipartUpload where
   hashWithSalt _salt AbortMultipartUpload' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` vaultName
       `Prelude.hashWithSalt` uploadId
 

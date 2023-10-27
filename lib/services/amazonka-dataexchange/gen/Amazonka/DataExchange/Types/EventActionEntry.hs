@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.EventActionEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.EventActionEntry where
@@ -139,7 +139,8 @@ instance Data.FromJSON EventActionEntry where
 
 instance Prelude.Hashable EventActionEntry where
   hashWithSalt _salt EventActionEntry' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` event

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.FilterActivity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.FilterActivity where
@@ -94,7 +94,8 @@ instance Data.FromJSON FilterActivity where
 
 instance Prelude.Hashable FilterActivity where
   hashWithSalt _salt FilterActivity' {..} =
-    _salt `Prelude.hashWithSalt` next
+    _salt
+      `Prelude.hashWithSalt` next
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` filter'
 

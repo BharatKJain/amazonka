@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.MLUserDataEncryption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.MLUserDataEncryption where
@@ -94,7 +94,8 @@ instance Data.FromJSON MLUserDataEncryption where
 
 instance Prelude.Hashable MLUserDataEncryption where
   hashWithSalt _salt MLUserDataEncryption' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyId
+    _salt
+      `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` mlUserDataEncryptionMode
 
 instance Prelude.NFData MLUserDataEncryption where

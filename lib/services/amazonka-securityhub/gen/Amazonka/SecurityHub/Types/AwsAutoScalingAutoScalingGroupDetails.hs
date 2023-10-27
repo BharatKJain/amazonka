@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsAutoScalingAutoScalingGroupDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsAutoScalingAutoScalingGroupDetails where
@@ -165,7 +165,8 @@ instance
       "AwsAutoScalingAutoScalingGroupDetails"
       ( \x ->
           AwsAutoScalingAutoScalingGroupDetails'
-            Prelude.<$> ( x Data..:? "AvailabilityZones"
+            Prelude.<$> ( x
+                            Data..:? "AvailabilityZones"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CapacityRebalance")
@@ -174,7 +175,8 @@ instance
             Prelude.<*> (x Data..:? "HealthCheckType")
             Prelude.<*> (x Data..:? "LaunchConfigurationName")
             Prelude.<*> (x Data..:? "LaunchTemplate")
-            Prelude.<*> ( x Data..:? "LoadBalancerNames"
+            Prelude.<*> ( x
+                            Data..:? "LoadBalancerNames"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "MixedInstancesPolicy")
@@ -187,7 +189,8 @@ instance
   hashWithSalt
     _salt
     AwsAutoScalingAutoScalingGroupDetails' {..} =
-      _salt `Prelude.hashWithSalt` availabilityZones
+      _salt
+        `Prelude.hashWithSalt` availabilityZones
         `Prelude.hashWithSalt` capacityRebalance
         `Prelude.hashWithSalt` createdTime
         `Prelude.hashWithSalt` healthCheckGracePeriod

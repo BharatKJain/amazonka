@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.UpdateDataQualityRuleset
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,7 +130,8 @@ instance Core.AWSRequest UpdateDataQualityRuleset where
 
 instance Prelude.Hashable UpdateDataQualityRuleset where
   hashWithSalt _salt UpdateDataQualityRuleset' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` ruleset
       `Prelude.hashWithSalt` updatedName
       `Prelude.hashWithSalt` name

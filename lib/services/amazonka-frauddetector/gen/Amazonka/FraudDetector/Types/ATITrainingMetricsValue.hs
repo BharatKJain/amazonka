@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.ATITrainingMetricsValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.ATITrainingMetricsValue where
@@ -71,7 +71,8 @@ instance Data.FromJSON ATITrainingMetricsValue where
       "ATITrainingMetricsValue"
       ( \x ->
           ATITrainingMetricsValue'
-            Prelude.<$> ( x Data..:? "metricDataPoints"
+            Prelude.<$> ( x
+                            Data..:? "metricDataPoints"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "modelPerformance")
@@ -79,7 +80,8 @@ instance Data.FromJSON ATITrainingMetricsValue where
 
 instance Prelude.Hashable ATITrainingMetricsValue where
   hashWithSalt _salt ATITrainingMetricsValue' {..} =
-    _salt `Prelude.hashWithSalt` metricDataPoints
+    _salt
+      `Prelude.hashWithSalt` metricDataPoints
       `Prelude.hashWithSalt` modelPerformance
 
 instance Prelude.NFData ATITrainingMetricsValue where

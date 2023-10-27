@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecretsManager.Types.RotationRulesType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecretsManager.Types.RotationRulesType where
@@ -205,7 +205,8 @@ instance Data.FromJSON RotationRulesType where
 
 instance Prelude.Hashable RotationRulesType where
   hashWithSalt _salt RotationRulesType' {..} =
-    _salt `Prelude.hashWithSalt` automaticallyAfterDays
+    _salt
+      `Prelude.hashWithSalt` automaticallyAfterDays
       `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` scheduleExpression
 

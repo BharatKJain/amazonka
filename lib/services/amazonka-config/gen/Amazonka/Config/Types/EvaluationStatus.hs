@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.EvaluationStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.EvaluationStatus where
@@ -80,7 +80,8 @@ instance Data.FromJSON EvaluationStatus where
 
 instance Prelude.Hashable EvaluationStatus where
   hashWithSalt _salt EvaluationStatus' {..} =
-    _salt `Prelude.hashWithSalt` failureReason
+    _salt
+      `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData EvaluationStatus where

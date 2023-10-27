@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KafkaConnect.ListCustomPlugins
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,22 +98,22 @@ instance Core.AWSPager ListCustomPlugins where
     | Core.stop
         ( rs
             Lens.^? listCustomPluginsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listCustomPluginsResponse_customPlugins
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listCustomPlugins_nextToken
           Lens..~ rs
           Lens.^? listCustomPluginsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListCustomPlugins where
   type
@@ -132,7 +132,8 @@ instance Core.AWSRequest ListCustomPlugins where
 
 instance Prelude.Hashable ListCustomPlugins where
   hashWithSalt _salt ListCustomPlugins' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListCustomPlugins where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.NielsenWatermarksSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.NielsenWatermarksSettings where
@@ -97,7 +97,8 @@ instance Data.FromJSON NielsenWatermarksSettings where
 
 instance Prelude.Hashable NielsenWatermarksSettings where
   hashWithSalt _salt NielsenWatermarksSettings' {..} =
-    _salt `Prelude.hashWithSalt` nielsenCbetSettings
+    _salt
+      `Prelude.hashWithSalt` nielsenCbetSettings
       `Prelude.hashWithSalt` nielsenDistributionType
       `Prelude.hashWithSalt` nielsenNaesIiNwSettings
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.RecoveryPointSelection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.RecoveryPointSelection where
@@ -86,7 +86,8 @@ instance Data.FromJSON RecoveryPointSelection where
       ( \x ->
           RecoveryPointSelection'
             Prelude.<$> (x Data..:? "DateRange")
-            Prelude.<*> ( x Data..:? "ResourceIdentifiers"
+            Prelude.<*> ( x
+                            Data..:? "ResourceIdentifiers"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "VaultNames" Data..!= Prelude.mempty)
@@ -94,7 +95,8 @@ instance Data.FromJSON RecoveryPointSelection where
 
 instance Prelude.Hashable RecoveryPointSelection where
   hashWithSalt _salt RecoveryPointSelection' {..} =
-    _salt `Prelude.hashWithSalt` dateRange
+    _salt
+      `Prelude.hashWithSalt` dateRange
       `Prelude.hashWithSalt` resourceIdentifiers
       `Prelude.hashWithSalt` vaultNames
 

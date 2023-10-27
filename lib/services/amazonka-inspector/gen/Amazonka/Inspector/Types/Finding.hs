@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.Finding
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.Finding where
@@ -252,7 +252,8 @@ instance Data.FromJSON Finding where
 
 instance Prelude.Hashable Finding where
   hashWithSalt _salt Finding' {..} =
-    _salt `Prelude.hashWithSalt` assetAttributes
+    _salt
+      `Prelude.hashWithSalt` assetAttributes
       `Prelude.hashWithSalt` assetType
       `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` description

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFV2.GetRegexPatternSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -160,7 +160,8 @@ instance Core.AWSRequest GetRegexPatternSet where
 
 instance Prelude.Hashable GetRegexPatternSet where
   hashWithSalt _salt GetRegexPatternSet' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` scope
       `Prelude.hashWithSalt` id
 
@@ -261,7 +262,6 @@ newGetRegexPatternSetResponse pHttpStatus_ =
 getRegexPatternSetResponse_lockToken :: Lens.Lens' GetRegexPatternSetResponse (Prelude.Maybe Prelude.Text)
 getRegexPatternSetResponse_lockToken = Lens.lens (\GetRegexPatternSetResponse' {lockToken} -> lockToken) (\s@GetRegexPatternSetResponse' {} a -> s {lockToken = a} :: GetRegexPatternSetResponse)
 
--- |
 getRegexPatternSetResponse_regexPatternSet :: Lens.Lens' GetRegexPatternSetResponse (Prelude.Maybe RegexPatternSet)
 getRegexPatternSetResponse_regexPatternSet = Lens.lens (\GetRegexPatternSetResponse' {regexPatternSet} -> regexPatternSet) (\s@GetRegexPatternSetResponse' {} a -> s {regexPatternSet = a} :: GetRegexPatternSetResponse)
 

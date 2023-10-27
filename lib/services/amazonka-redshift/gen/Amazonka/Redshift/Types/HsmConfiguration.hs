@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.HsmConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.HsmConfiguration where
@@ -106,13 +106,16 @@ instance Data.FromXML HsmConfiguration where
       Prelude.<*> (x Data..@? "HsmConfigurationIdentifier")
       Prelude.<*> (x Data..@? "HsmIpAddress")
       Prelude.<*> (x Data..@? "HsmPartitionName")
-      Prelude.<*> ( x Data..@? "Tags" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Tags"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Tag")
                   )
 
 instance Prelude.Hashable HsmConfiguration where
   hashWithSalt _salt HsmConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` hsmConfigurationIdentifier
       `Prelude.hashWithSalt` hsmIpAddress
       `Prelude.hashWithSalt` hsmPartitionName

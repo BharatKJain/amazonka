@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.AccessScopeAnalysisFinding
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.AccessScopeAnalysisFinding where
@@ -87,7 +87,8 @@ accessScopeAnalysisFinding_networkInsightsAccessScopeId = Lens.lens (\AccessScop
 instance Data.FromXML AccessScopeAnalysisFinding where
   parseXML x =
     AccessScopeAnalysisFinding'
-      Prelude.<$> ( x Data..@? "findingComponentSet"
+      Prelude.<$> ( x
+                      Data..@? "findingComponentSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
@@ -97,7 +98,8 @@ instance Data.FromXML AccessScopeAnalysisFinding where
 
 instance Prelude.Hashable AccessScopeAnalysisFinding where
   hashWithSalt _salt AccessScopeAnalysisFinding' {..} =
-    _salt `Prelude.hashWithSalt` findingComponents
+    _salt
+      `Prelude.hashWithSalt` findingComponents
       `Prelude.hashWithSalt` findingId
       `Prelude.hashWithSalt` networkInsightsAccessScopeAnalysisId
       `Prelude.hashWithSalt` networkInsightsAccessScopeId

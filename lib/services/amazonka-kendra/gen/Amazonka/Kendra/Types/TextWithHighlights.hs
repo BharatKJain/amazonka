@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.TextWithHighlights
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.TextWithHighlights where
@@ -75,7 +75,8 @@ instance Data.FromJSON TextWithHighlights where
 
 instance Prelude.Hashable TextWithHighlights where
   hashWithSalt _salt TextWithHighlights' {..} =
-    _salt `Prelude.hashWithSalt` highlights
+    _salt
+      `Prelude.hashWithSalt` highlights
       `Prelude.hashWithSalt` text
 
 instance Prelude.NFData TextWithHighlights where

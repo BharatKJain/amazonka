@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ArtifactRevision
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ArtifactRevision where
@@ -141,7 +141,8 @@ instance Data.FromJSON ArtifactRevision where
 
 instance Prelude.Hashable ArtifactRevision where
   hashWithSalt _salt ArtifactRevision' {..} =
-    _salt `Prelude.hashWithSalt` created
+    _salt
+      `Prelude.hashWithSalt` created
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` revisionChangeIdentifier
       `Prelude.hashWithSalt` revisionId

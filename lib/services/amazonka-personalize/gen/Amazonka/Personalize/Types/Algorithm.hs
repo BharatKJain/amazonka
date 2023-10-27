@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.Algorithm
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.Algorithm where
@@ -155,10 +155,12 @@ instance Data.FromJSON Algorithm where
             Prelude.<*> (x Data..:? "algorithmImage")
             Prelude.<*> (x Data..:? "creationDateTime")
             Prelude.<*> (x Data..:? "defaultHyperParameterRanges")
-            Prelude.<*> ( x Data..:? "defaultHyperParameters"
+            Prelude.<*> ( x
+                            Data..:? "defaultHyperParameters"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "defaultResourceConfig"
+            Prelude.<*> ( x
+                            Data..:? "defaultResourceConfig"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "lastUpdatedDateTime")
@@ -169,7 +171,8 @@ instance Data.FromJSON Algorithm where
 
 instance Prelude.Hashable Algorithm where
   hashWithSalt _salt Algorithm' {..} =
-    _salt `Prelude.hashWithSalt` algorithmArn
+    _salt
+      `Prelude.hashWithSalt` algorithmArn
       `Prelude.hashWithSalt` algorithmImage
       `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` defaultHyperParameterRanges

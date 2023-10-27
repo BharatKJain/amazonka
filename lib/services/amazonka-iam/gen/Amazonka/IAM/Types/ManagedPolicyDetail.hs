@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.ManagedPolicyDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.ManagedPolicyDetail where
@@ -261,7 +261,8 @@ instance Data.FromXML ManagedPolicyDetail where
       Prelude.<*> (x Data..@? "PermissionsBoundaryUsageCount")
       Prelude.<*> (x Data..@? "PolicyId")
       Prelude.<*> (x Data..@? "PolicyName")
-      Prelude.<*> ( x Data..@? "PolicyVersionList"
+      Prelude.<*> ( x
+                      Data..@? "PolicyVersionList"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
@@ -269,7 +270,8 @@ instance Data.FromXML ManagedPolicyDetail where
 
 instance Prelude.Hashable ManagedPolicyDetail where
   hashWithSalt _salt ManagedPolicyDetail' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` attachmentCount
       `Prelude.hashWithSalt` createDate
       `Prelude.hashWithSalt` defaultVersionId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.ObjectPart
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.ObjectPart where
@@ -174,7 +174,8 @@ instance Data.FromXML ObjectPart where
 
 instance Prelude.Hashable ObjectPart where
   hashWithSalt _salt ObjectPart' {..} =
-    _salt `Prelude.hashWithSalt` checksumCRC32
+    _salt
+      `Prelude.hashWithSalt` checksumCRC32
       `Prelude.hashWithSalt` checksumCRC32C
       `Prelude.hashWithSalt` checksumSHA1
       `Prelude.hashWithSalt` checksumSHA256

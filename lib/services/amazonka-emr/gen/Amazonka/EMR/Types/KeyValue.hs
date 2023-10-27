@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.KeyValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.KeyValue where
@@ -64,7 +64,8 @@ keyValue_value = Lens.lens (\KeyValue' {value} -> value) (\s@KeyValue' {} a -> s
 
 instance Prelude.Hashable KeyValue where
   hashWithSalt _salt KeyValue' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData KeyValue where

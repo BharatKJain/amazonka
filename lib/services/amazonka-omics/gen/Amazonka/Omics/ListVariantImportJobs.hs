@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Omics.ListVariantImportJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,22 +115,22 @@ instance Core.AWSPager ListVariantImportJobs where
     | Core.stop
         ( rs
             Lens.^? listVariantImportJobsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listVariantImportJobsResponse_variantImportJobs
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listVariantImportJobs_nextToken
           Lens..~ rs
           Lens.^? listVariantImportJobsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListVariantImportJobs where
   type
@@ -143,7 +143,8 @@ instance Core.AWSRequest ListVariantImportJobs where
       ( \s h x ->
           ListVariantImportJobsResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "variantImportJobs"
+            Prelude.<*> ( x
+                            Data..?> "variantImportJobs"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -151,7 +152,8 @@ instance Core.AWSRequest ListVariantImportJobs where
 
 instance Prelude.Hashable ListVariantImportJobs where
   hashWithSalt _salt ListVariantImportJobs' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` ids
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.CopyDBSnapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -604,7 +604,8 @@ instance Core.AWSRequest CopyDBSnapshot where
 
 instance Prelude.Hashable CopyDBSnapshot where
   hashWithSalt _salt CopyDBSnapshot' {..} =
-    _salt `Prelude.hashWithSalt` copyOptionGroup
+    _salt
+      `Prelude.hashWithSalt` copyOptionGroup
       `Prelude.hashWithSalt` copyTags
       `Prelude.hashWithSalt` destinationRegion
       `Prelude.hashWithSalt` kmsKeyId

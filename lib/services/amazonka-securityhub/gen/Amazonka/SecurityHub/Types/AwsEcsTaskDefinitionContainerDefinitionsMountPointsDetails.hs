@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsMountPointsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsMountPointsDetails where
@@ -87,8 +87,8 @@ instance
       ( \x ->
           AwsEcsTaskDefinitionContainerDefinitionsMountPointsDetails'
             Prelude.<$> (x Data..:? "ContainerPath")
-              Prelude.<*> (x Data..:? "ReadOnly")
-              Prelude.<*> (x Data..:? "SourceVolume")
+            Prelude.<*> (x Data..:? "ReadOnly")
+            Prelude.<*> (x Data..:? "SourceVolume")
       )
 
 instance
@@ -98,7 +98,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsTaskDefinitionContainerDefinitionsMountPointsDetails' {..} =
-      _salt `Prelude.hashWithSalt` containerPath
+      _salt
+        `Prelude.hashWithSalt` containerPath
         `Prelude.hashWithSalt` readOnly
         `Prelude.hashWithSalt` sourceVolume
 

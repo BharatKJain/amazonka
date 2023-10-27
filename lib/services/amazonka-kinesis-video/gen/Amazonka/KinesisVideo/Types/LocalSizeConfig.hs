@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisVideo.Types.LocalSizeConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisVideo.Types.LocalSizeConfig where
@@ -85,7 +85,8 @@ instance Data.FromJSON LocalSizeConfig where
 
 instance Prelude.Hashable LocalSizeConfig where
   hashWithSalt _salt LocalSizeConfig' {..} =
-    _salt `Prelude.hashWithSalt` maxLocalMediaSizeInMB
+    _salt
+      `Prelude.hashWithSalt` maxLocalMediaSizeInMB
       `Prelude.hashWithSalt` strategyOnFullSize
 
 instance Prelude.NFData LocalSizeConfig where

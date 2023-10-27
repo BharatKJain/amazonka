@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.PublishMetricAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.PublishMetricAction where
@@ -54,7 +54,6 @@ newPublishMetricAction pDimensions_ =
         Lens.coerced Lens.# pDimensions_
     }
 
--- |
 publishMetricAction_dimensions :: Lens.Lens' PublishMetricAction (Prelude.NonEmpty Dimension)
 publishMetricAction_dimensions = Lens.lens (\PublishMetricAction' {dimensions} -> dimensions) (\s@PublishMetricAction' {} a -> s {dimensions = a} :: PublishMetricAction) Prelude.. Lens.coerced
 

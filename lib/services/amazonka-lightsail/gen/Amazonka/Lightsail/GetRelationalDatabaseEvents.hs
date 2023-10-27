@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.GetRelationalDatabaseEvents
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,22 +137,22 @@ instance Core.AWSPager GetRelationalDatabaseEvents where
     | Core.stop
         ( rs
             Lens.^? getRelationalDatabaseEventsResponse_nextPageToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getRelationalDatabaseEventsResponse_relationalDatabaseEvents
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getRelationalDatabaseEvents_pageToken
           Lens..~ rs
           Lens.^? getRelationalDatabaseEventsResponse_nextPageToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetRelationalDatabaseEvents where
   type
@@ -165,7 +165,8 @@ instance Core.AWSRequest GetRelationalDatabaseEvents where
       ( \s h x ->
           GetRelationalDatabaseEventsResponse'
             Prelude.<$> (x Data..?> "nextPageToken")
-            Prelude.<*> ( x Data..?> "relationalDatabaseEvents"
+            Prelude.<*> ( x
+                            Data..?> "relationalDatabaseEvents"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -173,7 +174,8 @@ instance Core.AWSRequest GetRelationalDatabaseEvents where
 
 instance Prelude.Hashable GetRelationalDatabaseEvents where
   hashWithSalt _salt GetRelationalDatabaseEvents' {..} =
-    _salt `Prelude.hashWithSalt` durationInMinutes
+    _salt
+      `Prelude.hashWithSalt` durationInMinutes
       `Prelude.hashWithSalt` pageToken
       `Prelude.hashWithSalt` relationalDatabaseName
 

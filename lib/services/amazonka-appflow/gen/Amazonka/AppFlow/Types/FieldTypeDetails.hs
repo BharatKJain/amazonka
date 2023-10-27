@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.FieldTypeDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.FieldTypeDetails where
@@ -125,19 +125,22 @@ instance Data.FromJSON FieldTypeDetails where
             Prelude.<$> (x Data..:? "fieldLengthRange")
             Prelude.<*> (x Data..:? "fieldValueRange")
             Prelude.<*> (x Data..:? "supportedDateFormat")
-            Prelude.<*> ( x Data..:? "supportedValues"
+            Prelude.<*> ( x
+                            Data..:? "supportedValues"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "valueRegexPattern")
             Prelude.<*> (x Data..: "fieldType")
-            Prelude.<*> ( x Data..:? "filterOperators"
+            Prelude.<*> ( x
+                            Data..:? "filterOperators"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable FieldTypeDetails where
   hashWithSalt _salt FieldTypeDetails' {..} =
-    _salt `Prelude.hashWithSalt` fieldLengthRange
+    _salt
+      `Prelude.hashWithSalt` fieldLengthRange
       `Prelude.hashWithSalt` fieldValueRange
       `Prelude.hashWithSalt` supportedDateFormat
       `Prelude.hashWithSalt` supportedValues

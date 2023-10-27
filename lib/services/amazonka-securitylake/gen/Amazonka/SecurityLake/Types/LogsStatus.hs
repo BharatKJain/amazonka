@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityLake.Types.LogsStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityLake.Types.LogsStatus where
@@ -82,7 +82,8 @@ instance Data.FromJSON LogsStatus where
 
 instance Prelude.Hashable LogsStatus where
   hashWithSalt _salt LogsStatus' {..} =
-    _salt `Prelude.hashWithSalt` healthStatus
+    _salt
+      `Prelude.hashWithSalt` healthStatus
       `Prelude.hashWithSalt` pathToLogs
 
 instance Prelude.NFData LogsStatus where

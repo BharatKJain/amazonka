@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.ReactionForComment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.ReactionForComment where
@@ -97,7 +97,8 @@ instance Data.FromJSON ReactionForComment where
 
 instance Prelude.Hashable ReactionForComment where
   hashWithSalt _salt ReactionForComment' {..} =
-    _salt `Prelude.hashWithSalt` reaction
+    _salt
+      `Prelude.hashWithSalt` reaction
       `Prelude.hashWithSalt` reactionUsers
       `Prelude.hashWithSalt` reactionsFromDeletedUsersCount
 

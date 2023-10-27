@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.UpdateComponentData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.UpdateComponentData where
@@ -180,7 +180,8 @@ updateComponentData_variants = Lens.lens (\UpdateComponentData' {variants} -> va
 
 instance Prelude.Hashable UpdateComponentData where
   hashWithSalt _salt UpdateComponentData' {..} =
-    _salt `Prelude.hashWithSalt` bindingProperties
+    _salt
+      `Prelude.hashWithSalt` bindingProperties
       `Prelude.hashWithSalt` children
       `Prelude.hashWithSalt` collectionProperties
       `Prelude.hashWithSalt` componentType

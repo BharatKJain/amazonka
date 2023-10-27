@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.Taint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.Taint where
@@ -87,7 +87,8 @@ instance Data.FromJSON Taint where
 
 instance Prelude.Hashable Taint where
   hashWithSalt _salt Taint' {..} =
-    _salt `Prelude.hashWithSalt` effect
+    _salt
+      `Prelude.hashWithSalt` effect
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 

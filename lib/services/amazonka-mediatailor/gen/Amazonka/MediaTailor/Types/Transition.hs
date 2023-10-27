@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.Transition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.Transition where
@@ -153,7 +153,8 @@ transition_type = Lens.lens (\Transition' {type'} -> type') (\s@Transition' {} a
 
 instance Prelude.Hashable Transition where
   hashWithSalt _salt Transition' {..} =
-    _salt `Prelude.hashWithSalt` durationMillis
+    _salt
+      `Prelude.hashWithSalt` durationMillis
       `Prelude.hashWithSalt` relativeProgram
       `Prelude.hashWithSalt` scheduledStartTimeMillis
       `Prelude.hashWithSalt` relativePosition

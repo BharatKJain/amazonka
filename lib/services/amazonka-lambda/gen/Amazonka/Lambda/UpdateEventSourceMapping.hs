@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lambda.UpdateEventSourceMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -476,7 +476,8 @@ instance Core.AWSRequest UpdateEventSourceMapping where
 
 instance Prelude.Hashable UpdateEventSourceMapping where
   hashWithSalt _salt UpdateEventSourceMapping' {..} =
-    _salt `Prelude.hashWithSalt` batchSize
+    _salt
+      `Prelude.hashWithSalt` batchSize
       `Prelude.hashWithSalt` bisectBatchOnFunctionError
       `Prelude.hashWithSalt` destinationConfig
       `Prelude.hashWithSalt` enabled

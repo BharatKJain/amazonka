@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistributionDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistributionDetails where
@@ -150,11 +150,11 @@ instance
       ( \x ->
           AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistributionDetails'
             Prelude.<$> (x Data..:? "OnDemandAllocationStrategy")
-              Prelude.<*> (x Data..:? "OnDemandBaseCapacity")
-              Prelude.<*> (x Data..:? "OnDemandPercentageAboveBaseCapacity")
-              Prelude.<*> (x Data..:? "SpotAllocationStrategy")
-              Prelude.<*> (x Data..:? "SpotInstancePools")
-              Prelude.<*> (x Data..:? "SpotMaxPrice")
+            Prelude.<*> (x Data..:? "OnDemandBaseCapacity")
+            Prelude.<*> (x Data..:? "OnDemandPercentageAboveBaseCapacity")
+            Prelude.<*> (x Data..:? "SpotAllocationStrategy")
+            Prelude.<*> (x Data..:? "SpotInstancePools")
+            Prelude.<*> (x Data..:? "SpotMaxPrice")
       )
 
 instance

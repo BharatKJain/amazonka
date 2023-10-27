@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpaces.Types.WorkspacesIpGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpaces.Types.WorkspacesIpGroup where
@@ -95,7 +95,8 @@ instance Data.FromJSON WorkspacesIpGroup where
 
 instance Prelude.Hashable WorkspacesIpGroup where
   hashWithSalt _salt WorkspacesIpGroup' {..} =
-    _salt `Prelude.hashWithSalt` groupDesc
+    _salt
+      `Prelude.hashWithSalt` groupDesc
       `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` groupName
       `Prelude.hashWithSalt` userRules

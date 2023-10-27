@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECS.DescribeCapacityProviders
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -177,7 +177,8 @@ instance Core.AWSRequest DescribeCapacityProviders where
     Response.receiveJSON
       ( \s h x ->
           DescribeCapacityProvidersResponse'
-            Prelude.<$> ( x Data..?> "capacityProviders"
+            Prelude.<$> ( x
+                            Data..?> "capacityProviders"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "failures" Core..!@ Prelude.mempty)
@@ -187,7 +188,8 @@ instance Core.AWSRequest DescribeCapacityProviders where
 
 instance Prelude.Hashable DescribeCapacityProviders where
   hashWithSalt _salt DescribeCapacityProviders' {..} =
-    _salt `Prelude.hashWithSalt` capacityProviders
+    _salt
+      `Prelude.hashWithSalt` capacityProviders
       `Prelude.hashWithSalt` include
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

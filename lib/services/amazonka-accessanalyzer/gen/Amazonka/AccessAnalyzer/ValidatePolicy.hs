@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AccessAnalyzer.ValidatePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -199,18 +199,19 @@ instance Core.AWSPager ValidatePolicy where
     | Core.stop
         ( rs
             Lens.^? validatePolicyResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. validatePolicyResponse_findings) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& validatePolicy_nextToken
           Lens..~ rs
-          Lens.^? validatePolicyResponse_nextToken Prelude.. Lens._Just
+          Lens.^? validatePolicyResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ValidatePolicy where
   type
@@ -229,7 +230,8 @@ instance Core.AWSRequest ValidatePolicy where
 
 instance Prelude.Hashable ValidatePolicy where
   hashWithSalt _salt ValidatePolicy' {..} =
-    _salt `Prelude.hashWithSalt` locale
+    _salt
+      `Prelude.hashWithSalt` locale
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` validatePolicyResourceType

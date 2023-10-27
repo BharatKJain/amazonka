@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.ThrottleSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.ThrottleSettings where
@@ -77,7 +77,8 @@ instance Data.FromJSON ThrottleSettings where
 
 instance Prelude.Hashable ThrottleSettings where
   hashWithSalt _salt ThrottleSettings' {..} =
-    _salt `Prelude.hashWithSalt` burstLimit
+    _salt
+      `Prelude.hashWithSalt` burstLimit
       `Prelude.hashWithSalt` rateLimit
 
 instance Prelude.NFData ThrottleSettings where

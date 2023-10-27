@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.ImportJobSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.ImportJobSummary where
@@ -117,7 +117,8 @@ instance Data.FromJSON ImportJobSummary where
 
 instance Prelude.Hashable ImportJobSummary where
   hashWithSalt _salt ImportJobSummary' {..} =
-    _salt `Prelude.hashWithSalt` createdTimestamp
+    _salt
+      `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` failedRecordsCount
       `Prelude.hashWithSalt` importDestination
       `Prelude.hashWithSalt` jobId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RolesAnywhere.Types.SubjectDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RolesAnywhere.Types.SubjectDetail where
@@ -142,7 +142,8 @@ instance Data.FromJSON SubjectDetail where
             Prelude.<$> (x Data..:? "createdAt")
             Prelude.<*> (x Data..:? "credentials" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "enabled")
-            Prelude.<*> ( x Data..:? "instanceProperties"
+            Prelude.<*> ( x
+                            Data..:? "instanceProperties"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "lastSeenAt")
@@ -154,7 +155,8 @@ instance Data.FromJSON SubjectDetail where
 
 instance Prelude.Hashable SubjectDetail where
   hashWithSalt _salt SubjectDetail' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` credentials
       `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` instanceProperties

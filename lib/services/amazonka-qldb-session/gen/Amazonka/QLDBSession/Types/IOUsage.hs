@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QLDBSession.Types.IOUsage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QLDBSession.Types.IOUsage where
@@ -74,7 +74,8 @@ instance Data.FromJSON IOUsage where
 
 instance Prelude.Hashable IOUsage where
   hashWithSalt _salt IOUsage' {..} =
-    _salt `Prelude.hashWithSalt` readIOs
+    _salt
+      `Prelude.hashWithSalt` readIOs
       `Prelude.hashWithSalt` writeIOs
 
 instance Prelude.NFData IOUsage where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRServerless.Types.AutoStopConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRServerless.Types.AutoStopConfig where
@@ -81,7 +81,8 @@ instance Data.FromJSON AutoStopConfig where
 
 instance Prelude.Hashable AutoStopConfig where
   hashWithSalt _salt AutoStopConfig' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` idleTimeoutMinutes
 
 instance Prelude.NFData AutoStopConfig where

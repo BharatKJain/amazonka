@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GuardDuty.ListIPSets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,17 +117,19 @@ instance Core.AWSPager ListIPSets where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listIPSetsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listIPSetsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop (rs Lens.^. listIPSetsResponse_ipSetIds) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listIPSets_nextToken
           Lens..~ rs
-          Lens.^? listIPSetsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listIPSetsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListIPSets where
   type AWSResponse ListIPSets = ListIPSetsResponse
@@ -144,7 +146,8 @@ instance Core.AWSRequest ListIPSets where
 
 instance Prelude.Hashable ListIPSets where
   hashWithSalt _salt ListIPSets' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` detectorId
 

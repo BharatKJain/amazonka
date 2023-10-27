@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.ServiceStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.ServiceStatistics where
@@ -113,7 +113,8 @@ instance Data.FromJSON ServiceStatistics where
 
 instance Prelude.Hashable ServiceStatistics where
   hashWithSalt _salt ServiceStatistics' {..} =
-    _salt `Prelude.hashWithSalt` errorStatistics
+    _salt
+      `Prelude.hashWithSalt` errorStatistics
       `Prelude.hashWithSalt` faultStatistics
       `Prelude.hashWithSalt` okCount
       `Prelude.hashWithSalt` totalCount

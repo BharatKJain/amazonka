@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.ExecutorsSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.ExecutorsSummary where
@@ -169,7 +169,8 @@ instance Data.FromJSON ExecutorsSummary where
 
 instance Prelude.Hashable ExecutorsSummary where
   hashWithSalt _salt ExecutorsSummary' {..} =
-    _salt `Prelude.hashWithSalt` executorSize
+    _salt
+      `Prelude.hashWithSalt` executorSize
       `Prelude.hashWithSalt` executorState
       `Prelude.hashWithSalt` executorType
       `Prelude.hashWithSalt` startDateTime

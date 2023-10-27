@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.AttributeKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.AttributeKey where
@@ -93,7 +93,8 @@ instance Data.FromJSON AttributeKey where
 
 instance Prelude.Hashable AttributeKey where
   hashWithSalt _salt AttributeKey' {..} =
-    _salt `Prelude.hashWithSalt` schemaArn
+    _salt
+      `Prelude.hashWithSalt` schemaArn
       `Prelude.hashWithSalt` facetName
       `Prelude.hashWithSalt` name
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LookoutMetrics.ListMetricSets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,7 +117,8 @@ instance Core.AWSRequest ListMetricSets where
     Response.receiveJSON
       ( \s h x ->
           ListMetricSetsResponse'
-            Prelude.<$> ( x Data..?> "MetricSetSummaryList"
+            Prelude.<$> ( x
+                            Data..?> "MetricSetSummaryList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -126,7 +127,8 @@ instance Core.AWSRequest ListMetricSets where
 
 instance Prelude.Hashable ListMetricSets where
   hashWithSalt _salt ListMetricSets' {..} =
-    _salt `Prelude.hashWithSalt` anomalyDetectorArn
+    _salt
+      `Prelude.hashWithSalt` anomalyDetectorArn
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

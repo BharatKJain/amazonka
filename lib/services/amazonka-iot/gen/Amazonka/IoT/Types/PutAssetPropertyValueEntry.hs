@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.PutAssetPropertyValueEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.PutAssetPropertyValueEntry where
@@ -136,7 +136,8 @@ instance Data.FromJSON PutAssetPropertyValueEntry where
 
 instance Prelude.Hashable PutAssetPropertyValueEntry where
   hashWithSalt _salt PutAssetPropertyValueEntry' {..} =
-    _salt `Prelude.hashWithSalt` assetId
+    _salt
+      `Prelude.hashWithSalt` assetId
       `Prelude.hashWithSalt` entryId
       `Prelude.hashWithSalt` propertyAlias
       `Prelude.hashWithSalt` propertyId

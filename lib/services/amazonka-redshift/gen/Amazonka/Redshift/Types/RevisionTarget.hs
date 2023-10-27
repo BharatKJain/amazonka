@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.RevisionTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.RevisionTarget where
@@ -87,7 +87,8 @@ instance Data.FromXML RevisionTarget where
 
 instance Prelude.Hashable RevisionTarget where
   hashWithSalt _salt RevisionTarget' {..} =
-    _salt `Prelude.hashWithSalt` databaseRevision
+    _salt
+      `Prelude.hashWithSalt` databaseRevision
       `Prelude.hashWithSalt` databaseRevisionReleaseDate
       `Prelude.hashWithSalt` description
 

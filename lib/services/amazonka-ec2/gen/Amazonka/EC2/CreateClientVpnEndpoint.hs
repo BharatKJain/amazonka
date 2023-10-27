@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.CreateClientVpnEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -435,7 +435,8 @@ instance Core.AWSRequest CreateClientVpnEndpoint where
 
 instance Prelude.Hashable CreateClientVpnEndpoint where
   hashWithSalt _salt CreateClientVpnEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` clientConnectOptions
+    _salt
+      `Prelude.hashWithSalt` clientConnectOptions
       `Prelude.hashWithSalt` clientLoginBannerOptions
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` description

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.CreateDeviceFleet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,7 +153,8 @@ instance Core.AWSRequest CreateDeviceFleet where
 
 instance Prelude.Hashable CreateDeviceFleet where
   hashWithSalt _salt CreateDeviceFleet' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` enableIotRoleAlias
       `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` tags

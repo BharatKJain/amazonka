@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.GenerateEmbedUrlForAnonymousUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -33,9 +33,10 @@
 --
 -- -   The URL validity period should not be confused with the actual
 --     session lifetime that can be customized using the
---     @ SessionLifetimeInMinutes @ parameter. The resulting user session
---     is valid for 15 minutes (minimum) to 10 hours (maximum). The default
---     session duration is 10 hours.
+--     @ @<https://docs.aws.amazon.com/quicksight/latest/APIReference/API_GenerateEmbedUrlForAnonymousUser.html#QS-GenerateEmbedUrlForAnonymousUser-request-SessionLifetimeInMinutes SessionLifetimeInMinutes>@ @
+--     parameter. The resulting user session is valid for 15 minutes
+--     (minimum) to 10 hours (maximum). The default session duration is 10
+--     hours.
 --
 -- -   You are charged only when the URL is used or there is interaction
 --     with Amazon QuickSight.
@@ -275,7 +276,8 @@ instance
   hashWithSalt
     _salt
     GenerateEmbedUrlForAnonymousUser' {..} =
-      _salt `Prelude.hashWithSalt` allowedDomains
+      _salt
+        `Prelude.hashWithSalt` allowedDomains
         `Prelude.hashWithSalt` sessionLifetimeInMinutes
         `Prelude.hashWithSalt` sessionTags
         `Prelude.hashWithSalt` awsAccountId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.BucketPublicAccess
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.BucketPublicAccess where
@@ -105,7 +105,8 @@ instance Data.FromJSON BucketPublicAccess where
 
 instance Prelude.Hashable BucketPublicAccess where
   hashWithSalt _salt BucketPublicAccess' {..} =
-    _salt `Prelude.hashWithSalt` effectivePermission
+    _salt
+      `Prelude.hashWithSalt` effectivePermission
       `Prelude.hashWithSalt` permissionConfiguration
 
 instance Prelude.NFData BucketPublicAccess where

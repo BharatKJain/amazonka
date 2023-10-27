@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.MappingParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.MappingParameters where
@@ -86,7 +86,8 @@ instance Data.FromJSON MappingParameters where
 
 instance Prelude.Hashable MappingParameters where
   hashWithSalt _salt MappingParameters' {..} =
-    _salt `Prelude.hashWithSalt` cSVMappingParameters
+    _salt
+      `Prelude.hashWithSalt` cSVMappingParameters
       `Prelude.hashWithSalt` jSONMappingParameters
 
 instance Prelude.NFData MappingParameters where

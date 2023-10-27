@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.SelfManagedKafkaAccessConfigurationCredentials
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.SelfManagedKafkaAccessConfigurationCredentials where
@@ -94,9 +94,9 @@ instance
       ( \x ->
           SelfManagedKafkaAccessConfigurationCredentials'
             Prelude.<$> (x Data..:? "BasicAuth")
-              Prelude.<*> (x Data..:? "ClientCertificateTlsAuth")
-              Prelude.<*> (x Data..:? "SaslScram256Auth")
-              Prelude.<*> (x Data..:? "SaslScram512Auth")
+            Prelude.<*> (x Data..:? "ClientCertificateTlsAuth")
+            Prelude.<*> (x Data..:? "SaslScram256Auth")
+            Prelude.<*> (x Data..:? "SaslScram512Auth")
       )
 
 instance
@@ -106,7 +106,8 @@ instance
   hashWithSalt
     _salt
     SelfManagedKafkaAccessConfigurationCredentials' {..} =
-      _salt `Prelude.hashWithSalt` basicAuth
+      _salt
+        `Prelude.hashWithSalt` basicAuth
         `Prelude.hashWithSalt` clientCertificateTlsAuth
         `Prelude.hashWithSalt` saslScram256Auth
         `Prelude.hashWithSalt` saslScram512Auth

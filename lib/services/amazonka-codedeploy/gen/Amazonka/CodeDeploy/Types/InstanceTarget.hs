@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.InstanceTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.InstanceTarget where
@@ -126,7 +126,8 @@ instance Data.FromJSON InstanceTarget where
             Prelude.<$> (x Data..:? "deploymentId")
             Prelude.<*> (x Data..:? "instanceLabel")
             Prelude.<*> (x Data..:? "lastUpdatedAt")
-            Prelude.<*> ( x Data..:? "lifecycleEvents"
+            Prelude.<*> ( x
+                            Data..:? "lifecycleEvents"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "status")
@@ -136,7 +137,8 @@ instance Data.FromJSON InstanceTarget where
 
 instance Prelude.Hashable InstanceTarget where
   hashWithSalt _salt InstanceTarget' {..} =
-    _salt `Prelude.hashWithSalt` deploymentId
+    _salt
+      `Prelude.hashWithSalt` deploymentId
       `Prelude.hashWithSalt` instanceLabel
       `Prelude.hashWithSalt` lastUpdatedAt
       `Prelude.hashWithSalt` lifecycleEvents

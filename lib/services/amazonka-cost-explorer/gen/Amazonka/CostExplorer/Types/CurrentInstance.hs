@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.CurrentInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.CurrentInstance where
@@ -197,7 +197,8 @@ instance Data.FromJSON CurrentInstance where
 
 instance Prelude.Hashable CurrentInstance where
   hashWithSalt _salt CurrentInstance' {..} =
-    _salt `Prelude.hashWithSalt` currencyCode
+    _salt
+      `Prelude.hashWithSalt` currencyCode
       `Prelude.hashWithSalt` instanceName
       `Prelude.hashWithSalt` monthlyCost
       `Prelude.hashWithSalt` onDemandHoursInLookbackPeriod

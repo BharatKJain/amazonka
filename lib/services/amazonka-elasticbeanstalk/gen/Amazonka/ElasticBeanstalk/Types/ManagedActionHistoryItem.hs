@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.ManagedActionHistoryItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.ManagedActionHistoryItem where
@@ -134,7 +134,8 @@ instance Data.FromXML ManagedActionHistoryItem where
 
 instance Prelude.Hashable ManagedActionHistoryItem where
   hashWithSalt _salt ManagedActionHistoryItem' {..} =
-    _salt `Prelude.hashWithSalt` actionDescription
+    _salt
+      `Prelude.hashWithSalt` actionDescription
       `Prelude.hashWithSalt` actionId
       `Prelude.hashWithSalt` actionType
       `Prelude.hashWithSalt` executedTime

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.ImportReferenceJobItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.ImportReferenceJobItem where
@@ -131,7 +131,8 @@ instance Data.FromJSON ImportReferenceJobItem where
 
 instance Prelude.Hashable ImportReferenceJobItem where
   hashWithSalt _salt ImportReferenceJobItem' {..} =
-    _salt `Prelude.hashWithSalt` completionTime
+    _salt
+      `Prelude.hashWithSalt` completionTime
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` referenceStoreId

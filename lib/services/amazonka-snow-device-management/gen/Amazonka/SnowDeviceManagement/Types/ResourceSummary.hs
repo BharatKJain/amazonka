@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SnowDeviceManagement.Types.ResourceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SnowDeviceManagement.Types.ResourceSummary where
@@ -86,7 +86,8 @@ instance Data.FromJSON ResourceSummary where
 
 instance Prelude.Hashable ResourceSummary where
   hashWithSalt _salt ResourceSummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` resourceType
 

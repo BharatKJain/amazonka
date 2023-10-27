@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.MetricAttributionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.MetricAttributionSummary where
@@ -117,7 +117,8 @@ instance Data.FromJSON MetricAttributionSummary where
 
 instance Prelude.Hashable MetricAttributionSummary where
   hashWithSalt _salt MetricAttributionSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationDateTime
+    _salt
+      `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` lastUpdatedDateTime
       `Prelude.hashWithSalt` metricAttributionArn

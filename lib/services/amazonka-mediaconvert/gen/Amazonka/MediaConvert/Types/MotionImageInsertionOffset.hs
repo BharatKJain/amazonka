@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.MotionImageInsertionOffset
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.MotionImageInsertionOffset where
@@ -82,7 +82,8 @@ instance Data.FromJSON MotionImageInsertionOffset where
 
 instance Prelude.Hashable MotionImageInsertionOffset where
   hashWithSalt _salt MotionImageInsertionOffset' {..} =
-    _salt `Prelude.hashWithSalt` imageX
+    _salt
+      `Prelude.hashWithSalt` imageX
       `Prelude.hashWithSalt` imageY
 
 instance Prelude.NFData MotionImageInsertionOffset where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.FaceSearchSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.FaceSearchSettings where
@@ -86,7 +86,8 @@ instance Data.FromJSON FaceSearchSettings where
 
 instance Prelude.Hashable FaceSearchSettings where
   hashWithSalt _salt FaceSearchSettings' {..} =
-    _salt `Prelude.hashWithSalt` collectionId
+    _salt
+      `Prelude.hashWithSalt` collectionId
       `Prelude.hashWithSalt` faceMatchThreshold
 
 instance Prelude.NFData FaceSearchSettings where

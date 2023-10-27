@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ConnectionLogOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ConnectionLogOptions where
@@ -82,7 +82,8 @@ connectionLogOptions_enabled = Lens.lens (\ConnectionLogOptions' {enabled} -> en
 
 instance Prelude.Hashable ConnectionLogOptions where
   hashWithSalt _salt ConnectionLogOptions' {..} =
-    _salt `Prelude.hashWithSalt` cloudwatchLogGroup
+    _salt
+      `Prelude.hashWithSalt` cloudwatchLogGroup
       `Prelude.hashWithSalt` cloudwatchLogStream
       `Prelude.hashWithSalt` enabled
 

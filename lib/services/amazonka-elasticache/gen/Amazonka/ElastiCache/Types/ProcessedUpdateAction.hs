@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.ProcessedUpdateAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.ProcessedUpdateAction where
@@ -93,7 +93,8 @@ instance Data.FromXML ProcessedUpdateAction where
 
 instance Prelude.Hashable ProcessedUpdateAction where
   hashWithSalt _salt ProcessedUpdateAction' {..} =
-    _salt `Prelude.hashWithSalt` cacheClusterId
+    _salt
+      `Prelude.hashWithSalt` cacheClusterId
       `Prelude.hashWithSalt` replicationGroupId
       `Prelude.hashWithSalt` serviceUpdateName
       `Prelude.hashWithSalt` updateActionStatus

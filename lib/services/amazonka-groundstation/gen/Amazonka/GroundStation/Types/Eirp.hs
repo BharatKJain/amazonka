@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.Eirp
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.Eirp where
@@ -70,12 +70,14 @@ instance Data.FromJSON Eirp where
       "Eirp"
       ( \x ->
           Eirp'
-            Prelude.<$> (x Data..: "units") Prelude.<*> (x Data..: "value")
+            Prelude.<$> (x Data..: "units")
+            Prelude.<*> (x Data..: "value")
       )
 
 instance Prelude.Hashable Eirp where
   hashWithSalt _salt Eirp' {..} =
-    _salt `Prelude.hashWithSalt` units
+    _salt
+      `Prelude.hashWithSalt` units
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData Eirp where

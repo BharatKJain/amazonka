@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.AutoMLCandidate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.AutoMLCandidate where
@@ -176,7 +176,8 @@ instance Data.FromJSON AutoMLCandidate where
             Prelude.<*> (x Data..:? "EndTime")
             Prelude.<*> (x Data..:? "FailureReason")
             Prelude.<*> (x Data..:? "FinalAutoMLJobObjectiveMetric")
-            Prelude.<*> ( x Data..:? "InferenceContainers"
+            Prelude.<*> ( x
+                            Data..:? "InferenceContainers"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "CandidateName")
@@ -189,7 +190,8 @@ instance Data.FromJSON AutoMLCandidate where
 
 instance Prelude.Hashable AutoMLCandidate where
   hashWithSalt _salt AutoMLCandidate' {..} =
-    _salt `Prelude.hashWithSalt` candidateProperties
+    _salt
+      `Prelude.hashWithSalt` candidateProperties
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` finalAutoMLJobObjectiveMetric

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.DestinationOptionsRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.DestinationOptionsRequest where
@@ -82,7 +82,8 @@ destinationOptionsRequest_perHourPartition = Lens.lens (\DestinationOptionsReque
 
 instance Prelude.Hashable DestinationOptionsRequest where
   hashWithSalt _salt DestinationOptionsRequest' {..} =
-    _salt `Prelude.hashWithSalt` fileFormat
+    _salt
+      `Prelude.hashWithSalt` fileFormat
       `Prelude.hashWithSalt` hiveCompatiblePartitions
       `Prelude.hashWithSalt` perHourPartition
 

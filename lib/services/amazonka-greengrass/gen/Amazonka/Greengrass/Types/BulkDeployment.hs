@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.BulkDeployment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.BulkDeployment where
@@ -87,7 +87,8 @@ instance Data.FromJSON BulkDeployment where
 
 instance Prelude.Hashable BulkDeployment where
   hashWithSalt _salt BulkDeployment' {..} =
-    _salt `Prelude.hashWithSalt` bulkDeploymentArn
+    _salt
+      `Prelude.hashWithSalt` bulkDeploymentArn
       `Prelude.hashWithSalt` bulkDeploymentId
       `Prelude.hashWithSalt` createdAt
 

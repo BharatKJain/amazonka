@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PinpointSmsVoiceV2.Types.OptedOutFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PinpointSmsVoiceV2.Types.OptedOutFilter where
@@ -69,7 +69,8 @@ optedOutFilter_values = Lens.lens (\OptedOutFilter' {values} -> values) (\s@Opte
 
 instance Prelude.Hashable OptedOutFilter where
   hashWithSalt _salt OptedOutFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData OptedOutFilter where

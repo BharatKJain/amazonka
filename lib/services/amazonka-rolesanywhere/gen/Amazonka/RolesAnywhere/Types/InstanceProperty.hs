@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RolesAnywhere.Types.InstanceProperty
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RolesAnywhere.Types.InstanceProperty where
@@ -97,7 +97,8 @@ instance Data.FromJSON InstanceProperty where
 
 instance Prelude.Hashable InstanceProperty where
   hashWithSalt _salt InstanceProperty' {..} =
-    _salt `Prelude.hashWithSalt` failed
+    _salt
+      `Prelude.hashWithSalt` failed
       `Prelude.hashWithSalt` properties
       `Prelude.hashWithSalt` seenAt
 

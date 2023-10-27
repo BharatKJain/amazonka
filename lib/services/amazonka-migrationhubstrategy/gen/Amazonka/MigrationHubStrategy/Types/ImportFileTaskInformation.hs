@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.ImportFileTaskInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.ImportFileTaskInformation where
@@ -172,7 +172,8 @@ instance Data.FromJSON ImportFileTaskInformation where
 
 instance Prelude.Hashable ImportFileTaskInformation where
   hashWithSalt _salt ImportFileTaskInformation' {..} =
-    _salt `Prelude.hashWithSalt` completionTime
+    _salt
+      `Prelude.hashWithSalt` completionTime
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` importName
       `Prelude.hashWithSalt` inputS3Bucket

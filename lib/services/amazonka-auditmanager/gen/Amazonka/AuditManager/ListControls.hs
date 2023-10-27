@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AuditManager.ListControls
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest ListControls where
     Response.receiveJSON
       ( \s h x ->
           ListControlsResponse'
-            Prelude.<$> ( x Data..?> "controlMetadataList"
+            Prelude.<$> ( x
+                            Data..?> "controlMetadataList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -117,7 +118,8 @@ instance Core.AWSRequest ListControls where
 
 instance Prelude.Hashable ListControls where
   hashWithSalt _salt ListControls' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` controlType
 

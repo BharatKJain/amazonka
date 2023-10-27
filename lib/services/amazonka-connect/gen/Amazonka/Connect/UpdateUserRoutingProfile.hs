@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.UpdateUserRoutingProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest UpdateUserRoutingProfile where
 
 instance Prelude.Hashable UpdateUserRoutingProfile where
   hashWithSalt _salt UpdateUserRoutingProfile' {..} =
-    _salt `Prelude.hashWithSalt` routingProfileId
+    _salt
+      `Prelude.hashWithSalt` routingProfileId
       `Prelude.hashWithSalt` userId
       `Prelude.hashWithSalt` instanceId
 

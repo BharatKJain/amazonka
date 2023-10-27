@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTWireless.SendDataToWirelessDevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance Core.AWSRequest SendDataToWirelessDevice where
 
 instance Prelude.Hashable SendDataToWirelessDevice where
   hashWithSalt _salt SendDataToWirelessDevice' {..} =
-    _salt `Prelude.hashWithSalt` wirelessMetadata
+    _salt
+      `Prelude.hashWithSalt` wirelessMetadata
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` transmitMode
       `Prelude.hashWithSalt` payloadData

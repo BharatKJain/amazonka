@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppRunner.Types.ImageRepository
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppRunner.Types.ImageRepository where
@@ -111,7 +111,8 @@ instance Data.FromJSON ImageRepository where
 
 instance Prelude.Hashable ImageRepository where
   hashWithSalt _salt ImageRepository' {..} =
-    _salt `Prelude.hashWithSalt` imageConfiguration
+    _salt
+      `Prelude.hashWithSalt` imageConfiguration
       `Prelude.hashWithSalt` imageIdentifier
       `Prelude.hashWithSalt` imageRepositoryType
 

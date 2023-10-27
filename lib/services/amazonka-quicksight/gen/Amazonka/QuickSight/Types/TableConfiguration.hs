@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TableConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TableConfiguration where
@@ -120,7 +120,8 @@ instance Data.FromJSON TableConfiguration where
 
 instance Prelude.Hashable TableConfiguration where
   hashWithSalt _salt TableConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` fieldOptions
+    _salt
+      `Prelude.hashWithSalt` fieldOptions
       `Prelude.hashWithSalt` fieldWells
       `Prelude.hashWithSalt` paginatedReportOptions
       `Prelude.hashWithSalt` sortConfiguration

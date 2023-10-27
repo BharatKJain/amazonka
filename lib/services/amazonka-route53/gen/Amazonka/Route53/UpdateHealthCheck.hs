@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53.UpdateHealthCheck
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -993,7 +993,8 @@ instance Core.AWSRequest UpdateHealthCheck where
 
 instance Prelude.Hashable UpdateHealthCheck where
   hashWithSalt _salt UpdateHealthCheck' {..} =
-    _salt `Prelude.hashWithSalt` alarmIdentifier
+    _salt
+      `Prelude.hashWithSalt` alarmIdentifier
       `Prelude.hashWithSalt` childHealthChecks
       `Prelude.hashWithSalt` disabled
       `Prelude.hashWithSalt` enableSNI

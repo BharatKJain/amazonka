@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ImageBuilder.ListComponents
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -188,7 +188,8 @@ instance Core.AWSRequest ListComponents where
     Response.receiveJSON
       ( \s h x ->
           ListComponentsResponse'
-            Prelude.<$> ( x Data..?> "componentVersionList"
+            Prelude.<$> ( x
+                            Data..?> "componentVersionList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -198,7 +199,8 @@ instance Core.AWSRequest ListComponents where
 
 instance Prelude.Hashable ListComponents where
   hashWithSalt _salt ListComponents' {..} =
-    _salt `Prelude.hashWithSalt` byName
+    _salt
+      `Prelude.hashWithSalt` byName
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

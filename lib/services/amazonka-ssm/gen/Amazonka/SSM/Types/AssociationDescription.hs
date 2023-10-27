@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.AssociationDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.AssociationDescription where
@@ -487,7 +487,8 @@ instance Data.FromJSON AssociationDescription where
 
 instance Prelude.Hashable AssociationDescription where
   hashWithSalt _salt AssociationDescription' {..} =
-    _salt `Prelude.hashWithSalt` alarmConfiguration
+    _salt
+      `Prelude.hashWithSalt` alarmConfiguration
       `Prelude.hashWithSalt` applyOnlyAtCronInterval
       `Prelude.hashWithSalt` associationId
       `Prelude.hashWithSalt` associationName

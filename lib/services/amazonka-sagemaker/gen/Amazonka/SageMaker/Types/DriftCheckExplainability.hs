@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.DriftCheckExplainability
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.DriftCheckExplainability where
@@ -78,7 +78,8 @@ instance Data.FromJSON DriftCheckExplainability where
 
 instance Prelude.Hashable DriftCheckExplainability where
   hashWithSalt _salt DriftCheckExplainability' {..} =
-    _salt `Prelude.hashWithSalt` configFile
+    _salt
+      `Prelude.hashWithSalt` configFile
       `Prelude.hashWithSalt` constraints
 
 instance Prelude.NFData DriftCheckExplainability where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DrS.Types.IdentificationHints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DrS.Types.IdentificationHints where
@@ -95,7 +95,8 @@ instance Data.FromJSON IdentificationHints where
 
 instance Prelude.Hashable IdentificationHints where
   hashWithSalt _salt IdentificationHints' {..} =
-    _salt `Prelude.hashWithSalt` awsInstanceID
+    _salt
+      `Prelude.hashWithSalt` awsInstanceID
       `Prelude.hashWithSalt` fqdn
       `Prelude.hashWithSalt` hostname
       `Prelude.hashWithSalt` vmWareUuid

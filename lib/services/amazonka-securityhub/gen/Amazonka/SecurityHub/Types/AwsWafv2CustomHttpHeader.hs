@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsWafv2CustomHttpHeader
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsWafv2CustomHttpHeader where
@@ -68,12 +68,14 @@ instance Data.FromJSON AwsWafv2CustomHttpHeader where
       "AwsWafv2CustomHttpHeader"
       ( \x ->
           AwsWafv2CustomHttpHeader'
-            Prelude.<$> (x Data..:? "Name") Prelude.<*> (x Data..:? "Value")
+            Prelude.<$> (x Data..:? "Name")
+            Prelude.<*> (x Data..:? "Value")
       )
 
 instance Prelude.Hashable AwsWafv2CustomHttpHeader where
   hashWithSalt _salt AwsWafv2CustomHttpHeader' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData AwsWafv2CustomHttpHeader where

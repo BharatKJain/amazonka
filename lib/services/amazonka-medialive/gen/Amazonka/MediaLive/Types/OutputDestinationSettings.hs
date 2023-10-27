@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.OutputDestinationSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.OutputDestinationSettings where
@@ -95,7 +95,8 @@ instance Data.FromJSON OutputDestinationSettings where
 
 instance Prelude.Hashable OutputDestinationSettings where
   hashWithSalt _salt OutputDestinationSettings' {..} =
-    _salt `Prelude.hashWithSalt` passwordParam
+    _salt
+      `Prelude.hashWithSalt` passwordParam
       `Prelude.hashWithSalt` streamName
       `Prelude.hashWithSalt` url
       `Prelude.hashWithSalt` username

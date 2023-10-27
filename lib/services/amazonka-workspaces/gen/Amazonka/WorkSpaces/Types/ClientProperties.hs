@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpaces.Types.ClientProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpaces.Types.ClientProperties where
@@ -95,7 +95,8 @@ instance Data.FromJSON ClientProperties where
 
 instance Prelude.Hashable ClientProperties where
   hashWithSalt _salt ClientProperties' {..} =
-    _salt `Prelude.hashWithSalt` logUploadEnabled
+    _salt
+      `Prelude.hashWithSalt` logUploadEnabled
       `Prelude.hashWithSalt` reconnectEnabled
 
 instance Prelude.NFData ClientProperties where

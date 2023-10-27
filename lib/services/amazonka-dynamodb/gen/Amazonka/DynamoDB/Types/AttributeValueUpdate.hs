@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.AttributeValueUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.AttributeValueUpdate where
@@ -305,7 +305,8 @@ attributeValueUpdate_value = Lens.lens (\AttributeValueUpdate' {value} -> value)
 
 instance Prelude.Hashable AttributeValueUpdate where
   hashWithSalt _salt AttributeValueUpdate' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData AttributeValueUpdate where

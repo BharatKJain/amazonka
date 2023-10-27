@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.StopFleetActions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -146,7 +146,8 @@ instance Core.AWSRequest StopFleetActions where
 
 instance Prelude.Hashable StopFleetActions where
   hashWithSalt _salt StopFleetActions' {..} =
-    _salt `Prelude.hashWithSalt` location
+    _salt
+      `Prelude.hashWithSalt` location
       `Prelude.hashWithSalt` fleetId
       `Prelude.hashWithSalt` actions
 

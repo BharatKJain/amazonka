@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Shield.Types.ApplicationLayerAutomaticResponseConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Shield.Types.ApplicationLayerAutomaticResponseConfiguration where
@@ -106,7 +106,7 @@ instance
       ( \x ->
           ApplicationLayerAutomaticResponseConfiguration'
             Prelude.<$> (x Data..: "Status")
-              Prelude.<*> (x Data..: "Action")
+            Prelude.<*> (x Data..: "Action")
       )
 
 instance
@@ -116,7 +116,8 @@ instance
   hashWithSalt
     _salt
     ApplicationLayerAutomaticResponseConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` status
+      _salt
+        `Prelude.hashWithSalt` status
         `Prelude.hashWithSalt` action
 
 instance

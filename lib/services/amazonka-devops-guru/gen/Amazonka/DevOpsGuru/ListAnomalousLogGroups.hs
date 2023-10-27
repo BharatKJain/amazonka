@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DevOpsGuru.ListAnomalousLogGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,21 +115,21 @@ instance Core.AWSPager ListAnomalousLogGroups where
     | Core.stop
         ( rs
             Lens.^? listAnomalousLogGroupsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listAnomalousLogGroupsResponse_anomalousLogGroups
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAnomalousLogGroups_nextToken
           Lens..~ rs
           Lens.^? listAnomalousLogGroupsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAnomalousLogGroups where
   type
@@ -144,14 +144,16 @@ instance Core.AWSRequest ListAnomalousLogGroups where
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
             Prelude.<*> (x Data..:> "InsightId")
-            Prelude.<*> ( x Data..?> "AnomalousLogGroups"
+            Prelude.<*> ( x
+                            Data..?> "AnomalousLogGroups"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListAnomalousLogGroups where
   hashWithSalt _salt ListAnomalousLogGroups' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` insightId
 

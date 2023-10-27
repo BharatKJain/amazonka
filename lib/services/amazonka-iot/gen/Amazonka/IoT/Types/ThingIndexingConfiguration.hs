@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.ThingIndexingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.ThingIndexingConfiguration where
@@ -239,7 +239,8 @@ instance Data.FromJSON ThingIndexingConfiguration where
 
 instance Prelude.Hashable ThingIndexingConfiguration where
   hashWithSalt _salt ThingIndexingConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` customFields
+    _salt
+      `Prelude.hashWithSalt` customFields
       `Prelude.hashWithSalt` deviceDefenderIndexingMode
       `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` managedFields

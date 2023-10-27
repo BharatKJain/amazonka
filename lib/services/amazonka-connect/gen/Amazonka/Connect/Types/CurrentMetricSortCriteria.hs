@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.CurrentMetricSortCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.CurrentMetricSortCriteria where
@@ -68,7 +68,8 @@ currentMetricSortCriteria_sortOrder = Lens.lens (\CurrentMetricSortCriteria' {so
 
 instance Prelude.Hashable CurrentMetricSortCriteria where
   hashWithSalt _salt CurrentMetricSortCriteria' {..} =
-    _salt `Prelude.hashWithSalt` sortByMetric
+    _salt
+      `Prelude.hashWithSalt` sortByMetric
       `Prelude.hashWithSalt` sortOrder
 
 instance Prelude.NFData CurrentMetricSortCriteria where

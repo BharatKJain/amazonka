@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.LabelingJobInputConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.LabelingJobInputConfig where
@@ -79,7 +79,8 @@ instance Data.FromJSON LabelingJobInputConfig where
 
 instance Prelude.Hashable LabelingJobInputConfig where
   hashWithSalt _salt LabelingJobInputConfig' {..} =
-    _salt `Prelude.hashWithSalt` dataAttributes
+    _salt
+      `Prelude.hashWithSalt` dataAttributes
       `Prelude.hashWithSalt` dataSource
 
 instance Prelude.NFData LabelingJobInputConfig where

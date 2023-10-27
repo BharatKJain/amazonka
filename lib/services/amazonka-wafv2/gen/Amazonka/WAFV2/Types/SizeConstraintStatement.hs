@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.SizeConstraintStatement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.SizeConstraintStatement where
@@ -141,7 +141,8 @@ instance Data.FromJSON SizeConstraintStatement where
 
 instance Prelude.Hashable SizeConstraintStatement where
   hashWithSalt _salt SizeConstraintStatement' {..} =
-    _salt `Prelude.hashWithSalt` fieldToMatch
+    _salt
+      `Prelude.hashWithSalt` fieldToMatch
       `Prelude.hashWithSalt` comparisonOperator
       `Prelude.hashWithSalt` size
       `Prelude.hashWithSalt` textTransformations

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.ChildWorkflowExecutionCanceledEventAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.ChildWorkflowExecutionCanceledEventAttributes where
@@ -136,10 +136,10 @@ instance
       ( \x ->
           ChildWorkflowExecutionCanceledEventAttributes'
             Prelude.<$> (x Data..:? "details")
-              Prelude.<*> (x Data..: "workflowExecution")
-              Prelude.<*> (x Data..: "workflowType")
-              Prelude.<*> (x Data..: "initiatedEventId")
-              Prelude.<*> (x Data..: "startedEventId")
+            Prelude.<*> (x Data..: "workflowExecution")
+            Prelude.<*> (x Data..: "workflowType")
+            Prelude.<*> (x Data..: "initiatedEventId")
+            Prelude.<*> (x Data..: "startedEventId")
       )
 
 instance
@@ -149,7 +149,8 @@ instance
   hashWithSalt
     _salt
     ChildWorkflowExecutionCanceledEventAttributes' {..} =
-      _salt `Prelude.hashWithSalt` details
+      _salt
+        `Prelude.hashWithSalt` details
         `Prelude.hashWithSalt` workflowExecution
         `Prelude.hashWithSalt` workflowType
         `Prelude.hashWithSalt` initiatedEventId

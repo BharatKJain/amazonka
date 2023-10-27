@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.TransformParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.TransformParameters where
@@ -89,7 +89,8 @@ instance Data.FromJSON TransformParameters where
 
 instance Prelude.Hashable TransformParameters where
   hashWithSalt _salt TransformParameters' {..} =
-    _salt `Prelude.hashWithSalt` findMatchesParameters
+    _salt
+      `Prelude.hashWithSalt` findMatchesParameters
       `Prelude.hashWithSalt` transformType
 
 instance Prelude.NFData TransformParameters where

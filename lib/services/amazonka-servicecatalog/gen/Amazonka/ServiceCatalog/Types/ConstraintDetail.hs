@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ConstraintDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ConstraintDetail where
@@ -150,7 +150,8 @@ instance Data.FromJSON ConstraintDetail where
 
 instance Prelude.Hashable ConstraintDetail where
   hashWithSalt _salt ConstraintDetail' {..} =
-    _salt `Prelude.hashWithSalt` constraintId
+    _salt
+      `Prelude.hashWithSalt` constraintId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` owner
       `Prelude.hashWithSalt` portfolioId

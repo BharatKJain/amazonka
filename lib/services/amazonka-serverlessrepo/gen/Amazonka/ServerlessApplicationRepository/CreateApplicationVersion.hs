@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServerlessApplicationRepository.CreateApplicationVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -163,10 +163,12 @@ instance Core.AWSRequest CreateApplicationVersion where
           CreateApplicationVersionResponse'
             Prelude.<$> (x Data..?> "applicationId")
             Prelude.<*> (x Data..?> "creationTime")
-            Prelude.<*> ( x Data..?> "parameterDefinitions"
+            Prelude.<*> ( x
+                            Data..?> "parameterDefinitions"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "requiredCapabilities"
+            Prelude.<*> ( x
+                            Data..?> "requiredCapabilities"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "resourcesSupported")
@@ -179,7 +181,8 @@ instance Core.AWSRequest CreateApplicationVersion where
 
 instance Prelude.Hashable CreateApplicationVersion where
   hashWithSalt _salt CreateApplicationVersion' {..} =
-    _salt `Prelude.hashWithSalt` sourceCodeArchiveUrl
+    _salt
+      `Prelude.hashWithSalt` sourceCodeArchiveUrl
       `Prelude.hashWithSalt` sourceCodeUrl
       `Prelude.hashWithSalt` templateBody
       `Prelude.hashWithSalt` templateUrl

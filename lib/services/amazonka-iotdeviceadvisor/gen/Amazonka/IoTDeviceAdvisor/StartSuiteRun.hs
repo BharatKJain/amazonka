@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTDeviceAdvisor.StartSuiteRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest StartSuiteRun where
 
 instance Prelude.Hashable StartSuiteRun where
   hashWithSalt _salt StartSuiteRun' {..} =
-    _salt `Prelude.hashWithSalt` suiteDefinitionVersion
+    _salt
+      `Prelude.hashWithSalt` suiteDefinitionVersion
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` suiteDefinitionId
       `Prelude.hashWithSalt` suiteRunConfiguration

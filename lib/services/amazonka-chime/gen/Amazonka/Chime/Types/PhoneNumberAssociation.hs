@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.PhoneNumberAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.PhoneNumberAssociation where
@@ -91,7 +91,8 @@ instance Data.FromJSON PhoneNumberAssociation where
 
 instance Prelude.Hashable PhoneNumberAssociation where
   hashWithSalt _salt PhoneNumberAssociation' {..} =
-    _salt `Prelude.hashWithSalt` associatedTimestamp
+    _salt
+      `Prelude.hashWithSalt` associatedTimestamp
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.OfferingStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.OfferingStatus where
@@ -96,7 +96,8 @@ instance Data.FromJSON OfferingStatus where
 
 instance Prelude.Hashable OfferingStatus where
   hashWithSalt _salt OfferingStatus' {..} =
-    _salt `Prelude.hashWithSalt` effectiveOn
+    _salt
+      `Prelude.hashWithSalt` effectiveOn
       `Prelude.hashWithSalt` offering
       `Prelude.hashWithSalt` quantity
       `Prelude.hashWithSalt` type'

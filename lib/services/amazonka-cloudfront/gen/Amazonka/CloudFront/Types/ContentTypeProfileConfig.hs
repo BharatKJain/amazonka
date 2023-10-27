@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.ContentTypeProfileConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.ContentTypeProfileConfig where
@@ -89,7 +89,8 @@ instance Data.FromXML ContentTypeProfileConfig where
 
 instance Prelude.Hashable ContentTypeProfileConfig where
   hashWithSalt _salt ContentTypeProfileConfig' {..} =
-    _salt `Prelude.hashWithSalt` contentTypeProfiles
+    _salt
+      `Prelude.hashWithSalt` contentTypeProfiles
       `Prelude.hashWithSalt` forwardWhenContentTypeIsUnknown
 
 instance Prelude.NFData ContentTypeProfileConfig where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Neptune.FailoverDBCluster
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest FailoverDBCluster where
 
 instance Prelude.Hashable FailoverDBCluster where
   hashWithSalt _salt FailoverDBCluster' {..} =
-    _salt `Prelude.hashWithSalt` dbClusterIdentifier
+    _salt
+      `Prelude.hashWithSalt` dbClusterIdentifier
       `Prelude.hashWithSalt` targetDBInstanceIdentifier
 
 instance Prelude.NFData FailoverDBCluster where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.SplitFields
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.SplitFields where
@@ -91,7 +91,8 @@ instance Data.FromJSON SplitFields where
 
 instance Prelude.Hashable SplitFields where
   hashWithSalt _salt SplitFields' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inputs
       `Prelude.hashWithSalt` paths
 

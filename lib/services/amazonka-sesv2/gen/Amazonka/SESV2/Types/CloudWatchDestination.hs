@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.CloudWatchDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.CloudWatchDestination where
@@ -66,7 +66,8 @@ instance Data.FromJSON CloudWatchDestination where
       "CloudWatchDestination"
       ( \x ->
           CloudWatchDestination'
-            Prelude.<$> ( x Data..:? "DimensionConfigurations"
+            Prelude.<$> ( x
+                            Data..:? "DimensionConfigurations"
                             Data..!= Prelude.mempty
                         )
       )

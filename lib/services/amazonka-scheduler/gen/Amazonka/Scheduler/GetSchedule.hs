@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Scheduler.GetSchedule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance Core.AWSRequest GetSchedule where
 
 instance Prelude.Hashable GetSchedule where
   hashWithSalt _salt GetSchedule' {..} =
-    _salt `Prelude.hashWithSalt` groupName
+    _salt
+      `Prelude.hashWithSalt` groupName
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData GetSchedule where

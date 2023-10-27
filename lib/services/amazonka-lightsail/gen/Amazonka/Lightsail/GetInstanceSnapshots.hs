@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.GetInstanceSnapshots
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -92,22 +92,22 @@ instance Core.AWSPager GetInstanceSnapshots where
     | Core.stop
         ( rs
             Lens.^? getInstanceSnapshotsResponse_nextPageToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getInstanceSnapshotsResponse_instanceSnapshots
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getInstanceSnapshots_pageToken
           Lens..~ rs
           Lens.^? getInstanceSnapshotsResponse_nextPageToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetInstanceSnapshots where
   type
@@ -119,7 +119,8 @@ instance Core.AWSRequest GetInstanceSnapshots where
     Response.receiveJSON
       ( \s h x ->
           GetInstanceSnapshotsResponse'
-            Prelude.<$> ( x Data..?> "instanceSnapshots"
+            Prelude.<$> ( x
+                            Data..?> "instanceSnapshots"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextPageToken")

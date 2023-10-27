@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudHSMV2.CreateCluster
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -162,7 +162,8 @@ instance Core.AWSRequest CreateCluster where
 
 instance Prelude.Hashable CreateCluster where
   hashWithSalt _salt CreateCluster' {..} =
-    _salt `Prelude.hashWithSalt` backupRetentionPolicy
+    _salt
+      `Prelude.hashWithSalt` backupRetentionPolicy
       `Prelude.hashWithSalt` sourceBackupId
       `Prelude.hashWithSalt` tagList
       `Prelude.hashWithSalt` hsmType

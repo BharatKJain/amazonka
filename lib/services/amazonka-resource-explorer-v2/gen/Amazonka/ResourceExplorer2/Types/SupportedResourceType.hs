@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResourceExplorer2.Types.SupportedResourceType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResourceExplorer2.Types.SupportedResourceType where
@@ -82,7 +82,8 @@ instance Data.FromJSON SupportedResourceType where
 
 instance Prelude.Hashable SupportedResourceType where
   hashWithSalt _salt SupportedResourceType' {..} =
-    _salt `Prelude.hashWithSalt` resourceType
+    _salt
+      `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` service
 
 instance Prelude.NFData SupportedResourceType where

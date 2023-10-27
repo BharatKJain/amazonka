@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.StatisticsConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.StatisticsConfiguration where
@@ -81,7 +81,8 @@ instance Data.FromJSON StatisticsConfiguration where
 
 instance Prelude.Hashable StatisticsConfiguration where
   hashWithSalt _salt StatisticsConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` includedStatistics
+    _salt
+      `Prelude.hashWithSalt` includedStatistics
       `Prelude.hashWithSalt` overrides
 
 instance Prelude.NFData StatisticsConfiguration where

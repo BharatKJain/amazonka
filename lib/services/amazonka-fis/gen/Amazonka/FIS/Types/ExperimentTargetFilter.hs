@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FIS.Types.ExperimentTargetFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FIS.Types.ExperimentTargetFilter where
@@ -74,7 +74,8 @@ instance Data.FromJSON ExperimentTargetFilter where
 
 instance Prelude.Hashable ExperimentTargetFilter where
   hashWithSalt _salt ExperimentTargetFilter' {..} =
-    _salt `Prelude.hashWithSalt` path
+    _salt
+      `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData ExperimentTargetFilter where

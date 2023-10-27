@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.VisualTitleLabelOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.VisualTitleLabelOptions where
@@ -80,7 +80,8 @@ instance Data.FromJSON VisualTitleLabelOptions where
 
 instance Prelude.Hashable VisualTitleLabelOptions where
   hashWithSalt _salt VisualTitleLabelOptions' {..} =
-    _salt `Prelude.hashWithSalt` formatText
+    _salt
+      `Prelude.hashWithSalt` formatText
       `Prelude.hashWithSalt` visibility
 
 instance Prelude.NFData VisualTitleLabelOptions where

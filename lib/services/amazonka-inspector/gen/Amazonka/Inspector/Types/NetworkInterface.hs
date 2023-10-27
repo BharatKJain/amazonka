@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.NetworkInterface
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.NetworkInterface where
@@ -154,7 +154,8 @@ instance Data.FromJSON NetworkInterface where
             Prelude.<*> (x Data..:? "networkInterfaceId")
             Prelude.<*> (x Data..:? "privateDnsName")
             Prelude.<*> (x Data..:? "privateIpAddress")
-            Prelude.<*> ( x Data..:? "privateIpAddresses"
+            Prelude.<*> ( x
+                            Data..:? "privateIpAddresses"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "publicDnsName")
@@ -166,7 +167,8 @@ instance Data.FromJSON NetworkInterface where
 
 instance Prelude.Hashable NetworkInterface where
   hashWithSalt _salt NetworkInterface' {..} =
-    _salt `Prelude.hashWithSalt` ipv6Addresses
+    _salt
+      `Prelude.hashWithSalt` ipv6Addresses
       `Prelude.hashWithSalt` networkInterfaceId
       `Prelude.hashWithSalt` privateDnsName
       `Prelude.hashWithSalt` privateIpAddress

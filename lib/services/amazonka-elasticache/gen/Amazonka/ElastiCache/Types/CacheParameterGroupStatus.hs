@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.CacheParameterGroupStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.CacheParameterGroupStatus where
@@ -81,7 +81,8 @@ cacheParameterGroupStatus_parameterApplyStatus = Lens.lens (\CacheParameterGroup
 instance Data.FromXML CacheParameterGroupStatus where
   parseXML x =
     CacheParameterGroupStatus'
-      Prelude.<$> ( x Data..@? "CacheNodeIdsToReboot"
+      Prelude.<$> ( x
+                      Data..@? "CacheNodeIdsToReboot"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "CacheNodeId")
                   )
@@ -90,7 +91,8 @@ instance Data.FromXML CacheParameterGroupStatus where
 
 instance Prelude.Hashable CacheParameterGroupStatus where
   hashWithSalt _salt CacheParameterGroupStatus' {..} =
-    _salt `Prelude.hashWithSalt` cacheNodeIdsToReboot
+    _salt
+      `Prelude.hashWithSalt` cacheNodeIdsToReboot
       `Prelude.hashWithSalt` cacheParameterGroupName
       `Prelude.hashWithSalt` parameterApplyStatus
 

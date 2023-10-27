@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.AuthParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.AuthParameter where
@@ -108,7 +108,8 @@ instance Data.FromJSON AuthParameter where
       "AuthParameter"
       ( \x ->
           AuthParameter'
-            Prelude.<$> ( x Data..:? "connectorSuppliedValues"
+            Prelude.<$> ( x
+                            Data..:? "connectorSuppliedValues"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "description")

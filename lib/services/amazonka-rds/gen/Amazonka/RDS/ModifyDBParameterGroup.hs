@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.ModifyDBParameterGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -198,7 +198,8 @@ instance Core.AWSRequest ModifyDBParameterGroup where
 
 instance Prelude.Hashable ModifyDBParameterGroup where
   hashWithSalt _salt ModifyDBParameterGroup' {..} =
-    _salt `Prelude.hashWithSalt` dbParameterGroupName
+    _salt
+      `Prelude.hashWithSalt` dbParameterGroupName
       `Prelude.hashWithSalt` parameters
 
 instance Prelude.NFData ModifyDBParameterGroup where

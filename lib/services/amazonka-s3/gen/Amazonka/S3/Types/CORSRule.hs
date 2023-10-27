@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.CORSRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.CORSRule where
@@ -138,7 +138,8 @@ instance Data.FromXML CORSRule where
 
 instance Prelude.Hashable CORSRule where
   hashWithSalt _salt CORSRule' {..} =
-    _salt `Prelude.hashWithSalt` allowedHeaders
+    _salt
+      `Prelude.hashWithSalt` allowedHeaders
       `Prelude.hashWithSalt` exposeHeaders
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` maxAgeSeconds

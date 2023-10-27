@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.PutEventsRequestEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.PutEventsRequestEntry where
@@ -169,7 +169,8 @@ putEventsRequestEntry_traceHeader = Lens.lens (\PutEventsRequestEntry' {traceHea
 
 instance Prelude.Hashable PutEventsRequestEntry where
   hashWithSalt _salt PutEventsRequestEntry' {..} =
-    _salt `Prelude.hashWithSalt` detail
+    _salt
+      `Prelude.hashWithSalt` detail
       `Prelude.hashWithSalt` detailType
       `Prelude.hashWithSalt` eventBusName
       `Prelude.hashWithSalt` resources

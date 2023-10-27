@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.Edge
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.Edge where
@@ -140,11 +140,13 @@ instance Data.FromJSON Edge where
             Prelude.<$> (x Data..:? "Aliases" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "EdgeType")
             Prelude.<*> (x Data..:? "EndTime")
-            Prelude.<*> ( x Data..:? "ReceivedEventAgeHistogram"
+            Prelude.<*> ( x
+                            Data..:? "ReceivedEventAgeHistogram"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ReferenceId")
-            Prelude.<*> ( x Data..:? "ResponseTimeHistogram"
+            Prelude.<*> ( x
+                            Data..:? "ResponseTimeHistogram"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "StartTime")
@@ -153,7 +155,8 @@ instance Data.FromJSON Edge where
 
 instance Prelude.Hashable Edge where
   hashWithSalt _salt Edge' {..} =
-    _salt `Prelude.hashWithSalt` aliases
+    _salt
+      `Prelude.hashWithSalt` aliases
       `Prelude.hashWithSalt` edgeType
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` receivedEventAgeHistogram

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.DeltaTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.DeltaTarget where
@@ -100,7 +100,8 @@ instance Data.FromJSON DeltaTarget where
 
 instance Prelude.Hashable DeltaTarget where
   hashWithSalt _salt DeltaTarget' {..} =
-    _salt `Prelude.hashWithSalt` connectionName
+    _salt
+      `Prelude.hashWithSalt` connectionName
       `Prelude.hashWithSalt` createNativeDeltaTable
       `Prelude.hashWithSalt` deltaTables
       `Prelude.hashWithSalt` writeManifest

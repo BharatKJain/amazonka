@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.ClusterOperationStep
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.ClusterOperationStep where
@@ -75,7 +75,8 @@ instance Data.FromJSON ClusterOperationStep where
 
 instance Prelude.Hashable ClusterOperationStep where
   hashWithSalt _salt ClusterOperationStep' {..} =
-    _salt `Prelude.hashWithSalt` stepInfo
+    _salt
+      `Prelude.hashWithSalt` stepInfo
       `Prelude.hashWithSalt` stepName
 
 instance Prelude.NFData ClusterOperationStep where

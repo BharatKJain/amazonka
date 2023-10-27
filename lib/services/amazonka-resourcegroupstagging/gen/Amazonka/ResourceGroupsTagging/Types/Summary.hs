@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResourceGroupsTagging.Types.Summary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResourceGroupsTagging.Types.Summary where
@@ -124,7 +124,8 @@ instance Data.FromJSON Summary where
 
 instance Prelude.Hashable Summary where
   hashWithSalt _salt Summary' {..} =
-    _salt `Prelude.hashWithSalt` lastUpdated
+    _salt
+      `Prelude.hashWithSalt` lastUpdated
       `Prelude.hashWithSalt` nonCompliantResources
       `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` resourceType

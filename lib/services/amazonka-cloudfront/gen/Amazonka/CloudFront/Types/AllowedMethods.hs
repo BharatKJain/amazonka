@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.AllowedMethods
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.AllowedMethods where
@@ -105,13 +105,16 @@ instance Data.FromXML AllowedMethods where
     AllowedMethods'
       Prelude.<$> (x Data..@? "CachedMethods")
       Prelude.<*> (x Data..@ "Quantity")
-      Prelude.<*> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Data.parseXMLList "Method"
                   )
 
 instance Prelude.Hashable AllowedMethods where
   hashWithSalt _salt AllowedMethods' {..} =
-    _salt `Prelude.hashWithSalt` cachedMethods
+    _salt
+      `Prelude.hashWithSalt` cachedMethods
       `Prelude.hashWithSalt` quantity
       `Prelude.hashWithSalt` items
 

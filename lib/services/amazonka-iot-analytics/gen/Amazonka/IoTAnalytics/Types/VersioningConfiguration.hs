@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.VersioningConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.VersioningConfiguration where
@@ -78,7 +78,8 @@ instance Data.FromJSON VersioningConfiguration where
 
 instance Prelude.Hashable VersioningConfiguration where
   hashWithSalt _salt VersioningConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` maxVersions
+    _salt
+      `Prelude.hashWithSalt` maxVersions
       `Prelude.hashWithSalt` unlimited
 
 instance Prelude.NFData VersioningConfiguration where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.AddressBookData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.AddressBookData where
@@ -84,7 +84,8 @@ instance Data.FromJSON AddressBookData where
 
 instance Prelude.Hashable AddressBookData where
   hashWithSalt _salt AddressBookData' {..} =
-    _salt `Prelude.hashWithSalt` addressBookArn
+    _salt
+      `Prelude.hashWithSalt` addressBookArn
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name
 

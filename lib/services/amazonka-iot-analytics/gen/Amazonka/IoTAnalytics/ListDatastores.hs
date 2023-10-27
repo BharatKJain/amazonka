@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTAnalytics.ListDatastores
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,21 +98,22 @@ instance Core.AWSPager ListDatastores where
     | Core.stop
         ( rs
             Lens.^? listDatastoresResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listDatastoresResponse_datastoreSummaries
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listDatastores_nextToken
           Lens..~ rs
-          Lens.^? listDatastoresResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listDatastoresResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListDatastores where
   type
@@ -124,7 +125,8 @@ instance Core.AWSRequest ListDatastores where
     Response.receiveJSON
       ( \s h x ->
           ListDatastoresResponse'
-            Prelude.<$> ( x Data..?> "datastoreSummaries"
+            Prelude.<$> ( x
+                            Data..?> "datastoreSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -133,7 +135,8 @@ instance Core.AWSRequest ListDatastores where
 
 instance Prelude.Hashable ListDatastores where
   hashWithSalt _salt ListDatastores' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListDatastores where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.Summary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.Summary where
@@ -80,7 +80,8 @@ instance Data.FromJSON Summary where
       ( \x ->
           Summary'
             Prelude.<$> (x Data..:? "name")
-            Prelude.<*> ( x Data..:? "reasonCodeSummaries"
+            Prelude.<*> ( x
+                            Data..:? "reasonCodeSummaries"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "value")
@@ -88,7 +89,8 @@ instance Data.FromJSON Summary where
 
 instance Prelude.Hashable Summary where
   hashWithSalt _salt Summary' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` reasonCodeSummaries
       `Prelude.hashWithSalt` value
 

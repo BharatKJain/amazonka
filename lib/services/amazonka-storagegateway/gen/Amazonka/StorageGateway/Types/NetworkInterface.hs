@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StorageGateway.Types.NetworkInterface
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StorageGateway.Types.NetworkInterface where
@@ -93,7 +93,8 @@ instance Data.FromJSON NetworkInterface where
 
 instance Prelude.Hashable NetworkInterface where
   hashWithSalt _salt NetworkInterface' {..} =
-    _salt `Prelude.hashWithSalt` ipv4Address
+    _salt
+      `Prelude.hashWithSalt` ipv4Address
       `Prelude.hashWithSalt` ipv6Address
       `Prelude.hashWithSalt` macAddress
 

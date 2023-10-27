@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.StartNetworkInsightsAnalysis
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -170,7 +170,8 @@ instance
     StartNetworkInsightsAnalysis
   where
   hashWithSalt _salt StartNetworkInsightsAnalysis' {..} =
-    _salt `Prelude.hashWithSalt` additionalAccounts
+    _salt
+      `Prelude.hashWithSalt` additionalAccounts
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filterInArns
       `Prelude.hashWithSalt` tagSpecifications

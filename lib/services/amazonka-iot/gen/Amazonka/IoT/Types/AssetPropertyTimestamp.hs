@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.AssetPropertyTimestamp
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.AssetPropertyTimestamp where
@@ -83,7 +83,8 @@ instance Data.FromJSON AssetPropertyTimestamp where
 
 instance Prelude.Hashable AssetPropertyTimestamp where
   hashWithSalt _salt AssetPropertyTimestamp' {..} =
-    _salt `Prelude.hashWithSalt` offsetInNanos
+    _salt
+      `Prelude.hashWithSalt` offsetInNanos
       `Prelude.hashWithSalt` timeInSeconds
 
 instance Prelude.NFData AssetPropertyTimestamp where

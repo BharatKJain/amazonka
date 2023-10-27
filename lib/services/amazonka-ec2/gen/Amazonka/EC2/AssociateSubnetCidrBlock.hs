@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.AssociateSubnetCidrBlock
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest AssociateSubnetCidrBlock where
 
 instance Prelude.Hashable AssociateSubnetCidrBlock where
   hashWithSalt _salt AssociateSubnetCidrBlock' {..} =
-    _salt `Prelude.hashWithSalt` ipv6CidrBlock
+    _salt
+      `Prelude.hashWithSalt` ipv6CidrBlock
       `Prelude.hashWithSalt` subnetId
 
 instance Prelude.NFData AssociateSubnetCidrBlock where

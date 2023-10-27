@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MachineLearning.Types.RedshiftDataSpec
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MachineLearning.Types.RedshiftDataSpec where
@@ -487,7 +487,8 @@ redshiftDataSpec_s3StagingLocation = Lens.lens (\RedshiftDataSpec' {s3StagingLoc
 
 instance Prelude.Hashable RedshiftDataSpec where
   hashWithSalt _salt RedshiftDataSpec' {..} =
-    _salt `Prelude.hashWithSalt` dataRearrangement
+    _salt
+      `Prelude.hashWithSalt` dataRearrangement
       `Prelude.hashWithSalt` dataSchema
       `Prelude.hashWithSalt` dataSchemaUri
       `Prelude.hashWithSalt` databaseInformation

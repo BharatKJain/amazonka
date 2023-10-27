@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatchEvents.DescribeEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest DescribeEndpoint where
 
 instance Prelude.Hashable DescribeEndpoint where
   hashWithSalt _salt DescribeEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` homeRegion
+    _salt
+      `Prelude.hashWithSalt` homeRegion
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData DescribeEndpoint where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.CurrentRevision
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.CurrentRevision where
@@ -89,7 +89,8 @@ currentRevision_changeIdentifier = Lens.lens (\CurrentRevision' {changeIdentifie
 
 instance Prelude.Hashable CurrentRevision where
   hashWithSalt _salt CurrentRevision' {..} =
-    _salt `Prelude.hashWithSalt` created
+    _salt
+      `Prelude.hashWithSalt` created
       `Prelude.hashWithSalt` revisionSummary
       `Prelude.hashWithSalt` revision
       `Prelude.hashWithSalt` changeIdentifier

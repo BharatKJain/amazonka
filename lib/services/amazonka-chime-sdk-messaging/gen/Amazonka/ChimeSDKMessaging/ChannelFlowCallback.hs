@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSDKMessaging.ChannelFlowCallback
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -147,7 +147,8 @@ instance Core.AWSRequest ChannelFlowCallback where
 
 instance Prelude.Hashable ChannelFlowCallback where
   hashWithSalt _salt ChannelFlowCallback' {..} =
-    _salt `Prelude.hashWithSalt` deleteResource
+    _salt
+      `Prelude.hashWithSalt` deleteResource
       `Prelude.hashWithSalt` callbackId
       `Prelude.hashWithSalt` channelArn
       `Prelude.hashWithSalt` channelMessage

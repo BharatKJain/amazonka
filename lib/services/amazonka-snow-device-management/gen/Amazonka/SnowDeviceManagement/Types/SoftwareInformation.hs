@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SnowDeviceManagement.Types.SoftwareInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SnowDeviceManagement.Types.SoftwareInformation where
@@ -88,7 +88,8 @@ instance Data.FromJSON SoftwareInformation where
 
 instance Prelude.Hashable SoftwareInformation where
   hashWithSalt _salt SoftwareInformation' {..} =
-    _salt `Prelude.hashWithSalt` installState
+    _salt
+      `Prelude.hashWithSalt` installState
       `Prelude.hashWithSalt` installedVersion
       `Prelude.hashWithSalt` installingVersion
 

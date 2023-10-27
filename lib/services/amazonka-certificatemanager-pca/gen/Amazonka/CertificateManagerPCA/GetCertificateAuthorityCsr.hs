@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.GetCertificateAuthorityCsr
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -60,7 +60,7 @@ data GetCertificateAuthorityCsr = GetCertificateAuthorityCsr'
     -- <https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html CreateCertificateAuthority>
     -- action. This must be of the form:
     --
-    -- @arn:aws:acm-pca:region:account:certificate-authority\/12345678-1234-1234-1234-123456789012 @
+    -- @arn:aws:acm-pca:@/@region@/@:@/@account@/@:certificate-authority\/@/@12345678-1234-1234-1234-123456789012@/@ @
     certificateAuthorityArn :: Prelude.Text
   }
   deriving (Prelude.Eq, Prelude.Read, Prelude.Show, Prelude.Generic)
@@ -77,7 +77,7 @@ data GetCertificateAuthorityCsr = GetCertificateAuthorityCsr'
 -- <https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html CreateCertificateAuthority>
 -- action. This must be of the form:
 --
--- @arn:aws:acm-pca:region:account:certificate-authority\/12345678-1234-1234-1234-123456789012 @
+-- @arn:aws:acm-pca:@/@region@/@:@/@account@/@:certificate-authority\/@/@12345678-1234-1234-1234-123456789012@/@ @
 newGetCertificateAuthorityCsr ::
   -- | 'certificateAuthorityArn'
   Prelude.Text ->
@@ -93,7 +93,7 @@ newGetCertificateAuthorityCsr
 -- <https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html CreateCertificateAuthority>
 -- action. This must be of the form:
 --
--- @arn:aws:acm-pca:region:account:certificate-authority\/12345678-1234-1234-1234-123456789012 @
+-- @arn:aws:acm-pca:@/@region@/@:@/@account@/@:certificate-authority\/@/@12345678-1234-1234-1234-123456789012@/@ @
 getCertificateAuthorityCsr_certificateAuthorityArn :: Lens.Lens' GetCertificateAuthorityCsr Prelude.Text
 getCertificateAuthorityCsr_certificateAuthorityArn = Lens.lens (\GetCertificateAuthorityCsr' {certificateAuthorityArn} -> certificateAuthorityArn) (\s@GetCertificateAuthorityCsr' {} a -> s {certificateAuthorityArn = a} :: GetCertificateAuthorityCsr)
 

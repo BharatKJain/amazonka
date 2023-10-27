@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.EventResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.EventResource where
@@ -87,7 +87,8 @@ instance Data.FromJSON EventResource where
 
 instance Prelude.Hashable EventResource where
   hashWithSalt _salt EventResource' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'
 

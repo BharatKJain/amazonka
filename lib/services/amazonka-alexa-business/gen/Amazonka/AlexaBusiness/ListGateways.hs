@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AlexaBusiness.ListGateways
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance Core.AWSRequest ListGateways where
 
 instance Prelude.Hashable ListGateways where
   hashWithSalt _salt ListGateways' {..} =
-    _salt `Prelude.hashWithSalt` gatewayGroupArn
+    _salt
+      `Prelude.hashWithSalt` gatewayGroupArn
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataBrew.SendProjectSessionAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,7 +158,8 @@ instance Core.AWSRequest SendProjectSessionAction where
 
 instance Prelude.Hashable SendProjectSessionAction where
   hashWithSalt _salt SendProjectSessionAction' {..} =
-    _salt `Prelude.hashWithSalt` clientSessionId
+    _salt
+      `Prelude.hashWithSalt` clientSessionId
       `Prelude.hashWithSalt` preview
       `Prelude.hashWithSalt` recipeStep
       `Prelude.hashWithSalt` stepIndex

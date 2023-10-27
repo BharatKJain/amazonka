@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RobOMaker.Types.S3KeyOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RobOMaker.Types.S3KeyOutput where
@@ -68,12 +68,14 @@ instance Data.FromJSON S3KeyOutput where
       "S3KeyOutput"
       ( \x ->
           S3KeyOutput'
-            Prelude.<$> (x Data..:? "etag") Prelude.<*> (x Data..:? "s3Key")
+            Prelude.<$> (x Data..:? "etag")
+            Prelude.<*> (x Data..:? "s3Key")
       )
 
 instance Prelude.Hashable S3KeyOutput where
   hashWithSalt _salt S3KeyOutput' {..} =
-    _salt `Prelude.hashWithSalt` etag
+    _salt
+      `Prelude.hashWithSalt` etag
       `Prelude.hashWithSalt` s3Key
 
 instance Prelude.NFData S3KeyOutput where

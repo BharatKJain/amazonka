@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TargetConfigurationRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TargetConfigurationRequest where
@@ -74,7 +74,8 @@ targetConfigurationRequest_offeringId = Lens.lens (\TargetConfigurationRequest' 
 
 instance Prelude.Hashable TargetConfigurationRequest where
   hashWithSalt _salt TargetConfigurationRequest' {..} =
-    _salt `Prelude.hashWithSalt` instanceCount
+    _salt
+      `Prelude.hashWithSalt` instanceCount
       `Prelude.hashWithSalt` offeringId
 
 instance Prelude.NFData TargetConfigurationRequest where

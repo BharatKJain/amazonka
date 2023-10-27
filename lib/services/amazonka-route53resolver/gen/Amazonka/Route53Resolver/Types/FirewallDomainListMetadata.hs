@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53Resolver.Types.FirewallDomainListMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53Resolver.Types.FirewallDomainListMetadata where
@@ -123,7 +123,8 @@ instance Data.FromJSON FirewallDomainListMetadata where
 
 instance Prelude.Hashable FirewallDomainListMetadata where
   hashWithSalt _salt FirewallDomainListMetadata' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` creatorRequestId
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` managedOwnerName

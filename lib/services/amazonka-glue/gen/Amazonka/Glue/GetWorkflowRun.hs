@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.GetWorkflowRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest GetWorkflowRun where
 
 instance Prelude.Hashable GetWorkflowRun where
   hashWithSalt _salt GetWorkflowRun' {..} =
-    _salt `Prelude.hashWithSalt` includeGraph
+    _salt
+      `Prelude.hashWithSalt` includeGraph
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` runId
 

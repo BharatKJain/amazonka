@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.LustreLogConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.LustreLogConfiguration where
@@ -125,7 +125,8 @@ instance Data.FromJSON LustreLogConfiguration where
 
 instance Prelude.Hashable LustreLogConfiguration where
   hashWithSalt _salt LustreLogConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` destination
+    _salt
+      `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` level
 
 instance Prelude.NFData LustreLogConfiguration where

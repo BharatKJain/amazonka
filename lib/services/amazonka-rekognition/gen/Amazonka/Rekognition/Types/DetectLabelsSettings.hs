@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.DetectLabelsSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.DetectLabelsSettings where
@@ -71,7 +71,8 @@ detectLabelsSettings_imageProperties = Lens.lens (\DetectLabelsSettings' {imageP
 
 instance Prelude.Hashable DetectLabelsSettings where
   hashWithSalt _salt DetectLabelsSettings' {..} =
-    _salt `Prelude.hashWithSalt` generalLabels
+    _salt
+      `Prelude.hashWithSalt` generalLabels
       `Prelude.hashWithSalt` imageProperties
 
 instance Prelude.NFData DetectLabelsSettings where

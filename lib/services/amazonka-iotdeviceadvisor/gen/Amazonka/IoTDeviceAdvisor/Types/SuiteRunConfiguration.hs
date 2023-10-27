@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTDeviceAdvisor.Types.SuiteRunConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTDeviceAdvisor.Types.SuiteRunConfiguration where
@@ -85,7 +85,8 @@ instance Data.FromJSON SuiteRunConfiguration where
       ( \x ->
           SuiteRunConfiguration'
             Prelude.<$> (x Data..:? "parallelRun")
-            Prelude.<*> ( x Data..:? "selectedTestList"
+            Prelude.<*> ( x
+                            Data..:? "selectedTestList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "primaryDevice")
@@ -93,7 +94,8 @@ instance Data.FromJSON SuiteRunConfiguration where
 
 instance Prelude.Hashable SuiteRunConfiguration where
   hashWithSalt _salt SuiteRunConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` parallelRun
+    _salt
+      `Prelude.hashWithSalt` parallelRun
       `Prelude.hashWithSalt` selectedTestList
       `Prelude.hashWithSalt` primaryDevice
 

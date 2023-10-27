@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.JobBookmarkEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.JobBookmarkEntry where
@@ -124,7 +124,8 @@ instance Data.FromJSON JobBookmarkEntry where
 
 instance Prelude.Hashable JobBookmarkEntry where
   hashWithSalt _salt JobBookmarkEntry' {..} =
-    _salt `Prelude.hashWithSalt` attempt
+    _salt
+      `Prelude.hashWithSalt` attempt
       `Prelude.hashWithSalt` jobBookmark
       `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` previousRunId

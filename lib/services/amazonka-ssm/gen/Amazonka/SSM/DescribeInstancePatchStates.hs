@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.DescribeInstancePatchStates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,22 +109,22 @@ instance Core.AWSPager DescribeInstancePatchStates where
     | Core.stop
         ( rs
             Lens.^? describeInstancePatchStatesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeInstancePatchStatesResponse_instancePatchStates
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeInstancePatchStates_nextToken
           Lens..~ rs
           Lens.^? describeInstancePatchStatesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeInstancePatchStates where
   type
@@ -136,7 +136,8 @@ instance Core.AWSRequest DescribeInstancePatchStates where
     Response.receiveJSON
       ( \s h x ->
           DescribeInstancePatchStatesResponse'
-            Prelude.<$> ( x Data..?> "InstancePatchStates"
+            Prelude.<$> ( x
+                            Data..?> "InstancePatchStates"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -145,7 +146,8 @@ instance Core.AWSRequest DescribeInstancePatchStates where
 
 instance Prelude.Hashable DescribeInstancePatchStates where
   hashWithSalt _salt DescribeInstancePatchStates' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` instanceIds
 

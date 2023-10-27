@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.BuildSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.BuildSummary where
@@ -161,14 +161,16 @@ instance Data.FromJSON BuildSummary where
             Prelude.<*> (x Data..:? "buildStatus")
             Prelude.<*> (x Data..:? "primaryArtifact")
             Prelude.<*> (x Data..:? "requestedOn")
-            Prelude.<*> ( x Data..:? "secondaryArtifacts"
+            Prelude.<*> ( x
+                            Data..:? "secondaryArtifacts"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable BuildSummary where
   hashWithSalt _salt BuildSummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` buildStatus
       `Prelude.hashWithSalt` primaryArtifact
       `Prelude.hashWithSalt` requestedOn

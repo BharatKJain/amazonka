@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.ListAuditFindings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -182,22 +182,22 @@ instance Core.AWSPager ListAuditFindings where
     | Core.stop
         ( rs
             Lens.^? listAuditFindingsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listAuditFindingsResponse_findings
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAuditFindings_nextToken
           Lens..~ rs
           Lens.^? listAuditFindingsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAuditFindings where
   type
@@ -216,7 +216,8 @@ instance Core.AWSRequest ListAuditFindings where
 
 instance Prelude.Hashable ListAuditFindings where
   hashWithSalt _salt ListAuditFindings' {..} =
-    _salt `Prelude.hashWithSalt` checkName
+    _salt
+      `Prelude.hashWithSalt` checkName
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` listSuppressedFindings
       `Prelude.hashWithSalt` maxResults

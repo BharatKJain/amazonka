@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ImageBuilder.ListImageBuildVersions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -154,7 +154,8 @@ instance Core.AWSRequest ListImageBuildVersions where
     Response.receiveJSON
       ( \s h x ->
           ListImageBuildVersionsResponse'
-            Prelude.<$> ( x Data..?> "imageSummaryList"
+            Prelude.<$> ( x
+                            Data..?> "imageSummaryList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -164,7 +165,8 @@ instance Core.AWSRequest ListImageBuildVersions where
 
 instance Prelude.Hashable ListImageBuildVersions where
   hashWithSalt _salt ListImageBuildVersions' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` imageVersionArn

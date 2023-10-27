@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ConnectCases.GetLayout
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest GetLayout where
 
 instance Prelude.Hashable GetLayout where
   hashWithSalt _salt GetLayout' {..} =
-    _salt `Prelude.hashWithSalt` domainId
+    _salt
+      `Prelude.hashWithSalt` domainId
       `Prelude.hashWithSalt` layoutId
 
 instance Prelude.NFData GetLayout where

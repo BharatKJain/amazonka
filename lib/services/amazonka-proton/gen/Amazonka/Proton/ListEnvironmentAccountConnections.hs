@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Proton.ListEnvironmentAccountConnections
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,21 +144,21 @@ instance
     | Core.stop
         ( rs
             Lens.^? listEnvironmentAccountConnectionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listEnvironmentAccountConnectionsResponse_environmentAccountConnections
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listEnvironmentAccountConnections_nextToken
           Lens..~ rs
           Lens.^? listEnvironmentAccountConnectionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -174,10 +174,11 @@ instance
       ( \s h x ->
           ListEnvironmentAccountConnectionsResponse'
             Prelude.<$> (x Data..?> "nextToken")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> ( x Data..?> "environmentAccountConnections"
-                              Core..!@ Prelude.mempty
-                          )
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> ( x
+                            Data..?> "environmentAccountConnections"
+                            Core..!@ Prelude.mempty
+                        )
       )
 
 instance
@@ -187,7 +188,8 @@ instance
   hashWithSalt
     _salt
     ListEnvironmentAccountConnections' {..} =
-      _salt `Prelude.hashWithSalt` environmentName
+      _salt
+        `Prelude.hashWithSalt` environmentName
         `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` statuses

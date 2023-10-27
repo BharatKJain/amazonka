@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.Expression
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.Expression where
@@ -195,7 +195,8 @@ instance Data.FromJSON Expression where
 
 instance Prelude.Hashable Expression where
   hashWithSalt _salt Expression' {..} =
-    _salt `Prelude.hashWithSalt` and
+    _salt
+      `Prelude.hashWithSalt` and
       `Prelude.hashWithSalt` costCategories
       `Prelude.hashWithSalt` dimensions
       `Prelude.hashWithSalt` not

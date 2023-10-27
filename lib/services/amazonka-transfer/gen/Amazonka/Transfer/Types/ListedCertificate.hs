@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.ListedCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.ListedCertificate where
@@ -152,7 +152,8 @@ instance Data.FromJSON ListedCertificate where
 
 instance Prelude.Hashable ListedCertificate where
   hashWithSalt _salt ListedCertificate' {..} =
-    _salt `Prelude.hashWithSalt` activeDate
+    _salt
+      `Prelude.hashWithSalt` activeDate
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` certificateId
       `Prelude.hashWithSalt` description

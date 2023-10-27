@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Outposts.Types.LineItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Outposts.Types.LineItem where
@@ -107,7 +107,8 @@ instance Data.FromJSON LineItem where
       "LineItem"
       ( \x ->
           LineItem'
-            Prelude.<$> ( x Data..:? "AssetInformationList"
+            Prelude.<$> ( x
+                            Data..:? "AssetInformationList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CatalogItemId")
@@ -119,7 +120,8 @@ instance Data.FromJSON LineItem where
 
 instance Prelude.Hashable LineItem where
   hashWithSalt _salt LineItem' {..} =
-    _salt `Prelude.hashWithSalt` assetInformationList
+    _salt
+      `Prelude.hashWithSalt` assetInformationList
       `Prelude.hashWithSalt` catalogItemId
       `Prelude.hashWithSalt` lineItemId
       `Prelude.hashWithSalt` quantity

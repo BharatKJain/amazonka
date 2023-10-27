@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.SolutionStackDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.SolutionStackDescription where
@@ -66,7 +66,8 @@ solutionStackDescription_solutionStackName = Lens.lens (\SolutionStackDescriptio
 instance Data.FromXML SolutionStackDescription where
   parseXML x =
     SolutionStackDescription'
-      Prelude.<$> ( x Data..@? "PermittedFileTypes"
+      Prelude.<$> ( x
+                      Data..@? "PermittedFileTypes"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
@@ -74,7 +75,8 @@ instance Data.FromXML SolutionStackDescription where
 
 instance Prelude.Hashable SolutionStackDescription where
   hashWithSalt _salt SolutionStackDescription' {..} =
-    _salt `Prelude.hashWithSalt` permittedFileTypes
+    _salt
+      `Prelude.hashWithSalt` permittedFileTypes
       `Prelude.hashWithSalt` solutionStackName
 
 instance Prelude.NFData SolutionStackDescription where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.HostedZoneLimit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.HostedZoneLimit where
@@ -87,11 +87,13 @@ hostedZoneLimit_value = Lens.lens (\HostedZoneLimit' {value} -> value) (\s@Hoste
 instance Data.FromXML HostedZoneLimit where
   parseXML x =
     HostedZoneLimit'
-      Prelude.<$> (x Data..@ "Type") Prelude.<*> (x Data..@ "Value")
+      Prelude.<$> (x Data..@ "Type")
+      Prelude.<*> (x Data..@ "Value")
 
 instance Prelude.Hashable HostedZoneLimit where
   hashWithSalt _salt HostedZoneLimit' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData HostedZoneLimit where

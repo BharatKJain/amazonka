@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.MonitoringDatasetFormat
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.MonitoringDatasetFormat where
@@ -87,7 +87,8 @@ instance Data.FromJSON MonitoringDatasetFormat where
 
 instance Prelude.Hashable MonitoringDatasetFormat where
   hashWithSalt _salt MonitoringDatasetFormat' {..} =
-    _salt `Prelude.hashWithSalt` csv
+    _salt
+      `Prelude.hashWithSalt` csv
       `Prelude.hashWithSalt` json
       `Prelude.hashWithSalt` parquet
 

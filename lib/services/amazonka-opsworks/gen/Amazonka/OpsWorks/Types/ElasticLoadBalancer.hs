@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.ElasticLoadBalancer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.ElasticLoadBalancer where
@@ -135,7 +135,8 @@ instance Data.FromJSON ElasticLoadBalancer where
       "ElasticLoadBalancer"
       ( \x ->
           ElasticLoadBalancer'
-            Prelude.<$> ( x Data..:? "AvailabilityZones"
+            Prelude.<$> ( x
+                            Data..:? "AvailabilityZones"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "DnsName")
@@ -150,7 +151,8 @@ instance Data.FromJSON ElasticLoadBalancer where
 
 instance Prelude.Hashable ElasticLoadBalancer where
   hashWithSalt _salt ElasticLoadBalancer' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZones
+    _salt
+      `Prelude.hashWithSalt` availabilityZones
       `Prelude.hashWithSalt` dnsName
       `Prelude.hashWithSalt` ec2InstanceIds
       `Prelude.hashWithSalt` elasticLoadBalancerName

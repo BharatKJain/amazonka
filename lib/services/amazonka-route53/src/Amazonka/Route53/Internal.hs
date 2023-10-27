@@ -6,9 +6,9 @@
 
 -- |
 -- Module      : Amazonka.Route53.Internal
--- Copyright   : (c) 2013-2022 Brendan Hay
+-- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay@gmail.com>
+-- Maintainer  : Brendan Hay <brendan.g.hay+amazonka.com>
 -- Stability   : experimental
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Internal
@@ -80,7 +80,6 @@ getHostedZoneId = \case
   Jakarta -> Just "Z01846753K324LI26A3VV"
   Melbourne -> Just "Z0312387243XT5FE14WFO"
   Mumbai -> Just "Z11RGJOFQNVJUP"
-  Hyderabad -> Just "Z02976202B4EZMXIPMXF7"
   Osaka -> Just "Z2YQB5RD63NC85"
   Seoul -> Just "Z3W03O7B5YMIYP"
   Singapore -> Just "Z3O0J2DXBE1FTB"

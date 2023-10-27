@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MemoryDb.Types.ServiceUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MemoryDb.Types.ServiceUpdate where
@@ -137,7 +137,8 @@ instance Data.FromJSON ServiceUpdate where
 
 instance Prelude.Hashable ServiceUpdate where
   hashWithSalt _salt ServiceUpdate' {..} =
-    _salt `Prelude.hashWithSalt` autoUpdateStartDate
+    _salt
+      `Prelude.hashWithSalt` autoUpdateStartDate
       `Prelude.hashWithSalt` clusterName
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` nodesUpdated

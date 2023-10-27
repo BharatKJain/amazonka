@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppStream.DescribeAppBlocks
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest DescribeAppBlocks where
 
 instance Prelude.Hashable DescribeAppBlocks where
   hashWithSalt _salt DescribeAppBlocks' {..} =
-    _salt `Prelude.hashWithSalt` arns
+    _salt
+      `Prelude.hashWithSalt` arns
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

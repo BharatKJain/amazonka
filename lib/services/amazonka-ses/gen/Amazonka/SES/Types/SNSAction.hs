@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.SNSAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.SNSAction where
@@ -114,7 +114,8 @@ instance Data.FromXML SNSAction where
 
 instance Prelude.Hashable SNSAction where
   hashWithSalt _salt SNSAction' {..} =
-    _salt `Prelude.hashWithSalt` encoding
+    _salt
+      `Prelude.hashWithSalt` encoding
       `Prelude.hashWithSalt` topicArn
 
 instance Prelude.NFData SNSAction where

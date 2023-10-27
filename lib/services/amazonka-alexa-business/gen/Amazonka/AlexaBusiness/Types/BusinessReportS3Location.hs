@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.BusinessReportS3Location
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.BusinessReportS3Location where
@@ -75,7 +75,8 @@ instance Data.FromJSON BusinessReportS3Location where
 
 instance Prelude.Hashable BusinessReportS3Location where
   hashWithSalt _salt BusinessReportS3Location' {..} =
-    _salt `Prelude.hashWithSalt` bucketName
+    _salt
+      `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` path
 
 instance Prelude.NFData BusinessReportS3Location where

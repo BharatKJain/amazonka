@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.UserPoolType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.UserPoolType where
@@ -596,11 +596,13 @@ instance Data.FromJSON UserPoolType where
           UserPoolType'
             Prelude.<$> (x Data..:? "AccountRecoverySetting")
             Prelude.<*> (x Data..:? "AdminCreateUserConfig")
-            Prelude.<*> ( x Data..:? "AliasAttributes"
+            Prelude.<*> ( x
+                            Data..:? "AliasAttributes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Arn")
-            Prelude.<*> ( x Data..:? "AutoVerifiedAttributes"
+            Prelude.<*> ( x
+                            Data..:? "AutoVerifiedAttributes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CreationDate")
@@ -628,7 +630,8 @@ instance Data.FromJSON UserPoolType where
             Prelude.<*> (x Data..:? "UserAttributeUpdateSettings")
             Prelude.<*> (x Data..:? "UserPoolAddOns")
             Prelude.<*> (x Data..:? "UserPoolTags" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "UsernameAttributes"
+            Prelude.<*> ( x
+                            Data..:? "UsernameAttributes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "UsernameConfiguration")
@@ -637,7 +640,8 @@ instance Data.FromJSON UserPoolType where
 
 instance Prelude.Hashable UserPoolType where
   hashWithSalt _salt UserPoolType' {..} =
-    _salt `Prelude.hashWithSalt` accountRecoverySetting
+    _salt
+      `Prelude.hashWithSalt` accountRecoverySetting
       `Prelude.hashWithSalt` adminCreateUserConfig
       `Prelude.hashWithSalt` aliasAttributes
       `Prelude.hashWithSalt` arn

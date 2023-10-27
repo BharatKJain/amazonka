@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.Source
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.Source where
@@ -197,7 +197,8 @@ instance Data.FromJSON Source where
 
 instance Prelude.Hashable Source where
   hashWithSalt _salt Source' {..} =
-    _salt `Prelude.hashWithSalt` password
+    _salt
+      `Prelude.hashWithSalt` password
       `Prelude.hashWithSalt` revision
       `Prelude.hashWithSalt` sshKey
       `Prelude.hashWithSalt` type'

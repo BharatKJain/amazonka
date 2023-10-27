@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AWSHealth.DescribeEvents
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,20 +153,22 @@ instance Core.AWSPager DescribeEvents where
     | Core.stop
         ( rs
             Lens.^? describeEventsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? describeEventsResponse_events Prelude.. Lens._Just
+            Lens.^? describeEventsResponse_events
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeEvents_nextToken
           Lens..~ rs
-          Lens.^? describeEventsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? describeEventsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeEvents where
   type
@@ -185,7 +187,8 @@ instance Core.AWSRequest DescribeEvents where
 
 instance Prelude.Hashable DescribeEvents where
   hashWithSalt _salt DescribeEvents' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` locale
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

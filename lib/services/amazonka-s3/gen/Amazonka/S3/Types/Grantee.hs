@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.Grantee
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.Grantee where
@@ -173,7 +173,8 @@ instance Data.FromXML Grantee where
 
 instance Prelude.Hashable Grantee where
   hashWithSalt _salt Grantee' {..} =
-    _salt `Prelude.hashWithSalt` displayName
+    _salt
+      `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` emailAddress
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` uri

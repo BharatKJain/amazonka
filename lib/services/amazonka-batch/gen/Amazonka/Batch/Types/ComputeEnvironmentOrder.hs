@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.ComputeEnvironmentOrder
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.ComputeEnvironmentOrder where
@@ -101,7 +101,8 @@ instance Data.FromJSON ComputeEnvironmentOrder where
 
 instance Prelude.Hashable ComputeEnvironmentOrder where
   hashWithSalt _salt ComputeEnvironmentOrder' {..} =
-    _salt `Prelude.hashWithSalt` order
+    _salt
+      `Prelude.hashWithSalt` order
       `Prelude.hashWithSalt` computeEnvironment
 
 instance Prelude.NFData ComputeEnvironmentOrder where

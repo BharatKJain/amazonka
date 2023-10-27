@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Datatype
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Datatype where
@@ -69,12 +69,14 @@ instance Data.FromJSON Datatype where
       "Datatype"
       ( \x ->
           Datatype'
-            Prelude.<$> (x Data..: "Id") Prelude.<*> (x Data..: "Label")
+            Prelude.<$> (x Data..: "Id")
+            Prelude.<*> (x Data..: "Label")
       )
 
 instance Prelude.Hashable Datatype where
   hashWithSalt _salt Datatype' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` label
 
 instance Prelude.NFData Datatype where

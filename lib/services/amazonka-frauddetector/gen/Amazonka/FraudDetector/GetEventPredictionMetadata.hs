@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FraudDetector.GetEventPredictionMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -181,10 +181,12 @@ instance Core.AWSRequest GetEventPredictionMetadata where
             Prelude.<*> (x Data..?> "detectorVersionStatus")
             Prelude.<*> (x Data..?> "entityId")
             Prelude.<*> (x Data..?> "entityType")
-            Prelude.<*> ( x Data..?> "evaluatedExternalModels"
+            Prelude.<*> ( x
+                            Data..?> "evaluatedExternalModels"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "evaluatedModelVersions"
+            Prelude.<*> ( x
+                            Data..?> "evaluatedModelVersions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "eventId")
@@ -200,7 +202,8 @@ instance Core.AWSRequest GetEventPredictionMetadata where
 
 instance Prelude.Hashable GetEventPredictionMetadata where
   hashWithSalt _salt GetEventPredictionMetadata' {..} =
-    _salt `Prelude.hashWithSalt` eventId
+    _salt
+      `Prelude.hashWithSalt` eventId
       `Prelude.hashWithSalt` eventTypeName
       `Prelude.hashWithSalt` detectorId
       `Prelude.hashWithSalt` detectorVersionId

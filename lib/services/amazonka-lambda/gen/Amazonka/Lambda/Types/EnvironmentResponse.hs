@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.EnvironmentResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.EnvironmentResponse where
@@ -77,7 +77,8 @@ instance Data.FromJSON EnvironmentResponse where
 
 instance Prelude.Hashable EnvironmentResponse where
   hashWithSalt _salt EnvironmentResponse' {..} =
-    _salt `Prelude.hashWithSalt` error
+    _salt
+      `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` variables
 
 instance Prelude.NFData EnvironmentResponse where

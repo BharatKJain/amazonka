@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.UpdatePipeSourceRabbitMQBrokerParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.UpdatePipeSourceRabbitMQBrokerParameters where
@@ -84,7 +84,8 @@ instance
   hashWithSalt
     _salt
     UpdatePipeSourceRabbitMQBrokerParameters' {..} =
-      _salt `Prelude.hashWithSalt` batchSize
+      _salt
+        `Prelude.hashWithSalt` batchSize
         `Prelude.hashWithSalt` maximumBatchingWindowInSeconds
         `Prelude.hashWithSalt` credentials
 

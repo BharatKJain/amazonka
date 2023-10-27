@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScalingPlans.Types.ScalingPlanResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScalingPlans.Types.ScalingPlanResource where
@@ -322,7 +322,8 @@ instance Data.FromJSON ScalingPlanResource where
       "ScalingPlanResource"
       ( \x ->
           ScalingPlanResource'
-            Prelude.<$> ( x Data..:? "ScalingPolicies"
+            Prelude.<$> ( x
+                            Data..:? "ScalingPolicies"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ScalingStatusMessage")
@@ -336,7 +337,8 @@ instance Data.FromJSON ScalingPlanResource where
 
 instance Prelude.Hashable ScalingPlanResource where
   hashWithSalt _salt ScalingPlanResource' {..} =
-    _salt `Prelude.hashWithSalt` scalingPolicies
+    _salt
+      `Prelude.hashWithSalt` scalingPolicies
       `Prelude.hashWithSalt` scalingStatusMessage
       `Prelude.hashWithSalt` scalingPlanName
       `Prelude.hashWithSalt` scalingPlanVersion

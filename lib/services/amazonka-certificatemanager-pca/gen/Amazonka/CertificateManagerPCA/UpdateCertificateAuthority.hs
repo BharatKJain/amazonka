@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.UpdateCertificateAuthority
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -88,7 +88,7 @@ data UpdateCertificateAuthority = UpdateCertificateAuthority'
     -- | Amazon Resource Name (ARN) of the private CA that issued the certificate
     -- to be revoked. This must be of the form:
     --
-    -- @arn:aws:acm-pca:region:account:certificate-authority\/12345678-1234-1234-1234-123456789012 @
+    -- @arn:aws:acm-pca:@/@region@/@:@/@account@/@:certificate-authority\/@/@12345678-1234-1234-1234-123456789012@/@ @
     certificateAuthorityArn :: Prelude.Text
   }
   deriving (Prelude.Eq, Prelude.Read, Prelude.Show, Prelude.Generic)
@@ -133,7 +133,7 @@ data UpdateCertificateAuthority = UpdateCertificateAuthority'
 -- 'certificateAuthorityArn', 'updateCertificateAuthority_certificateAuthorityArn' - Amazon Resource Name (ARN) of the private CA that issued the certificate
 -- to be revoked. This must be of the form:
 --
--- @arn:aws:acm-pca:region:account:certificate-authority\/12345678-1234-1234-1234-123456789012 @
+-- @arn:aws:acm-pca:@/@region@/@:@/@account@/@:certificate-authority\/@/@12345678-1234-1234-1234-123456789012@/@ @
 newUpdateCertificateAuthority ::
   -- | 'certificateAuthorityArn'
   Prelude.Text ->
@@ -184,7 +184,7 @@ updateCertificateAuthority_status = Lens.lens (\UpdateCertificateAuthority' {sta
 -- | Amazon Resource Name (ARN) of the private CA that issued the certificate
 -- to be revoked. This must be of the form:
 --
--- @arn:aws:acm-pca:region:account:certificate-authority\/12345678-1234-1234-1234-123456789012 @
+-- @arn:aws:acm-pca:@/@region@/@:@/@account@/@:certificate-authority\/@/@12345678-1234-1234-1234-123456789012@/@ @
 updateCertificateAuthority_certificateAuthorityArn :: Lens.Lens' UpdateCertificateAuthority Prelude.Text
 updateCertificateAuthority_certificateAuthorityArn = Lens.lens (\UpdateCertificateAuthority' {certificateAuthorityArn} -> certificateAuthorityArn) (\s@UpdateCertificateAuthority' {} a -> s {certificateAuthorityArn = a} :: UpdateCertificateAuthority)
 

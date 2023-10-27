@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.BaselineOverride
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.BaselineOverride where
@@ -188,7 +188,8 @@ baselineOverride_sources = Lens.lens (\BaselineOverride' {sources} -> sources) (
 
 instance Prelude.Hashable BaselineOverride where
   hashWithSalt _salt BaselineOverride' {..} =
-    _salt `Prelude.hashWithSalt` approvalRules
+    _salt
+      `Prelude.hashWithSalt` approvalRules
       `Prelude.hashWithSalt` approvedPatches
       `Prelude.hashWithSalt` approvedPatchesComplianceLevel
       `Prelude.hashWithSalt` approvedPatchesEnableNonSecurity

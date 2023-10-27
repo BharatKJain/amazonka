@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataPrivateDnsNameOptionsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataPrivateDnsNameOptionsDetails where
@@ -90,8 +90,8 @@ instance
       ( \x ->
           AwsEc2LaunchTemplateDataPrivateDnsNameOptionsDetails'
             Prelude.<$> (x Data..:? "EnableResourceNameDnsAAAARecord")
-              Prelude.<*> (x Data..:? "EnableResourceNameDnsARecord")
-              Prelude.<*> (x Data..:? "HostnameType")
+            Prelude.<*> (x Data..:? "EnableResourceNameDnsARecord")
+            Prelude.<*> (x Data..:? "HostnameType")
       )
 
 instance

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.DeleteScheduledAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,7 +98,8 @@ instance Core.AWSRequest DeleteScheduledAction where
 
 instance Prelude.Hashable DeleteScheduledAction where
   hashWithSalt _salt DeleteScheduledAction' {..} =
-    _salt `Prelude.hashWithSalt` autoScalingGroupName
+    _salt
+      `Prelude.hashWithSalt` autoScalingGroupName
       `Prelude.hashWithSalt` scheduledActionName
 
 instance Prelude.NFData DeleteScheduledAction where

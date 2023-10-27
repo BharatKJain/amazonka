@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MemoryDb.Types.ShardConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MemoryDb.Types.ShardConfiguration where
@@ -81,7 +81,8 @@ instance Data.FromJSON ShardConfiguration where
 
 instance Prelude.Hashable ShardConfiguration where
   hashWithSalt _salt ShardConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` replicaCount
+    _salt
+      `Prelude.hashWithSalt` replicaCount
       `Prelude.hashWithSalt` slots
 
 instance Prelude.NFData ShardConfiguration where

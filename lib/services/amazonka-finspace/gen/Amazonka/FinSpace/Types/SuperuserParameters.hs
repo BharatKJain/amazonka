@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FinSpace.Types.SuperuserParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FinSpace.Types.SuperuserParameters where
@@ -83,7 +83,8 @@ superuserParameters_lastName = Lens.lens (\SuperuserParameters' {lastName} -> la
 
 instance Prelude.Hashable SuperuserParameters where
   hashWithSalt _salt SuperuserParameters' {..} =
-    _salt `Prelude.hashWithSalt` emailAddress
+    _salt
+      `Prelude.hashWithSalt` emailAddress
       `Prelude.hashWithSalt` firstName
       `Prelude.hashWithSalt` lastName
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.UserContext
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.UserContext where
@@ -111,7 +111,8 @@ userContext_userId = Lens.lens (\UserContext' {userId} -> userId) (\s@UserContex
 
 instance Prelude.Hashable UserContext where
   hashWithSalt _salt UserContext' {..} =
-    _salt `Prelude.hashWithSalt` dataSourceGroups
+    _salt
+      `Prelude.hashWithSalt` dataSourceGroups
       `Prelude.hashWithSalt` groups
       `Prelude.hashWithSalt` token
       `Prelude.hashWithSalt` userId

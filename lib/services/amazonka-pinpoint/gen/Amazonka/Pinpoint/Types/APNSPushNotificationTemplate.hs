@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.APNSPushNotificationTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.APNSPushNotificationTemplate where
@@ -203,7 +203,8 @@ instance
     APNSPushNotificationTemplate
   where
   hashWithSalt _salt APNSPushNotificationTemplate' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` body
       `Prelude.hashWithSalt` mediaUrl
       `Prelude.hashWithSalt` rawContent

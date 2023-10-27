@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Outposts.Types.RackPhysicalProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Outposts.Types.RackPhysicalProperties where
@@ -178,7 +178,8 @@ instance Data.FromJSON RackPhysicalProperties where
 
 instance Prelude.Hashable RackPhysicalProperties where
   hashWithSalt _salt RackPhysicalProperties' {..} =
-    _salt `Prelude.hashWithSalt` fiberOpticCableType
+    _salt
+      `Prelude.hashWithSalt` fiberOpticCableType
       `Prelude.hashWithSalt` maximumSupportedWeightLbs
       `Prelude.hashWithSalt` opticalStandard
       `Prelude.hashWithSalt` powerConnector

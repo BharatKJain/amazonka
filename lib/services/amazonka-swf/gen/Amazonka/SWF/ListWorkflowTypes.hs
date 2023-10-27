@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SWF.ListWorkflowTypes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -192,19 +192,19 @@ instance Core.AWSPager ListWorkflowTypes where
     | Core.stop
         ( rs
             Lens.^? listWorkflowTypesResponse_nextPageToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listWorkflowTypesResponse_typeInfos) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listWorkflowTypes_nextPageToken
           Lens..~ rs
           Lens.^? listWorkflowTypesResponse_nextPageToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListWorkflowTypes where
   type
@@ -223,7 +223,8 @@ instance Core.AWSRequest ListWorkflowTypes where
 
 instance Prelude.Hashable ListWorkflowTypes where
   hashWithSalt _salt ListWorkflowTypes' {..} =
-    _salt `Prelude.hashWithSalt` maximumPageSize
+    _salt
+      `Prelude.hashWithSalt` maximumPageSize
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` nextPageToken
       `Prelude.hashWithSalt` reverseOrder

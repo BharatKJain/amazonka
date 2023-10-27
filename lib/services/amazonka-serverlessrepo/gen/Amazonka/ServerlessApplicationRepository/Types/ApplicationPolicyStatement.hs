@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServerlessApplicationRepository.Types.ApplicationPolicyStatement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServerlessApplicationRepository.Types.ApplicationPolicyStatement where
@@ -96,7 +96,8 @@ instance Data.FromJSON ApplicationPolicyStatement where
       "ApplicationPolicyStatement"
       ( \x ->
           ApplicationPolicyStatement'
-            Prelude.<$> ( x Data..:? "principalOrgIDs"
+            Prelude.<$> ( x
+                            Data..:? "principalOrgIDs"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "statementId")
@@ -106,7 +107,8 @@ instance Data.FromJSON ApplicationPolicyStatement where
 
 instance Prelude.Hashable ApplicationPolicyStatement where
   hashWithSalt _salt ApplicationPolicyStatement' {..} =
-    _salt `Prelude.hashWithSalt` principalOrgIDs
+    _salt
+      `Prelude.hashWithSalt` principalOrgIDs
       `Prelude.hashWithSalt` statementId
       `Prelude.hashWithSalt` principals
       `Prelude.hashWithSalt` actions

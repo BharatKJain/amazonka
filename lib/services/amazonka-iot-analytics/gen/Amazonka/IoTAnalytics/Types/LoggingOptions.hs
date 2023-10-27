@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.LoggingOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.LoggingOptions where
@@ -94,7 +94,8 @@ instance Data.FromJSON LoggingOptions where
 
 instance Prelude.Hashable LoggingOptions where
   hashWithSalt _salt LoggingOptions' {..} =
-    _salt `Prelude.hashWithSalt` roleArn
+    _salt
+      `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` level
       `Prelude.hashWithSalt` enabled
 

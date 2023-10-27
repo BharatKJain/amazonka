@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.WorkflowExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.WorkflowExecution where
@@ -78,7 +78,8 @@ instance Data.FromJSON WorkflowExecution where
 
 instance Prelude.Hashable WorkflowExecution where
   hashWithSalt _salt WorkflowExecution' {..} =
-    _salt `Prelude.hashWithSalt` workflowId
+    _salt
+      `Prelude.hashWithSalt` workflowId
       `Prelude.hashWithSalt` runId
 
 instance Prelude.NFData WorkflowExecution where

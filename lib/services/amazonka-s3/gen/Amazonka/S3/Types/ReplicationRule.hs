@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.ReplicationRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.ReplicationRule where
@@ -149,7 +149,6 @@ newReplicationRule pStatus_ pDestination_ =
 replicationRule_deleteMarkerReplication :: Lens.Lens' ReplicationRule (Prelude.Maybe DeleteMarkerReplication)
 replicationRule_deleteMarkerReplication = Lens.lens (\ReplicationRule' {deleteMarkerReplication} -> deleteMarkerReplication) (\s@ReplicationRule' {} a -> s {deleteMarkerReplication = a} :: ReplicationRule)
 
--- |
 replicationRule_existingObjectReplication :: Lens.Lens' ReplicationRule (Prelude.Maybe ExistingObjectReplication)
 replicationRule_existingObjectReplication = Lens.lens (\ReplicationRule' {existingObjectReplication} -> existingObjectReplication) (\s@ReplicationRule' {} a -> s {existingObjectReplication = a} :: ReplicationRule)
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.LogsConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.LogsConfig where
@@ -83,7 +83,8 @@ instance Data.FromJSON LogsConfig where
 
 instance Prelude.Hashable LogsConfig where
   hashWithSalt _salt LogsConfig' {..} =
-    _salt `Prelude.hashWithSalt` cloudWatchLogs
+    _salt
+      `Prelude.hashWithSalt` cloudWatchLogs
       `Prelude.hashWithSalt` s3Logs
 
 instance Prelude.NFData LogsConfig where

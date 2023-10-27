@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.NewDeviceMetadataType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.NewDeviceMetadataType where
@@ -75,7 +75,8 @@ instance Data.FromJSON NewDeviceMetadataType where
 
 instance Prelude.Hashable NewDeviceMetadataType where
   hashWithSalt _salt NewDeviceMetadataType' {..} =
-    _salt `Prelude.hashWithSalt` deviceGroupKey
+    _salt
+      `Prelude.hashWithSalt` deviceGroupKey
       `Prelude.hashWithSalt` deviceKey
 
 instance Prelude.NFData NewDeviceMetadataType where

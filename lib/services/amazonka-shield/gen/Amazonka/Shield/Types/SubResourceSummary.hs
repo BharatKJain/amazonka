@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Shield.Types.SubResourceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Shield.Types.SubResourceSummary where
@@ -98,7 +98,8 @@ instance Data.FromJSON SubResourceSummary where
 
 instance Prelude.Hashable SubResourceSummary where
   hashWithSalt _salt SubResourceSummary' {..} =
-    _salt `Prelude.hashWithSalt` attackVectors
+    _salt
+      `Prelude.hashWithSalt` attackVectors
       `Prelude.hashWithSalt` counters
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` type'

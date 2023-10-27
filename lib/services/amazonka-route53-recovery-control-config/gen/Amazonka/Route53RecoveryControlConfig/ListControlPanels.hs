@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53RecoveryControlConfig.ListControlPanels
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,22 +102,22 @@ instance Core.AWSPager ListControlPanels where
     | Core.stop
         ( rs
             Lens.^? listControlPanelsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listControlPanelsResponse_controlPanels
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listControlPanels_nextToken
           Lens..~ rs
           Lens.^? listControlPanelsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListControlPanels where
   type
@@ -136,7 +136,8 @@ instance Core.AWSRequest ListControlPanels where
 
 instance Prelude.Hashable ListControlPanels where
   hashWithSalt _salt ListControlPanels' {..} =
-    _salt `Prelude.hashWithSalt` clusterArn
+    _salt
+      `Prelude.hashWithSalt` clusterArn
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

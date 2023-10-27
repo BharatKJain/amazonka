@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.CodeContentDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.CodeContentDescription where
@@ -103,7 +103,8 @@ instance Data.FromJSON CodeContentDescription where
 
 instance Prelude.Hashable CodeContentDescription where
   hashWithSalt _salt CodeContentDescription' {..} =
-    _salt `Prelude.hashWithSalt` codeMD5
+    _salt
+      `Prelude.hashWithSalt` codeMD5
       `Prelude.hashWithSalt` codeSize
       `Prelude.hashWithSalt` s3ApplicationCodeLocationDescription
       `Prelude.hashWithSalt` textContent

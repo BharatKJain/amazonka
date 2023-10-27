@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.ControlInputParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.ControlInputParameter where
@@ -79,7 +79,8 @@ instance Data.FromJSON ControlInputParameter where
 
 instance Prelude.Hashable ControlInputParameter where
   hashWithSalt _salt ControlInputParameter' {..} =
-    _salt `Prelude.hashWithSalt` parameterName
+    _salt
+      `Prelude.hashWithSalt` parameterName
       `Prelude.hashWithSalt` parameterValue
 
 instance Prelude.NFData ControlInputParameter where

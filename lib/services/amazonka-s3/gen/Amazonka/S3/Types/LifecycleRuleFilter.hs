@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.LifecycleRuleFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.LifecycleRuleFilter where
@@ -122,7 +122,8 @@ instance Data.FromXML LifecycleRuleFilter where
 
 instance Prelude.Hashable LifecycleRuleFilter where
   hashWithSalt _salt LifecycleRuleFilter' {..} =
-    _salt `Prelude.hashWithSalt` and
+    _salt
+      `Prelude.hashWithSalt` and
       `Prelude.hashWithSalt` objectSizeGreaterThan
       `Prelude.hashWithSalt` objectSizeLessThan
       `Prelude.hashWithSalt` prefix

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.PortRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.PortRange where
@@ -86,7 +86,8 @@ instance Data.FromJSON PortRange where
 
 instance Prelude.Hashable PortRange where
   hashWithSalt _salt PortRange' {..} =
-    _salt `Prelude.hashWithSalt` fromPort
+    _salt
+      `Prelude.hashWithSalt` fromPort
       `Prelude.hashWithSalt` toPort
 
 instance Prelude.NFData PortRange where

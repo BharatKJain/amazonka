@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsCodeBuildProjectArtifactsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsCodeBuildProjectArtifactsDetails where
@@ -180,7 +180,8 @@ instance
   hashWithSalt
     _salt
     AwsCodeBuildProjectArtifactsDetails' {..} =
-      _salt `Prelude.hashWithSalt` artifactIdentifier
+      _salt
+        `Prelude.hashWithSalt` artifactIdentifier
         `Prelude.hashWithSalt` encryptionDisabled
         `Prelude.hashWithSalt` location
         `Prelude.hashWithSalt` name

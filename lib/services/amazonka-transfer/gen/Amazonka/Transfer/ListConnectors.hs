@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Transfer.ListConnectors
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -101,18 +101,19 @@ instance Core.AWSPager ListConnectors where
     | Core.stop
         ( rs
             Lens.^? listConnectorsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listConnectorsResponse_connectors) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listConnectors_nextToken
           Lens..~ rs
-          Lens.^? listConnectorsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listConnectorsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListConnectors where
   type
@@ -131,7 +132,8 @@ instance Core.AWSRequest ListConnectors where
 
 instance Prelude.Hashable ListConnectors where
   hashWithSalt _salt ListConnectors' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListConnectors where

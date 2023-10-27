@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.CreateIdentityProvider
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -345,7 +345,8 @@ instance Core.AWSRequest CreateIdentityProvider where
 
 instance Prelude.Hashable CreateIdentityProvider where
   hashWithSalt _salt CreateIdentityProvider' {..} =
-    _salt `Prelude.hashWithSalt` attributeMapping
+    _salt
+      `Prelude.hashWithSalt` attributeMapping
       `Prelude.hashWithSalt` idpIdentifiers
       `Prelude.hashWithSalt` userPoolId
       `Prelude.hashWithSalt` providerName

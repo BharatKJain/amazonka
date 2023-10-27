@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.CertificateDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.CertificateDetails where
@@ -79,7 +79,8 @@ instance Data.FromXML CertificateDetails where
 
 instance Prelude.Hashable CertificateDetails where
   hashWithSalt _salt CertificateDetails' {..} =
-    _salt `Prelude.hashWithSalt` cAIdentifier
+    _salt
+      `Prelude.hashWithSalt` cAIdentifier
       `Prelude.hashWithSalt` validTill
 
 instance Prelude.NFData CertificateDetails where

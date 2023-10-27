@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.Insights
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.Insights where
@@ -191,7 +191,8 @@ instance Data.FromJSON Insights where
 
 instance Prelude.Hashable Insights where
   hashWithSalt _salt Insights' {..} =
-    _salt `Prelude.hashWithSalt` activeAssessmentsCount
+    _salt
+      `Prelude.hashWithSalt` activeAssessmentsCount
       `Prelude.hashWithSalt` assessmentControlsCountByNoncompliantEvidence
       `Prelude.hashWithSalt` compliantEvidenceCount
       `Prelude.hashWithSalt` inconclusiveEvidenceCount

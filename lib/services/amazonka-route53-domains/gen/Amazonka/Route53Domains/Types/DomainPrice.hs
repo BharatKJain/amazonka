@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53Domains.Types.DomainPrice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53Domains.Types.DomainPrice where
@@ -116,7 +116,8 @@ instance Data.FromJSON DomainPrice where
 
 instance Prelude.Hashable DomainPrice where
   hashWithSalt _salt DomainPrice' {..} =
-    _salt `Prelude.hashWithSalt` changeOwnershipPrice
+    _salt
+      `Prelude.hashWithSalt` changeOwnershipPrice
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` registrationPrice
       `Prelude.hashWithSalt` renewalPrice

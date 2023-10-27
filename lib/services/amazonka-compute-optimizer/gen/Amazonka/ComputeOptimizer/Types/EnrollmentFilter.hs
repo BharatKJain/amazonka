@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.EnrollmentFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.EnrollmentFilter where
@@ -82,7 +82,8 @@ enrollmentFilter_values = Lens.lens (\EnrollmentFilter' {values} -> values) (\s@
 
 instance Prelude.Hashable EnrollmentFilter where
   hashWithSalt _salt EnrollmentFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData EnrollmentFilter where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.PushNotificationTemplateResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.PushNotificationTemplateResponse where
@@ -294,7 +294,8 @@ instance
   hashWithSalt
     _salt
     PushNotificationTemplateResponse' {..} =
-      _salt `Prelude.hashWithSalt` adm
+      _salt
+        `Prelude.hashWithSalt` adm
         `Prelude.hashWithSalt` apns
         `Prelude.hashWithSalt` arn
         `Prelude.hashWithSalt` baidu

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RAM.Types.ServiceNameAndResourceType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RAM.Types.ServiceNameAndResourceType where
@@ -111,7 +111,8 @@ instance Data.FromJSON ServiceNameAndResourceType where
 
 instance Prelude.Hashable ServiceNameAndResourceType where
   hashWithSalt _salt ServiceNameAndResourceType' {..} =
-    _salt `Prelude.hashWithSalt` resourceRegionScope
+    _salt
+      `Prelude.hashWithSalt` resourceRegionScope
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` serviceName
 

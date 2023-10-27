@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectoryService.EnableRadius
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest EnableRadius where
 
 instance Prelude.Hashable EnableRadius where
   hashWithSalt _salt EnableRadius' {..} =
-    _salt `Prelude.hashWithSalt` directoryId
+    _salt
+      `Prelude.hashWithSalt` directoryId
       `Prelude.hashWithSalt` radiusSettings
 
 instance Prelude.NFData EnableRadius where

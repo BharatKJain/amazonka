@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pi.Types.MetricKeyDataPoints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pi.Types.MetricKeyDataPoints where
@@ -80,7 +80,8 @@ instance Data.FromJSON MetricKeyDataPoints where
 
 instance Prelude.Hashable MetricKeyDataPoints where
   hashWithSalt _salt MetricKeyDataPoints' {..} =
-    _salt `Prelude.hashWithSalt` dataPoints
+    _salt
+      `Prelude.hashWithSalt` dataPoints
       `Prelude.hashWithSalt` key
 
 instance Prelude.NFData MetricKeyDataPoints where

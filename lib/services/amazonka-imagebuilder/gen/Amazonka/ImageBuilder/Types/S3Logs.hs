@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ImageBuilder.Types.S3Logs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ImageBuilder.Types.S3Logs where
@@ -74,7 +74,8 @@ instance Data.FromJSON S3Logs where
 
 instance Prelude.Hashable S3Logs where
   hashWithSalt _salt S3Logs' {..} =
-    _salt `Prelude.hashWithSalt` s3BucketName
+    _salt
+      `Prelude.hashWithSalt` s3BucketName
       `Prelude.hashWithSalt` s3KeyPrefix
 
 instance Prelude.NFData S3Logs where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeCommit.MergeBranchesByFastForward
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -139,7 +139,8 @@ instance Core.AWSRequest MergeBranchesByFastForward where
 
 instance Prelude.Hashable MergeBranchesByFastForward where
   hashWithSalt _salt MergeBranchesByFastForward' {..} =
-    _salt `Prelude.hashWithSalt` targetBranch
+    _salt
+      `Prelude.hashWithSalt` targetBranch
       `Prelude.hashWithSalt` repositoryName
       `Prelude.hashWithSalt` sourceCommitSpecifier
       `Prelude.hashWithSalt` destinationCommitSpecifier

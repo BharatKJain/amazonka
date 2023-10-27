@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.UpsolverS3OutputFormatConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.UpsolverS3OutputFormatConfig where
@@ -95,7 +95,8 @@ instance
     UpsolverS3OutputFormatConfig
   where
   hashWithSalt _salt UpsolverS3OutputFormatConfig' {..} =
-    _salt `Prelude.hashWithSalt` aggregationConfig
+    _salt
+      `Prelude.hashWithSalt` aggregationConfig
       `Prelude.hashWithSalt` fileType
       `Prelude.hashWithSalt` prefixConfig
 

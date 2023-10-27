@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.CreateSmsTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest CreateSmsTemplate where
 
 instance Prelude.Hashable CreateSmsTemplate where
   hashWithSalt _salt CreateSmsTemplate' {..} =
-    _salt `Prelude.hashWithSalt` templateName
+    _salt
+      `Prelude.hashWithSalt` templateName
       `Prelude.hashWithSalt` sMSTemplateRequest
 
 instance Prelude.NFData CreateSmsTemplate where

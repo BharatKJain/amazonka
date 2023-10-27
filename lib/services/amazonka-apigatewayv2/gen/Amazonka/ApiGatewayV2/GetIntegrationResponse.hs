@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ApiGatewayV2.GetIntegrationResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,10 +121,12 @@ instance Core.AWSRequest GetIntegrationResponse where
             Prelude.<$> (x Data..?> "contentHandlingStrategy")
             Prelude.<*> (x Data..?> "integrationResponseId")
             Prelude.<*> (x Data..?> "integrationResponseKey")
-            Prelude.<*> ( x Data..?> "responseParameters"
+            Prelude.<*> ( x
+                            Data..?> "responseParameters"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "responseTemplates"
+            Prelude.<*> ( x
+                            Data..?> "responseTemplates"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "templateSelectionExpression")
@@ -133,7 +135,8 @@ instance Core.AWSRequest GetIntegrationResponse where
 
 instance Prelude.Hashable GetIntegrationResponse where
   hashWithSalt _salt GetIntegrationResponse' {..} =
-    _salt `Prelude.hashWithSalt` apiId
+    _salt
+      `Prelude.hashWithSalt` apiId
       `Prelude.hashWithSalt` integrationResponseId
       `Prelude.hashWithSalt` integrationId
 

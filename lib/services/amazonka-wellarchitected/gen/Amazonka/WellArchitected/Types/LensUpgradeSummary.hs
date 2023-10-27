@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.LensUpgradeSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.LensUpgradeSummary where
@@ -112,7 +112,8 @@ instance Data.FromJSON LensUpgradeSummary where
 
 instance Prelude.Hashable LensUpgradeSummary where
   hashWithSalt _salt LensUpgradeSummary' {..} =
-    _salt `Prelude.hashWithSalt` currentLensVersion
+    _salt
+      `Prelude.hashWithSalt` currentLensVersion
       `Prelude.hashWithSalt` latestLensVersion
       `Prelude.hashWithSalt` lensAlias
       `Prelude.hashWithSalt` lensArn

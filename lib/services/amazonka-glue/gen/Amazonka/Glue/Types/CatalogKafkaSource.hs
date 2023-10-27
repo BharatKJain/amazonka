@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.CatalogKafkaSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.CatalogKafkaSource where
@@ -136,7 +136,8 @@ instance Data.FromJSON CatalogKafkaSource where
 
 instance Prelude.Hashable CatalogKafkaSource where
   hashWithSalt _salt CatalogKafkaSource' {..} =
-    _salt `Prelude.hashWithSalt` dataPreviewOptions
+    _salt
+      `Prelude.hashWithSalt` dataPreviewOptions
       `Prelude.hashWithSalt` detectSchema
       `Prelude.hashWithSalt` streamingOptions
       `Prelude.hashWithSalt` windowSize

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.ClosedDays
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.ClosedDays where
@@ -105,7 +105,8 @@ instance Data.FromJSON ClosedDays where
 
 instance Prelude.Hashable ClosedDays where
   hashWithSalt _salt ClosedDays' {..} =
-    _salt `Prelude.hashWithSalt` custom
+    _salt
+      `Prelude.hashWithSalt` custom
       `Prelude.hashWithSalt` email
       `Prelude.hashWithSalt` push
       `Prelude.hashWithSalt` sms

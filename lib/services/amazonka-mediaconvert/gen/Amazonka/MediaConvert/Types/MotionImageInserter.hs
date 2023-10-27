@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.MotionImageInserter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.MotionImageInserter where
@@ -226,7 +226,8 @@ instance Data.FromJSON MotionImageInserter where
 
 instance Prelude.Hashable MotionImageInserter where
   hashWithSalt _salt MotionImageInserter' {..} =
-    _salt `Prelude.hashWithSalt` framerate
+    _salt
+      `Prelude.hashWithSalt` framerate
       `Prelude.hashWithSalt` input
       `Prelude.hashWithSalt` insertionMode
       `Prelude.hashWithSalt` offset

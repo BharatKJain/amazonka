@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.InsightConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.InsightConfiguration where
@@ -77,7 +77,8 @@ instance Data.FromJSON InsightConfiguration where
 
 instance Prelude.Hashable InsightConfiguration where
   hashWithSalt _salt InsightConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` computations
+    _salt
+      `Prelude.hashWithSalt` computations
       `Prelude.hashWithSalt` customNarrative
 
 instance Prelude.NFData InsightConfiguration where

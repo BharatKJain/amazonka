@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.UpdateFormData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.UpdateFormData where
@@ -130,7 +130,8 @@ updateFormData_style = Lens.lens (\UpdateFormData' {style} -> style) (\s@UpdateF
 
 instance Prelude.Hashable UpdateFormData where
   hashWithSalt _salt UpdateFormData' {..} =
-    _salt `Prelude.hashWithSalt` cta
+    _salt
+      `Prelude.hashWithSalt` cta
       `Prelude.hashWithSalt` dataType
       `Prelude.hashWithSalt` fields
       `Prelude.hashWithSalt` formActionType

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.DataRepositoryConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.DataRepositoryConfiguration where
@@ -283,7 +283,8 @@ instance Data.FromJSON DataRepositoryConfiguration where
 
 instance Prelude.Hashable DataRepositoryConfiguration where
   hashWithSalt _salt DataRepositoryConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` autoImportPolicy
+    _salt
+      `Prelude.hashWithSalt` autoImportPolicy
       `Prelude.hashWithSalt` exportPath
       `Prelude.hashWithSalt` failureDetails
       `Prelude.hashWithSalt` importPath

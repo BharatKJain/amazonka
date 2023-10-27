@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.WriteSegmentRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.WriteSegmentRequest where
@@ -101,7 +101,8 @@ writeSegmentRequest_tags = Lens.lens (\WriteSegmentRequest' {tags} -> tags) (\s@
 
 instance Prelude.Hashable WriteSegmentRequest where
   hashWithSalt _salt WriteSegmentRequest' {..} =
-    _salt `Prelude.hashWithSalt` dimensions
+    _salt
+      `Prelude.hashWithSalt` dimensions
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` segmentGroups
       `Prelude.hashWithSalt` tags

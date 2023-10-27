@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GuardDuty.UpdatePublishingDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest UpdatePublishingDestination where
 
 instance Prelude.Hashable UpdatePublishingDestination where
   hashWithSalt _salt UpdatePublishingDestination' {..} =
-    _salt `Prelude.hashWithSalt` destinationProperties
+    _salt
+      `Prelude.hashWithSalt` destinationProperties
       `Prelude.hashWithSalt` detectorId
       `Prelude.hashWithSalt` destinationId
 

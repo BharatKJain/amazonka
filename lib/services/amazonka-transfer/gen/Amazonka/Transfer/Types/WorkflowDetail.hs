@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.WorkflowDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.WorkflowDetail where
@@ -90,7 +90,8 @@ instance Data.FromJSON WorkflowDetail where
 
 instance Prelude.Hashable WorkflowDetail where
   hashWithSalt _salt WorkflowDetail' {..} =
-    _salt `Prelude.hashWithSalt` workflowId
+    _salt
+      `Prelude.hashWithSalt` workflowId
       `Prelude.hashWithSalt` executionRole
 
 instance Prelude.NFData WorkflowDetail where

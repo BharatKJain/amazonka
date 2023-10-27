@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2VolumeAttachment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2VolumeAttachment where
@@ -125,7 +125,8 @@ instance Data.FromJSON AwsEc2VolumeAttachment where
 
 instance Prelude.Hashable AwsEc2VolumeAttachment where
   hashWithSalt _salt AwsEc2VolumeAttachment' {..} =
-    _salt `Prelude.hashWithSalt` attachTime
+    _salt
+      `Prelude.hashWithSalt` attachTime
       `Prelude.hashWithSalt` deleteOnTermination
       `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` status

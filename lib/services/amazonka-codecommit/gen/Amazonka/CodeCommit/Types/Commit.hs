@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.Commit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.Commit where
@@ -158,7 +158,8 @@ instance Data.FromJSON Commit where
 
 instance Prelude.Hashable Commit where
   hashWithSalt _salt Commit' {..} =
-    _salt `Prelude.hashWithSalt` additionalData
+    _salt
+      `Prelude.hashWithSalt` additionalData
       `Prelude.hashWithSalt` author
       `Prelude.hashWithSalt` commitId
       `Prelude.hashWithSalt` committer

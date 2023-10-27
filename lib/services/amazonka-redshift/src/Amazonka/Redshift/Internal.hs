@@ -4,9 +4,9 @@
 
 -- |
 -- Module      : Amazonka.Redshift.Internal
--- Copyright   : (c) 2013-2021 Brendan Hay
+-- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay@gmail.com>
+-- Maintainer  : Brendan Hay <brendan.g.hay+amazonka.com>
 -- Stability   : experimental
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Internal
@@ -72,7 +72,6 @@ getCloudTrailAccountId = \case
   Jakarta -> Just "623197973179"
   Melbourne -> Just "945512339897"
   Mumbai -> Just "408097707231"
-  Hyderabad -> Just "297058826802"
   Osaka -> Just "398671365691"
   Seoul -> Just "713597048934"
   Singapore -> Just "960118270566"

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.DatasetStats
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.DatasetStats where
@@ -95,7 +95,8 @@ instance Data.FromJSON DatasetStats where
 
 instance Prelude.Hashable DatasetStats where
   hashWithSalt _salt DatasetStats' {..} =
-    _salt `Prelude.hashWithSalt` errorEntries
+    _salt
+      `Prelude.hashWithSalt` errorEntries
       `Prelude.hashWithSalt` labeledEntries
       `Prelude.hashWithSalt` totalEntries
       `Prelude.hashWithSalt` totalLabels

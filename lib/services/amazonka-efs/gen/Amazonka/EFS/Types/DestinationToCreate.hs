@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EFS.Types.DestinationToCreate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EFS.Types.DestinationToCreate where
@@ -129,7 +129,8 @@ destinationToCreate_region = Lens.lens (\DestinationToCreate' {region} -> region
 
 instance Prelude.Hashable DestinationToCreate where
   hashWithSalt _salt DestinationToCreate' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZoneName
+    _salt
+      `Prelude.hashWithSalt` availabilityZoneName
       `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` region
 

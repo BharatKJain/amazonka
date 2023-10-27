@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.SnapshotInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.SnapshotInfo where
@@ -172,7 +172,9 @@ instance Data.FromXML SnapshotInfo where
       Prelude.<*> (x Data..@? "snapshotId")
       Prelude.<*> (x Data..@? "startTime")
       Prelude.<*> (x Data..@? "state")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "volumeId")
@@ -180,7 +182,8 @@ instance Data.FromXML SnapshotInfo where
 
 instance Prelude.Hashable SnapshotInfo where
   hashWithSalt _salt SnapshotInfo' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` encrypted
       `Prelude.hashWithSalt` outpostArn
       `Prelude.hashWithSalt` ownerId

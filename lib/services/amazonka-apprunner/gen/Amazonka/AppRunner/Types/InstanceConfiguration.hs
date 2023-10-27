@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppRunner.Types.InstanceConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppRunner.Types.InstanceConfiguration where
@@ -109,7 +109,8 @@ instance Data.FromJSON InstanceConfiguration where
 
 instance Prelude.Hashable InstanceConfiguration where
   hashWithSalt _salt InstanceConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` cpu
+    _salt
+      `Prelude.hashWithSalt` cpu
       `Prelude.hashWithSalt` instanceRoleArn
       `Prelude.hashWithSalt` memory
 

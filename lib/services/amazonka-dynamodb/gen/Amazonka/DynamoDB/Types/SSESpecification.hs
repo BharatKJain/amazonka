@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.SSESpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.SSESpecification where
@@ -123,7 +123,8 @@ instance Data.FromJSON SSESpecification where
 
 instance Prelude.Hashable SSESpecification where
   hashWithSalt _salt SSESpecification' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` kmsMasterKeyId
       `Prelude.hashWithSalt` sSEType
 

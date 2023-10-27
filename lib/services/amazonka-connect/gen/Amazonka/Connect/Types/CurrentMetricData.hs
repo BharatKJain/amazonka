@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.CurrentMetricData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.CurrentMetricData where
@@ -75,7 +75,8 @@ instance Data.FromJSON CurrentMetricData where
 
 instance Prelude.Hashable CurrentMetricData where
   hashWithSalt _salt CurrentMetricData' {..} =
-    _salt `Prelude.hashWithSalt` metric
+    _salt
+      `Prelude.hashWithSalt` metric
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData CurrentMetricData where

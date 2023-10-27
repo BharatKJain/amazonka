@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FMS.ListAppsLists
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,20 +136,23 @@ instance Core.AWSPager ListAppsLists where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listAppsListsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listAppsListsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listAppsListsResponse_appsLists Prelude.. Lens._Just
+            Lens.^? listAppsListsResponse_appsLists
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAppsLists_nextToken
           Lens..~ rs
-          Lens.^? listAppsListsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listAppsListsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAppsLists where
   type
@@ -168,7 +171,8 @@ instance Core.AWSRequest ListAppsLists where
 
 instance Prelude.Hashable ListAppsLists where
   hashWithSalt _salt ListAppsLists' {..} =
-    _salt `Prelude.hashWithSalt` defaultLists
+    _salt
+      `Prelude.hashWithSalt` defaultLists
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` maxResults
 

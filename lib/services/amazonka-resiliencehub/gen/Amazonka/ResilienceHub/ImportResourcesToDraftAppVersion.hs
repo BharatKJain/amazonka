@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ResilienceHub.ImportResourcesToDraftAppVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance
       ( \s h x ->
           ImportResourcesToDraftAppVersionResponse'
             Prelude.<$> (x Data..?> "sourceArns" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "terraformSources"
+            Prelude.<*> ( x
+                            Data..?> "terraformSources"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -148,7 +149,8 @@ instance
   hashWithSalt
     _salt
     ImportResourcesToDraftAppVersion' {..} =
-      _salt `Prelude.hashWithSalt` sourceArns
+      _salt
+        `Prelude.hashWithSalt` sourceArns
         `Prelude.hashWithSalt` terraformSources
         `Prelude.hashWithSalt` appArn
 

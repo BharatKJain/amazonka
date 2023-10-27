@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManagerUserSubscriptions.Types.ProductUserSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManagerUserSubscriptions.Types.ProductUserSummary where
@@ -147,7 +147,8 @@ instance Data.FromJSON ProductUserSummary where
 
 instance Prelude.Hashable ProductUserSummary where
   hashWithSalt _salt ProductUserSummary' {..} =
-    _salt `Prelude.hashWithSalt` domain
+    _salt
+      `Prelude.hashWithSalt` domain
       `Prelude.hashWithSalt` statusMessage
       `Prelude.hashWithSalt` subscriptionEndDate
       `Prelude.hashWithSalt` subscriptionStartDate

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ImageBuilder.StartImagePipelineExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest StartImagePipelineExecution where
 
 instance Prelude.Hashable StartImagePipelineExecution where
   hashWithSalt _salt StartImagePipelineExecution' {..} =
-    _salt `Prelude.hashWithSalt` imagePipelineArn
+    _salt
+      `Prelude.hashWithSalt` imagePipelineArn
       `Prelude.hashWithSalt` clientToken
 
 instance Prelude.NFData StartImagePipelineExecution where

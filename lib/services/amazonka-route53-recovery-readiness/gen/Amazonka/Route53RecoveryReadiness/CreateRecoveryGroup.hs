@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53RecoveryReadiness.CreateRecoveryGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest CreateRecoveryGroup where
 
 instance Prelude.Hashable CreateRecoveryGroup where
   hashWithSalt _salt CreateRecoveryGroup' {..} =
-    _salt `Prelude.hashWithSalt` cells
+    _salt
+      `Prelude.hashWithSalt` cells
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` recoveryGroupName
 

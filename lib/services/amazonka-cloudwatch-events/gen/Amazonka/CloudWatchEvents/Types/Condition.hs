@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.Condition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.Condition where
@@ -95,7 +95,8 @@ condition_value = Lens.lens (\Condition' {value} -> value) (\s@Condition' {} a -
 
 instance Prelude.Hashable Condition where
   hashWithSalt _salt Condition' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 

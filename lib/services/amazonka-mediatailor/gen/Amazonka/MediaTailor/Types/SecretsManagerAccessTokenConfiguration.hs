@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.SecretsManagerAccessTokenConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.SecretsManagerAccessTokenConfiguration where
@@ -110,7 +110,8 @@ instance
   hashWithSalt
     _salt
     SecretsManagerAccessTokenConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` headerName
+      _salt
+        `Prelude.hashWithSalt` headerName
         `Prelude.hashWithSalt` secretArn
         `Prelude.hashWithSalt` secretStringKey
 

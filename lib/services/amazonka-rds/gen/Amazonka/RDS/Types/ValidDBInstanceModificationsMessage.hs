@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.ValidDBInstanceModificationsMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.ValidDBInstanceModificationsMessage where
@@ -75,10 +75,13 @@ instance
   where
   parseXML x =
     ValidDBInstanceModificationsMessage'
-      Prelude.<$> ( x Data..@? "Storage" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Storage"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "ValidStorageOptions")
                   )
-      Prelude.<*> ( x Data..@? "ValidProcessorFeatures"
+      Prelude.<*> ( x
+                      Data..@? "ValidProcessorFeatures"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may
                         (Data.parseXMLList "AvailableProcessorFeature")
@@ -91,7 +94,8 @@ instance
   hashWithSalt
     _salt
     ValidDBInstanceModificationsMessage' {..} =
-      _salt `Prelude.hashWithSalt` storage
+      _salt
+        `Prelude.hashWithSalt` storage
         `Prelude.hashWithSalt` validProcessorFeatures
 
 instance

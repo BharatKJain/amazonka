@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ColumnConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ColumnConfiguration where
@@ -90,7 +90,8 @@ instance Data.FromJSON ColumnConfiguration where
 
 instance Prelude.Hashable ColumnConfiguration where
   hashWithSalt _salt ColumnConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` formatConfiguration
+    _salt
+      `Prelude.hashWithSalt` formatConfiguration
       `Prelude.hashWithSalt` role'
       `Prelude.hashWithSalt` column
 

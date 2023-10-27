@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.Vpc
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.Vpc where
@@ -64,7 +64,8 @@ vpc_subnets = Lens.lens (\Vpc' {subnets} -> subnets) (\s@Vpc' {} a -> s {subnets
 
 instance Prelude.Hashable Vpc where
   hashWithSalt _salt Vpc' {..} =
-    _salt `Prelude.hashWithSalt` securityGroups
+    _salt
+      `Prelude.hashWithSalt` securityGroups
       `Prelude.hashWithSalt` subnets
 
 instance Prelude.NFData Vpc where

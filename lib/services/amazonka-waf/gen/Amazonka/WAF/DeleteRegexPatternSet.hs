@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAF.DeleteRegexPatternSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,7 +124,8 @@ instance Core.AWSRequest DeleteRegexPatternSet where
 
 instance Prelude.Hashable DeleteRegexPatternSet where
   hashWithSalt _salt DeleteRegexPatternSet' {..} =
-    _salt `Prelude.hashWithSalt` regexPatternSetId
+    _salt
+      `Prelude.hashWithSalt` regexPatternSetId
       `Prelude.hashWithSalt` changeToken
 
 instance Prelude.NFData DeleteRegexPatternSet where

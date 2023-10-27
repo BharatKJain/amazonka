@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.AvailabilityZone
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.AvailabilityZone where
@@ -97,7 +97,8 @@ availabilityZone_zoneName = Lens.lens (\AvailabilityZone' {zoneName} -> zoneName
 instance Data.FromXML AvailabilityZone where
   parseXML x =
     AvailabilityZone'
-      Prelude.<$> ( x Data..@? "LoadBalancerAddresses"
+      Prelude.<$> ( x
+                      Data..@? "LoadBalancerAddresses"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
@@ -107,7 +108,8 @@ instance Data.FromXML AvailabilityZone where
 
 instance Prelude.Hashable AvailabilityZone where
   hashWithSalt _salt AvailabilityZone' {..} =
-    _salt `Prelude.hashWithSalt` loadBalancerAddresses
+    _salt
+      `Prelude.hashWithSalt` loadBalancerAddresses
       `Prelude.hashWithSalt` outpostId
       `Prelude.hashWithSalt` subnetId
       `Prelude.hashWithSalt` zoneName

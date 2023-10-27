@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Crawl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Crawl where
@@ -115,7 +115,8 @@ instance Data.FromJSON Crawl where
 
 instance Prelude.Hashable Crawl where
   hashWithSalt _salt Crawl' {..} =
-    _salt `Prelude.hashWithSalt` completedOn
+    _salt
+      `Prelude.hashWithSalt` completedOn
       `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` logGroup
       `Prelude.hashWithSalt` logStream

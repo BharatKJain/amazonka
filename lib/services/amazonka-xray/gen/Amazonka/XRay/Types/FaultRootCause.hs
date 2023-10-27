@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.FaultRootCause
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.FaultRootCause where
@@ -78,7 +78,8 @@ instance Data.FromJSON FaultRootCause where
 
 instance Prelude.Hashable FaultRootCause where
   hashWithSalt _salt FaultRootCause' {..} =
-    _salt `Prelude.hashWithSalt` clientImpacting
+    _salt
+      `Prelude.hashWithSalt` clientImpacting
       `Prelude.hashWithSalt` services
 
 instance Prelude.NFData FaultRootCause where

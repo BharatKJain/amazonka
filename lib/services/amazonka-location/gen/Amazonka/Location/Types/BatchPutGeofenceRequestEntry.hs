@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.BatchPutGeofenceRequestEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.BatchPutGeofenceRequestEntry where
@@ -93,7 +93,8 @@ instance
     BatchPutGeofenceRequestEntry
   where
   hashWithSalt _salt BatchPutGeofenceRequestEntry' {..} =
-    _salt `Prelude.hashWithSalt` geofenceId
+    _salt
+      `Prelude.hashWithSalt` geofenceId
       `Prelude.hashWithSalt` geometry
 
 instance Prelude.NFData BatchPutGeofenceRequestEntry where

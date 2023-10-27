@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.ResponseHeadersPolicyAccessControlAllowMethods
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.ResponseHeadersPolicyAccessControlAllowMethods where
@@ -134,9 +134,11 @@ instance
   parseXML x =
     ResponseHeadersPolicyAccessControlAllowMethods'
       Prelude.<$> (x Data..@ "Quantity")
-        Prelude.<*> ( x Data..@? "Items" Core..!@ Prelude.mempty
-                        Prelude.>>= Data.parseXMLList "Method"
-                    )
+      Prelude.<*> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
+                      Prelude.>>= Data.parseXMLList "Method"
+                  )
 
 instance
   Prelude.Hashable
@@ -145,7 +147,8 @@ instance
   hashWithSalt
     _salt
     ResponseHeadersPolicyAccessControlAllowMethods' {..} =
-      _salt `Prelude.hashWithSalt` quantity
+      _salt
+        `Prelude.hashWithSalt` quantity
         `Prelude.hashWithSalt` items
 
 instance

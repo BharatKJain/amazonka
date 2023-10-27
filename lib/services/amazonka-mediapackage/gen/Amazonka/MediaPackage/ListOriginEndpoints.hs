@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaPackage.ListOriginEndpoints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,22 +105,22 @@ instance Core.AWSPager ListOriginEndpoints where
     | Core.stop
         ( rs
             Lens.^? listOriginEndpointsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listOriginEndpointsResponse_originEndpoints
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listOriginEndpoints_nextToken
           Lens..~ rs
           Lens.^? listOriginEndpointsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListOriginEndpoints where
   type
@@ -133,7 +133,8 @@ instance Core.AWSRequest ListOriginEndpoints where
       ( \s h x ->
           ListOriginEndpointsResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "originEndpoints"
+            Prelude.<*> ( x
+                            Data..?> "originEndpoints"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -141,7 +142,8 @@ instance Core.AWSRequest ListOriginEndpoints where
 
 instance Prelude.Hashable ListOriginEndpoints where
   hashWithSalt _salt ListOriginEndpoints' {..} =
-    _salt `Prelude.hashWithSalt` channelId
+    _salt
+      `Prelude.hashWithSalt` channelId
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

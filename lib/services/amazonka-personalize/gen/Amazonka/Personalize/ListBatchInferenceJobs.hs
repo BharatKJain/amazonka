@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Personalize.ListBatchInferenceJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,22 +110,22 @@ instance Core.AWSPager ListBatchInferenceJobs where
     | Core.stop
         ( rs
             Lens.^? listBatchInferenceJobsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listBatchInferenceJobsResponse_batchInferenceJobs
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listBatchInferenceJobs_nextToken
           Lens..~ rs
           Lens.^? listBatchInferenceJobsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListBatchInferenceJobs where
   type
@@ -137,7 +137,8 @@ instance Core.AWSRequest ListBatchInferenceJobs where
     Response.receiveJSON
       ( \s h x ->
           ListBatchInferenceJobsResponse'
-            Prelude.<$> ( x Data..?> "batchInferenceJobs"
+            Prelude.<$> ( x
+                            Data..?> "batchInferenceJobs"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -146,7 +147,8 @@ instance Core.AWSRequest ListBatchInferenceJobs where
 
 instance Prelude.Hashable ListBatchInferenceJobs where
   hashWithSalt _salt ListBatchInferenceJobs' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` solutionVersionArn
 

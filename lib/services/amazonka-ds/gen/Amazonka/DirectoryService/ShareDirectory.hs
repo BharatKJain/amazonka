@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectoryService.ShareDirectory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -172,7 +172,8 @@ instance Core.AWSRequest ShareDirectory where
 
 instance Prelude.Hashable ShareDirectory where
   hashWithSalt _salt ShareDirectory' {..} =
-    _salt `Prelude.hashWithSalt` shareNotes
+    _salt
+      `Prelude.hashWithSalt` shareNotes
       `Prelude.hashWithSalt` directoryId
       `Prelude.hashWithSalt` shareTarget
       `Prelude.hashWithSalt` shareMethod

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AlexaBusiness.PutSkillAuthorization
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest PutSkillAuthorization where
 
 instance Prelude.Hashable PutSkillAuthorization where
   hashWithSalt _salt PutSkillAuthorization' {..} =
-    _salt `Prelude.hashWithSalt` roomArn
+    _salt
+      `Prelude.hashWithSalt` roomArn
       `Prelude.hashWithSalt` authorizationResult
       `Prelude.hashWithSalt` skillId
 

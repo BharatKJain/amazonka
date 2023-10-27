@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GamesParks.Types.DeploymentResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GamesParks.Types.DeploymentResult where
@@ -75,7 +75,8 @@ instance Data.FromJSON DeploymentResult where
 
 instance Prelude.Hashable DeploymentResult where
   hashWithSalt _salt DeploymentResult' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` resultCode
 
 instance Prelude.NFData DeploymentResult where

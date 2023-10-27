@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.AttachmentReference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.AttachmentReference where
@@ -86,7 +86,8 @@ instance Data.FromJSON AttachmentReference where
 
 instance Prelude.Hashable AttachmentReference where
   hashWithSalt _salt AttachmentReference' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` value
 

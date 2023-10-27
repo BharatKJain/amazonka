@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.SmartHomeAppliance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.SmartHomeAppliance where
@@ -85,7 +85,8 @@ instance Data.FromJSON SmartHomeAppliance where
 
 instance Prelude.Hashable SmartHomeAppliance where
   hashWithSalt _salt SmartHomeAppliance' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` friendlyName
       `Prelude.hashWithSalt` manufacturerName
 

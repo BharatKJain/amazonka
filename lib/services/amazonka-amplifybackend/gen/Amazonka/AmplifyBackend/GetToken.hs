@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AmplifyBackend.GetToken
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest GetToken where
 
 instance Prelude.Hashable GetToken where
   hashWithSalt _salt GetToken' {..} =
-    _salt `Prelude.hashWithSalt` sessionId
+    _salt
+      `Prelude.hashWithSalt` sessionId
       `Prelude.hashWithSalt` appId
 
 instance Prelude.NFData GetToken where

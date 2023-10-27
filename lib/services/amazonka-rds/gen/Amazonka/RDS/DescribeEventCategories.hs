@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.DescribeEventCategories
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest DescribeEventCategories where
       "DescribeEventCategoriesResult"
       ( \s h x ->
           DescribeEventCategoriesResponse'
-            Prelude.<$> ( x Data..@? "EventCategoriesMapList"
+            Prelude.<$> ( x
+                            Data..@? "EventCategoriesMapList"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "EventCategoriesMap")
                         )
@@ -124,7 +125,8 @@ instance Core.AWSRequest DescribeEventCategories where
 
 instance Prelude.Hashable DescribeEventCategories where
   hashWithSalt _salt DescribeEventCategories' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` sourceType
 
 instance Prelude.NFData DescribeEventCategories where

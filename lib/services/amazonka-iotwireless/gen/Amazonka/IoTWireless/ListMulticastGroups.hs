@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTWireless.ListMulticastGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,7 +100,8 @@ instance Core.AWSRequest ListMulticastGroups where
     Response.receiveJSON
       ( \s h x ->
           ListMulticastGroupsResponse'
-            Prelude.<$> ( x Data..?> "MulticastGroupList"
+            Prelude.<$> ( x
+                            Data..?> "MulticastGroupList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -109,7 +110,8 @@ instance Core.AWSRequest ListMulticastGroups where
 
 instance Prelude.Hashable ListMulticastGroups where
   hashWithSalt _salt ListMulticastGroups' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListMulticastGroups where

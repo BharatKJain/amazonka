@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodePipeline.StopPipelineExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -149,7 +149,8 @@ instance Core.AWSRequest StopPipelineExecution where
 
 instance Prelude.Hashable StopPipelineExecution where
   hashWithSalt _salt StopPipelineExecution' {..} =
-    _salt `Prelude.hashWithSalt` abandon
+    _salt
+      `Prelude.hashWithSalt` abandon
       `Prelude.hashWithSalt` reason
       `Prelude.hashWithSalt` pipelineName
       `Prelude.hashWithSalt` pipelineExecutionId

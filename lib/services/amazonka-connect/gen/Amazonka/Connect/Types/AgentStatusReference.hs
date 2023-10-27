@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.AgentStatusReference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.AgentStatusReference where
@@ -84,7 +84,8 @@ instance Data.FromJSON AgentStatusReference where
 
 instance Prelude.Hashable AgentStatusReference where
   hashWithSalt _salt AgentStatusReference' {..} =
-    _salt `Prelude.hashWithSalt` statusArn
+    _salt
+      `Prelude.hashWithSalt` statusArn
       `Prelude.hashWithSalt` statusName
       `Prelude.hashWithSalt` statusStartTimestamp
 

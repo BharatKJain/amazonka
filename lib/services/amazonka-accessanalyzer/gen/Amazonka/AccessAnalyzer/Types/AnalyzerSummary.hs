@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.AnalyzerSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.AnalyzerSummary where
@@ -199,7 +199,8 @@ instance Data.FromJSON AnalyzerSummary where
 
 instance Prelude.Hashable AnalyzerSummary where
   hashWithSalt _salt AnalyzerSummary' {..} =
-    _salt `Prelude.hashWithSalt` lastResourceAnalyzed
+    _salt
+      `Prelude.hashWithSalt` lastResourceAnalyzed
       `Prelude.hashWithSalt` lastResourceAnalyzedAt
       `Prelude.hashWithSalt` statusReason
       `Prelude.hashWithSalt` tags

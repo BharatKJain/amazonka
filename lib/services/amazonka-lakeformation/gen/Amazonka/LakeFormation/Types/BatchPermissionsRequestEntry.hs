@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.BatchPermissionsRequestEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.BatchPermissionsRequestEntry where
@@ -102,7 +102,8 @@ instance Data.FromJSON BatchPermissionsRequestEntry where
       ( \x ->
           BatchPermissionsRequestEntry'
             Prelude.<$> (x Data..:? "Permissions" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "PermissionsWithGrantOption"
+            Prelude.<*> ( x
+                            Data..:? "PermissionsWithGrantOption"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Principal")
@@ -115,7 +116,8 @@ instance
     BatchPermissionsRequestEntry
   where
   hashWithSalt _salt BatchPermissionsRequestEntry' {..} =
-    _salt `Prelude.hashWithSalt` permissions
+    _salt
+      `Prelude.hashWithSalt` permissions
       `Prelude.hashWithSalt` permissionsWithGrantOption
       `Prelude.hashWithSalt` principal
       `Prelude.hashWithSalt` resource

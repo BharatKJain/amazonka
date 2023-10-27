@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.CostCategoryProcessingStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.CostCategoryProcessingStatus where
@@ -81,7 +81,8 @@ instance
     CostCategoryProcessingStatus
   where
   hashWithSalt _salt CostCategoryProcessingStatus' {..} =
-    _salt `Prelude.hashWithSalt` component
+    _salt
+      `Prelude.hashWithSalt` component
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData CostCategoryProcessingStatus where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.TCPFlagField
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.TCPFlagField where
@@ -115,7 +115,8 @@ instance Data.FromJSON TCPFlagField where
 
 instance Prelude.Hashable TCPFlagField where
   hashWithSalt _salt TCPFlagField' {..} =
-    _salt `Prelude.hashWithSalt` masks
+    _salt
+      `Prelude.hashWithSalt` masks
       `Prelude.hashWithSalt` flags
 
 instance Prelude.NFData TCPFlagField where

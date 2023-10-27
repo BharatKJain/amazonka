@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.S3SourceProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.S3SourceProperties where
@@ -90,7 +90,8 @@ instance Data.FromJSON S3SourceProperties where
 
 instance Prelude.Hashable S3SourceProperties where
   hashWithSalt _salt S3SourceProperties' {..} =
-    _salt `Prelude.hashWithSalt` bucketPrefix
+    _salt
+      `Prelude.hashWithSalt` bucketPrefix
       `Prelude.hashWithSalt` s3InputFormatConfig
       `Prelude.hashWithSalt` bucketName
 

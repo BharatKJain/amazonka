@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.ModelSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.ModelSettings where
@@ -28,7 +28,7 @@ import qualified Amazonka.Prelude as Prelude
 -- specified transcription job.
 --
 -- Only use @ModelSettings@ with the @LanguageModelName@ sub-parameter if
--- you\'re __not__ using automatic language identification (@@). If using
+-- you\'re __not__ using automatic language identification (). If using
 -- @LanguageIdSettings@ in your request, this parameter contains a
 -- @LanguageModelName@ sub-parameter.
 --

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.Resource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.Resource where
@@ -100,14 +100,16 @@ instance Data.FromJSON Resource where
             Prelude.<*> (x Data..:? "parentId")
             Prelude.<*> (x Data..:? "path")
             Prelude.<*> (x Data..:? "pathPart")
-            Prelude.<*> ( x Data..:? "resourceMethods"
+            Prelude.<*> ( x
+                            Data..:? "resourceMethods"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable Resource where
   hashWithSalt _salt Resource' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` parentId
       `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` pathPart

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.DeleteChannelModerator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance Core.AWSRequest DeleteChannelModerator where
 
 instance Prelude.Hashable DeleteChannelModerator where
   hashWithSalt _salt DeleteChannelModerator' {..} =
-    _salt `Prelude.hashWithSalt` chimeBearer
+    _salt
+      `Prelude.hashWithSalt` chimeBearer
       `Prelude.hashWithSalt` channelArn
       `Prelude.hashWithSalt` channelModeratorArn
 

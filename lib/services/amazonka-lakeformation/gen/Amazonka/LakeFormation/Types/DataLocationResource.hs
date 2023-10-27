@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.DataLocationResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.DataLocationResource where
@@ -83,7 +83,8 @@ instance Data.FromJSON DataLocationResource where
 
 instance Prelude.Hashable DataLocationResource where
   hashWithSalt _salt DataLocationResource' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` resourceArn
 
 instance Prelude.NFData DataLocationResource where

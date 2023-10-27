@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AmplifyBackend.UpdateBackendConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest UpdateBackendConfig where
 
 instance Prelude.Hashable UpdateBackendConfig where
   hashWithSalt _salt UpdateBackendConfig' {..} =
-    _salt `Prelude.hashWithSalt` loginAuthConfig
+    _salt
+      `Prelude.hashWithSalt` loginAuthConfig
       `Prelude.hashWithSalt` appId
 
 instance Prelude.NFData UpdateBackendConfig where

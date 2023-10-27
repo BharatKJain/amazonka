@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.ProjectCache
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.ProjectCache where
@@ -247,7 +247,8 @@ instance Data.FromJSON ProjectCache where
 
 instance Prelude.Hashable ProjectCache where
   hashWithSalt _salt ProjectCache' {..} =
-    _salt `Prelude.hashWithSalt` location
+    _salt
+      `Prelude.hashWithSalt` location
       `Prelude.hashWithSalt` modes
       `Prelude.hashWithSalt` type'
 

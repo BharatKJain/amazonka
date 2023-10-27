@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaLive.UpdateMultiplex
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest UpdateMultiplex' where
 
 instance Prelude.Hashable UpdateMultiplex' where
   hashWithSalt _salt UpdateMultiplex'' {..} =
-    _salt `Prelude.hashWithSalt` multiplexSettings
+    _salt
+      `Prelude.hashWithSalt` multiplexSettings
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` multiplexId
 

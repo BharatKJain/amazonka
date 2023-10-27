@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Mobile.Types.ProjectDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Mobile.Types.ProjectDetails where
@@ -131,7 +131,8 @@ instance Data.FromJSON ProjectDetails where
 
 instance Prelude.Hashable ProjectDetails where
   hashWithSalt _salt ProjectDetails' {..} =
-    _salt `Prelude.hashWithSalt` consoleUrl
+    _salt
+      `Prelude.hashWithSalt` consoleUrl
       `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` lastUpdatedDate
       `Prelude.hashWithSalt` name

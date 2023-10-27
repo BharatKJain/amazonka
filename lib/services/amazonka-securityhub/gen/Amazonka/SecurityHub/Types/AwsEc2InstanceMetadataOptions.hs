@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2InstanceMetadataOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2InstanceMetadataOptions where
@@ -118,7 +118,8 @@ instance
     AwsEc2InstanceMetadataOptions
   where
   hashWithSalt _salt AwsEc2InstanceMetadataOptions' {..} =
-    _salt `Prelude.hashWithSalt` httpEndpoint
+    _salt
+      `Prelude.hashWithSalt` httpEndpoint
       `Prelude.hashWithSalt` httpProtocolIpv6
       `Prelude.hashWithSalt` httpPutResponseHopLimit
       `Prelude.hashWithSalt` httpTokens

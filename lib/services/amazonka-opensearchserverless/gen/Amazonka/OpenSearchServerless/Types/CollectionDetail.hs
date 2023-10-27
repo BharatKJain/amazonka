@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearchServerless.Types.CollectionDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearchServerless.Types.CollectionDetail where
@@ -173,7 +173,8 @@ instance Data.FromJSON CollectionDetail where
 
 instance Prelude.Hashable CollectionDetail where
   hashWithSalt _salt CollectionDetail' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` collectionEndpoint
       `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` dashboardEndpoint

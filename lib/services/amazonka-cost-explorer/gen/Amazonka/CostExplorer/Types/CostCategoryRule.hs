@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.CostCategoryRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.CostCategoryRule where
@@ -167,7 +167,8 @@ instance Data.FromJSON CostCategoryRule where
 
 instance Prelude.Hashable CostCategoryRule where
   hashWithSalt _salt CostCategoryRule' {..} =
-    _salt `Prelude.hashWithSalt` inheritedValue
+    _salt
+      `Prelude.hashWithSalt` inheritedValue
       `Prelude.hashWithSalt` rule
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` value

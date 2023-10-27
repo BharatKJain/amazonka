@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.ScheduleLambdaFunctionFailedEventAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.ScheduleLambdaFunctionFailedEventAttributes where
@@ -135,9 +135,10 @@ instance
       "ScheduleLambdaFunctionFailedEventAttributes"
       ( \x ->
           ScheduleLambdaFunctionFailedEventAttributes'
-            Prelude.<$> (x Data..: "id") Prelude.<*> (x Data..: "name")
-              Prelude.<*> (x Data..: "cause")
-              Prelude.<*> (x Data..: "decisionTaskCompletedEventId")
+            Prelude.<$> (x Data..: "id")
+            Prelude.<*> (x Data..: "name")
+            Prelude.<*> (x Data..: "cause")
+            Prelude.<*> (x Data..: "decisionTaskCompletedEventId")
       )
 
 instance
@@ -147,7 +148,8 @@ instance
   hashWithSalt
     _salt
     ScheduleLambdaFunctionFailedEventAttributes' {..} =
-      _salt `Prelude.hashWithSalt` id
+      _salt
+        `Prelude.hashWithSalt` id
         `Prelude.hashWithSalt` name
         `Prelude.hashWithSalt` cause
         `Prelude.hashWithSalt` decisionTaskCompletedEventId

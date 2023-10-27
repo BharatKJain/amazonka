@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ResourceStatementRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ResourceStatementRequest where
@@ -66,7 +66,8 @@ resourceStatementRequest_resources = Lens.lens (\ResourceStatementRequest' {reso
 
 instance Prelude.Hashable ResourceStatementRequest where
   hashWithSalt _salt ResourceStatementRequest' {..} =
-    _salt `Prelude.hashWithSalt` resourceTypes
+    _salt
+      `Prelude.hashWithSalt` resourceTypes
       `Prelude.hashWithSalt` resources
 
 instance Prelude.NFData ResourceStatementRequest where

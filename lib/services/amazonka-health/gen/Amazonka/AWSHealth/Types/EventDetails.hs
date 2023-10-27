@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AWSHealth.Types.EventDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AWSHealth.Types.EventDetails where
@@ -92,7 +92,8 @@ instance Data.FromJSON EventDetails where
 
 instance Prelude.Hashable EventDetails where
   hashWithSalt _salt EventDetails' {..} =
-    _salt `Prelude.hashWithSalt` event
+    _salt
+      `Prelude.hashWithSalt` event
       `Prelude.hashWithSalt` eventDescription
       `Prelude.hashWithSalt` eventMetadata
 

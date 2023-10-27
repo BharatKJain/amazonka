@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.StackSetDriftDetectionDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.StackSetDriftDetectionDetails where
@@ -286,7 +286,8 @@ instance
     StackSetDriftDetectionDetails
   where
   hashWithSalt _salt StackSetDriftDetectionDetails' {..} =
-    _salt `Prelude.hashWithSalt` driftDetectionStatus
+    _salt
+      `Prelude.hashWithSalt` driftDetectionStatus
       `Prelude.hashWithSalt` driftStatus
       `Prelude.hashWithSalt` driftedStackInstancesCount
       `Prelude.hashWithSalt` failedStackInstancesCount

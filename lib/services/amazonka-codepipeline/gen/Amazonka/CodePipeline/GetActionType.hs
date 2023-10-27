@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodePipeline.GetActionType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -180,7 +180,8 @@ instance Core.AWSRequest GetActionType where
 
 instance Prelude.Hashable GetActionType where
   hashWithSalt _salt GetActionType' {..} =
-    _salt `Prelude.hashWithSalt` category
+    _salt
+      `Prelude.hashWithSalt` category
       `Prelude.hashWithSalt` owner
       `Prelude.hashWithSalt` provider
       `Prelude.hashWithSalt` version

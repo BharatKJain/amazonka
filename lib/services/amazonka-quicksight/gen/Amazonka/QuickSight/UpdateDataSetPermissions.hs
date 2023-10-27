@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.UpdateDataSetPermissions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -140,7 +140,8 @@ instance Core.AWSRequest UpdateDataSetPermissions where
 
 instance Prelude.Hashable UpdateDataSetPermissions where
   hashWithSalt _salt UpdateDataSetPermissions' {..} =
-    _salt `Prelude.hashWithSalt` grantPermissions
+    _salt
+      `Prelude.hashWithSalt` grantPermissions
       `Prelude.hashWithSalt` revokePermissions
       `Prelude.hashWithSalt` awsAccountId
       `Prelude.hashWithSalt` dataSetId

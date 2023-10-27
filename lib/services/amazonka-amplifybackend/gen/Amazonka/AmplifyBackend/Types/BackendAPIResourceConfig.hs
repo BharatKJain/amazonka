@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyBackend.Types.BackendAPIResourceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyBackend.Types.BackendAPIResourceConfig where
@@ -123,7 +123,8 @@ instance Data.FromJSON BackendAPIResourceConfig where
       "BackendAPIResourceConfig"
       ( \x ->
           BackendAPIResourceConfig'
-            Prelude.<$> ( x Data..:? "additionalAuthTypes"
+            Prelude.<$> ( x
+                            Data..:? "additionalAuthTypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "apiName")
@@ -135,7 +136,8 @@ instance Data.FromJSON BackendAPIResourceConfig where
 
 instance Prelude.Hashable BackendAPIResourceConfig where
   hashWithSalt _salt BackendAPIResourceConfig' {..} =
-    _salt `Prelude.hashWithSalt` additionalAuthTypes
+    _salt
+      `Prelude.hashWithSalt` additionalAuthTypes
       `Prelude.hashWithSalt` apiName
       `Prelude.hashWithSalt` conflictResolution
       `Prelude.hashWithSalt` defaultAuthType

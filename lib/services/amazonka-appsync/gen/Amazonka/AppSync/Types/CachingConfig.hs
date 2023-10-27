@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.CachingConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.CachingConfig where
@@ -91,7 +91,8 @@ instance Data.FromJSON CachingConfig where
 
 instance Prelude.Hashable CachingConfig where
   hashWithSalt _salt CachingConfig' {..} =
-    _salt `Prelude.hashWithSalt` cachingKeys
+    _salt
+      `Prelude.hashWithSalt` cachingKeys
       `Prelude.hashWithSalt` ttl
 
 instance Prelude.NFData CachingConfig where

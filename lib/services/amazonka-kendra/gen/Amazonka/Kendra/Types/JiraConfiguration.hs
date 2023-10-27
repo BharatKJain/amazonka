@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.JiraConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.JiraConfiguration where
@@ -370,14 +370,17 @@ instance Data.FromJSON JiraConfiguration where
           JiraConfiguration'
             Prelude.<$> (x Data..:? "AttachmentFieldMappings")
             Prelude.<*> (x Data..:? "CommentFieldMappings")
-            Prelude.<*> ( x Data..:? "ExclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "ExclusionPatterns"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "InclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "InclusionPatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "IssueFieldMappings")
-            Prelude.<*> ( x Data..:? "IssueSubEntityFilter"
+            Prelude.<*> ( x
+                            Data..:? "IssueSubEntityFilter"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "IssueType" Data..!= Prelude.mempty)

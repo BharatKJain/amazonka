@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.FsxConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.FsxConfiguration where
@@ -232,11 +232,13 @@ instance Data.FromJSON FsxConfiguration where
       "FsxConfiguration"
       ( \x ->
           FsxConfiguration'
-            Prelude.<$> ( x Data..:? "ExclusionPatterns"
+            Prelude.<$> ( x
+                            Data..:? "ExclusionPatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "FieldMappings")
-            Prelude.<*> ( x Data..:? "InclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "InclusionPatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SecretArn")
@@ -247,7 +249,8 @@ instance Data.FromJSON FsxConfiguration where
 
 instance Prelude.Hashable FsxConfiguration where
   hashWithSalt _salt FsxConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` exclusionPatterns
+    _salt
+      `Prelude.hashWithSalt` exclusionPatterns
       `Prelude.hashWithSalt` fieldMappings
       `Prelude.hashWithSalt` inclusionPatterns
       `Prelude.hashWithSalt` secretArn

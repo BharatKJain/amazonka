@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Panorama.Types.ReportedRuntimeContextState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Panorama.Types.ReportedRuntimeContextState where
@@ -110,7 +110,8 @@ instance Data.FromJSON ReportedRuntimeContextState where
 
 instance Prelude.Hashable ReportedRuntimeContextState where
   hashWithSalt _salt ReportedRuntimeContextState' {..} =
-    _salt `Prelude.hashWithSalt` desiredState
+    _salt
+      `Prelude.hashWithSalt` desiredState
       `Prelude.hashWithSalt` deviceReportedStatus
       `Prelude.hashWithSalt` deviceReportedTime
       `Prelude.hashWithSalt` runtimeContextName

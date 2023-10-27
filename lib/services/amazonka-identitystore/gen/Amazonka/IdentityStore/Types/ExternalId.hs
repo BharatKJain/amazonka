@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IdentityStore.Types.ExternalId
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IdentityStore.Types.ExternalId where
@@ -73,12 +73,14 @@ instance Data.FromJSON ExternalId where
       "ExternalId"
       ( \x ->
           ExternalId'
-            Prelude.<$> (x Data..: "Issuer") Prelude.<*> (x Data..: "Id")
+            Prelude.<$> (x Data..: "Issuer")
+            Prelude.<*> (x Data..: "Id")
       )
 
 instance Prelude.Hashable ExternalId where
   hashWithSalt _salt ExternalId' {..} =
-    _salt `Prelude.hashWithSalt` issuer
+    _salt
+      `Prelude.hashWithSalt` issuer
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData ExternalId where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.AutoScalingPolicyUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.AutoScalingPolicyUpdate where
@@ -72,7 +72,8 @@ autoScalingPolicyUpdate_targetTrackingScalingPolicyConfiguration = Lens.lens (\A
 
 instance Prelude.Hashable AutoScalingPolicyUpdate where
   hashWithSalt _salt AutoScalingPolicyUpdate' {..} =
-    _salt `Prelude.hashWithSalt` policyName
+    _salt
+      `Prelude.hashWithSalt` policyName
       `Prelude.hashWithSalt` targetTrackingScalingPolicyConfiguration
 
 instance Prelude.NFData AutoScalingPolicyUpdate where

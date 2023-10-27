@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Outposts.Types.Order
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Outposts.Types.Order where
@@ -169,7 +169,8 @@ instance Data.FromJSON Order where
 
 instance Prelude.Hashable Order where
   hashWithSalt _salt Order' {..} =
-    _salt `Prelude.hashWithSalt` lineItems
+    _salt
+      `Prelude.hashWithSalt` lineItems
       `Prelude.hashWithSalt` orderFulfilledDate
       `Prelude.hashWithSalt` orderId
       `Prelude.hashWithSalt` orderSubmissionDate

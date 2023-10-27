@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53RecoveryControlConfig.Types.RuleConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53RecoveryControlConfig.Types.RuleConfig where
@@ -102,7 +102,8 @@ instance Data.FromJSON RuleConfig where
 
 instance Prelude.Hashable RuleConfig where
   hashWithSalt _salt RuleConfig' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` inverted
       `Prelude.hashWithSalt` threshold
 

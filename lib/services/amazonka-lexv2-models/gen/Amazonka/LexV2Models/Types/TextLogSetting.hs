@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.TextLogSetting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.TextLogSetting where
@@ -78,7 +78,8 @@ instance Data.FromJSON TextLogSetting where
 
 instance Prelude.Hashable TextLogSetting where
   hashWithSalt _salt TextLogSetting' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` destination
 
 instance Prelude.NFData TextLogSetting where

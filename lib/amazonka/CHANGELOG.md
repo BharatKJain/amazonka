@@ -1,7 +1,45 @@
 # Change Log
 
+## Unreleased
+
+### Changed
+
+- `amazonka`: Add support for `AWS_SHARED_CREDENTIALS_FILE` and `AWS_CONFIG_FILE` environment variables to override the
+  default paths `$HOME/.aws/credentials` and `$HOME/.aws/config` [\#951](https://github.com/brendanhay/amazonka/pull/951)
+
+### Fixed
+
+- `amazonka`: Allow reading the AWS config file when the credentials file is missing [\#951](https://github.com/brendanhay/amazonka/pull/951).
+  This is useful when you are using a role-based authentication method or AWS IAM Identity Center (formerly AWS SSO) which does not require a credentials file.
+  Before this fix you had to create an empty credentials file for these methods to work correctly.
+- `amazonka`: During logging, do not print bytestrings that have unprintable characters
+[\#952](https://github.com/brendanhay/amazonka/pull/952)
+- `amazonka`: Support reading values of IMDS metadata tags, add `Metadata.Other` constructor
+[\#955](https://github.com/brendanhay/amazonka/pull/955)
+
+
 ## [2.0.0](https://github.com/brendanhay/amazonka/tree/2.0.0)
-Released: **?**, Compare: [2.0.0-rc1](https://github.com/brendanhay/amazonka/compare/2.0.0-rc1...2.0.0)
+Released: **28 July 2023**, Compare: [2.0.0-rc2](https://github.com/brendanhay/amazonka/compare/2.0.0-rc2...2.0.0)
+
+### Changed
+
+- `amazonka`: Update two missing EC2 metadata keys from [instance metadata categories](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-categories.html)
+[\#935](https://github.com/brendanhay/amazonka/pull/935)
+- `amazonka`: Stop re-exporting a subset of EC2 metadata keys from the root `Amazonka` module.
+[\#940](https://github.com/brendanhay/amazonka/pull/940)
+  - Metadata users should import `Amazonka.EC2.Metadata` directly.
+  - The functions `Amazonka.dynamic`, `Amazonka.metadata` and `Amazonka.userdata` have been removed in favour of their equivalents in `Amazonka.EC2.Metadata` which only require a HTTP `Manager`, not an entire `Env`.
+  - It is easy to share a single `Manager` between metadata requests and an Amazonka `Env`:
+    - If you create the `Env` first, you can read its `manager :: Manager` field.
+    - If you make metadata requests before calling `newEnv`, you must create a `Manager` youself. You can pass this `Manager` to `newEnvFromManager`.
+
+### Fixed
+
+- `aeson ^>= 2.2` is now supported.
+[\#938](https://github.com/brendanhay/amazonka/pull/938)
+
+## [2.0.0 RC2](https://github.com/brendanhay/amazonka/tree/2.0.0-rc2)
+Released: **10th July, 2023**, Compare: [2.0.0-rc1](https://github.com/brendanhay/amazonka/compare/2.0.0-rc1...2.0.0-rc2)
 
 ### Major Changes
 
@@ -15,7 +53,7 @@ Released: **?**, Compare: [2.0.0-rc1](https://github.com/brendanhay/amazonka/com
 
 - The authentication code in `amazonka` got a full rewrite in PR [\#746](https://github.com/brendanhay/amazonka/pull/746).
 
-  - On Windows, the {credential,config} files are read from `%USERPROFILE%\\.aws\\{credentials,config}` to [match the AWS SDK](https://docs.aws.amazon.com/sdk-for-net/v3/developer-guide/creds-file.html#creds-file-general-info).
+  - On Windows, the {credential,config} files are read from `%USERPROFILE%\.aws\{credentials,config}` to [match the AWS SDK](https://docs.aws.amazon.com/sdk-for-net/v3/developer-guide/creds-file.html#creds-file-general-info).
   - `newEnv` now takes a function of type `EnvNoAuth -> m Env`, which is to fetch credentials in an appropriate manner
   - The `Credentials` type has been removed, you should instead use the following functions corresponding to the departed constructor. All are exported by `Amazonka.Auth`:
 
@@ -62,7 +100,7 @@ Released: **?**, Compare: [2.0.0-rc1](https://github.com/brendanhay/amazonka/com
 - `amazonka-amplifyuibuilder`: A programmatic interface for creating and configuring user interface (UI) component libraries and themes for use in your Amplify applications. [Overview](https://docs.aws.amazon.com/amplifyuibuilder/latest/APIReference/Welcome.html)
 - `amazonka-arc-zonal-shift`: Zonal shift is a function within the Amazon Route 53 Application Recovery Controller (Route 53 ARC). With zonal shifting, you can shift your load balancer resources away from an impaired Availability Zone with a single action. [Overview](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/zonal-shift.html)
 - `amazonka-backupgateway`: Backup gateway is downloadable AWS Backup software that you deploy to your VMware infrastructure to connect your VMware VMs to AWS Backup.
-- `amazonka-backup-storage`
+- `amazonka-backupstorage`
 - `amazonka-billingconductor`: The AWS Billing Conductor is a customizable billing service, allowing you to customize your billing data to match your desired business structure. [Overview](https://aws.amazon.com/aws-cost-management/aws-billing-conductor/)
 - `amazonka-chime-sdk-media-pipelines`: Create Amazon Chime SDK media pipelines and capture audio, video, events, and data messages from Amazon Chime SDK meetings. [Overview](https://docs.aws.amazon.com/chime-sdk/latest/APIReference/API_Operations_Amazon_Chime_SDK_Media_Pipelines.html)
 - `amazonka-chime-sdk-meetings`: Create Amazon Chime SDK meetings, set the AWS Regions for meetings, create and manage users, and send and receive meeting notifications. [Overview](https://docs.aws.amazon.com/chime-sdk/latest/APIReference/API_Operations_Amazon_Chime_SDK_Meetings.html)
@@ -117,8 +155,8 @@ Released: **?**, Compare: [2.0.0-rc1](https://github.com/brendanhay/amazonka/com
 
 ### Changed
 
-- `amazonka-core`/`amazonka-redshift`/`amazonka-route53`/`amazonka-s3`: Support Hyderabad region (`ap-south-2`).
-[\#900](https://github.com/brendanhay/amazonka/pull/900)
+- `amazonka-core`: Use `crypton` instead of `cryptonite` to provide cryptographic primitives
+[\#920](https://github.com/brendanhay/amazonka/pull/920)
 - `amazonka-core`/`amazonka-redshift`/`amazonka-route53`/`amazonka-s3`: Support Melbourne region (`ap-southeast-4`).
 [\#897](https://github.com/brendanhay/amazonka/pull/897)
 - `amazonka`: Presigning functions do not require `MonadIO`.
@@ -239,7 +277,7 @@ Released: **28nd November, 2021**, Compare: [1.6.1](https://github.com/brendanha
   - CPP supporting GHC < 8.8 has been removed.
   - While GHC 8.6 is not in the CI matrix, it currently builds, so packages depend on `base >= 4.12`.
 
-- The `Control.Monad.Trans.AWS` transformer and its related instances has been removed. Functions such as `send` and `paginate` now universally take an `Env` as their first argument, so you can build your own transformer, or use your preferred effects system.
+- The `AWST` transformer from `Control.Monad.Trans.AWS` and its related instances has been removed. Functions such as `send` and `paginate` now universally take an `Env` as their first argument, so you can build your own transformer, or use your preferred effects system.
 
 - Namespace
   - The core `Network.AWS` namespace has been renamed to `Amazonka`, which now matches the package name. A simple search and replace on your codebase should be sufficient for migration:

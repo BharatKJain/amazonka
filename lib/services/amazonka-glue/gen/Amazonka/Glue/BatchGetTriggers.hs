@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.BatchGetTriggers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -91,7 +91,8 @@ instance Core.AWSRequest BatchGetTriggers where
       ( \s h x ->
           BatchGetTriggersResponse'
             Prelude.<$> (x Data..?> "Triggers" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "TriggersNotFound"
+            Prelude.<*> ( x
+                            Data..?> "TriggersNotFound"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

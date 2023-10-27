@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DeviceFarm.CreateUpload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -345,7 +345,8 @@ instance Core.AWSRequest CreateUpload where
 
 instance Prelude.Hashable CreateUpload where
   hashWithSalt _salt CreateUpload' {..} =
-    _salt `Prelude.hashWithSalt` contentType
+    _salt
+      `Prelude.hashWithSalt` contentType
       `Prelude.hashWithSalt` projectArn
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'

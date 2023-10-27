@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kinesis.Types.SequenceNumberRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kinesis.Types.SequenceNumberRange where
@@ -80,7 +80,8 @@ instance Data.FromJSON SequenceNumberRange where
 
 instance Prelude.Hashable SequenceNumberRange where
   hashWithSalt _salt SequenceNumberRange' {..} =
-    _salt `Prelude.hashWithSalt` endingSequenceNumber
+    _salt
+      `Prelude.hashWithSalt` endingSequenceNumber
       `Prelude.hashWithSalt` startingSequenceNumber
 
 instance Prelude.NFData SequenceNumberRange where

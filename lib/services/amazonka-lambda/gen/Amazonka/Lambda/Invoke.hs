@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lambda.Invoke
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -295,7 +295,8 @@ instance Core.AWSRequest Invoke where
 
 instance Prelude.Hashable Invoke where
   hashWithSalt _salt Invoke' {..} =
-    _salt `Prelude.hashWithSalt` clientContext
+    _salt
+      `Prelude.hashWithSalt` clientContext
       `Prelude.hashWithSalt` invocationType
       `Prelude.hashWithSalt` logType
       `Prelude.hashWithSalt` qualifier

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.LabelingJobDataSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.LabelingJobDataSource where
@@ -94,7 +94,8 @@ instance Data.FromJSON LabelingJobDataSource where
 
 instance Prelude.Hashable LabelingJobDataSource where
   hashWithSalt _salt LabelingJobDataSource' {..} =
-    _salt `Prelude.hashWithSalt` s3DataSource
+    _salt
+      `Prelude.hashWithSalt` s3DataSource
       `Prelude.hashWithSalt` snsDataSource
 
 instance Prelude.NFData LabelingJobDataSource where

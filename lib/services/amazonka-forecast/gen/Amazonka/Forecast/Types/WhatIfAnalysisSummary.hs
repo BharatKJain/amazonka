@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.WhatIfAnalysisSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.WhatIfAnalysisSummary where
@@ -197,7 +197,8 @@ instance Data.FromJSON WhatIfAnalysisSummary where
 
 instance Prelude.Hashable WhatIfAnalysisSummary where
   hashWithSalt _salt WhatIfAnalysisSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` forecastArn
       `Prelude.hashWithSalt` lastModificationTime
       `Prelude.hashWithSalt` message

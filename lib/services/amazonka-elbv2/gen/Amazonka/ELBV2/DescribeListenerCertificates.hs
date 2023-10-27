@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ELBV2.DescribeListenerCertificates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,22 +119,22 @@ instance Core.AWSPager DescribeListenerCertificates where
     | Core.stop
         ( rs
             Lens.^? describeListenerCertificatesResponse_nextMarker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeListenerCertificatesResponse_certificates
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeListenerCertificates_marker
           Lens..~ rs
           Lens.^? describeListenerCertificatesResponse_nextMarker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeListenerCertificates where
   type
@@ -147,7 +147,9 @@ instance Core.AWSRequest DescribeListenerCertificates where
       "DescribeListenerCertificatesResult"
       ( \s h x ->
           DescribeListenerCertificatesResponse'
-            Prelude.<$> ( x Data..@? "Certificates" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "Certificates"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (x Data..@? "NextMarker")
@@ -159,7 +161,8 @@ instance
     DescribeListenerCertificates
   where
   hashWithSalt _salt DescribeListenerCertificates' {..} =
-    _salt `Prelude.hashWithSalt` marker
+    _salt
+      `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` pageSize
       `Prelude.hashWithSalt` listenerArn
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSMIncidents.ListReplicationSets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -92,21 +92,21 @@ instance Core.AWSPager ListReplicationSets where
     | Core.stop
         ( rs
             Lens.^? listReplicationSetsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listReplicationSetsResponse_replicationSetArns
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listReplicationSets_nextToken
           Lens..~ rs
           Lens.^? listReplicationSetsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListReplicationSets where
   type
@@ -120,14 +120,16 @@ instance Core.AWSRequest ListReplicationSets where
           ListReplicationSetsResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "replicationSetArns"
+            Prelude.<*> ( x
+                            Data..?> "replicationSetArns"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListReplicationSets where
   hashWithSalt _salt ListReplicationSets' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListReplicationSets where

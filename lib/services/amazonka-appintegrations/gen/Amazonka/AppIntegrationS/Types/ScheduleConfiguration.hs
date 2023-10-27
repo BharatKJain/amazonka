@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppIntegrationS.Types.ScheduleConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppIntegrationS.Types.ScheduleConfiguration where
@@ -85,7 +85,8 @@ instance Data.FromJSON ScheduleConfiguration where
 
 instance Prelude.Hashable ScheduleConfiguration where
   hashWithSalt _salt ScheduleConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` firstExecutionFrom
+    _salt
+      `Prelude.hashWithSalt` firstExecutionFrom
       `Prelude.hashWithSalt` object'
       `Prelude.hashWithSalt` scheduleExpression
 

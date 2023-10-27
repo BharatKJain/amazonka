@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.GetPartitionIndexes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,22 +122,22 @@ instance Core.AWSPager GetPartitionIndexes where
     | Core.stop
         ( rs
             Lens.^? getPartitionIndexesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getPartitionIndexesResponse_partitionIndexDescriptorList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getPartitionIndexes_nextToken
           Lens..~ rs
           Lens.^? getPartitionIndexesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetPartitionIndexes where
   type
@@ -150,7 +150,8 @@ instance Core.AWSRequest GetPartitionIndexes where
       ( \s h x ->
           GetPartitionIndexesResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "PartitionIndexDescriptorList"
+            Prelude.<*> ( x
+                            Data..?> "PartitionIndexDescriptorList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -158,7 +159,8 @@ instance Core.AWSRequest GetPartitionIndexes where
 
 instance Prelude.Hashable GetPartitionIndexes where
   hashWithSalt _salt GetPartitionIndexes' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` tableName

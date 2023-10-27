@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudDirectory.LookupPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,21 +128,23 @@ instance Core.AWSPager LookupPolicy where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? lookupPolicyResponse_nextToken Prelude.. Lens._Just
+            Lens.^? lookupPolicyResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? lookupPolicyResponse_policyToPathList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& lookupPolicy_nextToken
           Lens..~ rs
-          Lens.^? lookupPolicyResponse_nextToken Prelude.. Lens._Just
+          Lens.^? lookupPolicyResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest LookupPolicy where
   type AWSResponse LookupPolicy = LookupPolicyResponse
@@ -153,7 +155,8 @@ instance Core.AWSRequest LookupPolicy where
       ( \s h x ->
           LookupPolicyResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "PolicyToPathList"
+            Prelude.<*> ( x
+                            Data..?> "PolicyToPathList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -161,7 +164,8 @@ instance Core.AWSRequest LookupPolicy where
 
 instance Prelude.Hashable LookupPolicy where
   hashWithSalt _salt LookupPolicy' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` directoryArn
       `Prelude.hashWithSalt` objectReference

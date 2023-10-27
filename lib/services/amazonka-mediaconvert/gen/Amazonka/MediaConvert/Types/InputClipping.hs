@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.InputClipping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.InputClipping where
@@ -126,7 +126,8 @@ instance Data.FromJSON InputClipping where
 
 instance Prelude.Hashable InputClipping where
   hashWithSalt _salt InputClipping' {..} =
-    _salt `Prelude.hashWithSalt` endTimecode
+    _salt
+      `Prelude.hashWithSalt` endTimecode
       `Prelude.hashWithSalt` startTimecode
 
 instance Prelude.NFData InputClipping where

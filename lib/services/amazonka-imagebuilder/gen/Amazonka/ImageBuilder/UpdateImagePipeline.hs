@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ImageBuilder.UpdateImagePipeline
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -234,7 +234,8 @@ instance Core.AWSRequest UpdateImagePipeline where
 
 instance Prelude.Hashable UpdateImagePipeline where
   hashWithSalt _salt UpdateImagePipeline' {..} =
-    _salt `Prelude.hashWithSalt` containerRecipeArn
+    _salt
+      `Prelude.hashWithSalt` containerRecipeArn
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` distributionConfigurationArn
       `Prelude.hashWithSalt` enhancedImageMetadataEnabled

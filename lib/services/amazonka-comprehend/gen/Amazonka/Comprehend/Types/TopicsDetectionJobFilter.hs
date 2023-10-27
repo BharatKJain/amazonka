@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.TopicsDetectionJobFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.TopicsDetectionJobFilter where
@@ -76,7 +76,6 @@ newTopicsDetectionJobFilter =
       submitTimeBefore = Prelude.Nothing
     }
 
--- |
 topicsDetectionJobFilter_jobName :: Lens.Lens' TopicsDetectionJobFilter (Prelude.Maybe Prelude.Text)
 topicsDetectionJobFilter_jobName = Lens.lens (\TopicsDetectionJobFilter' {jobName} -> jobName) (\s@TopicsDetectionJobFilter' {} a -> s {jobName = a} :: TopicsDetectionJobFilter)
 
@@ -99,7 +98,8 @@ topicsDetectionJobFilter_submitTimeBefore = Lens.lens (\TopicsDetectionJobFilter
 
 instance Prelude.Hashable TopicsDetectionJobFilter where
   hashWithSalt _salt TopicsDetectionJobFilter' {..} =
-    _salt `Prelude.hashWithSalt` jobName
+    _salt
+      `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` jobStatus
       `Prelude.hashWithSalt` submitTimeAfter
       `Prelude.hashWithSalt` submitTimeBefore

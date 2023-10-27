@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.InputChannelLevel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.InputChannelLevel where
@@ -81,7 +81,8 @@ instance Data.FromJSON InputChannelLevel where
 
 instance Prelude.Hashable InputChannelLevel where
   hashWithSalt _salt InputChannelLevel' {..} =
-    _salt `Prelude.hashWithSalt` inputChannel
+    _salt
+      `Prelude.hashWithSalt` inputChannel
       `Prelude.hashWithSalt` gain
 
 instance Prelude.NFData InputChannelLevel where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.TrialComponentArtifact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.TrialComponentArtifact where
@@ -95,7 +95,8 @@ instance Data.FromJSON TrialComponentArtifact where
 
 instance Prelude.Hashable TrialComponentArtifact where
   hashWithSalt _salt TrialComponentArtifact' {..} =
-    _salt `Prelude.hashWithSalt` mediaType
+    _salt
+      `Prelude.hashWithSalt` mediaType
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData TrialComponentArtifact where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DocDbElastic.Types.Cluster
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DocDbElastic.Types.Cluster where
@@ -227,14 +227,16 @@ instance Data.FromJSON Cluster where
             Prelude.<*> (x Data..: "shardCount")
             Prelude.<*> (x Data..: "status")
             Prelude.<*> (x Data..:? "subnetIds" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "vpcSecurityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "vpcSecurityGroupIds"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable Cluster where
   hashWithSalt _salt Cluster' {..} =
-    _salt `Prelude.hashWithSalt` adminUserName
+    _salt
+      `Prelude.hashWithSalt` adminUserName
       `Prelude.hashWithSalt` authType
       `Prelude.hashWithSalt` clusterArn
       `Prelude.hashWithSalt` clusterEndpoint

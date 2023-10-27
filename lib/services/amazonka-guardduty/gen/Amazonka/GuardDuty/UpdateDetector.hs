@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GuardDuty.UpdateDetector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest UpdateDetector where
 
 instance Prelude.Hashable UpdateDetector where
   hashWithSalt _salt UpdateDetector' {..} =
-    _salt `Prelude.hashWithSalt` dataSources
+    _salt
+      `Prelude.hashWithSalt` dataSources
       `Prelude.hashWithSalt` enable
       `Prelude.hashWithSalt` findingPublishingFrequency
       `Prelude.hashWithSalt` detectorId

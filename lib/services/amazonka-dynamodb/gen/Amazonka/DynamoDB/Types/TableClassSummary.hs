@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.TableClassSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.TableClassSummary where
@@ -81,7 +81,8 @@ instance Data.FromJSON TableClassSummary where
 
 instance Prelude.Hashable TableClassSummary where
   hashWithSalt _salt TableClassSummary' {..} =
-    _salt `Prelude.hashWithSalt` lastUpdateDateTime
+    _salt
+      `Prelude.hashWithSalt` lastUpdateDateTime
       `Prelude.hashWithSalt` tableClass
 
 instance Prelude.NFData TableClassSummary where

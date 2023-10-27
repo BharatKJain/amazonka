@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.BatchDescribeModelPackage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -88,10 +88,12 @@ instance Core.AWSRequest BatchDescribeModelPackage where
     Response.receiveJSON
       ( \s h x ->
           BatchDescribeModelPackageResponse'
-            Prelude.<$> ( x Data..?> "BatchDescribeModelPackageErrorMap"
+            Prelude.<$> ( x
+                            Data..?> "BatchDescribeModelPackageErrorMap"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "ModelPackageSummaries"
+            Prelude.<*> ( x
+                            Data..?> "ModelPackageSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

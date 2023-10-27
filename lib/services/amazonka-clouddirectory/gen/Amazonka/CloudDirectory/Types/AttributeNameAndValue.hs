@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.AttributeNameAndValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.AttributeNameAndValue where
@@ -80,7 +80,8 @@ instance Data.FromJSON AttributeNameAndValue where
 
 instance Prelude.Hashable AttributeNameAndValue where
   hashWithSalt _salt AttributeNameAndValue' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData AttributeNameAndValue where

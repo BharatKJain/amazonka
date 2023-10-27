@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.ImageQuality
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.ImageQuality where
@@ -86,7 +86,8 @@ instance Data.FromJSON ImageQuality where
 
 instance Prelude.Hashable ImageQuality where
   hashWithSalt _salt ImageQuality' {..} =
-    _salt `Prelude.hashWithSalt` brightness
+    _salt
+      `Prelude.hashWithSalt` brightness
       `Prelude.hashWithSalt` sharpness
 
 instance Prelude.NFData ImageQuality where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.ChangeSetSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.ChangeSetSummary where
@@ -194,7 +194,8 @@ instance Data.FromXML ChangeSetSummary where
 
 instance Prelude.Hashable ChangeSetSummary where
   hashWithSalt _salt ChangeSetSummary' {..} =
-    _salt `Prelude.hashWithSalt` changeSetId
+    _salt
+      `Prelude.hashWithSalt` changeSetId
       `Prelude.hashWithSalt` changeSetName
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` description

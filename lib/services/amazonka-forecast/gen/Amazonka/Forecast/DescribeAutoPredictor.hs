@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Forecast.DescribeAutoPredictor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest DescribeAutoPredictor where
           DescribeAutoPredictorResponse'
             Prelude.<$> (x Data..?> "CreationTime")
             Prelude.<*> (x Data..?> "DataConfig")
-            Prelude.<*> ( x Data..?> "DatasetImportJobArns"
+            Prelude.<*> ( x
+                            Data..?> "DatasetImportJobArns"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "EncryptionConfig")

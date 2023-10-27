@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.ClusterInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.ClusterInfo where
@@ -273,7 +273,8 @@ instance Data.FromJSON ClusterInfo where
 
 instance Prelude.Hashable ClusterInfo where
   hashWithSalt _salt ClusterInfo' {..} =
-    _salt `Prelude.hashWithSalt` activeOperationArn
+    _salt
+      `Prelude.hashWithSalt` activeOperationArn
       `Prelude.hashWithSalt` brokerNodeGroupInfo
       `Prelude.hashWithSalt` clientAuthentication
       `Prelude.hashWithSalt` clusterArn

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.S3BucketSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.S3BucketSource where
@@ -91,7 +91,8 @@ instance Data.FromJSON S3BucketSource where
 
 instance Prelude.Hashable S3BucketSource where
   hashWithSalt _salt S3BucketSource' {..} =
-    _salt `Prelude.hashWithSalt` s3BucketOwner
+    _salt
+      `Prelude.hashWithSalt` s3BucketOwner
       `Prelude.hashWithSalt` s3KeyPrefix
       `Prelude.hashWithSalt` s3Bucket
 

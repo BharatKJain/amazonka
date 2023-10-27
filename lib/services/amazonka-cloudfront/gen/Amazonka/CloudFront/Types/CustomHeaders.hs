@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.CustomHeaders
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.CustomHeaders where
@@ -74,14 +74,17 @@ customHeaders_quantity = Lens.lens (\CustomHeaders' {quantity} -> quantity) (\s@
 instance Data.FromXML CustomHeaders where
   parseXML x =
     CustomHeaders'
-      Prelude.<$> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "OriginCustomHeader")
                   )
       Prelude.<*> (x Data..@ "Quantity")
 
 instance Prelude.Hashable CustomHeaders where
   hashWithSalt _salt CustomHeaders' {..} =
-    _salt `Prelude.hashWithSalt` items
+    _salt
+      `Prelude.hashWithSalt` items
       `Prelude.hashWithSalt` quantity
 
 instance Prelude.NFData CustomHeaders where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.ClusterIamRole
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.ClusterIamRole where
@@ -109,7 +109,8 @@ instance Data.FromXML ClusterIamRole where
 
 instance Prelude.Hashable ClusterIamRole where
   hashWithSalt _salt ClusterIamRole' {..} =
-    _salt `Prelude.hashWithSalt` applyStatus
+    _salt
+      `Prelude.hashWithSalt` applyStatus
       `Prelude.hashWithSalt` iamRoleArn
 
 instance Prelude.NFData ClusterIamRole where

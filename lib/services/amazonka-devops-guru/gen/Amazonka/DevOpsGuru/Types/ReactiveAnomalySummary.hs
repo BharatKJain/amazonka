@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.ReactiveAnomalySummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.ReactiveAnomalySummary where
@@ -215,7 +215,8 @@ instance Data.FromJSON ReactiveAnomalySummary where
       ( \x ->
           ReactiveAnomalySummary'
             Prelude.<$> (x Data..:? "AnomalyReportedTimeRange")
-            Prelude.<*> ( x Data..:? "AnomalyResources"
+            Prelude.<*> ( x
+                            Data..:? "AnomalyResources"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "AnomalyTimeRange")

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.ZeppelinApplicationConfigurationDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.ZeppelinApplicationConfigurationDescription where
@@ -110,13 +110,14 @@ instance
       ( \x ->
           ZeppelinApplicationConfigurationDescription'
             Prelude.<$> (x Data..:? "CatalogConfigurationDescription")
-              Prelude.<*> ( x Data..:? "CustomArtifactsConfigurationDescription"
-                              Data..!= Prelude.mempty
-                          )
-              Prelude.<*> ( x
-                              Data..:? "DeployAsApplicationConfigurationDescription"
-                          )
-              Prelude.<*> (x Data..: "MonitoringConfigurationDescription")
+            Prelude.<*> ( x
+                            Data..:? "CustomArtifactsConfigurationDescription"
+                            Data..!= Prelude.mempty
+                        )
+            Prelude.<*> ( x
+                            Data..:? "DeployAsApplicationConfigurationDescription"
+                        )
+            Prelude.<*> (x Data..: "MonitoringConfigurationDescription")
       )
 
 instance

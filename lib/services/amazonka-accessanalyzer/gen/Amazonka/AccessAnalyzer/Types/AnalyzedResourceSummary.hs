@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.AnalyzedResourceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.AnalyzedResourceSummary where
@@ -95,7 +95,8 @@ instance Data.FromJSON AnalyzedResourceSummary where
 
 instance Prelude.Hashable AnalyzedResourceSummary where
   hashWithSalt _salt AnalyzedResourceSummary' {..} =
-    _salt `Prelude.hashWithSalt` resourceArn
+    _salt
+      `Prelude.hashWithSalt` resourceArn
       `Prelude.hashWithSalt` resourceOwnerAccount
       `Prelude.hashWithSalt` resourceType
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DAX.Types.NodeTypeSpecificValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DAX.Types.NodeTypeSpecificValue where
@@ -75,7 +75,8 @@ instance Data.FromJSON NodeTypeSpecificValue where
 
 instance Prelude.Hashable NodeTypeSpecificValue where
   hashWithSalt _salt NodeTypeSpecificValue' {..} =
-    _salt `Prelude.hashWithSalt` nodeType
+    _salt
+      `Prelude.hashWithSalt` nodeType
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData NodeTypeSpecificValue where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Grafana.Types.SamlAuthentication
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Grafana.Types.SamlAuthentication where
@@ -80,7 +80,8 @@ instance Data.FromJSON SamlAuthentication where
 
 instance Prelude.Hashable SamlAuthentication where
   hashWithSalt _salt SamlAuthentication' {..} =
-    _salt `Prelude.hashWithSalt` configuration
+    _salt
+      `Prelude.hashWithSalt` configuration
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData SamlAuthentication where

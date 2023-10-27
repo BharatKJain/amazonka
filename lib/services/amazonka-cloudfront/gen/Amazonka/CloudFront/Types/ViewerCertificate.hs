@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.ViewerCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.ViewerCertificate where
@@ -418,7 +418,8 @@ instance Data.FromXML ViewerCertificate where
 
 instance Prelude.Hashable ViewerCertificate where
   hashWithSalt _salt ViewerCertificate' {..} =
-    _salt `Prelude.hashWithSalt` aCMCertificateArn
+    _salt
+      `Prelude.hashWithSalt` aCMCertificateArn
       `Prelude.hashWithSalt` certificate
       `Prelude.hashWithSalt` certificateSource
       `Prelude.hashWithSalt` cloudFrontDefaultCertificate

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeArtifact.CopyPackageVersions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -293,7 +293,8 @@ instance Core.AWSRequest CopyPackageVersions where
       ( \s h x ->
           CopyPackageVersionsResponse'
             Prelude.<$> (x Data..?> "failedVersions" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "successfulVersions"
+            Prelude.<*> ( x
+                            Data..?> "successfulVersions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -301,7 +302,8 @@ instance Core.AWSRequest CopyPackageVersions where
 
 instance Prelude.Hashable CopyPackageVersions where
   hashWithSalt _salt CopyPackageVersions' {..} =
-    _salt `Prelude.hashWithSalt` allowOverwrite
+    _salt
+      `Prelude.hashWithSalt` allowOverwrite
       `Prelude.hashWithSalt` domainOwner
       `Prelude.hashWithSalt` includeFromUpstream
       `Prelude.hashWithSalt` namespace

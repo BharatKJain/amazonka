@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.CustomVocabularyItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.CustomVocabularyItem where
@@ -110,7 +110,8 @@ instance Data.FromJSON CustomVocabularyItem where
 
 instance Prelude.Hashable CustomVocabularyItem where
   hashWithSalt _salt CustomVocabularyItem' {..} =
-    _salt `Prelude.hashWithSalt` displayAs
+    _salt
+      `Prelude.hashWithSalt` displayAs
       `Prelude.hashWithSalt` weight
       `Prelude.hashWithSalt` itemId
       `Prelude.hashWithSalt` phrase

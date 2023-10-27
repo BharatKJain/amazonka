@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.DeleteObjectInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.DeleteObjectInput where
@@ -81,7 +81,8 @@ deleteObjectInput_uri = Lens.lens (\DeleteObjectInput' {uri} -> uri) (\s@DeleteO
 
 instance Prelude.Hashable DeleteObjectInput where
   hashWithSalt _salt DeleteObjectInput' {..} =
-    _salt `Prelude.hashWithSalt` eTag
+    _salt
+      `Prelude.hashWithSalt` eTag
       `Prelude.hashWithSalt` partitionValues
       `Prelude.hashWithSalt` uri
 

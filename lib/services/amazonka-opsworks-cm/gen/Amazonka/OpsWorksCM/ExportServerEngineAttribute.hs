@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpsWorksCM.ExportServerEngineAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -191,7 +191,8 @@ instance Core.AWSRequest ExportServerEngineAttribute where
 
 instance Prelude.Hashable ExportServerEngineAttribute where
   hashWithSalt _salt ExportServerEngineAttribute' {..} =
-    _salt `Prelude.hashWithSalt` inputAttributes
+    _salt
+      `Prelude.hashWithSalt` inputAttributes
       `Prelude.hashWithSalt` exportAttributeName
       `Prelude.hashWithSalt` serverName
 

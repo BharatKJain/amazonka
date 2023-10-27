@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Forecast.ListForecasts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -171,20 +171,23 @@ instance Core.AWSPager ListForecasts where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listForecastsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listForecastsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listForecastsResponse_forecasts Prelude.. Lens._Just
+            Lens.^? listForecastsResponse_forecasts
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listForecasts_nextToken
           Lens..~ rs
-          Lens.^? listForecastsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listForecastsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListForecasts where
   type
@@ -203,7 +206,8 @@ instance Core.AWSRequest ListForecasts where
 
 instance Prelude.Hashable ListForecasts where
   hashWithSalt _salt ListForecasts' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

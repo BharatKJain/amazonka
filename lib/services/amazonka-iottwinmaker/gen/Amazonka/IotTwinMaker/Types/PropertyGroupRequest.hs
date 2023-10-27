@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.PropertyGroupRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.PropertyGroupRequest where
@@ -65,7 +65,8 @@ propertyGroupRequest_propertyNames = Lens.lens (\PropertyGroupRequest' {property
 
 instance Prelude.Hashable PropertyGroupRequest where
   hashWithSalt _salt PropertyGroupRequest' {..} =
-    _salt `Prelude.hashWithSalt` groupType
+    _salt
+      `Prelude.hashWithSalt` groupType
       `Prelude.hashWithSalt` propertyNames
 
 instance Prelude.NFData PropertyGroupRequest where

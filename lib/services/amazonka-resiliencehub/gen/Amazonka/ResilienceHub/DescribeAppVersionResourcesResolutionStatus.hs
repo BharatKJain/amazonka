@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ResilienceHub.DescribeAppVersionResourcesResolutionStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,11 +134,11 @@ instance
       ( \s h x ->
           DescribeAppVersionResourcesResolutionStatusResponse'
             Prelude.<$> (x Data..?> "errorMessage")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> (x Data..:> "appArn")
-              Prelude.<*> (x Data..:> "appVersion")
-              Prelude.<*> (x Data..:> "resolutionId")
-              Prelude.<*> (x Data..:> "status")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..:> "appArn")
+            Prelude.<*> (x Data..:> "appVersion")
+            Prelude.<*> (x Data..:> "resolutionId")
+            Prelude.<*> (x Data..:> "status")
       )
 
 instance
@@ -148,7 +148,8 @@ instance
   hashWithSalt
     _salt
     DescribeAppVersionResourcesResolutionStatus' {..} =
-      _salt `Prelude.hashWithSalt` resolutionId
+      _salt
+        `Prelude.hashWithSalt` resolutionId
         `Prelude.hashWithSalt` appArn
         `Prelude.hashWithSalt` appVersion
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.UpdateWorkforce
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -173,7 +173,8 @@ instance Core.AWSRequest UpdateWorkforce where
 
 instance Prelude.Hashable UpdateWorkforce where
   hashWithSalt _salt UpdateWorkforce' {..} =
-    _salt `Prelude.hashWithSalt` oidcConfig
+    _salt
+      `Prelude.hashWithSalt` oidcConfig
       `Prelude.hashWithSalt` sourceIpConfig
       `Prelude.hashWithSalt` workforceVpcConfig
       `Prelude.hashWithSalt` workforceName

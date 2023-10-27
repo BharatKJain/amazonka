@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.CreateRequireCheckIn
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.CreateRequireCheckIn where
@@ -77,7 +77,8 @@ createRequireCheckIn_enabled = Lens.lens (\CreateRequireCheckIn' {enabled} -> en
 
 instance Prelude.Hashable CreateRequireCheckIn where
   hashWithSalt _salt CreateRequireCheckIn' {..} =
-    _salt `Prelude.hashWithSalt` releaseAfterMinutes
+    _salt
+      `Prelude.hashWithSalt` releaseAfterMinutes
       `Prelude.hashWithSalt` enabled
 
 instance Prelude.NFData CreateRequireCheckIn where

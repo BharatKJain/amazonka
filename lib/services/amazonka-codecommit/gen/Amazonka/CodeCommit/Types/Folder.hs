@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.Folder
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.Folder where
@@ -90,7 +90,8 @@ instance Data.FromJSON Folder where
 
 instance Prelude.Hashable Folder where
   hashWithSalt _salt Folder' {..} =
-    _salt `Prelude.hashWithSalt` absolutePath
+    _salt
+      `Prelude.hashWithSalt` absolutePath
       `Prelude.hashWithSalt` relativePath
       `Prelude.hashWithSalt` treeId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.ReferencePredictorSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.ReferencePredictorSummary where
@@ -70,12 +70,14 @@ instance Data.FromJSON ReferencePredictorSummary where
       "ReferencePredictorSummary"
       ( \x ->
           ReferencePredictorSummary'
-            Prelude.<$> (x Data..:? "Arn") Prelude.<*> (x Data..:? "State")
+            Prelude.<$> (x Data..:? "Arn")
+            Prelude.<*> (x Data..:? "State")
       )
 
 instance Prelude.Hashable ReferencePredictorSummary where
   hashWithSalt _salt ReferencePredictorSummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` state
 
 instance Prelude.NFData ReferencePredictorSummary where

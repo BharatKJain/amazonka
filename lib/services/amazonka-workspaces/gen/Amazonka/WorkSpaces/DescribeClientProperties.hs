@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkSpaces.DescribeClientProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -88,7 +88,8 @@ instance Core.AWSRequest DescribeClientProperties where
     Response.receiveJSON
       ( \s h x ->
           DescribeClientPropertiesResponse'
-            Prelude.<$> ( x Data..?> "ClientPropertiesList"
+            Prelude.<$> ( x
+                            Data..?> "ClientPropertiesList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

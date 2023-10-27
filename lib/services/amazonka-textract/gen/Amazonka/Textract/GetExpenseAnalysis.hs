@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Textract.GetExpenseAnalysis
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -157,7 +157,8 @@ instance Core.AWSRequest GetExpenseAnalysis where
           GetExpenseAnalysisResponse'
             Prelude.<$> (x Data..?> "AnalyzeExpenseModelVersion")
             Prelude.<*> (x Data..?> "DocumentMetadata")
-            Prelude.<*> ( x Data..?> "ExpenseDocuments"
+            Prelude.<*> ( x
+                            Data..?> "ExpenseDocuments"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "JobStatus")
@@ -169,7 +170,8 @@ instance Core.AWSRequest GetExpenseAnalysis where
 
 instance Prelude.Hashable GetExpenseAnalysis where
   hashWithSalt _salt GetExpenseAnalysis' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` jobId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.ResponseHeadersPolicyServerTimingHeadersConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.ResponseHeadersPolicyServerTimingHeadersConfig where
@@ -116,7 +116,7 @@ instance
   parseXML x =
     ResponseHeadersPolicyServerTimingHeadersConfig'
       Prelude.<$> (x Data..@? "SamplingRate")
-        Prelude.<*> (x Data..@ "Enabled")
+      Prelude.<*> (x Data..@ "Enabled")
 
 instance
   Prelude.Hashable
@@ -125,7 +125,8 @@ instance
   hashWithSalt
     _salt
     ResponseHeadersPolicyServerTimingHeadersConfig' {..} =
-      _salt `Prelude.hashWithSalt` samplingRate
+      _salt
+        `Prelude.hashWithSalt` samplingRate
         `Prelude.hashWithSalt` enabled
 
 instance

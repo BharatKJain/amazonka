@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudTrail.CreateEventDataStore
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -272,7 +272,8 @@ instance Core.AWSRequest CreateEventDataStore where
     Response.receiveJSON
       ( \s h x ->
           CreateEventDataStoreResponse'
-            Prelude.<$> ( x Data..?> "AdvancedEventSelectors"
+            Prelude.<$> ( x
+                            Data..?> "AdvancedEventSelectors"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "CreatedTimestamp")
@@ -291,7 +292,8 @@ instance Core.AWSRequest CreateEventDataStore where
 
 instance Prelude.Hashable CreateEventDataStore where
   hashWithSalt _salt CreateEventDataStore' {..} =
-    _salt `Prelude.hashWithSalt` advancedEventSelectors
+    _salt
+      `Prelude.hashWithSalt` advancedEventSelectors
       `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` multiRegionEnabled
       `Prelude.hashWithSalt` organizationEnabled

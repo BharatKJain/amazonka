@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchCreateObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchCreateObject where
@@ -110,7 +110,8 @@ batchCreateObject_objectAttributeList = Lens.lens (\BatchCreateObject' {objectAt
 
 instance Prelude.Hashable BatchCreateObject where
   hashWithSalt _salt BatchCreateObject' {..} =
-    _salt `Prelude.hashWithSalt` batchReferenceName
+    _salt
+      `Prelude.hashWithSalt` batchReferenceName
       `Prelude.hashWithSalt` linkName
       `Prelude.hashWithSalt` parentReference
       `Prelude.hashWithSalt` schemaFacet

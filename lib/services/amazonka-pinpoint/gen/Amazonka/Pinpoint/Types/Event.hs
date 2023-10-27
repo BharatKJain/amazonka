@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.Event
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.Event where
@@ -142,7 +142,8 @@ event_timestamp = Lens.lens (\Event' {timestamp} -> timestamp) (\s@Event' {} a -
 
 instance Prelude.Hashable Event where
   hashWithSalt _salt Event' {..} =
-    _salt `Prelude.hashWithSalt` appPackageName
+    _salt
+      `Prelude.hashWithSalt` appPackageName
       `Prelude.hashWithSalt` appTitle
       `Prelude.hashWithSalt` appVersionCode
       `Prelude.hashWithSalt` attributes

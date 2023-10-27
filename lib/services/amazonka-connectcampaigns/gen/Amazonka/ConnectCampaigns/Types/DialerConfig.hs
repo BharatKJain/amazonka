@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCampaigns.Types.DialerConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCampaigns.Types.DialerConfig where
@@ -75,7 +75,8 @@ instance Data.FromJSON DialerConfig where
 
 instance Prelude.Hashable DialerConfig where
   hashWithSalt _salt DialerConfig' {..} =
-    _salt `Prelude.hashWithSalt` predictiveDialerConfig
+    _salt
+      `Prelude.hashWithSalt` predictiveDialerConfig
       `Prelude.hashWithSalt` progressiveDialerConfig
 
 instance Prelude.NFData DialerConfig where

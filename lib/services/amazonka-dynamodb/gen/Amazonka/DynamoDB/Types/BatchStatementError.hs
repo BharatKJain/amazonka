@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.BatchStatementError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.BatchStatementError where
@@ -77,7 +77,8 @@ instance Data.FromJSON BatchStatementError where
 
 instance Prelude.Hashable BatchStatementError where
   hashWithSalt _salt BatchStatementError' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData BatchStatementError where

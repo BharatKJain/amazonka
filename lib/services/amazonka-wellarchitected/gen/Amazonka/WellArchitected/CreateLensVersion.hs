@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WellArchitected.CreateLensVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest CreateLensVersion where
 
 instance Prelude.Hashable CreateLensVersion where
   hashWithSalt _salt CreateLensVersion' {..} =
-    _salt `Prelude.hashWithSalt` isMajorVersion
+    _salt
+      `Prelude.hashWithSalt` isMajorVersion
       `Prelude.hashWithSalt` lensAlias
       `Prelude.hashWithSalt` lensVersion
       `Prelude.hashWithSalt` clientRequestToken

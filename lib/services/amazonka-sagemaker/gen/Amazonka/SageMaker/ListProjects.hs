@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.ListProjects
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -160,14 +160,16 @@ instance Core.AWSRequest ListProjects where
           ListProjectsResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "ProjectSummaryList"
+            Prelude.<*> ( x
+                            Data..?> "ProjectSummaryList"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListProjects where
   hashWithSalt _salt ListProjects' {..} =
-    _salt `Prelude.hashWithSalt` creationTimeAfter
+    _salt
+      `Prelude.hashWithSalt` creationTimeAfter
       `Prelude.hashWithSalt` creationTimeBefore
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nameContains

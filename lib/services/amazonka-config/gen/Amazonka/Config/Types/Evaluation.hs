@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.Evaluation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.Evaluation where
@@ -164,7 +164,8 @@ instance Data.FromJSON Evaluation where
 
 instance Prelude.Hashable Evaluation where
   hashWithSalt _salt Evaluation' {..} =
-    _salt `Prelude.hashWithSalt` annotation
+    _salt
+      `Prelude.hashWithSalt` annotation
       `Prelude.hashWithSalt` complianceResourceType
       `Prelude.hashWithSalt` complianceResourceId
       `Prelude.hashWithSalt` complianceType

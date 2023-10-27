@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.EbsConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.EbsConfiguration where
@@ -69,7 +69,8 @@ ebsConfiguration_ebsOptimized = Lens.lens (\EbsConfiguration' {ebsOptimized} -> 
 
 instance Prelude.Hashable EbsConfiguration where
   hashWithSalt _salt EbsConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` ebsBlockDeviceConfigs
+    _salt
+      `Prelude.hashWithSalt` ebsBlockDeviceConfigs
       `Prelude.hashWithSalt` ebsOptimized
 
 instance Prelude.NFData EbsConfiguration where

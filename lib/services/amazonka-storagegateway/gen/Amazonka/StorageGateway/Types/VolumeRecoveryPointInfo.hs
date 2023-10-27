@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StorageGateway.Types.VolumeRecoveryPointInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StorageGateway.Types.VolumeRecoveryPointInfo where
@@ -104,7 +104,8 @@ instance Data.FromJSON VolumeRecoveryPointInfo where
 
 instance Prelude.Hashable VolumeRecoveryPointInfo where
   hashWithSalt _salt VolumeRecoveryPointInfo' {..} =
-    _salt `Prelude.hashWithSalt` volumeARN
+    _salt
+      `Prelude.hashWithSalt` volumeARN
       `Prelude.hashWithSalt` volumeRecoveryPointTime
       `Prelude.hashWithSalt` volumeSizeInBytes
       `Prelude.hashWithSalt` volumeUsageInBytes

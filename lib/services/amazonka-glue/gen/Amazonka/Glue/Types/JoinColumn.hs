@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.JoinColumn
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.JoinColumn where
@@ -73,7 +73,8 @@ instance Data.FromJSON JoinColumn where
 
 instance Prelude.Hashable JoinColumn where
   hashWithSalt _salt JoinColumn' {..} =
-    _salt `Prelude.hashWithSalt` from
+    _salt
+      `Prelude.hashWithSalt` from
       `Prelude.hashWithSalt` keys
 
 instance Prelude.NFData JoinColumn where

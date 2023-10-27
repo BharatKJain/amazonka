@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Nimble.Types.LaunchProfileInitializationActiveDirectory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Nimble.Types.LaunchProfileInitializationActiveDirectory where
@@ -126,15 +126,16 @@ instance
       "LaunchProfileInitializationActiveDirectory"
       ( \x ->
           LaunchProfileInitializationActiveDirectory'
-            Prelude.<$> ( x Data..:? "computerAttributes"
+            Prelude.<$> ( x
+                            Data..:? "computerAttributes"
                             Data..!= Prelude.mempty
                         )
-              Prelude.<*> (x Data..:? "directoryId")
-              Prelude.<*> (x Data..:? "directoryName")
-              Prelude.<*> (x Data..:? "dnsIpAddresses" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "organizationalUnitDistinguishedName")
-              Prelude.<*> (x Data..:? "studioComponentId")
-              Prelude.<*> (x Data..:? "studioComponentName")
+            Prelude.<*> (x Data..:? "directoryId")
+            Prelude.<*> (x Data..:? "directoryName")
+            Prelude.<*> (x Data..:? "dnsIpAddresses" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "organizationalUnitDistinguishedName")
+            Prelude.<*> (x Data..:? "studioComponentId")
+            Prelude.<*> (x Data..:? "studioComponentName")
       )
 
 instance
@@ -144,7 +145,8 @@ instance
   hashWithSalt
     _salt
     LaunchProfileInitializationActiveDirectory' {..} =
-      _salt `Prelude.hashWithSalt` computerAttributes
+      _salt
+        `Prelude.hashWithSalt` computerAttributes
         `Prelude.hashWithSalt` directoryId
         `Prelude.hashWithSalt` directoryName
         `Prelude.hashWithSalt` dnsIpAddresses

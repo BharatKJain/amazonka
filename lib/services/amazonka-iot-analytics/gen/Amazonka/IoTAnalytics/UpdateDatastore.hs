@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTAnalytics.UpdateDatastore
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,8 @@ instance Core.AWSRequest UpdateDatastore where
 
 instance Prelude.Hashable UpdateDatastore where
   hashWithSalt _salt UpdateDatastore' {..} =
-    _salt `Prelude.hashWithSalt` datastoreStorage
+    _salt
+      `Prelude.hashWithSalt` datastoreStorage
       `Prelude.hashWithSalt` fileFormatConfiguration
       `Prelude.hashWithSalt` retentionPeriod
       `Prelude.hashWithSalt` datastoreName

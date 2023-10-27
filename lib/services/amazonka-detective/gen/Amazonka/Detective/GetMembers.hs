@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Detective.GetMembers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest GetMembers where
       ( \s h x ->
           GetMembersResponse'
             Prelude.<$> (x Data..?> "MemberDetails" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "UnprocessedAccounts"
+            Prelude.<*> ( x
+                            Data..?> "UnprocessedAccounts"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -122,7 +123,8 @@ instance Core.AWSRequest GetMembers where
 
 instance Prelude.Hashable GetMembers where
   hashWithSalt _salt GetMembers' {..} =
-    _salt `Prelude.hashWithSalt` graphArn
+    _salt
+      `Prelude.hashWithSalt` graphArn
       `Prelude.hashWithSalt` accountIds
 
 instance Prelude.NFData GetMembers where

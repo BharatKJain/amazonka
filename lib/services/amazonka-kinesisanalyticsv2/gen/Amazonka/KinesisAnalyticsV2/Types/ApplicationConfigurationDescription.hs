@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.ApplicationConfigurationDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.ApplicationConfigurationDescription where
@@ -175,7 +175,8 @@ instance
                         )
             Prelude.<*> (x Data..:? "RunConfigurationDescription")
             Prelude.<*> (x Data..:? "SqlApplicationConfigurationDescription")
-            Prelude.<*> ( x Data..:? "VpcConfigurationDescriptions"
+            Prelude.<*> ( x
+                            Data..:? "VpcConfigurationDescriptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> ( x

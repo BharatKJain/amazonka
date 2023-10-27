@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.UnprocessedAccount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.UnprocessedAccount where
@@ -78,7 +78,8 @@ instance Data.FromJSON UnprocessedAccount where
 
 instance Prelude.Hashable UnprocessedAccount where
   hashWithSalt _salt UnprocessedAccount' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` result
 
 instance Prelude.NFData UnprocessedAccount where

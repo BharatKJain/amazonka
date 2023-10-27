@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.ReservedNodeExchangeStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.ReservedNodeExchangeStatus where
@@ -151,7 +151,8 @@ instance Data.FromXML ReservedNodeExchangeStatus where
 
 instance Prelude.Hashable ReservedNodeExchangeStatus where
   hashWithSalt _salt ReservedNodeExchangeStatus' {..} =
-    _salt `Prelude.hashWithSalt` requestTime
+    _salt
+      `Prelude.hashWithSalt` requestTime
       `Prelude.hashWithSalt` reservedNodeExchangeRequestId
       `Prelude.hashWithSalt` sourceReservedNodeCount
       `Prelude.hashWithSalt` sourceReservedNodeId

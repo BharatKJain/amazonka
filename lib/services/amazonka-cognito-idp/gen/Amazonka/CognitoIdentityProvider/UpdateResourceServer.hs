@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.UpdateResourceServer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -133,7 +133,8 @@ instance Core.AWSRequest UpdateResourceServer where
 
 instance Prelude.Hashable UpdateResourceServer where
   hashWithSalt _salt UpdateResourceServer' {..} =
-    _salt `Prelude.hashWithSalt` scopes
+    _salt
+      `Prelude.hashWithSalt` scopes
       `Prelude.hashWithSalt` userPoolId
       `Prelude.hashWithSalt` identifier
       `Prelude.hashWithSalt` name

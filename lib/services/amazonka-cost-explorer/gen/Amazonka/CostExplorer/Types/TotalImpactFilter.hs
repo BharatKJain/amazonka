@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.TotalImpactFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.TotalImpactFilter where
@@ -78,7 +78,8 @@ totalImpactFilter_startValue = Lens.lens (\TotalImpactFilter' {startValue} -> st
 
 instance Prelude.Hashable TotalImpactFilter where
   hashWithSalt _salt TotalImpactFilter' {..} =
-    _salt `Prelude.hashWithSalt` endValue
+    _salt
+      `Prelude.hashWithSalt` endValue
       `Prelude.hashWithSalt` numericOperator
       `Prelude.hashWithSalt` startValue
 

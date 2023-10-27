@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.CreateBlueGreenDeployment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -232,7 +232,8 @@ instance Core.AWSRequest CreateBlueGreenDeployment where
 
 instance Prelude.Hashable CreateBlueGreenDeployment where
   hashWithSalt _salt CreateBlueGreenDeployment' {..} =
-    _salt `Prelude.hashWithSalt` tags
+    _salt
+      `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` targetDBClusterParameterGroupName
       `Prelude.hashWithSalt` targetDBParameterGroupName
       `Prelude.hashWithSalt` targetEngineVersion

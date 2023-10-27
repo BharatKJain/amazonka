@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.NullCheckBoxList
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.NullCheckBoxList where
@@ -88,7 +88,8 @@ instance Data.FromJSON NullCheckBoxList where
 
 instance Prelude.Hashable NullCheckBoxList where
   hashWithSalt _salt NullCheckBoxList' {..} =
-    _salt `Prelude.hashWithSalt` isEmpty
+    _salt
+      `Prelude.hashWithSalt` isEmpty
       `Prelude.hashWithSalt` isNegOne
       `Prelude.hashWithSalt` isNullString
 

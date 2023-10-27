@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeStarNotifications.Types.EventTypeSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeStarNotifications.Types.EventTypeSummary where
@@ -104,7 +104,8 @@ instance Data.FromJSON EventTypeSummary where
 
 instance Prelude.Hashable EventTypeSummary where
   hashWithSalt _salt EventTypeSummary' {..} =
-    _salt `Prelude.hashWithSalt` eventTypeId
+    _salt
+      `Prelude.hashWithSalt` eventTypeId
       `Prelude.hashWithSalt` eventTypeName
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` serviceName

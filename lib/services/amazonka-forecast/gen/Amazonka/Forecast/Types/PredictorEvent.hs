@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.PredictorEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.PredictorEvent where
@@ -83,7 +83,8 @@ instance Data.FromJSON PredictorEvent where
 
 instance Prelude.Hashable PredictorEvent where
   hashWithSalt _salt PredictorEvent' {..} =
-    _salt `Prelude.hashWithSalt` datetime
+    _salt
+      `Prelude.hashWithSalt` datetime
       `Prelude.hashWithSalt` detail
 
 instance Prelude.NFData PredictorEvent where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstanceCapacity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstanceCapacity where
@@ -89,7 +89,8 @@ instance Data.FromXML InstanceCapacity where
 
 instance Prelude.Hashable InstanceCapacity where
   hashWithSalt _salt InstanceCapacity' {..} =
-    _salt `Prelude.hashWithSalt` availableCapacity
+    _salt
+      `Prelude.hashWithSalt` availableCapacity
       `Prelude.hashWithSalt` instanceType
       `Prelude.hashWithSalt` totalCapacity
 

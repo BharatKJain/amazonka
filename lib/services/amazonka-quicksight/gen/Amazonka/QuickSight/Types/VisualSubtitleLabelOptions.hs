@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.VisualSubtitleLabelOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.VisualSubtitleLabelOptions where
@@ -80,7 +80,8 @@ instance Data.FromJSON VisualSubtitleLabelOptions where
 
 instance Prelude.Hashable VisualSubtitleLabelOptions where
   hashWithSalt _salt VisualSubtitleLabelOptions' {..} =
-    _salt `Prelude.hashWithSalt` formatText
+    _salt
+      `Prelude.hashWithSalt` formatText
       `Prelude.hashWithSalt` visibility
 
 instance Prelude.NFData VisualSubtitleLabelOptions where

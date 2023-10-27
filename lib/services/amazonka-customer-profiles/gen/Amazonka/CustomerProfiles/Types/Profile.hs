@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CustomerProfiles.Types.Profile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CustomerProfiles.Types.Profile where
@@ -366,7 +366,8 @@ instance Data.FromJSON Profile where
 
 instance Prelude.Hashable Profile where
   hashWithSalt _salt Profile' {..} =
-    _salt `Prelude.hashWithSalt` accountNumber
+    _salt
+      `Prelude.hashWithSalt` accountNumber
       `Prelude.hashWithSalt` additionalInformation
       `Prelude.hashWithSalt` address
       `Prelude.hashWithSalt` attributes

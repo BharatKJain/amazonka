@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.VideoMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.VideoMetadata where
@@ -130,7 +130,8 @@ instance Data.FromJSON VideoMetadata where
 
 instance Prelude.Hashable VideoMetadata where
   hashWithSalt _salt VideoMetadata' {..} =
-    _salt `Prelude.hashWithSalt` codec
+    _salt
+      `Prelude.hashWithSalt` codec
       `Prelude.hashWithSalt` colorRange
       `Prelude.hashWithSalt` durationMillis
       `Prelude.hashWithSalt` format

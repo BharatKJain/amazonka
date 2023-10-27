@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.IAMPolicyAssignmentSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.IAMPolicyAssignmentSummary where
@@ -76,7 +76,8 @@ instance Data.FromJSON IAMPolicyAssignmentSummary where
 
 instance Prelude.Hashable IAMPolicyAssignmentSummary where
   hashWithSalt _salt IAMPolicyAssignmentSummary' {..} =
-    _salt `Prelude.hashWithSalt` assignmentName
+    _salt
+      `Prelude.hashWithSalt` assignmentName
       `Prelude.hashWithSalt` assignmentStatus
 
 instance Prelude.NFData IAMPolicyAssignmentSummary where

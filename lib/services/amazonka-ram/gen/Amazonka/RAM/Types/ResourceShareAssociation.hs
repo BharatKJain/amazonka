@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RAM.Types.ResourceShareAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RAM.Types.ResourceShareAssociation where
@@ -214,7 +214,8 @@ instance Data.FromJSON ResourceShareAssociation where
 
 instance Prelude.Hashable ResourceShareAssociation where
   hashWithSalt _salt ResourceShareAssociation' {..} =
-    _salt `Prelude.hashWithSalt` associatedEntity
+    _salt
+      `Prelude.hashWithSalt` associatedEntity
       `Prelude.hashWithSalt` associationType
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` external

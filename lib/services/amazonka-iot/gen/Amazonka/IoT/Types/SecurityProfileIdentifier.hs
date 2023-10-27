@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.SecurityProfileIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.SecurityProfileIdentifier where
@@ -72,12 +72,14 @@ instance Data.FromJSON SecurityProfileIdentifier where
       "SecurityProfileIdentifier"
       ( \x ->
           SecurityProfileIdentifier'
-            Prelude.<$> (x Data..: "name") Prelude.<*> (x Data..: "arn")
+            Prelude.<$> (x Data..: "name")
+            Prelude.<*> (x Data..: "arn")
       )
 
 instance Prelude.Hashable SecurityProfileIdentifier where
   hashWithSalt _salt SecurityProfileIdentifier' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` arn
 
 instance Prelude.NFData SecurityProfileIdentifier where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeStar.Types.Code
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeStar.Types.Code where
@@ -87,7 +87,8 @@ code_destination = Lens.lens (\Code' {destination} -> destination) (\s@Code' {} 
 
 instance Prelude.Hashable Code where
   hashWithSalt _salt Code' {..} =
-    _salt `Prelude.hashWithSalt` source
+    _salt
+      `Prelude.hashWithSalt` source
       `Prelude.hashWithSalt` destination
 
 instance Prelude.NFData Code where

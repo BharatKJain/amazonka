@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Amplify.UpdateBranch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -282,7 +282,8 @@ instance Core.AWSRequest UpdateBranch where
 
 instance Prelude.Hashable UpdateBranch where
   hashWithSalt _salt UpdateBranch' {..} =
-    _salt `Prelude.hashWithSalt` backendEnvironmentArn
+    _salt
+      `Prelude.hashWithSalt` backendEnvironmentArn
       `Prelude.hashWithSalt` basicAuthCredentials
       `Prelude.hashWithSalt` buildSpec
       `Prelude.hashWithSalt` description

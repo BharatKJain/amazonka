@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFRegional.UntagResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -84,11 +84,9 @@ newUntagResource pResourceARN_ pTagKeys_ =
       tagKeys = Lens.coerced Lens.# pTagKeys_
     }
 
--- |
 untagResource_resourceARN :: Lens.Lens' UntagResource Prelude.Text
 untagResource_resourceARN = Lens.lens (\UntagResource' {resourceARN} -> resourceARN) (\s@UntagResource' {} a -> s {resourceARN = a} :: UntagResource)
 
--- |
 untagResource_tagKeys :: Lens.Lens' UntagResource (Prelude.NonEmpty Prelude.Text)
 untagResource_tagKeys = Lens.lens (\UntagResource' {tagKeys} -> tagKeys) (\s@UntagResource' {} a -> s {tagKeys = a} :: UntagResource) Prelude.. Lens.coerced
 
@@ -107,7 +105,8 @@ instance Core.AWSRequest UntagResource where
 
 instance Prelude.Hashable UntagResource where
   hashWithSalt _salt UntagResource' {..} =
-    _salt `Prelude.hashWithSalt` resourceARN
+    _salt
+      `Prelude.hashWithSalt` resourceARN
       `Prelude.hashWithSalt` tagKeys
 
 instance Prelude.NFData UntagResource where

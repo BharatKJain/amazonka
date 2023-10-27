@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.Condition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.Condition where
@@ -568,7 +568,8 @@ condition_comparisonOperator = Lens.lens (\Condition' {comparisonOperator} -> co
 
 instance Prelude.Hashable Condition where
   hashWithSalt _salt Condition' {..} =
-    _salt `Prelude.hashWithSalt` attributeValueList
+    _salt
+      `Prelude.hashWithSalt` attributeValueList
       `Prelude.hashWithSalt` comparisonOperator
 
 instance Prelude.NFData Condition where

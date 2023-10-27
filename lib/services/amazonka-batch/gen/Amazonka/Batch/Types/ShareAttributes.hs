@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.ShareAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.ShareAttributes where
@@ -132,7 +132,8 @@ instance Data.FromJSON ShareAttributes where
 
 instance Prelude.Hashable ShareAttributes where
   hashWithSalt _salt ShareAttributes' {..} =
-    _salt `Prelude.hashWithSalt` weightFactor
+    _salt
+      `Prelude.hashWithSalt` weightFactor
       `Prelude.hashWithSalt` shareIdentifier
 
 instance Prelude.NFData ShareAttributes where

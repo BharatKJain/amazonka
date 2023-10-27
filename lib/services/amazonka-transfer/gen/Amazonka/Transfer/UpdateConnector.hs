@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Transfer.UpdateConnector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -173,7 +173,8 @@ instance Core.AWSRequest UpdateConnector where
 
 instance Prelude.Hashable UpdateConnector where
   hashWithSalt _salt UpdateConnector' {..} =
-    _salt `Prelude.hashWithSalt` accessRole
+    _salt
+      `Prelude.hashWithSalt` accessRole
       `Prelude.hashWithSalt` as2Config
       `Prelude.hashWithSalt` loggingRole
       `Prelude.hashWithSalt` url

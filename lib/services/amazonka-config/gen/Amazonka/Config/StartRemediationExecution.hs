@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Config.StartRemediationExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest StartRemediationExecution where
 
 instance Prelude.Hashable StartRemediationExecution where
   hashWithSalt _salt StartRemediationExecution' {..} =
-    _salt `Prelude.hashWithSalt` configRuleName
+    _salt
+      `Prelude.hashWithSalt` configRuleName
       `Prelude.hashWithSalt` resourceKeys
 
 instance Prelude.NFData StartRemediationExecution where

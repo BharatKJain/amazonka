@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeCommit.CreateBranch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest CreateBranch where
 
 instance Prelude.Hashable CreateBranch where
   hashWithSalt _salt CreateBranch' {..} =
-    _salt `Prelude.hashWithSalt` repositoryName
+    _salt
+      `Prelude.hashWithSalt` repositoryName
       `Prelude.hashWithSalt` branchName
       `Prelude.hashWithSalt` commitId
 

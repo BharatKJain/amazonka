@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeVpcEndpointServicePermissions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -165,22 +165,22 @@ instance
     | Core.stop
         ( rs
             Lens.^? describeVpcEndpointServicePermissionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeVpcEndpointServicePermissionsResponse_allowedPrincipals
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeVpcEndpointServicePermissions_nextToken
           Lens..~ rs
-            Lens.^? describeVpcEndpointServicePermissionsResponse_nextToken
-              Prelude.. Lens._Just
+          Lens.^? describeVpcEndpointServicePermissionsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -196,12 +196,13 @@ instance
     Response.receiveXML
       ( \s h x ->
           DescribeVpcEndpointServicePermissionsResponse'
-            Prelude.<$> ( x Data..@? "allowedPrincipals"
+            Prelude.<$> ( x
+                            Data..@? "allowedPrincipals"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
-              Prelude.<*> (x Data..@? "nextToken")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..@? "nextToken")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -211,7 +212,8 @@ instance
   hashWithSalt
     _salt
     DescribeVpcEndpointServicePermissions' {..} =
-      _salt `Prelude.hashWithSalt` dryRun
+      _salt
+        `Prelude.hashWithSalt` dryRun
         `Prelude.hashWithSalt` filters
         `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken

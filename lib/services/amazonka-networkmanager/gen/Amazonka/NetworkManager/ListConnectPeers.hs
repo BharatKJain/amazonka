@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkManager.ListConnectPeers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,22 +113,22 @@ instance Core.AWSPager ListConnectPeers where
     | Core.stop
         ( rs
             Lens.^? listConnectPeersResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listConnectPeersResponse_connectPeers
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listConnectPeers_nextToken
           Lens..~ rs
           Lens.^? listConnectPeersResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListConnectPeers where
   type
@@ -147,7 +147,8 @@ instance Core.AWSRequest ListConnectPeers where
 
 instance Prelude.Hashable ListConnectPeers where
   hashWithSalt _salt ListConnectPeers' {..} =
-    _salt `Prelude.hashWithSalt` connectAttachmentId
+    _salt
+      `Prelude.hashWithSalt` connectAttachmentId
       `Prelude.hashWithSalt` coreNetworkId
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

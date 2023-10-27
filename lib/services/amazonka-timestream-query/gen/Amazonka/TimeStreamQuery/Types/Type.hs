@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamQuery.Types.Type
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamQuery.Types.Type where
@@ -102,7 +102,8 @@ instance Data.FromJSON Type where
 
 instance Prelude.Hashable Type where
   hashWithSalt _salt Type' {..} =
-    _salt `Prelude.hashWithSalt` arrayColumnInfo
+    _salt
+      `Prelude.hashWithSalt` arrayColumnInfo
       `Prelude.hashWithSalt` rowColumnInfo
       `Prelude.hashWithSalt` scalarType
       `Prelude.hashWithSalt` timeSeriesMeasureValueColumnInfo

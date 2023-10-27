@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.DeliveryStreamEncryptionConfigurationInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.DeliveryStreamEncryptionConfigurationInput where
@@ -159,7 +159,8 @@ instance
   hashWithSalt
     _salt
     DeliveryStreamEncryptionConfigurationInput' {..} =
-      _salt `Prelude.hashWithSalt` keyARN
+      _salt
+        `Prelude.hashWithSalt` keyARN
         `Prelude.hashWithSalt` keyType
 
 instance

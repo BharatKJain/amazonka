@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudSearch.ListDomainNames
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -69,7 +69,9 @@ instance Core.AWSRequest ListDomainNames where
       "ListDomainNamesResult"
       ( \s h x ->
           ListDomainNamesResponse'
-            Prelude.<$> ( x Data..@? "DomainNames" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "DomainNames"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLMap "entry" "key" "value")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

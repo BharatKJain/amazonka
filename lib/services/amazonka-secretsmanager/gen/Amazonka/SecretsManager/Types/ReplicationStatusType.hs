@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecretsManager.Types.ReplicationStatusType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecretsManager.Types.ReplicationStatusType where
@@ -112,7 +112,8 @@ instance Data.FromJSON ReplicationStatusType where
 
 instance Prelude.Hashable ReplicationStatusType where
   hashWithSalt _salt ReplicationStatusType' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyId
+    _salt
+      `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` lastAccessedDate
       `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` status

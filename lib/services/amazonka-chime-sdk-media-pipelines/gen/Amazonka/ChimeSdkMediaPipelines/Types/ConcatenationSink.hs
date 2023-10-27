@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkMediaPipelines.Types.ConcatenationSink
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkMediaPipelines.Types.ConcatenationSink where
@@ -83,7 +83,8 @@ instance Data.FromJSON ConcatenationSink where
 
 instance Prelude.Hashable ConcatenationSink where
   hashWithSalt _salt ConcatenationSink' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` s3BucketSinkConfiguration
 
 instance Prelude.NFData ConcatenationSink where

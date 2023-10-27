@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Backup.ListRestoreJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -171,22 +171,22 @@ instance Core.AWSPager ListRestoreJobs where
     | Core.stop
         ( rs
             Lens.^? listRestoreJobsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listRestoreJobsResponse_restoreJobs
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listRestoreJobs_nextToken
           Lens..~ rs
           Lens.^? listRestoreJobsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListRestoreJobs where
   type
@@ -205,7 +205,8 @@ instance Core.AWSRequest ListRestoreJobs where
 
 instance Prelude.Hashable ListRestoreJobs where
   hashWithSalt _salt ListRestoreJobs' {..} =
-    _salt `Prelude.hashWithSalt` byAccountId
+    _salt
+      `Prelude.hashWithSalt` byAccountId
       `Prelude.hashWithSalt` byCompleteAfter
       `Prelude.hashWithSalt` byCompleteBefore
       `Prelude.hashWithSalt` byCreatedAfter

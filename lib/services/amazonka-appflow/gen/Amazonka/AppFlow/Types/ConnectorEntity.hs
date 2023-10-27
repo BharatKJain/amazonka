@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.ConnectorEntity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.ConnectorEntity where
@@ -101,7 +101,8 @@ instance Data.FromJSON ConnectorEntity where
 
 instance Prelude.Hashable ConnectorEntity where
   hashWithSalt _salt ConnectorEntity' {..} =
-    _salt `Prelude.hashWithSalt` hasNestedEntities
+    _salt
+      `Prelude.hashWithSalt` hasNestedEntities
       `Prelude.hashWithSalt` label
       `Prelude.hashWithSalt` name
 

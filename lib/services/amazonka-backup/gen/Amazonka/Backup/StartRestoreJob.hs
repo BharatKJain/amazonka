@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Backup.StartRestoreJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -330,7 +330,8 @@ instance Core.AWSRequest StartRestoreJob where
 
 instance Prelude.Hashable StartRestoreJob where
   hashWithSalt _salt StartRestoreJob' {..} =
-    _salt `Prelude.hashWithSalt` iamRoleArn
+    _salt
+      `Prelude.hashWithSalt` iamRoleArn
       `Prelude.hashWithSalt` idempotencyToken
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` recoveryPointArn

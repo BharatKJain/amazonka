@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.MetricDatapoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.MetricDatapoint where
@@ -125,7 +125,8 @@ instance Data.FromJSON MetricDatapoint where
 
 instance Prelude.Hashable MetricDatapoint where
   hashWithSalt _salt MetricDatapoint' {..} =
-    _salt `Prelude.hashWithSalt` average
+    _salt
+      `Prelude.hashWithSalt` average
       `Prelude.hashWithSalt` maximum
       `Prelude.hashWithSalt` minimum
       `Prelude.hashWithSalt` sampleCount

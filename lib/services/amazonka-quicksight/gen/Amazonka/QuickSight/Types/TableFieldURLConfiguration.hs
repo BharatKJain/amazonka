@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TableFieldURLConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TableFieldURLConfiguration where
@@ -77,7 +77,8 @@ instance Data.FromJSON TableFieldURLConfiguration where
 
 instance Prelude.Hashable TableFieldURLConfiguration where
   hashWithSalt _salt TableFieldURLConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` imageConfiguration
+    _salt
+      `Prelude.hashWithSalt` imageConfiguration
       `Prelude.hashWithSalt` linkConfiguration
 
 instance Prelude.NFData TableFieldURLConfiguration where

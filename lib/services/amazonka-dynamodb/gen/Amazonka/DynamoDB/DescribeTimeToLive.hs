@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.DescribeTimeToLive
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -154,7 +154,6 @@ newDescribeTimeToLiveResponse pHttpStatus_ =
       httpStatus = pHttpStatus_
     }
 
--- |
 describeTimeToLiveResponse_timeToLiveDescription :: Lens.Lens' DescribeTimeToLiveResponse (Prelude.Maybe TimeToLiveDescription)
 describeTimeToLiveResponse_timeToLiveDescription = Lens.lens (\DescribeTimeToLiveResponse' {timeToLiveDescription} -> timeToLiveDescription) (\s@DescribeTimeToLiveResponse' {} a -> s {timeToLiveDescription = a} :: DescribeTimeToLiveResponse)
 

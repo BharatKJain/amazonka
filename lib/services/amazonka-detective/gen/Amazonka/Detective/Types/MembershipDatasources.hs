@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Detective.Types.MembershipDatasources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Detective.Types.MembershipDatasources where
@@ -81,7 +81,8 @@ instance Data.FromJSON MembershipDatasources where
       ( \x ->
           MembershipDatasources'
             Prelude.<$> (x Data..:? "AccountId")
-            Prelude.<*> ( x Data..:? "DatasourcePackageIngestHistory"
+            Prelude.<*> ( x
+                            Data..:? "DatasourcePackageIngestHistory"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "GraphArn")
@@ -89,7 +90,8 @@ instance Data.FromJSON MembershipDatasources where
 
 instance Prelude.Hashable MembershipDatasources where
   hashWithSalt _salt MembershipDatasources' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` datasourcePackageIngestHistory
       `Prelude.hashWithSalt` graphArn
 

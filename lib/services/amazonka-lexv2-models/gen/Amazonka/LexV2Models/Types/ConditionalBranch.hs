@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.ConditionalBranch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.ConditionalBranch where
@@ -105,7 +105,8 @@ instance Data.FromJSON ConditionalBranch where
 
 instance Prelude.Hashable ConditionalBranch where
   hashWithSalt _salt ConditionalBranch' {..} =
-    _salt `Prelude.hashWithSalt` response
+    _salt
+      `Prelude.hashWithSalt` response
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` condition
       `Prelude.hashWithSalt` nextStep

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Translate.Types.TerminologyProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Translate.Types.TerminologyProperties where
@@ -236,7 +236,8 @@ instance Data.FromJSON TerminologyProperties where
             Prelude.<*> (x Data..:? "SizeBytes")
             Prelude.<*> (x Data..:? "SkippedTermCount")
             Prelude.<*> (x Data..:? "SourceLanguageCode")
-            Prelude.<*> ( x Data..:? "TargetLanguageCodes"
+            Prelude.<*> ( x
+                            Data..:? "TargetLanguageCodes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "TermCount")
@@ -244,7 +245,8 @@ instance Data.FromJSON TerminologyProperties where
 
 instance Prelude.Hashable TerminologyProperties where
   hashWithSalt _salt TerminologyProperties' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` directionality

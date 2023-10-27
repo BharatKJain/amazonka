@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.SlotCaptureSetting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.SlotCaptureSetting where
@@ -151,7 +151,8 @@ instance Data.FromJSON SlotCaptureSetting where
 
 instance Prelude.Hashable SlotCaptureSetting where
   hashWithSalt _salt SlotCaptureSetting' {..} =
-    _salt `Prelude.hashWithSalt` captureConditional
+    _salt
+      `Prelude.hashWithSalt` captureConditional
       `Prelude.hashWithSalt` captureNextStep
       `Prelude.hashWithSalt` captureResponse
       `Prelude.hashWithSalt` codeHook

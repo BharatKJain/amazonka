@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECRPublic.Types.AuthorizationData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECRPublic.Types.AuthorizationData where
@@ -88,7 +88,8 @@ instance Data.FromJSON AuthorizationData where
 
 instance Prelude.Hashable AuthorizationData where
   hashWithSalt _salt AuthorizationData' {..} =
-    _salt `Prelude.hashWithSalt` authorizationToken
+    _salt
+      `Prelude.hashWithSalt` authorizationToken
       `Prelude.hashWithSalt` expiresAt
 
 instance Prelude.NFData AuthorizationData where

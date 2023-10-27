@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.Field
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.Field where
@@ -69,12 +69,14 @@ instance Data.FromJSON Field where
       "Field"
       ( \x ->
           Field'
-            Prelude.<$> (x Data..:? "name") Prelude.<*> (x Data..:? "type")
+            Prelude.<$> (x Data..:? "name")
+            Prelude.<*> (x Data..:? "type")
       )
 
 instance Prelude.Hashable Field where
   hashWithSalt _salt Field' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData Field where

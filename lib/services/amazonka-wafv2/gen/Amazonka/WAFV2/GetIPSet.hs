@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFV2.GetIPSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,7 +158,8 @@ instance Core.AWSRequest GetIPSet where
 
 instance Prelude.Hashable GetIPSet where
   hashWithSalt _salt GetIPSet' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` scope
       `Prelude.hashWithSalt` id
 
@@ -245,7 +246,6 @@ newGetIPSetResponse pHttpStatus_ =
       httpStatus = pHttpStatus_
     }
 
--- |
 getIPSetResponse_iPSet :: Lens.Lens' GetIPSetResponse (Prelude.Maybe IPSet)
 getIPSetResponse_iPSet = Lens.lens (\GetIPSetResponse' {iPSet} -> iPSet) (\s@GetIPSetResponse' {} a -> s {iPSet = a} :: GetIPSetResponse)
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.Leg
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.Leg where
@@ -137,10 +137,12 @@ newLeg
         distance = pDistance_,
         durationSeconds = pDurationSeconds_,
         endPosition =
-          Data._Sensitive Prelude.. Lens.coerced
+          Data._Sensitive
+            Prelude.. Lens.coerced
             Lens.# pEndPosition_,
         startPosition =
-          Data._Sensitive Prelude.. Lens.coerced
+          Data._Sensitive
+            Prelude.. Lens.coerced
             Lens.# pStartPosition_,
         steps = Prelude.mempty
       }
@@ -202,7 +204,8 @@ instance Data.FromJSON Leg where
 
 instance Prelude.Hashable Leg where
   hashWithSalt _salt Leg' {..} =
-    _salt `Prelude.hashWithSalt` geometry
+    _salt
+      `Prelude.hashWithSalt` geometry
       `Prelude.hashWithSalt` distance
       `Prelude.hashWithSalt` durationSeconds
       `Prelude.hashWithSalt` endPosition

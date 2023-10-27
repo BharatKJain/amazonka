@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectConnect.DescribeDirectConnectGatewayAssociationProposals
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -154,8 +154,8 @@ instance
                             Data..?> "directConnectGatewayAssociationProposals"
                             Core..!@ Prelude.mempty
                         )
-              Prelude.<*> (x Data..?> "nextToken")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "nextToken")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -165,7 +165,8 @@ instance
   hashWithSalt
     _salt
     DescribeDirectConnectGatewayAssociationProposals' {..} =
-      _salt `Prelude.hashWithSalt` associatedGatewayId
+      _salt
+        `Prelude.hashWithSalt` associatedGatewayId
         `Prelude.hashWithSalt` directConnectGatewayId
         `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken

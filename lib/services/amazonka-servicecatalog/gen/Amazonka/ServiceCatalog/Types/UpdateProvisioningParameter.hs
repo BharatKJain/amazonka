@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.UpdateProvisioningParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.UpdateProvisioningParameter where
@@ -87,7 +87,8 @@ instance Data.FromJSON UpdateProvisioningParameter where
 
 instance Prelude.Hashable UpdateProvisioningParameter where
   hashWithSalt _salt UpdateProvisioningParameter' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` usePreviousValue
       `Prelude.hashWithSalt` value
 

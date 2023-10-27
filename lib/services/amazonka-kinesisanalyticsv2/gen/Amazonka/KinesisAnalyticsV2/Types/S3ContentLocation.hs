@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.S3ContentLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.S3ContentLocation where
@@ -94,7 +94,8 @@ instance Data.FromJSON S3ContentLocation where
 
 instance Prelude.Hashable S3ContentLocation where
   hashWithSalt _salt S3ContentLocation' {..} =
-    _salt `Prelude.hashWithSalt` objectVersion
+    _salt
+      `Prelude.hashWithSalt` objectVersion
       `Prelude.hashWithSalt` bucketARN
       `Prelude.hashWithSalt` fileKey
 

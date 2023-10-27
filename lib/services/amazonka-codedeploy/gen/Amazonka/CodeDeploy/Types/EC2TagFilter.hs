@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.EC2TagFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.EC2TagFilter where
@@ -103,7 +103,8 @@ instance Data.FromJSON EC2TagFilter where
 
 instance Prelude.Hashable EC2TagFilter where
   hashWithSalt _salt EC2TagFilter' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` value
 

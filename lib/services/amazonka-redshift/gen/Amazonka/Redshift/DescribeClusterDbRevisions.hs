@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.DescribeClusterDbRevisions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -160,22 +160,22 @@ instance Core.AWSPager DescribeClusterDbRevisions where
     | Core.stop
         ( rs
             Lens.^? describeClusterDbRevisionsResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeClusterDbRevisionsResponse_clusterDbRevisions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeClusterDbRevisions_marker
           Lens..~ rs
           Lens.^? describeClusterDbRevisionsResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeClusterDbRevisions where
   type
@@ -188,7 +188,8 @@ instance Core.AWSRequest DescribeClusterDbRevisions where
       "DescribeClusterDbRevisionsResult"
       ( \s h x ->
           DescribeClusterDbRevisionsResponse'
-            Prelude.<$> ( x Data..@? "ClusterDbRevisions"
+            Prelude.<$> ( x
+                            Data..@? "ClusterDbRevisions"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "ClusterDbRevision")
                         )
@@ -198,7 +199,8 @@ instance Core.AWSRequest DescribeClusterDbRevisions where
 
 instance Prelude.Hashable DescribeClusterDbRevisions where
   hashWithSalt _salt DescribeClusterDbRevisions' {..} =
-    _salt `Prelude.hashWithSalt` clusterIdentifier
+    _salt
+      `Prelude.hashWithSalt` clusterIdentifier
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxRecords
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataInstanceRequirementsVCpuCountDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataInstanceRequirementsVCpuCountDetails where
@@ -73,7 +73,8 @@ instance
       "AwsEc2LaunchTemplateDataInstanceRequirementsVCpuCountDetails"
       ( \x ->
           AwsEc2LaunchTemplateDataInstanceRequirementsVCpuCountDetails'
-            Prelude.<$> (x Data..:? "Max") Prelude.<*> (x Data..:? "Min")
+            Prelude.<$> (x Data..:? "Max")
+            Prelude.<*> (x Data..:? "Min")
       )
 
 instance
@@ -83,7 +84,8 @@ instance
   hashWithSalt
     _salt
     AwsEc2LaunchTemplateDataInstanceRequirementsVCpuCountDetails' {..} =
-      _salt `Prelude.hashWithSalt` max
+      _salt
+        `Prelude.hashWithSalt` max
         `Prelude.hashWithSalt` min
 
 instance

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.XssMatchSetUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.XssMatchSetUpdate where
@@ -90,7 +90,8 @@ xssMatchSetUpdate_xssMatchTuple = Lens.lens (\XssMatchSetUpdate' {xssMatchTuple}
 
 instance Prelude.Hashable XssMatchSetUpdate where
   hashWithSalt _salt XssMatchSetUpdate' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` xssMatchTuple
 
 instance Prelude.NFData XssMatchSetUpdate where

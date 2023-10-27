@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.GroupDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.GroupDefinition where
@@ -70,12 +70,14 @@ instance Data.FromJSON GroupDefinition where
       "GroupDefinition"
       ( \x ->
           GroupDefinition'
-            Prelude.<$> (x Data..:? "Key") Prelude.<*> (x Data..:? "Type")
+            Prelude.<$> (x Data..:? "Key")
+            Prelude.<*> (x Data..:? "Type")
       )
 
 instance Prelude.Hashable GroupDefinition where
   hashWithSalt _salt GroupDefinition' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData GroupDefinition where

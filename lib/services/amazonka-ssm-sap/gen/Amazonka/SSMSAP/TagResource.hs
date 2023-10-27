@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSMSAP.TagResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -75,11 +75,9 @@ newTagResource pResourceArn_ =
       tags = Prelude.mempty
     }
 
--- |
 tagResource_resourceArn :: Lens.Lens' TagResource Prelude.Text
 tagResource_resourceArn = Lens.lens (\TagResource' {resourceArn} -> resourceArn) (\s@TagResource' {} a -> s {resourceArn = a} :: TagResource)
 
--- |
 tagResource_tags :: Lens.Lens' TagResource (Prelude.HashMap Prelude.Text Prelude.Text)
 tagResource_tags = Lens.lens (\TagResource' {tags} -> tags) (\s@TagResource' {} a -> s {tags = a} :: TagResource) Prelude.. Lens.coerced
 
@@ -96,7 +94,8 @@ instance Core.AWSRequest TagResource where
 
 instance Prelude.Hashable TagResource where
   hashWithSalt _salt TagResource' {..} =
-    _salt `Prelude.hashWithSalt` resourceArn
+    _salt
+      `Prelude.hashWithSalt` resourceArn
       `Prelude.hashWithSalt` tags
 
 instance Prelude.NFData TagResource where

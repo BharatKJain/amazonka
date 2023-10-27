@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.RootCauseException
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.RootCauseException where
@@ -74,7 +74,8 @@ instance Data.FromJSON RootCauseException where
 
 instance Prelude.Hashable RootCauseException where
   hashWithSalt _salt RootCauseException' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData RootCauseException where

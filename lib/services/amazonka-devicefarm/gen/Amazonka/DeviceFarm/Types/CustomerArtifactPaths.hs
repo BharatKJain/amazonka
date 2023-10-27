@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.CustomerArtifactPaths
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.CustomerArtifactPaths where
@@ -95,7 +95,8 @@ instance Data.FromJSON CustomerArtifactPaths where
       ( \x ->
           CustomerArtifactPaths'
             Prelude.<$> (x Data..:? "androidPaths" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "deviceHostPaths"
+            Prelude.<*> ( x
+                            Data..:? "deviceHostPaths"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "iosPaths" Data..!= Prelude.mempty)
@@ -103,7 +104,8 @@ instance Data.FromJSON CustomerArtifactPaths where
 
 instance Prelude.Hashable CustomerArtifactPaths where
   hashWithSalt _salt CustomerArtifactPaths' {..} =
-    _salt `Prelude.hashWithSalt` androidPaths
+    _salt
+      `Prelude.hashWithSalt` androidPaths
       `Prelude.hashWithSalt` deviceHostPaths
       `Prelude.hashWithSalt` iosPaths
 

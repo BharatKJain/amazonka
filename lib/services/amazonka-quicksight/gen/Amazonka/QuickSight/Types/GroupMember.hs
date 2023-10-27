@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.GroupMember
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.GroupMember where
@@ -75,7 +75,8 @@ instance Data.FromJSON GroupMember where
 
 instance Prelude.Hashable GroupMember where
   hashWithSalt _salt GroupMember' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` memberName
 
 instance Prelude.NFData GroupMember where

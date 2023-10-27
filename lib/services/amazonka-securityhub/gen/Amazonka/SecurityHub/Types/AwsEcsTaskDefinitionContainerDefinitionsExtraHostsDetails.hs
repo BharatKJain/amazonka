@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsExtraHostsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsExtraHostsDetails where
@@ -75,7 +75,7 @@ instance
       ( \x ->
           AwsEcsTaskDefinitionContainerDefinitionsExtraHostsDetails'
             Prelude.<$> (x Data..:? "Hostname")
-              Prelude.<*> (x Data..:? "IpAddress")
+            Prelude.<*> (x Data..:? "IpAddress")
       )
 
 instance
@@ -85,7 +85,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsTaskDefinitionContainerDefinitionsExtraHostsDetails' {..} =
-      _salt `Prelude.hashWithSalt` hostname
+      _salt
+        `Prelude.hashWithSalt` hostname
         `Prelude.hashWithSalt` ipAddress
 
 instance

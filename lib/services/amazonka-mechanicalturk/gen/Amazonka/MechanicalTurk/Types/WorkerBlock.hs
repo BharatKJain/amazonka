@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MechanicalTurk.Types.WorkerBlock
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MechanicalTurk.Types.WorkerBlock where
@@ -75,7 +75,8 @@ instance Data.FromJSON WorkerBlock where
 
 instance Prelude.Hashable WorkerBlock where
   hashWithSalt _salt WorkerBlock' {..} =
-    _salt `Prelude.hashWithSalt` reason
+    _salt
+      `Prelude.hashWithSalt` reason
       `Prelude.hashWithSalt` workerId
 
 instance Prelude.NFData WorkerBlock where

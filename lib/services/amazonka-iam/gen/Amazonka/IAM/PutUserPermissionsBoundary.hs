@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.PutUserPermissionsBoundary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest PutUserPermissionsBoundary where
 
 instance Prelude.Hashable PutUserPermissionsBoundary where
   hashWithSalt _salt PutUserPermissionsBoundary' {..} =
-    _salt `Prelude.hashWithSalt` userName
+    _salt
+      `Prelude.hashWithSalt` userName
       `Prelude.hashWithSalt` permissionsBoundary
 
 instance Prelude.NFData PutUserPermissionsBoundary where

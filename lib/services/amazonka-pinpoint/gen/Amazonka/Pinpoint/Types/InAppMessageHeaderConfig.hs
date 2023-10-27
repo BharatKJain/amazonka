@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.InAppMessageHeaderConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.InAppMessageHeaderConfig where
@@ -94,7 +94,8 @@ instance Data.FromJSON InAppMessageHeaderConfig where
 
 instance Prelude.Hashable InAppMessageHeaderConfig where
   hashWithSalt _salt InAppMessageHeaderConfig' {..} =
-    _salt `Prelude.hashWithSalt` alignment
+    _salt
+      `Prelude.hashWithSalt` alignment
       `Prelude.hashWithSalt` header
       `Prelude.hashWithSalt` textColor
 

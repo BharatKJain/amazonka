@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.DirectoryDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.DirectoryDescription where
@@ -396,7 +396,8 @@ instance Data.FromJSON DirectoryDescription where
 
 instance Prelude.Hashable DirectoryDescription where
   hashWithSalt _salt DirectoryDescription' {..} =
-    _salt `Prelude.hashWithSalt` accessUrl
+    _salt
+      `Prelude.hashWithSalt` accessUrl
       `Prelude.hashWithSalt` alias
       `Prelude.hashWithSalt` connectSettings
       `Prelude.hashWithSalt` description

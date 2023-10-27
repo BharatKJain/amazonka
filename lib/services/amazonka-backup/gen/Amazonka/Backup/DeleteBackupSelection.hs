@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Backup.DeleteBackupSelection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,7 +100,8 @@ instance Core.AWSRequest DeleteBackupSelection where
 
 instance Prelude.Hashable DeleteBackupSelection where
   hashWithSalt _salt DeleteBackupSelection' {..} =
-    _salt `Prelude.hashWithSalt` backupPlanId
+    _salt
+      `Prelude.hashWithSalt` backupPlanId
       `Prelude.hashWithSalt` selectionId
 
 instance Prelude.NFData DeleteBackupSelection where

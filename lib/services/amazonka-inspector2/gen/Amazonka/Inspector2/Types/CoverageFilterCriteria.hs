@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.CoverageFilterCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.CoverageFilterCriteria where
@@ -178,7 +178,8 @@ coverageFilterCriteria_scanType = Lens.lens (\CoverageFilterCriteria' {scanType}
 
 instance Prelude.Hashable CoverageFilterCriteria where
   hashWithSalt _salt CoverageFilterCriteria' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` ec2InstanceTags
       `Prelude.hashWithSalt` ecrImageTags
       `Prelude.hashWithSalt` ecrRepositoryName

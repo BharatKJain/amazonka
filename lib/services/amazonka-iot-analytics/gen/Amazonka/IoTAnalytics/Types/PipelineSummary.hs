@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.PipelineSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.PipelineSummary where
@@ -90,14 +90,16 @@ instance Data.FromJSON PipelineSummary where
             Prelude.<$> (x Data..:? "creationTime")
             Prelude.<*> (x Data..:? "lastUpdateTime")
             Prelude.<*> (x Data..:? "pipelineName")
-            Prelude.<*> ( x Data..:? "reprocessingSummaries"
+            Prelude.<*> ( x
+                            Data..:? "reprocessingSummaries"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable PipelineSummary where
   hashWithSalt _salt PipelineSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` lastUpdateTime
       `Prelude.hashWithSalt` pipelineName
       `Prelude.hashWithSalt` reprocessingSummaries

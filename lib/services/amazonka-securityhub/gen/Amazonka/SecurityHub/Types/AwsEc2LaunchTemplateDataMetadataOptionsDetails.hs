@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataMetadataOptionsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataMetadataOptionsDetails where
@@ -128,10 +128,10 @@ instance
       ( \x ->
           AwsEc2LaunchTemplateDataMetadataOptionsDetails'
             Prelude.<$> (x Data..:? "HttpEndpoint")
-              Prelude.<*> (x Data..:? "HttpProtocolIpv6")
-              Prelude.<*> (x Data..:? "HttpPutResponseHopLimit")
-              Prelude.<*> (x Data..:? "HttpTokens")
-              Prelude.<*> (x Data..:? "InstanceMetadataTags")
+            Prelude.<*> (x Data..:? "HttpProtocolIpv6")
+            Prelude.<*> (x Data..:? "HttpPutResponseHopLimit")
+            Prelude.<*> (x Data..:? "HttpTokens")
+            Prelude.<*> (x Data..:? "InstanceMetadataTags")
       )
 
 instance
@@ -141,7 +141,8 @@ instance
   hashWithSalt
     _salt
     AwsEc2LaunchTemplateDataMetadataOptionsDetails' {..} =
-      _salt `Prelude.hashWithSalt` httpEndpoint
+      _salt
+        `Prelude.hashWithSalt` httpEndpoint
         `Prelude.hashWithSalt` httpProtocolIpv6
         `Prelude.hashWithSalt` httpPutResponseHopLimit
         `Prelude.hashWithSalt` httpTokens

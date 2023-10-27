@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LookoutEquipment.ListInferenceExecutions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,7 +148,8 @@ instance Core.AWSRequest ListInferenceExecutions where
     Response.receiveJSON
       ( \s h x ->
           ListInferenceExecutionsResponse'
-            Prelude.<$> ( x Data..?> "InferenceExecutionSummaries"
+            Prelude.<$> ( x
+                            Data..?> "InferenceExecutionSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -157,7 +158,8 @@ instance Core.AWSRequest ListInferenceExecutions where
 
 instance Prelude.Hashable ListInferenceExecutions where
   hashWithSalt _salt ListInferenceExecutions' {..} =
-    _salt `Prelude.hashWithSalt` dataEndTimeBefore
+    _salt
+      `Prelude.hashWithSalt` dataEndTimeBefore
       `Prelude.hashWithSalt` dataStartTimeAfter
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

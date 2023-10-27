@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.QuickConnectConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.QuickConnectConfig where
@@ -115,7 +115,8 @@ instance Data.FromJSON QuickConnectConfig where
 
 instance Prelude.Hashable QuickConnectConfig where
   hashWithSalt _salt QuickConnectConfig' {..} =
-    _salt `Prelude.hashWithSalt` phoneConfig
+    _salt
+      `Prelude.hashWithSalt` phoneConfig
       `Prelude.hashWithSalt` queueConfig
       `Prelude.hashWithSalt` userConfig
       `Prelude.hashWithSalt` quickConnectType

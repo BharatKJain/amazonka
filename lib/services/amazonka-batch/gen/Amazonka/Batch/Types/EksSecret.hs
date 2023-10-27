@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.EksSecret
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.EksSecret where
@@ -88,7 +88,8 @@ instance Data.FromJSON EksSecret where
 
 instance Prelude.Hashable EksSecret where
   hashWithSalt _salt EksSecret' {..} =
-    _salt `Prelude.hashWithSalt` optional
+    _salt
+      `Prelude.hashWithSalt` optional
       `Prelude.hashWithSalt` secretName
 
 instance Prelude.NFData EksSecret where

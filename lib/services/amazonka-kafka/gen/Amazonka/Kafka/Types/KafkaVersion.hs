@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.KafkaVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.KafkaVersion where
@@ -71,7 +71,8 @@ instance Data.FromJSON KafkaVersion where
 
 instance Prelude.Hashable KafkaVersion where
   hashWithSalt _salt KafkaVersion' {..} =
-    _salt `Prelude.hashWithSalt` status
+    _salt
+      `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` version
 
 instance Prelude.NFData KafkaVersion where

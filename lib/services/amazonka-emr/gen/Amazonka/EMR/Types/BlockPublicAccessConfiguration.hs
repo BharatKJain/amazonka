@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.BlockPublicAccessConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.BlockPublicAccessConfiguration where
@@ -115,7 +115,8 @@ instance Data.FromJSON BlockPublicAccessConfiguration where
       "BlockPublicAccessConfiguration"
       ( \x ->
           BlockPublicAccessConfiguration'
-            Prelude.<$> ( x Data..:? "PermittedPublicSecurityGroupRuleRanges"
+            Prelude.<$> ( x
+                            Data..:? "PermittedPublicSecurityGroupRuleRanges"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "BlockPublicSecurityGroupRules")

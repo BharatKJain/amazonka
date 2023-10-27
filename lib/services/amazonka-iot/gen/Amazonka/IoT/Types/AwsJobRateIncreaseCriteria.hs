@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.AwsJobRateIncreaseCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.AwsJobRateIncreaseCriteria where
@@ -81,7 +81,8 @@ instance Data.FromJSON AwsJobRateIncreaseCriteria where
 
 instance Prelude.Hashable AwsJobRateIncreaseCriteria where
   hashWithSalt _salt AwsJobRateIncreaseCriteria' {..} =
-    _salt `Prelude.hashWithSalt` numberOfNotifiedThings
+    _salt
+      `Prelude.hashWithSalt` numberOfNotifiedThings
       `Prelude.hashWithSalt` numberOfSucceededThings
 
 instance Prelude.NFData AwsJobRateIncreaseCriteria where

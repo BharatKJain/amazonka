@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.BatchCreateRoomMembership
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,7 +117,8 @@ instance Core.AWSRequest BatchCreateRoomMembership where
 
 instance Prelude.Hashable BatchCreateRoomMembership where
   hashWithSalt _salt BatchCreateRoomMembership' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` roomId
       `Prelude.hashWithSalt` membershipItemList
 

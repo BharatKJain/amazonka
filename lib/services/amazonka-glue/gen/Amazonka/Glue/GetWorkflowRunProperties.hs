@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.GetWorkflowRunProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest GetWorkflowRunProperties where
 
 instance Prelude.Hashable GetWorkflowRunProperties where
   hashWithSalt _salt GetWorkflowRunProperties' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` runId
 
 instance Prelude.NFData GetWorkflowRunProperties where

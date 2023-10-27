@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DrS.Types.SourceCloudProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DrS.Types.SourceCloudProperties where
@@ -86,7 +86,8 @@ instance Data.FromJSON SourceCloudProperties where
 
 instance Prelude.Hashable SourceCloudProperties where
   hashWithSalt _salt SourceCloudProperties' {..} =
-    _salt `Prelude.hashWithSalt` originAccountID
+    _salt
+      `Prelude.hashWithSalt` originAccountID
       `Prelude.hashWithSalt` originAvailabilityZone
       `Prelude.hashWithSalt` originRegion
 

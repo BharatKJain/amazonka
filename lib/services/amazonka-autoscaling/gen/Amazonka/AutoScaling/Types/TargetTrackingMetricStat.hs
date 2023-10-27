@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.TargetTrackingMetricStat
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.TargetTrackingMetricStat where
@@ -113,7 +113,8 @@ instance Data.FromXML TargetTrackingMetricStat where
 
 instance Prelude.Hashable TargetTrackingMetricStat where
   hashWithSalt _salt TargetTrackingMetricStat' {..} =
-    _salt `Prelude.hashWithSalt` unit
+    _salt
+      `Prelude.hashWithSalt` unit
       `Prelude.hashWithSalt` metric
       `Prelude.hashWithSalt` stat
 

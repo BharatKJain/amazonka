@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.SelectObjectContentEventStream
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.SelectObjectContentEventStream where
@@ -112,7 +112,8 @@ instance
   hashWithSalt
     _salt
     SelectObjectContentEventStream' {..} =
-      _salt `Prelude.hashWithSalt` cont
+      _salt
+        `Prelude.hashWithSalt` cont
         `Prelude.hashWithSalt` end
         `Prelude.hashWithSalt` progress
         `Prelude.hashWithSalt` records

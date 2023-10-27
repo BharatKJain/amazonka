@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.DataResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.DataResponse where
@@ -130,7 +130,9 @@ instance Data.FromXML DataResponse where
       Prelude.<$> (x Data..@? "destination")
       Prelude.<*> (x Data..@? "id")
       Prelude.<*> (x Data..@? "metric")
-      Prelude.<*> ( x Data..@? "metricPointSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "metricPointSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "period")
@@ -139,7 +141,8 @@ instance Data.FromXML DataResponse where
 
 instance Prelude.Hashable DataResponse where
   hashWithSalt _salt DataResponse' {..} =
-    _salt `Prelude.hashWithSalt` destination
+    _salt
+      `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` metric
       `Prelude.hashWithSalt` metricPoints

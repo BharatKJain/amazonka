@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.EdgeOutputConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.EdgeOutputConfig where
@@ -199,7 +199,8 @@ instance Data.FromJSON EdgeOutputConfig where
 
 instance Prelude.Hashable EdgeOutputConfig where
   hashWithSalt _salt EdgeOutputConfig' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyId
+    _salt
+      `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` presetDeploymentConfig
       `Prelude.hashWithSalt` presetDeploymentType
       `Prelude.hashWithSalt` s3OutputLocation

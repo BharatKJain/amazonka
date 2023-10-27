@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.UpdateUserAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -245,7 +245,8 @@ instance Core.AWSRequest UpdateUserAttributes where
     Response.receiveJSON
       ( \s h x ->
           UpdateUserAttributesResponse'
-            Prelude.<$> ( x Data..?> "CodeDeliveryDetailsList"
+            Prelude.<$> ( x
+                            Data..?> "CodeDeliveryDetailsList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -253,7 +254,8 @@ instance Core.AWSRequest UpdateUserAttributes where
 
 instance Prelude.Hashable UpdateUserAttributes where
   hashWithSalt _salt UpdateUserAttributes' {..} =
-    _salt `Prelude.hashWithSalt` clientMetadata
+    _salt
+      `Prelude.hashWithSalt` clientMetadata
       `Prelude.hashWithSalt` userAttributes
       `Prelude.hashWithSalt` accessToken
 

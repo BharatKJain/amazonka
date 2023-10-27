@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.CreateDisk
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -166,7 +166,8 @@ instance Core.AWSRequest CreateDisk where
 
 instance Prelude.Hashable CreateDisk where
   hashWithSalt _salt CreateDisk' {..} =
-    _salt `Prelude.hashWithSalt` addOns
+    _salt
+      `Prelude.hashWithSalt` addOns
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` diskName
       `Prelude.hashWithSalt` availabilityZone

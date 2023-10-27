@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.CreateBillingGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest CreateBillingGroup where
 
 instance Prelude.Hashable CreateBillingGroup where
   hashWithSalt _salt CreateBillingGroup' {..} =
-    _salt `Prelude.hashWithSalt` billingGroupProperties
+    _salt
+      `Prelude.hashWithSalt` billingGroupProperties
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` billingGroupName
 

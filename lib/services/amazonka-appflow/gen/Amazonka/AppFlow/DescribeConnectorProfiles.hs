@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppFlow.DescribeConnectorProfiles
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -147,7 +147,8 @@ instance Core.AWSRequest DescribeConnectorProfiles where
     Response.receiveJSON
       ( \s h x ->
           DescribeConnectorProfilesResponse'
-            Prelude.<$> ( x Data..?> "connectorProfileDetails"
+            Prelude.<$> ( x
+                            Data..?> "connectorProfileDetails"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -156,7 +157,8 @@ instance Core.AWSRequest DescribeConnectorProfiles where
 
 instance Prelude.Hashable DescribeConnectorProfiles where
   hashWithSalt _salt DescribeConnectorProfiles' {..} =
-    _salt `Prelude.hashWithSalt` connectorLabel
+    _salt
+      `Prelude.hashWithSalt` connectorLabel
       `Prelude.hashWithSalt` connectorProfileNames
       `Prelude.hashWithSalt` connectorType
       `Prelude.hashWithSalt` maxResults

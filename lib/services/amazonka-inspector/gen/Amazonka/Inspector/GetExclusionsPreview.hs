@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Inspector.GetExclusionsPreview
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,7 +158,8 @@ instance Core.AWSRequest GetExclusionsPreview where
     Response.receiveJSON
       ( \s h x ->
           GetExclusionsPreviewResponse'
-            Prelude.<$> ( x Data..?> "exclusionPreviews"
+            Prelude.<$> ( x
+                            Data..?> "exclusionPreviews"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -168,7 +169,8 @@ instance Core.AWSRequest GetExclusionsPreview where
 
 instance Prelude.Hashable GetExclusionsPreview where
   hashWithSalt _salt GetExclusionsPreview' {..} =
-    _salt `Prelude.hashWithSalt` locale
+    _salt
+      `Prelude.hashWithSalt` locale
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` assessmentTemplateArn

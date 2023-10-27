@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.ImageConfigError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.ImageConfigError where
@@ -74,7 +74,8 @@ instance Data.FromJSON ImageConfigError where
 
 instance Prelude.Hashable ImageConfigError where
   hashWithSalt _salt ImageConfigError' {..} =
-    _salt `Prelude.hashWithSalt` errorCode
+    _salt
+      `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData ImageConfigError where

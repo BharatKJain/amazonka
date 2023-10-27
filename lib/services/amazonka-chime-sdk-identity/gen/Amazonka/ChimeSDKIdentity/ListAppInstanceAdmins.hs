@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSDKIdentity.ListAppInstanceAdmins
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest ListAppInstanceAdmins where
     Response.receiveJSON
       ( \s h x ->
           ListAppInstanceAdminsResponse'
-            Prelude.<$> ( x Data..?> "AppInstanceAdmins"
+            Prelude.<$> ( x
+                            Data..?> "AppInstanceAdmins"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "AppInstanceArn")
@@ -122,7 +123,8 @@ instance Core.AWSRequest ListAppInstanceAdmins where
 
 instance Prelude.Hashable ListAppInstanceAdmins where
   hashWithSalt _salt ListAppInstanceAdmins' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` appInstanceArn
 

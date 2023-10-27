@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.CostCategorySplitChargeRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.CostCategorySplitChargeRule where
@@ -146,7 +146,8 @@ instance Data.FromJSON CostCategorySplitChargeRule where
 
 instance Prelude.Hashable CostCategorySplitChargeRule where
   hashWithSalt _salt CostCategorySplitChargeRule' {..} =
-    _salt `Prelude.hashWithSalt` parameters
+    _salt
+      `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` source
       `Prelude.hashWithSalt` targets
       `Prelude.hashWithSalt` method

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.UserContextDataType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.UserContextDataType where
@@ -75,7 +75,8 @@ userContextDataType_ipAddress = Lens.lens (\UserContextDataType' {ipAddress} -> 
 
 instance Prelude.Hashable UserContextDataType where
   hashWithSalt _salt UserContextDataType' {..} =
-    _salt `Prelude.hashWithSalt` encodedData
+    _salt
+      `Prelude.hashWithSalt` encodedData
       `Prelude.hashWithSalt` ipAddress
 
 instance Prelude.NFData UserContextDataType where

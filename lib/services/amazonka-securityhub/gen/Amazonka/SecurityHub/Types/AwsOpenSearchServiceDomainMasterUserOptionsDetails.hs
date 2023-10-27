@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsOpenSearchServiceDomainMasterUserOptionsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsOpenSearchServiceDomainMasterUserOptionsDetails where
@@ -84,8 +84,8 @@ instance
       ( \x ->
           AwsOpenSearchServiceDomainMasterUserOptionsDetails'
             Prelude.<$> (x Data..:? "MasterUserArn")
-              Prelude.<*> (x Data..:? "MasterUserName")
-              Prelude.<*> (x Data..:? "MasterUserPassword")
+            Prelude.<*> (x Data..:? "MasterUserName")
+            Prelude.<*> (x Data..:? "MasterUserPassword")
       )
 
 instance
@@ -95,7 +95,8 @@ instance
   hashWithSalt
     _salt
     AwsOpenSearchServiceDomainMasterUserOptionsDetails' {..} =
-      _salt `Prelude.hashWithSalt` masterUserArn
+      _salt
+        `Prelude.hashWithSalt` masterUserArn
         `Prelude.hashWithSalt` masterUserName
         `Prelude.hashWithSalt` masterUserPassword
 

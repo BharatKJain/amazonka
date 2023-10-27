@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ModelPackageValidationSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ModelPackageValidationSpecification where
@@ -99,7 +99,8 @@ instance
   hashWithSalt
     _salt
     ModelPackageValidationSpecification' {..} =
-      _salt `Prelude.hashWithSalt` validationRole
+      _salt
+        `Prelude.hashWithSalt` validationRole
         `Prelude.hashWithSalt` validationProfiles
 
 instance

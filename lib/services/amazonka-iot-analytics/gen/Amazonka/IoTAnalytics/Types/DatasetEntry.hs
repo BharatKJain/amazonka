@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.DatasetEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.DatasetEntry where
@@ -74,7 +74,8 @@ instance Data.FromJSON DatasetEntry where
 
 instance Prelude.Hashable DatasetEntry where
   hashWithSalt _salt DatasetEntry' {..} =
-    _salt `Prelude.hashWithSalt` dataURI
+    _salt
+      `Prelude.hashWithSalt` dataURI
       `Prelude.hashWithSalt` entryName
 
 instance Prelude.NFData DatasetEntry where

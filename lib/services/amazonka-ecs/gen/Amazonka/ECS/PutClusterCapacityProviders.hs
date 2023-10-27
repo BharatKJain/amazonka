@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECS.PutClusterCapacityProviders
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -226,7 +226,8 @@ instance Core.AWSRequest PutClusterCapacityProviders where
 
 instance Prelude.Hashable PutClusterCapacityProviders where
   hashWithSalt _salt PutClusterCapacityProviders' {..} =
-    _salt `Prelude.hashWithSalt` cluster
+    _salt
+      `Prelude.hashWithSalt` cluster
       `Prelude.hashWithSalt` capacityProviders
       `Prelude.hashWithSalt` defaultCapacityProviderStrategy
 

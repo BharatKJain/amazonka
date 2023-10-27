@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatch.Types.DimensionFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatch.Types.DimensionFilter where
@@ -66,7 +66,8 @@ dimensionFilter_name = Lens.lens (\DimensionFilter' {name} -> name) (\s@Dimensio
 
 instance Prelude.Hashable DimensionFilter where
   hashWithSalt _salt DimensionFilter' {..} =
-    _salt `Prelude.hashWithSalt` value
+    _salt
+      `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData DimensionFilter where

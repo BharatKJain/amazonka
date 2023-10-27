@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.ScheduledSplit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.ScheduledSplit where
@@ -140,7 +140,8 @@ instance Data.FromJSON ScheduledSplit where
       ( \x ->
           ScheduledSplit'
             Prelude.<$> (x Data..:? "groupWeights" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "segmentOverrides"
+            Prelude.<*> ( x
+                            Data..:? "segmentOverrides"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "startTime")
@@ -148,7 +149,8 @@ instance Data.FromJSON ScheduledSplit where
 
 instance Prelude.Hashable ScheduledSplit where
   hashWithSalt _salt ScheduledSplit' {..} =
-    _salt `Prelude.hashWithSalt` groupWeights
+    _salt
+      `Prelude.hashWithSalt` groupWeights
       `Prelude.hashWithSalt` segmentOverrides
       `Prelude.hashWithSalt` startTime
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.CreateXMLClassifierRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.CreateXMLClassifierRequest where
@@ -93,7 +93,8 @@ createXMLClassifierRequest_name = Lens.lens (\CreateXMLClassifierRequest' {name}
 
 instance Prelude.Hashable CreateXMLClassifierRequest where
   hashWithSalt _salt CreateXMLClassifierRequest' {..} =
-    _salt `Prelude.hashWithSalt` rowTag
+    _salt
+      `Prelude.hashWithSalt` rowTag
       `Prelude.hashWithSalt` classification
       `Prelude.hashWithSalt` name
 

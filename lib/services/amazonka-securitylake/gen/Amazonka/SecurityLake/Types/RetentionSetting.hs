@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityLake.Types.RetentionSetting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityLake.Types.RetentionSetting where
@@ -86,7 +86,8 @@ instance Data.FromJSON RetentionSetting where
 
 instance Prelude.Hashable RetentionSetting where
   hashWithSalt _salt RetentionSetting' {..} =
-    _salt `Prelude.hashWithSalt` retentionPeriod
+    _salt
+      `Prelude.hashWithSalt` retentionPeriod
       `Prelude.hashWithSalt` storageClass
 
 instance Prelude.NFData RetentionSetting where

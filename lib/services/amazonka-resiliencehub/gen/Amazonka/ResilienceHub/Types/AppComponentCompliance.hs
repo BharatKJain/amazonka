@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResilienceHub.Types.AppComponentCompliance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResilienceHub.Types.AppComponentCompliance where
@@ -124,7 +124,8 @@ instance Data.FromJSON AppComponentCompliance where
 
 instance Prelude.Hashable AppComponentCompliance where
   hashWithSalt _salt AppComponentCompliance' {..} =
-    _salt `Prelude.hashWithSalt` appComponentName
+    _salt
+      `Prelude.hashWithSalt` appComponentName
       `Prelude.hashWithSalt` compliance
       `Prelude.hashWithSalt` cost
       `Prelude.hashWithSalt` message

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFront.DeleteResponseHeadersPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest DeleteResponseHeadersPolicy where
 
 instance Prelude.Hashable DeleteResponseHeadersPolicy where
   hashWithSalt _salt DeleteResponseHeadersPolicy' {..} =
-    _salt `Prelude.hashWithSalt` ifMatch
+    _salt
+      `Prelude.hashWithSalt` ifMatch
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData DeleteResponseHeadersPolicy where

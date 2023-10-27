@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.FunctionResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.FunctionResponse where
@@ -90,7 +90,8 @@ instance Data.FromJSON FunctionResponse where
           FunctionResponse'
             Prelude.<$> (x Data..:? "implementedBy")
             Prelude.<*> (x Data..:? "isInherited")
-            Prelude.<*> ( x Data..:? "requiredProperties"
+            Prelude.<*> ( x
+                            Data..:? "requiredProperties"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "scope")
@@ -98,7 +99,8 @@ instance Data.FromJSON FunctionResponse where
 
 instance Prelude.Hashable FunctionResponse where
   hashWithSalt _salt FunctionResponse' {..} =
-    _salt `Prelude.hashWithSalt` implementedBy
+    _salt
+      `Prelude.hashWithSalt` implementedBy
       `Prelude.hashWithSalt` isInherited
       `Prelude.hashWithSalt` requiredProperties
       `Prelude.hashWithSalt` scope

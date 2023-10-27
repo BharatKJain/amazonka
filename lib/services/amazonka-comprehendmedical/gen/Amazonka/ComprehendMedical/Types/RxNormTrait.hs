@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComprehendMedical.Types.RxNormTrait
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComprehendMedical.Types.RxNormTrait where
@@ -74,12 +74,14 @@ instance Data.FromJSON RxNormTrait where
       "RxNormTrait"
       ( \x ->
           RxNormTrait'
-            Prelude.<$> (x Data..:? "Name") Prelude.<*> (x Data..:? "Score")
+            Prelude.<$> (x Data..:? "Name")
+            Prelude.<*> (x Data..:? "Score")
       )
 
 instance Prelude.Hashable RxNormTrait where
   hashWithSalt _salt RxNormTrait' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` score
 
 instance Prelude.NFData RxNormTrait where

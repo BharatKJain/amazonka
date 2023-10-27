@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.MonitorInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.MonitorInfo where
@@ -104,7 +104,8 @@ instance Data.FromJSON MonitorInfo where
 
 instance Prelude.Hashable MonitorInfo where
   hashWithSalt _salt MonitorInfo' {..} =
-    _salt `Prelude.hashWithSalt` monitorArn
+    _salt
+      `Prelude.hashWithSalt` monitorArn
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData MonitorInfo where

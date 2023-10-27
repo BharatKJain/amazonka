@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELB.Types.LoadBalancerAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELB.Types.LoadBalancerAttributes where
@@ -172,7 +172,8 @@ instance Data.FromXML LoadBalancerAttributes where
   parseXML x =
     LoadBalancerAttributes'
       Prelude.<$> (x Data..@? "AccessLog")
-      Prelude.<*> ( x Data..@? "AdditionalAttributes"
+      Prelude.<*> ( x
+                      Data..@? "AdditionalAttributes"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
@@ -182,7 +183,8 @@ instance Data.FromXML LoadBalancerAttributes where
 
 instance Prelude.Hashable LoadBalancerAttributes where
   hashWithSalt _salt LoadBalancerAttributes' {..} =
-    _salt `Prelude.hashWithSalt` accessLog
+    _salt
+      `Prelude.hashWithSalt` accessLog
       `Prelude.hashWithSalt` additionalAttributes
       `Prelude.hashWithSalt` connectionDraining
       `Prelude.hashWithSalt` connectionSettings

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.JobEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.JobEntry where
@@ -165,7 +165,8 @@ instance Data.FromJSON JobEntry where
 
 instance Prelude.Hashable JobEntry where
   hashWithSalt _salt JobEntry' {..} =
-    _salt `Prelude.hashWithSalt` errors
+    _salt
+      `Prelude.hashWithSalt` errors
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` details

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.KinesisStreamsOutputUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.KinesisStreamsOutputUpdate where
@@ -77,7 +77,8 @@ kinesisStreamsOutputUpdate_roleARNUpdate = Lens.lens (\KinesisStreamsOutputUpdat
 
 instance Prelude.Hashable KinesisStreamsOutputUpdate where
   hashWithSalt _salt KinesisStreamsOutputUpdate' {..} =
-    _salt `Prelude.hashWithSalt` resourceARNUpdate
+    _salt
+      `Prelude.hashWithSalt` resourceARNUpdate
       `Prelude.hashWithSalt` roleARNUpdate
 
 instance Prelude.NFData KinesisStreamsOutputUpdate where

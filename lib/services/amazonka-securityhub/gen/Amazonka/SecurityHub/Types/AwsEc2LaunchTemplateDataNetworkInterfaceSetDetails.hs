@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails where
@@ -304,26 +304,27 @@ instance
       ( \x ->
           AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails'
             Prelude.<$> (x Data..:? "AssociateCarrierIpAddress")
-              Prelude.<*> (x Data..:? "AssociatePublicIpAddress")
-              Prelude.<*> (x Data..:? "DeleteOnTermination")
-              Prelude.<*> (x Data..:? "Description")
-              Prelude.<*> (x Data..:? "DeviceIndex")
-              Prelude.<*> (x Data..:? "Groups" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "InterfaceType")
-              Prelude.<*> (x Data..:? "Ipv4PrefixCount")
-              Prelude.<*> (x Data..:? "Ipv4Prefixes" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "Ipv6AddressCount")
-              Prelude.<*> (x Data..:? "Ipv6Addresses" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "Ipv6PrefixCount")
-              Prelude.<*> (x Data..:? "Ipv6Prefixes" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "NetworkCardIndex")
-              Prelude.<*> (x Data..:? "NetworkInterfaceId")
-              Prelude.<*> (x Data..:? "PrivateIpAddress")
-              Prelude.<*> ( x Data..:? "PrivateIpAddresses"
-                              Data..!= Prelude.mempty
-                          )
-              Prelude.<*> (x Data..:? "SecondaryPrivateIpAddressCount")
-              Prelude.<*> (x Data..:? "SubnetId")
+            Prelude.<*> (x Data..:? "AssociatePublicIpAddress")
+            Prelude.<*> (x Data..:? "DeleteOnTermination")
+            Prelude.<*> (x Data..:? "Description")
+            Prelude.<*> (x Data..:? "DeviceIndex")
+            Prelude.<*> (x Data..:? "Groups" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "InterfaceType")
+            Prelude.<*> (x Data..:? "Ipv4PrefixCount")
+            Prelude.<*> (x Data..:? "Ipv4Prefixes" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "Ipv6AddressCount")
+            Prelude.<*> (x Data..:? "Ipv6Addresses" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "Ipv6PrefixCount")
+            Prelude.<*> (x Data..:? "Ipv6Prefixes" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "NetworkCardIndex")
+            Prelude.<*> (x Data..:? "NetworkInterfaceId")
+            Prelude.<*> (x Data..:? "PrivateIpAddress")
+            Prelude.<*> ( x
+                            Data..:? "PrivateIpAddresses"
+                            Data..!= Prelude.mempty
+                        )
+            Prelude.<*> (x Data..:? "SecondaryPrivateIpAddressCount")
+            Prelude.<*> (x Data..:? "SubnetId")
       )
 
 instance

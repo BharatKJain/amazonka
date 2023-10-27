@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FSx.AssociateFileSystemAliases
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -180,7 +180,8 @@ instance Core.AWSRequest AssociateFileSystemAliases where
 
 instance Prelude.Hashable AssociateFileSystemAliases where
   hashWithSalt _salt AssociateFileSystemAliases' {..} =
-    _salt `Prelude.hashWithSalt` clientRequestToken
+    _salt
+      `Prelude.hashWithSalt` clientRequestToken
       `Prelude.hashWithSalt` fileSystemId
       `Prelude.hashWithSalt` aliases
 

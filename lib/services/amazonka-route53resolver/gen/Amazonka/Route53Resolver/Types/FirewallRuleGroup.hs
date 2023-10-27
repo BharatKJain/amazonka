@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53Resolver.Types.FirewallRuleGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53Resolver.Types.FirewallRuleGroup where
@@ -196,7 +196,8 @@ instance Data.FromJSON FirewallRuleGroup where
 
 instance Prelude.Hashable FirewallRuleGroup where
   hashWithSalt _salt FirewallRuleGroup' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` creatorRequestId
       `Prelude.hashWithSalt` id

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ActionTypeArtifactDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ActionTypeArtifactDetails where
@@ -94,7 +94,8 @@ instance Data.FromJSON ActionTypeArtifactDetails where
 
 instance Prelude.Hashable ActionTypeArtifactDetails where
   hashWithSalt _salt ActionTypeArtifactDetails' {..} =
-    _salt `Prelude.hashWithSalt` minimumCount
+    _salt
+      `Prelude.hashWithSalt` minimumCount
       `Prelude.hashWithSalt` maximumCount
 
 instance Prelude.NFData ActionTypeArtifactDetails where

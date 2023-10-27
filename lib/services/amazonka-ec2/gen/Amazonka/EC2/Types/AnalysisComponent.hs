@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.AnalysisComponent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.AnalysisComponent where
@@ -81,7 +81,8 @@ instance Data.FromXML AnalysisComponent where
 
 instance Prelude.Hashable AnalysisComponent where
   hashWithSalt _salt AnalysisComponent' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name
 

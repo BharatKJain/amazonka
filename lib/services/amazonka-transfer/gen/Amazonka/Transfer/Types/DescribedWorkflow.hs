@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.DescribedWorkflow
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.DescribedWorkflow where
@@ -115,7 +115,8 @@ instance Data.FromJSON DescribedWorkflow where
       ( \x ->
           DescribedWorkflow'
             Prelude.<$> (x Data..:? "Description")
-            Prelude.<*> ( x Data..:? "OnExceptionSteps"
+            Prelude.<*> ( x
+                            Data..:? "OnExceptionSteps"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Steps" Data..!= Prelude.mempty)
@@ -126,7 +127,8 @@ instance Data.FromJSON DescribedWorkflow where
 
 instance Prelude.Hashable DescribedWorkflow where
   hashWithSalt _salt DescribedWorkflow' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` onExceptionSteps
       `Prelude.hashWithSalt` steps
       `Prelude.hashWithSalt` tags

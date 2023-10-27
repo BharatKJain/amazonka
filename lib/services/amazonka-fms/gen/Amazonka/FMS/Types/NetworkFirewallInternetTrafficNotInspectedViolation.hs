@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.NetworkFirewallInternetTrafficNotInspectedViolation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.NetworkFirewallInternetTrafficNotInspectedViolation where
@@ -209,31 +209,36 @@ instance
       "NetworkFirewallInternetTrafficNotInspectedViolation"
       ( \x ->
           NetworkFirewallInternetTrafficNotInspectedViolation'
-            Prelude.<$> ( x Data..:? "ActualFirewallSubnetRoutes"
+            Prelude.<$> ( x
+                            Data..:? "ActualFirewallSubnetRoutes"
                             Data..!= Prelude.mempty
                         )
-              Prelude.<*> ( x Data..:? "ActualInternetGatewayRoutes"
-                              Data..!= Prelude.mempty
-                          )
-              Prelude.<*> (x Data..:? "CurrentFirewallSubnetRouteTable")
-              Prelude.<*> (x Data..:? "CurrentInternetGatewayRouteTable")
-              Prelude.<*> (x Data..:? "ExpectedFirewallEndpoint")
-              Prelude.<*> ( x Data..:? "ExpectedFirewallSubnetRoutes"
-                              Data..!= Prelude.mempty
-                          )
-              Prelude.<*> ( x Data..:? "ExpectedInternetGatewayRoutes"
-                              Data..!= Prelude.mempty
-                          )
-              Prelude.<*> (x Data..:? "FirewallSubnetId")
-              Prelude.<*> (x Data..:? "InternetGatewayId")
-              Prelude.<*> (x Data..:? "IsRouteTableUsedInDifferentAZ")
-              Prelude.<*> (x Data..:? "RouteTableId")
-              Prelude.<*> (x Data..:? "SubnetAvailabilityZone")
-              Prelude.<*> (x Data..:? "SubnetId")
-              Prelude.<*> ( x Data..:? "ViolatingRoutes"
-                              Data..!= Prelude.mempty
-                          )
-              Prelude.<*> (x Data..:? "VpcId")
+            Prelude.<*> ( x
+                            Data..:? "ActualInternetGatewayRoutes"
+                            Data..!= Prelude.mempty
+                        )
+            Prelude.<*> (x Data..:? "CurrentFirewallSubnetRouteTable")
+            Prelude.<*> (x Data..:? "CurrentInternetGatewayRouteTable")
+            Prelude.<*> (x Data..:? "ExpectedFirewallEndpoint")
+            Prelude.<*> ( x
+                            Data..:? "ExpectedFirewallSubnetRoutes"
+                            Data..!= Prelude.mempty
+                        )
+            Prelude.<*> ( x
+                            Data..:? "ExpectedInternetGatewayRoutes"
+                            Data..!= Prelude.mempty
+                        )
+            Prelude.<*> (x Data..:? "FirewallSubnetId")
+            Prelude.<*> (x Data..:? "InternetGatewayId")
+            Prelude.<*> (x Data..:? "IsRouteTableUsedInDifferentAZ")
+            Prelude.<*> (x Data..:? "RouteTableId")
+            Prelude.<*> (x Data..:? "SubnetAvailabilityZone")
+            Prelude.<*> (x Data..:? "SubnetId")
+            Prelude.<*> ( x
+                            Data..:? "ViolatingRoutes"
+                            Data..!= Prelude.mempty
+                        )
+            Prelude.<*> (x Data..:? "VpcId")
       )
 
 instance

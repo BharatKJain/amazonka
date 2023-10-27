@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.RefreshSchemasStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.RefreshSchemasStatus where
@@ -110,7 +110,8 @@ instance Data.FromJSON RefreshSchemasStatus where
 
 instance Prelude.Hashable RefreshSchemasStatus where
   hashWithSalt _salt RefreshSchemasStatus' {..} =
-    _salt `Prelude.hashWithSalt` endpointArn
+    _salt
+      `Prelude.hashWithSalt` endpointArn
       `Prelude.hashWithSalt` lastFailureMessage
       `Prelude.hashWithSalt` lastRefreshDate
       `Prelude.hashWithSalt` replicationInstanceArn

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruProfiler.Types.Match
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruProfiler.Types.Match where
@@ -91,7 +91,8 @@ instance Data.FromJSON Match where
 
 instance Prelude.Hashable Match where
   hashWithSalt _salt Match' {..} =
-    _salt `Prelude.hashWithSalt` frameAddress
+    _salt
+      `Prelude.hashWithSalt` frameAddress
       `Prelude.hashWithSalt` targetFramesIndex
       `Prelude.hashWithSalt` thresholdBreachValue
 

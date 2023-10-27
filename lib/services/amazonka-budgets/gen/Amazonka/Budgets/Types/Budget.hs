@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Budgets.Types.Budget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Budgets.Types.Budget where
@@ -411,7 +411,8 @@ instance Data.FromJSON Budget where
             Prelude.<*> (x Data..:? "CostFilters" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "CostTypes")
             Prelude.<*> (x Data..:? "LastUpdatedTime")
-            Prelude.<*> ( x Data..:? "PlannedBudgetLimits"
+            Prelude.<*> ( x
+                            Data..:? "PlannedBudgetLimits"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "TimePeriod")
@@ -422,7 +423,8 @@ instance Data.FromJSON Budget where
 
 instance Prelude.Hashable Budget where
   hashWithSalt _salt Budget' {..} =
-    _salt `Prelude.hashWithSalt` autoAdjustData
+    _salt
+      `Prelude.hashWithSalt` autoAdjustData
       `Prelude.hashWithSalt` budgetLimit
       `Prelude.hashWithSalt` calculatedSpend
       `Prelude.hashWithSalt` costFilters

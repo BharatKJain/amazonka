@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.ProvisionedRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.ProvisionedRequest where
@@ -163,7 +163,8 @@ provisionedRequest_numberOfBrokerNodes = Lens.lens (\ProvisionedRequest' {number
 
 instance Prelude.Hashable ProvisionedRequest where
   hashWithSalt _salt ProvisionedRequest' {..} =
-    _salt `Prelude.hashWithSalt` clientAuthentication
+    _salt
+      `Prelude.hashWithSalt` clientAuthentication
       `Prelude.hashWithSalt` configurationInfo
       `Prelude.hashWithSalt` encryptionInfo
       `Prelude.hashWithSalt` enhancedMonitoring

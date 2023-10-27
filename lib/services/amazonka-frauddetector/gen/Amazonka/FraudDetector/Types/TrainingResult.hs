@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.TrainingResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.TrainingResult where
@@ -88,7 +88,8 @@ instance Data.FromJSON TrainingResult where
 
 instance Prelude.Hashable TrainingResult where
   hashWithSalt _salt TrainingResult' {..} =
-    _salt `Prelude.hashWithSalt` dataValidationMetrics
+    _salt
+      `Prelude.hashWithSalt` dataValidationMetrics
       `Prelude.hashWithSalt` trainingMetrics
       `Prelude.hashWithSalt` variableImportanceMetrics
 

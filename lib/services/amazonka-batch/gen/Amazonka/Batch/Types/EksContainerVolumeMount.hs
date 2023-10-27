@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.EksContainerVolumeMount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.EksContainerVolumeMount where
@@ -97,7 +97,8 @@ instance Data.FromJSON EksContainerVolumeMount where
 
 instance Prelude.Hashable EksContainerVolumeMount where
   hashWithSalt _salt EksContainerVolumeMount' {..} =
-    _salt `Prelude.hashWithSalt` mountPath
+    _salt
+      `Prelude.hashWithSalt` mountPath
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` readOnly
 

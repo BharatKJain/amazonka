@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.ConnectionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.ConnectionConfiguration where
@@ -142,7 +142,8 @@ instance Data.FromJSON ConnectionConfiguration where
 
 instance Prelude.Hashable ConnectionConfiguration where
   hashWithSalt _salt ConnectionConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` databaseHost
+    _salt
+      `Prelude.hashWithSalt` databaseHost
       `Prelude.hashWithSalt` databasePort
       `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` tableName

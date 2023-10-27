@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.CaptionSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.CaptionSource where
@@ -160,7 +160,8 @@ instance Data.FromJSON CaptionSource where
 
 instance Prelude.Hashable CaptionSource where
   hashWithSalt _salt CaptionSource' {..} =
-    _salt `Prelude.hashWithSalt` encryption
+    _salt
+      `Prelude.hashWithSalt` encryption
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` label
       `Prelude.hashWithSalt` language

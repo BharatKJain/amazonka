@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.ListMonitoringAlerts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,23 +110,23 @@ instance Core.AWSPager ListMonitoringAlerts where
     | Core.stop
         ( rs
             Lens.^? listMonitoringAlertsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listMonitoringAlertsResponse_monitoringAlertSummaries
-              Prelude.. Lens._Just
-              Prelude.. Lens.to Prelude.toList
+            Prelude.. Lens._Just
+            Prelude.. Lens.to Prelude.toList
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listMonitoringAlerts_nextToken
           Lens..~ rs
           Lens.^? listMonitoringAlertsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListMonitoringAlerts where
   type
@@ -145,7 +145,8 @@ instance Core.AWSRequest ListMonitoringAlerts where
 
 instance Prelude.Hashable ListMonitoringAlerts where
   hashWithSalt _salt ListMonitoringAlerts' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` monitoringScheduleName
 

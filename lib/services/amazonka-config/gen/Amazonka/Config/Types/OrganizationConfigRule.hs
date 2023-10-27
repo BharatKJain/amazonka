@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.OrganizationConfigRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.OrganizationConfigRule where
@@ -145,7 +145,8 @@ instance Data.FromJSON OrganizationConfigRule where
       "OrganizationConfigRule"
       ( \x ->
           OrganizationConfigRule'
-            Prelude.<$> ( x Data..:? "ExcludedAccounts"
+            Prelude.<$> ( x
+                            Data..:? "ExcludedAccounts"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "LastUpdateTime")
@@ -158,7 +159,8 @@ instance Data.FromJSON OrganizationConfigRule where
 
 instance Prelude.Hashable OrganizationConfigRule where
   hashWithSalt _salt OrganizationConfigRule' {..} =
-    _salt `Prelude.hashWithSalt` excludedAccounts
+    _salt
+      `Prelude.hashWithSalt` excludedAccounts
       `Prelude.hashWithSalt` lastUpdateTime
       `Prelude.hashWithSalt` organizationCustomPolicyRuleMetadata
       `Prelude.hashWithSalt` organizationCustomRuleMetadata

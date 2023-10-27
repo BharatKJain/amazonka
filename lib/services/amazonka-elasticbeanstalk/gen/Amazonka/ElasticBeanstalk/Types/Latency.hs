@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.Latency
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.Latency where
@@ -155,7 +155,8 @@ instance Data.FromXML Latency where
 
 instance Prelude.Hashable Latency where
   hashWithSalt _salt Latency' {..} =
-    _salt `Prelude.hashWithSalt` p10
+    _salt
+      `Prelude.hashWithSalt` p10
       `Prelude.hashWithSalt` p50
       `Prelude.hashWithSalt` p75
       `Prelude.hashWithSalt` p85

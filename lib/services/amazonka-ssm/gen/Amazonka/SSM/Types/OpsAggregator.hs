@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.OpsAggregator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.OpsAggregator where
@@ -103,7 +103,8 @@ opsAggregator_values = Lens.lens (\OpsAggregator' {values} -> values) (\s@OpsAgg
 
 instance Prelude.Hashable OpsAggregator where
   hashWithSalt _salt OpsAggregator' {..} =
-    _salt `Prelude.hashWithSalt` aggregatorType
+    _salt
+      `Prelude.hashWithSalt` aggregatorType
       `Prelude.hashWithSalt` aggregators
       `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` filters

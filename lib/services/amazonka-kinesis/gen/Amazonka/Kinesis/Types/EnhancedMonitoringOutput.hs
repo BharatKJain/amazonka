@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kinesis.Types.EnhancedMonitoringOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kinesis.Types.EnhancedMonitoringOutput where
@@ -95,10 +95,12 @@ instance Data.FromJSON EnhancedMonitoringOutput where
       "EnhancedMonitoringOutput"
       ( \x ->
           EnhancedMonitoringOutput'
-            Prelude.<$> ( x Data..:? "CurrentShardLevelMetrics"
+            Prelude.<$> ( x
+                            Data..:? "CurrentShardLevelMetrics"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "DesiredShardLevelMetrics"
+            Prelude.<*> ( x
+                            Data..:? "DesiredShardLevelMetrics"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "StreamARN")

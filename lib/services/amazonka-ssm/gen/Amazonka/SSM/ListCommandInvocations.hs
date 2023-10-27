@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.ListCommandInvocations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,22 +153,22 @@ instance Core.AWSPager ListCommandInvocations where
     | Core.stop
         ( rs
             Lens.^? listCommandInvocationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listCommandInvocationsResponse_commandInvocations
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listCommandInvocations_nextToken
           Lens..~ rs
           Lens.^? listCommandInvocationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListCommandInvocations where
   type
@@ -180,7 +180,8 @@ instance Core.AWSRequest ListCommandInvocations where
     Response.receiveJSON
       ( \s h x ->
           ListCommandInvocationsResponse'
-            Prelude.<$> ( x Data..?> "CommandInvocations"
+            Prelude.<$> ( x
+                            Data..?> "CommandInvocations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -189,7 +190,8 @@ instance Core.AWSRequest ListCommandInvocations where
 
 instance Prelude.Hashable ListCommandInvocations where
   hashWithSalt _salt ListCommandInvocations' {..} =
-    _salt `Prelude.hashWithSalt` commandId
+    _salt
+      `Prelude.hashWithSalt` commandId
       `Prelude.hashWithSalt` details
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` instanceId

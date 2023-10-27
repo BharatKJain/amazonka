@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.ApiCache
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.ApiCache where
@@ -285,7 +285,8 @@ instance Data.FromJSON ApiCache where
 
 instance Prelude.Hashable ApiCache where
   hashWithSalt _salt ApiCache' {..} =
-    _salt `Prelude.hashWithSalt` apiCachingBehavior
+    _salt
+      `Prelude.hashWithSalt` apiCachingBehavior
       `Prelude.hashWithSalt` atRestEncryptionEnabled
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` transitEncryptionEnabled

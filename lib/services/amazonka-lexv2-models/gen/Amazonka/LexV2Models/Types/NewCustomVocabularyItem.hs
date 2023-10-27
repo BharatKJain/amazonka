@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.NewCustomVocabularyItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.NewCustomVocabularyItem where
@@ -85,7 +85,8 @@ newCustomVocabularyItem_phrase = Lens.lens (\NewCustomVocabularyItem' {phrase} -
 
 instance Prelude.Hashable NewCustomVocabularyItem where
   hashWithSalt _salt NewCustomVocabularyItem' {..} =
-    _salt `Prelude.hashWithSalt` displayAs
+    _salt
+      `Prelude.hashWithSalt` displayAs
       `Prelude.hashWithSalt` weight
       `Prelude.hashWithSalt` phrase
 

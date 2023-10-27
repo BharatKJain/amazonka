@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MGN.AssociateSourceServers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest AssociateSourceServers where
 
 instance Prelude.Hashable AssociateSourceServers where
   hashWithSalt _salt AssociateSourceServers' {..} =
-    _salt `Prelude.hashWithSalt` applicationID
+    _salt
+      `Prelude.hashWithSalt` applicationID
       `Prelude.hashWithSalt` sourceServerIDs
 
 instance Prelude.NFData AssociateSourceServers where

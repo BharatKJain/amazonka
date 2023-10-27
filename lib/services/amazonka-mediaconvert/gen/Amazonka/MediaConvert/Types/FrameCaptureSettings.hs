@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.FrameCaptureSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.FrameCaptureSettings where
@@ -126,7 +126,8 @@ instance Data.FromJSON FrameCaptureSettings where
 
 instance Prelude.Hashable FrameCaptureSettings where
   hashWithSalt _salt FrameCaptureSettings' {..} =
-    _salt `Prelude.hashWithSalt` framerateDenominator
+    _salt
+      `Prelude.hashWithSalt` framerateDenominator
       `Prelude.hashWithSalt` framerateNumerator
       `Prelude.hashWithSalt` maxCaptures
       `Prelude.hashWithSalt` quality

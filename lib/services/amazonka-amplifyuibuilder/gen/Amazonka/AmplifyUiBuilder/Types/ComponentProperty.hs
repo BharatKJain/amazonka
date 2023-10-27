@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.ComponentProperty
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.ComponentProperty where
@@ -227,7 +227,8 @@ instance Data.FromJSON ComponentProperty where
 
 instance Prelude.Hashable ComponentProperty where
   hashWithSalt _salt ComponentProperty' {..} =
-    _salt `Prelude.hashWithSalt` bindingProperties
+    _salt
+      `Prelude.hashWithSalt` bindingProperties
       `Prelude.hashWithSalt` bindings
       `Prelude.hashWithSalt` collectionBindingProperties
       `Prelude.hashWithSalt` componentName

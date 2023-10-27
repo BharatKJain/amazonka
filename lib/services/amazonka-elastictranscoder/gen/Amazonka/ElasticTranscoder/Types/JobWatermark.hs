@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.JobWatermark
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.JobWatermark where
@@ -120,7 +120,8 @@ instance Data.FromJSON JobWatermark where
 
 instance Prelude.Hashable JobWatermark where
   hashWithSalt _salt JobWatermark' {..} =
-    _salt `Prelude.hashWithSalt` encryption
+    _salt
+      `Prelude.hashWithSalt` encryption
       `Prelude.hashWithSalt` inputKey
       `Prelude.hashWithSalt` presetWatermarkId
 

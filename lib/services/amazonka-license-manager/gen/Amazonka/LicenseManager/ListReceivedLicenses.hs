@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LicenseManager.ListReceivedLicenses
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -152,7 +152,8 @@ instance Core.AWSRequest ListReceivedLicenses where
 
 instance Prelude.Hashable ListReceivedLicenses where
   hashWithSalt _salt ListReceivedLicenses' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` licenseArns
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

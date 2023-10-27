@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.GetApplicationComponentDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,10 +98,12 @@ instance
       ( \s h x ->
           GetApplicationComponentDetailsResponse'
             Prelude.<$> (x Data..?> "applicationComponentDetail")
-            Prelude.<*> ( x Data..?> "associatedApplications"
+            Prelude.<*> ( x
+                            Data..?> "associatedApplications"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "associatedServerIds"
+            Prelude.<*> ( x
+                            Data..?> "associatedServerIds"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "moreApplicationResource")

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppConfig.Types.ExtensionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppConfig.Types.ExtensionSummary where
@@ -105,7 +105,8 @@ instance Data.FromJSON ExtensionSummary where
 
 instance Prelude.Hashable ExtensionSummary where
   hashWithSalt _salt ExtensionSummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name

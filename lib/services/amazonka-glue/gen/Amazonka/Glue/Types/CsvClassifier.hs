@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.CsvClassifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.CsvClassifier where
@@ -177,7 +177,8 @@ instance Data.FromJSON CsvClassifier where
             Prelude.<*> (x Data..:? "ContainsHeader")
             Prelude.<*> (x Data..:? "CreationTime")
             Prelude.<*> (x Data..:? "CustomDatatypeConfigured")
-            Prelude.<*> ( x Data..:? "CustomDatatypes"
+            Prelude.<*> ( x
+                            Data..:? "CustomDatatypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Delimiter")
@@ -191,7 +192,8 @@ instance Data.FromJSON CsvClassifier where
 
 instance Prelude.Hashable CsvClassifier where
   hashWithSalt _salt CsvClassifier' {..} =
-    _salt `Prelude.hashWithSalt` allowSingleColumn
+    _salt
+      `Prelude.hashWithSalt` allowSingleColumn
       `Prelude.hashWithSalt` containsHeader
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` customDatatypeConfigured

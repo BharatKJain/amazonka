@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.ConnectorProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.ConnectorProfile where
@@ -166,7 +166,8 @@ instance Data.FromJSON ConnectorProfile where
 
 instance Prelude.Hashable ConnectorProfile where
   hashWithSalt _salt ConnectorProfile' {..} =
-    _salt `Prelude.hashWithSalt` connectionMode
+    _salt
+      `Prelude.hashWithSalt` connectionMode
       `Prelude.hashWithSalt` connectorLabel
       `Prelude.hashWithSalt` connectorProfileArn
       `Prelude.hashWithSalt` connectorProfileName

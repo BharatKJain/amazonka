@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.OpsItemEventFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.OpsItemEventFilter where
@@ -87,7 +87,8 @@ opsItemEventFilter_operator = Lens.lens (\OpsItemEventFilter' {operator} -> oper
 
 instance Prelude.Hashable OpsItemEventFilter where
   hashWithSalt _salt OpsItemEventFilter' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` values
       `Prelude.hashWithSalt` operator
 

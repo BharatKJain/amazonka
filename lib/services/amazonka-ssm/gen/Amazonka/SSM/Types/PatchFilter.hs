@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.PatchFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.PatchFilter where
@@ -108,12 +108,14 @@ instance Data.FromJSON PatchFilter where
       "PatchFilter"
       ( \x ->
           PatchFilter'
-            Prelude.<$> (x Data..: "Key") Prelude.<*> (x Data..: "Values")
+            Prelude.<$> (x Data..: "Key")
+            Prelude.<*> (x Data..: "Values")
       )
 
 instance Prelude.Hashable PatchFilter where
   hashWithSalt _salt PatchFilter' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData PatchFilter where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.FunctionRunAsConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.FunctionRunAsConfig where
@@ -75,12 +75,14 @@ instance Data.FromJSON FunctionRunAsConfig where
       "FunctionRunAsConfig"
       ( \x ->
           FunctionRunAsConfig'
-            Prelude.<$> (x Data..:? "Gid") Prelude.<*> (x Data..:? "Uid")
+            Prelude.<$> (x Data..:? "Gid")
+            Prelude.<*> (x Data..:? "Uid")
       )
 
 instance Prelude.Hashable FunctionRunAsConfig where
   hashWithSalt _salt FunctionRunAsConfig' {..} =
-    _salt `Prelude.hashWithSalt` gid
+    _salt
+      `Prelude.hashWithSalt` gid
       `Prelude.hashWithSalt` uid
 
 instance Prelude.NFData FunctionRunAsConfig where

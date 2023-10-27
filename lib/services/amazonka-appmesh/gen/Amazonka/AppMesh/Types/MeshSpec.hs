@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.MeshSpec
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.MeshSpec where
@@ -75,7 +75,8 @@ instance Data.FromJSON MeshSpec where
 
 instance Prelude.Hashable MeshSpec where
   hashWithSalt _salt MeshSpec' {..} =
-    _salt `Prelude.hashWithSalt` egressFilter
+    _salt
+      `Prelude.hashWithSalt` egressFilter
       `Prelude.hashWithSalt` serviceDiscovery
 
 instance Prelude.NFData MeshSpec where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.ApplicationInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.ApplicationInfo where
@@ -121,7 +121,8 @@ instance Data.FromJSON ApplicationInfo where
 
 instance Prelude.Hashable ApplicationInfo where
   hashWithSalt _salt ApplicationInfo' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` applicationName
       `Prelude.hashWithSalt` computePlatform
       `Prelude.hashWithSalt` createTime

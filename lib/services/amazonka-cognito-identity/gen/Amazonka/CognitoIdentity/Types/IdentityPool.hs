@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentity.Types.IdentityPool
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentity.Types.IdentityPool where
@@ -173,20 +173,25 @@ instance Data.FromJSON IdentityPool where
       ( \x ->
           IdentityPool'
             Prelude.<$> (x Data..:? "AllowClassicFlow")
-            Prelude.<*> ( x Data..:? "CognitoIdentityProviders"
+            Prelude.<*> ( x
+                            Data..:? "CognitoIdentityProviders"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "DeveloperProviderName")
-            Prelude.<*> ( x Data..:? "IdentityPoolTags"
+            Prelude.<*> ( x
+                            Data..:? "IdentityPoolTags"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "OpenIdConnectProviderARNs"
+            Prelude.<*> ( x
+                            Data..:? "OpenIdConnectProviderARNs"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "SamlProviderARNs"
+            Prelude.<*> ( x
+                            Data..:? "SamlProviderARNs"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "SupportedLoginProviders"
+            Prelude.<*> ( x
+                            Data..:? "SupportedLoginProviders"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "IdentityPoolId")
@@ -196,7 +201,8 @@ instance Data.FromJSON IdentityPool where
 
 instance Prelude.Hashable IdentityPool where
   hashWithSalt _salt IdentityPool' {..} =
-    _salt `Prelude.hashWithSalt` allowClassicFlow
+    _salt
+      `Prelude.hashWithSalt` allowClassicFlow
       `Prelude.hashWithSalt` cognitoIdentityProviders
       `Prelude.hashWithSalt` developerProviderName
       `Prelude.hashWithSalt` identityPoolTags

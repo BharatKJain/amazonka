@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ExportTaskS3LocationRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ExportTaskS3LocationRequest where
@@ -68,7 +68,8 @@ exportTaskS3LocationRequest_s3Bucket = Lens.lens (\ExportTaskS3LocationRequest' 
 
 instance Prelude.Hashable ExportTaskS3LocationRequest where
   hashWithSalt _salt ExportTaskS3LocationRequest' {..} =
-    _salt `Prelude.hashWithSalt` s3Prefix
+    _salt
+      `Prelude.hashWithSalt` s3Prefix
       `Prelude.hashWithSalt` s3Bucket
 
 instance Prelude.NFData ExportTaskS3LocationRequest where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QLDB.ListJournalS3Exports
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest ListJournalS3Exports where
     Response.receiveJSON
       ( \s h x ->
           ListJournalS3ExportsResponse'
-            Prelude.<$> ( x Data..?> "JournalS3Exports"
+            Prelude.<$> ( x
+                            Data..?> "JournalS3Exports"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -129,7 +130,8 @@ instance Core.AWSRequest ListJournalS3Exports where
 
 instance Prelude.Hashable ListJournalS3Exports where
   hashWithSalt _salt ListJournalS3Exports' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListJournalS3Exports where

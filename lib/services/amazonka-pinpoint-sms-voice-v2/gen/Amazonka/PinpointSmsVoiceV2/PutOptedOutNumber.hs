@@ -16,7 +16,7 @@
 -- Module      : Amazonka.PinpointSmsVoiceV2.PutOptedOutNumber
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,7 +118,8 @@ instance Core.AWSRequest PutOptedOutNumber where
 
 instance Prelude.Hashable PutOptedOutNumber where
   hashWithSalt _salt PutOptedOutNumber' {..} =
-    _salt `Prelude.hashWithSalt` optOutListName
+    _salt
+      `Prelude.hashWithSalt` optOutListName
       `Prelude.hashWithSalt` optedOutNumber
 
 instance Prelude.NFData PutOptedOutNumber where

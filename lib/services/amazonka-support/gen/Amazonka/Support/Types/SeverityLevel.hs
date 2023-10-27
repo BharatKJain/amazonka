@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Support.Types.SeverityLevel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Support.Types.SeverityLevel where
@@ -141,12 +141,14 @@ instance Data.FromJSON SeverityLevel where
       "SeverityLevel"
       ( \x ->
           SeverityLevel'
-            Prelude.<$> (x Data..:? "code") Prelude.<*> (x Data..:? "name")
+            Prelude.<$> (x Data..:? "code")
+            Prelude.<*> (x Data..:? "name")
       )
 
 instance Prelude.Hashable SeverityLevel where
   hashWithSalt _salt SeverityLevel' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData SeverityLevel where

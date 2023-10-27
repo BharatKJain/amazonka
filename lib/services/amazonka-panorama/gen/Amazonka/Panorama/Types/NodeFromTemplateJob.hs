@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Panorama.Types.NodeFromTemplateJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Panorama.Types.NodeFromTemplateJob where
@@ -116,7 +116,8 @@ instance Data.FromJSON NodeFromTemplateJob where
 
 instance Prelude.Hashable NodeFromTemplateJob where
   hashWithSalt _salt NodeFromTemplateJob' {..} =
-    _salt `Prelude.hashWithSalt` createdTime
+    _salt
+      `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` jobId
       `Prelude.hashWithSalt` nodeName
       `Prelude.hashWithSalt` status

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GlobalAccelerator.AddCustomRoutingEndpoints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest AddCustomRoutingEndpoints where
     Response.receiveJSON
       ( \s h x ->
           AddCustomRoutingEndpointsResponse'
-            Prelude.<$> ( x Data..?> "EndpointDescriptions"
+            Prelude.<$> ( x
+                            Data..?> "EndpointDescriptions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "EndpointGroupArn")
@@ -130,7 +131,8 @@ instance Core.AWSRequest AddCustomRoutingEndpoints where
 
 instance Prelude.Hashable AddCustomRoutingEndpoints where
   hashWithSalt _salt AddCustomRoutingEndpoints' {..} =
-    _salt `Prelude.hashWithSalt` endpointConfigurations
+    _salt
+      `Prelude.hashWithSalt` endpointConfigurations
       `Prelude.hashWithSalt` endpointGroupArn
 
 instance Prelude.NFData AddCustomRoutingEndpoints where

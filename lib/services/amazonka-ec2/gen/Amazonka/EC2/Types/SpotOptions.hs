@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.SpotOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.SpotOptions where
@@ -380,7 +380,8 @@ instance Data.FromXML SpotOptions where
 
 instance Prelude.Hashable SpotOptions where
   hashWithSalt _salt SpotOptions' {..} =
-    _salt `Prelude.hashWithSalt` allocationStrategy
+    _salt
+      `Prelude.hashWithSalt` allocationStrategy
       `Prelude.hashWithSalt` instanceInterruptionBehavior
       `Prelude.hashWithSalt` instancePoolsToUseCount
       `Prelude.hashWithSalt` maintenanceStrategies

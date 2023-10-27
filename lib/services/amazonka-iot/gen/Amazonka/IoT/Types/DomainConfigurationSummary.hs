@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.DomainConfigurationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.DomainConfigurationSummary where
@@ -99,7 +99,8 @@ instance Data.FromJSON DomainConfigurationSummary where
 
 instance Prelude.Hashable DomainConfigurationSummary where
   hashWithSalt _salt DomainConfigurationSummary' {..} =
-    _salt `Prelude.hashWithSalt` domainConfigurationArn
+    _salt
+      `Prelude.hashWithSalt` domainConfigurationArn
       `Prelude.hashWithSalt` domainConfigurationName
       `Prelude.hashWithSalt` serviceType
 

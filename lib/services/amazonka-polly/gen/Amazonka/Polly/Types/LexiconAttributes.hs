@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Polly.Types.LexiconAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Polly.Types.LexiconAttributes where
@@ -126,7 +126,8 @@ instance Data.FromJSON LexiconAttributes where
 
 instance Prelude.Hashable LexiconAttributes where
   hashWithSalt _salt LexiconAttributes' {..} =
-    _salt `Prelude.hashWithSalt` alphabet
+    _salt
+      `Prelude.hashWithSalt` alphabet
       `Prelude.hashWithSalt` languageCode
       `Prelude.hashWithSalt` lastModified
       `Prelude.hashWithSalt` lexemesCount

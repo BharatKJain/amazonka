@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.GeneralName
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.GeneralName where
@@ -142,7 +142,8 @@ instance Data.FromJSON GeneralName where
 
 instance Prelude.Hashable GeneralName where
   hashWithSalt _salt GeneralName' {..} =
-    _salt `Prelude.hashWithSalt` directoryName
+    _salt
+      `Prelude.hashWithSalt` directoryName
       `Prelude.hashWithSalt` dnsName
       `Prelude.hashWithSalt` ediPartyName
       `Prelude.hashWithSalt` ipAddress

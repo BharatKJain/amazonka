@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.InputSerialization
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.InputSerialization where
@@ -90,7 +90,8 @@ inputSerialization_parquet = Lens.lens (\InputSerialization' {parquet} -> parque
 
 instance Prelude.Hashable InputSerialization where
   hashWithSalt _salt InputSerialization' {..} =
-    _salt `Prelude.hashWithSalt` csv
+    _salt
+      `Prelude.hashWithSalt` csv
       `Prelude.hashWithSalt` compressionType
       `Prelude.hashWithSalt` json
       `Prelude.hashWithSalt` parquet

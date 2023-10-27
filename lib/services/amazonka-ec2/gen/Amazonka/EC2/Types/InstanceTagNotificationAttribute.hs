@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstanceTagNotificationAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstanceTagNotificationAttribute where
@@ -77,7 +77,8 @@ instance
   parseXML x =
     InstanceTagNotificationAttribute'
       Prelude.<$> (x Data..@? "includeAllTagsOfInstance")
-      Prelude.<*> ( x Data..@? "instanceTagKeySet"
+      Prelude.<*> ( x
+                      Data..@? "instanceTagKeySet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )

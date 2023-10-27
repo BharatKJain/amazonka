@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.AccessPreview
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.AccessPreview where
@@ -162,7 +162,8 @@ instance Data.FromJSON AccessPreview where
 
 instance Prelude.Hashable AccessPreview where
   hashWithSalt _salt AccessPreview' {..} =
-    _salt `Prelude.hashWithSalt` statusReason
+    _salt
+      `Prelude.hashWithSalt` statusReason
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` analyzerArn
       `Prelude.hashWithSalt` configurations

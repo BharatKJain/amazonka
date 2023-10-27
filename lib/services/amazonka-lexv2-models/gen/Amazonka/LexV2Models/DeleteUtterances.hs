@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexV2Models.DeleteUtterances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -146,7 +146,8 @@ instance Core.AWSRequest DeleteUtterances where
 
 instance Prelude.Hashable DeleteUtterances where
   hashWithSalt _salt DeleteUtterances' {..} =
-    _salt `Prelude.hashWithSalt` localeId
+    _salt
+      `Prelude.hashWithSalt` localeId
       `Prelude.hashWithSalt` sessionId
       `Prelude.hashWithSalt` botId
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MemoryDb.ResetParameterGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,7 +128,8 @@ instance Core.AWSRequest ResetParameterGroup where
 
 instance Prelude.Hashable ResetParameterGroup where
   hashWithSalt _salt ResetParameterGroup' {..} =
-    _salt `Prelude.hashWithSalt` allParameters
+    _salt
+      `Prelude.hashWithSalt` allParameters
       `Prelude.hashWithSalt` parameterNames
       `Prelude.hashWithSalt` parameterGroupName
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.RevisionEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.RevisionEntry where
@@ -218,7 +218,8 @@ instance Data.FromJSON RevisionEntry where
 
 instance Prelude.Hashable RevisionEntry where
   hashWithSalt _salt RevisionEntry' {..} =
-    _salt `Prelude.hashWithSalt` comment
+    _salt
+      `Prelude.hashWithSalt` comment
       `Prelude.hashWithSalt` finalized
       `Prelude.hashWithSalt` revocationComment
       `Prelude.hashWithSalt` revoked

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.DevicePositionUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.DevicePositionUpdate where
@@ -92,7 +92,8 @@ newDevicePositionUpdate
         positionProperties = Prelude.Nothing,
         deviceId = pDeviceId_,
         position =
-          Data._Sensitive Prelude.. Lens.coerced
+          Data._Sensitive
+            Prelude.. Lens.coerced
             Lens.# pPosition_,
         sampleTime = Data._Time Lens.# pSampleTime_
       }
@@ -127,7 +128,8 @@ devicePositionUpdate_sampleTime = Lens.lens (\DevicePositionUpdate' {sampleTime}
 
 instance Prelude.Hashable DevicePositionUpdate where
   hashWithSalt _salt DevicePositionUpdate' {..} =
-    _salt `Prelude.hashWithSalt` accuracy
+    _salt
+      `Prelude.hashWithSalt` accuracy
       `Prelude.hashWithSalt` positionProperties
       `Prelude.hashWithSalt` deviceId
       `Prelude.hashWithSalt` position

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.LaunchPathSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.LaunchPathSummary where
@@ -89,7 +89,8 @@ instance Data.FromJSON LaunchPathSummary where
       "LaunchPathSummary"
       ( \x ->
           LaunchPathSummary'
-            Prelude.<$> ( x Data..:? "ConstraintSummaries"
+            Prelude.<$> ( x
+                            Data..:? "ConstraintSummaries"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Id")
@@ -99,7 +100,8 @@ instance Data.FromJSON LaunchPathSummary where
 
 instance Prelude.Hashable LaunchPathSummary where
   hashWithSalt _salt LaunchPathSummary' {..} =
-    _salt `Prelude.hashWithSalt` constraintSummaries
+    _salt
+      `Prelude.hashWithSalt` constraintSummaries
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` tags

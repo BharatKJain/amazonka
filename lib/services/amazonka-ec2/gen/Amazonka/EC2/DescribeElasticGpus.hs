@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeElasticGpus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -188,7 +188,9 @@ instance Core.AWSRequest DescribeElasticGpus where
     Response.receiveXML
       ( \s h x ->
           DescribeElasticGpusResponse'
-            Prelude.<$> ( x Data..@? "elasticGpuSet" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "elasticGpuSet"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
             Prelude.<*> (x Data..@? "maxResults")
@@ -198,7 +200,8 @@ instance Core.AWSRequest DescribeElasticGpus where
 
 instance Prelude.Hashable DescribeElasticGpus where
   hashWithSalt _salt DescribeElasticGpus' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` elasticGpuIds
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults

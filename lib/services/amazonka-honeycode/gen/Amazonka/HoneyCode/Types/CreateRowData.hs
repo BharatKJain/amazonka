@@ -14,7 +14,7 @@
 -- Module      : Amazonka.HoneyCode.Types.CreateRowData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.HoneyCode.Types.CreateRowData where
@@ -86,7 +86,8 @@ createRowData_cellsToCreate = Lens.lens (\CreateRowData' {cellsToCreate} -> cell
 
 instance Prelude.Hashable CreateRowData where
   hashWithSalt _salt CreateRowData' {..} =
-    _salt `Prelude.hashWithSalt` batchItemId
+    _salt
+      `Prelude.hashWithSalt` batchItemId
       `Prelude.hashWithSalt` cellsToCreate
 
 instance Prelude.NFData CreateRowData where

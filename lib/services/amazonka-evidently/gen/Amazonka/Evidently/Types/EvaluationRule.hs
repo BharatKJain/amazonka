@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.EvaluationRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.EvaluationRule where
@@ -77,12 +77,14 @@ instance Data.FromJSON EvaluationRule where
       "EvaluationRule"
       ( \x ->
           EvaluationRule'
-            Prelude.<$> (x Data..:? "name") Prelude.<*> (x Data..: "type")
+            Prelude.<$> (x Data..:? "name")
+            Prelude.<*> (x Data..: "type")
       )
 
 instance Prelude.Hashable EvaluationRule where
   hashWithSalt _salt EvaluationRule' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData EvaluationRule where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.VirtualMFADevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.VirtualMFADevice where
@@ -155,7 +155,9 @@ instance Data.FromXML VirtualMFADevice where
       Prelude.<$> (x Data..@? "Base32StringSeed")
       Prelude.<*> (x Data..@? "EnableDate")
       Prelude.<*> (x Data..@? "QRCodePNG")
-      Prelude.<*> ( x Data..@? "Tags" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Tags"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "User")
@@ -163,7 +165,8 @@ instance Data.FromXML VirtualMFADevice where
 
 instance Prelude.Hashable VirtualMFADevice where
   hashWithSalt _salt VirtualMFADevice' {..} =
-    _salt `Prelude.hashWithSalt` base32StringSeed
+    _salt
+      `Prelude.hashWithSalt` base32StringSeed
       `Prelude.hashWithSalt` enableDate
       `Prelude.hashWithSalt` qRCodePNG
       `Prelude.hashWithSalt` tags

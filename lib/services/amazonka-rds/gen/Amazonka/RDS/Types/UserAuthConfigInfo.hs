@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.UserAuthConfigInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.UserAuthConfigInfo where
@@ -135,7 +135,8 @@ instance Data.FromXML UserAuthConfigInfo where
 
 instance Prelude.Hashable UserAuthConfigInfo where
   hashWithSalt _salt UserAuthConfigInfo' {..} =
-    _salt `Prelude.hashWithSalt` authScheme
+    _salt
+      `Prelude.hashWithSalt` authScheme
       `Prelude.hashWithSalt` clientPasswordAuthType
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` iAMAuth

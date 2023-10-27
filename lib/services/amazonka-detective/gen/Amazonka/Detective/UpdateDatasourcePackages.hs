@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Detective.UpdateDatasourcePackages
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -99,7 +99,8 @@ instance Core.AWSRequest UpdateDatasourcePackages where
 
 instance Prelude.Hashable UpdateDatasourcePackages where
   hashWithSalt _salt UpdateDatasourcePackages' {..} =
-    _salt `Prelude.hashWithSalt` graphArn
+    _salt
+      `Prelude.hashWithSalt` graphArn
       `Prelude.hashWithSalt` datasourcePackages
 
 instance Prelude.NFData UpdateDatasourcePackages where

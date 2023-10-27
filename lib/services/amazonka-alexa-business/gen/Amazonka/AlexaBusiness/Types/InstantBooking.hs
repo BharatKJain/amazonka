@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.InstantBooking
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.InstantBooking where
@@ -80,7 +80,8 @@ instance Data.FromJSON InstantBooking where
 
 instance Prelude.Hashable InstantBooking where
   hashWithSalt _salt InstantBooking' {..} =
-    _salt `Prelude.hashWithSalt` durationInMinutes
+    _salt
+      `Prelude.hashWithSalt` durationInMinutes
       `Prelude.hashWithSalt` enabled
 
 instance Prelude.NFData InstantBooking where

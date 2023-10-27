@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GlobalAccelerator.ProvisionByoipCidr
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,7 +127,8 @@ instance Core.AWSRequest ProvisionByoipCidr where
 
 instance Prelude.Hashable ProvisionByoipCidr where
   hashWithSalt _salt ProvisionByoipCidr' {..} =
-    _salt `Prelude.hashWithSalt` cidr
+    _salt
+      `Prelude.hashWithSalt` cidr
       `Prelude.hashWithSalt` cidrAuthorizationContext
 
 instance Prelude.NFData ProvisionByoipCidr where

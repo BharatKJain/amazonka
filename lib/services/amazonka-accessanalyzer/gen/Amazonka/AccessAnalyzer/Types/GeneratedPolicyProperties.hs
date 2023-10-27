@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.GeneratedPolicyProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.GeneratedPolicyProperties where
@@ -97,7 +97,8 @@ instance Data.FromJSON GeneratedPolicyProperties where
 
 instance Prelude.Hashable GeneratedPolicyProperties where
   hashWithSalt _salt GeneratedPolicyProperties' {..} =
-    _salt `Prelude.hashWithSalt` cloudTrailProperties
+    _salt
+      `Prelude.hashWithSalt` cloudTrailProperties
       `Prelude.hashWithSalt` isComplete
       `Prelude.hashWithSalt` principalArn
 

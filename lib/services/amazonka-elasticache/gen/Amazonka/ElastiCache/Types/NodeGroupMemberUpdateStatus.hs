@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.NodeGroupMemberUpdateStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.NodeGroupMemberUpdateStatus where
@@ -146,7 +146,8 @@ instance Data.FromXML NodeGroupMemberUpdateStatus where
 
 instance Prelude.Hashable NodeGroupMemberUpdateStatus where
   hashWithSalt _salt NodeGroupMemberUpdateStatus' {..} =
-    _salt `Prelude.hashWithSalt` cacheClusterId
+    _salt
+      `Prelude.hashWithSalt` cacheClusterId
       `Prelude.hashWithSalt` cacheNodeId
       `Prelude.hashWithSalt` nodeDeletionDate
       `Prelude.hashWithSalt` nodeUpdateEndDate

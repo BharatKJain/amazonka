@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.JobAlbumArt
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.JobAlbumArt where
@@ -123,7 +123,8 @@ instance Data.FromJSON JobAlbumArt where
 
 instance Prelude.Hashable JobAlbumArt where
   hashWithSalt _salt JobAlbumArt' {..} =
-    _salt `Prelude.hashWithSalt` artwork
+    _salt
+      `Prelude.hashWithSalt` artwork
       `Prelude.hashWithSalt` mergePolicy
 
 instance Prelude.NFData JobAlbumArt where

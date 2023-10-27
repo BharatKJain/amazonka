@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.GetSession
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,7 +100,8 @@ instance Core.AWSRequest GetSession where
 
 instance Prelude.Hashable GetSession where
   hashWithSalt _salt GetSession' {..} =
-    _salt `Prelude.hashWithSalt` requestOrigin
+    _salt
+      `Prelude.hashWithSalt` requestOrigin
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData GetSession where

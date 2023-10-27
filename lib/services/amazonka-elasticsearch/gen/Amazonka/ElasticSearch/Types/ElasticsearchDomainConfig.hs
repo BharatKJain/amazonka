@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.ElasticsearchDomainConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.ElasticsearchDomainConfig where
@@ -235,7 +235,8 @@ instance Data.FromJSON ElasticsearchDomainConfig where
 
 instance Prelude.Hashable ElasticsearchDomainConfig where
   hashWithSalt _salt ElasticsearchDomainConfig' {..} =
-    _salt `Prelude.hashWithSalt` accessPolicies
+    _salt
+      `Prelude.hashWithSalt` accessPolicies
       `Prelude.hashWithSalt` advancedOptions
       `Prelude.hashWithSalt` advancedSecurityOptions
       `Prelude.hashWithSalt` autoTuneOptions

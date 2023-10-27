@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchLookupPolicyResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchLookupPolicyResponse where
@@ -77,14 +77,16 @@ instance Data.FromJSON BatchLookupPolicyResponse where
       ( \x ->
           BatchLookupPolicyResponse'
             Prelude.<$> (x Data..:? "NextToken")
-            Prelude.<*> ( x Data..:? "PolicyToPathList"
+            Prelude.<*> ( x
+                            Data..:? "PolicyToPathList"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable BatchLookupPolicyResponse where
   hashWithSalt _salt BatchLookupPolicyResponse' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` policyToPathList
 
 instance Prelude.NFData BatchLookupPolicyResponse where

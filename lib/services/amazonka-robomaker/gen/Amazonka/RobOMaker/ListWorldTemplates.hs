@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RobOMaker.ListWorldTemplates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,22 +125,22 @@ instance Core.AWSPager ListWorldTemplates where
     | Core.stop
         ( rs
             Lens.^? listWorldTemplatesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listWorldTemplatesResponse_templateSummaries
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listWorldTemplates_nextToken
           Lens..~ rs
           Lens.^? listWorldTemplatesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListWorldTemplates where
   type
@@ -153,7 +153,8 @@ instance Core.AWSRequest ListWorldTemplates where
       ( \s h x ->
           ListWorldTemplatesResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "templateSummaries"
+            Prelude.<*> ( x
+                            Data..?> "templateSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -161,7 +162,8 @@ instance Core.AWSRequest ListWorldTemplates where
 
 instance Prelude.Hashable ListWorldTemplates where
   hashWithSalt _salt ListWorldTemplates' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListWorldTemplates where

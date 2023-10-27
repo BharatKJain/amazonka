@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Inspector.PreviewAgents
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,18 +119,20 @@ instance Core.AWSPager PreviewAgents where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? previewAgentsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? previewAgentsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. previewAgentsResponse_agentPreviews) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& previewAgents_nextToken
           Lens..~ rs
-          Lens.^? previewAgentsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? previewAgentsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest PreviewAgents where
   type
@@ -149,7 +151,8 @@ instance Core.AWSRequest PreviewAgents where
 
 instance Prelude.Hashable PreviewAgents where
   hashWithSalt _salt PreviewAgents' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` previewAgentsArn
 

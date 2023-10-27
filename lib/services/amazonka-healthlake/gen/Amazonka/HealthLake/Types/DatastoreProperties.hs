@@ -14,7 +14,7 @@
 -- Module      : Amazonka.HealthLake.Types.DatastoreProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.HealthLake.Types.DatastoreProperties where
@@ -176,7 +176,8 @@ instance Data.FromJSON DatastoreProperties where
 
 instance Prelude.Hashable DatastoreProperties where
   hashWithSalt _salt DatastoreProperties' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` datastoreName
       `Prelude.hashWithSalt` preloadDataConfig
       `Prelude.hashWithSalt` sseConfiguration

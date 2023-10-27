@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.ScanThreatName
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.ScanThreatName where
@@ -96,7 +96,8 @@ instance Data.FromJSON ScanThreatName where
 
 instance Prelude.Hashable ScanThreatName where
   hashWithSalt _salt ScanThreatName' {..} =
-    _salt `Prelude.hashWithSalt` filePaths
+    _salt
+      `Prelude.hashWithSalt` filePaths
       `Prelude.hashWithSalt` itemCount
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` severity

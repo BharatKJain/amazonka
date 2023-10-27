@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MQ.Types.ConfigurationId
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MQ.Types.ConfigurationId where
@@ -72,12 +72,14 @@ instance Data.FromJSON ConfigurationId where
       "ConfigurationId"
       ( \x ->
           ConfigurationId'
-            Prelude.<$> (x Data..:? "revision") Prelude.<*> (x Data..: "id")
+            Prelude.<$> (x Data..:? "revision")
+            Prelude.<*> (x Data..: "id")
       )
 
 instance Prelude.Hashable ConfigurationId where
   hashWithSalt _salt ConfigurationId' {..} =
-    _salt `Prelude.hashWithSalt` revision
+    _salt
+      `Prelude.hashWithSalt` revision
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData ConfigurationId where

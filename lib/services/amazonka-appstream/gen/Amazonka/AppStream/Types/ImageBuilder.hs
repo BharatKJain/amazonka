@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.ImageBuilder
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.ImageBuilder where
@@ -471,7 +471,8 @@ instance Data.FromJSON ImageBuilder where
             Prelude.<*> (x Data..:? "EnableDefaultInternetAccess")
             Prelude.<*> (x Data..:? "IamRoleArn")
             Prelude.<*> (x Data..:? "ImageArn")
-            Prelude.<*> ( x Data..:? "ImageBuilderErrors"
+            Prelude.<*> ( x
+                            Data..:? "ImageBuilderErrors"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "InstanceType")
@@ -485,7 +486,8 @@ instance Data.FromJSON ImageBuilder where
 
 instance Prelude.Hashable ImageBuilder where
   hashWithSalt _salt ImageBuilder' {..} =
-    _salt `Prelude.hashWithSalt` accessEndpoints
+    _salt
+      `Prelude.hashWithSalt` accessEndpoints
       `Prelude.hashWithSalt` appstreamAgentVersion
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdTime

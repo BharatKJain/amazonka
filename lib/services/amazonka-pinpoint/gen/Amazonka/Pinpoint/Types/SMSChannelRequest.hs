@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.SMSChannelRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.SMSChannelRequest where
@@ -79,7 +79,8 @@ sMSChannelRequest_shortCode = Lens.lens (\SMSChannelRequest' {shortCode} -> shor
 
 instance Prelude.Hashable SMSChannelRequest where
   hashWithSalt _salt SMSChannelRequest' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` senderId
       `Prelude.hashWithSalt` shortCode
 

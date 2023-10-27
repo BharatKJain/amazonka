@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.OpenXJsonSerDe
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.OpenXJsonSerDe where
@@ -119,7 +119,8 @@ instance Data.FromJSON OpenXJsonSerDe where
       ( \x ->
           OpenXJsonSerDe'
             Prelude.<$> (x Data..:? "CaseInsensitive")
-            Prelude.<*> ( x Data..:? "ColumnToJsonKeyMappings"
+            Prelude.<*> ( x
+                            Data..:? "ColumnToJsonKeyMappings"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ConvertDotsInJsonKeysToUnderscores")
@@ -127,7 +128,8 @@ instance Data.FromJSON OpenXJsonSerDe where
 
 instance Prelude.Hashable OpenXJsonSerDe where
   hashWithSalt _salt OpenXJsonSerDe' {..} =
-    _salt `Prelude.hashWithSalt` caseInsensitive
+    _salt
+      `Prelude.hashWithSalt` caseInsensitive
       `Prelude.hashWithSalt` columnToJsonKeyMappings
       `Prelude.hashWithSalt` convertDotsInJsonKeysToUnderscores
 

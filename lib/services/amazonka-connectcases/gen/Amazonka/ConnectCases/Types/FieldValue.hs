@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCases.Types.FieldValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCases.Types.FieldValue where
@@ -70,12 +70,14 @@ instance Data.FromJSON FieldValue where
       "FieldValue"
       ( \x ->
           FieldValue'
-            Prelude.<$> (x Data..: "id") Prelude.<*> (x Data..: "value")
+            Prelude.<$> (x Data..: "id")
+            Prelude.<*> (x Data..: "value")
       )
 
 instance Prelude.Hashable FieldValue where
   hashWithSalt _salt FieldValue' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData FieldValue where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.MedicalTranscriptionSetting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.MedicalTranscriptionSetting where
@@ -298,7 +298,8 @@ instance Data.FromJSON MedicalTranscriptionSetting where
 
 instance Prelude.Hashable MedicalTranscriptionSetting where
   hashWithSalt _salt MedicalTranscriptionSetting' {..} =
-    _salt `Prelude.hashWithSalt` channelIdentification
+    _salt
+      `Prelude.hashWithSalt` channelIdentification
       `Prelude.hashWithSalt` maxAlternatives
       `Prelude.hashWithSalt` maxSpeakerLabels
       `Prelude.hashWithSalt` showAlternatives

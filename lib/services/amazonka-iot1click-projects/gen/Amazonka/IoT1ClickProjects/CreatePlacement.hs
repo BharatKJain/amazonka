@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT1ClickProjects.CreatePlacement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest CreatePlacement where
 
 instance Prelude.Hashable CreatePlacement where
   hashWithSalt _salt CreatePlacement' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` placementName
       `Prelude.hashWithSalt` projectName
 

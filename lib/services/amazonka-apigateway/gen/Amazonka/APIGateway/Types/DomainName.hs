@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.DomainName
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.DomainName where
@@ -332,7 +332,8 @@ instance Data.FromJSON DomainName where
 
 instance Prelude.Hashable DomainName where
   hashWithSalt _salt DomainName' {..} =
-    _salt `Prelude.hashWithSalt` certificateArn
+    _salt
+      `Prelude.hashWithSalt` certificateArn
       `Prelude.hashWithSalt` certificateName
       `Prelude.hashWithSalt` certificateUploadDate
       `Prelude.hashWithSalt` distributionDomainName

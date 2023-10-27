@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.ConnectPeerSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.ConnectPeerSummary where
@@ -127,7 +127,8 @@ instance Data.FromJSON ConnectPeerSummary where
 
 instance Prelude.Hashable ConnectPeerSummary where
   hashWithSalt _salt ConnectPeerSummary' {..} =
-    _salt `Prelude.hashWithSalt` connectAttachmentId
+    _salt
+      `Prelude.hashWithSalt` connectAttachmentId
       `Prelude.hashWithSalt` connectPeerId
       `Prelude.hashWithSalt` connectPeerState
       `Prelude.hashWithSalt` coreNetworkId

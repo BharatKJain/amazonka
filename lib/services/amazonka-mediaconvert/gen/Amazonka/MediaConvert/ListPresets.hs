@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaConvert.ListPresets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,20 +144,23 @@ instance Core.AWSPager ListPresets where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listPresetsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listPresetsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listPresetsResponse_presets Prelude.. Lens._Just
+            Lens.^? listPresetsResponse_presets
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listPresets_nextToken
           Lens..~ rs
-          Lens.^? listPresetsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listPresetsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListPresets where
   type AWSResponse ListPresets = ListPresetsResponse
@@ -174,7 +177,8 @@ instance Core.AWSRequest ListPresets where
 
 instance Prelude.Hashable ListPresets where
   hashWithSalt _salt ListPresets' {..} =
-    _salt `Prelude.hashWithSalt` category
+    _salt
+      `Prelude.hashWithSalt` category
       `Prelude.hashWithSalt` listBy
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

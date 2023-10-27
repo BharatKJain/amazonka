@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IotTwinMaker.UpdateScene
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest UpdateScene where
 
 instance Prelude.Hashable UpdateScene where
   hashWithSalt _salt UpdateScene' {..} =
-    _salt `Prelude.hashWithSalt` capabilities
+    _salt
+      `Prelude.hashWithSalt` capabilities
       `Prelude.hashWithSalt` contentLocation
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` workspaceId

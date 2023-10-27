@@ -14,7 +14,7 @@
 -- Module      : Amazonka.HoneyCode.Types.Cell
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.HoneyCode.Types.Cell where
@@ -314,7 +314,8 @@ instance Data.FromJSON Cell where
           Cell'
             Prelude.<$> (x Data..:? "format")
             Prelude.<*> (x Data..:? "formattedValue")
-            Prelude.<*> ( x Data..:? "formattedValues"
+            Prelude.<*> ( x
+                            Data..:? "formattedValues"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "formula")
@@ -323,7 +324,8 @@ instance Data.FromJSON Cell where
 
 instance Prelude.Hashable Cell where
   hashWithSalt _salt Cell' {..} =
-    _salt `Prelude.hashWithSalt` format
+    _salt
+      `Prelude.hashWithSalt` format
       `Prelude.hashWithSalt` formattedValue
       `Prelude.hashWithSalt` formattedValues
       `Prelude.hashWithSalt` formula

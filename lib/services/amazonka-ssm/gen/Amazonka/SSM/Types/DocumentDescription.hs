@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.DocumentDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.DocumentDescription where
@@ -394,7 +394,8 @@ instance Data.FromJSON DocumentDescription where
       ( \x ->
           DocumentDescription'
             Prelude.<$> (x Data..:? "ApprovedVersion")
-            Prelude.<*> ( x Data..:? "AttachmentsInformation"
+            Prelude.<*> ( x
+                            Data..:? "AttachmentsInformation"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Author")
@@ -429,7 +430,8 @@ instance Data.FromJSON DocumentDescription where
 
 instance Prelude.Hashable DocumentDescription where
   hashWithSalt _salt DocumentDescription' {..} =
-    _salt `Prelude.hashWithSalt` approvedVersion
+    _salt
+      `Prelude.hashWithSalt` approvedVersion
       `Prelude.hashWithSalt` attachmentsInformation
       `Prelude.hashWithSalt` author
       `Prelude.hashWithSalt` category

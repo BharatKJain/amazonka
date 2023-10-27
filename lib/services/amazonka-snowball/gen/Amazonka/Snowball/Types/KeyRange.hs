@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Snowball.Types.KeyRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Snowball.Types.KeyRange where
@@ -83,7 +83,8 @@ instance Data.FromJSON KeyRange where
 
 instance Prelude.Hashable KeyRange where
   hashWithSalt _salt KeyRange' {..} =
-    _salt `Prelude.hashWithSalt` beginMarker
+    _salt
+      `Prelude.hashWithSalt` beginMarker
       `Prelude.hashWithSalt` endMarker
 
 instance Prelude.NFData KeyRange where

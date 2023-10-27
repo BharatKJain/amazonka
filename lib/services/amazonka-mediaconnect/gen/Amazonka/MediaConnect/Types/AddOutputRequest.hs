@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.AddOutputRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.AddOutputRequest where
@@ -229,7 +229,8 @@ addOutputRequest_protocol = Lens.lens (\AddOutputRequest' {protocol} -> protocol
 
 instance Prelude.Hashable AddOutputRequest where
   hashWithSalt _salt AddOutputRequest' {..} =
-    _salt `Prelude.hashWithSalt` cidrAllowList
+    _salt
+      `Prelude.hashWithSalt` cidrAllowList
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` encryption

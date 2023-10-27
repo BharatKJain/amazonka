@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.ContainerRecommendation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.ContainerRecommendation where
@@ -87,7 +87,8 @@ instance Data.FromJSON ContainerRecommendation where
 
 instance Prelude.Hashable ContainerRecommendation where
   hashWithSalt _salt ContainerRecommendation' {..} =
-    _salt `Prelude.hashWithSalt` containerName
+    _salt
+      `Prelude.hashWithSalt` containerName
       `Prelude.hashWithSalt` cpu
       `Prelude.hashWithSalt` memorySizeConfiguration
 

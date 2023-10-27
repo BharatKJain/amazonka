@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaLive.StartChannel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,19 +105,22 @@ instance Core.AWSRequest StartChannel where
             Prelude.<*> (x Data..?> "cdiInputSpecification")
             Prelude.<*> (x Data..?> "channelClass")
             Prelude.<*> (x Data..?> "destinations" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "egressEndpoints"
+            Prelude.<*> ( x
+                            Data..?> "egressEndpoints"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "encoderSettings")
             Prelude.<*> (x Data..?> "id")
-            Prelude.<*> ( x Data..?> "inputAttachments"
+            Prelude.<*> ( x
+                            Data..?> "inputAttachments"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "inputSpecification")
             Prelude.<*> (x Data..?> "logLevel")
             Prelude.<*> (x Data..?> "maintenance")
             Prelude.<*> (x Data..?> "name")
-            Prelude.<*> ( x Data..?> "pipelineDetails"
+            Prelude.<*> ( x
+                            Data..?> "pipelineDetails"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "pipelinesRunningCount")

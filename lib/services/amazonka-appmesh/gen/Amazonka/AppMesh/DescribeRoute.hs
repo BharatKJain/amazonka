@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppMesh.DescribeRoute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -140,7 +140,8 @@ instance Core.AWSRequest DescribeRoute where
 
 instance Prelude.Hashable DescribeRoute where
   hashWithSalt _salt DescribeRoute' {..} =
-    _salt `Prelude.hashWithSalt` meshOwner
+    _salt
+      `Prelude.hashWithSalt` meshOwner
       `Prelude.hashWithSalt` meshName
       `Prelude.hashWithSalt` routeName
       `Prelude.hashWithSalt` virtualRouterName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisVideoSignaling.Types.IceServer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisVideoSignaling.Types.IceServer where
@@ -106,7 +106,8 @@ instance Data.FromJSON IceServer where
 
 instance Prelude.Hashable IceServer where
   hashWithSalt _salt IceServer' {..} =
-    _salt `Prelude.hashWithSalt` password
+    _salt
+      `Prelude.hashWithSalt` password
       `Prelude.hashWithSalt` ttl
       `Prelude.hashWithSalt` uris
       `Prelude.hashWithSalt` username

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.RuleActionOverride
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.RuleActionOverride where
@@ -90,7 +90,8 @@ instance Data.FromJSON RuleActionOverride where
 
 instance Prelude.Hashable RuleActionOverride where
   hashWithSalt _salt RuleActionOverride' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` actionToUse
 
 instance Prelude.NFData RuleActionOverride where

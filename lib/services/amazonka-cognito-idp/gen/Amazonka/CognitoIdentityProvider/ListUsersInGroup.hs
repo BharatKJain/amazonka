@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.ListUsersInGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,21 +124,22 @@ instance Core.AWSPager ListUsersInGroup where
     | Core.stop
         ( rs
             Lens.^? listUsersInGroupResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listUsersInGroupResponse_users Prelude.. Lens._Just
+            Lens.^? listUsersInGroupResponse_users
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listUsersInGroup_nextToken
           Lens..~ rs
           Lens.^? listUsersInGroupResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListUsersInGroup where
   type
@@ -157,7 +158,8 @@ instance Core.AWSRequest ListUsersInGroup where
 
 instance Prelude.Hashable ListUsersInGroup where
   hashWithSalt _salt ListUsersInGroup' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` userPoolId
       `Prelude.hashWithSalt` groupName

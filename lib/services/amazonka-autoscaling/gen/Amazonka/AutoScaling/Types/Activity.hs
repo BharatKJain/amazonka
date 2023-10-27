@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.Activity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.Activity where
@@ -191,7 +191,8 @@ instance Data.FromXML Activity where
 
 instance Prelude.Hashable Activity where
   hashWithSalt _salt Activity' {..} =
-    _salt `Prelude.hashWithSalt` autoScalingGroupARN
+    _salt
+      `Prelude.hashWithSalt` autoScalingGroupARN
       `Prelude.hashWithSalt` autoScalingGroupState
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` details

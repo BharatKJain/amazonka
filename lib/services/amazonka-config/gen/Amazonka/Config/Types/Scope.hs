@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.Scope
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.Scope where
@@ -113,7 +113,8 @@ instance Data.FromJSON Scope where
       ( \x ->
           Scope'
             Prelude.<$> (x Data..:? "ComplianceResourceId")
-            Prelude.<*> ( x Data..:? "ComplianceResourceTypes"
+            Prelude.<*> ( x
+                            Data..:? "ComplianceResourceTypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "TagKey")
@@ -122,7 +123,8 @@ instance Data.FromJSON Scope where
 
 instance Prelude.Hashable Scope where
   hashWithSalt _salt Scope' {..} =
-    _salt `Prelude.hashWithSalt` complianceResourceId
+    _salt
+      `Prelude.hashWithSalt` complianceResourceId
       `Prelude.hashWithSalt` complianceResourceTypes
       `Prelude.hashWithSalt` tagKey
       `Prelude.hashWithSalt` tagValue

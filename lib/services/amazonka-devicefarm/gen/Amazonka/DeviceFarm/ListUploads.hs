@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DeviceFarm.ListUploads
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -312,20 +312,23 @@ instance Core.AWSPager ListUploads where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listUploadsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listUploadsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listUploadsResponse_uploads Prelude.. Lens._Just
+            Lens.^? listUploadsResponse_uploads
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listUploads_nextToken
           Lens..~ rs
-          Lens.^? listUploadsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listUploadsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListUploads where
   type AWSResponse ListUploads = ListUploadsResponse
@@ -342,7 +345,8 @@ instance Core.AWSRequest ListUploads where
 
 instance Prelude.Hashable ListUploads where
   hashWithSalt _salt ListUploads' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` arn
 

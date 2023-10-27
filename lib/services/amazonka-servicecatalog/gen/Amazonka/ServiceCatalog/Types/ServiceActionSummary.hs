@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ServiceActionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ServiceActionSummary where
@@ -96,7 +96,8 @@ instance Data.FromJSON ServiceActionSummary where
 
 instance Prelude.Hashable ServiceActionSummary where
   hashWithSalt _salt ServiceActionSummary' {..} =
-    _salt `Prelude.hashWithSalt` definitionType
+    _salt
+      `Prelude.hashWithSalt` definitionType
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name

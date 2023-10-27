@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.S3OutputLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.S3OutputLocation where
@@ -85,7 +85,8 @@ instance Data.FromJSON S3OutputLocation where
 
 instance Prelude.Hashable S3OutputLocation where
   hashWithSalt _salt S3OutputLocation' {..} =
-    _salt `Prelude.hashWithSalt` outputS3BucketName
+    _salt
+      `Prelude.hashWithSalt` outputS3BucketName
       `Prelude.hashWithSalt` outputS3KeyPrefix
       `Prelude.hashWithSalt` outputS3Region
 

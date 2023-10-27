@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.ReferenceDataSourceDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.ReferenceDataSourceDescription where
@@ -131,7 +131,8 @@ instance
   hashWithSalt
     _salt
     ReferenceDataSourceDescription' {..} =
-      _salt `Prelude.hashWithSalt` referenceSchema
+      _salt
+        `Prelude.hashWithSalt` referenceSchema
         `Prelude.hashWithSalt` referenceId
         `Prelude.hashWithSalt` tableName
         `Prelude.hashWithSalt` s3ReferenceDataSourceDescription

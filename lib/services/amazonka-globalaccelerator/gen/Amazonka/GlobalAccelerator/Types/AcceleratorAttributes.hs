@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GlobalAccelerator.Types.AcceleratorAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GlobalAccelerator.Types.AcceleratorAttributes where
@@ -130,7 +130,8 @@ instance Data.FromJSON AcceleratorAttributes where
 
 instance Prelude.Hashable AcceleratorAttributes where
   hashWithSalt _salt AcceleratorAttributes' {..} =
-    _salt `Prelude.hashWithSalt` flowLogsEnabled
+    _salt
+      `Prelude.hashWithSalt` flowLogsEnabled
       `Prelude.hashWithSalt` flowLogsS3Bucket
       `Prelude.hashWithSalt` flowLogsS3Prefix
 

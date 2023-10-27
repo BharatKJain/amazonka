@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TrafficMirrorPortRangeRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TrafficMirrorPortRangeRequest where
@@ -75,7 +75,8 @@ instance
     TrafficMirrorPortRangeRequest
   where
   hashWithSalt _salt TrafficMirrorPortRangeRequest' {..} =
-    _salt `Prelude.hashWithSalt` fromPort
+    _salt
+      `Prelude.hashWithSalt` fromPort
       `Prelude.hashWithSalt` toPort
 
 instance Prelude.NFData TrafficMirrorPortRangeRequest where

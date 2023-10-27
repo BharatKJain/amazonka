@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.HumanLoopConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.HumanLoopConfig where
@@ -94,7 +94,8 @@ humanLoopConfig_flowDefinitionArn = Lens.lens (\HumanLoopConfig' {flowDefinition
 
 instance Prelude.Hashable HumanLoopConfig where
   hashWithSalt _salt HumanLoopConfig' {..} =
-    _salt `Prelude.hashWithSalt` dataAttributes
+    _salt
+      `Prelude.hashWithSalt` dataAttributes
       `Prelude.hashWithSalt` humanLoopName
       `Prelude.hashWithSalt` flowDefinitionArn
 

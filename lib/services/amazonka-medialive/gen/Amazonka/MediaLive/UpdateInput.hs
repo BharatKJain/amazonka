@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaLive.UpdateInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -183,7 +183,8 @@ instance Core.AWSRequest UpdateInput' where
 
 instance Prelude.Hashable UpdateInput' where
   hashWithSalt _salt UpdateInput'' {..} =
-    _salt `Prelude.hashWithSalt` destinations
+    _salt
+      `Prelude.hashWithSalt` destinations
       `Prelude.hashWithSalt` inputDevices
       `Prelude.hashWithSalt` inputSecurityGroups
       `Prelude.hashWithSalt` mediaConnectFlows

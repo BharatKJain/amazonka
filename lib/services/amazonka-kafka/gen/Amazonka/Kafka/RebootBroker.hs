@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kafka.RebootBroker
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest RebootBroker where
 
 instance Prelude.Hashable RebootBroker where
   hashWithSalt _salt RebootBroker' {..} =
-    _salt `Prelude.hashWithSalt` clusterArn
+    _salt
+      `Prelude.hashWithSalt` clusterArn
       `Prelude.hashWithSalt` brokerIds
 
 instance Prelude.NFData RebootBroker where

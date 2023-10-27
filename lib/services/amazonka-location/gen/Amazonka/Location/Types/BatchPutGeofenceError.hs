@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.BatchPutGeofenceError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.BatchPutGeofenceError where
@@ -80,7 +80,8 @@ instance Data.FromJSON BatchPutGeofenceError where
 
 instance Prelude.Hashable BatchPutGeofenceError where
   hashWithSalt _salt BatchPutGeofenceError' {..} =
-    _salt `Prelude.hashWithSalt` error
+    _salt
+      `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` geofenceId
 
 instance Prelude.NFData BatchPutGeofenceError where

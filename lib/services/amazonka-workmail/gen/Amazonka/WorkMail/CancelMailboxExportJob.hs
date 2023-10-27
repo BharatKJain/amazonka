@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkMail.CancelMailboxExportJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest CancelMailboxExportJob where
 
 instance Prelude.Hashable CancelMailboxExportJob where
   hashWithSalt _salt CancelMailboxExportJob' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` jobId
       `Prelude.hashWithSalt` organizationId
 

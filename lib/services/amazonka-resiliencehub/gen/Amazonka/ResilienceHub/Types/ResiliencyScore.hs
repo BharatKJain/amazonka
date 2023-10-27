@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResilienceHub.Types.ResiliencyScore
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResilienceHub.Types.ResiliencyScore where
@@ -72,7 +72,8 @@ instance Data.FromJSON ResiliencyScore where
       "ResiliencyScore"
       ( \x ->
           ResiliencyScore'
-            Prelude.<$> ( x Data..:? "disruptionScore"
+            Prelude.<$> ( x
+                            Data..:? "disruptionScore"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "score")
@@ -80,7 +81,8 @@ instance Data.FromJSON ResiliencyScore where
 
 instance Prelude.Hashable ResiliencyScore where
   hashWithSalt _salt ResiliencyScore' {..} =
-    _salt `Prelude.hashWithSalt` disruptionScore
+    _salt
+      `Prelude.hashWithSalt` disruptionScore
       `Prelude.hashWithSalt` score
 
 instance Prelude.NFData ResiliencyScore where

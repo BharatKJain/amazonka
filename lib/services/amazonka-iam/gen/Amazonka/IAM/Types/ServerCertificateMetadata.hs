@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.ServerCertificateMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.ServerCertificateMetadata where
@@ -154,7 +154,8 @@ instance Data.FromXML ServerCertificateMetadata where
 
 instance Prelude.Hashable ServerCertificateMetadata where
   hashWithSalt _salt ServerCertificateMetadata' {..} =
-    _salt `Prelude.hashWithSalt` expiration
+    _salt
+      `Prelude.hashWithSalt` expiration
       `Prelude.hashWithSalt` uploadDate
       `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` serverCertificateName

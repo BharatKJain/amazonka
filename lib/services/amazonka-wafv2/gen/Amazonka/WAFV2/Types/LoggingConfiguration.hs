@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.LoggingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.LoggingConfiguration where
@@ -192,7 +192,8 @@ instance Data.FromJSON LoggingConfiguration where
 
 instance Prelude.Hashable LoggingConfiguration where
   hashWithSalt _salt LoggingConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` loggingFilter
+    _salt
+      `Prelude.hashWithSalt` loggingFilter
       `Prelude.hashWithSalt` managedByFirewallManager
       `Prelude.hashWithSalt` redactedFields
       `Prelude.hashWithSalt` resourceArn

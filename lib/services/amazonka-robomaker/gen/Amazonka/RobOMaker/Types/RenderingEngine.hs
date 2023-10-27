@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RobOMaker.Types.RenderingEngine
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RobOMaker.Types.RenderingEngine where
@@ -75,7 +75,8 @@ instance Data.FromJSON RenderingEngine where
 
 instance Prelude.Hashable RenderingEngine where
   hashWithSalt _salt RenderingEngine' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` version
 
 instance Prelude.NFData RenderingEngine where

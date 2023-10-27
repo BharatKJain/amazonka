@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EBS.Types.ChangedBlock
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EBS.Types.ChangedBlock where
@@ -94,7 +94,8 @@ instance Data.FromJSON ChangedBlock where
 
 instance Prelude.Hashable ChangedBlock where
   hashWithSalt _salt ChangedBlock' {..} =
-    _salt `Prelude.hashWithSalt` blockIndex
+    _salt
+      `Prelude.hashWithSalt` blockIndex
       `Prelude.hashWithSalt` firstBlockToken
       `Prelude.hashWithSalt` secondBlockToken
 

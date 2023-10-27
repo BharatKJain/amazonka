@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Grafana.DeleteWorkspaceApiKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest DeleteWorkspaceApiKey where
 
 instance Prelude.Hashable DeleteWorkspaceApiKey where
   hashWithSalt _salt DeleteWorkspaceApiKey' {..} =
-    _salt `Prelude.hashWithSalt` keyName
+    _salt
+      `Prelude.hashWithSalt` keyName
       `Prelude.hashWithSalt` workspaceId
 
 instance Prelude.NFData DeleteWorkspaceApiKey where

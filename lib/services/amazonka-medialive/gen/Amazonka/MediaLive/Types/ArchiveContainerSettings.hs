@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.ArchiveContainerSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.ArchiveContainerSettings where
@@ -75,7 +75,8 @@ instance Data.FromJSON ArchiveContainerSettings where
 
 instance Prelude.Hashable ArchiveContainerSettings where
   hashWithSalt _salt ArchiveContainerSettings' {..} =
-    _salt `Prelude.hashWithSalt` m2tsSettings
+    _salt
+      `Prelude.hashWithSalt` m2tsSettings
       `Prelude.hashWithSalt` rawSettings
 
 instance Prelude.NFData ArchiveContainerSettings where

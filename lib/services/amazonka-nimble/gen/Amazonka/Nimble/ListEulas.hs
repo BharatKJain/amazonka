@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Nimble.ListEulas
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -94,20 +94,23 @@ instance Core.AWSPager ListEulas where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listEulasResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listEulasResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listEulasResponse_eulas Prelude.. Lens._Just
+            Lens.^? listEulasResponse_eulas
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listEulas_nextToken
           Lens..~ rs
-          Lens.^? listEulasResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listEulasResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListEulas where
   type AWSResponse ListEulas = ListEulasResponse
@@ -124,7 +127,8 @@ instance Core.AWSRequest ListEulas where
 
 instance Prelude.Hashable ListEulas where
   hashWithSalt _salt ListEulas' {..} =
-    _salt `Prelude.hashWithSalt` eulaIds
+    _salt
+      `Prelude.hashWithSalt` eulaIds
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListEulas where

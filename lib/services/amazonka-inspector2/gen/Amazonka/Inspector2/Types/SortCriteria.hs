@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.SortCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.SortCriteria where
@@ -70,7 +70,8 @@ sortCriteria_sortOrder = Lens.lens (\SortCriteria' {sortOrder} -> sortOrder) (\s
 
 instance Prelude.Hashable SortCriteria where
   hashWithSalt _salt SortCriteria' {..} =
-    _salt `Prelude.hashWithSalt` field
+    _salt
+      `Prelude.hashWithSalt` field
       `Prelude.hashWithSalt` sortOrder
 
 instance Prelude.NFData SortCriteria where

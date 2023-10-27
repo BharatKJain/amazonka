@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AccountDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AccountDetails where
@@ -66,7 +66,8 @@ accountDetails_accountId = Lens.lens (\AccountDetails' {accountId} -> accountId)
 
 instance Prelude.Hashable AccountDetails where
   hashWithSalt _salt AccountDetails' {..} =
-    _salt `Prelude.hashWithSalt` email
+    _salt
+      `Prelude.hashWithSalt` email
       `Prelude.hashWithSalt` accountId
 
 instance Prelude.NFData AccountDetails where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.StackResourceDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.StackResourceDetail where
@@ -222,7 +222,8 @@ instance Data.FromXML StackResourceDetail where
 
 instance Prelude.Hashable StackResourceDetail where
   hashWithSalt _salt StackResourceDetail' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` driftInformation
       `Prelude.hashWithSalt` metadata
       `Prelude.hashWithSalt` moduleInfo

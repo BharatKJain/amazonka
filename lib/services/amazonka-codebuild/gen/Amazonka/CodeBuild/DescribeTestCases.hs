@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeBuild.DescribeTestCases
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,22 +138,22 @@ instance Core.AWSPager DescribeTestCases where
     | Core.stop
         ( rs
             Lens.^? describeTestCasesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeTestCasesResponse_testCases
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeTestCases_nextToken
           Lens..~ rs
           Lens.^? describeTestCasesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeTestCases where
   type
@@ -172,7 +172,8 @@ instance Core.AWSRequest DescribeTestCases where
 
 instance Prelude.Hashable DescribeTestCases where
   hashWithSalt _salt DescribeTestCases' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` reportArn

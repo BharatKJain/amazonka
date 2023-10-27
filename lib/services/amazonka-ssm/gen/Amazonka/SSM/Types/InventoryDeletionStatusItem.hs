@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.InventoryDeletionStatusItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.InventoryDeletionStatusItem where
@@ -139,7 +139,8 @@ instance Data.FromJSON InventoryDeletionStatusItem where
 
 instance Prelude.Hashable InventoryDeletionStatusItem where
   hashWithSalt _salt InventoryDeletionStatusItem' {..} =
-    _salt `Prelude.hashWithSalt` deletionId
+    _salt
+      `Prelude.hashWithSalt` deletionId
       `Prelude.hashWithSalt` deletionStartTime
       `Prelude.hashWithSalt` deletionSummary
       `Prelude.hashWithSalt` lastStatus

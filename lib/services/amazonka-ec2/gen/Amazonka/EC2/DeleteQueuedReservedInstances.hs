@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DeleteQueuedReservedInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,11 +112,13 @@ instance
     Response.receiveXML
       ( \s h x ->
           DeleteQueuedReservedInstancesResponse'
-            Prelude.<$> ( x Data..@? "failedQueuedPurchaseDeletionSet"
+            Prelude.<$> ( x
+                            Data..@? "failedQueuedPurchaseDeletionSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
-            Prelude.<*> ( x Data..@? "successfulQueuedPurchaseDeletionSet"
+            Prelude.<*> ( x
+                            Data..@? "successfulQueuedPurchaseDeletionSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -128,7 +130,8 @@ instance
     DeleteQueuedReservedInstances
   where
   hashWithSalt _salt DeleteQueuedReservedInstances' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` reservedInstancesIds
 
 instance Prelude.NFData DeleteQueuedReservedInstances where

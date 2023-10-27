@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudSearch.Types.IntOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudSearch.Types.IntOptions where
@@ -118,7 +118,8 @@ instance Data.FromXML IntOptions where
 
 instance Prelude.Hashable IntOptions where
   hashWithSalt _salt IntOptions' {..} =
-    _salt `Prelude.hashWithSalt` defaultValue
+    _salt
+      `Prelude.hashWithSalt` defaultValue
       `Prelude.hashWithSalt` facetEnabled
       `Prelude.hashWithSalt` returnEnabled
       `Prelude.hashWithSalt` searchEnabled

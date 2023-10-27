@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SQS.TagQueue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest TagQueue where
 
 instance Prelude.Hashable TagQueue where
   hashWithSalt _salt TagQueue' {..} =
-    _salt `Prelude.hashWithSalt` queueUrl
+    _salt
+      `Prelude.hashWithSalt` queueUrl
       `Prelude.hashWithSalt` tags
 
 instance Prelude.NFData TagQueue where

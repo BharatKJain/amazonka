@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IVS.Types.BatchError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IVS.Types.BatchError where
@@ -84,7 +84,8 @@ instance Data.FromJSON BatchError where
 
 instance Prelude.Hashable BatchError where
   hashWithSalt _salt BatchError' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 

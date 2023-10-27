@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ELBV2.CreateLoadBalancer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -370,7 +370,9 @@ instance Core.AWSRequest CreateLoadBalancer where
       "CreateLoadBalancerResult"
       ( \s h x ->
           CreateLoadBalancerResponse'
-            Prelude.<$> ( x Data..@? "LoadBalancers" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "LoadBalancers"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -378,7 +380,8 @@ instance Core.AWSRequest CreateLoadBalancer where
 
 instance Prelude.Hashable CreateLoadBalancer where
   hashWithSalt _salt CreateLoadBalancer' {..} =
-    _salt `Prelude.hashWithSalt` customerOwnedIpv4Pool
+    _salt
+      `Prelude.hashWithSalt` customerOwnedIpv4Pool
       `Prelude.hashWithSalt` ipAddressType
       `Prelude.hashWithSalt` scheme
       `Prelude.hashWithSalt` securityGroups

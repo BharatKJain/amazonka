@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.SectionBasedLayoutPaperCanvasSizeOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.SectionBasedLayoutPaperCanvasSizeOptions where
@@ -115,7 +115,8 @@ instance
   hashWithSalt
     _salt
     SectionBasedLayoutPaperCanvasSizeOptions' {..} =
-      _salt `Prelude.hashWithSalt` paperMargin
+      _salt
+        `Prelude.hashWithSalt` paperMargin
         `Prelude.hashWithSalt` paperOrientation
         `Prelude.hashWithSalt` paperSize
 

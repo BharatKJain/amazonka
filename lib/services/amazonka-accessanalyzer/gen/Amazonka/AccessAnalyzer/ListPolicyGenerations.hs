@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AccessAnalyzer.ListPolicyGenerations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,21 +109,21 @@ instance Core.AWSPager ListPolicyGenerations where
     | Core.stop
         ( rs
             Lens.^? listPolicyGenerationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listPolicyGenerationsResponse_policyGenerations
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listPolicyGenerations_nextToken
           Lens..~ rs
           Lens.^? listPolicyGenerationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListPolicyGenerations where
   type
@@ -137,14 +137,16 @@ instance Core.AWSRequest ListPolicyGenerations where
           ListPolicyGenerationsResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "policyGenerations"
+            Prelude.<*> ( x
+                            Data..?> "policyGenerations"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListPolicyGenerations where
   hashWithSalt _salt ListPolicyGenerations' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` principalArn
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.EmailConfigurationType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.EmailConfigurationType where
@@ -351,7 +351,8 @@ instance Data.FromJSON EmailConfigurationType where
 
 instance Prelude.Hashable EmailConfigurationType where
   hashWithSalt _salt EmailConfigurationType' {..} =
-    _salt `Prelude.hashWithSalt` configurationSet
+    _salt
+      `Prelude.hashWithSalt` configurationSet
       `Prelude.hashWithSalt` emailSendingAccount
       `Prelude.hashWithSalt` from
       `Prelude.hashWithSalt` replyToEmailAddress

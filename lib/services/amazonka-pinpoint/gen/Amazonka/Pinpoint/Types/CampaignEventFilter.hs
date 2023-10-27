@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.CampaignEventFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.CampaignEventFilter where
@@ -86,7 +86,8 @@ instance Data.FromJSON CampaignEventFilter where
 
 instance Prelude.Hashable CampaignEventFilter where
   hashWithSalt _salt CampaignEventFilter' {..} =
-    _salt `Prelude.hashWithSalt` filterType
+    _salt
+      `Prelude.hashWithSalt` filterType
       `Prelude.hashWithSalt` dimensions
 
 instance Prelude.NFData CampaignEventFilter where

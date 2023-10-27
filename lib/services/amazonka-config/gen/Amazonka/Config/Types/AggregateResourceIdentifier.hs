@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.AggregateResourceIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.AggregateResourceIdentifier where
@@ -120,7 +120,8 @@ instance Data.FromJSON AggregateResourceIdentifier where
 
 instance Prelude.Hashable AggregateResourceIdentifier where
   hashWithSalt _salt AggregateResourceIdentifier' {..} =
-    _salt `Prelude.hashWithSalt` resourceName
+    _salt
+      `Prelude.hashWithSalt` resourceName
       `Prelude.hashWithSalt` sourceAccountId
       `Prelude.hashWithSalt` sourceRegion
       `Prelude.hashWithSalt` resourceId

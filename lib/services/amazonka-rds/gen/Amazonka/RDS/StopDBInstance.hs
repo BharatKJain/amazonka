@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.StopDBInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,7 +117,8 @@ instance Core.AWSRequest StopDBInstance where
 
 instance Prelude.Hashable StopDBInstance where
   hashWithSalt _salt StopDBInstance' {..} =
-    _salt `Prelude.hashWithSalt` dbSnapshotIdentifier
+    _salt
+      `Prelude.hashWithSalt` dbSnapshotIdentifier
       `Prelude.hashWithSalt` dbInstanceIdentifier
 
 instance Prelude.NFData StopDBInstance where

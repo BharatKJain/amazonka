@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DrS.Types.SourceProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DrS.Types.SourceProperties where
@@ -134,7 +134,8 @@ instance Data.FromJSON SourceProperties where
             Prelude.<*> (x Data..:? "disks" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "identificationHints")
             Prelude.<*> (x Data..:? "lastUpdatedDateTime")
-            Prelude.<*> ( x Data..:? "networkInterfaces"
+            Prelude.<*> ( x
+                            Data..:? "networkInterfaces"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "os")
@@ -144,7 +145,8 @@ instance Data.FromJSON SourceProperties where
 
 instance Prelude.Hashable SourceProperties where
   hashWithSalt _salt SourceProperties' {..} =
-    _salt `Prelude.hashWithSalt` cpus
+    _salt
+      `Prelude.hashWithSalt` cpus
       `Prelude.hashWithSalt` disks
       `Prelude.hashWithSalt` identificationHints
       `Prelude.hashWithSalt` lastUpdatedDateTime

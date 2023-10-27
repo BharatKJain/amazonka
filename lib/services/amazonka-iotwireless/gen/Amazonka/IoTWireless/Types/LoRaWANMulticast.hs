@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.LoRaWANMulticast
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.LoRaWANMulticast where
@@ -64,7 +64,8 @@ loRaWANMulticast_rfRegion = Lens.lens (\LoRaWANMulticast' {rfRegion} -> rfRegion
 
 instance Prelude.Hashable LoRaWANMulticast where
   hashWithSalt _salt LoRaWANMulticast' {..} =
-    _salt `Prelude.hashWithSalt` dlClass
+    _salt
+      `Prelude.hashWithSalt` dlClass
       `Prelude.hashWithSalt` rfRegion
 
 instance Prelude.NFData LoRaWANMulticast where

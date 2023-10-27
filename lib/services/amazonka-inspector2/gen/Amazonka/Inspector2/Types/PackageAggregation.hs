@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.PackageAggregation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.PackageAggregation where
@@ -77,7 +77,8 @@ packageAggregation_sortOrder = Lens.lens (\PackageAggregation' {sortOrder} -> so
 
 instance Prelude.Hashable PackageAggregation where
   hashWithSalt _salt PackageAggregation' {..} =
-    _salt `Prelude.hashWithSalt` packageNames
+    _salt
+      `Prelude.hashWithSalt` packageNames
       `Prelude.hashWithSalt` sortBy
       `Prelude.hashWithSalt` sortOrder
 

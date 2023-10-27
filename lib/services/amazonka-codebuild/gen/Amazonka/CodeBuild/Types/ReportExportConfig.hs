@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.ReportExportConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.ReportExportConfig where
@@ -92,7 +92,8 @@ instance Data.FromJSON ReportExportConfig where
 
 instance Prelude.Hashable ReportExportConfig where
   hashWithSalt _salt ReportExportConfig' {..} =
-    _salt `Prelude.hashWithSalt` exportConfigType
+    _salt
+      `Prelude.hashWithSalt` exportConfigType
       `Prelude.hashWithSalt` s3Destination
 
 instance Prelude.NFData ReportExportConfig where

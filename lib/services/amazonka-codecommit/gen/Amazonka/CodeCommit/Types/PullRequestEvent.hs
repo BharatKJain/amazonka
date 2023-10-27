@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.PullRequestEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.PullRequestEvent where
@@ -198,7 +198,8 @@ instance Data.FromJSON PullRequestEvent where
 
 instance Prelude.Hashable PullRequestEvent where
   hashWithSalt _salt PullRequestEvent' {..} =
-    _salt `Prelude.hashWithSalt` actorArn
+    _salt
+      `Prelude.hashWithSalt` actorArn
       `Prelude.hashWithSalt` approvalRuleEventMetadata
       `Prelude.hashWithSalt` approvalRuleOverriddenEventMetadata
       `Prelude.hashWithSalt` approvalStateChangedEventMetadata

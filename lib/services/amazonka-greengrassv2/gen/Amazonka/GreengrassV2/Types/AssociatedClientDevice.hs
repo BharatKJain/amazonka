@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.AssociatedClientDevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.AssociatedClientDevice where
@@ -79,7 +79,8 @@ instance Data.FromJSON AssociatedClientDevice where
 
 instance Prelude.Hashable AssociatedClientDevice where
   hashWithSalt _salt AssociatedClientDevice' {..} =
-    _salt `Prelude.hashWithSalt` associationTimestamp
+    _salt
+      `Prelude.hashWithSalt` associationTimestamp
       `Prelude.hashWithSalt` thingName
 
 instance Prelude.NFData AssociatedClientDevice where

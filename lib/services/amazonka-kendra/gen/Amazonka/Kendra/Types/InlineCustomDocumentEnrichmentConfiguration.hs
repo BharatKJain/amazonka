@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.InlineCustomDocumentEnrichmentConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.InlineCustomDocumentEnrichmentConfiguration where
@@ -101,8 +101,8 @@ instance
       ( \x ->
           InlineCustomDocumentEnrichmentConfiguration'
             Prelude.<$> (x Data..:? "Condition")
-              Prelude.<*> (x Data..:? "DocumentContentDeletion")
-              Prelude.<*> (x Data..:? "Target")
+            Prelude.<*> (x Data..:? "DocumentContentDeletion")
+            Prelude.<*> (x Data..:? "Target")
       )
 
 instance
@@ -112,7 +112,8 @@ instance
   hashWithSalt
     _salt
     InlineCustomDocumentEnrichmentConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` condition
+      _salt
+        `Prelude.hashWithSalt` condition
         `Prelude.hashWithSalt` documentContentDeletion
         `Prelude.hashWithSalt` target
 

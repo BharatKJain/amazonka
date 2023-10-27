@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MachineLearning.Types.Prediction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MachineLearning.Types.Prediction where
@@ -99,7 +99,8 @@ instance Data.FromJSON Prediction where
           Prediction'
             Prelude.<$> (x Data..:? "details" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "predictedLabel")
-            Prelude.<*> ( x Data..:? "predictedScores"
+            Prelude.<*> ( x
+                            Data..:? "predictedScores"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "predictedValue")
@@ -107,7 +108,8 @@ instance Data.FromJSON Prediction where
 
 instance Prelude.Hashable Prediction where
   hashWithSalt _salt Prediction' {..} =
-    _salt `Prelude.hashWithSalt` details
+    _salt
+      `Prelude.hashWithSalt` details
       `Prelude.hashWithSalt` predictedLabel
       `Prelude.hashWithSalt` predictedScores
       `Prelude.hashWithSalt` predictedValue

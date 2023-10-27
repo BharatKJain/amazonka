@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.ShrinkPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.ShrinkPolicy where
@@ -83,7 +83,8 @@ instance Data.FromJSON ShrinkPolicy where
 
 instance Prelude.Hashable ShrinkPolicy where
   hashWithSalt _salt ShrinkPolicy' {..} =
-    _salt `Prelude.hashWithSalt` decommissionTimeout
+    _salt
+      `Prelude.hashWithSalt` decommissionTimeout
       `Prelude.hashWithSalt` instanceResizePolicy
 
 instance Prelude.NFData ShrinkPolicy where

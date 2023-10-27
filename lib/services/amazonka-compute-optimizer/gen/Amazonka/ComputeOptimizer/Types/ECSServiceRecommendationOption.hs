@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.ECSServiceRecommendationOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.ECSServiceRecommendationOption where
@@ -105,12 +105,14 @@ instance Data.FromJSON ECSServiceRecommendationOption where
       "ECSServiceRecommendationOption"
       ( \x ->
           ECSServiceRecommendationOption'
-            Prelude.<$> ( x Data..:? "containerRecommendations"
+            Prelude.<$> ( x
+                            Data..:? "containerRecommendations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "cpu")
             Prelude.<*> (x Data..:? "memory")
-            Prelude.<*> ( x Data..:? "projectedUtilizationMetrics"
+            Prelude.<*> ( x
+                            Data..:? "projectedUtilizationMetrics"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "savingsOpportunity")

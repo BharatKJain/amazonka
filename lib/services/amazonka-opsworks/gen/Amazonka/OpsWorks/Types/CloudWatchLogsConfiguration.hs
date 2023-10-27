@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.CloudWatchLogsConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.CloudWatchLogsConfiguration where
@@ -76,7 +76,8 @@ instance Data.FromJSON CloudWatchLogsConfiguration where
 
 instance Prelude.Hashable CloudWatchLogsConfiguration where
   hashWithSalt _salt CloudWatchLogsConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` logStreams
 
 instance Prelude.NFData CloudWatchLogsConfiguration where

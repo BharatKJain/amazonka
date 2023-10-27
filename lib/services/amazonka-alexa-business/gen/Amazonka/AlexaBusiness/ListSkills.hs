@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AlexaBusiness.ListSkills
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,21 +136,23 @@ instance Core.AWSPager ListSkills where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listSkillsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listSkillsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listSkillsResponse_skillSummaries
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSkills_nextToken
           Lens..~ rs
-          Lens.^? listSkillsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listSkillsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListSkills where
   type AWSResponse ListSkills = ListSkillsResponse
@@ -167,7 +169,8 @@ instance Core.AWSRequest ListSkills where
 
 instance Prelude.Hashable ListSkills where
   hashWithSalt _salt ListSkills' {..} =
-    _salt `Prelude.hashWithSalt` enablementType
+    _salt
+      `Prelude.hashWithSalt` enablementType
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` skillGroupArn

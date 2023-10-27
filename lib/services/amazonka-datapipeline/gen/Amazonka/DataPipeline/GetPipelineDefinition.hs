@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataPipeline.GetPipelineDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,13 +108,16 @@ instance Core.AWSRequest GetPipelineDefinition where
     Response.receiveJSON
       ( \s h x ->
           GetPipelineDefinitionResponse'
-            Prelude.<$> ( x Data..?> "parameterObjects"
+            Prelude.<$> ( x
+                            Data..?> "parameterObjects"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "parameterValues"
+            Prelude.<*> ( x
+                            Data..?> "parameterValues"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "pipelineObjects"
+            Prelude.<*> ( x
+                            Data..?> "pipelineObjects"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -122,7 +125,8 @@ instance Core.AWSRequest GetPipelineDefinition where
 
 instance Prelude.Hashable GetPipelineDefinition where
   hashWithSalt _salt GetPipelineDefinition' {..} =
-    _salt `Prelude.hashWithSalt` version
+    _salt
+      `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` pipelineId
 
 instance Prelude.NFData GetPipelineDefinition where

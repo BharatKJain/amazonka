@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ManagedBlockChain.GetNode
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest GetNode where
 
 instance Prelude.Hashable GetNode where
   hashWithSalt _salt GetNode' {..} =
-    _salt `Prelude.hashWithSalt` memberId
+    _salt
+      `Prelude.hashWithSalt` memberId
       `Prelude.hashWithSalt` networkId
       `Prelude.hashWithSalt` nodeId
 

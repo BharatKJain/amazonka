@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.VocabularyInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.VocabularyInfo where
@@ -137,7 +137,8 @@ instance Data.FromJSON VocabularyInfo where
 
 instance Prelude.Hashable VocabularyInfo where
   hashWithSalt _salt VocabularyInfo' {..} =
-    _salt `Prelude.hashWithSalt` languageCode
+    _salt
+      `Prelude.hashWithSalt` languageCode
       `Prelude.hashWithSalt` lastModifiedTime
       `Prelude.hashWithSalt` vocabularyName
       `Prelude.hashWithSalt` vocabularyState

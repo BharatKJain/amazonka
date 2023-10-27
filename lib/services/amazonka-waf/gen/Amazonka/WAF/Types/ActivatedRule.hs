@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.ActivatedRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.ActivatedRule where
@@ -386,7 +386,8 @@ instance Data.FromJSON ActivatedRule where
 
 instance Prelude.Hashable ActivatedRule where
   hashWithSalt _salt ActivatedRule' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` excludedRules
       `Prelude.hashWithSalt` overrideAction
       `Prelude.hashWithSalt` type'

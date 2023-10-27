@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.Group
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.Group where
@@ -66,7 +66,8 @@ group_value = Lens.lens (\Group' {value} -> value) (\s@Group' {} a -> s {value =
 
 instance Prelude.Hashable Group where
   hashWithSalt _salt Group' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData Group where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCases.Types.FieldOptionError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCases.Types.FieldOptionError where
@@ -90,7 +90,8 @@ instance Data.FromJSON FieldOptionError where
 
 instance Prelude.Hashable FieldOptionError where
   hashWithSalt _salt FieldOptionError' {..} =
-    _salt `Prelude.hashWithSalt` errorCode
+    _salt
+      `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` value
 

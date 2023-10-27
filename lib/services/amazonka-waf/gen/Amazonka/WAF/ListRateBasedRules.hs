@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAF.ListRateBasedRules
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,22 +125,22 @@ instance Core.AWSPager ListRateBasedRules where
     | Core.stop
         ( rs
             Lens.^? listRateBasedRulesResponse_nextMarker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listRateBasedRulesResponse_rules
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listRateBasedRules_nextMarker
           Lens..~ rs
           Lens.^? listRateBasedRulesResponse_nextMarker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListRateBasedRules where
   type
@@ -159,7 +159,8 @@ instance Core.AWSRequest ListRateBasedRules where
 
 instance Prelude.Hashable ListRateBasedRules where
   hashWithSalt _salt ListRateBasedRules' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextMarker
 
 instance Prelude.NFData ListRateBasedRules where

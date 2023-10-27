@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ApiGatewayV2.ReimportApi
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -172,7 +172,8 @@ instance Core.AWSRequest ReimportApi where
 
 instance Prelude.Hashable ReimportApi where
   hashWithSalt _salt ReimportApi' {..} =
-    _salt `Prelude.hashWithSalt` basepath
+    _salt
+      `Prelude.hashWithSalt` basepath
       `Prelude.hashWithSalt` failOnWarnings
       `Prelude.hashWithSalt` apiId
       `Prelude.hashWithSalt` body

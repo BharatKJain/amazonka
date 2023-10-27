@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.BulkDeploymentMetrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.BulkDeploymentMetrics where
@@ -109,7 +109,8 @@ instance Data.FromJSON BulkDeploymentMetrics where
 
 instance Prelude.Hashable BulkDeploymentMetrics where
   hashWithSalt _salt BulkDeploymentMetrics' {..} =
-    _salt `Prelude.hashWithSalt` invalidInputRecords
+    _salt
+      `Prelude.hashWithSalt` invalidInputRecords
       `Prelude.hashWithSalt` recordsProcessed
       `Prelude.hashWithSalt` retryAttempts
 

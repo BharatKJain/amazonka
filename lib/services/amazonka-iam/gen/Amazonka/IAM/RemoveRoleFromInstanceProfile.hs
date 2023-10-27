@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.RemoveRoleFromInstanceProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -145,7 +145,8 @@ instance
     RemoveRoleFromInstanceProfile
   where
   hashWithSalt _salt RemoveRoleFromInstanceProfile' {..} =
-    _salt `Prelude.hashWithSalt` instanceProfileName
+    _salt
+      `Prelude.hashWithSalt` instanceProfileName
       `Prelude.hashWithSalt` roleName
 
 instance Prelude.NFData RemoveRoleFromInstanceProfile where

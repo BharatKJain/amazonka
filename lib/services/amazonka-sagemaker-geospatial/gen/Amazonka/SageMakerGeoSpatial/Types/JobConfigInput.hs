@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.JobConfigInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.JobConfigInput where
@@ -110,7 +110,6 @@ newJobConfigInput =
       zonalStatisticsConfig = Prelude.Nothing
     }
 
--- |
 jobConfigInput_bandMathConfig :: Lens.Lens' JobConfigInput (Prelude.Maybe BandMathConfigInput)
 jobConfigInput_bandMathConfig = Lens.lens (\JobConfigInput' {bandMathConfig} -> bandMathConfig) (\s@JobConfigInput' {} a -> s {bandMathConfig = a} :: JobConfigInput)
 
@@ -139,7 +138,6 @@ jobConfigInput_landCoverSegmentationConfig = Lens.lens (\JobConfigInput' {landCo
 jobConfigInput_resamplingConfig :: Lens.Lens' JobConfigInput (Prelude.Maybe ResamplingConfigInput)
 jobConfigInput_resamplingConfig = Lens.lens (\JobConfigInput' {resamplingConfig} -> resamplingConfig) (\s@JobConfigInput' {} a -> s {resamplingConfig = a} :: JobConfigInput)
 
--- |
 jobConfigInput_stackConfig :: Lens.Lens' JobConfigInput (Prelude.Maybe StackConfigInput)
 jobConfigInput_stackConfig = Lens.lens (\JobConfigInput' {stackConfig} -> stackConfig) (\s@JobConfigInput' {} a -> s {stackConfig = a} :: JobConfigInput)
 
@@ -172,7 +170,8 @@ instance Data.FromJSON JobConfigInput where
 
 instance Prelude.Hashable JobConfigInput where
   hashWithSalt _salt JobConfigInput' {..} =
-    _salt `Prelude.hashWithSalt` bandMathConfig
+    _salt
+      `Prelude.hashWithSalt` bandMathConfig
       `Prelude.hashWithSalt` cloudMaskingConfig
       `Prelude.hashWithSalt` cloudRemovalConfig
       `Prelude.hashWithSalt` geoMosaicConfig

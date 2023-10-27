@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.ConfigurationInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.ConfigurationInfo where
@@ -72,12 +72,14 @@ instance Data.FromJSON ConfigurationInfo where
       "ConfigurationInfo"
       ( \x ->
           ConfigurationInfo'
-            Prelude.<$> (x Data..: "revision") Prelude.<*> (x Data..: "arn")
+            Prelude.<$> (x Data..: "revision")
+            Prelude.<*> (x Data..: "arn")
       )
 
 instance Prelude.Hashable ConfigurationInfo where
   hashWithSalt _salt ConfigurationInfo' {..} =
-    _salt `Prelude.hashWithSalt` revision
+    _salt
+      `Prelude.hashWithSalt` revision
       `Prelude.hashWithSalt` arn
 
 instance Prelude.NFData ConfigurationInfo where

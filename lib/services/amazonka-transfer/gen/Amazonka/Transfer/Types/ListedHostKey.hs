@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.ListedHostKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.ListedHostKey where
@@ -155,7 +155,8 @@ instance Data.FromJSON ListedHostKey where
 
 instance Prelude.Hashable ListedHostKey where
   hashWithSalt _salt ListedHostKey' {..} =
-    _salt `Prelude.hashWithSalt` dateImported
+    _salt
+      `Prelude.hashWithSalt` dateImported
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` fingerprint
       `Prelude.hashWithSalt` hostKeyId

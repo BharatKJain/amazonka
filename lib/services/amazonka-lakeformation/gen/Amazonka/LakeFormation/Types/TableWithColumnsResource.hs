@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.TableWithColumnsResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.TableWithColumnsResource where
@@ -138,7 +138,8 @@ instance Data.FromJSON TableWithColumnsResource where
 
 instance Prelude.Hashable TableWithColumnsResource where
   hashWithSalt _salt TableWithColumnsResource' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` columnNames
       `Prelude.hashWithSalt` columnWildcard
       `Prelude.hashWithSalt` databaseName

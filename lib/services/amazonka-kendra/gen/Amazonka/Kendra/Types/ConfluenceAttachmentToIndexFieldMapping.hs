@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.ConfluenceAttachmentToIndexFieldMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.ConfluenceAttachmentToIndexFieldMapping where
@@ -114,7 +114,8 @@ instance
   hashWithSalt
     _salt
     ConfluenceAttachmentToIndexFieldMapping' {..} =
-      _salt `Prelude.hashWithSalt` dataSourceFieldName
+      _salt
+        `Prelude.hashWithSalt` dataSourceFieldName
         `Prelude.hashWithSalt` dateFieldFormat
         `Prelude.hashWithSalt` indexFieldName
 

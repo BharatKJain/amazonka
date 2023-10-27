@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DocDbElastic.ListClusterSnapshots
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,22 +103,22 @@ instance Core.AWSPager ListClusterSnapshots where
     | Core.stop
         ( rs
             Lens.^? listClusterSnapshotsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listClusterSnapshotsResponse_snapshots
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listClusterSnapshots_nextToken
           Lens..~ rs
           Lens.^? listClusterSnapshotsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListClusterSnapshots where
   type
@@ -137,7 +137,8 @@ instance Core.AWSRequest ListClusterSnapshots where
 
 instance Prelude.Hashable ListClusterSnapshots where
   hashWithSalt _salt ListClusterSnapshots' {..} =
-    _salt `Prelude.hashWithSalt` clusterArn
+    _salt
+      `Prelude.hashWithSalt` clusterArn
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDSData.Types.ArrayValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDSData.Types.ArrayValue where
@@ -104,7 +104,8 @@ instance Data.FromJSON ArrayValue where
 
 instance Prelude.Hashable ArrayValue where
   hashWithSalt _salt ArrayValue' {..} =
-    _salt `Prelude.hashWithSalt` arrayValues
+    _salt
+      `Prelude.hashWithSalt` arrayValues
       `Prelude.hashWithSalt` booleanValues
       `Prelude.hashWithSalt` doubleValues
       `Prelude.hashWithSalt` longValues

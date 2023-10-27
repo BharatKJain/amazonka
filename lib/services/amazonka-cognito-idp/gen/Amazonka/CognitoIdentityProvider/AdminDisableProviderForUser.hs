@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.AdminDisableProviderForUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,7 +136,8 @@ instance Core.AWSRequest AdminDisableProviderForUser where
 
 instance Prelude.Hashable AdminDisableProviderForUser where
   hashWithSalt _salt AdminDisableProviderForUser' {..} =
-    _salt `Prelude.hashWithSalt` userPoolId
+    _salt
+      `Prelude.hashWithSalt` userPoolId
       `Prelude.hashWithSalt` user
 
 instance Prelude.NFData AdminDisableProviderForUser where

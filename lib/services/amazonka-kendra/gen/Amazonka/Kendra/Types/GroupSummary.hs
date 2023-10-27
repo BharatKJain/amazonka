@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.GroupSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.GroupSummary where
@@ -74,7 +74,8 @@ instance Data.FromJSON GroupSummary where
 
 instance Prelude.Hashable GroupSummary where
   hashWithSalt _salt GroupSummary' {..} =
-    _salt `Prelude.hashWithSalt` groupId
+    _salt
+      `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` orderingId
 
 instance Prelude.NFData GroupSummary where

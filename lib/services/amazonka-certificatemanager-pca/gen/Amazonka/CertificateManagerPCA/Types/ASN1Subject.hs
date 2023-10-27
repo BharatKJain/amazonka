@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.ASN1Subject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.ASN1Subject where
@@ -276,7 +276,8 @@ instance Data.FromJSON ASN1Subject where
 
 instance Prelude.Hashable ASN1Subject where
   hashWithSalt _salt ASN1Subject' {..} =
-    _salt `Prelude.hashWithSalt` commonName
+    _salt
+      `Prelude.hashWithSalt` commonName
       `Prelude.hashWithSalt` country
       `Prelude.hashWithSalt` customAttributes
       `Prelude.hashWithSalt` distinguishedNameQualifier

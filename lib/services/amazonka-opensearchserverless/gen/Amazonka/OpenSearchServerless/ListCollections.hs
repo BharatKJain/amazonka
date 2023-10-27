@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpenSearchServerless.ListCollections
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest ListCollections where
     Response.receiveJSON
       ( \s h x ->
           ListCollectionsResponse'
-            Prelude.<$> ( x Data..?> "collectionSummaries"
+            Prelude.<$> ( x
+                            Data..?> "collectionSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -128,7 +129,8 @@ instance Core.AWSRequest ListCollections where
 
 instance Prelude.Hashable ListCollections where
   hashWithSalt _salt ListCollections' {..} =
-    _salt `Prelude.hashWithSalt` collectionFilters
+    _salt
+      `Prelude.hashWithSalt` collectionFilters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

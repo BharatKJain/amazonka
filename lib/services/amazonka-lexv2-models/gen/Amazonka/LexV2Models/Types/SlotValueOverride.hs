@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.SlotValueOverride
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.SlotValueOverride where
@@ -99,7 +99,8 @@ instance Data.FromJSON SlotValueOverride where
 
 instance Prelude.Hashable SlotValueOverride where
   hashWithSalt _salt SlotValueOverride' {..} =
-    _salt `Prelude.hashWithSalt` shape
+    _salt
+      `Prelude.hashWithSalt` shape
       `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` values
 

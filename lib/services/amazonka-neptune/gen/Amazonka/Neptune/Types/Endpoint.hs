@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Neptune.Types.Endpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Neptune.Types.Endpoint where
@@ -86,7 +86,8 @@ instance Data.FromXML Endpoint where
 
 instance Prelude.Hashable Endpoint where
   hashWithSalt _salt Endpoint' {..} =
-    _salt `Prelude.hashWithSalt` address
+    _salt
+      `Prelude.hashWithSalt` address
       `Prelude.hashWithSalt` hostedZoneId
       `Prelude.hashWithSalt` port
 

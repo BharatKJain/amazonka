@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IVS.Types.VideoConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IVS.Types.VideoConfiguration where
@@ -148,7 +148,8 @@ instance Data.FromJSON VideoConfiguration where
 
 instance Prelude.Hashable VideoConfiguration where
   hashWithSalt _salt VideoConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` avcLevel
+    _salt
+      `Prelude.hashWithSalt` avcLevel
       `Prelude.hashWithSalt` avcProfile
       `Prelude.hashWithSalt` codec
       `Prelude.hashWithSalt` encoder

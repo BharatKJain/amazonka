@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SimSpaceWeaver.Types.LaunchOverrides
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SimSpaceWeaver.Types.LaunchOverrides where
@@ -61,7 +61,8 @@ instance Data.FromJSON LaunchOverrides where
       "LaunchOverrides"
       ( \x ->
           LaunchOverrides'
-            Prelude.<$> ( x Data..:? "LaunchCommands"
+            Prelude.<$> ( x
+                            Data..:? "LaunchCommands"
                             Data..!= Prelude.mempty
                         )
       )

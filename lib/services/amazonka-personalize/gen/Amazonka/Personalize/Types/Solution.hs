@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.Solution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.Solution where
@@ -230,7 +230,8 @@ instance Data.FromJSON Solution where
 
 instance Prelude.Hashable Solution where
   hashWithSalt _salt Solution' {..} =
-    _salt `Prelude.hashWithSalt` autoMLResult
+    _salt
+      `Prelude.hashWithSalt` autoMLResult
       `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` datasetGroupArn
       `Prelude.hashWithSalt` eventType

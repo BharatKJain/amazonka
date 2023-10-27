@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.AlarmStateInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.AlarmStateInformation where
@@ -73,12 +73,14 @@ instance Data.FromJSON AlarmStateInformation where
       "AlarmStateInformation"
       ( \x ->
           AlarmStateInformation'
-            Prelude.<$> (x Data..: "Name") Prelude.<*> (x Data..: "State")
+            Prelude.<$> (x Data..: "Name")
+            Prelude.<*> (x Data..: "State")
       )
 
 instance Prelude.Hashable AlarmStateInformation where
   hashWithSalt _salt AlarmStateInformation' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` state
 
 instance Prelude.NFData AlarmStateInformation where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatchEvents.DescribeRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,8 @@ instance Core.AWSRequest DescribeRule where
 
 instance Prelude.Hashable DescribeRule where
   hashWithSalt _salt DescribeRule' {..} =
-    _salt `Prelude.hashWithSalt` eventBusName
+    _salt
+      `Prelude.hashWithSalt` eventBusName
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData DescribeRule where

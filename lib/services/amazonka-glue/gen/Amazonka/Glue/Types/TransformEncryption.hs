@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.TransformEncryption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.TransformEncryption where
@@ -84,7 +84,8 @@ instance Data.FromJSON TransformEncryption where
 
 instance Prelude.Hashable TransformEncryption where
   hashWithSalt _salt TransformEncryption' {..} =
-    _salt `Prelude.hashWithSalt` mlUserDataEncryption
+    _salt
+      `Prelude.hashWithSalt` mlUserDataEncryption
       `Prelude.hashWithSalt` taskRunSecurityConfigurationName
 
 instance Prelude.NFData TransformEncryption where

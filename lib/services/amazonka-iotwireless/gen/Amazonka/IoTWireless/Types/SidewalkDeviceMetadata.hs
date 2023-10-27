@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.SidewalkDeviceMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.SidewalkDeviceMetadata where
@@ -98,7 +98,8 @@ instance Data.FromJSON SidewalkDeviceMetadata where
 
 instance Prelude.Hashable SidewalkDeviceMetadata where
   hashWithSalt _salt SidewalkDeviceMetadata' {..} =
-    _salt `Prelude.hashWithSalt` batteryLevel
+    _salt
+      `Prelude.hashWithSalt` batteryLevel
       `Prelude.hashWithSalt` deviceState
       `Prelude.hashWithSalt` event
       `Prelude.hashWithSalt` rssi

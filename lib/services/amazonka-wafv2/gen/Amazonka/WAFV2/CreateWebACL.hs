@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFV2.CreateWebACL
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -355,7 +355,8 @@ instance Core.AWSRequest CreateWebACL where
 
 instance Prelude.Hashable CreateWebACL where
   hashWithSalt _salt CreateWebACL' {..} =
-    _salt `Prelude.hashWithSalt` captchaConfig
+    _salt
+      `Prelude.hashWithSalt` captchaConfig
       `Prelude.hashWithSalt` challengeConfig
       `Prelude.hashWithSalt` customResponseBodies
       `Prelude.hashWithSalt` description

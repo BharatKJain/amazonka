@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AMP.DeleteLoggingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,7 +100,8 @@ instance Core.AWSRequest DeleteLoggingConfiguration where
 
 instance Prelude.Hashable DeleteLoggingConfiguration where
   hashWithSalt _salt DeleteLoggingConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` workspaceId
 
 instance Prelude.NFData DeleteLoggingConfiguration where

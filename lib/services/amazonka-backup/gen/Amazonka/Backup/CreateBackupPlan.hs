@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Backup.CreateBackupPlan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -142,7 +142,8 @@ instance Core.AWSRequest CreateBackupPlan where
     Response.receiveJSON
       ( \s h x ->
           CreateBackupPlanResponse'
-            Prelude.<$> ( x Data..?> "AdvancedBackupSettings"
+            Prelude.<$> ( x
+                            Data..?> "AdvancedBackupSettings"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "BackupPlanArn")
@@ -154,7 +155,8 @@ instance Core.AWSRequest CreateBackupPlan where
 
 instance Prelude.Hashable CreateBackupPlan where
   hashWithSalt _salt CreateBackupPlan' {..} =
-    _salt `Prelude.hashWithSalt` backupPlanTags
+    _salt
+      `Prelude.hashWithSalt` backupPlanTags
       `Prelude.hashWithSalt` creatorRequestId
       `Prelude.hashWithSalt` backupPlan
 

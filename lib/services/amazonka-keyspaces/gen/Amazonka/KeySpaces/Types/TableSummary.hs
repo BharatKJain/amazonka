@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KeySpaces.Types.TableSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KeySpaces.Types.TableSummary where
@@ -98,7 +98,8 @@ instance Data.FromJSON TableSummary where
 
 instance Prelude.Hashable TableSummary where
   hashWithSalt _salt TableSummary' {..} =
-    _salt `Prelude.hashWithSalt` keyspaceName
+    _salt
+      `Prelude.hashWithSalt` keyspaceName
       `Prelude.hashWithSalt` tableName
       `Prelude.hashWithSalt` resourceArn
 

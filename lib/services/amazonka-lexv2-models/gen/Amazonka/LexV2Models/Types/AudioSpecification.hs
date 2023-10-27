@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.AudioSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.AudioSpecification where
@@ -84,7 +84,8 @@ instance Data.FromJSON AudioSpecification where
 
 instance Prelude.Hashable AudioSpecification where
   hashWithSalt _salt AudioSpecification' {..} =
-    _salt `Prelude.hashWithSalt` maxLengthMs
+    _salt
+      `Prelude.hashWithSalt` maxLengthMs
       `Prelude.hashWithSalt` endTimeoutMs
 
 instance Prelude.NFData AudioSpecification where

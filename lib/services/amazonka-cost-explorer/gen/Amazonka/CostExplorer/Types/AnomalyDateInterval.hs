@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.AnomalyDateInterval
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.AnomalyDateInterval where
@@ -66,7 +66,8 @@ anomalyDateInterval_startDate = Lens.lens (\AnomalyDateInterval' {startDate} -> 
 
 instance Prelude.Hashable AnomalyDateInterval where
   hashWithSalt _salt AnomalyDateInterval' {..} =
-    _salt `Prelude.hashWithSalt` endDate
+    _salt
+      `Prelude.hashWithSalt` endDate
       `Prelude.hashWithSalt` startDate
 
 instance Prelude.NFData AnomalyDateInterval where

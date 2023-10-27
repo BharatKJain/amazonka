@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.Activation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.Activation where
@@ -168,7 +168,8 @@ instance Data.FromJSON Activation where
 
 instance Prelude.Hashable Activation where
   hashWithSalt _salt Activation' {..} =
-    _salt `Prelude.hashWithSalt` activationId
+    _salt
+      `Prelude.hashWithSalt` activationId
       `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` defaultInstanceName
       `Prelude.hashWithSalt` description

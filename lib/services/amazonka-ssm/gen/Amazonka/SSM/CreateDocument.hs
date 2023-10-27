@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.CreateDocument
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -354,7 +354,8 @@ instance Core.AWSRequest CreateDocument where
 
 instance Prelude.Hashable CreateDocument where
   hashWithSalt _salt CreateDocument' {..} =
-    _salt `Prelude.hashWithSalt` attachments
+    _salt
+      `Prelude.hashWithSalt` attachments
       `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` documentFormat
       `Prelude.hashWithSalt` documentType

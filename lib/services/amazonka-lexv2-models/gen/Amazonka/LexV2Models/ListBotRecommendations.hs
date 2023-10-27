@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexV2Models.ListBotRecommendations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -160,7 +160,8 @@ instance Core.AWSRequest ListBotRecommendations where
       ( \s h x ->
           ListBotRecommendationsResponse'
             Prelude.<$> (x Data..?> "botId")
-            Prelude.<*> ( x Data..?> "botRecommendationSummaries"
+            Prelude.<*> ( x
+                            Data..?> "botRecommendationSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "botVersion")
@@ -171,7 +172,8 @@ instance Core.AWSRequest ListBotRecommendations where
 
 instance Prelude.Hashable ListBotRecommendations where
   hashWithSalt _salt ListBotRecommendations' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` botId
       `Prelude.hashWithSalt` botVersion

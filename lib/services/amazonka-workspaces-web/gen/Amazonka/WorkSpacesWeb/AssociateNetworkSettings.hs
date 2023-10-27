@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.AssociateNetworkSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest AssociateNetworkSettings where
 
 instance Prelude.Hashable AssociateNetworkSettings where
   hashWithSalt _salt AssociateNetworkSettings' {..} =
-    _salt `Prelude.hashWithSalt` networkSettingsArn
+    _salt
+      `Prelude.hashWithSalt` networkSettingsArn
       `Prelude.hashWithSalt` portalArn
 
 instance Prelude.NFData AssociateNetworkSettings where

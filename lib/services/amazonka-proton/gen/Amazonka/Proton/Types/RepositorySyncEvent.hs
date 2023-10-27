@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Proton.Types.RepositorySyncEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Proton.Types.RepositorySyncEvent where
@@ -100,7 +100,8 @@ instance Data.FromJSON RepositorySyncEvent where
 
 instance Prelude.Hashable RepositorySyncEvent where
   hashWithSalt _salt RepositorySyncEvent' {..} =
-    _salt `Prelude.hashWithSalt` externalId
+    _salt
+      `Prelude.hashWithSalt` externalId
       `Prelude.hashWithSalt` event
       `Prelude.hashWithSalt` time
       `Prelude.hashWithSalt` type'

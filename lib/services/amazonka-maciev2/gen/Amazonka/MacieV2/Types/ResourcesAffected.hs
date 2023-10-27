@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.ResourcesAffected
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.ResourcesAffected where
@@ -76,7 +76,8 @@ instance Data.FromJSON ResourcesAffected where
 
 instance Prelude.Hashable ResourcesAffected where
   hashWithSalt _salt ResourcesAffected' {..} =
-    _salt `Prelude.hashWithSalt` s3Bucket
+    _salt
+      `Prelude.hashWithSalt` s3Bucket
       `Prelude.hashWithSalt` s3Object
 
 instance Prelude.NFData ResourcesAffected where

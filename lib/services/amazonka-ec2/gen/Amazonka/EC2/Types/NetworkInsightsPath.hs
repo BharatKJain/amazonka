@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.NetworkInsightsPath
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.NetworkInsightsPath where
@@ -175,13 +175,16 @@ instance Data.FromXML NetworkInsightsPath where
       Prelude.<*> (x Data..@? "source")
       Prelude.<*> (x Data..@? "sourceArn")
       Prelude.<*> (x Data..@? "sourceIp")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable NetworkInsightsPath where
   hashWithSalt _salt NetworkInsightsPath' {..} =
-    _salt `Prelude.hashWithSalt` createdDate
+    _salt
+      `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` destinationArn
       `Prelude.hashWithSalt` destinationIp

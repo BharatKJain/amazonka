@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.SecurityGroupRuleRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.SecurityGroupRuleRequest where
@@ -165,7 +165,8 @@ securityGroupRuleRequest_toPort = Lens.lens (\SecurityGroupRuleRequest' {toPort}
 
 instance Prelude.Hashable SecurityGroupRuleRequest where
   hashWithSalt _salt SecurityGroupRuleRequest' {..} =
-    _salt `Prelude.hashWithSalt` cidrIpv4
+    _salt
+      `Prelude.hashWithSalt` cidrIpv4
       `Prelude.hashWithSalt` cidrIpv6
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` fromPort

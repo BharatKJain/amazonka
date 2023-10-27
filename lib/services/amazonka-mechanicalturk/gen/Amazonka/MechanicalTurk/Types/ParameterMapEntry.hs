@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MechanicalTurk.Types.ParameterMapEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MechanicalTurk.Types.ParameterMapEntry where
@@ -87,7 +87,8 @@ instance Data.FromJSON ParameterMapEntry where
 
 instance Prelude.Hashable ParameterMapEntry where
   hashWithSalt _salt ParameterMapEntry' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData ParameterMapEntry where

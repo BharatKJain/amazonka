@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionPlacementConstraintsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionPlacementConstraintsDetails where
@@ -73,7 +73,7 @@ instance
       ( \x ->
           AwsEcsTaskDefinitionPlacementConstraintsDetails'
             Prelude.<$> (x Data..:? "Expression")
-              Prelude.<*> (x Data..:? "Type")
+            Prelude.<*> (x Data..:? "Type")
       )
 
 instance
@@ -83,7 +83,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsTaskDefinitionPlacementConstraintsDetails' {..} =
-      _salt `Prelude.hashWithSalt` expression
+      _salt
+        `Prelude.hashWithSalt` expression
         `Prelude.hashWithSalt` type'
 
 instance

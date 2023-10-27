@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.UpdatePatchBaseline
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -302,7 +302,8 @@ instance Core.AWSRequest UpdatePatchBaseline where
       ( \s h x ->
           UpdatePatchBaselineResponse'
             Prelude.<$> (x Data..?> "ApprovalRules")
-            Prelude.<*> ( x Data..?> "ApprovedPatches"
+            Prelude.<*> ( x
+                            Data..?> "ApprovedPatches"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "ApprovedPatchesComplianceLevel")
@@ -314,7 +315,8 @@ instance Core.AWSRequest UpdatePatchBaseline where
             Prelude.<*> (x Data..?> "ModifiedDate")
             Prelude.<*> (x Data..?> "Name")
             Prelude.<*> (x Data..?> "OperatingSystem")
-            Prelude.<*> ( x Data..?> "RejectedPatches"
+            Prelude.<*> ( x
+                            Data..?> "RejectedPatches"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "RejectedPatchesAction")
@@ -324,7 +326,8 @@ instance Core.AWSRequest UpdatePatchBaseline where
 
 instance Prelude.Hashable UpdatePatchBaseline where
   hashWithSalt _salt UpdatePatchBaseline' {..} =
-    _salt `Prelude.hashWithSalt` approvalRules
+    _salt
+      `Prelude.hashWithSalt` approvalRules
       `Prelude.hashWithSalt` approvedPatches
       `Prelude.hashWithSalt` approvedPatchesComplianceLevel
       `Prelude.hashWithSalt` approvedPatchesEnableNonSecurity

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Amplify.Types.CustomRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Amplify.Types.CustomRule where
@@ -149,7 +149,8 @@ instance Data.FromJSON CustomRule where
 
 instance Prelude.Hashable CustomRule where
   hashWithSalt _salt CustomRule' {..} =
-    _salt `Prelude.hashWithSalt` condition
+    _salt
+      `Prelude.hashWithSalt` condition
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` source
       `Prelude.hashWithSalt` target

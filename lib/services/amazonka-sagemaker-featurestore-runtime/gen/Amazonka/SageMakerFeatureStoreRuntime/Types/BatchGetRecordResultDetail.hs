@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerFeatureStoreRuntime.Types.BatchGetRecordResultDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerFeatureStoreRuntime.Types.BatchGetRecordResultDetail where
@@ -96,7 +96,8 @@ instance Data.FromJSON BatchGetRecordResultDetail where
 
 instance Prelude.Hashable BatchGetRecordResultDetail where
   hashWithSalt _salt BatchGetRecordResultDetail' {..} =
-    _salt `Prelude.hashWithSalt` featureGroupName
+    _salt
+      `Prelude.hashWithSalt` featureGroupName
       `Prelude.hashWithSalt` recordIdentifierValueAsString
       `Prelude.hashWithSalt` record
 

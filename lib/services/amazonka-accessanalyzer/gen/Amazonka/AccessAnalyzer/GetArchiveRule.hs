@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AccessAnalyzer.GetArchiveRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest GetArchiveRule where
 
 instance Prelude.Hashable GetArchiveRule where
   hashWithSalt _salt GetArchiveRule' {..} =
-    _salt `Prelude.hashWithSalt` analyzerName
+    _salt
+      `Prelude.hashWithSalt` analyzerName
       `Prelude.hashWithSalt` ruleName
 
 instance Prelude.NFData GetArchiveRule where

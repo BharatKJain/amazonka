@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ManagedBlockChain.Types.NodeConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ManagedBlockChain.Types.NodeConfiguration where
@@ -105,7 +105,8 @@ nodeConfiguration_instanceType = Lens.lens (\NodeConfiguration' {instanceType} -
 
 instance Prelude.Hashable NodeConfiguration where
   hashWithSalt _salt NodeConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZone
+    _salt
+      `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` logPublishingConfiguration
       `Prelude.hashWithSalt` stateDB
       `Prelude.hashWithSalt` instanceType

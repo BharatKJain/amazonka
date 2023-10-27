@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElastiCache.BatchStopUpdateAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest BatchStopUpdateAction where
 
 instance Prelude.Hashable BatchStopUpdateAction where
   hashWithSalt _salt BatchStopUpdateAction' {..} =
-    _salt `Prelude.hashWithSalt` cacheClusterIds
+    _salt
+      `Prelude.hashWithSalt` cacheClusterIds
       `Prelude.hashWithSalt` replicationGroupIds
       `Prelude.hashWithSalt` serviceUpdateName
 

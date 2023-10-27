@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StorageGateway.Types.ChapInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StorageGateway.Types.ChapInfo where
@@ -110,7 +110,8 @@ instance Data.FromJSON ChapInfo where
 
 instance Prelude.Hashable ChapInfo where
   hashWithSalt _salt ChapInfo' {..} =
-    _salt `Prelude.hashWithSalt` initiatorName
+    _salt
+      `Prelude.hashWithSalt` initiatorName
       `Prelude.hashWithSalt` secretToAuthenticateInitiator
       `Prelude.hashWithSalt` secretToAuthenticateTarget
       `Prelude.hashWithSalt` targetARN

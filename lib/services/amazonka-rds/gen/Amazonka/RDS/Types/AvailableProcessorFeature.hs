@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.AvailableProcessorFeature
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.AvailableProcessorFeature where
@@ -89,7 +89,8 @@ instance Data.FromXML AvailableProcessorFeature where
 
 instance Prelude.Hashable AvailableProcessorFeature where
   hashWithSalt _salt AvailableProcessorFeature' {..} =
-    _salt `Prelude.hashWithSalt` allowedValues
+    _salt
+      `Prelude.hashWithSalt` allowedValues
       `Prelude.hashWithSalt` defaultValue
       `Prelude.hashWithSalt` name
 

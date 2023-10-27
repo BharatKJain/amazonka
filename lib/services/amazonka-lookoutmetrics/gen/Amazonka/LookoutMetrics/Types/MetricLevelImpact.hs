@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.MetricLevelImpact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.MetricLevelImpact where
@@ -86,7 +86,8 @@ instance Data.FromJSON MetricLevelImpact where
 
 instance Prelude.Hashable MetricLevelImpact where
   hashWithSalt _salt MetricLevelImpact' {..} =
-    _salt `Prelude.hashWithSalt` contributionMatrix
+    _salt
+      `Prelude.hashWithSalt` contributionMatrix
       `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` numTimeSeries
 

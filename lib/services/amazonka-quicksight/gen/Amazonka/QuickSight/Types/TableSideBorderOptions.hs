@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TableSideBorderOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TableSideBorderOptions where
@@ -115,7 +115,8 @@ instance Data.FromJSON TableSideBorderOptions where
 
 instance Prelude.Hashable TableSideBorderOptions where
   hashWithSalt _salt TableSideBorderOptions' {..} =
-    _salt `Prelude.hashWithSalt` bottom
+    _salt
+      `Prelude.hashWithSalt` bottom
       `Prelude.hashWithSalt` innerHorizontal
       `Prelude.hashWithSalt` innerVertical
       `Prelude.hashWithSalt` left

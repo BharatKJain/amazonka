@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.S3ContentBaseLocationUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.S3ContentBaseLocationUpdate where
@@ -66,7 +66,8 @@ s3ContentBaseLocationUpdate_bucketARNUpdate = Lens.lens (\S3ContentBaseLocationU
 
 instance Prelude.Hashable S3ContentBaseLocationUpdate where
   hashWithSalt _salt S3ContentBaseLocationUpdate' {..} =
-    _salt `Prelude.hashWithSalt` basePathUpdate
+    _salt
+      `Prelude.hashWithSalt` basePathUpdate
       `Prelude.hashWithSalt` bucketARNUpdate
 
 instance Prelude.NFData S3ContentBaseLocationUpdate where

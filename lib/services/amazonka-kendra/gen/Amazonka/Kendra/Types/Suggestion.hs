@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.Suggestion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.Suggestion where
@@ -78,12 +78,14 @@ instance Data.FromJSON Suggestion where
       "Suggestion"
       ( \x ->
           Suggestion'
-            Prelude.<$> (x Data..:? "Id") Prelude.<*> (x Data..:? "Value")
+            Prelude.<$> (x Data..:? "Id")
+            Prelude.<*> (x Data..:? "Value")
       )
 
 instance Prelude.Hashable Suggestion where
   hashWithSalt _salt Suggestion' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData Suggestion where

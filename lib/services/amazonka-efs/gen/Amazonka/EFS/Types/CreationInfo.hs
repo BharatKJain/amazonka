@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EFS.Types.CreationInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EFS.Types.CreationInfo where
@@ -114,7 +114,8 @@ instance Data.FromJSON CreationInfo where
 
 instance Prelude.Hashable CreationInfo where
   hashWithSalt _salt CreationInfo' {..} =
-    _salt `Prelude.hashWithSalt` ownerUid
+    _salt
+      `Prelude.hashWithSalt` ownerUid
       `Prelude.hashWithSalt` ownerGid
       `Prelude.hashWithSalt` permissions
 

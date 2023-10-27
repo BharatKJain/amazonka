@@ -16,7 +16,7 @@
 -- Module      : Amazonka.BillingConductor.CreatePricingRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -205,7 +205,8 @@ instance Core.AWSRequest CreatePricingRule where
 
 instance Prelude.Hashable CreatePricingRule where
   hashWithSalt _salt CreatePricingRule' {..} =
-    _salt `Prelude.hashWithSalt` billingEntity
+    _salt
+      `Prelude.hashWithSalt` billingEntity
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` modifierPercentage

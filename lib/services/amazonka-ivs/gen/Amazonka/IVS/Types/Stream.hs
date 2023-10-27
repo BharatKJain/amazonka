@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IVS.Types.Stream
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IVS.Types.Stream where
@@ -147,7 +147,8 @@ instance Data.FromJSON Stream where
 
 instance Prelude.Hashable Stream where
   hashWithSalt _salt Stream' {..} =
-    _salt `Prelude.hashWithSalt` channelArn
+    _salt
+      `Prelude.hashWithSalt` channelArn
       `Prelude.hashWithSalt` health
       `Prelude.hashWithSalt` playbackUrl
       `Prelude.hashWithSalt` startTime

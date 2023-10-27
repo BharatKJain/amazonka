@@ -16,7 +16,7 @@
 -- Module      : Amazonka.HoneyCode.BatchCreateTableRows
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -198,7 +198,8 @@ instance Core.AWSRequest BatchCreateTableRows where
     Response.receiveJSON
       ( \s h x ->
           BatchCreateTableRowsResponse'
-            Prelude.<$> ( x Data..?> "failedBatchItems"
+            Prelude.<$> ( x
+                            Data..?> "failedBatchItems"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -208,7 +209,8 @@ instance Core.AWSRequest BatchCreateTableRows where
 
 instance Prelude.Hashable BatchCreateTableRows where
   hashWithSalt _salt BatchCreateTableRows' {..} =
-    _salt `Prelude.hashWithSalt` clientRequestToken
+    _salt
+      `Prelude.hashWithSalt` clientRequestToken
       `Prelude.hashWithSalt` workbookId
       `Prelude.hashWithSalt` tableId
       `Prelude.hashWithSalt` rowsToCreate

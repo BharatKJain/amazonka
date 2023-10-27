@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataInstanceMarketOptionsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataInstanceMarketOptionsDetails where
@@ -76,7 +76,7 @@ instance
       ( \x ->
           AwsEc2LaunchTemplateDataInstanceMarketOptionsDetails'
             Prelude.<$> (x Data..:? "MarketType")
-              Prelude.<*> (x Data..:? "SpotOptions")
+            Prelude.<*> (x Data..:? "SpotOptions")
       )
 
 instance
@@ -86,7 +86,8 @@ instance
   hashWithSalt
     _salt
     AwsEc2LaunchTemplateDataInstanceMarketOptionsDetails' {..} =
-      _salt `Prelude.hashWithSalt` marketType
+      _salt
+        `Prelude.hashWithSalt` marketType
         `Prelude.hashWithSalt` spotOptions
 
 instance

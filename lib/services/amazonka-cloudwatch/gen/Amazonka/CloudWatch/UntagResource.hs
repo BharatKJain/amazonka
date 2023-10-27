@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatch.UntagResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -52,10 +52,10 @@ data UntagResource = UntagResource'
   { -- | The ARN of the CloudWatch resource that you\'re removing tags from.
     --
     -- The ARN format of an alarm is
-    -- @arn:aws:cloudwatch:Region:account-id:alarm:alarm-name @
+    -- @arn:aws:cloudwatch:@/@Region@/@:@/@account-id@/@:alarm:@/@alarm-name@/@ @
     --
     -- The ARN format of a Contributor Insights rule is
-    -- @arn:aws:cloudwatch:Region:account-id:insight-rule:insight-rule-name @
+    -- @arn:aws:cloudwatch:@/@Region@/@:@/@account-id@/@:insight-rule:@/@insight-rule-name@/@ @
     --
     -- For more information about ARN format, see
     -- <https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncloudwatch.html#amazoncloudwatch-resources-for-iam-policies Resource Types Defined by Amazon CloudWatch>
@@ -77,10 +77,10 @@ data UntagResource = UntagResource'
 -- 'resourceARN', 'untagResource_resourceARN' - The ARN of the CloudWatch resource that you\'re removing tags from.
 --
 -- The ARN format of an alarm is
--- @arn:aws:cloudwatch:Region:account-id:alarm:alarm-name @
+-- @arn:aws:cloudwatch:@/@Region@/@:@/@account-id@/@:alarm:@/@alarm-name@/@ @
 --
 -- The ARN format of a Contributor Insights rule is
--- @arn:aws:cloudwatch:Region:account-id:insight-rule:insight-rule-name @
+-- @arn:aws:cloudwatch:@/@Region@/@:@/@account-id@/@:insight-rule:@/@insight-rule-name@/@ @
 --
 -- For more information about ARN format, see
 -- <https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncloudwatch.html#amazoncloudwatch-resources-for-iam-policies Resource Types Defined by Amazon CloudWatch>
@@ -100,10 +100,10 @@ newUntagResource pResourceARN_ =
 -- | The ARN of the CloudWatch resource that you\'re removing tags from.
 --
 -- The ARN format of an alarm is
--- @arn:aws:cloudwatch:Region:account-id:alarm:alarm-name @
+-- @arn:aws:cloudwatch:@/@Region@/@:@/@account-id@/@:alarm:@/@alarm-name@/@ @
 --
 -- The ARN format of a Contributor Insights rule is
--- @arn:aws:cloudwatch:Region:account-id:insight-rule:insight-rule-name @
+-- @arn:aws:cloudwatch:@/@Region@/@:@/@account-id@/@:insight-rule:@/@insight-rule-name@/@ @
 --
 -- For more information about ARN format, see
 -- <https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncloudwatch.html#amazoncloudwatch-resources-for-iam-policies Resource Types Defined by Amazon CloudWatch>
@@ -131,7 +131,8 @@ instance Core.AWSRequest UntagResource where
 
 instance Prelude.Hashable UntagResource where
   hashWithSalt _salt UntagResource' {..} =
-    _salt `Prelude.hashWithSalt` resourceARN
+    _salt
+      `Prelude.hashWithSalt` resourceARN
       `Prelude.hashWithSalt` tagKeys
 
 instance Prelude.NFData UntagResource where

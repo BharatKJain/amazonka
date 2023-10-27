@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.AutoRollbackConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.AutoRollbackConfiguration where
@@ -81,7 +81,8 @@ instance Data.FromJSON AutoRollbackConfiguration where
 
 instance Prelude.Hashable AutoRollbackConfiguration where
   hashWithSalt _salt AutoRollbackConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` events
 
 instance Prelude.NFData AutoRollbackConfiguration where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.HyperParameterRanges
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.HyperParameterRanges where
@@ -82,13 +82,16 @@ instance Data.FromJSON HyperParameterRanges where
       "HyperParameterRanges"
       ( \x ->
           HyperParameterRanges'
-            Prelude.<$> ( x Data..:? "categoricalHyperParameterRanges"
+            Prelude.<$> ( x
+                            Data..:? "categoricalHyperParameterRanges"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "continuousHyperParameterRanges"
+            Prelude.<*> ( x
+                            Data..:? "continuousHyperParameterRanges"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "integerHyperParameterRanges"
+            Prelude.<*> ( x
+                            Data..:? "integerHyperParameterRanges"
                             Data..!= Prelude.mempty
                         )
       )

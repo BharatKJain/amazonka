@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecretsManager.Types.ValidationErrorsEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecretsManager.Types.ValidationErrorsEntry where
@@ -77,7 +77,8 @@ instance Data.FromJSON ValidationErrorsEntry where
 
 instance Prelude.Hashable ValidationErrorsEntry where
   hashWithSalt _salt ValidationErrorsEntry' {..} =
-    _salt `Prelude.hashWithSalt` checkName
+    _salt
+      `Prelude.hashWithSalt` checkName
       `Prelude.hashWithSalt` errorMessage
 
 instance Prelude.NFData ValidationErrorsEntry where

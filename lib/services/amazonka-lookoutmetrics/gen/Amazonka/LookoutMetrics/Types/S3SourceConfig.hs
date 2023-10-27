@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.S3SourceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.S3SourceConfig where
@@ -100,7 +100,8 @@ instance Data.FromJSON S3SourceConfig where
 
 instance Prelude.Hashable S3SourceConfig where
   hashWithSalt _salt S3SourceConfig' {..} =
-    _salt `Prelude.hashWithSalt` fileFormatDescriptor
+    _salt
+      `Prelude.hashWithSalt` fileFormatDescriptor
       `Prelude.hashWithSalt` historicalDataPathList
       `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` templatedPathList

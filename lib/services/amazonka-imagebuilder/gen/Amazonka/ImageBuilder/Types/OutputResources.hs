@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ImageBuilder.Types.OutputResources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ImageBuilder.Types.OutputResources where
@@ -79,7 +79,8 @@ instance Data.FromJSON OutputResources where
 
 instance Prelude.Hashable OutputResources where
   hashWithSalt _salt OutputResources' {..} =
-    _salt `Prelude.hashWithSalt` amis
+    _salt
+      `Prelude.hashWithSalt` amis
       `Prelude.hashWithSalt` containers
 
 instance Prelude.NFData OutputResources where

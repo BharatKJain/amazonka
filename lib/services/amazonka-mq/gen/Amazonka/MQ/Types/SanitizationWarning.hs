@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MQ.Types.SanitizationWarning
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MQ.Types.SanitizationWarning where
@@ -92,7 +92,8 @@ instance Data.FromJSON SanitizationWarning where
 
 instance Prelude.Hashable SanitizationWarning where
   hashWithSalt _salt SanitizationWarning' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` elementName
       `Prelude.hashWithSalt` reason
 

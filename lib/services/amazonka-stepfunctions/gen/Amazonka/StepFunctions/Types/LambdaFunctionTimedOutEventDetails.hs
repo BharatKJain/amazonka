@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StepFunctions.Types.LambdaFunctionTimedOutEventDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StepFunctions.Types.LambdaFunctionTimedOutEventDetails where
@@ -84,7 +84,8 @@ instance
   hashWithSalt
     _salt
     LambdaFunctionTimedOutEventDetails' {..} =
-      _salt `Prelude.hashWithSalt` cause
+      _salt
+        `Prelude.hashWithSalt` cause
         `Prelude.hashWithSalt` error
 
 instance

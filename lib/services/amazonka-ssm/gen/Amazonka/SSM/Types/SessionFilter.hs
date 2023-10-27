@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.SessionFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.SessionFilter where
@@ -159,7 +159,8 @@ sessionFilter_value = Lens.lens (\SessionFilter' {value} -> value) (\s@SessionFi
 
 instance Prelude.Hashable SessionFilter where
   hashWithSalt _salt SessionFilter' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData SessionFilter where

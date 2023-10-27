@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.DBClusterBacktrack
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.DBClusterBacktrack where
@@ -154,7 +154,8 @@ instance Data.FromXML DBClusterBacktrack where
 
 instance Prelude.Hashable DBClusterBacktrack where
   hashWithSalt _salt DBClusterBacktrack' {..} =
-    _salt `Prelude.hashWithSalt` backtrackIdentifier
+    _salt
+      `Prelude.hashWithSalt` backtrackIdentifier
       `Prelude.hashWithSalt` backtrackRequestCreationTime
       `Prelude.hashWithSalt` backtrackTo
       `Prelude.hashWithSalt` backtrackedFrom

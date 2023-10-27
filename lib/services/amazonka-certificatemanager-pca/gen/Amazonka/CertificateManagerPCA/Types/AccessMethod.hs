@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.AccessMethod
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.AccessMethod where
@@ -86,7 +86,8 @@ instance Data.FromJSON AccessMethod where
 
 instance Prelude.Hashable AccessMethod where
   hashWithSalt _salt AccessMethod' {..} =
-    _salt `Prelude.hashWithSalt` accessMethodType
+    _salt
+      `Prelude.hashWithSalt` accessMethodType
       `Prelude.hashWithSalt` customObjectIdentifier
 
 instance Prelude.NFData AccessMethod where

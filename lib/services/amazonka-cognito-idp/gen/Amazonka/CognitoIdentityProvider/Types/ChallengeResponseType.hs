@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.ChallengeResponseType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.ChallengeResponseType where
@@ -77,7 +77,8 @@ instance Data.FromJSON ChallengeResponseType where
 
 instance Prelude.Hashable ChallengeResponseType where
   hashWithSalt _salt ChallengeResponseType' {..} =
-    _salt `Prelude.hashWithSalt` challengeName
+    _salt
+      `Prelude.hashWithSalt` challengeName
       `Prelude.hashWithSalt` challengeResponse
 
 instance Prelude.NFData ChallengeResponseType where

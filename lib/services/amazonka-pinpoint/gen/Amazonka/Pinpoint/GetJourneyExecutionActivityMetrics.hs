@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.GetJourneyExecutionActivityMetrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -154,7 +154,7 @@ instance
       ( \s h x ->
           GetJourneyExecutionActivityMetricsResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> (Data.eitherParseJSON x)
+            Prelude.<*> (Data.eitherParseJSON x)
       )
 
 instance
@@ -164,7 +164,8 @@ instance
   hashWithSalt
     _salt
     GetJourneyExecutionActivityMetrics' {..} =
-      _salt `Prelude.hashWithSalt` nextToken
+      _salt
+        `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` pageSize
         `Prelude.hashWithSalt` journeyActivityId
         `Prelude.hashWithSalt` applicationId

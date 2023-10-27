@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.JobTemplateSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.JobTemplateSettings where
@@ -319,7 +319,8 @@ instance Data.FromJSON JobTemplateSettings where
 
 instance Prelude.Hashable JobTemplateSettings where
   hashWithSalt _salt JobTemplateSettings' {..} =
-    _salt `Prelude.hashWithSalt` adAvailOffset
+    _salt
+      `Prelude.hashWithSalt` adAvailOffset
       `Prelude.hashWithSalt` availBlanking
       `Prelude.hashWithSalt` esam
       `Prelude.hashWithSalt` extendedDataServices

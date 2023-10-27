@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.UnsuccessfulItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.UnsuccessfulItem where
@@ -73,7 +73,8 @@ instance Data.FromXML UnsuccessfulItem where
 
 instance Prelude.Hashable UnsuccessfulItem where
   hashWithSalt _salt UnsuccessfulItem' {..} =
-    _salt `Prelude.hashWithSalt` error
+    _salt
+      `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` resourceId
 
 instance Prelude.NFData UnsuccessfulItem where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkDocs.Types.Participants
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkDocs.Types.Participants where
@@ -76,7 +76,8 @@ instance Data.FromJSON Participants where
 
 instance Prelude.Hashable Participants where
   hashWithSalt _salt Participants' {..} =
-    _salt `Prelude.hashWithSalt` groups
+    _salt
+      `Prelude.hashWithSalt` groups
       `Prelude.hashWithSalt` users
 
 instance Prelude.NFData Participants where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.TimeSeriesSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.TimeSeriesSummary where
@@ -176,7 +176,8 @@ instance Data.FromJSON TimeSeriesSummary where
 
 instance Prelude.Hashable TimeSeriesSummary where
   hashWithSalt _salt TimeSeriesSummary' {..} =
-    _salt `Prelude.hashWithSalt` alias
+    _salt
+      `Prelude.hashWithSalt` alias
       `Prelude.hashWithSalt` assetId
       `Prelude.hashWithSalt` dataTypeSpec
       `Prelude.hashWithSalt` propertyId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.SshPublicKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.SshPublicKey where
@@ -111,7 +111,8 @@ instance Data.FromJSON SshPublicKey where
 
 instance Prelude.Hashable SshPublicKey where
   hashWithSalt _salt SshPublicKey' {..} =
-    _salt `Prelude.hashWithSalt` dateImported
+    _salt
+      `Prelude.hashWithSalt` dateImported
       `Prelude.hashWithSalt` sshPublicKeyBody
       `Prelude.hashWithSalt` sshPublicKeyId
 

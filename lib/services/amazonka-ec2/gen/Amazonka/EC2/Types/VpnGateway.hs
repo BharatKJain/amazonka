@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VpnGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VpnGateway where
@@ -124,18 +124,23 @@ instance Data.FromXML VpnGateway where
       Prelude.<$> (x Data..@? "amazonSideAsn")
       Prelude.<*> (x Data..@? "availabilityZone")
       Prelude.<*> (x Data..@? "state")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "type")
-      Prelude.<*> ( x Data..@? "attachments" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "attachments"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "vpnGatewayId")
 
 instance Prelude.Hashable VpnGateway where
   hashWithSalt _salt VpnGateway' {..} =
-    _salt `Prelude.hashWithSalt` amazonSideAsn
+    _salt
+      `Prelude.hashWithSalt` amazonSideAsn
       `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` tags

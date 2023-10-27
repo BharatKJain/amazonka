@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataSync.Types.FsxProtocol
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataSync.Types.FsxProtocol where
@@ -80,12 +80,14 @@ instance Data.FromJSON FsxProtocol where
       "FsxProtocol"
       ( \x ->
           FsxProtocol'
-            Prelude.<$> (x Data..:? "NFS") Prelude.<*> (x Data..:? "SMB")
+            Prelude.<$> (x Data..:? "NFS")
+            Prelude.<*> (x Data..:? "SMB")
       )
 
 instance Prelude.Hashable FsxProtocol where
   hashWithSalt _salt FsxProtocol' {..} =
-    _salt `Prelude.hashWithSalt` nfs
+    _salt
+      `Prelude.hashWithSalt` nfs
       `Prelude.hashWithSalt` smb
 
 instance Prelude.NFData FsxProtocol where

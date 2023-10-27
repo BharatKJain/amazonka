@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.EksAttemptContainerDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.EksAttemptContainerDetail where
@@ -82,7 +82,8 @@ instance Data.FromJSON EksAttemptContainerDetail where
 
 instance Prelude.Hashable EksAttemptContainerDetail where
   hashWithSalt _salt EksAttemptContainerDetail' {..} =
-    _salt `Prelude.hashWithSalt` exitCode
+    _salt
+      `Prelude.hashWithSalt` exitCode
       `Prelude.hashWithSalt` reason
 
 instance Prelude.NFData EksAttemptContainerDetail where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Backup.StartCopyJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -189,7 +189,8 @@ instance Core.AWSRequest StartCopyJob where
 
 instance Prelude.Hashable StartCopyJob where
   hashWithSalt _salt StartCopyJob' {..} =
-    _salt `Prelude.hashWithSalt` idempotencyToken
+    _salt
+      `Prelude.hashWithSalt` idempotencyToken
       `Prelude.hashWithSalt` lifecycle
       `Prelude.hashWithSalt` recoveryPointArn
       `Prelude.hashWithSalt` sourceBackupVaultName

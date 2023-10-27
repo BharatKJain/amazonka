@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchReadOperationResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchReadOperationResponse where
@@ -77,7 +77,8 @@ instance Data.FromJSON BatchReadOperationResponse where
 
 instance Prelude.Hashable BatchReadOperationResponse where
   hashWithSalt _salt BatchReadOperationResponse' {..} =
-    _salt `Prelude.hashWithSalt` exceptionResponse
+    _salt
+      `Prelude.hashWithSalt` exceptionResponse
       `Prelude.hashWithSalt` successfulResponse
 
 instance Prelude.NFData BatchReadOperationResponse where

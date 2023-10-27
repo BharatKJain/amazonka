@@ -16,7 +16,7 @@
 -- Module      : Amazonka.XRay.ListResourcePolicies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -81,22 +81,22 @@ instance Core.AWSPager ListResourcePolicies where
     | Core.stop
         ( rs
             Lens.^? listResourcePoliciesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listResourcePoliciesResponse_resourcePolicies
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listResourcePolicies_nextToken
           Lens..~ rs
           Lens.^? listResourcePoliciesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListResourcePolicies where
   type
@@ -109,7 +109,8 @@ instance Core.AWSRequest ListResourcePolicies where
       ( \s h x ->
           ListResourcePoliciesResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "ResourcePolicies"
+            Prelude.<*> ( x
+                            Data..?> "ResourcePolicies"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.AccessKeyInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.AccessKeyInfo where
@@ -125,7 +125,8 @@ instance Data.FromXML AccessKeyInfo where
 
 instance Prelude.Hashable AccessKeyInfo where
   hashWithSalt _salt AccessKeyInfo' {..} =
-    _salt `Prelude.hashWithSalt` createDate
+    _salt
+      `Prelude.hashWithSalt` createDate
       `Prelude.hashWithSalt` userName
       `Prelude.hashWithSalt` accessKeyId
       `Prelude.hashWithSalt` status

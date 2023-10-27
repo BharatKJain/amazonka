@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.RoutingRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.RoutingRule where
@@ -96,7 +96,8 @@ instance Data.FromXML RoutingRule where
 
 instance Prelude.Hashable RoutingRule where
   hashWithSalt _salt RoutingRule' {..} =
-    _salt `Prelude.hashWithSalt` condition
+    _salt
+      `Prelude.hashWithSalt` condition
       `Prelude.hashWithSalt` redirect
 
 instance Prelude.NFData RoutingRule where

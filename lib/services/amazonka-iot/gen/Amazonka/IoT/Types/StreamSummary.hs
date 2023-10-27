@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.StreamSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.StreamSummary where
@@ -94,7 +94,8 @@ instance Data.FromJSON StreamSummary where
 
 instance Prelude.Hashable StreamSummary where
   hashWithSalt _salt StreamSummary' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` streamArn
       `Prelude.hashWithSalt` streamId
       `Prelude.hashWithSalt` streamVersion

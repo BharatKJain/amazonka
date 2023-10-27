@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.Change
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.Change where
@@ -125,7 +125,8 @@ change_resourceRecordSet = Lens.lens (\Change' {resourceRecordSet} -> resourceRe
 
 instance Prelude.Hashable Change where
   hashWithSalt _salt Change' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` resourceRecordSet
 
 instance Prelude.NFData Change where

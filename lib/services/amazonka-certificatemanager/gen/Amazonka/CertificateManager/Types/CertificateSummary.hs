@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManager.Types.CertificateSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManager.Types.CertificateSummary where
@@ -396,7 +396,8 @@ instance Data.FromJSON CertificateSummary where
             Prelude.<*> (x Data..:? "CreatedAt")
             Prelude.<*> (x Data..:? "DomainName")
             Prelude.<*> (x Data..:? "Exported")
-            Prelude.<*> ( x Data..:? "ExtendedKeyUsages"
+            Prelude.<*> ( x
+                            Data..:? "ExtendedKeyUsages"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "HasAdditionalSubjectAlternativeNames")
@@ -416,7 +417,8 @@ instance Data.FromJSON CertificateSummary where
 
 instance Prelude.Hashable CertificateSummary where
   hashWithSalt _salt CertificateSummary' {..} =
-    _salt `Prelude.hashWithSalt` certificateArn
+    _salt
+      `Prelude.hashWithSalt` certificateArn
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` exported

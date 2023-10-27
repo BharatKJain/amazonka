@@ -16,7 +16,7 @@
 -- Module      : Amazonka.XRay.GetGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -79,20 +79,23 @@ instance Core.AWSPager GetGroups where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? getGroupsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? getGroupsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? getGroupsResponse_groups Prelude.. Lens._Just
+            Lens.^? getGroupsResponse_groups
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getGroups_nextToken
           Lens..~ rs
-          Lens.^? getGroupsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? getGroupsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetGroups where
   type AWSResponse GetGroups = GetGroupsResponse

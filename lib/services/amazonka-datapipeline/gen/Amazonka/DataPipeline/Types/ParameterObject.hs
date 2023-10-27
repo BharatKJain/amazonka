@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataPipeline.Types.ParameterObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataPipeline.Types.ParameterObject where
@@ -77,7 +77,8 @@ instance Data.FromJSON ParameterObject where
 
 instance Prelude.Hashable ParameterObject where
   hashWithSalt _salt ParameterObject' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` attributes
 
 instance Prelude.NFData ParameterObject where

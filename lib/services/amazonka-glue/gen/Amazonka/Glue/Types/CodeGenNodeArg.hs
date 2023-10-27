@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.CodeGenNodeArg
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.CodeGenNodeArg where
@@ -88,7 +88,8 @@ instance Data.FromJSON CodeGenNodeArg where
 
 instance Prelude.Hashable CodeGenNodeArg where
   hashWithSalt _salt CodeGenNodeArg' {..} =
-    _salt `Prelude.hashWithSalt` param
+    _salt
+      `Prelude.hashWithSalt` param
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 

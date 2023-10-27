@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Athena.BatchGetPreparedStatement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,10 +103,12 @@ instance Core.AWSRequest BatchGetPreparedStatement where
     Response.receiveJSON
       ( \s h x ->
           BatchGetPreparedStatementResponse'
-            Prelude.<$> ( x Data..?> "PreparedStatements"
+            Prelude.<$> ( x
+                            Data..?> "PreparedStatements"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "UnprocessedPreparedStatementNames"
+            Prelude.<*> ( x
+                            Data..?> "UnprocessedPreparedStatementNames"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -114,7 +116,8 @@ instance Core.AWSRequest BatchGetPreparedStatement where
 
 instance Prelude.Hashable BatchGetPreparedStatement where
   hashWithSalt _salt BatchGetPreparedStatement' {..} =
-    _salt `Prelude.hashWithSalt` preparedStatementNames
+    _salt
+      `Prelude.hashWithSalt` preparedStatementNames
       `Prelude.hashWithSalt` workGroup
 
 instance Prelude.NFData BatchGetPreparedStatement where

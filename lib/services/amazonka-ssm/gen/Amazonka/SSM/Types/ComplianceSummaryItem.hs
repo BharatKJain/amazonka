@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.ComplianceSummaryItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.ComplianceSummaryItem where
@@ -90,7 +90,8 @@ instance Data.FromJSON ComplianceSummaryItem where
 
 instance Prelude.Hashable ComplianceSummaryItem where
   hashWithSalt _salt ComplianceSummaryItem' {..} =
-    _salt `Prelude.hashWithSalt` complianceType
+    _salt
+      `Prelude.hashWithSalt` complianceType
       `Prelude.hashWithSalt` compliantSummary
       `Prelude.hashWithSalt` nonCompliantSummary
 

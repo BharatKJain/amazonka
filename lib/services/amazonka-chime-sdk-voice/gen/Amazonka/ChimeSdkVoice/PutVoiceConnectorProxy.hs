@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSdkVoice.PutVoiceConnectorProxy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,7 +136,8 @@ instance Core.AWSRequest PutVoiceConnectorProxy where
 
 instance Prelude.Hashable PutVoiceConnectorProxy where
   hashWithSalt _salt PutVoiceConnectorProxy' {..} =
-    _salt `Prelude.hashWithSalt` disabled
+    _salt
+      `Prelude.hashWithSalt` disabled
       `Prelude.hashWithSalt` fallBackPhoneNumber
       `Prelude.hashWithSalt` defaultSessionExpiryMinutes
       `Prelude.hashWithSalt` phoneNumberPoolCountries

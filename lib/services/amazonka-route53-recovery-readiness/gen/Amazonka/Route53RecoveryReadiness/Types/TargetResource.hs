@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53RecoveryReadiness.Types.TargetResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53RecoveryReadiness.Types.TargetResource where
@@ -76,7 +76,8 @@ instance Data.FromJSON TargetResource where
 
 instance Prelude.Hashable TargetResource where
   hashWithSalt _salt TargetResource' {..} =
-    _salt `Prelude.hashWithSalt` nLBResource
+    _salt
+      `Prelude.hashWithSalt` nLBResource
       `Prelude.hashWithSalt` r53Resource
 
 instance Prelude.NFData TargetResource where

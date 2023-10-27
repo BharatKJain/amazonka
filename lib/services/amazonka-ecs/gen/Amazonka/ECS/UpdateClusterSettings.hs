@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECS.UpdateClusterSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance Core.AWSRequest UpdateClusterSettings where
 
 instance Prelude.Hashable UpdateClusterSettings where
   hashWithSalt _salt UpdateClusterSettings' {..} =
-    _salt `Prelude.hashWithSalt` cluster
+    _salt
+      `Prelude.hashWithSalt` cluster
       `Prelude.hashWithSalt` settings
 
 instance Prelude.NFData UpdateClusterSettings where

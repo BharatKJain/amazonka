@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.PresetWatermark
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.PresetWatermark where
@@ -552,7 +552,8 @@ instance Data.FromJSON PresetWatermark where
 
 instance Prelude.Hashable PresetWatermark where
   hashWithSalt _salt PresetWatermark' {..} =
-    _salt `Prelude.hashWithSalt` horizontalAlign
+    _salt
+      `Prelude.hashWithSalt` horizontalAlign
       `Prelude.hashWithSalt` horizontalOffset
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` maxHeight

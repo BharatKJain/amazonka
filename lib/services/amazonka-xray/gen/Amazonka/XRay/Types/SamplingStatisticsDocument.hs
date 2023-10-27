@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.SamplingStatisticsDocument
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.SamplingStatisticsDocument where
@@ -119,7 +119,8 @@ samplingStatisticsDocument_sampledCount = Lens.lens (\SamplingStatisticsDocument
 
 instance Prelude.Hashable SamplingStatisticsDocument where
   hashWithSalt _salt SamplingStatisticsDocument' {..} =
-    _salt `Prelude.hashWithSalt` borrowCount
+    _salt
+      `Prelude.hashWithSalt` borrowCount
       `Prelude.hashWithSalt` ruleName
       `Prelude.hashWithSalt` clientID
       `Prelude.hashWithSalt` timestamp

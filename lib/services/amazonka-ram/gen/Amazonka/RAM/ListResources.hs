@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RAM.ListResources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -271,20 +271,23 @@ instance Core.AWSPager ListResources where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listResourcesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listResourcesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listResourcesResponse_resources Prelude.. Lens._Just
+            Lens.^? listResourcesResponse_resources
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listResources_nextToken
           Lens..~ rs
-          Lens.^? listResourcesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listResourcesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListResources where
   type
@@ -303,7 +306,8 @@ instance Core.AWSRequest ListResources where
 
 instance Prelude.Hashable ListResources where
   hashWithSalt _salt ListResources' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` principal
       `Prelude.hashWithSalt` resourceArns

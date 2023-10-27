@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53AutoNaming.Types.NamespaceProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53AutoNaming.Types.NamespaceProperties where
@@ -81,7 +81,8 @@ instance Data.FromJSON NamespaceProperties where
 
 instance Prelude.Hashable NamespaceProperties where
   hashWithSalt _salt NamespaceProperties' {..} =
-    _salt `Prelude.hashWithSalt` dnsProperties
+    _salt
+      `Prelude.hashWithSalt` dnsProperties
       `Prelude.hashWithSalt` httpProperties
 
 instance Prelude.NFData NamespaceProperties where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.PutPortfolioPreferences
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest PutPortfolioPreferences where
 
 instance Prelude.Hashable PutPortfolioPreferences where
   hashWithSalt _salt PutPortfolioPreferences' {..} =
-    _salt `Prelude.hashWithSalt` applicationMode
+    _salt
+      `Prelude.hashWithSalt` applicationMode
       `Prelude.hashWithSalt` applicationPreferences
       `Prelude.hashWithSalt` databasePreferences
       `Prelude.hashWithSalt` prioritizeBusinessGoals

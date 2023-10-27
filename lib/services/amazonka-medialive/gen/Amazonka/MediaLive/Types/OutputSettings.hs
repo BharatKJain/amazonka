@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.OutputSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.OutputSettings where
@@ -135,7 +135,8 @@ instance Data.FromJSON OutputSettings where
 
 instance Prelude.Hashable OutputSettings where
   hashWithSalt _salt OutputSettings' {..} =
-    _salt `Prelude.hashWithSalt` archiveOutputSettings
+    _salt
+      `Prelude.hashWithSalt` archiveOutputSettings
       `Prelude.hashWithSalt` frameCaptureOutputSettings
       `Prelude.hashWithSalt` hlsOutputSettings
       `Prelude.hashWithSalt` mediaPackageOutputSettings

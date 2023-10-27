@@ -16,7 +16,7 @@
 -- Module      : Amazonka.PersonalizeRuntime.GetRecommendations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -274,7 +274,8 @@ instance Core.AWSRequest GetRecommendations where
 
 instance Prelude.Hashable GetRecommendations where
   hashWithSalt _salt GetRecommendations' {..} =
-    _salt `Prelude.hashWithSalt` campaignArn
+    _salt
+      `Prelude.hashWithSalt` campaignArn
       `Prelude.hashWithSalt` context
       `Prelude.hashWithSalt` filterArn
       `Prelude.hashWithSalt` filterValues

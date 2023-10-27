@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsElasticsearchDomainDomainEndpointOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsElasticsearchDomainDomainEndpointOptions where
@@ -96,7 +96,7 @@ instance
       ( \x ->
           AwsElasticsearchDomainDomainEndpointOptions'
             Prelude.<$> (x Data..:? "EnforceHTTPS")
-              Prelude.<*> (x Data..:? "TLSSecurityPolicy")
+            Prelude.<*> (x Data..:? "TLSSecurityPolicy")
       )
 
 instance
@@ -106,7 +106,8 @@ instance
   hashWithSalt
     _salt
     AwsElasticsearchDomainDomainEndpointOptions' {..} =
-      _salt `Prelude.hashWithSalt` enforceHTTPS
+      _salt
+        `Prelude.hashWithSalt` enforceHTTPS
         `Prelude.hashWithSalt` tLSSecurityPolicy
 
 instance

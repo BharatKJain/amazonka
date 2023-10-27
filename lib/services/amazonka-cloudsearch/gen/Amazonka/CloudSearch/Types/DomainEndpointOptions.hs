@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudSearch.Types.DomainEndpointOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudSearch.Types.DomainEndpointOptions where
@@ -72,7 +72,8 @@ instance Data.FromXML DomainEndpointOptions where
 
 instance Prelude.Hashable DomainEndpointOptions where
   hashWithSalt _salt DomainEndpointOptions' {..} =
-    _salt `Prelude.hashWithSalt` enforceHTTPS
+    _salt
+      `Prelude.hashWithSalt` enforceHTTPS
       `Prelude.hashWithSalt` tLSSecurityPolicy
 
 instance Prelude.NFData DomainEndpointOptions where

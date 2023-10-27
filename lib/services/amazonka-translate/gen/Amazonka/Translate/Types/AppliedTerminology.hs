@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Translate.Types.AppliedTerminology
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Translate.Types.AppliedTerminology where
@@ -91,7 +91,8 @@ instance Data.FromJSON AppliedTerminology where
 
 instance Prelude.Hashable AppliedTerminology where
   hashWithSalt _salt AppliedTerminology' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` terms
 
 instance Prelude.NFData AppliedTerminology where

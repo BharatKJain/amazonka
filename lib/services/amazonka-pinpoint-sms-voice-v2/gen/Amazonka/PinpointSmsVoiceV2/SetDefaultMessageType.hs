@@ -16,7 +16,7 @@
 -- Module      : Amazonka.PinpointSmsVoiceV2.SetDefaultMessageType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,7 +127,8 @@ instance Core.AWSRequest SetDefaultMessageType where
 
 instance Prelude.Hashable SetDefaultMessageType where
   hashWithSalt _salt SetDefaultMessageType' {..} =
-    _salt `Prelude.hashWithSalt` configurationSetName
+    _salt
+      `Prelude.hashWithSalt` configurationSetName
       `Prelude.hashWithSalt` messageType
 
 instance Prelude.NFData SetDefaultMessageType where

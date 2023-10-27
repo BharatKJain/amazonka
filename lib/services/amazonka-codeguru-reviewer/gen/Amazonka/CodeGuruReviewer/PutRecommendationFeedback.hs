@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.PutRecommendationFeedback
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,7 +129,8 @@ instance Core.AWSRequest PutRecommendationFeedback where
 
 instance Prelude.Hashable PutRecommendationFeedback where
   hashWithSalt _salt PutRecommendationFeedback' {..} =
-    _salt `Prelude.hashWithSalt` codeReviewArn
+    _salt
+      `Prelude.hashWithSalt` codeReviewArn
       `Prelude.hashWithSalt` recommendationId
       `Prelude.hashWithSalt` reactions
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkDocs.GetResources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -143,7 +143,8 @@ instance Core.AWSRequest GetResources where
 
 instance Prelude.Hashable GetResources where
   hashWithSalt _salt GetResources' {..} =
-    _salt `Prelude.hashWithSalt` authenticationToken
+    _salt
+      `Prelude.hashWithSalt` authenticationToken
       `Prelude.hashWithSalt` collectionType
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` marker

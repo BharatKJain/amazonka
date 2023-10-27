@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DLM.Types.Schedule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DLM.Types.Schedule where
@@ -221,7 +221,8 @@ instance Data.FromJSON Schedule where
             Prelude.<$> (x Data..:? "ArchiveRule")
             Prelude.<*> (x Data..:? "CopyTags")
             Prelude.<*> (x Data..:? "CreateRule")
-            Prelude.<*> ( x Data..:? "CrossRegionCopyRules"
+            Prelude.<*> ( x
+                            Data..:? "CrossRegionCopyRules"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "DeprecateRule")
@@ -235,7 +236,8 @@ instance Data.FromJSON Schedule where
 
 instance Prelude.Hashable Schedule where
   hashWithSalt _salt Schedule' {..} =
-    _salt `Prelude.hashWithSalt` archiveRule
+    _salt
+      `Prelude.hashWithSalt` archiveRule
       `Prelude.hashWithSalt` copyTags
       `Prelude.hashWithSalt` createRule
       `Prelude.hashWithSalt` crossRegionCopyRules

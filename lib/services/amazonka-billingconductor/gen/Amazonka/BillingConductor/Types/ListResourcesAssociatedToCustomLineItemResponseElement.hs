@@ -14,7 +14,7 @@
 -- Module      : Amazonka.BillingConductor.Types.ListResourcesAssociatedToCustomLineItemResponseElement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.BillingConductor.Types.ListResourcesAssociatedToCustomLineItemResponseElement where
@@ -88,8 +88,8 @@ instance
       ( \x ->
           ListResourcesAssociatedToCustomLineItemResponseElement'
             Prelude.<$> (x Data..:? "Arn")
-              Prelude.<*> (x Data..:? "EndBillingPeriod")
-              Prelude.<*> (x Data..:? "Relationship")
+            Prelude.<*> (x Data..:? "EndBillingPeriod")
+            Prelude.<*> (x Data..:? "Relationship")
       )
 
 instance
@@ -99,7 +99,8 @@ instance
   hashWithSalt
     _salt
     ListResourcesAssociatedToCustomLineItemResponseElement' {..} =
-      _salt `Prelude.hashWithSalt` arn
+      _salt
+        `Prelude.hashWithSalt` arn
         `Prelude.hashWithSalt` endBillingPeriod
         `Prelude.hashWithSalt` relationship
 

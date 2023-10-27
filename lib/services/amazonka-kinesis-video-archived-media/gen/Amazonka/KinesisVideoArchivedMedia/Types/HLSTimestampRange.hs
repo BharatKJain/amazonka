@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisVideoArchivedMedia.Types.HLSTimestampRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisVideoArchivedMedia.Types.HLSTimestampRange where
@@ -135,7 +135,8 @@ hLSTimestampRange_startTimestamp = Lens.lens (\HLSTimestampRange' {startTimestam
 
 instance Prelude.Hashable HLSTimestampRange where
   hashWithSalt _salt HLSTimestampRange' {..} =
-    _salt `Prelude.hashWithSalt` endTimestamp
+    _salt
+      `Prelude.hashWithSalt` endTimestamp
       `Prelude.hashWithSalt` startTimestamp
 
 instance Prelude.NFData HLSTimestampRange where

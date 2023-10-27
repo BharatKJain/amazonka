@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.PortProbeDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.PortProbeDetail where
@@ -96,7 +96,8 @@ instance Data.FromJSON PortProbeDetail where
 
 instance Prelude.Hashable PortProbeDetail where
   hashWithSalt _salt PortProbeDetail' {..} =
-    _salt `Prelude.hashWithSalt` localIpDetails
+    _salt
+      `Prelude.hashWithSalt` localIpDetails
       `Prelude.hashWithSalt` localPortDetails
       `Prelude.hashWithSalt` remoteIpDetails
 

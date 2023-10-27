@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.EnvironmentDescriptionsMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.EnvironmentDescriptionsMessage where
@@ -70,7 +70,9 @@ environmentDescriptionsMessage_nextToken = Lens.lens (\EnvironmentDescriptionsMe
 instance Data.FromXML EnvironmentDescriptionsMessage where
   parseXML x =
     EnvironmentDescriptionsMessage'
-      Prelude.<$> ( x Data..@? "Environments" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Environments"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "NextToken")
@@ -82,7 +84,8 @@ instance
   hashWithSalt
     _salt
     EnvironmentDescriptionsMessage' {..} =
-      _salt `Prelude.hashWithSalt` environments
+      _salt
+        `Prelude.hashWithSalt` environments
         `Prelude.hashWithSalt` nextToken
 
 instance

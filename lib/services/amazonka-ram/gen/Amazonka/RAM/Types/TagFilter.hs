@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RAM.Types.TagFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RAM.Types.TagFilter where
@@ -68,7 +68,8 @@ tagFilter_tagValues = Lens.lens (\TagFilter' {tagValues} -> tagValues) (\s@TagFi
 
 instance Prelude.Hashable TagFilter where
   hashWithSalt _salt TagFilter' {..} =
-    _salt `Prelude.hashWithSalt` tagKey
+    _salt
+      `Prelude.hashWithSalt` tagKey
       `Prelude.hashWithSalt` tagValues
 
 instance Prelude.NFData TagFilter where

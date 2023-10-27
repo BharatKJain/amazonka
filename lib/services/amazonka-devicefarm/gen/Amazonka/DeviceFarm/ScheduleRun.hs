@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DeviceFarm.ScheduleRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -182,7 +182,8 @@ instance Core.AWSRequest ScheduleRun where
 
 instance Prelude.Hashable ScheduleRun where
   hashWithSalt _salt ScheduleRun' {..} =
-    _salt `Prelude.hashWithSalt` appArn
+    _salt
+      `Prelude.hashWithSalt` appArn
       `Prelude.hashWithSalt` configuration
       `Prelude.hashWithSalt` devicePoolArn
       `Prelude.hashWithSalt` deviceSelectionConfiguration

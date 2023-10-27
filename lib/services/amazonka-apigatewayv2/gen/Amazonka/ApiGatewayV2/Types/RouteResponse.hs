@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApiGatewayV2.Types.RouteResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApiGatewayV2.Types.RouteResponse where
@@ -104,7 +104,8 @@ instance Data.FromJSON RouteResponse where
           RouteResponse'
             Prelude.<$> (x Data..:? "modelSelectionExpression")
             Prelude.<*> (x Data..:? "responseModels" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "responseParameters"
+            Prelude.<*> ( x
+                            Data..:? "responseParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "routeResponseId")

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ChannelSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ChannelSpecification where
@@ -139,11 +139,13 @@ instance Data.FromJSON ChannelSpecification where
           ChannelSpecification'
             Prelude.<$> (x Data..:? "Description")
             Prelude.<*> (x Data..:? "IsRequired")
-            Prelude.<*> ( x Data..:? "SupportedCompressionTypes"
+            Prelude.<*> ( x
+                            Data..:? "SupportedCompressionTypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "Name")
-            Prelude.<*> ( x Data..:? "SupportedContentTypes"
+            Prelude.<*> ( x
+                            Data..:? "SupportedContentTypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "SupportedInputModes")
@@ -151,7 +153,8 @@ instance Data.FromJSON ChannelSpecification where
 
 instance Prelude.Hashable ChannelSpecification where
   hashWithSalt _salt ChannelSpecification' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` isRequired
       `Prelude.hashWithSalt` supportedCompressionTypes
       `Prelude.hashWithSalt` name

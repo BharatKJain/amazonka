@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.NumericEqualityDrillDownFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.NumericEqualityDrillDownFilter where
@@ -73,7 +73,8 @@ instance Data.FromJSON NumericEqualityDrillDownFilter where
       "NumericEqualityDrillDownFilter"
       ( \x ->
           NumericEqualityDrillDownFilter'
-            Prelude.<$> (x Data..: "Column") Prelude.<*> (x Data..: "Value")
+            Prelude.<$> (x Data..: "Column")
+            Prelude.<*> (x Data..: "Value")
       )
 
 instance
@@ -83,7 +84,8 @@ instance
   hashWithSalt
     _salt
     NumericEqualityDrillDownFilter' {..} =
-      _salt `Prelude.hashWithSalt` column
+      _salt
+        `Prelude.hashWithSalt` column
         `Prelude.hashWithSalt` value
 
 instance

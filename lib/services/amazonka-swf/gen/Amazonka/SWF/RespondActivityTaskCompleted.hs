@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SWF.RespondActivityTaskCompleted
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -152,7 +152,8 @@ instance
     RespondActivityTaskCompleted
   where
   hashWithSalt _salt RespondActivityTaskCompleted' {..} =
-    _salt `Prelude.hashWithSalt` result
+    _salt
+      `Prelude.hashWithSalt` result
       `Prelude.hashWithSalt` taskToken
 
 instance Prelude.NFData RespondActivityTaskCompleted where

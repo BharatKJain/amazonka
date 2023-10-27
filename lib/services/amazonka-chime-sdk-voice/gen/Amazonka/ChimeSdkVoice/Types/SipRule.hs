@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkVoice.Types.SipRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkVoice.Types.SipRule where
@@ -126,7 +126,8 @@ instance Data.FromJSON SipRule where
 
 instance Prelude.Hashable SipRule where
   hashWithSalt _salt SipRule' {..} =
-    _salt `Prelude.hashWithSalt` createdTimestamp
+    _salt
+      `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` disabled
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` sipRuleId

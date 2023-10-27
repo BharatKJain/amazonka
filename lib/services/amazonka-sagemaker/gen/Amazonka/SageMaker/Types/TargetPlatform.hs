@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.TargetPlatform
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.TargetPlatform where
@@ -165,7 +165,8 @@ instance Data.FromJSON TargetPlatform where
 
 instance Prelude.Hashable TargetPlatform where
   hashWithSalt _salt TargetPlatform' {..} =
-    _salt `Prelude.hashWithSalt` accelerator
+    _salt
+      `Prelude.hashWithSalt` accelerator
       `Prelude.hashWithSalt` os
       `Prelude.hashWithSalt` arch
 

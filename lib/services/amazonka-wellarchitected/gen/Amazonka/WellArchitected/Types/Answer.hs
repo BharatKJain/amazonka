@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.Answer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.Answer where
@@ -182,14 +182,16 @@ instance Data.FromJSON Answer where
             Prelude.<*> (x Data..:? "QuestionTitle")
             Prelude.<*> (x Data..:? "Reason")
             Prelude.<*> (x Data..:? "Risk")
-            Prelude.<*> ( x Data..:? "SelectedChoices"
+            Prelude.<*> ( x
+                            Data..:? "SelectedChoices"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable Answer where
   hashWithSalt _salt Answer' {..} =
-    _salt `Prelude.hashWithSalt` choiceAnswers
+    _salt
+      `Prelude.hashWithSalt` choiceAnswers
       `Prelude.hashWithSalt` choices
       `Prelude.hashWithSalt` helpfulResourceDisplayText
       `Prelude.hashWithSalt` helpfulResourceUrl

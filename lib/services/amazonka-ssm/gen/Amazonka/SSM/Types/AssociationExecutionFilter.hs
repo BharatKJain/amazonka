@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.AssociationExecutionFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.AssociationExecutionFilter where
@@ -81,7 +81,8 @@ associationExecutionFilter_type = Lens.lens (\AssociationExecutionFilter' {type'
 
 instance Prelude.Hashable AssociationExecutionFilter where
   hashWithSalt _salt AssociationExecutionFilter' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` type'
 

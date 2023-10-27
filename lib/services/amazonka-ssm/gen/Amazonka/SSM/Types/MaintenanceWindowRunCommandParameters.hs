@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.MaintenanceWindowRunCommandParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.MaintenanceWindowRunCommandParameters where
@@ -244,7 +244,8 @@ instance
   hashWithSalt
     _salt
     MaintenanceWindowRunCommandParameters' {..} =
-      _salt `Prelude.hashWithSalt` cloudWatchOutputConfig
+      _salt
+        `Prelude.hashWithSalt` cloudWatchOutputConfig
         `Prelude.hashWithSalt` comment
         `Prelude.hashWithSalt` documentHash
         `Prelude.hashWithSalt` documentHashType

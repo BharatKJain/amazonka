@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.AccountUsage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.AccountUsage where
@@ -77,7 +77,8 @@ instance Data.FromJSON AccountUsage where
 
 instance Prelude.Hashable AccountUsage where
   hashWithSalt _salt AccountUsage' {..} =
-    _salt `Prelude.hashWithSalt` functionCount
+    _salt
+      `Prelude.hashWithSalt` functionCount
       `Prelude.hashWithSalt` totalCodeSize
 
 instance Prelude.NFData AccountUsage where

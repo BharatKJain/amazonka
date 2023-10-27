@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VerifiedAccessLogs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VerifiedAccessLogs where
@@ -85,7 +85,8 @@ instance Data.FromXML VerifiedAccessLogs where
 
 instance Prelude.Hashable VerifiedAccessLogs where
   hashWithSalt _salt VerifiedAccessLogs' {..} =
-    _salt `Prelude.hashWithSalt` cloudWatchLogs
+    _salt
+      `Prelude.hashWithSalt` cloudWatchLogs
       `Prelude.hashWithSalt` kinesisDataFirehose
       `Prelude.hashWithSalt` s3
 

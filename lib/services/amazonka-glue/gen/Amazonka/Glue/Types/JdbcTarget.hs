@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.JdbcTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.JdbcTarget where
@@ -109,7 +109,8 @@ instance Data.FromJSON JdbcTarget where
       ( \x ->
           JdbcTarget'
             Prelude.<$> (x Data..:? "ConnectionName")
-            Prelude.<*> ( x Data..:? "EnableAdditionalMetadata"
+            Prelude.<*> ( x
+                            Data..:? "EnableAdditionalMetadata"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Exclusions" Data..!= Prelude.mempty)
@@ -118,7 +119,8 @@ instance Data.FromJSON JdbcTarget where
 
 instance Prelude.Hashable JdbcTarget where
   hashWithSalt _salt JdbcTarget' {..} =
-    _salt `Prelude.hashWithSalt` connectionName
+    _salt
+      `Prelude.hashWithSalt` connectionName
       `Prelude.hashWithSalt` enableAdditionalMetadata
       `Prelude.hashWithSalt` exclusions
       `Prelude.hashWithSalt` path

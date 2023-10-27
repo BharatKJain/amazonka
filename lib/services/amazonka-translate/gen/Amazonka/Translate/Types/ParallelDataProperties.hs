@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Translate.Types.ParallelDataProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Translate.Types.ParallelDataProperties where
@@ -257,14 +257,16 @@ instance Data.FromJSON ParallelDataProperties where
             Prelude.<*> (x Data..:? "SkippedRecordCount")
             Prelude.<*> (x Data..:? "SourceLanguageCode")
             Prelude.<*> (x Data..:? "Status")
-            Prelude.<*> ( x Data..:? "TargetLanguageCodes"
+            Prelude.<*> ( x
+                            Data..:? "TargetLanguageCodes"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ParallelDataProperties where
   hashWithSalt _salt ParallelDataProperties' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` encryptionKey

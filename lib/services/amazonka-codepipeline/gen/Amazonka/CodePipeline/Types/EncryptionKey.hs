@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.EncryptionKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.EncryptionKey where
@@ -92,12 +92,14 @@ instance Data.FromJSON EncryptionKey where
       "EncryptionKey"
       ( \x ->
           EncryptionKey'
-            Prelude.<$> (x Data..: "id") Prelude.<*> (x Data..: "type")
+            Prelude.<$> (x Data..: "id")
+            Prelude.<*> (x Data..: "type")
       )
 
 instance Prelude.Hashable EncryptionKey where
   hashWithSalt _salt EncryptionKey' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData EncryptionKey where

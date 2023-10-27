@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LookoutEquipment.DescribeLabel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest DescribeLabel where
 
 instance Prelude.Hashable DescribeLabel where
   hashWithSalt _salt DescribeLabel' {..} =
-    _salt `Prelude.hashWithSalt` labelGroupName
+    _salt
+      `Prelude.hashWithSalt` labelGroupName
       `Prelude.hashWithSalt` labelId
 
 instance Prelude.NFData DescribeLabel where

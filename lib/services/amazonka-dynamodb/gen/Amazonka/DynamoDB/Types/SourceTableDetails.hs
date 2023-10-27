@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.SourceTableDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.SourceTableDetails where
@@ -189,7 +189,8 @@ instance Data.FromJSON SourceTableDetails where
 
 instance Prelude.Hashable SourceTableDetails where
   hashWithSalt _salt SourceTableDetails' {..} =
-    _salt `Prelude.hashWithSalt` billingMode
+    _salt
+      `Prelude.hashWithSalt` billingMode
       `Prelude.hashWithSalt` itemCount
       `Prelude.hashWithSalt` tableArn
       `Prelude.hashWithSalt` tableSizeBytes

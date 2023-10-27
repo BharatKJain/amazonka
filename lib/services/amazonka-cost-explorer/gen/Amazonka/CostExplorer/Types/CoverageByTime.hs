@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.CoverageByTime
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.CoverageByTime where
@@ -87,7 +87,8 @@ instance Data.FromJSON CoverageByTime where
 
 instance Prelude.Hashable CoverageByTime where
   hashWithSalt _salt CoverageByTime' {..} =
-    _salt `Prelude.hashWithSalt` groups
+    _salt
+      `Prelude.hashWithSalt` groups
       `Prelude.hashWithSalt` timePeriod
       `Prelude.hashWithSalt` total
 

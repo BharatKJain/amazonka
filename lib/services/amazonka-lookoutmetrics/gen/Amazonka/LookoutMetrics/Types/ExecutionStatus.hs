@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.ExecutionStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.ExecutionStatus where
@@ -85,7 +85,8 @@ instance Data.FromJSON ExecutionStatus where
 
 instance Prelude.Hashable ExecutionStatus where
   hashWithSalt _salt ExecutionStatus' {..} =
-    _salt `Prelude.hashWithSalt` failureReason
+    _salt
+      `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` timestamp
 

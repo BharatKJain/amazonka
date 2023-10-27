@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Amplify.ListBranches
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,18 +111,20 @@ instance Core.AWSPager ListBranches where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listBranchesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listBranchesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listBranchesResponse_branches) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listBranches_nextToken
           Lens..~ rs
-          Lens.^? listBranchesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listBranchesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListBranches where
   type AWSResponse ListBranches = ListBranchesResponse
@@ -139,7 +141,8 @@ instance Core.AWSRequest ListBranches where
 
 instance Prelude.Hashable ListBranches where
   hashWithSalt _salt ListBranches' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` appId
 

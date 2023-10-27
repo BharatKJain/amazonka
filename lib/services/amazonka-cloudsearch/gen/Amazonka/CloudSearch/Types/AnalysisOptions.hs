@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudSearch.Types.AnalysisOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudSearch.Types.AnalysisOptions where
@@ -181,7 +181,8 @@ instance Data.FromXML AnalysisOptions where
 
 instance Prelude.Hashable AnalysisOptions where
   hashWithSalt _salt AnalysisOptions' {..} =
-    _salt `Prelude.hashWithSalt` algorithmicStemming
+    _salt
+      `Prelude.hashWithSalt` algorithmicStemming
       `Prelude.hashWithSalt` japaneseTokenizationDictionary
       `Prelude.hashWithSalt` stemmingDictionary
       `Prelude.hashWithSalt` stopwords

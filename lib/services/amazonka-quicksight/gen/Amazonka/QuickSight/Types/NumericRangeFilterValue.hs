@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.NumericRangeFilterValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.NumericRangeFilterValue where
@@ -75,7 +75,8 @@ instance Data.FromJSON NumericRangeFilterValue where
 
 instance Prelude.Hashable NumericRangeFilterValue where
   hashWithSalt _salt NumericRangeFilterValue' {..} =
-    _salt `Prelude.hashWithSalt` parameter
+    _salt
+      `Prelude.hashWithSalt` parameter
       `Prelude.hashWithSalt` staticValue
 
 instance Prelude.NFData NumericRangeFilterValue where

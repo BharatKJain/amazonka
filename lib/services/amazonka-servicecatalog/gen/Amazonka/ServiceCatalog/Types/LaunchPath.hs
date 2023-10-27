@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.LaunchPath
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.LaunchPath where
@@ -68,12 +68,14 @@ instance Data.FromJSON LaunchPath where
       "LaunchPath"
       ( \x ->
           LaunchPath'
-            Prelude.<$> (x Data..:? "Id") Prelude.<*> (x Data..:? "Name")
+            Prelude.<$> (x Data..:? "Id")
+            Prelude.<*> (x Data..:? "Name")
       )
 
 instance Prelude.Hashable LaunchPath where
   hashWithSalt _salt LaunchPath' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData LaunchPath where

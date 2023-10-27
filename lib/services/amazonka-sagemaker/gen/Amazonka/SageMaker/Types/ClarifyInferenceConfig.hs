@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ClarifyInferenceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ClarifyInferenceConfig where
@@ -382,7 +382,8 @@ instance Data.FromJSON ClarifyInferenceConfig where
 
 instance Prelude.Hashable ClarifyInferenceConfig where
   hashWithSalt _salt ClarifyInferenceConfig' {..} =
-    _salt `Prelude.hashWithSalt` contentTemplate
+    _salt
+      `Prelude.hashWithSalt` contentTemplate
       `Prelude.hashWithSalt` featureHeaders
       `Prelude.hashWithSalt` featureTypes
       `Prelude.hashWithSalt` featuresAttribute

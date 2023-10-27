@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Workflow
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Workflow where
@@ -162,7 +162,8 @@ instance Data.FromJSON Workflow where
           Workflow'
             Prelude.<$> (x Data..:? "BlueprintDetails")
             Prelude.<*> (x Data..:? "CreatedOn")
-            Prelude.<*> ( x Data..:? "DefaultRunProperties"
+            Prelude.<*> ( x
+                            Data..:? "DefaultRunProperties"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Description")
@@ -175,7 +176,8 @@ instance Data.FromJSON Workflow where
 
 instance Prelude.Hashable Workflow where
   hashWithSalt _salt Workflow' {..} =
-    _salt `Prelude.hashWithSalt` blueprintDetails
+    _salt
+      `Prelude.hashWithSalt` blueprintDetails
       `Prelude.hashWithSalt` createdOn
       `Prelude.hashWithSalt` defaultRunProperties
       `Prelude.hashWithSalt` description

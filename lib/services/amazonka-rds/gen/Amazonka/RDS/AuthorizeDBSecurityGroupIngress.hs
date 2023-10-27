@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.AuthorizeDBSecurityGroupIngress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -204,7 +204,8 @@ instance
   hashWithSalt
     _salt
     AuthorizeDBSecurityGroupIngress' {..} =
-      _salt `Prelude.hashWithSalt` cidrip
+      _salt
+        `Prelude.hashWithSalt` cidrip
         `Prelude.hashWithSalt` eC2SecurityGroupId
         `Prelude.hashWithSalt` eC2SecurityGroupName
         `Prelude.hashWithSalt` eC2SecurityGroupOwnerId

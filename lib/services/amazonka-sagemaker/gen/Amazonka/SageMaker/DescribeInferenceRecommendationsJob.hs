@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.DescribeInferenceRecommendationsJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,22 +108,23 @@ instance
       ( \s h x ->
           DescribeInferenceRecommendationsJobResponse'
             Prelude.<$> (x Data..?> "CompletionTime")
-              Prelude.<*> ( x Data..?> "EndpointPerformances"
-                              Core..!@ Prelude.mempty
-                          )
-              Prelude.<*> (x Data..?> "FailureReason")
-              Prelude.<*> (x Data..?> "InferenceRecommendations")
-              Prelude.<*> (x Data..?> "JobDescription")
-              Prelude.<*> (x Data..?> "StoppingConditions")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> (x Data..:> "JobName")
-              Prelude.<*> (x Data..:> "JobType")
-              Prelude.<*> (x Data..:> "JobArn")
-              Prelude.<*> (x Data..:> "RoleArn")
-              Prelude.<*> (x Data..:> "Status")
-              Prelude.<*> (x Data..:> "CreationTime")
-              Prelude.<*> (x Data..:> "LastModifiedTime")
-              Prelude.<*> (x Data..:> "InputConfig")
+            Prelude.<*> ( x
+                            Data..?> "EndpointPerformances"
+                            Core..!@ Prelude.mempty
+                        )
+            Prelude.<*> (x Data..?> "FailureReason")
+            Prelude.<*> (x Data..?> "InferenceRecommendations")
+            Prelude.<*> (x Data..?> "JobDescription")
+            Prelude.<*> (x Data..?> "StoppingConditions")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..:> "JobName")
+            Prelude.<*> (x Data..:> "JobType")
+            Prelude.<*> (x Data..:> "JobArn")
+            Prelude.<*> (x Data..:> "RoleArn")
+            Prelude.<*> (x Data..:> "Status")
+            Prelude.<*> (x Data..:> "CreationTime")
+            Prelude.<*> (x Data..:> "LastModifiedTime")
+            Prelude.<*> (x Data..:> "InputConfig")
       )
 
 instance

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.VpcEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.VpcEndpoint where
@@ -83,7 +83,8 @@ vpcEndpoint_vpcId = Lens.lens (\VpcEndpoint' {vpcId} -> vpcId) (\s@VpcEndpoint' 
 instance Data.FromXML VpcEndpoint where
   parseXML x =
     VpcEndpoint'
-      Prelude.<$> ( x Data..@? "NetworkInterfaces"
+      Prelude.<$> ( x
+                      Data..@? "NetworkInterfaces"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "NetworkInterface")
                   )
@@ -92,7 +93,8 @@ instance Data.FromXML VpcEndpoint where
 
 instance Prelude.Hashable VpcEndpoint where
   hashWithSalt _salt VpcEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` networkInterfaces
+    _salt
+      `Prelude.hashWithSalt` networkInterfaces
       `Prelude.hashWithSalt` vpcEndpointId
       `Prelude.hashWithSalt` vpcId
 

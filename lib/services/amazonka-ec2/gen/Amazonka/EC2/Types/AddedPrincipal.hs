@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.AddedPrincipal
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.AddedPrincipal where
@@ -92,7 +92,8 @@ instance Data.FromXML AddedPrincipal where
 
 instance Prelude.Hashable AddedPrincipal where
   hashWithSalt _salt AddedPrincipal' {..} =
-    _salt `Prelude.hashWithSalt` principal
+    _salt
+      `Prelude.hashWithSalt` principal
       `Prelude.hashWithSalt` principalType
       `Prelude.hashWithSalt` serviceId
       `Prelude.hashWithSalt` servicePermissionId

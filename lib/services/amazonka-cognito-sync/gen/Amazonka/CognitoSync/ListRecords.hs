@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoSync.ListRecords
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -188,7 +188,8 @@ instance Core.AWSRequest ListRecords where
             Prelude.<*> (x Data..?> "DatasetExists")
             Prelude.<*> (x Data..?> "DatasetSyncCount")
             Prelude.<*> (x Data..?> "LastModifiedBy")
-            Prelude.<*> ( x Data..?> "MergedDatasetNames"
+            Prelude.<*> ( x
+                            Data..?> "MergedDatasetNames"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -199,7 +200,8 @@ instance Core.AWSRequest ListRecords where
 
 instance Prelude.Hashable ListRecords where
   hashWithSalt _salt ListRecords' {..} =
-    _salt `Prelude.hashWithSalt` lastSyncCount
+    _salt
+      `Prelude.hashWithSalt` lastSyncCount
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` syncSessionToken

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.IPRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.IPRange where
@@ -78,13 +78,16 @@ instance Data.FromXML IPRange where
     IPRange'
       Prelude.<$> (x Data..@? "CIDRIP")
       Prelude.<*> (x Data..@? "Status")
-      Prelude.<*> ( x Data..@? "Tags" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Tags"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Tag")
                   )
 
 instance Prelude.Hashable IPRange where
   hashWithSalt _salt IPRange' {..} =
-    _salt `Prelude.hashWithSalt` cidrip
+    _salt
+      `Prelude.hashWithSalt` cidrip
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` tags
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.FileFormatDescriptor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.FileFormatDescriptor where
@@ -83,7 +83,8 @@ instance Data.FromJSON FileFormatDescriptor where
 
 instance Prelude.Hashable FileFormatDescriptor where
   hashWithSalt _salt FileFormatDescriptor' {..} =
-    _salt `Prelude.hashWithSalt` csvFormatDescriptor
+    _salt
+      `Prelude.hashWithSalt` csvFormatDescriptor
       `Prelude.hashWithSalt` jsonFormatDescriptor
 
 instance Prelude.NFData FileFormatDescriptor where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EMR.ListInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -151,20 +151,23 @@ instance Core.AWSPager ListInstances where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listInstancesResponse_marker Prelude.. Lens._Just
+            Lens.^? listInstancesResponse_marker
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listInstancesResponse_instances Prelude.. Lens._Just
+            Lens.^? listInstancesResponse_instances
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listInstances_marker
           Lens..~ rs
-          Lens.^? listInstancesResponse_marker Prelude.. Lens._Just
+          Lens.^? listInstancesResponse_marker
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListInstances where
   type
@@ -183,7 +186,8 @@ instance Core.AWSRequest ListInstances where
 
 instance Prelude.Hashable ListInstances where
   hashWithSalt _salt ListInstances' {..} =
-    _salt `Prelude.hashWithSalt` instanceFleetId
+    _salt
+      `Prelude.hashWithSalt` instanceFleetId
       `Prelude.hashWithSalt` instanceFleetType
       `Prelude.hashWithSalt` instanceGroupId
       `Prelude.hashWithSalt` instanceGroupTypes

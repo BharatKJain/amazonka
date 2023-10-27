@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.RouteTableAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.RouteTableAssociation where
@@ -116,7 +116,8 @@ instance Data.FromXML RouteTableAssociation where
 
 instance Prelude.Hashable RouteTableAssociation where
   hashWithSalt _salt RouteTableAssociation' {..} =
-    _salt `Prelude.hashWithSalt` associationState
+    _salt
+      `Prelude.hashWithSalt` associationState
       `Prelude.hashWithSalt` gatewayId
       `Prelude.hashWithSalt` main
       `Prelude.hashWithSalt` routeTableAssociationId

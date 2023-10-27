@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AccessAnalyzer.UpdateArchiveRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest UpdateArchiveRule where
 
 instance Prelude.Hashable UpdateArchiveRule where
   hashWithSalt _salt UpdateArchiveRule' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` analyzerName
       `Prelude.hashWithSalt` ruleName
       `Prelude.hashWithSalt` filter'

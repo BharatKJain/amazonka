@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SupportApp.Types.SlackChannelConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SupportApp.Types.SlackChannelConfiguration where
@@ -169,7 +169,8 @@ instance Data.FromJSON SlackChannelConfiguration where
 
 instance Prelude.Hashable SlackChannelConfiguration where
   hashWithSalt _salt SlackChannelConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` channelName
+    _salt
+      `Prelude.hashWithSalt` channelName
       `Prelude.hashWithSalt` channelRoleArn
       `Prelude.hashWithSalt` notifyOnAddCorrespondenceToCase
       `Prelude.hashWithSalt` notifyOnCaseSeverity

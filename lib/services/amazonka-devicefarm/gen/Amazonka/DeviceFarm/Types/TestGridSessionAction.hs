@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.TestGridSessionAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.TestGridSessionAction where
@@ -107,7 +107,8 @@ instance Data.FromJSON TestGridSessionAction where
 
 instance Prelude.Hashable TestGridSessionAction where
   hashWithSalt _salt TestGridSessionAction' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` requestMethod
       `Prelude.hashWithSalt` started

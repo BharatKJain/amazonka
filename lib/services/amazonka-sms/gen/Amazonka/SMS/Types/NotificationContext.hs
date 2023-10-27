@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SMS.Types.NotificationContext
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SMS.Types.NotificationContext where
@@ -74,7 +74,8 @@ notificationContext_validationId = Lens.lens (\NotificationContext' {validationI
 
 instance Prelude.Hashable NotificationContext where
   hashWithSalt _salt NotificationContext' {..} =
-    _salt `Prelude.hashWithSalt` status
+    _salt
+      `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` statusMessage
       `Prelude.hashWithSalt` validationId
 

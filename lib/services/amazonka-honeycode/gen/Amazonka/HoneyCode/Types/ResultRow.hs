@@ -14,7 +14,7 @@
 -- Module      : Amazonka.HoneyCode.Types.ResultRow
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.HoneyCode.Types.ResultRow where
@@ -75,7 +75,8 @@ instance Data.FromJSON ResultRow where
 
 instance Prelude.Hashable ResultRow where
   hashWithSalt _salt ResultRow' {..} =
-    _salt `Prelude.hashWithSalt` rowId
+    _salt
+      `Prelude.hashWithSalt` rowId
       `Prelude.hashWithSalt` dataItems
 
 instance Prelude.NFData ResultRow where

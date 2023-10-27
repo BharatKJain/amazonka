@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElastiCache.DescribeUsers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,20 +136,23 @@ instance Core.AWSPager DescribeUsers where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? describeUsersResponse_marker Prelude.. Lens._Just
+            Lens.^? describeUsersResponse_marker
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? describeUsersResponse_users Prelude.. Lens._Just
+            Lens.^? describeUsersResponse_users
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeUsers_marker
           Lens..~ rs
-          Lens.^? describeUsersResponse_marker Prelude.. Lens._Just
+          Lens.^? describeUsersResponse_marker
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeUsers where
   type
@@ -163,7 +166,9 @@ instance Core.AWSRequest DescribeUsers where
       ( \s h x ->
           DescribeUsersResponse'
             Prelude.<$> (x Data..@? "Marker")
-            Prelude.<*> ( x Data..@? "Users" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "Users"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -171,7 +176,8 @@ instance Core.AWSRequest DescribeUsers where
 
 instance Prelude.Hashable DescribeUsers where
   hashWithSalt _salt DescribeUsers' {..} =
-    _salt `Prelude.hashWithSalt` engine
+    _salt
+      `Prelude.hashWithSalt` engine
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxRecords

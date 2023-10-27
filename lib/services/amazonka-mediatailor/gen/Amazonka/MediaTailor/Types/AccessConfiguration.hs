@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.AccessConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.AccessConfiguration where
@@ -151,7 +151,8 @@ instance Data.FromJSON AccessConfiguration where
 
 instance Prelude.Hashable AccessConfiguration where
   hashWithSalt _salt AccessConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` accessType
+    _salt
+      `Prelude.hashWithSalt` accessType
       `Prelude.hashWithSalt` secretsManagerAccessTokenConfiguration
 
 instance Prelude.NFData AccessConfiguration where

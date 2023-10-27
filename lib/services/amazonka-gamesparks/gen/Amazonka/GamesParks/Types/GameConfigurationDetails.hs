@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GamesParks.Types.GameConfigurationDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GamesParks.Types.GameConfigurationDetails where
@@ -90,7 +90,8 @@ instance Data.FromJSON GameConfigurationDetails where
 
 instance Prelude.Hashable GameConfigurationDetails where
   hashWithSalt _salt GameConfigurationDetails' {..} =
-    _salt `Prelude.hashWithSalt` created
+    _salt
+      `Prelude.hashWithSalt` created
       `Prelude.hashWithSalt` lastUpdated
       `Prelude.hashWithSalt` sections
 

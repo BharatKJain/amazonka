@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.Statistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.Statistics where
@@ -201,7 +201,8 @@ instance Data.FromJSON Statistics where
 
 instance Prelude.Hashable Statistics where
   hashWithSalt _salt Statistics' {..} =
-    _salt `Prelude.hashWithSalt` avg
+    _salt
+      `Prelude.hashWithSalt` avg
       `Prelude.hashWithSalt` count
       `Prelude.hashWithSalt` countDistinct
       `Prelude.hashWithSalt` countDistinctLong

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMSAP.Types.DatabaseSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMSAP.Types.DatabaseSummary where
@@ -69,27 +69,21 @@ newDatabaseSummary =
       tags = Prelude.Nothing
     }
 
--- |
 databaseSummary_applicationId :: Lens.Lens' DatabaseSummary (Prelude.Maybe Prelude.Text)
 databaseSummary_applicationId = Lens.lens (\DatabaseSummary' {applicationId} -> applicationId) (\s@DatabaseSummary' {} a -> s {applicationId = a} :: DatabaseSummary)
 
--- |
 databaseSummary_arn :: Lens.Lens' DatabaseSummary (Prelude.Maybe Prelude.Text)
 databaseSummary_arn = Lens.lens (\DatabaseSummary' {arn} -> arn) (\s@DatabaseSummary' {} a -> s {arn = a} :: DatabaseSummary)
 
--- |
 databaseSummary_componentId :: Lens.Lens' DatabaseSummary (Prelude.Maybe Prelude.Text)
 databaseSummary_componentId = Lens.lens (\DatabaseSummary' {componentId} -> componentId) (\s@DatabaseSummary' {} a -> s {componentId = a} :: DatabaseSummary)
 
--- |
 databaseSummary_databaseId :: Lens.Lens' DatabaseSummary (Prelude.Maybe Prelude.Text)
 databaseSummary_databaseId = Lens.lens (\DatabaseSummary' {databaseId} -> databaseId) (\s@DatabaseSummary' {} a -> s {databaseId = a} :: DatabaseSummary)
 
--- |
 databaseSummary_databaseType :: Lens.Lens' DatabaseSummary (Prelude.Maybe DatabaseType)
 databaseSummary_databaseType = Lens.lens (\DatabaseSummary' {databaseType} -> databaseType) (\s@DatabaseSummary' {} a -> s {databaseType = a} :: DatabaseSummary)
 
--- |
 databaseSummary_tags :: Lens.Lens' DatabaseSummary (Prelude.Maybe (Prelude.HashMap Prelude.Text Prelude.Text))
 databaseSummary_tags = Lens.lens (\DatabaseSummary' {tags} -> tags) (\s@DatabaseSummary' {} a -> s {tags = a} :: DatabaseSummary) Prelude.. Lens.mapping Lens.coerced
 
@@ -109,7 +103,8 @@ instance Data.FromJSON DatabaseSummary where
 
 instance Prelude.Hashable DatabaseSummary where
   hashWithSalt _salt DatabaseSummary' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` componentId
       `Prelude.hashWithSalt` databaseId

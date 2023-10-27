@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.S3BucketDefinitionForJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.S3BucketDefinitionForJob where
@@ -81,7 +81,8 @@ instance Data.FromJSON S3BucketDefinitionForJob where
 
 instance Prelude.Hashable S3BucketDefinitionForJob where
   hashWithSalt _salt S3BucketDefinitionForJob' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` buckets
 
 instance Prelude.NFData S3BucketDefinitionForJob where

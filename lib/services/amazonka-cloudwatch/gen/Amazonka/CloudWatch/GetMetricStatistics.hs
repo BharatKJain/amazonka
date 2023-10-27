@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatch.GetMetricStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -457,7 +457,9 @@ instance Core.AWSRequest GetMetricStatistics where
       "GetMetricStatisticsResult"
       ( \s h x ->
           GetMetricStatisticsResponse'
-            Prelude.<$> ( x Data..@? "Datapoints" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "Datapoints"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (x Data..@? "Label")
@@ -466,7 +468,8 @@ instance Core.AWSRequest GetMetricStatistics where
 
 instance Prelude.Hashable GetMetricStatistics where
   hashWithSalt _salt GetMetricStatistics' {..} =
-    _salt `Prelude.hashWithSalt` dimensions
+    _salt
+      `Prelude.hashWithSalt` dimensions
       `Prelude.hashWithSalt` extendedStatistics
       `Prelude.hashWithSalt` statistics
       `Prelude.hashWithSalt` unit

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DocumentDB.Types.OrderableDBInstanceOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DocumentDB.Types.OrderableDBInstanceOption where
@@ -103,7 +103,8 @@ orderableDBInstanceOption_vpc = Lens.lens (\OrderableDBInstanceOption' {vpc} -> 
 instance Data.FromXML OrderableDBInstanceOption where
   parseXML x =
     OrderableDBInstanceOption'
-      Prelude.<$> ( x Data..@? "AvailabilityZones"
+      Prelude.<$> ( x
+                      Data..@? "AvailabilityZones"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "AvailabilityZone")
                   )
@@ -115,7 +116,8 @@ instance Data.FromXML OrderableDBInstanceOption where
 
 instance Prelude.Hashable OrderableDBInstanceOption where
   hashWithSalt _salt OrderableDBInstanceOption' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZones
+    _salt
+      `Prelude.hashWithSalt` availabilityZones
       `Prelude.hashWithSalt` dbInstanceClass
       `Prelude.hashWithSalt` engine
       `Prelude.hashWithSalt` engineVersion

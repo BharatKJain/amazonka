@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutEquipment.Types.DatasetSchema
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutEquipment.Types.DatasetSchema where
@@ -46,7 +46,6 @@ newDatasetSchema ::
 newDatasetSchema =
   DatasetSchema' {inlineDataSchema = Prelude.Nothing}
 
--- |
 datasetSchema_inlineDataSchema :: Lens.Lens' DatasetSchema (Prelude.Maybe Prelude.Text)
 datasetSchema_inlineDataSchema = Lens.lens (\DatasetSchema' {inlineDataSchema} -> inlineDataSchema) (\s@DatasetSchema' {} a -> s {inlineDataSchema = a} :: DatasetSchema)
 

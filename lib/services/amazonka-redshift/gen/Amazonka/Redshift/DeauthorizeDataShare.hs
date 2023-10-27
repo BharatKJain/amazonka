@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.DeauthorizeDataShare
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest DeauthorizeDataShare where
 
 instance Prelude.Hashable DeauthorizeDataShare where
   hashWithSalt _salt DeauthorizeDataShare' {..} =
-    _salt `Prelude.hashWithSalt` dataShareArn
+    _salt
+      `Prelude.hashWithSalt` dataShareArn
       `Prelude.hashWithSalt` consumerIdentifier
 
 instance Prelude.NFData DeauthorizeDataShare where

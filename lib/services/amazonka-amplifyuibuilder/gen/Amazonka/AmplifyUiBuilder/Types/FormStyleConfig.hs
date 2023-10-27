@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.FormStyleConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.FormStyleConfig where
@@ -77,7 +77,8 @@ instance Data.FromJSON FormStyleConfig where
 
 instance Prelude.Hashable FormStyleConfig where
   hashWithSalt _salt FormStyleConfig' {..} =
-    _salt `Prelude.hashWithSalt` tokenReference
+    _salt
+      `Prelude.hashWithSalt` tokenReference
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData FormStyleConfig where

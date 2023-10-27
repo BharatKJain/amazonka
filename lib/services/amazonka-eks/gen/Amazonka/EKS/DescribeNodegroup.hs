@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EKS.DescribeNodegroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest DescribeNodegroup where
 
 instance Prelude.Hashable DescribeNodegroup where
   hashWithSalt _salt DescribeNodegroup' {..} =
-    _salt `Prelude.hashWithSalt` clusterName
+    _salt
+      `Prelude.hashWithSalt` clusterName
       `Prelude.hashWithSalt` nodegroupName
 
 instance Prelude.NFData DescribeNodegroup where

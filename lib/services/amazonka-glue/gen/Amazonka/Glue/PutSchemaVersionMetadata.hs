@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.PutSchemaVersionMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -139,7 +139,8 @@ instance Core.AWSRequest PutSchemaVersionMetadata where
 
 instance Prelude.Hashable PutSchemaVersionMetadata where
   hashWithSalt _salt PutSchemaVersionMetadata' {..} =
-    _salt `Prelude.hashWithSalt` schemaId
+    _salt
+      `Prelude.hashWithSalt` schemaId
       `Prelude.hashWithSalt` schemaVersionId
       `Prelude.hashWithSalt` schemaVersionNumber
       `Prelude.hashWithSalt` metadataKeyValue

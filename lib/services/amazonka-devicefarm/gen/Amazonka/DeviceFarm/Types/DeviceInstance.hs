@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.DeviceInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.DeviceInstance where
@@ -116,7 +116,8 @@ instance Data.FromJSON DeviceInstance where
 
 instance Prelude.Hashable DeviceInstance where
   hashWithSalt _salt DeviceInstance' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` deviceArn
       `Prelude.hashWithSalt` instanceProfile
       `Prelude.hashWithSalt` labels

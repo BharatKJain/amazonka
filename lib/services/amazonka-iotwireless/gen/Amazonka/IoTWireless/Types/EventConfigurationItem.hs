@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.EventConfigurationItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.EventConfigurationItem where
@@ -99,7 +99,8 @@ instance Data.FromJSON EventConfigurationItem where
 
 instance Prelude.Hashable EventConfigurationItem where
   hashWithSalt _salt EventConfigurationItem' {..} =
-    _salt `Prelude.hashWithSalt` events
+    _salt
+      `Prelude.hashWithSalt` events
       `Prelude.hashWithSalt` identifier
       `Prelude.hashWithSalt` identifierType
       `Prelude.hashWithSalt` partnerType

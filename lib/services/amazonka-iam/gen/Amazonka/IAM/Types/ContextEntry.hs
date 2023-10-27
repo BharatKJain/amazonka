@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.ContextEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.ContextEntry where
@@ -92,7 +92,8 @@ contextEntry_contextKeyValues = Lens.lens (\ContextEntry' {contextKeyValues} -> 
 
 instance Prelude.Hashable ContextEntry where
   hashWithSalt _salt ContextEntry' {..} =
-    _salt `Prelude.hashWithSalt` contextKeyName
+    _salt
+      `Prelude.hashWithSalt` contextKeyName
       `Prelude.hashWithSalt` contextKeyType
       `Prelude.hashWithSalt` contextKeyValues
 

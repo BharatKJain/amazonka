@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.AuthenticationResultType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.AuthenticationResultType where
@@ -119,7 +119,8 @@ instance Data.FromJSON AuthenticationResultType where
 
 instance Prelude.Hashable AuthenticationResultType where
   hashWithSalt _salt AuthenticationResultType' {..} =
-    _salt `Prelude.hashWithSalt` accessToken
+    _salt
+      `Prelude.hashWithSalt` accessToken
       `Prelude.hashWithSalt` expiresIn
       `Prelude.hashWithSalt` idToken
       `Prelude.hashWithSalt` newDeviceMetadata'

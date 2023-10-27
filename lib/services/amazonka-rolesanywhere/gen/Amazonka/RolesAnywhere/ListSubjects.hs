@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RolesAnywhere.ListSubjects
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,20 +100,23 @@ instance Core.AWSPager ListSubjects where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listSubjectsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listSubjectsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listSubjectsResponse_subjects Prelude.. Lens._Just
+            Lens.^? listSubjectsResponse_subjects
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSubjects_nextToken
           Lens..~ rs
-          Lens.^? listSubjectsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listSubjectsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListSubjects where
   type AWSResponse ListSubjects = ListSubjectsResponse
@@ -130,7 +133,8 @@ instance Core.AWSRequest ListSubjects where
 
 instance Prelude.Hashable ListSubjects where
   hashWithSalt _salt ListSubjects' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` pageSize
 
 instance Prelude.NFData ListSubjects where

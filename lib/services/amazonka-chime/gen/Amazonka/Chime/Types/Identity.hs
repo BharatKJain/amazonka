@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.Identity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.Identity where
@@ -68,12 +68,14 @@ instance Data.FromJSON Identity where
       "Identity"
       ( \x ->
           Identity'
-            Prelude.<$> (x Data..:? "Arn") Prelude.<*> (x Data..:? "Name")
+            Prelude.<$> (x Data..:? "Arn")
+            Prelude.<*> (x Data..:? "Name")
       )
 
 instance Prelude.Hashable Identity where
   hashWithSalt _salt Identity' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData Identity where

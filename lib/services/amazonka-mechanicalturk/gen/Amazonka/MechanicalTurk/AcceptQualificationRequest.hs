@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MechanicalTurk.AcceptQualificationRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest AcceptQualificationRequest where
 
 instance Prelude.Hashable AcceptQualificationRequest where
   hashWithSalt _salt AcceptQualificationRequest' {..} =
-    _salt `Prelude.hashWithSalt` integerValue
+    _salt
+      `Prelude.hashWithSalt` integerValue
       `Prelude.hashWithSalt` qualificationRequestId
 
 instance Prelude.NFData AcceptQualificationRequest where

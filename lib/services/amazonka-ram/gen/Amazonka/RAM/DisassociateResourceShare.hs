@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RAM.DisassociateResourceShare
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -240,7 +240,8 @@ instance Core.AWSRequest DisassociateResourceShare where
       ( \s h x ->
           DisassociateResourceShareResponse'
             Prelude.<$> (x Data..?> "clientToken")
-            Prelude.<*> ( x Data..?> "resourceShareAssociations"
+            Prelude.<*> ( x
+                            Data..?> "resourceShareAssociations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -248,7 +249,8 @@ instance Core.AWSRequest DisassociateResourceShare where
 
 instance Prelude.Hashable DisassociateResourceShare where
   hashWithSalt _salt DisassociateResourceShare' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` principals
       `Prelude.hashWithSalt` resourceArns
       `Prelude.hashWithSalt` resourceShareArn

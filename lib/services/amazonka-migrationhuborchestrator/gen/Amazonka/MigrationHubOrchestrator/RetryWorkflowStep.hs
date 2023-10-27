@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MigrationHubOrchestrator.RetryWorkflowStep
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest RetryWorkflowStep where
 
 instance Prelude.Hashable RetryWorkflowStep where
   hashWithSalt _salt RetryWorkflowStep' {..} =
-    _salt `Prelude.hashWithSalt` workflowId
+    _salt
+      `Prelude.hashWithSalt` workflowId
       `Prelude.hashWithSalt` stepGroupId
       `Prelude.hashWithSalt` id
 

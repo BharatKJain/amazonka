@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LookoutVision.StartModelPackagingJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -233,7 +233,8 @@ instance Core.AWSRequest StartModelPackagingJob where
 
 instance Prelude.Hashable StartModelPackagingJob where
   hashWithSalt _salt StartModelPackagingJob' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` projectName

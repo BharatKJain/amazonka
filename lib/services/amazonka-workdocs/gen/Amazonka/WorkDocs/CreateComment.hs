@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkDocs.CreateComment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -182,7 +182,8 @@ instance Core.AWSRequest CreateComment where
 
 instance Prelude.Hashable CreateComment where
   hashWithSalt _salt CreateComment' {..} =
-    _salt `Prelude.hashWithSalt` authenticationToken
+    _salt
+      `Prelude.hashWithSalt` authenticationToken
       `Prelude.hashWithSalt` notifyCollaborators
       `Prelude.hashWithSalt` parentId
       `Prelude.hashWithSalt` threadId

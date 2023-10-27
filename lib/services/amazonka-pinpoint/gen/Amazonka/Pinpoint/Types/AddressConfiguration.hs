@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.AddressConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.AddressConfiguration where
@@ -133,7 +133,8 @@ addressConfiguration_titleOverride = Lens.lens (\AddressConfiguration' {titleOve
 
 instance Prelude.Hashable AddressConfiguration where
   hashWithSalt _salt AddressConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` bodyOverride
+    _salt
+      `Prelude.hashWithSalt` bodyOverride
       `Prelude.hashWithSalt` channelType
       `Prelude.hashWithSalt` context
       `Prelude.hashWithSalt` rawContent

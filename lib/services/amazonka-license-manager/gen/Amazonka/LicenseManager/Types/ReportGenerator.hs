@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManager.Types.ReportGenerator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManager.Types.ReportGenerator where
@@ -189,7 +189,8 @@ instance Data.FromJSON ReportGenerator where
 
 instance Prelude.Hashable ReportGenerator where
   hashWithSalt _salt ReportGenerator' {..} =
-    _salt `Prelude.hashWithSalt` createTime
+    _salt
+      `Prelude.hashWithSalt` createTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` lastReportGenerationTime
       `Prelude.hashWithSalt` lastRunFailureReason

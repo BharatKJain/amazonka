@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.CancelMLTaskRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest CancelMLTaskRun where
 
 instance Prelude.Hashable CancelMLTaskRun where
   hashWithSalt _salt CancelMLTaskRun' {..} =
-    _salt `Prelude.hashWithSalt` transformId
+    _salt
+      `Prelude.hashWithSalt` transformId
       `Prelude.hashWithSalt` taskRunId
 
 instance Prelude.NFData CancelMLTaskRun where

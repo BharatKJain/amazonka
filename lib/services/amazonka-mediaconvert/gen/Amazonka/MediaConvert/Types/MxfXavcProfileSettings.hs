@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.MxfXavcProfileSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.MxfXavcProfileSettings where
@@ -116,7 +116,8 @@ instance Data.FromJSON MxfXavcProfileSettings where
 
 instance Prelude.Hashable MxfXavcProfileSettings where
   hashWithSalt _salt MxfXavcProfileSettings' {..} =
-    _salt `Prelude.hashWithSalt` durationMode
+    _salt
+      `Prelude.hashWithSalt` durationMode
       `Prelude.hashWithSalt` maxAncDataSize
 
 instance Prelude.NFData MxfXavcProfileSettings where

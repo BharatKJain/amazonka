@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.SamplingTargetDocument
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.SamplingTargetDocument where
@@ -114,7 +114,8 @@ instance Data.FromJSON SamplingTargetDocument where
 
 instance Prelude.Hashable SamplingTargetDocument where
   hashWithSalt _salt SamplingTargetDocument' {..} =
-    _salt `Prelude.hashWithSalt` fixedRate
+    _salt
+      `Prelude.hashWithSalt` fixedRate
       `Prelude.hashWithSalt` interval
       `Prelude.hashWithSalt` reservoirQuota
       `Prelude.hashWithSalt` reservoirQuotaTTL

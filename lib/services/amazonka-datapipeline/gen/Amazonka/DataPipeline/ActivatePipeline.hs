@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataPipeline.ActivatePipeline
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest ActivatePipeline where
 
 instance Prelude.Hashable ActivatePipeline where
   hashWithSalt _salt ActivatePipeline' {..} =
-    _salt `Prelude.hashWithSalt` parameterValues
+    _salt
+      `Prelude.hashWithSalt` parameterValues
       `Prelude.hashWithSalt` startTimestamp
       `Prelude.hashWithSalt` pipelineId
 

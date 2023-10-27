@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.ChangeSetHookTargetDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.ChangeSetHookTargetDetails where
@@ -73,7 +73,8 @@ instance Data.FromXML ChangeSetHookTargetDetails where
 
 instance Prelude.Hashable ChangeSetHookTargetDetails where
   hashWithSalt _salt ChangeSetHookTargetDetails' {..} =
-    _salt `Prelude.hashWithSalt` resourceTargetDetails
+    _salt
+      `Prelude.hashWithSalt` resourceTargetDetails
       `Prelude.hashWithSalt` targetType
 
 instance Prelude.NFData ChangeSetHookTargetDetails where

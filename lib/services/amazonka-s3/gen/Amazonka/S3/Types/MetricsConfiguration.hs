@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.MetricsConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.MetricsConfiguration where
@@ -84,11 +84,13 @@ metricsConfiguration_id = Lens.lens (\MetricsConfiguration' {id} -> id) (\s@Metr
 instance Data.FromXML MetricsConfiguration where
   parseXML x =
     MetricsConfiguration'
-      Prelude.<$> (x Data..@? "Filter") Prelude.<*> (x Data..@ "Id")
+      Prelude.<$> (x Data..@? "Filter")
+      Prelude.<*> (x Data..@ "Id")
 
 instance Prelude.Hashable MetricsConfiguration where
   hashWithSalt _salt MetricsConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData MetricsConfiguration where

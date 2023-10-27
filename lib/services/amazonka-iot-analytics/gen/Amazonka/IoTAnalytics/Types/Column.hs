@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.Column
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.Column where
@@ -78,12 +78,14 @@ instance Data.FromJSON Column where
       "Column"
       ( \x ->
           Column'
-            Prelude.<$> (x Data..: "name") Prelude.<*> (x Data..: "type")
+            Prelude.<$> (x Data..: "name")
+            Prelude.<*> (x Data..: "type")
       )
 
 instance Prelude.Hashable Column where
   hashWithSalt _salt Column' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData Column where

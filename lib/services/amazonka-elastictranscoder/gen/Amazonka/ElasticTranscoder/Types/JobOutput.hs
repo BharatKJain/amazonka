@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.JobOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.JobOutput where
@@ -757,7 +757,8 @@ instance Data.FromJSON JobOutput where
 
 instance Prelude.Hashable JobOutput where
   hashWithSalt _salt JobOutput' {..} =
-    _salt `Prelude.hashWithSalt` albumArt
+    _salt
+      `Prelude.hashWithSalt` albumArt
       `Prelude.hashWithSalt` appliedColorSpaceConversion
       `Prelude.hashWithSalt` captions
       `Prelude.hashWithSalt` composition

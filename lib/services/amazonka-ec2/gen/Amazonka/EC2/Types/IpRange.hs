@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.IpRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.IpRange where
@@ -91,7 +91,8 @@ instance Data.FromXML IpRange where
 
 instance Prelude.Hashable IpRange where
   hashWithSalt _salt IpRange' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` cidrIp
 
 instance Prelude.NFData IpRange where

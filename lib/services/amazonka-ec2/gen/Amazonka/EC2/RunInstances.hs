@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.RunInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -1095,7 +1095,8 @@ instance Core.AWSRequest RunInstances where
 
 instance Prelude.Hashable RunInstances where
   hashWithSalt _salt RunInstances' {..} =
-    _salt `Prelude.hashWithSalt` additionalInfo
+    _salt
+      `Prelude.hashWithSalt` additionalInfo
       `Prelude.hashWithSalt` blockDeviceMappings
       `Prelude.hashWithSalt` capacityReservationSpecification
       `Prelude.hashWithSalt` clientToken

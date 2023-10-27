@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DAX.Types.ParameterNameValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DAX.Types.ParameterNameValue where
@@ -65,7 +65,8 @@ parameterNameValue_parameterValue = Lens.lens (\ParameterNameValue' {parameterVa
 
 instance Prelude.Hashable ParameterNameValue where
   hashWithSalt _salt ParameterNameValue' {..} =
-    _salt `Prelude.hashWithSalt` parameterName
+    _salt
+      `Prelude.hashWithSalt` parameterName
       `Prelude.hashWithSalt` parameterValue
 
 instance Prelude.NFData ParameterNameValue where

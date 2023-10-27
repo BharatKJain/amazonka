@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.DeploymentCircuitBreaker
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.DeploymentCircuitBreaker where
@@ -101,7 +101,8 @@ instance Data.FromJSON DeploymentCircuitBreaker where
 
 instance Prelude.Hashable DeploymentCircuitBreaker where
   hashWithSalt _salt DeploymentCircuitBreaker' {..} =
-    _salt `Prelude.hashWithSalt` enable
+    _salt
+      `Prelude.hashWithSalt` enable
       `Prelude.hashWithSalt` rollback
 
 instance Prelude.NFData DeploymentCircuitBreaker where

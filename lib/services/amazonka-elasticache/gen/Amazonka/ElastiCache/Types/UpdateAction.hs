@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.UpdateAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.UpdateAction where
@@ -227,13 +227,15 @@ instance Data.FromXML UpdateAction where
   parseXML x =
     UpdateAction'
       Prelude.<$> (x Data..@? "CacheClusterId")
-      Prelude.<*> ( x Data..@? "CacheNodeUpdateStatus"
+      Prelude.<*> ( x
+                      Data..@? "CacheNodeUpdateStatus"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "CacheNodeUpdateStatus")
                   )
       Prelude.<*> (x Data..@? "Engine")
       Prelude.<*> (x Data..@? "EstimatedUpdateTime")
-      Prelude.<*> ( x Data..@? "NodeGroupUpdateStatus"
+      Prelude.<*> ( x
+                      Data..@? "NodeGroupUpdateStatus"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "NodeGroupUpdateStatus")
                   )
@@ -252,7 +254,8 @@ instance Data.FromXML UpdateAction where
 
 instance Prelude.Hashable UpdateAction where
   hashWithSalt _salt UpdateAction' {..} =
-    _salt `Prelude.hashWithSalt` cacheClusterId
+    _salt
+      `Prelude.hashWithSalt` cacheClusterId
       `Prelude.hashWithSalt` cacheNodeUpdateStatus
       `Prelude.hashWithSalt` engine
       `Prelude.hashWithSalt` estimatedUpdateTime

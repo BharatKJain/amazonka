@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.FaceRecord
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.FaceRecord where
@@ -81,7 +81,8 @@ instance Data.FromJSON FaceRecord where
 
 instance Prelude.Hashable FaceRecord where
   hashWithSalt _salt FaceRecord' {..} =
-    _salt `Prelude.hashWithSalt` face
+    _salt
+      `Prelude.hashWithSalt` face
       `Prelude.hashWithSalt` faceDetail
 
 instance Prelude.NFData FaceRecord where

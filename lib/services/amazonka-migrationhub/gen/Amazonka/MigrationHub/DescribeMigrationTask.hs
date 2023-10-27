@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MigrationHub.DescribeMigrationTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest DescribeMigrationTask where
 
 instance Prelude.Hashable DescribeMigrationTask where
   hashWithSalt _salt DescribeMigrationTask' {..} =
-    _salt `Prelude.hashWithSalt` progressUpdateStream
+    _salt
+      `Prelude.hashWithSalt` progressUpdateStream
       `Prelude.hashWithSalt` migrationTaskName
 
 instance Prelude.NFData DescribeMigrationTask where

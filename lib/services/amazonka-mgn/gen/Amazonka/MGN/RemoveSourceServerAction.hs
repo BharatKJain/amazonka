@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MGN.RemoveSourceServerAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest RemoveSourceServerAction where
 
 instance Prelude.Hashable RemoveSourceServerAction where
   hashWithSalt _salt RemoveSourceServerAction' {..} =
-    _salt `Prelude.hashWithSalt` actionID
+    _salt
+      `Prelude.hashWithSalt` actionID
       `Prelude.hashWithSalt` sourceServerID
 
 instance Prelude.NFData RemoveSourceServerAction where

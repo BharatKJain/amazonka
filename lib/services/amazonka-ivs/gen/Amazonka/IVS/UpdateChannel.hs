@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IVS.UpdateChannel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -207,7 +207,8 @@ instance Core.AWSRequest UpdateChannel where
 
 instance Prelude.Hashable UpdateChannel where
   hashWithSalt _salt UpdateChannel' {..} =
-    _salt `Prelude.hashWithSalt` authorized
+    _salt
+      `Prelude.hashWithSalt` authorized
       `Prelude.hashWithSalt` latencyMode
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` recordingConfigurationArn

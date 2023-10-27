@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkManager.GetNetworkResources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -302,22 +302,22 @@ instance Core.AWSPager GetNetworkResources where
     | Core.stop
         ( rs
             Lens.^? getNetworkResourcesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getNetworkResourcesResponse_networkResources
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getNetworkResources_nextToken
           Lens..~ rs
           Lens.^? getNetworkResourcesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetNetworkResources where
   type
@@ -329,7 +329,8 @@ instance Core.AWSRequest GetNetworkResources where
     Response.receiveJSON
       ( \s h x ->
           GetNetworkResourcesResponse'
-            Prelude.<$> ( x Data..?> "NetworkResources"
+            Prelude.<$> ( x
+                            Data..?> "NetworkResources"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -338,7 +339,8 @@ instance Core.AWSRequest GetNetworkResources where
 
 instance Prelude.Hashable GetNetworkResources where
   hashWithSalt _salt GetNetworkResources' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` awsRegion
       `Prelude.hashWithSalt` coreNetworkId
       `Prelude.hashWithSalt` maxResults

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.FileCacheCreating
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.FileCacheCreating where
@@ -278,7 +278,8 @@ instance Data.FromJSON FileCacheCreating where
             Prelude.<$> (x Data..:? "CopyTagsToDataRepositoryAssociations")
             Prelude.<*> (x Data..:? "CreationTime")
             Prelude.<*> (x Data..:? "DNSName")
-            Prelude.<*> ( x Data..:? "DataRepositoryAssociationIds"
+            Prelude.<*> ( x
+                            Data..:? "DataRepositoryAssociationIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "FailureDetails")
@@ -288,7 +289,8 @@ instance Data.FromJSON FileCacheCreating where
             Prelude.<*> (x Data..:? "KmsKeyId")
             Prelude.<*> (x Data..:? "Lifecycle")
             Prelude.<*> (x Data..:? "LustreConfiguration")
-            Prelude.<*> ( x Data..:? "NetworkInterfaceIds"
+            Prelude.<*> ( x
+                            Data..:? "NetworkInterfaceIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "OwnerId")

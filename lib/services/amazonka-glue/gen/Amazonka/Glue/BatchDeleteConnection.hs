@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.BatchDeleteConnection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest BatchDeleteConnection where
 
 instance Prelude.Hashable BatchDeleteConnection where
   hashWithSalt _salt BatchDeleteConnection' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` connectionNameList
 
 instance Prelude.NFData BatchDeleteConnection where

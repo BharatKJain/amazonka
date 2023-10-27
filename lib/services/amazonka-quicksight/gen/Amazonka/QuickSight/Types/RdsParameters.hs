@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.RdsParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.RdsParameters where
@@ -78,7 +78,8 @@ instance Data.FromJSON RdsParameters where
 
 instance Prelude.Hashable RdsParameters where
   hashWithSalt _salt RdsParameters' {..} =
-    _salt `Prelude.hashWithSalt` instanceId
+    _salt
+      `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` database
 
 instance Prelude.NFData RdsParameters where

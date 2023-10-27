@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MechanicalTurk.NotifyWorkers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest NotifyWorkers where
     Response.receiveJSON
       ( \s h x ->
           NotifyWorkersResponse'
-            Prelude.<$> ( x Data..?> "NotifyWorkersFailureStatuses"
+            Prelude.<$> ( x
+                            Data..?> "NotifyWorkersFailureStatuses"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -129,7 +130,8 @@ instance Core.AWSRequest NotifyWorkers where
 
 instance Prelude.Hashable NotifyWorkers where
   hashWithSalt _salt NotifyWorkers' {..} =
-    _salt `Prelude.hashWithSalt` subject
+    _salt
+      `Prelude.hashWithSalt` subject
       `Prelude.hashWithSalt` messageText
       `Prelude.hashWithSalt` workerIds
 

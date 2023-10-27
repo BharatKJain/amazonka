@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MachineLearning.Types.MLModel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MachineLearning.Types.MLModel where
@@ -460,14 +460,16 @@ instance Data.FromJSON MLModel where
             Prelude.<*> (x Data..:? "StartedAt")
             Prelude.<*> (x Data..:? "Status")
             Prelude.<*> (x Data..:? "TrainingDataSourceId")
-            Prelude.<*> ( x Data..:? "TrainingParameters"
+            Prelude.<*> ( x
+                            Data..:? "TrainingParameters"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable MLModel where
   hashWithSalt _salt MLModel' {..} =
-    _salt `Prelude.hashWithSalt` algorithm
+    _salt
+      `Prelude.hashWithSalt` algorithm
       `Prelude.hashWithSalt` computeTime
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` createdByIamUser

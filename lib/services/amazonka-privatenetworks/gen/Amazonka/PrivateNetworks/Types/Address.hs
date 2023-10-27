@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PrivateNetworks.Types.Address
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PrivateNetworks.Types.Address where
@@ -173,7 +173,8 @@ instance Data.FromJSON Address where
 
 instance Prelude.Hashable Address where
   hashWithSalt _salt Address' {..} =
-    _salt `Prelude.hashWithSalt` company
+    _salt
+      `Prelude.hashWithSalt` company
       `Prelude.hashWithSalt` phoneNumber
       `Prelude.hashWithSalt` street2
       `Prelude.hashWithSalt` street3

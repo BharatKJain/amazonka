@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.ApplicationComponentStrategy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.ApplicationComponentStrategy where
@@ -91,7 +91,8 @@ instance
     ApplicationComponentStrategy
   where
   hashWithSalt _salt ApplicationComponentStrategy' {..} =
-    _salt `Prelude.hashWithSalt` isPreferred
+    _salt
+      `Prelude.hashWithSalt` isPreferred
       `Prelude.hashWithSalt` recommendation
       `Prelude.hashWithSalt` status
 

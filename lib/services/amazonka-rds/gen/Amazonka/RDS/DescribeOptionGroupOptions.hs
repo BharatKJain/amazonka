@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.DescribeOptionGroupOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -232,22 +232,22 @@ instance Core.AWSPager DescribeOptionGroupOptions where
     | Core.stop
         ( rs
             Lens.^? describeOptionGroupOptionsResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeOptionGroupOptionsResponse_optionGroupOptions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeOptionGroupOptions_marker
           Lens..~ rs
           Lens.^? describeOptionGroupOptionsResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeOptionGroupOptions where
   type
@@ -261,7 +261,8 @@ instance Core.AWSRequest DescribeOptionGroupOptions where
       ( \s h x ->
           DescribeOptionGroupOptionsResponse'
             Prelude.<$> (x Data..@? "Marker")
-            Prelude.<*> ( x Data..@? "OptionGroupOptions"
+            Prelude.<*> ( x
+                            Data..@? "OptionGroupOptions"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "OptionGroupOption")
                         )
@@ -270,7 +271,8 @@ instance Core.AWSRequest DescribeOptionGroupOptions where
 
 instance Prelude.Hashable DescribeOptionGroupOptions where
   hashWithSalt _salt DescribeOptionGroupOptions' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` majorEngineVersion
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxRecords

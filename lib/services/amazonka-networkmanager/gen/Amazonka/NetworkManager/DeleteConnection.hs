@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkManager.DeleteConnection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest DeleteConnection where
 
 instance Prelude.Hashable DeleteConnection where
   hashWithSalt _salt DeleteConnection' {..} =
-    _salt `Prelude.hashWithSalt` globalNetworkId
+    _salt
+      `Prelude.hashWithSalt` globalNetworkId
       `Prelude.hashWithSalt` connectionId
 
 instance Prelude.NFData DeleteConnection where

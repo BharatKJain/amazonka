@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pi.Types.MetricQuery
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pi.Types.MetricQuery where
@@ -170,7 +170,8 @@ metricQuery_metric = Lens.lens (\MetricQuery' {metric} -> metric) (\s@MetricQuer
 
 instance Prelude.Hashable MetricQuery where
   hashWithSalt _salt MetricQuery' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` groupBy
       `Prelude.hashWithSalt` metric
 

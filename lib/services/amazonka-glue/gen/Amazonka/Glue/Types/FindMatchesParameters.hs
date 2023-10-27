@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.FindMatchesParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.FindMatchesParameters where
@@ -194,7 +194,8 @@ instance Data.FromJSON FindMatchesParameters where
 
 instance Prelude.Hashable FindMatchesParameters where
   hashWithSalt _salt FindMatchesParameters' {..} =
-    _salt `Prelude.hashWithSalt` accuracyCostTradeoff
+    _salt
+      `Prelude.hashWithSalt` accuracyCostTradeoff
       `Prelude.hashWithSalt` enforceProvidedLabels
       `Prelude.hashWithSalt` precisionRecallTradeoff
       `Prelude.hashWithSalt` primaryKeyColumnName

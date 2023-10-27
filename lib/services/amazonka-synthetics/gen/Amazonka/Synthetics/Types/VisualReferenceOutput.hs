@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Synthetics.Types.VisualReferenceOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Synthetics.Types.VisualReferenceOutput where
@@ -83,14 +83,16 @@ instance Data.FromJSON VisualReferenceOutput where
       ( \x ->
           VisualReferenceOutput'
             Prelude.<$> (x Data..:? "BaseCanaryRunId")
-            Prelude.<*> ( x Data..:? "BaseScreenshots"
+            Prelude.<*> ( x
+                            Data..:? "BaseScreenshots"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable VisualReferenceOutput where
   hashWithSalt _salt VisualReferenceOutput' {..} =
-    _salt `Prelude.hashWithSalt` baseCanaryRunId
+    _salt
+      `Prelude.hashWithSalt` baseCanaryRunId
       `Prelude.hashWithSalt` baseScreenshots
 
 instance Prelude.NFData VisualReferenceOutput where

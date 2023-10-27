@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IotTwinMaker.GetPropertyValueHistory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -263,14 +263,16 @@ instance Core.AWSRequest GetPropertyValueHistory where
           GetPropertyValueHistoryResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "propertyValues"
+            Prelude.<*> ( x
+                            Data..?> "propertyValues"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable GetPropertyValueHistory where
   hashWithSalt _salt GetPropertyValueHistory' {..} =
-    _salt `Prelude.hashWithSalt` componentName
+    _salt
+      `Prelude.hashWithSalt` componentName
       `Prelude.hashWithSalt` componentTypeId
       `Prelude.hashWithSalt` endDateTime
       `Prelude.hashWithSalt` endTime

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.StackSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.StackSummary where
@@ -115,7 +115,8 @@ instance Data.FromJSON StackSummary where
 
 instance Prelude.Hashable StackSummary where
   hashWithSalt _salt StackSummary' {..} =
-    _salt `Prelude.hashWithSalt` appsCount
+    _salt
+      `Prelude.hashWithSalt` appsCount
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` instancesCount
       `Prelude.hashWithSalt` layersCount

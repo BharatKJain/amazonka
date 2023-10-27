@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.EdgeModelSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.EdgeModelSummary where
@@ -78,7 +78,8 @@ instance Data.FromJSON EdgeModelSummary where
 
 instance Prelude.Hashable EdgeModelSummary where
   hashWithSalt _salt EdgeModelSummary' {..} =
-    _salt `Prelude.hashWithSalt` modelName
+    _salt
+      `Prelude.hashWithSalt` modelName
       `Prelude.hashWithSalt` modelVersion
 
 instance Prelude.NFData EdgeModelSummary where

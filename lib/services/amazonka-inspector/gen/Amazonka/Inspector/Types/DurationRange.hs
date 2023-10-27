@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.DurationRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.DurationRange where
@@ -67,7 +67,8 @@ durationRange_minSeconds = Lens.lens (\DurationRange' {minSeconds} -> minSeconds
 
 instance Prelude.Hashable DurationRange where
   hashWithSalt _salt DurationRange' {..} =
-    _salt `Prelude.hashWithSalt` maxSeconds
+    _salt
+      `Prelude.hashWithSalt` maxSeconds
       `Prelude.hashWithSalt` minSeconds
 
 instance Prelude.NFData DurationRange where

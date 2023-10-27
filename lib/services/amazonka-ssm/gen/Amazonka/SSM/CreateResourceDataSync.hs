@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.CreateResourceDataSync
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -176,7 +176,8 @@ instance Core.AWSRequest CreateResourceDataSync where
 
 instance Prelude.Hashable CreateResourceDataSync where
   hashWithSalt _salt CreateResourceDataSync' {..} =
-    _salt `Prelude.hashWithSalt` s3Destination
+    _salt
+      `Prelude.hashWithSalt` s3Destination
       `Prelude.hashWithSalt` syncSource
       `Prelude.hashWithSalt` syncType
       `Prelude.hashWithSalt` syncName

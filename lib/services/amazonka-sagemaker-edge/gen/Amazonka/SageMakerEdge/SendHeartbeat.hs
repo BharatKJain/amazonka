@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMakerEdge.SendHeartbeat
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,8 @@ instance Core.AWSRequest SendHeartbeat where
 
 instance Prelude.Hashable SendHeartbeat where
   hashWithSalt _salt SendHeartbeat' {..} =
-    _salt `Prelude.hashWithSalt` agentMetrics
+    _salt
+      `Prelude.hashWithSalt` agentMetrics
       `Prelude.hashWithSalt` deploymentResult
       `Prelude.hashWithSalt` models
       `Prelude.hashWithSalt` agentVersion

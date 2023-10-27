@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.GetExport
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -173,7 +173,8 @@ instance Core.AWSRequest GetExport where
 
 instance Prelude.Hashable GetExport where
   hashWithSalt _salt GetExport' {..} =
-    _salt `Prelude.hashWithSalt` accepts
+    _salt
+      `Prelude.hashWithSalt` accepts
       `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` restApiId
       `Prelude.hashWithSalt` stageName

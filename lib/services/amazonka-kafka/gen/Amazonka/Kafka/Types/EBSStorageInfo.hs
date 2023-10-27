@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.EBSStorageInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.EBSStorageInfo where
@@ -80,7 +80,8 @@ instance Data.FromJSON EBSStorageInfo where
 
 instance Prelude.Hashable EBSStorageInfo where
   hashWithSalt _salt EBSStorageInfo' {..} =
-    _salt `Prelude.hashWithSalt` provisionedThroughput
+    _salt
+      `Prelude.hashWithSalt` provisionedThroughput
       `Prelude.hashWithSalt` volumeSize
 
 instance Prelude.NFData EBSStorageInfo where

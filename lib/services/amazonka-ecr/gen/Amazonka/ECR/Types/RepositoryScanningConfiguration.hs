@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECR.Types.RepositoryScanningConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECR.Types.RepositoryScanningConfiguration where
@@ -101,7 +101,8 @@ instance
       "RepositoryScanningConfiguration"
       ( \x ->
           RepositoryScanningConfiguration'
-            Prelude.<$> ( x Data..:? "appliedScanFilters"
+            Prelude.<$> ( x
+                            Data..:? "appliedScanFilters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "repositoryArn")
@@ -117,7 +118,8 @@ instance
   hashWithSalt
     _salt
     RepositoryScanningConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` appliedScanFilters
+      _salt
+        `Prelude.hashWithSalt` appliedScanFilters
         `Prelude.hashWithSalt` repositoryArn
         `Prelude.hashWithSalt` repositoryName
         `Prelude.hashWithSalt` scanFrequency

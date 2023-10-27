@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.CachePolicySummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.CachePolicySummary where
@@ -79,7 +79,8 @@ instance Data.FromXML CachePolicySummary where
 
 instance Prelude.Hashable CachePolicySummary where
   hashWithSalt _salt CachePolicySummary' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` cachePolicy
 
 instance Prelude.NFData CachePolicySummary where

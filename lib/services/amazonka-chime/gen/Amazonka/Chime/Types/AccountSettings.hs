@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.AccountSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.AccountSettings where
@@ -89,7 +89,8 @@ instance Data.FromJSON AccountSettings where
 
 instance Prelude.Hashable AccountSettings where
   hashWithSalt _salt AccountSettings' {..} =
-    _salt `Prelude.hashWithSalt` disableRemoteControl
+    _salt
+      `Prelude.hashWithSalt` disableRemoteControl
       `Prelude.hashWithSalt` enableDialOut
 
 instance Prelude.NFData AccountSettings where

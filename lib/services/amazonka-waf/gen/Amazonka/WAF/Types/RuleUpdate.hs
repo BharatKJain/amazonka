@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.RuleUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.RuleUpdate where
@@ -86,7 +86,8 @@ ruleUpdate_predicate = Lens.lens (\RuleUpdate' {predicate} -> predicate) (\s@Rul
 
 instance Prelude.Hashable RuleUpdate where
   hashWithSalt _salt RuleUpdate' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` predicate
 
 instance Prelude.NFData RuleUpdate where

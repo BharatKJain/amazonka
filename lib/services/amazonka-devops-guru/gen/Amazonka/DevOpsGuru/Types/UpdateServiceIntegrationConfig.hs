@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.UpdateServiceIntegrationConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.UpdateServiceIntegrationConfig where
@@ -76,7 +76,8 @@ instance
   hashWithSalt
     _salt
     UpdateServiceIntegrationConfig' {..} =
-      _salt `Prelude.hashWithSalt` logsAnomalyDetection
+      _salt
+        `Prelude.hashWithSalt` logsAnomalyDetection
         `Prelude.hashWithSalt` opsCenter
 
 instance

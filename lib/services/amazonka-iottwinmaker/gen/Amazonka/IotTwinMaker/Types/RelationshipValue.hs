@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.RelationshipValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.RelationshipValue where
@@ -75,7 +75,8 @@ instance Data.FromJSON RelationshipValue where
 
 instance Prelude.Hashable RelationshipValue where
   hashWithSalt _salt RelationshipValue' {..} =
-    _salt `Prelude.hashWithSalt` targetComponentName
+    _salt
+      `Prelude.hashWithSalt` targetComponentName
       `Prelude.hashWithSalt` targetEntityId
 
 instance Prelude.NFData RelationshipValue where

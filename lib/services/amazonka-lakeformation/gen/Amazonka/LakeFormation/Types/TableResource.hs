@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.TableResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.TableResource where
@@ -120,7 +120,8 @@ instance Data.FromJSON TableResource where
 
 instance Prelude.Hashable TableResource where
   hashWithSalt _salt TableResource' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` tableWildcard
       `Prelude.hashWithSalt` databaseName

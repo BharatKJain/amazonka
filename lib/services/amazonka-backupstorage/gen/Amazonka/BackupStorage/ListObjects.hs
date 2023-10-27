@@ -16,7 +16,7 @@
 -- Module      : Amazonka.BackupStorage.ListObjects
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,7 +158,8 @@ instance Core.AWSRequest ListObjects where
 
 instance Prelude.Hashable ListObjects where
   hashWithSalt _salt ListObjects' {..} =
-    _salt `Prelude.hashWithSalt` createdAfter
+    _salt
+      `Prelude.hashWithSalt` createdAfter
       `Prelude.hashWithSalt` createdBefore
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

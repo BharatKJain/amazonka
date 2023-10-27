@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.SessionStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.SessionStatus where
@@ -178,7 +178,8 @@ instance Data.FromJSON SessionStatus where
 
 instance Prelude.Hashable SessionStatus where
   hashWithSalt _salt SessionStatus' {..} =
-    _salt `Prelude.hashWithSalt` endDateTime
+    _salt
+      `Prelude.hashWithSalt` endDateTime
       `Prelude.hashWithSalt` idleSinceDateTime
       `Prelude.hashWithSalt` lastModifiedDateTime
       `Prelude.hashWithSalt` startDateTime

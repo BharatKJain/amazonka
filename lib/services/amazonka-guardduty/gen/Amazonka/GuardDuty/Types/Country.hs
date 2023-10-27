@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.Country
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.Country where
@@ -75,7 +75,8 @@ instance Data.FromJSON Country where
 
 instance Prelude.Hashable Country where
   hashWithSalt _salt Country' {..} =
-    _salt `Prelude.hashWithSalt` countryCode
+    _salt
+      `Prelude.hashWithSalt` countryCode
       `Prelude.hashWithSalt` countryName
 
 instance Prelude.NFData Country where

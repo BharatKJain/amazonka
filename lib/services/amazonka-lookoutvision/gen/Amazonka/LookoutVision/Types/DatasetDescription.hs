@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutVision.Types.DatasetDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutVision.Types.DatasetDescription where
@@ -134,7 +134,8 @@ instance Data.FromJSON DatasetDescription where
 
 instance Prelude.Hashable DatasetDescription where
   hashWithSalt _salt DatasetDescription' {..} =
-    _salt `Prelude.hashWithSalt` creationTimestamp
+    _salt
+      `Prelude.hashWithSalt` creationTimestamp
       `Prelude.hashWithSalt` datasetType
       `Prelude.hashWithSalt` imageStats
       `Prelude.hashWithSalt` lastUpdatedTimestamp

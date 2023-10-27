@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.DescribeLabelingJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -187,13 +187,13 @@ data DescribeLabelingJobResponse = DescribeLabelingJobResponse'
     --
     -- @ {@
     --
-    -- @ \"label\": \"label 1\"@
+    -- @ \"label\": \"@/@label 1@/@\"@
     --
     -- @ },@
     --
     -- @ {@
     --
-    -- @ \"label\": \"label 2\"@
+    -- @ \"label\": \"@/@label 2@/@\"@
     --
     -- @ },@
     --
@@ -201,7 +201,7 @@ data DescribeLabelingJobResponse = DescribeLabelingJobResponse'
     --
     -- @ {@
     --
-    -- @ \"label\": \"label n\"@
+    -- @ \"label\": \"@/@label n@/@\"@
     --
     -- @ }@
     --
@@ -286,13 +286,13 @@ data DescribeLabelingJobResponse = DescribeLabelingJobResponse'
 --
 -- @ {@
 --
--- @ \"label\": \"label 1\"@
+-- @ \"label\": \"@/@label 1@/@\"@
 --
 -- @ },@
 --
 -- @ {@
 --
--- @ \"label\": \"label 2\"@
+-- @ \"label\": \"@/@label 2@/@\"@
 --
 -- @ },@
 --
@@ -300,7 +300,7 @@ data DescribeLabelingJobResponse = DescribeLabelingJobResponse'
 --
 -- @ {@
 --
--- @ \"label\": \"label n\"@
+-- @ \"label\": \"@/@label n@/@\"@
 --
 -- @ }@
 --
@@ -441,13 +441,13 @@ describeLabelingJobResponse_labelAttributeName = Lens.lens (\DescribeLabelingJob
 --
 -- @ {@
 --
--- @ \"label\": \"label 1\"@
+-- @ \"label\": \"@/@label 1@/@\"@
 --
 -- @ },@
 --
 -- @ {@
 --
--- @ \"label\": \"label 2\"@
+-- @ \"label\": \"@/@label 2@/@\"@
 --
 -- @ },@
 --
@@ -455,7 +455,7 @@ describeLabelingJobResponse_labelAttributeName = Lens.lens (\DescribeLabelingJob
 --
 -- @ {@
 --
--- @ \"label\": \"label n\"@
+-- @ \"label\": \"@/@label n@/@\"@
 --
 -- @ }@
 --

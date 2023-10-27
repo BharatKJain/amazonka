@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFRegional.ListXssMatchSets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,7 +138,8 @@ instance Core.AWSRequest ListXssMatchSets where
 
 instance Prelude.Hashable ListXssMatchSets where
   hashWithSalt _salt ListXssMatchSets' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextMarker
 
 instance Prelude.NFData ListXssMatchSets where

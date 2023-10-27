@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeDeploy.ListApplicationRevisions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -249,22 +249,22 @@ instance Core.AWSPager ListApplicationRevisions where
     | Core.stop
         ( rs
             Lens.^? listApplicationRevisionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listApplicationRevisionsResponse_revisions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listApplicationRevisions_nextToken
           Lens..~ rs
           Lens.^? listApplicationRevisionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListApplicationRevisions where
   type
@@ -283,7 +283,8 @@ instance Core.AWSRequest ListApplicationRevisions where
 
 instance Prelude.Hashable ListApplicationRevisions where
   hashWithSalt _salt ListApplicationRevisions' {..} =
-    _salt `Prelude.hashWithSalt` deployed
+    _salt
+      `Prelude.hashWithSalt` deployed
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` s3Bucket
       `Prelude.hashWithSalt` s3KeyPrefix

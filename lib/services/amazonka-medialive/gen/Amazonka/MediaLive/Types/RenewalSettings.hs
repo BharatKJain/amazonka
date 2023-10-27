@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.RenewalSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.RenewalSettings where
@@ -76,7 +76,8 @@ instance Data.FromJSON RenewalSettings where
 
 instance Prelude.Hashable RenewalSettings where
   hashWithSalt _salt RenewalSettings' {..} =
-    _salt `Prelude.hashWithSalt` automaticRenewal
+    _salt
+      `Prelude.hashWithSalt` automaticRenewal
       `Prelude.hashWithSalt` renewalCount
 
 instance Prelude.NFData RenewalSettings where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.Details
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.Details where
@@ -74,7 +74,8 @@ instance Data.FromJSON Details where
             Prelude.<$> ( x
                             Data..:? "ImportAssetFromSignedUrlJobErrorDetails"
                         )
-            Prelude.<*> ( x Data..:? "ImportAssetsFromS3JobErrorDetails"
+            Prelude.<*> ( x
+                            Data..:? "ImportAssetsFromS3JobErrorDetails"
                             Data..!= Prelude.mempty
                         )
       )

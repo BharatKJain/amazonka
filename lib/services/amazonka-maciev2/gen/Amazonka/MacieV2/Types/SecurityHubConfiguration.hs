@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.SecurityHubConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.SecurityHubConfiguration where
@@ -104,7 +104,8 @@ instance Data.FromJSON SecurityHubConfiguration where
 
 instance Prelude.Hashable SecurityHubConfiguration where
   hashWithSalt _salt SecurityHubConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` publishPolicyFindings
+    _salt
+      `Prelude.hashWithSalt` publishPolicyFindings
       `Prelude.hashWithSalt` publishClassificationFindings
 
 instance Prelude.NFData SecurityHubConfiguration where

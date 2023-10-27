@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SavingsPlans.Types.SavingsPlan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SavingsPlans.Types.SavingsPlan where
@@ -239,7 +239,8 @@ instance Data.FromJSON SavingsPlan where
 
 instance Prelude.Hashable SavingsPlan where
   hashWithSalt _salt SavingsPlan' {..} =
-    _salt `Prelude.hashWithSalt` commitment
+    _salt
+      `Prelude.hashWithSalt` commitment
       `Prelude.hashWithSalt` currency
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` ec2InstanceFamily

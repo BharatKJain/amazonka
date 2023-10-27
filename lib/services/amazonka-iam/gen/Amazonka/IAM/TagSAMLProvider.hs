@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.TagSAMLProvider
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -147,7 +147,8 @@ instance Core.AWSRequest TagSAMLProvider where
 
 instance Prelude.Hashable TagSAMLProvider where
   hashWithSalt _salt TagSAMLProvider' {..} =
-    _salt `Prelude.hashWithSalt` sAMLProviderArn
+    _salt
+      `Prelude.hashWithSalt` sAMLProviderArn
       `Prelude.hashWithSalt` tags
 
 instance Prelude.NFData TagSAMLProvider where

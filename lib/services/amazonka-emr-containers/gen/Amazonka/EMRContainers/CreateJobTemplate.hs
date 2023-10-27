@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EMRContainers.CreateJobTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,7 +148,8 @@ instance Core.AWSRequest CreateJobTemplate where
 
 instance Prelude.Hashable CreateJobTemplate where
   hashWithSalt _salt CreateJobTemplate' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyArn
+    _salt
+      `Prelude.hashWithSalt` kmsKeyArn
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` clientToken

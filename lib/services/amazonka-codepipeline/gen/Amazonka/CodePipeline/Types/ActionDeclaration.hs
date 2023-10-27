@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ActionDeclaration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ActionDeclaration where
@@ -201,7 +201,8 @@ instance Data.FromJSON ActionDeclaration where
             Prelude.<$> (x Data..:? "configuration" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "inputArtifacts" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "namespace")
-            Prelude.<*> ( x Data..:? "outputArtifacts"
+            Prelude.<*> ( x
+                            Data..:? "outputArtifacts"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "region")
@@ -213,7 +214,8 @@ instance Data.FromJSON ActionDeclaration where
 
 instance Prelude.Hashable ActionDeclaration where
   hashWithSalt _salt ActionDeclaration' {..} =
-    _salt `Prelude.hashWithSalt` configuration
+    _salt
+      `Prelude.hashWithSalt` configuration
       `Prelude.hashWithSalt` inputArtifacts
       `Prelude.hashWithSalt` namespace
       `Prelude.hashWithSalt` outputArtifacts

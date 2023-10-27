@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.ComponentConfigurationUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.ComponentConfigurationUpdate where
@@ -123,7 +123,8 @@ instance
     ComponentConfigurationUpdate
   where
   hashWithSalt _salt ComponentConfigurationUpdate' {..} =
-    _salt `Prelude.hashWithSalt` merge
+    _salt
+      `Prelude.hashWithSalt` merge
       `Prelude.hashWithSalt` reset
 
 instance Prelude.NFData ComponentConfigurationUpdate where

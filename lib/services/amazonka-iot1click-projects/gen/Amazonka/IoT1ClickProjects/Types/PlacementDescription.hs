@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT1ClickProjects.Types.PlacementDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT1ClickProjects.Types.PlacementDescription where
@@ -125,7 +125,8 @@ instance Data.FromJSON PlacementDescription where
 
 instance Prelude.Hashable PlacementDescription where
   hashWithSalt _salt PlacementDescription' {..} =
-    _salt `Prelude.hashWithSalt` projectName
+    _salt
+      `Prelude.hashWithSalt` projectName
       `Prelude.hashWithSalt` placementName
       `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` createdDate

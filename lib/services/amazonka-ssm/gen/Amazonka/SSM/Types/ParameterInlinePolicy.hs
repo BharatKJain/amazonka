@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.ParameterInlinePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.ParameterInlinePolicy where
@@ -100,7 +100,8 @@ instance Data.FromJSON ParameterInlinePolicy where
 
 instance Prelude.Hashable ParameterInlinePolicy where
   hashWithSalt _salt ParameterInlinePolicy' {..} =
-    _salt `Prelude.hashWithSalt` policyStatus
+    _salt
+      `Prelude.hashWithSalt` policyStatus
       `Prelude.hashWithSalt` policyText
       `Prelude.hashWithSalt` policyType
 

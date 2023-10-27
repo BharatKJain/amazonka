@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.ResponseHeadersPolicyConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.ResponseHeadersPolicyConfig where
@@ -156,7 +156,8 @@ instance Data.FromXML ResponseHeadersPolicyConfig where
 
 instance Prelude.Hashable ResponseHeadersPolicyConfig where
   hashWithSalt _salt ResponseHeadersPolicyConfig' {..} =
-    _salt `Prelude.hashWithSalt` comment
+    _salt
+      `Prelude.hashWithSalt` comment
       `Prelude.hashWithSalt` corsConfig
       `Prelude.hashWithSalt` customHeadersConfig
       `Prelude.hashWithSalt` removeHeadersConfig

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.SyncState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.SyncState where
@@ -114,7 +114,8 @@ instance Data.FromJSON SyncState where
 
 instance Prelude.Hashable SyncState where
   hashWithSalt _salt SyncState' {..} =
-    _salt `Prelude.hashWithSalt` attachment
+    _salt
+      `Prelude.hashWithSalt` attachment
       `Prelude.hashWithSalt` config
 
 instance Prelude.NFData SyncState where

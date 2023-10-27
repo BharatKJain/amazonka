@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.RuleSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.RuleSummary where
@@ -100,12 +100,14 @@ instance Data.FromJSON RuleSummary where
       "RuleSummary"
       ( \x ->
           RuleSummary'
-            Prelude.<$> (x Data..: "RuleId") Prelude.<*> (x Data..: "Name")
+            Prelude.<$> (x Data..: "RuleId")
+            Prelude.<*> (x Data..: "Name")
       )
 
 instance Prelude.Hashable RuleSummary where
   hashWithSalt _salt RuleSummary' {..} =
-    _salt `Prelude.hashWithSalt` ruleId
+    _salt
+      `Prelude.hashWithSalt` ruleId
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData RuleSummary where

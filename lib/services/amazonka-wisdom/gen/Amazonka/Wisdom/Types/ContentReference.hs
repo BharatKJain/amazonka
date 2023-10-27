@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Wisdom.Types.ContentReference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Wisdom.Types.ContentReference where
@@ -94,7 +94,8 @@ instance Data.FromJSON ContentReference where
 
 instance Prelude.Hashable ContentReference where
   hashWithSalt _salt ContentReference' {..} =
-    _salt `Prelude.hashWithSalt` contentArn
+    _salt
+      `Prelude.hashWithSalt` contentArn
       `Prelude.hashWithSalt` contentId
       `Prelude.hashWithSalt` knowledgeBaseArn
       `Prelude.hashWithSalt` knowledgeBaseId

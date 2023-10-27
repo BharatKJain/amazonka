@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaTailor.DeleteVodSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest DeleteVodSource where
 
 instance Prelude.Hashable DeleteVodSource where
   hashWithSalt _salt DeleteVodSource' {..} =
-    _salt `Prelude.hashWithSalt` sourceLocationName
+    _salt
+      `Prelude.hashWithSalt` sourceLocationName
       `Prelude.hashWithSalt` vodSourceName
 
 instance Prelude.NFData DeleteVodSource where

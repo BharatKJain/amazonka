@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.KeyPhrase
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.KeyPhrase where
@@ -103,7 +103,8 @@ instance Data.FromJSON KeyPhrase where
 
 instance Prelude.Hashable KeyPhrase where
   hashWithSalt _salt KeyPhrase' {..} =
-    _salt `Prelude.hashWithSalt` beginOffset
+    _salt
+      `Prelude.hashWithSalt` beginOffset
       `Prelude.hashWithSalt` endOffset
       `Prelude.hashWithSalt` score
       `Prelude.hashWithSalt` text

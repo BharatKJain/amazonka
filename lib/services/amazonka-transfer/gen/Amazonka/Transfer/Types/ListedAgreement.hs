@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.ListedAgreement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.ListedAgreement where
@@ -131,7 +131,8 @@ instance Data.FromJSON ListedAgreement where
 
 instance Prelude.Hashable ListedAgreement where
   hashWithSalt _salt ListedAgreement' {..} =
-    _salt `Prelude.hashWithSalt` agreementId
+    _salt
+      `Prelude.hashWithSalt` agreementId
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` localProfileId

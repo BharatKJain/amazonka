@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PersonalizeRuntime.Types.Promotion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PersonalizeRuntime.Types.Promotion where
@@ -131,7 +131,8 @@ promotion_percentPromotedItems = Lens.lens (\Promotion' {percentPromotedItems} -
 
 instance Prelude.Hashable Promotion where
   hashWithSalt _salt Promotion' {..} =
-    _salt `Prelude.hashWithSalt` filterArn
+    _salt
+      `Prelude.hashWithSalt` filterArn
       `Prelude.hashWithSalt` filterValues
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` percentPromotedItems

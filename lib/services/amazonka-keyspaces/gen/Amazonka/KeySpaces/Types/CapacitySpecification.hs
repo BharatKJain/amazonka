@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KeySpaces.Types.CapacitySpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KeySpaces.Types.CapacitySpecification where
@@ -129,7 +129,8 @@ capacitySpecification_throughputMode = Lens.lens (\CapacitySpecification' {throu
 
 instance Prelude.Hashable CapacitySpecification where
   hashWithSalt _salt CapacitySpecification' {..} =
-    _salt `Prelude.hashWithSalt` readCapacityUnits
+    _salt
+      `Prelude.hashWithSalt` readCapacityUnits
       `Prelude.hashWithSalt` writeCapacityUnits
       `Prelude.hashWithSalt` throughputMode
 

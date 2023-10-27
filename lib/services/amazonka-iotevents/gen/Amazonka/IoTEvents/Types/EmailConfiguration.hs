@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.EmailConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.EmailConfiguration where
@@ -114,7 +114,8 @@ instance Data.FromJSON EmailConfiguration where
 
 instance Prelude.Hashable EmailConfiguration where
   hashWithSalt _salt EmailConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` content
+    _salt
+      `Prelude.hashWithSalt` content
       `Prelude.hashWithSalt` from
       `Prelude.hashWithSalt` recipients
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.InputDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.InputDestination where
@@ -97,7 +97,8 @@ instance Data.FromJSON InputDestination where
 
 instance Prelude.Hashable InputDestination where
   hashWithSalt _salt InputDestination' {..} =
-    _salt `Prelude.hashWithSalt` ip
+    _salt
+      `Prelude.hashWithSalt` ip
       `Prelude.hashWithSalt` port
       `Prelude.hashWithSalt` url
       `Prelude.hashWithSalt` vpc

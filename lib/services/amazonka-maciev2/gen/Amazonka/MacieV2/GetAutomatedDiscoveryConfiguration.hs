@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MacieV2.GetAutomatedDiscoveryConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -79,12 +79,12 @@ instance
       ( \s h x ->
           GetAutomatedDiscoveryConfigurationResponse'
             Prelude.<$> (x Data..?> "classificationScopeId")
-              Prelude.<*> (x Data..?> "disabledAt")
-              Prelude.<*> (x Data..?> "firstEnabledAt")
-              Prelude.<*> (x Data..?> "lastUpdatedAt")
-              Prelude.<*> (x Data..?> "sensitivityInspectionTemplateId")
-              Prelude.<*> (x Data..?> "status")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "disabledAt")
+            Prelude.<*> (x Data..?> "firstEnabledAt")
+            Prelude.<*> (x Data..?> "lastUpdatedAt")
+            Prelude.<*> (x Data..?> "sensitivityInspectionTemplateId")
+            Prelude.<*> (x Data..?> "status")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance

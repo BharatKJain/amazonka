@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.ParticipantTimerValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.ParticipantTimerValue where
@@ -74,7 +74,8 @@ participantTimerValue_participantTimerDurationInMinutes = Lens.lens (\Participan
 
 instance Prelude.Hashable ParticipantTimerValue where
   hashWithSalt _salt ParticipantTimerValue' {..} =
-    _salt `Prelude.hashWithSalt` participantTimerAction
+    _salt
+      `Prelude.hashWithSalt` participantTimerAction
       `Prelude.hashWithSalt` participantTimerDurationInMinutes
 
 instance Prelude.NFData ParticipantTimerValue where

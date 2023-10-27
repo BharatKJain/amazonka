@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GlobalAccelerator.ListAccelerators
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,22 +98,22 @@ instance Core.AWSPager ListAccelerators where
     | Core.stop
         ( rs
             Lens.^? listAcceleratorsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listAcceleratorsResponse_accelerators
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAccelerators_nextToken
           Lens..~ rs
           Lens.^? listAcceleratorsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAccelerators where
   type
@@ -132,7 +132,8 @@ instance Core.AWSRequest ListAccelerators where
 
 instance Prelude.Hashable ListAccelerators where
   hashWithSalt _salt ListAccelerators' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListAccelerators where

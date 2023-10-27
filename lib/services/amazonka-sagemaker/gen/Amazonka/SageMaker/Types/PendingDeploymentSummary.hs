@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.PendingDeploymentSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.PendingDeploymentSummary where
@@ -111,7 +111,8 @@ instance Data.FromJSON PendingDeploymentSummary where
 
 instance Prelude.Hashable PendingDeploymentSummary where
   hashWithSalt _salt PendingDeploymentSummary' {..} =
-    _salt `Prelude.hashWithSalt` productionVariants
+    _salt
+      `Prelude.hashWithSalt` productionVariants
       `Prelude.hashWithSalt` shadowProductionVariants
       `Prelude.hashWithSalt` startTime
       `Prelude.hashWithSalt` endpointConfigName

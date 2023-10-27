@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.RealTimeInferenceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.RealTimeInferenceConfig where
@@ -83,7 +83,8 @@ instance Data.FromJSON RealTimeInferenceConfig where
 
 instance Prelude.Hashable RealTimeInferenceConfig where
   hashWithSalt _salt RealTimeInferenceConfig' {..} =
-    _salt `Prelude.hashWithSalt` instanceType
+    _salt
+      `Prelude.hashWithSalt` instanceType
       `Prelude.hashWithSalt` instanceCount
 
 instance Prelude.NFData RealTimeInferenceConfig where

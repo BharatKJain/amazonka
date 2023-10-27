@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppRunner.ListOperations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -142,7 +142,8 @@ instance Core.AWSRequest ListOperations where
       ( \s h x ->
           ListOperationsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "OperationSummaryList"
+            Prelude.<*> ( x
+                            Data..?> "OperationSummaryList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -150,7 +151,8 @@ instance Core.AWSRequest ListOperations where
 
 instance Prelude.Hashable ListOperations where
   hashWithSalt _salt ListOperations' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` serviceArn
 

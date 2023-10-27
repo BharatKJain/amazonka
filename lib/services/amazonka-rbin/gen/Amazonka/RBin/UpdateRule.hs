@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RBin.UpdateRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -200,7 +200,8 @@ instance Core.AWSRequest UpdateRule where
 
 instance Prelude.Hashable UpdateRule where
   hashWithSalt _salt UpdateRule' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` resourceTags
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` retentionPeriod

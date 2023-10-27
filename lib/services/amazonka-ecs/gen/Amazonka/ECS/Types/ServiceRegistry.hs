@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.ServiceRegistry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.ServiceRegistry where
@@ -155,7 +155,8 @@ instance Data.FromJSON ServiceRegistry where
 
 instance Prelude.Hashable ServiceRegistry where
   hashWithSalt _salt ServiceRegistry' {..} =
-    _salt `Prelude.hashWithSalt` containerName
+    _salt
+      `Prelude.hashWithSalt` containerName
       `Prelude.hashWithSalt` containerPort
       `Prelude.hashWithSalt` port
       `Prelude.hashWithSalt` registryArn

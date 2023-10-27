@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.PutLifecycleHook
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -312,7 +312,8 @@ instance Core.AWSRequest PutLifecycleHook where
 
 instance Prelude.Hashable PutLifecycleHook where
   hashWithSalt _salt PutLifecycleHook' {..} =
-    _salt `Prelude.hashWithSalt` defaultResult
+    _salt
+      `Prelude.hashWithSalt` defaultResult
       `Prelude.hashWithSalt` heartbeatTimeout
       `Prelude.hashWithSalt` lifecycleTransition
       `Prelude.hashWithSalt` notificationMetadata

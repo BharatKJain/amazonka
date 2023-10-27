@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpsWorks.UpdateUserProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest UpdateUserProfile where
 
 instance Prelude.Hashable UpdateUserProfile where
   hashWithSalt _salt UpdateUserProfile' {..} =
-    _salt `Prelude.hashWithSalt` allowSelfManagement
+    _salt
+      `Prelude.hashWithSalt` allowSelfManagement
       `Prelude.hashWithSalt` sshPublicKey
       `Prelude.hashWithSalt` sshUsername
       `Prelude.hashWithSalt` iamUserArn

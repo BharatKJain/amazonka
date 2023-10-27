@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2VpcDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2VpcDetails where
@@ -95,11 +95,13 @@ instance Data.FromJSON AwsEc2VpcDetails where
       "AwsEc2VpcDetails"
       ( \x ->
           AwsEc2VpcDetails'
-            Prelude.<$> ( x Data..:? "CidrBlockAssociationSet"
+            Prelude.<$> ( x
+                            Data..:? "CidrBlockAssociationSet"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "DhcpOptionsId")
-            Prelude.<*> ( x Data..:? "Ipv6CidrBlockAssociationSet"
+            Prelude.<*> ( x
+                            Data..:? "Ipv6CidrBlockAssociationSet"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "State")

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.FilterOperationSelectedFieldsConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.FilterOperationSelectedFieldsConfiguration where
@@ -94,7 +94,7 @@ instance
       ( \x ->
           FilterOperationSelectedFieldsConfiguration'
             Prelude.<$> (x Data..:? "SelectedFieldOptions")
-              Prelude.<*> (x Data..:? "SelectedFields")
+            Prelude.<*> (x Data..:? "SelectedFields")
       )
 
 instance
@@ -104,7 +104,8 @@ instance
   hashWithSalt
     _salt
     FilterOperationSelectedFieldsConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` selectedFieldOptions
+      _salt
+        `Prelude.hashWithSalt` selectedFieldOptions
         `Prelude.hashWithSalt` selectedFields
 
 instance

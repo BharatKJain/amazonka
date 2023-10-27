@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.SchedulingConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.SchedulingConfig where
@@ -118,7 +118,8 @@ instance Data.FromJSON SchedulingConfig where
 
 instance Prelude.Hashable SchedulingConfig where
   hashWithSalt _salt SchedulingConfig' {..} =
-    _salt `Prelude.hashWithSalt` endBehavior
+    _salt
+      `Prelude.hashWithSalt` endBehavior
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` startTime
 

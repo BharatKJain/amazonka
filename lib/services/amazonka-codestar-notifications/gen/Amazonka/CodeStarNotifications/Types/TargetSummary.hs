@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeStarNotifications.Types.TargetSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeStarNotifications.Types.TargetSummary where
@@ -97,7 +97,8 @@ instance Data.FromJSON TargetSummary where
 
 instance Prelude.Hashable TargetSummary where
   hashWithSalt _salt TargetSummary' {..} =
-    _salt `Prelude.hashWithSalt` targetAddress
+    _salt
+      `Prelude.hashWithSalt` targetAddress
       `Prelude.hashWithSalt` targetStatus
       `Prelude.hashWithSalt` targetType
 

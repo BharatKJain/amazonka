@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.RegexMatchSetUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.RegexMatchSetUpdate where
@@ -96,7 +96,8 @@ regexMatchSetUpdate_regexMatchTuple = Lens.lens (\RegexMatchSetUpdate' {regexMat
 
 instance Prelude.Hashable RegexMatchSetUpdate where
   hashWithSalt _salt RegexMatchSetUpdate' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` regexMatchTuple
 
 instance Prelude.NFData RegexMatchSetUpdate where

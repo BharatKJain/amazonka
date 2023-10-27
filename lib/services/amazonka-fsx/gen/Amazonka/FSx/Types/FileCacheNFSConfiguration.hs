@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.FileCacheNFSConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.FileCacheNFSConfiguration where
@@ -87,7 +87,8 @@ fileCacheNFSConfiguration_version = Lens.lens (\FileCacheNFSConfiguration' {vers
 
 instance Prelude.Hashable FileCacheNFSConfiguration where
   hashWithSalt _salt FileCacheNFSConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` dnsIps
+    _salt
+      `Prelude.hashWithSalt` dnsIps
       `Prelude.hashWithSalt` version
 
 instance Prelude.NFData FileCacheNFSConfiguration where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.DeleteApplicationVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest DeleteApplicationVersion where
 
 instance Prelude.Hashable DeleteApplicationVersion where
   hashWithSalt _salt DeleteApplicationVersion' {..} =
-    _salt `Prelude.hashWithSalt` deleteSourceBundle
+    _salt
+      `Prelude.hashWithSalt` deleteSourceBundle
       `Prelude.hashWithSalt` applicationName
       `Prelude.hashWithSalt` versionLabel
 

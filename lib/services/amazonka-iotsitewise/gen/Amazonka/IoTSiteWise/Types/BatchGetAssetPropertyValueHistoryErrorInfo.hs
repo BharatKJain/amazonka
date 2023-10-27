@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.BatchGetAssetPropertyValueHistoryErrorInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.BatchGetAssetPropertyValueHistoryErrorInfo where
@@ -82,7 +82,7 @@ instance
       ( \x ->
           BatchGetAssetPropertyValueHistoryErrorInfo'
             Prelude.<$> (x Data..: "errorCode")
-              Prelude.<*> (x Data..: "errorTimestamp")
+            Prelude.<*> (x Data..: "errorTimestamp")
       )
 
 instance
@@ -92,7 +92,8 @@ instance
   hashWithSalt
     _salt
     BatchGetAssetPropertyValueHistoryErrorInfo' {..} =
-      _salt `Prelude.hashWithSalt` errorCode
+      _salt
+        `Prelude.hashWithSalt` errorCode
         `Prelude.hashWithSalt` errorTimestamp
 
 instance

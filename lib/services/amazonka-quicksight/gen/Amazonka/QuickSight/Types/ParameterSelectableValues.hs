@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ParameterSelectableValues
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ParameterSelectableValues where
@@ -76,7 +76,8 @@ instance Data.FromJSON ParameterSelectableValues where
 
 instance Prelude.Hashable ParameterSelectableValues where
   hashWithSalt _salt ParameterSelectableValues' {..} =
-    _salt `Prelude.hashWithSalt` linkToDataSetColumn
+    _salt
+      `Prelude.hashWithSalt` linkToDataSetColumn
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData ParameterSelectableValues where

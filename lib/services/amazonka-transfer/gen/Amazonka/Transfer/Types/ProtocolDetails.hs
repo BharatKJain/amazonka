@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.ProtocolDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.ProtocolDetails where
@@ -328,7 +328,8 @@ instance Data.FromJSON ProtocolDetails where
 
 instance Prelude.Hashable ProtocolDetails where
   hashWithSalt _salt ProtocolDetails' {..} =
-    _salt `Prelude.hashWithSalt` as2Transports
+    _salt
+      `Prelude.hashWithSalt` as2Transports
       `Prelude.hashWithSalt` passiveIp
       `Prelude.hashWithSalt` setStatOption
       `Prelude.hashWithSalt` tlsSessionResumptionMode

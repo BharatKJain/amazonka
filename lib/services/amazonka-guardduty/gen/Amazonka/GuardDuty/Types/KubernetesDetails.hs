@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.KubernetesDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.KubernetesDetails where
@@ -78,7 +78,8 @@ instance Data.FromJSON KubernetesDetails where
 
 instance Prelude.Hashable KubernetesDetails where
   hashWithSalt _salt KubernetesDetails' {..} =
-    _salt `Prelude.hashWithSalt` kubernetesUserDetails
+    _salt
+      `Prelude.hashWithSalt` kubernetesUserDetails
       `Prelude.hashWithSalt` kubernetesWorkloadDetails
 
 instance Prelude.NFData KubernetesDetails where

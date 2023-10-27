@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.ChildWorkflowExecutionStartedEventAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.ChildWorkflowExecutionStartedEventAttributes where
@@ -103,8 +103,8 @@ instance
       ( \x ->
           ChildWorkflowExecutionStartedEventAttributes'
             Prelude.<$> (x Data..: "workflowExecution")
-              Prelude.<*> (x Data..: "workflowType")
-              Prelude.<*> (x Data..: "initiatedEventId")
+            Prelude.<*> (x Data..: "workflowType")
+            Prelude.<*> (x Data..: "initiatedEventId")
       )
 
 instance
@@ -114,7 +114,8 @@ instance
   hashWithSalt
     _salt
     ChildWorkflowExecutionStartedEventAttributes' {..} =
-      _salt `Prelude.hashWithSalt` workflowExecution
+      _salt
+        `Prelude.hashWithSalt` workflowExecution
         `Prelude.hashWithSalt` workflowType
         `Prelude.hashWithSalt` initiatedEventId
 

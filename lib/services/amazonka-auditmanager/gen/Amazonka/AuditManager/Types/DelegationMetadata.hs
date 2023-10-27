@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.DelegationMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.DelegationMetadata where
@@ -125,7 +125,8 @@ instance Data.FromJSON DelegationMetadata where
 
 instance Prelude.Hashable DelegationMetadata where
   hashWithSalt _salt DelegationMetadata' {..} =
-    _salt `Prelude.hashWithSalt` assessmentId
+    _salt
+      `Prelude.hashWithSalt` assessmentId
       `Prelude.hashWithSalt` assessmentName
       `Prelude.hashWithSalt` controlSetName
       `Prelude.hashWithSalt` creationTime

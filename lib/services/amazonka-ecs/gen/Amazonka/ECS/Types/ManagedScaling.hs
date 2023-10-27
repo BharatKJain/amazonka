@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.ManagedScaling
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.ManagedScaling where
@@ -175,7 +175,8 @@ instance Data.FromJSON ManagedScaling where
 
 instance Prelude.Hashable ManagedScaling where
   hashWithSalt _salt ManagedScaling' {..} =
-    _salt `Prelude.hashWithSalt` instanceWarmupPeriod
+    _salt
+      `Prelude.hashWithSalt` instanceWarmupPeriod
       `Prelude.hashWithSalt` maximumScalingStepSize
       `Prelude.hashWithSalt` minimumScalingStepSize
       `Prelude.hashWithSalt` status

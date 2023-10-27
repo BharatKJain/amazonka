@@ -11,7 +11,7 @@
 -- Module      : Amazonka.EKS.Waiters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Waiters where
@@ -38,7 +38,8 @@ newAddonActive =
         [ Core.matchAll
             "CREATE_FAILED"
             Core.AcceptFailure
-            ( describeAddonResponse_addon Prelude.. Lens._Just
+            ( describeAddonResponse_addon
+                Prelude.. Lens._Just
                 Prelude.. addon_status
                 Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
@@ -46,7 +47,8 @@ newAddonActive =
           Core.matchAll
             "DEGRADED"
             Core.AcceptFailure
-            ( describeAddonResponse_addon Prelude.. Lens._Just
+            ( describeAddonResponse_addon
+                Prelude.. Lens._Just
                 Prelude.. addon_status
                 Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
@@ -54,7 +56,8 @@ newAddonActive =
           Core.matchAll
             "ACTIVE"
             Core.AcceptSuccess
-            ( describeAddonResponse_addon Prelude.. Lens._Just
+            ( describeAddonResponse_addon
+                Prelude.. Lens._Just
                 Prelude.. addon_status
                 Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
@@ -73,7 +76,8 @@ newAddonDeleted =
         [ Core.matchAll
             "DELETE_FAILED"
             Core.AcceptFailure
-            ( describeAddonResponse_addon Prelude.. Lens._Just
+            ( describeAddonResponse_addon
+                Prelude.. Lens._Just
                 Prelude.. addon_status
                 Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
@@ -95,7 +99,8 @@ newClusterActive =
         [ Core.matchAll
             "DELETING"
             Core.AcceptFailure
-            ( describeClusterResponse_cluster Prelude.. Lens._Just
+            ( describeClusterResponse_cluster
+                Prelude.. Lens._Just
                 Prelude.. cluster_status
                 Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
@@ -103,7 +108,8 @@ newClusterActive =
           Core.matchAll
             "FAILED"
             Core.AcceptFailure
-            ( describeClusterResponse_cluster Prelude.. Lens._Just
+            ( describeClusterResponse_cluster
+                Prelude.. Lens._Just
                 Prelude.. cluster_status
                 Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
@@ -111,7 +117,8 @@ newClusterActive =
           Core.matchAll
             "ACTIVE"
             Core.AcceptSuccess
-            ( describeClusterResponse_cluster Prelude.. Lens._Just
+            ( describeClusterResponse_cluster
+                Prelude.. Lens._Just
                 Prelude.. cluster_status
                 Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
@@ -130,7 +137,8 @@ newClusterDeleted =
         [ Core.matchAll
             "ACTIVE"
             Core.AcceptFailure
-            ( describeClusterResponse_cluster Prelude.. Lens._Just
+            ( describeClusterResponse_cluster
+                Prelude.. Lens._Just
                 Prelude.. cluster_status
                 Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
@@ -138,7 +146,8 @@ newClusterDeleted =
           Core.matchAll
             "CREATING"
             Core.AcceptFailure
-            ( describeClusterResponse_cluster Prelude.. Lens._Just
+            ( describeClusterResponse_cluster
+                Prelude.. Lens._Just
                 Prelude.. cluster_status
                 Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
@@ -146,7 +155,8 @@ newClusterDeleted =
           Core.matchAll
             "PENDING"
             Core.AcceptFailure
-            ( describeClusterResponse_cluster Prelude.. Lens._Just
+            ( describeClusterResponse_cluster
+                Prelude.. Lens._Just
                 Prelude.. cluster_status
                 Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI

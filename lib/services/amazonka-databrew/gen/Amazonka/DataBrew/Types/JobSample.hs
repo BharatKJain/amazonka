@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.JobSample
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.JobSample where
@@ -105,12 +105,14 @@ instance Data.FromJSON JobSample where
       "JobSample"
       ( \x ->
           JobSample'
-            Prelude.<$> (x Data..:? "Mode") Prelude.<*> (x Data..:? "Size")
+            Prelude.<$> (x Data..:? "Mode")
+            Prelude.<*> (x Data..:? "Size")
       )
 
 instance Prelude.Hashable JobSample where
   hashWithSalt _salt JobSample' {..} =
-    _salt `Prelude.hashWithSalt` mode
+    _salt
+      `Prelude.hashWithSalt` mode
       `Prelude.hashWithSalt` size
 
 instance Prelude.NFData JobSample where

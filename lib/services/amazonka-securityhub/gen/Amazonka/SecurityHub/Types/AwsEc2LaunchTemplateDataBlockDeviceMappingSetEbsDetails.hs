@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails where
@@ -153,13 +153,13 @@ instance
       ( \x ->
           AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails'
             Prelude.<$> (x Data..:? "DeleteOnTermination")
-              Prelude.<*> (x Data..:? "Encrypted")
-              Prelude.<*> (x Data..:? "Iops")
-              Prelude.<*> (x Data..:? "KmsKeyId")
-              Prelude.<*> (x Data..:? "SnapshotId")
-              Prelude.<*> (x Data..:? "Throughput")
-              Prelude.<*> (x Data..:? "VolumeSize")
-              Prelude.<*> (x Data..:? "VolumeType")
+            Prelude.<*> (x Data..:? "Encrypted")
+            Prelude.<*> (x Data..:? "Iops")
+            Prelude.<*> (x Data..:? "KmsKeyId")
+            Prelude.<*> (x Data..:? "SnapshotId")
+            Prelude.<*> (x Data..:? "Throughput")
+            Prelude.<*> (x Data..:? "VolumeSize")
+            Prelude.<*> (x Data..:? "VolumeType")
       )
 
 instance
@@ -169,7 +169,8 @@ instance
   hashWithSalt
     _salt
     AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails' {..} =
-      _salt `Prelude.hashWithSalt` deleteOnTermination
+      _salt
+        `Prelude.hashWithSalt` deleteOnTermination
         `Prelude.hashWithSalt` encrypted
         `Prelude.hashWithSalt` iops
         `Prelude.hashWithSalt` kmsKeyId

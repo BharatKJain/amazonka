@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DrS.Types.RecoveryInstanceProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DrS.Types.RecoveryInstanceProperties where
@@ -122,7 +122,8 @@ instance Data.FromJSON RecoveryInstanceProperties where
             Prelude.<*> (x Data..:? "disks" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "identificationHints")
             Prelude.<*> (x Data..:? "lastUpdatedDateTime")
-            Prelude.<*> ( x Data..:? "networkInterfaces"
+            Prelude.<*> ( x
+                            Data..:? "networkInterfaces"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "os")
@@ -131,7 +132,8 @@ instance Data.FromJSON RecoveryInstanceProperties where
 
 instance Prelude.Hashable RecoveryInstanceProperties where
   hashWithSalt _salt RecoveryInstanceProperties' {..} =
-    _salt `Prelude.hashWithSalt` cpus
+    _salt
+      `Prelude.hashWithSalt` cpus
       `Prelude.hashWithSalt` disks
       `Prelude.hashWithSalt` identificationHints
       `Prelude.hashWithSalt` lastUpdatedDateTime

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpaces.Types.WorkspaceBundle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpaces.Types.WorkspaceBundle where
@@ -185,7 +185,8 @@ instance Data.FromJSON WorkspaceBundle where
 
 instance Prelude.Hashable WorkspaceBundle where
   hashWithSalt _salt WorkspaceBundle' {..} =
-    _salt `Prelude.hashWithSalt` bundleId
+    _salt
+      `Prelude.hashWithSalt` bundleId
       `Prelude.hashWithSalt` bundleType
       `Prelude.hashWithSalt` computeType
       `Prelude.hashWithSalt` creationTime

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsRdsDbSnapshotDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsRdsDbSnapshotDetails where
@@ -450,7 +450,8 @@ instance Data.FromJSON AwsRdsDbSnapshotDetails where
             Prelude.<*> (x Data..:? "OptionGroupName")
             Prelude.<*> (x Data..:? "PercentProgress")
             Prelude.<*> (x Data..:? "Port")
-            Prelude.<*> ( x Data..:? "ProcessorFeatures"
+            Prelude.<*> ( x
+                            Data..:? "ProcessorFeatures"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SnapshotCreateTime")
@@ -466,7 +467,8 @@ instance Data.FromJSON AwsRdsDbSnapshotDetails where
 
 instance Prelude.Hashable AwsRdsDbSnapshotDetails where
   hashWithSalt _salt AwsRdsDbSnapshotDetails' {..} =
-    _salt `Prelude.hashWithSalt` allocatedStorage
+    _salt
+      `Prelude.hashWithSalt` allocatedStorage
       `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` dbInstanceIdentifier
       `Prelude.hashWithSalt` dbSnapshotIdentifier

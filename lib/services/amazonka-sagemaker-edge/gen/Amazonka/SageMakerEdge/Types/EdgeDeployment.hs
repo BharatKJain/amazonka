@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerEdge.Types.EdgeDeployment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerEdge.Types.EdgeDeployment where
@@ -101,7 +101,8 @@ instance Data.FromJSON EdgeDeployment where
 
 instance Prelude.Hashable EdgeDeployment where
   hashWithSalt _salt EdgeDeployment' {..} =
-    _salt `Prelude.hashWithSalt` definitions
+    _salt
+      `Prelude.hashWithSalt` definitions
       `Prelude.hashWithSalt` deploymentName
       `Prelude.hashWithSalt` failureHandlingPolicy
       `Prelude.hashWithSalt` type'

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SQS.Types.ChangeMessageVisibilityBatchResultEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SQS.Types.ChangeMessageVisibilityBatchResultEntry where
@@ -24,7 +24,7 @@ import qualified Amazonka.Core.Lens.Internal as Lens
 import qualified Amazonka.Data as Data
 import qualified Amazonka.Prelude as Prelude
 
--- | Encloses the @Id@ of an entry in @ ChangeMessageVisibilityBatch.@
+-- | Encloses the @Id@ of an entry in @ @@ChangeMessageVisibilityBatch@@.@
 --
 -- /See:/ 'newChangeMessageVisibilityBatchResultEntry' smart constructor.
 data ChangeMessageVisibilityBatchResultEntry = ChangeMessageVisibilityBatchResultEntry'

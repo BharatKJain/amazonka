@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.ListUsers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -99,7 +99,7 @@ data ListUsers = ListUsers'
     -- -   @cognito:user_status@ (called __Status__ in the Console)
     --     (case-insensitive)
     --
-    -- -   @status (called Enabled in the Console) (case-sensitive)@
+    -- -   @status (called @__@Enabled@__@ in the Console) (case-sensitive)@
     --
     -- -   @sub@
     --
@@ -186,7 +186,7 @@ data ListUsers = ListUsers'
 -- -   @cognito:user_status@ (called __Status__ in the Console)
 --     (case-insensitive)
 --
--- -   @status (called Enabled in the Console) (case-sensitive)@
+-- -   @status (called @__@Enabled@__@ in the Console) (case-sensitive)@
 --
 -- -   @sub@
 --
@@ -276,7 +276,7 @@ listUsers_attributesToGet = Lens.lens (\ListUsers' {attributesToGet} -> attribut
 -- -   @cognito:user_status@ (called __Status__ in the Console)
 --     (case-insensitive)
 --
--- -   @status (called Enabled in the Console) (case-sensitive)@
+-- -   @status (called @__@Enabled@__@ in the Console) (case-sensitive)@
 --
 -- -   @sub@
 --
@@ -324,21 +324,22 @@ instance Core.AWSPager ListUsers where
     | Core.stop
         ( rs
             Lens.^? listUsersResponse_paginationToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listUsersResponse_users Prelude.. Lens._Just
+            Lens.^? listUsersResponse_users
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listUsers_paginationToken
           Lens..~ rs
           Lens.^? listUsersResponse_paginationToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListUsers where
   type AWSResponse ListUsers = ListUsersResponse
@@ -355,7 +356,8 @@ instance Core.AWSRequest ListUsers where
 
 instance Prelude.Hashable ListUsers where
   hashWithSalt _salt ListUsers' {..} =
-    _salt `Prelude.hashWithSalt` attributesToGet
+    _salt
+      `Prelude.hashWithSalt` attributesToGet
       `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` paginationToken

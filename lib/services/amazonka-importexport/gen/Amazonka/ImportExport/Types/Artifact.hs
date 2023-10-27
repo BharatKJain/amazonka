@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ImportExport.Types.Artifact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ImportExport.Types.Artifact where
@@ -69,7 +69,8 @@ instance Data.FromXML Artifact where
 
 instance Prelude.Hashable Artifact where
   hashWithSalt _salt Artifact' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` url
 
 instance Prelude.NFData Artifact where

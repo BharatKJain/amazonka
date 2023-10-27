@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.NodePropertiesSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.NodePropertiesSummary where
@@ -95,7 +95,8 @@ instance Data.FromJSON NodePropertiesSummary where
 
 instance Prelude.Hashable NodePropertiesSummary where
   hashWithSalt _salt NodePropertiesSummary' {..} =
-    _salt `Prelude.hashWithSalt` isMainNode
+    _salt
+      `Prelude.hashWithSalt` isMainNode
       `Prelude.hashWithSalt` nodeIndex
       `Prelude.hashWithSalt` numNodes
 

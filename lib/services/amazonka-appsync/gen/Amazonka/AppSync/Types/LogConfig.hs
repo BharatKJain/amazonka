@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.LogConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.LogConfig where
@@ -158,7 +158,8 @@ instance Data.FromJSON LogConfig where
 
 instance Prelude.Hashable LogConfig where
   hashWithSalt _salt LogConfig' {..} =
-    _salt `Prelude.hashWithSalt` excludeVerboseContent
+    _salt
+      `Prelude.hashWithSalt` excludeVerboseContent
       `Prelude.hashWithSalt` fieldLogLevel
       `Prelude.hashWithSalt` cloudWatchLogsRoleArn
 

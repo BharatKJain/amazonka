@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.CloudTrailProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.CloudTrailProperties where
@@ -98,7 +98,8 @@ instance Data.FromJSON CloudTrailProperties where
       "CloudTrailProperties"
       ( \x ->
           CloudTrailProperties'
-            Prelude.<$> ( x Data..:? "trailProperties"
+            Prelude.<$> ( x
+                            Data..:? "trailProperties"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "startTime")
@@ -107,7 +108,8 @@ instance Data.FromJSON CloudTrailProperties where
 
 instance Prelude.Hashable CloudTrailProperties where
   hashWithSalt _salt CloudTrailProperties' {..} =
-    _salt `Prelude.hashWithSalt` trailProperties
+    _salt
+      `Prelude.hashWithSalt` trailProperties
       `Prelude.hashWithSalt` startTime
       `Prelude.hashWithSalt` endTime
 

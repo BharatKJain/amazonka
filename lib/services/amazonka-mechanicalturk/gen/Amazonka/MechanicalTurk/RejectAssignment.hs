@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MechanicalTurk.RejectAssignment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest RejectAssignment where
 
 instance Prelude.Hashable RejectAssignment where
   hashWithSalt _salt RejectAssignment' {..} =
-    _salt `Prelude.hashWithSalt` assignmentId
+    _salt
+      `Prelude.hashWithSalt` assignmentId
       `Prelude.hashWithSalt` requesterFeedback
 
 instance Prelude.NFData RejectAssignment where

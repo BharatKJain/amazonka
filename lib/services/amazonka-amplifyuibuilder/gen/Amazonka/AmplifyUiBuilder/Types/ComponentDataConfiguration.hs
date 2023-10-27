@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.ComponentDataConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.ComponentDataConfiguration where
@@ -109,7 +109,8 @@ instance Data.FromJSON ComponentDataConfiguration where
 
 instance Prelude.Hashable ComponentDataConfiguration where
   hashWithSalt _salt ComponentDataConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` identifiers
+    _salt
+      `Prelude.hashWithSalt` identifiers
       `Prelude.hashWithSalt` predicate
       `Prelude.hashWithSalt` sort
       `Prelude.hashWithSalt` model

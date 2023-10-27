@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.UsageLimit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.UsageLimit where
@@ -164,14 +164,17 @@ instance Data.FromXML UsageLimit where
       Prelude.<*> (x Data..@? "FeatureType")
       Prelude.<*> (x Data..@? "LimitType")
       Prelude.<*> (x Data..@? "Period")
-      Prelude.<*> ( x Data..@? "Tags" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Tags"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Tag")
                   )
       Prelude.<*> (x Data..@? "UsageLimitId")
 
 instance Prelude.Hashable UsageLimit where
   hashWithSalt _salt UsageLimit' {..} =
-    _salt `Prelude.hashWithSalt` amount
+    _salt
+      `Prelude.hashWithSalt` amount
       `Prelude.hashWithSalt` breachAction
       `Prelude.hashWithSalt` clusterIdentifier
       `Prelude.hashWithSalt` featureType

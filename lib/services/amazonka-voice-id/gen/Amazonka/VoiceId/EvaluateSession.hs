@@ -16,7 +16,7 @@
 -- Module      : Amazonka.VoiceId.EvaluateSession
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,7 +118,8 @@ instance Core.AWSRequest EvaluateSession where
 
 instance Prelude.Hashable EvaluateSession where
   hashWithSalt _salt EvaluateSession' {..} =
-    _salt `Prelude.hashWithSalt` domainId
+    _salt
+      `Prelude.hashWithSalt` domainId
       `Prelude.hashWithSalt` sessionNameOrId
 
 instance Prelude.NFData EvaluateSession where

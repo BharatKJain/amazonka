@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudTrail.Types.S3ImportSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudTrail.Types.S3ImportSource where
@@ -93,7 +93,8 @@ instance Data.FromJSON S3ImportSource where
 
 instance Prelude.Hashable S3ImportSource where
   hashWithSalt _salt S3ImportSource' {..} =
-    _salt `Prelude.hashWithSalt` s3LocationUri
+    _salt
+      `Prelude.hashWithSalt` s3LocationUri
       `Prelude.hashWithSalt` s3BucketRegion
       `Prelude.hashWithSalt` s3BucketAccessRoleArn
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.DomainIspPlacement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.DomainIspPlacement where
@@ -124,7 +124,8 @@ instance Data.FromJSON DomainIspPlacement where
 
 instance Prelude.Hashable DomainIspPlacement where
   hashWithSalt _salt DomainIspPlacement' {..} =
-    _salt `Prelude.hashWithSalt` inboxPercentage
+    _salt
+      `Prelude.hashWithSalt` inboxPercentage
       `Prelude.hashWithSalt` inboxRawCount
       `Prelude.hashWithSalt` ispName
       `Prelude.hashWithSalt` spamPercentage

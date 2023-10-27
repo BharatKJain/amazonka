@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.VirtualServiceRef
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.VirtualServiceRef where
@@ -186,7 +186,8 @@ instance Data.FromJSON VirtualServiceRef where
 
 instance Prelude.Hashable VirtualServiceRef where
   hashWithSalt _salt VirtualServiceRef' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` lastUpdatedAt
       `Prelude.hashWithSalt` meshName

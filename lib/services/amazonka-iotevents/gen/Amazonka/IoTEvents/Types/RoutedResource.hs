@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.RoutedResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.RoutedResource where
@@ -74,12 +74,14 @@ instance Data.FromJSON RoutedResource where
       "RoutedResource"
       ( \x ->
           RoutedResource'
-            Prelude.<$> (x Data..:? "arn") Prelude.<*> (x Data..:? "name")
+            Prelude.<$> (x Data..:? "arn")
+            Prelude.<*> (x Data..:? "name")
       )
 
 instance Prelude.Hashable RoutedResource where
   hashWithSalt _salt RoutedResource' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData RoutedResource where

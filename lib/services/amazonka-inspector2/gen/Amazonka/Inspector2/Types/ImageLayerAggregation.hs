@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.ImageLayerAggregation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.ImageLayerAggregation where
@@ -95,7 +95,8 @@ imageLayerAggregation_sortOrder = Lens.lens (\ImageLayerAggregation' {sortOrder}
 
 instance Prelude.Hashable ImageLayerAggregation where
   hashWithSalt _salt ImageLayerAggregation' {..} =
-    _salt `Prelude.hashWithSalt` layerHashes
+    _salt
+      `Prelude.hashWithSalt` layerHashes
       `Prelude.hashWithSalt` repositories
       `Prelude.hashWithSalt` resourceIds
       `Prelude.hashWithSalt` sortBy

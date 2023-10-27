@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Location.GetMapTile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest GetMapTile where
 
 instance Prelude.Hashable GetMapTile where
   hashWithSalt _salt GetMapTile' {..} =
-    _salt `Prelude.hashWithSalt` mapName
+    _salt
+      `Prelude.hashWithSalt` mapName
       `Prelude.hashWithSalt` x
       `Prelude.hashWithSalt` y
       `Prelude.hashWithSalt` z

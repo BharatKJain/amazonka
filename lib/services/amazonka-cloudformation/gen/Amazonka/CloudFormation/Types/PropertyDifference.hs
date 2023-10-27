@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.PropertyDifference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.PropertyDifference where
@@ -141,7 +141,8 @@ instance Data.FromXML PropertyDifference where
 
 instance Prelude.Hashable PropertyDifference where
   hashWithSalt _salt PropertyDifference' {..} =
-    _salt `Prelude.hashWithSalt` propertyPath
+    _salt
+      `Prelude.hashWithSalt` propertyPath
       `Prelude.hashWithSalt` expectedValue
       `Prelude.hashWithSalt` actualValue
       `Prelude.hashWithSalt` differenceType

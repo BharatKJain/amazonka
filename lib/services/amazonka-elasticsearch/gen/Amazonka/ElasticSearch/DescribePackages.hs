@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticSearch.DescribePackages
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -51,7 +51,7 @@ import qualified Amazonka.Prelude as Prelude
 import qualified Amazonka.Request as Request
 import qualified Amazonka.Response as Response
 
--- | Container for request parameters to @ DescribePackage @ operation.
+-- | Container for request parameters to @ @@DescribePackage@@ @ operation.
 --
 -- /See:/ 'newDescribePackages' smart constructor.
 data DescribePackages = DescribePackages'
@@ -118,7 +118,8 @@ instance Core.AWSRequest DescribePackages where
       ( \s h x ->
           DescribePackagesResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "PackageDetailsList"
+            Prelude.<*> ( x
+                            Data..?> "PackageDetailsList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -126,7 +127,8 @@ instance Core.AWSRequest DescribePackages where
 
 instance Prelude.Hashable DescribePackages where
   hashWithSalt _salt DescribePackages' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
@@ -156,7 +158,7 @@ instance Data.ToPath DescribePackages where
 instance Data.ToQuery DescribePackages where
   toQuery = Prelude.const Prelude.mempty
 
--- | Container for response returned by @ DescribePackages @ operation.
+-- | Container for response returned by @ @@DescribePackages@@ @ operation.
 --
 -- /See:/ 'newDescribePackagesResponse' smart constructor.
 data DescribePackagesResponse = DescribePackagesResponse'

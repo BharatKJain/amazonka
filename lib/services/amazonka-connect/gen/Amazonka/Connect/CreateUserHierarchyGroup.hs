@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.CreateUserHierarchyGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -139,7 +139,8 @@ instance Core.AWSRequest CreateUserHierarchyGroup where
 
 instance Prelude.Hashable CreateUserHierarchyGroup where
   hashWithSalt _salt CreateUserHierarchyGroup' {..} =
-    _salt `Prelude.hashWithSalt` parentGroupId
+    _salt
+      `Prelude.hashWithSalt` parentGroupId
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` instanceId

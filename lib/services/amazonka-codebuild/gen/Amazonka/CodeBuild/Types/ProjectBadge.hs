@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.ProjectBadge
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.ProjectBadge where
@@ -80,7 +80,8 @@ instance Data.FromJSON ProjectBadge where
 
 instance Prelude.Hashable ProjectBadge where
   hashWithSalt _salt ProjectBadge' {..} =
-    _salt `Prelude.hashWithSalt` badgeEnabled
+    _salt
+      `Prelude.hashWithSalt` badgeEnabled
       `Prelude.hashWithSalt` badgeRequestUrl
 
 instance Prelude.NFData ProjectBadge where

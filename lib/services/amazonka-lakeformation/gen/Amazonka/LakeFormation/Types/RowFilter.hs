@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.RowFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.RowFilter where
@@ -75,7 +75,8 @@ instance Data.FromJSON RowFilter where
 
 instance Prelude.Hashable RowFilter where
   hashWithSalt _salt RowFilter' {..} =
-    _salt `Prelude.hashWithSalt` allRowsWildcard
+    _salt
+      `Prelude.hashWithSalt` allRowsWildcard
       `Prelude.hashWithSalt` filterExpression
 
 instance Prelude.NFData RowFilter where

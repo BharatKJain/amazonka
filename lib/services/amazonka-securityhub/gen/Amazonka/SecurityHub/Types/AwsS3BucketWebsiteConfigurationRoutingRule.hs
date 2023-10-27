@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsS3BucketWebsiteConfigurationRoutingRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsS3BucketWebsiteConfigurationRoutingRule where
@@ -81,7 +81,7 @@ instance
       ( \x ->
           AwsS3BucketWebsiteConfigurationRoutingRule'
             Prelude.<$> (x Data..:? "Condition")
-              Prelude.<*> (x Data..:? "Redirect")
+            Prelude.<*> (x Data..:? "Redirect")
       )
 
 instance
@@ -91,7 +91,8 @@ instance
   hashWithSalt
     _salt
     AwsS3BucketWebsiteConfigurationRoutingRule' {..} =
-      _salt `Prelude.hashWithSalt` condition
+      _salt
+        `Prelude.hashWithSalt` condition
         `Prelude.hashWithSalt` redirect
 
 instance

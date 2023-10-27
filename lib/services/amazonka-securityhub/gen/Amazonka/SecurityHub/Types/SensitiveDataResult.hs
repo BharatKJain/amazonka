@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.SensitiveDataResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.SensitiveDataResult where
@@ -92,7 +92,8 @@ instance Data.FromJSON SensitiveDataResult where
 
 instance Prelude.Hashable SensitiveDataResult where
   hashWithSalt _salt SensitiveDataResult' {..} =
-    _salt `Prelude.hashWithSalt` category
+    _salt
+      `Prelude.hashWithSalt` category
       `Prelude.hashWithSalt` detections
       `Prelude.hashWithSalt` totalCount
 

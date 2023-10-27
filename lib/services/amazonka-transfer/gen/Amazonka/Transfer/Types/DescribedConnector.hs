@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.DescribedConnector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.DescribedConnector where
@@ -168,7 +168,8 @@ instance Data.FromJSON DescribedConnector where
 
 instance Prelude.Hashable DescribedConnector where
   hashWithSalt _salt DescribedConnector' {..} =
-    _salt `Prelude.hashWithSalt` accessRole
+    _salt
+      `Prelude.hashWithSalt` accessRole
       `Prelude.hashWithSalt` as2Config
       `Prelude.hashWithSalt` connectorId
       `Prelude.hashWithSalt` loggingRole

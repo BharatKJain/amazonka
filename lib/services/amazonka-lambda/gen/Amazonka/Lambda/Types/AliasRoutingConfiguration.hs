@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.AliasRoutingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.AliasRoutingConfiguration where
@@ -62,7 +62,8 @@ instance Data.FromJSON AliasRoutingConfiguration where
       "AliasRoutingConfiguration"
       ( \x ->
           AliasRoutingConfiguration'
-            Prelude.<$> ( x Data..:? "AdditionalVersionWeights"
+            Prelude.<$> ( x
+                            Data..:? "AdditionalVersionWeights"
                             Data..!= Prelude.mempty
                         )
       )

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SNS.Types.PlatformApplication
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SNS.Types.PlatformApplication where
@@ -65,14 +65,17 @@ platformApplication_platformApplicationArn = Lens.lens (\PlatformApplication' {p
 instance Data.FromXML PlatformApplication where
   parseXML x =
     PlatformApplication'
-      Prelude.<$> ( x Data..@? "Attributes" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Attributes"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLMap "entry" "key" "value")
                   )
       Prelude.<*> (x Data..@? "PlatformApplicationArn")
 
 instance Prelude.Hashable PlatformApplication where
   hashWithSalt _salt PlatformApplication' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` platformApplicationArn
 
 instance Prelude.NFData PlatformApplication where

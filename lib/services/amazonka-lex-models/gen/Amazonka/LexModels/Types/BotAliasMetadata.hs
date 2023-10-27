@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexModels.Types.BotAliasMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexModels.Types.BotAliasMetadata where
@@ -141,7 +141,8 @@ instance Data.FromJSON BotAliasMetadata where
 
 instance Prelude.Hashable BotAliasMetadata where
   hashWithSalt _salt BotAliasMetadata' {..} =
-    _salt `Prelude.hashWithSalt` botName
+    _salt
+      `Prelude.hashWithSalt` botName
       `Prelude.hashWithSalt` botVersion
       `Prelude.hashWithSalt` checksum
       `Prelude.hashWithSalt` conversationLogs

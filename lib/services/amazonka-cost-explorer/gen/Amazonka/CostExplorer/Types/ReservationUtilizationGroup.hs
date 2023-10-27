@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.ReservationUtilizationGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.ReservationUtilizationGroup where
@@ -96,7 +96,8 @@ instance Data.FromJSON ReservationUtilizationGroup where
 
 instance Prelude.Hashable ReservationUtilizationGroup where
   hashWithSalt _salt ReservationUtilizationGroup' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` utilization
       `Prelude.hashWithSalt` value

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StorageGateway.Types.FileSystemAssociationInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StorageGateway.Types.FileSystemAssociationInfo where
@@ -171,7 +171,8 @@ instance Data.FromJSON FileSystemAssociationInfo where
             Prelude.<*> (x Data..:? "EndpointNetworkConfiguration")
             Prelude.<*> (x Data..:? "FileSystemAssociationARN")
             Prelude.<*> (x Data..:? "FileSystemAssociationStatus")
-            Prelude.<*> ( x Data..:? "FileSystemAssociationStatusDetails"
+            Prelude.<*> ( x
+                            Data..:? "FileSystemAssociationStatusDetails"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "GatewayARN")
@@ -181,7 +182,8 @@ instance Data.FromJSON FileSystemAssociationInfo where
 
 instance Prelude.Hashable FileSystemAssociationInfo where
   hashWithSalt _salt FileSystemAssociationInfo' {..} =
-    _salt `Prelude.hashWithSalt` auditDestinationARN
+    _salt
+      `Prelude.hashWithSalt` auditDestinationARN
       `Prelude.hashWithSalt` cacheAttributes
       `Prelude.hashWithSalt` endpointNetworkConfiguration
       `Prelude.hashWithSalt` fileSystemAssociationARN

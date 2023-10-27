@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.VpcInterface
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.VpcInterface where
@@ -125,11 +125,13 @@ instance Data.FromJSON VpcInterface where
       ( \x ->
           VpcInterface'
             Prelude.<$> (x Data..: "networkInterfaceType")
-            Prelude.<*> ( x Data..:? "networkInterfaceIds"
+            Prelude.<*> ( x
+                            Data..:? "networkInterfaceIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "subnetId")
-            Prelude.<*> ( x Data..:? "securityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "securityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "roleArn")
@@ -138,7 +140,8 @@ instance Data.FromJSON VpcInterface where
 
 instance Prelude.Hashable VpcInterface where
   hashWithSalt _salt VpcInterface' {..} =
-    _salt `Prelude.hashWithSalt` networkInterfaceType
+    _salt
+      `Prelude.hashWithSalt` networkInterfaceType
       `Prelude.hashWithSalt` networkInterfaceIds
       `Prelude.hashWithSalt` subnetId
       `Prelude.hashWithSalt` securityGroupIds

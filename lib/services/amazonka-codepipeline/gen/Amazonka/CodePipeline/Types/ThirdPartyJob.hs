@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ThirdPartyJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ThirdPartyJob where
@@ -81,7 +81,8 @@ instance Data.FromJSON ThirdPartyJob where
 
 instance Prelude.Hashable ThirdPartyJob where
   hashWithSalt _salt ThirdPartyJob' {..} =
-    _salt `Prelude.hashWithSalt` clientId
+    _salt
+      `Prelude.hashWithSalt` clientId
       `Prelude.hashWithSalt` jobId
 
 instance Prelude.NFData ThirdPartyJob where

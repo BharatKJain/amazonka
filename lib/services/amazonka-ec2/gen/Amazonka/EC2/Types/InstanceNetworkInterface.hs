@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstanceNetworkInterface
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstanceNetworkInterface where
@@ -234,18 +234,25 @@ instance Data.FromXML InstanceNetworkInterface where
       Prelude.<$> (x Data..@? "association")
       Prelude.<*> (x Data..@? "attachment")
       Prelude.<*> (x Data..@? "description")
-      Prelude.<*> ( x Data..@? "groupSet" Core..!@ Prelude.mempty
-                      Prelude.>>= Core.may (Data.parseXMLList "item")
-                  )
-      Prelude.<*> (x Data..@? "interfaceType")
-      Prelude.<*> ( x Data..@? "ipv4PrefixSet" Core..!@ Prelude.mempty
-                      Prelude.>>= Core.may (Data.parseXMLList "item")
-                  )
-      Prelude.<*> ( x Data..@? "ipv6AddressesSet"
+      Prelude.<*> ( x
+                      Data..@? "groupSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "ipv6PrefixSet" Core..!@ Prelude.mempty
+      Prelude.<*> (x Data..@? "interfaceType")
+      Prelude.<*> ( x
+                      Data..@? "ipv4PrefixSet"
+                      Core..!@ Prelude.mempty
+                      Prelude.>>= Core.may (Data.parseXMLList "item")
+                  )
+      Prelude.<*> ( x
+                      Data..@? "ipv6AddressesSet"
+                      Core..!@ Prelude.mempty
+                      Prelude.>>= Core.may (Data.parseXMLList "item")
+                  )
+      Prelude.<*> ( x
+                      Data..@? "ipv6PrefixSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "macAddress")
@@ -253,7 +260,8 @@ instance Data.FromXML InstanceNetworkInterface where
       Prelude.<*> (x Data..@? "ownerId")
       Prelude.<*> (x Data..@? "privateDnsName")
       Prelude.<*> (x Data..@? "privateIpAddress")
-      Prelude.<*> ( x Data..@? "privateIpAddressesSet"
+      Prelude.<*> ( x
+                      Data..@? "privateIpAddressesSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
@@ -264,7 +272,8 @@ instance Data.FromXML InstanceNetworkInterface where
 
 instance Prelude.Hashable InstanceNetworkInterface where
   hashWithSalt _salt InstanceNetworkInterface' {..} =
-    _salt `Prelude.hashWithSalt` association
+    _salt
+      `Prelude.hashWithSalt` association
       `Prelude.hashWithSalt` attachment
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` groups

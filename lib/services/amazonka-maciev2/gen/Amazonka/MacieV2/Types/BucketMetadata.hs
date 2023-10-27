@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.BucketMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.BucketMetadata where
@@ -586,7 +586,8 @@ instance Data.FromJSON BucketMetadata where
 
 instance Prelude.Hashable BucketMetadata where
   hashWithSalt _salt BucketMetadata' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` allowsUnencryptedObjectUploads
       `Prelude.hashWithSalt` bucketArn
       `Prelude.hashWithSalt` bucketCreatedAt

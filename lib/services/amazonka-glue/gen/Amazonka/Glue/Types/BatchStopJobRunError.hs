@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.BatchStopJobRunError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.BatchStopJobRunError where
@@ -87,7 +87,8 @@ instance Data.FromJSON BatchStopJobRunError where
 
 instance Prelude.Hashable BatchStopJobRunError where
   hashWithSalt _salt BatchStopJobRunError' {..} =
-    _salt `Prelude.hashWithSalt` errorDetail
+    _salt
+      `Prelude.hashWithSalt` errorDetail
       `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` jobRunId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.ServerSideEncryption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.ServerSideEncryption where
@@ -92,7 +92,8 @@ instance Data.FromJSON ServerSideEncryption where
 
 instance Prelude.Hashable ServerSideEncryption where
   hashWithSalt _salt ServerSideEncryption' {..} =
-    _salt `Prelude.hashWithSalt` encryptionType
+    _salt
+      `Prelude.hashWithSalt` encryptionType
       `Prelude.hashWithSalt` kmsMasterKeyId
 
 instance Prelude.NFData ServerSideEncryption where

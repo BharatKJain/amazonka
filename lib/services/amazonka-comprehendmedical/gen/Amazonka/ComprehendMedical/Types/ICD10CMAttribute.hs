@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComprehendMedical.Types.ICD10CMAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComprehendMedical.Types.ICD10CMAttribute where
@@ -191,7 +191,8 @@ instance Data.FromJSON ICD10CMAttribute where
 
 instance Prelude.Hashable ICD10CMAttribute where
   hashWithSalt _salt ICD10CMAttribute' {..} =
-    _salt `Prelude.hashWithSalt` beginOffset
+    _salt
+      `Prelude.hashWithSalt` beginOffset
       `Prelude.hashWithSalt` category
       `Prelude.hashWithSalt` endOffset
       `Prelude.hashWithSalt` id

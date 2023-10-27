@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.TranscriptionJobSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.TranscriptionJobSummary where
@@ -323,7 +323,8 @@ instance Data.FromJSON TranscriptionJobSummary where
 
 instance Prelude.Hashable TranscriptionJobSummary where
   hashWithSalt _salt TranscriptionJobSummary' {..} =
-    _salt `Prelude.hashWithSalt` completionTime
+    _salt
+      `Prelude.hashWithSalt` completionTime
       `Prelude.hashWithSalt` contentRedaction
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` failureReason

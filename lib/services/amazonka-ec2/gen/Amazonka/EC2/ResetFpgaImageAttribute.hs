@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ResetFpgaImageAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest ResetFpgaImageAttribute where
 
 instance Prelude.Hashable ResetFpgaImageAttribute where
   hashWithSalt _salt ResetFpgaImageAttribute' {..} =
-    _salt `Prelude.hashWithSalt` attribute
+    _salt
+      `Prelude.hashWithSalt` attribute
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` fpgaImageId
 

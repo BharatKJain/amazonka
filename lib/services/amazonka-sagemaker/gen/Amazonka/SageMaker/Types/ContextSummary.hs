@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ContextSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ContextSummary where
@@ -116,7 +116,8 @@ instance Data.FromJSON ContextSummary where
 
 instance Prelude.Hashable ContextSummary where
   hashWithSalt _salt ContextSummary' {..} =
-    _salt `Prelude.hashWithSalt` contextArn
+    _salt
+      `Prelude.hashWithSalt` contextArn
       `Prelude.hashWithSalt` contextName
       `Prelude.hashWithSalt` contextType
       `Prelude.hashWithSalt` creationTime

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.PipelineExperimentConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.PipelineExperimentConfig where
@@ -75,7 +75,8 @@ instance Data.FromJSON PipelineExperimentConfig where
 
 instance Prelude.Hashable PipelineExperimentConfig where
   hashWithSalt _salt PipelineExperimentConfig' {..} =
-    _salt `Prelude.hashWithSalt` experimentName
+    _salt
+      `Prelude.hashWithSalt` experimentName
       `Prelude.hashWithSalt` trialName
 
 instance Prelude.NFData PipelineExperimentConfig where

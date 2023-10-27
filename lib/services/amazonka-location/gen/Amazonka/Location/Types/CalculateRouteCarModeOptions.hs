@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.CalculateRouteCarModeOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.CalculateRouteCarModeOptions where
@@ -93,7 +93,8 @@ instance
     CalculateRouteCarModeOptions
   where
   hashWithSalt _salt CalculateRouteCarModeOptions' {..} =
-    _salt `Prelude.hashWithSalt` avoidFerries
+    _salt
+      `Prelude.hashWithSalt` avoidFerries
       `Prelude.hashWithSalt` avoidTolls
 
 instance Prelude.NFData CalculateRouteCarModeOptions where

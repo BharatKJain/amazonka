@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.StartContactStreaming
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -152,7 +152,8 @@ instance Core.AWSRequest StartContactStreaming where
 
 instance Prelude.Hashable StartContactStreaming where
   hashWithSalt _salt StartContactStreaming' {..} =
-    _salt `Prelude.hashWithSalt` instanceId
+    _salt
+      `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` contactId
       `Prelude.hashWithSalt` chatStreamingConfiguration
       `Prelude.hashWithSalt` clientToken

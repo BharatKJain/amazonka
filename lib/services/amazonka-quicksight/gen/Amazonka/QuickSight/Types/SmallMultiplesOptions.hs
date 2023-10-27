@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.SmallMultiplesOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.SmallMultiplesOptions where
@@ -111,7 +111,8 @@ instance Data.FromJSON SmallMultiplesOptions where
 
 instance Prelude.Hashable SmallMultiplesOptions where
   hashWithSalt _salt SmallMultiplesOptions' {..} =
-    _salt `Prelude.hashWithSalt` maxVisibleColumns
+    _salt
+      `Prelude.hashWithSalt` maxVisibleColumns
       `Prelude.hashWithSalt` maxVisibleRows
       `Prelude.hashWithSalt` panelConfiguration
 

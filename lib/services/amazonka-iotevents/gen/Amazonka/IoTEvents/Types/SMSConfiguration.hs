@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.SMSConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.SMSConfiguration where
@@ -100,7 +100,8 @@ instance Data.FromJSON SMSConfiguration where
 
 instance Prelude.Hashable SMSConfiguration where
   hashWithSalt _salt SMSConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` additionalMessage
+    _salt
+      `Prelude.hashWithSalt` additionalMessage
       `Prelude.hashWithSalt` senderId
       `Prelude.hashWithSalt` recipients
 

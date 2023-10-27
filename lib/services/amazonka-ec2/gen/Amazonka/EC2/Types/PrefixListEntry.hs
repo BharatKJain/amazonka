@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.PrefixListEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.PrefixListEntry where
@@ -71,7 +71,8 @@ instance Data.FromXML PrefixListEntry where
 
 instance Prelude.Hashable PrefixListEntry where
   hashWithSalt _salt PrefixListEntry' {..} =
-    _salt `Prelude.hashWithSalt` cidr
+    _salt
+      `Prelude.hashWithSalt` cidr
       `Prelude.hashWithSalt` description
 
 instance Prelude.NFData PrefixListEntry where

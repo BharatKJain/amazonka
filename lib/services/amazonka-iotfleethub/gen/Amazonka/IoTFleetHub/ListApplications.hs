@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTFleetHub.ListApplications
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -84,22 +84,22 @@ instance Core.AWSPager ListApplications where
     | Core.stop
         ( rs
             Lens.^? listApplicationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listApplicationsResponse_applicationSummaries
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listApplications_nextToken
           Lens..~ rs
           Lens.^? listApplicationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListApplications where
   type
@@ -111,7 +111,8 @@ instance Core.AWSRequest ListApplications where
     Response.receiveJSON
       ( \s h x ->
           ListApplicationsResponse'
-            Prelude.<$> ( x Data..?> "applicationSummaries"
+            Prelude.<$> ( x
+                            Data..?> "applicationSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")

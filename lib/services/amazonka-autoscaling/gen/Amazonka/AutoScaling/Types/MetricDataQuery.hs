@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.MetricDataQuery
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.MetricDataQuery where
@@ -192,7 +192,8 @@ instance Data.FromXML MetricDataQuery where
 
 instance Prelude.Hashable MetricDataQuery where
   hashWithSalt _salt MetricDataQuery' {..} =
-    _salt `Prelude.hashWithSalt` expression
+    _salt
+      `Prelude.hashWithSalt` expression
       `Prelude.hashWithSalt` label
       `Prelude.hashWithSalt` metricStat
       `Prelude.hashWithSalt` returnData

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.TrainingDataSchema
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.TrainingDataSchema where
@@ -69,14 +69,16 @@ instance Data.FromJSON TrainingDataSchema where
       ( \x ->
           TrainingDataSchema'
             Prelude.<$> (x Data..:? "labelSchema")
-            Prelude.<*> ( x Data..:? "modelVariables"
+            Prelude.<*> ( x
+                            Data..:? "modelVariables"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable TrainingDataSchema where
   hashWithSalt _salt TrainingDataSchema' {..} =
-    _salt `Prelude.hashWithSalt` labelSchema
+    _salt
+      `Prelude.hashWithSalt` labelSchema
       `Prelude.hashWithSalt` modelVariables
 
 instance Prelude.NFData TrainingDataSchema where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.AccountSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.AccountSettings where
@@ -152,7 +152,8 @@ instance Data.FromJSON AccountSettings where
 
 instance Prelude.Hashable AccountSettings where
   hashWithSalt _salt AccountSettings' {..} =
-    _salt `Prelude.hashWithSalt` accountName
+    _salt
+      `Prelude.hashWithSalt` accountName
       `Prelude.hashWithSalt` defaultNamespace
       `Prelude.hashWithSalt` edition
       `Prelude.hashWithSalt` notificationEmail

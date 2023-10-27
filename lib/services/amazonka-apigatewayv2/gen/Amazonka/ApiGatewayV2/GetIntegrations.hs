@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ApiGatewayV2.GetIntegrations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,21 +107,22 @@ instance Core.AWSPager GetIntegrations where
     | Core.stop
         ( rs
             Lens.^? getIntegrationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? getIntegrationsResponse_items Prelude.. Lens._Just
+            Lens.^? getIntegrationsResponse_items
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getIntegrations_nextToken
           Lens..~ rs
           Lens.^? getIntegrationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetIntegrations where
   type
@@ -140,7 +141,8 @@ instance Core.AWSRequest GetIntegrations where
 
 instance Prelude.Hashable GetIntegrations where
   hashWithSalt _salt GetIntegrations' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` apiId
 

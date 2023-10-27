@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.ImportApiKeys
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,7 +128,8 @@ instance Core.AWSRequest ImportApiKeys where
 
 instance Prelude.Hashable ImportApiKeys where
   hashWithSalt _salt ImportApiKeys' {..} =
-    _salt `Prelude.hashWithSalt` failOnWarnings
+    _salt
+      `Prelude.hashWithSalt` failOnWarnings
       `Prelude.hashWithSalt` body
       `Prelude.hashWithSalt` format
 

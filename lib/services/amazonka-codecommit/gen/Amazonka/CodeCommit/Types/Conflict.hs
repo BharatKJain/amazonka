@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.Conflict
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.Conflict where
@@ -79,7 +79,8 @@ instance Data.FromJSON Conflict where
 
 instance Prelude.Hashable Conflict where
   hashWithSalt _salt Conflict' {..} =
-    _salt `Prelude.hashWithSalt` conflictMetadata
+    _salt
+      `Prelude.hashWithSalt` conflictMetadata
       `Prelude.hashWithSalt` mergeHunks
 
 instance Prelude.NFData Conflict where

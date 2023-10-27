@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexRuntime.Types.SentimentResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexRuntime.Types.SentimentResponse where
@@ -82,7 +82,8 @@ instance Data.FromJSON SentimentResponse where
 
 instance Prelude.Hashable SentimentResponse where
   hashWithSalt _salt SentimentResponse' {..} =
-    _salt `Prelude.hashWithSalt` sentimentLabel
+    _salt
+      `Prelude.hashWithSalt` sentimentLabel
       `Prelude.hashWithSalt` sentimentScore
 
 instance Prelude.NFData SentimentResponse where

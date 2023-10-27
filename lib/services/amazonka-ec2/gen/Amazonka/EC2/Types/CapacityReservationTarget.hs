@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.CapacityReservationTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.CapacityReservationTarget where
@@ -70,7 +70,8 @@ capacityReservationTarget_capacityReservationResourceGroupArn = Lens.lens (\Capa
 
 instance Prelude.Hashable CapacityReservationTarget where
   hashWithSalt _salt CapacityReservationTarget' {..} =
-    _salt `Prelude.hashWithSalt` capacityReservationId
+    _salt
+      `Prelude.hashWithSalt` capacityReservationId
       `Prelude.hashWithSalt` capacityReservationResourceGroupArn
 
 instance Prelude.NFData CapacityReservationTarget where

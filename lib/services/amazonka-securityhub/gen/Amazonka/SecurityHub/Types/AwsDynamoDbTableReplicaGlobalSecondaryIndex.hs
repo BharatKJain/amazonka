@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsDynamoDbTableReplicaGlobalSecondaryIndex
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsDynamoDbTableReplicaGlobalSecondaryIndex where
@@ -78,7 +78,7 @@ instance
       ( \x ->
           AwsDynamoDbTableReplicaGlobalSecondaryIndex'
             Prelude.<$> (x Data..:? "IndexName")
-              Prelude.<*> (x Data..:? "ProvisionedThroughputOverride")
+            Prelude.<*> (x Data..:? "ProvisionedThroughputOverride")
       )
 
 instance
@@ -88,7 +88,8 @@ instance
   hashWithSalt
     _salt
     AwsDynamoDbTableReplicaGlobalSecondaryIndex' {..} =
-      _salt `Prelude.hashWithSalt` indexName
+      _salt
+        `Prelude.hashWithSalt` indexName
         `Prelude.hashWithSalt` provisionedThroughputOverride
 
 instance

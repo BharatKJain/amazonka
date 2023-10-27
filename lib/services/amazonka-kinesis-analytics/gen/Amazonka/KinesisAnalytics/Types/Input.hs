@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.Input
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.Input where
@@ -196,7 +196,8 @@ input_inputSchema = Lens.lens (\Input' {inputSchema} -> inputSchema) (\s@Input' 
 
 instance Prelude.Hashable Input where
   hashWithSalt _salt Input' {..} =
-    _salt `Prelude.hashWithSalt` inputParallelism
+    _salt
+      `Prelude.hashWithSalt` inputParallelism
       `Prelude.hashWithSalt` inputProcessingConfiguration
       `Prelude.hashWithSalt` kinesisFirehoseInput
       `Prelude.hashWithSalt` kinesisStreamsInput

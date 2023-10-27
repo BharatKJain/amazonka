@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Nimble.Types.StudioComponentSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Nimble.Types.StudioComponentSummary where
@@ -147,7 +147,8 @@ instance Data.FromJSON StudioComponentSummary where
 
 instance Prelude.Hashable StudioComponentSummary where
   hashWithSalt _salt StudioComponentSummary' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` createdBy
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECR.Types.Resource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECR.Types.Resource where
@@ -98,7 +98,8 @@ instance Data.FromJSON Resource where
 
 instance Prelude.Hashable Resource where
   hashWithSalt _salt Resource' {..} =
-    _salt `Prelude.hashWithSalt` details
+    _salt
+      `Prelude.hashWithSalt` details
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` type'

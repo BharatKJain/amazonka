@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.ChefConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.ChefConfiguration where
@@ -75,7 +75,8 @@ instance Data.FromJSON ChefConfiguration where
 
 instance Prelude.Hashable ChefConfiguration where
   hashWithSalt _salt ChefConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` berkshelfVersion
+    _salt
+      `Prelude.hashWithSalt` berkshelfVersion
       `Prelude.hashWithSalt` manageBerkshelf
 
 instance Prelude.NFData ChefConfiguration where

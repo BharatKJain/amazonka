@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.CapacityForecast
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.CapacityForecast where
@@ -67,16 +67,21 @@ capacityForecast_values = Lens.lens (\CapacityForecast' {values} -> values) (\s@
 instance Data.FromXML CapacityForecast where
   parseXML x =
     CapacityForecast'
-      Prelude.<$> ( x Data..@? "Timestamps" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Timestamps"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Data.parseXMLList "member"
                   )
-      Prelude.<*> ( x Data..@? "Values" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Values"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Data.parseXMLList "member"
                   )
 
 instance Prelude.Hashable CapacityForecast where
   hashWithSalt _salt CapacityForecast' {..} =
-    _salt `Prelude.hashWithSalt` timestamps
+    _salt
+      `Prelude.hashWithSalt` timestamps
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData CapacityForecast where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAF.GetSampledRequests
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -200,7 +200,8 @@ instance Core.AWSRequest GetSampledRequests where
       ( \s h x ->
           GetSampledRequestsResponse'
             Prelude.<$> (x Data..?> "PopulationSize")
-            Prelude.<*> ( x Data..?> "SampledRequests"
+            Prelude.<*> ( x
+                            Data..?> "SampledRequests"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "TimeWindow")
@@ -209,7 +210,8 @@ instance Core.AWSRequest GetSampledRequests where
 
 instance Prelude.Hashable GetSampledRequests where
   hashWithSalt _salt GetSampledRequests' {..} =
-    _salt `Prelude.hashWithSalt` webAclId
+    _salt
+      `Prelude.hashWithSalt` webAclId
       `Prelude.hashWithSalt` ruleId
       `Prelude.hashWithSalt` timeWindow
       `Prelude.hashWithSalt` maxItems

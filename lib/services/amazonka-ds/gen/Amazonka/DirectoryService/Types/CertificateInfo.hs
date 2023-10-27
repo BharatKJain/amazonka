@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.CertificateInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.CertificateInfo where
@@ -112,7 +112,8 @@ instance Data.FromJSON CertificateInfo where
 
 instance Prelude.Hashable CertificateInfo where
   hashWithSalt _salt CertificateInfo' {..} =
-    _salt `Prelude.hashWithSalt` certificateId
+    _salt
+      `Prelude.hashWithSalt` certificateId
       `Prelude.hashWithSalt` commonName
       `Prelude.hashWithSalt` expiryDateTime
       `Prelude.hashWithSalt` state

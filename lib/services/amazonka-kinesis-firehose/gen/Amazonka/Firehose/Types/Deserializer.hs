@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.Deserializer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.Deserializer where
@@ -108,7 +108,8 @@ instance Data.FromJSON Deserializer where
 
 instance Prelude.Hashable Deserializer where
   hashWithSalt _salt Deserializer' {..} =
-    _salt `Prelude.hashWithSalt` hiveJsonSerDe
+    _salt
+      `Prelude.hashWithSalt` hiveJsonSerDe
       `Prelude.hashWithSalt` openXJsonSerDe
 
 instance Prelude.NFData Deserializer where

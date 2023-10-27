@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lambda.GetFunctionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -181,7 +181,8 @@ instance Core.AWSRequest GetFunctionConfiguration where
 
 instance Prelude.Hashable GetFunctionConfiguration where
   hashWithSalt _salt GetFunctionConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` qualifier
+    _salt
+      `Prelude.hashWithSalt` qualifier
       `Prelude.hashWithSalt` functionName
 
 instance Prelude.NFData GetFunctionConfiguration where

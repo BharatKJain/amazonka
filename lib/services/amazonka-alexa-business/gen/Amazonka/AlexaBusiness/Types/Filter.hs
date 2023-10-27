@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.Filter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.Filter where
@@ -65,7 +65,8 @@ filter_values = Lens.lens (\Filter' {values} -> values) (\s@Filter' {} a -> s {v
 
 instance Prelude.Hashable Filter where
   hashWithSalt _salt Filter' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData Filter where

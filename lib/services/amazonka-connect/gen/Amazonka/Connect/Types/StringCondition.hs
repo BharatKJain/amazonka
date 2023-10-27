@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.StringCondition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.StringCondition where
@@ -76,7 +76,8 @@ stringCondition_value = Lens.lens (\StringCondition' {value} -> value) (\s@Strin
 
 instance Prelude.Hashable StringCondition where
   hashWithSalt _salt StringCondition' {..} =
-    _salt `Prelude.hashWithSalt` comparisonType
+    _salt
+      `Prelude.hashWithSalt` comparisonType
       `Prelude.hashWithSalt` fieldName
       `Prelude.hashWithSalt` value
 

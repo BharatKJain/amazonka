@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.ReportSetting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.ReportSetting where
@@ -118,7 +118,8 @@ instance Data.FromJSON ReportSetting where
             Prelude.<$> (x Data..:? "Accounts" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "FrameworkArns" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "NumberOfFrameworks")
-            Prelude.<*> ( x Data..:? "OrganizationUnits"
+            Prelude.<*> ( x
+                            Data..:? "OrganizationUnits"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Regions" Data..!= Prelude.mempty)
@@ -127,7 +128,8 @@ instance Data.FromJSON ReportSetting where
 
 instance Prelude.Hashable ReportSetting where
   hashWithSalt _salt ReportSetting' {..} =
-    _salt `Prelude.hashWithSalt` accounts
+    _salt
+      `Prelude.hashWithSalt` accounts
       `Prelude.hashWithSalt` frameworkArns
       `Prelude.hashWithSalt` numberOfFrameworks
       `Prelude.hashWithSalt` organizationUnits

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.BackupGateway.ListGateways
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,20 +102,23 @@ instance Core.AWSPager ListGateways where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listGatewaysResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listGatewaysResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listGatewaysResponse_gateways Prelude.. Lens._Just
+            Lens.^? listGatewaysResponse_gateways
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listGateways_nextToken
           Lens..~ rs
-          Lens.^? listGatewaysResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listGatewaysResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListGateways where
   type AWSResponse ListGateways = ListGatewaysResponse
@@ -132,7 +135,8 @@ instance Core.AWSRequest ListGateways where
 
 instance Prelude.Hashable ListGateways where
   hashWithSalt _salt ListGateways' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListGateways where

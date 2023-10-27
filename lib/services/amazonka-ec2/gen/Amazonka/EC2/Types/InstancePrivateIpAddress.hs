@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstancePrivateIpAddress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstancePrivateIpAddress where
@@ -99,7 +99,8 @@ instance Data.FromXML InstancePrivateIpAddress where
 
 instance Prelude.Hashable InstancePrivateIpAddress where
   hashWithSalt _salt InstancePrivateIpAddress' {..} =
-    _salt `Prelude.hashWithSalt` association
+    _salt
+      `Prelude.hashWithSalt` association
       `Prelude.hashWithSalt` primary
       `Prelude.hashWithSalt` privateDnsName
       `Prelude.hashWithSalt` privateIpAddress

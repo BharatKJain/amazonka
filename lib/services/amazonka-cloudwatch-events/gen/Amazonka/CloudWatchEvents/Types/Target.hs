@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.Target
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.Target where
@@ -371,7 +371,8 @@ instance Data.FromJSON Target where
 
 instance Prelude.Hashable Target where
   hashWithSalt _salt Target' {..} =
-    _salt `Prelude.hashWithSalt` batchParameters
+    _salt
+      `Prelude.hashWithSalt` batchParameters
       `Prelude.hashWithSalt` deadLetterConfig
       `Prelude.hashWithSalt` ecsParameters
       `Prelude.hashWithSalt` httpParameters

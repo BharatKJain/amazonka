@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.EntitlementAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.EntitlementAttribute where
@@ -131,12 +131,14 @@ instance Data.FromJSON EntitlementAttribute where
       "EntitlementAttribute"
       ( \x ->
           EntitlementAttribute'
-            Prelude.<$> (x Data..: "Name") Prelude.<*> (x Data..: "Value")
+            Prelude.<$> (x Data..: "Name")
+            Prelude.<*> (x Data..: "Value")
       )
 
 instance Prelude.Hashable EntitlementAttribute where
   hashWithSalt _salt EntitlementAttribute' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData EntitlementAttribute where

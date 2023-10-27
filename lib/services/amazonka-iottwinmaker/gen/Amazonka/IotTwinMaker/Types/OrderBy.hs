@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.OrderBy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.OrderBy where
@@ -68,7 +68,8 @@ orderBy_propertyName = Lens.lens (\OrderBy' {propertyName} -> propertyName) (\s@
 
 instance Prelude.Hashable OrderBy where
   hashWithSalt _salt OrderBy' {..} =
-    _salt `Prelude.hashWithSalt` order
+    _salt
+      `Prelude.hashWithSalt` order
       `Prelude.hashWithSalt` propertyName
 
 instance Prelude.NFData OrderBy where

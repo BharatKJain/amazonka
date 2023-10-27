@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.MarketplaceInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.MarketplaceInformation where
@@ -76,7 +76,8 @@ instance Data.FromJSON MarketplaceInformation where
 
 instance Prelude.Hashable MarketplaceInformation where
   hashWithSalt _salt MarketplaceInformation' {..} =
-    _salt `Prelude.hashWithSalt` productId
+    _salt
+      `Prelude.hashWithSalt` productId
       `Prelude.hashWithSalt` productUrl
 
 instance Prelude.NFData MarketplaceInformation where

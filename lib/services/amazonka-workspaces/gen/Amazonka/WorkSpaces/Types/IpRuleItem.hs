@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpaces.Types.IpRuleItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpaces.Types.IpRuleItem where
@@ -74,7 +74,8 @@ instance Data.FromJSON IpRuleItem where
 
 instance Prelude.Hashable IpRuleItem where
   hashWithSalt _salt IpRuleItem' {..} =
-    _salt `Prelude.hashWithSalt` ipRule
+    _salt
+      `Prelude.hashWithSalt` ipRule
       `Prelude.hashWithSalt` ruleDesc
 
 instance Prelude.NFData IpRuleItem where

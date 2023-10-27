@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.EncodingParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.EncodingParameters where
@@ -105,7 +105,8 @@ instance Data.FromJSON EncodingParameters where
 
 instance Prelude.Hashable EncodingParameters where
   hashWithSalt _salt EncodingParameters' {..} =
-    _salt `Prelude.hashWithSalt` encoderProfile
+    _salt
+      `Prelude.hashWithSalt` encoderProfile
       `Prelude.hashWithSalt` compressionFactor
 
 instance Prelude.NFData EncodingParameters where

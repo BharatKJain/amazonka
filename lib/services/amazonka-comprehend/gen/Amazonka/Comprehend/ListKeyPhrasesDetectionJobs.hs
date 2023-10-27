@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Comprehend.ListKeyPhrasesDetectionJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,22 +112,22 @@ instance Core.AWSPager ListKeyPhrasesDetectionJobs where
     | Core.stop
         ( rs
             Lens.^? listKeyPhrasesDetectionJobsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listKeyPhrasesDetectionJobsResponse_keyPhrasesDetectionJobPropertiesList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listKeyPhrasesDetectionJobs_nextToken
           Lens..~ rs
           Lens.^? listKeyPhrasesDetectionJobsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListKeyPhrasesDetectionJobs where
   type
@@ -139,7 +139,8 @@ instance Core.AWSRequest ListKeyPhrasesDetectionJobs where
     Response.receiveJSON
       ( \s h x ->
           ListKeyPhrasesDetectionJobsResponse'
-            Prelude.<$> ( x Data..?> "KeyPhrasesDetectionJobPropertiesList"
+            Prelude.<$> ( x
+                            Data..?> "KeyPhrasesDetectionJobPropertiesList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -148,7 +149,8 @@ instance Core.AWSRequest ListKeyPhrasesDetectionJobs where
 
 instance Prelude.Hashable ListKeyPhrasesDetectionJobs where
   hashWithSalt _salt ListKeyPhrasesDetectionJobs' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

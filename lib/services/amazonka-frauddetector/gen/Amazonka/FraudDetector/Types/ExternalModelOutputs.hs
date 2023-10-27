@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.ExternalModelOutputs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.ExternalModelOutputs where
@@ -76,7 +76,8 @@ instance Data.FromJSON ExternalModelOutputs where
 
 instance Prelude.Hashable ExternalModelOutputs where
   hashWithSalt _salt ExternalModelOutputs' {..} =
-    _salt `Prelude.hashWithSalt` externalModel
+    _salt
+      `Prelude.hashWithSalt` externalModel
       `Prelude.hashWithSalt` outputs
 
 instance Prelude.NFData ExternalModelOutputs where

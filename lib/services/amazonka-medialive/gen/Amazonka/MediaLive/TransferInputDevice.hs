@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaLive.TransferInputDevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,7 +124,8 @@ instance Core.AWSRequest TransferInputDevice' where
 
 instance Prelude.Hashable TransferInputDevice' where
   hashWithSalt _salt TransferInputDevice'' {..} =
-    _salt `Prelude.hashWithSalt` targetCustomerId
+    _salt
+      `Prelude.hashWithSalt` targetCustomerId
       `Prelude.hashWithSalt` targetRegion
       `Prelude.hashWithSalt` transferMessage
       `Prelude.hashWithSalt` inputDeviceId

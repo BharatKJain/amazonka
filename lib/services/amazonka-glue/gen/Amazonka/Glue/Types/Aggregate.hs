@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Aggregate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Aggregate where
@@ -105,7 +105,8 @@ instance Data.FromJSON Aggregate where
 
 instance Prelude.Hashable Aggregate where
   hashWithSalt _salt Aggregate' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inputs
       `Prelude.hashWithSalt` groups
       `Prelude.hashWithSalt` aggs

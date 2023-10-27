@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSDKIdentity.Types.AppInstanceAdmin
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSDKIdentity.Types.AppInstanceAdmin where
@@ -85,7 +85,8 @@ instance Data.FromJSON AppInstanceAdmin where
 
 instance Prelude.Hashable AppInstanceAdmin where
   hashWithSalt _salt AppInstanceAdmin' {..} =
-    _salt `Prelude.hashWithSalt` admin
+    _salt
+      `Prelude.hashWithSalt` admin
       `Prelude.hashWithSalt` appInstanceArn
       `Prelude.hashWithSalt` createdTimestamp
 

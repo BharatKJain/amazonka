@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.SegmentGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.SegmentGroup where
@@ -138,7 +138,8 @@ instance Data.FromJSON SegmentGroup where
 
 instance Prelude.Hashable SegmentGroup where
   hashWithSalt _salt SegmentGroup' {..} =
-    _salt `Prelude.hashWithSalt` dimensions
+    _salt
+      `Prelude.hashWithSalt` dimensions
       `Prelude.hashWithSalt` sourceSegments
       `Prelude.hashWithSalt` sourceType
       `Prelude.hashWithSalt` type'

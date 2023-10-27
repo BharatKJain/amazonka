@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.ReviewInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.ReviewInformation where
@@ -85,7 +85,8 @@ instance Data.FromJSON ReviewInformation where
 
 instance Prelude.Hashable ReviewInformation where
   hashWithSalt _salt ReviewInformation' {..} =
-    _salt `Prelude.hashWithSalt` reviewedTime
+    _salt
+      `Prelude.hashWithSalt` reviewedTime
       `Prelude.hashWithSalt` reviewer
       `Prelude.hashWithSalt` status
 

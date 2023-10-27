@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFront.GetFunction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest GetFunction where
 
 instance Prelude.Hashable GetFunction where
   hashWithSalt _salt GetFunction' {..} =
-    _salt `Prelude.hashWithSalt` stage
+    _salt
+      `Prelude.hashWithSalt` stage
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData GetFunction where

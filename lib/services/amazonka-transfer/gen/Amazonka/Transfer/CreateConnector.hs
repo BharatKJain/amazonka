@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Transfer.CreateConnector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -182,7 +182,8 @@ instance Core.AWSRequest CreateConnector where
 
 instance Prelude.Hashable CreateConnector where
   hashWithSalt _salt CreateConnector' {..} =
-    _salt `Prelude.hashWithSalt` loggingRole
+    _salt
+      `Prelude.hashWithSalt` loggingRole
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` url
       `Prelude.hashWithSalt` as2Config

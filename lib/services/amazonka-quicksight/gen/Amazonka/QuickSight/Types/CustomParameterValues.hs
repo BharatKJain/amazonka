@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.CustomParameterValues
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.CustomParameterValues where
@@ -98,7 +98,8 @@ instance Data.FromJSON CustomParameterValues where
 
 instance Prelude.Hashable CustomParameterValues where
   hashWithSalt _salt CustomParameterValues' {..} =
-    _salt `Prelude.hashWithSalt` dateTimeValues
+    _salt
+      `Prelude.hashWithSalt` dateTimeValues
       `Prelude.hashWithSalt` decimalValues
       `Prelude.hashWithSalt` integerValues
       `Prelude.hashWithSalt` stringValues

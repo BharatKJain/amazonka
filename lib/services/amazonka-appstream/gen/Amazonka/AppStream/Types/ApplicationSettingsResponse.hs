@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.ApplicationSettingsResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.ApplicationSettingsResponse where
@@ -100,7 +100,8 @@ instance Data.FromJSON ApplicationSettingsResponse where
 
 instance Prelude.Hashable ApplicationSettingsResponse where
   hashWithSalt _salt ApplicationSettingsResponse' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` s3BucketName
       `Prelude.hashWithSalt` settingsGroup
 

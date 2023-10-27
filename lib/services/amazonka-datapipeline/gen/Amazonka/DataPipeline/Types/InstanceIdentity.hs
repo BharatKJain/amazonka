@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataPipeline.Types.InstanceIdentity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataPipeline.Types.InstanceIdentity where
@@ -80,7 +80,8 @@ instanceIdentity_signature = Lens.lens (\InstanceIdentity' {signature} -> signat
 
 instance Prelude.Hashable InstanceIdentity where
   hashWithSalt _salt InstanceIdentity' {..} =
-    _salt `Prelude.hashWithSalt` document
+    _salt
+      `Prelude.hashWithSalt` document
       `Prelude.hashWithSalt` signature
 
 instance Prelude.NFData InstanceIdentity where

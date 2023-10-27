@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.EvaluationMetrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.EvaluationMetrics where
@@ -80,7 +80,8 @@ instance Data.FromJSON EvaluationMetrics where
 
 instance Prelude.Hashable EvaluationMetrics where
   hashWithSalt _salt EvaluationMetrics' {..} =
-    _salt `Prelude.hashWithSalt` findMatchesMetrics
+    _salt
+      `Prelude.hashWithSalt` findMatchesMetrics
       `Prelude.hashWithSalt` transformType
 
 instance Prelude.NFData EvaluationMetrics where

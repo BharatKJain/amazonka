@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ThousandSeparatorOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ThousandSeparatorOptions where
@@ -76,7 +76,8 @@ instance Data.FromJSON ThousandSeparatorOptions where
 
 instance Prelude.Hashable ThousandSeparatorOptions where
   hashWithSalt _salt ThousandSeparatorOptions' {..} =
-    _salt `Prelude.hashWithSalt` symbol
+    _salt
+      `Prelude.hashWithSalt` symbol
       `Prelude.hashWithSalt` visibility
 
 instance Prelude.NFData ThousandSeparatorOptions where

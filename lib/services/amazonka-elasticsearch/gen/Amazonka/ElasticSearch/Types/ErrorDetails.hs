@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.ErrorDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.ErrorDetails where
@@ -70,7 +70,8 @@ instance Data.FromJSON ErrorDetails where
 
 instance Prelude.Hashable ErrorDetails where
   hashWithSalt _salt ErrorDetails' {..} =
-    _salt `Prelude.hashWithSalt` errorMessage
+    _salt
+      `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` errorType
 
 instance Prelude.NFData ErrorDetails where

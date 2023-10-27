@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.VariableValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.VariableValue where
@@ -103,7 +103,8 @@ instance Data.FromJSON VariableValue where
 
 instance Prelude.Hashable VariableValue where
   hashWithSalt _salt VariableValue' {..} =
-    _salt `Prelude.hashWithSalt` hierarchyId
+    _salt
+      `Prelude.hashWithSalt` hierarchyId
       `Prelude.hashWithSalt` propertyId
 
 instance Prelude.NFData VariableValue where

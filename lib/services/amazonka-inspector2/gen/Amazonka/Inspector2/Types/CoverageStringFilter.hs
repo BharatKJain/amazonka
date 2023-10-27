@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.CoverageStringFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.CoverageStringFilter where
@@ -69,7 +69,8 @@ coverageStringFilter_value = Lens.lens (\CoverageStringFilter' {value} -> value)
 
 instance Prelude.Hashable CoverageStringFilter where
   hashWithSalt _salt CoverageStringFilter' {..} =
-    _salt `Prelude.hashWithSalt` comparison
+    _salt
+      `Prelude.hashWithSalt` comparison
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData CoverageStringFilter where

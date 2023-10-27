@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.EvaluatedRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.EvaluatedRule where
@@ -124,7 +124,8 @@ instance Data.FromJSON EvaluatedRule where
 
 instance Prelude.Hashable EvaluatedRule where
   hashWithSalt _salt EvaluatedRule' {..} =
-    _salt `Prelude.hashWithSalt` evaluated
+    _salt
+      `Prelude.hashWithSalt` evaluated
       `Prelude.hashWithSalt` expression
       `Prelude.hashWithSalt` expressionWithValues
       `Prelude.hashWithSalt` matched

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.TransitionEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.TransitionEvent where
@@ -108,7 +108,8 @@ instance Data.FromJSON TransitionEvent where
 
 instance Prelude.Hashable TransitionEvent where
   hashWithSalt _salt TransitionEvent' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` eventName
       `Prelude.hashWithSalt` condition
       `Prelude.hashWithSalt` nextState

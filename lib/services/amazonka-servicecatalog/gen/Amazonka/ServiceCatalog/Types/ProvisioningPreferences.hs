@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ProvisioningPreferences
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ProvisioningPreferences where
@@ -321,7 +321,8 @@ provisioningPreferences_stackSetRegions = Lens.lens (\ProvisioningPreferences' {
 
 instance Prelude.Hashable ProvisioningPreferences where
   hashWithSalt _salt ProvisioningPreferences' {..} =
-    _salt `Prelude.hashWithSalt` stackSetAccounts
+    _salt
+      `Prelude.hashWithSalt` stackSetAccounts
       `Prelude.hashWithSalt` stackSetFailureToleranceCount
       `Prelude.hashWithSalt` stackSetFailureTolerancePercentage
       `Prelude.hashWithSalt` stackSetMaxConcurrencyCount

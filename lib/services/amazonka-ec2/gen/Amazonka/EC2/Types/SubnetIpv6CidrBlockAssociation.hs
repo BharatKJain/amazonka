@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.SubnetIpv6CidrBlockAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.SubnetIpv6CidrBlockAssociation where
@@ -88,7 +88,8 @@ instance
   hashWithSalt
     _salt
     SubnetIpv6CidrBlockAssociation' {..} =
-      _salt `Prelude.hashWithSalt` associationId
+      _salt
+        `Prelude.hashWithSalt` associationId
         `Prelude.hashWithSalt` ipv6CidrBlock
         `Prelude.hashWithSalt` ipv6CidrBlockState
 

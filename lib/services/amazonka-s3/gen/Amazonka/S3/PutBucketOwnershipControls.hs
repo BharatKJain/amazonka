@@ -16,7 +16,7 @@
 -- Module      : Amazonka.S3.PutBucketOwnershipControls
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -156,7 +156,8 @@ instance Core.AWSRequest PutBucketOwnershipControls where
 
 instance Prelude.Hashable PutBucketOwnershipControls where
   hashWithSalt _salt PutBucketOwnershipControls' {..} =
-    _salt `Prelude.hashWithSalt` contentMD5
+    _salt
+      `Prelude.hashWithSalt` contentMD5
       `Prelude.hashWithSalt` expectedBucketOwner
       `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` ownershipControls

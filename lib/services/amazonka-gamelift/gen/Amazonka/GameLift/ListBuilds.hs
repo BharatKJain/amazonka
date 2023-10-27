@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.ListBuilds
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -163,20 +163,23 @@ instance Core.AWSPager ListBuilds where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listBuildsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listBuildsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listBuildsResponse_builds Prelude.. Lens._Just
+            Lens.^? listBuildsResponse_builds
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listBuilds_nextToken
           Lens..~ rs
-          Lens.^? listBuildsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listBuildsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListBuilds where
   type AWSResponse ListBuilds = ListBuildsResponse
@@ -193,7 +196,8 @@ instance Core.AWSRequest ListBuilds where
 
 instance Prelude.Hashable ListBuilds where
   hashWithSalt _salt ListBuilds' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` status
 

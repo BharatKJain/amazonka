@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFront.ListPublicKeys
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance Core.AWSRequest ListPublicKeys where
 
 instance Prelude.Hashable ListPublicKeys where
   hashWithSalt _salt ListPublicKeys' {..} =
-    _salt `Prelude.hashWithSalt` marker
+    _salt
+      `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxItems
 
 instance Prelude.NFData ListPublicKeys where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ModifyVolume
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -317,7 +317,8 @@ instance Core.AWSRequest ModifyVolume where
 
 instance Prelude.Hashable ModifyVolume where
   hashWithSalt _salt ModifyVolume' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` iops
       `Prelude.hashWithSalt` multiAttachEnabled
       `Prelude.hashWithSalt` size

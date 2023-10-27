@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.Metrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.Metrics where
@@ -108,7 +108,8 @@ instance Data.FromJSON Metrics where
             Prelude.<$> (x Data..:? "AverageWeightedQuantileLoss")
             Prelude.<*> (x Data..:? "ErrorMetrics" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "RMSE")
-            Prelude.<*> ( x Data..:? "WeightedQuantileLosses"
+            Prelude.<*> ( x
+                            Data..:? "WeightedQuantileLosses"
                             Data..!= Prelude.mempty
                         )
       )

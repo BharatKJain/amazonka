@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.MasterUserSecret
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.MasterUserSecret where
@@ -147,7 +147,8 @@ instance Data.FromXML MasterUserSecret where
 
 instance Prelude.Hashable MasterUserSecret where
   hashWithSalt _salt MasterUserSecret' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyId
+    _salt
+      `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` secretArn
       `Prelude.hashWithSalt` secretStatus
 

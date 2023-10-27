@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.QueryExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.QueryExecution where
@@ -210,7 +210,8 @@ instance Data.FromJSON QueryExecution where
 
 instance Prelude.Hashable QueryExecution where
   hashWithSalt _salt QueryExecution' {..} =
-    _salt `Prelude.hashWithSalt` engineVersion
+    _salt
+      `Prelude.hashWithSalt` engineVersion
       `Prelude.hashWithSalt` executionParameters
       `Prelude.hashWithSalt` query
       `Prelude.hashWithSalt` queryExecutionContext

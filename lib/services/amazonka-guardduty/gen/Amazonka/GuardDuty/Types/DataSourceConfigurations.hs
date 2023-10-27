@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.DataSourceConfigurations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.DataSourceConfigurations where
@@ -77,7 +77,8 @@ dataSourceConfigurations_s3Logs = Lens.lens (\DataSourceConfigurations' {s3Logs}
 
 instance Prelude.Hashable DataSourceConfigurations where
   hashWithSalt _salt DataSourceConfigurations' {..} =
-    _salt `Prelude.hashWithSalt` kubernetes
+    _salt
+      `Prelude.hashWithSalt` kubernetes
       `Prelude.hashWithSalt` malwareProtection
       `Prelude.hashWithSalt` s3Logs
 

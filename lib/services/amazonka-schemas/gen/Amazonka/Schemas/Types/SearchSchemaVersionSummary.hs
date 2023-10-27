@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Schemas.Types.SearchSchemaVersionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Schemas.Types.SearchSchemaVersionSummary where
@@ -84,7 +84,8 @@ instance Data.FromJSON SearchSchemaVersionSummary where
 
 instance Prelude.Hashable SearchSchemaVersionSummary where
   hashWithSalt _salt SearchSchemaVersionSummary' {..} =
-    _salt `Prelude.hashWithSalt` createdDate
+    _salt
+      `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` schemaVersion
       `Prelude.hashWithSalt` type'
 

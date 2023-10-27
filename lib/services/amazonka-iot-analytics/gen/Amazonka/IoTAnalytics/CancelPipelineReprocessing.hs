@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTAnalytics.CancelPipelineReprocessing
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest CancelPipelineReprocessing where
 
 instance Prelude.Hashable CancelPipelineReprocessing where
   hashWithSalt _salt CancelPipelineReprocessing' {..} =
-    _salt `Prelude.hashWithSalt` pipelineName
+    _salt
+      `Prelude.hashWithSalt` pipelineName
       `Prelude.hashWithSalt` reprocessingId
 
 instance Prelude.NFData CancelPipelineReprocessing where

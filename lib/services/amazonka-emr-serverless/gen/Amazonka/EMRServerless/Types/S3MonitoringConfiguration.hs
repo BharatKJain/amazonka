@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRServerless.Types.S3MonitoringConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRServerless.Types.S3MonitoringConfiguration where
@@ -79,7 +79,8 @@ instance Data.FromJSON S3MonitoringConfiguration where
 
 instance Prelude.Hashable S3MonitoringConfiguration where
   hashWithSalt _salt S3MonitoringConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` encryptionKeyArn
+    _salt
+      `Prelude.hashWithSalt` encryptionKeyArn
       `Prelude.hashWithSalt` logUri
 
 instance Prelude.NFData S3MonitoringConfiguration where

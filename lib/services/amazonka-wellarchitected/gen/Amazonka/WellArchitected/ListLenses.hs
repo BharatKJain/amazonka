@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WellArchitected.ListLenses
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,7 +129,8 @@ instance Core.AWSRequest ListLenses where
 
 instance Prelude.Hashable ListLenses where
   hashWithSalt _salt ListLenses' {..} =
-    _salt `Prelude.hashWithSalt` lensName
+    _salt
+      `Prelude.hashWithSalt` lensName
       `Prelude.hashWithSalt` lensStatus
       `Prelude.hashWithSalt` lensType
       `Prelude.hashWithSalt` maxResults

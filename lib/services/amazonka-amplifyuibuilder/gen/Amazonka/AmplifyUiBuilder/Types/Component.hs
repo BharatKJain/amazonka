@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.Component
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.Component where
@@ -265,7 +265,8 @@ instance Data.FromJSON Component where
       ( \x ->
           Component'
             Prelude.<$> (x Data..:? "children" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "collectionProperties"
+            Prelude.<*> ( x
+                            Data..:? "collectionProperties"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "events" Data..!= Prelude.mempty)
@@ -274,7 +275,8 @@ instance Data.FromJSON Component where
             Prelude.<*> (x Data..:? "sourceId")
             Prelude.<*> (x Data..:? "tags" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..: "appId")
-            Prelude.<*> ( x Data..:? "bindingProperties"
+            Prelude.<*> ( x
+                            Data..:? "bindingProperties"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "componentType")
@@ -289,7 +291,8 @@ instance Data.FromJSON Component where
 
 instance Prelude.Hashable Component where
   hashWithSalt _salt Component' {..} =
-    _salt `Prelude.hashWithSalt` children
+    _salt
+      `Prelude.hashWithSalt` children
       `Prelude.hashWithSalt` collectionProperties
       `Prelude.hashWithSalt` events
       `Prelude.hashWithSalt` modifiedAt

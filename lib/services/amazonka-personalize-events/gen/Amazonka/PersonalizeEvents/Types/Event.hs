@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PersonalizeEvents.Types.Event
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PersonalizeEvents.Types.Event where
@@ -235,7 +235,8 @@ event_sentAt = Lens.lens (\Event' {sentAt} -> sentAt) (\s@Event' {} a -> s {sent
 
 instance Prelude.Hashable Event where
   hashWithSalt _salt Event' {..} =
-    _salt `Prelude.hashWithSalt` eventId
+    _salt
+      `Prelude.hashWithSalt` eventId
       `Prelude.hashWithSalt` eventValue
       `Prelude.hashWithSalt` impression
       `Prelude.hashWithSalt` itemId

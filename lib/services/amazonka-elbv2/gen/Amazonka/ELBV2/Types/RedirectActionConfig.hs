@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.RedirectActionConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.RedirectActionConfig where
@@ -155,7 +155,8 @@ instance Data.FromXML RedirectActionConfig where
 
 instance Prelude.Hashable RedirectActionConfig where
   hashWithSalt _salt RedirectActionConfig' {..} =
-    _salt `Prelude.hashWithSalt` host
+    _salt
+      `Prelude.hashWithSalt` host
       `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` port
       `Prelude.hashWithSalt` protocol

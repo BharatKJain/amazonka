@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.Stack
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.Stack where
@@ -357,7 +357,8 @@ instance Data.FromJSON Stack where
 
 instance Prelude.Hashable Stack where
   hashWithSalt _salt Stack' {..} =
-    _salt `Prelude.hashWithSalt` agentVersion
+    _salt
+      `Prelude.hashWithSalt` agentVersion
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` chefConfiguration

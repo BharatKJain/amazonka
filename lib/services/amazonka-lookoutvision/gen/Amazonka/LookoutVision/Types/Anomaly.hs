@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutVision.Types.Anomaly
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutVision.Types.Anomaly where
@@ -85,7 +85,8 @@ instance Data.FromJSON Anomaly where
 
 instance Prelude.Hashable Anomaly where
   hashWithSalt _salt Anomaly' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` pixelAnomaly
 
 instance Prelude.NFData Anomaly where

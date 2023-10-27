@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ComboChartSortConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ComboChartSortConfiguration where
@@ -100,7 +100,8 @@ instance Data.FromJSON ComboChartSortConfiguration where
 
 instance Prelude.Hashable ComboChartSortConfiguration where
   hashWithSalt _salt ComboChartSortConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` categoryItemsLimit
+    _salt
+      `Prelude.hashWithSalt` categoryItemsLimit
       `Prelude.hashWithSalt` categorySort
       `Prelude.hashWithSalt` colorItemsLimit
       `Prelude.hashWithSalt` colorSort

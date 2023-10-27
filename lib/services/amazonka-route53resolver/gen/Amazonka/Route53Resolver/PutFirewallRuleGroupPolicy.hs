@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53Resolver.PutFirewallRuleGroupPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest PutFirewallRuleGroupPolicy where
 
 instance Prelude.Hashable PutFirewallRuleGroupPolicy where
   hashWithSalt _salt PutFirewallRuleGroupPolicy' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` firewallRuleGroupPolicy
 
 instance Prelude.NFData PutFirewallRuleGroupPolicy where
@@ -186,7 +187,6 @@ newPutFirewallRuleGroupPolicyResponse pHttpStatus_ =
       httpStatus = pHttpStatus_
     }
 
--- |
 putFirewallRuleGroupPolicyResponse_returnValue :: Lens.Lens' PutFirewallRuleGroupPolicyResponse (Prelude.Maybe Prelude.Bool)
 putFirewallRuleGroupPolicyResponse_returnValue = Lens.lens (\PutFirewallRuleGroupPolicyResponse' {returnValue} -> returnValue) (\s@PutFirewallRuleGroupPolicyResponse' {} a -> s {returnValue = a} :: PutFirewallRuleGroupPolicyResponse)
 

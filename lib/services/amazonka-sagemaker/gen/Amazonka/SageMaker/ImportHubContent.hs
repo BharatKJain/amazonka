@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.ImportHubContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -211,7 +211,8 @@ instance Core.AWSRequest ImportHubContent where
 
 instance Prelude.Hashable ImportHubContent where
   hashWithSalt _salt ImportHubContent' {..} =
-    _salt `Prelude.hashWithSalt` hubContentDescription
+    _salt
+      `Prelude.hashWithSalt` hubContentDescription
       `Prelude.hashWithSalt` hubContentDisplayName
       `Prelude.hashWithSalt` hubContentMarkdown
       `Prelude.hashWithSalt` hubContentSearchKeywords

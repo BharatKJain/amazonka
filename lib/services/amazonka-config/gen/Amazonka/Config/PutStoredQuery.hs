@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Config.PutStoredQuery
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest PutStoredQuery where
 
 instance Prelude.Hashable PutStoredQuery where
   hashWithSalt _salt PutStoredQuery' {..} =
-    _salt `Prelude.hashWithSalt` tags
+    _salt
+      `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` storedQuery
 
 instance Prelude.NFData PutStoredQuery where

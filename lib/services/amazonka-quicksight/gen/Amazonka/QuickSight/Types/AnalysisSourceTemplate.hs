@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.AnalysisSourceTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.AnalysisSourceTemplate where
@@ -70,7 +70,8 @@ analysisSourceTemplate_arn = Lens.lens (\AnalysisSourceTemplate' {arn} -> arn) (
 
 instance Prelude.Hashable AnalysisSourceTemplate where
   hashWithSalt _salt AnalysisSourceTemplate' {..} =
-    _salt `Prelude.hashWithSalt` dataSetReferences
+    _salt
+      `Prelude.hashWithSalt` dataSetReferences
       `Prelude.hashWithSalt` arn
 
 instance Prelude.NFData AnalysisSourceTemplate where

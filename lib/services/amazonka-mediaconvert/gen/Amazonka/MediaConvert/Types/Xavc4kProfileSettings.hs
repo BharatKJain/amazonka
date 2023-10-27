@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.Xavc4kProfileSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.Xavc4kProfileSettings where
@@ -240,7 +240,8 @@ instance Data.FromJSON Xavc4kProfileSettings where
 
 instance Prelude.Hashable Xavc4kProfileSettings where
   hashWithSalt _salt Xavc4kProfileSettings' {..} =
-    _salt `Prelude.hashWithSalt` bitrateClass
+    _salt
+      `Prelude.hashWithSalt` bitrateClass
       `Prelude.hashWithSalt` codecProfile
       `Prelude.hashWithSalt` flickerAdaptiveQuantization
       `Prelude.hashWithSalt` gopBReference

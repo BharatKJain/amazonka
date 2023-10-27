@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.ReportJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.ReportJob where
@@ -193,7 +193,8 @@ instance Data.FromJSON ReportJob where
 
 instance Prelude.Hashable ReportJob where
   hashWithSalt _salt ReportJob' {..} =
-    _salt `Prelude.hashWithSalt` completionTime
+    _salt
+      `Prelude.hashWithSalt` completionTime
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` reportDestination
       `Prelude.hashWithSalt` reportJobId

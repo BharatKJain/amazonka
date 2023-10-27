@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SES.PutIdentityPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -168,7 +168,8 @@ instance Core.AWSRequest PutIdentityPolicy where
 
 instance Prelude.Hashable PutIdentityPolicy where
   hashWithSalt _salt PutIdentityPolicy' {..} =
-    _salt `Prelude.hashWithSalt` identity
+    _salt
+      `Prelude.hashWithSalt` identity
       `Prelude.hashWithSalt` policyName
       `Prelude.hashWithSalt` policy
 

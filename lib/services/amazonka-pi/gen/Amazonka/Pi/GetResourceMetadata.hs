@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pi.GetResourceMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest GetResourceMetadata where
 
 instance Prelude.Hashable GetResourceMetadata where
   hashWithSalt _salt GetResourceMetadata' {..} =
-    _salt `Prelude.hashWithSalt` serviceType
+    _salt
+      `Prelude.hashWithSalt` serviceType
       `Prelude.hashWithSalt` identifier
 
 instance Prelude.NFData GetResourceMetadata where

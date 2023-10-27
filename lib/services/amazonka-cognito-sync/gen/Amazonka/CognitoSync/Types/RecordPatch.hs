@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoSync.Types.RecordPatch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoSync.Types.RecordPatch where
@@ -99,7 +99,8 @@ recordPatch_syncCount = Lens.lens (\RecordPatch' {syncCount} -> syncCount) (\s@R
 
 instance Prelude.Hashable RecordPatch where
   hashWithSalt _salt RecordPatch' {..} =
-    _salt `Prelude.hashWithSalt` deviceLastModifiedDate
+    _salt
+      `Prelude.hashWithSalt` deviceLastModifiedDate
       `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` op
       `Prelude.hashWithSalt` key

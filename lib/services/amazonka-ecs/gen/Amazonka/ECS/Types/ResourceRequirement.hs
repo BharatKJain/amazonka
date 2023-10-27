@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.ResourceRequirement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.ResourceRequirement where
@@ -109,12 +109,14 @@ instance Data.FromJSON ResourceRequirement where
       "ResourceRequirement"
       ( \x ->
           ResourceRequirement'
-            Prelude.<$> (x Data..: "value") Prelude.<*> (x Data..: "type")
+            Prelude.<$> (x Data..: "value")
+            Prelude.<*> (x Data..: "type")
       )
 
 instance Prelude.Hashable ResourceRequirement where
   hashWithSalt _salt ResourceRequirement' {..} =
-    _salt `Prelude.hashWithSalt` value
+    _salt
+      `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData ResourceRequirement where

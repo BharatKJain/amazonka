@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.StatusCodes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.StatusCodes where
@@ -72,13 +72,16 @@ instance Data.FromXML StatusCodes where
   parseXML x =
     StatusCodes'
       Prelude.<$> (x Data..@ "Quantity")
-      Prelude.<*> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Data.parseXMLList1 "StatusCode"
                   )
 
 instance Prelude.Hashable StatusCodes where
   hashWithSalt _salt StatusCodes' {..} =
-    _salt `Prelude.hashWithSalt` quantity
+    _salt
+      `Prelude.hashWithSalt` quantity
       `Prelude.hashWithSalt` items
 
 instance Prelude.NFData StatusCodes where

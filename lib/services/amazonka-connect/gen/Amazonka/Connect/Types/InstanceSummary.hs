@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.InstanceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.InstanceSummary where
@@ -146,7 +146,8 @@ instance Data.FromJSON InstanceSummary where
 
 instance Prelude.Hashable InstanceSummary where
   hashWithSalt _salt InstanceSummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` identityManagementType

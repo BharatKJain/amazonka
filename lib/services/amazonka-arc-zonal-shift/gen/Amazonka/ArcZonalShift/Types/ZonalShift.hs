@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ArcZonalShift.Types.ZonalShift
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ArcZonalShift.Types.ZonalShift where
@@ -231,7 +231,8 @@ instance Data.FromJSON ZonalShift where
 
 instance Prelude.Hashable ZonalShift where
   hashWithSalt _salt ZonalShift' {..} =
-    _salt `Prelude.hashWithSalt` awayFrom
+    _salt
+      `Prelude.hashWithSalt` awayFrom
       `Prelude.hashWithSalt` comment
       `Prelude.hashWithSalt` expiryTime
       `Prelude.hashWithSalt` resourceIdentifier

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsOpenSearchServiceDomainVpcOptionsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsOpenSearchServiceDomainVpcOptionsDetails where
@@ -79,10 +79,11 @@ instance
       "AwsOpenSearchServiceDomainVpcOptionsDetails"
       ( \x ->
           AwsOpenSearchServiceDomainVpcOptionsDetails'
-            Prelude.<$> ( x Data..:? "SecurityGroupIds"
+            Prelude.<$> ( x
+                            Data..:? "SecurityGroupIds"
                             Data..!= Prelude.mempty
                         )
-              Prelude.<*> (x Data..:? "SubnetIds" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "SubnetIds" Data..!= Prelude.mempty)
       )
 
 instance
@@ -92,7 +93,8 @@ instance
   hashWithSalt
     _salt
     AwsOpenSearchServiceDomainVpcOptionsDetails' {..} =
-      _salt `Prelude.hashWithSalt` securityGroupIds
+      _salt
+        `Prelude.hashWithSalt` securityGroupIds
         `Prelude.hashWithSalt` subnetIds
 
 instance

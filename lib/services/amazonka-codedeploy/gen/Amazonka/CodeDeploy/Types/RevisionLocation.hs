@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.RevisionLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.RevisionLocation where
@@ -154,7 +154,8 @@ instance Data.FromJSON RevisionLocation where
 
 instance Prelude.Hashable RevisionLocation where
   hashWithSalt _salt RevisionLocation' {..} =
-    _salt `Prelude.hashWithSalt` appSpecContent
+    _salt
+      `Prelude.hashWithSalt` appSpecContent
       `Prelude.hashWithSalt` gitHubLocation
       `Prelude.hashWithSalt` revisionType
       `Prelude.hashWithSalt` s3Location

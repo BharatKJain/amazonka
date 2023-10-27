@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EMR.GetStudioSessionMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -159,7 +159,8 @@ instance Core.AWSRequest GetStudioSessionMapping where
 
 instance Prelude.Hashable GetStudioSessionMapping where
   hashWithSalt _salt GetStudioSessionMapping' {..} =
-    _salt `Prelude.hashWithSalt` identityId
+    _salt
+      `Prelude.hashWithSalt` identityId
       `Prelude.hashWithSalt` identityName
       `Prelude.hashWithSalt` studioId
       `Prelude.hashWithSalt` identityType

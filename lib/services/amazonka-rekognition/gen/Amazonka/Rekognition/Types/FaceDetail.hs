@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.FaceDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.FaceDetail where
@@ -285,7 +285,8 @@ instance Data.FromJSON FaceDetail where
 
 instance Prelude.Hashable FaceDetail where
   hashWithSalt _salt FaceDetail' {..} =
-    _salt `Prelude.hashWithSalt` ageRange
+    _salt
+      `Prelude.hashWithSalt` ageRange
       `Prelude.hashWithSalt` beard
       `Prelude.hashWithSalt` boundingBox
       `Prelude.hashWithSalt` confidence

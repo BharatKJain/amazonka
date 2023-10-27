@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QLDBSession.Types.CommitTransactionResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QLDBSession.Types.CommitTransactionResult where
@@ -105,7 +105,8 @@ instance Data.FromJSON CommitTransactionResult where
 
 instance Prelude.Hashable CommitTransactionResult where
   hashWithSalt _salt CommitTransactionResult' {..} =
-    _salt `Prelude.hashWithSalt` commitDigest
+    _salt
+      `Prelude.hashWithSalt` commitDigest
       `Prelude.hashWithSalt` consumedIOs
       `Prelude.hashWithSalt` timingInformation
       `Prelude.hashWithSalt` transactionId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.ChatChannel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.ChatChannel where
@@ -84,7 +84,8 @@ instance Data.FromJSON ChatChannel where
 
 instance Prelude.Hashable ChatChannel where
   hashWithSalt _salt ChatChannel' {..} =
-    _salt `Prelude.hashWithSalt` chatbotSns
+    _salt
+      `Prelude.hashWithSalt` chatbotSns
       `Prelude.hashWithSalt` empty
 
 instance Prelude.NFData ChatChannel where

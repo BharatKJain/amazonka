@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.Processor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.Processor where
@@ -78,7 +78,8 @@ instance Data.FromJSON Processor where
 
 instance Prelude.Hashable Processor where
   hashWithSalt _salt Processor' {..} =
-    _salt `Prelude.hashWithSalt` parameters
+    _salt
+      `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData Processor where

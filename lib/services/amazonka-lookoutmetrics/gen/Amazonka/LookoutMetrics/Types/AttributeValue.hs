@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.AttributeValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.AttributeValue where
@@ -114,7 +114,8 @@ instance Data.FromJSON AttributeValue where
 
 instance Prelude.Hashable AttributeValue where
   hashWithSalt _salt AttributeValue' {..} =
-    _salt `Prelude.hashWithSalt` b
+    _salt
+      `Prelude.hashWithSalt` b
       `Prelude.hashWithSalt` bs
       `Prelude.hashWithSalt` n
       `Prelude.hashWithSalt` ns

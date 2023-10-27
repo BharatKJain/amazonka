@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StepFunctions.Types.TaskSubmittedEventDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StepFunctions.Types.TaskSubmittedEventDetails where
@@ -105,7 +105,8 @@ instance Data.FromJSON TaskSubmittedEventDetails where
 
 instance Prelude.Hashable TaskSubmittedEventDetails where
   hashWithSalt _salt TaskSubmittedEventDetails' {..} =
-    _salt `Prelude.hashWithSalt` output
+    _salt
+      `Prelude.hashWithSalt` output
       `Prelude.hashWithSalt` outputDetails
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` resource

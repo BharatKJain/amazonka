@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.JDBCConnectorTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.JDBCConnectorTarget where
@@ -146,7 +146,8 @@ instance Data.FromJSON JDBCConnectorTarget where
       "JDBCConnectorTarget"
       ( \x ->
           JDBCConnectorTarget'
-            Prelude.<$> ( x Data..:? "AdditionalOptions"
+            Prelude.<$> ( x
+                            Data..:? "AdditionalOptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "OutputSchemas" Data..!= Prelude.mempty)
@@ -160,7 +161,8 @@ instance Data.FromJSON JDBCConnectorTarget where
 
 instance Prelude.Hashable JDBCConnectorTarget where
   hashWithSalt _salt JDBCConnectorTarget' {..} =
-    _salt `Prelude.hashWithSalt` additionalOptions
+    _salt
+      `Prelude.hashWithSalt` additionalOptions
       `Prelude.hashWithSalt` outputSchemas
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inputs

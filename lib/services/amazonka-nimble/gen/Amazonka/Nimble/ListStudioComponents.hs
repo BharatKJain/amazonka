@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Nimble.ListStudioComponents
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -133,22 +133,22 @@ instance Core.AWSPager ListStudioComponents where
     | Core.stop
         ( rs
             Lens.^? listStudioComponentsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listStudioComponentsResponse_studioComponents
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listStudioComponents_nextToken
           Lens..~ rs
           Lens.^? listStudioComponentsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListStudioComponents where
   type
@@ -161,7 +161,8 @@ instance Core.AWSRequest ListStudioComponents where
       ( \s h x ->
           ListStudioComponentsResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "studioComponents"
+            Prelude.<*> ( x
+                            Data..?> "studioComponents"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -169,7 +170,8 @@ instance Core.AWSRequest ListStudioComponents where
 
 instance Prelude.Hashable ListStudioComponents where
   hashWithSalt _salt ListStudioComponents' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` states
       `Prelude.hashWithSalt` types

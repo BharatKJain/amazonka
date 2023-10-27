@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexV2Models.UpdateBotAlias
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -174,7 +174,8 @@ instance Core.AWSRequest UpdateBotAlias where
       ( \s h x ->
           UpdateBotAliasResponse'
             Prelude.<$> (x Data..?> "botAliasId")
-            Prelude.<*> ( x Data..?> "botAliasLocaleSettings"
+            Prelude.<*> ( x
+                            Data..?> "botAliasLocaleSettings"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "botAliasName")
@@ -191,7 +192,8 @@ instance Core.AWSRequest UpdateBotAlias where
 
 instance Prelude.Hashable UpdateBotAlias where
   hashWithSalt _salt UpdateBotAlias' {..} =
-    _salt `Prelude.hashWithSalt` botAliasLocaleSettings
+    _salt
+      `Prelude.hashWithSalt` botAliasLocaleSettings
       `Prelude.hashWithSalt` botVersion
       `Prelude.hashWithSalt` conversationLogSettings
       `Prelude.hashWithSalt` description

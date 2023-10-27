@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppRunner.Types.VpcConnector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppRunner.Types.VpcConnector where
@@ -179,7 +179,8 @@ instance Data.FromJSON VpcConnector where
 
 instance Prelude.Hashable VpcConnector where
   hashWithSalt _salt VpcConnector' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` deletedAt
       `Prelude.hashWithSalt` securityGroups
       `Prelude.hashWithSalt` status

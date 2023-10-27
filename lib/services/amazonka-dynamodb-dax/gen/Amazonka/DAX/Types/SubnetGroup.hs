@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DAX.Types.SubnetGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DAX.Types.SubnetGroup where
@@ -102,7 +102,8 @@ instance Data.FromJSON SubnetGroup where
 
 instance Prelude.Hashable SubnetGroup where
   hashWithSalt _salt SubnetGroup' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` subnetGroupName
       `Prelude.hashWithSalt` subnets
       `Prelude.hashWithSalt` vpcId

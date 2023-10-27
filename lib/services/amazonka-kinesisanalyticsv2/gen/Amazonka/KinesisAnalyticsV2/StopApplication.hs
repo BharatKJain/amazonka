@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.StopApplication
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -150,7 +150,8 @@ instance Core.AWSRequest StopApplication where
 
 instance Prelude.Hashable StopApplication where
   hashWithSalt _salt StopApplication' {..} =
-    _salt `Prelude.hashWithSalt` force
+    _salt
+      `Prelude.hashWithSalt` force
       `Prelude.hashWithSalt` applicationName
 
 instance Prelude.NFData StopApplication where

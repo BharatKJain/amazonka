@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.SigV4Authorization
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.SigV4Authorization where
@@ -95,7 +95,8 @@ instance Data.FromJSON SigV4Authorization where
 
 instance Prelude.Hashable SigV4Authorization where
   hashWithSalt _salt SigV4Authorization' {..} =
-    _salt `Prelude.hashWithSalt` signingRegion
+    _salt
+      `Prelude.hashWithSalt` signingRegion
       `Prelude.hashWithSalt` serviceName
       `Prelude.hashWithSalt` roleArn
 

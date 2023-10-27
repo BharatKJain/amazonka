@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.RecommenderConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.RecommenderConfig where
@@ -87,7 +87,8 @@ instance Data.FromJSON RecommenderConfig where
       "RecommenderConfig"
       ( \x ->
           RecommenderConfig'
-            Prelude.<$> ( x Data..:? "itemExplorationConfig"
+            Prelude.<$> ( x
+                            Data..:? "itemExplorationConfig"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "minRecommendationRequestsPerSecond")
@@ -95,7 +96,8 @@ instance Data.FromJSON RecommenderConfig where
 
 instance Prelude.Hashable RecommenderConfig where
   hashWithSalt _salt RecommenderConfig' {..} =
-    _salt `Prelude.hashWithSalt` itemExplorationConfig
+    _salt
+      `Prelude.hashWithSalt` itemExplorationConfig
       `Prelude.hashWithSalt` minRecommendationRequestsPerSecond
 
 instance Prelude.NFData RecommenderConfig where

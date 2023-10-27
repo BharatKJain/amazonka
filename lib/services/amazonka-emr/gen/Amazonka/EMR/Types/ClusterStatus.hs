@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.ClusterStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.ClusterStatus where
@@ -90,7 +90,8 @@ instance Data.FromJSON ClusterStatus where
 
 instance Prelude.Hashable ClusterStatus where
   hashWithSalt _salt ClusterStatus' {..} =
-    _salt `Prelude.hashWithSalt` state
+    _salt
+      `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` stateChangeReason
       `Prelude.hashWithSalt` timeline
 

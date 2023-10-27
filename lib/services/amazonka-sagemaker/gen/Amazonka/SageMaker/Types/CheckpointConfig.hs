@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.CheckpointConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.CheckpointConfig where
@@ -83,7 +83,8 @@ instance Data.FromJSON CheckpointConfig where
 
 instance Prelude.Hashable CheckpointConfig where
   hashWithSalt _salt CheckpointConfig' {..} =
-    _salt `Prelude.hashWithSalt` localPath
+    _salt
+      `Prelude.hashWithSalt` localPath
       `Prelude.hashWithSalt` s3Uri
 
 instance Prelude.NFData CheckpointConfig where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.FileGroupSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.FileGroupSettings where
@@ -94,7 +94,8 @@ instance Data.FromJSON FileGroupSettings where
 
 instance Prelude.Hashable FileGroupSettings where
   hashWithSalt _salt FileGroupSettings' {..} =
-    _salt `Prelude.hashWithSalt` destination
+    _salt
+      `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` destinationSettings
 
 instance Prelude.NFData FileGroupSettings where

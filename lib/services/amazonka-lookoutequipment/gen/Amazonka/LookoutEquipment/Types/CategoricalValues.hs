@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutEquipment.Types.CategoricalValues
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutEquipment.Types.CategoricalValues where
@@ -81,7 +81,8 @@ instance Data.FromJSON CategoricalValues where
 
 instance Prelude.Hashable CategoricalValues where
   hashWithSalt _salt CategoricalValues' {..} =
-    _salt `Prelude.hashWithSalt` numberOfCategory
+    _salt
+      `Prelude.hashWithSalt` numberOfCategory
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData CategoricalValues where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.SybaseSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.SybaseSettings where
@@ -169,7 +169,8 @@ instance Data.FromJSON SybaseSettings where
 
 instance Prelude.Hashable SybaseSettings where
   hashWithSalt _salt SybaseSettings' {..} =
-    _salt `Prelude.hashWithSalt` databaseName
+    _salt
+      `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` password
       `Prelude.hashWithSalt` port
       `Prelude.hashWithSalt` secretsManagerAccessRoleArn

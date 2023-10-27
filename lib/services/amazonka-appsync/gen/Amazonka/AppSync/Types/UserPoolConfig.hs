@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.UserPoolConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.UserPoolConfig where
@@ -113,7 +113,8 @@ instance Data.FromJSON UserPoolConfig where
 
 instance Prelude.Hashable UserPoolConfig where
   hashWithSalt _salt UserPoolConfig' {..} =
-    _salt `Prelude.hashWithSalt` appIdClientRegex
+    _salt
+      `Prelude.hashWithSalt` appIdClientRegex
       `Prelude.hashWithSalt` userPoolId
       `Prelude.hashWithSalt` awsRegion
       `Prelude.hashWithSalt` defaultAction

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CustomerProfiles.UpdateDomain
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -224,7 +224,8 @@ instance Core.AWSRequest UpdateDomain where
 
 instance Prelude.Hashable UpdateDomain where
   hashWithSalt _salt UpdateDomain' {..} =
-    _salt `Prelude.hashWithSalt` deadLetterQueueUrl
+    _salt
+      `Prelude.hashWithSalt` deadLetterQueueUrl
       `Prelude.hashWithSalt` defaultEncryptionKey
       `Prelude.hashWithSalt` defaultExpirationDays
       `Prelude.hashWithSalt` matching

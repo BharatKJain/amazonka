@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.Job
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.Job where
@@ -329,7 +329,8 @@ instance Data.FromJSON Job where
 
 instance Prelude.Hashable Job where
   hashWithSalt _salt Job' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` input
       `Prelude.hashWithSalt` inputs

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FinSpaceData.Types.PermissionGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FinSpaceData.Types.PermissionGroup where
@@ -227,7 +227,8 @@ instance Data.FromJSON PermissionGroup where
       "PermissionGroup"
       ( \x ->
           PermissionGroup'
-            Prelude.<$> ( x Data..:? "applicationPermissions"
+            Prelude.<$> ( x
+                            Data..:? "applicationPermissions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "createTime")
@@ -240,7 +241,8 @@ instance Data.FromJSON PermissionGroup where
 
 instance Prelude.Hashable PermissionGroup where
   hashWithSalt _salt PermissionGroup' {..} =
-    _salt `Prelude.hashWithSalt` applicationPermissions
+    _salt
+      `Prelude.hashWithSalt` applicationPermissions
       `Prelude.hashWithSalt` createTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` lastModifiedTime

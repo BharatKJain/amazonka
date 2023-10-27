@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Panorama.Types.EthernetPayload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Panorama.Types.EthernetPayload where
@@ -79,7 +79,8 @@ instance Data.FromJSON EthernetPayload where
 
 instance Prelude.Hashable EthernetPayload where
   hashWithSalt _salt EthernetPayload' {..} =
-    _salt `Prelude.hashWithSalt` staticIpConnectionInfo
+    _salt
+      `Prelude.hashWithSalt` staticIpConnectionInfo
       `Prelude.hashWithSalt` connectionType
 
 instance Prelude.NFData EthernetPayload where

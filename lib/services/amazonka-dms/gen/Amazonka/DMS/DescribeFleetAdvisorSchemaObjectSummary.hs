@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DMS.DescribeFleetAdvisorSchemaObjectSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,11 +141,12 @@ instance
     Response.receiveJSON
       ( \s h x ->
           DescribeFleetAdvisorSchemaObjectSummaryResponse'
-            Prelude.<$> ( x Data..?> "FleetAdvisorSchemaObjects"
+            Prelude.<$> ( x
+                            Data..?> "FleetAdvisorSchemaObjects"
                             Core..!@ Prelude.mempty
                         )
-              Prelude.<*> (x Data..?> "NextToken")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "NextToken")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -155,7 +156,8 @@ instance
   hashWithSalt
     _salt
     DescribeFleetAdvisorSchemaObjectSummary' {..} =
-      _salt `Prelude.hashWithSalt` filters
+      _salt
+        `Prelude.hashWithSalt` filters
         `Prelude.hashWithSalt` maxRecords
         `Prelude.hashWithSalt` nextToken
 

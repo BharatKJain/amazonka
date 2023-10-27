@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.ResourceTags
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.ResourceTags where
@@ -75,7 +75,8 @@ instance Data.FromJSON ResourceTags where
 
 instance Prelude.Hashable ResourceTags where
   hashWithSalt _salt ResourceTags' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` tags
 
 instance Prelude.NFData ResourceTags where

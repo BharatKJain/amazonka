@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudTrail.Types.ImportFailureListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudTrail.Types.ImportFailureListItem where
@@ -106,7 +106,8 @@ instance Data.FromJSON ImportFailureListItem where
 
 instance Prelude.Hashable ImportFailureListItem where
   hashWithSalt _salt ImportFailureListItem' {..} =
-    _salt `Prelude.hashWithSalt` errorMessage
+    _salt
+      `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` errorType
       `Prelude.hashWithSalt` lastUpdatedTime
       `Prelude.hashWithSalt` location

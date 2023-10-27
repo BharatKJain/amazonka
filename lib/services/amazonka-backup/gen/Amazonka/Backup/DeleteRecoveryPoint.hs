@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Backup.DeleteRecoveryPoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,7 +130,8 @@ instance Core.AWSRequest DeleteRecoveryPoint where
 
 instance Prelude.Hashable DeleteRecoveryPoint where
   hashWithSalt _salt DeleteRecoveryPoint' {..} =
-    _salt `Prelude.hashWithSalt` backupVaultName
+    _salt
+      `Prelude.hashWithSalt` backupVaultName
       `Prelude.hashWithSalt` recoveryPointArn
 
 instance Prelude.NFData DeleteRecoveryPoint where

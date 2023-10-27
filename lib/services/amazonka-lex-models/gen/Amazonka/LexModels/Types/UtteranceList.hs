@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexModels.Types.UtteranceList
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexModels.Types.UtteranceList where
@@ -82,7 +82,8 @@ instance Data.FromJSON UtteranceList where
 
 instance Prelude.Hashable UtteranceList where
   hashWithSalt _salt UtteranceList' {..} =
-    _salt `Prelude.hashWithSalt` botVersion
+    _salt
+      `Prelude.hashWithSalt` botVersion
       `Prelude.hashWithSalt` utterances
 
 instance Prelude.NFData UtteranceList where

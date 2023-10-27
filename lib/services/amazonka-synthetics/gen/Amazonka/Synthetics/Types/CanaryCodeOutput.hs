@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Synthetics.Types.CanaryCodeOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Synthetics.Types.CanaryCodeOutput where
@@ -78,7 +78,8 @@ instance Data.FromJSON CanaryCodeOutput where
 
 instance Prelude.Hashable CanaryCodeOutput where
   hashWithSalt _salt CanaryCodeOutput' {..} =
-    _salt `Prelude.hashWithSalt` handler
+    _salt
+      `Prelude.hashWithSalt` handler
       `Prelude.hashWithSalt` sourceLocationArn
 
 instance Prelude.NFData CanaryCodeOutput where

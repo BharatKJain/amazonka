@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.FailedScheduledUpdateGroupActionRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.FailedScheduledUpdateGroupActionRequest where
@@ -84,8 +84,8 @@ instance
   parseXML x =
     FailedScheduledUpdateGroupActionRequest'
       Prelude.<$> (x Data..@? "ErrorCode")
-        Prelude.<*> (x Data..@? "ErrorMessage")
-        Prelude.<*> (x Data..@ "ScheduledActionName")
+      Prelude.<*> (x Data..@? "ErrorMessage")
+      Prelude.<*> (x Data..@ "ScheduledActionName")
 
 instance
   Prelude.Hashable
@@ -94,7 +94,8 @@ instance
   hashWithSalt
     _salt
     FailedScheduledUpdateGroupActionRequest' {..} =
-      _salt `Prelude.hashWithSalt` errorCode
+      _salt
+        `Prelude.hashWithSalt` errorCode
         `Prelude.hashWithSalt` errorMessage
         `Prelude.hashWithSalt` scheduledActionName
 

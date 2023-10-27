@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.ListPipelineExecutionSteps
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,22 +122,22 @@ instance Core.AWSPager ListPipelineExecutionSteps where
     | Core.stop
         ( rs
             Lens.^? listPipelineExecutionStepsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listPipelineExecutionStepsResponse_pipelineExecutionSteps
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listPipelineExecutionSteps_nextToken
           Lens..~ rs
           Lens.^? listPipelineExecutionStepsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListPipelineExecutionSteps where
   type
@@ -150,7 +150,8 @@ instance Core.AWSRequest ListPipelineExecutionSteps where
       ( \s h x ->
           ListPipelineExecutionStepsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "PipelineExecutionSteps"
+            Prelude.<*> ( x
+                            Data..?> "PipelineExecutionSteps"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -158,7 +159,8 @@ instance Core.AWSRequest ListPipelineExecutionSteps where
 
 instance Prelude.Hashable ListPipelineExecutionSteps where
   hashWithSalt _salt ListPipelineExecutionSteps' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` pipelineExecutionArn
       `Prelude.hashWithSalt` sortOrder

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.DatasetDetailOrgAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.DatasetDetailOrgAttributes where
@@ -72,12 +72,14 @@ instance Data.FromJSON DatasetDetailOrgAttributes where
       "DatasetDetailOrgAttributes"
       ( \x ->
           DatasetDetailOrgAttributes'
-            Prelude.<$> (x Data..:? "gdg") Prelude.<*> (x Data..:? "vsam")
+            Prelude.<$> (x Data..:? "gdg")
+            Prelude.<*> (x Data..:? "vsam")
       )
 
 instance Prelude.Hashable DatasetDetailOrgAttributes where
   hashWithSalt _salt DatasetDetailOrgAttributes' {..} =
-    _salt `Prelude.hashWithSalt` gdg
+    _salt
+      `Prelude.hashWithSalt` gdg
       `Prelude.hashWithSalt` vsam
 
 instance Prelude.NFData DatasetDetailOrgAttributes where

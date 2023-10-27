@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSOAdmin.Types.CustomerManagedPolicyReference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSOAdmin.Types.CustomerManagedPolicyReference where
@@ -88,7 +88,8 @@ instance Data.FromJSON CustomerManagedPolicyReference where
       "CustomerManagedPolicyReference"
       ( \x ->
           CustomerManagedPolicyReference'
-            Prelude.<$> (x Data..:? "Path") Prelude.<*> (x Data..: "Name")
+            Prelude.<$> (x Data..:? "Path")
+            Prelude.<*> (x Data..: "Name")
       )
 
 instance
@@ -98,7 +99,8 @@ instance
   hashWithSalt
     _salt
     CustomerManagedPolicyReference' {..} =
-      _salt `Prelude.hashWithSalt` path
+      _salt
+        `Prelude.hashWithSalt` path
         `Prelude.hashWithSalt` name
 
 instance

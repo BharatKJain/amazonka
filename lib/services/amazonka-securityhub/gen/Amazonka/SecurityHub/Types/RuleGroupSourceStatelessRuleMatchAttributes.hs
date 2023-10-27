@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.RuleGroupSourceStatelessRuleMatchAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.RuleGroupSourceStatelessRuleMatchAttributes where
@@ -119,14 +119,15 @@ instance
       "RuleGroupSourceStatelessRuleMatchAttributes"
       ( \x ->
           RuleGroupSourceStatelessRuleMatchAttributes'
-            Prelude.<$> ( x Data..:? "DestinationPorts"
+            Prelude.<$> ( x
+                            Data..:? "DestinationPorts"
                             Data..!= Prelude.mempty
                         )
-              Prelude.<*> (x Data..:? "Destinations" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "Protocols" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "SourcePorts" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "Sources" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "TcpFlags" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "Destinations" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "Protocols" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "SourcePorts" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "Sources" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "TcpFlags" Data..!= Prelude.mempty)
       )
 
 instance
@@ -136,7 +137,8 @@ instance
   hashWithSalt
     _salt
     RuleGroupSourceStatelessRuleMatchAttributes' {..} =
-      _salt `Prelude.hashWithSalt` destinationPorts
+      _salt
+        `Prelude.hashWithSalt` destinationPorts
         `Prelude.hashWithSalt` destinations
         `Prelude.hashWithSalt` protocols
         `Prelude.hashWithSalt` sourcePorts

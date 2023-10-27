@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.PublicEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.PublicEndpoint where
@@ -207,7 +207,8 @@ publicEndpoint_user = Lens.lens (\PublicEndpoint' {user} -> user) (\s@PublicEndp
 
 instance Prelude.Hashable PublicEndpoint where
   hashWithSalt _salt PublicEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` address
+    _salt
+      `Prelude.hashWithSalt` address
       `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` channelType
       `Prelude.hashWithSalt` demographic

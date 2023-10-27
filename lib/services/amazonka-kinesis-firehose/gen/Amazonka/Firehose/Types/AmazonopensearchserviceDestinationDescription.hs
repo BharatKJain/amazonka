@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.AmazonopensearchserviceDestinationDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.AmazonopensearchserviceDestinationDescription where
@@ -196,18 +196,18 @@ instance
       ( \x ->
           AmazonopensearchserviceDestinationDescription'
             Prelude.<$> (x Data..:? "BufferingHints")
-              Prelude.<*> (x Data..:? "CloudWatchLoggingOptions")
-              Prelude.<*> (x Data..:? "ClusterEndpoint")
-              Prelude.<*> (x Data..:? "DomainARN")
-              Prelude.<*> (x Data..:? "IndexName")
-              Prelude.<*> (x Data..:? "IndexRotationPeriod")
-              Prelude.<*> (x Data..:? "ProcessingConfiguration")
-              Prelude.<*> (x Data..:? "RetryOptions")
-              Prelude.<*> (x Data..:? "RoleARN")
-              Prelude.<*> (x Data..:? "S3BackupMode")
-              Prelude.<*> (x Data..:? "S3DestinationDescription")
-              Prelude.<*> (x Data..:? "TypeName")
-              Prelude.<*> (x Data..:? "VpcConfigurationDescription")
+            Prelude.<*> (x Data..:? "CloudWatchLoggingOptions")
+            Prelude.<*> (x Data..:? "ClusterEndpoint")
+            Prelude.<*> (x Data..:? "DomainARN")
+            Prelude.<*> (x Data..:? "IndexName")
+            Prelude.<*> (x Data..:? "IndexRotationPeriod")
+            Prelude.<*> (x Data..:? "ProcessingConfiguration")
+            Prelude.<*> (x Data..:? "RetryOptions")
+            Prelude.<*> (x Data..:? "RoleARN")
+            Prelude.<*> (x Data..:? "S3BackupMode")
+            Prelude.<*> (x Data..:? "S3DestinationDescription")
+            Prelude.<*> (x Data..:? "TypeName")
+            Prelude.<*> (x Data..:? "VpcConfigurationDescription")
       )
 
 instance
@@ -217,7 +217,8 @@ instance
   hashWithSalt
     _salt
     AmazonopensearchserviceDestinationDescription' {..} =
-      _salt `Prelude.hashWithSalt` bufferingHints
+      _salt
+        `Prelude.hashWithSalt` bufferingHints
         `Prelude.hashWithSalt` cloudWatchLoggingOptions
         `Prelude.hashWithSalt` clusterEndpoint
         `Prelude.hashWithSalt` domainARN

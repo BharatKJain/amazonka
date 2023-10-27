@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Synthetics.DescribeRuntimeVersions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest DescribeRuntimeVersions where
       ( \s h x ->
           DescribeRuntimeVersionsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "RuntimeVersions"
+            Prelude.<*> ( x
+                            Data..?> "RuntimeVersions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -119,7 +120,8 @@ instance Core.AWSRequest DescribeRuntimeVersions where
 
 instance Prelude.Hashable DescribeRuntimeVersions where
   hashWithSalt _salt DescribeRuntimeVersions' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData DescribeRuntimeVersions where

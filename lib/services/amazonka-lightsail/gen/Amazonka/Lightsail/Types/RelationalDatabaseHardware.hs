@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.RelationalDatabaseHardware
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.RelationalDatabaseHardware where
@@ -85,7 +85,8 @@ instance Data.FromJSON RelationalDatabaseHardware where
 
 instance Prelude.Hashable RelationalDatabaseHardware where
   hashWithSalt _salt RelationalDatabaseHardware' {..} =
-    _salt `Prelude.hashWithSalt` cpuCount
+    _salt
+      `Prelude.hashWithSalt` cpuCount
       `Prelude.hashWithSalt` diskSizeInGb
       `Prelude.hashWithSalt` ramSizeInGb
 

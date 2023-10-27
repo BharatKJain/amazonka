@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.ContributionMatrix
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.ContributionMatrix where
@@ -61,7 +61,8 @@ instance Data.FromJSON ContributionMatrix where
       "ContributionMatrix"
       ( \x ->
           ContributionMatrix'
-            Prelude.<$> ( x Data..:? "DimensionContributionList"
+            Prelude.<$> ( x
+                            Data..:? "DimensionContributionList"
                             Data..!= Prelude.mempty
                         )
       )

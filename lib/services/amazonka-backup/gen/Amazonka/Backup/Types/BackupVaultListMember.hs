@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.BackupVaultListMember
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.BackupVaultListMember where
@@ -314,7 +314,8 @@ instance Data.FromJSON BackupVaultListMember where
 
 instance Prelude.Hashable BackupVaultListMember where
   hashWithSalt _salt BackupVaultListMember' {..} =
-    _salt `Prelude.hashWithSalt` backupVaultArn
+    _salt
+      `Prelude.hashWithSalt` backupVaultArn
       `Prelude.hashWithSalt` backupVaultName
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` creatorRequestId

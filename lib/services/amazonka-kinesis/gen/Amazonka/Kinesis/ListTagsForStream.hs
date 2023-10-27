@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kinesis.ListTagsForStream
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,8 @@ instance Core.AWSRequest ListTagsForStream where
 
 instance Prelude.Hashable ListTagsForStream where
   hashWithSalt _salt ListTagsForStream' {..} =
-    _salt `Prelude.hashWithSalt` exclusiveStartTagKey
+    _salt
+      `Prelude.hashWithSalt` exclusiveStartTagKey
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` streamARN
       `Prelude.hashWithSalt` streamName

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53Domains.CheckDomainTransferability
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -159,7 +159,8 @@ instance Core.AWSRequest CheckDomainTransferability where
 
 instance Prelude.Hashable CheckDomainTransferability where
   hashWithSalt _salt CheckDomainTransferability' {..} =
-    _salt `Prelude.hashWithSalt` authCode
+    _salt
+      `Prelude.hashWithSalt` authCode
       `Prelude.hashWithSalt` domainName
 
 instance Prelude.NFData CheckDomainTransferability where

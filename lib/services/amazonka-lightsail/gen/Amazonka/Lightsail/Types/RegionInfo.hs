@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.RegionInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.RegionInfo where
@@ -116,21 +116,24 @@ instance Data.FromJSON RegionInfo where
       "RegionInfo"
       ( \x ->
           RegionInfo'
-            Prelude.<$> ( x Data..:? "availabilityZones"
+            Prelude.<$> ( x
+                            Data..:? "availabilityZones"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "continentCode")
             Prelude.<*> (x Data..:? "description")
             Prelude.<*> (x Data..:? "displayName")
             Prelude.<*> (x Data..:? "name")
-            Prelude.<*> ( x Data..:? "relationalDatabaseAvailabilityZones"
+            Prelude.<*> ( x
+                            Data..:? "relationalDatabaseAvailabilityZones"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable RegionInfo where
   hashWithSalt _salt RegionInfo' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZones
+    _salt
+      `Prelude.hashWithSalt` availabilityZones
       `Prelude.hashWithSalt` continentCode
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` displayName

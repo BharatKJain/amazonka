@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Budgets.Types.Spend
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Budgets.Types.Spend where
@@ -82,12 +82,14 @@ instance Data.FromJSON Spend where
       "Spend"
       ( \x ->
           Spend'
-            Prelude.<$> (x Data..: "Amount") Prelude.<*> (x Data..: "Unit")
+            Prelude.<$> (x Data..: "Amount")
+            Prelude.<*> (x Data..: "Unit")
       )
 
 instance Prelude.Hashable Spend where
   hashWithSalt _salt Spend' {..} =
-    _salt `Prelude.hashWithSalt` amount
+    _salt
+      `Prelude.hashWithSalt` amount
       `Prelude.hashWithSalt` unit
 
 instance Prelude.NFData Spend where

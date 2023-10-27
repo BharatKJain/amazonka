@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.ArchiveGroupSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.ArchiveGroupSettings where
@@ -92,7 +92,8 @@ instance Data.FromJSON ArchiveGroupSettings where
 
 instance Prelude.Hashable ArchiveGroupSettings where
   hashWithSalt _salt ArchiveGroupSettings' {..} =
-    _salt `Prelude.hashWithSalt` archiveCdnSettings
+    _salt
+      `Prelude.hashWithSalt` archiveCdnSettings
       `Prelude.hashWithSalt` rolloverInterval
       `Prelude.hashWithSalt` destination
 

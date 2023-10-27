@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.AlgorithmStatusItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.AlgorithmStatusItem where
@@ -93,7 +93,8 @@ instance Data.FromJSON AlgorithmStatusItem where
 
 instance Prelude.Hashable AlgorithmStatusItem where
   hashWithSalt _salt AlgorithmStatusItem' {..} =
-    _salt `Prelude.hashWithSalt` failureReason
+    _salt
+      `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` status
 

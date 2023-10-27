@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MemoryDb.Types.Authentication
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MemoryDb.Types.Authentication where
@@ -76,7 +76,8 @@ instance Data.FromJSON Authentication where
 
 instance Prelude.Hashable Authentication where
   hashWithSalt _salt Authentication' {..} =
-    _salt `Prelude.hashWithSalt` passwordCount
+    _salt
+      `Prelude.hashWithSalt` passwordCount
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData Authentication where

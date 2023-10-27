@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Panorama.Types.NodeInputPort
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Panorama.Types.NodeInputPort where
@@ -105,7 +105,8 @@ instance Data.FromJSON NodeInputPort where
 
 instance Prelude.Hashable NodeInputPort where
   hashWithSalt _salt NodeInputPort' {..} =
-    _salt `Prelude.hashWithSalt` defaultValue
+    _salt
+      `Prelude.hashWithSalt` defaultValue
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` maxConnections
       `Prelude.hashWithSalt` name

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.CreateDiskFromSnapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -342,7 +342,8 @@ instance Core.AWSRequest CreateDiskFromSnapshot where
 
 instance Prelude.Hashable CreateDiskFromSnapshot where
   hashWithSalt _salt CreateDiskFromSnapshot' {..} =
-    _salt `Prelude.hashWithSalt` addOns
+    _salt
+      `Prelude.hashWithSalt` addOns
       `Prelude.hashWithSalt` diskSnapshotName
       `Prelude.hashWithSalt` restoreDate
       `Prelude.hashWithSalt` sourceDiskName

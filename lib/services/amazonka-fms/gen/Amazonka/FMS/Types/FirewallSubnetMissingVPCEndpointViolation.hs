@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.FirewallSubnetMissingVPCEndpointViolation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.FirewallSubnetMissingVPCEndpointViolation where
@@ -94,9 +94,9 @@ instance
       ( \x ->
           FirewallSubnetMissingVPCEndpointViolation'
             Prelude.<$> (x Data..:? "FirewallSubnetId")
-              Prelude.<*> (x Data..:? "SubnetAvailabilityZone")
-              Prelude.<*> (x Data..:? "SubnetAvailabilityZoneId")
-              Prelude.<*> (x Data..:? "VpcId")
+            Prelude.<*> (x Data..:? "SubnetAvailabilityZone")
+            Prelude.<*> (x Data..:? "SubnetAvailabilityZoneId")
+            Prelude.<*> (x Data..:? "VpcId")
       )
 
 instance
@@ -106,7 +106,8 @@ instance
   hashWithSalt
     _salt
     FirewallSubnetMissingVPCEndpointViolation' {..} =
-      _salt `Prelude.hashWithSalt` firewallSubnetId
+      _salt
+        `Prelude.hashWithSalt` firewallSubnetId
         `Prelude.hashWithSalt` subnetAvailabilityZone
         `Prelude.hashWithSalt` subnetAvailabilityZoneId
         `Prelude.hashWithSalt` vpcId

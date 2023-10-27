@@ -16,7 +16,7 @@
 -- Module      : Amazonka.S3.ListObjectVersions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -238,31 +238,31 @@ instance Core.AWSPager ListObjectVersions where
     | Core.stop
         ( rs
             Lens.^? listObjectVersionsResponse_isTruncated
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.isNothing
         ( rs
             Lens.^? listObjectVersionsResponse_nextKeyMarker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         )
         Prelude.&& Prelude.isNothing
           ( rs
               Lens.^? listObjectVersionsResponse_nextVersionIdMarker
-                Prelude.. Lens._Just
+              Prelude.. Lens._Just
           ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listObjectVersions_keyMarker
           Lens..~ rs
           Lens.^? listObjectVersionsResponse_nextKeyMarker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
           Prelude.& listObjectVersions_versionIdMarker
           Lens..~ rs
           Lens.^? listObjectVersionsResponse_nextVersionIdMarker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListObjectVersions where
   type
@@ -293,7 +293,8 @@ instance Core.AWSRequest ListObjectVersions where
 
 instance Prelude.Hashable ListObjectVersions where
   hashWithSalt _salt ListObjectVersions' {..} =
-    _salt `Prelude.hashWithSalt` delimiter
+    _salt
+      `Prelude.hashWithSalt` delimiter
       `Prelude.hashWithSalt` encodingType
       `Prelude.hashWithSalt` expectedBucketOwner
       `Prelude.hashWithSalt` keyMarker

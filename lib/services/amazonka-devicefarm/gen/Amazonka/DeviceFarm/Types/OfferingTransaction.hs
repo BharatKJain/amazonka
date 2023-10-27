@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.OfferingTransaction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.OfferingTransaction where
@@ -106,7 +106,8 @@ instance Data.FromJSON OfferingTransaction where
 
 instance Prelude.Hashable OfferingTransaction where
   hashWithSalt _salt OfferingTransaction' {..} =
-    _salt `Prelude.hashWithSalt` cost
+    _salt
+      `Prelude.hashWithSalt` cost
       `Prelude.hashWithSalt` createdOn
       `Prelude.hashWithSalt` offeringPromotionId
       `Prelude.hashWithSalt` offeringStatus

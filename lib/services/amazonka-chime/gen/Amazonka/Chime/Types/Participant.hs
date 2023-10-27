@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.Participant
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.Participant where
@@ -75,7 +75,8 @@ instance Data.FromJSON Participant where
 
 instance Prelude.Hashable Participant where
   hashWithSalt _salt Participant' {..} =
-    _salt `Prelude.hashWithSalt` phoneNumber
+    _salt
+      `Prelude.hashWithSalt` phoneNumber
       `Prelude.hashWithSalt` proxyPhoneNumber
 
 instance Prelude.NFData Participant where

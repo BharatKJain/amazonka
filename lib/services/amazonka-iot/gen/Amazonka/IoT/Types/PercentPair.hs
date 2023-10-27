@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.PercentPair
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.PercentPair where
@@ -74,7 +74,8 @@ instance Data.FromJSON PercentPair where
 
 instance Prelude.Hashable PercentPair where
   hashWithSalt _salt PercentPair' {..} =
-    _salt `Prelude.hashWithSalt` percent
+    _salt
+      `Prelude.hashWithSalt` percent
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData PercentPair where

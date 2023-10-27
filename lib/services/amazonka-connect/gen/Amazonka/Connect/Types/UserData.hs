@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.UserData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.UserData where
@@ -164,15 +164,18 @@ instance Data.FromJSON UserData where
       "UserData"
       ( \x ->
           UserData'
-            Prelude.<$> ( x Data..:? "ActiveSlotsByChannel"
+            Prelude.<$> ( x
+                            Data..:? "ActiveSlotsByChannel"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "AvailableSlotsByChannel"
+            Prelude.<*> ( x
+                            Data..:? "AvailableSlotsByChannel"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Contacts" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "HierarchyPath")
-            Prelude.<*> ( x Data..:? "MaxSlotsByChannel"
+            Prelude.<*> ( x
+                            Data..:? "MaxSlotsByChannel"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "NextStatus")
@@ -183,7 +186,8 @@ instance Data.FromJSON UserData where
 
 instance Prelude.Hashable UserData where
   hashWithSalt _salt UserData' {..} =
-    _salt `Prelude.hashWithSalt` activeSlotsByChannel
+    _salt
+      `Prelude.hashWithSalt` activeSlotsByChannel
       `Prelude.hashWithSalt` availableSlotsByChannel
       `Prelude.hashWithSalt` contacts
       `Prelude.hashWithSalt` hierarchyPath

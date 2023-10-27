@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticSearch.DeletePackage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -47,7 +47,7 @@ import qualified Amazonka.Prelude as Prelude
 import qualified Amazonka.Request as Request
 import qualified Amazonka.Response as Response
 
--- | Container for request parameters to @ DeletePackage @ operation.
+-- | Container for request parameters to @ @@DeletePackage@@ @ operation.
 --
 -- /See:/ 'newDeletePackage' smart constructor.
 data DeletePackage = DeletePackage'
@@ -111,7 +111,7 @@ instance Data.ToPath DeletePackage where
 instance Data.ToQuery DeletePackage where
   toQuery = Prelude.const Prelude.mempty
 
--- | Container for response parameters to @ DeletePackage @ operation.
+-- | Container for response parameters to @ @@DeletePackage@@ @ operation.
 --
 -- /See:/ 'newDeletePackageResponse' smart constructor.
 data DeletePackageResponse = DeletePackageResponse'

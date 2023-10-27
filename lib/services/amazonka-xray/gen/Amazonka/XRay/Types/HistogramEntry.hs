@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.HistogramEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.HistogramEntry where
@@ -76,7 +76,8 @@ instance Data.FromJSON HistogramEntry where
 
 instance Prelude.Hashable HistogramEntry where
   hashWithSalt _salt HistogramEntry' {..} =
-    _salt `Prelude.hashWithSalt` count
+    _salt
+      `Prelude.hashWithSalt` count
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData HistogramEntry where

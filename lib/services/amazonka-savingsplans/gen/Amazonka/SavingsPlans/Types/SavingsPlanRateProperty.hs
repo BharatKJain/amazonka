@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SavingsPlans.Types.SavingsPlanRateProperty
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SavingsPlans.Types.SavingsPlanRateProperty where
@@ -69,12 +69,14 @@ instance Data.FromJSON SavingsPlanRateProperty where
       "SavingsPlanRateProperty"
       ( \x ->
           SavingsPlanRateProperty'
-            Prelude.<$> (x Data..:? "name") Prelude.<*> (x Data..:? "value")
+            Prelude.<$> (x Data..:? "name")
+            Prelude.<*> (x Data..:? "value")
       )
 
 instance Prelude.Hashable SavingsPlanRateProperty where
   hashWithSalt _salt SavingsPlanRateProperty' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData SavingsPlanRateProperty where

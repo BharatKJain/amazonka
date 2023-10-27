@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53AutoNaming.ListServices
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -150,20 +150,23 @@ instance Core.AWSPager ListServices where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listServicesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listServicesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listServicesResponse_services Prelude.. Lens._Just
+            Lens.^? listServicesResponse_services
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listServices_nextToken
           Lens..~ rs
-          Lens.^? listServicesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listServicesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListServices where
   type AWSResponse ListServices = ListServicesResponse
@@ -180,7 +183,8 @@ instance Core.AWSRequest ListServices where
 
 instance Prelude.Hashable ListServices where
   hashWithSalt _salt ListServices' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

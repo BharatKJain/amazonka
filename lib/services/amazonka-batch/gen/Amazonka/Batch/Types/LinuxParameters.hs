@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.LinuxParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.LinuxParameters where
@@ -330,7 +330,8 @@ instance Data.FromJSON LinuxParameters where
 
 instance Prelude.Hashable LinuxParameters where
   hashWithSalt _salt LinuxParameters' {..} =
-    _salt `Prelude.hashWithSalt` devices
+    _salt
+      `Prelude.hashWithSalt` devices
       `Prelude.hashWithSalt` initProcessEnabled
       `Prelude.hashWithSalt` maxSwap
       `Prelude.hashWithSalt` sharedMemorySize

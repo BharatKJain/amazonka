@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.DestinationFlowConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.DestinationFlowConfig where
@@ -111,7 +111,8 @@ instance Data.FromJSON DestinationFlowConfig where
 
 instance Prelude.Hashable DestinationFlowConfig where
   hashWithSalt _salt DestinationFlowConfig' {..} =
-    _salt `Prelude.hashWithSalt` apiVersion
+    _salt
+      `Prelude.hashWithSalt` apiVersion
       `Prelude.hashWithSalt` connectorProfileName
       `Prelude.hashWithSalt` connectorType
       `Prelude.hashWithSalt` destinationConnectorProperties

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.OptionSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.OptionSpecification where
@@ -73,7 +73,8 @@ optionSpecification_resourceName = Lens.lens (\OptionSpecification' {resourceNam
 
 instance Prelude.Hashable OptionSpecification where
   hashWithSalt _salt OptionSpecification' {..} =
-    _salt `Prelude.hashWithSalt` namespace
+    _salt
+      `Prelude.hashWithSalt` namespace
       `Prelude.hashWithSalt` optionName
       `Prelude.hashWithSalt` resourceName
 

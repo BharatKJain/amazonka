@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.CreateThing
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,7 +158,8 @@ instance Core.AWSRequest CreateThing where
 
 instance Prelude.Hashable CreateThing where
   hashWithSalt _salt CreateThing' {..} =
-    _salt `Prelude.hashWithSalt` attributePayload
+    _salt
+      `Prelude.hashWithSalt` attributePayload
       `Prelude.hashWithSalt` billingGroupName
       `Prelude.hashWithSalt` thingTypeName
       `Prelude.hashWithSalt` thingName

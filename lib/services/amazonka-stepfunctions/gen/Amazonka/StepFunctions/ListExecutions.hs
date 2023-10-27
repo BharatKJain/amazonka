@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StepFunctions.ListExecutions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -208,18 +208,19 @@ instance Core.AWSPager ListExecutions where
     | Core.stop
         ( rs
             Lens.^? listExecutionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listExecutionsResponse_executions) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listExecutions_nextToken
           Lens..~ rs
-          Lens.^? listExecutionsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listExecutionsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListExecutions where
   type
@@ -238,7 +239,8 @@ instance Core.AWSRequest ListExecutions where
 
 instance Prelude.Hashable ListExecutions where
   hashWithSalt _salt ListExecutions' {..} =
-    _salt `Prelude.hashWithSalt` mapRunArn
+    _salt
+      `Prelude.hashWithSalt` mapRunArn
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` stateMachineArn

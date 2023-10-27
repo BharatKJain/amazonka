@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.FailedItemDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.FailedItemDetails where
@@ -82,7 +82,8 @@ instance Data.FromJSON FailedItemDetails where
 
 instance Prelude.Hashable FailedItemDetails where
   hashWithSalt _salt FailedItemDetails' {..} =
-    _salt `Prelude.hashWithSalt` failureCode
+    _salt
+      `Prelude.hashWithSalt` failureCode
       `Prelude.hashWithSalt` retryable
 
 instance Prelude.NFData FailedItemDetails where

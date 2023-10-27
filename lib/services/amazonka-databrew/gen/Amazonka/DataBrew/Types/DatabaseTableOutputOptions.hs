@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.DatabaseTableOutputOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.DatabaseTableOutputOptions where
@@ -82,7 +82,8 @@ instance Data.FromJSON DatabaseTableOutputOptions where
 
 instance Prelude.Hashable DatabaseTableOutputOptions where
   hashWithSalt _salt DatabaseTableOutputOptions' {..} =
-    _salt `Prelude.hashWithSalt` tempDirectory
+    _salt
+      `Prelude.hashWithSalt` tempDirectory
       `Prelude.hashWithSalt` tableName
 
 instance Prelude.NFData DatabaseTableOutputOptions where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.AccountStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.AccountStatus where
@@ -75,7 +75,8 @@ instance Data.FromJSON AccountStatus where
 
 instance Prelude.Hashable AccountStatus where
   hashWithSalt _salt AccountStatus' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` sLRDeploymentStatus
 
 instance Prelude.NFData AccountStatus where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AWSHealth.Types.OrganizationEventFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AWSHealth.Types.OrganizationEventFilter where
@@ -166,7 +166,8 @@ organizationEventFilter_startTime = Lens.lens (\OrganizationEventFilter' {startT
 
 instance Prelude.Hashable OrganizationEventFilter where
   hashWithSalt _salt OrganizationEventFilter' {..} =
-    _salt `Prelude.hashWithSalt` awsAccountIds
+    _salt
+      `Prelude.hashWithSalt` awsAccountIds
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` entityArns
       `Prelude.hashWithSalt` entityValues

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTDeviceAdvisor.Types.SuiteRunInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTDeviceAdvisor.Types.SuiteRunInformation where
@@ -159,7 +159,8 @@ instance Data.FromJSON SuiteRunInformation where
 
 instance Prelude.Hashable SuiteRunInformation where
   hashWithSalt _salt SuiteRunInformation' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` endAt
       `Prelude.hashWithSalt` failed
       `Prelude.hashWithSalt` passed

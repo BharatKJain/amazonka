@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.CancelJobExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -181,7 +181,8 @@ instance Core.AWSRequest CancelJobExecution where
 
 instance Prelude.Hashable CancelJobExecution where
   hashWithSalt _salt CancelJobExecution' {..} =
-    _salt `Prelude.hashWithSalt` expectedVersion
+    _salt
+      `Prelude.hashWithSalt` expectedVersion
       `Prelude.hashWithSalt` force
       `Prelude.hashWithSalt` statusDetails
       `Prelude.hashWithSalt` jobId

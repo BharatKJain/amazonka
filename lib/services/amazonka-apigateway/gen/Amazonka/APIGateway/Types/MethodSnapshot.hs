@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.MethodSnapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.MethodSnapshot where
@@ -84,7 +84,8 @@ instance Data.FromJSON MethodSnapshot where
 
 instance Prelude.Hashable MethodSnapshot where
   hashWithSalt _salt MethodSnapshot' {..} =
-    _salt `Prelude.hashWithSalt` apiKeyRequired
+    _salt
+      `Prelude.hashWithSalt` apiKeyRequired
       `Prelude.hashWithSalt` authorizationType
 
 instance Prelude.NFData MethodSnapshot where

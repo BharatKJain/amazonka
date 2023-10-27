@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.BlobMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.BlobMetadata where
@@ -111,7 +111,8 @@ instance Data.FromJSON BlobMetadata where
 
 instance Prelude.Hashable BlobMetadata where
   hashWithSalt _salt BlobMetadata' {..} =
-    _salt `Prelude.hashWithSalt` blobId
+    _salt
+      `Prelude.hashWithSalt` blobId
       `Prelude.hashWithSalt` mode
       `Prelude.hashWithSalt` path
 

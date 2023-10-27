@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ComparisonConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ComparisonConfiguration where
@@ -95,7 +95,8 @@ instance Data.FromJSON ComparisonConfiguration where
 
 instance Prelude.Hashable ComparisonConfiguration where
   hashWithSalt _salt ComparisonConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` comparisonFormat
+    _salt
+      `Prelude.hashWithSalt` comparisonFormat
       `Prelude.hashWithSalt` comparisonMethod
 
 instance Prelude.NFData ComparisonConfiguration where

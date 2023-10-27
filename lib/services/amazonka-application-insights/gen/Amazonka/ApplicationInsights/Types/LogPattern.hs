@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApplicationInsights.Types.LogPattern
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApplicationInsights.Types.LogPattern where
@@ -149,7 +149,8 @@ instance Data.FromJSON LogPattern where
 
 instance Prelude.Hashable LogPattern where
   hashWithSalt _salt LogPattern' {..} =
-    _salt `Prelude.hashWithSalt` pattern'
+    _salt
+      `Prelude.hashWithSalt` pattern'
       `Prelude.hashWithSalt` patternName
       `Prelude.hashWithSalt` patternSetName
       `Prelude.hashWithSalt` rank

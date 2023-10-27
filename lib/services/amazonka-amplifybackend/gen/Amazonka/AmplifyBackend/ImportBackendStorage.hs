@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AmplifyBackend.ImportBackendStorage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest ImportBackendStorage where
 
 instance Prelude.Hashable ImportBackendStorage where
   hashWithSalt _salt ImportBackendStorage' {..} =
-    _salt `Prelude.hashWithSalt` bucketName
+    _salt
+      `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` appId
       `Prelude.hashWithSalt` backendEnvironmentName
       `Prelude.hashWithSalt` serviceName

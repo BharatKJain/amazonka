@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.KPIOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.KPIOptions where
@@ -139,7 +139,8 @@ instance Data.FromJSON KPIOptions where
 
 instance Prelude.Hashable KPIOptions where
   hashWithSalt _salt KPIOptions' {..} =
-    _salt `Prelude.hashWithSalt` comparison
+    _salt
+      `Prelude.hashWithSalt` comparison
       `Prelude.hashWithSalt` primaryValueDisplayType
       `Prelude.hashWithSalt` primaryValueFontConfiguration
       `Prelude.hashWithSalt` progressBar

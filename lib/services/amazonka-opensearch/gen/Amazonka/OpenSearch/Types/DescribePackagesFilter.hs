@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.DescribePackagesFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.DescribePackagesFilter where
@@ -65,7 +65,8 @@ describePackagesFilter_value = Lens.lens (\DescribePackagesFilter' {value} -> va
 
 instance Prelude.Hashable DescribePackagesFilter where
   hashWithSalt _salt DescribePackagesFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData DescribePackagesFilter where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CostExplorer.ListCostCategoryDefinitions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest ListCostCategoryDefinitions where
     Response.receiveJSON
       ( \s h x ->
           ListCostCategoryDefinitionsResponse'
-            Prelude.<$> ( x Data..?> "CostCategoryReferences"
+            Prelude.<$> ( x
+                            Data..?> "CostCategoryReferences"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -128,7 +129,8 @@ instance Core.AWSRequest ListCostCategoryDefinitions where
 
 instance Prelude.Hashable ListCostCategoryDefinitions where
   hashWithSalt _salt ListCostCategoryDefinitions' {..} =
-    _salt `Prelude.hashWithSalt` effectiveOn
+    _salt
+      `Prelude.hashWithSalt` effectiveOn
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

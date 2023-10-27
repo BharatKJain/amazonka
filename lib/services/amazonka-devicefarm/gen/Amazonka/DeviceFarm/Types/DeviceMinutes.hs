@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.DeviceMinutes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.DeviceMinutes where
@@ -94,7 +94,8 @@ instance Data.FromJSON DeviceMinutes where
 
 instance Prelude.Hashable DeviceMinutes where
   hashWithSalt _salt DeviceMinutes' {..} =
-    _salt `Prelude.hashWithSalt` metered
+    _salt
+      `Prelude.hashWithSalt` metered
       `Prelude.hashWithSalt` total
       `Prelude.hashWithSalt` unmetered
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MigrationHub.ListCreatedArtifacts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,22 +136,22 @@ instance Core.AWSPager ListCreatedArtifacts where
     | Core.stop
         ( rs
             Lens.^? listCreatedArtifactsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listCreatedArtifactsResponse_createdArtifactList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listCreatedArtifacts_nextToken
           Lens..~ rs
           Lens.^? listCreatedArtifactsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListCreatedArtifacts where
   type
@@ -163,7 +163,8 @@ instance Core.AWSRequest ListCreatedArtifacts where
     Response.receiveJSON
       ( \s h x ->
           ListCreatedArtifactsResponse'
-            Prelude.<$> ( x Data..?> "CreatedArtifactList"
+            Prelude.<$> ( x
+                            Data..?> "CreatedArtifactList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -172,7 +173,8 @@ instance Core.AWSRequest ListCreatedArtifacts where
 
 instance Prelude.Hashable ListCreatedArtifacts where
   hashWithSalt _salt ListCreatedArtifacts' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` progressUpdateStream
       `Prelude.hashWithSalt` migrationTaskName

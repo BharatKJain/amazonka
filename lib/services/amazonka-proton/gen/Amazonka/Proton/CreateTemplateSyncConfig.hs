@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Proton.CreateTemplateSyncConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -172,7 +172,8 @@ instance Core.AWSRequest CreateTemplateSyncConfig where
 
 instance Prelude.Hashable CreateTemplateSyncConfig where
   hashWithSalt _salt CreateTemplateSyncConfig' {..} =
-    _salt `Prelude.hashWithSalt` subdirectory
+    _salt
+      `Prelude.hashWithSalt` subdirectory
       `Prelude.hashWithSalt` branch
       `Prelude.hashWithSalt` repositoryName
       `Prelude.hashWithSalt` repositoryProvider

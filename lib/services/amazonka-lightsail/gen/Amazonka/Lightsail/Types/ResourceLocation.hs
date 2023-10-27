@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.ResourceLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.ResourceLocation where
@@ -76,7 +76,8 @@ instance Data.FromJSON ResourceLocation where
 
 instance Prelude.Hashable ResourceLocation where
   hashWithSalt _salt ResourceLocation' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZone
+    _salt
+      `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` regionName
 
 instance Prelude.NFData ResourceLocation where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsElbLoadBalancerAccessLog
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsElbLoadBalancerAccessLog where
@@ -111,7 +111,8 @@ instance Data.FromJSON AwsElbLoadBalancerAccessLog where
 
 instance Prelude.Hashable AwsElbLoadBalancerAccessLog where
   hashWithSalt _salt AwsElbLoadBalancerAccessLog' {..} =
-    _salt `Prelude.hashWithSalt` emitInterval
+    _salt
+      `Prelude.hashWithSalt` emitInterval
       `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` s3BucketName
       `Prelude.hashWithSalt` s3BucketPrefix

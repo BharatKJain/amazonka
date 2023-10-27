@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.ScheduledTriggerProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.ScheduledTriggerProperties where
@@ -192,7 +192,8 @@ instance Data.FromJSON ScheduledTriggerProperties where
 
 instance Prelude.Hashable ScheduledTriggerProperties where
   hashWithSalt _salt ScheduledTriggerProperties' {..} =
-    _salt `Prelude.hashWithSalt` dataPullMode
+    _salt
+      `Prelude.hashWithSalt` dataPullMode
       `Prelude.hashWithSalt` firstExecutionFrom
       `Prelude.hashWithSalt` flowErrorDeactivationThreshold
       `Prelude.hashWithSalt` scheduleEndTime

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.MetadataInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.MetadataInfo where
@@ -80,14 +80,16 @@ instance Data.FromJSON MetadataInfo where
           MetadataInfo'
             Prelude.<$> (x Data..:? "CreatedTime")
             Prelude.<*> (x Data..:? "MetadataValue")
-            Prelude.<*> ( x Data..:? "OtherMetadataValueList"
+            Prelude.<*> ( x
+                            Data..:? "OtherMetadataValueList"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable MetadataInfo where
   hashWithSalt _salt MetadataInfo' {..} =
-    _salt `Prelude.hashWithSalt` createdTime
+    _salt
+      `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` metadataValue
       `Prelude.hashWithSalt` otherMetadataValueList
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAF.PutPermissionPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,8 @@ instance Core.AWSRequest PutPermissionPolicy where
 
 instance Prelude.Hashable PutPermissionPolicy where
   hashWithSalt _salt PutPermissionPolicy' {..} =
-    _salt `Prelude.hashWithSalt` resourceArn
+    _salt
+      `Prelude.hashWithSalt` resourceArn
       `Prelude.hashWithSalt` policy
 
 instance Prelude.NFData PutPermissionPolicy where

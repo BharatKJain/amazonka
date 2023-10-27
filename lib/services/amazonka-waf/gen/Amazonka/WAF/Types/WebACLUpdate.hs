@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.WebACLUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.WebACLUpdate where
@@ -92,7 +92,8 @@ webACLUpdate_activatedRule = Lens.lens (\WebACLUpdate' {activatedRule} -> activa
 
 instance Prelude.Hashable WebACLUpdate where
   hashWithSalt _salt WebACLUpdate' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` activatedRule
 
 instance Prelude.NFData WebACLUpdate where

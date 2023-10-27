@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.EntityPersonaConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.EntityPersonaConfiguration where
@@ -87,7 +87,8 @@ entityPersonaConfiguration_persona = Lens.lens (\EntityPersonaConfiguration' {pe
 
 instance Prelude.Hashable EntityPersonaConfiguration where
   hashWithSalt _salt EntityPersonaConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` entityId
+    _salt
+      `Prelude.hashWithSalt` entityId
       `Prelude.hashWithSalt` persona
 
 instance Prelude.NFData EntityPersonaConfiguration where

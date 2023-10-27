@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GlobalAccelerator.Types.CustomRoutingEndpointGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GlobalAccelerator.Types.CustomRoutingEndpointGroup where
@@ -100,10 +100,12 @@ instance Data.FromJSON CustomRoutingEndpointGroup where
       "CustomRoutingEndpointGroup"
       ( \x ->
           CustomRoutingEndpointGroup'
-            Prelude.<$> ( x Data..:? "DestinationDescriptions"
+            Prelude.<$> ( x
+                            Data..:? "DestinationDescriptions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "EndpointDescriptions"
+            Prelude.<*> ( x
+                            Data..:? "EndpointDescriptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "EndpointGroupArn")

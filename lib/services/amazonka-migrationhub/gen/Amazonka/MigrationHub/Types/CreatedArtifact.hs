@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHub.Types.CreatedArtifact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHub.Types.CreatedArtifact where
@@ -80,7 +80,8 @@ instance Data.FromJSON CreatedArtifact where
 
 instance Prelude.Hashable CreatedArtifact where
   hashWithSalt _salt CreatedArtifact' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData CreatedArtifact where

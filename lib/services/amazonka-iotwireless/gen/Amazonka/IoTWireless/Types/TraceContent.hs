@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.TraceContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.TraceContent where
@@ -74,7 +74,8 @@ instance Data.FromJSON TraceContent where
 
 instance Prelude.Hashable TraceContent where
   hashWithSalt _salt TraceContent' {..} =
-    _salt `Prelude.hashWithSalt` logLevel
+    _salt
+      `Prelude.hashWithSalt` logLevel
       `Prelude.hashWithSalt` wirelessDeviceFrameInfo
 
 instance Prelude.NFData TraceContent where

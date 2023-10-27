@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Mobile.DeleteProject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -87,10 +87,12 @@ instance Core.AWSRequest DeleteProject where
     Response.receiveJSON
       ( \s h x ->
           DeleteProjectResponse'
-            Prelude.<$> ( x Data..?> "deletedResources"
+            Prelude.<$> ( x
+                            Data..?> "deletedResources"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "orphanedResources"
+            Prelude.<*> ( x
+                            Data..?> "orphanedResources"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.AutoMLCandidateStep
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.AutoMLCandidateStep where
@@ -96,7 +96,8 @@ instance Data.FromJSON AutoMLCandidateStep where
 
 instance Prelude.Hashable AutoMLCandidateStep where
   hashWithSalt _salt AutoMLCandidateStep' {..} =
-    _salt `Prelude.hashWithSalt` candidateStepType
+    _salt
+      `Prelude.hashWithSalt` candidateStepType
       `Prelude.hashWithSalt` candidateStepArn
       `Prelude.hashWithSalt` candidateStepName
 

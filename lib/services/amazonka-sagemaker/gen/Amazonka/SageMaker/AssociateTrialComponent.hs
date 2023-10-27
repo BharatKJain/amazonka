@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.AssociateTrialComponent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest AssociateTrialComponent where
 
 instance Prelude.Hashable AssociateTrialComponent where
   hashWithSalt _salt AssociateTrialComponent' {..} =
-    _salt `Prelude.hashWithSalt` trialComponentName
+    _salt
+      `Prelude.hashWithSalt` trialComponentName
       `Prelude.hashWithSalt` trialName
 
 instance Prelude.NFData AssociateTrialComponent where

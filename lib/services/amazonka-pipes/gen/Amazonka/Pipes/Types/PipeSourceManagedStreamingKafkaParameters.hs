@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.PipeSourceManagedStreamingKafkaParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.PipeSourceManagedStreamingKafkaParameters where
@@ -119,11 +119,11 @@ instance
       ( \x ->
           PipeSourceManagedStreamingKafkaParameters'
             Prelude.<$> (x Data..:? "BatchSize")
-              Prelude.<*> (x Data..:? "ConsumerGroupID")
-              Prelude.<*> (x Data..:? "Credentials")
-              Prelude.<*> (x Data..:? "MaximumBatchingWindowInSeconds")
-              Prelude.<*> (x Data..:? "StartingPosition")
-              Prelude.<*> (x Data..: "TopicName")
+            Prelude.<*> (x Data..:? "ConsumerGroupID")
+            Prelude.<*> (x Data..:? "Credentials")
+            Prelude.<*> (x Data..:? "MaximumBatchingWindowInSeconds")
+            Prelude.<*> (x Data..:? "StartingPosition")
+            Prelude.<*> (x Data..: "TopicName")
       )
 
 instance
@@ -133,7 +133,8 @@ instance
   hashWithSalt
     _salt
     PipeSourceManagedStreamingKafkaParameters' {..} =
-      _salt `Prelude.hashWithSalt` batchSize
+      _salt
+        `Prelude.hashWithSalt` batchSize
         `Prelude.hashWithSalt` consumerGroupID
         `Prelude.hashWithSalt` credentials
         `Prelude.hashWithSalt` maximumBatchingWindowInSeconds

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FSx.DeleteStorageVirtualMachine
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest DeleteStorageVirtualMachine where
 
 instance Prelude.Hashable DeleteStorageVirtualMachine where
   hashWithSalt _salt DeleteStorageVirtualMachine' {..} =
-    _salt `Prelude.hashWithSalt` clientRequestToken
+    _salt
+      `Prelude.hashWithSalt` clientRequestToken
       `Prelude.hashWithSalt` storageVirtualMachineId
 
 instance Prelude.NFData DeleteStorageVirtualMachine where

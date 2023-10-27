@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ManagedBlockChain.Types.NodeFabricAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ManagedBlockChain.Types.NodeFabricAttributes where
@@ -82,7 +82,8 @@ instance Data.FromJSON NodeFabricAttributes where
 
 instance Prelude.Hashable NodeFabricAttributes where
   hashWithSalt _salt NodeFabricAttributes' {..} =
-    _salt `Prelude.hashWithSalt` peerEndpoint
+    _salt
+      `Prelude.hashWithSalt` peerEndpoint
       `Prelude.hashWithSalt` peerEventEndpoint
 
 instance Prelude.NFData NodeFabricAttributes where

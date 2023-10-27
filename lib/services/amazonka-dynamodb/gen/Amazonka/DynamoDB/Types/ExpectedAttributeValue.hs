@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.ExpectedAttributeValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.ExpectedAttributeValue where
@@ -689,7 +689,8 @@ expectedAttributeValue_value = Lens.lens (\ExpectedAttributeValue' {value} -> va
 
 instance Prelude.Hashable ExpectedAttributeValue where
   hashWithSalt _salt ExpectedAttributeValue' {..} =
-    _salt `Prelude.hashWithSalt` attributeValueList
+    _salt
+      `Prelude.hashWithSalt` attributeValueList
       `Prelude.hashWithSalt` comparisonOperator
       `Prelude.hashWithSalt` exists
       `Prelude.hashWithSalt` value

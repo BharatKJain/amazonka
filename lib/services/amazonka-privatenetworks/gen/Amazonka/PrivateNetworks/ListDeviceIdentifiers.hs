@@ -16,7 +16,7 @@
 -- Module      : Amazonka.PrivateNetworks.ListDeviceIdentifiers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -154,22 +154,22 @@ instance Core.AWSPager ListDeviceIdentifiers where
     | Core.stop
         ( rs
             Lens.^? listDeviceIdentifiersResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listDeviceIdentifiersResponse_deviceIdentifiers
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listDeviceIdentifiers_startToken
           Lens..~ rs
           Lens.^? listDeviceIdentifiersResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListDeviceIdentifiers where
   type
@@ -181,7 +181,8 @@ instance Core.AWSRequest ListDeviceIdentifiers where
     Response.receiveJSON
       ( \s h x ->
           ListDeviceIdentifiersResponse'
-            Prelude.<$> ( x Data..?> "deviceIdentifiers"
+            Prelude.<$> ( x
+                            Data..?> "deviceIdentifiers"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -190,7 +191,8 @@ instance Core.AWSRequest ListDeviceIdentifiers where
 
 instance Prelude.Hashable ListDeviceIdentifiers where
   hashWithSalt _salt ListDeviceIdentifiers' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` startToken
       `Prelude.hashWithSalt` networkArn

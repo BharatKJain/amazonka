@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchAddFacetToObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchAddFacetToObject where
@@ -82,7 +82,8 @@ batchAddFacetToObject_objectReference = Lens.lens (\BatchAddFacetToObject' {obje
 
 instance Prelude.Hashable BatchAddFacetToObject where
   hashWithSalt _salt BatchAddFacetToObject' {..} =
-    _salt `Prelude.hashWithSalt` schemaFacet
+    _salt
+      `Prelude.hashWithSalt` schemaFacet
       `Prelude.hashWithSalt` objectAttributeList
       `Prelude.hashWithSalt` objectReference
 

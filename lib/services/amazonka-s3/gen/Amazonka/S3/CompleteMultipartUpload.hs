@@ -16,7 +16,7 @@
 -- Module      : Amazonka.S3.CompleteMultipartUpload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -223,7 +223,7 @@ data CompleteMultipartUpload = CompleteMultipartUpload'
     -- When using this action with Amazon S3 on Outposts, you must direct
     -- requests to the S3 on Outposts hostname. The S3 on Outposts hostname
     -- takes the form
-    -- @ AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com@.
+    -- @ @/@AccessPointName@/@-@/@AccountId@/@.@/@outpostID@/@.s3-outposts.@/@Region@/@.amazonaws.com@.
     -- When using this action with S3 on Outposts through the Amazon Web
     -- Services SDKs, you provide the Outposts bucket ARN in place of the
     -- bucket name. For more information about S3 on Outposts ARNs, see
@@ -313,7 +313,7 @@ data CompleteMultipartUpload = CompleteMultipartUpload'
 -- When using this action with Amazon S3 on Outposts, you must direct
 -- requests to the S3 on Outposts hostname. The S3 on Outposts hostname
 -- takes the form
--- @ AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com@.
+-- @ @/@AccessPointName@/@-@/@AccountId@/@.@/@outpostID@/@.s3-outposts.@/@Region@/@.amazonaws.com@.
 -- When using this action with S3 on Outposts through the Amazon Web
 -- Services SDKs, you provide the Outposts bucket ARN in place of the
 -- bucket name. For more information about S3 on Outposts ARNs, see
@@ -437,7 +437,7 @@ completeMultipartUpload_sSECustomerKeyMD5 = Lens.lens (\CompleteMultipartUpload'
 -- When using this action with Amazon S3 on Outposts, you must direct
 -- requests to the S3 on Outposts hostname. The S3 on Outposts hostname
 -- takes the form
--- @ AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com@.
+-- @ @/@AccessPointName@/@-@/@AccountId@/@.@/@outpostID@/@.s3-outposts.@/@Region@/@.amazonaws.com@.
 -- When using this action with S3 on Outposts through the Amazon Web
 -- Services SDKs, you provide the Outposts bucket ARN in place of the
 -- bucket name. For more information about S3 on Outposts ARNs, see
@@ -488,7 +488,8 @@ instance Core.AWSRequest CompleteMultipartUpload where
 
 instance Prelude.Hashable CompleteMultipartUpload where
   hashWithSalt _salt CompleteMultipartUpload' {..} =
-    _salt `Prelude.hashWithSalt` checksumCRC32
+    _salt
+      `Prelude.hashWithSalt` checksumCRC32
       `Prelude.hashWithSalt` checksumCRC32C
       `Prelude.hashWithSalt` checksumSHA1
       `Prelude.hashWithSalt` checksumSHA256
@@ -568,7 +569,7 @@ data CompleteMultipartUploadResponse = CompleteMultipartUploadResponse'
     -- When using this action with Amazon S3 on Outposts, you must direct
     -- requests to the S3 on Outposts hostname. The S3 on Outposts hostname
     -- takes the form
-    -- @ AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com@.
+    -- @ @/@AccessPointName@/@-@/@AccountId@/@.@/@outpostID@/@.s3-outposts.@/@Region@/@.amazonaws.com@.
     -- When using this action with S3 on Outposts through the Amazon Web
     -- Services SDKs, you provide the Outposts bucket ARN in place of the
     -- bucket name. For more information about S3 on Outposts ARNs, see
@@ -665,7 +666,7 @@ data CompleteMultipartUploadResponse = CompleteMultipartUploadResponse'
 -- When using this action with Amazon S3 on Outposts, you must direct
 -- requests to the S3 on Outposts hostname. The S3 on Outposts hostname
 -- takes the form
--- @ AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com@.
+-- @ @/@AccessPointName@/@-@/@AccountId@/@.@/@outpostID@/@.s3-outposts.@/@Region@/@.amazonaws.com@.
 -- When using this action with S3 on Outposts through the Amazon Web
 -- Services SDKs, you provide the Outposts bucket ARN in place of the
 -- bucket name. For more information about S3 on Outposts ARNs, see
@@ -775,7 +776,7 @@ newCompleteMultipartUploadResponse pHttpStatus_ =
 -- When using this action with Amazon S3 on Outposts, you must direct
 -- requests to the S3 on Outposts hostname. The S3 on Outposts hostname
 -- takes the form
--- @ AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com@.
+-- @ @/@AccessPointName@/@-@/@AccountId@/@.@/@outpostID@/@.s3-outposts.@/@Region@/@.amazonaws.com@.
 -- When using this action with S3 on Outposts through the Amazon Web
 -- Services SDKs, you provide the Outposts bucket ARN in place of the
 -- bucket name. For more information about S3 on Outposts ARNs, see

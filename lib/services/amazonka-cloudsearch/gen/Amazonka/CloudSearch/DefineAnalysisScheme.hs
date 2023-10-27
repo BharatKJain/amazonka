@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudSearch.DefineAnalysisScheme
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest DefineAnalysisScheme where
 
 instance Prelude.Hashable DefineAnalysisScheme where
   hashWithSalt _salt DefineAnalysisScheme' {..} =
-    _salt `Prelude.hashWithSalt` domainName
+    _salt
+      `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` analysisScheme
 
 instance Prelude.NFData DefineAnalysisScheme where

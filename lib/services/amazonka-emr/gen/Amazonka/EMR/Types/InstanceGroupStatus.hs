@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.InstanceGroupStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.InstanceGroupStatus where
@@ -87,7 +87,8 @@ instance Data.FromJSON InstanceGroupStatus where
 
 instance Prelude.Hashable InstanceGroupStatus where
   hashWithSalt _salt InstanceGroupStatus' {..} =
-    _salt `Prelude.hashWithSalt` state
+    _salt
+      `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` stateChangeReason
       `Prelude.hashWithSalt` timeline
 

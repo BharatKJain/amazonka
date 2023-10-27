@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ManagedBlockChain.Types.NetworkFrameworkAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ManagedBlockChain.Types.NetworkFrameworkAttributes where
@@ -84,7 +84,8 @@ instance Data.FromJSON NetworkFrameworkAttributes where
 
 instance Prelude.Hashable NetworkFrameworkAttributes where
   hashWithSalt _salt NetworkFrameworkAttributes' {..} =
-    _salt `Prelude.hashWithSalt` ethereum
+    _salt
+      `Prelude.hashWithSalt` ethereum
       `Prelude.hashWithSalt` fabric
 
 instance Prelude.NFData NetworkFrameworkAttributes where

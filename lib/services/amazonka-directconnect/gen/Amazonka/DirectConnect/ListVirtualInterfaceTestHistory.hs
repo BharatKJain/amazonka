@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectConnect.ListVirtualInterfaceTestHistory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,7 +158,8 @@ instance
       ( \s h x ->
           ListVirtualInterfaceTestHistoryResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "virtualInterfaceTestHistory"
+            Prelude.<*> ( x
+                            Data..?> "virtualInterfaceTestHistory"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -171,7 +172,8 @@ instance
   hashWithSalt
     _salt
     ListVirtualInterfaceTestHistory' {..} =
-      _salt `Prelude.hashWithSalt` bgpPeers
+      _salt
+        `Prelude.hashWithSalt` bgpPeers
         `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` status

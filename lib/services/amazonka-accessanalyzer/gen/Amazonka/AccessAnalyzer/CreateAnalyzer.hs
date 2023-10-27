@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AccessAnalyzer.CreateAnalyzer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,7 +148,8 @@ instance Core.AWSRequest CreateAnalyzer where
 
 instance Prelude.Hashable CreateAnalyzer where
   hashWithSalt _salt CreateAnalyzer' {..} =
-    _salt `Prelude.hashWithSalt` archiveRules
+    _salt
+      `Prelude.hashWithSalt` archiveRules
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` analyzerName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.TaskStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.TaskStatistics where
@@ -124,7 +124,8 @@ instance Data.FromJSON TaskStatistics where
 
 instance Prelude.Hashable TaskStatistics where
   hashWithSalt _salt TaskStatistics' {..} =
-    _salt `Prelude.hashWithSalt` canceledChecks
+    _salt
+      `Prelude.hashWithSalt` canceledChecks
       `Prelude.hashWithSalt` compliantChecks
       `Prelude.hashWithSalt` failedChecks
       `Prelude.hashWithSalt` inProgressChecks

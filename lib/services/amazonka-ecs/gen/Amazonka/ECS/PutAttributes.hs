@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECS.PutAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,7 +117,8 @@ instance Core.AWSRequest PutAttributes where
 
 instance Prelude.Hashable PutAttributes where
   hashWithSalt _salt PutAttributes' {..} =
-    _salt `Prelude.hashWithSalt` cluster
+    _salt
+      `Prelude.hashWithSalt` cluster
       `Prelude.hashWithSalt` attributes
 
 instance Prelude.NFData PutAttributes where

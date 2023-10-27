@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearchServerless.Types.SecurityConfigDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearchServerless.Types.SecurityConfigDetail where
@@ -130,7 +130,8 @@ instance Data.FromJSON SecurityConfigDetail where
 
 instance Prelude.Hashable SecurityConfigDetail where
   hashWithSalt _salt SecurityConfigDetail' {..} =
-    _salt `Prelude.hashWithSalt` configVersion
+    _salt
+      `Prelude.hashWithSalt` configVersion
       `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` id

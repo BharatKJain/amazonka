@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.AiffSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.AiffSettings where
@@ -94,7 +94,8 @@ instance Data.FromJSON AiffSettings where
 
 instance Prelude.Hashable AiffSettings where
   hashWithSalt _salt AiffSettings' {..} =
-    _salt `Prelude.hashWithSalt` bitDepth
+    _salt
+      `Prelude.hashWithSalt` bitDepth
       `Prelude.hashWithSalt` channels
       `Prelude.hashWithSalt` sampleRate
 

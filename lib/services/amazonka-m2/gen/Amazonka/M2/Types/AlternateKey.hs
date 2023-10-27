@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.AlternateKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.AlternateKey where
@@ -110,7 +110,8 @@ instance Data.FromJSON AlternateKey where
 
 instance Prelude.Hashable AlternateKey where
   hashWithSalt _salt AlternateKey' {..} =
-    _salt `Prelude.hashWithSalt` allowDuplicates
+    _salt
+      `Prelude.hashWithSalt` allowDuplicates
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` length
       `Prelude.hashWithSalt` offset

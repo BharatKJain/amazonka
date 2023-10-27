@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SMS.Types.ValidationOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SMS.Types.ValidationOutput where
@@ -128,7 +128,8 @@ instance Data.FromJSON ValidationOutput where
 
 instance Prelude.Hashable ValidationOutput where
   hashWithSalt _salt ValidationOutput' {..} =
-    _salt `Prelude.hashWithSalt` appValidationOutput
+    _salt
+      `Prelude.hashWithSalt` appValidationOutput
       `Prelude.hashWithSalt` latestValidationTime
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` serverValidationOutput

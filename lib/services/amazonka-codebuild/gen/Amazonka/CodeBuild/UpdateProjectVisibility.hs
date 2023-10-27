@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeBuild.UpdateProjectVisibility
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -156,7 +156,8 @@ instance Core.AWSRequest UpdateProjectVisibility where
 
 instance Prelude.Hashable UpdateProjectVisibility where
   hashWithSalt _salt UpdateProjectVisibility' {..} =
-    _salt `Prelude.hashWithSalt` resourceAccessRole
+    _salt
+      `Prelude.hashWithSalt` resourceAccessRole
       `Prelude.hashWithSalt` projectArn
       `Prelude.hashWithSalt` projectVisibility
 

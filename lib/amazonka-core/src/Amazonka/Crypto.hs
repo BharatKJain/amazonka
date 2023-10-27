@@ -1,6 +1,6 @@
 -- |
 -- Module      : Amazonka.Crypto
--- Copyright   : (c) 2013-2021 Brendan Hay
+-- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
 -- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
 -- Stability   : provisional
@@ -60,7 +60,7 @@ sinkMD5 = sinkHash
 sinkSHA256 :: Monad m => ConduitM ByteString o m (Hash.Digest Hash.SHA256)
 sinkSHA256 = sinkHash
 
--- | A cryptonite compatible incremental hash sink.
+-- | A crypton-compatible incremental hash sink.
 sinkHash ::
   ( Monad m,
     Hash.HashAlgorithm a

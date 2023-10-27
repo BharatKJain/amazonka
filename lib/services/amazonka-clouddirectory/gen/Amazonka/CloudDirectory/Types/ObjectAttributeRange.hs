@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.ObjectAttributeRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.ObjectAttributeRange where
@@ -67,7 +67,8 @@ objectAttributeRange_range = Lens.lens (\ObjectAttributeRange' {range} -> range)
 
 instance Prelude.Hashable ObjectAttributeRange where
   hashWithSalt _salt ObjectAttributeRange' {..} =
-    _salt `Prelude.hashWithSalt` attributeKey
+    _salt
+      `Prelude.hashWithSalt` attributeKey
       `Prelude.hashWithSalt` range
 
 instance Prelude.NFData ObjectAttributeRange where

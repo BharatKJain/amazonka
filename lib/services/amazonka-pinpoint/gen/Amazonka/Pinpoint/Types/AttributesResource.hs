@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.AttributesResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.AttributesResource where
@@ -120,7 +120,8 @@ instance Data.FromJSON AttributesResource where
 
 instance Prelude.Hashable AttributesResource where
   hashWithSalt _salt AttributesResource' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` attributeType
       `Prelude.hashWithSalt` applicationId
 

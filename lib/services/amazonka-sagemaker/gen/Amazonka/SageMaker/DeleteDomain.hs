@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.DeleteDomain
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -99,7 +99,8 @@ instance Core.AWSRequest DeleteDomain where
 
 instance Prelude.Hashable DeleteDomain where
   hashWithSalt _salt DeleteDomain' {..} =
-    _salt `Prelude.hashWithSalt` retentionPolicy
+    _salt
+      `Prelude.hashWithSalt` retentionPolicy
       `Prelude.hashWithSalt` domainId
 
 instance Prelude.NFData DeleteDomain where

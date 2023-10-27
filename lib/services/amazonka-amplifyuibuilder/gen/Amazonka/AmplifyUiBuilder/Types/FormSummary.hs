@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.FormSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.FormSummary where
@@ -134,7 +134,8 @@ instance Data.FromJSON FormSummary where
 
 instance Prelude.Hashable FormSummary where
   hashWithSalt _salt FormSummary' {..} =
-    _salt `Prelude.hashWithSalt` appId
+    _salt
+      `Prelude.hashWithSalt` appId
       `Prelude.hashWithSalt` dataType
       `Prelude.hashWithSalt` environmentName
       `Prelude.hashWithSalt` formActionType

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.WebsiteConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.WebsiteConfiguration where
@@ -97,7 +97,8 @@ websiteConfiguration_routingRules = Lens.lens (\WebsiteConfiguration' {routingRu
 
 instance Prelude.Hashable WebsiteConfiguration where
   hashWithSalt _salt WebsiteConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` errorDocument
+    _salt
+      `Prelude.hashWithSalt` errorDocument
       `Prelude.hashWithSalt` indexDocument
       `Prelude.hashWithSalt` redirectAllRequestsTo
       `Prelude.hashWithSalt` routingRules

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityLake.Types.AutoEnableNewRegionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityLake.Types.AutoEnableNewRegionConfiguration where
@@ -94,7 +94,8 @@ instance
   hashWithSalt
     _salt
     AutoEnableNewRegionConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` region
+      _salt
+        `Prelude.hashWithSalt` region
         `Prelude.hashWithSalt` sources
 
 instance

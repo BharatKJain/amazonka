@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.PublicKeySummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.PublicKeySummary where
@@ -115,7 +115,8 @@ instance Data.FromXML PublicKeySummary where
 
 instance Prelude.Hashable PublicKeySummary where
   hashWithSalt _salt PublicKeySummary' {..} =
-    _salt `Prelude.hashWithSalt` comment
+    _salt
+      `Prelude.hashWithSalt` comment
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` createdTime

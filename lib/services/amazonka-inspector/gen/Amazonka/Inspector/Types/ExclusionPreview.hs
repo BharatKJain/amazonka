@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.ExclusionPreview
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.ExclusionPreview where
@@ -119,7 +119,8 @@ instance Data.FromJSON ExclusionPreview where
 
 instance Prelude.Hashable ExclusionPreview where
   hashWithSalt _salt ExclusionPreview' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` title
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` recommendation

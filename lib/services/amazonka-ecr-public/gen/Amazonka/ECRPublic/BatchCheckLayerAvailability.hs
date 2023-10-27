@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECRPublic.BatchCheckLayerAvailability
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,7 +136,8 @@ instance Core.AWSRequest BatchCheckLayerAvailability where
 
 instance Prelude.Hashable BatchCheckLayerAvailability where
   hashWithSalt _salt BatchCheckLayerAvailability' {..} =
-    _salt `Prelude.hashWithSalt` registryId
+    _salt
+      `Prelude.hashWithSalt` registryId
       `Prelude.hashWithSalt` repositoryName
       `Prelude.hashWithSalt` layerDigests
 

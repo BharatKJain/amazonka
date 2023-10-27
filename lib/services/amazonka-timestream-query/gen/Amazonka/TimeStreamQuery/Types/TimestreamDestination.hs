@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamQuery.Types.TimestreamDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamQuery.Types.TimestreamDestination where
@@ -75,7 +75,8 @@ instance Data.FromJSON TimestreamDestination where
 
 instance Prelude.Hashable TimestreamDestination where
   hashWithSalt _salt TimestreamDestination' {..} =
-    _salt `Prelude.hashWithSalt` databaseName
+    _salt
+      `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` tableName
 
 instance Prelude.NFData TimestreamDestination where

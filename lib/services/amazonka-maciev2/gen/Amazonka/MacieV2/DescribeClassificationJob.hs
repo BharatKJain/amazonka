@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MacieV2.DescribeClassificationJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest DescribeClassificationJob where
             Prelude.<$> (x Data..?> "allowListIds" Core..!@ Prelude.mempty)
             Prelude.<*> (x Data..?> "clientToken")
             Prelude.<*> (x Data..?> "createdAt")
-            Prelude.<*> ( x Data..?> "customDataIdentifierIds"
+            Prelude.<*> ( x
+                            Data..?> "customDataIdentifierIds"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "description")
@@ -118,7 +119,8 @@ instance Core.AWSRequest DescribeClassificationJob where
             Prelude.<*> (x Data..?> "jobType")
             Prelude.<*> (x Data..?> "lastRunErrorStatus")
             Prelude.<*> (x Data..?> "lastRunTime")
-            Prelude.<*> ( x Data..?> "managedDataIdentifierIds"
+            Prelude.<*> ( x
+                            Data..?> "managedDataIdentifierIds"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "managedDataIdentifierSelector")

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.Operation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.Operation where
@@ -181,7 +181,8 @@ instance Data.FromJSON Operation where
 
 instance Prelude.Hashable Operation where
   hashWithSalt _salt Operation' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` errorDetails
       `Prelude.hashWithSalt` id

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.LogTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.LogTarget where
@@ -77,7 +77,8 @@ instance Data.FromJSON LogTarget where
 
 instance Prelude.Hashable LogTarget where
   hashWithSalt _salt LogTarget' {..} =
-    _salt `Prelude.hashWithSalt` targetName
+    _salt
+      `Prelude.hashWithSalt` targetName
       `Prelude.hashWithSalt` targetType
 
 instance Prelude.NFData LogTarget where

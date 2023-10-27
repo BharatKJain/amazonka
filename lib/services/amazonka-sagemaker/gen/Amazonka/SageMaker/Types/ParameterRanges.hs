@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ParameterRanges
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ParameterRanges where
@@ -101,13 +101,16 @@ instance Data.FromJSON ParameterRanges where
       "ParameterRanges"
       ( \x ->
           ParameterRanges'
-            Prelude.<$> ( x Data..:? "CategoricalParameterRanges"
+            Prelude.<$> ( x
+                            Data..:? "CategoricalParameterRanges"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "ContinuousParameterRanges"
+            Prelude.<*> ( x
+                            Data..:? "ContinuousParameterRanges"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "IntegerParameterRanges"
+            Prelude.<*> ( x
+                            Data..:? "IntegerParameterRanges"
                             Data..!= Prelude.mempty
                         )
       )

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GlobalAccelerator.Types.IpSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GlobalAccelerator.Types.IpSet where
@@ -88,7 +88,8 @@ instance Data.FromJSON IpSet where
 
 instance Prelude.Hashable IpSet where
   hashWithSalt _salt IpSet' {..} =
-    _salt `Prelude.hashWithSalt` ipAddressFamily
+    _salt
+      `Prelude.hashWithSalt` ipAddressFamily
       `Prelude.hashWithSalt` ipAddresses
       `Prelude.hashWithSalt` ipFamily
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WellArchitected.DeleteLensShare
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest DeleteLensShare where
 
 instance Prelude.Hashable DeleteLensShare where
   hashWithSalt _salt DeleteLensShare' {..} =
-    _salt `Prelude.hashWithSalt` shareId
+    _salt
+      `Prelude.hashWithSalt` shareId
       `Prelude.hashWithSalt` lensAlias
       `Prelude.hashWithSalt` clientRequestToken
 

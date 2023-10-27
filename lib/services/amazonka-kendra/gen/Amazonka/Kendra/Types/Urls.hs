@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.Urls
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.Urls where
@@ -117,7 +117,8 @@ instance Data.FromJSON Urls where
 
 instance Prelude.Hashable Urls where
   hashWithSalt _salt Urls' {..} =
-    _salt `Prelude.hashWithSalt` seedUrlConfiguration
+    _salt
+      `Prelude.hashWithSalt` seedUrlConfiguration
       `Prelude.hashWithSalt` siteMapsConfiguration
 
 instance Prelude.NFData Urls where

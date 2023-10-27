@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudHSM.DescribeHsm
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -161,7 +161,8 @@ instance Core.AWSRequest DescribeHsm where
 
 instance Prelude.Hashable DescribeHsm where
   hashWithSalt _salt DescribeHsm' {..} =
-    _salt `Prelude.hashWithSalt` hsmArn
+    _salt
+      `Prelude.hashWithSalt` hsmArn
       `Prelude.hashWithSalt` hsmSerialNumber
 
 instance Prelude.NFData DescribeHsm where

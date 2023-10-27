@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsCodeBuildProjectEnvironmentRegistryCredential
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsCodeBuildProjectEnvironmentRegistryCredential where
@@ -92,7 +92,7 @@ instance
       ( \x ->
           AwsCodeBuildProjectEnvironmentRegistryCredential'
             Prelude.<$> (x Data..:? "Credential")
-              Prelude.<*> (x Data..:? "CredentialProvider")
+            Prelude.<*> (x Data..:? "CredentialProvider")
       )
 
 instance
@@ -102,7 +102,8 @@ instance
   hashWithSalt
     _salt
     AwsCodeBuildProjectEnvironmentRegistryCredential' {..} =
-      _salt `Prelude.hashWithSalt` credential
+      _salt
+        `Prelude.hashWithSalt` credential
         `Prelude.hashWithSalt` credentialProvider
 
 instance

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ImportInstanceLaunchSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ImportInstanceLaunchSpecification where
@@ -176,7 +176,8 @@ instance
   hashWithSalt
     _salt
     ImportInstanceLaunchSpecification' {..} =
-      _salt `Prelude.hashWithSalt` additionalInfo
+      _salt
+        `Prelude.hashWithSalt` additionalInfo
         `Prelude.hashWithSalt` architecture
         `Prelude.hashWithSalt` groupIds
         `Prelude.hashWithSalt` groupNames

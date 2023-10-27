@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.Integration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.Integration where
@@ -430,7 +430,8 @@ instance Data.FromJSON Integration where
       "Integration"
       ( \x ->
           Integration'
-            Prelude.<$> ( x Data..:? "cacheKeyParameters"
+            Prelude.<$> ( x
+                            Data..:? "cacheKeyParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "cacheNamespace")
@@ -439,14 +440,17 @@ instance Data.FromJSON Integration where
             Prelude.<*> (x Data..:? "contentHandling")
             Prelude.<*> (x Data..:? "credentials")
             Prelude.<*> (x Data..:? "httpMethod")
-            Prelude.<*> ( x Data..:? "integrationResponses"
+            Prelude.<*> ( x
+                            Data..:? "integrationResponses"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "passthroughBehavior")
-            Prelude.<*> ( x Data..:? "requestParameters"
+            Prelude.<*> ( x
+                            Data..:? "requestParameters"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "requestTemplates"
+            Prelude.<*> ( x
+                            Data..:? "requestTemplates"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "timeoutInMillis")
@@ -457,7 +461,8 @@ instance Data.FromJSON Integration where
 
 instance Prelude.Hashable Integration where
   hashWithSalt _salt Integration' {..} =
-    _salt `Prelude.hashWithSalt` cacheKeyParameters
+    _salt
+      `Prelude.hashWithSalt` cacheKeyParameters
       `Prelude.hashWithSalt` cacheNamespace
       `Prelude.hashWithSalt` connectionId
       `Prelude.hashWithSalt` connectionType

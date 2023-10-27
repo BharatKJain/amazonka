@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.WebhookFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.WebhookFilter where
@@ -276,7 +276,8 @@ instance Data.FromJSON WebhookFilter where
 
 instance Prelude.Hashable WebhookFilter where
   hashWithSalt _salt WebhookFilter' {..} =
-    _salt `Prelude.hashWithSalt` excludeMatchedPattern
+    _salt
+      `Prelude.hashWithSalt` excludeMatchedPattern
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` pattern'
 

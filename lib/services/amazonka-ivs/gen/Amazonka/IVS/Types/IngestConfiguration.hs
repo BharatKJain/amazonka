@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IVS.Types.IngestConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IVS.Types.IngestConfiguration where
@@ -77,7 +77,8 @@ instance Data.FromJSON IngestConfiguration where
 
 instance Prelude.Hashable IngestConfiguration where
   hashWithSalt _salt IngestConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` audio
+    _salt
+      `Prelude.hashWithSalt` audio
       `Prelude.hashWithSalt` video
 
 instance Prelude.NFData IngestConfiguration where

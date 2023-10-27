@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.PackageVersionHistory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.PackageVersionHistory where
@@ -85,7 +85,8 @@ instance Data.FromJSON PackageVersionHistory where
 
 instance Prelude.Hashable PackageVersionHistory where
   hashWithSalt _salt PackageVersionHistory' {..} =
-    _salt `Prelude.hashWithSalt` commitMessage
+    _salt
+      `Prelude.hashWithSalt` commitMessage
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` packageVersion
 

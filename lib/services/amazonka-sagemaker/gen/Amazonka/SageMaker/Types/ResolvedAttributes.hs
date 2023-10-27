@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ResolvedAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ResolvedAttributes where
@@ -86,7 +86,8 @@ instance Data.FromJSON ResolvedAttributes where
 
 instance Prelude.Hashable ResolvedAttributes where
   hashWithSalt _salt ResolvedAttributes' {..} =
-    _salt `Prelude.hashWithSalt` autoMLJobObjective
+    _salt
+      `Prelude.hashWithSalt` autoMLJobObjective
       `Prelude.hashWithSalt` completionCriteria
       `Prelude.hashWithSalt` problemType
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.ManagedRuleGroupVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.ManagedRuleGroupVersion where
@@ -78,7 +78,8 @@ instance Data.FromJSON ManagedRuleGroupVersion where
 
 instance Prelude.Hashable ManagedRuleGroupVersion where
   hashWithSalt _salt ManagedRuleGroupVersion' {..} =
-    _salt `Prelude.hashWithSalt` lastUpdateTimestamp
+    _salt
+      `Prelude.hashWithSalt` lastUpdateTimestamp
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData ManagedRuleGroupVersion where

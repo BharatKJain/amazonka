@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaLive.ListMultiplexPrograms
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,22 +107,22 @@ instance Core.AWSPager ListMultiplexPrograms where
     | Core.stop
         ( rs
             Lens.^? listMultiplexProgramsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listMultiplexProgramsResponse_multiplexPrograms
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listMultiplexPrograms_nextToken
           Lens..~ rs
           Lens.^? listMultiplexProgramsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListMultiplexPrograms where
   type
@@ -134,7 +134,8 @@ instance Core.AWSRequest ListMultiplexPrograms where
     Response.receiveJSON
       ( \s h x ->
           ListMultiplexProgramsResponse'
-            Prelude.<$> ( x Data..?> "multiplexPrograms"
+            Prelude.<$> ( x
+                            Data..?> "multiplexPrograms"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -143,7 +144,8 @@ instance Core.AWSRequest ListMultiplexPrograms where
 
 instance Prelude.Hashable ListMultiplexPrograms where
   hashWithSalt _salt ListMultiplexPrograms' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` multiplexId
 

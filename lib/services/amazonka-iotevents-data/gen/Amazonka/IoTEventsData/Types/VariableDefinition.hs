@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEventsData.Types.VariableDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEventsData.Types.VariableDefinition where
@@ -65,7 +65,8 @@ variableDefinition_value = Lens.lens (\VariableDefinition' {value} -> value) (\s
 
 instance Prelude.Hashable VariableDefinition where
   hashWithSalt _salt VariableDefinition' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData VariableDefinition where

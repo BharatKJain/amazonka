@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeBundleTasks
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -193,7 +193,8 @@ instance Core.AWSRequest DescribeBundleTasks where
     Response.receiveXML
       ( \s h x ->
           DescribeBundleTasksResponse'
-            Prelude.<$> ( x Data..@? "bundleInstanceTasksSet"
+            Prelude.<$> ( x
+                            Data..@? "bundleInstanceTasksSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -202,7 +203,8 @@ instance Core.AWSRequest DescribeBundleTasks where
 
 instance Prelude.Hashable DescribeBundleTasks where
   hashWithSalt _salt DescribeBundleTasks' {..} =
-    _salt `Prelude.hashWithSalt` bundleIds
+    _salt
+      `Prelude.hashWithSalt` bundleIds
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filters
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.CalculationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.CalculationSummary where
@@ -86,7 +86,8 @@ instance Data.FromJSON CalculationSummary where
 
 instance Prelude.Hashable CalculationSummary where
   hashWithSalt _salt CalculationSummary' {..} =
-    _salt `Prelude.hashWithSalt` calculationExecutionId
+    _salt
+      `Prelude.hashWithSalt` calculationExecutionId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` status
 

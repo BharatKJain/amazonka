@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.StepExecutionFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.StepExecutionFilter where
@@ -76,7 +76,8 @@ stepExecutionFilter_values = Lens.lens (\StepExecutionFilter' {values} -> values
 
 instance Prelude.Hashable StepExecutionFilter where
   hashWithSalt _salt StepExecutionFilter' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData StepExecutionFilter where

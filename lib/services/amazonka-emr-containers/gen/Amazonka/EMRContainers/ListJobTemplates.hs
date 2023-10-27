@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EMRContainers.ListJobTemplates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,22 +116,22 @@ instance Core.AWSPager ListJobTemplates where
     | Core.stop
         ( rs
             Lens.^? listJobTemplatesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listJobTemplatesResponse_templates
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listJobTemplates_nextToken
           Lens..~ rs
           Lens.^? listJobTemplatesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListJobTemplates where
   type
@@ -150,7 +150,8 @@ instance Core.AWSRequest ListJobTemplates where
 
 instance Prelude.Hashable ListJobTemplates where
   hashWithSalt _salt ListJobTemplates' {..} =
-    _salt `Prelude.hashWithSalt` createdAfter
+    _salt
+      `Prelude.hashWithSalt` createdAfter
       `Prelude.hashWithSalt` createdBefore
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

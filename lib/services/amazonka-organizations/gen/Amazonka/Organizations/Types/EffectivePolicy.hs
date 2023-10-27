@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Organizations.Types.EffectivePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Organizations.Types.EffectivePolicy where
@@ -98,7 +98,8 @@ instance Data.FromJSON EffectivePolicy where
 
 instance Prelude.Hashable EffectivePolicy where
   hashWithSalt _salt EffectivePolicy' {..} =
-    _salt `Prelude.hashWithSalt` lastUpdatedTimestamp
+    _salt
+      `Prelude.hashWithSalt` lastUpdatedTimestamp
       `Prelude.hashWithSalt` policyContent
       `Prelude.hashWithSalt` policyType
       `Prelude.hashWithSalt` targetId

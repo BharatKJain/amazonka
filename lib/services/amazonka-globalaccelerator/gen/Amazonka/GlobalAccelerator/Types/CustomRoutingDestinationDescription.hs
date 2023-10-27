@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GlobalAccelerator.Types.CustomRoutingDestinationDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GlobalAccelerator.Types.CustomRoutingDestinationDescription where
@@ -105,7 +105,8 @@ instance
   hashWithSalt
     _salt
     CustomRoutingDestinationDescription' {..} =
-      _salt `Prelude.hashWithSalt` fromPort
+      _salt
+        `Prelude.hashWithSalt` fromPort
         `Prelude.hashWithSalt` protocols
         `Prelude.hashWithSalt` toPort
 

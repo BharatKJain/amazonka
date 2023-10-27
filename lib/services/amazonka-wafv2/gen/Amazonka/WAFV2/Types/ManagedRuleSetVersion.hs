@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.ManagedRuleSetVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.ManagedRuleSetVersion where
@@ -181,7 +181,8 @@ instance Data.FromJSON ManagedRuleSetVersion where
 
 instance Prelude.Hashable ManagedRuleSetVersion where
   hashWithSalt _salt ManagedRuleSetVersion' {..} =
-    _salt `Prelude.hashWithSalt` associatedRuleGroupArn
+    _salt
+      `Prelude.hashWithSalt` associatedRuleGroupArn
       `Prelude.hashWithSalt` capacity
       `Prelude.hashWithSalt` expiryTimestamp
       `Prelude.hashWithSalt` forecastedLifetime

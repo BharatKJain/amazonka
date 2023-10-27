@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Comprehend.DetectSyntax
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest DetectSyntax where
 
 instance Prelude.Hashable DetectSyntax where
   hashWithSalt _salt DetectSyntax' {..} =
-    _salt `Prelude.hashWithSalt` text
+    _salt
+      `Prelude.hashWithSalt` text
       `Prelude.hashWithSalt` languageCode
 
 instance Prelude.NFData DetectSyntax where

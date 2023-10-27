@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkSpaces.DescribeWorkspaceImages
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,22 +118,22 @@ instance Core.AWSPager DescribeWorkspaceImages where
     | Core.stop
         ( rs
             Lens.^? describeWorkspaceImagesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeWorkspaceImagesResponse_images
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeWorkspaceImages_nextToken
           Lens..~ rs
           Lens.^? describeWorkspaceImagesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeWorkspaceImages where
   type
@@ -152,7 +152,8 @@ instance Core.AWSRequest DescribeWorkspaceImages where
 
 instance Prelude.Hashable DescribeWorkspaceImages where
   hashWithSalt _salt DescribeWorkspaceImages' {..} =
-    _salt `Prelude.hashWithSalt` imageIds
+    _salt
+      `Prelude.hashWithSalt` imageIds
       `Prelude.hashWithSalt` imageType
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

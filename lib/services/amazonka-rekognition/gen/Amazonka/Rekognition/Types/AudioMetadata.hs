@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.AudioMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.AudioMetadata where
@@ -96,7 +96,8 @@ instance Data.FromJSON AudioMetadata where
 
 instance Prelude.Hashable AudioMetadata where
   hashWithSalt _salt AudioMetadata' {..} =
-    _salt `Prelude.hashWithSalt` codec
+    _salt
+      `Prelude.hashWithSalt` codec
       `Prelude.hashWithSalt` durationMillis
       `Prelude.hashWithSalt` numberOfChannels
       `Prelude.hashWithSalt` sampleRate

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.AwsVPCSecurityGroupViolation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.AwsVPCSecurityGroupViolation where
@@ -95,7 +95,8 @@ instance Data.FromJSON AwsVPCSecurityGroupViolation where
       ( \x ->
           AwsVPCSecurityGroupViolation'
             Prelude.<$> (x Data..:? "PartialMatches" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "PossibleSecurityGroupRemediationActions"
+            Prelude.<*> ( x
+                            Data..:? "PossibleSecurityGroupRemediationActions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ViolationTarget")
@@ -107,7 +108,8 @@ instance
     AwsVPCSecurityGroupViolation
   where
   hashWithSalt _salt AwsVPCSecurityGroupViolation' {..} =
-    _salt `Prelude.hashWithSalt` partialMatches
+    _salt
+      `Prelude.hashWithSalt` partialMatches
       `Prelude.hashWithSalt` possibleSecurityGroupRemediationActions
       `Prelude.hashWithSalt` violationTarget
       `Prelude.hashWithSalt` violationTargetDescription

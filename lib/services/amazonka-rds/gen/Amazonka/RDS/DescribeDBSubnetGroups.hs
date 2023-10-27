@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.DescribeDBSubnetGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -150,22 +150,22 @@ instance Core.AWSPager DescribeDBSubnetGroups where
     | Core.stop
         ( rs
             Lens.^? describeDBSubnetGroupsResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeDBSubnetGroupsResponse_dbSubnetGroups
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeDBSubnetGroups_marker
           Lens..~ rs
           Lens.^? describeDBSubnetGroupsResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeDBSubnetGroups where
   type
@@ -178,7 +178,9 @@ instance Core.AWSRequest DescribeDBSubnetGroups where
       "DescribeDBSubnetGroupsResult"
       ( \s h x ->
           DescribeDBSubnetGroupsResponse'
-            Prelude.<$> ( x Data..@? "DBSubnetGroups" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "DBSubnetGroups"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "DBSubnetGroup")
                         )
             Prelude.<*> (x Data..@? "Marker")
@@ -187,7 +189,8 @@ instance Core.AWSRequest DescribeDBSubnetGroups where
 
 instance Prelude.Hashable DescribeDBSubnetGroups where
   hashWithSalt _salt DescribeDBSubnetGroups' {..} =
-    _salt `Prelude.hashWithSalt` dbSubnetGroupName
+    _salt
+      `Prelude.hashWithSalt` dbSubnetGroupName
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxRecords

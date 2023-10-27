@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubOrchestrator.Types.PlatformScriptKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubOrchestrator.Types.PlatformScriptKey where
@@ -74,7 +74,8 @@ instance Data.FromJSON PlatformScriptKey where
 
 instance Prelude.Hashable PlatformScriptKey where
   hashWithSalt _salt PlatformScriptKey' {..} =
-    _salt `Prelude.hashWithSalt` linux
+    _salt
+      `Prelude.hashWithSalt` linux
       `Prelude.hashWithSalt` windows
 
 instance Prelude.NFData PlatformScriptKey where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.GitConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.GitConfig where
@@ -36,7 +36,7 @@ data GitConfig = GitConfig'
     -- repository. The secret must have a staging label of @AWSCURRENT@ and
     -- must be in the following format:
     --
-    -- @{\"username\": UserName, \"password\": Password}@
+    -- @{\"username\": @/@UserName@/@, \"password\": @/@Password@/@}@
     secretArn :: Prelude.Maybe Prelude.Text,
     -- | The URL where the Git repository is located.
     repositoryUrl :: Prelude.Text
@@ -58,7 +58,7 @@ data GitConfig = GitConfig'
 -- repository. The secret must have a staging label of @AWSCURRENT@ and
 -- must be in the following format:
 --
--- @{\"username\": UserName, \"password\": Password}@
+-- @{\"username\": @/@UserName@/@, \"password\": @/@Password@/@}@
 --
 -- 'repositoryUrl', 'gitConfig_repositoryUrl' - The URL where the Git repository is located.
 newGitConfig ::
@@ -81,7 +81,7 @@ gitConfig_branch = Lens.lens (\GitConfig' {branch} -> branch) (\s@GitConfig' {} 
 -- repository. The secret must have a staging label of @AWSCURRENT@ and
 -- must be in the following format:
 --
--- @{\"username\": UserName, \"password\": Password}@
+-- @{\"username\": @/@UserName@/@, \"password\": @/@Password@/@}@
 gitConfig_secretArn :: Lens.Lens' GitConfig (Prelude.Maybe Prelude.Text)
 gitConfig_secretArn = Lens.lens (\GitConfig' {secretArn} -> secretArn) (\s@GitConfig' {} a -> s {secretArn = a} :: GitConfig)
 
@@ -102,7 +102,8 @@ instance Data.FromJSON GitConfig where
 
 instance Prelude.Hashable GitConfig where
   hashWithSalt _salt GitConfig' {..} =
-    _salt `Prelude.hashWithSalt` branch
+    _salt
+      `Prelude.hashWithSalt` branch
       `Prelude.hashWithSalt` secretArn
       `Prelude.hashWithSalt` repositoryUrl
 

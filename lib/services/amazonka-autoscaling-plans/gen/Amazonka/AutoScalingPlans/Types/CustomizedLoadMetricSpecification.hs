@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScalingPlans.Types.CustomizedLoadMetricSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScalingPlans.Types.CustomizedLoadMetricSpecification where
@@ -169,7 +169,8 @@ instance
   hashWithSalt
     _salt
     CustomizedLoadMetricSpecification' {..} =
-      _salt `Prelude.hashWithSalt` dimensions
+      _salt
+        `Prelude.hashWithSalt` dimensions
         `Prelude.hashWithSalt` unit
         `Prelude.hashWithSalt` metricName
         `Prelude.hashWithSalt` namespace

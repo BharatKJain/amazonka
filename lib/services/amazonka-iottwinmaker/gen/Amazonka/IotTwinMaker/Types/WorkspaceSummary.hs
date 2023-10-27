@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.WorkspaceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.WorkspaceSummary where
@@ -117,7 +117,8 @@ instance Data.FromJSON WorkspaceSummary where
 
 instance Prelude.Hashable WorkspaceSummary where
   hashWithSalt _salt WorkspaceSummary' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` workspaceId
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` creationDateTime

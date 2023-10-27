@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.Scte27SourceSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.Scte27SourceSettings where
@@ -100,7 +100,8 @@ instance Data.FromJSON Scte27SourceSettings where
 
 instance Prelude.Hashable Scte27SourceSettings where
   hashWithSalt _salt Scte27SourceSettings' {..} =
-    _salt `Prelude.hashWithSalt` ocrLanguage
+    _salt
+      `Prelude.hashWithSalt` ocrLanguage
       `Prelude.hashWithSalt` pid
 
 instance Prelude.NFData Scte27SourceSettings where

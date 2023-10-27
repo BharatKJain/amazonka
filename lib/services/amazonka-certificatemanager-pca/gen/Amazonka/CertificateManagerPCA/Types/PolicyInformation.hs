@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.PolicyInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.PolicyInformation where
@@ -83,7 +83,8 @@ policyInformation_certPolicyId = Lens.lens (\PolicyInformation' {certPolicyId} -
 
 instance Prelude.Hashable PolicyInformation where
   hashWithSalt _salt PolicyInformation' {..} =
-    _salt `Prelude.hashWithSalt` policyQualifiers
+    _salt
+      `Prelude.hashWithSalt` policyQualifiers
       `Prelude.hashWithSalt` certPolicyId
 
 instance Prelude.NFData PolicyInformation where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Shield.Types.AttackSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Shield.Types.AttackSummary where
@@ -105,7 +105,8 @@ instance Data.FromJSON AttackSummary where
 
 instance Prelude.Hashable AttackSummary where
   hashWithSalt _salt AttackSummary' {..} =
-    _salt `Prelude.hashWithSalt` attackId
+    _salt
+      `Prelude.hashWithSalt` attackId
       `Prelude.hashWithSalt` attackVectors
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` resourceArn

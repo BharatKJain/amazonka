@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Segment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Segment where
@@ -72,7 +72,8 @@ segment_totalSegments = Lens.lens (\Segment' {totalSegments} -> totalSegments) (
 
 instance Prelude.Hashable Segment where
   hashWithSalt _salt Segment' {..} =
-    _salt `Prelude.hashWithSalt` segmentNumber
+    _salt
+      `Prelude.hashWithSalt` segmentNumber
       `Prelude.hashWithSalt` totalSegments
 
 instance Prelude.NFData Segment where

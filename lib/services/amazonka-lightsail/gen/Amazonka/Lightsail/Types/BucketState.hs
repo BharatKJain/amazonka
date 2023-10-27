@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.BucketState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.BucketState where
@@ -95,7 +95,8 @@ instance Data.FromJSON BucketState where
 
 instance Prelude.Hashable BucketState where
   hashWithSalt _salt BucketState' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData BucketState where

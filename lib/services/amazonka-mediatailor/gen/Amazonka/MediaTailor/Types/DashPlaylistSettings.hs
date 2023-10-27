@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.DashPlaylistSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.DashPlaylistSettings where
@@ -116,7 +116,8 @@ instance Data.FromJSON DashPlaylistSettings where
 
 instance Prelude.Hashable DashPlaylistSettings where
   hashWithSalt _salt DashPlaylistSettings' {..} =
-    _salt `Prelude.hashWithSalt` manifestWindowSeconds
+    _salt
+      `Prelude.hashWithSalt` manifestWindowSeconds
       `Prelude.hashWithSalt` minBufferTimeSeconds
       `Prelude.hashWithSalt` minUpdatePeriodSeconds
       `Prelude.hashWithSalt` suggestedPresentationDelaySeconds

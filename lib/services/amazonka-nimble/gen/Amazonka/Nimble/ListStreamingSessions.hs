@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Nimble.ListStreamingSessions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,22 +127,22 @@ instance Core.AWSPager ListStreamingSessions where
     | Core.stop
         ( rs
             Lens.^? listStreamingSessionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listStreamingSessionsResponse_sessions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listStreamingSessions_nextToken
           Lens..~ rs
           Lens.^? listStreamingSessionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListStreamingSessions where
   type
@@ -161,7 +161,8 @@ instance Core.AWSRequest ListStreamingSessions where
 
 instance Prelude.Hashable ListStreamingSessions where
   hashWithSalt _salt ListStreamingSessions' {..} =
-    _salt `Prelude.hashWithSalt` createdBy
+    _salt
+      `Prelude.hashWithSalt` createdBy
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` ownedBy
       `Prelude.hashWithSalt` sessionIds

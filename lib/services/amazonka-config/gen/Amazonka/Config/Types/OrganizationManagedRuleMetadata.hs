@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.OrganizationManagedRuleMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.OrganizationManagedRuleMetadata where
@@ -173,7 +173,8 @@ instance
             Prelude.<*> (x Data..:? "InputParameters")
             Prelude.<*> (x Data..:? "MaximumExecutionFrequency")
             Prelude.<*> (x Data..:? "ResourceIdScope")
-            Prelude.<*> ( x Data..:? "ResourceTypesScope"
+            Prelude.<*> ( x
+                            Data..:? "ResourceTypesScope"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "TagKeyScope")
@@ -188,7 +189,8 @@ instance
   hashWithSalt
     _salt
     OrganizationManagedRuleMetadata' {..} =
-      _salt `Prelude.hashWithSalt` description
+      _salt
+        `Prelude.hashWithSalt` description
         `Prelude.hashWithSalt` inputParameters
         `Prelude.hashWithSalt` maximumExecutionFrequency
         `Prelude.hashWithSalt` resourceIdScope

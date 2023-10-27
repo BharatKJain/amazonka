@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.OriginAccessControlConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.OriginAccessControlConfig where
@@ -198,7 +198,8 @@ instance Data.FromXML OriginAccessControlConfig where
 
 instance Prelude.Hashable OriginAccessControlConfig where
   hashWithSalt _salt OriginAccessControlConfig' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` signingProtocol
       `Prelude.hashWithSalt` signingBehavior

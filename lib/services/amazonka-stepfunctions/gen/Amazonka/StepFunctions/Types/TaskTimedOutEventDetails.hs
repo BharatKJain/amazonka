@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StepFunctions.Types.TaskTimedOutEventDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StepFunctions.Types.TaskTimedOutEventDetails where
@@ -99,7 +99,8 @@ instance Data.FromJSON TaskTimedOutEventDetails where
 
 instance Prelude.Hashable TaskTimedOutEventDetails where
   hashWithSalt _salt TaskTimedOutEventDetails' {..} =
-    _salt `Prelude.hashWithSalt` cause
+    _salt
+      `Prelude.hashWithSalt` cause
       `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` resource

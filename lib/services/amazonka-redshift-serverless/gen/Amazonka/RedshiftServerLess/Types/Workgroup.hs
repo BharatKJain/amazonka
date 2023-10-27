@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RedshiftServerLess.Types.Workgroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RedshiftServerLess.Types.Workgroup where
@@ -201,7 +201,8 @@ instance Data.FromJSON Workgroup where
       ( \x ->
           Workgroup'
             Prelude.<$> (x Data..:? "baseCapacity")
-            Prelude.<*> ( x Data..:? "configParameters"
+            Prelude.<*> ( x
+                            Data..:? "configParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "creationDate")
@@ -210,7 +211,8 @@ instance Data.FromJSON Workgroup where
             Prelude.<*> (x Data..:? "namespaceName")
             Prelude.<*> (x Data..:? "port")
             Prelude.<*> (x Data..:? "publiclyAccessible")
-            Prelude.<*> ( x Data..:? "securityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "securityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "status")
@@ -222,7 +224,8 @@ instance Data.FromJSON Workgroup where
 
 instance Prelude.Hashable Workgroup where
   hashWithSalt _salt Workgroup' {..} =
-    _salt `Prelude.hashWithSalt` baseCapacity
+    _salt
+      `Prelude.hashWithSalt` baseCapacity
       `Prelude.hashWithSalt` configParameters
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` endpoint

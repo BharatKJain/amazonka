@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResourceGroupsTagging.Types.TagFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResourceGroupsTagging.Types.TagFilter where
@@ -71,7 +71,8 @@ tagFilter_values = Lens.lens (\TagFilter' {values} -> values) (\s@TagFilter' {} 
 
 instance Prelude.Hashable TagFilter where
   hashWithSalt _salt TagFilter' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData TagFilter where

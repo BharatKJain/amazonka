@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.ContextDataType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.ContextDataType where
@@ -111,7 +111,8 @@ contextDataType_httpHeaders = Lens.lens (\ContextDataType' {httpHeaders} -> http
 
 instance Prelude.Hashable ContextDataType where
   hashWithSalt _salt ContextDataType' {..} =
-    _salt `Prelude.hashWithSalt` encodedData
+    _salt
+      `Prelude.hashWithSalt` encodedData
       `Prelude.hashWithSalt` ipAddress
       `Prelude.hashWithSalt` serverName
       `Prelude.hashWithSalt` serverPath

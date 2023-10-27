@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.UpdateProvisionedProductProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -235,12 +235,13 @@ instance
       ( \s h x ->
           UpdateProvisionedProductPropertiesResponse'
             Prelude.<$> (x Data..?> "ProvisionedProductId")
-              Prelude.<*> ( x Data..?> "ProvisionedProductProperties"
-                              Core..!@ Prelude.mempty
-                          )
-              Prelude.<*> (x Data..?> "RecordId")
-              Prelude.<*> (x Data..?> "Status")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> ( x
+                            Data..?> "ProvisionedProductProperties"
+                            Core..!@ Prelude.mempty
+                        )
+            Prelude.<*> (x Data..?> "RecordId")
+            Prelude.<*> (x Data..?> "Status")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -250,7 +251,8 @@ instance
   hashWithSalt
     _salt
     UpdateProvisionedProductProperties' {..} =
-      _salt `Prelude.hashWithSalt` acceptLanguage
+      _salt
+        `Prelude.hashWithSalt` acceptLanguage
         `Prelude.hashWithSalt` provisionedProductId
         `Prelude.hashWithSalt` provisionedProductProperties
         `Prelude.hashWithSalt` idempotencyToken

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IdentityStore.UpdateGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest UpdateGroup where
 
 instance Prelude.Hashable UpdateGroup where
   hashWithSalt _salt UpdateGroup' {..} =
-    _salt `Prelude.hashWithSalt` identityStoreId
+    _salt
+      `Prelude.hashWithSalt` identityStoreId
       `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` operations
 

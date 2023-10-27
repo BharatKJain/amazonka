@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFV2.GetMobileSdkRelease
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest GetMobileSdkRelease where
 
 instance Prelude.Hashable GetMobileSdkRelease where
   hashWithSalt _salt GetMobileSdkRelease' {..} =
-    _salt `Prelude.hashWithSalt` platform
+    _salt
+      `Prelude.hashWithSalt` platform
       `Prelude.hashWithSalt` releaseVersion
 
 instance Prelude.NFData GetMobileSdkRelease where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.CallAnalyticsJobSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.CallAnalyticsJobSummary where
@@ -190,7 +190,8 @@ instance Data.FromJSON CallAnalyticsJobSummary where
 
 instance Prelude.Hashable CallAnalyticsJobSummary where
   hashWithSalt _salt CallAnalyticsJobSummary' {..} =
-    _salt `Prelude.hashWithSalt` callAnalyticsJobName
+    _salt
+      `Prelude.hashWithSalt` callAnalyticsJobName
       `Prelude.hashWithSalt` callAnalyticsJobStatus
       `Prelude.hashWithSalt` completionTime
       `Prelude.hashWithSalt` creationTime

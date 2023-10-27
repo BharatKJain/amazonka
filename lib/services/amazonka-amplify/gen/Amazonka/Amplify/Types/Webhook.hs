@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Amplify.Types.Webhook
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Amplify.Types.Webhook where
@@ -145,7 +145,8 @@ instance Data.FromJSON Webhook where
 
 instance Prelude.Hashable Webhook where
   hashWithSalt _salt Webhook' {..} =
-    _salt `Prelude.hashWithSalt` webhookArn
+    _salt
+      `Prelude.hashWithSalt` webhookArn
       `Prelude.hashWithSalt` webhookId
       `Prelude.hashWithSalt` webhookUrl
       `Prelude.hashWithSalt` branchName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.EventsConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.EventsConfiguration where
@@ -85,7 +85,8 @@ instance Data.FromJSON EventsConfiguration where
 
 instance Prelude.Hashable EventsConfiguration where
   hashWithSalt _salt EventsConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` botId
+    _salt
+      `Prelude.hashWithSalt` botId
       `Prelude.hashWithSalt` lambdaFunctionArn
       `Prelude.hashWithSalt` outboundEventsHTTPSEndpoint
 

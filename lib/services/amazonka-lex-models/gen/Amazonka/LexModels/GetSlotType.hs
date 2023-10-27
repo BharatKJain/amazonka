@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexModels.GetSlotType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,13 +109,15 @@ instance Core.AWSRequest GetSlotType where
             Prelude.<$> (x Data..?> "checksum")
             Prelude.<*> (x Data..?> "createdDate")
             Prelude.<*> (x Data..?> "description")
-            Prelude.<*> ( x Data..?> "enumerationValues"
+            Prelude.<*> ( x
+                            Data..?> "enumerationValues"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "lastUpdatedDate")
             Prelude.<*> (x Data..?> "name")
             Prelude.<*> (x Data..?> "parentSlotTypeSignature")
-            Prelude.<*> ( x Data..?> "slotTypeConfigurations"
+            Prelude.<*> ( x
+                            Data..?> "slotTypeConfigurations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "valueSelectionStrategy")
@@ -125,7 +127,8 @@ instance Core.AWSRequest GetSlotType where
 
 instance Prelude.Hashable GetSlotType where
   hashWithSalt _salt GetSlotType' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` version
 
 instance Prelude.NFData GetSlotType where

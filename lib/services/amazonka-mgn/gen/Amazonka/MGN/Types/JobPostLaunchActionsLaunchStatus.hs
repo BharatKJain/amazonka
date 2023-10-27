@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.JobPostLaunchActionsLaunchStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.JobPostLaunchActionsLaunchStatus where
@@ -119,7 +119,8 @@ instance
   hashWithSalt
     _salt
     JobPostLaunchActionsLaunchStatus' {..} =
-      _salt `Prelude.hashWithSalt` executionID
+      _salt
+        `Prelude.hashWithSalt` executionID
         `Prelude.hashWithSalt` executionStatus
         `Prelude.hashWithSalt` failureReason
         `Prelude.hashWithSalt` ssmDocument

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudSearch.DescribeIndexFields
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -126,14 +126,17 @@ instance Core.AWSRequest DescribeIndexFields where
       ( \s h x ->
           DescribeIndexFieldsResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..@? "IndexFields" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "IndexFields"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Data.parseXMLList "member"
                         )
       )
 
 instance Prelude.Hashable DescribeIndexFields where
   hashWithSalt _salt DescribeIndexFields' {..} =
-    _salt `Prelude.hashWithSalt` deployed
+    _salt
+      `Prelude.hashWithSalt` deployed
       `Prelude.hashWithSalt` fieldNames
       `Prelude.hashWithSalt` domainName
 

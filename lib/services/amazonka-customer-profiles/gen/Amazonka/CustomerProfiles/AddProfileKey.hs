@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CustomerProfiles.AddProfileKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -151,7 +151,8 @@ instance Core.AWSRequest AddProfileKey where
 
 instance Prelude.Hashable AddProfileKey where
   hashWithSalt _salt AddProfileKey' {..} =
-    _salt `Prelude.hashWithSalt` profileId
+    _salt
+      `Prelude.hashWithSalt` profileId
       `Prelude.hashWithSalt` keyName
       `Prelude.hashWithSalt` values
       `Prelude.hashWithSalt` domainName

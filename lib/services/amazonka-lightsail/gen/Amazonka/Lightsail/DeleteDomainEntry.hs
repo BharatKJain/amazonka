@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.DeleteDomainEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest DeleteDomainEntry where
 
 instance Prelude.Hashable DeleteDomainEntry where
   hashWithSalt _salt DeleteDomainEntry' {..} =
-    _salt `Prelude.hashWithSalt` domainName
+    _salt
+      `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` domainEntry
 
 instance Prelude.NFData DeleteDomainEntry where

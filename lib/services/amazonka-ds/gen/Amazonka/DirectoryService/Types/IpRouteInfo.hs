@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.IpRouteInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.IpRouteInfo where
@@ -115,7 +115,8 @@ instance Data.FromJSON IpRouteInfo where
 
 instance Prelude.Hashable IpRouteInfo where
   hashWithSalt _salt IpRouteInfo' {..} =
-    _salt `Prelude.hashWithSalt` addedDateTime
+    _salt
+      `Prelude.hashWithSalt` addedDateTime
       `Prelude.hashWithSalt` cidrIp
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` directoryId

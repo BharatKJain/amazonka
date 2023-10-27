@@ -16,7 +16,7 @@
 -- Module      : Amazonka.PinpointSmsVoiceV2.DescribeAccountAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,22 +104,22 @@ instance Core.AWSPager DescribeAccountAttributes where
     | Core.stop
         ( rs
             Lens.^? describeAccountAttributesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeAccountAttributesResponse_accountAttributes
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeAccountAttributes_nextToken
           Lens..~ rs
           Lens.^? describeAccountAttributesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeAccountAttributes where
   type
@@ -131,7 +131,8 @@ instance Core.AWSRequest DescribeAccountAttributes where
     Response.receiveJSON
       ( \s h x ->
           DescribeAccountAttributesResponse'
-            Prelude.<$> ( x Data..?> "AccountAttributes"
+            Prelude.<$> ( x
+                            Data..?> "AccountAttributes"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -140,7 +141,8 @@ instance Core.AWSRequest DescribeAccountAttributes where
 
 instance Prelude.Hashable DescribeAccountAttributes where
   hashWithSalt _salt DescribeAccountAttributes' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData DescribeAccountAttributes where

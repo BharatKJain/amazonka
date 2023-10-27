@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Braket.Types.QuantumTaskSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Braket.Types.QuantumTaskSummary where
@@ -166,7 +166,8 @@ instance Data.FromJSON QuantumTaskSummary where
 
 instance Prelude.Hashable QuantumTaskSummary where
   hashWithSalt _salt QuantumTaskSummary' {..} =
-    _salt `Prelude.hashWithSalt` endedAt
+    _salt
+      `Prelude.hashWithSalt` endedAt
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` deviceArn

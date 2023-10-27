@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECS.UpdateService
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -274,9 +274,10 @@ data UpdateService = UpdateService'
     -- to a single target group.
     --
     -- For services that use blue\/green deployments, you can update Elastic
-    -- Load Balancing target groups by using @ CreateDeployment @ through
-    -- CodeDeploy. Note that multiple target groups are not supported for
-    -- blue\/green deployments. For more information see
+    -- Load Balancing target groups by using
+    -- @ @<https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateDeployment.html CreateDeployment>@ @
+    -- through CodeDeploy. Note that multiple target groups are not supported
+    -- for blue\/green deployments. For more information see
     -- <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/register-multiple-targetgroups.html Register multiple target groups with a service>
     -- in the /Amazon Elastic Container Service Developer Guide/.
     --
@@ -457,9 +458,10 @@ data UpdateService = UpdateService'
 -- to a single target group.
 --
 -- For services that use blue\/green deployments, you can update Elastic
--- Load Balancing target groups by using @ CreateDeployment @ through
--- CodeDeploy. Note that multiple target groups are not supported for
--- blue\/green deployments. For more information see
+-- Load Balancing target groups by using
+-- @ @<https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateDeployment.html CreateDeployment>@ @
+-- through CodeDeploy. Note that multiple target groups are not supported
+-- for blue\/green deployments. For more information see
 -- <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/register-multiple-targetgroups.html Register multiple target groups with a service>
 -- in the /Amazon Elastic Container Service Developer Guide/.
 --
@@ -671,9 +673,10 @@ updateService_healthCheckGracePeriodSeconds = Lens.lens (\UpdateService' {health
 -- to a single target group.
 --
 -- For services that use blue\/green deployments, you can update Elastic
--- Load Balancing target groups by using @ CreateDeployment @ through
--- CodeDeploy. Note that multiple target groups are not supported for
--- blue\/green deployments. For more information see
+-- Load Balancing target groups by using
+-- @ @<https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateDeployment.html CreateDeployment>@ @
+-- through CodeDeploy. Note that multiple target groups are not supported
+-- for blue\/green deployments. For more information see
 -- <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/register-multiple-targetgroups.html Register multiple target groups with a service>
 -- in the /Amazon Elastic Container Service Developer Guide/.
 --

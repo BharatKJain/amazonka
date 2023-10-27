@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.PatchOperation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.PatchOperation where
@@ -147,7 +147,8 @@ patchOperation_value = Lens.lens (\PatchOperation' {value} -> value) (\s@PatchOp
 
 instance Prelude.Hashable PatchOperation where
   hashWithSalt _salt PatchOperation' {..} =
-    _salt `Prelude.hashWithSalt` from
+    _salt
+      `Prelude.hashWithSalt` from
       `Prelude.hashWithSalt` op
       `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` value

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.DeleteDashboard
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,7 +124,8 @@ instance Core.AWSRequest DeleteDashboard where
 
 instance Prelude.Hashable DeleteDashboard where
   hashWithSalt _salt DeleteDashboard' {..} =
-    _salt `Prelude.hashWithSalt` versionNumber
+    _salt
+      `Prelude.hashWithSalt` versionNumber
       `Prelude.hashWithSalt` awsAccountId
       `Prelude.hashWithSalt` dashboardId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.ReplicationTaskAssessmentRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.ReplicationTaskAssessmentRun where
@@ -299,7 +299,8 @@ instance
     ReplicationTaskAssessmentRun
   where
   hashWithSalt _salt ReplicationTaskAssessmentRun' {..} =
-    _salt `Prelude.hashWithSalt` assessmentProgress
+    _salt
+      `Prelude.hashWithSalt` assessmentProgress
       `Prelude.hashWithSalt` assessmentRunName
       `Prelude.hashWithSalt` lastFailureMessage
       `Prelude.hashWithSalt` replicationTaskArn

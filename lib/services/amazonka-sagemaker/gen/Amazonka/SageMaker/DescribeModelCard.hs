@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.DescribeModelCard
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,7 +127,8 @@ instance Core.AWSRequest DescribeModelCard where
 
 instance Prelude.Hashable DescribeModelCard where
   hashWithSalt _salt DescribeModelCard' {..} =
-    _salt `Prelude.hashWithSalt` modelCardVersion
+    _salt
+      `Prelude.hashWithSalt` modelCardVersion
       `Prelude.hashWithSalt` modelCardName
 
 instance Prelude.NFData DescribeModelCard where

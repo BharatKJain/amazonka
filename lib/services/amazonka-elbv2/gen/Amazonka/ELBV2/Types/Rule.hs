@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.Rule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.Rule where
@@ -109,10 +109,14 @@ rule_ruleArn = Lens.lens (\Rule' {ruleArn} -> ruleArn) (\s@Rule' {} a -> s {rule
 instance Data.FromXML Rule where
   parseXML x =
     Rule'
-      Prelude.<$> ( x Data..@? "Actions" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Actions"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "Conditions" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Conditions"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "IsDefault")
@@ -121,7 +125,8 @@ instance Data.FromXML Rule where
 
 instance Prelude.Hashable Rule where
   hashWithSalt _salt Rule' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` conditions
       `Prelude.hashWithSalt` isDefault
       `Prelude.hashWithSalt` priority

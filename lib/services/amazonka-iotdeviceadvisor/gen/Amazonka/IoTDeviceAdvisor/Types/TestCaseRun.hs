@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTDeviceAdvisor.Types.TestCaseRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTDeviceAdvisor.Types.TestCaseRun where
@@ -210,7 +210,8 @@ instance Data.FromJSON TestCaseRun where
 
 instance Prelude.Hashable TestCaseRun where
   hashWithSalt _salt TestCaseRun' {..} =
-    _salt `Prelude.hashWithSalt` endTime
+    _salt
+      `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` failure
       `Prelude.hashWithSalt` logUrl
       `Prelude.hashWithSalt` startTime

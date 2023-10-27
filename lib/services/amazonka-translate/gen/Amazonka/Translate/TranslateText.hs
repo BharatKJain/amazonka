@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Translate.TranslateText
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -200,7 +200,8 @@ instance Core.AWSRequest TranslateText where
       ( \s h x ->
           TranslateTextResponse'
             Prelude.<$> (x Data..?> "AppliedSettings")
-            Prelude.<*> ( x Data..?> "AppliedTerminologies"
+            Prelude.<*> ( x
+                            Data..?> "AppliedTerminologies"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -211,7 +212,8 @@ instance Core.AWSRequest TranslateText where
 
 instance Prelude.Hashable TranslateText where
   hashWithSalt _salt TranslateText' {..} =
-    _salt `Prelude.hashWithSalt` settings
+    _salt
+      `Prelude.hashWithSalt` settings
       `Prelude.hashWithSalt` terminologyNames
       `Prelude.hashWithSalt` text
       `Prelude.hashWithSalt` sourceLanguageCode

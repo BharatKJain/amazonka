@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.Homogeneous
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.Homogeneous where
@@ -64,7 +64,8 @@ instance Data.FromJSON Homogeneous where
       "Homogeneous"
       ( \x ->
           Homogeneous'
-            Prelude.<$> ( x Data..:? "targetDatabaseEngine"
+            Prelude.<$> ( x
+                            Data..:? "targetDatabaseEngine"
                             Data..!= Prelude.mempty
                         )
       )

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.DhcpOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.DhcpOptions where
@@ -89,19 +89,23 @@ dhcpOptions_tags = Lens.lens (\DhcpOptions' {tags} -> tags) (\s@DhcpOptions' {} 
 instance Data.FromXML DhcpOptions where
   parseXML x =
     DhcpOptions'
-      Prelude.<$> ( x Data..@? "dhcpConfigurationSet"
+      Prelude.<$> ( x
+                      Data..@? "dhcpConfigurationSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "dhcpOptionsId")
       Prelude.<*> (x Data..@? "ownerId")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable DhcpOptions where
   hashWithSalt _salt DhcpOptions' {..} =
-    _salt `Prelude.hashWithSalt` dhcpConfigurations
+    _salt
+      `Prelude.hashWithSalt` dhcpConfigurations
       `Prelude.hashWithSalt` dhcpOptionsId
       `Prelude.hashWithSalt` ownerId
       `Prelude.hashWithSalt` tags

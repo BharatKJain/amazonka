@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ReplaceTransitGatewayRoute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -151,7 +151,8 @@ instance Core.AWSRequest ReplaceTransitGatewayRoute where
 
 instance Prelude.Hashable ReplaceTransitGatewayRoute where
   hashWithSalt _salt ReplaceTransitGatewayRoute' {..} =
-    _salt `Prelude.hashWithSalt` blackhole
+    _salt
+      `Prelude.hashWithSalt` blackhole
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` transitGatewayAttachmentId
       `Prelude.hashWithSalt` destinationCidrBlock

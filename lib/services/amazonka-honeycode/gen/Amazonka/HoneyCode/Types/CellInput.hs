@@ -14,7 +14,7 @@
 -- Module      : Amazonka.HoneyCode.Types.CellInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.HoneyCode.Types.CellInput where
@@ -77,7 +77,8 @@ cellInput_facts = Lens.lens (\CellInput' {facts} -> facts) (\s@CellInput' {} a -
 
 instance Prelude.Hashable CellInput where
   hashWithSalt _salt CellInput' {..} =
-    _salt `Prelude.hashWithSalt` fact
+    _salt
+      `Prelude.hashWithSalt` fact
       `Prelude.hashWithSalt` facts
 
 instance Prelude.NFData CellInput where

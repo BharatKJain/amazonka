@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApplicationAutoScaling.Types.StepScalingPolicyConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApplicationAutoScaling.Types.StepScalingPolicyConfiguration where
@@ -332,7 +332,8 @@ instance Data.FromJSON StepScalingPolicyConfiguration where
             Prelude.<*> (x Data..:? "Cooldown")
             Prelude.<*> (x Data..:? "MetricAggregationType")
             Prelude.<*> (x Data..:? "MinAdjustmentMagnitude")
-            Prelude.<*> ( x Data..:? "StepAdjustments"
+            Prelude.<*> ( x
+                            Data..:? "StepAdjustments"
                             Data..!= Prelude.mempty
                         )
       )
@@ -344,7 +345,8 @@ instance
   hashWithSalt
     _salt
     StepScalingPolicyConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` adjustmentType
+      _salt
+        `Prelude.hashWithSalt` adjustmentType
         `Prelude.hashWithSalt` cooldown
         `Prelude.hashWithSalt` metricAggregationType
         `Prelude.hashWithSalt` minAdjustmentMagnitude

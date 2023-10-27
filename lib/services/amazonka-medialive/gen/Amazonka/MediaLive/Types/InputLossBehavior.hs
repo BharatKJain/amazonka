@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.InputLossBehavior
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.InputLossBehavior where
@@ -116,7 +116,8 @@ instance Data.FromJSON InputLossBehavior where
 
 instance Prelude.Hashable InputLossBehavior where
   hashWithSalt _salt InputLossBehavior' {..} =
-    _salt `Prelude.hashWithSalt` blackFrameMsec
+    _salt
+      `Prelude.hashWithSalt` blackFrameMsec
       `Prelude.hashWithSalt` inputLossImageColor
       `Prelude.hashWithSalt` inputLossImageSlate
       `Prelude.hashWithSalt` inputLossImageType

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.VoiceId.OptOutSpeaker
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest OptOutSpeaker where
 
 instance Prelude.Hashable OptOutSpeaker where
   hashWithSalt _salt OptOutSpeaker' {..} =
-    _salt `Prelude.hashWithSalt` domainId
+    _salt
+      `Prelude.hashWithSalt` domainId
       `Prelude.hashWithSalt` speakerId
 
 instance Prelude.NFData OptOutSpeaker where

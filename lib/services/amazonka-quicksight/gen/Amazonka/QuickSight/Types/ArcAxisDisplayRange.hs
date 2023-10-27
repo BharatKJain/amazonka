@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ArcAxisDisplayRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ArcAxisDisplayRange where
@@ -68,12 +68,14 @@ instance Data.FromJSON ArcAxisDisplayRange where
       "ArcAxisDisplayRange"
       ( \x ->
           ArcAxisDisplayRange'
-            Prelude.<$> (x Data..:? "Max") Prelude.<*> (x Data..:? "Min")
+            Prelude.<$> (x Data..:? "Max")
+            Prelude.<*> (x Data..:? "Min")
       )
 
 instance Prelude.Hashable ArcAxisDisplayRange where
   hashWithSalt _salt ArcAxisDisplayRange' {..} =
-    _salt `Prelude.hashWithSalt` max
+    _salt
+      `Prelude.hashWithSalt` max
       `Prelude.hashWithSalt` min
 
 instance Prelude.NFData ArcAxisDisplayRange where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.JobScheduleFrequency
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.JobScheduleFrequency where
@@ -88,7 +88,8 @@ instance Data.FromJSON JobScheduleFrequency where
 
 instance Prelude.Hashable JobScheduleFrequency where
   hashWithSalt _salt JobScheduleFrequency' {..} =
-    _salt `Prelude.hashWithSalt` dailySchedule
+    _salt
+      `Prelude.hashWithSalt` dailySchedule
       `Prelude.hashWithSalt` monthlySchedule
       `Prelude.hashWithSalt` weeklySchedule
 

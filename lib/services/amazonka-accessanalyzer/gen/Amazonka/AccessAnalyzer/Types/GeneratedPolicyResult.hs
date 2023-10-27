@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.GeneratedPolicyResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.GeneratedPolicyResult where
@@ -85,7 +85,8 @@ instance Data.FromJSON GeneratedPolicyResult where
       "GeneratedPolicyResult"
       ( \x ->
           GeneratedPolicyResult'
-            Prelude.<$> ( x Data..:? "generatedPolicies"
+            Prelude.<$> ( x
+                            Data..:? "generatedPolicies"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "properties")
@@ -93,7 +94,8 @@ instance Data.FromJSON GeneratedPolicyResult where
 
 instance Prelude.Hashable GeneratedPolicyResult where
   hashWithSalt _salt GeneratedPolicyResult' {..} =
-    _salt `Prelude.hashWithSalt` generatedPolicies
+    _salt
+      `Prelude.hashWithSalt` generatedPolicies
       `Prelude.hashWithSalt` properties
 
 instance Prelude.NFData GeneratedPolicyResult where

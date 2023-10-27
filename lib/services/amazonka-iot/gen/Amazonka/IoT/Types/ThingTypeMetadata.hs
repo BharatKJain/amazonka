@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.ThingTypeMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.ThingTypeMetadata where
@@ -89,7 +89,8 @@ instance Data.FromJSON ThingTypeMetadata where
 
 instance Prelude.Hashable ThingTypeMetadata where
   hashWithSalt _salt ThingTypeMetadata' {..} =
-    _salt `Prelude.hashWithSalt` creationDate
+    _salt
+      `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` deprecated
       `Prelude.hashWithSalt` deprecationDate
 

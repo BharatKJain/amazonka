@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.VectorEnrichmentJobDataSourceConfigInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.VectorEnrichmentJobDataSourceConfigInput where
@@ -50,7 +50,6 @@ newVectorEnrichmentJobDataSourceConfigInput =
         Prelude.Nothing
     }
 
--- |
 vectorEnrichmentJobDataSourceConfigInput_s3Data :: Lens.Lens' VectorEnrichmentJobDataSourceConfigInput (Prelude.Maybe VectorEnrichmentJobS3Data)
 vectorEnrichmentJobDataSourceConfigInput_s3Data = Lens.lens (\VectorEnrichmentJobDataSourceConfigInput' {s3Data} -> s3Data) (\s@VectorEnrichmentJobDataSourceConfigInput' {} a -> s {s3Data = a} :: VectorEnrichmentJobDataSourceConfigInput)
 

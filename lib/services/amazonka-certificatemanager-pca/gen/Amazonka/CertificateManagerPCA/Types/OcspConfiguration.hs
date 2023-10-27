@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.OcspConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.OcspConfiguration where
@@ -120,7 +120,8 @@ instance Data.FromJSON OcspConfiguration where
 
 instance Prelude.Hashable OcspConfiguration where
   hashWithSalt _salt OcspConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` ocspCustomCname
+    _salt
+      `Prelude.hashWithSalt` ocspCustomCname
       `Prelude.hashWithSalt` enabled
 
 instance Prelude.NFData OcspConfiguration where

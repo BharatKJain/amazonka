@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComprehendMedical.Types.RxNormEntity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComprehendMedical.Types.RxNormEntity where
@@ -194,7 +194,8 @@ instance Data.FromJSON RxNormEntity where
 
 instance Prelude.Hashable RxNormEntity where
   hashWithSalt _salt RxNormEntity' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` beginOffset
       `Prelude.hashWithSalt` category
       `Prelude.hashWithSalt` endOffset

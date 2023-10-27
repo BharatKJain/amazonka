@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.GetAccountAuthorizationDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -172,22 +172,22 @@ instance Core.AWSPager GetAccountAuthorizationDetails where
     | Core.stop
         ( rs
             Lens.^? getAccountAuthorizationDetailsResponse_isTruncated
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.isNothing
         ( rs
             Lens.^? getAccountAuthorizationDetailsResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getAccountAuthorizationDetails_marker
           Lens..~ rs
           Lens.^? getAccountAuthorizationDetailsResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -203,18 +203,26 @@ instance
       "GetAccountAuthorizationDetailsResult"
       ( \s h x ->
           GetAccountAuthorizationDetailsResponse'
-            Prelude.<$> ( x Data..@? "GroupDetailList" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "GroupDetailList"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (x Data..@? "IsTruncated")
             Prelude.<*> (x Data..@? "Marker")
-            Prelude.<*> ( x Data..@? "Policies" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "Policies"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
-            Prelude.<*> ( x Data..@? "RoleDetailList" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "RoleDetailList"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
-            Prelude.<*> ( x Data..@? "UserDetailList" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "UserDetailList"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -227,7 +235,8 @@ instance
   hashWithSalt
     _salt
     GetAccountAuthorizationDetails' {..} =
-      _salt `Prelude.hashWithSalt` filter'
+      _salt
+        `Prelude.hashWithSalt` filter'
         `Prelude.hashWithSalt` marker
         `Prelude.hashWithSalt` maxItems
 

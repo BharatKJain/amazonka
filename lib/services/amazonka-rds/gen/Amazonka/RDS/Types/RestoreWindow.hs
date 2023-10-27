@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.RestoreWindow
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.RestoreWindow where
@@ -70,7 +70,8 @@ instance Data.FromXML RestoreWindow where
 
 instance Prelude.Hashable RestoreWindow where
   hashWithSalt _salt RestoreWindow' {..} =
-    _salt `Prelude.hashWithSalt` earliestTime
+    _salt
+      `Prelude.hashWithSalt` earliestTime
       `Prelude.hashWithSalt` latestTime
 
 instance Prelude.NFData RestoreWindow where

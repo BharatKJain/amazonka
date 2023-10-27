@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ActionContext
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ActionContext where
@@ -78,7 +78,8 @@ instance Data.FromJSON ActionContext where
 
 instance Prelude.Hashable ActionContext where
   hashWithSalt _salt ActionContext' {..} =
-    _salt `Prelude.hashWithSalt` actionExecutionId
+    _salt
+      `Prelude.hashWithSalt` actionExecutionId
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData ActionContext where

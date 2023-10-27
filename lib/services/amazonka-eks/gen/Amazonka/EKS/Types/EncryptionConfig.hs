@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.EncryptionConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.EncryptionConfig where
@@ -81,7 +81,8 @@ instance Data.FromJSON EncryptionConfig where
 
 instance Prelude.Hashable EncryptionConfig where
   hashWithSalt _salt EncryptionConfig' {..} =
-    _salt `Prelude.hashWithSalt` provider
+    _salt
+      `Prelude.hashWithSalt` provider
       `Prelude.hashWithSalt` resources
 
 instance Prelude.NFData EncryptionConfig where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.ImprovementSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.ImprovementSummary where
@@ -103,7 +103,8 @@ instance Data.FromJSON ImprovementSummary where
       ( \x ->
           ImprovementSummary'
             Prelude.<$> (x Data..:? "ImprovementPlanUrl")
-            Prelude.<*> ( x Data..:? "ImprovementPlans"
+            Prelude.<*> ( x
+                            Data..:? "ImprovementPlans"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "PillarId")
@@ -114,7 +115,8 @@ instance Data.FromJSON ImprovementSummary where
 
 instance Prelude.Hashable ImprovementSummary where
   hashWithSalt _salt ImprovementSummary' {..} =
-    _salt `Prelude.hashWithSalt` improvementPlanUrl
+    _salt
+      `Prelude.hashWithSalt` improvementPlanUrl
       `Prelude.hashWithSalt` improvementPlans
       `Prelude.hashWithSalt` pillarId
       `Prelude.hashWithSalt` questionId

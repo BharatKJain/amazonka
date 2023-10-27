@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatchLogs.PutSubscriptionFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -255,7 +255,8 @@ instance Core.AWSRequest PutSubscriptionFilter where
 
 instance Prelude.Hashable PutSubscriptionFilter where
   hashWithSalt _salt PutSubscriptionFilter' {..} =
-    _salt `Prelude.hashWithSalt` distribution
+    _salt
+      `Prelude.hashWithSalt` distribution
       `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` logGroupName
       `Prelude.hashWithSalt` filterName

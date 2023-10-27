@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataSync.Types.TaskFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataSync.Types.TaskFilter where
@@ -97,7 +97,8 @@ taskFilter_operator = Lens.lens (\TaskFilter' {operator} -> operator) (\s@TaskFi
 
 instance Prelude.Hashable TaskFilter where
   hashWithSalt _salt TaskFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
       `Prelude.hashWithSalt` operator
 

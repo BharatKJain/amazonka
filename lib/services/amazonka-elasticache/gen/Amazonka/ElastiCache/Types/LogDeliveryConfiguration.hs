@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.LogDeliveryConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.LogDeliveryConfiguration where
@@ -125,7 +125,8 @@ instance Data.FromXML LogDeliveryConfiguration where
 
 instance Prelude.Hashable LogDeliveryConfiguration where
   hashWithSalt _salt LogDeliveryConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` destinationDetails
+    _salt
+      `Prelude.hashWithSalt` destinationDetails
       `Prelude.hashWithSalt` destinationType
       `Prelude.hashWithSalt` logFormat
       `Prelude.hashWithSalt` logType

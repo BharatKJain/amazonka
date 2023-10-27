@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.ProxyConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.ProxyConfiguration where
@@ -131,7 +131,8 @@ instance Data.FromJSON ProxyConfiguration where
 
 instance Prelude.Hashable ProxyConfiguration where
   hashWithSalt _salt ProxyConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` credentials
+    _salt
+      `Prelude.hashWithSalt` credentials
       `Prelude.hashWithSalt` host
       `Prelude.hashWithSalt` port
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.CreateThingGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest CreateThingGroup where
 
 instance Prelude.Hashable CreateThingGroup where
   hashWithSalt _salt CreateThingGroup' {..} =
-    _salt `Prelude.hashWithSalt` parentGroupName
+    _salt
+      `Prelude.hashWithSalt` parentGroupName
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` thingGroupProperties
       `Prelude.hashWithSalt` thingGroupName

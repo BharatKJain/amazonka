@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.VisibilityConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.VisibilityConfig where
@@ -117,7 +117,8 @@ instance Data.FromJSON VisibilityConfig where
 
 instance Prelude.Hashable VisibilityConfig where
   hashWithSalt _salt VisibilityConfig' {..} =
-    _salt `Prelude.hashWithSalt` sampledRequestsEnabled
+    _salt
+      `Prelude.hashWithSalt` sampledRequestsEnabled
       `Prelude.hashWithSalt` cloudWatchMetricsEnabled
       `Prelude.hashWithSalt` metricName
 

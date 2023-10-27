@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.ConnectPeerConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.ConnectPeerConfiguration where
@@ -98,11 +98,13 @@ instance Data.FromJSON ConnectPeerConfiguration where
       "ConnectPeerConfiguration"
       ( \x ->
           ConnectPeerConfiguration'
-            Prelude.<$> ( x Data..:? "BgpConfigurations"
+            Prelude.<$> ( x
+                            Data..:? "BgpConfigurations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CoreNetworkAddress")
-            Prelude.<*> ( x Data..:? "InsideCidrBlocks"
+            Prelude.<*> ( x
+                            Data..:? "InsideCidrBlocks"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "PeerAddress")
@@ -111,7 +113,8 @@ instance Data.FromJSON ConnectPeerConfiguration where
 
 instance Prelude.Hashable ConnectPeerConfiguration where
   hashWithSalt _salt ConnectPeerConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` bgpConfigurations
+    _salt
+      `Prelude.hashWithSalt` bgpConfigurations
       `Prelude.hashWithSalt` coreNetworkAddress
       `Prelude.hashWithSalt` insideCidrBlocks
       `Prelude.hashWithSalt` peerAddress

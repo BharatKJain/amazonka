@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.S3GlueParquetTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.S3GlueParquetTarget where
@@ -129,7 +129,8 @@ instance Data.FromJSON S3GlueParquetTarget where
 
 instance Prelude.Hashable S3GlueParquetTarget where
   hashWithSalt _salt S3GlueParquetTarget' {..} =
-    _salt `Prelude.hashWithSalt` compression
+    _salt
+      `Prelude.hashWithSalt` compression
       `Prelude.hashWithSalt` partitionKeys
       `Prelude.hashWithSalt` schemaChangePolicy
       `Prelude.hashWithSalt` name

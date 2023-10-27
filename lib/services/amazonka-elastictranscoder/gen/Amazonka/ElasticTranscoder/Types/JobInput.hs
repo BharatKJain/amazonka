@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.JobInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.JobInput where
@@ -428,7 +428,8 @@ instance Data.FromJSON JobInput where
 
 instance Prelude.Hashable JobInput where
   hashWithSalt _salt JobInput' {..} =
-    _salt `Prelude.hashWithSalt` aspectRatio
+    _salt
+      `Prelude.hashWithSalt` aspectRatio
       `Prelude.hashWithSalt` container
       `Prelude.hashWithSalt` detectedProperties
       `Prelude.hashWithSalt` encryption

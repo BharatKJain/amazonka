@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RobOMaker.Types.SourceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RobOMaker.Types.SourceConfig where
@@ -74,7 +74,8 @@ sourceConfig_s3Key = Lens.lens (\SourceConfig' {s3Key} -> s3Key) (\s@SourceConfi
 
 instance Prelude.Hashable SourceConfig where
   hashWithSalt _salt SourceConfig' {..} =
-    _salt `Prelude.hashWithSalt` architecture
+    _salt
+      `Prelude.hashWithSalt` architecture
       `Prelude.hashWithSalt` s3Bucket
       `Prelude.hashWithSalt` s3Key
 

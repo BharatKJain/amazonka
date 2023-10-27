@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.FunnelChartConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.FunnelChartConfiguration where
@@ -137,7 +137,8 @@ instance Data.FromJSON FunnelChartConfiguration where
 
 instance Prelude.Hashable FunnelChartConfiguration where
   hashWithSalt _salt FunnelChartConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` categoryLabelOptions
+    _salt
+      `Prelude.hashWithSalt` categoryLabelOptions
       `Prelude.hashWithSalt` dataLabelOptions
       `Prelude.hashWithSalt` fieldWells
       `Prelude.hashWithSalt` sortConfiguration

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.ExportJobResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.ExportJobResource where
@@ -129,7 +129,8 @@ instance Data.FromJSON ExportJobResource where
 
 instance Prelude.Hashable ExportJobResource where
   hashWithSalt _salt ExportJobResource' {..} =
-    _salt `Prelude.hashWithSalt` segmentId
+    _salt
+      `Prelude.hashWithSalt` segmentId
       `Prelude.hashWithSalt` segmentVersion
       `Prelude.hashWithSalt` s3UrlPrefix
       `Prelude.hashWithSalt` roleArn

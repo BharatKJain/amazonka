@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.Redirect
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.Redirect where
@@ -163,7 +163,8 @@ instance Data.FromXML Redirect where
 
 instance Prelude.Hashable Redirect where
   hashWithSalt _salt Redirect' {..} =
-    _salt `Prelude.hashWithSalt` hostName
+    _salt
+      `Prelude.hashWithSalt` hostName
       `Prelude.hashWithSalt` httpRedirectCode
       `Prelude.hashWithSalt` protocol
       `Prelude.hashWithSalt` replaceKeyPrefixWith

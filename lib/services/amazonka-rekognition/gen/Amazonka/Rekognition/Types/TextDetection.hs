@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.TextDetection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.TextDetection where
@@ -148,7 +148,8 @@ instance Data.FromJSON TextDetection where
 
 instance Prelude.Hashable TextDetection where
   hashWithSalt _salt TextDetection' {..} =
-    _salt `Prelude.hashWithSalt` confidence
+    _salt
+      `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` detectedText
       `Prelude.hashWithSalt` geometry
       `Prelude.hashWithSalt` id

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.Trail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.Trail where
@@ -88,7 +88,8 @@ trail_cloudTrailArn = Lens.lens (\Trail' {cloudTrailArn} -> cloudTrailArn) (\s@T
 
 instance Prelude.Hashable Trail where
   hashWithSalt _salt Trail' {..} =
-    _salt `Prelude.hashWithSalt` allRegions
+    _salt
+      `Prelude.hashWithSalt` allRegions
       `Prelude.hashWithSalt` regions
       `Prelude.hashWithSalt` cloudTrailArn
 

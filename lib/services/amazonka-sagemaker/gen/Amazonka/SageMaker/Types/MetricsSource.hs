@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.MetricsSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.MetricsSource where
@@ -88,7 +88,8 @@ instance Data.FromJSON MetricsSource where
 
 instance Prelude.Hashable MetricsSource where
   hashWithSalt _salt MetricsSource' {..} =
-    _salt `Prelude.hashWithSalt` contentDigest
+    _salt
+      `Prelude.hashWithSalt` contentDigest
       `Prelude.hashWithSalt` contentType
       `Prelude.hashWithSalt` s3Uri
 

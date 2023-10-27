@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELB.Types.TagDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELB.Types.TagDescription where
@@ -68,13 +68,16 @@ instance Data.FromXML TagDescription where
   parseXML x =
     TagDescription'
       Prelude.<$> (x Data..@? "LoadBalancerName")
-      Prelude.<*> ( x Data..@? "Tags" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Tags"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList1 "member")
                   )
 
 instance Prelude.Hashable TagDescription where
   hashWithSalt _salt TagDescription' {..} =
-    _salt `Prelude.hashWithSalt` loadBalancerName
+    _salt
+      `Prelude.hashWithSalt` loadBalancerName
       `Prelude.hashWithSalt` tags
 
 instance Prelude.NFData TagDescription where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.UpdateTimeToLive
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -140,7 +140,8 @@ instance Core.AWSRequest UpdateTimeToLive where
 
 instance Prelude.Hashable UpdateTimeToLive where
   hashWithSalt _salt UpdateTimeToLive' {..} =
-    _salt `Prelude.hashWithSalt` tableName
+    _salt
+      `Prelude.hashWithSalt` tableName
       `Prelude.hashWithSalt` timeToLiveSpecification
 
 instance Prelude.NFData UpdateTimeToLive where

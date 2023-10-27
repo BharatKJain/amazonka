@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.FirehoseAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.FirehoseAction where
@@ -100,7 +100,8 @@ instance Data.FromJSON FirehoseAction where
 
 instance Prelude.Hashable FirehoseAction where
   hashWithSalt _salt FirehoseAction' {..} =
-    _salt `Prelude.hashWithSalt` payload
+    _salt
+      `Prelude.hashWithSalt` payload
       `Prelude.hashWithSalt` separator
       `Prelude.hashWithSalt` deliveryStreamName
 

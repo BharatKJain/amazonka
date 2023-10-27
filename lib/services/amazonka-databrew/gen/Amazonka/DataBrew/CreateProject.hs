@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataBrew.CreateProject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -157,7 +157,8 @@ instance Core.AWSRequest CreateProject where
 
 instance Prelude.Hashable CreateProject where
   hashWithSalt _salt CreateProject' {..} =
-    _salt `Prelude.hashWithSalt` sample
+    _salt
+      `Prelude.hashWithSalt` sample
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` datasetName
       `Prelude.hashWithSalt` name

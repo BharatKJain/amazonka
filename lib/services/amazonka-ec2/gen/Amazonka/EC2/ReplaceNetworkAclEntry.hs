@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ReplaceNetworkAclEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -238,7 +238,8 @@ instance Core.AWSRequest ReplaceNetworkAclEntry where
 
 instance Prelude.Hashable ReplaceNetworkAclEntry where
   hashWithSalt _salt ReplaceNetworkAclEntry' {..} =
-    _salt `Prelude.hashWithSalt` cidrBlock
+    _salt
+      `Prelude.hashWithSalt` cidrBlock
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` icmpTypeCode
       `Prelude.hashWithSalt` ipv6CidrBlock

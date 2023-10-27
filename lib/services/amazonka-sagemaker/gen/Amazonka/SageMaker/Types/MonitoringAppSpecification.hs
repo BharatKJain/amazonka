@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.MonitoringAppSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.MonitoringAppSpecification where
@@ -120,7 +120,8 @@ instance Data.FromJSON MonitoringAppSpecification where
 
 instance Prelude.Hashable MonitoringAppSpecification where
   hashWithSalt _salt MonitoringAppSpecification' {..} =
-    _salt `Prelude.hashWithSalt` containerArguments
+    _salt
+      `Prelude.hashWithSalt` containerArguments
       `Prelude.hashWithSalt` containerEntrypoint
       `Prelude.hashWithSalt` postAnalyticsProcessorSourceUri
       `Prelude.hashWithSalt` recordPreprocessorSourceUri

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexV2Models.UpdateExport
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,7 +116,8 @@ instance Core.AWSRequest UpdateExport where
 
 instance Prelude.Hashable UpdateExport where
   hashWithSalt _salt UpdateExport' {..} =
-    _salt `Prelude.hashWithSalt` filePassword
+    _salt
+      `Prelude.hashWithSalt` filePassword
       `Prelude.hashWithSalt` exportId
 
 instance Prelude.NFData UpdateExport where

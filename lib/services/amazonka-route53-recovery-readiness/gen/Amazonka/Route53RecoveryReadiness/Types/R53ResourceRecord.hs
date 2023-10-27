@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53RecoveryReadiness.Types.R53ResourceRecord
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53RecoveryReadiness.Types.R53ResourceRecord where
@@ -74,7 +74,8 @@ instance Data.FromJSON R53ResourceRecord where
 
 instance Prelude.Hashable R53ResourceRecord where
   hashWithSalt _salt R53ResourceRecord' {..} =
-    _salt `Prelude.hashWithSalt` domainName
+    _salt
+      `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` recordSetId
 
 instance Prelude.NFData R53ResourceRecord where

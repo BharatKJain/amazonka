@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.ActiveViolation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.ActiveViolation where
@@ -162,7 +162,8 @@ instance Data.FromJSON ActiveViolation where
 
 instance Prelude.Hashable ActiveViolation where
   hashWithSalt _salt ActiveViolation' {..} =
-    _salt `Prelude.hashWithSalt` behavior
+    _salt
+      `Prelude.hashWithSalt` behavior
       `Prelude.hashWithSalt` lastViolationTime
       `Prelude.hashWithSalt` lastViolationValue
       `Prelude.hashWithSalt` securityProfileName

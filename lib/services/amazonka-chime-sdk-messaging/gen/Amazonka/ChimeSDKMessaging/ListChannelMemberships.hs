@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSDKMessaging.ListChannelMemberships
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -172,7 +172,8 @@ instance Core.AWSRequest ListChannelMemberships where
       ( \s h x ->
           ListChannelMembershipsResponse'
             Prelude.<$> (x Data..?> "ChannelArn")
-            Prelude.<*> ( x Data..?> "ChannelMemberships"
+            Prelude.<*> ( x
+                            Data..?> "ChannelMemberships"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -181,7 +182,8 @@ instance Core.AWSRequest ListChannelMemberships where
 
 instance Prelude.Hashable ListChannelMemberships where
   hashWithSalt _salt ListChannelMemberships' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` subChannelId
       `Prelude.hashWithSalt` type'

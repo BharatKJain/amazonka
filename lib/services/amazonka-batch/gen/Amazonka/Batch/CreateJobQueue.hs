@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Batch.CreateJobQueue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -70,7 +70,8 @@ data CreateJobQueue = CreateJobQueue'
     -- policy. If this parameter isn\'t specified, the job queue uses a first
     -- in, first out (FIFO) scheduling policy. After a job queue is created,
     -- you can replace but can\'t remove the fair share scheduling policy. The
-    -- format is @aws:Partition:batch:Region:Account:scheduling-policy\/Name @.
+    -- format is
+    -- @aws:@/@Partition@/@:batch:@/@Region@/@:@/@Account@/@:scheduling-policy\/@/@Name@/@ @.
     -- An example is
     -- @aws:aws:batch:us-west-2:123456789012:scheduling-policy\/MySchedulingPolicy@.
     schedulingPolicyArn :: Prelude.Maybe Prelude.Text,
@@ -126,7 +127,8 @@ data CreateJobQueue = CreateJobQueue'
 -- policy. If this parameter isn\'t specified, the job queue uses a first
 -- in, first out (FIFO) scheduling policy. After a job queue is created,
 -- you can replace but can\'t remove the fair share scheduling policy. The
--- format is @aws:Partition:batch:Region:Account:scheduling-policy\/Name @.
+-- format is
+-- @aws:@/@Partition@/@:batch:@/@Region@/@:@/@Account@/@:scheduling-policy\/@/@Name@/@ @.
 -- An example is
 -- @aws:aws:batch:us-west-2:123456789012:scheduling-policy\/MySchedulingPolicy@.
 --
@@ -187,7 +189,8 @@ newCreateJobQueue pJobQueueName_ pPriority_ =
 -- policy. If this parameter isn\'t specified, the job queue uses a first
 -- in, first out (FIFO) scheduling policy. After a job queue is created,
 -- you can replace but can\'t remove the fair share scheduling policy. The
--- format is @aws:Partition:batch:Region:Account:scheduling-policy\/Name @.
+-- format is
+-- @aws:@/@Partition@/@:batch:@/@Region@/@:@/@Account@/@:scheduling-policy\/@/@Name@/@ @.
 -- An example is
 -- @aws:aws:batch:us-west-2:123456789012:scheduling-policy\/MySchedulingPolicy@.
 createJobQueue_schedulingPolicyArn :: Lens.Lens' CreateJobQueue (Prelude.Maybe Prelude.Text)
@@ -256,7 +259,8 @@ instance Core.AWSRequest CreateJobQueue where
 
 instance Prelude.Hashable CreateJobQueue where
   hashWithSalt _salt CreateJobQueue' {..} =
-    _salt `Prelude.hashWithSalt` schedulingPolicyArn
+    _salt
+      `Prelude.hashWithSalt` schedulingPolicyArn
       `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` jobQueueName

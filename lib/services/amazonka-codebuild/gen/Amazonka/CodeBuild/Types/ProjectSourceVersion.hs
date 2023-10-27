@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.ProjectSourceVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.ProjectSourceVersion where
@@ -153,7 +153,8 @@ instance Data.FromJSON ProjectSourceVersion where
 
 instance Prelude.Hashable ProjectSourceVersion where
   hashWithSalt _salt ProjectSourceVersion' {..} =
-    _salt `Prelude.hashWithSalt` sourceIdentifier
+    _salt
+      `Prelude.hashWithSalt` sourceIdentifier
       `Prelude.hashWithSalt` sourceVersion
 
 instance Prelude.NFData ProjectSourceVersion where

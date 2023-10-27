@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.BatchGetAssetPropertyValueHistorySuccessEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.BatchGetAssetPropertyValueHistorySuccessEntry where
@@ -80,9 +80,10 @@ instance
       ( \x ->
           BatchGetAssetPropertyValueHistorySuccessEntry'
             Prelude.<$> (x Data..: "entryId")
-              Prelude.<*> ( x Data..:? "assetPropertyValueHistory"
-                              Data..!= Prelude.mempty
-                          )
+            Prelude.<*> ( x
+                            Data..:? "assetPropertyValueHistory"
+                            Data..!= Prelude.mempty
+                        )
       )
 
 instance
@@ -92,7 +93,8 @@ instance
   hashWithSalt
     _salt
     BatchGetAssetPropertyValueHistorySuccessEntry' {..} =
-      _salt `Prelude.hashWithSalt` entryId
+      _salt
+        `Prelude.hashWithSalt` entryId
         `Prelude.hashWithSalt` assetPropertyValueHistory
 
 instance

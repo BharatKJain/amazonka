@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.S3ReferenceDataSourceUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.S3ReferenceDataSourceUpdate where
@@ -67,7 +67,8 @@ s3ReferenceDataSourceUpdate_fileKeyUpdate = Lens.lens (\S3ReferenceDataSourceUpd
 
 instance Prelude.Hashable S3ReferenceDataSourceUpdate where
   hashWithSalt _salt S3ReferenceDataSourceUpdate' {..} =
-    _salt `Prelude.hashWithSalt` bucketARNUpdate
+    _salt
+      `Prelude.hashWithSalt` bucketARNUpdate
       `Prelude.hashWithSalt` fileKeyUpdate
 
 instance Prelude.NFData S3ReferenceDataSourceUpdate where

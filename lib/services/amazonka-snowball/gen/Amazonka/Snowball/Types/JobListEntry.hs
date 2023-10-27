@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Snowball.Types.JobListEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Snowball.Types.JobListEntry where
@@ -153,7 +153,8 @@ instance Data.FromJSON JobListEntry where
 
 instance Prelude.Hashable JobListEntry where
   hashWithSalt _salt JobListEntry' {..} =
-    _salt `Prelude.hashWithSalt` creationDate
+    _salt
+      `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` isMaster
       `Prelude.hashWithSalt` jobId

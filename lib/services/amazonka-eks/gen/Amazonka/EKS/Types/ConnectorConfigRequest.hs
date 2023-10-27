@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.ConnectorConfigRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.ConnectorConfigRequest where
@@ -72,7 +72,8 @@ connectorConfigRequest_provider = Lens.lens (\ConnectorConfigRequest' {provider}
 
 instance Prelude.Hashable ConnectorConfigRequest where
   hashWithSalt _salt ConnectorConfigRequest' {..} =
-    _salt `Prelude.hashWithSalt` roleArn
+    _salt
+      `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` provider
 
 instance Prelude.NFData ConnectorConfigRequest where

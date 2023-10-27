@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KMS.Types.KeyListEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KMS.Types.KeyListEntry where
@@ -74,7 +74,8 @@ instance Data.FromJSON KeyListEntry where
 
 instance Prelude.Hashable KeyListEntry where
   hashWithSalt _salt KeyListEntry' {..} =
-    _salt `Prelude.hashWithSalt` keyArn
+    _salt
+      `Prelude.hashWithSalt` keyArn
       `Prelude.hashWithSalt` keyId
 
 instance Prelude.NFData KeyListEntry where

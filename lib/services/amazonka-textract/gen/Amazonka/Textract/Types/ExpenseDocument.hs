@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.ExpenseDocument
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.ExpenseDocument where
@@ -106,7 +106,8 @@ instance Data.FromJSON ExpenseDocument where
 
 instance Prelude.Hashable ExpenseDocument where
   hashWithSalt _salt ExpenseDocument' {..} =
-    _salt `Prelude.hashWithSalt` blocks
+    _salt
+      `Prelude.hashWithSalt` blocks
       `Prelude.hashWithSalt` expenseIndex
       `Prelude.hashWithSalt` lineItemGroups
       `Prelude.hashWithSalt` summaryFields

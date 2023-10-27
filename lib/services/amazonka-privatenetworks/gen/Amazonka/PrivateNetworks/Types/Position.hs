@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PrivateNetworks.Types.Position
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PrivateNetworks.Types.Position where
@@ -106,7 +106,8 @@ instance Data.FromJSON Position where
 
 instance Prelude.Hashable Position where
   hashWithSalt _salt Position' {..} =
-    _salt `Prelude.hashWithSalt` elevation
+    _salt
+      `Prelude.hashWithSalt` elevation
       `Prelude.hashWithSalt` elevationReference
       `Prelude.hashWithSalt` elevationUnit
       `Prelude.hashWithSalt` latitude

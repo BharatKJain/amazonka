@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppStream.CreateStack
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -271,7 +271,8 @@ instance Core.AWSRequest CreateStack where
 
 instance Prelude.Hashable CreateStack where
   hashWithSalt _salt CreateStack' {..} =
-    _salt `Prelude.hashWithSalt` accessEndpoints
+    _salt
+      `Prelude.hashWithSalt` accessEndpoints
       `Prelude.hashWithSalt` applicationSettings
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` displayName

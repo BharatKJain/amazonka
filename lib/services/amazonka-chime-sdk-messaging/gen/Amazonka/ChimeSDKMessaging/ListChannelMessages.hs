@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSDKMessaging.ListChannelMessages
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -187,7 +187,8 @@ instance Core.AWSRequest ListChannelMessages where
       ( \s h x ->
           ListChannelMessagesResponse'
             Prelude.<$> (x Data..?> "ChannelArn")
-            Prelude.<*> ( x Data..?> "ChannelMessages"
+            Prelude.<*> ( x
+                            Data..?> "ChannelMessages"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -197,7 +198,8 @@ instance Core.AWSRequest ListChannelMessages where
 
 instance Prelude.Hashable ListChannelMessages where
   hashWithSalt _salt ListChannelMessages' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` notAfter
       `Prelude.hashWithSalt` notBefore

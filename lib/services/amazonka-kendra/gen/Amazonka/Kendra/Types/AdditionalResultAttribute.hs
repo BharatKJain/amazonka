@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.AdditionalResultAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.AdditionalResultAttribute where
@@ -95,7 +95,8 @@ instance Data.FromJSON AdditionalResultAttribute where
 
 instance Prelude.Hashable AdditionalResultAttribute where
   hashWithSalt _salt AdditionalResultAttribute' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` valueType
       `Prelude.hashWithSalt` value
 

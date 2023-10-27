@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.CreateWorkflow
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -151,7 +151,8 @@ instance Core.AWSRequest CreateWorkflow where
 
 instance Prelude.Hashable CreateWorkflow where
   hashWithSalt _salt CreateWorkflow' {..} =
-    _salt `Prelude.hashWithSalt` defaultRunProperties
+    _salt
+      `Prelude.hashWithSalt` defaultRunProperties
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` maxConcurrentRuns
       `Prelude.hashWithSalt` tags

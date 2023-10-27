@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53RecoveryCluster.UpdateRoutingControlState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -170,7 +170,8 @@ instance Core.AWSRequest UpdateRoutingControlState where
 
 instance Prelude.Hashable UpdateRoutingControlState where
   hashWithSalt _salt UpdateRoutingControlState' {..} =
-    _salt `Prelude.hashWithSalt` safetyRulesToOverride
+    _salt
+      `Prelude.hashWithSalt` safetyRulesToOverride
       `Prelude.hashWithSalt` routingControlArn
       `Prelude.hashWithSalt` routingControlState
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.RegisterCompute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -172,7 +172,8 @@ instance Core.AWSRequest RegisterCompute where
 
 instance Prelude.Hashable RegisterCompute where
   hashWithSalt _salt RegisterCompute' {..} =
-    _salt `Prelude.hashWithSalt` certificatePath
+    _salt
+      `Prelude.hashWithSalt` certificatePath
       `Prelude.hashWithSalt` dnsName
       `Prelude.hashWithSalt` ipAddress
       `Prelude.hashWithSalt` location

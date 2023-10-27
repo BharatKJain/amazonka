@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StorageGateway.Types.CachediSCSIVolume
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StorageGateway.Types.CachediSCSIVolume where
@@ -280,7 +280,8 @@ instance Data.FromJSON CachediSCSIVolume where
 
 instance Prelude.Hashable CachediSCSIVolume where
   hashWithSalt _salt CachediSCSIVolume' {..} =
-    _salt `Prelude.hashWithSalt` createdDate
+    _salt
+      `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` kmsKey
       `Prelude.hashWithSalt` sourceSnapshotId
       `Prelude.hashWithSalt` targetName

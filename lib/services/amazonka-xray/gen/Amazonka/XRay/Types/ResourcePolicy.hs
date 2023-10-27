@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.ResourcePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.ResourcePolicy where
@@ -99,7 +99,8 @@ instance Data.FromJSON ResourcePolicy where
 
 instance Prelude.Hashable ResourcePolicy where
   hashWithSalt _salt ResourcePolicy' {..} =
-    _salt `Prelude.hashWithSalt` lastUpdatedTime
+    _salt
+      `Prelude.hashWithSalt` lastUpdatedTime
       `Prelude.hashWithSalt` policyDocument
       `Prelude.hashWithSalt` policyName
       `Prelude.hashWithSalt` policyRevisionId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsWafRuleGroupDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsWafRuleGroupDetails where
@@ -100,7 +100,8 @@ instance Data.FromJSON AwsWafRuleGroupDetails where
 
 instance Prelude.Hashable AwsWafRuleGroupDetails where
   hashWithSalt _salt AwsWafRuleGroupDetails' {..} =
-    _salt `Prelude.hashWithSalt` metricName
+    _salt
+      `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` ruleGroupId
       `Prelude.hashWithSalt` rules

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSDKIdentity.PutAppInstanceRetentionSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,7 +118,8 @@ instance
   hashWithSalt
     _salt
     PutAppInstanceRetentionSettings' {..} =
-      _salt `Prelude.hashWithSalt` appInstanceArn
+      _salt
+        `Prelude.hashWithSalt` appInstanceArn
         `Prelude.hashWithSalt` appInstanceRetentionSettings
 
 instance

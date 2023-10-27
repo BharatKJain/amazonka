@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.HadoopStepConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.HadoopStepConfig where
@@ -105,7 +105,8 @@ instance Data.FromJSON HadoopStepConfig where
 
 instance Prelude.Hashable HadoopStepConfig where
   hashWithSalt _salt HadoopStepConfig' {..} =
-    _salt `Prelude.hashWithSalt` args
+    _salt
+      `Prelude.hashWithSalt` args
       `Prelude.hashWithSalt` jar
       `Prelude.hashWithSalt` mainClass
       `Prelude.hashWithSalt` properties

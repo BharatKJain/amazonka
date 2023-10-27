@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.AuthorizerSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.AuthorizerSummary where
@@ -74,7 +74,8 @@ instance Data.FromJSON AuthorizerSummary where
 
 instance Prelude.Hashable AuthorizerSummary where
   hashWithSalt _salt AuthorizerSummary' {..} =
-    _salt `Prelude.hashWithSalt` authorizerArn
+    _salt
+      `Prelude.hashWithSalt` authorizerArn
       `Prelude.hashWithSalt` authorizerName
 
 instance Prelude.NFData AuthorizerSummary where

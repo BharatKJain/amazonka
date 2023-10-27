@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.GetUnfilteredPartitionMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,7 +148,8 @@ instance
     Response.receiveJSON
       ( \s h x ->
           GetUnfilteredPartitionMetadataResponse'
-            Prelude.<$> ( x Data..?> "AuthorizedColumns"
+            Prelude.<$> ( x
+                            Data..?> "AuthorizedColumns"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "IsRegisteredWithLakeFormation")
@@ -163,7 +164,8 @@ instance
   hashWithSalt
     _salt
     GetUnfilteredPartitionMetadata' {..} =
-      _salt `Prelude.hashWithSalt` auditContext
+      _salt
+        `Prelude.hashWithSalt` auditContext
         `Prelude.hashWithSalt` catalogId
         `Prelude.hashWithSalt` databaseName
         `Prelude.hashWithSalt` tableName

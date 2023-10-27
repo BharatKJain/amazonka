@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.DynamicTransform
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.DynamicTransform where
@@ -143,7 +143,8 @@ instance Data.FromJSON DynamicTransform where
 
 instance Prelude.Hashable DynamicTransform where
   hashWithSalt _salt DynamicTransform' {..} =
-    _salt `Prelude.hashWithSalt` parameters
+    _salt
+      `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` transformName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsCodeBuildProjectVpcConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsCodeBuildProjectVpcConfig where
@@ -78,7 +78,8 @@ instance Data.FromJSON AwsCodeBuildProjectVpcConfig where
       "AwsCodeBuildProjectVpcConfig"
       ( \x ->
           AwsCodeBuildProjectVpcConfig'
-            Prelude.<$> ( x Data..:? "SecurityGroupIds"
+            Prelude.<$> ( x
+                            Data..:? "SecurityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Subnets" Data..!= Prelude.mempty)
@@ -90,7 +91,8 @@ instance
     AwsCodeBuildProjectVpcConfig
   where
   hashWithSalt _salt AwsCodeBuildProjectVpcConfig' {..} =
-    _salt `Prelude.hashWithSalt` securityGroupIds
+    _salt
+      `Prelude.hashWithSalt` securityGroupIds
       `Prelude.hashWithSalt` subnets
       `Prelude.hashWithSalt` vpcId
 

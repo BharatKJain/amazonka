@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.AutoScalingUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.AutoScalingUpdate where
@@ -112,7 +112,8 @@ autoScalingUpdate_scaleOutPolicy = Lens.lens (\AutoScalingUpdate' {scaleOutPolic
 
 instance Prelude.Hashable AutoScalingUpdate where
   hashWithSalt _salt AutoScalingUpdate' {..} =
-    _salt `Prelude.hashWithSalt` maxWorkerCount
+    _salt
+      `Prelude.hashWithSalt` maxWorkerCount
       `Prelude.hashWithSalt` mcuCount
       `Prelude.hashWithSalt` minWorkerCount
       `Prelude.hashWithSalt` scaleInPolicy

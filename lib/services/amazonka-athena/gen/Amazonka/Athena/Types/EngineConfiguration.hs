@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.EngineConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.EngineConfiguration where
@@ -117,7 +117,8 @@ instance Data.FromJSON EngineConfiguration where
       "EngineConfiguration"
       ( \x ->
           EngineConfiguration'
-            Prelude.<$> ( x Data..:? "AdditionalConfigs"
+            Prelude.<$> ( x
+                            Data..:? "AdditionalConfigs"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CoordinatorDpuSize")
@@ -127,7 +128,8 @@ instance Data.FromJSON EngineConfiguration where
 
 instance Prelude.Hashable EngineConfiguration where
   hashWithSalt _salt EngineConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` additionalConfigs
+    _salt
+      `Prelude.hashWithSalt` additionalConfigs
       `Prelude.hashWithSalt` coordinatorDpuSize
       `Prelude.hashWithSalt` defaultExecutorDpuSize
       `Prelude.hashWithSalt` maxConcurrentDpus

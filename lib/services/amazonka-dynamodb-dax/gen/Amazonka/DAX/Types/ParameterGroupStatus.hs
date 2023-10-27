@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DAX.Types.ParameterGroupStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DAX.Types.ParameterGroupStatus where
@@ -78,7 +78,8 @@ instance Data.FromJSON ParameterGroupStatus where
       "ParameterGroupStatus"
       ( \x ->
           ParameterGroupStatus'
-            Prelude.<$> ( x Data..:? "NodeIdsToReboot"
+            Prelude.<$> ( x
+                            Data..:? "NodeIdsToReboot"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ParameterApplyStatus")
@@ -87,7 +88,8 @@ instance Data.FromJSON ParameterGroupStatus where
 
 instance Prelude.Hashable ParameterGroupStatus where
   hashWithSalt _salt ParameterGroupStatus' {..} =
-    _salt `Prelude.hashWithSalt` nodeIdsToReboot
+    _salt
+      `Prelude.hashWithSalt` nodeIdsToReboot
       `Prelude.hashWithSalt` parameterApplyStatus
       `Prelude.hashWithSalt` parameterGroupName
 

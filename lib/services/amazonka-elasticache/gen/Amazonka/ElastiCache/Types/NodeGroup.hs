@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.NodeGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.NodeGroup where
@@ -124,7 +124,8 @@ instance Data.FromXML NodeGroup where
   parseXML x =
     NodeGroup'
       Prelude.<$> (x Data..@? "NodeGroupId")
-      Prelude.<*> ( x Data..@? "NodeGroupMembers"
+      Prelude.<*> ( x
+                      Data..@? "NodeGroupMembers"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "NodeGroupMember")
                   )
@@ -135,7 +136,8 @@ instance Data.FromXML NodeGroup where
 
 instance Prelude.Hashable NodeGroup where
   hashWithSalt _salt NodeGroup' {..} =
-    _salt `Prelude.hashWithSalt` nodeGroupId
+    _salt
+      `Prelude.hashWithSalt` nodeGroupId
       `Prelude.hashWithSalt` nodeGroupMembers
       `Prelude.hashWithSalt` primaryEndpoint
       `Prelude.hashWithSalt` readerEndpoint

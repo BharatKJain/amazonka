@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.DeleteArtifact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,7 +100,8 @@ instance Core.AWSRequest DeleteArtifact where
 
 instance Prelude.Hashable DeleteArtifact where
   hashWithSalt _salt DeleteArtifact' {..} =
-    _salt `Prelude.hashWithSalt` artifactArn
+    _salt
+      `Prelude.hashWithSalt` artifactArn
       `Prelude.hashWithSalt` source
 
 instance Prelude.NFData DeleteArtifact where

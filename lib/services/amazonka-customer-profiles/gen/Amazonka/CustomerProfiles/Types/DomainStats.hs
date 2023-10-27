@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CustomerProfiles.Types.DomainStats
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CustomerProfiles.Types.DomainStats where
@@ -104,7 +104,8 @@ instance Data.FromJSON DomainStats where
 
 instance Prelude.Hashable DomainStats where
   hashWithSalt _salt DomainStats' {..} =
-    _salt `Prelude.hashWithSalt` meteringProfileCount
+    _salt
+      `Prelude.hashWithSalt` meteringProfileCount
       `Prelude.hashWithSalt` objectCount
       `Prelude.hashWithSalt` profileCount
       `Prelude.hashWithSalt` totalSize

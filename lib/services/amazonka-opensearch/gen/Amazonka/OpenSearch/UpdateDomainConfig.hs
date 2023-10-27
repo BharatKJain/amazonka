@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpenSearch.UpdateDomainConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -349,7 +349,8 @@ instance Core.AWSRequest UpdateDomainConfig where
 
 instance Prelude.Hashable UpdateDomainConfig where
   hashWithSalt _salt UpdateDomainConfig' {..} =
-    _salt `Prelude.hashWithSalt` accessPolicies
+    _salt
+      `Prelude.hashWithSalt` accessPolicies
       `Prelude.hashWithSalt` advancedOptions
       `Prelude.hashWithSalt` advancedSecurityOptions
       `Prelude.hashWithSalt` autoTuneOptions

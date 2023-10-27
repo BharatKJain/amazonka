@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatchEvents.ListEndpoints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -146,7 +146,8 @@ instance Core.AWSRequest ListEndpoints where
 
 instance Prelude.Hashable ListEndpoints where
   hashWithSalt _salt ListEndpoints' {..} =
-    _salt `Prelude.hashWithSalt` homeRegion
+    _salt
+      `Prelude.hashWithSalt` homeRegion
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` namePrefix
       `Prelude.hashWithSalt` nextToken

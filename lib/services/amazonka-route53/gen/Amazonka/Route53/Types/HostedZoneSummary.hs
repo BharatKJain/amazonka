@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.HostedZoneSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.HostedZoneSummary where
@@ -101,7 +101,8 @@ instance Data.FromXML HostedZoneSummary where
 
 instance Prelude.Hashable HostedZoneSummary where
   hashWithSalt _salt HostedZoneSummary' {..} =
-    _salt `Prelude.hashWithSalt` hostedZoneId
+    _salt
+      `Prelude.hashWithSalt` hostedZoneId
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` owner
 

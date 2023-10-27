@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.TimeToLiveDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.TimeToLiveDescription where
@@ -78,7 +78,8 @@ instance Data.FromJSON TimeToLiveDescription where
 
 instance Prelude.Hashable TimeToLiveDescription where
   hashWithSalt _salt TimeToLiveDescription' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` timeToLiveStatus
 
 instance Prelude.NFData TimeToLiveDescription where

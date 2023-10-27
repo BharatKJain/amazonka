@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.S3DestinationProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.S3DestinationProperties where
@@ -93,7 +93,8 @@ instance Data.FromJSON S3DestinationProperties where
 
 instance Prelude.Hashable S3DestinationProperties where
   hashWithSalt _salt S3DestinationProperties' {..} =
-    _salt `Prelude.hashWithSalt` bucketPrefix
+    _salt
+      `Prelude.hashWithSalt` bucketPrefix
       `Prelude.hashWithSalt` s3OutputFormatConfig
       `Prelude.hashWithSalt` bucketName
 

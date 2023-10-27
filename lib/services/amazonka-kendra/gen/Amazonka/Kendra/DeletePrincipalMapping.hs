@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kendra.DeletePrincipalMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -205,7 +205,8 @@ instance Core.AWSRequest DeletePrincipalMapping where
 
 instance Prelude.Hashable DeletePrincipalMapping where
   hashWithSalt _salt DeletePrincipalMapping' {..} =
-    _salt `Prelude.hashWithSalt` dataSourceId
+    _salt
+      `Prelude.hashWithSalt` dataSourceId
       `Prelude.hashWithSalt` orderingId
       `Prelude.hashWithSalt` indexId
       `Prelude.hashWithSalt` groupId

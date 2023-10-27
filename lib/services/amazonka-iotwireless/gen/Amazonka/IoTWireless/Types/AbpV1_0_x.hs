@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.AbpV1_0_x
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.AbpV1_0_x where
@@ -85,7 +85,8 @@ instance Data.FromJSON AbpV1_0_x where
 
 instance Prelude.Hashable AbpV1_0_x where
   hashWithSalt _salt AbpV1_0_x' {..} =
-    _salt `Prelude.hashWithSalt` devAddr
+    _salt
+      `Prelude.hashWithSalt` devAddr
       `Prelude.hashWithSalt` fCntStart
       `Prelude.hashWithSalt` sessionKeys
 

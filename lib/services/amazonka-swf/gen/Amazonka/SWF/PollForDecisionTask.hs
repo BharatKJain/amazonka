@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SWF.PollForDecisionTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -269,22 +269,22 @@ instance Core.AWSPager PollForDecisionTask where
     | Core.stop
         ( rs
             Lens.^? pollForDecisionTaskResponse_nextPageToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? pollForDecisionTaskResponse_events
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& pollForDecisionTask_nextPageToken
           Lens..~ rs
           Lens.^? pollForDecisionTaskResponse_nextPageToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest PollForDecisionTask where
   type
@@ -308,7 +308,8 @@ instance Core.AWSRequest PollForDecisionTask where
 
 instance Prelude.Hashable PollForDecisionTask where
   hashWithSalt _salt PollForDecisionTask' {..} =
-    _salt `Prelude.hashWithSalt` identity
+    _salt
+      `Prelude.hashWithSalt` identity
       `Prelude.hashWithSalt` maximumPageSize
       `Prelude.hashWithSalt` nextPageToken
       `Prelude.hashWithSalt` reverseOrder

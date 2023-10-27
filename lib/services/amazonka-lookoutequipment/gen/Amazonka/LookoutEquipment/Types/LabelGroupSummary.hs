@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutEquipment.Types.LabelGroupSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutEquipment.Types.LabelGroupSummary where
@@ -94,7 +94,8 @@ instance Data.FromJSON LabelGroupSummary where
 
 instance Prelude.Hashable LabelGroupSummary where
   hashWithSalt _salt LabelGroupSummary' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` labelGroupArn
       `Prelude.hashWithSalt` labelGroupName
       `Prelude.hashWithSalt` updatedAt

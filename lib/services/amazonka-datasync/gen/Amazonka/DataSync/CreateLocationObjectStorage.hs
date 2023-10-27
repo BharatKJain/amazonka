@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataSync.CreateLocationObjectStorage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -256,7 +256,8 @@ instance Core.AWSRequest CreateLocationObjectStorage where
 
 instance Prelude.Hashable CreateLocationObjectStorage where
   hashWithSalt _salt CreateLocationObjectStorage' {..} =
-    _salt `Prelude.hashWithSalt` accessKey
+    _salt
+      `Prelude.hashWithSalt` accessKey
       `Prelude.hashWithSalt` secretKey
       `Prelude.hashWithSalt` serverCertificate
       `Prelude.hashWithSalt` serverPort

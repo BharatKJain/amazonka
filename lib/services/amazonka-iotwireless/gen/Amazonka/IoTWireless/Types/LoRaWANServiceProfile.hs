@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.LoRaWANServiceProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.LoRaWANServiceProfile where
@@ -74,7 +74,8 @@ loRaWANServiceProfile_drMin = Lens.lens (\LoRaWANServiceProfile' {drMin} -> drMi
 
 instance Prelude.Hashable LoRaWANServiceProfile where
   hashWithSalt _salt LoRaWANServiceProfile' {..} =
-    _salt `Prelude.hashWithSalt` addGwMetadata
+    _salt
+      `Prelude.hashWithSalt` addGwMetadata
       `Prelude.hashWithSalt` drMax
       `Prelude.hashWithSalt` drMin
 

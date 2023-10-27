@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataPipeline.Types.TaskObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataPipeline.Types.TaskObject where
@@ -105,7 +105,8 @@ instance Data.FromJSON TaskObject where
 
 instance Prelude.Hashable TaskObject where
   hashWithSalt _salt TaskObject' {..} =
-    _salt `Prelude.hashWithSalt` attemptId
+    _salt
+      `Prelude.hashWithSalt` attemptId
       `Prelude.hashWithSalt` objects
       `Prelude.hashWithSalt` pipelineId
       `Prelude.hashWithSalt` taskId

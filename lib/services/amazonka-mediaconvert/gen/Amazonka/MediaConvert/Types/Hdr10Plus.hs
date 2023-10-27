@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.Hdr10Plus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.Hdr10Plus where
@@ -86,7 +86,8 @@ instance Data.FromJSON Hdr10Plus where
 
 instance Prelude.Hashable Hdr10Plus where
   hashWithSalt _salt Hdr10Plus' {..} =
-    _salt `Prelude.hashWithSalt` masteringMonitorNits
+    _salt
+      `Prelude.hashWithSalt` masteringMonitorNits
       `Prelude.hashWithSalt` targetMonitorNits
 
 instance Prelude.NFData Hdr10Plus where

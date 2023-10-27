@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Comprehend.BatchDetectSentiment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -95,7 +95,8 @@ newBatchDetectSentiment ::
 newBatchDetectSentiment pTextList_ pLanguageCode_ =
   BatchDetectSentiment'
     { textList =
-        Data._Sensitive Prelude.. Lens.coerced
+        Data._Sensitive
+          Prelude.. Lens.coerced
           Lens.# pTextList_,
       languageCode = pLanguageCode_
     }
@@ -133,7 +134,8 @@ instance Core.AWSRequest BatchDetectSentiment where
 
 instance Prelude.Hashable BatchDetectSentiment where
   hashWithSalt _salt BatchDetectSentiment' {..} =
-    _salt `Prelude.hashWithSalt` textList
+    _salt
+      `Prelude.hashWithSalt` textList
       `Prelude.hashWithSalt` languageCode
 
 instance Prelude.NFData BatchDetectSentiment where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TableConditionalFormattingOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TableConditionalFormattingOption where
@@ -74,7 +74,8 @@ instance
       "TableConditionalFormattingOption"
       ( \x ->
           TableConditionalFormattingOption'
-            Prelude.<$> (x Data..:? "Cell") Prelude.<*> (x Data..:? "Row")
+            Prelude.<$> (x Data..:? "Cell")
+            Prelude.<*> (x Data..:? "Row")
       )
 
 instance
@@ -84,7 +85,8 @@ instance
   hashWithSalt
     _salt
     TableConditionalFormattingOption' {..} =
-      _salt `Prelude.hashWithSalt` cell
+      _salt
+        `Prelude.hashWithSalt` cell
         `Prelude.hashWithSalt` row
 
 instance

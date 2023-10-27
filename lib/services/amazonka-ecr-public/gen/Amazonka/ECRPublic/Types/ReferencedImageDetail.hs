@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECRPublic.Types.ReferencedImageDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECRPublic.Types.ReferencedImageDetail where
@@ -136,7 +136,8 @@ instance Data.FromJSON ReferencedImageDetail where
 
 instance Prelude.Hashable ReferencedImageDetail where
   hashWithSalt _salt ReferencedImageDetail' {..} =
-    _salt `Prelude.hashWithSalt` artifactMediaType
+    _salt
+      `Prelude.hashWithSalt` artifactMediaType
       `Prelude.hashWithSalt` imageDigest
       `Prelude.hashWithSalt` imageManifestMediaType
       `Prelude.hashWithSalt` imagePushedAt

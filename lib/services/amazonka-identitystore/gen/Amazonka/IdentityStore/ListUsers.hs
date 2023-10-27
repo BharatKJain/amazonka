@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IdentityStore.ListUsers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,17 +148,19 @@ instance Core.AWSPager ListUsers where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listUsersResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listUsersResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop (rs Lens.^. listUsersResponse_users) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listUsers_nextToken
           Lens..~ rs
-          Lens.^? listUsersResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listUsersResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListUsers where
   type AWSResponse ListUsers = ListUsersResponse
@@ -175,7 +177,8 @@ instance Core.AWSRequest ListUsers where
 
 instance Prelude.Hashable ListUsers where
   hashWithSalt _salt ListUsers' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` identityStoreId

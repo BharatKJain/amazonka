@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.MediaStreamSourceConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.MediaStreamSourceConfiguration where
@@ -99,7 +99,8 @@ instance Data.FromJSON MediaStreamSourceConfiguration where
       "MediaStreamSourceConfiguration"
       ( \x ->
           MediaStreamSourceConfiguration'
-            Prelude.<$> ( x Data..:? "inputConfigurations"
+            Prelude.<$> ( x
+                            Data..:? "inputConfigurations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "mediaStreamName")
@@ -113,7 +114,8 @@ instance
   hashWithSalt
     _salt
     MediaStreamSourceConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` inputConfigurations
+      _salt
+        `Prelude.hashWithSalt` inputConfigurations
         `Prelude.hashWithSalt` mediaStreamName
         `Prelude.hashWithSalt` encodingName
 

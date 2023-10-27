@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PinpointSmsVoiceV2.Types.KeywordInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PinpointSmsVoiceV2.Types.KeywordInformation where
@@ -94,7 +94,8 @@ instance Data.FromJSON KeywordInformation where
 
 instance Prelude.Hashable KeywordInformation where
   hashWithSalt _salt KeywordInformation' {..} =
-    _salt `Prelude.hashWithSalt` keyword
+    _salt
+      `Prelude.hashWithSalt` keyword
       `Prelude.hashWithSalt` keywordMessage
       `Prelude.hashWithSalt` keywordAction
 

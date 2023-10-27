@@ -16,7 +16,7 @@
 -- Module      : Amazonka.S3Outposts.ListSharedEndpoints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,22 +114,22 @@ instance Core.AWSPager ListSharedEndpoints where
     | Core.stop
         ( rs
             Lens.^? listSharedEndpointsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listSharedEndpointsResponse_endpoints
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSharedEndpoints_nextToken
           Lens..~ rs
           Lens.^? listSharedEndpointsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListSharedEndpoints where
   type
@@ -148,7 +148,8 @@ instance Core.AWSRequest ListSharedEndpoints where
 
 instance Prelude.Hashable ListSharedEndpoints where
   hashWithSalt _salt ListSharedEndpoints' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` outpostId
 

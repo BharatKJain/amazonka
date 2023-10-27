@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.DataConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.DataConfig where
@@ -89,7 +89,8 @@ instance Data.FromJSON DataConfig where
 
 instance Prelude.Hashable DataConfig where
   hashWithSalt _salt DataConfig' {..} =
-    _salt `Prelude.hashWithSalt` additionalDatasets
+    _salt
+      `Prelude.hashWithSalt` additionalDatasets
       `Prelude.hashWithSalt` attributeConfigs
       `Prelude.hashWithSalt` datasetGroupArn
 

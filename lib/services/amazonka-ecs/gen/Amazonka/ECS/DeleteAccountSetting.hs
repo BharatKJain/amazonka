@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECS.DeleteAccountSetting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -140,7 +140,8 @@ instance Core.AWSRequest DeleteAccountSetting where
 
 instance Prelude.Hashable DeleteAccountSetting where
   hashWithSalt _salt DeleteAccountSetting' {..} =
-    _salt `Prelude.hashWithSalt` principalArn
+    _salt
+      `Prelude.hashWithSalt` principalArn
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData DeleteAccountSetting where

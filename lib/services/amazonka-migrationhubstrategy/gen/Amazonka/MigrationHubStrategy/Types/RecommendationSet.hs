@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.RecommendationSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.RecommendationSet where
@@ -87,7 +87,8 @@ instance Data.FromJSON RecommendationSet where
 
 instance Prelude.Hashable RecommendationSet where
   hashWithSalt _salt RecommendationSet' {..} =
-    _salt `Prelude.hashWithSalt` strategy
+    _salt
+      `Prelude.hashWithSalt` strategy
       `Prelude.hashWithSalt` targetDestination
       `Prelude.hashWithSalt` transformationTool
 

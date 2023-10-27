@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.StatefulEngineOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.StatefulEngineOptions where
@@ -140,7 +140,8 @@ instance Data.FromJSON StatefulEngineOptions where
 
 instance Prelude.Hashable StatefulEngineOptions where
   hashWithSalt _salt StatefulEngineOptions' {..} =
-    _salt `Prelude.hashWithSalt` ruleOrder
+    _salt
+      `Prelude.hashWithSalt` ruleOrder
       `Prelude.hashWithSalt` streamExceptionPolicy
 
 instance Prelude.NFData StatefulEngineOptions where

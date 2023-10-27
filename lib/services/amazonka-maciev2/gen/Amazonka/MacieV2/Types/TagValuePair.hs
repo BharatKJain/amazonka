@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.TagValuePair
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.TagValuePair where
@@ -78,12 +78,14 @@ instance Data.FromJSON TagValuePair where
       "TagValuePair"
       ( \x ->
           TagValuePair'
-            Prelude.<$> (x Data..:? "key") Prelude.<*> (x Data..:? "value")
+            Prelude.<$> (x Data..:? "key")
+            Prelude.<*> (x Data..:? "value")
       )
 
 instance Prelude.Hashable TagValuePair where
   hashWithSalt _salt TagValuePair' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData TagValuePair where

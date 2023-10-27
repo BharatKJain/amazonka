@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Rekognition.DescribeStreamProcessor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest DescribeStreamProcessor where
             Prelude.<*> (x Data..?> "Name")
             Prelude.<*> (x Data..?> "NotificationChannel")
             Prelude.<*> (x Data..?> "Output")
-            Prelude.<*> ( x Data..?> "RegionsOfInterest"
+            Prelude.<*> ( x
+                            Data..?> "RegionsOfInterest"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "RoleArn")

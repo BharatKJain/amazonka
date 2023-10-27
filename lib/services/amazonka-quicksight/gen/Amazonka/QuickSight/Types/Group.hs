@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.Group
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.Group where
@@ -95,7 +95,8 @@ instance Data.FromJSON Group where
 
 instance Prelude.Hashable Group where
   hashWithSalt _salt Group' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` groupName
       `Prelude.hashWithSalt` principalId

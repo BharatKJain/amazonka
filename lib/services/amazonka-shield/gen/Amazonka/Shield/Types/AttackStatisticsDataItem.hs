@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Shield.Types.AttackStatisticsDataItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Shield.Types.AttackStatisticsDataItem where
@@ -86,7 +86,8 @@ instance Data.FromJSON AttackStatisticsDataItem where
 
 instance Prelude.Hashable AttackStatisticsDataItem where
   hashWithSalt _salt AttackStatisticsDataItem' {..} =
-    _salt `Prelude.hashWithSalt` attackVolume
+    _salt
+      `Prelude.hashWithSalt` attackVolume
       `Prelude.hashWithSalt` attackCount
 
 instance Prelude.NFData AttackStatisticsDataItem where

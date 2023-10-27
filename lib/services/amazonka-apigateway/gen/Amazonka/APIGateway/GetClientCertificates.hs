@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.GetClientCertificates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,22 +98,22 @@ instance Core.AWSPager GetClientCertificates where
     | Core.stop
         ( rs
             Lens.^? getClientCertificatesResponse_position
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getClientCertificatesResponse_items
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getClientCertificates_position
           Lens..~ rs
           Lens.^? getClientCertificatesResponse_position
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetClientCertificates where
   type
@@ -132,7 +132,8 @@ instance Core.AWSRequest GetClientCertificates where
 
 instance Prelude.Hashable GetClientCertificates where
   hashWithSalt _salt GetClientCertificates' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` position
 
 instance Prelude.NFData GetClientCertificates where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FIS.Types.TargetResourceType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FIS.Types.TargetResourceType where
@@ -85,7 +85,8 @@ instance Data.FromJSON TargetResourceType where
 
 instance Prelude.Hashable TargetResourceType where
   hashWithSalt _salt TargetResourceType' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` resourceType
 

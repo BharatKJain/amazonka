@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppRunner.Types.IngressVpcConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppRunner.Types.IngressVpcConfiguration where
@@ -77,7 +77,8 @@ instance Data.FromJSON IngressVpcConfiguration where
 
 instance Prelude.Hashable IngressVpcConfiguration where
   hashWithSalt _salt IngressVpcConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` vpcEndpointId
+    _salt
+      `Prelude.hashWithSalt` vpcEndpointId
       `Prelude.hashWithSalt` vpcId
 
 instance Prelude.NFData IngressVpcConfiguration where

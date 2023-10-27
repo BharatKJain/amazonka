@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pi.Types.DimensionKeyDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pi.Types.DimensionKeyDetail where
@@ -151,7 +151,8 @@ instance Data.FromJSON DimensionKeyDetail where
 
 instance Prelude.Hashable DimensionKeyDetail where
   hashWithSalt _salt DimensionKeyDetail' {..} =
-    _salt `Prelude.hashWithSalt` dimension
+    _salt
+      `Prelude.hashWithSalt` dimension
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` value
 

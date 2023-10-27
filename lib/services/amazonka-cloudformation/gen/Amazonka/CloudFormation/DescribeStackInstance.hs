@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFormation.DescribeStackInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -185,7 +185,8 @@ instance Core.AWSRequest DescribeStackInstance where
 
 instance Prelude.Hashable DescribeStackInstance where
   hashWithSalt _salt DescribeStackInstance' {..} =
-    _salt `Prelude.hashWithSalt` callAs
+    _salt
+      `Prelude.hashWithSalt` callAs
       `Prelude.hashWithSalt` stackSetName
       `Prelude.hashWithSalt` stackInstanceAccount
       `Prelude.hashWithSalt` stackInstanceRegion

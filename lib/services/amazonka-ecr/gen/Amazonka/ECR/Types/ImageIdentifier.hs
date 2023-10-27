@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECR.Types.ImageIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECR.Types.ImageIdentifier where
@@ -75,7 +75,8 @@ instance Data.FromJSON ImageIdentifier where
 
 instance Prelude.Hashable ImageIdentifier where
   hashWithSalt _salt ImageIdentifier' {..} =
-    _salt `Prelude.hashWithSalt` imageDigest
+    _salt
+      `Prelude.hashWithSalt` imageDigest
       `Prelude.hashWithSalt` imageTag
 
 instance Prelude.NFData ImageIdentifier where

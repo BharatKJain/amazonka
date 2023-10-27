@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.ListMonitoringSchedules
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -236,21 +236,21 @@ instance Core.AWSPager ListMonitoringSchedules where
     | Core.stop
         ( rs
             Lens.^? listMonitoringSchedulesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listMonitoringSchedulesResponse_monitoringScheduleSummaries
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listMonitoringSchedules_nextToken
           Lens..~ rs
           Lens.^? listMonitoringSchedulesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListMonitoringSchedules where
   type
@@ -264,14 +264,16 @@ instance Core.AWSRequest ListMonitoringSchedules where
           ListMonitoringSchedulesResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "MonitoringScheduleSummaries"
+            Prelude.<*> ( x
+                            Data..?> "MonitoringScheduleSummaries"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListMonitoringSchedules where
   hashWithSalt _salt ListMonitoringSchedules' {..} =
-    _salt `Prelude.hashWithSalt` creationTimeAfter
+    _salt
+      `Prelude.hashWithSalt` creationTimeAfter
       `Prelude.hashWithSalt` creationTimeBefore
       `Prelude.hashWithSalt` endpointName
       `Prelude.hashWithSalt` lastModifiedTimeAfter

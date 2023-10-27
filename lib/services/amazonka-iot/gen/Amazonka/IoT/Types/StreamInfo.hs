@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.StreamInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.StreamInfo where
@@ -135,7 +135,8 @@ instance Data.FromJSON StreamInfo where
 
 instance Prelude.Hashable StreamInfo where
   hashWithSalt _salt StreamInfo' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` files
       `Prelude.hashWithSalt` lastUpdatedAt

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.KPIFieldWells
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.KPIFieldWells where
@@ -86,7 +86,8 @@ instance Data.FromJSON KPIFieldWells where
 
 instance Prelude.Hashable KPIFieldWells where
   hashWithSalt _salt KPIFieldWells' {..} =
-    _salt `Prelude.hashWithSalt` targetValues
+    _salt
+      `Prelude.hashWithSalt` targetValues
       `Prelude.hashWithSalt` trendGroups
       `Prelude.hashWithSalt` values
 

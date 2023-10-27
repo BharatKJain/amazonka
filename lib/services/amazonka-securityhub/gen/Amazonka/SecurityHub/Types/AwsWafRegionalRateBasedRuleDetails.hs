@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsWafRegionalRateBasedRuleDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsWafRegionalRateBasedRuleDetails where
@@ -127,7 +127,8 @@ instance
       "AwsWafRegionalRateBasedRuleDetails"
       ( \x ->
           AwsWafRegionalRateBasedRuleDetails'
-            Prelude.<$> ( x Data..:? "MatchPredicates"
+            Prelude.<$> ( x
+                            Data..:? "MatchPredicates"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "MetricName")
@@ -144,7 +145,8 @@ instance
   hashWithSalt
     _salt
     AwsWafRegionalRateBasedRuleDetails' {..} =
-      _salt `Prelude.hashWithSalt` matchPredicates
+      _salt
+        `Prelude.hashWithSalt` matchPredicates
         `Prelude.hashWithSalt` metricName
         `Prelude.hashWithSalt` name
         `Prelude.hashWithSalt` rateKey

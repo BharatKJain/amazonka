@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SESV2.SendBulkEmail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -272,14 +272,16 @@ instance Core.AWSRequest SendBulkEmail where
       ( \s h x ->
           SendBulkEmailResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "BulkEmailEntryResults"
+            Prelude.<*> ( x
+                            Data..?> "BulkEmailEntryResults"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable SendBulkEmail where
   hashWithSalt _salt SendBulkEmail' {..} =
-    _salt `Prelude.hashWithSalt` configurationSetName
+    _salt
+      `Prelude.hashWithSalt` configurationSetName
       `Prelude.hashWithSalt` defaultEmailTags
       `Prelude.hashWithSalt` feedbackForwardingEmailAddress
       `Prelude.hashWithSalt` feedbackForwardingEmailAddressIdentityArn

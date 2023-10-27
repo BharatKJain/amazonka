@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.Limits
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.Limits where
@@ -83,7 +83,8 @@ instance Data.FromJSON Limits where
       "Limits"
       ( \x ->
           Limits'
-            Prelude.<$> ( x Data..:? "AdditionalLimits"
+            Prelude.<$> ( x
+                            Data..:? "AdditionalLimits"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "InstanceLimits")
@@ -92,7 +93,8 @@ instance Data.FromJSON Limits where
 
 instance Prelude.Hashable Limits where
   hashWithSalt _salt Limits' {..} =
-    _salt `Prelude.hashWithSalt` additionalLimits
+    _salt
+      `Prelude.hashWithSalt` additionalLimits
       `Prelude.hashWithSalt` instanceLimits
       `Prelude.hashWithSalt` storageTypes
 

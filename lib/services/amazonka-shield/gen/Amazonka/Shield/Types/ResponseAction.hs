@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Shield.Types.ResponseAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Shield.Types.ResponseAction where
@@ -100,7 +100,8 @@ instance Data.FromJSON ResponseAction where
 
 instance Prelude.Hashable ResponseAction where
   hashWithSalt _salt ResponseAction' {..} =
-    _salt `Prelude.hashWithSalt` block
+    _salt
+      `Prelude.hashWithSalt` block
       `Prelude.hashWithSalt` count
 
 instance Prelude.NFData ResponseAction where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.RecommendationExportJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.RecommendationExportJob where
@@ -135,7 +135,8 @@ instance Data.FromJSON RecommendationExportJob where
 
 instance Prelude.Hashable RecommendationExportJob where
   hashWithSalt _salt RecommendationExportJob' {..} =
-    _salt `Prelude.hashWithSalt` creationTimestamp
+    _salt
+      `Prelude.hashWithSalt` creationTimestamp
       `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` jobId

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.DeleteAccessKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,7 +130,8 @@ instance Core.AWSRequest DeleteAccessKey where
 
 instance Prelude.Hashable DeleteAccessKey where
   hashWithSalt _salt DeleteAccessKey' {..} =
-    _salt `Prelude.hashWithSalt` userName
+    _salt
+      `Prelude.hashWithSalt` userName
       `Prelude.hashWithSalt` accessKeyId
 
 instance Prelude.NFData DeleteAccessKey where

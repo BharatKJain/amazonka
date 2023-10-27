@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.Scte35TimeSignalApos
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.Scte35TimeSignalApos where
@@ -99,7 +99,8 @@ instance Data.FromJSON Scte35TimeSignalApos where
 
 instance Prelude.Hashable Scte35TimeSignalApos where
   hashWithSalt _salt Scte35TimeSignalApos' {..} =
-    _salt `Prelude.hashWithSalt` adAvailOffset
+    _salt
+      `Prelude.hashWithSalt` adAvailOffset
       `Prelude.hashWithSalt` noRegionalBlackoutFlag
       `Prelude.hashWithSalt` webDeliveryAllowedFlag
 

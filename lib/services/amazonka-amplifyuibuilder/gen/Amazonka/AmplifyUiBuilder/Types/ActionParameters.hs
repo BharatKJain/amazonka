@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.ActionParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.ActionParameters where
@@ -174,7 +174,8 @@ instance Data.FromJSON ActionParameters where
 
 instance Prelude.Hashable ActionParameters where
   hashWithSalt _salt ActionParameters' {..} =
-    _salt `Prelude.hashWithSalt` anchor
+    _salt
+      `Prelude.hashWithSalt` anchor
       `Prelude.hashWithSalt` fields
       `Prelude.hashWithSalt` global
       `Prelude.hashWithSalt` id

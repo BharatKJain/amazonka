@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InternetGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InternetGateway where
@@ -91,18 +91,23 @@ internetGateway_internetGatewayId = Lens.lens (\InternetGateway' {internetGatewa
 instance Data.FromXML InternetGateway where
   parseXML x =
     InternetGateway'
-      Prelude.<$> ( x Data..@? "attachmentSet" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "attachmentSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "ownerId")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@ "internetGatewayId")
 
 instance Prelude.Hashable InternetGateway where
   hashWithSalt _salt InternetGateway' {..} =
-    _salt `Prelude.hashWithSalt` attachments
+    _salt
+      `Prelude.hashWithSalt` attachments
       `Prelude.hashWithSalt` ownerId
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` internetGatewayId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.HealthLake.Types.ImportJobProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.HealthLake.Types.ImportJobProperties where
@@ -185,7 +185,8 @@ instance Data.FromJSON ImportJobProperties where
 
 instance Prelude.Hashable ImportJobProperties where
   hashWithSalt _salt ImportJobProperties' {..} =
-    _salt `Prelude.hashWithSalt` dataAccessRoleArn
+    _salt
+      `Prelude.hashWithSalt` dataAccessRoleArn
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` jobOutputDataConfig

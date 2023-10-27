@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.FrameworkMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.FrameworkMetadata where
@@ -98,7 +98,8 @@ instance Data.FromJSON FrameworkMetadata where
 
 instance Prelude.Hashable FrameworkMetadata where
   hashWithSalt _salt FrameworkMetadata' {..} =
-    _salt `Prelude.hashWithSalt` complianceType
+    _salt
+      `Prelude.hashWithSalt` complianceType
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` logo
       `Prelude.hashWithSalt` name

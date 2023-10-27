@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.TagOptionDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.TagOptionDetail where
@@ -107,7 +107,8 @@ instance Data.FromJSON TagOptionDetail where
 
 instance Prelude.Hashable TagOptionDetail where
   hashWithSalt _salt TagOptionDetail' {..} =
-    _salt `Prelude.hashWithSalt` active
+    _salt
+      `Prelude.hashWithSalt` active
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` owner

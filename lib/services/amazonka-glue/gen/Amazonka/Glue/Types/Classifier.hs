@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Classifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Classifier where
@@ -108,7 +108,8 @@ instance Data.FromJSON Classifier where
 
 instance Prelude.Hashable Classifier where
   hashWithSalt _salt Classifier' {..} =
-    _salt `Prelude.hashWithSalt` csvClassifier
+    _salt
+      `Prelude.hashWithSalt` csvClassifier
       `Prelude.hashWithSalt` grokClassifier
       `Prelude.hashWithSalt` jsonClassifier
       `Prelude.hashWithSalt` xMLClassifier

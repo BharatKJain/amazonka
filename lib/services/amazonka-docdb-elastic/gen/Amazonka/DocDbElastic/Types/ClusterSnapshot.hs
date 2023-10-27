@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DocDbElastic.Types.ClusterSnapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DocDbElastic.Types.ClusterSnapshot where
@@ -183,14 +183,16 @@ instance Data.FromJSON ClusterSnapshot where
             Prelude.<*> (x Data..: "snapshotName")
             Prelude.<*> (x Data..: "status")
             Prelude.<*> (x Data..:? "subnetIds" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "vpcSecurityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "vpcSecurityGroupIds"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ClusterSnapshot where
   hashWithSalt _salt ClusterSnapshot' {..} =
-    _salt `Prelude.hashWithSalt` adminUserName
+    _salt
+      `Prelude.hashWithSalt` adminUserName
       `Prelude.hashWithSalt` clusterArn
       `Prelude.hashWithSalt` clusterCreationTime
       `Prelude.hashWithSalt` kmsKeyId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.ItemizedMetricStats
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.ItemizedMetricStats where
@@ -74,7 +74,8 @@ instance Data.FromJSON ItemizedMetricStats where
 
 instance Prelude.Hashable ItemizedMetricStats where
   hashWithSalt _salt ItemizedMetricStats' {..} =
-    _salt `Prelude.hashWithSalt` metricName
+    _salt
+      `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` occurrenceCount
 
 instance Prelude.NFData ItemizedMetricStats where

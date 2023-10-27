@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticSearch.UpgradeElasticsearchDomain
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -53,7 +53,7 @@ import qualified Amazonka.Prelude as Prelude
 import qualified Amazonka.Request as Request
 import qualified Amazonka.Response as Response
 
--- | Container for request parameters to @ UpgradeElasticsearchDomain @
+-- | Container for request parameters to @ @@UpgradeElasticsearchDomain@@ @
 -- operation.
 --
 -- /See:/ 'newUpgradeElasticsearchDomain' smart constructor.
@@ -129,7 +129,8 @@ instance Core.AWSRequest UpgradeElasticsearchDomain where
 
 instance Prelude.Hashable UpgradeElasticsearchDomain where
   hashWithSalt _salt UpgradeElasticsearchDomain' {..} =
-    _salt `Prelude.hashWithSalt` performCheckOnly
+    _salt
+      `Prelude.hashWithSalt` performCheckOnly
       `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` targetVersion
 
@@ -160,7 +161,7 @@ instance Data.ToPath UpgradeElasticsearchDomain where
 instance Data.ToQuery UpgradeElasticsearchDomain where
   toQuery = Prelude.const Prelude.mempty
 
--- | Container for response returned by @ UpgradeElasticsearchDomain @
+-- | Container for response returned by @ @@UpgradeElasticsearchDomain@@ @
 -- operation.
 --
 -- /See:/ 'newUpgradeElasticsearchDomainResponse' smart constructor.

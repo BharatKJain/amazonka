@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.PhysicalTable
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.PhysicalTable where
@@ -89,7 +89,8 @@ instance Data.FromJSON PhysicalTable where
 
 instance Prelude.Hashable PhysicalTable where
   hashWithSalt _salt PhysicalTable' {..} =
-    _salt `Prelude.hashWithSalt` customSql
+    _salt
+      `Prelude.hashWithSalt` customSql
       `Prelude.hashWithSalt` relationalTable
       `Prelude.hashWithSalt` s3Source
 

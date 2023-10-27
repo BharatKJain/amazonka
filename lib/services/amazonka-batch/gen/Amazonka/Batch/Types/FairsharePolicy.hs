@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.FairsharePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.FairsharePolicy where
@@ -32,8 +32,9 @@ data FairsharePolicy = FairsharePolicy'
   { -- | A value used to reserve some of the available maximum vCPU for fair
     -- share identifiers that aren\'t already used.
     --
-    -- The reserved ratio is @(computeReservation\/100)^ActiveFairShares @
-    -- where @ ActiveFairShares @ is the number of active fair share
+    -- The reserved ratio is
+    -- @(@/@computeReservation@/@\/100)^@/@ActiveFairShares@/@ @ where
+    -- @ @/@ActiveFairShares@/@ @ is the number of active fair share
     -- identifiers.
     --
     -- For example, a @computeReservation@ value of 50 indicates that
@@ -71,8 +72,9 @@ data FairsharePolicy = FairsharePolicy'
 -- 'computeReservation', 'fairsharePolicy_computeReservation' - A value used to reserve some of the available maximum vCPU for fair
 -- share identifiers that aren\'t already used.
 --
--- The reserved ratio is @(computeReservation\/100)^ActiveFairShares @
--- where @ ActiveFairShares @ is the number of active fair share
+-- The reserved ratio is
+-- @(@/@computeReservation@/@\/100)^@/@ActiveFairShares@/@ @ where
+-- @ @/@ActiveFairShares@/@ @ is the number of active fair share
 -- identifiers.
 --
 -- For example, a @computeReservation@ value of 50 indicates that
@@ -108,8 +110,9 @@ newFairsharePolicy =
 -- | A value used to reserve some of the available maximum vCPU for fair
 -- share identifiers that aren\'t already used.
 --
--- The reserved ratio is @(computeReservation\/100)^ActiveFairShares @
--- where @ ActiveFairShares @ is the number of active fair share
+-- The reserved ratio is
+-- @(@/@computeReservation@/@\/100)^@/@ActiveFairShares@/@ @ where
+-- @ @/@ActiveFairShares@/@ @ is the number of active fair share
 -- identifiers.
 --
 -- For example, a @computeReservation@ value of 50 indicates that
@@ -147,14 +150,16 @@ instance Data.FromJSON FairsharePolicy where
           FairsharePolicy'
             Prelude.<$> (x Data..:? "computeReservation")
             Prelude.<*> (x Data..:? "shareDecaySeconds")
-            Prelude.<*> ( x Data..:? "shareDistribution"
+            Prelude.<*> ( x
+                            Data..:? "shareDistribution"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable FairsharePolicy where
   hashWithSalt _salt FairsharePolicy' {..} =
-    _salt `Prelude.hashWithSalt` computeReservation
+    _salt
+      `Prelude.hashWithSalt` computeReservation
       `Prelude.hashWithSalt` shareDecaySeconds
       `Prelude.hashWithSalt` shareDistribution
 

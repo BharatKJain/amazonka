@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.BatchUpdatePartitionFailureEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.BatchUpdatePartitionFailureEntry where
@@ -74,7 +74,8 @@ instance
       ( \x ->
           BatchUpdatePartitionFailureEntry'
             Prelude.<$> (x Data..:? "ErrorDetail")
-            Prelude.<*> ( x Data..:? "PartitionValueList"
+            Prelude.<*> ( x
+                            Data..:? "PartitionValueList"
                             Data..!= Prelude.mempty
                         )
       )
@@ -86,7 +87,8 @@ instance
   hashWithSalt
     _salt
     BatchUpdatePartitionFailureEntry' {..} =
-      _salt `Prelude.hashWithSalt` errorDetail
+      _salt
+        `Prelude.hashWithSalt` errorDetail
         `Prelude.hashWithSalt` partitionValueList
 
 instance

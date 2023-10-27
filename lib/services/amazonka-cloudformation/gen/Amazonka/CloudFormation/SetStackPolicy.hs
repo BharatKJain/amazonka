@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFormation.SetStackPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest SetStackPolicy where
 
 instance Prelude.Hashable SetStackPolicy where
   hashWithSalt _salt SetStackPolicy' {..} =
-    _salt `Prelude.hashWithSalt` stackPolicyBody
+    _salt
+      `Prelude.hashWithSalt` stackPolicyBody
       `Prelude.hashWithSalt` stackPolicyURL
       `Prelude.hashWithSalt` stackName
 

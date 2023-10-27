@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppRunner.Types.AuthenticationConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppRunner.Types.AuthenticationConfiguration where
@@ -88,7 +88,8 @@ instance Data.FromJSON AuthenticationConfiguration where
 
 instance Prelude.Hashable AuthenticationConfiguration where
   hashWithSalt _salt AuthenticationConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` accessRoleArn
+    _salt
+      `Prelude.hashWithSalt` accessRoleArn
       `Prelude.hashWithSalt` connectionArn
 
 instance Prelude.NFData AuthenticationConfiguration where

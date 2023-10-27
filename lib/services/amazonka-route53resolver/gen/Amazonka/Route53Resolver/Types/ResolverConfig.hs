@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53Resolver.Types.ResolverConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53Resolver.Types.ResolverConfig where
@@ -148,7 +148,8 @@ instance Data.FromJSON ResolverConfig where
 
 instance Prelude.Hashable ResolverConfig where
   hashWithSalt _salt ResolverConfig' {..} =
-    _salt `Prelude.hashWithSalt` autodefinedReverse
+    _salt
+      `Prelude.hashWithSalt` autodefinedReverse
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` ownerId
       `Prelude.hashWithSalt` resourceId

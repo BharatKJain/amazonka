@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeArtifact.GetAuthorizationToken
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -156,7 +156,8 @@ instance Core.AWSRequest GetAuthorizationToken where
 
 instance Prelude.Hashable GetAuthorizationToken where
   hashWithSalt _salt GetAuthorizationToken' {..} =
-    _salt `Prelude.hashWithSalt` domainOwner
+    _salt
+      `Prelude.hashWithSalt` domainOwner
       `Prelude.hashWithSalt` durationSeconds
       `Prelude.hashWithSalt` domain
 

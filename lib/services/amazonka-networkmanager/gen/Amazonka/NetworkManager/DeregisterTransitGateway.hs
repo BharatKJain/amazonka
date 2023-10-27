@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkManager.DeregisterTransitGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest DeregisterTransitGateway where
 
 instance Prelude.Hashable DeregisterTransitGateway where
   hashWithSalt _salt DeregisterTransitGateway' {..} =
-    _salt `Prelude.hashWithSalt` globalNetworkId
+    _salt
+      `Prelude.hashWithSalt` globalNetworkId
       `Prelude.hashWithSalt` transitGatewayArn
 
 instance Prelude.NFData DeregisterTransitGateway where

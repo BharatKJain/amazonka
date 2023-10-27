@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.UpdateContributorInsights
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,7 +129,8 @@ instance Core.AWSRequest UpdateContributorInsights where
 
 instance Prelude.Hashable UpdateContributorInsights where
   hashWithSalt _salt UpdateContributorInsights' {..} =
-    _salt `Prelude.hashWithSalt` indexName
+    _salt
+      `Prelude.hashWithSalt` indexName
       `Prelude.hashWithSalt` tableName
       `Prelude.hashWithSalt` contributorInsightsAction
 

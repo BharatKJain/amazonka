@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Proton.Types.ResourceSyncAttempt
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Proton.Types.ResourceSyncAttempt where
@@ -133,7 +133,8 @@ instance Data.FromJSON ResourceSyncAttempt where
 
 instance Prelude.Hashable ResourceSyncAttempt where
   hashWithSalt _salt ResourceSyncAttempt' {..} =
-    _salt `Prelude.hashWithSalt` events
+    _salt
+      `Prelude.hashWithSalt` events
       `Prelude.hashWithSalt` initialRevision
       `Prelude.hashWithSalt` startedAt
       `Prelude.hashWithSalt` status

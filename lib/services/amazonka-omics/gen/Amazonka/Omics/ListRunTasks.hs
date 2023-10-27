@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Omics.ListRunTasks
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,20 +116,23 @@ instance Core.AWSPager ListRunTasks where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listRunTasksResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listRunTasksResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listRunTasksResponse_items Prelude.. Lens._Just
+            Lens.^? listRunTasksResponse_items
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listRunTasks_startingToken
           Lens..~ rs
-          Lens.^? listRunTasksResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listRunTasksResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListRunTasks where
   type AWSResponse ListRunTasks = ListRunTasksResponse
@@ -146,7 +149,8 @@ instance Core.AWSRequest ListRunTasks where
 
 instance Prelude.Hashable ListRunTasks where
   hashWithSalt _salt ListRunTasks' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` startingToken
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` id

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Panorama.DescribeDevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,7 +103,8 @@ instance Core.AWSRequest DescribeDevice where
     Response.receiveJSON
       ( \s h x ->
           DescribeDeviceResponse'
-            Prelude.<$> ( x Data..?> "AlternateSoftwares"
+            Prelude.<$> ( x
+                            Data..?> "AlternateSoftwares"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "Arn")

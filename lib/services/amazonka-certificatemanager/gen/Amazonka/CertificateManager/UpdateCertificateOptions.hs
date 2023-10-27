@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CertificateManager.UpdateCertificateOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -51,7 +51,7 @@ import qualified Amazonka.Response as Response
 data UpdateCertificateOptions = UpdateCertificateOptions'
   { -- | ARN of the requested certificate to update. This must be of the form:
     --
-    -- @arn:aws:acm:us-east-1:account:certificate\/12345678-1234-1234-1234-123456789012 @
+    -- @arn:aws:acm:us-east-1:@/@account@/@:certificate\/@/@12345678-1234-1234-1234-123456789012@/@ @
     certificateArn :: Prelude.Text,
     -- | Use to update the options for your certificate. Currently, you can
     -- specify whether to add your certificate to a transparency log.
@@ -73,7 +73,7 @@ data UpdateCertificateOptions = UpdateCertificateOptions'
 --
 -- 'certificateArn', 'updateCertificateOptions_certificateArn' - ARN of the requested certificate to update. This must be of the form:
 --
--- @arn:aws:acm:us-east-1:account:certificate\/12345678-1234-1234-1234-123456789012 @
+-- @arn:aws:acm:us-east-1:@/@account@/@:certificate\/@/@12345678-1234-1234-1234-123456789012@/@ @
 --
 -- 'options', 'updateCertificateOptions_options' - Use to update the options for your certificate. Currently, you can
 -- specify whether to add your certificate to a transparency log.
@@ -98,7 +98,7 @@ newUpdateCertificateOptions
 
 -- | ARN of the requested certificate to update. This must be of the form:
 --
--- @arn:aws:acm:us-east-1:account:certificate\/12345678-1234-1234-1234-123456789012 @
+-- @arn:aws:acm:us-east-1:@/@account@/@:certificate\/@/@12345678-1234-1234-1234-123456789012@/@ @
 updateCertificateOptions_certificateArn :: Lens.Lens' UpdateCertificateOptions Prelude.Text
 updateCertificateOptions_certificateArn = Lens.lens (\UpdateCertificateOptions' {certificateArn} -> certificateArn) (\s@UpdateCertificateOptions' {} a -> s {certificateArn = a} :: UpdateCertificateOptions)
 
@@ -123,7 +123,8 @@ instance Core.AWSRequest UpdateCertificateOptions where
 
 instance Prelude.Hashable UpdateCertificateOptions where
   hashWithSalt _salt UpdateCertificateOptions' {..} =
-    _salt `Prelude.hashWithSalt` certificateArn
+    _salt
+      `Prelude.hashWithSalt` certificateArn
       `Prelude.hashWithSalt` options
 
 instance Prelude.NFData UpdateCertificateOptions where

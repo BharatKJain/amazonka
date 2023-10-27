@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MachineLearning.Types.RedshiftDatabaseCredentials
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MachineLearning.Types.RedshiftDatabaseCredentials where
@@ -67,7 +67,8 @@ redshiftDatabaseCredentials_password = Lens.lens (\RedshiftDatabaseCredentials' 
 
 instance Prelude.Hashable RedshiftDatabaseCredentials where
   hashWithSalt _salt RedshiftDatabaseCredentials' {..} =
-    _salt `Prelude.hashWithSalt` username
+    _salt
+      `Prelude.hashWithSalt` username
       `Prelude.hashWithSalt` password
 
 instance Prelude.NFData RedshiftDatabaseCredentials where

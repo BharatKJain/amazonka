@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkMail.UpdateMailboxQuota
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest UpdateMailboxQuota where
 
 instance Prelude.Hashable UpdateMailboxQuota where
   hashWithSalt _salt UpdateMailboxQuota' {..} =
-    _salt `Prelude.hashWithSalt` organizationId
+    _salt
+      `Prelude.hashWithSalt` organizationId
       `Prelude.hashWithSalt` userId
       `Prelude.hashWithSalt` mailboxQuota
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ModifyInstanceMetadataOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -262,7 +262,8 @@ instance
     ModifyInstanceMetadataOptions
   where
   hashWithSalt _salt ModifyInstanceMetadataOptions' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` httpEndpoint
       `Prelude.hashWithSalt` httpProtocolIpv6
       `Prelude.hashWithSalt` httpPutResponseHopLimit

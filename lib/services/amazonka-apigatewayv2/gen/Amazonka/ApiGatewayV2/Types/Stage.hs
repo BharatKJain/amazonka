@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApiGatewayV2.Types.Stage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApiGatewayV2.Types.Stage where
@@ -225,7 +225,8 @@ instance Data.FromJSON Stage where
 
 instance Prelude.Hashable Stage where
   hashWithSalt _salt Stage' {..} =
-    _salt `Prelude.hashWithSalt` accessLogSettings
+    _salt
+      `Prelude.hashWithSalt` accessLogSettings
       `Prelude.hashWithSalt` apiGatewayManaged
       `Prelude.hashWithSalt` autoDeploy
       `Prelude.hashWithSalt` clientCertificateId

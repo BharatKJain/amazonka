@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.DescribeInstanceRefreshes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -155,7 +155,8 @@ instance Core.AWSRequest DescribeInstanceRefreshes where
       "DescribeInstanceRefreshesResult"
       ( \s h x ->
           DescribeInstanceRefreshesResponse'
-            Prelude.<$> ( x Data..@? "InstanceRefreshes"
+            Prelude.<$> ( x
+                            Data..@? "InstanceRefreshes"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
@@ -165,7 +166,8 @@ instance Core.AWSRequest DescribeInstanceRefreshes where
 
 instance Prelude.Hashable DescribeInstanceRefreshes where
   hashWithSalt _salt DescribeInstanceRefreshes' {..} =
-    _salt `Prelude.hashWithSalt` instanceRefreshIds
+    _salt
+      `Prelude.hashWithSalt` instanceRefreshIds
       `Prelude.hashWithSalt` maxRecords
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` autoScalingGroupName

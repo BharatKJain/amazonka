@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFRegional.Types.ByteMatchSetSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFRegional.Types.ByteMatchSetSummary where
@@ -110,7 +110,8 @@ instance Data.FromJSON ByteMatchSetSummary where
 
 instance Prelude.Hashable ByteMatchSetSummary where
   hashWithSalt _salt ByteMatchSetSummary' {..} =
-    _salt `Prelude.hashWithSalt` byteMatchSetId
+    _salt
+      `Prelude.hashWithSalt` byteMatchSetId
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData ByteMatchSetSummary where

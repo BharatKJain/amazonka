@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudSearch.Types.DomainStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudSearch.Types.DomainStatus where
@@ -217,7 +217,8 @@ instance Data.FromXML DomainStatus where
 
 instance Prelude.Hashable DomainStatus where
   hashWithSalt _salt DomainStatus' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` created
       `Prelude.hashWithSalt` deleted
       `Prelude.hashWithSalt` docService

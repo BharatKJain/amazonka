@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.ResponseOutputItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.ResponseOutputItem where
@@ -122,7 +122,8 @@ instance Data.FromJSON ResponseOutputItem where
 
 instance Prelude.Hashable ResponseOutputItem where
   hashWithSalt _salt ResponseOutputItem' {..} =
-    _salt `Prelude.hashWithSalt` dashPlaylistSettings
+    _salt
+      `Prelude.hashWithSalt` dashPlaylistSettings
       `Prelude.hashWithSalt` hlsPlaylistSettings
       `Prelude.hashWithSalt` manifestName
       `Prelude.hashWithSalt` playbackUrl

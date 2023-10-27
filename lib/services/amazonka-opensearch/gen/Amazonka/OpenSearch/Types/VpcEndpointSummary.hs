@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.VpcEndpointSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.VpcEndpointSummary where
@@ -99,7 +99,8 @@ instance Data.FromJSON VpcEndpointSummary where
 
 instance Prelude.Hashable VpcEndpointSummary where
   hashWithSalt _salt VpcEndpointSummary' {..} =
-    _salt `Prelude.hashWithSalt` domainArn
+    _salt
+      `Prelude.hashWithSalt` domainArn
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` vpcEndpointId
       `Prelude.hashWithSalt` vpcEndpointOwner

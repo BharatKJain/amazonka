@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.RecommendationMetrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.RecommendationMetrics where
@@ -109,7 +109,8 @@ instance Data.FromJSON RecommendationMetrics where
 
 instance Prelude.Hashable RecommendationMetrics where
   hashWithSalt _salt RecommendationMetrics' {..} =
-    _salt `Prelude.hashWithSalt` costPerHour
+    _salt
+      `Prelude.hashWithSalt` costPerHour
       `Prelude.hashWithSalt` costPerInference
       `Prelude.hashWithSalt` maxInvocations
       `Prelude.hashWithSalt` modelLatency

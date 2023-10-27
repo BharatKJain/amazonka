@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DrS.Types.RecoveryInstanceDataReplicationInitiation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DrS.Types.RecoveryInstanceDataReplicationInitiation where
@@ -74,7 +74,7 @@ instance
       ( \x ->
           RecoveryInstanceDataReplicationInitiation'
             Prelude.<$> (x Data..:? "startDateTime")
-              Prelude.<*> (x Data..:? "steps" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "steps" Data..!= Prelude.mempty)
       )
 
 instance
@@ -84,7 +84,8 @@ instance
   hashWithSalt
     _salt
     RecoveryInstanceDataReplicationInitiation' {..} =
-      _salt `Prelude.hashWithSalt` startDateTime
+      _salt
+        `Prelude.hashWithSalt` startDateTime
         `Prelude.hashWithSalt` steps
 
 instance

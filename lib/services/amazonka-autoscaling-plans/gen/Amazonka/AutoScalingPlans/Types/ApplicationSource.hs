@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScalingPlans.Types.ApplicationSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScalingPlans.Types.ApplicationSource where
@@ -76,7 +76,8 @@ instance Data.FromJSON ApplicationSource where
 
 instance Prelude.Hashable ApplicationSource where
   hashWithSalt _salt ApplicationSource' {..} =
-    _salt `Prelude.hashWithSalt` cloudFormationStackARN
+    _salt
+      `Prelude.hashWithSalt` cloudFormationStackARN
       `Prelude.hashWithSalt` tagFilters
 
 instance Prelude.NFData ApplicationSource where

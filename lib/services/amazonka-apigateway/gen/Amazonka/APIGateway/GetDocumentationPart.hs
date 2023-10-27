@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.GetDocumentationPart
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest GetDocumentationPart where
 
 instance Prelude.Hashable GetDocumentationPart where
   hashWithSalt _salt GetDocumentationPart' {..} =
-    _salt `Prelude.hashWithSalt` restApiId
+    _salt
+      `Prelude.hashWithSalt` restApiId
       `Prelude.hashWithSalt` documentationPartId
 
 instance Prelude.NFData GetDocumentationPart where

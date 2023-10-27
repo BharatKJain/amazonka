@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MGN.PutSourceServerAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -198,7 +198,8 @@ instance Core.AWSRequest PutSourceServerAction where
 
 instance Prelude.Hashable PutSourceServerAction where
   hashWithSalt _salt PutSourceServerAction' {..} =
-    _salt `Prelude.hashWithSalt` active
+    _salt
+      `Prelude.hashWithSalt` active
       `Prelude.hashWithSalt` documentVersion
       `Prelude.hashWithSalt` mustSucceedForCutover
       `Prelude.hashWithSalt` parameters

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Translate.StartTextTranslationJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -368,7 +368,8 @@ instance Core.AWSRequest StartTextTranslationJob where
 
 instance Prelude.Hashable StartTextTranslationJob where
   hashWithSalt _salt StartTextTranslationJob' {..} =
-    _salt `Prelude.hashWithSalt` jobName
+    _salt
+      `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` parallelDataNames
       `Prelude.hashWithSalt` settings
       `Prelude.hashWithSalt` terminologyNames

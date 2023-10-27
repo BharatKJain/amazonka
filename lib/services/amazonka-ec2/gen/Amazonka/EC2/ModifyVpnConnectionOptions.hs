@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ModifyVpnConnectionOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -187,7 +187,8 @@ instance Core.AWSRequest ModifyVpnConnectionOptions where
 
 instance Prelude.Hashable ModifyVpnConnectionOptions where
   hashWithSalt _salt ModifyVpnConnectionOptions' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` localIpv4NetworkCidr
       `Prelude.hashWithSalt` localIpv6NetworkCidr
       `Prelude.hashWithSalt` remoteIpv4NetworkCidr

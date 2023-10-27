@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManager.Types.ProductInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManager.Types.ProductInformation where
@@ -228,14 +228,16 @@ instance Data.FromJSON ProductInformation where
       ( \x ->
           ProductInformation'
             Prelude.<$> (x Data..: "ResourceType")
-            Prelude.<*> ( x Data..:? "ProductInformationFilterList"
+            Prelude.<*> ( x
+                            Data..:? "ProductInformationFilterList"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ProductInformation where
   hashWithSalt _salt ProductInformation' {..} =
-    _salt `Prelude.hashWithSalt` resourceType
+    _salt
+      `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` productInformationFilterList
 
 instance Prelude.NFData ProductInformation where

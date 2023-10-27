@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ProvisioningArtifact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ProvisioningArtifact where
@@ -110,7 +110,8 @@ instance Data.FromJSON ProvisioningArtifact where
 
 instance Prelude.Hashable ProvisioningArtifact where
   hashWithSalt _salt ProvisioningArtifact' {..} =
-    _salt `Prelude.hashWithSalt` createdTime
+    _salt
+      `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` guidance
       `Prelude.hashWithSalt` id

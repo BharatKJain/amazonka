@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53RecoveryControlConfig.CreateSafetyRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -149,7 +149,8 @@ instance Core.AWSRequest CreateSafetyRule where
 
 instance Prelude.Hashable CreateSafetyRule where
   hashWithSalt _salt CreateSafetyRule' {..} =
-    _salt `Prelude.hashWithSalt` assertionRule
+    _salt
+      `Prelude.hashWithSalt` assertionRule
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` gatingRule
       `Prelude.hashWithSalt` tags

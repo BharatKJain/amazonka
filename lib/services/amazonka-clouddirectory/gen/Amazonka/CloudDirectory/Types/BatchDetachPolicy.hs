@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchDetachPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchDetachPolicy where
@@ -77,7 +77,8 @@ batchDetachPolicy_objectReference = Lens.lens (\BatchDetachPolicy' {objectRefere
 
 instance Prelude.Hashable BatchDetachPolicy where
   hashWithSalt _salt BatchDetachPolicy' {..} =
-    _salt `Prelude.hashWithSalt` policyReference
+    _salt
+      `Prelude.hashWithSalt` policyReference
       `Prelude.hashWithSalt` objectReference
 
 instance Prelude.NFData BatchDetachPolicy where

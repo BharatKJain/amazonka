@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.AutomatedAbrSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.AutomatedAbrSettings where
@@ -147,7 +147,8 @@ instance Data.FromJSON AutomatedAbrSettings where
 
 instance Prelude.Hashable AutomatedAbrSettings where
   hashWithSalt _salt AutomatedAbrSettings' {..} =
-    _salt `Prelude.hashWithSalt` maxAbrBitrate
+    _salt
+      `Prelude.hashWithSalt` maxAbrBitrate
       `Prelude.hashWithSalt` maxRenditions
       `Prelude.hashWithSalt` minAbrBitrate
       `Prelude.hashWithSalt` rules

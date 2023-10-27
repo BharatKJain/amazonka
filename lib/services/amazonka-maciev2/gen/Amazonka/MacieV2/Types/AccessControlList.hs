@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.AccessControlList
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.AccessControlList where
@@ -82,7 +82,8 @@ instance Data.FromJSON AccessControlList where
 
 instance Prelude.Hashable AccessControlList where
   hashWithSalt _salt AccessControlList' {..} =
-    _salt `Prelude.hashWithSalt` allowsPublicReadAccess
+    _salt
+      `Prelude.hashWithSalt` allowsPublicReadAccess
       `Prelude.hashWithSalt` allowsPublicWriteAccess
 
 instance Prelude.NFData AccessControlList where

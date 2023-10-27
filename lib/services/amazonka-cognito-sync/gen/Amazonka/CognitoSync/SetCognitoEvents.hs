@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoSync.SetCognitoEvents
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest SetCognitoEvents where
 
 instance Prelude.Hashable SetCognitoEvents where
   hashWithSalt _salt SetCognitoEvents' {..} =
-    _salt `Prelude.hashWithSalt` identityPoolId
+    _salt
+      `Prelude.hashWithSalt` identityPoolId
       `Prelude.hashWithSalt` events
 
 instance Prelude.NFData SetCognitoEvents where

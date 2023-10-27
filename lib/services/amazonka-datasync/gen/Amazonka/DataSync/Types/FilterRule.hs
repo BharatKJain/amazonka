@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataSync.Types.FilterRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataSync.Types.FilterRule where
@@ -85,7 +85,8 @@ instance Data.FromJSON FilterRule where
 
 instance Prelude.Hashable FilterRule where
   hashWithSalt _salt FilterRule' {..} =
-    _salt `Prelude.hashWithSalt` filterType
+    _salt
+      `Prelude.hashWithSalt` filterType
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData FilterRule where

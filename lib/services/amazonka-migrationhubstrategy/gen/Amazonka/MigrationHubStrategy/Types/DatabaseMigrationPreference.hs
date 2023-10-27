@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.DatabaseMigrationPreference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.DatabaseMigrationPreference where
@@ -100,7 +100,8 @@ instance Data.FromJSON DatabaseMigrationPreference where
 
 instance Prelude.Hashable DatabaseMigrationPreference where
   hashWithSalt _salt DatabaseMigrationPreference' {..} =
-    _salt `Prelude.hashWithSalt` heterogeneous
+    _salt
+      `Prelude.hashWithSalt` heterogeneous
       `Prelude.hashWithSalt` homogeneous
       `Prelude.hashWithSalt` noPreference
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.LoadPermission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.LoadPermission where
@@ -72,7 +72,8 @@ instance Data.FromXML LoadPermission where
 
 instance Prelude.Hashable LoadPermission where
   hashWithSalt _salt LoadPermission' {..} =
-    _salt `Prelude.hashWithSalt` group'
+    _salt
+      `Prelude.hashWithSalt` group'
       `Prelude.hashWithSalt` userId
 
 instance Prelude.NFData LoadPermission where

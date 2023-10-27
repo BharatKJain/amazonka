@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFormation.UpdateStackInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -404,7 +404,8 @@ instance Core.AWSRequest UpdateStackInstances where
 
 instance Prelude.Hashable UpdateStackInstances where
   hashWithSalt _salt UpdateStackInstances' {..} =
-    _salt `Prelude.hashWithSalt` accounts
+    _salt
+      `Prelude.hashWithSalt` accounts
       `Prelude.hashWithSalt` callAs
       `Prelude.hashWithSalt` deploymentTargets
       `Prelude.hashWithSalt` operationId

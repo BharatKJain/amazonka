@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Discovery.Types.OrderByElement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Discovery.Types.OrderByElement where
@@ -67,7 +67,8 @@ orderByElement_fieldName = Lens.lens (\OrderByElement' {fieldName} -> fieldName)
 
 instance Prelude.Hashable OrderByElement where
   hashWithSalt _salt OrderByElement' {..} =
-    _salt `Prelude.hashWithSalt` sortOrder
+    _salt
+      `Prelude.hashWithSalt` sortOrder
       `Prelude.hashWithSalt` fieldName
 
 instance Prelude.NFData OrderByElement where

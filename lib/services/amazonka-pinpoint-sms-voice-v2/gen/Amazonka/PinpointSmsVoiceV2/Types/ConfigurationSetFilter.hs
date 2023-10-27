@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PinpointSmsVoiceV2.Types.ConfigurationSetFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PinpointSmsVoiceV2.Types.ConfigurationSetFilter where
@@ -69,7 +69,8 @@ configurationSetFilter_values = Lens.lens (\ConfigurationSetFilter' {values} -> 
 
 instance Prelude.Hashable ConfigurationSetFilter where
   hashWithSalt _salt ConfigurationSetFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData ConfigurationSetFilter where

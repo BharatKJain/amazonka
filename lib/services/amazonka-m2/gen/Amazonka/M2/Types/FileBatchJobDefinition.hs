@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.FileBatchJobDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.FileBatchJobDefinition where
@@ -77,7 +77,8 @@ instance Data.FromJSON FileBatchJobDefinition where
 
 instance Prelude.Hashable FileBatchJobDefinition where
   hashWithSalt _salt FileBatchJobDefinition' {..} =
-    _salt `Prelude.hashWithSalt` folderPath
+    _salt
+      `Prelude.hashWithSalt` folderPath
       `Prelude.hashWithSalt` fileName
 
 instance Prelude.NFData FileBatchJobDefinition where

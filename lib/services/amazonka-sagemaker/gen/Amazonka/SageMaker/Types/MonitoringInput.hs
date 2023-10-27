@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.MonitoringInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.MonitoringInput where
@@ -77,7 +77,8 @@ instance Data.FromJSON MonitoringInput where
 
 instance Prelude.Hashable MonitoringInput where
   hashWithSalt _salt MonitoringInput' {..} =
-    _salt `Prelude.hashWithSalt` batchTransformInput
+    _salt
+      `Prelude.hashWithSalt` batchTransformInput
       `Prelude.hashWithSalt` endpointInput
 
 instance Prelude.NFData MonitoringInput where

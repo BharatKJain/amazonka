@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkMediaPipelines.Types.ConcatenationSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkMediaPipelines.Types.ConcatenationSource where
@@ -89,7 +89,8 @@ instance Data.FromJSON ConcatenationSource where
 
 instance Prelude.Hashable ConcatenationSource where
   hashWithSalt _salt ConcatenationSource' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` mediaCapturePipelineSourceConfiguration
 
 instance Prelude.NFData ConcatenationSource where

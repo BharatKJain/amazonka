@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.DomainInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.DomainInformation where
@@ -81,7 +81,8 @@ instance Data.FromJSON DomainInformation where
 
 instance Prelude.Hashable DomainInformation where
   hashWithSalt _salt DomainInformation' {..} =
-    _salt `Prelude.hashWithSalt` ownerId
+    _salt
+      `Prelude.hashWithSalt` ownerId
       `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` domainName
 

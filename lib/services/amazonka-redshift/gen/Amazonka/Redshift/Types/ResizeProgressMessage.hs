@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.ResizeProgressMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.ResizeProgressMessage where
@@ -287,15 +287,18 @@ instance Data.FromXML ResizeProgressMessage where
       Prelude.<*> (x Data..@? "DataTransferProgressPercent")
       Prelude.<*> (x Data..@? "ElapsedTimeInSeconds")
       Prelude.<*> (x Data..@? "EstimatedTimeToCompletionInSeconds")
-      Prelude.<*> ( x Data..@? "ImportTablesCompleted"
+      Prelude.<*> ( x
+                      Data..@? "ImportTablesCompleted"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "ImportTablesInProgress"
+      Prelude.<*> ( x
+                      Data..@? "ImportTablesInProgress"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "ImportTablesNotStarted"
+      Prelude.<*> ( x
+                      Data..@? "ImportTablesNotStarted"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )

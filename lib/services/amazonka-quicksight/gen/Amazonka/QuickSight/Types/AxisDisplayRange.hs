@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.AxisDisplayRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.AxisDisplayRange where
@@ -79,7 +79,8 @@ instance Data.FromJSON AxisDisplayRange where
 
 instance Prelude.Hashable AxisDisplayRange where
   hashWithSalt _salt AxisDisplayRange' {..} =
-    _salt `Prelude.hashWithSalt` dataDriven
+    _salt
+      `Prelude.hashWithSalt` dataDriven
       `Prelude.hashWithSalt` minMax
 
 instance Prelude.NFData AxisDisplayRange where

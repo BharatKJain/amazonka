@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeStar.Types.ProjectStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeStar.Types.ProjectStatus where
@@ -80,7 +80,8 @@ instance Data.FromJSON ProjectStatus where
 
 instance Prelude.Hashable ProjectStatus where
   hashWithSalt _salt ProjectStatus' {..} =
-    _salt `Prelude.hashWithSalt` reason
+    _salt
+      `Prelude.hashWithSalt` reason
       `Prelude.hashWithSalt` state
 
 instance Prelude.NFData ProjectStatus where

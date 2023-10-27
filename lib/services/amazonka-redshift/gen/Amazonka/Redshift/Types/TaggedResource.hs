@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.TaggedResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.TaggedResource where
@@ -157,7 +157,8 @@ instance Data.FromXML TaggedResource where
 
 instance Prelude.Hashable TaggedResource where
   hashWithSalt _salt TaggedResource' {..} =
-    _salt `Prelude.hashWithSalt` resourceName
+    _salt
+      `Prelude.hashWithSalt` resourceName
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` tag
 

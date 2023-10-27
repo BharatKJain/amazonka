@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Snowball.Types.DataTransfer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Snowball.Types.DataTransfer where
@@ -109,7 +109,8 @@ instance Data.FromJSON DataTransfer where
 
 instance Prelude.Hashable DataTransfer where
   hashWithSalt _salt DataTransfer' {..} =
-    _salt `Prelude.hashWithSalt` bytesTransferred
+    _salt
+      `Prelude.hashWithSalt` bytesTransferred
       `Prelude.hashWithSalt` objectsTransferred
       `Prelude.hashWithSalt` totalBytes
       `Prelude.hashWithSalt` totalObjects

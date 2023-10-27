@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.UserSetting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.UserSetting where
@@ -81,7 +81,8 @@ instance Data.FromJSON UserSetting where
 
 instance Prelude.Hashable UserSetting where
   hashWithSalt _salt UserSetting' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` permission
 
 instance Prelude.NFData UserSetting where

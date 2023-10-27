@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ApiGatewayV2.GetModelTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest GetModelTemplate where
 
 instance Prelude.Hashable GetModelTemplate where
   hashWithSalt _salt GetModelTemplate' {..} =
-    _salt `Prelude.hashWithSalt` modelId
+    _salt
+      `Prelude.hashWithSalt` modelId
       `Prelude.hashWithSalt` apiId
 
 instance Prelude.NFData GetModelTemplate where

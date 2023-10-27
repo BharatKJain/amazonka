@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PinpointEmail.Types.EventDestinationDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PinpointEmail.Types.EventDestinationDefinition where
@@ -154,7 +154,8 @@ eventDestinationDefinition_snsDestination = Lens.lens (\EventDestinationDefiniti
 
 instance Prelude.Hashable EventDestinationDefinition where
   hashWithSalt _salt EventDestinationDefinition' {..} =
-    _salt `Prelude.hashWithSalt` cloudWatchDestination
+    _salt
+      `Prelude.hashWithSalt` cloudWatchDestination
       `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` kinesisFirehoseDestination
       `Prelude.hashWithSalt` matchingEventTypes

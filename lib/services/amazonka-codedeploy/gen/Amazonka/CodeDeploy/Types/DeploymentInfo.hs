@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.DeploymentInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.DeploymentInfo where
@@ -541,7 +541,8 @@ instance Data.FromJSON DeploymentInfo where
             Prelude.<*> (x Data..:? "deploymentGroupName")
             Prelude.<*> (x Data..:? "deploymentId")
             Prelude.<*> (x Data..:? "deploymentOverview")
-            Prelude.<*> ( x Data..:? "deploymentStatusMessages"
+            Prelude.<*> ( x
+                            Data..:? "deploymentStatusMessages"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "deploymentStyle")

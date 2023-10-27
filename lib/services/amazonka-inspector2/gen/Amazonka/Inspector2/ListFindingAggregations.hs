@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Inspector2.ListFindingAggregations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -142,22 +142,22 @@ instance Core.AWSPager ListFindingAggregations where
     | Core.stop
         ( rs
             Lens.^? listFindingAggregationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listFindingAggregationsResponse_responses
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listFindingAggregations_nextToken
           Lens..~ rs
           Lens.^? listFindingAggregationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListFindingAggregations where
   type
@@ -177,7 +177,8 @@ instance Core.AWSRequest ListFindingAggregations where
 
 instance Prelude.Hashable ListFindingAggregations where
   hashWithSalt _salt ListFindingAggregations' {..} =
-    _salt `Prelude.hashWithSalt` accountIds
+    _salt
+      `Prelude.hashWithSalt` accountIds
       `Prelude.hashWithSalt` aggregationRequest
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

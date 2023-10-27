@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Athena.DeleteWorkGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest DeleteWorkGroup where
 
 instance Prelude.Hashable DeleteWorkGroup where
   hashWithSalt _salt DeleteWorkGroup' {..} =
-    _salt `Prelude.hashWithSalt` recursiveDeleteOption
+    _salt
+      `Prelude.hashWithSalt` recursiveDeleteOption
       `Prelude.hashWithSalt` workGroup
 
 instance Prelude.NFData DeleteWorkGroup where

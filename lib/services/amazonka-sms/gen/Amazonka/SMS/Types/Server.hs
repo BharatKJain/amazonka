@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SMS.Types.Server
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SMS.Types.Server where
@@ -106,7 +106,8 @@ instance Data.FromJSON Server where
 
 instance Prelude.Hashable Server where
   hashWithSalt _salt Server' {..} =
-    _salt `Prelude.hashWithSalt` replicationJobId
+    _salt
+      `Prelude.hashWithSalt` replicationJobId
       `Prelude.hashWithSalt` replicationJobTerminated
       `Prelude.hashWithSalt` serverId
       `Prelude.hashWithSalt` serverType

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFront.TestFunction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ newTestFunction pName_ pIfMatch_ pEventObject_ =
       name = pName_,
       ifMatch = pIfMatch_,
       eventObject =
-        Data._Sensitive Prelude.. Data._Base64
+        Data._Sensitive
+          Prelude.. Data._Base64
           Lens.# pEventObject_
     }
 
@@ -163,7 +164,8 @@ instance Core.AWSRequest TestFunction where
 
 instance Prelude.Hashable TestFunction where
   hashWithSalt _salt TestFunction' {..} =
-    _salt `Prelude.hashWithSalt` stage
+    _salt
+      `Prelude.hashWithSalt` stage
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` ifMatch
       `Prelude.hashWithSalt` eventObject

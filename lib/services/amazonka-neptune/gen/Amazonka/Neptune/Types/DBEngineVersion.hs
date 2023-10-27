@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Neptune.Types.DBEngineVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Neptune.Types.DBEngineVersion where
@@ -190,29 +190,34 @@ instance Data.FromXML DBEngineVersion where
       Prelude.<*> (x Data..@? "DefaultCharacterSet")
       Prelude.<*> (x Data..@? "Engine")
       Prelude.<*> (x Data..@? "EngineVersion")
-      Prelude.<*> ( x Data..@? "ExportableLogTypes"
+      Prelude.<*> ( x
+                      Data..@? "ExportableLogTypes"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "SupportedCharacterSets"
+      Prelude.<*> ( x
+                      Data..@? "SupportedCharacterSets"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "CharacterSet")
                   )
-      Prelude.<*> ( x Data..@? "SupportedTimezones"
+      Prelude.<*> ( x
+                      Data..@? "SupportedTimezones"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Timezone")
                   )
       Prelude.<*> (x Data..@? "SupportsGlobalDatabases")
       Prelude.<*> (x Data..@? "SupportsLogExportsToCloudwatchLogs")
       Prelude.<*> (x Data..@? "SupportsReadReplica")
-      Prelude.<*> ( x Data..@? "ValidUpgradeTarget"
+      Prelude.<*> ( x
+                      Data..@? "ValidUpgradeTarget"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "UpgradeTarget")
                   )
 
 instance Prelude.Hashable DBEngineVersion where
   hashWithSalt _salt DBEngineVersion' {..} =
-    _salt `Prelude.hashWithSalt` dbEngineDescription
+    _salt
+      `Prelude.hashWithSalt` dbEngineDescription
       `Prelude.hashWithSalt` dbEngineVersionDescription
       `Prelude.hashWithSalt` dbParameterGroupFamily
       `Prelude.hashWithSalt` defaultCharacterSet

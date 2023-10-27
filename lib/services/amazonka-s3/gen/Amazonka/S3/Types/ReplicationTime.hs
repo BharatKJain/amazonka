@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.ReplicationTime
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.ReplicationTime where
@@ -75,11 +75,13 @@ replicationTime_time = Lens.lens (\ReplicationTime' {time} -> time) (\s@Replicat
 instance Data.FromXML ReplicationTime where
   parseXML x =
     ReplicationTime'
-      Prelude.<$> (x Data..@ "Status") Prelude.<*> (x Data..@ "Time")
+      Prelude.<$> (x Data..@ "Status")
+      Prelude.<*> (x Data..@ "Time")
 
 instance Prelude.Hashable ReplicationTime where
   hashWithSalt _salt ReplicationTime' {..} =
-    _salt `Prelude.hashWithSalt` status
+    _salt
+      `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` time
 
 instance Prelude.NFData ReplicationTime where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTWireless.ListDeviceProfiles
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -101,7 +101,8 @@ instance Core.AWSRequest ListDeviceProfiles where
     Response.receiveJSON
       ( \s h x ->
           ListDeviceProfilesResponse'
-            Prelude.<$> ( x Data..?> "DeviceProfileList"
+            Prelude.<$> ( x
+                            Data..?> "DeviceProfileList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -110,7 +111,8 @@ instance Core.AWSRequest ListDeviceProfiles where
 
 instance Prelude.Hashable ListDeviceProfiles where
   hashWithSalt _salt ListDeviceProfiles' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListDeviceProfiles where

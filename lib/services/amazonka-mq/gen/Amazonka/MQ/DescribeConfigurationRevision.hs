@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MQ.DescribeConfigurationRevision
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance
     DescribeConfigurationRevision
   where
   hashWithSalt _salt DescribeConfigurationRevision' {..} =
-    _salt `Prelude.hashWithSalt` configurationRevision
+    _salt
+      `Prelude.hashWithSalt` configurationRevision
       `Prelude.hashWithSalt` configurationId
 
 instance Prelude.NFData DescribeConfigurationRevision where

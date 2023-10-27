@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataPipeline.DescribeObjects
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,20 +138,22 @@ instance Core.AWSPager DescribeObjects where
     | Core.stop
         ( rs
             Lens.^? describeObjectsResponse_hasMoreResults
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.isNothing
         ( rs
-            Lens.^? describeObjectsResponse_marker Prelude.. Lens._Just
+            Lens.^? describeObjectsResponse_marker
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeObjects_marker
           Lens..~ rs
-          Lens.^? describeObjectsResponse_marker Prelude.. Lens._Just
+          Lens.^? describeObjectsResponse_marker
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeObjects where
   type
@@ -166,14 +168,16 @@ instance Core.AWSRequest DescribeObjects where
             Prelude.<$> (x Data..?> "hasMoreResults")
             Prelude.<*> (x Data..?> "marker")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "pipelineObjects"
+            Prelude.<*> ( x
+                            Data..?> "pipelineObjects"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable DescribeObjects where
   hashWithSalt _salt DescribeObjects' {..} =
-    _salt `Prelude.hashWithSalt` evaluateExpressions
+    _salt
+      `Prelude.hashWithSalt` evaluateExpressions
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` pipelineId
       `Prelude.hashWithSalt` objectIds

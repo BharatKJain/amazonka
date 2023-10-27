@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.WorkflowRunStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.WorkflowRunStatistics where
@@ -135,7 +135,8 @@ instance Data.FromJSON WorkflowRunStatistics where
 
 instance Prelude.Hashable WorkflowRunStatistics where
   hashWithSalt _salt WorkflowRunStatistics' {..} =
-    _salt `Prelude.hashWithSalt` erroredActions
+    _salt
+      `Prelude.hashWithSalt` erroredActions
       `Prelude.hashWithSalt` failedActions
       `Prelude.hashWithSalt` runningActions
       `Prelude.hashWithSalt` stoppedActions

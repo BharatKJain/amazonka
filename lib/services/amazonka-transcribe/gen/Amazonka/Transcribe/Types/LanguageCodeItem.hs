@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.LanguageCodeItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.LanguageCodeItem where
@@ -82,7 +82,8 @@ instance Data.FromJSON LanguageCodeItem where
 
 instance Prelude.Hashable LanguageCodeItem where
   hashWithSalt _salt LanguageCodeItem' {..} =
-    _salt `Prelude.hashWithSalt` durationInSeconds
+    _salt
+      `Prelude.hashWithSalt` durationInSeconds
       `Prelude.hashWithSalt` languageCode
 
 instance Prelude.NFData LanguageCodeItem where

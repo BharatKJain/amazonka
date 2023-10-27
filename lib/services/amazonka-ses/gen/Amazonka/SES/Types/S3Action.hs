@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.S3Action
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.S3Action where
@@ -234,7 +234,8 @@ instance Data.FromXML S3Action where
 
 instance Prelude.Hashable S3Action where
   hashWithSalt _salt S3Action' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyArn
+    _salt
+      `Prelude.hashWithSalt` kmsKeyArn
       `Prelude.hashWithSalt` objectKeyPrefix
       `Prelude.hashWithSalt` topicArn
       `Prelude.hashWithSalt` bucketName

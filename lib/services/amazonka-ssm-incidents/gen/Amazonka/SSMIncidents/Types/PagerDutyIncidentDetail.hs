@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.PagerDutyIncidentDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.PagerDutyIncidentDetail where
@@ -100,7 +100,8 @@ instance Data.FromJSON PagerDutyIncidentDetail where
 
 instance Prelude.Hashable PagerDutyIncidentDetail where
   hashWithSalt _salt PagerDutyIncidentDetail' {..} =
-    _salt `Prelude.hashWithSalt` autoResolve
+    _salt
+      `Prelude.hashWithSalt` autoResolve
       `Prelude.hashWithSalt` secretId
       `Prelude.hashWithSalt` id
 

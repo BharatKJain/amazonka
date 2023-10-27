@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EMRContainers.ListManagedEndpoints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -147,22 +147,22 @@ instance Core.AWSPager ListManagedEndpoints where
     | Core.stop
         ( rs
             Lens.^? listManagedEndpointsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listManagedEndpointsResponse_endpoints
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listManagedEndpoints_nextToken
           Lens..~ rs
           Lens.^? listManagedEndpointsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListManagedEndpoints where
   type
@@ -181,7 +181,8 @@ instance Core.AWSRequest ListManagedEndpoints where
 
 instance Prelude.Hashable ListManagedEndpoints where
   hashWithSalt _salt ListManagedEndpoints' {..} =
-    _salt `Prelude.hashWithSalt` createdAfter
+    _salt
+      `Prelude.hashWithSalt` createdAfter
       `Prelude.hashWithSalt` createdBefore
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.DestinationProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.DestinationProperties where
@@ -86,7 +86,8 @@ instance Data.FromJSON DestinationProperties where
 
 instance Prelude.Hashable DestinationProperties where
   hashWithSalt _salt DestinationProperties' {..} =
-    _salt `Prelude.hashWithSalt` destinationArn
+    _salt
+      `Prelude.hashWithSalt` destinationArn
       `Prelude.hashWithSalt` kmsKeyArn
 
 instance Prelude.NFData DestinationProperties where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELB.Types.Policies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELB.Types.Policies where
@@ -78,15 +78,19 @@ policies_otherPolicies = Lens.lens (\Policies' {otherPolicies} -> otherPolicies)
 instance Data.FromXML Policies where
   parseXML x =
     Policies'
-      Prelude.<$> ( x Data..@? "AppCookieStickinessPolicies"
+      Prelude.<$> ( x
+                      Data..@? "AppCookieStickinessPolicies"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "LBCookieStickinessPolicies"
+      Prelude.<*> ( x
+                      Data..@? "LBCookieStickinessPolicies"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "OtherPolicies" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "OtherPolicies"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 

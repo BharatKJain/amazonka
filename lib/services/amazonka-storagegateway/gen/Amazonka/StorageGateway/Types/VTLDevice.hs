@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StorageGateway.Types.VTLDevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StorageGateway.Types.VTLDevice where
@@ -108,7 +108,8 @@ instance Data.FromJSON VTLDevice where
 
 instance Prelude.Hashable VTLDevice where
   hashWithSalt _salt VTLDevice' {..} =
-    _salt `Prelude.hashWithSalt` deviceiSCSIAttributes
+    _salt
+      `Prelude.hashWithSalt` deviceiSCSIAttributes
       `Prelude.hashWithSalt` vTLDeviceARN
       `Prelude.hashWithSalt` vTLDeviceProductIdentifier
       `Prelude.hashWithSalt` vTLDeviceType

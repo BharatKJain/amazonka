@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppSync.ListDomainNames
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -95,7 +95,8 @@ instance Core.AWSRequest ListDomainNames where
     Response.receiveJSON
       ( \s h x ->
           ListDomainNamesResponse'
-            Prelude.<$> ( x Data..?> "domainNameConfigs"
+            Prelude.<$> ( x
+                            Data..?> "domainNameConfigs"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -104,7 +105,8 @@ instance Core.AWSRequest ListDomainNames where
 
 instance Prelude.Hashable ListDomainNames where
   hashWithSalt _salt ListDomainNames' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListDomainNames where

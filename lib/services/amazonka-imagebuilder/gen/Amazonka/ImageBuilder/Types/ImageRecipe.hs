@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ImageBuilder.Types.ImageRecipe
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ImageBuilder.Types.ImageRecipe where
@@ -202,7 +202,8 @@ instance Data.FromJSON ImageRecipe where
           ImageRecipe'
             Prelude.<$> (x Data..:? "additionalInstanceConfiguration")
             Prelude.<*> (x Data..:? "arn")
-            Prelude.<*> ( x Data..:? "blockDeviceMappings"
+            Prelude.<*> ( x
+                            Data..:? "blockDeviceMappings"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "components")

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.BackupGateway.UpdateHypervisor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -150,7 +150,8 @@ instance Core.AWSRequest UpdateHypervisor where
 
 instance Prelude.Hashable UpdateHypervisor where
   hashWithSalt _salt UpdateHypervisor' {..} =
-    _salt `Prelude.hashWithSalt` host
+    _salt
+      `Prelude.hashWithSalt` host
       `Prelude.hashWithSalt` logGroupArn
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` password

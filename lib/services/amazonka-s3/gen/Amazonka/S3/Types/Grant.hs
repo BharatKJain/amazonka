@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.Grant
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.Grant where
@@ -73,7 +73,8 @@ instance Data.FromXML Grant where
 
 instance Prelude.Hashable Grant where
   hashWithSalt _salt Grant' {..} =
-    _salt `Prelude.hashWithSalt` grantee
+    _salt
+      `Prelude.hashWithSalt` grantee
       `Prelude.hashWithSalt` permission
 
 instance Prelude.NFData Grant where

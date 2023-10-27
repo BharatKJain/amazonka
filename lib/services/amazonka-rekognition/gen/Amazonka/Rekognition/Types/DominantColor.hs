@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.DominantColor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.DominantColor where
@@ -124,7 +124,8 @@ instance Data.FromJSON DominantColor where
 
 instance Prelude.Hashable DominantColor where
   hashWithSalt _salt DominantColor' {..} =
-    _salt `Prelude.hashWithSalt` blue
+    _salt
+      `Prelude.hashWithSalt` blue
       `Prelude.hashWithSalt` cSSColor
       `Prelude.hashWithSalt` green
       `Prelude.hashWithSalt` hexCode

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.ElasticsearchBufferingHints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.ElasticsearchBufferingHints where
@@ -100,7 +100,8 @@ instance Data.FromJSON ElasticsearchBufferingHints where
 
 instance Prelude.Hashable ElasticsearchBufferingHints where
   hashWithSalt _salt ElasticsearchBufferingHints' {..} =
-    _salt `Prelude.hashWithSalt` intervalInSeconds
+    _salt
+      `Prelude.hashWithSalt` intervalInSeconds
       `Prelude.hashWithSalt` sizeInMBs
 
 instance Prelude.NFData ElasticsearchBufferingHints where

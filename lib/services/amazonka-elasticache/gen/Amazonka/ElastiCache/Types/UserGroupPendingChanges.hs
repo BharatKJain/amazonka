@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.UserGroupPendingChanges
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.UserGroupPendingChanges where
@@ -66,16 +66,21 @@ userGroupPendingChanges_userIdsToRemove = Lens.lens (\UserGroupPendingChanges' {
 instance Data.FromXML UserGroupPendingChanges where
   parseXML x =
     UserGroupPendingChanges'
-      Prelude.<$> ( x Data..@? "UserIdsToAdd" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "UserIdsToAdd"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "UserIdsToRemove" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "UserIdsToRemove"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 
 instance Prelude.Hashable UserGroupPendingChanges where
   hashWithSalt _salt UserGroupPendingChanges' {..} =
-    _salt `Prelude.hashWithSalt` userIdsToAdd
+    _salt
+      `Prelude.hashWithSalt` userIdsToAdd
       `Prelude.hashWithSalt` userIdsToRemove
 
 instance Prelude.NFData UserGroupPendingChanges where

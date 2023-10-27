@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CustomerProfiles.Types.ListProfileObjectTypeItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CustomerProfiles.Types.ListProfileObjectTypeItem where
@@ -111,7 +111,8 @@ instance Data.FromJSON ListProfileObjectTypeItem where
 
 instance Prelude.Hashable ListProfileObjectTypeItem where
   hashWithSalt _salt ListProfileObjectTypeItem' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` lastUpdatedAt
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` objectTypeName

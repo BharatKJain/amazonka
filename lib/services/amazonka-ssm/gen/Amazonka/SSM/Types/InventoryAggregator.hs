@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.InventoryAggregator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.InventoryAggregator where
@@ -81,7 +81,8 @@ inventoryAggregator_groups = Lens.lens (\InventoryAggregator' {groups} -> groups
 
 instance Prelude.Hashable InventoryAggregator where
   hashWithSalt _salt InventoryAggregator' {..} =
-    _salt `Prelude.hashWithSalt` aggregators
+    _salt
+      `Prelude.hashWithSalt` aggregators
       `Prelude.hashWithSalt` expression
       `Prelude.hashWithSalt` groups
 

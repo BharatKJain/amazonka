@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudHSM.CreateLunaClient
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest CreateLunaClient where
 
 instance Prelude.Hashable CreateLunaClient where
   hashWithSalt _salt CreateLunaClient' {..} =
-    _salt `Prelude.hashWithSalt` label
+    _salt
+      `Prelude.hashWithSalt` label
       `Prelude.hashWithSalt` certificate
 
 instance Prelude.NFData CreateLunaClient where

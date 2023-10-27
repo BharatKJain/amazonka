@@ -1,8 +1,6 @@
-{-# LANGUAGE BangPatterns #-}
-
 -- |
 -- Module      : Amazonka.HTTP
--- Copyright   : (c) 2013-2021 Brendan Hay
+-- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
 -- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
 -- Stability   : provisional
@@ -133,7 +131,7 @@ httpRequest env@Env {hooks, manager, region} cfgRq =
             pure $! rq
 
       rs <- Client.Conduit.http clientRq manager
-      liftIO $ Hooks.clientResponse hooks env (cfgRq, () <$ rs)
+      liftIO $ Hooks.clientResponse hooks env (cfgRq, void rs)
       parsedRs <-
         response
           (Hooks.rawResponseBody hooks env)
@@ -145,7 +143,7 @@ httpRequest env@Env {hooks, manager, region} cfgRq =
 
     handlers :: [Handler (Either Error b)]
     handlers =
-      [ Handler $ err,
+      [ Handler err,
         Handler $ err . TransportError
       ]
       where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.OutlierDetection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.OutlierDetection where
@@ -115,7 +115,8 @@ instance Data.FromJSON OutlierDetection where
 
 instance Prelude.Hashable OutlierDetection where
   hashWithSalt _salt OutlierDetection' {..} =
-    _salt `Prelude.hashWithSalt` baseEjectionDuration
+    _salt
+      `Prelude.hashWithSalt` baseEjectionDuration
       `Prelude.hashWithSalt` interval
       `Prelude.hashWithSalt` maxEjectionPercent
       `Prelude.hashWithSalt` maxServerErrors

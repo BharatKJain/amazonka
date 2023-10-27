@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StepFunctions.Types.TaskScheduledEventDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StepFunctions.Types.TaskScheduledEventDetails where
@@ -144,7 +144,8 @@ instance Data.FromJSON TaskScheduledEventDetails where
 
 instance Prelude.Hashable TaskScheduledEventDetails where
   hashWithSalt _salt TaskScheduledEventDetails' {..} =
-    _salt `Prelude.hashWithSalt` heartbeatInSeconds
+    _salt
+      `Prelude.hashWithSalt` heartbeatInSeconds
       `Prelude.hashWithSalt` taskCredentials
       `Prelude.hashWithSalt` timeoutInSeconds
       `Prelude.hashWithSalt` resourceType

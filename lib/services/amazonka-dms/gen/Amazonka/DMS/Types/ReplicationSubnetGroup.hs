@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.ReplicationSubnetGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.ReplicationSubnetGroup where
@@ -120,7 +120,8 @@ instance Data.FromJSON ReplicationSubnetGroup where
             Prelude.<*> (x Data..:? "ReplicationSubnetGroupIdentifier")
             Prelude.<*> (x Data..:? "SubnetGroupStatus")
             Prelude.<*> (x Data..:? "Subnets" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "SupportedNetworkTypes"
+            Prelude.<*> ( x
+                            Data..:? "SupportedNetworkTypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "VpcId")

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Inspector.RemoveAttributesFromFindings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance
     RemoveAttributesFromFindings
   where
   hashWithSalt _salt RemoveAttributesFromFindings' {..} =
-    _salt `Prelude.hashWithSalt` findingArns
+    _salt
+      `Prelude.hashWithSalt` findingArns
       `Prelude.hashWithSalt` attributeKeys
 
 instance Prelude.NFData RemoveAttributesFromFindings where

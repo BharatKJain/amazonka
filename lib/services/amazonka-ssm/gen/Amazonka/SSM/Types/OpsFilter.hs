@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.OpsFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.OpsFilter where
@@ -78,7 +78,8 @@ opsFilter_values = Lens.lens (\OpsFilter' {values} -> values) (\s@OpsFilter' {} 
 
 instance Prelude.Hashable OpsFilter where
   hashWithSalt _salt OpsFilter' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` values
 

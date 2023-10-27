@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FinSpaceData.UpdateDataset
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -170,7 +170,8 @@ instance Core.AWSRequest UpdateDataset where
 
 instance Prelude.Hashable UpdateDataset where
   hashWithSalt _salt UpdateDataset' {..} =
-    _salt `Prelude.hashWithSalt` alias
+    _salt
+      `Prelude.hashWithSalt` alias
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` datasetDescription
       `Prelude.hashWithSalt` schemaDefinition

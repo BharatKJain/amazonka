@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.AutomatedAbrRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.AutomatedAbrRule where
@@ -252,10 +252,12 @@ instance Data.FromJSON AutomatedAbrRule where
       "AutomatedAbrRule"
       ( \x ->
           AutomatedAbrRule'
-            Prelude.<$> ( x Data..:? "allowedRenditions"
+            Prelude.<$> ( x
+                            Data..:? "allowedRenditions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "forceIncludeRenditions"
+            Prelude.<*> ( x
+                            Data..:? "forceIncludeRenditions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "minBottomRenditionSize")
@@ -265,7 +267,8 @@ instance Data.FromJSON AutomatedAbrRule where
 
 instance Prelude.Hashable AutomatedAbrRule where
   hashWithSalt _salt AutomatedAbrRule' {..} =
-    _salt `Prelude.hashWithSalt` allowedRenditions
+    _salt
+      `Prelude.hashWithSalt` allowedRenditions
       `Prelude.hashWithSalt` forceIncludeRenditions
       `Prelude.hashWithSalt` minBottomRenditionSize
       `Prelude.hashWithSalt` minTopRenditionSize

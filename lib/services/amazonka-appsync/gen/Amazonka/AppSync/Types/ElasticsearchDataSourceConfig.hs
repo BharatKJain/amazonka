@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.ElasticsearchDataSourceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.ElasticsearchDataSourceConfig where
@@ -88,7 +88,8 @@ instance
     ElasticsearchDataSourceConfig
   where
   hashWithSalt _salt ElasticsearchDataSourceConfig' {..} =
-    _salt `Prelude.hashWithSalt` endpoint
+    _salt
+      `Prelude.hashWithSalt` endpoint
       `Prelude.hashWithSalt` awsRegion
 
 instance Prelude.NFData ElasticsearchDataSourceConfig where

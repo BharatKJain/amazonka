@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.AccountLimit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.AccountLimit where
@@ -120,7 +120,8 @@ instance Data.FromJSON AccountLimit where
 
 instance Prelude.Hashable AccountLimit where
   hashWithSalt _salt AccountLimit' {..} =
-    _salt `Prelude.hashWithSalt` codeSizeUnzipped
+    _salt
+      `Prelude.hashWithSalt` codeSizeUnzipped
       `Prelude.hashWithSalt` codeSizeZipped
       `Prelude.hashWithSalt` concurrentExecutions
       `Prelude.hashWithSalt` totalCodeSize

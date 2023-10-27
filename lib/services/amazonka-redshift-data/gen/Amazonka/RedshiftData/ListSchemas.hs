@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RedshiftData.ListSchemas
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -240,20 +240,23 @@ instance Core.AWSPager ListSchemas where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listSchemasResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listSchemasResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listSchemasResponse_schemas Prelude.. Lens._Just
+            Lens.^? listSchemasResponse_schemas
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSchemas_nextToken
           Lens..~ rs
-          Lens.^? listSchemasResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listSchemasResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListSchemas where
   type AWSResponse ListSchemas = ListSchemasResponse
@@ -270,7 +273,8 @@ instance Core.AWSRequest ListSchemas where
 
 instance Prelude.Hashable ListSchemas where
   hashWithSalt _salt ListSchemas' {..} =
-    _salt `Prelude.hashWithSalt` clusterIdentifier
+    _salt
+      `Prelude.hashWithSalt` clusterIdentifier
       `Prelude.hashWithSalt` connectedDatabase
       `Prelude.hashWithSalt` dbUser
       `Prelude.hashWithSalt` maxResults

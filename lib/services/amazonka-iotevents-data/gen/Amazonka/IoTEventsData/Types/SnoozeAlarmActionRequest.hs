@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEventsData.Types.SnoozeAlarmActionRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEventsData.Types.SnoozeAlarmActionRequest where
@@ -110,7 +110,8 @@ snoozeAlarmActionRequest_snoozeDuration = Lens.lens (\SnoozeAlarmActionRequest' 
 
 instance Prelude.Hashable SnoozeAlarmActionRequest where
   hashWithSalt _salt SnoozeAlarmActionRequest' {..} =
-    _salt `Prelude.hashWithSalt` keyValue
+    _salt
+      `Prelude.hashWithSalt` keyValue
       `Prelude.hashWithSalt` note
       `Prelude.hashWithSalt` requestId
       `Prelude.hashWithSalt` alarmModelName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.RepositoryMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.RepositoryMetadata where
@@ -154,7 +154,8 @@ instance Data.FromJSON RepositoryMetadata where
 
 instance Prelude.Hashable RepositoryMetadata where
   hashWithSalt _salt RepositoryMetadata' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` cloneUrlHttp
       `Prelude.hashWithSalt` cloneUrlSsh

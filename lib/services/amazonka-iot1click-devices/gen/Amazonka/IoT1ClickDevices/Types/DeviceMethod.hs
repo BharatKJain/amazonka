@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT1ClickDevices.Types.DeviceMethod
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT1ClickDevices.Types.DeviceMethod where
@@ -72,7 +72,8 @@ instance Data.FromJSON DeviceMethod where
 
 instance Prelude.Hashable DeviceMethod where
   hashWithSalt _salt DeviceMethod' {..} =
-    _salt `Prelude.hashWithSalt` deviceType
+    _salt
+      `Prelude.hashWithSalt` deviceType
       `Prelude.hashWithSalt` methodName
 
 instance Prelude.NFData DeviceMethod where

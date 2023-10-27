@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GreengrassV2.ListComponentVersions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,22 +112,22 @@ instance Core.AWSPager ListComponentVersions where
     | Core.stop
         ( rs
             Lens.^? listComponentVersionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listComponentVersionsResponse_componentVersions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listComponentVersions_nextToken
           Lens..~ rs
           Lens.^? listComponentVersionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListComponentVersions where
   type
@@ -139,7 +139,8 @@ instance Core.AWSRequest ListComponentVersions where
     Response.receiveJSON
       ( \s h x ->
           ListComponentVersionsResponse'
-            Prelude.<$> ( x Data..?> "componentVersions"
+            Prelude.<$> ( x
+                            Data..?> "componentVersions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -148,7 +149,8 @@ instance Core.AWSRequest ListComponentVersions where
 
 instance Prelude.Hashable ListComponentVersions where
   hashWithSalt _salt ListComponentVersions' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` arn
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WellArchitected.CreateLensShare
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,7 +130,8 @@ instance Core.AWSRequest CreateLensShare where
 
 instance Prelude.Hashable CreateLensShare where
   hashWithSalt _salt CreateLensShare' {..} =
-    _salt `Prelude.hashWithSalt` lensAlias
+    _salt
+      `Prelude.hashWithSalt` lensAlias
       `Prelude.hashWithSalt` sharedWith
       `Prelude.hashWithSalt` clientRequestToken
 

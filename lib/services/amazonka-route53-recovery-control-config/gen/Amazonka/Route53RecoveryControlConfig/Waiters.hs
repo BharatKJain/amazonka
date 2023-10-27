@@ -11,7 +11,7 @@
 -- Module      : Amazonka.Route53RecoveryControlConfig.Waiters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53RecoveryControlConfig.Waiters where
@@ -37,7 +37,8 @@ newClusterCreated =
         [ Core.matchAll
             "DEPLOYED"
             Core.AcceptSuccess
-            ( describeClusterResponse_cluster Prelude.. Lens._Just
+            ( describeClusterResponse_cluster
+                Prelude.. Lens._Just
                 Prelude.. cluster_status
                 Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
@@ -45,7 +46,8 @@ newClusterCreated =
           Core.matchAll
             "PENDING"
             Core.AcceptRetry
-            ( describeClusterResponse_cluster Prelude.. Lens._Just
+            ( describeClusterResponse_cluster
+                Prelude.. Lens._Just
                 Prelude.. cluster_status
                 Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
@@ -66,7 +68,8 @@ newClusterDeleted =
           Core.matchAll
             "PENDING_DELETION"
             Core.AcceptRetry
-            ( describeClusterResponse_cluster Prelude.. Lens._Just
+            ( describeClusterResponse_cluster
+                Prelude.. Lens._Just
                 Prelude.. cluster_status
                 Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI

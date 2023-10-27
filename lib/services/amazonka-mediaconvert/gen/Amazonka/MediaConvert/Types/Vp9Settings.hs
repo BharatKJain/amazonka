@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.Vp9Settings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.Vp9Settings where
@@ -352,7 +352,8 @@ instance Data.FromJSON Vp9Settings where
 
 instance Prelude.Hashable Vp9Settings where
   hashWithSalt _salt Vp9Settings' {..} =
-    _salt `Prelude.hashWithSalt` bitrate
+    _salt
+      `Prelude.hashWithSalt` bitrate
       `Prelude.hashWithSalt` framerateControl
       `Prelude.hashWithSalt` framerateConversionAlgorithm
       `Prelude.hashWithSalt` framerateDenominator

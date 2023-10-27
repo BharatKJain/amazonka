@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TemplateSourceEntity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TemplateSourceEntity where
@@ -67,7 +67,8 @@ templateSourceEntity_sourceTemplate = Lens.lens (\TemplateSourceEntity' {sourceT
 
 instance Prelude.Hashable TemplateSourceEntity where
   hashWithSalt _salt TemplateSourceEntity' {..} =
-    _salt `Prelude.hashWithSalt` sourceAnalysis
+    _salt
+      `Prelude.hashWithSalt` sourceAnalysis
       `Prelude.hashWithSalt` sourceTemplate
 
 instance Prelude.NFData TemplateSourceEntity where

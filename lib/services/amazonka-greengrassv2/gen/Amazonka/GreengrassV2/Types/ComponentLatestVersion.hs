@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.ComponentLatestVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.ComponentLatestVersion where
@@ -124,7 +124,8 @@ instance Data.FromJSON ComponentLatestVersion where
 
 instance Prelude.Hashable ComponentLatestVersion where
   hashWithSalt _salt ComponentLatestVersion' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` componentVersion
       `Prelude.hashWithSalt` creationTimestamp
       `Prelude.hashWithSalt` description

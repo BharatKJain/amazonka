@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.RestoreDBClusterFromS3
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -1121,7 +1121,8 @@ instance Core.AWSRequest RestoreDBClusterFromS3 where
 
 instance Prelude.Hashable RestoreDBClusterFromS3 where
   hashWithSalt _salt RestoreDBClusterFromS3' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZones
+    _salt
+      `Prelude.hashWithSalt` availabilityZones
       `Prelude.hashWithSalt` backtrackWindow
       `Prelude.hashWithSalt` backupRetentionPeriod
       `Prelude.hashWithSalt` characterSetName

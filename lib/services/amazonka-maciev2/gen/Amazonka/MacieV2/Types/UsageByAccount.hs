@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.UsageByAccount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.UsageByAccount where
@@ -119,7 +119,8 @@ instance Data.FromJSON UsageByAccount where
 
 instance Prelude.Hashable UsageByAccount where
   hashWithSalt _salt UsageByAccount' {..} =
-    _salt `Prelude.hashWithSalt` currency
+    _salt
+      `Prelude.hashWithSalt` currency
       `Prelude.hashWithSalt` estimatedCost
       `Prelude.hashWithSalt` serviceLimit
       `Prelude.hashWithSalt` type'

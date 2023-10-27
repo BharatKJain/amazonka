@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpsWorksCM.UpdateServer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest UpdateServer where
 
 instance Prelude.Hashable UpdateServer where
   hashWithSalt _salt UpdateServer' {..} =
-    _salt `Prelude.hashWithSalt` backupRetentionCount
+    _salt
+      `Prelude.hashWithSalt` backupRetentionCount
       `Prelude.hashWithSalt` disableAutomatedBackup
       `Prelude.hashWithSalt` preferredBackupWindow
       `Prelude.hashWithSalt` preferredMaintenanceWindow

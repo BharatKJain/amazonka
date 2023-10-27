@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutVision.Types.OutputS3Object
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutVision.Types.OutputS3Object where
@@ -69,12 +69,14 @@ instance Data.FromJSON OutputS3Object where
       "OutputS3Object"
       ( \x ->
           OutputS3Object'
-            Prelude.<$> (x Data..: "Bucket") Prelude.<*> (x Data..: "Key")
+            Prelude.<$> (x Data..: "Bucket")
+            Prelude.<*> (x Data..: "Key")
       )
 
 instance Prelude.Hashable OutputS3Object where
   hashWithSalt _salt OutputS3Object' {..} =
-    _salt `Prelude.hashWithSalt` bucket
+    _salt
+      `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` key
 
 instance Prelude.NFData OutputS3Object where

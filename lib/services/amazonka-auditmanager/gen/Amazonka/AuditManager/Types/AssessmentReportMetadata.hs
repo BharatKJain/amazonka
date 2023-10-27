@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.AssessmentReportMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.AssessmentReportMetadata where
@@ -137,7 +137,8 @@ instance Data.FromJSON AssessmentReportMetadata where
 
 instance Prelude.Hashable AssessmentReportMetadata where
   hashWithSalt _salt AssessmentReportMetadata' {..} =
-    _salt `Prelude.hashWithSalt` assessmentId
+    _salt
+      `Prelude.hashWithSalt` assessmentId
       `Prelude.hashWithSalt` assessmentName
       `Prelude.hashWithSalt` author
       `Prelude.hashWithSalt` creationTime

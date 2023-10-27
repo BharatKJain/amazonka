@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.KernelGatewayAppSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.KernelGatewayAppSettings where
@@ -118,14 +118,16 @@ instance Data.FromJSON KernelGatewayAppSettings where
           KernelGatewayAppSettings'
             Prelude.<$> (x Data..:? "CustomImages" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "DefaultResourceSpec")
-            Prelude.<*> ( x Data..:? "LifecycleConfigArns"
+            Prelude.<*> ( x
+                            Data..:? "LifecycleConfigArns"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable KernelGatewayAppSettings where
   hashWithSalt _salt KernelGatewayAppSettings' {..} =
-    _salt `Prelude.hashWithSalt` customImages
+    _salt
+      `Prelude.hashWithSalt` customImages
       `Prelude.hashWithSalt` defaultResourceSpec
       `Prelude.hashWithSalt` lifecycleConfigArns
 

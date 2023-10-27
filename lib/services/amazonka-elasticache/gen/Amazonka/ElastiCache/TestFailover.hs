@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElastiCache.TestFailover
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -169,7 +169,8 @@ instance Core.AWSRequest TestFailover where
 
 instance Prelude.Hashable TestFailover where
   hashWithSalt _salt TestFailover' {..} =
-    _salt `Prelude.hashWithSalt` replicationGroupId
+    _salt
+      `Prelude.hashWithSalt` replicationGroupId
       `Prelude.hashWithSalt` nodeGroupId
 
 instance Prelude.NFData TestFailover where

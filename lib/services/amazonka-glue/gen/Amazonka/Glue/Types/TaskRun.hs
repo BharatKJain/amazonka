@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.TaskRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.TaskRun where
@@ -160,7 +160,8 @@ instance Data.FromJSON TaskRun where
 
 instance Prelude.Hashable TaskRun where
   hashWithSalt _salt TaskRun' {..} =
-    _salt `Prelude.hashWithSalt` completedOn
+    _salt
+      `Prelude.hashWithSalt` completedOn
       `Prelude.hashWithSalt` errorString
       `Prelude.hashWithSalt` executionTime
       `Prelude.hashWithSalt` lastModifiedOn

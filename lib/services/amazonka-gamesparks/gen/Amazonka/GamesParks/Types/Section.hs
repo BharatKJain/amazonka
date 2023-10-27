@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GamesParks.Types.Section
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GamesParks.Types.Section where
@@ -85,7 +85,8 @@ instance Data.FromJSON Section where
 
 instance Prelude.Hashable Section where
   hashWithSalt _salt Section' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` size
 

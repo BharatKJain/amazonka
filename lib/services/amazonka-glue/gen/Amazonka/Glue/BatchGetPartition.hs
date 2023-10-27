@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.BatchGetPartition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest BatchGetPartition where
       ( \s h x ->
           BatchGetPartitionResponse'
             Prelude.<$> (x Data..?> "Partitions" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "UnprocessedKeys"
+            Prelude.<*> ( x
+                            Data..?> "UnprocessedKeys"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -131,7 +132,8 @@ instance Core.AWSRequest BatchGetPartition where
 
 instance Prelude.Hashable BatchGetPartition where
   hashWithSalt _salt BatchGetPartition' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` tableName
       `Prelude.hashWithSalt` partitionsToGet

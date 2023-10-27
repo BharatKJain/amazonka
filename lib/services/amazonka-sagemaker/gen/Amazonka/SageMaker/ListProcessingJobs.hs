@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.ListProcessingJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -194,21 +194,21 @@ instance Core.AWSPager ListProcessingJobs where
     | Core.stop
         ( rs
             Lens.^? listProcessingJobsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listProcessingJobsResponse_processingJobSummaries
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listProcessingJobs_nextToken
           Lens..~ rs
           Lens.^? listProcessingJobsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListProcessingJobs where
   type
@@ -222,14 +222,16 @@ instance Core.AWSRequest ListProcessingJobs where
           ListProcessingJobsResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "ProcessingJobSummaries"
+            Prelude.<*> ( x
+                            Data..?> "ProcessingJobSummaries"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListProcessingJobs where
   hashWithSalt _salt ListProcessingJobs' {..} =
-    _salt `Prelude.hashWithSalt` creationTimeAfter
+    _salt
+      `Prelude.hashWithSalt` creationTimeAfter
       `Prelude.hashWithSalt` creationTimeBefore
       `Prelude.hashWithSalt` lastModifiedTimeAfter
       `Prelude.hashWithSalt` lastModifiedTimeBefore

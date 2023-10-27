@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RobOMaker.Types.LaunchConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RobOMaker.Types.LaunchConfig where
@@ -136,7 +136,8 @@ instance Data.FromJSON LaunchConfig where
       ( \x ->
           LaunchConfig'
             Prelude.<$> (x Data..:? "command" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "environmentVariables"
+            Prelude.<*> ( x
+                            Data..:? "environmentVariables"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "launchFile")
@@ -147,7 +148,8 @@ instance Data.FromJSON LaunchConfig where
 
 instance Prelude.Hashable LaunchConfig where
   hashWithSalt _salt LaunchConfig' {..} =
-    _salt `Prelude.hashWithSalt` command
+    _salt
+      `Prelude.hashWithSalt` command
       `Prelude.hashWithSalt` environmentVariables
       `Prelude.hashWithSalt` launchFile
       `Prelude.hashWithSalt` packageName

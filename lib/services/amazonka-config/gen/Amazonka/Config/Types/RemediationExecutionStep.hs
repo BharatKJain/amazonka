@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.RemediationExecutionStep
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.RemediationExecutionStep where
@@ -106,7 +106,8 @@ instance Data.FromJSON RemediationExecutionStep where
 
 instance Prelude.Hashable RemediationExecutionStep where
   hashWithSalt _salt RemediationExecutionStep' {..} =
-    _salt `Prelude.hashWithSalt` errorMessage
+    _salt
+      `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` startTime
       `Prelude.hashWithSalt` state

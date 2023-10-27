@@ -14,7 +14,7 @@
 -- Module      : Amazonka.HoneyCode.Types.ColumnMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.HoneyCode.Types.ColumnMetadata where
@@ -74,12 +74,14 @@ instance Data.FromJSON ColumnMetadata where
       "ColumnMetadata"
       ( \x ->
           ColumnMetadata'
-            Prelude.<$> (x Data..: "name") Prelude.<*> (x Data..: "format")
+            Prelude.<$> (x Data..: "name")
+            Prelude.<*> (x Data..: "format")
       )
 
 instance Prelude.Hashable ColumnMetadata where
   hashWithSalt _salt ColumnMetadata' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` format
 
 instance Prelude.NFData ColumnMetadata where

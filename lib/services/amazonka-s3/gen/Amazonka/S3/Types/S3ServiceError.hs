@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.S3ServiceError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.S3ServiceError where
@@ -2491,7 +2491,8 @@ instance Data.FromXML S3ServiceError where
 
 instance Prelude.Hashable S3ServiceError where
   hashWithSalt _salt S3ServiceError' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` versionId

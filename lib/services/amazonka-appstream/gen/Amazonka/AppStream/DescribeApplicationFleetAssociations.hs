@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppStream.DescribeApplicationFleetAssociations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,8 +124,8 @@ instance
       ( \s h x ->
           DescribeApplicationFleetAssociationsResponse'
             Prelude.<$> (x Data..?> "ApplicationFleetAssociations")
-              Prelude.<*> (x Data..?> "NextToken")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "NextToken")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -135,7 +135,8 @@ instance
   hashWithSalt
     _salt
     DescribeApplicationFleetAssociations' {..} =
-      _salt `Prelude.hashWithSalt` applicationArn
+      _salt
+        `Prelude.hashWithSalt` applicationArn
         `Prelude.hashWithSalt` fleetName
         `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken

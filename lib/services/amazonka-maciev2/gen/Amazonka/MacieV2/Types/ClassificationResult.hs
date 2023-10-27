@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.ClassificationResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.ClassificationResult where
@@ -153,7 +153,8 @@ instance Data.FromJSON ClassificationResult where
 
 instance Prelude.Hashable ClassificationResult where
   hashWithSalt _salt ClassificationResult' {..} =
-    _salt `Prelude.hashWithSalt` additionalOccurrences
+    _salt
+      `Prelude.hashWithSalt` additionalOccurrences
       `Prelude.hashWithSalt` customDataIdentifiers
       `Prelude.hashWithSalt` mimeType
       `Prelude.hashWithSalt` sensitiveData

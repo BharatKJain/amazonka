@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaPackageVOD.ConfigureLogs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance Core.AWSRequest ConfigureLogs where
 
 instance Prelude.Hashable ConfigureLogs where
   hashWithSalt _salt ConfigureLogs' {..} =
-    _salt `Prelude.hashWithSalt` egressAccessLogs
+    _salt
+      `Prelude.hashWithSalt` egressAccessLogs
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData ConfigureLogs where

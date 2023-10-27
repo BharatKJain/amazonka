@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Inspector.StartAssessmentRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest StartAssessmentRun where
 
 instance Prelude.Hashable StartAssessmentRun where
   hashWithSalt _salt StartAssessmentRun' {..} =
-    _salt `Prelude.hashWithSalt` assessmentRunName
+    _salt
+      `Prelude.hashWithSalt` assessmentRunName
       `Prelude.hashWithSalt` assessmentTemplateArn
 
 instance Prelude.NFData StartAssessmentRun where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.LineChartSortConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.LineChartSortConfiguration where
@@ -106,7 +106,8 @@ instance Data.FromJSON LineChartSortConfiguration where
             Prelude.<*> (x Data..:? "CategorySort" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "ColorItemsLimitConfiguration")
             Prelude.<*> (x Data..:? "SmallMultiplesLimitConfiguration")
-            Prelude.<*> ( x Data..:? "SmallMultiplesSort"
+            Prelude.<*> ( x
+                            Data..:? "SmallMultiplesSort"
                             Data..!= Prelude.mempty
                         )
       )

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ResourceDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ResourceDetail where
@@ -104,7 +104,8 @@ instance Data.FromJSON ResourceDetail where
 
 instance Prelude.Hashable ResourceDetail where
   hashWithSalt _salt ResourceDetail' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` id

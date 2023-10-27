@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.DataSourceSyncJobMetrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.DataSourceSyncJobMetrics where
@@ -122,7 +122,8 @@ instance Data.FromJSON DataSourceSyncJobMetrics where
 
 instance Prelude.Hashable DataSourceSyncJobMetrics where
   hashWithSalt _salt DataSourceSyncJobMetrics' {..} =
-    _salt `Prelude.hashWithSalt` documentsAdded
+    _salt
+      `Prelude.hashWithSalt` documentsAdded
       `Prelude.hashWithSalt` documentsDeleted
       `Prelude.hashWithSalt` documentsFailed
       `Prelude.hashWithSalt` documentsModified

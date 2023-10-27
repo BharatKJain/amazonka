@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.InputColumn
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.InputColumn where
@@ -71,12 +71,14 @@ instance Data.FromJSON InputColumn where
       "InputColumn"
       ( \x ->
           InputColumn'
-            Prelude.<$> (x Data..: "Name") Prelude.<*> (x Data..: "Type")
+            Prelude.<$> (x Data..: "Name")
+            Prelude.<*> (x Data..: "Type")
       )
 
 instance Prelude.Hashable InputColumn where
   hashWithSalt _salt InputColumn' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData InputColumn where

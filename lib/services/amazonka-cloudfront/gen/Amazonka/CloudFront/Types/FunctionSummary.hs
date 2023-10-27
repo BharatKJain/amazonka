@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.FunctionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.FunctionSummary where
@@ -102,7 +102,8 @@ instance Data.FromXML FunctionSummary where
 
 instance Prelude.Hashable FunctionSummary where
   hashWithSalt _salt FunctionSummary' {..} =
-    _salt `Prelude.hashWithSalt` status
+    _salt
+      `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` functionConfig
       `Prelude.hashWithSalt` functionMetadata

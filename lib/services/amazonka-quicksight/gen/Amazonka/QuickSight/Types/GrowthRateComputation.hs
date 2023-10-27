@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.GrowthRateComputation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.GrowthRateComputation where
@@ -110,7 +110,8 @@ instance Data.FromJSON GrowthRateComputation where
 
 instance Prelude.Hashable GrowthRateComputation where
   hashWithSalt _salt GrowthRateComputation' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` periodSize
       `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` computationId

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.UpdatePortfolio
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -174,7 +174,8 @@ instance Core.AWSRequest UpdatePortfolio where
 
 instance Prelude.Hashable UpdatePortfolio where
   hashWithSalt _salt UpdatePortfolio' {..} =
-    _salt `Prelude.hashWithSalt` acceptLanguage
+    _salt
+      `Prelude.hashWithSalt` acceptLanguage
       `Prelude.hashWithSalt` addTags
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` displayName

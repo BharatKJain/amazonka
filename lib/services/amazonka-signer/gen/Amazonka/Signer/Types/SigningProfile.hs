@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Signer.Types.SigningProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Signer.Types.SigningProfile where
@@ -164,7 +164,8 @@ instance Data.FromJSON SigningProfile where
             Prelude.<*> (x Data..:? "profileVersionArn")
             Prelude.<*> (x Data..:? "signatureValidityPeriod")
             Prelude.<*> (x Data..:? "signingMaterial")
-            Prelude.<*> ( x Data..:? "signingParameters"
+            Prelude.<*> ( x
+                            Data..:? "signingParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "status")
@@ -173,7 +174,8 @@ instance Data.FromJSON SigningProfile where
 
 instance Prelude.Hashable SigningProfile where
   hashWithSalt _salt SigningProfile' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` platformDisplayName
       `Prelude.hashWithSalt` platformId
       `Prelude.hashWithSalt` profileName

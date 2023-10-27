@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Support.AddCommunicationToCase
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,7 +148,8 @@ instance Core.AWSRequest AddCommunicationToCase where
 
 instance Prelude.Hashable AddCommunicationToCase where
   hashWithSalt _salt AddCommunicationToCase' {..} =
-    _salt `Prelude.hashWithSalt` attachmentSetId
+    _salt
+      `Prelude.hashWithSalt` attachmentSetId
       `Prelude.hashWithSalt` caseId
       `Prelude.hashWithSalt` ccEmailAddresses
       `Prelude.hashWithSalt` communicationBody

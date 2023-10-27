@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.PutGroupPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -209,7 +209,8 @@ instance Core.AWSRequest PutGroupPolicy where
 
 instance Prelude.Hashable PutGroupPolicy where
   hashWithSalt _salt PutGroupPolicy' {..} =
-    _salt `Prelude.hashWithSalt` groupName
+    _salt
+      `Prelude.hashWithSalt` groupName
       `Prelude.hashWithSalt` policyName
       `Prelude.hashWithSalt` policyDocument
 

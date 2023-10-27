@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Location.BatchGetDevicePosition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest BatchGetDevicePosition where
       ( \s h x ->
           BatchGetDevicePositionResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "DevicePositions"
+            Prelude.<*> ( x
+                            Data..?> "DevicePositions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "Errors" Core..!@ Prelude.mempty)
@@ -118,7 +119,8 @@ instance Core.AWSRequest BatchGetDevicePosition where
 
 instance Prelude.Hashable BatchGetDevicePosition where
   hashWithSalt _salt BatchGetDevicePosition' {..} =
-    _salt `Prelude.hashWithSalt` deviceIds
+    _salt
+      `Prelude.hashWithSalt` deviceIds
       `Prelude.hashWithSalt` trackerName
 
 instance Prelude.NFData BatchGetDevicePosition where

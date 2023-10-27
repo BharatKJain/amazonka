@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.ResourceEvaluation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.ResourceEvaluation where
@@ -86,7 +86,8 @@ instance Data.FromJSON ResourceEvaluation where
 
 instance Prelude.Hashable ResourceEvaluation where
   hashWithSalt _salt ResourceEvaluation' {..} =
-    _salt `Prelude.hashWithSalt` evaluationMode
+    _salt
+      `Prelude.hashWithSalt` evaluationMode
       `Prelude.hashWithSalt` evaluationStartTimestamp
       `Prelude.hashWithSalt` resourceEvaluationId
 

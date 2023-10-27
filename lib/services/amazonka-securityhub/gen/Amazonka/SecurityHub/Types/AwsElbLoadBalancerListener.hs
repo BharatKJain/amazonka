@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsElbLoadBalancerListener
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsElbLoadBalancerListener where
@@ -132,7 +132,8 @@ instance Data.FromJSON AwsElbLoadBalancerListener where
 
 instance Prelude.Hashable AwsElbLoadBalancerListener where
   hashWithSalt _salt AwsElbLoadBalancerListener' {..} =
-    _salt `Prelude.hashWithSalt` instancePort
+    _salt
+      `Prelude.hashWithSalt` instancePort
       `Prelude.hashWithSalt` instanceProtocol
       `Prelude.hashWithSalt` loadBalancerPort
       `Prelude.hashWithSalt` protocol

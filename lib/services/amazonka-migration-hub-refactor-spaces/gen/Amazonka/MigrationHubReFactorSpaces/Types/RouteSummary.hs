@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubReFactorSpaces.Types.RouteSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubReFactorSpaces.Types.RouteSummary where
@@ -232,7 +232,8 @@ instance Data.FromJSON RouteSummary where
             Prelude.<*> (x Data..:? "LastUpdatedTime")
             Prelude.<*> (x Data..:? "Methods" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "OwnerAccountId")
-            Prelude.<*> ( x Data..:? "PathResourceToId"
+            Prelude.<*> ( x
+                            Data..:? "PathResourceToId"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "RouteId")
@@ -245,7 +246,8 @@ instance Data.FromJSON RouteSummary where
 
 instance Prelude.Hashable RouteSummary where
   hashWithSalt _salt RouteSummary' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdByAccountId
       `Prelude.hashWithSalt` createdTime

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECRPublic.GetRepositoryCatalogData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest GetRepositoryCatalogData where
 
 instance Prelude.Hashable GetRepositoryCatalogData where
   hashWithSalt _salt GetRepositoryCatalogData' {..} =
-    _salt `Prelude.hashWithSalt` registryId
+    _salt
+      `Prelude.hashWithSalt` registryId
       `Prelude.hashWithSalt` repositoryName
 
 instance Prelude.NFData GetRepositoryCatalogData where

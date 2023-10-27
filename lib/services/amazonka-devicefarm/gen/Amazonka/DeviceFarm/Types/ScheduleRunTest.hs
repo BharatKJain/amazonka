@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.ScheduleRunTest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.ScheduleRunTest where
@@ -459,7 +459,8 @@ scheduleRunTest_type = Lens.lens (\ScheduleRunTest' {type'} -> type') (\s@Schedu
 
 instance Prelude.Hashable ScheduleRunTest where
   hashWithSalt _salt ScheduleRunTest' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` testPackageArn
       `Prelude.hashWithSalt` testSpecArn

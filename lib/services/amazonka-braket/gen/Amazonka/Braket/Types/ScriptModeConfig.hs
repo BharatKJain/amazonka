@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Braket.Types.ScriptModeConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Braket.Types.ScriptModeConfig where
@@ -100,7 +100,8 @@ instance Data.FromJSON ScriptModeConfig where
 
 instance Prelude.Hashable ScriptModeConfig where
   hashWithSalt _salt ScriptModeConfig' {..} =
-    _salt `Prelude.hashWithSalt` compressionType
+    _salt
+      `Prelude.hashWithSalt` compressionType
       `Prelude.hashWithSalt` entryPoint
       `Prelude.hashWithSalt` s3Uri
 

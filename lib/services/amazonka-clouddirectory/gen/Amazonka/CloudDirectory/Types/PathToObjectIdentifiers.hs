@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.PathToObjectIdentifiers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.PathToObjectIdentifiers where
@@ -76,7 +76,8 @@ instance Data.FromJSON PathToObjectIdentifiers where
       "PathToObjectIdentifiers"
       ( \x ->
           PathToObjectIdentifiers'
-            Prelude.<$> ( x Data..:? "ObjectIdentifiers"
+            Prelude.<$> ( x
+                            Data..:? "ObjectIdentifiers"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Path")
@@ -84,7 +85,8 @@ instance Data.FromJSON PathToObjectIdentifiers where
 
 instance Prelude.Hashable PathToObjectIdentifiers where
   hashWithSalt _salt PathToObjectIdentifiers' {..} =
-    _salt `Prelude.hashWithSalt` objectIdentifiers
+    _salt
+      `Prelude.hashWithSalt` objectIdentifiers
       `Prelude.hashWithSalt` path
 
 instance Prelude.NFData PathToObjectIdentifiers where

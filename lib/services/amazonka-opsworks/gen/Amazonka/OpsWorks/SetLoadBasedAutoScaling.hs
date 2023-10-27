@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpsWorks.SetLoadBasedAutoScaling
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -146,7 +146,8 @@ instance Core.AWSRequest SetLoadBasedAutoScaling where
 
 instance Prelude.Hashable SetLoadBasedAutoScaling where
   hashWithSalt _salt SetLoadBasedAutoScaling' {..} =
-    _salt `Prelude.hashWithSalt` downScaling
+    _salt
+      `Prelude.hashWithSalt` downScaling
       `Prelude.hashWithSalt` enable
       `Prelude.hashWithSalt` upScaling
       `Prelude.hashWithSalt` layerId

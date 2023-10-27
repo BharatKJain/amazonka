@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.IcmpTypeCode
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.IcmpTypeCode where
@@ -74,12 +74,14 @@ instance Data.FromJSON IcmpTypeCode where
       "IcmpTypeCode"
       ( \x ->
           IcmpTypeCode'
-            Prelude.<$> (x Data..:? "Code") Prelude.<*> (x Data..:? "Type")
+            Prelude.<$> (x Data..:? "Code")
+            Prelude.<*> (x Data..:? "Type")
       )
 
 instance Prelude.Hashable IcmpTypeCode where
   hashWithSalt _salt IcmpTypeCode' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData IcmpTypeCode where

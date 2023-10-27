@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SESV2.GetContact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,10 +108,12 @@ instance Core.AWSRequest GetContact where
             Prelude.<*> (x Data..?> "CreatedTimestamp")
             Prelude.<*> (x Data..?> "EmailAddress")
             Prelude.<*> (x Data..?> "LastUpdatedTimestamp")
-            Prelude.<*> ( x Data..?> "TopicDefaultPreferences"
+            Prelude.<*> ( x
+                            Data..?> "TopicDefaultPreferences"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "TopicPreferences"
+            Prelude.<*> ( x
+                            Data..?> "TopicPreferences"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "UnsubscribeAll")
@@ -120,7 +122,8 @@ instance Core.AWSRequest GetContact where
 
 instance Prelude.Hashable GetContact where
   hashWithSalt _salt GetContact' {..} =
-    _salt `Prelude.hashWithSalt` contactListName
+    _salt
+      `Prelude.hashWithSalt` contactListName
       `Prelude.hashWithSalt` emailAddress
 
 instance Prelude.NFData GetContact where

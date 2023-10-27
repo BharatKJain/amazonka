@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.VpcConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.VpcConfig where
@@ -68,7 +68,8 @@ instance Data.FromJSON VpcConfig where
       "VpcConfig"
       ( \x ->
           VpcConfig'
-            Prelude.<$> ( x Data..:? "securityGroupIds"
+            Prelude.<$> ( x
+                            Data..:? "securityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "subnetIds" Data..!= Prelude.mempty)
@@ -76,7 +77,8 @@ instance Data.FromJSON VpcConfig where
 
 instance Prelude.Hashable VpcConfig where
   hashWithSalt _salt VpcConfig' {..} =
-    _salt `Prelude.hashWithSalt` securityGroupIds
+    _salt
+      `Prelude.hashWithSalt` securityGroupIds
       `Prelude.hashWithSalt` subnetIds
 
 instance Prelude.NFData VpcConfig where

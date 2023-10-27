@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.ParameterMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.ParameterMetadata where
@@ -184,7 +184,8 @@ instance Data.FromJSON ParameterMetadata where
 
 instance Prelude.Hashable ParameterMetadata where
   hashWithSalt _salt ParameterMetadata' {..} =
-    _salt `Prelude.hashWithSalt` allowedPattern
+    _salt
+      `Prelude.hashWithSalt` allowedPattern
       `Prelude.hashWithSalt` dataType
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` keyId

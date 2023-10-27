@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.FilesLimit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.FilesLimit where
@@ -101,7 +101,8 @@ instance Data.FromJSON FilesLimit where
 
 instance Prelude.Hashable FilesLimit where
   hashWithSalt _salt FilesLimit' {..} =
-    _salt `Prelude.hashWithSalt` order
+    _salt
+      `Prelude.hashWithSalt` order
       `Prelude.hashWithSalt` orderedBy
       `Prelude.hashWithSalt` maxFiles
 

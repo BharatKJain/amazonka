@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.ApplicationsResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.ApplicationsResponse where
@@ -81,7 +81,8 @@ instance Data.FromJSON ApplicationsResponse where
 
 instance Prelude.Hashable ApplicationsResponse where
   hashWithSalt _salt ApplicationsResponse' {..} =
-    _salt `Prelude.hashWithSalt` item
+    _salt
+      `Prelude.hashWithSalt` item
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ApplicationsResponse where

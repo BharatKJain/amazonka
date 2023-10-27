@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.InputFileLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.InputFileLocation where
@@ -78,7 +78,8 @@ instance Data.FromJSON InputFileLocation where
 
 instance Prelude.Hashable InputFileLocation where
   hashWithSalt _salt InputFileLocation' {..} =
-    _salt `Prelude.hashWithSalt` efsFileLocation
+    _salt
+      `Prelude.hashWithSalt` efsFileLocation
       `Prelude.hashWithSalt` s3FileLocation
 
 instance Prelude.NFData InputFileLocation where

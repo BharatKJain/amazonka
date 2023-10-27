@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerMetrics.Types.RawMetricData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerMetrics.Types.RawMetricData where
@@ -88,7 +88,8 @@ rawMetricData_value = Lens.lens (\RawMetricData' {value} -> value) (\s@RawMetric
 
 instance Prelude.Hashable RawMetricData where
   hashWithSalt _salt RawMetricData' {..} =
-    _salt `Prelude.hashWithSalt` step
+    _salt
+      `Prelude.hashWithSalt` step
       `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` timestamp
       `Prelude.hashWithSalt` value

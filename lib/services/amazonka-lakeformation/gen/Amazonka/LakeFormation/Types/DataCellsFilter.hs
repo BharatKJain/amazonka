@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.DataCellsFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.DataCellsFilter where
@@ -144,7 +144,8 @@ instance Data.FromJSON DataCellsFilter where
 
 instance Prelude.Hashable DataCellsFilter where
   hashWithSalt _salt DataCellsFilter' {..} =
-    _salt `Prelude.hashWithSalt` columnNames
+    _salt
+      `Prelude.hashWithSalt` columnNames
       `Prelude.hashWithSalt` columnWildcard
       `Prelude.hashWithSalt` rowFilter
       `Prelude.hashWithSalt` tableCatalogId

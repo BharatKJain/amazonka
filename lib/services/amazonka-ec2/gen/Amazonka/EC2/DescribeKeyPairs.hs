@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeKeyPairs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -197,7 +197,9 @@ instance Core.AWSRequest DescribeKeyPairs where
     Response.receiveXML
       ( \s h x ->
           DescribeKeyPairsResponse'
-            Prelude.<$> ( x Data..@? "keySet" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "keySet"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -205,7 +207,8 @@ instance Core.AWSRequest DescribeKeyPairs where
 
 instance Prelude.Hashable DescribeKeyPairs where
   hashWithSalt _salt DescribeKeyPairs' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` includePublicKey
       `Prelude.hashWithSalt` keyNames

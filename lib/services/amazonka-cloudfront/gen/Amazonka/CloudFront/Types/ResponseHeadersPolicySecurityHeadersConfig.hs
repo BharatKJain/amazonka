@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.ResponseHeadersPolicySecurityHeadersConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.ResponseHeadersPolicySecurityHeadersConfig where
@@ -226,11 +226,11 @@ instance
   parseXML x =
     ResponseHeadersPolicySecurityHeadersConfig'
       Prelude.<$> (x Data..@? "ContentSecurityPolicy")
-        Prelude.<*> (x Data..@? "ContentTypeOptions")
-        Prelude.<*> (x Data..@? "FrameOptions")
-        Prelude.<*> (x Data..@? "ReferrerPolicy")
-        Prelude.<*> (x Data..@? "StrictTransportSecurity")
-        Prelude.<*> (x Data..@? "XSSProtection")
+      Prelude.<*> (x Data..@? "ContentTypeOptions")
+      Prelude.<*> (x Data..@? "FrameOptions")
+      Prelude.<*> (x Data..@? "ReferrerPolicy")
+      Prelude.<*> (x Data..@? "StrictTransportSecurity")
+      Prelude.<*> (x Data..@? "XSSProtection")
 
 instance
   Prelude.Hashable
@@ -239,7 +239,8 @@ instance
   hashWithSalt
     _salt
     ResponseHeadersPolicySecurityHeadersConfig' {..} =
-      _salt `Prelude.hashWithSalt` contentSecurityPolicy
+      _salt
+        `Prelude.hashWithSalt` contentSecurityPolicy
         `Prelude.hashWithSalt` contentTypeOptions
         `Prelude.hashWithSalt` frameOptions
         `Prelude.hashWithSalt` referrerPolicy

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppRunner.Types.ServiceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppRunner.Types.ServiceSummary where
@@ -188,7 +188,8 @@ instance Data.FromJSON ServiceSummary where
 
 instance Prelude.Hashable ServiceSummary where
   hashWithSalt _salt ServiceSummary' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` serviceArn
       `Prelude.hashWithSalt` serviceId
       `Prelude.hashWithSalt` serviceName

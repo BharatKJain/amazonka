@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.FunctionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.FunctionConfiguration where
@@ -158,7 +158,8 @@ instance Data.FromJSON FunctionConfiguration where
 
 instance Prelude.Hashable FunctionConfiguration where
   hashWithSalt _salt FunctionConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` encodingType
+    _salt
+      `Prelude.hashWithSalt` encodingType
       `Prelude.hashWithSalt` environment
       `Prelude.hashWithSalt` execArgs
       `Prelude.hashWithSalt` executable

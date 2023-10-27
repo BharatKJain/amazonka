@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kinesis.DescribeStream
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -171,26 +171,26 @@ instance Core.AWSPager DescribeStream where
     | Core.stop
         ( rs
             Lens.^. describeStreamResponse_streamDescription
-              Prelude.. streamDescription_hasMoreShards
+            Prelude.. streamDescription_hasMoreShards
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.isNothing
         ( rs
             Lens.^? describeStreamResponse_streamDescription
-              Prelude.. streamDescription_shards
-              Prelude.. Lens._last
-              Prelude.. shard_shardId
-        ) =
-      Prelude.Nothing
-    | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
-          Prelude.& describeStream_exclusiveStartShardId
-          Lens..~ rs
-          Lens.^? describeStreamResponse_streamDescription
             Prelude.. streamDescription_shards
             Prelude.. Lens._last
             Prelude.. shard_shardId
+        ) =
+        Prelude.Nothing
+    | Prelude.otherwise =
+        Prelude.Just
+          Prelude.$ rq
+          Prelude.& describeStream_exclusiveStartShardId
+          Lens..~ rs
+          Lens.^? describeStreamResponse_streamDescription
+          Prelude.. streamDescription_shards
+          Prelude.. Lens._last
+          Prelude.. shard_shardId
 
 instance Core.AWSRequest DescribeStream where
   type
@@ -208,7 +208,8 @@ instance Core.AWSRequest DescribeStream where
 
 instance Prelude.Hashable DescribeStream where
   hashWithSalt _salt DescribeStream' {..} =
-    _salt `Prelude.hashWithSalt` exclusiveStartShardId
+    _salt
+      `Prelude.hashWithSalt` exclusiveStartShardId
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` streamARN
       `Prelude.hashWithSalt` streamName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.ClassifierMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.ClassifierMetadata where
@@ -108,7 +108,8 @@ instance Data.FromJSON ClassifierMetadata where
 
 instance Prelude.Hashable ClassifierMetadata where
   hashWithSalt _salt ClassifierMetadata' {..} =
-    _salt `Prelude.hashWithSalt` evaluationMetrics
+    _salt
+      `Prelude.hashWithSalt` evaluationMetrics
       `Prelude.hashWithSalt` numberOfLabels
       `Prelude.hashWithSalt` numberOfTestDocuments
       `Prelude.hashWithSalt` numberOfTrainedDocuments

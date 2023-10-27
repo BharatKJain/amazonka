@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.NatGatewayAddress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.NatGatewayAddress where
@@ -98,7 +98,8 @@ instance Data.FromXML NatGatewayAddress where
 
 instance Prelude.Hashable NatGatewayAddress where
   hashWithSalt _salt NatGatewayAddress' {..} =
-    _salt `Prelude.hashWithSalt` allocationId
+    _salt
+      `Prelude.hashWithSalt` allocationId
       `Prelude.hashWithSalt` networkInterfaceId
       `Prelude.hashWithSalt` privateIp
       `Prelude.hashWithSalt` publicIp

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudSearchDomains.Types.SearchStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudSearchDomains.Types.SearchStatus where
@@ -69,12 +69,14 @@ instance Data.FromJSON SearchStatus where
       "SearchStatus"
       ( \x ->
           SearchStatus'
-            Prelude.<$> (x Data..:? "rid") Prelude.<*> (x Data..:? "timems")
+            Prelude.<$> (x Data..:? "rid")
+            Prelude.<*> (x Data..:? "timems")
       )
 
 instance Prelude.Hashable SearchStatus where
   hashWithSalt _salt SearchStatus' {..} =
-    _salt `Prelude.hashWithSalt` rid
+    _salt
+      `Prelude.hashWithSalt` rid
       `Prelude.hashWithSalt` timems
 
 instance Prelude.NFData SearchStatus where

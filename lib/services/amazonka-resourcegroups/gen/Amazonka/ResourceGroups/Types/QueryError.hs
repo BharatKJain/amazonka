@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResourceGroups.Types.QueryError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResourceGroups.Types.QueryError where
@@ -96,7 +96,8 @@ instance Data.FromJSON QueryError where
 
 instance Prelude.Hashable QueryError where
   hashWithSalt _salt QueryError' {..} =
-    _salt `Prelude.hashWithSalt` errorCode
+    _salt
+      `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData QueryError where

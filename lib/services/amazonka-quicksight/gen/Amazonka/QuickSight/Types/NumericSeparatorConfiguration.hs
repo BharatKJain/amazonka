@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.NumericSeparatorConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.NumericSeparatorConfiguration where
@@ -80,7 +80,8 @@ instance
     NumericSeparatorConfiguration
   where
   hashWithSalt _salt NumericSeparatorConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` decimalSeparator
+    _salt
+      `Prelude.hashWithSalt` decimalSeparator
       `Prelude.hashWithSalt` thousandsSeparator
 
 instance Prelude.NFData NumericSeparatorConfiguration where

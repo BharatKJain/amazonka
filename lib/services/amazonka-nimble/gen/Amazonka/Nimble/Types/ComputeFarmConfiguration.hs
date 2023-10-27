@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Nimble.Types.ComputeFarmConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Nimble.Types.ComputeFarmConfiguration where
@@ -82,7 +82,8 @@ instance Data.FromJSON ComputeFarmConfiguration where
 
 instance Prelude.Hashable ComputeFarmConfiguration where
   hashWithSalt _salt ComputeFarmConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` activeDirectoryUser
+    _salt
+      `Prelude.hashWithSalt` activeDirectoryUser
       `Prelude.hashWithSalt` endpoint
 
 instance Prelude.NFData ComputeFarmConfiguration where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.GlobalSecondaryIndex
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.GlobalSecondaryIndex where
@@ -178,7 +178,8 @@ instance Data.FromJSON GlobalSecondaryIndex where
 
 instance Prelude.Hashable GlobalSecondaryIndex where
   hashWithSalt _salt GlobalSecondaryIndex' {..} =
-    _salt `Prelude.hashWithSalt` provisionedThroughput
+    _salt
+      `Prelude.hashWithSalt` provisionedThroughput
       `Prelude.hashWithSalt` indexName
       `Prelude.hashWithSalt` keySchema
       `Prelude.hashWithSalt` projection

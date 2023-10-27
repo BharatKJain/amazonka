@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.FailureDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.FailureDetails where
@@ -79,7 +79,8 @@ failureDetails_message = Lens.lens (\FailureDetails' {message} -> message) (\s@F
 
 instance Prelude.Hashable FailureDetails where
   hashWithSalt _salt FailureDetails' {..} =
-    _salt `Prelude.hashWithSalt` externalExecutionId
+    _salt
+      `Prelude.hashWithSalt` externalExecutionId
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` message
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.Source
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.Source where
@@ -189,7 +189,8 @@ instance Data.FromJSON Source where
 
 instance Prelude.Hashable Source where
   hashWithSalt _salt Source' {..} =
-    _salt `Prelude.hashWithSalt` customPolicyDetails
+    _salt
+      `Prelude.hashWithSalt` customPolicyDetails
       `Prelude.hashWithSalt` sourceDetails
       `Prelude.hashWithSalt` sourceIdentifier
       `Prelude.hashWithSalt` owner

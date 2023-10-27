@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EMR.AddInstanceGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -101,7 +101,8 @@ instance Core.AWSRequest AddInstanceGroups where
       ( \s h x ->
           AddInstanceGroupsResponse'
             Prelude.<$> (x Data..?> "ClusterArn")
-            Prelude.<*> ( x Data..?> "InstanceGroupIds"
+            Prelude.<*> ( x
+                            Data..?> "InstanceGroupIds"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "JobFlowId")
@@ -110,7 +111,8 @@ instance Core.AWSRequest AddInstanceGroups where
 
 instance Prelude.Hashable AddInstanceGroups where
   hashWithSalt _salt AddInstanceGroups' {..} =
-    _salt `Prelude.hashWithSalt` instanceGroups
+    _salt
+      `Prelude.hashWithSalt` instanceGroups
       `Prelude.hashWithSalt` jobFlowId
 
 instance Prelude.NFData AddInstanceGroups where

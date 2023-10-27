@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.ThingTypeProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.ThingTypeProperties where
@@ -71,7 +71,8 @@ instance Data.FromJSON ThingTypeProperties where
       "ThingTypeProperties"
       ( \x ->
           ThingTypeProperties'
-            Prelude.<$> ( x Data..:? "searchableAttributes"
+            Prelude.<$> ( x
+                            Data..:? "searchableAttributes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "thingTypeDescription")
@@ -79,7 +80,8 @@ instance Data.FromJSON ThingTypeProperties where
 
 instance Prelude.Hashable ThingTypeProperties where
   hashWithSalt _salt ThingTypeProperties' {..} =
-    _salt `Prelude.hashWithSalt` searchableAttributes
+    _salt
+      `Prelude.hashWithSalt` searchableAttributes
       `Prelude.hashWithSalt` thingTypeDescription
 
 instance Prelude.NFData ThingTypeProperties where

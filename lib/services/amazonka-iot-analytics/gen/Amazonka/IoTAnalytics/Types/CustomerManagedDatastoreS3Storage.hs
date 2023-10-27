@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.CustomerManagedDatastoreS3Storage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.CustomerManagedDatastoreS3Storage where
@@ -113,7 +113,8 @@ instance
   hashWithSalt
     _salt
     CustomerManagedDatastoreS3Storage' {..} =
-      _salt `Prelude.hashWithSalt` keyPrefix
+      _salt
+        `Prelude.hashWithSalt` keyPrefix
         `Prelude.hashWithSalt` bucket
         `Prelude.hashWithSalt` roleArn
 

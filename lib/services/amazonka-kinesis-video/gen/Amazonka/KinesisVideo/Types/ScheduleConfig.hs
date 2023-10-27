@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisVideo.Types.ScheduleConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisVideo.Types.ScheduleConfig where
@@ -114,7 +114,8 @@ instance Data.FromJSON ScheduleConfig where
 
 instance Prelude.Hashable ScheduleConfig where
   hashWithSalt _salt ScheduleConfig' {..} =
-    _salt `Prelude.hashWithSalt` scheduleExpression
+    _salt
+      `Prelude.hashWithSalt` scheduleExpression
       `Prelude.hashWithSalt` durationInSeconds
 
 instance Prelude.NFData ScheduleConfig where

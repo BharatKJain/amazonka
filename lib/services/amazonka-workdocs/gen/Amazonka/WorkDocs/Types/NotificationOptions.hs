@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkDocs.Types.NotificationOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkDocs.Types.NotificationOptions where
@@ -68,7 +68,8 @@ notificationOptions_sendEmail = Lens.lens (\NotificationOptions' {sendEmail} -> 
 
 instance Prelude.Hashable NotificationOptions where
   hashWithSalt _salt NotificationOptions' {..} =
-    _salt `Prelude.hashWithSalt` emailMessage
+    _salt
+      `Prelude.hashWithSalt` emailMessage
       `Prelude.hashWithSalt` sendEmail
 
 instance Prelude.NFData NotificationOptions where

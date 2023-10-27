@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.MicrosoftSQLServerSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.MicrosoftSQLServerSettings where
@@ -353,7 +353,8 @@ instance Data.FromJSON MicrosoftSQLServerSettings where
 
 instance Prelude.Hashable MicrosoftSQLServerSettings where
   hashWithSalt _salt MicrosoftSQLServerSettings' {..} =
-    _salt `Prelude.hashWithSalt` bcpPacketSize
+    _salt
+      `Prelude.hashWithSalt` bcpPacketSize
       `Prelude.hashWithSalt` controlTablesFileGroup
       `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` password

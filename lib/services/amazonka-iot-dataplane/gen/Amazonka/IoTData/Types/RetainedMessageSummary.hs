@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTData.Types.RetainedMessageSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTData.Types.RetainedMessageSummary where
@@ -98,7 +98,8 @@ instance Data.FromJSON RetainedMessageSummary where
 
 instance Prelude.Hashable RetainedMessageSummary where
   hashWithSalt _salt RetainedMessageSummary' {..} =
-    _salt `Prelude.hashWithSalt` lastModifiedTime
+    _salt
+      `Prelude.hashWithSalt` lastModifiedTime
       `Prelude.hashWithSalt` payloadSize
       `Prelude.hashWithSalt` qos
       `Prelude.hashWithSalt` topic

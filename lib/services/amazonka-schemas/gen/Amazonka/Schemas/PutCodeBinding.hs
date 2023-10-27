@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Schemas.PutCodeBinding
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest PutCodeBinding where
 
 instance Prelude.Hashable PutCodeBinding where
   hashWithSalt _salt PutCodeBinding' {..} =
-    _salt `Prelude.hashWithSalt` schemaVersion
+    _salt
+      `Prelude.hashWithSalt` schemaVersion
       `Prelude.hashWithSalt` registryName
       `Prelude.hashWithSalt` schemaName
       `Prelude.hashWithSalt` language

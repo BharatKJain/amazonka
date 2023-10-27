@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.DatastorePartition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.DatastorePartition where
@@ -78,7 +78,8 @@ instance Data.FromJSON DatastorePartition where
 
 instance Prelude.Hashable DatastorePartition where
   hashWithSalt _salt DatastorePartition' {..} =
-    _salt `Prelude.hashWithSalt` attributePartition
+    _salt
+      `Prelude.hashWithSalt` attributePartition
       `Prelude.hashWithSalt` timestampPartition
 
 instance Prelude.NFData DatastorePartition where

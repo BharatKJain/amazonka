@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.CustomLabel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.CustomLabel where
@@ -97,7 +97,8 @@ instance Data.FromJSON CustomLabel where
 
 instance Prelude.Hashable CustomLabel where
   hashWithSalt _salt CustomLabel' {..} =
-    _salt `Prelude.hashWithSalt` confidence
+    _salt
+      `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` geometry
       `Prelude.hashWithSalt` name
 

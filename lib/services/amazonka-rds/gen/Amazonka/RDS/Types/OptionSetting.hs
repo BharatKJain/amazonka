@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.OptionSetting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.OptionSetting where
@@ -147,7 +147,8 @@ instance Data.FromXML OptionSetting where
 
 instance Prelude.Hashable OptionSetting where
   hashWithSalt _salt OptionSetting' {..} =
-    _salt `Prelude.hashWithSalt` allowedValues
+    _salt
+      `Prelude.hashWithSalt` allowedValues
       `Prelude.hashWithSalt` applyType
       `Prelude.hashWithSalt` dataType
       `Prelude.hashWithSalt` defaultValue

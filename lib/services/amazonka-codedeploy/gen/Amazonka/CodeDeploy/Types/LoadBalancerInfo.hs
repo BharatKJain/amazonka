@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.LoadBalancerInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.LoadBalancerInfo where
@@ -109,17 +109,20 @@ instance Data.FromJSON LoadBalancerInfo where
       ( \x ->
           LoadBalancerInfo'
             Prelude.<$> (x Data..:? "elbInfoList" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "targetGroupInfoList"
+            Prelude.<*> ( x
+                            Data..:? "targetGroupInfoList"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "targetGroupPairInfoList"
+            Prelude.<*> ( x
+                            Data..:? "targetGroupPairInfoList"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable LoadBalancerInfo where
   hashWithSalt _salt LoadBalancerInfo' {..} =
-    _salt `Prelude.hashWithSalt` elbInfoList
+    _salt
+      `Prelude.hashWithSalt` elbInfoList
       `Prelude.hashWithSalt` targetGroupInfoList
       `Prelude.hashWithSalt` targetGroupPairInfoList
 

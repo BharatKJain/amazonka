@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamQuery.Types.ParameterMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamQuery.Types.ParameterMapping where
@@ -69,12 +69,14 @@ instance Data.FromJSON ParameterMapping where
       "ParameterMapping"
       ( \x ->
           ParameterMapping'
-            Prelude.<$> (x Data..: "Name") Prelude.<*> (x Data..: "Type")
+            Prelude.<$> (x Data..: "Name")
+            Prelude.<*> (x Data..: "Type")
       )
 
 instance Prelude.Hashable ParameterMapping where
   hashWithSalt _salt ParameterMapping' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData ParameterMapping where

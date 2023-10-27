@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTDeviceAdvisor.UpdateSuiteDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest UpdateSuiteDefinition where
 
 instance Prelude.Hashable UpdateSuiteDefinition where
   hashWithSalt _salt UpdateSuiteDefinition' {..} =
-    _salt `Prelude.hashWithSalt` suiteDefinitionId
+    _salt
+      `Prelude.hashWithSalt` suiteDefinitionId
       `Prelude.hashWithSalt` suiteDefinitionConfiguration
 
 instance Prelude.NFData UpdateSuiteDefinition where

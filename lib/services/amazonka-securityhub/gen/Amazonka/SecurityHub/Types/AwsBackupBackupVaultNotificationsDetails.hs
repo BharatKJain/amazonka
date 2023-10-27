@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsBackupBackupVaultNotificationsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsBackupBackupVaultNotificationsDetails where
@@ -103,7 +103,8 @@ instance
       "AwsBackupBackupVaultNotificationsDetails"
       ( \x ->
           AwsBackupBackupVaultNotificationsDetails'
-            Prelude.<$> ( x Data..:? "BackupVaultEvents"
+            Prelude.<$> ( x
+                            Data..:? "BackupVaultEvents"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SnsTopicArn")
@@ -116,7 +117,8 @@ instance
   hashWithSalt
     _salt
     AwsBackupBackupVaultNotificationsDetails' {..} =
-      _salt `Prelude.hashWithSalt` backupVaultEvents
+      _salt
+        `Prelude.hashWithSalt` backupVaultEvents
         `Prelude.hashWithSalt` snsTopicArn
 
 instance

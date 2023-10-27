@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Detective.Types.DatasourcePackageUsageInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Detective.Types.DatasourcePackageUsageInfo where
@@ -84,7 +84,8 @@ instance Data.FromJSON DatasourcePackageUsageInfo where
 
 instance Prelude.Hashable DatasourcePackageUsageInfo where
   hashWithSalt _salt DatasourcePackageUsageInfo' {..} =
-    _salt `Prelude.hashWithSalt` volumeUsageInBytes
+    _salt
+      `Prelude.hashWithSalt` volumeUsageInBytes
       `Prelude.hashWithSalt` volumeUsageUpdateTime
 
 instance Prelude.NFData DatasourcePackageUsageInfo where

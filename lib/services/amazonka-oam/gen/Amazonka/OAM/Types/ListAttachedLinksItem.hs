@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OAM.Types.ListAttachedLinksItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OAM.Types.ListAttachedLinksItem where
@@ -88,7 +88,8 @@ instance Data.FromJSON ListAttachedLinksItem where
 
 instance Prelude.Hashable ListAttachedLinksItem where
   hashWithSalt _salt ListAttachedLinksItem' {..} =
-    _salt `Prelude.hashWithSalt` label
+    _salt
+      `Prelude.hashWithSalt` label
       `Prelude.hashWithSalt` linkArn
       `Prelude.hashWithSalt` resourceTypes
 

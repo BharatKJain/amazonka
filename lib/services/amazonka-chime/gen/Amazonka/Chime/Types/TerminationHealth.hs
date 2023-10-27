@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.TerminationHealth
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.TerminationHealth where
@@ -76,7 +76,8 @@ instance Data.FromJSON TerminationHealth where
 
 instance Prelude.Hashable TerminationHealth where
   hashWithSalt _salt TerminationHealth' {..} =
-    _salt `Prelude.hashWithSalt` source
+    _salt
+      `Prelude.hashWithSalt` source
       `Prelude.hashWithSalt` timestamp
 
 instance Prelude.NFData TerminationHealth where

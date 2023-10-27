@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.FilterTextAreaControl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.FilterTextAreaControl where
@@ -114,7 +114,8 @@ instance Data.FromJSON FilterTextAreaControl where
 
 instance Prelude.Hashable FilterTextAreaControl where
   hashWithSalt _salt FilterTextAreaControl' {..} =
-    _salt `Prelude.hashWithSalt` delimiter
+    _salt
+      `Prelude.hashWithSalt` delimiter
       `Prelude.hashWithSalt` displayOptions
       `Prelude.hashWithSalt` filterControlId
       `Prelude.hashWithSalt` title

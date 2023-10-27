@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.MovSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.MovSettings where
@@ -145,7 +145,8 @@ instance Data.FromJSON MovSettings where
 
 instance Prelude.Hashable MovSettings where
   hashWithSalt _salt MovSettings' {..} =
-    _salt `Prelude.hashWithSalt` clapAtom
+    _salt
+      `Prelude.hashWithSalt` clapAtom
       `Prelude.hashWithSalt` cslgAtom
       `Prelude.hashWithSalt` mpeg2FourCCControl
       `Prelude.hashWithSalt` paddingControl

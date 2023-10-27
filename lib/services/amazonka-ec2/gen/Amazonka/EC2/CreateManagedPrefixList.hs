@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.CreateManagedPrefixList
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -198,7 +198,8 @@ instance Core.AWSRequest CreateManagedPrefixList where
 
 instance Prelude.Hashable CreateManagedPrefixList where
   hashWithSalt _salt CreateManagedPrefixList' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` entries
       `Prelude.hashWithSalt` tagSpecifications

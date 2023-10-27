@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.VersionToPublish
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.VersionToPublish where
@@ -81,7 +81,8 @@ versionToPublish_forecastedLifetime = Lens.lens (\VersionToPublish' {forecastedL
 
 instance Prelude.Hashable VersionToPublish where
   hashWithSalt _salt VersionToPublish' {..} =
-    _salt `Prelude.hashWithSalt` associatedRuleGroupArn
+    _salt
+      `Prelude.hashWithSalt` associatedRuleGroupArn
       `Prelude.hashWithSalt` forecastedLifetime
 
 instance Prelude.NFData VersionToPublish where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.InventoryItemSchema
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.InventoryItemSchema where
@@ -118,7 +118,8 @@ instance Data.FromJSON InventoryItemSchema where
 
 instance Prelude.Hashable InventoryItemSchema where
   hashWithSalt _salt InventoryItemSchema' {..} =
-    _salt `Prelude.hashWithSalt` displayName
+    _salt
+      `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` typeName
       `Prelude.hashWithSalt` attributes

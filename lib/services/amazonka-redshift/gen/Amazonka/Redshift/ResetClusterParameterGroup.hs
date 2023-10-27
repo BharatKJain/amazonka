@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.ResetClusterParameterGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest ResetClusterParameterGroup where
 
 instance Prelude.Hashable ResetClusterParameterGroup where
   hashWithSalt _salt ResetClusterParameterGroup' {..} =
-    _salt `Prelude.hashWithSalt` parameters
+    _salt
+      `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` resetAllParameters
       `Prelude.hashWithSalt` parameterGroupName
 

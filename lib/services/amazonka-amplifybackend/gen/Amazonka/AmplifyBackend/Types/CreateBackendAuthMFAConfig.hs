@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyBackend.Types.CreateBackendAuthMFAConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyBackend.Types.CreateBackendAuthMFAConfig where
@@ -86,7 +86,8 @@ instance Data.FromJSON CreateBackendAuthMFAConfig where
 
 instance Prelude.Hashable CreateBackendAuthMFAConfig where
   hashWithSalt _salt CreateBackendAuthMFAConfig' {..} =
-    _salt `Prelude.hashWithSalt` settings
+    _salt
+      `Prelude.hashWithSalt` settings
       `Prelude.hashWithSalt` mfaMode
 
 instance Prelude.NFData CreateBackendAuthMFAConfig where

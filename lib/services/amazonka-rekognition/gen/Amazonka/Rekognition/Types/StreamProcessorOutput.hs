@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.StreamProcessorOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.StreamProcessorOutput where
@@ -86,7 +86,8 @@ instance Data.FromJSON StreamProcessorOutput where
 
 instance Prelude.Hashable StreamProcessorOutput where
   hashWithSalt _salt StreamProcessorOutput' {..} =
-    _salt `Prelude.hashWithSalt` kinesisDataStream
+    _salt
+      `Prelude.hashWithSalt` kinesisDataStream
       `Prelude.hashWithSalt` s3Destination
 
 instance Prelude.NFData StreamProcessorOutput where

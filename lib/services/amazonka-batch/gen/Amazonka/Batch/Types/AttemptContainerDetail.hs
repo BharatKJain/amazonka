@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.AttemptContainerDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.AttemptContainerDetail where
@@ -134,7 +134,8 @@ instance Data.FromJSON AttemptContainerDetail where
             Prelude.<$> (x Data..:? "containerInstanceArn")
             Prelude.<*> (x Data..:? "exitCode")
             Prelude.<*> (x Data..:? "logStreamName")
-            Prelude.<*> ( x Data..:? "networkInterfaces"
+            Prelude.<*> ( x
+                            Data..:? "networkInterfaces"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "reason")
@@ -143,7 +144,8 @@ instance Data.FromJSON AttemptContainerDetail where
 
 instance Prelude.Hashable AttemptContainerDetail where
   hashWithSalt _salt AttemptContainerDetail' {..} =
-    _salt `Prelude.hashWithSalt` containerInstanceArn
+    _salt
+      `Prelude.hashWithSalt` containerInstanceArn
       `Prelude.hashWithSalt` exitCode
       `Prelude.hashWithSalt` logStreamName
       `Prelude.hashWithSalt` networkInterfaces

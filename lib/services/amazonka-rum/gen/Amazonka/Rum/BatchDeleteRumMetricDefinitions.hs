@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Rum.BatchDeleteRumMetricDefinitions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -164,7 +164,8 @@ instance
     Response.receiveJSON
       ( \s h x ->
           BatchDeleteRumMetricDefinitionsResponse'
-            Prelude.<$> ( x Data..?> "MetricDefinitionIds"
+            Prelude.<$> ( x
+                            Data..?> "MetricDefinitionIds"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -178,7 +179,8 @@ instance
   hashWithSalt
     _salt
     BatchDeleteRumMetricDefinitions' {..} =
-      _salt `Prelude.hashWithSalt` destinationArn
+      _salt
+        `Prelude.hashWithSalt` destinationArn
         `Prelude.hashWithSalt` appMonitorName
         `Prelude.hashWithSalt` destination
         `Prelude.hashWithSalt` metricDefinitionIds

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.UpdateBaiduChannel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest UpdateBaiduChannel where
 
 instance Prelude.Hashable UpdateBaiduChannel where
   hashWithSalt _salt UpdateBaiduChannel' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` baiduChannelRequest
 
 instance Prelude.NFData UpdateBaiduChannel where

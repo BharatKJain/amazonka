@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.ErrorInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.ErrorInfo where
@@ -75,7 +75,8 @@ instance Data.FromJSON ErrorInfo where
 
 instance Prelude.Hashable ErrorInfo where
   hashWithSalt _salt ErrorInfo' {..} =
-    _salt `Prelude.hashWithSalt` executionMessage
+    _salt
+      `Prelude.hashWithSalt` executionMessage
       `Prelude.hashWithSalt` putFailuresCount
 
 instance Prelude.NFData ErrorInfo where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeAvailabilityZones
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -264,7 +264,8 @@ instance Core.AWSRequest DescribeAvailabilityZones where
     Response.receiveXML
       ( \s h x ->
           DescribeAvailabilityZonesResponse'
-            Prelude.<$> ( x Data..@? "availabilityZoneInfo"
+            Prelude.<$> ( x
+                            Data..@? "availabilityZoneInfo"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -273,7 +274,8 @@ instance Core.AWSRequest DescribeAvailabilityZones where
 
 instance Prelude.Hashable DescribeAvailabilityZones where
   hashWithSalt _salt DescribeAvailabilityZones' {..} =
-    _salt `Prelude.hashWithSalt` allAvailabilityZones
+    _salt
+      `Prelude.hashWithSalt` allAvailabilityZones
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` zoneIds

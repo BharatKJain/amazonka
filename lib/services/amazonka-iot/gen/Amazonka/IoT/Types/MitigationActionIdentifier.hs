@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.MitigationActionIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.MitigationActionIdentifier where
@@ -86,7 +86,8 @@ instance Data.FromJSON MitigationActionIdentifier where
 
 instance Prelude.Hashable MitigationActionIdentifier where
   hashWithSalt _salt MitigationActionIdentifier' {..} =
-    _salt `Prelude.hashWithSalt` actionArn
+    _salt
+      `Prelude.hashWithSalt` actionArn
       `Prelude.hashWithSalt` actionName
       `Prelude.hashWithSalt` creationDate
 

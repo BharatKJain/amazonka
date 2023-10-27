@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RolesAnywhere.Types.CredentialSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RolesAnywhere.Types.CredentialSummary where
@@ -130,7 +130,8 @@ instance Data.FromJSON CredentialSummary where
 
 instance Prelude.Hashable CredentialSummary where
   hashWithSalt _salt CredentialSummary' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` failed
       `Prelude.hashWithSalt` issuer
       `Prelude.hashWithSalt` seenAt

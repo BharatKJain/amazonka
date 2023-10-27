@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.CreateEndOfMeetingReminder
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.CreateEndOfMeetingReminder where
@@ -86,7 +86,8 @@ createEndOfMeetingReminder_enabled = Lens.lens (\CreateEndOfMeetingReminder' {en
 
 instance Prelude.Hashable CreateEndOfMeetingReminder where
   hashWithSalt _salt CreateEndOfMeetingReminder' {..} =
-    _salt `Prelude.hashWithSalt` reminderAtMinutes
+    _salt
+      `Prelude.hashWithSalt` reminderAtMinutes
       `Prelude.hashWithSalt` reminderType
       `Prelude.hashWithSalt` enabled
 

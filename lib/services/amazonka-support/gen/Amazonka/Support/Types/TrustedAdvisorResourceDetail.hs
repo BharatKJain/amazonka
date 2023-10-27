@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Support.Types.TrustedAdvisorResourceDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Support.Types.TrustedAdvisorResourceDetail where
@@ -137,7 +137,8 @@ instance
     TrustedAdvisorResourceDetail
   where
   hashWithSalt _salt TrustedAdvisorResourceDetail' {..} =
-    _salt `Prelude.hashWithSalt` isSuppressed
+    _salt
+      `Prelude.hashWithSalt` isSuppressed
       `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` resourceId

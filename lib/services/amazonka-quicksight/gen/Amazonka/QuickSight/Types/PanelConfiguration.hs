@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.PanelConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.PanelConfiguration where
@@ -158,7 +158,8 @@ instance Data.FromJSON PanelConfiguration where
 
 instance Prelude.Hashable PanelConfiguration where
   hashWithSalt _salt PanelConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` backgroundColor
+    _salt
+      `Prelude.hashWithSalt` backgroundColor
       `Prelude.hashWithSalt` backgroundVisibility
       `Prelude.hashWithSalt` borderColor
       `Prelude.hashWithSalt` borderStyle

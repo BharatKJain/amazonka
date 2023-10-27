@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.TimeSeries
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.TimeSeries where
@@ -84,14 +84,16 @@ instance Data.FromJSON TimeSeries where
           TimeSeries'
             Prelude.<$> (x Data..: "TimeSeriesId")
             Prelude.<*> (x Data..:? "DimensionList" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "MetricValueList"
+            Prelude.<*> ( x
+                            Data..:? "MetricValueList"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable TimeSeries where
   hashWithSalt _salt TimeSeries' {..} =
-    _salt `Prelude.hashWithSalt` timeSeriesId
+    _salt
+      `Prelude.hashWithSalt` timeSeriesId
       `Prelude.hashWithSalt` dimensionList
       `Prelude.hashWithSalt` metricValueList
 

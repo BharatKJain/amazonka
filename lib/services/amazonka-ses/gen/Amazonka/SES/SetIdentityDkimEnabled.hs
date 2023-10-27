@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SES.SetIdentityDkimEnabled
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,7 +128,8 @@ instance Core.AWSRequest SetIdentityDkimEnabled where
 
 instance Prelude.Hashable SetIdentityDkimEnabled where
   hashWithSalt _salt SetIdentityDkimEnabled' {..} =
-    _salt `Prelude.hashWithSalt` identity
+    _salt
+      `Prelude.hashWithSalt` identity
       `Prelude.hashWithSalt` dkimEnabled
 
 instance Prelude.NFData SetIdentityDkimEnabled where

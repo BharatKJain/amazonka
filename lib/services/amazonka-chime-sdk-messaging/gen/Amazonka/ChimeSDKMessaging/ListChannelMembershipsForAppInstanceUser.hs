@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSDKMessaging.ListChannelMembershipsForAppInstanceUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,11 +132,12 @@ instance
     Response.receiveJSON
       ( \s h x ->
           ListChannelMembershipsForAppInstanceUserResponse'
-            Prelude.<$> ( x Data..?> "ChannelMemberships"
+            Prelude.<$> ( x
+                            Data..?> "ChannelMemberships"
                             Core..!@ Prelude.mempty
                         )
-              Prelude.<*> (x Data..?> "NextToken")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "NextToken")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -146,7 +147,8 @@ instance
   hashWithSalt
     _salt
     ListChannelMembershipsForAppInstanceUser' {..} =
-      _salt `Prelude.hashWithSalt` appInstanceUserArn
+      _salt
+        `Prelude.hashWithSalt` appInstanceUserArn
         `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` chimeBearer

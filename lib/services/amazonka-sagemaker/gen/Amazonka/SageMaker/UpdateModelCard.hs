@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.UpdateModelCard
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -163,7 +163,8 @@ instance Core.AWSRequest UpdateModelCard where
 
 instance Prelude.Hashable UpdateModelCard where
   hashWithSalt _salt UpdateModelCard' {..} =
-    _salt `Prelude.hashWithSalt` content
+    _salt
+      `Prelude.hashWithSalt` content
       `Prelude.hashWithSalt` modelCardStatus
       `Prelude.hashWithSalt` modelCardName
 

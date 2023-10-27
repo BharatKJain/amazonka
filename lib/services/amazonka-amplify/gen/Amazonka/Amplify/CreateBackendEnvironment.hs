@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Amplify.CreateBackendEnvironment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,7 +127,8 @@ instance Core.AWSRequest CreateBackendEnvironment where
 
 instance Prelude.Hashable CreateBackendEnvironment where
   hashWithSalt _salt CreateBackendEnvironment' {..} =
-    _salt `Prelude.hashWithSalt` deploymentArtifacts
+    _salt
+      `Prelude.hashWithSalt` deploymentArtifacts
       `Prelude.hashWithSalt` stackName
       `Prelude.hashWithSalt` appId
       `Prelude.hashWithSalt` environmentName

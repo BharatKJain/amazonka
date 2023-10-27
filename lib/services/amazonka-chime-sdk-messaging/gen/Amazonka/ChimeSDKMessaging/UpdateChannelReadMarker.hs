@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSDKMessaging.UpdateChannelReadMarker
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest UpdateChannelReadMarker where
 
 instance Prelude.Hashable UpdateChannelReadMarker where
   hashWithSalt _salt UpdateChannelReadMarker' {..} =
-    _salt `Prelude.hashWithSalt` subChannelId
+    _salt
+      `Prelude.hashWithSalt` subChannelId
       `Prelude.hashWithSalt` channelArn
       `Prelude.hashWithSalt` chimeBearer
 

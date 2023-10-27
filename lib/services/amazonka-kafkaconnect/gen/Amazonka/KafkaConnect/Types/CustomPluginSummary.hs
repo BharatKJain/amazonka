@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.CustomPluginSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.CustomPluginSummary where
@@ -117,7 +117,8 @@ instance Data.FromJSON CustomPluginSummary where
 
 instance Prelude.Hashable CustomPluginSummary where
   hashWithSalt _salt CustomPluginSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` customPluginArn
       `Prelude.hashWithSalt` customPluginState
       `Prelude.hashWithSalt` description

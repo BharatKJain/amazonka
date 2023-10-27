@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResilienceHub.Types.TestRecommendation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResilienceHub.Types.TestRecommendation where
@@ -173,7 +173,8 @@ instance Data.FromJSON TestRecommendation where
 
 instance Prelude.Hashable TestRecommendation where
   hashWithSalt _salt TestRecommendation' {..} =
-    _salt `Prelude.hashWithSalt` appComponentName
+    _salt
+      `Prelude.hashWithSalt` appComponentName
       `Prelude.hashWithSalt` dependsOnAlarms
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` intent

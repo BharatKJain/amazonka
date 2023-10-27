@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.S3Target
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.S3Target where
@@ -135,7 +135,8 @@ instance Data.FromJSON S3Target where
 
 instance Prelude.Hashable S3Target where
   hashWithSalt _salt S3Target' {..} =
-    _salt `Prelude.hashWithSalt` connectionName
+    _salt
+      `Prelude.hashWithSalt` connectionName
       `Prelude.hashWithSalt` dlqEventQueueArn
       `Prelude.hashWithSalt` eventQueueArn
       `Prelude.hashWithSalt` exclusions

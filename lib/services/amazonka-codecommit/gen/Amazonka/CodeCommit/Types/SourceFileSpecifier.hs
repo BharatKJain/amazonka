@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.SourceFileSpecifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.SourceFileSpecifier where
@@ -67,7 +67,8 @@ sourceFileSpecifier_filePath = Lens.lens (\SourceFileSpecifier' {filePath} -> fi
 
 instance Prelude.Hashable SourceFileSpecifier where
   hashWithSalt _salt SourceFileSpecifier' {..} =
-    _salt `Prelude.hashWithSalt` isMove
+    _salt
+      `Prelude.hashWithSalt` isMove
       `Prelude.hashWithSalt` filePath
 
 instance Prelude.NFData SourceFileSpecifier where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InternetGatewayAttachment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InternetGatewayAttachment where
@@ -78,11 +78,13 @@ internetGatewayAttachment_vpcId = Lens.lens (\InternetGatewayAttachment' {vpcId}
 instance Data.FromXML InternetGatewayAttachment where
   parseXML x =
     InternetGatewayAttachment'
-      Prelude.<$> (x Data..@ "state") Prelude.<*> (x Data..@ "vpcId")
+      Prelude.<$> (x Data..@ "state")
+      Prelude.<*> (x Data..@ "vpcId")
 
 instance Prelude.Hashable InternetGatewayAttachment where
   hashWithSalt _salt InternetGatewayAttachment' {..} =
-    _salt `Prelude.hashWithSalt` state
+    _salt
+      `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` vpcId
 
 instance Prelude.NFData InternetGatewayAttachment where

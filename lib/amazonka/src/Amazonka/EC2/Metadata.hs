@@ -2,16 +2,17 @@
 
 -- |
 -- Module      : Amazonka.EC2.Metadata
--- Copyright   : (c) 2013-2021 Brendan Hay
+-- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
 -- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
 -- Stability   : provisional
 -- Portability : non-portable (GHC extensions)
 --
 -- This module contains functions for retrieving various EC2 metadata from an
--- instance's local metadata endpoint.
+-- instance's local metadata endpoint. It assumes that you're running the code
+-- on an EC2 instance or have a compatible @instance-data@ endpoint available.
 --
--- It is intended to be used when you need to make metadata calls prior to
+-- It is intended to be usable when you need to make metadata calls prior to
 -- initialisation of the 'Amazonka.Env.Env'.
 module Amazonka.EC2.Metadata
   ( -- * EC2 Instance Check
@@ -34,6 +35,7 @@ module Amazonka.EC2.Metadata
     Maintenance (..),
     Recommendations (..),
     IAM (..),
+    IdentityCredentialsEC2 (..),
     Interface (..),
     Placement (..),
     Services (..),
@@ -97,6 +99,8 @@ instance ToText Dynamic where
       PKCS7 -> "instance-identity/pkcs7"
       Signature -> "instance-identity/signature"
 
+-- | Instance metadata categories. The list of supported categories
+-- are listed in the [EC2 Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-categories.html).
 data Metadata
   = -- | The AMI ID used to launch the instance.
     AMIId
@@ -132,6 +136,8 @@ data Metadata
     Hostname
   | -- | See: 'IAM'
     IAM !IAM
+  | -- | See: 'IdentityCredentialsEC2'
+    IdentityCredentialsEC2 !IdentityCredentialsEC2
   | -- | Notifies the instance that it should reboot in preparation for bundling.
     -- Valid values: @none@ | @shutdown@ | @bundle-pending@.
     InstanceAction
@@ -208,6 +214,12 @@ data Metadata
     Spot !Spot
   | -- | See: 'Tags'
     Tags !Tags
+  | -- | Any other piece of metadata specified by arbitrary key.
+    --
+    -- This is provided for forward compatibility: should there ever appear any gap
+    -- between a future version of IMDS API and what this library covers,
+    -- this constructor provides a workaround.
+    Other !Text
   deriving stock (Eq, Ord, Show, Generic)
 
 instance ToText Metadata where
@@ -224,6 +236,7 @@ instance ToText Metadata where
       ElasticInference m -> "elastic-inference/" <> toText m
       Events m -> "events/" <> toText m
       IAM m -> "iam/" <> toText m
+      IdentityCredentialsEC2 m -> "identity-credentials/ec2/" <> toText m
       InstanceAction -> "instance-action"
       InstanceId -> "instance-id"
       InstanceLifeCycle -> "instance-life-cycle"
@@ -245,6 +258,7 @@ instance ToText Metadata where
       Services m -> "services/" <> toText m
       Spot m -> "spot/" <> toText m
       Tags m -> "tags/" <> toText m
+      Other m -> m
 
 -- | Metadata keys for @autoscaling/*@.
 data Autoscaling
@@ -291,11 +305,11 @@ instance ToText Mapping where
     Swap -> "root"
 
 -- | Metadata keys for @elastic-gpus/*@.
-data ElasticGpus
+newtype ElasticGpus
   = -- | If there is an Elastic GPU attached to the instance, contains
     -- a JSON string with information about the Elastic GPU, including
     -- its ID and connection information.
-    EGAssociations !Text
+    EGAssociations Text
   deriving stock (Eq, Ord, Show, Generic)
 
 instance ToText ElasticGpus where
@@ -303,11 +317,11 @@ instance ToText ElasticGpus where
     EGAssociations gpuId -> "associations/" <> gpuId
 
 -- | Metadata keys for @elastic-inference/*@.
-data ElasticInference
+newtype ElasticInference
   = -- | If there is an Elastic Inference accelerator attached to the
     -- instance, contains a JSON string with information about the
     -- Elastic Inference accelerator, including its ID and type.
-    EIAssociations !Text
+    EIAssociations Text
   deriving stock (Eq, Ord, Show, Generic)
 
 instance ToText ElasticInference where
@@ -383,6 +397,27 @@ instance ToText IAM where
   toText = \case
     Info -> "info"
     SecurityCredentials r -> "security-credentials/" <> maybe mempty toText r
+
+-- | Metadata keys for @identity-credentials\/ec2\/*@.
+data IdentityCredentialsEC2
+  = -- | Information about the credentials in
+    -- @identity-credentials/ec2/security-credentials/ec2-instance@.
+    ICEInfo
+  | -- | Credentials for the instance identity role that allow
+    -- on-instance software to identify itself to AWS to support
+    -- features such as EC2 Instance Connect and AWS Systems Manager
+    -- Default Host Management Configuration. These credentials have
+    -- no policies attached, so they have no additional AWS API
+    -- permissions beyond identifying the instance to the AWS
+    -- feature. For more information, see [Instance identity
+    -- roles](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-identity-roles.html).
+    ICESecurityCredentials
+  deriving stock (Eq, Ord, Show, Generic)
+
+instance ToText IdentityCredentialsEC2 where
+  toText = \case
+    ICEInfo -> "info"
+    ICESecurityCredentials -> "security-credentials/ec2-instance"
 
 -- | Metadata keys for @network\/interfaces\/macs\/${mac}\/*@.
 data Interface
@@ -545,18 +580,24 @@ instance ToText Spot where
     SInstanceAction -> "instance-action"
     STerminationTime -> "termination-time"
 
--- | Metadata keys for @tags/*@.
+-- | Instance Metadata tags: @tags/instance@, @tags/instance/*@.
+--
+-- See [these 2 curl examples](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-retrieval.html#instance-metadata-ex-7)
+-- in AWSEC2 User Guide.
+--
+-- Only available if you [explicitly allow access](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#allow-access-to-tags-in-IMDS)
+-- to instance metadata tags.
 data Tags
-  = -- | The instance tags associated with the instance. Only
-    -- available if you explicitly allow access to tags in instance
-    -- metadata. For more information, see
-    -- [Allow access to tags in instance metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#allow-access-to-tags-in-IMDS).
+  = -- | The keys of available tags, @\n@-separated, if enabled in instance settings.
     Instance
+    -- | A specific named tag in Instance Metadata, if enabled in instance settings.
+  | InstanceTag !Text
   deriving stock (Eq, Ord, Show, Generic)
 
 instance ToText Tags where
   toText = \case
     Instance -> "instance"
+    InstanceTag t -> "instance/" <> t
 
 latest :: Text
 latest = "http://169.254.169.254/latest/"
@@ -596,7 +637,7 @@ userdata m =
     Exception.try (get m (latest <> "user-data")) >>= \case
       Left (Client.HttpExceptionRequest _ (Client.StatusCodeException rs _))
         | fromEnum (Client.responseStatus rs) == 404 ->
-          return Nothing
+            return Nothing
       --
       Left e -> Exception.throwIO e
       --

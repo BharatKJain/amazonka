@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.ImportTableDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.ImportTableDescription where
@@ -283,7 +283,8 @@ instance Data.FromJSON ImportTableDescription where
 
 instance Prelude.Hashable ImportTableDescription where
   hashWithSalt _salt ImportTableDescription' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` cloudWatchLogGroupArn
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` errorCount

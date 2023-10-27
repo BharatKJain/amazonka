@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.StatefulRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.StatefulRule where
@@ -161,7 +161,8 @@ instance Data.FromJSON StatefulRule where
 
 instance Prelude.Hashable StatefulRule where
   hashWithSalt _salt StatefulRule' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` header
       `Prelude.hashWithSalt` ruleOptions
 

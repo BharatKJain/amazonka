@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.RecoveryPointByBackupVault
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.RecoveryPointByBackupVault where
@@ -414,7 +414,8 @@ instance Data.FromJSON RecoveryPointByBackupVault where
 
 instance Prelude.Hashable RecoveryPointByBackupVault where
   hashWithSalt _salt RecoveryPointByBackupVault' {..} =
-    _salt `Prelude.hashWithSalt` backupSizeInBytes
+    _salt
+      `Prelude.hashWithSalt` backupSizeInBytes
       `Prelude.hashWithSalt` backupVaultArn
       `Prelude.hashWithSalt` backupVaultName
       `Prelude.hashWithSalt` calculatedLifecycle

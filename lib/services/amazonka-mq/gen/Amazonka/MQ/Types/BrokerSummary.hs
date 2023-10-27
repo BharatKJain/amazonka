@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MQ.Types.BrokerSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MQ.Types.BrokerSummary where
@@ -150,7 +150,8 @@ instance Data.FromJSON BrokerSummary where
 
 instance Prelude.Hashable BrokerSummary where
   hashWithSalt _salt BrokerSummary' {..} =
-    _salt `Prelude.hashWithSalt` brokerArn
+    _salt
+      `Prelude.hashWithSalt` brokerArn
       `Prelude.hashWithSalt` brokerId
       `Prelude.hashWithSalt` brokerName
       `Prelude.hashWithSalt` brokerState

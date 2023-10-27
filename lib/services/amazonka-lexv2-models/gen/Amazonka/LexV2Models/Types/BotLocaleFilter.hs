@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.BotLocaleFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.BotLocaleFilter where
@@ -90,7 +90,8 @@ botLocaleFilter_operator = Lens.lens (\BotLocaleFilter' {operator} -> operator) 
 
 instance Prelude.Hashable BotLocaleFilter where
   hashWithSalt _salt BotLocaleFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
       `Prelude.hashWithSalt` operator
 

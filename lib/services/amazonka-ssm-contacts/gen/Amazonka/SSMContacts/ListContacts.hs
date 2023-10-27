@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSMContacts.ListContacts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,20 +117,23 @@ instance Core.AWSPager ListContacts where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listContactsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listContactsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listContactsResponse_contacts Prelude.. Lens._Just
+            Lens.^? listContactsResponse_contacts
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listContacts_nextToken
           Lens..~ rs
-          Lens.^? listContactsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listContactsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListContacts where
   type AWSResponse ListContacts = ListContactsResponse
@@ -147,7 +150,8 @@ instance Core.AWSRequest ListContacts where
 
 instance Prelude.Hashable ListContacts where
   hashWithSalt _salt ListContacts' {..} =
-    _salt `Prelude.hashWithSalt` aliasPrefix
+    _salt
+      `Prelude.hashWithSalt` aliasPrefix
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` type'

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.BlockerDeclaration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.BlockerDeclaration where
@@ -70,12 +70,14 @@ instance Data.FromJSON BlockerDeclaration where
       "BlockerDeclaration"
       ( \x ->
           BlockerDeclaration'
-            Prelude.<$> (x Data..: "name") Prelude.<*> (x Data..: "type")
+            Prelude.<$> (x Data..: "name")
+            Prelude.<*> (x Data..: "type")
       )
 
 instance Prelude.Hashable BlockerDeclaration where
   hashWithSalt _salt BlockerDeclaration' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData BlockerDeclaration where

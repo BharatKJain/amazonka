@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.SamplingStrategy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.SamplingStrategy where
@@ -65,7 +65,8 @@ samplingStrategy_value = Lens.lens (\SamplingStrategy' {value} -> value) (\s@Sam
 
 instance Prelude.Hashable SamplingStrategy where
   hashWithSalt _salt SamplingStrategy' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData SamplingStrategy where

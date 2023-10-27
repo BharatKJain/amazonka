@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.InventoryResultItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.InventoryResultItem where
@@ -120,7 +120,8 @@ instance Data.FromJSON InventoryResultItem where
 
 instance Prelude.Hashable InventoryResultItem where
   hashWithSalt _salt InventoryResultItem' {..} =
-    _salt `Prelude.hashWithSalt` captureTime
+    _salt
+      `Prelude.hashWithSalt` captureTime
       `Prelude.hashWithSalt` contentHash
       `Prelude.hashWithSalt` typeName
       `Prelude.hashWithSalt` schemaVersion

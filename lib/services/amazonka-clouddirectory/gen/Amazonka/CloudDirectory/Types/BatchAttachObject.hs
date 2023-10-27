@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchAttachObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchAttachObject where
@@ -84,7 +84,8 @@ batchAttachObject_linkName = Lens.lens (\BatchAttachObject' {linkName} -> linkNa
 
 instance Prelude.Hashable BatchAttachObject where
   hashWithSalt _salt BatchAttachObject' {..} =
-    _salt `Prelude.hashWithSalt` parentReference
+    _salt
+      `Prelude.hashWithSalt` parentReference
       `Prelude.hashWithSalt` childReference
       `Prelude.hashWithSalt` linkName
 

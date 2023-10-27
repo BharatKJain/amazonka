@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.GetImportJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest GetImportJob where
 
 instance Prelude.Hashable GetImportJob where
   hashWithSalt _salt GetImportJob' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` jobId
 
 instance Prelude.NFData GetImportJob where

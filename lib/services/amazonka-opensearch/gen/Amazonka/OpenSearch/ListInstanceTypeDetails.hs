@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpenSearch.ListInstanceTypeDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest ListInstanceTypeDetails where
     Response.receiveJSON
       ( \s h x ->
           ListInstanceTypeDetailsResponse'
-            Prelude.<$> ( x Data..?> "InstanceTypeDetails"
+            Prelude.<$> ( x
+                            Data..?> "InstanceTypeDetails"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -143,7 +144,8 @@ instance Core.AWSRequest ListInstanceTypeDetails where
 
 instance Prelude.Hashable ListInstanceTypeDetails where
   hashWithSalt _salt ListInstanceTypeDetails' {..} =
-    _salt `Prelude.hashWithSalt` domainName
+    _salt
+      `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` engineVersion

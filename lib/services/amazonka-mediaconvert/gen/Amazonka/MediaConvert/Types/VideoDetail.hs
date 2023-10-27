@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.VideoDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.VideoDetail where
@@ -74,7 +74,8 @@ instance Data.FromJSON VideoDetail where
 
 instance Prelude.Hashable VideoDetail where
   hashWithSalt _salt VideoDetail' {..} =
-    _salt `Prelude.hashWithSalt` heightInPx
+    _salt
+      `Prelude.hashWithSalt` heightInPx
       `Prelude.hashWithSalt` widthInPx
 
 instance Prelude.NFData VideoDetail where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.CreateIntegrationAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -190,7 +190,8 @@ instance
     CreateIntegrationAssociation
   where
   hashWithSalt _salt CreateIntegrationAssociation' {..} =
-    _salt `Prelude.hashWithSalt` sourceApplicationName
+    _salt
+      `Prelude.hashWithSalt` sourceApplicationName
       `Prelude.hashWithSalt` sourceApplicationUrl
       `Prelude.hashWithSalt` sourceType
       `Prelude.hashWithSalt` tags

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTFleetWise.Types.TimestreamResources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTFleetWise.Types.TimestreamResources where
@@ -82,7 +82,8 @@ instance Data.FromJSON TimestreamResources where
 
 instance Prelude.Hashable TimestreamResources where
   hashWithSalt _salt TimestreamResources' {..} =
-    _salt `Prelude.hashWithSalt` timestreamDatabaseName
+    _salt
+      `Prelude.hashWithSalt` timestreamDatabaseName
       `Prelude.hashWithSalt` timestreamTableName
 
 instance Prelude.NFData TimestreamResources where

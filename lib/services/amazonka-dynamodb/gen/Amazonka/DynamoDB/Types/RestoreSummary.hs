@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.RestoreSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.RestoreSummary where
@@ -106,7 +106,8 @@ instance Data.FromJSON RestoreSummary where
 
 instance Prelude.Hashable RestoreSummary where
   hashWithSalt _salt RestoreSummary' {..} =
-    _salt `Prelude.hashWithSalt` sourceBackupArn
+    _salt
+      `Prelude.hashWithSalt` sourceBackupArn
       `Prelude.hashWithSalt` sourceTableArn
       `Prelude.hashWithSalt` restoreDateTime
       `Prelude.hashWithSalt` restoreInProgress

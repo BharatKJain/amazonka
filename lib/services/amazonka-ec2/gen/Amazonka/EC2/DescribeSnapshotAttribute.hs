@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeSnapshotAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,11 +125,14 @@ instance Core.AWSRequest DescribeSnapshotAttribute where
     Response.receiveXML
       ( \s h x ->
           DescribeSnapshotAttributeResponse'
-            Prelude.<$> ( x Data..@? "createVolumePermission"
+            Prelude.<$> ( x
+                            Data..@? "createVolumePermission"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
-            Prelude.<*> ( x Data..@? "productCodes" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "productCodes"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
             Prelude.<*> (x Data..@? "snapshotId")
@@ -138,7 +141,8 @@ instance Core.AWSRequest DescribeSnapshotAttribute where
 
 instance Prelude.Hashable DescribeSnapshotAttribute where
   hashWithSalt _salt DescribeSnapshotAttribute' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` attribute
       `Prelude.hashWithSalt` snapshotId
 

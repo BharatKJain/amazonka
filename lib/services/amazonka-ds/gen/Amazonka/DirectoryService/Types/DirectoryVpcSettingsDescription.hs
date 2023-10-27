@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.DirectoryVpcSettingsDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.DirectoryVpcSettingsDescription where
@@ -90,7 +90,8 @@ instance
       "DirectoryVpcSettingsDescription"
       ( \x ->
           DirectoryVpcSettingsDescription'
-            Prelude.<$> ( x Data..:? "AvailabilityZones"
+            Prelude.<$> ( x
+                            Data..:? "AvailabilityZones"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SecurityGroupId")
@@ -105,7 +106,8 @@ instance
   hashWithSalt
     _salt
     DirectoryVpcSettingsDescription' {..} =
-      _salt `Prelude.hashWithSalt` availabilityZones
+      _salt
+        `Prelude.hashWithSalt` availabilityZones
         `Prelude.hashWithSalt` securityGroupId
         `Prelude.hashWithSalt` subnetIds
         `Prelude.hashWithSalt` vpcId

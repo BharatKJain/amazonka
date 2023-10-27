@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.RoutingStrategy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.RoutingStrategy where
@@ -119,7 +119,8 @@ instance Data.FromJSON RoutingStrategy where
 
 instance Prelude.Hashable RoutingStrategy where
   hashWithSalt _salt RoutingStrategy' {..} =
-    _salt `Prelude.hashWithSalt` fleetId
+    _salt
+      `Prelude.hashWithSalt` fleetId
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` type'
 

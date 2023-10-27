@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.EventCategoryGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.EventCategoryGroup where
@@ -81,7 +81,8 @@ instance Data.FromJSON EventCategoryGroup where
       "EventCategoryGroup"
       ( \x ->
           EventCategoryGroup'
-            Prelude.<$> ( x Data..:? "EventCategories"
+            Prelude.<$> ( x
+                            Data..:? "EventCategories"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SourceType")
@@ -89,7 +90,8 @@ instance Data.FromJSON EventCategoryGroup where
 
 instance Prelude.Hashable EventCategoryGroup where
   hashWithSalt _salt EventCategoryGroup' {..} =
-    _salt `Prelude.hashWithSalt` eventCategories
+    _salt
+      `Prelude.hashWithSalt` eventCategories
       `Prelude.hashWithSalt` sourceType
 
 instance Prelude.NFData EventCategoryGroup where

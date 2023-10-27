@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkManager.ListAttachments
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,22 +132,22 @@ instance Core.AWSPager ListAttachments where
     | Core.stop
         ( rs
             Lens.^? listAttachmentsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listAttachmentsResponse_attachments
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAttachments_nextToken
           Lens..~ rs
           Lens.^? listAttachmentsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAttachments where
   type
@@ -166,7 +166,8 @@ instance Core.AWSRequest ListAttachments where
 
 instance Prelude.Hashable ListAttachments where
   hashWithSalt _salt ListAttachments' {..} =
-    _salt `Prelude.hashWithSalt` attachmentType
+    _salt
+      `Prelude.hashWithSalt` attachmentType
       `Prelude.hashWithSalt` coreNetworkId
       `Prelude.hashWithSalt` edgeLocation
       `Prelude.hashWithSalt` maxResults

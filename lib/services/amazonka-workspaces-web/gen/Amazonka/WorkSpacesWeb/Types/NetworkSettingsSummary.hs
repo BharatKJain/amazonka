@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.Types.NetworkSettingsSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpacesWeb.Types.NetworkSettingsSummary where
@@ -75,7 +75,8 @@ instance Data.FromJSON NetworkSettingsSummary where
 
 instance Prelude.Hashable NetworkSettingsSummary where
   hashWithSalt _salt NetworkSettingsSummary' {..} =
-    _salt `Prelude.hashWithSalt` networkSettingsArn
+    _salt
+      `Prelude.hashWithSalt` networkSettingsArn
       `Prelude.hashWithSalt` vpcId
 
 instance Prelude.NFData NetworkSettingsSummary where

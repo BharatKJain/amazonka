@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.ApplicationSettingsResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.ApplicationSettingsResource where
@@ -177,7 +177,8 @@ instance Data.FromJSON ApplicationSettingsResource where
 
 instance Prelude.Hashable ApplicationSettingsResource where
   hashWithSalt _salt ApplicationSettingsResource' {..} =
-    _salt `Prelude.hashWithSalt` campaignHook
+    _salt
+      `Prelude.hashWithSalt` campaignHook
       `Prelude.hashWithSalt` lastModifiedDate
       `Prelude.hashWithSalt` limits
       `Prelude.hashWithSalt` quietTime

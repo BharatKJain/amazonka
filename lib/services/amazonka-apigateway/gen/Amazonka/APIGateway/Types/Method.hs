@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.Method
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.Method where
@@ -240,19 +240,22 @@ instance Data.FromJSON Method where
       ( \x ->
           Method'
             Prelude.<$> (x Data..:? "apiKeyRequired")
-            Prelude.<*> ( x Data..:? "authorizationScopes"
+            Prelude.<*> ( x
+                            Data..:? "authorizationScopes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "authorizationType")
             Prelude.<*> (x Data..:? "authorizerId")
             Prelude.<*> (x Data..:? "httpMethod")
             Prelude.<*> (x Data..:? "methodIntegration")
-            Prelude.<*> ( x Data..:? "methodResponses"
+            Prelude.<*> ( x
+                            Data..:? "methodResponses"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "operationName")
             Prelude.<*> (x Data..:? "requestModels" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "requestParameters"
+            Prelude.<*> ( x
+                            Data..:? "requestParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "requestValidatorId")
@@ -260,7 +263,8 @@ instance Data.FromJSON Method where
 
 instance Prelude.Hashable Method where
   hashWithSalt _salt Method' {..} =
-    _salt `Prelude.hashWithSalt` apiKeyRequired
+    _salt
+      `Prelude.hashWithSalt` apiKeyRequired
       `Prelude.hashWithSalt` authorizationScopes
       `Prelude.hashWithSalt` authorizationType
       `Prelude.hashWithSalt` authorizerId

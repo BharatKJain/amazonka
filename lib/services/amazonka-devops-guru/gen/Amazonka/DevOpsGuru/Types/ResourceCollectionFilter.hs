@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.ResourceCollectionFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.ResourceCollectionFilter where
@@ -189,7 +189,8 @@ instance Data.FromJSON ResourceCollectionFilter where
 
 instance Prelude.Hashable ResourceCollectionFilter where
   hashWithSalt _salt ResourceCollectionFilter' {..} =
-    _salt `Prelude.hashWithSalt` cloudFormation
+    _salt
+      `Prelude.hashWithSalt` cloudFormation
       `Prelude.hashWithSalt` tags
 
 instance Prelude.NFData ResourceCollectionFilter where

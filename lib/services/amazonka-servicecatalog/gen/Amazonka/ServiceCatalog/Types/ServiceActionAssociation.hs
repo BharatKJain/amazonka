@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ServiceActionAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ServiceActionAssociation where
@@ -87,7 +87,8 @@ serviceActionAssociation_provisioningArtifactId = Lens.lens (\ServiceActionAssoc
 
 instance Prelude.Hashable ServiceActionAssociation where
   hashWithSalt _salt ServiceActionAssociation' {..} =
-    _salt `Prelude.hashWithSalt` serviceActionId
+    _salt
+      `Prelude.hashWithSalt` serviceActionId
       `Prelude.hashWithSalt` productId
       `Prelude.hashWithSalt` provisioningArtifactId
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Amplify.ListJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,18 +123,20 @@ instance Core.AWSPager ListJobs where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listJobsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listJobsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listJobsResponse_jobSummaries) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listJobs_nextToken
           Lens..~ rs
-          Lens.^? listJobsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listJobsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListJobs where
   type AWSResponse ListJobs = ListJobsResponse
@@ -151,7 +153,8 @@ instance Core.AWSRequest ListJobs where
 
 instance Prelude.Hashable ListJobs where
   hashWithSalt _salt ListJobs' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` appId
       `Prelude.hashWithSalt` branchName

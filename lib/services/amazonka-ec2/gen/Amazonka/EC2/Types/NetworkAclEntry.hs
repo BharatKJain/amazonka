@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.NetworkAclEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.NetworkAclEntry where
@@ -140,7 +140,8 @@ instance Data.FromXML NetworkAclEntry where
 
 instance Prelude.Hashable NetworkAclEntry where
   hashWithSalt _salt NetworkAclEntry' {..} =
-    _salt `Prelude.hashWithSalt` cidrBlock
+    _salt
+      `Prelude.hashWithSalt` cidrBlock
       `Prelude.hashWithSalt` egress
       `Prelude.hashWithSalt` icmpTypeCode
       `Prelude.hashWithSalt` ipv6CidrBlock

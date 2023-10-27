@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.ExchangeCodeForTokenRequestBody
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.ExchangeCodeForTokenRequestBody where
@@ -77,7 +77,8 @@ instance
   hashWithSalt
     _salt
     ExchangeCodeForTokenRequestBody' {..} =
-      _salt `Prelude.hashWithSalt` code
+      _salt
+        `Prelude.hashWithSalt` code
         `Prelude.hashWithSalt` redirectUri
 
 instance

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.BuildNotDeleted
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.BuildNotDeleted where
@@ -77,7 +77,8 @@ instance Data.FromJSON BuildNotDeleted where
 
 instance Prelude.Hashable BuildNotDeleted where
   hashWithSalt _salt BuildNotDeleted' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` statusCode
 
 instance Prelude.NFData BuildNotDeleted where

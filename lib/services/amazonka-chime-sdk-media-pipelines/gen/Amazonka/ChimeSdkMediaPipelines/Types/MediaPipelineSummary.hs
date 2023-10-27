@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkMediaPipelines.Types.MediaPipelineSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkMediaPipelines.Types.MediaPipelineSummary where
@@ -75,7 +75,8 @@ instance Data.FromJSON MediaPipelineSummary where
 
 instance Prelude.Hashable MediaPipelineSummary where
   hashWithSalt _salt MediaPipelineSummary' {..} =
-    _salt `Prelude.hashWithSalt` mediaPipelineArn
+    _salt
+      `Prelude.hashWithSalt` mediaPipelineArn
       `Prelude.hashWithSalt` mediaPipelineId
 
 instance Prelude.NFData MediaPipelineSummary where

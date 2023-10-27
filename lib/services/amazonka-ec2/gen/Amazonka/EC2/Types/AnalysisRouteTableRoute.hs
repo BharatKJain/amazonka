@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.AnalysisRouteTableRoute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.AnalysisRouteTableRoute where
@@ -204,7 +204,8 @@ instance Data.FromXML AnalysisRouteTableRoute where
 
 instance Prelude.Hashable AnalysisRouteTableRoute where
   hashWithSalt _salt AnalysisRouteTableRoute' {..} =
-    _salt `Prelude.hashWithSalt` destinationCidr
+    _salt
+      `Prelude.hashWithSalt` destinationCidr
       `Prelude.hashWithSalt` destinationPrefixListId
       `Prelude.hashWithSalt` egressOnlyInternetGatewayId
       `Prelude.hashWithSalt` gatewayId

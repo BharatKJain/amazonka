@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Synthetics.Types.CanaryCodeInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Synthetics.Types.CanaryCodeInput where
@@ -52,11 +52,12 @@ data CanaryCodeInput = CanaryCodeInput'
     -- | The entry point to use for the source code when running the canary. For
     -- canaries that use the @syn-python-selenium-1.0@ runtime or a
     -- @syn-nodejs.puppeteer@ runtime earlier than @syn-nodejs.puppeteer-3.4@,
-    -- the handler must be specified as @ fileName.handler@. For
+    -- the handler must be specified as @ @/@fileName@/@.handler@. For
     -- @syn-python-selenium-1.1@, @syn-nodejs.puppeteer-3.4@, and later
-    -- runtimes, the handler can be specified as @ fileName.functionName @, or
-    -- you can specify a folder where canary scripts reside as
-    -- @ folder\/fileName.functionName @.
+    -- runtimes, the handler can be specified as
+    -- @ @/@fileName@/@.@/@functionName@/@ @, or you can specify a folder where
+    -- canary scripts reside as
+    -- @ @/@folder@/@\/@/@fileName@/@.@/@functionName@/@ @.
     handler :: Prelude.Text
   }
   deriving (Prelude.Eq, Prelude.Read, Prelude.Show, Prelude.Generic)
@@ -92,11 +93,12 @@ data CanaryCodeInput = CanaryCodeInput'
 -- 'handler', 'canaryCodeInput_handler' - The entry point to use for the source code when running the canary. For
 -- canaries that use the @syn-python-selenium-1.0@ runtime or a
 -- @syn-nodejs.puppeteer@ runtime earlier than @syn-nodejs.puppeteer-3.4@,
--- the handler must be specified as @ fileName.handler@. For
+-- the handler must be specified as @ @/@fileName@/@.handler@. For
 -- @syn-python-selenium-1.1@, @syn-nodejs.puppeteer-3.4@, and later
--- runtimes, the handler can be specified as @ fileName.functionName @, or
--- you can specify a folder where canary scripts reside as
--- @ folder\/fileName.functionName @.
+-- runtimes, the handler can be specified as
+-- @ @/@fileName@/@.@/@functionName@/@ @, or you can specify a folder where
+-- canary scripts reside as
+-- @ @/@folder@/@\/@/@fileName@/@.@/@functionName@/@ @.
 newCanaryCodeInput ::
   -- | 'handler'
   Prelude.Text ->
@@ -141,17 +143,19 @@ canaryCodeInput_zipFile = Lens.lens (\CanaryCodeInput' {zipFile} -> zipFile) (\s
 -- | The entry point to use for the source code when running the canary. For
 -- canaries that use the @syn-python-selenium-1.0@ runtime or a
 -- @syn-nodejs.puppeteer@ runtime earlier than @syn-nodejs.puppeteer-3.4@,
--- the handler must be specified as @ fileName.handler@. For
+-- the handler must be specified as @ @/@fileName@/@.handler@. For
 -- @syn-python-selenium-1.1@, @syn-nodejs.puppeteer-3.4@, and later
--- runtimes, the handler can be specified as @ fileName.functionName @, or
--- you can specify a folder where canary scripts reside as
--- @ folder\/fileName.functionName @.
+-- runtimes, the handler can be specified as
+-- @ @/@fileName@/@.@/@functionName@/@ @, or you can specify a folder where
+-- canary scripts reside as
+-- @ @/@folder@/@\/@/@fileName@/@.@/@functionName@/@ @.
 canaryCodeInput_handler :: Lens.Lens' CanaryCodeInput Prelude.Text
 canaryCodeInput_handler = Lens.lens (\CanaryCodeInput' {handler} -> handler) (\s@CanaryCodeInput' {} a -> s {handler = a} :: CanaryCodeInput)
 
 instance Prelude.Hashable CanaryCodeInput where
   hashWithSalt _salt CanaryCodeInput' {..} =
-    _salt `Prelude.hashWithSalt` s3Bucket
+    _salt
+      `Prelude.hashWithSalt` s3Bucket
       `Prelude.hashWithSalt` s3Key
       `Prelude.hashWithSalt` s3Version
       `Prelude.hashWithSalt` zipFile

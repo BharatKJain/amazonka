@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.PredictiveScalingCustomizedLoadMetric
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.PredictiveScalingCustomizedLoadMetric where
@@ -67,7 +67,8 @@ instance
   where
   parseXML x =
     PredictiveScalingCustomizedLoadMetric'
-      Prelude.<$> ( x Data..@? "MetricDataQueries"
+      Prelude.<$> ( x
+                      Data..@? "MetricDataQueries"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Data.parseXMLList "member"
                   )

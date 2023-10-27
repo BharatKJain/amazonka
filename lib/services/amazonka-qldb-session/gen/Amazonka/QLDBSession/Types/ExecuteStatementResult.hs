@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QLDBSession.Types.ExecuteStatementResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QLDBSession.Types.ExecuteStatementResult where
@@ -88,7 +88,8 @@ instance Data.FromJSON ExecuteStatementResult where
 
 instance Prelude.Hashable ExecuteStatementResult where
   hashWithSalt _salt ExecuteStatementResult' {..} =
-    _salt `Prelude.hashWithSalt` consumedIOs
+    _salt
+      `Prelude.hashWithSalt` consumedIOs
       `Prelude.hashWithSalt` firstPage
       `Prelude.hashWithSalt` timingInformation
 

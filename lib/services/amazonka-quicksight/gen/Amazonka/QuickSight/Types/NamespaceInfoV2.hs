@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.NamespaceInfoV2
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.NamespaceInfoV2 where
@@ -117,7 +117,8 @@ instance Data.FromJSON NamespaceInfoV2 where
 
 instance Prelude.Hashable NamespaceInfoV2 where
   hashWithSalt _salt NamespaceInfoV2' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` capacityRegion
       `Prelude.hashWithSalt` creationStatus
       `Prelude.hashWithSalt` identityStore

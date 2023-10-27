@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScalingPlans.CreateScalingPlan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -147,7 +147,8 @@ instance Core.AWSRequest CreateScalingPlan where
 
 instance Prelude.Hashable CreateScalingPlan where
   hashWithSalt _salt CreateScalingPlan' {..} =
-    _salt `Prelude.hashWithSalt` scalingPlanName
+    _salt
+      `Prelude.hashWithSalt` scalingPlanName
       `Prelude.hashWithSalt` applicationSource
       `Prelude.hashWithSalt` scalingInstructions
 

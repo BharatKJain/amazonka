@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.GrpcGatewayRouteAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.GrpcGatewayRouteAction where
@@ -81,7 +81,8 @@ instance Data.FromJSON GrpcGatewayRouteAction where
 
 instance Prelude.Hashable GrpcGatewayRouteAction where
   hashWithSalt _salt GrpcGatewayRouteAction' {..} =
-    _salt `Prelude.hashWithSalt` rewrite
+    _salt
+      `Prelude.hashWithSalt` rewrite
       `Prelude.hashWithSalt` target
 
 instance Prelude.NFData GrpcGatewayRouteAction where

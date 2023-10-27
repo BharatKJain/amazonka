@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ELBV2.SetSecurityGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,7 +103,8 @@ instance Core.AWSRequest SetSecurityGroups where
       "SetSecurityGroupsResult"
       ( \s h x ->
           SetSecurityGroupsResponse'
-            Prelude.<$> ( x Data..@? "SecurityGroupIds"
+            Prelude.<$> ( x
+                            Data..@? "SecurityGroupIds"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
@@ -112,7 +113,8 @@ instance Core.AWSRequest SetSecurityGroups where
 
 instance Prelude.Hashable SetSecurityGroups where
   hashWithSalt _salt SetSecurityGroups' {..} =
-    _salt `Prelude.hashWithSalt` loadBalancerArn
+    _salt
+      `Prelude.hashWithSalt` loadBalancerArn
       `Prelude.hashWithSalt` securityGroups
 
 instance Prelude.NFData SetSecurityGroups where

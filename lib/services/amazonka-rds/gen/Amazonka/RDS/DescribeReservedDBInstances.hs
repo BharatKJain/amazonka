@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.DescribeReservedDBInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -256,22 +256,22 @@ instance Core.AWSPager DescribeReservedDBInstances where
     | Core.stop
         ( rs
             Lens.^? describeReservedDBInstancesResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeReservedDBInstancesResponse_reservedDBInstances
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeReservedDBInstances_marker
           Lens..~ rs
           Lens.^? describeReservedDBInstancesResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeReservedDBInstances where
   type
@@ -285,7 +285,8 @@ instance Core.AWSRequest DescribeReservedDBInstances where
       ( \s h x ->
           DescribeReservedDBInstancesResponse'
             Prelude.<$> (x Data..@? "Marker")
-            Prelude.<*> ( x Data..@? "ReservedDBInstances"
+            Prelude.<*> ( x
+                            Data..@? "ReservedDBInstances"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "ReservedDBInstance")
                         )
@@ -294,7 +295,8 @@ instance Core.AWSRequest DescribeReservedDBInstances where
 
 instance Prelude.Hashable DescribeReservedDBInstances where
   hashWithSalt _salt DescribeReservedDBInstances' {..} =
-    _salt `Prelude.hashWithSalt` dbInstanceClass
+    _salt
+      `Prelude.hashWithSalt` dbInstanceClass
       `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` leaseId

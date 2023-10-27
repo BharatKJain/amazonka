@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsS3BucketBucketLifecycleConfigurationRulesDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsS3BucketBucketLifecycleConfigurationRulesDetails where
@@ -218,18 +218,19 @@ instance
       ( \x ->
           AwsS3BucketBucketLifecycleConfigurationRulesDetails'
             Prelude.<$> (x Data..:? "AbortIncompleteMultipartUpload")
-              Prelude.<*> (x Data..:? "ExpirationDate")
-              Prelude.<*> (x Data..:? "ExpirationInDays")
-              Prelude.<*> (x Data..:? "ExpiredObjectDeleteMarker")
-              Prelude.<*> (x Data..:? "Filter")
-              Prelude.<*> (x Data..:? "ID")
-              Prelude.<*> (x Data..:? "NoncurrentVersionExpirationInDays")
-              Prelude.<*> ( x Data..:? "NoncurrentVersionTransitions"
-                              Data..!= Prelude.mempty
-                          )
-              Prelude.<*> (x Data..:? "Prefix")
-              Prelude.<*> (x Data..:? "Status")
-              Prelude.<*> (x Data..:? "Transitions" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "ExpirationDate")
+            Prelude.<*> (x Data..:? "ExpirationInDays")
+            Prelude.<*> (x Data..:? "ExpiredObjectDeleteMarker")
+            Prelude.<*> (x Data..:? "Filter")
+            Prelude.<*> (x Data..:? "ID")
+            Prelude.<*> (x Data..:? "NoncurrentVersionExpirationInDays")
+            Prelude.<*> ( x
+                            Data..:? "NoncurrentVersionTransitions"
+                            Data..!= Prelude.mempty
+                        )
+            Prelude.<*> (x Data..:? "Prefix")
+            Prelude.<*> (x Data..:? "Status")
+            Prelude.<*> (x Data..:? "Transitions" Data..!= Prelude.mempty)
       )
 
 instance

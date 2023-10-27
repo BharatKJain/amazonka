@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.ProjectPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.ProjectPolicy where
@@ -117,7 +117,8 @@ instance Data.FromJSON ProjectPolicy where
 
 instance Prelude.Hashable ProjectPolicy where
   hashWithSalt _salt ProjectPolicy' {..} =
-    _salt `Prelude.hashWithSalt` creationTimestamp
+    _salt
+      `Prelude.hashWithSalt` creationTimestamp
       `Prelude.hashWithSalt` lastUpdatedTimestamp
       `Prelude.hashWithSalt` policyDocument
       `Prelude.hashWithSalt` policyName

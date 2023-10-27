@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.UpdateSmsChannel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest UpdateSmsChannel where
 
 instance Prelude.Hashable UpdateSmsChannel where
   hashWithSalt _salt UpdateSmsChannel' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` sMSChannelRequest
 
 instance Prelude.NFData UpdateSmsChannel where

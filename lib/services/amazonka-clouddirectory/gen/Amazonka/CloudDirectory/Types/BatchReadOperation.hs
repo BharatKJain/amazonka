@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchReadOperation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchReadOperation where
@@ -244,7 +244,8 @@ batchReadOperation_lookupPolicy = Lens.lens (\BatchReadOperation' {lookupPolicy}
 
 instance Prelude.Hashable BatchReadOperation where
   hashWithSalt _salt BatchReadOperation' {..} =
-    _salt `Prelude.hashWithSalt` getLinkAttributes
+    _salt
+      `Prelude.hashWithSalt` getLinkAttributes
       `Prelude.hashWithSalt` getObjectAttributes
       `Prelude.hashWithSalt` getObjectInformation
       `Prelude.hashWithSalt` listAttachedIndices

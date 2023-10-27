@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudTrail.Types.EventSelector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudTrail.Types.EventSelector where
@@ -206,7 +206,8 @@ instance Data.FromJSON EventSelector where
       ( \x ->
           EventSelector'
             Prelude.<$> (x Data..:? "DataResources" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "ExcludeManagementEventSources"
+            Prelude.<*> ( x
+                            Data..:? "ExcludeManagementEventSources"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "IncludeManagementEvents")
@@ -215,7 +216,8 @@ instance Data.FromJSON EventSelector where
 
 instance Prelude.Hashable EventSelector where
   hashWithSalt _salt EventSelector' {..} =
-    _salt `Prelude.hashWithSalt` dataResources
+    _salt
+      `Prelude.hashWithSalt` dataResources
       `Prelude.hashWithSalt` excludeManagementEventSources
       `Prelude.hashWithSalt` includeManagementEvents
       `Prelude.hashWithSalt` readWriteType

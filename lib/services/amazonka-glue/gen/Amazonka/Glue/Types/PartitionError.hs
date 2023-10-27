@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.PartitionError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.PartitionError where
@@ -70,14 +70,16 @@ instance Data.FromJSON PartitionError where
       ( \x ->
           PartitionError'
             Prelude.<$> (x Data..:? "ErrorDetail")
-            Prelude.<*> ( x Data..:? "PartitionValues"
+            Prelude.<*> ( x
+                            Data..:? "PartitionValues"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable PartitionError where
   hashWithSalt _salt PartitionError' {..} =
-    _salt `Prelude.hashWithSalt` errorDetail
+    _salt
+      `Prelude.hashWithSalt` errorDetail
       `Prelude.hashWithSalt` partitionValues
 
 instance Prelude.NFData PartitionError where

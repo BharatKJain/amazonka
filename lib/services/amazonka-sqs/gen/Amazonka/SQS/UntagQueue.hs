@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SQS.UntagQueue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,7 +98,8 @@ instance Core.AWSRequest UntagQueue where
 
 instance Prelude.Hashable UntagQueue where
   hashWithSalt _salt UntagQueue' {..} =
-    _salt `Prelude.hashWithSalt` queueUrl
+    _salt
+      `Prelude.hashWithSalt` queueUrl
       `Prelude.hashWithSalt` tagKeys
 
 instance Prelude.NFData UntagQueue where

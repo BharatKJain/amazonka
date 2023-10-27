@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53RecoveryControlConfig.ListRoutingControls
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,22 +108,22 @@ instance Core.AWSPager ListRoutingControls where
     | Core.stop
         ( rs
             Lens.^? listRoutingControlsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listRoutingControlsResponse_routingControls
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listRoutingControls_nextToken
           Lens..~ rs
           Lens.^? listRoutingControlsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListRoutingControls where
   type
@@ -136,7 +136,8 @@ instance Core.AWSRequest ListRoutingControls where
       ( \s h x ->
           ListRoutingControlsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "RoutingControls"
+            Prelude.<*> ( x
+                            Data..?> "RoutingControls"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -144,7 +145,8 @@ instance Core.AWSRequest ListRoutingControls where
 
 instance Prelude.Hashable ListRoutingControls where
   hashWithSalt _salt ListRoutingControls' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` controlPanelArn
 

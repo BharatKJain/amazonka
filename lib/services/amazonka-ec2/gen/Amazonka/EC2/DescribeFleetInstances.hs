@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeFleetInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -156,7 +156,8 @@ instance Core.AWSRequest DescribeFleetInstances where
     Response.receiveXML
       ( \s h x ->
           DescribeFleetInstancesResponse'
-            Prelude.<$> ( x Data..@? "activeInstanceSet"
+            Prelude.<$> ( x
+                            Data..@? "activeInstanceSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -167,7 +168,8 @@ instance Core.AWSRequest DescribeFleetInstances where
 
 instance Prelude.Hashable DescribeFleetInstances where
   hashWithSalt _salt DescribeFleetInstances' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.ColumnRowFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.ColumnRowFilter where
@@ -70,7 +70,8 @@ instance Data.FromJSON ColumnRowFilter where
 
 instance Prelude.Hashable ColumnRowFilter where
   hashWithSalt _salt ColumnRowFilter' {..} =
-    _salt `Prelude.hashWithSalt` columnName
+    _salt
+      `Prelude.hashWithSalt` columnName
       `Prelude.hashWithSalt` rowFilterExpression
 
 instance Prelude.NFData ColumnRowFilter where

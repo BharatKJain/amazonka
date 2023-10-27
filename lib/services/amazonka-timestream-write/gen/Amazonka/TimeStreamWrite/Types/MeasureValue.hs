@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamWrite.Types.MeasureValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamWrite.Types.MeasureValue where
@@ -101,7 +101,8 @@ measureValue_type = Lens.lens (\MeasureValue' {type'} -> type') (\s@MeasureValue
 
 instance Prelude.Hashable MeasureValue where
   hashWithSalt _salt MeasureValue' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` type'
 

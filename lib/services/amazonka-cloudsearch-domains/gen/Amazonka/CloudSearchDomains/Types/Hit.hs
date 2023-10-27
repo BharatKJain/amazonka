@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudSearchDomains.Types.Hit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudSearchDomains.Types.Hit where
@@ -97,7 +97,8 @@ instance Data.FromJSON Hit where
 
 instance Prelude.Hashable Hit where
   hashWithSalt _salt Hit' {..} =
-    _salt `Prelude.hashWithSalt` exprs
+    _salt
+      `Prelude.hashWithSalt` exprs
       `Prelude.hashWithSalt` fields
       `Prelude.hashWithSalt` highlights
       `Prelude.hashWithSalt` id

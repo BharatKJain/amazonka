@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppFlow.DescribeConnector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest DescribeConnector where
 
 instance Prelude.Hashable DescribeConnector where
   hashWithSalt _salt DescribeConnector' {..} =
-    _salt `Prelude.hashWithSalt` connectorLabel
+    _salt
+      `Prelude.hashWithSalt` connectorLabel
       `Prelude.hashWithSalt` connectorType
 
 instance Prelude.NFData DescribeConnector where

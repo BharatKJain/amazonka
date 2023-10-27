@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECR.GetLifecyclePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest GetLifecyclePolicy where
 
 instance Prelude.Hashable GetLifecyclePolicy where
   hashWithSalt _salt GetLifecyclePolicy' {..} =
-    _salt `Prelude.hashWithSalt` registryId
+    _salt
+      `Prelude.hashWithSalt` registryId
       `Prelude.hashWithSalt` repositoryName
 
 instance Prelude.NFData GetLifecyclePolicy where

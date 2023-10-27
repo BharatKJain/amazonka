@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.ListIAMPolicyAssignments
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -139,7 +139,8 @@ instance Core.AWSRequest ListIAMPolicyAssignments where
     Response.receiveJSON
       ( \s h x ->
           ListIAMPolicyAssignmentsResponse'
-            Prelude.<$> ( x Data..?> "IAMPolicyAssignments"
+            Prelude.<$> ( x
+                            Data..?> "IAMPolicyAssignments"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -149,7 +150,8 @@ instance Core.AWSRequest ListIAMPolicyAssignments where
 
 instance Prelude.Hashable ListIAMPolicyAssignments where
   hashWithSalt _salt ListIAMPolicyAssignments' {..} =
-    _salt `Prelude.hashWithSalt` assignmentStatus
+    _salt
+      `Prelude.hashWithSalt` assignmentStatus
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` awsAccountId

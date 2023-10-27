@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFV2.ListWebACLs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -164,7 +164,8 @@ instance Core.AWSRequest ListWebACLs where
 
 instance Prelude.Hashable ListWebACLs where
   hashWithSalt _salt ListWebACLs' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextMarker
       `Prelude.hashWithSalt` scope
 
@@ -252,7 +253,6 @@ newListWebACLsResponse pHttpStatus_ =
 listWebACLsResponse_nextMarker :: Lens.Lens' ListWebACLsResponse (Prelude.Maybe Prelude.Text)
 listWebACLsResponse_nextMarker = Lens.lens (\ListWebACLsResponse' {nextMarker} -> nextMarker) (\s@ListWebACLsResponse' {} a -> s {nextMarker = a} :: ListWebACLsResponse)
 
--- |
 listWebACLsResponse_webACLs :: Lens.Lens' ListWebACLsResponse (Prelude.Maybe [WebACLSummary])
 listWebACLsResponse_webACLs = Lens.lens (\ListWebACLsResponse' {webACLs} -> webACLs) (\s@ListWebACLsResponse' {} a -> s {webACLs = a} :: ListWebACLsResponse) Prelude.. Lens.mapping Lens.coerced
 

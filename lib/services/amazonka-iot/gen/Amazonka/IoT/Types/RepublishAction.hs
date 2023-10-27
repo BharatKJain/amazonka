@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.RepublishAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.RepublishAction where
@@ -108,7 +108,8 @@ instance Data.FromJSON RepublishAction where
 
 instance Prelude.Hashable RepublishAction where
   hashWithSalt _salt RepublishAction' {..} =
-    _salt `Prelude.hashWithSalt` headers
+    _salt
+      `Prelude.hashWithSalt` headers
       `Prelude.hashWithSalt` qos
       `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` topic

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectConnect.Types.DirectConnectGatewayAttachment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectConnect.Types.DirectConnectGatewayAttachment where
@@ -173,7 +173,8 @@ instance
   hashWithSalt
     _salt
     DirectConnectGatewayAttachment' {..} =
-      _salt `Prelude.hashWithSalt` attachmentState
+      _salt
+        `Prelude.hashWithSalt` attachmentState
         `Prelude.hashWithSalt` attachmentType
         `Prelude.hashWithSalt` directConnectGatewayId
         `Prelude.hashWithSalt` stateChangeError

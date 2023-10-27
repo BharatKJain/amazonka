@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.StackSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.StackSet where
@@ -319,17 +319,22 @@ instance Data.FromXML StackSet where
     StackSet'
       Prelude.<$> (x Data..@? "AdministrationRoleARN")
       Prelude.<*> (x Data..@? "AutoDeployment")
-      Prelude.<*> ( x Data..@? "Capabilities" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Capabilities"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "Description")
       Prelude.<*> (x Data..@? "ExecutionRoleName")
       Prelude.<*> (x Data..@? "ManagedExecution")
-      Prelude.<*> ( x Data..@? "OrganizationalUnitIds"
+      Prelude.<*> ( x
+                      Data..@? "OrganizationalUnitIds"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "Parameters" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Parameters"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "PermissionModel")
@@ -338,14 +343,17 @@ instance Data.FromXML StackSet where
       Prelude.<*> (x Data..@? "StackSetId")
       Prelude.<*> (x Data..@? "StackSetName")
       Prelude.<*> (x Data..@? "Status")
-      Prelude.<*> ( x Data..@? "Tags" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Tags"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "TemplateBody")
 
 instance Prelude.Hashable StackSet where
   hashWithSalt _salt StackSet' {..} =
-    _salt `Prelude.hashWithSalt` administrationRoleARN
+    _salt
+      `Prelude.hashWithSalt` administrationRoleARN
       `Prelude.hashWithSalt` autoDeployment
       `Prelude.hashWithSalt` capabilities
       `Prelude.hashWithSalt` description

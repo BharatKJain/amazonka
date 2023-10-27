@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.ConnectorProfileCredentials
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.ConnectorProfileCredentials where
@@ -225,7 +225,8 @@ connectorProfileCredentials_zendesk = Lens.lens (\ConnectorProfileCredentials' {
 
 instance Prelude.Hashable ConnectorProfileCredentials where
   hashWithSalt _salt ConnectorProfileCredentials' {..} =
-    _salt `Prelude.hashWithSalt` amplitude
+    _salt
+      `Prelude.hashWithSalt` amplitude
       `Prelude.hashWithSalt` customConnector
       `Prelude.hashWithSalt` datadog
       `Prelude.hashWithSalt` dynatrace

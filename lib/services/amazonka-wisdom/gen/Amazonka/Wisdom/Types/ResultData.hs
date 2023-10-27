@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Wisdom.Types.ResultData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Wisdom.Types.ResultData where
@@ -89,7 +89,8 @@ instance Data.FromJSON ResultData where
 
 instance Prelude.Hashable ResultData where
   hashWithSalt _salt ResultData' {..} =
-    _salt `Prelude.hashWithSalt` relevanceScore
+    _salt
+      `Prelude.hashWithSalt` relevanceScore
       `Prelude.hashWithSalt` document
       `Prelude.hashWithSalt` resultId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.CalculateRouteSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.CalculateRouteSummary where
@@ -147,7 +147,8 @@ newCalculateRouteSummary
         distanceUnit = pDistanceUnit_,
         durationSeconds = pDurationSeconds_,
         routeBBox =
-          Data._Sensitive Prelude.. Lens.coerced
+          Data._Sensitive
+            Prelude.. Lens.coerced
             Lens.# pRouteBBox_
       }
 
@@ -218,7 +219,8 @@ instance Data.FromJSON CalculateRouteSummary where
 
 instance Prelude.Hashable CalculateRouteSummary where
   hashWithSalt _salt CalculateRouteSummary' {..} =
-    _salt `Prelude.hashWithSalt` dataSource
+    _salt
+      `Prelude.hashWithSalt` dataSource
       `Prelude.hashWithSalt` distance
       `Prelude.hashWithSalt` distanceUnit
       `Prelude.hashWithSalt` durationSeconds

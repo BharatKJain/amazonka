@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DocumentDB.Types.UpgradeTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DocumentDB.Types.UpgradeTarget where
@@ -106,7 +106,8 @@ instance Data.FromXML UpgradeTarget where
 
 instance Prelude.Hashable UpgradeTarget where
   hashWithSalt _salt UpgradeTarget' {..} =
-    _salt `Prelude.hashWithSalt` autoUpgrade
+    _salt
+      `Prelude.hashWithSalt` autoUpgrade
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` engine
       `Prelude.hashWithSalt` engineVersion

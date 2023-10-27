@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.OverrideAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.OverrideAction where
@@ -103,12 +103,14 @@ instance Data.FromJSON OverrideAction where
       "OverrideAction"
       ( \x ->
           OverrideAction'
-            Prelude.<$> (x Data..:? "Count") Prelude.<*> (x Data..:? "None")
+            Prelude.<$> (x Data..:? "Count")
+            Prelude.<*> (x Data..:? "None")
       )
 
 instance Prelude.Hashable OverrideAction where
   hashWithSalt _salt OverrideAction' {..} =
-    _salt `Prelude.hashWithSalt` count
+    _salt
+      `Prelude.hashWithSalt` count
       `Prelude.hashWithSalt` none
 
 instance Prelude.NFData OverrideAction where

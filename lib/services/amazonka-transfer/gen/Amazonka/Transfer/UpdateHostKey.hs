@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Transfer.UpdateHostKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest UpdateHostKey where
 
 instance Prelude.Hashable UpdateHostKey where
   hashWithSalt _salt UpdateHostKey' {..} =
-    _salt `Prelude.hashWithSalt` serverId
+    _salt
+      `Prelude.hashWithSalt` serverId
       `Prelude.hashWithSalt` hostKeyId
       `Prelude.hashWithSalt` description
 

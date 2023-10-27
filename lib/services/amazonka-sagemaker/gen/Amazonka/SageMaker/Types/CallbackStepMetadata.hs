@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.CallbackStepMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.CallbackStepMetadata where
@@ -83,7 +83,8 @@ instance Data.FromJSON CallbackStepMetadata where
       ( \x ->
           CallbackStepMetadata'
             Prelude.<$> (x Data..:? "CallbackToken")
-            Prelude.<*> ( x Data..:? "OutputParameters"
+            Prelude.<*> ( x
+                            Data..:? "OutputParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SqsQueueUrl")
@@ -91,7 +92,8 @@ instance Data.FromJSON CallbackStepMetadata where
 
 instance Prelude.Hashable CallbackStepMetadata where
   hashWithSalt _salt CallbackStepMetadata' {..} =
-    _salt `Prelude.hashWithSalt` callbackToken
+    _salt
+      `Prelude.hashWithSalt` callbackToken
       `Prelude.hashWithSalt` outputParameters
       `Prelude.hashWithSalt` sqsQueueUrl
 

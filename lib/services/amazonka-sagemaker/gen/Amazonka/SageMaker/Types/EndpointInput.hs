@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.EndpointInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.EndpointInput where
@@ -196,7 +196,8 @@ instance Data.FromJSON EndpointInput where
 
 instance Prelude.Hashable EndpointInput where
   hashWithSalt _salt EndpointInput' {..} =
-    _salt `Prelude.hashWithSalt` endTimeOffset
+    _salt
+      `Prelude.hashWithSalt` endTimeOffset
       `Prelude.hashWithSalt` featuresAttribute
       `Prelude.hashWithSalt` inferenceAttribute
       `Prelude.hashWithSalt` probabilityAttribute

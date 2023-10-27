@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.LocationState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.LocationState where
@@ -102,7 +102,8 @@ instance Data.FromJSON LocationState where
 
 instance Prelude.Hashable LocationState where
   hashWithSalt _salt LocationState' {..} =
-    _salt `Prelude.hashWithSalt` location
+    _salt
+      `Prelude.hashWithSalt` location
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData LocationState where

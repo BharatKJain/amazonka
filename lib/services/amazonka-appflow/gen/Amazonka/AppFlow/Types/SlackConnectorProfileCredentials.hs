@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.SlackConnectorProfileCredentials
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.SlackConnectorProfileCredentials where
@@ -102,7 +102,8 @@ instance
   hashWithSalt
     _salt
     SlackConnectorProfileCredentials' {..} =
-      _salt `Prelude.hashWithSalt` accessToken
+      _salt
+        `Prelude.hashWithSalt` accessToken
         `Prelude.hashWithSalt` oAuthRequest
         `Prelude.hashWithSalt` clientId
         `Prelude.hashWithSalt` clientSecret

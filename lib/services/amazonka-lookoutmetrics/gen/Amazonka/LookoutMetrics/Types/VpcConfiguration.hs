@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.VpcConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.VpcConfiguration where
@@ -73,14 +73,16 @@ instance Data.FromJSON VpcConfiguration where
       ( \x ->
           VpcConfiguration'
             Prelude.<$> (x Data..:? "SubnetIdList" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "SecurityGroupIdList"
+            Prelude.<*> ( x
+                            Data..:? "SecurityGroupIdList"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable VpcConfiguration where
   hashWithSalt _salt VpcConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` subnetIdList
+    _salt
+      `Prelude.hashWithSalt` subnetIdList
       `Prelude.hashWithSalt` securityGroupIdList
 
 instance Prelude.NFData VpcConfiguration where

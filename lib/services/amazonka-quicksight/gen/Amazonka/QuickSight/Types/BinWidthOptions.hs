@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.BinWidthOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.BinWidthOptions where
@@ -74,7 +74,8 @@ instance Data.FromJSON BinWidthOptions where
 
 instance Prelude.Hashable BinWidthOptions where
   hashWithSalt _salt BinWidthOptions' {..} =
-    _salt `Prelude.hashWithSalt` binCountLimit
+    _salt
+      `Prelude.hashWithSalt` binCountLimit
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData BinWidthOptions where

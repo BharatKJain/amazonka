@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MachineLearning.UpdateBatchPrediction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest UpdateBatchPrediction where
 
 instance Prelude.Hashable UpdateBatchPrediction where
   hashWithSalt _salt UpdateBatchPrediction' {..} =
-    _salt `Prelude.hashWithSalt` batchPredictionId
+    _salt
+      `Prelude.hashWithSalt` batchPredictionId
       `Prelude.hashWithSalt` batchPredictionName
 
 instance Prelude.NFData UpdateBatchPrediction where

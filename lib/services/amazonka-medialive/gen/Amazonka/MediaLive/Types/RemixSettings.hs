@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.RemixSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.RemixSettings where
@@ -83,14 +83,16 @@ instance Data.FromJSON RemixSettings where
           RemixSettings'
             Prelude.<$> (x Data..:? "channelsIn")
             Prelude.<*> (x Data..:? "channelsOut")
-            Prelude.<*> ( x Data..:? "channelMappings"
+            Prelude.<*> ( x
+                            Data..:? "channelMappings"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable RemixSettings where
   hashWithSalt _salt RemixSettings' {..} =
-    _salt `Prelude.hashWithSalt` channelsIn
+    _salt
+      `Prelude.hashWithSalt` channelsIn
       `Prelude.hashWithSalt` channelsOut
       `Prelude.hashWithSalt` channelMappings
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamQuery.Types.S3ReportLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamQuery.Types.S3ReportLocation where
@@ -74,7 +74,8 @@ instance Data.FromJSON S3ReportLocation where
 
 instance Prelude.Hashable S3ReportLocation where
   hashWithSalt _salt S3ReportLocation' {..} =
-    _salt `Prelude.hashWithSalt` bucketName
+    _salt
+      `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` objectKey
 
 instance Prelude.NFData S3ReportLocation where

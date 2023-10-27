@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.SearchDataSets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,21 +118,22 @@ instance Core.AWSPager SearchDataSets where
     | Core.stop
         ( rs
             Lens.^? searchDataSetsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? searchDataSetsResponse_dataSetSummaries
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& searchDataSets_nextToken
           Lens..~ rs
-          Lens.^? searchDataSetsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? searchDataSetsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest SearchDataSets where
   type
@@ -144,7 +145,8 @@ instance Core.AWSRequest SearchDataSets where
     Response.receiveJSON
       ( \s h x ->
           SearchDataSetsResponse'
-            Prelude.<$> ( x Data..?> "DataSetSummaries"
+            Prelude.<$> ( x
+                            Data..?> "DataSetSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -154,7 +156,8 @@ instance Core.AWSRequest SearchDataSets where
 
 instance Prelude.Hashable SearchDataSets where
   hashWithSalt _salt SearchDataSets' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` awsAccountId
       `Prelude.hashWithSalt` filters

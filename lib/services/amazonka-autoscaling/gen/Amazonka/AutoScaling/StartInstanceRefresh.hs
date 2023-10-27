@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.StartInstanceRefresh
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -206,7 +206,8 @@ instance Core.AWSRequest StartInstanceRefresh where
 
 instance Prelude.Hashable StartInstanceRefresh where
   hashWithSalt _salt StartInstanceRefresh' {..} =
-    _salt `Prelude.hashWithSalt` desiredConfiguration
+    _salt
+      `Prelude.hashWithSalt` desiredConfiguration
       `Prelude.hashWithSalt` preferences
       `Prelude.hashWithSalt` strategy
       `Prelude.hashWithSalt` autoScalingGroupName

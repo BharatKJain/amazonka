@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.ComputeEnvironmentDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.ComputeEnvironmentDetail where
@@ -320,7 +320,8 @@ instance Data.FromJSON ComputeEnvironmentDetail where
 
 instance Prelude.Hashable ComputeEnvironmentDetail where
   hashWithSalt _salt ComputeEnvironmentDetail' {..} =
-    _salt `Prelude.hashWithSalt` computeResources
+    _salt
+      `Prelude.hashWithSalt` computeResources
       `Prelude.hashWithSalt` containerOrchestrationType
       `Prelude.hashWithSalt` ecsClusterArn
       `Prelude.hashWithSalt` eksConfiguration

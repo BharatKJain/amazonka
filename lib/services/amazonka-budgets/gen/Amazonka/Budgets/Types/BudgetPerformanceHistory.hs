@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Budgets.Types.BudgetPerformanceHistory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Budgets.Types.BudgetPerformanceHistory where
@@ -118,7 +118,8 @@ instance Data.FromJSON BudgetPerformanceHistory where
           BudgetPerformanceHistory'
             Prelude.<$> (x Data..:? "BudgetName")
             Prelude.<*> (x Data..:? "BudgetType")
-            Prelude.<*> ( x Data..:? "BudgetedAndActualAmountsList"
+            Prelude.<*> ( x
+                            Data..:? "BudgetedAndActualAmountsList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CostFilters" Data..!= Prelude.mempty)
@@ -128,7 +129,8 @@ instance Data.FromJSON BudgetPerformanceHistory where
 
 instance Prelude.Hashable BudgetPerformanceHistory where
   hashWithSalt _salt BudgetPerformanceHistory' {..} =
-    _salt `Prelude.hashWithSalt` budgetName
+    _salt
+      `Prelude.hashWithSalt` budgetName
       `Prelude.hashWithSalt` budgetType
       `Prelude.hashWithSalt` budgetedAndActualAmountsList
       `Prelude.hashWithSalt` costFilters

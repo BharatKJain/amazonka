@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRServerless.Types.Application
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRServerless.Types.Application where
@@ -265,7 +265,8 @@ instance Data.FromJSON Application where
             Prelude.<*> (x Data..:? "autoStartConfiguration")
             Prelude.<*> (x Data..:? "autoStopConfiguration")
             Prelude.<*> (x Data..:? "imageConfiguration")
-            Prelude.<*> ( x Data..:? "initialCapacity"
+            Prelude.<*> ( x
+                            Data..:? "initialCapacity"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "maximumCapacity")
@@ -273,7 +274,8 @@ instance Data.FromJSON Application where
             Prelude.<*> (x Data..:? "networkConfiguration")
             Prelude.<*> (x Data..:? "stateDetails")
             Prelude.<*> (x Data..:? "tags" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "workerTypeSpecifications"
+            Prelude.<*> ( x
+                            Data..:? "workerTypeSpecifications"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "applicationId")
@@ -287,7 +289,8 @@ instance Data.FromJSON Application where
 
 instance Prelude.Hashable Application where
   hashWithSalt _salt Application' {..} =
-    _salt `Prelude.hashWithSalt` architecture
+    _salt
+      `Prelude.hashWithSalt` architecture
       `Prelude.hashWithSalt` autoStartConfiguration
       `Prelude.hashWithSalt` autoStopConfiguration
       `Prelude.hashWithSalt` imageConfiguration

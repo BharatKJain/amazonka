@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GamesParks.DeleteStage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,7 +100,8 @@ instance Core.AWSRequest DeleteStage where
 
 instance Prelude.Hashable DeleteStage where
   hashWithSalt _salt DeleteStage' {..} =
-    _salt `Prelude.hashWithSalt` gameName
+    _salt
+      `Prelude.hashWithSalt` gameName
       `Prelude.hashWithSalt` stageName
 
 instance Prelude.NFData DeleteStage where

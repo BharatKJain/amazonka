@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KinesisVideo.ListSignalingChannels
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,22 +117,22 @@ instance Core.AWSPager ListSignalingChannels where
     | Core.stop
         ( rs
             Lens.^? listSignalingChannelsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listSignalingChannelsResponse_channelInfoList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSignalingChannels_nextToken
           Lens..~ rs
           Lens.^? listSignalingChannelsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListSignalingChannels where
   type
@@ -144,7 +144,8 @@ instance Core.AWSRequest ListSignalingChannels where
     Response.receiveJSON
       ( \s h x ->
           ListSignalingChannelsResponse'
-            Prelude.<$> ( x Data..?> "ChannelInfoList"
+            Prelude.<$> ( x
+                            Data..?> "ChannelInfoList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -153,7 +154,8 @@ instance Core.AWSRequest ListSignalingChannels where
 
 instance Prelude.Hashable ListSignalingChannels where
   hashWithSalt _salt ListSignalingChannels' {..} =
-    _salt `Prelude.hashWithSalt` channelNameCondition
+    _salt
+      `Prelude.hashWithSalt` channelNameCondition
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.PartOfSpeechTag
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.PartOfSpeechTag where
@@ -77,12 +77,14 @@ instance Data.FromJSON PartOfSpeechTag where
       "PartOfSpeechTag"
       ( \x ->
           PartOfSpeechTag'
-            Prelude.<$> (x Data..:? "Score") Prelude.<*> (x Data..:? "Tag")
+            Prelude.<$> (x Data..:? "Score")
+            Prelude.<*> (x Data..:? "Tag")
       )
 
 instance Prelude.Hashable PartOfSpeechTag where
   hashWithSalt _salt PartOfSpeechTag' {..} =
-    _salt `Prelude.hashWithSalt` score
+    _salt
+      `Prelude.hashWithSalt` score
       `Prelude.hashWithSalt` tag
 
 instance Prelude.NFData PartOfSpeechTag where

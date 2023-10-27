@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ManagedBlockChain.VoteOnProposal
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest VoteOnProposal where
 
 instance Prelude.Hashable VoteOnProposal where
   hashWithSalt _salt VoteOnProposal' {..} =
-    _salt `Prelude.hashWithSalt` networkId
+    _salt
+      `Prelude.hashWithSalt` networkId
       `Prelude.hashWithSalt` proposalId
       `Prelude.hashWithSalt` voterMemberId
       `Prelude.hashWithSalt` vote

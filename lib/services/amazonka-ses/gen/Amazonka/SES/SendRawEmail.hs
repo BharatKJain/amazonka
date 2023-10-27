@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SES.SendRawEmail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -560,7 +560,8 @@ instance Core.AWSRequest SendRawEmail where
 
 instance Prelude.Hashable SendRawEmail where
   hashWithSalt _salt SendRawEmail' {..} =
-    _salt `Prelude.hashWithSalt` configurationSetName
+    _salt
+      `Prelude.hashWithSalt` configurationSetName
       `Prelude.hashWithSalt` destinations
       `Prelude.hashWithSalt` fromArn
       `Prelude.hashWithSalt` returnPathArn

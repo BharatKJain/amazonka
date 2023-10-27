@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTWireless.ListWirelessGateways
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,7 +102,8 @@ instance Core.AWSRequest ListWirelessGateways where
       ( \s h x ->
           ListWirelessGatewaysResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "WirelessGatewayList"
+            Prelude.<*> ( x
+                            Data..?> "WirelessGatewayList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -110,7 +111,8 @@ instance Core.AWSRequest ListWirelessGateways where
 
 instance Prelude.Hashable ListWirelessGateways where
   hashWithSalt _salt ListWirelessGateways' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListWirelessGateways where

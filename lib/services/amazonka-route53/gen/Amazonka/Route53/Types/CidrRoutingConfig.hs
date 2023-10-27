@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.CidrRoutingConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.CidrRoutingConfig where
@@ -79,7 +79,8 @@ instance Data.FromXML CidrRoutingConfig where
 
 instance Prelude.Hashable CidrRoutingConfig where
   hashWithSalt _salt CidrRoutingConfig' {..} =
-    _salt `Prelude.hashWithSalt` collectionId
+    _salt
+      `Prelude.hashWithSalt` collectionId
       `Prelude.hashWithSalt` locationName
 
 instance Prelude.NFData CidrRoutingConfig where

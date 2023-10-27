@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Amplify.Types.SubDomainSetting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Amplify.Types.SubDomainSetting where
@@ -78,7 +78,8 @@ instance Data.FromJSON SubDomainSetting where
 
 instance Prelude.Hashable SubDomainSetting where
   hashWithSalt _salt SubDomainSetting' {..} =
-    _salt `Prelude.hashWithSalt` prefix
+    _salt
+      `Prelude.hashWithSalt` prefix
       `Prelude.hashWithSalt` branchName
 
 instance Prelude.NFData SubDomainSetting where

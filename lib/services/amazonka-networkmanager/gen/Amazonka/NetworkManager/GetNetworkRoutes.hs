@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkManager.GetNetworkRoutes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -201,7 +201,8 @@ instance Core.AWSRequest GetNetworkRoutes where
 
 instance Prelude.Hashable GetNetworkRoutes where
   hashWithSalt _salt GetNetworkRoutes' {..} =
-    _salt `Prelude.hashWithSalt` destinationFilters
+    _salt
+      `Prelude.hashWithSalt` destinationFilters
       `Prelude.hashWithSalt` exactCidrMatches
       `Prelude.hashWithSalt` longestPrefixMatches
       `Prelude.hashWithSalt` prefixListIds

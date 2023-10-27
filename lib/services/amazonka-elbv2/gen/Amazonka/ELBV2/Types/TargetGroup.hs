@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.TargetGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.TargetGroup where
@@ -266,7 +266,8 @@ instance Data.FromXML TargetGroup where
       Prelude.<*> (x Data..@? "HealthCheckTimeoutSeconds")
       Prelude.<*> (x Data..@? "HealthyThresholdCount")
       Prelude.<*> (x Data..@? "IpAddressType")
-      Prelude.<*> ( x Data..@? "LoadBalancerArns"
+      Prelude.<*> ( x
+                      Data..@? "LoadBalancerArns"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
@@ -282,7 +283,8 @@ instance Data.FromXML TargetGroup where
 
 instance Prelude.Hashable TargetGroup where
   hashWithSalt _salt TargetGroup' {..} =
-    _salt `Prelude.hashWithSalt` healthCheckEnabled
+    _salt
+      `Prelude.hashWithSalt` healthCheckEnabled
       `Prelude.hashWithSalt` healthCheckIntervalSeconds
       `Prelude.hashWithSalt` healthCheckPath
       `Prelude.hashWithSalt` healthCheckPort

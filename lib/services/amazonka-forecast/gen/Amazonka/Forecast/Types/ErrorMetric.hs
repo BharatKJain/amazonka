@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.ErrorMetric
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.ErrorMetric where
@@ -105,7 +105,8 @@ instance Data.FromJSON ErrorMetric where
 
 instance Prelude.Hashable ErrorMetric where
   hashWithSalt _salt ErrorMetric' {..} =
-    _salt `Prelude.hashWithSalt` forecastType
+    _salt
+      `Prelude.hashWithSalt` forecastType
       `Prelude.hashWithSalt` mape
       `Prelude.hashWithSalt` mase
       `Prelude.hashWithSalt` rmse

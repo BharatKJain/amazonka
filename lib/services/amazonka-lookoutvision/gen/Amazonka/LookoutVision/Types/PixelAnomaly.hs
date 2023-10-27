@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutVision.Types.PixelAnomaly
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutVision.Types.PixelAnomaly where
@@ -82,7 +82,8 @@ instance Data.FromJSON PixelAnomaly where
 
 instance Prelude.Hashable PixelAnomaly where
   hashWithSalt _salt PixelAnomaly' {..} =
-    _salt `Prelude.hashWithSalt` color
+    _salt
+      `Prelude.hashWithSalt` color
       `Prelude.hashWithSalt` totalPercentageArea
 
 instance Prelude.NFData PixelAnomaly where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppMesh.DescribeVirtualNode
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,8 @@ instance Core.AWSRequest DescribeVirtualNode where
 
 instance Prelude.Hashable DescribeVirtualNode where
   hashWithSalt _salt DescribeVirtualNode' {..} =
-    _salt `Prelude.hashWithSalt` meshOwner
+    _salt
+      `Prelude.hashWithSalt` meshOwner
       `Prelude.hashWithSalt` meshName
       `Prelude.hashWithSalt` virtualNodeName
 

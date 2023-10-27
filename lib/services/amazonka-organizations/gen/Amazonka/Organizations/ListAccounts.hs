@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Organizations.ListAccounts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -142,20 +142,23 @@ instance Core.AWSPager ListAccounts where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listAccountsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listAccountsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listAccountsResponse_accounts Prelude.. Lens._Just
+            Lens.^? listAccountsResponse_accounts
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAccounts_nextToken
           Lens..~ rs
-          Lens.^? listAccountsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listAccountsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAccounts where
   type AWSResponse ListAccounts = ListAccountsResponse
@@ -172,7 +175,8 @@ instance Core.AWSRequest ListAccounts where
 
 instance Prelude.Hashable ListAccounts where
   hashWithSalt _salt ListAccounts' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListAccounts where

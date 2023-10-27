@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.CrawlerMetrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.CrawlerMetrics where
@@ -137,7 +137,8 @@ instance Data.FromJSON CrawlerMetrics where
 
 instance Prelude.Hashable CrawlerMetrics where
   hashWithSalt _salt CrawlerMetrics' {..} =
-    _salt `Prelude.hashWithSalt` crawlerName
+    _salt
+      `Prelude.hashWithSalt` crawlerName
       `Prelude.hashWithSalt` lastRuntimeSeconds
       `Prelude.hashWithSalt` medianRuntimeSeconds
       `Prelude.hashWithSalt` stillEstimating

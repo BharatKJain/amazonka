@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.SourceConnection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.SourceConnection where
@@ -73,7 +73,8 @@ sourceConnection_connectionParameters = Lens.lens (\SourceConnection' {connectio
 
 instance Prelude.Hashable SourceConnection where
   hashWithSalt _salt SourceConnection' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` connectionParameters
 
 instance Prelude.NFData SourceConnection where

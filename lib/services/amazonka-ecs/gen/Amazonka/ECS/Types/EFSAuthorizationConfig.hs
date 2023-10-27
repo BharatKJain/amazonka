@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.EFSAuthorizationConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.EFSAuthorizationConfig where
@@ -112,7 +112,8 @@ instance Data.FromJSON EFSAuthorizationConfig where
 
 instance Prelude.Hashable EFSAuthorizationConfig where
   hashWithSalt _salt EFSAuthorizationConfig' {..} =
-    _salt `Prelude.hashWithSalt` accessPointId
+    _salt
+      `Prelude.hashWithSalt` accessPointId
       `Prelude.hashWithSalt` iam
 
 instance Prelude.NFData EFSAuthorizationConfig where

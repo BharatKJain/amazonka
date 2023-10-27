@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ServiceConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ServiceConfiguration where
@@ -203,20 +203,24 @@ instance Data.FromXML ServiceConfiguration where
   parseXML x =
     ServiceConfiguration'
       Prelude.<$> (x Data..@? "acceptanceRequired")
-      Prelude.<*> ( x Data..@? "availabilityZoneSet"
+      Prelude.<*> ( x
+                      Data..@? "availabilityZoneSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "baseEndpointDnsNameSet"
+      Prelude.<*> ( x
+                      Data..@? "baseEndpointDnsNameSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "gatewayLoadBalancerArnSet"
+      Prelude.<*> ( x
+                      Data..@? "gatewayLoadBalancerArnSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "managesVpcEndpoints")
-      Prelude.<*> ( x Data..@? "networkLoadBalancerArnSet"
+      Prelude.<*> ( x
+                      Data..@? "networkLoadBalancerArnSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
@@ -226,20 +230,26 @@ instance Data.FromXML ServiceConfiguration where
       Prelude.<*> (x Data..@? "serviceId")
       Prelude.<*> (x Data..@? "serviceName")
       Prelude.<*> (x Data..@? "serviceState")
-      Prelude.<*> ( x Data..@? "serviceType" Core..!@ Prelude.mempty
-                      Prelude.>>= Core.may (Data.parseXMLList "item")
-                  )
-      Prelude.<*> ( x Data..@? "supportedIpAddressTypeSet"
+      Prelude.<*> ( x
+                      Data..@? "serviceType"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "supportedIpAddressTypeSet"
+                      Core..!@ Prelude.mempty
+                      Prelude.>>= Core.may (Data.parseXMLList "item")
+                  )
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable ServiceConfiguration where
   hashWithSalt _salt ServiceConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` acceptanceRequired
+    _salt
+      `Prelude.hashWithSalt` acceptanceRequired
       `Prelude.hashWithSalt` availabilityZones
       `Prelude.hashWithSalt` baseEndpointDnsNames
       `Prelude.hashWithSalt` gatewayLoadBalancerArns

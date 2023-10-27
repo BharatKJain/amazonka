@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.DeleteAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -143,7 +143,8 @@ instance Core.AWSRequest DeleteAssociation where
 
 instance Prelude.Hashable DeleteAssociation where
   hashWithSalt _salt DeleteAssociation' {..} =
-    _salt `Prelude.hashWithSalt` associationId
+    _salt
+      `Prelude.hashWithSalt` associationId
       `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` name
 

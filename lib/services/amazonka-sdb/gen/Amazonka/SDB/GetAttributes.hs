@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SDB.GetAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -143,7 +143,8 @@ instance Core.AWSRequest GetAttributes where
 
 instance Prelude.Hashable GetAttributes where
   hashWithSalt _salt GetAttributes' {..} =
-    _salt `Prelude.hashWithSalt` attributeNames
+    _salt
+      `Prelude.hashWithSalt` attributeNames
       `Prelude.hashWithSalt` consistentRead
       `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` itemName

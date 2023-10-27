@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.DocumentMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.DocumentMetadata where
@@ -73,7 +73,8 @@ instance Data.FromJSON DocumentMetadata where
       "DocumentMetadata"
       ( \x ->
           DocumentMetadata'
-            Prelude.<$> ( x Data..:? "ExtractedCharacters"
+            Prelude.<$> ( x
+                            Data..:? "ExtractedCharacters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Pages")
@@ -81,7 +82,8 @@ instance Data.FromJSON DocumentMetadata where
 
 instance Prelude.Hashable DocumentMetadata where
   hashWithSalt _salt DocumentMetadata' {..} =
-    _salt `Prelude.hashWithSalt` extractedCharacters
+    _salt
+      `Prelude.hashWithSalt` extractedCharacters
       `Prelude.hashWithSalt` pages
 
 instance Prelude.NFData DocumentMetadata where

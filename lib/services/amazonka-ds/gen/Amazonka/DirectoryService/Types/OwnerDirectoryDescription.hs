@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.OwnerDirectoryDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.OwnerDirectoryDescription where
@@ -125,7 +125,8 @@ instance Data.FromJSON OwnerDirectoryDescription where
 
 instance Prelude.Hashable OwnerDirectoryDescription where
   hashWithSalt _salt OwnerDirectoryDescription' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` directoryId
       `Prelude.hashWithSalt` dnsIpAddrs
       `Prelude.hashWithSalt` radiusSettings

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.StartThingRegistrationTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -143,7 +143,8 @@ instance Core.AWSRequest StartThingRegistrationTask where
 
 instance Prelude.Hashable StartThingRegistrationTask where
   hashWithSalt _salt StartThingRegistrationTask' {..} =
-    _salt `Prelude.hashWithSalt` templateBody
+    _salt
+      `Prelude.hashWithSalt` templateBody
       `Prelude.hashWithSalt` inputFileBucket
       `Prelude.hashWithSalt` inputFileKey
       `Prelude.hashWithSalt` roleArn

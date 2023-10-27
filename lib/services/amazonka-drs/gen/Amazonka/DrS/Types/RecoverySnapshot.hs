@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DrS.Types.RecoverySnapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DrS.Types.RecoverySnapshot where
@@ -113,7 +113,8 @@ instance Data.FromJSON RecoverySnapshot where
 
 instance Prelude.Hashable RecoverySnapshot where
   hashWithSalt _salt RecoverySnapshot' {..} =
-    _salt `Prelude.hashWithSalt` ebsSnapshots
+    _salt
+      `Prelude.hashWithSalt` ebsSnapshots
       `Prelude.hashWithSalt` timestamp
       `Prelude.hashWithSalt` expectedTimestamp
       `Prelude.hashWithSalt` snapshotID

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Config.PutEvaluations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest PutEvaluations where
     Response.receiveJSON
       ( \s h x ->
           PutEvaluationsResponse'
-            Prelude.<$> ( x Data..?> "FailedEvaluations"
+            Prelude.<$> ( x
+                            Data..?> "FailedEvaluations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -145,7 +146,8 @@ instance Core.AWSRequest PutEvaluations where
 
 instance Prelude.Hashable PutEvaluations where
   hashWithSalt _salt PutEvaluations' {..} =
-    _salt `Prelude.hashWithSalt` evaluations
+    _salt
+      `Prelude.hashWithSalt` evaluations
       `Prelude.hashWithSalt` testMode
       `Prelude.hashWithSalt` resultToken
 

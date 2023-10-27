@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Translate.Types.Language
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Translate.Types.Language where
@@ -78,7 +78,8 @@ instance Data.FromJSON Language where
 
 instance Prelude.Hashable Language where
   hashWithSalt _salt Language' {..} =
-    _salt `Prelude.hashWithSalt` languageName
+    _salt
+      `Prelude.hashWithSalt` languageName
       `Prelude.hashWithSalt` languageCode
 
 instance Prelude.NFData Language where

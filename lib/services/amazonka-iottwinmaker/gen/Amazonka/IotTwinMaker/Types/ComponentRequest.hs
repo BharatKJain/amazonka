@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.ComponentRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.ComponentRequest where
@@ -89,7 +89,8 @@ componentRequest_propertyGroups = Lens.lens (\ComponentRequest' {propertyGroups}
 
 instance Prelude.Hashable ComponentRequest where
   hashWithSalt _salt ComponentRequest' {..} =
-    _salt `Prelude.hashWithSalt` componentTypeId
+    _salt
+      `Prelude.hashWithSalt` componentTypeId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` properties
       `Prelude.hashWithSalt` propertyGroups

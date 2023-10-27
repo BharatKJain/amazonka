@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.ExecutePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -182,7 +182,8 @@ instance Core.AWSRequest ExecutePolicy where
 
 instance Prelude.Hashable ExecutePolicy where
   hashWithSalt _salt ExecutePolicy' {..} =
-    _salt `Prelude.hashWithSalt` autoScalingGroupName
+    _salt
+      `Prelude.hashWithSalt` autoScalingGroupName
       `Prelude.hashWithSalt` breachThreshold
       `Prelude.hashWithSalt` honorCooldown
       `Prelude.hashWithSalt` metricValue

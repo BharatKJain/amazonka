@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.MultiplexVideoSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.MultiplexVideoSettings where
@@ -82,7 +82,8 @@ instance Data.FromJSON MultiplexVideoSettings where
 
 instance Prelude.Hashable MultiplexVideoSettings where
   hashWithSalt _salt MultiplexVideoSettings' {..} =
-    _salt `Prelude.hashWithSalt` constantBitrate
+    _salt
+      `Prelude.hashWithSalt` constantBitrate
       `Prelude.hashWithSalt` statmuxSettings
 
 instance Prelude.NFData MultiplexVideoSettings where

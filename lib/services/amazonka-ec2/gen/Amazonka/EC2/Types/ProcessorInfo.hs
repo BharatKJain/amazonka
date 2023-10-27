@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ProcessorInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ProcessorInfo where
@@ -68,7 +68,8 @@ processorInfo_sustainedClockSpeedInGhz = Lens.lens (\ProcessorInfo' {sustainedCl
 instance Data.FromXML ProcessorInfo where
   parseXML x =
     ProcessorInfo'
-      Prelude.<$> ( x Data..@? "supportedArchitectures"
+      Prelude.<$> ( x
+                      Data..@? "supportedArchitectures"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
@@ -76,7 +77,8 @@ instance Data.FromXML ProcessorInfo where
 
 instance Prelude.Hashable ProcessorInfo where
   hashWithSalt _salt ProcessorInfo' {..} =
-    _salt `Prelude.hashWithSalt` supportedArchitectures
+    _salt
+      `Prelude.hashWithSalt` supportedArchitectures
       `Prelude.hashWithSalt` sustainedClockSpeedInGhz
 
 instance Prelude.NFData ProcessorInfo where

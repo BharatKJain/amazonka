@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.AxisDisplayMinMaxRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.AxisDisplayMinMaxRange where
@@ -74,7 +74,8 @@ instance Data.FromJSON AxisDisplayMinMaxRange where
 
 instance Prelude.Hashable AxisDisplayMinMaxRange where
   hashWithSalt _salt AxisDisplayMinMaxRange' {..} =
-    _salt `Prelude.hashWithSalt` maximum
+    _salt
+      `Prelude.hashWithSalt` maximum
       `Prelude.hashWithSalt` minimum
 
 instance Prelude.NFData AxisDisplayMinMaxRange where

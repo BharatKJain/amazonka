@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.StopEdgeDeploymentStage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -99,7 +99,8 @@ instance Core.AWSRequest StopEdgeDeploymentStage where
 
 instance Prelude.Hashable StopEdgeDeploymentStage where
   hashWithSalt _salt StopEdgeDeploymentStage' {..} =
-    _salt `Prelude.hashWithSalt` edgeDeploymentPlanName
+    _salt
+      `Prelude.hashWithSalt` edgeDeploymentPlanName
       `Prelude.hashWithSalt` stageName
 
 instance Prelude.NFData StopEdgeDeploymentStage where

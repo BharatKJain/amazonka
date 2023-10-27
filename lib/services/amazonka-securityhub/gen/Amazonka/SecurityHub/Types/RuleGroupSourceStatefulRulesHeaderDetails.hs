@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.RuleGroupSourceStatefulRulesHeaderDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.RuleGroupSourceStatefulRulesHeaderDetails where
@@ -140,11 +140,11 @@ instance
       ( \x ->
           RuleGroupSourceStatefulRulesHeaderDetails'
             Prelude.<$> (x Data..:? "Destination")
-              Prelude.<*> (x Data..:? "DestinationPort")
-              Prelude.<*> (x Data..:? "Direction")
-              Prelude.<*> (x Data..:? "Protocol")
-              Prelude.<*> (x Data..:? "Source")
-              Prelude.<*> (x Data..:? "SourcePort")
+            Prelude.<*> (x Data..:? "DestinationPort")
+            Prelude.<*> (x Data..:? "Direction")
+            Prelude.<*> (x Data..:? "Protocol")
+            Prelude.<*> (x Data..:? "Source")
+            Prelude.<*> (x Data..:? "SourcePort")
       )
 
 instance
@@ -154,7 +154,8 @@ instance
   hashWithSalt
     _salt
     RuleGroupSourceStatefulRulesHeaderDetails' {..} =
-      _salt `Prelude.hashWithSalt` destination
+      _salt
+        `Prelude.hashWithSalt` destination
         `Prelude.hashWithSalt` destinationPort
         `Prelude.hashWithSalt` direction
         `Prelude.hashWithSalt` protocol

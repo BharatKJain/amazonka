@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeStar.Types.TeamMember
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeStar.Types.TeamMember where
@@ -100,7 +100,8 @@ instance Data.FromJSON TeamMember where
 
 instance Prelude.Hashable TeamMember where
   hashWithSalt _salt TeamMember' {..} =
-    _salt `Prelude.hashWithSalt` remoteAccessAllowed
+    _salt
+      `Prelude.hashWithSalt` remoteAccessAllowed
       `Prelude.hashWithSalt` userArn
       `Prelude.hashWithSalt` projectRole
 

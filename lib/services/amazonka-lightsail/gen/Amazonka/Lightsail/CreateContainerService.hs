@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.CreateContainerService
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -387,7 +387,8 @@ instance Core.AWSRequest CreateContainerService where
 
 instance Prelude.Hashable CreateContainerService where
   hashWithSalt _salt CreateContainerService' {..} =
-    _salt `Prelude.hashWithSalt` deployment
+    _salt
+      `Prelude.hashWithSalt` deployment
       `Prelude.hashWithSalt` privateRegistryAccess
       `Prelude.hashWithSalt` publicDomainNames
       `Prelude.hashWithSalt` tags

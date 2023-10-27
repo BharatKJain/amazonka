@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RobOMaker.Types.Tool
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RobOMaker.Types.Tool where
@@ -130,7 +130,8 @@ instance Data.FromJSON Tool where
 
 instance Prelude.Hashable Tool where
   hashWithSalt _salt Tool' {..} =
-    _salt `Prelude.hashWithSalt` exitBehavior
+    _salt
+      `Prelude.hashWithSalt` exitBehavior
       `Prelude.hashWithSalt` streamOutputToCloudWatch
       `Prelude.hashWithSalt` streamUI
       `Prelude.hashWithSalt` name

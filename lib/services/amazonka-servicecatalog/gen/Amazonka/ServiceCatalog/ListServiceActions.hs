@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.ListServiceActions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,22 +124,22 @@ instance Core.AWSPager ListServiceActions where
     | Core.stop
         ( rs
             Lens.^? listServiceActionsResponse_nextPageToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listServiceActionsResponse_serviceActionSummaries
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listServiceActions_pageToken
           Lens..~ rs
           Lens.^? listServiceActionsResponse_nextPageToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListServiceActions where
   type
@@ -152,7 +152,8 @@ instance Core.AWSRequest ListServiceActions where
       ( \s h x ->
           ListServiceActionsResponse'
             Prelude.<$> (x Data..?> "NextPageToken")
-            Prelude.<*> ( x Data..?> "ServiceActionSummaries"
+            Prelude.<*> ( x
+                            Data..?> "ServiceActionSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -160,7 +161,8 @@ instance Core.AWSRequest ListServiceActions where
 
 instance Prelude.Hashable ListServiceActions where
   hashWithSalt _salt ListServiceActions' {..} =
-    _salt `Prelude.hashWithSalt` acceptLanguage
+    _salt
+      `Prelude.hashWithSalt` acceptLanguage
       `Prelude.hashWithSalt` pageSize
       `Prelude.hashWithSalt` pageToken
 

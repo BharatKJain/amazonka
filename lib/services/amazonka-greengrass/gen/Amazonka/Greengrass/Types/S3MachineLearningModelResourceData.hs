@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.S3MachineLearningModelResourceData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.S3MachineLearningModelResourceData where
@@ -96,7 +96,8 @@ instance
   hashWithSalt
     _salt
     S3MachineLearningModelResourceData' {..} =
-      _salt `Prelude.hashWithSalt` destinationPath
+      _salt
+        `Prelude.hashWithSalt` destinationPath
         `Prelude.hashWithSalt` ownerSetting
         `Prelude.hashWithSalt` s3Uri
 

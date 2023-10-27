@@ -14,7 +14,7 @@
 -- Module      : Amazonka.HoneyCode.Types.UpdateRowData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.HoneyCode.Types.UpdateRowData where
@@ -74,7 +74,8 @@ updateRowData_cellsToUpdate = Lens.lens (\UpdateRowData' {cellsToUpdate} -> cell
 
 instance Prelude.Hashable UpdateRowData where
   hashWithSalt _salt UpdateRowData' {..} =
-    _salt `Prelude.hashWithSalt` rowId
+    _salt
+      `Prelude.hashWithSalt` rowId
       `Prelude.hashWithSalt` cellsToUpdate
 
 instance Prelude.NFData UpdateRowData where

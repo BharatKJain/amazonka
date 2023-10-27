@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.PlacementStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.PlacementStatistics where
@@ -120,7 +120,8 @@ instance Data.FromJSON PlacementStatistics where
 
 instance Prelude.Hashable PlacementStatistics where
   hashWithSalt _salt PlacementStatistics' {..} =
-    _salt `Prelude.hashWithSalt` dkimPercentage
+    _salt
+      `Prelude.hashWithSalt` dkimPercentage
       `Prelude.hashWithSalt` inboxPercentage
       `Prelude.hashWithSalt` missingPercentage
       `Prelude.hashWithSalt` spamPercentage

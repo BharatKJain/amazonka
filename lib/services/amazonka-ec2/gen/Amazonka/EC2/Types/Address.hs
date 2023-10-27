@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.Address
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.Address where
@@ -207,13 +207,16 @@ instance Data.FromXML Address where
       Prelude.<*> (x Data..@? "privateIpAddress")
       Prelude.<*> (x Data..@? "publicIp")
       Prelude.<*> (x Data..@? "publicIpv4Pool")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable Address where
   hashWithSalt _salt Address' {..} =
-    _salt `Prelude.hashWithSalt` allocationId
+    _salt
+      `Prelude.hashWithSalt` allocationId
       `Prelude.hashWithSalt` associationId
       `Prelude.hashWithSalt` carrierIp
       `Prelude.hashWithSalt` customerOwnedIp

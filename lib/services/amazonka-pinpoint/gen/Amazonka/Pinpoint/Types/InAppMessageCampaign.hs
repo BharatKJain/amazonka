@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.InAppMessageCampaign
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.InAppMessageCampaign where
@@ -148,7 +148,8 @@ instance Data.FromJSON InAppMessageCampaign where
 
 instance Prelude.Hashable InAppMessageCampaign where
   hashWithSalt _salt InAppMessageCampaign' {..} =
-    _salt `Prelude.hashWithSalt` campaignId
+    _salt
+      `Prelude.hashWithSalt` campaignId
       `Prelude.hashWithSalt` dailyCap
       `Prelude.hashWithSalt` inAppMessage
       `Prelude.hashWithSalt` priority

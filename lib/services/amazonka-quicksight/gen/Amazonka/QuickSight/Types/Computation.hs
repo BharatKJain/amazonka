@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.Computation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.Computation where
@@ -167,7 +167,8 @@ instance Data.FromJSON Computation where
 
 instance Prelude.Hashable Computation where
   hashWithSalt _salt Computation' {..} =
-    _salt `Prelude.hashWithSalt` forecast
+    _salt
+      `Prelude.hashWithSalt` forecast
       `Prelude.hashWithSalt` growthRate
       `Prelude.hashWithSalt` maximumMinimum
       `Prelude.hashWithSalt` metricComparison

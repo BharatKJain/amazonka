@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.WebhookFilterRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.WebhookFilterRule where
@@ -119,7 +119,8 @@ instance Data.FromJSON WebhookFilterRule where
 
 instance Prelude.Hashable WebhookFilterRule where
   hashWithSalt _salt WebhookFilterRule' {..} =
-    _salt `Prelude.hashWithSalt` matchEquals
+    _salt
+      `Prelude.hashWithSalt` matchEquals
       `Prelude.hashWithSalt` jsonPath
 
 instance Prelude.NFData WebhookFilterRule where

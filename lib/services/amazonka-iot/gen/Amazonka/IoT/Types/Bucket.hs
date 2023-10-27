@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.Bucket
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.Bucket where
@@ -77,7 +77,8 @@ instance Data.FromJSON Bucket where
 
 instance Prelude.Hashable Bucket where
   hashWithSalt _salt Bucket' {..} =
-    _salt `Prelude.hashWithSalt` count
+    _salt
+      `Prelude.hashWithSalt` count
       `Prelude.hashWithSalt` keyValue
 
 instance Prelude.NFData Bucket where

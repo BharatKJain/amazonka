@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexModels.GetSlotTypes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,20 +127,23 @@ instance Core.AWSPager GetSlotTypes where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? getSlotTypesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? getSlotTypesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? getSlotTypesResponse_slotTypes Prelude.. Lens._Just
+            Lens.^? getSlotTypesResponse_slotTypes
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getSlotTypes_nextToken
           Lens..~ rs
-          Lens.^? getSlotTypesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? getSlotTypesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetSlotTypes where
   type AWSResponse GetSlotTypes = GetSlotTypesResponse
@@ -157,7 +160,8 @@ instance Core.AWSRequest GetSlotTypes where
 
 instance Prelude.Hashable GetSlotTypes where
   hashWithSalt _salt GetSlotTypes' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nameContains
       `Prelude.hashWithSalt` nextToken
 

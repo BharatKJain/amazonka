@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.VariableEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.VariableEntry where
@@ -113,7 +113,8 @@ variableEntry_variableType = Lens.lens (\VariableEntry' {variableType} -> variab
 
 instance Prelude.Hashable VariableEntry where
   hashWithSalt _salt VariableEntry' {..} =
-    _salt `Prelude.hashWithSalt` dataSource
+    _salt
+      `Prelude.hashWithSalt` dataSource
       `Prelude.hashWithSalt` dataType
       `Prelude.hashWithSalt` defaultValue
       `Prelude.hashWithSalt` description

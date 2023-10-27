@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkVoice.Types.VoiceConnectorGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkVoice.Types.VoiceConnectorGroup where
@@ -103,14 +103,16 @@ instance Data.FromJSON VoiceConnectorGroup where
             Prelude.<*> (x Data..:? "UpdatedTimestamp")
             Prelude.<*> (x Data..:? "VoiceConnectorGroupArn")
             Prelude.<*> (x Data..:? "VoiceConnectorGroupId")
-            Prelude.<*> ( x Data..:? "VoiceConnectorItems"
+            Prelude.<*> ( x
+                            Data..:? "VoiceConnectorItems"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable VoiceConnectorGroup where
   hashWithSalt _salt VoiceConnectorGroup' {..} =
-    _salt `Prelude.hashWithSalt` createdTimestamp
+    _salt
+      `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` updatedTimestamp
       `Prelude.hashWithSalt` voiceConnectorGroupArn

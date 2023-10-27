@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.Project
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.Project where
@@ -214,7 +214,8 @@ instance Data.FromJSON Project where
 
 instance Prelude.Hashable Project where
   hashWithSalt _salt Project' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` createDate
       `Prelude.hashWithSalt` createdBy
       `Prelude.hashWithSalt` datasetName

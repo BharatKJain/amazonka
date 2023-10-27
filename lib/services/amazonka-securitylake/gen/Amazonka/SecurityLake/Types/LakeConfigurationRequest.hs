@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityLake.Types.LakeConfigurationRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityLake.Types.LakeConfigurationRequest where
@@ -136,7 +136,8 @@ lakeConfigurationRequest_tagsMap = Lens.lens (\LakeConfigurationRequest' {tagsMa
 
 instance Prelude.Hashable LakeConfigurationRequest where
   hashWithSalt _salt LakeConfigurationRequest' {..} =
-    _salt `Prelude.hashWithSalt` encryptionKey
+    _salt
+      `Prelude.hashWithSalt` encryptionKey
       `Prelude.hashWithSalt` replicationDestinationRegions
       `Prelude.hashWithSalt` replicationRoleArn
       `Prelude.hashWithSalt` retentionSettings

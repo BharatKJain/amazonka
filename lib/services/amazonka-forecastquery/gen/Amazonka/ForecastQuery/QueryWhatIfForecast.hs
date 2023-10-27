@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ForecastQuery.QueryWhatIfForecast
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -174,7 +174,8 @@ instance Core.AWSRequest QueryWhatIfForecast where
 
 instance Prelude.Hashable QueryWhatIfForecast where
   hashWithSalt _salt QueryWhatIfForecast' {..} =
-    _salt `Prelude.hashWithSalt` endDate
+    _salt
+      `Prelude.hashWithSalt` endDate
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` startDate
       `Prelude.hashWithSalt` whatIfForecastArn

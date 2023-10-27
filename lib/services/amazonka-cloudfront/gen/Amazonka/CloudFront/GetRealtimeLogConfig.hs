@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFront.GetRealtimeLogConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest GetRealtimeLogConfig where
 
 instance Prelude.Hashable GetRealtimeLogConfig where
   hashWithSalt _salt GetRealtimeLogConfig' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData GetRealtimeLogConfig where

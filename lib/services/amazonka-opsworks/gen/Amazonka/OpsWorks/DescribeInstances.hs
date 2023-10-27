@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpsWorks.DescribeInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,7 +130,8 @@ instance Core.AWSRequest DescribeInstances where
 
 instance Prelude.Hashable DescribeInstances where
   hashWithSalt _salt DescribeInstances' {..} =
-    _salt `Prelude.hashWithSalt` instanceIds
+    _salt
+      `Prelude.hashWithSalt` instanceIds
       `Prelude.hashWithSalt` layerId
       `Prelude.hashWithSalt` stackId
 

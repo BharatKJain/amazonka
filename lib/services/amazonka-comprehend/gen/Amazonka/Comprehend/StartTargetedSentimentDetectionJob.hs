@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Comprehend.StartTargetedSentimentDetectionJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -227,9 +227,9 @@ instance
       ( \s h x ->
           StartTargetedSentimentDetectionJobResponse'
             Prelude.<$> (x Data..?> "JobArn")
-              Prelude.<*> (x Data..?> "JobId")
-              Prelude.<*> (x Data..?> "JobStatus")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "JobId")
+            Prelude.<*> (x Data..?> "JobStatus")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -239,7 +239,8 @@ instance
   hashWithSalt
     _salt
     StartTargetedSentimentDetectionJob' {..} =
-      _salt `Prelude.hashWithSalt` clientRequestToken
+      _salt
+        `Prelude.hashWithSalt` clientRequestToken
         `Prelude.hashWithSalt` jobName
         `Prelude.hashWithSalt` tags
         `Prelude.hashWithSalt` volumeKmsKeyId

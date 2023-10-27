@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ApiGatewayV2.UpdateApiMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -147,7 +147,8 @@ instance Core.AWSRequest UpdateApiMapping where
 
 instance Prelude.Hashable UpdateApiMapping where
   hashWithSalt _salt UpdateApiMapping' {..} =
-    _salt `Prelude.hashWithSalt` apiMappingKey
+    _salt
+      `Prelude.hashWithSalt` apiMappingKey
       `Prelude.hashWithSalt` stage
       `Prelude.hashWithSalt` apiMappingId
       `Prelude.hashWithSalt` apiId

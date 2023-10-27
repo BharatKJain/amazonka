@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.FrameworkControl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.FrameworkControl where
@@ -95,7 +95,8 @@ instance Data.FromJSON FrameworkControl where
       "FrameworkControl"
       ( \x ->
           FrameworkControl'
-            Prelude.<$> ( x Data..:? "ControlInputParameters"
+            Prelude.<$> ( x
+                            Data..:? "ControlInputParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ControlScope")
@@ -104,7 +105,8 @@ instance Data.FromJSON FrameworkControl where
 
 instance Prelude.Hashable FrameworkControl where
   hashWithSalt _salt FrameworkControl' {..} =
-    _salt `Prelude.hashWithSalt` controlInputParameters
+    _salt
+      `Prelude.hashWithSalt` controlInputParameters
       `Prelude.hashWithSalt` controlScope
       `Prelude.hashWithSalt` controlName
 

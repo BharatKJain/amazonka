@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CustomerProfiles.SearchProfiles
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -251,7 +251,8 @@ instance Core.AWSRequest SearchProfiles where
 
 instance Prelude.Hashable SearchProfiles where
   hashWithSalt _salt SearchProfiles' {..} =
-    _salt `Prelude.hashWithSalt` additionalSearchKeys
+    _salt
+      `Prelude.hashWithSalt` additionalSearchKeys
       `Prelude.hashWithSalt` logicalOperator
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

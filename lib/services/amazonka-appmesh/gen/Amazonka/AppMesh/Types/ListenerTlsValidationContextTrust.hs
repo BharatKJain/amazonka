@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.ListenerTlsValidationContextTrust
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.ListenerTlsValidationContextTrust where
@@ -81,7 +81,8 @@ instance
       "ListenerTlsValidationContextTrust"
       ( \x ->
           ListenerTlsValidationContextTrust'
-            Prelude.<$> (x Data..:? "file") Prelude.<*> (x Data..:? "sds")
+            Prelude.<$> (x Data..:? "file")
+            Prelude.<*> (x Data..:? "sds")
       )
 
 instance
@@ -91,7 +92,8 @@ instance
   hashWithSalt
     _salt
     ListenerTlsValidationContextTrust' {..} =
-      _salt `Prelude.hashWithSalt` file
+      _salt
+        `Prelude.hashWithSalt` file
         `Prelude.hashWithSalt` sds
 
 instance

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.VideoSelector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.VideoSelector where
@@ -379,7 +379,8 @@ instance Data.FromJSON VideoSelector where
 
 instance Prelude.Hashable VideoSelector where
   hashWithSalt _salt VideoSelector' {..} =
-    _salt `Prelude.hashWithSalt` alphaBehavior
+    _salt
+      `Prelude.hashWithSalt` alphaBehavior
       `Prelude.hashWithSalt` colorSpace
       `Prelude.hashWithSalt` colorSpaceUsage
       `Prelude.hashWithSalt` embeddedTimecodeOverride

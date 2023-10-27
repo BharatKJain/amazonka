@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManager.Types.Grant
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManager.Types.Grant where
@@ -184,7 +184,8 @@ instance Data.FromJSON Grant where
 
 instance Prelude.Hashable Grant where
   hashWithSalt _salt Grant' {..} =
-    _salt `Prelude.hashWithSalt` statusReason
+    _salt
+      `Prelude.hashWithSalt` statusReason
       `Prelude.hashWithSalt` grantArn
       `Prelude.hashWithSalt` grantName
       `Prelude.hashWithSalt` parentArn

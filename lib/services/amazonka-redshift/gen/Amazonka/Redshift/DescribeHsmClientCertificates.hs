@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.DescribeHsmClientCertificates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -219,22 +219,22 @@ instance Core.AWSPager DescribeHsmClientCertificates where
     | Core.stop
         ( rs
             Lens.^? describeHsmClientCertificatesResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeHsmClientCertificatesResponse_hsmClientCertificates
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeHsmClientCertificates_marker
           Lens..~ rs
           Lens.^? describeHsmClientCertificatesResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -250,7 +250,8 @@ instance
       "DescribeHsmClientCertificatesResult"
       ( \s h x ->
           DescribeHsmClientCertificatesResponse'
-            Prelude.<$> ( x Data..@? "HsmClientCertificates"
+            Prelude.<$> ( x
+                            Data..@? "HsmClientCertificates"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "HsmClientCertificate")
                         )

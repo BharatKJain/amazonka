@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.MethodResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.MethodResponse where
@@ -126,7 +126,8 @@ instance Data.FromJSON MethodResponse where
       ( \x ->
           MethodResponse'
             Prelude.<$> (x Data..:? "responseModels" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "responseParameters"
+            Prelude.<*> ( x
+                            Data..:? "responseParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "statusCode")
@@ -134,7 +135,8 @@ instance Data.FromJSON MethodResponse where
 
 instance Prelude.Hashable MethodResponse where
   hashWithSalt _salt MethodResponse' {..} =
-    _salt `Prelude.hashWithSalt` responseModels
+    _salt
+      `Prelude.hashWithSalt` responseModels
       `Prelude.hashWithSalt` responseParameters
       `Prelude.hashWithSalt` statusCode
 

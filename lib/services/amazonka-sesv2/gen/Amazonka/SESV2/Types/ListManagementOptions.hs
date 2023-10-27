@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.ListManagementOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.ListManagementOptions where
@@ -67,7 +67,8 @@ listManagementOptions_contactListName = Lens.lens (\ListManagementOptions' {cont
 
 instance Prelude.Hashable ListManagementOptions where
   hashWithSalt _salt ListManagementOptions' {..} =
-    _salt `Prelude.hashWithSalt` topicName
+    _salt
+      `Prelude.hashWithSalt` topicName
       `Prelude.hashWithSalt` contactListName
 
 instance Prelude.NFData ListManagementOptions where

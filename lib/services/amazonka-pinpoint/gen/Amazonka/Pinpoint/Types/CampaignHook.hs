@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.CampaignHook
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.CampaignHook where
@@ -122,7 +122,8 @@ instance Data.FromJSON CampaignHook where
 
 instance Prelude.Hashable CampaignHook where
   hashWithSalt _salt CampaignHook' {..} =
-    _salt `Prelude.hashWithSalt` lambdaFunctionName
+    _salt
+      `Prelude.hashWithSalt` lambdaFunctionName
       `Prelude.hashWithSalt` mode
       `Prelude.hashWithSalt` webUrl
 

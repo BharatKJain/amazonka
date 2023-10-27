@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.ExplainabilityExportSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.ExplainabilityExportSummary where
@@ -188,7 +188,8 @@ instance Data.FromJSON ExplainabilityExportSummary where
 
 instance Prelude.Hashable ExplainabilityExportSummary where
   hashWithSalt _salt ExplainabilityExportSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` explainabilityExportArn
       `Prelude.hashWithSalt` explainabilityExportName

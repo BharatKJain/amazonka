@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.WorkflowExecutionContinuedAsNewEventAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.WorkflowExecutionContinuedAsNewEventAttributes where
@@ -256,16 +256,16 @@ instance
       ( \x ->
           WorkflowExecutionContinuedAsNewEventAttributes'
             Prelude.<$> (x Data..:? "executionStartToCloseTimeout")
-              Prelude.<*> (x Data..:? "input")
-              Prelude.<*> (x Data..:? "lambdaRole")
-              Prelude.<*> (x Data..:? "tagList" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "taskPriority")
-              Prelude.<*> (x Data..:? "taskStartToCloseTimeout")
-              Prelude.<*> (x Data..: "decisionTaskCompletedEventId")
-              Prelude.<*> (x Data..: "newExecutionRunId")
-              Prelude.<*> (x Data..: "taskList")
-              Prelude.<*> (x Data..: "childPolicy")
-              Prelude.<*> (x Data..: "workflowType")
+            Prelude.<*> (x Data..:? "input")
+            Prelude.<*> (x Data..:? "lambdaRole")
+            Prelude.<*> (x Data..:? "tagList" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "taskPriority")
+            Prelude.<*> (x Data..:? "taskStartToCloseTimeout")
+            Prelude.<*> (x Data..: "decisionTaskCompletedEventId")
+            Prelude.<*> (x Data..: "newExecutionRunId")
+            Prelude.<*> (x Data..: "taskList")
+            Prelude.<*> (x Data..: "childPolicy")
+            Prelude.<*> (x Data..: "workflowType")
       )
 
 instance

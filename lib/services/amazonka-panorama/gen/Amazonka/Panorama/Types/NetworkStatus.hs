@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Panorama.Types.NetworkStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Panorama.Types.NetworkStatus where
@@ -96,7 +96,8 @@ instance Data.FromJSON NetworkStatus where
 
 instance Prelude.Hashable NetworkStatus where
   hashWithSalt _salt NetworkStatus' {..} =
-    _salt `Prelude.hashWithSalt` ethernet0Status
+    _salt
+      `Prelude.hashWithSalt` ethernet0Status
       `Prelude.hashWithSalt` ethernet1Status
       `Prelude.hashWithSalt` lastUpdatedTime
       `Prelude.hashWithSalt` ntpStatus

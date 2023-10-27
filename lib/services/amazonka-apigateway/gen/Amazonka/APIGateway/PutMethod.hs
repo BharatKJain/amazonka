@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.PutMethod
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -279,7 +279,8 @@ instance Core.AWSRequest PutMethod where
 
 instance Prelude.Hashable PutMethod where
   hashWithSalt _salt PutMethod' {..} =
-    _salt `Prelude.hashWithSalt` apiKeyRequired
+    _salt
+      `Prelude.hashWithSalt` apiKeyRequired
       `Prelude.hashWithSalt` authorizationScopes
       `Prelude.hashWithSalt` authorizerId
       `Prelude.hashWithSalt` operationName

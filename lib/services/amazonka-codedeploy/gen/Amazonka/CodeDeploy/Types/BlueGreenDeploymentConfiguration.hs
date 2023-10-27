@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.BlueGreenDeploymentConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.BlueGreenDeploymentConfiguration where
@@ -109,7 +109,8 @@ instance
   hashWithSalt
     _salt
     BlueGreenDeploymentConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` deploymentReadyOption
+      _salt
+        `Prelude.hashWithSalt` deploymentReadyOption
         `Prelude.hashWithSalt` greenFleetProvisioningOption
         `Prelude.hashWithSalt` terminateBlueInstancesOnDeploymentSuccess
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.LoRaWANGatewayMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.LoRaWANGatewayMetadata where
@@ -85,7 +85,8 @@ instance Data.FromJSON LoRaWANGatewayMetadata where
 
 instance Prelude.Hashable LoRaWANGatewayMetadata where
   hashWithSalt _salt LoRaWANGatewayMetadata' {..} =
-    _salt `Prelude.hashWithSalt` gatewayEui
+    _salt
+      `Prelude.hashWithSalt` gatewayEui
       `Prelude.hashWithSalt` rssi
       `Prelude.hashWithSalt` snr
 

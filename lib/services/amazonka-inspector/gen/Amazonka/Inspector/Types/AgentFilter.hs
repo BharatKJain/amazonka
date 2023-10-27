@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.AgentFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.AgentFilter where
@@ -76,7 +76,8 @@ agentFilter_agentHealthCodes = Lens.lens (\AgentFilter' {agentHealthCodes} -> ag
 
 instance Prelude.Hashable AgentFilter where
   hashWithSalt _salt AgentFilter' {..} =
-    _salt `Prelude.hashWithSalt` agentHealths
+    _salt
+      `Prelude.hashWithSalt` agentHealths
       `Prelude.hashWithSalt` agentHealthCodes
 
 instance Prelude.NFData AgentFilter where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeArtifact.Types.DomainEntryPoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeArtifact.Types.DomainEntryPoint where
@@ -81,7 +81,8 @@ instance Data.FromJSON DomainEntryPoint where
 
 instance Prelude.Hashable DomainEntryPoint where
   hashWithSalt _salt DomainEntryPoint' {..} =
-    _salt `Prelude.hashWithSalt` externalConnectionName
+    _salt
+      `Prelude.hashWithSalt` externalConnectionName
       `Prelude.hashWithSalt` repositoryName
 
 instance Prelude.NFData DomainEntryPoint where

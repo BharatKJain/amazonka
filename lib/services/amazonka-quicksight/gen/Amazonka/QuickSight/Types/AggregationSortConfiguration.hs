@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.AggregationSortConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.AggregationSortConfiguration where
@@ -111,7 +111,8 @@ instance
     AggregationSortConfiguration
   where
   hashWithSalt _salt AggregationSortConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` column
+    _salt
+      `Prelude.hashWithSalt` column
       `Prelude.hashWithSalt` sortDirection
       `Prelude.hashWithSalt` aggregationFunction
 

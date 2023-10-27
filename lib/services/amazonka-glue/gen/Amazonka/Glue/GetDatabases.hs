@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.GetDatabases
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,18 +135,20 @@ instance Core.AWSPager GetDatabases where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? getDatabasesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? getDatabasesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. getDatabasesResponse_databaseList) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getDatabases_nextToken
           Lens..~ rs
-          Lens.^? getDatabasesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? getDatabasesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetDatabases where
   type AWSResponse GetDatabases = GetDatabasesResponse
@@ -163,7 +165,8 @@ instance Core.AWSRequest GetDatabases where
 
 instance Prelude.Hashable GetDatabases where
   hashWithSalt _salt GetDatabases' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` resourceShareType

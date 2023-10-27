@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyBackend.Types.UpdateBackendAuthUserPoolConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyBackend.Types.UpdateBackendAuthUserPoolConfig where
@@ -119,7 +119,8 @@ instance
   hashWithSalt
     _salt
     UpdateBackendAuthUserPoolConfig' {..} =
-      _salt `Prelude.hashWithSalt` forgotPassword
+      _salt
+        `Prelude.hashWithSalt` forgotPassword
         `Prelude.hashWithSalt` mfa
         `Prelude.hashWithSalt` oAuth
         `Prelude.hashWithSalt` passwordPolicy

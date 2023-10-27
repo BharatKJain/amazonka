@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.InputConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.InputConfiguration where
@@ -83,7 +83,8 @@ inputConfiguration_inputStartingPositionConfiguration = Lens.lens (\InputConfigu
 
 instance Prelude.Hashable InputConfiguration where
   hashWithSalt _salt InputConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` inputStartingPositionConfiguration
 
 instance Prelude.NFData InputConfiguration where

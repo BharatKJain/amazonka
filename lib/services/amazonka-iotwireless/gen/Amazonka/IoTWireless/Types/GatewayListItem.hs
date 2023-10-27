@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.GatewayListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.GatewayListItem where
@@ -85,7 +85,8 @@ instance Data.FromJSON GatewayListItem where
 
 instance Prelude.Hashable GatewayListItem where
   hashWithSalt _salt GatewayListItem' {..} =
-    _salt `Prelude.hashWithSalt` gatewayId
+    _salt
+      `Prelude.hashWithSalt` gatewayId
       `Prelude.hashWithSalt` downlinkFrequency
 
 instance Prelude.NFData GatewayListItem where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EMR.PutAutoScalingPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest PutAutoScalingPolicy where
 
 instance Prelude.Hashable PutAutoScalingPolicy where
   hashWithSalt _salt PutAutoScalingPolicy' {..} =
-    _salt `Prelude.hashWithSalt` clusterId
+    _salt
+      `Prelude.hashWithSalt` clusterId
       `Prelude.hashWithSalt` instanceGroupId
       `Prelude.hashWithSalt` autoScalingPolicy
 

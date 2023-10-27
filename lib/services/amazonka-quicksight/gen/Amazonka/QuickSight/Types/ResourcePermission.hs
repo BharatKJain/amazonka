@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ResourcePermission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ResourcePermission where
@@ -114,7 +114,8 @@ instance Data.FromJSON ResourcePermission where
 
 instance Prelude.Hashable ResourcePermission where
   hashWithSalt _salt ResourcePermission' {..} =
-    _salt `Prelude.hashWithSalt` principal
+    _salt
+      `Prelude.hashWithSalt` principal
       `Prelude.hashWithSalt` actions
 
 instance Prelude.NFData ResourcePermission where

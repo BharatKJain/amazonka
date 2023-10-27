@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.BasicCatalogTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.BasicCatalogTarget where
@@ -112,7 +112,8 @@ instance Data.FromJSON BasicCatalogTarget where
 
 instance Prelude.Hashable BasicCatalogTarget where
   hashWithSalt _salt BasicCatalogTarget' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inputs
       `Prelude.hashWithSalt` database
       `Prelude.hashWithSalt` table

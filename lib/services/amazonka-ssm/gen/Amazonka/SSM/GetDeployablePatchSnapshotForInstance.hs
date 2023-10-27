@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.GetDeployablePatchSnapshotForInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,10 +136,10 @@ instance
       ( \s h x ->
           GetDeployablePatchSnapshotForInstanceResponse'
             Prelude.<$> (x Data..?> "InstanceId")
-              Prelude.<*> (x Data..?> "Product")
-              Prelude.<*> (x Data..?> "SnapshotDownloadUrl")
-              Prelude.<*> (x Data..?> "SnapshotId")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "Product")
+            Prelude.<*> (x Data..?> "SnapshotDownloadUrl")
+            Prelude.<*> (x Data..?> "SnapshotId")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -149,7 +149,8 @@ instance
   hashWithSalt
     _salt
     GetDeployablePatchSnapshotForInstance' {..} =
-      _salt `Prelude.hashWithSalt` baselineOverride
+      _salt
+        `Prelude.hashWithSalt` baselineOverride
         `Prelude.hashWithSalt` instanceId
         `Prelude.hashWithSalt` snapshotId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.RequestMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.RequestMetadata where
@@ -121,7 +121,8 @@ instance Data.FromJSON RequestMetadata where
 
 instance Prelude.Hashable RequestMetadata where
   hashWithSalt _salt RequestMetadata' {..} =
-    _salt `Prelude.hashWithSalt` eventInfo
+    _salt
+      `Prelude.hashWithSalt` eventInfo
       `Prelude.hashWithSalt` requestId
       `Prelude.hashWithSalt` requester
       `Prelude.hashWithSalt` vendorName

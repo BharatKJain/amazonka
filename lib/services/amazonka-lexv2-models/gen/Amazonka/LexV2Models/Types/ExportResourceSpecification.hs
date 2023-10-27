@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.ExportResourceSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.ExportResourceSpecification where
@@ -91,7 +91,8 @@ instance Data.FromJSON ExportResourceSpecification where
 
 instance Prelude.Hashable ExportResourceSpecification where
   hashWithSalt _salt ExportResourceSpecification' {..} =
-    _salt `Prelude.hashWithSalt` botExportSpecification
+    _salt
+      `Prelude.hashWithSalt` botExportSpecification
       `Prelude.hashWithSalt` botLocaleExportSpecification
       `Prelude.hashWithSalt` customVocabularyExportSpecification
 

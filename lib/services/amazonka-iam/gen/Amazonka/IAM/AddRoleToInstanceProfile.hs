@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.AddRoleToInstanceProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -147,7 +147,8 @@ instance Core.AWSRequest AddRoleToInstanceProfile where
 
 instance Prelude.Hashable AddRoleToInstanceProfile where
   hashWithSalt _salt AddRoleToInstanceProfile' {..} =
-    _salt `Prelude.hashWithSalt` instanceProfileName
+    _salt
+      `Prelude.hashWithSalt` instanceProfileName
       `Prelude.hashWithSalt` roleName
 
 instance Prelude.NFData AddRoleToInstanceProfile where

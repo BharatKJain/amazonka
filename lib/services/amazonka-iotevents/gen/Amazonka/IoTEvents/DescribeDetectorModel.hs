@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTEvents.DescribeDetectorModel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest DescribeDetectorModel where
 
 instance Prelude.Hashable DescribeDetectorModel where
   hashWithSalt _salt DescribeDetectorModel' {..} =
-    _salt `Prelude.hashWithSalt` detectorModelVersion
+    _salt
+      `Prelude.hashWithSalt` detectorModelVersion
       `Prelude.hashWithSalt` detectorModelName
 
 instance Prelude.NFData DescribeDetectorModel where

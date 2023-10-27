@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DrS.Types.DataReplicationInitiationStep
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DrS.Types.DataReplicationInitiationStep where
@@ -80,7 +80,8 @@ instance
     DataReplicationInitiationStep
   where
   hashWithSalt _salt DataReplicationInitiationStep' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData DataReplicationInitiationStep where

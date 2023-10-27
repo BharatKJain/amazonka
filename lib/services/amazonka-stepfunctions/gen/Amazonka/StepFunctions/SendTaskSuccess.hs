@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StepFunctions.SendTaskSuccess
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest SendTaskSuccess where
 
 instance Prelude.Hashable SendTaskSuccess where
   hashWithSalt _salt SendTaskSuccess' {..} =
-    _salt `Prelude.hashWithSalt` taskToken
+    _salt
+      `Prelude.hashWithSalt` taskToken
       `Prelude.hashWithSalt` output
 
 instance Prelude.NFData SendTaskSuccess where

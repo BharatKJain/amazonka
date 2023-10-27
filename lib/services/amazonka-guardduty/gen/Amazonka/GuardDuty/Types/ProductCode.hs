@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.ProductCode
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.ProductCode where
@@ -74,7 +74,8 @@ instance Data.FromJSON ProductCode where
 
 instance Prelude.Hashable ProductCode where
   hashWithSalt _salt ProductCode' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` productType
 
 instance Prelude.NFData ProductCode where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ResilienceHub.DescribeAppVersionTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest DescribeAppVersionTemplate where
 
 instance Prelude.Hashable DescribeAppVersionTemplate where
   hashWithSalt _salt DescribeAppVersionTemplate' {..} =
-    _salt `Prelude.hashWithSalt` appArn
+    _salt
+      `Prelude.hashWithSalt` appArn
       `Prelude.hashWithSalt` appVersion
 
 instance Prelude.NFData DescribeAppVersionTemplate where

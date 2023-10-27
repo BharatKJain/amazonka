@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SNS.Publish
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -498,7 +498,8 @@ instance Core.AWSRequest Publish where
 
 instance Prelude.Hashable Publish where
   hashWithSalt _salt Publish' {..} =
-    _salt `Prelude.hashWithSalt` messageAttributes
+    _salt
+      `Prelude.hashWithSalt` messageAttributes
       `Prelude.hashWithSalt` messageDeduplicationId
       `Prelude.hashWithSalt` messageGroupId
       `Prelude.hashWithSalt` messageStructure

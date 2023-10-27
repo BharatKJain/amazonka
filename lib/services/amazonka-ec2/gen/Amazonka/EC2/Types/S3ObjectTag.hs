@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.S3ObjectTag
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.S3ObjectTag where
@@ -86,7 +86,8 @@ s3ObjectTag_value = Lens.lens (\S3ObjectTag' {value} -> value) (\s@S3ObjectTag' 
 
 instance Prelude.Hashable S3ObjectTag where
   hashWithSalt _salt S3ObjectTag' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData S3ObjectTag where

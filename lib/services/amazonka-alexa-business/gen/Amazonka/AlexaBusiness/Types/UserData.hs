@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.UserData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.UserData where
@@ -115,7 +115,8 @@ instance Data.FromJSON UserData where
 
 instance Prelude.Hashable UserData where
   hashWithSalt _salt UserData' {..} =
-    _salt `Prelude.hashWithSalt` email
+    _salt
+      `Prelude.hashWithSalt` email
       `Prelude.hashWithSalt` enrollmentId
       `Prelude.hashWithSalt` enrollmentStatus
       `Prelude.hashWithSalt` firstName

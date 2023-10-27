@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ImageBuilder.ListImages
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -179,7 +179,8 @@ instance Core.AWSRequest ListImages where
     Response.receiveJSON
       ( \s h x ->
           ListImagesResponse'
-            Prelude.<$> ( x Data..?> "imageVersionList"
+            Prelude.<$> ( x
+                            Data..?> "imageVersionList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -189,7 +190,8 @@ instance Core.AWSRequest ListImages where
 
 instance Prelude.Hashable ListImages where
   hashWithSalt _salt ListImages' {..} =
-    _salt `Prelude.hashWithSalt` byName
+    _salt
+      `Prelude.hashWithSalt` byName
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` includeDeprecated
       `Prelude.hashWithSalt` maxResults

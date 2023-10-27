@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.NetworkInsightsAccessScopeAnalysis
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.NetworkInsightsAccessScopeAnalysis where
@@ -166,7 +166,9 @@ instance
       Prelude.<*> (x Data..@? "startDate")
       Prelude.<*> (x Data..@? "status")
       Prelude.<*> (x Data..@? "statusMessage")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "warningMessage")
@@ -178,7 +180,8 @@ instance
   hashWithSalt
     _salt
     NetworkInsightsAccessScopeAnalysis' {..} =
-      _salt `Prelude.hashWithSalt` analyzedEniCount
+      _salt
+        `Prelude.hashWithSalt` analyzedEniCount
         `Prelude.hashWithSalt` endDate
         `Prelude.hashWithSalt` findingsFound
         `Prelude.hashWithSalt` networkInsightsAccessScopeAnalysisArn

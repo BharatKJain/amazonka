@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Location
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Location where
@@ -74,7 +74,8 @@ location_s3 = Lens.lens (\Location' {s3} -> s3) (\s@Location' {} a -> s {s3 = a}
 
 instance Prelude.Hashable Location where
   hashWithSalt _salt Location' {..} =
-    _salt `Prelude.hashWithSalt` dynamoDB
+    _salt
+      `Prelude.hashWithSalt` dynamoDB
       `Prelude.hashWithSalt` jdbc
       `Prelude.hashWithSalt` s3
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.TLEData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.TLEData where
@@ -80,7 +80,8 @@ tLEData_validTimeRange = Lens.lens (\TLEData' {validTimeRange} -> validTimeRange
 
 instance Prelude.Hashable TLEData where
   hashWithSalt _salt TLEData' {..} =
-    _salt `Prelude.hashWithSalt` tleLine1
+    _salt
+      `Prelude.hashWithSalt` tleLine1
       `Prelude.hashWithSalt` tleLine2
       `Prelude.hashWithSalt` validTimeRange
 

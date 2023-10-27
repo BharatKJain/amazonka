@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSDKMessaging.Types.PushNotificationPreferences
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSDKMessaging.Types.PushNotificationPreferences where
@@ -90,7 +90,8 @@ instance Data.FromJSON PushNotificationPreferences where
 
 instance Prelude.Hashable PushNotificationPreferences where
   hashWithSalt _salt PushNotificationPreferences' {..} =
-    _salt `Prelude.hashWithSalt` filterRule
+    _salt
+      `Prelude.hashWithSalt` filterRule
       `Prelude.hashWithSalt` allowNotifications
 
 instance Prelude.NFData PushNotificationPreferences where

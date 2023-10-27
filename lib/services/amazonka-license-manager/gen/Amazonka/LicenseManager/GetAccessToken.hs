@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LicenseManager.GetAccessToken
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,7 +103,8 @@ instance Core.AWSRequest GetAccessToken where
 
 instance Prelude.Hashable GetAccessToken where
   hashWithSalt _salt GetAccessToken' {..} =
-    _salt `Prelude.hashWithSalt` tokenProperties
+    _salt
+      `Prelude.hashWithSalt` tokenProperties
       `Prelude.hashWithSalt` token
 
 instance Prelude.NFData GetAccessToken where

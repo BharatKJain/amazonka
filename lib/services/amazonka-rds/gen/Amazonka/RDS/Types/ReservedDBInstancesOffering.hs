@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.ReservedDBInstancesOffering
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.ReservedDBInstancesOffering where
@@ -148,7 +148,8 @@ instance Data.FromXML ReservedDBInstancesOffering where
       Prelude.<*> (x Data..@? "MultiAZ")
       Prelude.<*> (x Data..@? "OfferingType")
       Prelude.<*> (x Data..@? "ProductDescription")
-      Prelude.<*> ( x Data..@? "RecurringCharges"
+      Prelude.<*> ( x
+                      Data..@? "RecurringCharges"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "RecurringCharge")
                   )
@@ -157,7 +158,8 @@ instance Data.FromXML ReservedDBInstancesOffering where
 
 instance Prelude.Hashable ReservedDBInstancesOffering where
   hashWithSalt _salt ReservedDBInstancesOffering' {..} =
-    _salt `Prelude.hashWithSalt` currencyCode
+    _salt
+      `Prelude.hashWithSalt` currencyCode
       `Prelude.hashWithSalt` dbInstanceClass
       `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` fixedPrice

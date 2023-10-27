@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.GlueConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.GlueConfiguration where
@@ -88,7 +88,8 @@ instance Data.FromJSON GlueConfiguration where
 
 instance Prelude.Hashable GlueConfiguration where
   hashWithSalt _salt GlueConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` tableName
+    _salt
+      `Prelude.hashWithSalt` tableName
       `Prelude.hashWithSalt` databaseName
 
 instance Prelude.NFData GlueConfiguration where

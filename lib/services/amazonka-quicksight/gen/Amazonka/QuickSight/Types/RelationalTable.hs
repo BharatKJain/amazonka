@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.RelationalTable
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.RelationalTable where
@@ -117,7 +117,8 @@ instance Data.FromJSON RelationalTable where
 
 instance Prelude.Hashable RelationalTable where
   hashWithSalt _salt RelationalTable' {..} =
-    _salt `Prelude.hashWithSalt` catalog
+    _salt
+      `Prelude.hashWithSalt` catalog
       `Prelude.hashWithSalt` schema
       `Prelude.hashWithSalt` dataSourceArn
       `Prelude.hashWithSalt` name

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MechanicalTurk.GetQualificationScore
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest GetQualificationScore where
 
 instance Prelude.Hashable GetQualificationScore where
   hashWithSalt _salt GetQualificationScore' {..} =
-    _salt `Prelude.hashWithSalt` qualificationTypeId
+    _salt
+      `Prelude.hashWithSalt` qualificationTypeId
       `Prelude.hashWithSalt` workerId
 
 instance Prelude.NFData GetQualificationScore where

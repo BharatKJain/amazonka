@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Wisdom.Types.DocumentText
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Wisdom.Types.DocumentText where
@@ -75,7 +75,8 @@ instance Data.FromJSON DocumentText where
 
 instance Prelude.Hashable DocumentText where
   hashWithSalt _salt DocumentText' {..} =
-    _salt `Prelude.hashWithSalt` highlights
+    _salt
+      `Prelude.hashWithSalt` highlights
       `Prelude.hashWithSalt` text
 
 instance Prelude.NFData DocumentText where

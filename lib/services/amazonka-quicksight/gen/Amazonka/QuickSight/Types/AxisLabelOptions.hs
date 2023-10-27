@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.AxisLabelOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.AxisLabelOptions where
@@ -87,7 +87,8 @@ instance Data.FromJSON AxisLabelOptions where
 
 instance Prelude.Hashable AxisLabelOptions where
   hashWithSalt _salt AxisLabelOptions' {..} =
-    _salt `Prelude.hashWithSalt` applyTo
+    _salt
+      `Prelude.hashWithSalt` applyTo
       `Prelude.hashWithSalt` customLabel
       `Prelude.hashWithSalt` fontConfiguration
 

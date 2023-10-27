@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManager.Types.LicenseSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManager.Types.LicenseSpecification where
@@ -77,7 +77,8 @@ instance Data.FromJSON LicenseSpecification where
 
 instance Prelude.Hashable LicenseSpecification where
   hashWithSalt _salt LicenseSpecification' {..} =
-    _salt `Prelude.hashWithSalt` amiAssociationScope
+    _salt
+      `Prelude.hashWithSalt` amiAssociationScope
       `Prelude.hashWithSalt` licenseConfigurationArn
 
 instance Prelude.NFData LicenseSpecification where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.BatchImportEvidenceToAssessmentControlError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.BatchImportEvidenceToAssessmentControlError where
@@ -92,8 +92,8 @@ instance
       ( \x ->
           BatchImportEvidenceToAssessmentControlError'
             Prelude.<$> (x Data..:? "errorCode")
-              Prelude.<*> (x Data..:? "errorMessage")
-              Prelude.<*> (x Data..:? "manualEvidence")
+            Prelude.<*> (x Data..:? "errorMessage")
+            Prelude.<*> (x Data..:? "manualEvidence")
       )
 
 instance
@@ -103,7 +103,8 @@ instance
   hashWithSalt
     _salt
     BatchImportEvidenceToAssessmentControlError' {..} =
-      _salt `Prelude.hashWithSalt` errorCode
+      _salt
+        `Prelude.hashWithSalt` errorCode
         `Prelude.hashWithSalt` errorMessage
         `Prelude.hashWithSalt` manualEvidence
 

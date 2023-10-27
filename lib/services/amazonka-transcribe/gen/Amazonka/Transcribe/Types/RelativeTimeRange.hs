@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.RelativeTimeRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.RelativeTimeRange where
@@ -132,7 +132,8 @@ instance Data.FromJSON RelativeTimeRange where
 
 instance Prelude.Hashable RelativeTimeRange where
   hashWithSalt _salt RelativeTimeRange' {..} =
-    _salt `Prelude.hashWithSalt` endPercentage
+    _salt
+      `Prelude.hashWithSalt` endPercentage
       `Prelude.hashWithSalt` first
       `Prelude.hashWithSalt` last
       `Prelude.hashWithSalt` startPercentage

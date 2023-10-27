@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.ApiDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.ApiDestination where
@@ -150,7 +150,8 @@ instance Data.FromJSON ApiDestination where
 
 instance Prelude.Hashable ApiDestination where
   hashWithSalt _salt ApiDestination' {..} =
-    _salt `Prelude.hashWithSalt` apiDestinationArn
+    _salt
+      `Prelude.hashWithSalt` apiDestinationArn
       `Prelude.hashWithSalt` apiDestinationState
       `Prelude.hashWithSalt` connectionArn
       `Prelude.hashWithSalt` creationTime

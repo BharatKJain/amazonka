@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.Tiering
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.Tiering where
@@ -93,7 +93,8 @@ instance Data.FromXML Tiering where
 
 instance Prelude.Hashable Tiering where
   hashWithSalt _salt Tiering' {..} =
-    _salt `Prelude.hashWithSalt` days
+    _salt
+      `Prelude.hashWithSalt` days
       `Prelude.hashWithSalt` accessTier
 
 instance Prelude.NFData Tiering where

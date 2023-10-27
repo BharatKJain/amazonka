@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsDynamoDbTableProjection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsDynamoDbTableProjection where
@@ -94,7 +94,8 @@ instance Data.FromJSON AwsDynamoDbTableProjection where
       "AwsDynamoDbTableProjection"
       ( \x ->
           AwsDynamoDbTableProjection'
-            Prelude.<$> ( x Data..:? "NonKeyAttributes"
+            Prelude.<$> ( x
+                            Data..:? "NonKeyAttributes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ProjectionType")
@@ -102,7 +103,8 @@ instance Data.FromJSON AwsDynamoDbTableProjection where
 
 instance Prelude.Hashable AwsDynamoDbTableProjection where
   hashWithSalt _salt AwsDynamoDbTableProjection' {..} =
-    _salt `Prelude.hashWithSalt` nonKeyAttributes
+    _salt
+      `Prelude.hashWithSalt` nonKeyAttributes
       `Prelude.hashWithSalt` projectionType
 
 instance Prelude.NFData AwsDynamoDbTableProjection where

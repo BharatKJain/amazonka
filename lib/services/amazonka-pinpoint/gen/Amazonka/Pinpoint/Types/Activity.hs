@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.Activity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.Activity where
@@ -217,7 +217,8 @@ instance Data.FromJSON Activity where
 
 instance Prelude.Hashable Activity where
   hashWithSalt _salt Activity' {..} =
-    _salt `Prelude.hashWithSalt` custom
+    _salt
+      `Prelude.hashWithSalt` custom
       `Prelude.hashWithSalt` conditionalSplit
       `Prelude.hashWithSalt` contactCenter
       `Prelude.hashWithSalt` description

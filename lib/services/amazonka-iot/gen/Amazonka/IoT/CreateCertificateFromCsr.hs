@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.CreateCertificateFromCsr
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -162,7 +162,8 @@ instance Core.AWSRequest CreateCertificateFromCsr where
 
 instance Prelude.Hashable CreateCertificateFromCsr where
   hashWithSalt _salt CreateCertificateFromCsr' {..} =
-    _salt `Prelude.hashWithSalt` setAsActive
+    _salt
+      `Prelude.hashWithSalt` setAsActive
       `Prelude.hashWithSalt` certificateSigningRequest
 
 instance Prelude.NFData CreateCertificateFromCsr where

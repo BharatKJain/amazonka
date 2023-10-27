@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.ProviderUserIdentifierType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.ProviderUserIdentifierType where
@@ -77,7 +77,8 @@ providerUserIdentifierType_providerName = Lens.lens (\ProviderUserIdentifierType
 
 instance Prelude.Hashable ProviderUserIdentifierType where
   hashWithSalt _salt ProviderUserIdentifierType' {..} =
-    _salt `Prelude.hashWithSalt` providerAttributeName
+    _salt
+      `Prelude.hashWithSalt` providerAttributeName
       `Prelude.hashWithSalt` providerAttributeValue
       `Prelude.hashWithSalt` providerName
 

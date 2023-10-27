@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.TimeBasedLinear
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.TimeBasedLinear where
@@ -84,7 +84,8 @@ instance Data.FromJSON TimeBasedLinear where
 
 instance Prelude.Hashable TimeBasedLinear where
   hashWithSalt _salt TimeBasedLinear' {..} =
-    _salt `Prelude.hashWithSalt` linearInterval
+    _salt
+      `Prelude.hashWithSalt` linearInterval
       `Prelude.hashWithSalt` linearPercentage
 
 instance Prelude.NFData TimeBasedLinear where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.ListDataQualityJobDefinitions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -177,21 +177,21 @@ instance Core.AWSPager ListDataQualityJobDefinitions where
     | Core.stop
         ( rs
             Lens.^? listDataQualityJobDefinitionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listDataQualityJobDefinitionsResponse_jobDefinitionSummaries
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listDataQualityJobDefinitions_nextToken
           Lens..~ rs
           Lens.^? listDataQualityJobDefinitionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -208,7 +208,8 @@ instance
           ListDataQualityJobDefinitionsResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "JobDefinitionSummaries"
+            Prelude.<*> ( x
+                            Data..?> "JobDefinitionSummaries"
                             Core..!@ Prelude.mempty
                         )
       )
@@ -218,7 +219,8 @@ instance
     ListDataQualityJobDefinitions
   where
   hashWithSalt _salt ListDataQualityJobDefinitions' {..} =
-    _salt `Prelude.hashWithSalt` creationTimeAfter
+    _salt
+      `Prelude.hashWithSalt` creationTimeAfter
       `Prelude.hashWithSalt` creationTimeBefore
       `Prelude.hashWithSalt` endpointName
       `Prelude.hashWithSalt` maxResults

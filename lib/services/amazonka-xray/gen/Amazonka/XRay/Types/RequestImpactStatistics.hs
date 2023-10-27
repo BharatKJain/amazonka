@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.RequestImpactStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.RequestImpactStatistics where
@@ -85,7 +85,8 @@ instance Data.FromJSON RequestImpactStatistics where
 
 instance Prelude.Hashable RequestImpactStatistics where
   hashWithSalt _salt RequestImpactStatistics' {..} =
-    _salt `Prelude.hashWithSalt` faultCount
+    _salt
+      `Prelude.hashWithSalt` faultCount
       `Prelude.hashWithSalt` okCount
       `Prelude.hashWithSalt` totalCount
 

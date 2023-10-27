@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.SetIpAddressType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,7 +153,8 @@ instance Core.AWSRequest SetIpAddressType where
 
 instance Prelude.Hashable SetIpAddressType where
   hashWithSalt _salt SetIpAddressType' {..} =
-    _salt `Prelude.hashWithSalt` resourceType
+    _salt
+      `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` resourceName
       `Prelude.hashWithSalt` ipAddressType
 

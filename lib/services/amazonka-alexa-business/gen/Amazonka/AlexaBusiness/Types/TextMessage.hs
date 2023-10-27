@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.TextMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.TextMessage where
@@ -66,7 +66,8 @@ textMessage_value = Lens.lens (\TextMessage' {value} -> value) (\s@TextMessage' 
 
 instance Prelude.Hashable TextMessage where
   hashWithSalt _salt TextMessage' {..} =
-    _salt `Prelude.hashWithSalt` locale
+    _salt
+      `Prelude.hashWithSalt` locale
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData TextMessage where

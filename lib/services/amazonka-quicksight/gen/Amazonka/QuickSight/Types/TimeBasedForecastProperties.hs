@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TimeBasedForecastProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TimeBasedForecastProperties where
@@ -130,7 +130,8 @@ instance Data.FromJSON TimeBasedForecastProperties where
 
 instance Prelude.Hashable TimeBasedForecastProperties where
   hashWithSalt _salt TimeBasedForecastProperties' {..} =
-    _salt `Prelude.hashWithSalt` lowerBoundary
+    _salt
+      `Prelude.hashWithSalt` lowerBoundary
       `Prelude.hashWithSalt` periodsBackward
       `Prelude.hashWithSalt` periodsForward
       `Prelude.hashWithSalt` predictionInterval

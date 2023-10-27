@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kendra.BatchDeleteDocument
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest BatchDeleteDocument where
     Response.receiveJSON
       ( \s h x ->
           BatchDeleteDocumentResponse'
-            Prelude.<$> ( x Data..?> "FailedDocuments"
+            Prelude.<$> ( x
+                            Data..?> "FailedDocuments"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

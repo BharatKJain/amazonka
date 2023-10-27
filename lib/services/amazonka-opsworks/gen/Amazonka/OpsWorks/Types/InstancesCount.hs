@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.InstancesCount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.InstancesCount where
@@ -254,7 +254,8 @@ instance Data.FromJSON InstancesCount where
 
 instance Prelude.Hashable InstancesCount where
   hashWithSalt _salt InstancesCount' {..} =
-    _salt `Prelude.hashWithSalt` assigning
+    _salt
+      `Prelude.hashWithSalt` assigning
       `Prelude.hashWithSalt` booting
       `Prelude.hashWithSalt` connectionLost
       `Prelude.hashWithSalt` deregistering

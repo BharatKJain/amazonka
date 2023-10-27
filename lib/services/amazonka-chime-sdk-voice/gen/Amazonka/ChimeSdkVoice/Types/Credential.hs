@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkVoice.Types.Credential
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkVoice.Types.Credential where
@@ -60,7 +60,8 @@ credential_username = Lens.lens (\Credential' {username} -> username) (\s@Creden
 
 instance Prelude.Hashable Credential where
   hashWithSalt _salt Credential' {..} =
-    _salt `Prelude.hashWithSalt` password
+    _salt
+      `Prelude.hashWithSalt` password
       `Prelude.hashWithSalt` username
 
 instance Prelude.NFData Credential where

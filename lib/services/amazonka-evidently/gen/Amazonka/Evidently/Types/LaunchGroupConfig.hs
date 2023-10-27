@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.LaunchGroupConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.LaunchGroupConfig where
@@ -89,7 +89,8 @@ launchGroupConfig_variation = Lens.lens (\LaunchGroupConfig' {variation} -> vari
 
 instance Prelude.Hashable LaunchGroupConfig where
   hashWithSalt _salt LaunchGroupConfig' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` feature
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` variation

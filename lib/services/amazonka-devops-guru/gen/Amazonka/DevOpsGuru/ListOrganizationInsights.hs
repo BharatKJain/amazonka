@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DevOpsGuru.ListOrganizationInsights
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,28 +134,28 @@ instance Core.AWSPager ListOrganizationInsights where
     | Core.stop
         ( rs
             Lens.^? listOrganizationInsightsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listOrganizationInsightsResponse_proactiveInsights
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listOrganizationInsightsResponse_reactiveInsights
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listOrganizationInsights_nextToken
           Lens..~ rs
           Lens.^? listOrganizationInsightsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListOrganizationInsights where
   type
@@ -168,10 +168,12 @@ instance Core.AWSRequest ListOrganizationInsights where
       ( \s h x ->
           ListOrganizationInsightsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "ProactiveInsights"
+            Prelude.<*> ( x
+                            Data..?> "ProactiveInsights"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "ReactiveInsights"
+            Prelude.<*> ( x
+                            Data..?> "ReactiveInsights"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -179,7 +181,8 @@ instance Core.AWSRequest ListOrganizationInsights where
 
 instance Prelude.Hashable ListOrganizationInsights where
   hashWithSalt _salt ListOrganizationInsights' {..} =
-    _salt `Prelude.hashWithSalt` accountIds
+    _salt
+      `Prelude.hashWithSalt` accountIds
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` organizationalUnitIds

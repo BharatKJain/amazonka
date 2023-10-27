@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DeviceFarm.ListArtifacts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,20 +137,23 @@ instance Core.AWSPager ListArtifacts where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listArtifactsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listArtifactsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listArtifactsResponse_artifacts Prelude.. Lens._Just
+            Lens.^? listArtifactsResponse_artifacts
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listArtifacts_nextToken
           Lens..~ rs
-          Lens.^? listArtifactsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listArtifactsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListArtifacts where
   type
@@ -169,7 +172,8 @@ instance Core.AWSRequest ListArtifacts where
 
 instance Prelude.Hashable ListArtifacts where
   hashWithSalt _salt ListArtifacts' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` type'
 

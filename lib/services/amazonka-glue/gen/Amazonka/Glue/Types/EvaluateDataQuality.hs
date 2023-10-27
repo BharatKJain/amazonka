@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.EvaluateDataQuality
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.EvaluateDataQuality where
@@ -126,7 +126,8 @@ instance Data.FromJSON EvaluateDataQuality where
 
 instance Prelude.Hashable EvaluateDataQuality where
   hashWithSalt _salt EvaluateDataQuality' {..} =
-    _salt `Prelude.hashWithSalt` output
+    _salt
+      `Prelude.hashWithSalt` output
       `Prelude.hashWithSalt` publishingOptions
       `Prelude.hashWithSalt` stopJobOnFailureOptions
       `Prelude.hashWithSalt` name

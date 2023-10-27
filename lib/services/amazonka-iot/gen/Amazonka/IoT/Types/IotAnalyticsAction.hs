@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.IotAnalyticsAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.IotAnalyticsAction where
@@ -127,7 +127,8 @@ instance Data.FromJSON IotAnalyticsAction where
 
 instance Prelude.Hashable IotAnalyticsAction where
   hashWithSalt _salt IotAnalyticsAction' {..} =
-    _salt `Prelude.hashWithSalt` batchMode
+    _salt
+      `Prelude.hashWithSalt` batchMode
       `Prelude.hashWithSalt` channelArn
       `Prelude.hashWithSalt` channelName
       `Prelude.hashWithSalt` roleArn

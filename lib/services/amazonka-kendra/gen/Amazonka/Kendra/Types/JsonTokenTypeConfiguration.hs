@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.JsonTokenTypeConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.JsonTokenTypeConfiguration where
@@ -81,7 +81,8 @@ instance Data.FromJSON JsonTokenTypeConfiguration where
 
 instance Prelude.Hashable JsonTokenTypeConfiguration where
   hashWithSalt _salt JsonTokenTypeConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` userNameAttributeField
+    _salt
+      `Prelude.hashWithSalt` userNameAttributeField
       `Prelude.hashWithSalt` groupAttributeField
 
 instance Prelude.NFData JsonTokenTypeConfiguration where

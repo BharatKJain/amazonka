@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.LightsailDistribution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.LightsailDistribution where
@@ -313,7 +313,8 @@ instance Data.FromJSON LightsailDistribution where
       ( \x ->
           LightsailDistribution'
             Prelude.<$> (x Data..:? "ableToUpdateBundle")
-            Prelude.<*> ( x Data..:? "alternativeDomainNames"
+            Prelude.<*> ( x
+                            Data..:? "alternativeDomainNames"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "arn")
@@ -338,7 +339,8 @@ instance Data.FromJSON LightsailDistribution where
 
 instance Prelude.Hashable LightsailDistribution where
   hashWithSalt _salt LightsailDistribution' {..} =
-    _salt `Prelude.hashWithSalt` ableToUpdateBundle
+    _salt
+      `Prelude.hashWithSalt` ableToUpdateBundle
       `Prelude.hashWithSalt` alternativeDomainNames
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` bundleId

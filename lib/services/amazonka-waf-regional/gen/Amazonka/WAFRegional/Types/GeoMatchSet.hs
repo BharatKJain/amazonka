@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFRegional.Types.GeoMatchSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFRegional.Types.GeoMatchSet where
@@ -118,14 +118,16 @@ instance Data.FromJSON GeoMatchSet where
           GeoMatchSet'
             Prelude.<$> (x Data..:? "Name")
             Prelude.<*> (x Data..: "GeoMatchSetId")
-            Prelude.<*> ( x Data..:? "GeoMatchConstraints"
+            Prelude.<*> ( x
+                            Data..:? "GeoMatchConstraints"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable GeoMatchSet where
   hashWithSalt _salt GeoMatchSet' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` geoMatchSetId
       `Prelude.hashWithSalt` geoMatchConstraints
 

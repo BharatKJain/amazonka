@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.CoreNetworkSegment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.CoreNetworkSegment where
@@ -81,14 +81,16 @@ instance Data.FromJSON CoreNetworkSegment where
           CoreNetworkSegment'
             Prelude.<$> (x Data..:? "EdgeLocations" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "Name")
-            Prelude.<*> ( x Data..:? "SharedSegments"
+            Prelude.<*> ( x
+                            Data..:? "SharedSegments"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable CoreNetworkSegment where
   hashWithSalt _salt CoreNetworkSegment' {..} =
-    _salt `Prelude.hashWithSalt` edgeLocations
+    _salt
+      `Prelude.hashWithSalt` edgeLocations
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` sharedSegments
 

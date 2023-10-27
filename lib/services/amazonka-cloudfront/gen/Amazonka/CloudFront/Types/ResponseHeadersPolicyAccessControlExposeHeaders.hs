@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.ResponseHeadersPolicyAccessControlExposeHeaders
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.ResponseHeadersPolicyAccessControlExposeHeaders where
@@ -78,10 +78,12 @@ instance
   where
   parseXML x =
     ResponseHeadersPolicyAccessControlExposeHeaders'
-      Prelude.<$> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Header")
                   )
-        Prelude.<*> (x Data..@ "Quantity")
+      Prelude.<*> (x Data..@ "Quantity")
 
 instance
   Prelude.Hashable
@@ -90,7 +92,8 @@ instance
   hashWithSalt
     _salt
     ResponseHeadersPolicyAccessControlExposeHeaders' {..} =
-      _salt `Prelude.hashWithSalt` items
+      _salt
+        `Prelude.hashWithSalt` items
         `Prelude.hashWithSalt` quantity
 
 instance

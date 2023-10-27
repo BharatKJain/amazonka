@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Translate.Types.ParallelDataConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Translate.Types.ParallelDataConfig where
@@ -79,12 +79,14 @@ instance Data.FromJSON ParallelDataConfig where
       "ParallelDataConfig"
       ( \x ->
           ParallelDataConfig'
-            Prelude.<$> (x Data..: "S3Uri") Prelude.<*> (x Data..: "Format")
+            Prelude.<$> (x Data..: "S3Uri")
+            Prelude.<*> (x Data..: "Format")
       )
 
 instance Prelude.Hashable ParallelDataConfig where
   hashWithSalt _salt ParallelDataConfig' {..} =
-    _salt `Prelude.hashWithSalt` s3Uri
+    _salt
+      `Prelude.hashWithSalt` s3Uri
       `Prelude.hashWithSalt` format
 
 instance Prelude.NFData ParallelDataConfig where

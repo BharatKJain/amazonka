@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.S3OutputFormatConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.S3OutputFormatConfig where
@@ -137,7 +137,8 @@ instance Data.FromJSON S3OutputFormatConfig where
 
 instance Prelude.Hashable S3OutputFormatConfig where
   hashWithSalt _salt S3OutputFormatConfig' {..} =
-    _salt `Prelude.hashWithSalt` aggregationConfig
+    _salt
+      `Prelude.hashWithSalt` aggregationConfig
       `Prelude.hashWithSalt` fileType
       `Prelude.hashWithSalt` prefixConfig
       `Prelude.hashWithSalt` preserveSourceDataTyping

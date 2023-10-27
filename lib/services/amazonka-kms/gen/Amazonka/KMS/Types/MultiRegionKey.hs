@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KMS.Types.MultiRegionKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KMS.Types.MultiRegionKey where
@@ -71,12 +71,14 @@ instance Data.FromJSON MultiRegionKey where
       "MultiRegionKey"
       ( \x ->
           MultiRegionKey'
-            Prelude.<$> (x Data..:? "Arn") Prelude.<*> (x Data..:? "Region")
+            Prelude.<$> (x Data..:? "Arn")
+            Prelude.<*> (x Data..:? "Region")
       )
 
 instance Prelude.Hashable MultiRegionKey where
   hashWithSalt _salt MultiRegionKey' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` region
 
 instance Prelude.NFData MultiRegionKey where

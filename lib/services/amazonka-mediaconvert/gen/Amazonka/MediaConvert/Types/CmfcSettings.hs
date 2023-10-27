@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.CmfcSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.CmfcSettings where
@@ -508,7 +508,8 @@ instance Data.FromJSON CmfcSettings where
 
 instance Prelude.Hashable CmfcSettings where
   hashWithSalt _salt CmfcSettings' {..} =
-    _salt `Prelude.hashWithSalt` audioDuration
+    _salt
+      `Prelude.hashWithSalt` audioDuration
       `Prelude.hashWithSalt` audioGroupId
       `Prelude.hashWithSalt` audioRenditionSets
       `Prelude.hashWithSalt` audioTrackType

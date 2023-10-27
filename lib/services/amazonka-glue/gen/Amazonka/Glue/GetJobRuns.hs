@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.GetJobRuns
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,20 +103,23 @@ instance Core.AWSPager GetJobRuns where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? getJobRunsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? getJobRunsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? getJobRunsResponse_jobRuns Prelude.. Lens._Just
+            Lens.^? getJobRunsResponse_jobRuns
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getJobRuns_nextToken
           Lens..~ rs
-          Lens.^? getJobRunsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? getJobRunsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetJobRuns where
   type AWSResponse GetJobRuns = GetJobRunsResponse
@@ -133,7 +136,8 @@ instance Core.AWSRequest GetJobRuns where
 
 instance Prelude.Hashable GetJobRuns where
   hashWithSalt _salt GetJobRuns' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` jobName
 

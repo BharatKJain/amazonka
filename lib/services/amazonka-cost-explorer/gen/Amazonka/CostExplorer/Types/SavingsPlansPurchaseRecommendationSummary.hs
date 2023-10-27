@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.SavingsPlansPurchaseRecommendationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.SavingsPlansPurchaseRecommendationSummary where
@@ -202,18 +202,18 @@ instance
       ( \x ->
           SavingsPlansPurchaseRecommendationSummary'
             Prelude.<$> (x Data..:? "CurrencyCode")
-              Prelude.<*> (x Data..:? "CurrentOnDemandSpend")
-              Prelude.<*> (x Data..:? "DailyCommitmentToPurchase")
-              Prelude.<*> (x Data..:? "EstimatedMonthlySavingsAmount")
-              Prelude.<*> ( x
-                              Data..:? "EstimatedOnDemandCostWithCurrentCommitment"
-                          )
-              Prelude.<*> (x Data..:? "EstimatedROI")
-              Prelude.<*> (x Data..:? "EstimatedSavingsAmount")
-              Prelude.<*> (x Data..:? "EstimatedSavingsPercentage")
-              Prelude.<*> (x Data..:? "EstimatedTotalCost")
-              Prelude.<*> (x Data..:? "HourlyCommitmentToPurchase")
-              Prelude.<*> (x Data..:? "TotalRecommendationCount")
+            Prelude.<*> (x Data..:? "CurrentOnDemandSpend")
+            Prelude.<*> (x Data..:? "DailyCommitmentToPurchase")
+            Prelude.<*> (x Data..:? "EstimatedMonthlySavingsAmount")
+            Prelude.<*> ( x
+                            Data..:? "EstimatedOnDemandCostWithCurrentCommitment"
+                        )
+            Prelude.<*> (x Data..:? "EstimatedROI")
+            Prelude.<*> (x Data..:? "EstimatedSavingsAmount")
+            Prelude.<*> (x Data..:? "EstimatedSavingsPercentage")
+            Prelude.<*> (x Data..:? "EstimatedTotalCost")
+            Prelude.<*> (x Data..:? "HourlyCommitmentToPurchase")
+            Prelude.<*> (x Data..:? "TotalRecommendationCount")
       )
 
 instance
@@ -223,7 +223,8 @@ instance
   hashWithSalt
     _salt
     SavingsPlansPurchaseRecommendationSummary' {..} =
-      _salt `Prelude.hashWithSalt` currencyCode
+      _salt
+        `Prelude.hashWithSalt` currencyCode
         `Prelude.hashWithSalt` currentOnDemandSpend
         `Prelude.hashWithSalt` dailyCommitmentToPurchase
         `Prelude.hashWithSalt` estimatedMonthlySavingsAmount

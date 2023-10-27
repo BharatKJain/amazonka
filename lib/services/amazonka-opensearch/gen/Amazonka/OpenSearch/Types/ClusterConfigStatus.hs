@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.ClusterConfigStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.ClusterConfigStatus where
@@ -80,7 +80,8 @@ instance Data.FromJSON ClusterConfigStatus where
 
 instance Prelude.Hashable ClusterConfigStatus where
   hashWithSalt _salt ClusterConfigStatus' {..} =
-    _salt `Prelude.hashWithSalt` options
+    _salt
+      `Prelude.hashWithSalt` options
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData ClusterConfigStatus where

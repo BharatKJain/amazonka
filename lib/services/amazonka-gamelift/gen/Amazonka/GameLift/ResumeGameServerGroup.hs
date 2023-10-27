@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.ResumeGameServerGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,7 +129,8 @@ instance Core.AWSRequest ResumeGameServerGroup where
 
 instance Prelude.Hashable ResumeGameServerGroup where
   hashWithSalt _salt ResumeGameServerGroup' {..} =
-    _salt `Prelude.hashWithSalt` gameServerGroupName
+    _salt
+      `Prelude.hashWithSalt` gameServerGroupName
       `Prelude.hashWithSalt` resumeActions
 
 instance Prelude.NFData ResumeGameServerGroup where

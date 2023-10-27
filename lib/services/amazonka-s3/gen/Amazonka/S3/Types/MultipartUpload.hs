@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.MultipartUpload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.MultipartUpload where
@@ -126,7 +126,8 @@ instance Data.FromXML MultipartUpload where
 
 instance Prelude.Hashable MultipartUpload where
   hashWithSalt _salt MultipartUpload' {..} =
-    _salt `Prelude.hashWithSalt` checksumAlgorithm
+    _salt
+      `Prelude.hashWithSalt` checksumAlgorithm
       `Prelude.hashWithSalt` initiated
       `Prelude.hashWithSalt` initiator
       `Prelude.hashWithSalt` key

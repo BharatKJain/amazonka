@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Omics.ListReadSets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,18 +116,20 @@ instance Core.AWSPager ListReadSets where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listReadSetsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listReadSetsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listReadSetsResponse_readSets) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listReadSets_nextToken
           Lens..~ rs
-          Lens.^? listReadSetsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listReadSetsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListReadSets where
   type AWSResponse ListReadSets = ListReadSetsResponse
@@ -144,7 +146,8 @@ instance Core.AWSRequest ListReadSets where
 
 instance Prelude.Hashable ListReadSets where
   hashWithSalt _salt ListReadSets' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` sequenceStoreId

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.GetDocumentationVersions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,22 +109,22 @@ instance Core.AWSPager GetDocumentationVersions where
     | Core.stop
         ( rs
             Lens.^? getDocumentationVersionsResponse_position
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getDocumentationVersionsResponse_items
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getDocumentationVersions_position
           Lens..~ rs
           Lens.^? getDocumentationVersionsResponse_position
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetDocumentationVersions where
   type
@@ -143,7 +143,8 @@ instance Core.AWSRequest GetDocumentationVersions where
 
 instance Prelude.Hashable GetDocumentationVersions where
   hashWithSalt _salt GetDocumentationVersions' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` position
       `Prelude.hashWithSalt` restApiId
 

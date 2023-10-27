@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Wisdom.Types.RecommendationData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Wisdom.Types.RecommendationData where
@@ -112,7 +112,8 @@ instance Data.FromJSON RecommendationData where
 
 instance Prelude.Hashable RecommendationData where
   hashWithSalt _salt RecommendationData' {..} =
-    _salt `Prelude.hashWithSalt` relevanceLevel
+    _salt
+      `Prelude.hashWithSalt` relevanceLevel
       `Prelude.hashWithSalt` relevanceScore
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` document

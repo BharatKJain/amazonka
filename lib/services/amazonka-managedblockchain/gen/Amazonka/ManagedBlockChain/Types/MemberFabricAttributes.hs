@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ManagedBlockChain.Types.MemberFabricAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ManagedBlockChain.Types.MemberFabricAttributes where
@@ -76,7 +76,8 @@ instance Data.FromJSON MemberFabricAttributes where
 
 instance Prelude.Hashable MemberFabricAttributes where
   hashWithSalt _salt MemberFabricAttributes' {..} =
-    _salt `Prelude.hashWithSalt` adminUsername
+    _salt
+      `Prelude.hashWithSalt` adminUsername
       `Prelude.hashWithSalt` caEndpoint
 
 instance Prelude.NFData MemberFabricAttributes where

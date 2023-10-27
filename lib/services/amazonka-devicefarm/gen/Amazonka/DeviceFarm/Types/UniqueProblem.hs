@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.UniqueProblem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.UniqueProblem where
@@ -75,7 +75,8 @@ instance Data.FromJSON UniqueProblem where
 
 instance Prelude.Hashable UniqueProblem where
   hashWithSalt _salt UniqueProblem' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` problems
 
 instance Prelude.NFData UniqueProblem where

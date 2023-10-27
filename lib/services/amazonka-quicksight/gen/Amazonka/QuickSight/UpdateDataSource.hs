@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.UpdateDataSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -183,7 +183,8 @@ instance Core.AWSRequest UpdateDataSource where
 
 instance Prelude.Hashable UpdateDataSource where
   hashWithSalt _salt UpdateDataSource' {..} =
-    _salt `Prelude.hashWithSalt` credentials
+    _salt
+      `Prelude.hashWithSalt` credentials
       `Prelude.hashWithSalt` dataSourceParameters
       `Prelude.hashWithSalt` sslProperties
       `Prelude.hashWithSalt` vpcConnectionProperties

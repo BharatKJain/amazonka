@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DAX.Types.Cluster
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DAX.Types.Cluster where
@@ -277,7 +277,8 @@ instance Data.FromJSON Cluster where
             Prelude.<*> (x Data..:? "ClusterName")
             Prelude.<*> (x Data..:? "Description")
             Prelude.<*> (x Data..:? "IamRoleArn")
-            Prelude.<*> ( x Data..:? "NodeIdsToRemove"
+            Prelude.<*> ( x
+                            Data..:? "NodeIdsToRemove"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "NodeType")
@@ -294,7 +295,8 @@ instance Data.FromJSON Cluster where
 
 instance Prelude.Hashable Cluster where
   hashWithSalt _salt Cluster' {..} =
-    _salt `Prelude.hashWithSalt` activeNodes
+    _salt
+      `Prelude.hashWithSalt` activeNodes
       `Prelude.hashWithSalt` clusterArn
       `Prelude.hashWithSalt` clusterDiscoveryEndpoint
       `Prelude.hashWithSalt` clusterEndpointEncryptionType

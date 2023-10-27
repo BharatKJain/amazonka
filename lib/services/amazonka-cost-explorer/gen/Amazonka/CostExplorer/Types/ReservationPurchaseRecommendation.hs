@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.ReservationPurchaseRecommendation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.ReservationPurchaseRecommendation where
@@ -142,7 +142,8 @@ instance
             Prelude.<$> (x Data..:? "AccountScope")
             Prelude.<*> (x Data..:? "LookbackPeriodInDays")
             Prelude.<*> (x Data..:? "PaymentOption")
-            Prelude.<*> ( x Data..:? "RecommendationDetails"
+            Prelude.<*> ( x
+                            Data..:? "RecommendationDetails"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "RecommendationSummary")
@@ -157,7 +158,8 @@ instance
   hashWithSalt
     _salt
     ReservationPurchaseRecommendation' {..} =
-      _salt `Prelude.hashWithSalt` accountScope
+      _salt
+        `Prelude.hashWithSalt` accountScope
         `Prelude.hashWithSalt` lookbackPeriodInDays
         `Prelude.hashWithSalt` paymentOption
         `Prelude.hashWithSalt` recommendationDetails

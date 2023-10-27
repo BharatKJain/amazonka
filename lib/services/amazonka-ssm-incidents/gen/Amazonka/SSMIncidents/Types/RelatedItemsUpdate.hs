@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.RelatedItemsUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.RelatedItemsUpdate where
@@ -66,7 +66,8 @@ relatedItemsUpdate_itemToRemove = Lens.lens (\RelatedItemsUpdate' {itemToRemove}
 
 instance Prelude.Hashable RelatedItemsUpdate where
   hashWithSalt _salt RelatedItemsUpdate' {..} =
-    _salt `Prelude.hashWithSalt` itemToAdd
+    _salt
+      `Prelude.hashWithSalt` itemToAdd
       `Prelude.hashWithSalt` itemToRemove
 
 instance Prelude.NFData RelatedItemsUpdate where

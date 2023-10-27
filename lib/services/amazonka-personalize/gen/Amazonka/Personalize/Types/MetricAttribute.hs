@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.MetricAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.MetricAttribute where
@@ -107,7 +107,8 @@ instance Data.FromJSON MetricAttribute where
 
 instance Prelude.Hashable MetricAttribute where
   hashWithSalt _salt MetricAttribute' {..} =
-    _salt `Prelude.hashWithSalt` eventType
+    _salt
+      `Prelude.hashWithSalt` eventType
       `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` expression
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.QueryExecutionStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.QueryExecutionStatus where
@@ -138,7 +138,8 @@ instance Data.FromJSON QueryExecutionStatus where
 
 instance Prelude.Hashable QueryExecutionStatus where
   hashWithSalt _salt QueryExecutionStatus' {..} =
-    _salt `Prelude.hashWithSalt` athenaError
+    _salt
+      `Prelude.hashWithSalt` athenaError
       `Prelude.hashWithSalt` completionDateTime
       `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` stateChangeReason

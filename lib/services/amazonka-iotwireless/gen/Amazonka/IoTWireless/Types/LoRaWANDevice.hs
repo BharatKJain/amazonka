@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.LoRaWANDevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.LoRaWANDevice where
@@ -138,7 +138,8 @@ instance Data.FromJSON LoRaWANDevice where
 
 instance Prelude.Hashable LoRaWANDevice where
   hashWithSalt _salt LoRaWANDevice' {..} =
-    _salt `Prelude.hashWithSalt` abpV1_0_x
+    _salt
+      `Prelude.hashWithSalt` abpV1_0_x
       `Prelude.hashWithSalt` abpV1_1
       `Prelude.hashWithSalt` devEui
       `Prelude.hashWithSalt` deviceProfileId

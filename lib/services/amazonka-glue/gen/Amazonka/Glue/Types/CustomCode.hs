@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.CustomCode
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.CustomCode where
@@ -114,7 +114,8 @@ instance Data.FromJSON CustomCode where
 
 instance Prelude.Hashable CustomCode where
   hashWithSalt _salt CustomCode' {..} =
-    _salt `Prelude.hashWithSalt` outputSchemas
+    _salt
+      `Prelude.hashWithSalt` outputSchemas
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inputs
       `Prelude.hashWithSalt` code

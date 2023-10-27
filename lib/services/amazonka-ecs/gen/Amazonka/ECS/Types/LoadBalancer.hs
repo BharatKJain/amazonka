@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.LoadBalancer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.LoadBalancer where
@@ -207,7 +207,8 @@ instance Data.FromJSON LoadBalancer where
 
 instance Prelude.Hashable LoadBalancer where
   hashWithSalt _salt LoadBalancer' {..} =
-    _salt `Prelude.hashWithSalt` containerName
+    _salt
+      `Prelude.hashWithSalt` containerName
       `Prelude.hashWithSalt` containerPort
       `Prelude.hashWithSalt` loadBalancerName
       `Prelude.hashWithSalt` targetGroupArn

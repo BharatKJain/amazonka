@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Organizations.Types.HandshakeParty
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Organizations.Types.HandshakeParty where
@@ -85,12 +85,14 @@ instance Data.FromJSON HandshakeParty where
       "HandshakeParty"
       ( \x ->
           HandshakeParty'
-            Prelude.<$> (x Data..: "Id") Prelude.<*> (x Data..: "Type")
+            Prelude.<$> (x Data..: "Id")
+            Prelude.<*> (x Data..: "Type")
       )
 
 instance Prelude.Hashable HandshakeParty where
   hashWithSalt _salt HandshakeParty' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData HandshakeParty where

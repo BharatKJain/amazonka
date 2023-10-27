@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.Session
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.Session where
@@ -197,7 +197,8 @@ instance Data.FromJSON Session where
 
 instance Prelude.Hashable Session where
   hashWithSalt _salt Session' {..} =
-    _salt `Prelude.hashWithSalt` authenticationType
+    _salt
+      `Prelude.hashWithSalt` authenticationType
       `Prelude.hashWithSalt` connectionState
       `Prelude.hashWithSalt` maxExpirationTime
       `Prelude.hashWithSalt` networkAccessConfiguration

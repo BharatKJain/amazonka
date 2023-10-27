@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecretsManager.ValidateResourcePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance Core.AWSRequest ValidateResourcePolicy where
       ( \s h x ->
           ValidateResourcePolicyResponse'
             Prelude.<$> (x Data..?> "PolicyValidationPassed")
-            Prelude.<*> ( x Data..?> "ValidationErrors"
+            Prelude.<*> ( x
+                            Data..?> "ValidationErrors"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -140,7 +141,8 @@ instance Core.AWSRequest ValidateResourcePolicy where
 
 instance Prelude.Hashable ValidateResourcePolicy where
   hashWithSalt _salt ValidateResourcePolicy' {..} =
-    _salt `Prelude.hashWithSalt` secretId
+    _salt
+      `Prelude.hashWithSalt` secretId
       `Prelude.hashWithSalt` resourcePolicy
 
 instance Prelude.NFData ValidateResourcePolicy where

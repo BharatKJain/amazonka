@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.WindowsFileSystemConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.WindowsFileSystemConfiguration where
@@ -367,7 +367,8 @@ instance Data.FromJSON WindowsFileSystemConfiguration where
             Prelude.<*> (x Data..:? "CopyTagsToBackups")
             Prelude.<*> (x Data..:? "DailyAutomaticBackupStartTime")
             Prelude.<*> (x Data..:? "DeploymentType")
-            Prelude.<*> ( x Data..:? "MaintenanceOperationsInProgress"
+            Prelude.<*> ( x
+                            Data..:? "MaintenanceOperationsInProgress"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "PreferredFileServerIp")
@@ -387,7 +388,8 @@ instance
   hashWithSalt
     _salt
     WindowsFileSystemConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` activeDirectoryId
+      _salt
+        `Prelude.hashWithSalt` activeDirectoryId
         `Prelude.hashWithSalt` aliases
         `Prelude.hashWithSalt` auditLogConfiguration
         `Prelude.hashWithSalt` automaticBackupRetentionDays

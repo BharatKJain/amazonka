@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFRegional.CreateWebACLMigrationStack
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -176,7 +176,8 @@ instance Core.AWSRequest CreateWebACLMigrationStack where
 
 instance Prelude.Hashable CreateWebACLMigrationStack where
   hashWithSalt _salt CreateWebACLMigrationStack' {..} =
-    _salt `Prelude.hashWithSalt` webACLId
+    _salt
+      `Prelude.hashWithSalt` webACLId
       `Prelude.hashWithSalt` s3BucketName
       `Prelude.hashWithSalt` ignoreUnsupportedType
 

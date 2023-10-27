@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.AugmentedManifestsListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.AugmentedManifestsListItem where
@@ -209,14 +209,16 @@ instance Data.FromJSON AugmentedManifestsListItem where
             Prelude.<*> (x Data..:? "SourceDocumentsS3Uri")
             Prelude.<*> (x Data..:? "Split")
             Prelude.<*> (x Data..: "S3Uri")
-            Prelude.<*> ( x Data..:? "AttributeNames"
+            Prelude.<*> ( x
+                            Data..:? "AttributeNames"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable AugmentedManifestsListItem where
   hashWithSalt _salt AugmentedManifestsListItem' {..} =
-    _salt `Prelude.hashWithSalt` annotationDataS3Uri
+    _salt
+      `Prelude.hashWithSalt` annotationDataS3Uri
       `Prelude.hashWithSalt` documentType
       `Prelude.hashWithSalt` sourceDocumentsS3Uri
       `Prelude.hashWithSalt` split

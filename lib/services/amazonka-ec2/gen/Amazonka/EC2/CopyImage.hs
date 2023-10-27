@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.CopyImage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -374,7 +374,8 @@ instance Core.AWSRequest CopyImage where
 
 instance Prelude.Hashable CopyImage where
   hashWithSalt _salt CopyImage' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` copyImageTags
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` destinationOutpostArn

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glacier.InitiateVaultLock
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -167,7 +167,8 @@ instance Core.AWSRequest InitiateVaultLock where
 
 instance Prelude.Hashable InitiateVaultLock where
   hashWithSalt _salt InitiateVaultLock' {..} =
-    _salt `Prelude.hashWithSalt` policy
+    _salt
+      `Prelude.hashWithSalt` policy
       `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` vaultName
 

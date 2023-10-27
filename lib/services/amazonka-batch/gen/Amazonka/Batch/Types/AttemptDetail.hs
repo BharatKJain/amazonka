@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.AttemptDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.AttemptDetail where
@@ -110,7 +110,8 @@ instance Data.FromJSON AttemptDetail where
 
 instance Prelude.Hashable AttemptDetail where
   hashWithSalt _salt AttemptDetail' {..} =
-    _salt `Prelude.hashWithSalt` container
+    _salt
+      `Prelude.hashWithSalt` container
       `Prelude.hashWithSalt` startedAt
       `Prelude.hashWithSalt` statusReason
       `Prelude.hashWithSalt` stoppedAt

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.ProcessDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.ProcessDetails where
@@ -144,7 +144,8 @@ instance Data.FromJSON ProcessDetails where
 
 instance Prelude.Hashable ProcessDetails where
   hashWithSalt _salt ProcessDetails' {..} =
-    _salt `Prelude.hashWithSalt` launchedAt
+    _salt
+      `Prelude.hashWithSalt` launchedAt
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` parentPid
       `Prelude.hashWithSalt` path

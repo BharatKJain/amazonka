@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataSync.Types.LocationListEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataSync.Types.LocationListEntry where
@@ -140,7 +140,8 @@ instance Data.FromJSON LocationListEntry where
 
 instance Prelude.Hashable LocationListEntry where
   hashWithSalt _salt LocationListEntry' {..} =
-    _salt `Prelude.hashWithSalt` locationArn
+    _salt
+      `Prelude.hashWithSalt` locationArn
       `Prelude.hashWithSalt` locationUri
 
 instance Prelude.NFData LocationListEntry where

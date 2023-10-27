@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECRPublic.DeleteRepository
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest DeleteRepository where
 
 instance Prelude.Hashable DeleteRepository where
   hashWithSalt _salt DeleteRepository' {..} =
-    _salt `Prelude.hashWithSalt` force
+    _salt
+      `Prelude.hashWithSalt` force
       `Prelude.hashWithSalt` registryId
       `Prelude.hashWithSalt` repositoryName
 

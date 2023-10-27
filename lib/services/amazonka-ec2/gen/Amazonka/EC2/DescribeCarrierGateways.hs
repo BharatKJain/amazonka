@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeCarrierGateways
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -198,22 +198,22 @@ instance Core.AWSPager DescribeCarrierGateways where
     | Core.stop
         ( rs
             Lens.^? describeCarrierGatewaysResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeCarrierGatewaysResponse_carrierGateways
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeCarrierGateways_nextToken
           Lens..~ rs
           Lens.^? describeCarrierGatewaysResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeCarrierGateways where
   type
@@ -225,7 +225,8 @@ instance Core.AWSRequest DescribeCarrierGateways where
     Response.receiveXML
       ( \s h x ->
           DescribeCarrierGatewaysResponse'
-            Prelude.<$> ( x Data..@? "carrierGatewaySet"
+            Prelude.<$> ( x
+                            Data..@? "carrierGatewaySet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -235,7 +236,8 @@ instance Core.AWSRequest DescribeCarrierGateways where
 
 instance Prelude.Hashable DescribeCarrierGateways where
   hashWithSalt _salt DescribeCarrierGateways' {..} =
-    _salt `Prelude.hashWithSalt` carrierGatewayIds
+    _salt
+      `Prelude.hashWithSalt` carrierGatewayIds
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults

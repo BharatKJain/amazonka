@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecurityHub.ListFindingAggregators
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -101,22 +101,22 @@ instance Core.AWSPager ListFindingAggregators where
     | Core.stop
         ( rs
             Lens.^? listFindingAggregatorsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listFindingAggregatorsResponse_findingAggregators
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listFindingAggregators_nextToken
           Lens..~ rs
           Lens.^? listFindingAggregatorsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListFindingAggregators where
   type
@@ -128,7 +128,8 @@ instance Core.AWSRequest ListFindingAggregators where
     Response.receiveJSON
       ( \s h x ->
           ListFindingAggregatorsResponse'
-            Prelude.<$> ( x Data..?> "FindingAggregators"
+            Prelude.<$> ( x
+                            Data..?> "FindingAggregators"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -137,7 +138,8 @@ instance Core.AWSRequest ListFindingAggregators where
 
 instance Prelude.Hashable ListFindingAggregators where
   hashWithSalt _salt ListFindingAggregators' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListFindingAggregators where

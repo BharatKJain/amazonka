@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.ExecutionResults
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.ExecutionResults where
@@ -80,7 +80,8 @@ instance Data.FromJSON ExecutionResults where
 
 instance Prelude.Hashable ExecutionResults where
   hashWithSalt _salt ExecutionResults' {..} =
-    _salt `Prelude.hashWithSalt` onExceptionSteps
+    _salt
+      `Prelude.hashWithSalt` onExceptionSteps
       `Prelude.hashWithSalt` steps
 
 instance Prelude.NFData ExecutionResults where

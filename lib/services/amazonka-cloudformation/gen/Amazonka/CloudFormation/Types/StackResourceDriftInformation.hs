@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.StackResourceDriftInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.StackResourceDriftInformation where
@@ -131,7 +131,8 @@ instance
     StackResourceDriftInformation
   where
   hashWithSalt _salt StackResourceDriftInformation' {..} =
-    _salt `Prelude.hashWithSalt` lastCheckTimestamp
+    _salt
+      `Prelude.hashWithSalt` lastCheckTimestamp
       `Prelude.hashWithSalt` stackResourceDriftStatus
 
 instance Prelude.NFData StackResourceDriftInformation where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsCodeBuildProjectLogsConfigCloudWatchLogsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsCodeBuildProjectLogsConfigCloudWatchLogsDetails where
@@ -84,8 +84,8 @@ instance
       ( \x ->
           AwsCodeBuildProjectLogsConfigCloudWatchLogsDetails'
             Prelude.<$> (x Data..:? "GroupName")
-              Prelude.<*> (x Data..:? "Status")
-              Prelude.<*> (x Data..:? "StreamName")
+            Prelude.<*> (x Data..:? "Status")
+            Prelude.<*> (x Data..:? "StreamName")
       )
 
 instance
@@ -95,7 +95,8 @@ instance
   hashWithSalt
     _salt
     AwsCodeBuildProjectLogsConfigCloudWatchLogsDetails' {..} =
-      _salt `Prelude.hashWithSalt` groupName
+      _salt
+        `Prelude.hashWithSalt` groupName
         `Prelude.hashWithSalt` status
         `Prelude.hashWithSalt` streamName
 

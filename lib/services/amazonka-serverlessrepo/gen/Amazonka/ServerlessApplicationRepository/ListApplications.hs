@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServerlessApplicationRepository.ListApplications
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -92,22 +92,22 @@ instance Core.AWSPager ListApplications where
     | Core.stop
         ( rs
             Lens.^? listApplicationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listApplicationsResponse_applications
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listApplications_nextToken
           Lens..~ rs
           Lens.^? listApplicationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListApplications where
   type
@@ -126,7 +126,8 @@ instance Core.AWSRequest ListApplications where
 
 instance Prelude.Hashable ListApplications where
   hashWithSalt _salt ListApplications' {..} =
-    _salt `Prelude.hashWithSalt` maxItems
+    _salt
+      `Prelude.hashWithSalt` maxItems
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListApplications where

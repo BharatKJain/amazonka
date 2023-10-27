@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.AlarmIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.AlarmIdentifier where
@@ -121,11 +121,13 @@ alarmIdentifier_name = Lens.lens (\AlarmIdentifier' {name} -> name) (\s@AlarmIde
 instance Data.FromXML AlarmIdentifier where
   parseXML x =
     AlarmIdentifier'
-      Prelude.<$> (x Data..@ "Region") Prelude.<*> (x Data..@ "Name")
+      Prelude.<$> (x Data..@ "Region")
+      Prelude.<*> (x Data..@ "Name")
 
 instance Prelude.Hashable AlarmIdentifier where
   hashWithSalt _salt AlarmIdentifier' {..} =
-    _salt `Prelude.hashWithSalt` region
+    _salt
+      `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData AlarmIdentifier where

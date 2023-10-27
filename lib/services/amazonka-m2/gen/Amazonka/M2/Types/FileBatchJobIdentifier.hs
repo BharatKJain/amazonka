@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.FileBatchJobIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.FileBatchJobIdentifier where
@@ -68,7 +68,8 @@ fileBatchJobIdentifier_fileName = Lens.lens (\FileBatchJobIdentifier' {fileName}
 
 instance Prelude.Hashable FileBatchJobIdentifier where
   hashWithSalt _salt FileBatchJobIdentifier' {..} =
-    _salt `Prelude.hashWithSalt` folderPath
+    _salt
+      `Prelude.hashWithSalt` folderPath
       `Prelude.hashWithSalt` fileName
 
 instance Prelude.NFData FileBatchJobIdentifier where

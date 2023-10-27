@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GlobalAccelerator.Types.AcceleratorEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GlobalAccelerator.Types.AcceleratorEvent where
@@ -87,7 +87,8 @@ instance Data.FromJSON AcceleratorEvent where
 
 instance Prelude.Hashable AcceleratorEvent where
   hashWithSalt _salt AcceleratorEvent' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` timestamp
 
 instance Prelude.NFData AcceleratorEvent where

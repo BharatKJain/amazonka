@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.AccessKeyDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.AccessKeyDetails where
@@ -94,7 +94,8 @@ instance Data.FromJSON AccessKeyDetails where
 
 instance Prelude.Hashable AccessKeyDetails where
   hashWithSalt _salt AccessKeyDetails' {..} =
-    _salt `Prelude.hashWithSalt` accessKeyId
+    _salt
+      `Prelude.hashWithSalt` accessKeyId
       `Prelude.hashWithSalt` principalId
       `Prelude.hashWithSalt` userName
       `Prelude.hashWithSalt` userType

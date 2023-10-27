@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Amplify.DeleteDomainAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest DeleteDomainAssociation where
 
 instance Prelude.Hashable DeleteDomainAssociation where
   hashWithSalt _salt DeleteDomainAssociation' {..} =
-    _salt `Prelude.hashWithSalt` appId
+    _salt
+      `Prelude.hashWithSalt` appId
       `Prelude.hashWithSalt` domainName
 
 instance Prelude.NFData DeleteDomainAssociation where

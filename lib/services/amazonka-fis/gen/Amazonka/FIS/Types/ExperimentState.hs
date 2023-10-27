@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FIS.Types.ExperimentState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FIS.Types.ExperimentState where
@@ -75,7 +75,8 @@ instance Data.FromJSON ExperimentState where
 
 instance Prelude.Hashable ExperimentState where
   hashWithSalt _salt ExperimentState' {..} =
-    _salt `Prelude.hashWithSalt` reason
+    _salt
+      `Prelude.hashWithSalt` reason
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData ExperimentState where

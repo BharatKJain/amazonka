@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.IpPermission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.IpPermission where
@@ -140,7 +140,8 @@ instance Data.FromJSON IpPermission where
 
 instance Prelude.Hashable IpPermission where
   hashWithSalt _salt IpPermission' {..} =
-    _salt `Prelude.hashWithSalt` fromPort
+    _salt
+      `Prelude.hashWithSalt` fromPort
       `Prelude.hashWithSalt` toPort
       `Prelude.hashWithSalt` ipRange
       `Prelude.hashWithSalt` protocol

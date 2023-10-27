@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ELB.RegisterInstancesWithLoadBalancer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,10 +129,12 @@ instance
       "RegisterInstancesWithLoadBalancerResult"
       ( \s h x ->
           RegisterInstancesWithLoadBalancerResponse'
-            Prelude.<$> ( x Data..@? "Instances" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "Instances"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -142,7 +144,8 @@ instance
   hashWithSalt
     _salt
     RegisterInstancesWithLoadBalancer' {..} =
-      _salt `Prelude.hashWithSalt` loadBalancerName
+      _salt
+        `Prelude.hashWithSalt` loadBalancerName
         `Prelude.hashWithSalt` instances
 
 instance

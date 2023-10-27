@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.CustomImage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.CustomImage where
@@ -89,7 +89,8 @@ instance Data.FromJSON CustomImage where
 
 instance Prelude.Hashable CustomImage where
   hashWithSalt _salt CustomImage' {..} =
-    _salt `Prelude.hashWithSalt` imageVersionNumber
+    _salt
+      `Prelude.hashWithSalt` imageVersionNumber
       `Prelude.hashWithSalt` imageName
       `Prelude.hashWithSalt` appImageConfigName
 

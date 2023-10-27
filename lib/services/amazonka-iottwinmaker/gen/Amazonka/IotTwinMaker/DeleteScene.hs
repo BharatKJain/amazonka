@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IotTwinMaker.DeleteScene
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,7 +100,8 @@ instance Core.AWSRequest DeleteScene where
 
 instance Prelude.Hashable DeleteScene where
   hashWithSalt _salt DeleteScene' {..} =
-    _salt `Prelude.hashWithSalt` workspaceId
+    _salt
+      `Prelude.hashWithSalt` workspaceId
       `Prelude.hashWithSalt` sceneId
 
 instance Prelude.NFData DeleteScene where

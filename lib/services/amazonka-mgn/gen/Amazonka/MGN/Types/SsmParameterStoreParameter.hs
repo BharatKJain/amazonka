@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.SsmParameterStoreParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.SsmParameterStoreParameter where
@@ -82,7 +82,8 @@ instance Data.FromJSON SsmParameterStoreParameter where
 
 instance Prelude.Hashable SsmParameterStoreParameter where
   hashWithSalt _salt SsmParameterStoreParameter' {..} =
-    _salt `Prelude.hashWithSalt` parameterName
+    _salt
+      `Prelude.hashWithSalt` parameterName
       `Prelude.hashWithSalt` parameterType
 
 instance Prelude.NFData SsmParameterStoreParameter where

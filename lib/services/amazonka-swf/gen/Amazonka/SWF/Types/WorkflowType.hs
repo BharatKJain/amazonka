@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.WorkflowType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.WorkflowType where
@@ -87,12 +87,14 @@ instance Data.FromJSON WorkflowType where
       "WorkflowType"
       ( \x ->
           WorkflowType'
-            Prelude.<$> (x Data..: "name") Prelude.<*> (x Data..: "version")
+            Prelude.<$> (x Data..: "name")
+            Prelude.<*> (x Data..: "version")
       )
 
 instance Prelude.Hashable WorkflowType where
   hashWithSalt _salt WorkflowType' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` version
 
 instance Prelude.NFData WorkflowType where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.AccountSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.AccountSettings where
@@ -161,17 +161,20 @@ instance Data.FromJSON AccountSettings where
             Prelude.<*> (x Data..:? "maxSlots" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "skipAppResign")
             Prelude.<*> (x Data..:? "trialMinutes")
-            Prelude.<*> ( x Data..:? "unmeteredDevices"
+            Prelude.<*> ( x
+                            Data..:? "unmeteredDevices"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "unmeteredRemoteAccessDevices"
+            Prelude.<*> ( x
+                            Data..:? "unmeteredRemoteAccessDevices"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable AccountSettings where
   hashWithSalt _salt AccountSettings' {..} =
-    _salt `Prelude.hashWithSalt` awsAccountNumber
+    _salt
+      `Prelude.hashWithSalt` awsAccountNumber
       `Prelude.hashWithSalt` defaultJobTimeoutMinutes
       `Prelude.hashWithSalt` maxJobTimeoutMinutes
       `Prelude.hashWithSalt` maxSlots

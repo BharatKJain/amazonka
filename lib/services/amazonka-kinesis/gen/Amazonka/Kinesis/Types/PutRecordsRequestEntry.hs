@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kinesis.Types.PutRecordsRequestEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kinesis.Types.PutRecordsRequestEntry where
@@ -122,7 +122,8 @@ putRecordsRequestEntry_partitionKey = Lens.lens (\PutRecordsRequestEntry' {parti
 
 instance Prelude.Hashable PutRecordsRequestEntry where
   hashWithSalt _salt PutRecordsRequestEntry' {..} =
-    _salt `Prelude.hashWithSalt` explicitHashKey
+    _salt
+      `Prelude.hashWithSalt` explicitHashKey
       `Prelude.hashWithSalt` data'
       `Prelude.hashWithSalt` partitionKey
 

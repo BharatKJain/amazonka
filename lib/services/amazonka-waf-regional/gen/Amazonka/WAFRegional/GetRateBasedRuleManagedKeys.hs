@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFRegional.GetRateBasedRuleManagedKeys
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,7 +127,8 @@ instance Core.AWSRequest GetRateBasedRuleManagedKeys where
 
 instance Prelude.Hashable GetRateBasedRuleManagedKeys where
   hashWithSalt _salt GetRateBasedRuleManagedKeys' {..} =
-    _salt `Prelude.hashWithSalt` nextMarker
+    _salt
+      `Prelude.hashWithSalt` nextMarker
       `Prelude.hashWithSalt` ruleId
 
 instance Prelude.NFData GetRateBasedRuleManagedKeys where

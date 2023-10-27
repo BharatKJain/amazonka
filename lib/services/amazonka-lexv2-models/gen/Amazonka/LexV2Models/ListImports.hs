@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexV2Models.ListImports
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -191,7 +191,8 @@ instance Core.AWSRequest ListImports where
           ListImportsResponse'
             Prelude.<$> (x Data..?> "botId")
             Prelude.<*> (x Data..?> "botVersion")
-            Prelude.<*> ( x Data..?> "importSummaries"
+            Prelude.<*> ( x
+                            Data..?> "importSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "localeId")
@@ -201,7 +202,8 @@ instance Core.AWSRequest ListImports where
 
 instance Prelude.Hashable ListImports where
   hashWithSalt _salt ListImports' {..} =
-    _salt `Prelude.hashWithSalt` botId
+    _salt
+      `Prelude.hashWithSalt` botId
       `Prelude.hashWithSalt` botVersion
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` localeId

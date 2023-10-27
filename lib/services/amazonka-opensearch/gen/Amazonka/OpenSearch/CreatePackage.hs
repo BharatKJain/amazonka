@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpenSearch.CreatePackage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest CreatePackage where
 
 instance Prelude.Hashable CreatePackage where
   hashWithSalt _salt CreatePackage' {..} =
-    _salt `Prelude.hashWithSalt` packageDescription
+    _salt
+      `Prelude.hashWithSalt` packageDescription
       `Prelude.hashWithSalt` packageName
       `Prelude.hashWithSalt` packageType
       `Prelude.hashWithSalt` packageSource

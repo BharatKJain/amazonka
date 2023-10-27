@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.InboundConnectionStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.InboundConnectionStatus where
@@ -133,7 +133,8 @@ instance Data.FromJSON InboundConnectionStatus where
 
 instance Prelude.Hashable InboundConnectionStatus where
   hashWithSalt _salt InboundConnectionStatus' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` statusCode
 
 instance Prelude.NFData InboundConnectionStatus where

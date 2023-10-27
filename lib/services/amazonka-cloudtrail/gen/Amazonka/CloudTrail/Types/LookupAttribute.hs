@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudTrail.Types.LookupAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudTrail.Types.LookupAttribute where
@@ -69,7 +69,8 @@ lookupAttribute_attributeValue = Lens.lens (\LookupAttribute' {attributeValue} -
 
 instance Prelude.Hashable LookupAttribute where
   hashWithSalt _salt LookupAttribute' {..} =
-    _salt `Prelude.hashWithSalt` attributeKey
+    _salt
+      `Prelude.hashWithSalt` attributeKey
       `Prelude.hashWithSalt` attributeValue
 
 instance Prelude.NFData LookupAttribute where

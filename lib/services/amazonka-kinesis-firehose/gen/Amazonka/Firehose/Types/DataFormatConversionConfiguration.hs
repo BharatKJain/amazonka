@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.DataFormatConversionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.DataFormatConversionConfiguration where
@@ -135,7 +135,8 @@ instance
   hashWithSalt
     _salt
     DataFormatConversionConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` enabled
+      _salt
+        `Prelude.hashWithSalt` enabled
         `Prelude.hashWithSalt` inputFormatConfiguration
         `Prelude.hashWithSalt` outputFormatConfiguration
         `Prelude.hashWithSalt` schemaConfiguration

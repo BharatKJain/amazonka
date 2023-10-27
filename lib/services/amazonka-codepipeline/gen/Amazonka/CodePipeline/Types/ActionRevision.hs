@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ActionRevision
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ActionRevision where
@@ -102,7 +102,8 @@ instance Data.FromJSON ActionRevision where
 
 instance Prelude.Hashable ActionRevision where
   hashWithSalt _salt ActionRevision' {..} =
-    _salt `Prelude.hashWithSalt` revisionId
+    _salt
+      `Prelude.hashWithSalt` revisionId
       `Prelude.hashWithSalt` revisionChangeId
       `Prelude.hashWithSalt` created
 

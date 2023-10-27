@@ -14,7 +14,7 @@
 -- Module      : Amazonka.BackupGateway.Types.VmwareTag
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.BackupGateway.Types.VmwareTag where
@@ -89,7 +89,8 @@ instance Data.FromJSON VmwareTag where
 
 instance Prelude.Hashable VmwareTag where
   hashWithSalt _salt VmwareTag' {..} =
-    _salt `Prelude.hashWithSalt` vmwareCategory
+    _salt
+      `Prelude.hashWithSalt` vmwareCategory
       `Prelude.hashWithSalt` vmwareTagDescription
       `Prelude.hashWithSalt` vmwareTagName
 

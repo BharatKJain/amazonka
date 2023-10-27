@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Proton.Types.ServiceTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Proton.Types.ServiceTemplate where
@@ -166,7 +166,8 @@ instance Data.FromJSON ServiceTemplate where
 
 instance Prelude.Hashable ServiceTemplate where
   hashWithSalt _salt ServiceTemplate' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` encryptionKey
       `Prelude.hashWithSalt` pipelineProvisioning

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectoryService.DescribeDomainControllers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,22 +124,22 @@ instance Core.AWSPager DescribeDomainControllers where
     | Core.stop
         ( rs
             Lens.^? describeDomainControllersResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeDomainControllersResponse_domainControllers
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeDomainControllers_nextToken
           Lens..~ rs
           Lens.^? describeDomainControllersResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeDomainControllers where
   type
@@ -151,7 +151,8 @@ instance Core.AWSRequest DescribeDomainControllers where
     Response.receiveJSON
       ( \s h x ->
           DescribeDomainControllersResponse'
-            Prelude.<$> ( x Data..?> "DomainControllers"
+            Prelude.<$> ( x
+                            Data..?> "DomainControllers"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -160,7 +161,8 @@ instance Core.AWSRequest DescribeDomainControllers where
 
 instance Prelude.Hashable DescribeDomainControllers where
   hashWithSalt _salt DescribeDomainControllers' {..} =
-    _salt `Prelude.hashWithSalt` domainControllerIds
+    _salt
+      `Prelude.hashWithSalt` domainControllerIds
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` directoryId

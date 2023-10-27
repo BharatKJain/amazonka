@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Proton.Types.EnvironmentAccountConnection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Proton.Types.EnvironmentAccountConnection where
@@ -251,7 +251,8 @@ instance
     EnvironmentAccountConnection
   where
   hashWithSalt _salt EnvironmentAccountConnection' {..} =
-    _salt `Prelude.hashWithSalt` codebuildRoleArn
+    _salt
+      `Prelude.hashWithSalt` codebuildRoleArn
       `Prelude.hashWithSalt` componentRoleArn
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` environmentAccountId

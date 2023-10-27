@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTFleetWise.Types.CreateVehicleRequestItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTFleetWise.Types.CreateVehicleRequestItem where
@@ -124,7 +124,8 @@ createVehicleRequestItem_decoderManifestArn = Lens.lens (\CreateVehicleRequestIt
 
 instance Prelude.Hashable CreateVehicleRequestItem where
   hashWithSalt _salt CreateVehicleRequestItem' {..} =
-    _salt `Prelude.hashWithSalt` associationBehavior
+    _salt
+      `Prelude.hashWithSalt` associationBehavior
       `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` vehicleName

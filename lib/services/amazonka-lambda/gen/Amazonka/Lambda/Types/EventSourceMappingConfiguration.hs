@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.EventSourceMappingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.EventSourceMappingConfiguration where
@@ -442,7 +442,8 @@ instance
             Prelude.<*> (x Data..:? "EventSourceArn")
             Prelude.<*> (x Data..:? "FilterCriteria")
             Prelude.<*> (x Data..:? "FunctionArn")
-            Prelude.<*> ( x Data..:? "FunctionResponseTypes"
+            Prelude.<*> ( x
+                            Data..:? "FunctionResponseTypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "LastModified")
@@ -454,7 +455,8 @@ instance
             Prelude.<*> (x Data..:? "Queues")
             Prelude.<*> (x Data..:? "SelfManagedEventSource")
             Prelude.<*> (x Data..:? "SelfManagedKafkaEventSourceConfig")
-            Prelude.<*> ( x Data..:? "SourceAccessConfigurations"
+            Prelude.<*> ( x
+                            Data..:? "SourceAccessConfigurations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "StartingPosition")

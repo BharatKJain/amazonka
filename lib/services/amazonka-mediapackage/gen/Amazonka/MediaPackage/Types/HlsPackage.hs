@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaPackage.Types.HlsPackage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaPackage.Types.HlsPackage where
@@ -239,7 +239,8 @@ instance Data.FromJSON HlsPackage where
 
 instance Prelude.Hashable HlsPackage where
   hashWithSalt _salt HlsPackage' {..} =
-    _salt `Prelude.hashWithSalt` adMarkers
+    _salt
+      `Prelude.hashWithSalt` adMarkers
       `Prelude.hashWithSalt` adTriggers
       `Prelude.hashWithSalt` adsOnDeliveryRestrictions
       `Prelude.hashWithSalt` encryption

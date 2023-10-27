@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.DashConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.DashConfiguration where
@@ -125,7 +125,8 @@ instance Data.FromJSON DashConfiguration where
 
 instance Prelude.Hashable DashConfiguration where
   hashWithSalt _salt DashConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` manifestEndpointPrefix
+    _salt
+      `Prelude.hashWithSalt` manifestEndpointPrefix
       `Prelude.hashWithSalt` mpdLocation
       `Prelude.hashWithSalt` originManifestType
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.VideoSelector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.VideoSelector where
@@ -129,7 +129,8 @@ instance Data.FromJSON VideoSelector where
 
 instance Prelude.Hashable VideoSelector where
   hashWithSalt _salt VideoSelector' {..} =
-    _salt `Prelude.hashWithSalt` colorSpace
+    _salt
+      `Prelude.hashWithSalt` colorSpace
       `Prelude.hashWithSalt` colorSpaceSettings
       `Prelude.hashWithSalt` colorSpaceUsage
       `Prelude.hashWithSalt` selectorSettings

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GamesParks.Types.GameSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GamesParks.Types.GameSummary where
@@ -95,7 +95,8 @@ instance Data.FromJSON GameSummary where
 
 instance Prelude.Hashable GameSummary where
   hashWithSalt _salt GameSummary' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` tags

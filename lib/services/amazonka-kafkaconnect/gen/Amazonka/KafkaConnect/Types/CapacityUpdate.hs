@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.CapacityUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.CapacityUpdate where
@@ -67,7 +67,8 @@ capacityUpdate_provisionedCapacity = Lens.lens (\CapacityUpdate' {provisionedCap
 
 instance Prelude.Hashable CapacityUpdate where
   hashWithSalt _salt CapacityUpdate' {..} =
-    _salt `Prelude.hashWithSalt` autoScaling
+    _salt
+      `Prelude.hashWithSalt` autoScaling
       `Prelude.hashWithSalt` provisionedCapacity
 
 instance Prelude.NFData CapacityUpdate where

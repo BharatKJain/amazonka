@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeArtifact.Types.PackageDependency
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeArtifact.Types.PackageDependency where
@@ -134,7 +134,8 @@ instance Data.FromJSON PackageDependency where
 
 instance Prelude.Hashable PackageDependency where
   hashWithSalt _salt PackageDependency' {..} =
-    _salt `Prelude.hashWithSalt` dependencyType
+    _salt
+      `Prelude.hashWithSalt` dependencyType
       `Prelude.hashWithSalt` namespace
       `Prelude.hashWithSalt` package
       `Prelude.hashWithSalt` versionRequirement

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ForecastScenario
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ForecastScenario where
@@ -77,7 +77,8 @@ instance Data.FromJSON ForecastScenario where
 
 instance Prelude.Hashable ForecastScenario where
   hashWithSalt _salt ForecastScenario' {..} =
-    _salt `Prelude.hashWithSalt` whatIfPointScenario
+    _salt
+      `Prelude.hashWithSalt` whatIfPointScenario
       `Prelude.hashWithSalt` whatIfRangeScenario
 
 instance Prelude.NFData ForecastScenario where

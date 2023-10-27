@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTData.GetThingShadow
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest GetThingShadow where
 
 instance Prelude.Hashable GetThingShadow where
   hashWithSalt _salt GetThingShadow' {..} =
-    _salt `Prelude.hashWithSalt` shadowName
+    _salt
+      `Prelude.hashWithSalt` shadowName
       `Prelude.hashWithSalt` thingName
 
 instance Prelude.NFData GetThingShadow where

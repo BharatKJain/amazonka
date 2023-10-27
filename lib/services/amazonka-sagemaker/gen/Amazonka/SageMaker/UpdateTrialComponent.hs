@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.UpdateTrialComponent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -208,7 +208,8 @@ instance Core.AWSRequest UpdateTrialComponent where
 
 instance Prelude.Hashable UpdateTrialComponent where
   hashWithSalt _salt UpdateTrialComponent' {..} =
-    _salt `Prelude.hashWithSalt` displayName
+    _salt
+      `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` inputArtifacts
       `Prelude.hashWithSalt` inputArtifactsToRemove

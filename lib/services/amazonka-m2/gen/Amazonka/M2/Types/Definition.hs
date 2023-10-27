@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.Definition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.Definition where
@@ -70,7 +70,8 @@ definition_s3Location = Lens.lens (\Definition' {s3Location} -> s3Location) (\s@
 
 instance Prelude.Hashable Definition where
   hashWithSalt _salt Definition' {..} =
-    _salt `Prelude.hashWithSalt` content
+    _salt
+      `Prelude.hashWithSalt` content
       `Prelude.hashWithSalt` s3Location
 
 instance Prelude.NFData Definition where

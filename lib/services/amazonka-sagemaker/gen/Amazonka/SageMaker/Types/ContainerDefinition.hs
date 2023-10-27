@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ContainerDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ContainerDefinition where
@@ -289,7 +289,8 @@ instance Data.FromJSON ContainerDefinition where
 
 instance Prelude.Hashable ContainerDefinition where
   hashWithSalt _salt ContainerDefinition' {..} =
-    _salt `Prelude.hashWithSalt` containerHostname
+    _salt
+      `Prelude.hashWithSalt` containerHostname
       `Prelude.hashWithSalt` environment
       `Prelude.hashWithSalt` image
       `Prelude.hashWithSalt` imageConfig

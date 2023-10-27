@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.StartGameSessionPlacement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -260,7 +260,8 @@ instance Core.AWSRequest StartGameSessionPlacement where
 
 instance Prelude.Hashable StartGameSessionPlacement where
   hashWithSalt _salt StartGameSessionPlacement' {..} =
-    _salt `Prelude.hashWithSalt` desiredPlayerSessions
+    _salt
+      `Prelude.hashWithSalt` desiredPlayerSessions
       `Prelude.hashWithSalt` gameProperties
       `Prelude.hashWithSalt` gameSessionData
       `Prelude.hashWithSalt` gameSessionName

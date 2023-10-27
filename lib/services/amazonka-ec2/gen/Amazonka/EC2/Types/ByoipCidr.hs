@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ByoipCidr
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ByoipCidr where
@@ -97,7 +97,8 @@ instance Data.FromXML ByoipCidr where
 
 instance Prelude.Hashable ByoipCidr where
   hashWithSalt _salt ByoipCidr' {..} =
-    _salt `Prelude.hashWithSalt` cidr
+    _salt
+      `Prelude.hashWithSalt` cidr
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` statusMessage

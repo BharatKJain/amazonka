@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.ResourceQuotas
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.ResourceQuotas where
@@ -103,7 +103,8 @@ instance Data.FromXML ResourceQuotas where
 
 instance Prelude.Hashable ResourceQuotas where
   hashWithSalt _salt ResourceQuotas' {..} =
-    _salt `Prelude.hashWithSalt` applicationQuota
+    _salt
+      `Prelude.hashWithSalt` applicationQuota
       `Prelude.hashWithSalt` applicationVersionQuota
       `Prelude.hashWithSalt` configurationTemplateQuota
       `Prelude.hashWithSalt` customPlatformQuota

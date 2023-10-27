@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.ThirdPartySourceRepository
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.ThirdPartySourceRepository where
@@ -107,7 +107,8 @@ thirdPartySourceRepository_owner = Lens.lens (\ThirdPartySourceRepository' {owne
 
 instance Prelude.Hashable ThirdPartySourceRepository where
   hashWithSalt _salt ThirdPartySourceRepository' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` connectionArn
       `Prelude.hashWithSalt` owner
 

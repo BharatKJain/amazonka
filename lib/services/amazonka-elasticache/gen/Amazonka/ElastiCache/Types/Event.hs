@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.Event
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.Event where
@@ -102,7 +102,8 @@ instance Data.FromXML Event where
 
 instance Prelude.Hashable Event where
   hashWithSalt _salt Event' {..} =
-    _salt `Prelude.hashWithSalt` date
+    _salt
+      `Prelude.hashWithSalt` date
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` sourceIdentifier
       `Prelude.hashWithSalt` sourceType

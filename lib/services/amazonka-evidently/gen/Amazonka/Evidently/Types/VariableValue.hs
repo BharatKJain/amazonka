@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.VariableValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.VariableValue where
@@ -108,7 +108,8 @@ instance Data.FromJSON VariableValue where
 
 instance Prelude.Hashable VariableValue where
   hashWithSalt _salt VariableValue' {..} =
-    _salt `Prelude.hashWithSalt` boolValue
+    _salt
+      `Prelude.hashWithSalt` boolValue
       `Prelude.hashWithSalt` doubleValue
       `Prelude.hashWithSalt` longValue
       `Prelude.hashWithSalt` stringValue

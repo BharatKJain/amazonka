@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.DedicatedIpPool
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.DedicatedIpPool where
@@ -97,7 +97,8 @@ instance Data.FromJSON DedicatedIpPool where
 
 instance Prelude.Hashable DedicatedIpPool where
   hashWithSalt _salt DedicatedIpPool' {..} =
-    _salt `Prelude.hashWithSalt` poolName
+    _salt
+      `Prelude.hashWithSalt` poolName
       `Prelude.hashWithSalt` scalingMode
 
 instance Prelude.NFData DedicatedIpPool where

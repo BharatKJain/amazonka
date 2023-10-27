@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RBin.Types.ResourceTag
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RBin.Types.ResourceTag where
@@ -77,7 +77,8 @@ instance Data.FromJSON ResourceTag where
 
 instance Prelude.Hashable ResourceTag where
   hashWithSalt _salt ResourceTag' {..} =
-    _salt `Prelude.hashWithSalt` resourceTagValue
+    _salt
+      `Prelude.hashWithSalt` resourceTagValue
       `Prelude.hashWithSalt` resourceTagKey
 
 instance Prelude.NFData ResourceTag where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.RelationalDatabaseEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.RelationalDatabaseEndpoint where
@@ -75,7 +75,8 @@ instance Data.FromJSON RelationalDatabaseEndpoint where
 
 instance Prelude.Hashable RelationalDatabaseEndpoint where
   hashWithSalt _salt RelationalDatabaseEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` address
+    _salt
+      `Prelude.hashWithSalt` address
       `Prelude.hashWithSalt` port
 
 instance Prelude.NFData RelationalDatabaseEndpoint where

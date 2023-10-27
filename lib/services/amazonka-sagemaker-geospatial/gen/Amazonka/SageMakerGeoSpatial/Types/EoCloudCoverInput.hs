@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.EoCloudCoverInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.EoCloudCoverInput where
@@ -56,11 +56,9 @@ newEoCloudCoverInput pLowerBound_ pUpperBound_ =
       upperBound = pUpperBound_
     }
 
--- |
 eoCloudCoverInput_lowerBound :: Lens.Lens' EoCloudCoverInput Prelude.Double
 eoCloudCoverInput_lowerBound = Lens.lens (\EoCloudCoverInput' {lowerBound} -> lowerBound) (\s@EoCloudCoverInput' {} a -> s {lowerBound = a} :: EoCloudCoverInput)
 
--- |
 eoCloudCoverInput_upperBound :: Lens.Lens' EoCloudCoverInput Prelude.Double
 eoCloudCoverInput_upperBound = Lens.lens (\EoCloudCoverInput' {upperBound} -> upperBound) (\s@EoCloudCoverInput' {} a -> s {upperBound = a} :: EoCloudCoverInput)
 
@@ -76,7 +74,8 @@ instance Data.FromJSON EoCloudCoverInput where
 
 instance Prelude.Hashable EoCloudCoverInput where
   hashWithSalt _salt EoCloudCoverInput' {..} =
-    _salt `Prelude.hashWithSalt` lowerBound
+    _salt
+      `Prelude.hashWithSalt` lowerBound
       `Prelude.hashWithSalt` upperBound
 
 instance Prelude.NFData EoCloudCoverInput where

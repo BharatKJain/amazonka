@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.DataSetImportItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.DataSetImportItem where
@@ -70,7 +70,8 @@ dataSetImportItem_externalLocation = Lens.lens (\DataSetImportItem' {externalLoc
 
 instance Prelude.Hashable DataSetImportItem where
   hashWithSalt _salt DataSetImportItem' {..} =
-    _salt `Prelude.hashWithSalt` dataSet
+    _salt
+      `Prelude.hashWithSalt` dataSet
       `Prelude.hashWithSalt` externalLocation
 
 instance Prelude.NFData DataSetImportItem where

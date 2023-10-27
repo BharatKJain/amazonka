@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.GetOpenIDConnectProvider
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,14 +112,20 @@ instance Core.AWSRequest GetOpenIDConnectProvider where
       "GetOpenIDConnectProviderResult"
       ( \s h x ->
           GetOpenIDConnectProviderResponse'
-            Prelude.<$> ( x Data..@? "ClientIDList" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "ClientIDList"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (x Data..@? "CreateDate")
-            Prelude.<*> ( x Data..@? "Tags" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "Tags"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
-            Prelude.<*> ( x Data..@? "ThumbprintList" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "ThumbprintList"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (x Data..@? "Url")

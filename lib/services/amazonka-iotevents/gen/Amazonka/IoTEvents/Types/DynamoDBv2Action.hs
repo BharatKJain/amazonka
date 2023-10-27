@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.DynamoDBv2Action
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.DynamoDBv2Action where
@@ -121,7 +121,8 @@ instance Data.FromJSON DynamoDBv2Action where
 
 instance Prelude.Hashable DynamoDBv2Action where
   hashWithSalt _salt DynamoDBv2Action' {..} =
-    _salt `Prelude.hashWithSalt` payload
+    _salt
+      `Prelude.hashWithSalt` payload
       `Prelude.hashWithSalt` tableName
 
 instance Prelude.NFData DynamoDBv2Action where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Rekognition.ListDatasetLabels
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,22 +125,22 @@ instance Core.AWSPager ListDatasetLabels where
     | Core.stop
         ( rs
             Lens.^? listDatasetLabelsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listDatasetLabelsResponse_datasetLabelDescriptions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listDatasetLabels_nextToken
           Lens..~ rs
           Lens.^? listDatasetLabelsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListDatasetLabels where
   type
@@ -152,7 +152,8 @@ instance Core.AWSRequest ListDatasetLabels where
     Response.receiveJSON
       ( \s h x ->
           ListDatasetLabelsResponse'
-            Prelude.<$> ( x Data..?> "DatasetLabelDescriptions"
+            Prelude.<$> ( x
+                            Data..?> "DatasetLabelDescriptions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -161,7 +162,8 @@ instance Core.AWSRequest ListDatasetLabels where
 
 instance Prelude.Hashable ListDatasetLabels where
   hashWithSalt _salt ListDatasetLabels' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` datasetArn
 

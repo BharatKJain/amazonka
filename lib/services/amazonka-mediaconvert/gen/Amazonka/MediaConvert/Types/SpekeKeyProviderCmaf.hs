@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.SpekeKeyProviderCmaf
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.SpekeKeyProviderCmaf where
@@ -136,10 +136,12 @@ instance Data.FromJSON SpekeKeyProviderCmaf where
       ( \x ->
           SpekeKeyProviderCmaf'
             Prelude.<$> (x Data..:? "certificateArn")
-            Prelude.<*> ( x Data..:? "dashSignaledSystemIds"
+            Prelude.<*> ( x
+                            Data..:? "dashSignaledSystemIds"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "hlsSignaledSystemIds"
+            Prelude.<*> ( x
+                            Data..:? "hlsSignaledSystemIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "resourceId")
@@ -148,7 +150,8 @@ instance Data.FromJSON SpekeKeyProviderCmaf where
 
 instance Prelude.Hashable SpekeKeyProviderCmaf where
   hashWithSalt _salt SpekeKeyProviderCmaf' {..} =
-    _salt `Prelude.hashWithSalt` certificateArn
+    _salt
+      `Prelude.hashWithSalt` certificateArn
       `Prelude.hashWithSalt` dashSignaledSystemIds
       `Prelude.hashWithSalt` hlsSignaledSystemIds
       `Prelude.hashWithSalt` resourceId

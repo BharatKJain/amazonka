@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSdkVoice.UpdatePhoneNumber
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest UpdatePhoneNumber where
 
 instance Prelude.Hashable UpdatePhoneNumber where
   hashWithSalt _salt UpdatePhoneNumber' {..} =
-    _salt `Prelude.hashWithSalt` callingName
+    _salt
+      `Prelude.hashWithSalt` callingName
       `Prelude.hashWithSalt` productType
       `Prelude.hashWithSalt` phoneNumberId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.RasterDataCollectionQueryInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.RasterDataCollectionQueryInput where
@@ -78,7 +78,6 @@ newRasterDataCollectionQueryInput
 rasterDataCollectionQueryInput_areaOfInterest :: Lens.Lens' RasterDataCollectionQueryInput (Prelude.Maybe AreaOfInterest)
 rasterDataCollectionQueryInput_areaOfInterest = Lens.lens (\RasterDataCollectionQueryInput' {areaOfInterest} -> areaOfInterest) (\s@RasterDataCollectionQueryInput' {} a -> s {areaOfInterest = a} :: RasterDataCollectionQueryInput)
 
--- |
 rasterDataCollectionQueryInput_propertyFilters :: Lens.Lens' RasterDataCollectionQueryInput (Prelude.Maybe PropertyFilters)
 rasterDataCollectionQueryInput_propertyFilters = Lens.lens (\RasterDataCollectionQueryInput' {propertyFilters} -> propertyFilters) (\s@RasterDataCollectionQueryInput' {} a -> s {propertyFilters = a} :: RasterDataCollectionQueryInput)
 
@@ -86,7 +85,6 @@ rasterDataCollectionQueryInput_propertyFilters = Lens.lens (\RasterDataCollectio
 rasterDataCollectionQueryInput_rasterDataCollectionArn :: Lens.Lens' RasterDataCollectionQueryInput Prelude.Text
 rasterDataCollectionQueryInput_rasterDataCollectionArn = Lens.lens (\RasterDataCollectionQueryInput' {rasterDataCollectionArn} -> rasterDataCollectionArn) (\s@RasterDataCollectionQueryInput' {} a -> s {rasterDataCollectionArn = a} :: RasterDataCollectionQueryInput)
 
--- |
 rasterDataCollectionQueryInput_timeRangeFilter :: Lens.Lens' RasterDataCollectionQueryInput TimeRangeFilterInput
 rasterDataCollectionQueryInput_timeRangeFilter = Lens.lens (\RasterDataCollectionQueryInput' {timeRangeFilter} -> timeRangeFilter) (\s@RasterDataCollectionQueryInput' {} a -> s {timeRangeFilter = a} :: RasterDataCollectionQueryInput) Prelude.. Data._Sensitive
 
@@ -97,7 +95,8 @@ instance
   hashWithSalt
     _salt
     RasterDataCollectionQueryInput' {..} =
-      _salt `Prelude.hashWithSalt` areaOfInterest
+      _salt
+        `Prelude.hashWithSalt` areaOfInterest
         `Prelude.hashWithSalt` propertyFilters
         `Prelude.hashWithSalt` rasterDataCollectionArn
         `Prelude.hashWithSalt` timeRangeFilter

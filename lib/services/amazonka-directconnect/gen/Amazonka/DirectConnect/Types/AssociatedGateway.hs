@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectConnect.Types.AssociatedGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectConnect.Types.AssociatedGateway where
@@ -98,7 +98,8 @@ instance Data.FromJSON AssociatedGateway where
 
 instance Prelude.Hashable AssociatedGateway where
   hashWithSalt _salt AssociatedGateway' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` ownerAccount
       `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` type'

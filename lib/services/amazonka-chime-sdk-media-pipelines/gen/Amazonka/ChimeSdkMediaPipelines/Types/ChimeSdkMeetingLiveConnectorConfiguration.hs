@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkMediaPipelines.Types.ChimeSdkMeetingLiveConnectorConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkMediaPipelines.Types.ChimeSdkMeetingLiveConnectorConfiguration where
@@ -105,9 +105,9 @@ instance
       ( \x ->
           ChimeSdkMeetingLiveConnectorConfiguration'
             Prelude.<$> (x Data..:? "CompositedVideo")
-              Prelude.<*> (x Data..:? "SourceConfiguration")
-              Prelude.<*> (x Data..: "Arn")
-              Prelude.<*> (x Data..: "MuxType")
+            Prelude.<*> (x Data..:? "SourceConfiguration")
+            Prelude.<*> (x Data..: "Arn")
+            Prelude.<*> (x Data..: "MuxType")
       )
 
 instance
@@ -117,7 +117,8 @@ instance
   hashWithSalt
     _salt
     ChimeSdkMeetingLiveConnectorConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` compositedVideo
+      _salt
+        `Prelude.hashWithSalt` compositedVideo
         `Prelude.hashWithSalt` sourceConfiguration
         `Prelude.hashWithSalt` arn
         `Prelude.hashWithSalt` muxType

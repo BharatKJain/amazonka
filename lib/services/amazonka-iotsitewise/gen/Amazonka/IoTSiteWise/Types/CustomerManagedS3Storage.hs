@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.CustomerManagedS3Storage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.CustomerManagedS3Storage where
@@ -103,7 +103,8 @@ instance Data.FromJSON CustomerManagedS3Storage where
 
 instance Prelude.Hashable CustomerManagedS3Storage where
   hashWithSalt _salt CustomerManagedS3Storage' {..} =
-    _salt `Prelude.hashWithSalt` s3ResourceArn
+    _salt
+      `Prelude.hashWithSalt` s3ResourceArn
       `Prelude.hashWithSalt` roleArn
 
 instance Prelude.NFData CustomerManagedS3Storage where

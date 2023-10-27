@@ -16,7 +16,7 @@
 -- Module      : Amazonka.PinpointEmail.PutEmailIdentityMailFromAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -174,7 +174,8 @@ instance
   hashWithSalt
     _salt
     PutEmailIdentityMailFromAttributes' {..} =
-      _salt `Prelude.hashWithSalt` behaviorOnMxFailure
+      _salt
+        `Prelude.hashWithSalt` behaviorOnMxFailure
         `Prelude.hashWithSalt` mailFromDomain
         `Prelude.hashWithSalt` emailIdentity
 

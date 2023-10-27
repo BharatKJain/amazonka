@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.ServiceAccountCredentials
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.ServiceAccountCredentials where
@@ -92,7 +92,8 @@ instance Data.FromJSON ServiceAccountCredentials where
 
 instance Prelude.Hashable ServiceAccountCredentials where
   hashWithSalt _salt ServiceAccountCredentials' {..} =
-    _salt `Prelude.hashWithSalt` accountName
+    _salt
+      `Prelude.hashWithSalt` accountName
       `Prelude.hashWithSalt` accountPassword
 
 instance Prelude.NFData ServiceAccountCredentials where

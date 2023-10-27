@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.NotificationChannel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.NotificationChannel where
@@ -76,7 +76,8 @@ notificationChannel_roleArn = Lens.lens (\NotificationChannel' {roleArn} -> role
 
 instance Prelude.Hashable NotificationChannel where
   hashWithSalt _salt NotificationChannel' {..} =
-    _salt `Prelude.hashWithSalt` sNSTopicArn
+    _salt
+      `Prelude.hashWithSalt` sNSTopicArn
       `Prelude.hashWithSalt` roleArn
 
 instance Prelude.NFData NotificationChannel where

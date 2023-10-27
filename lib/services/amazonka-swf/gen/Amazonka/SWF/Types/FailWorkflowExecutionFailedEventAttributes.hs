@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.FailWorkflowExecutionFailedEventAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.FailWorkflowExecutionFailedEventAttributes where
@@ -111,7 +111,7 @@ instance
       ( \x ->
           FailWorkflowExecutionFailedEventAttributes'
             Prelude.<$> (x Data..: "cause")
-              Prelude.<*> (x Data..: "decisionTaskCompletedEventId")
+            Prelude.<*> (x Data..: "decisionTaskCompletedEventId")
       )
 
 instance
@@ -121,7 +121,8 @@ instance
   hashWithSalt
     _salt
     FailWorkflowExecutionFailedEventAttributes' {..} =
-      _salt `Prelude.hashWithSalt` cause
+      _salt
+        `Prelude.hashWithSalt` cause
         `Prelude.hashWithSalt` decisionTaskCompletedEventId
 
 instance

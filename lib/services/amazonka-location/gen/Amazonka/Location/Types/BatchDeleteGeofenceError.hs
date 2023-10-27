@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.BatchDeleteGeofenceError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.BatchDeleteGeofenceError where
@@ -80,7 +80,8 @@ instance Data.FromJSON BatchDeleteGeofenceError where
 
 instance Prelude.Hashable BatchDeleteGeofenceError where
   hashWithSalt _salt BatchDeleteGeofenceError' {..} =
-    _salt `Prelude.hashWithSalt` error
+    _salt
+      `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` geofenceId
 
 instance Prelude.NFData BatchDeleteGeofenceError where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.LifecycleExpiration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.LifecycleExpiration where
@@ -96,7 +96,8 @@ instance Data.FromXML LifecycleExpiration where
 
 instance Prelude.Hashable LifecycleExpiration where
   hashWithSalt _salt LifecycleExpiration' {..} =
-    _salt `Prelude.hashWithSalt` date
+    _salt
+      `Prelude.hashWithSalt` date
       `Prelude.hashWithSalt` days
       `Prelude.hashWithSalt` expiredObjectDeleteMarker
 

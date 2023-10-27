@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RobOMaker.CreateRobotApplicationVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -155,7 +155,8 @@ instance
     CreateRobotApplicationVersion
   where
   hashWithSalt _salt CreateRobotApplicationVersion' {..} =
-    _salt `Prelude.hashWithSalt` currentRevisionId
+    _salt
+      `Prelude.hashWithSalt` currentRevisionId
       `Prelude.hashWithSalt` imageDigest
       `Prelude.hashWithSalt` s3Etags
       `Prelude.hashWithSalt` application

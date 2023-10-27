@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.DefaultRetention
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.DefaultRetention where
@@ -101,7 +101,8 @@ instance Data.FromXML DefaultRetention where
 
 instance Prelude.Hashable DefaultRetention where
   hashWithSalt _salt DefaultRetention' {..} =
-    _salt `Prelude.hashWithSalt` days
+    _salt
+      `Prelude.hashWithSalt` days
       `Prelude.hashWithSalt` mode
       `Prelude.hashWithSalt` years
 

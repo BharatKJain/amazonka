@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.DescribeFleetsInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.DescribeFleetsInstances where
@@ -110,7 +110,9 @@ describeFleetsInstances_platform = Lens.lens (\DescribeFleetsInstances' {platfor
 instance Data.FromXML DescribeFleetsInstances where
   parseXML x =
     DescribeFleetsInstances'
-      Prelude.<$> ( x Data..@? "instanceIds" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "instanceIds"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "instanceType")
@@ -120,7 +122,8 @@ instance Data.FromXML DescribeFleetsInstances where
 
 instance Prelude.Hashable DescribeFleetsInstances where
   hashWithSalt _salt DescribeFleetsInstances' {..} =
-    _salt `Prelude.hashWithSalt` instanceIds
+    _salt
+      `Prelude.hashWithSalt` instanceIds
       `Prelude.hashWithSalt` instanceType
       `Prelude.hashWithSalt` launchTemplateAndOverrides
       `Prelude.hashWithSalt` lifecycle

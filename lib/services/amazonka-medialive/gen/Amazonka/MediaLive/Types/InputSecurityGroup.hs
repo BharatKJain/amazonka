@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.InputSecurityGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.InputSecurityGroup where
@@ -111,14 +111,16 @@ instance Data.FromJSON InputSecurityGroup where
             Prelude.<*> (x Data..:? "inputs" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "state")
             Prelude.<*> (x Data..:? "tags" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "whitelistRules"
+            Prelude.<*> ( x
+                            Data..:? "whitelistRules"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable InputSecurityGroup where
   hashWithSalt _salt InputSecurityGroup' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` inputs
       `Prelude.hashWithSalt` state

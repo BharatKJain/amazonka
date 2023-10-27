@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ELB.CreateLoadBalancerPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -142,7 +142,8 @@ instance Core.AWSRequest CreateLoadBalancerPolicy where
 
 instance Prelude.Hashable CreateLoadBalancerPolicy where
   hashWithSalt _salt CreateLoadBalancerPolicy' {..} =
-    _salt `Prelude.hashWithSalt` policyAttributes
+    _salt
+      `Prelude.hashWithSalt` policyAttributes
       `Prelude.hashWithSalt` loadBalancerName
       `Prelude.hashWithSalt` policyName
       `Prelude.hashWithSalt` policyTypeName

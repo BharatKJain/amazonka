@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.DeviceStatusInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.DeviceStatusInfo where
@@ -85,14 +85,16 @@ instance Data.FromJSON DeviceStatusInfo where
           DeviceStatusInfo'
             Prelude.<$> (x Data..:? "ConnectionStatus")
             Prelude.<*> (x Data..:? "ConnectionStatusUpdatedTime")
-            Prelude.<*> ( x Data..:? "DeviceStatusDetails"
+            Prelude.<*> ( x
+                            Data..:? "DeviceStatusDetails"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable DeviceStatusInfo where
   hashWithSalt _salt DeviceStatusInfo' {..} =
-    _salt `Prelude.hashWithSalt` connectionStatus
+    _salt
+      `Prelude.hashWithSalt` connectionStatus
       `Prelude.hashWithSalt` connectionStatusUpdatedTime
       `Prelude.hashWithSalt` deviceStatusDetails
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.TsvStoreOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.TsvStoreOptions where
@@ -87,7 +87,8 @@ instance Data.FromJSON TsvStoreOptions where
 
 instance Prelude.Hashable TsvStoreOptions where
   hashWithSalt _salt TsvStoreOptions' {..} =
-    _salt `Prelude.hashWithSalt` annotationType
+    _salt
+      `Prelude.hashWithSalt` annotationType
       `Prelude.hashWithSalt` formatToHeader
       `Prelude.hashWithSalt` schema
 

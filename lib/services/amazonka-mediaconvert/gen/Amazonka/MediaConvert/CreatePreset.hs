@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaConvert.CreatePreset
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest CreatePreset where
 
 instance Prelude.Hashable CreatePreset where
   hashWithSalt _salt CreatePreset' {..} =
-    _salt `Prelude.hashWithSalt` category
+    _salt
+      `Prelude.hashWithSalt` category
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` settings

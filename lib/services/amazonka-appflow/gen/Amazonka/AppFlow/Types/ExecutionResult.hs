@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.ExecutionResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.ExecutionResult where
@@ -95,7 +95,8 @@ instance Data.FromJSON ExecutionResult where
 
 instance Prelude.Hashable ExecutionResult where
   hashWithSalt _salt ExecutionResult' {..} =
-    _salt `Prelude.hashWithSalt` bytesProcessed
+    _salt
+      `Prelude.hashWithSalt` bytesProcessed
       `Prelude.hashWithSalt` bytesWritten
       `Prelude.hashWithSalt` errorInfo
       `Prelude.hashWithSalt` recordsProcessed

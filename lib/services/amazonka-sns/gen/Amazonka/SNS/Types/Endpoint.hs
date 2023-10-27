@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SNS.Types.Endpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SNS.Types.Endpoint where
@@ -65,14 +65,17 @@ endpoint_endpointArn = Lens.lens (\Endpoint' {endpointArn} -> endpointArn) (\s@E
 instance Data.FromXML Endpoint where
   parseXML x =
     Endpoint'
-      Prelude.<$> ( x Data..@? "Attributes" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Attributes"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLMap "entry" "key" "value")
                   )
       Prelude.<*> (x Data..@? "EndpointArn")
 
 instance Prelude.Hashable Endpoint where
   hashWithSalt _salt Endpoint' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` endpointArn
 
 instance Prelude.NFData Endpoint where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.FeatureTransformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.FeatureTransformation where
@@ -123,7 +123,8 @@ instance Data.FromJSON FeatureTransformation where
       ( \x ->
           FeatureTransformation'
             Prelude.<$> (x Data..:? "creationDateTime")
-            Prelude.<*> ( x Data..:? "defaultParameters"
+            Prelude.<*> ( x
+                            Data..:? "defaultParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "featureTransformationArn")
@@ -134,7 +135,8 @@ instance Data.FromJSON FeatureTransformation where
 
 instance Prelude.Hashable FeatureTransformation where
   hashWithSalt _salt FeatureTransformation' {..} =
-    _salt `Prelude.hashWithSalt` creationDateTime
+    _salt
+      `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` defaultParameters
       `Prelude.hashWithSalt` featureTransformationArn
       `Prelude.hashWithSalt` lastUpdatedDateTime

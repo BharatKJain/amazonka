@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.KeySchemaElement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.KeySchemaElement where
@@ -135,7 +135,8 @@ instance Data.FromJSON KeySchemaElement where
 
 instance Prelude.Hashable KeySchemaElement where
   hashWithSalt _salt KeySchemaElement' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` keyType
 
 instance Prelude.NFData KeySchemaElement where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsIamAttachedManagedPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsIamAttachedManagedPolicy where
@@ -75,7 +75,8 @@ instance Data.FromJSON AwsIamAttachedManagedPolicy where
 
 instance Prelude.Hashable AwsIamAttachedManagedPolicy where
   hashWithSalt _salt AwsIamAttachedManagedPolicy' {..} =
-    _salt `Prelude.hashWithSalt` policyArn
+    _salt
+      `Prelude.hashWithSalt` policyArn
       `Prelude.hashWithSalt` policyName
 
 instance Prelude.NFData AwsIamAttachedManagedPolicy where

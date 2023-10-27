@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.GetUserDefinedFunctions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -140,22 +140,22 @@ instance Core.AWSPager GetUserDefinedFunctions where
     | Core.stop
         ( rs
             Lens.^? getUserDefinedFunctionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getUserDefinedFunctionsResponse_userDefinedFunctions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getUserDefinedFunctions_nextToken
           Lens..~ rs
           Lens.^? getUserDefinedFunctionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetUserDefinedFunctions where
   type
@@ -168,7 +168,8 @@ instance Core.AWSRequest GetUserDefinedFunctions where
       ( \s h x ->
           GetUserDefinedFunctionsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "UserDefinedFunctions"
+            Prelude.<*> ( x
+                            Data..?> "UserDefinedFunctions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -176,7 +177,8 @@ instance Core.AWSRequest GetUserDefinedFunctions where
 
 instance Prelude.Hashable GetUserDefinedFunctions where
   hashWithSalt _salt GetUserDefinedFunctions' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

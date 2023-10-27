@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutVision.Types.ProjectMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutVision.Types.ProjectMetadata where
@@ -85,7 +85,8 @@ instance Data.FromJSON ProjectMetadata where
 
 instance Prelude.Hashable ProjectMetadata where
   hashWithSalt _salt ProjectMetadata' {..} =
-    _salt `Prelude.hashWithSalt` creationTimestamp
+    _salt
+      `Prelude.hashWithSalt` creationTimestamp
       `Prelude.hashWithSalt` projectArn
       `Prelude.hashWithSalt` projectName
 

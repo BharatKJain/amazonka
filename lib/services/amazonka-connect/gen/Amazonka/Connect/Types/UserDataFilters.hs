@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.UserDataFilters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.UserDataFilters where
@@ -95,7 +95,8 @@ userDataFilters_userHierarchyGroups = Lens.lens (\UserDataFilters' {userHierarch
 
 instance Prelude.Hashable UserDataFilters where
   hashWithSalt _salt UserDataFilters' {..} =
-    _salt `Prelude.hashWithSalt` agents
+    _salt
+      `Prelude.hashWithSalt` agents
       `Prelude.hashWithSalt` contactFilter
       `Prelude.hashWithSalt` queues
       `Prelude.hashWithSalt` routingProfiles

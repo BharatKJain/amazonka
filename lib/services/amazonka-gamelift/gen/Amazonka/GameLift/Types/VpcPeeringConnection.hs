@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.VpcPeeringConnection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.VpcPeeringConnection where
@@ -180,7 +180,8 @@ instance Data.FromJSON VpcPeeringConnection where
 
 instance Prelude.Hashable VpcPeeringConnection where
   hashWithSalt _salt VpcPeeringConnection' {..} =
-    _salt `Prelude.hashWithSalt` fleetArn
+    _salt
+      `Prelude.hashWithSalt` fleetArn
       `Prelude.hashWithSalt` fleetId
       `Prelude.hashWithSalt` gameLiftVpcId
       `Prelude.hashWithSalt` ipV4CidrBlock

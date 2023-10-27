@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ImageBuilder.Types.InfrastructureConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ImageBuilder.Types.InfrastructureConfiguration where
@@ -231,7 +231,8 @@ instance Data.FromJSON InfrastructureConfiguration where
             Prelude.<*> (x Data..:? "logging")
             Prelude.<*> (x Data..:? "name")
             Prelude.<*> (x Data..:? "resourceTags" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "securityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "securityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "snsTopicArn")
@@ -242,7 +243,8 @@ instance Data.FromJSON InfrastructureConfiguration where
 
 instance Prelude.Hashable InfrastructureConfiguration where
   hashWithSalt _salt InfrastructureConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` dateCreated
       `Prelude.hashWithSalt` dateUpdated
       `Prelude.hashWithSalt` description

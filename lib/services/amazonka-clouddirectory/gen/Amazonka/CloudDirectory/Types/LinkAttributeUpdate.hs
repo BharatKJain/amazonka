@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.LinkAttributeUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.LinkAttributeUpdate where
@@ -67,7 +67,8 @@ linkAttributeUpdate_attributeKey = Lens.lens (\LinkAttributeUpdate' {attributeKe
 
 instance Prelude.Hashable LinkAttributeUpdate where
   hashWithSalt _salt LinkAttributeUpdate' {..} =
-    _salt `Prelude.hashWithSalt` attributeAction
+    _salt
+      `Prelude.hashWithSalt` attributeAction
       `Prelude.hashWithSalt` attributeKey
 
 instance Prelude.NFData LinkAttributeUpdate where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.InputVpcRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.InputVpcRequest where
@@ -78,7 +78,8 @@ inputVpcRequest_subnetIds = Lens.lens (\InputVpcRequest' {subnetIds} -> subnetId
 
 instance Prelude.Hashable InputVpcRequest where
   hashWithSalt _salt InputVpcRequest' {..} =
-    _salt `Prelude.hashWithSalt` securityGroupIds
+    _salt
+      `Prelude.hashWithSalt` securityGroupIds
       `Prelude.hashWithSalt` subnetIds
 
 instance Prelude.NFData InputVpcRequest where

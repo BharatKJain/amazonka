@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ShadowModelVariantConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ShadowModelVariantConfig where
@@ -84,7 +84,8 @@ instance Data.FromJSON ShadowModelVariantConfig where
 
 instance Prelude.Hashable ShadowModelVariantConfig where
   hashWithSalt _salt ShadowModelVariantConfig' {..} =
-    _salt `Prelude.hashWithSalt` shadowModelVariantName
+    _salt
+      `Prelude.hashWithSalt` shadowModelVariantName
       `Prelude.hashWithSalt` samplingPercentage
 
 instance Prelude.NFData ShadowModelVariantConfig where

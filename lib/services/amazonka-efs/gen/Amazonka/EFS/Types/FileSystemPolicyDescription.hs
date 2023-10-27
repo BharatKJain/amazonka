@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EFS.Types.FileSystemPolicyDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EFS.Types.FileSystemPolicyDescription where
@@ -73,7 +73,8 @@ instance Data.FromJSON FileSystemPolicyDescription where
 
 instance Prelude.Hashable FileSystemPolicyDescription where
   hashWithSalt _salt FileSystemPolicyDescription' {..} =
-    _salt `Prelude.hashWithSalt` fileSystemId
+    _salt
+      `Prelude.hashWithSalt` fileSystemId
       `Prelude.hashWithSalt` policy
 
 instance Prelude.NFData FileSystemPolicyDescription where

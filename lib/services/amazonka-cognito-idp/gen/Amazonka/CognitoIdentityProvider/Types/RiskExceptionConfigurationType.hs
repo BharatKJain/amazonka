@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.RiskExceptionConfigurationType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.RiskExceptionConfigurationType where
@@ -78,10 +78,12 @@ instance Data.FromJSON RiskExceptionConfigurationType where
       "RiskExceptionConfigurationType"
       ( \x ->
           RiskExceptionConfigurationType'
-            Prelude.<$> ( x Data..:? "BlockedIPRangeList"
+            Prelude.<$> ( x
+                            Data..:? "BlockedIPRangeList"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "SkippedIPRangeList"
+            Prelude.<*> ( x
+                            Data..:? "SkippedIPRangeList"
                             Data..!= Prelude.mempty
                         )
       )
@@ -93,7 +95,8 @@ instance
   hashWithSalt
     _salt
     RiskExceptionConfigurationType' {..} =
-      _salt `Prelude.hashWithSalt` blockedIPRangeList
+      _salt
+        `Prelude.hashWithSalt` blockedIPRangeList
         `Prelude.hashWithSalt` skippedIPRangeList
 
 instance

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTAnalytics.StartPipelineReprocessing
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,7 +153,8 @@ instance Core.AWSRequest StartPipelineReprocessing where
 
 instance Prelude.Hashable StartPipelineReprocessing where
   hashWithSalt _salt StartPipelineReprocessing' {..} =
-    _salt `Prelude.hashWithSalt` channelMessages
+    _salt
+      `Prelude.hashWithSalt` channelMessages
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` startTime
       `Prelude.hashWithSalt` pipelineName

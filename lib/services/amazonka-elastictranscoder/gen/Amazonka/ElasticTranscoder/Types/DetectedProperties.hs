@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.DetectedProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.DetectedProperties where
@@ -106,7 +106,8 @@ instance Data.FromJSON DetectedProperties where
 
 instance Prelude.Hashable DetectedProperties where
   hashWithSalt _salt DetectedProperties' {..} =
-    _salt `Prelude.hashWithSalt` durationMillis
+    _salt
+      `Prelude.hashWithSalt` durationMillis
       `Prelude.hashWithSalt` fileSize
       `Prelude.hashWithSalt` frameRate
       `Prelude.hashWithSalt` height

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexModels.Types.OutputContext
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexModels.Types.OutputContext where
@@ -106,7 +106,8 @@ instance Data.FromJSON OutputContext where
 
 instance Prelude.Hashable OutputContext where
   hashWithSalt _salt OutputContext' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` timeToLiveInSeconds
       `Prelude.hashWithSalt` turnsToLive
 

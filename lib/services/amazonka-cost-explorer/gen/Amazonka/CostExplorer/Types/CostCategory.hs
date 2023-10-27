@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.CostCategory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.CostCategory where
@@ -162,7 +162,8 @@ instance Data.FromJSON CostCategory where
           CostCategory'
             Prelude.<$> (x Data..:? "DefaultValue")
             Prelude.<*> (x Data..:? "EffectiveEnd")
-            Prelude.<*> ( x Data..:? "ProcessingStatus"
+            Prelude.<*> ( x
+                            Data..:? "ProcessingStatus"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SplitChargeRules")
@@ -175,7 +176,8 @@ instance Data.FromJSON CostCategory where
 
 instance Prelude.Hashable CostCategory where
   hashWithSalt _salt CostCategory' {..} =
-    _salt `Prelude.hashWithSalt` defaultValue
+    _salt
+      `Prelude.hashWithSalt` defaultValue
       `Prelude.hashWithSalt` effectiveEnd
       `Prelude.hashWithSalt` processingStatus
       `Prelude.hashWithSalt` splitChargeRules

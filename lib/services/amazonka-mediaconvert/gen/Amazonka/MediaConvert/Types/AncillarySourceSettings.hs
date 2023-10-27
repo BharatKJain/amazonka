@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.AncillarySourceSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.AncillarySourceSettings where
@@ -108,7 +108,8 @@ instance Data.FromJSON AncillarySourceSettings where
 
 instance Prelude.Hashable AncillarySourceSettings where
   hashWithSalt _salt AncillarySourceSettings' {..} =
-    _salt `Prelude.hashWithSalt` convert608To708
+    _salt
+      `Prelude.hashWithSalt` convert608To708
       `Prelude.hashWithSalt` sourceAncillaryChannelNumber
       `Prelude.hashWithSalt` terminateCaptions
 

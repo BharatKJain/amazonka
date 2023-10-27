@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.VoiceTemplateResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.VoiceTemplateResponse where
@@ -234,7 +234,8 @@ instance Data.FromJSON VoiceTemplateResponse where
 
 instance Prelude.Hashable VoiceTemplateResponse where
   hashWithSalt _salt VoiceTemplateResponse' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` body
       `Prelude.hashWithSalt` defaultSubstitutions
       `Prelude.hashWithSalt` languageCode

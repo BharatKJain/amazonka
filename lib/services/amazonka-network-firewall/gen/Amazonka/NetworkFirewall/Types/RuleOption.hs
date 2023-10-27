@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.RuleOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.RuleOption where
@@ -55,11 +55,9 @@ newRuleOption pKeyword_ =
       keyword = pKeyword_
     }
 
--- |
 ruleOption_settings :: Lens.Lens' RuleOption (Prelude.Maybe [Prelude.Text])
 ruleOption_settings = Lens.lens (\RuleOption' {settings} -> settings) (\s@RuleOption' {} a -> s {settings = a} :: RuleOption) Prelude.. Lens.mapping Lens.coerced
 
--- |
 ruleOption_keyword :: Lens.Lens' RuleOption Prelude.Text
 ruleOption_keyword = Lens.lens (\RuleOption' {keyword} -> keyword) (\s@RuleOption' {} a -> s {keyword = a} :: RuleOption)
 
@@ -75,7 +73,8 @@ instance Data.FromJSON RuleOption where
 
 instance Prelude.Hashable RuleOption where
   hashWithSalt _salt RuleOption' {..} =
-    _salt `Prelude.hashWithSalt` settings
+    _salt
+      `Prelude.hashWithSalt` settings
       `Prelude.hashWithSalt` keyword
 
 instance Prelude.NFData RuleOption where

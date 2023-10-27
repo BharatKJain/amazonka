@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.PredictorExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.PredictorExecution where
@@ -81,7 +81,8 @@ instance Data.FromJSON PredictorExecution where
 
 instance Prelude.Hashable PredictorExecution where
   hashWithSalt _salt PredictorExecution' {..} =
-    _salt `Prelude.hashWithSalt` algorithmArn
+    _salt
+      `Prelude.hashWithSalt` algorithmArn
       `Prelude.hashWithSalt` testWindows
 
 instance Prelude.NFData PredictorExecution where

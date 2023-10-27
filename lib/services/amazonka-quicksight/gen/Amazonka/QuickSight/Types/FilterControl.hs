@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.FilterControl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.FilterControl where
@@ -144,7 +144,8 @@ instance Data.FromJSON FilterControl where
 
 instance Prelude.Hashable FilterControl where
   hashWithSalt _salt FilterControl' {..} =
-    _salt `Prelude.hashWithSalt` dateTimePicker
+    _salt
+      `Prelude.hashWithSalt` dateTimePicker
       `Prelude.hashWithSalt` dropdown
       `Prelude.hashWithSalt` list
       `Prelude.hashWithSalt` relativeDateTime

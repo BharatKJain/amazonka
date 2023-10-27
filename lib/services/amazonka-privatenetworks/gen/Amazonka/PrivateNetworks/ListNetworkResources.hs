@@ -16,7 +16,7 @@
 -- Module      : Amazonka.PrivateNetworks.ListNetworkResources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -146,22 +146,22 @@ instance Core.AWSPager ListNetworkResources where
     | Core.stop
         ( rs
             Lens.^? listNetworkResourcesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listNetworkResourcesResponse_networkResources
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listNetworkResources_startToken
           Lens..~ rs
           Lens.^? listNetworkResourcesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListNetworkResources where
   type
@@ -173,7 +173,8 @@ instance Core.AWSRequest ListNetworkResources where
     Response.receiveJSON
       ( \s h x ->
           ListNetworkResourcesResponse'
-            Prelude.<$> ( x Data..?> "networkResources"
+            Prelude.<$> ( x
+                            Data..?> "networkResources"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -182,7 +183,8 @@ instance Core.AWSRequest ListNetworkResources where
 
 instance Prelude.Hashable ListNetworkResources where
   hashWithSalt _salt ListNetworkResources' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` startToken
       `Prelude.hashWithSalt` networkArn

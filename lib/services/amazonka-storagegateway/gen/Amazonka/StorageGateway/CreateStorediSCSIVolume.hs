@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StorageGateway.CreateStorediSCSIVolume
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -315,7 +315,8 @@ instance Core.AWSRequest CreateStorediSCSIVolume where
 
 instance Prelude.Hashable CreateStorediSCSIVolume where
   hashWithSalt _salt CreateStorediSCSIVolume' {..} =
-    _salt `Prelude.hashWithSalt` kmsEncrypted
+    _salt
+      `Prelude.hashWithSalt` kmsEncrypted
       `Prelude.hashWithSalt` kmsKey
       `Prelude.hashWithSalt` snapshotId
       `Prelude.hashWithSalt` tags

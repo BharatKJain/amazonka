@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELB.Types.LBCookieStickinessPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELB.Types.LBCookieStickinessPolicy where
@@ -81,7 +81,8 @@ instance Data.FromXML LBCookieStickinessPolicy where
 
 instance Prelude.Hashable LBCookieStickinessPolicy where
   hashWithSalt _salt LBCookieStickinessPolicy' {..} =
-    _salt `Prelude.hashWithSalt` cookieExpirationPeriod
+    _salt
+      `Prelude.hashWithSalt` cookieExpirationPeriod
       `Prelude.hashWithSalt` policyName
 
 instance Prelude.NFData LBCookieStickinessPolicy where

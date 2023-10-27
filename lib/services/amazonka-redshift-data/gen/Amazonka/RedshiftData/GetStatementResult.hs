@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RedshiftData.GetStatementResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,19 +135,19 @@ instance Core.AWSPager GetStatementResult where
     | Core.stop
         ( rs
             Lens.^? getStatementResultResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. getStatementResultResponse_records) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getStatementResult_nextToken
           Lens..~ rs
           Lens.^? getStatementResultResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetStatementResult where
   type
@@ -168,7 +168,8 @@ instance Core.AWSRequest GetStatementResult where
 
 instance Prelude.Hashable GetStatementResult where
   hashWithSalt _salt GetStatementResult' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData GetStatementResult where

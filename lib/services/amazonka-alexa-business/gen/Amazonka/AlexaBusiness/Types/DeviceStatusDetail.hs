@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.DeviceStatusDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.DeviceStatusDetail where
@@ -76,7 +76,8 @@ instance Data.FromJSON DeviceStatusDetail where
 
 instance Prelude.Hashable DeviceStatusDetail where
   hashWithSalt _salt DeviceStatusDetail' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` feature
 
 instance Prelude.NFData DeviceStatusDetail where

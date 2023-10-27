@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.EphemerisMetaData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.EphemerisMetaData where
@@ -121,7 +121,8 @@ instance Data.FromJSON EphemerisMetaData where
 
 instance Prelude.Hashable EphemerisMetaData where
   hashWithSalt _salt EphemerisMetaData' {..} =
-    _salt `Prelude.hashWithSalt` ephemerisId
+    _salt
+      `Prelude.hashWithSalt` ephemerisId
       `Prelude.hashWithSalt` epoch
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` source

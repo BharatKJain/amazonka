@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.JourneySMSMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.JourneySMSMessage where
@@ -145,7 +145,8 @@ instance Data.FromJSON JourneySMSMessage where
 
 instance Prelude.Hashable JourneySMSMessage where
   hashWithSalt _salt JourneySMSMessage' {..} =
-    _salt `Prelude.hashWithSalt` entityId
+    _salt
+      `Prelude.hashWithSalt` entityId
       `Prelude.hashWithSalt` messageType
       `Prelude.hashWithSalt` originationNumber
       `Prelude.hashWithSalt` senderId

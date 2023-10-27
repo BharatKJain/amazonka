@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutEquipment.Types.InferenceExecutionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutEquipment.Types.InferenceExecutionSummary where
@@ -126,7 +126,6 @@ newInferenceExecutionSummary =
       status = Prelude.Nothing
     }
 
--- |
 inferenceExecutionSummary_customerResultObject :: Lens.Lens' InferenceExecutionSummary (Prelude.Maybe S3Object)
 inferenceExecutionSummary_customerResultObject = Lens.lens (\InferenceExecutionSummary' {customerResultObject} -> customerResultObject) (\s@InferenceExecutionSummary' {} a -> s {customerResultObject = a} :: InferenceExecutionSummary)
 
@@ -204,7 +203,8 @@ instance Data.FromJSON InferenceExecutionSummary where
 
 instance Prelude.Hashable InferenceExecutionSummary where
   hashWithSalt _salt InferenceExecutionSummary' {..} =
-    _salt `Prelude.hashWithSalt` customerResultObject
+    _salt
+      `Prelude.hashWithSalt` customerResultObject
       `Prelude.hashWithSalt` dataEndTime
       `Prelude.hashWithSalt` dataInputConfiguration
       `Prelude.hashWithSalt` dataOutputConfiguration

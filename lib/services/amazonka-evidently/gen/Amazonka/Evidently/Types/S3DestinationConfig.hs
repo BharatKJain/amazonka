@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.S3DestinationConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.S3DestinationConfig where
@@ -65,7 +65,8 @@ s3DestinationConfig_prefix = Lens.lens (\S3DestinationConfig' {prefix} -> prefix
 
 instance Prelude.Hashable S3DestinationConfig where
   hashWithSalt _salt S3DestinationConfig' {..} =
-    _salt `Prelude.hashWithSalt` bucket
+    _salt
+      `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` prefix
 
 instance Prelude.NFData S3DestinationConfig where

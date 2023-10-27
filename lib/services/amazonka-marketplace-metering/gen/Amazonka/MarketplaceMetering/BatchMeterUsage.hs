@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MarketplaceMetering.BatchMeterUsage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -139,7 +139,8 @@ instance Core.AWSRequest BatchMeterUsage where
       ( \s h x ->
           BatchMeterUsageResponse'
             Prelude.<$> (x Data..?> "Results" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "UnprocessedRecords"
+            Prelude.<*> ( x
+                            Data..?> "UnprocessedRecords"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -147,7 +148,8 @@ instance Core.AWSRequest BatchMeterUsage where
 
 instance Prelude.Hashable BatchMeterUsage where
   hashWithSalt _salt BatchMeterUsage' {..} =
-    _salt `Prelude.hashWithSalt` usageRecords
+    _salt
+      `Prelude.hashWithSalt` usageRecords
       `Prelude.hashWithSalt` productCode
 
 instance Prelude.NFData BatchMeterUsage where

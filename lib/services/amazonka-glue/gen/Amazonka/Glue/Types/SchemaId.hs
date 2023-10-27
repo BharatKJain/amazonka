@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.SchemaId
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.SchemaId where
@@ -90,7 +90,8 @@ instance Data.FromJSON SchemaId where
 
 instance Prelude.Hashable SchemaId where
   hashWithSalt _salt SchemaId' {..} =
-    _salt `Prelude.hashWithSalt` registryName
+    _salt
+      `Prelude.hashWithSalt` registryName
       `Prelude.hashWithSalt` schemaArn
       `Prelude.hashWithSalt` schemaName
 

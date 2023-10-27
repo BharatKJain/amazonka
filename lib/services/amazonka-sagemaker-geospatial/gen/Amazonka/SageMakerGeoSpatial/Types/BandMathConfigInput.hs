@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.BandMathConfigInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.BandMathConfigInput where
@@ -54,11 +54,9 @@ newBandMathConfigInput =
       predefinedIndices = Prelude.Nothing
     }
 
--- |
 bandMathConfigInput_customIndices :: Lens.Lens' BandMathConfigInput (Prelude.Maybe CustomIndicesInput)
 bandMathConfigInput_customIndices = Lens.lens (\BandMathConfigInput' {customIndices} -> customIndices) (\s@BandMathConfigInput' {} a -> s {customIndices = a} :: BandMathConfigInput)
 
--- |
 bandMathConfigInput_predefinedIndices :: Lens.Lens' BandMathConfigInput (Prelude.Maybe (Prelude.NonEmpty Prelude.Text))
 bandMathConfigInput_predefinedIndices = Lens.lens (\BandMathConfigInput' {predefinedIndices} -> predefinedIndices) (\s@BandMathConfigInput' {} a -> s {predefinedIndices = a} :: BandMathConfigInput) Prelude.. Lens.mapping Lens.coerced
 
@@ -74,7 +72,8 @@ instance Data.FromJSON BandMathConfigInput where
 
 instance Prelude.Hashable BandMathConfigInput where
   hashWithSalt _salt BandMathConfigInput' {..} =
-    _salt `Prelude.hashWithSalt` customIndices
+    _salt
+      `Prelude.hashWithSalt` customIndices
       `Prelude.hashWithSalt` predefinedIndices
 
 instance Prelude.NFData BandMathConfigInput where

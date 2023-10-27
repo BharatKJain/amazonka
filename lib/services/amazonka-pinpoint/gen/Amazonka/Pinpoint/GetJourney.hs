@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.GetJourney
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest GetJourney where
 
 instance Prelude.Hashable GetJourney where
   hashWithSalt _salt GetJourney' {..} =
-    _salt `Prelude.hashWithSalt` journeyId
+    _salt
+      `Prelude.hashWithSalt` journeyId
       `Prelude.hashWithSalt` applicationId
 
 instance Prelude.NFData GetJourney where

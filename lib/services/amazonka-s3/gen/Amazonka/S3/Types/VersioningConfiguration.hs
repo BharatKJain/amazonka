@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.VersioningConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.VersioningConfiguration where
@@ -80,7 +80,8 @@ versioningConfiguration_status = Lens.lens (\VersioningConfiguration' {status} -
 
 instance Prelude.Hashable VersioningConfiguration where
   hashWithSalt _salt VersioningConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` mfaDelete
+    _salt
+      `Prelude.hashWithSalt` mfaDelete
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData VersioningConfiguration where

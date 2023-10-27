@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeGuruProfiler.BatchGetFrameMetricData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -213,19 +213,22 @@ instance Core.AWSRequest BatchGetFrameMetricData where
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
             Prelude.<*> (x Data..:> "endTime")
             Prelude.<*> (x Data..?> "endTimes" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "frameMetricData"
+            Prelude.<*> ( x
+                            Data..?> "frameMetricData"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..:> "resolution")
             Prelude.<*> (x Data..:> "startTime")
-            Prelude.<*> ( x Data..?> "unprocessedEndTimes"
+            Prelude.<*> ( x
+                            Data..?> "unprocessedEndTimes"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable BatchGetFrameMetricData where
   hashWithSalt _salt BatchGetFrameMetricData' {..} =
-    _salt `Prelude.hashWithSalt` endTime
+    _salt
+      `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` frameMetrics
       `Prelude.hashWithSalt` period
       `Prelude.hashWithSalt` startTime

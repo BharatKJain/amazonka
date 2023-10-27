@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.ListAttachedUserPolicies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -208,22 +208,22 @@ instance Core.AWSPager ListAttachedUserPolicies where
     | Core.stop
         ( rs
             Lens.^? listAttachedUserPoliciesResponse_isTruncated
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.isNothing
         ( rs
             Lens.^? listAttachedUserPoliciesResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAttachedUserPolicies_marker
           Lens..~ rs
           Lens.^? listAttachedUserPoliciesResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAttachedUserPolicies where
   type
@@ -236,7 +236,8 @@ instance Core.AWSRequest ListAttachedUserPolicies where
       "ListAttachedUserPoliciesResult"
       ( \s h x ->
           ListAttachedUserPoliciesResponse'
-            Prelude.<$> ( x Data..@? "AttachedPolicies"
+            Prelude.<$> ( x
+                            Data..@? "AttachedPolicies"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
@@ -247,7 +248,8 @@ instance Core.AWSRequest ListAttachedUserPolicies where
 
 instance Prelude.Hashable ListAttachedUserPolicies where
   hashWithSalt _salt ListAttachedUserPolicies' {..} =
-    _salt `Prelude.hashWithSalt` marker
+    _salt
+      `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxItems
       `Prelude.hashWithSalt` pathPrefix
       `Prelude.hashWithSalt` userName

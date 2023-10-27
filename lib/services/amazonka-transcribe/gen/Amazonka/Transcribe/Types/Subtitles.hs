@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.Subtitles
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.Subtitles where
@@ -95,7 +95,8 @@ subtitles_outputStartIndex = Lens.lens (\Subtitles' {outputStartIndex} -> output
 
 instance Prelude.Hashable Subtitles where
   hashWithSalt _salt Subtitles' {..} =
-    _salt `Prelude.hashWithSalt` formats
+    _salt
+      `Prelude.hashWithSalt` formats
       `Prelude.hashWithSalt` outputStartIndex
 
 instance Prelude.NFData Subtitles where

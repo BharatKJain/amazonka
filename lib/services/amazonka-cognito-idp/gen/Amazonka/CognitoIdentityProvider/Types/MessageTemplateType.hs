@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.MessageTemplateType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.MessageTemplateType where
@@ -97,7 +97,8 @@ instance Data.FromJSON MessageTemplateType where
 
 instance Prelude.Hashable MessageTemplateType where
   hashWithSalt _salt MessageTemplateType' {..} =
-    _salt `Prelude.hashWithSalt` emailMessage
+    _salt
+      `Prelude.hashWithSalt` emailMessage
       `Prelude.hashWithSalt` emailSubject
       `Prelude.hashWithSalt` sMSMessage
 

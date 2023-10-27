@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RedshiftServerLess.Types.Namespace
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RedshiftServerLess.Types.Namespace where
@@ -190,7 +190,8 @@ instance Data.FromJSON Namespace where
 
 instance Prelude.Hashable Namespace where
   hashWithSalt _salt Namespace' {..} =
-    _salt `Prelude.hashWithSalt` adminUsername
+    _salt
+      `Prelude.hashWithSalt` adminUsername
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` dbName
       `Prelude.hashWithSalt` defaultIamRoleArn

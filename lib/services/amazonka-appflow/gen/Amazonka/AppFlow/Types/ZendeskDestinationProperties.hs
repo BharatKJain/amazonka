@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.ZendeskDestinationProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.ZendeskDestinationProperties where
@@ -99,7 +99,8 @@ instance
     ZendeskDestinationProperties
   where
   hashWithSalt _salt ZendeskDestinationProperties' {..} =
-    _salt `Prelude.hashWithSalt` errorHandlingConfig
+    _salt
+      `Prelude.hashWithSalt` errorHandlingConfig
       `Prelude.hashWithSalt` idFieldNames
       `Prelude.hashWithSalt` writeOperationType
       `Prelude.hashWithSalt` object'

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Outposts.Types.ComputeAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Outposts.Types.ComputeAttributes where
@@ -111,7 +111,8 @@ instance Data.FromJSON ComputeAttributes where
 
 instance Prelude.Hashable ComputeAttributes where
   hashWithSalt _salt ComputeAttributes' {..} =
-    _salt `Prelude.hashWithSalt` hostId
+    _salt
+      `Prelude.hashWithSalt` hostId
       `Prelude.hashWithSalt` state
 
 instance Prelude.NFData ComputeAttributes where

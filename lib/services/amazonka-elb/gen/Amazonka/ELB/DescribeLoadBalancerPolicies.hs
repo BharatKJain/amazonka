@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ELB.DescribeLoadBalancerPolicies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest DescribeLoadBalancerPolicies where
       "DescribeLoadBalancerPoliciesResult"
       ( \s h x ->
           DescribeLoadBalancerPoliciesResponse'
-            Prelude.<$> ( x Data..@? "PolicyDescriptions"
+            Prelude.<$> ( x
+                            Data..@? "PolicyDescriptions"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
@@ -118,7 +119,8 @@ instance
     DescribeLoadBalancerPolicies
   where
   hashWithSalt _salt DescribeLoadBalancerPolicies' {..} =
-    _salt `Prelude.hashWithSalt` loadBalancerName
+    _salt
+      `Prelude.hashWithSalt` loadBalancerName
       `Prelude.hashWithSalt` policyNames
 
 instance Prelude.NFData DescribeLoadBalancerPolicies where

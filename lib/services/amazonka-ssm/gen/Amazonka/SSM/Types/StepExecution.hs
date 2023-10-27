@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.StepExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.StepExecution where
@@ -307,7 +307,8 @@ instance Data.FromJSON StepExecution where
             Prelude.<*> (x Data..:? "NextStep")
             Prelude.<*> (x Data..:? "OnFailure")
             Prelude.<*> (x Data..:? "Outputs" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "OverriddenParameters"
+            Prelude.<*> ( x
+                            Data..:? "OverriddenParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Response")
@@ -319,14 +320,16 @@ instance Data.FromJSON StepExecution where
             Prelude.<*> (x Data..:? "Targets" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "TimeoutSeconds")
             Prelude.<*> (x Data..:? "TriggeredAlarms")
-            Prelude.<*> ( x Data..:? "ValidNextSteps"
+            Prelude.<*> ( x
+                            Data..:? "ValidNextSteps"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable StepExecution where
   hashWithSalt _salt StepExecution' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` executionEndTime
       `Prelude.hashWithSalt` executionStartTime
       `Prelude.hashWithSalt` failureDetails

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.GatewayPlatform
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.GatewayPlatform where
@@ -76,7 +76,8 @@ instance Data.FromJSON GatewayPlatform where
 
 instance Prelude.Hashable GatewayPlatform where
   hashWithSalt _salt GatewayPlatform' {..} =
-    _salt `Prelude.hashWithSalt` greengrass
+    _salt
+      `Prelude.hashWithSalt` greengrass
       `Prelude.hashWithSalt` greengrassV2
 
 instance Prelude.NFData GatewayPlatform where

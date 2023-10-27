@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexModels.GetBotChannelAssociations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -157,22 +157,22 @@ instance Core.AWSPager GetBotChannelAssociations where
     | Core.stop
         ( rs
             Lens.^? getBotChannelAssociationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getBotChannelAssociationsResponse_botChannelAssociations
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getBotChannelAssociations_nextToken
           Lens..~ rs
           Lens.^? getBotChannelAssociationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetBotChannelAssociations where
   type
@@ -184,7 +184,8 @@ instance Core.AWSRequest GetBotChannelAssociations where
     Response.receiveJSON
       ( \s h x ->
           GetBotChannelAssociationsResponse'
-            Prelude.<$> ( x Data..?> "botChannelAssociations"
+            Prelude.<$> ( x
+                            Data..?> "botChannelAssociations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -193,7 +194,8 @@ instance Core.AWSRequest GetBotChannelAssociations where
 
 instance Prelude.Hashable GetBotChannelAssociations where
   hashWithSalt _salt GetBotChannelAssociations' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nameContains
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` botName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFRegional.Types.XssMatchTuple
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFRegional.Types.XssMatchTuple where
@@ -310,7 +310,8 @@ instance Data.FromJSON XssMatchTuple where
 
 instance Prelude.Hashable XssMatchTuple where
   hashWithSalt _salt XssMatchTuple' {..} =
-    _salt `Prelude.hashWithSalt` fieldToMatch
+    _salt
+      `Prelude.hashWithSalt` fieldToMatch
       `Prelude.hashWithSalt` textTransformation
 
 instance Prelude.NFData XssMatchTuple where

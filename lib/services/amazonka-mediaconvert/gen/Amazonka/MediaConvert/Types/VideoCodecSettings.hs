@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.VideoCodecSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.VideoCodecSettings where
@@ -239,7 +239,8 @@ instance Data.FromJSON VideoCodecSettings where
 
 instance Prelude.Hashable VideoCodecSettings where
   hashWithSalt _salt VideoCodecSettings' {..} =
-    _salt `Prelude.hashWithSalt` av1Settings
+    _salt
+      `Prelude.hashWithSalt` av1Settings
       `Prelude.hashWithSalt` avcIntraSettings
       `Prelude.hashWithSalt` codec
       `Prelude.hashWithSalt` frameCaptureSettings

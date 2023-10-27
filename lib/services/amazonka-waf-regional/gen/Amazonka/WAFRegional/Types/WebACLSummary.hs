@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFRegional.Types.WebACLSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFRegional.Types.WebACLSummary where
@@ -102,7 +102,8 @@ instance Data.FromJSON WebACLSummary where
 
 instance Prelude.Hashable WebACLSummary where
   hashWithSalt _salt WebACLSummary' {..} =
-    _salt `Prelude.hashWithSalt` webACLId
+    _salt
+      `Prelude.hashWithSalt` webACLId
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData WebACLSummary where

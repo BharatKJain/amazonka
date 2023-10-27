@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.RoutingProfileQueueConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.RoutingProfileQueueConfig where
@@ -100,7 +100,8 @@ routingProfileQueueConfig_delay = Lens.lens (\RoutingProfileQueueConfig' {delay}
 
 instance Prelude.Hashable RoutingProfileQueueConfig where
   hashWithSalt _salt RoutingProfileQueueConfig' {..} =
-    _salt `Prelude.hashWithSalt` queueReference
+    _salt
+      `Prelude.hashWithSalt` queueReference
       `Prelude.hashWithSalt` priority
       `Prelude.hashWithSalt` delay
 

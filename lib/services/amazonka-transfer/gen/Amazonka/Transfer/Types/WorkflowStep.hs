@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.WorkflowStep
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.WorkflowStep where
@@ -182,7 +182,8 @@ instance Data.FromJSON WorkflowStep where
 
 instance Prelude.Hashable WorkflowStep where
   hashWithSalt _salt WorkflowStep' {..} =
-    _salt `Prelude.hashWithSalt` copyStepDetails
+    _salt
+      `Prelude.hashWithSalt` copyStepDetails
       `Prelude.hashWithSalt` customStepDetails
       `Prelude.hashWithSalt` decryptStepDetails
       `Prelude.hashWithSalt` deleteStepDetails

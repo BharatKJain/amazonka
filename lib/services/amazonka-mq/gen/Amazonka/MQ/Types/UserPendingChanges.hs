@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MQ.Types.UserPendingChanges
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MQ.Types.UserPendingChanges where
@@ -98,7 +98,8 @@ instance Data.FromJSON UserPendingChanges where
 
 instance Prelude.Hashable UserPendingChanges where
   hashWithSalt _salt UserPendingChanges' {..} =
-    _salt `Prelude.hashWithSalt` consoleAccess
+    _salt
+      `Prelude.hashWithSalt` consoleAccess
       `Prelude.hashWithSalt` groups
       `Prelude.hashWithSalt` pendingChange
 

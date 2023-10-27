@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.MilestoneSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.MilestoneSummary where
@@ -91,7 +91,8 @@ instance Data.FromJSON MilestoneSummary where
 
 instance Prelude.Hashable MilestoneSummary where
   hashWithSalt _salt MilestoneSummary' {..} =
-    _salt `Prelude.hashWithSalt` milestoneName
+    _salt
+      `Prelude.hashWithSalt` milestoneName
       `Prelude.hashWithSalt` milestoneNumber
       `Prelude.hashWithSalt` recordedAt
       `Prelude.hashWithSalt` workloadSummary

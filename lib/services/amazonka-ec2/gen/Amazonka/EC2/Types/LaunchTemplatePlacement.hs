@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.LaunchTemplatePlacement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.LaunchTemplatePlacement where
@@ -152,7 +152,8 @@ instance Data.FromXML LaunchTemplatePlacement where
 
 instance Prelude.Hashable LaunchTemplatePlacement where
   hashWithSalt _salt LaunchTemplatePlacement' {..} =
-    _salt `Prelude.hashWithSalt` affinity
+    _salt
+      `Prelude.hashWithSalt` affinity
       `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` groupName

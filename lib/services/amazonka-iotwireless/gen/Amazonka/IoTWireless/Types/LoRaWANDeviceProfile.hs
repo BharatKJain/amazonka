@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.LoRaWANDeviceProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.LoRaWANDeviceProfile where
@@ -227,7 +227,8 @@ instance Data.FromJSON LoRaWANDeviceProfile where
           LoRaWANDeviceProfile'
             Prelude.<$> (x Data..:? "ClassBTimeout")
             Prelude.<*> (x Data..:? "ClassCTimeout")
-            Prelude.<*> ( x Data..:? "FactoryPresetFreqsList"
+            Prelude.<*> ( x
+                            Data..:? "FactoryPresetFreqsList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "MacVersion")
@@ -250,7 +251,8 @@ instance Data.FromJSON LoRaWANDeviceProfile where
 
 instance Prelude.Hashable LoRaWANDeviceProfile where
   hashWithSalt _salt LoRaWANDeviceProfile' {..} =
-    _salt `Prelude.hashWithSalt` classBTimeout
+    _salt
+      `Prelude.hashWithSalt` classBTimeout
       `Prelude.hashWithSalt` classCTimeout
       `Prelude.hashWithSalt` factoryPresetFreqsList
       `Prelude.hashWithSalt` macVersion

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.OriginRequestPolicyHeadersConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.OriginRequestPolicyHeadersConfig where
@@ -134,7 +134,8 @@ instance
   hashWithSalt
     _salt
     OriginRequestPolicyHeadersConfig' {..} =
-      _salt `Prelude.hashWithSalt` headers
+      _salt
+        `Prelude.hashWithSalt` headers
         `Prelude.hashWithSalt` headerBehavior
 
 instance

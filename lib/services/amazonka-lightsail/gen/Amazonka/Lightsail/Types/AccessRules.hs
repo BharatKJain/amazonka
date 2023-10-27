@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.AccessRules
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.AccessRules where
@@ -158,7 +158,8 @@ instance Data.FromJSON AccessRules where
 
 instance Prelude.Hashable AccessRules where
   hashWithSalt _salt AccessRules' {..} =
-    _salt `Prelude.hashWithSalt` allowPublicOverrides
+    _salt
+      `Prelude.hashWithSalt` allowPublicOverrides
       `Prelude.hashWithSalt` getObject
 
 instance Prelude.NFData AccessRules where

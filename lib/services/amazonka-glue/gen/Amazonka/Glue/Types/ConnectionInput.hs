@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.ConnectionInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.ConnectionInput where
@@ -176,7 +176,8 @@ connectionInput_connectionProperties = Lens.lens (\ConnectionInput' {connectionP
 
 instance Prelude.Hashable ConnectionInput where
   hashWithSalt _salt ConnectionInput' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` matchCriteria
       `Prelude.hashWithSalt` physicalConnectionRequirements
       `Prelude.hashWithSalt` name

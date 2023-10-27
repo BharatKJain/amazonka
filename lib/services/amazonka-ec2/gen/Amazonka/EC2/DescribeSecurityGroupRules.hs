@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeSecurityGroupRules
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -171,22 +171,22 @@ instance Core.AWSPager DescribeSecurityGroupRules where
     | Core.stop
         ( rs
             Lens.^? describeSecurityGroupRulesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeSecurityGroupRulesResponse_securityGroupRules
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeSecurityGroupRules_nextToken
           Lens..~ rs
           Lens.^? describeSecurityGroupRulesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeSecurityGroupRules where
   type
@@ -199,7 +199,8 @@ instance Core.AWSRequest DescribeSecurityGroupRules where
       ( \s h x ->
           DescribeSecurityGroupRulesResponse'
             Prelude.<$> (x Data..@? "nextToken")
-            Prelude.<*> ( x Data..@? "securityGroupRuleSet"
+            Prelude.<*> ( x
+                            Data..@? "securityGroupRuleSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -208,7 +209,8 @@ instance Core.AWSRequest DescribeSecurityGroupRules where
 
 instance Prelude.Hashable DescribeSecurityGroupRules where
   hashWithSalt _salt DescribeSecurityGroupRules' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

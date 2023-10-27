@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QLDB.Types.JournalS3ExportDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QLDB.Types.JournalS3ExportDescription where
@@ -209,7 +209,8 @@ instance Data.FromJSON JournalS3ExportDescription where
 
 instance Prelude.Hashable JournalS3ExportDescription where
   hashWithSalt _salt JournalS3ExportDescription' {..} =
-    _salt `Prelude.hashWithSalt` outputFormat
+    _salt
+      `Prelude.hashWithSalt` outputFormat
       `Prelude.hashWithSalt` ledgerName
       `Prelude.hashWithSalt` exportId
       `Prelude.hashWithSalt` exportCreationTime

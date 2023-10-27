@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ThemeAlias
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ThemeAlias where
@@ -84,7 +84,8 @@ instance Data.FromJSON ThemeAlias where
 
 instance Prelude.Hashable ThemeAlias where
   hashWithSalt _salt ThemeAlias' {..} =
-    _salt `Prelude.hashWithSalt` aliasName
+    _salt
+      `Prelude.hashWithSalt` aliasName
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` themeVersionNumber
 

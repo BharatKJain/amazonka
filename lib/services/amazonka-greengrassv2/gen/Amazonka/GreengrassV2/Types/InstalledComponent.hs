@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.InstalledComponent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.InstalledComponent where
@@ -195,14 +195,16 @@ instance Data.FromJSON InstalledComponent where
             Prelude.<*> (x Data..:? "lastStatusChangeTimestamp")
             Prelude.<*> (x Data..:? "lifecycleState")
             Prelude.<*> (x Data..:? "lifecycleStateDetails")
-            Prelude.<*> ( x Data..:? "lifecycleStatusCodes"
+            Prelude.<*> ( x
+                            Data..:? "lifecycleStatusCodes"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable InstalledComponent where
   hashWithSalt _salt InstalledComponent' {..} =
-    _salt `Prelude.hashWithSalt` componentName
+    _salt
+      `Prelude.hashWithSalt` componentName
       `Prelude.hashWithSalt` componentVersion
       `Prelude.hashWithSalt` isRoot
       `Prelude.hashWithSalt` lastInstallationSource

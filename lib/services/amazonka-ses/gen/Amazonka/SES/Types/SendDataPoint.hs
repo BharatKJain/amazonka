@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.SendDataPoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.SendDataPoint where
@@ -101,7 +101,8 @@ instance Data.FromXML SendDataPoint where
 
 instance Prelude.Hashable SendDataPoint where
   hashWithSalt _salt SendDataPoint' {..} =
-    _salt `Prelude.hashWithSalt` bounces
+    _salt
+      `Prelude.hashWithSalt` bounces
       `Prelude.hashWithSalt` complaints
       `Prelude.hashWithSalt` deliveryAttempts
       `Prelude.hashWithSalt` rejects

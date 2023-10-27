@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Athena.UpdatePreparedStatement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,7 +128,8 @@ instance Core.AWSRequest UpdatePreparedStatement where
 
 instance Prelude.Hashable UpdatePreparedStatement where
   hashWithSalt _salt UpdatePreparedStatement' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` statementName
       `Prelude.hashWithSalt` workGroup
       `Prelude.hashWithSalt` queryStatement

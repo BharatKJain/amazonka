@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Personalize.ListMetricAttributions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,22 +109,22 @@ instance Core.AWSPager ListMetricAttributions where
     | Core.stop
         ( rs
             Lens.^? listMetricAttributionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listMetricAttributionsResponse_metricAttributions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listMetricAttributions_nextToken
           Lens..~ rs
           Lens.^? listMetricAttributionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListMetricAttributions where
   type
@@ -136,7 +136,8 @@ instance Core.AWSRequest ListMetricAttributions where
     Response.receiveJSON
       ( \s h x ->
           ListMetricAttributionsResponse'
-            Prelude.<$> ( x Data..?> "metricAttributions"
+            Prelude.<$> ( x
+                            Data..?> "metricAttributions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -145,7 +146,8 @@ instance Core.AWSRequest ListMetricAttributions where
 
 instance Prelude.Hashable ListMetricAttributions where
   hashWithSalt _salt ListMetricAttributions' {..} =
-    _salt `Prelude.hashWithSalt` datasetGroupArn
+    _salt
+      `Prelude.hashWithSalt` datasetGroupArn
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

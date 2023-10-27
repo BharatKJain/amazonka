@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.DeleteFleetMetric
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,7 +100,8 @@ instance Core.AWSRequest DeleteFleetMetric where
 
 instance Prelude.Hashable DeleteFleetMetric where
   hashWithSalt _salt DeleteFleetMetric' {..} =
-    _salt `Prelude.hashWithSalt` expectedVersion
+    _salt
+      `Prelude.hashWithSalt` expectedVersion
       `Prelude.hashWithSalt` metricName
 
 instance Prelude.NFData DeleteFleetMetric where

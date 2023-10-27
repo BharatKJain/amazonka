@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.DeviceStats
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.DeviceStats where
@@ -81,7 +81,8 @@ instance Data.FromJSON DeviceStats where
 
 instance Prelude.Hashable DeviceStats where
   hashWithSalt _salt DeviceStats' {..} =
-    _salt `Prelude.hashWithSalt` connectedDeviceCount
+    _salt
+      `Prelude.hashWithSalt` connectedDeviceCount
       `Prelude.hashWithSalt` registeredDeviceCount
 
 instance Prelude.NFData DeviceStats where

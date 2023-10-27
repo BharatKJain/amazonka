@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT1ClickProjects.GetDevicesInPlacement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest GetDevicesInPlacement where
 
 instance Prelude.Hashable GetDevicesInPlacement where
   hashWithSalt _salt GetDevicesInPlacement' {..} =
-    _salt `Prelude.hashWithSalt` projectName
+    _salt
+      `Prelude.hashWithSalt` projectName
       `Prelude.hashWithSalt` placementName
 
 instance Prelude.NFData GetDevicesInPlacement where

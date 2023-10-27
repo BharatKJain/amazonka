@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.FormStyle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.FormStyle where
@@ -85,7 +85,8 @@ instance Data.FromJSON FormStyle where
 
 instance Prelude.Hashable FormStyle where
   hashWithSalt _salt FormStyle' {..} =
-    _salt `Prelude.hashWithSalt` horizontalGap
+    _salt
+      `Prelude.hashWithSalt` horizontalGap
       `Prelude.hashWithSalt` outerPadding
       `Prelude.hashWithSalt` verticalGap
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkFirewall.DescribeRuleGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,8 @@ instance Core.AWSRequest DescribeRuleGroup where
 
 instance Prelude.Hashable DescribeRuleGroup where
   hashWithSalt _salt DescribeRuleGroup' {..} =
-    _salt `Prelude.hashWithSalt` ruleGroupArn
+    _salt
+      `Prelude.hashWithSalt` ruleGroupArn
       `Prelude.hashWithSalt` ruleGroupName
       `Prelude.hashWithSalt` type'
 

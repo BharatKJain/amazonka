@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.CacheSecurityGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.CacheSecurityGroup where
@@ -105,7 +105,8 @@ instance Data.FromXML CacheSecurityGroup where
       Prelude.<$> (x Data..@? "ARN")
       Prelude.<*> (x Data..@? "CacheSecurityGroupName")
       Prelude.<*> (x Data..@? "Description")
-      Prelude.<*> ( x Data..@? "EC2SecurityGroups"
+      Prelude.<*> ( x
+                      Data..@? "EC2SecurityGroups"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "EC2SecurityGroup")
                   )
@@ -113,7 +114,8 @@ instance Data.FromXML CacheSecurityGroup where
 
 instance Prelude.Hashable CacheSecurityGroup where
   hashWithSalt _salt CacheSecurityGroup' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` cacheSecurityGroupName
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` eC2SecurityGroups

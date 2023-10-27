@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.EngineVersionsSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.EngineVersionsSummary where
@@ -79,7 +79,8 @@ instance Data.FromJSON EngineVersionsSummary where
 
 instance Prelude.Hashable EngineVersionsSummary where
   hashWithSalt _salt EngineVersionsSummary' {..} =
-    _salt `Prelude.hashWithSalt` engineType
+    _salt
+      `Prelude.hashWithSalt` engineType
       `Prelude.hashWithSalt` engineVersion
 
 instance Prelude.NFData EngineVersionsSummary where

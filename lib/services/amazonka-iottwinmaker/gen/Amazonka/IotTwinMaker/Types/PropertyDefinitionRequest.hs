@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.PropertyDefinitionRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.PropertyDefinitionRequest where
@@ -136,7 +136,8 @@ propertyDefinitionRequest_isTimeSeries = Lens.lens (\PropertyDefinitionRequest' 
 
 instance Prelude.Hashable PropertyDefinitionRequest where
   hashWithSalt _salt PropertyDefinitionRequest' {..} =
-    _salt `Prelude.hashWithSalt` configuration
+    _salt
+      `Prelude.hashWithSalt` configuration
       `Prelude.hashWithSalt` dataType
       `Prelude.hashWithSalt` defaultValue
       `Prelude.hashWithSalt` displayName

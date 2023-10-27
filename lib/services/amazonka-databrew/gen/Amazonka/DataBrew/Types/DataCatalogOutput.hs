@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.DataCatalogOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.DataCatalogOutput where
@@ -136,7 +136,8 @@ instance Data.FromJSON DataCatalogOutput where
 
 instance Prelude.Hashable DataCatalogOutput where
   hashWithSalt _salt DataCatalogOutput' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` databaseOptions
       `Prelude.hashWithSalt` overwrite
       `Prelude.hashWithSalt` s3Options

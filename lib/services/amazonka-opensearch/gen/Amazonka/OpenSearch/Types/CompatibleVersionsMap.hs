@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.CompatibleVersionsMap
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.CompatibleVersionsMap where
@@ -71,14 +71,16 @@ instance Data.FromJSON CompatibleVersionsMap where
       ( \x ->
           CompatibleVersionsMap'
             Prelude.<$> (x Data..:? "SourceVersion")
-            Prelude.<*> ( x Data..:? "TargetVersions"
+            Prelude.<*> ( x
+                            Data..:? "TargetVersions"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable CompatibleVersionsMap where
   hashWithSalt _salt CompatibleVersionsMap' {..} =
-    _salt `Prelude.hashWithSalt` sourceVersion
+    _salt
+      `Prelude.hashWithSalt` sourceVersion
       `Prelude.hashWithSalt` targetVersions
 
 instance Prelude.NFData CompatibleVersionsMap where

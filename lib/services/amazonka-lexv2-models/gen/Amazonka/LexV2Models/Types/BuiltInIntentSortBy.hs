@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.BuiltInIntentSortBy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.BuiltInIntentSortBy where
@@ -73,7 +73,8 @@ builtInIntentSortBy_order = Lens.lens (\BuiltInIntentSortBy' {order} -> order) (
 
 instance Prelude.Hashable BuiltInIntentSortBy where
   hashWithSalt _salt BuiltInIntentSortBy' {..} =
-    _salt `Prelude.hashWithSalt` attribute
+    _salt
+      `Prelude.hashWithSalt` attribute
       `Prelude.hashWithSalt` order
 
 instance Prelude.NFData BuiltInIntentSortBy where

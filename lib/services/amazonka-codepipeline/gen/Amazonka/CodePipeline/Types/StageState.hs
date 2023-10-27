@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.StageState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.StageState where
@@ -112,7 +112,8 @@ instance Data.FromJSON StageState where
 
 instance Prelude.Hashable StageState where
   hashWithSalt _salt StageState' {..} =
-    _salt `Prelude.hashWithSalt` actionStates
+    _salt
+      `Prelude.hashWithSalt` actionStates
       `Prelude.hashWithSalt` inboundExecution
       `Prelude.hashWithSalt` inboundTransitionState
       `Prelude.hashWithSalt` latestExecution

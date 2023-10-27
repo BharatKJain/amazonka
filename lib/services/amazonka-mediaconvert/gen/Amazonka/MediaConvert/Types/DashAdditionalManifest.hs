@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.DashAdditionalManifest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.DashAdditionalManifest where
@@ -90,14 +90,16 @@ instance Data.FromJSON DashAdditionalManifest where
       ( \x ->
           DashAdditionalManifest'
             Prelude.<$> (x Data..:? "manifestNameModifier")
-            Prelude.<*> ( x Data..:? "selectedOutputs"
+            Prelude.<*> ( x
+                            Data..:? "selectedOutputs"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable DashAdditionalManifest where
   hashWithSalt _salt DashAdditionalManifest' {..} =
-    _salt `Prelude.hashWithSalt` manifestNameModifier
+    _salt
+      `Prelude.hashWithSalt` manifestNameModifier
       `Prelude.hashWithSalt` selectedOutputs
 
 instance Prelude.NFData DashAdditionalManifest where

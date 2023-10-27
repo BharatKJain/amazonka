@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.EbsVolumesResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.EbsVolumesResult where
@@ -78,7 +78,8 @@ instance Data.FromJSON EbsVolumesResult where
 
 instance Prelude.Hashable EbsVolumesResult where
   hashWithSalt _salt EbsVolumesResult' {..} =
-    _salt `Prelude.hashWithSalt` reason
+    _salt
+      `Prelude.hashWithSalt` reason
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData EbsVolumesResult where

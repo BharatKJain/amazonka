@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.ChoiceAnswer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.ChoiceAnswer where
@@ -98,7 +98,8 @@ instance Data.FromJSON ChoiceAnswer where
 
 instance Prelude.Hashable ChoiceAnswer where
   hashWithSalt _salt ChoiceAnswer' {..} =
-    _salt `Prelude.hashWithSalt` choiceId
+    _salt
+      `Prelude.hashWithSalt` choiceId
       `Prelude.hashWithSalt` notes
       `Prelude.hashWithSalt` reason
       `Prelude.hashWithSalt` status

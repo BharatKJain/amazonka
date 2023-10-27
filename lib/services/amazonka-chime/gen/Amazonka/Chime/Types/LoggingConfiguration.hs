@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.LoggingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.LoggingConfiguration where
@@ -83,7 +83,8 @@ instance Data.FromJSON LoggingConfiguration where
 
 instance Prelude.Hashable LoggingConfiguration where
   hashWithSalt _salt LoggingConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` enableMediaMetricLogs
+    _salt
+      `Prelude.hashWithSalt` enableMediaMetricLogs
       `Prelude.hashWithSalt` enableSIPLogs
 
 instance Prelude.NFData LoggingConfiguration where

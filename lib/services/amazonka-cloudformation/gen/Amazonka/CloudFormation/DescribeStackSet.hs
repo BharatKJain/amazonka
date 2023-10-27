@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFormation.DescribeStackSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,7 +148,8 @@ instance Core.AWSRequest DescribeStackSet where
 
 instance Prelude.Hashable DescribeStackSet where
   hashWithSalt _salt DescribeStackSet' {..} =
-    _salt `Prelude.hashWithSalt` callAs
+    _salt
+      `Prelude.hashWithSalt` callAs
       `Prelude.hashWithSalt` stackSetName
 
 instance Prelude.NFData DescribeStackSet where

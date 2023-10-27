@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FinSpaceData.ListDataViews
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,20 +105,23 @@ instance Core.AWSPager ListDataViews where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listDataViewsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listDataViewsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listDataViewsResponse_dataViews Prelude.. Lens._Just
+            Lens.^? listDataViewsResponse_dataViews
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listDataViews_nextToken
           Lens..~ rs
-          Lens.^? listDataViewsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listDataViewsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListDataViews where
   type
@@ -137,7 +140,8 @@ instance Core.AWSRequest ListDataViews where
 
 instance Prelude.Hashable ListDataViews where
   hashWithSalt _salt ListDataViews' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` datasetId
 

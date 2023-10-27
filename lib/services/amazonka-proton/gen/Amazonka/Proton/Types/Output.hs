@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Proton.Types.Output
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Proton.Types.Output where
@@ -74,7 +74,8 @@ instance Data.FromJSON Output where
 
 instance Prelude.Hashable Output where
   hashWithSalt _salt Output' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` valueString
 
 instance Prelude.NFData Output where

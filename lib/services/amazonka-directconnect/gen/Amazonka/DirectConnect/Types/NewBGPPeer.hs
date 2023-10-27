@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectConnect.Types.NewBGPPeer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectConnect.Types.NewBGPPeer where
@@ -98,7 +98,8 @@ newBGPPeer_customerAddress = Lens.lens (\NewBGPPeer' {customerAddress} -> custom
 
 instance Prelude.Hashable NewBGPPeer where
   hashWithSalt _salt NewBGPPeer' {..} =
-    _salt `Prelude.hashWithSalt` addressFamily
+    _salt
+      `Prelude.hashWithSalt` addressFamily
       `Prelude.hashWithSalt` amazonAddress
       `Prelude.hashWithSalt` asn
       `Prelude.hashWithSalt` authKey

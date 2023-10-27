@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.TunedHPOParams
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.TunedHPOParams where
@@ -61,7 +61,8 @@ instance Data.FromJSON TunedHPOParams where
       "TunedHPOParams"
       ( \x ->
           TunedHPOParams'
-            Prelude.<$> ( x Data..:? "algorithmHyperParameters"
+            Prelude.<$> ( x
+                            Data..:? "algorithmHyperParameters"
                             Data..!= Prelude.mempty
                         )
       )

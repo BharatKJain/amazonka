@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Panorama.Types.OutPutS3Location
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Panorama.Types.OutPutS3Location where
@@ -78,7 +78,8 @@ instance Data.FromJSON OutPutS3Location where
 
 instance Prelude.Hashable OutPutS3Location where
   hashWithSalt _salt OutPutS3Location' {..} =
-    _salt `Prelude.hashWithSalt` bucketName
+    _salt
+      `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` objectKey
 
 instance Prelude.NFData OutPutS3Location where

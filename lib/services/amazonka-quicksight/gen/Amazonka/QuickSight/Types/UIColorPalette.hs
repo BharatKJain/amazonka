@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.UIColorPalette
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.UIColorPalette where
@@ -258,7 +258,8 @@ instance Data.FromJSON UIColorPalette where
 
 instance Prelude.Hashable UIColorPalette where
   hashWithSalt _salt UIColorPalette' {..} =
-    _salt `Prelude.hashWithSalt` accent
+    _salt
+      `Prelude.hashWithSalt` accent
       `Prelude.hashWithSalt` accentForeground
       `Prelude.hashWithSalt` danger
       `Prelude.hashWithSalt` dangerForeground

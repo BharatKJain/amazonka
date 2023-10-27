@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRServerless.Types.MaximumAllowedResources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRServerless.Types.MaximumAllowedResources where
@@ -89,7 +89,8 @@ instance Data.FromJSON MaximumAllowedResources where
 
 instance Prelude.Hashable MaximumAllowedResources where
   hashWithSalt _salt MaximumAllowedResources' {..} =
-    _salt `Prelude.hashWithSalt` disk
+    _salt
+      `Prelude.hashWithSalt` disk
       `Prelude.hashWithSalt` cpu
       `Prelude.hashWithSalt` memory
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.DelegationSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.DelegationSet where
@@ -86,13 +86,16 @@ instance Data.FromXML DelegationSet where
     DelegationSet'
       Prelude.<$> (x Data..@? "CallerReference")
       Prelude.<*> (x Data..@? "Id")
-      Prelude.<*> ( x Data..@? "NameServers" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "NameServers"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Data.parseXMLList1 "NameServer"
                   )
 
 instance Prelude.Hashable DelegationSet where
   hashWithSalt _salt DelegationSet' {..} =
-    _salt `Prelude.hashWithSalt` callerReference
+    _salt
+      `Prelude.hashWithSalt` callerReference
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` nameServers
 

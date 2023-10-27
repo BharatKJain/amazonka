@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.DatasetActionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.DatasetActionSummary where
@@ -82,7 +82,8 @@ instance Data.FromJSON DatasetActionSummary where
 
 instance Prelude.Hashable DatasetActionSummary where
   hashWithSalt _salt DatasetActionSummary' {..} =
-    _salt `Prelude.hashWithSalt` actionName
+    _salt
+      `Prelude.hashWithSalt` actionName
       `Prelude.hashWithSalt` actionType
 
 instance Prelude.NFData DatasetActionSummary where

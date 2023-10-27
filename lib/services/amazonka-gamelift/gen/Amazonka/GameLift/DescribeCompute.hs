@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.DescribeCompute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest DescribeCompute where
 
 instance Prelude.Hashable DescribeCompute where
   hashWithSalt _salt DescribeCompute' {..} =
-    _salt `Prelude.hashWithSalt` fleetId
+    _salt
+      `Prelude.hashWithSalt` fleetId
       `Prelude.hashWithSalt` computeName
 
 instance Prelude.NFData DescribeCompute where

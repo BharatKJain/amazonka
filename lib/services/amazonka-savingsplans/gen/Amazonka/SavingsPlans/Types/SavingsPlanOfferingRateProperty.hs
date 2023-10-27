@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SavingsPlans.Types.SavingsPlanOfferingRateProperty
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SavingsPlans.Types.SavingsPlanOfferingRateProperty where
@@ -72,7 +72,8 @@ instance
       "SavingsPlanOfferingRateProperty"
       ( \x ->
           SavingsPlanOfferingRateProperty'
-            Prelude.<$> (x Data..:? "name") Prelude.<*> (x Data..:? "value")
+            Prelude.<$> (x Data..:? "name")
+            Prelude.<*> (x Data..:? "value")
       )
 
 instance
@@ -82,7 +83,8 @@ instance
   hashWithSalt
     _salt
     SavingsPlanOfferingRateProperty' {..} =
-      _salt `Prelude.hashWithSalt` name
+      _salt
+        `Prelude.hashWithSalt` name
         `Prelude.hashWithSalt` value
 
 instance

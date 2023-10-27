@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DataPathColor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DataPathColor where
@@ -91,7 +91,8 @@ instance Data.FromJSON DataPathColor where
 
 instance Prelude.Hashable DataPathColor where
   hashWithSalt _salt DataPathColor' {..} =
-    _salt `Prelude.hashWithSalt` timeGranularity
+    _salt
+      `Prelude.hashWithSalt` timeGranularity
       `Prelude.hashWithSalt` element
       `Prelude.hashWithSalt` color
 

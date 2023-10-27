@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RedshiftData.Types.StatementData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RedshiftData.Types.StatementData where
@@ -170,7 +170,8 @@ instance Data.FromJSON StatementData where
 
 instance Prelude.Hashable StatementData where
   hashWithSalt _salt StatementData' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` isBatchStatement
       `Prelude.hashWithSalt` queryParameters
       `Prelude.hashWithSalt` queryString

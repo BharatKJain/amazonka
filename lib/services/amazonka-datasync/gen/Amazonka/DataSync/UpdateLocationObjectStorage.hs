@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataSync.UpdateLocationObjectStorage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -223,7 +223,8 @@ instance Core.AWSRequest UpdateLocationObjectStorage where
 
 instance Prelude.Hashable UpdateLocationObjectStorage where
   hashWithSalt _salt UpdateLocationObjectStorage' {..} =
-    _salt `Prelude.hashWithSalt` accessKey
+    _salt
+      `Prelude.hashWithSalt` accessKey
       `Prelude.hashWithSalt` agentArns
       `Prelude.hashWithSalt` secretKey
       `Prelude.hashWithSalt` serverCertificate

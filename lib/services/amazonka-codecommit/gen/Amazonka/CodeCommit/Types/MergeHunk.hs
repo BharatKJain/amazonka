@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.MergeHunk
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.MergeHunk where
@@ -116,7 +116,8 @@ instance Data.FromJSON MergeHunk where
 
 instance Prelude.Hashable MergeHunk where
   hashWithSalt _salt MergeHunk' {..} =
-    _salt `Prelude.hashWithSalt` base
+    _salt
+      `Prelude.hashWithSalt` base
       `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` isConflict
       `Prelude.hashWithSalt` source

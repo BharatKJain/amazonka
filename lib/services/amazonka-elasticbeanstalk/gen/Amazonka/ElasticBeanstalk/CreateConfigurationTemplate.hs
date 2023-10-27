@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.CreateConfigurationTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -325,7 +325,8 @@ instance Core.AWSRequest CreateConfigurationTemplate where
 
 instance Prelude.Hashable CreateConfigurationTemplate where
   hashWithSalt _salt CreateConfigurationTemplate' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` environmentId
       `Prelude.hashWithSalt` optionSettings
       `Prelude.hashWithSalt` platformArn

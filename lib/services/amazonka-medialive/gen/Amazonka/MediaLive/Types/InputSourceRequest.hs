@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.InputSourceRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.InputSourceRequest where
@@ -74,7 +74,8 @@ inputSourceRequest_username = Lens.lens (\InputSourceRequest' {username} -> user
 
 instance Prelude.Hashable InputSourceRequest where
   hashWithSalt _salt InputSourceRequest' {..} =
-    _salt `Prelude.hashWithSalt` passwordParam
+    _salt
+      `Prelude.hashWithSalt` passwordParam
       `Prelude.hashWithSalt` url
       `Prelude.hashWithSalt` username
 

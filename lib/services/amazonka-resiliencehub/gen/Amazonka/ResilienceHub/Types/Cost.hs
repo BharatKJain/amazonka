@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResilienceHub.Types.Cost
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResilienceHub.Types.Cost where
@@ -91,7 +91,8 @@ instance Data.FromJSON Cost where
 
 instance Prelude.Hashable Cost where
   hashWithSalt _salt Cost' {..} =
-    _salt `Prelude.hashWithSalt` amount
+    _salt
+      `Prelude.hashWithSalt` amount
       `Prelude.hashWithSalt` currency
       `Prelude.hashWithSalt` frequency
 

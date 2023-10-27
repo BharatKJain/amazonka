@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.ModelVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.ModelVersion where
@@ -104,7 +104,8 @@ instance Data.FromJSON ModelVersion where
 
 instance Prelude.Hashable ModelVersion where
   hashWithSalt _salt ModelVersion' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` modelId
       `Prelude.hashWithSalt` modelType
       `Prelude.hashWithSalt` modelVersionNumber

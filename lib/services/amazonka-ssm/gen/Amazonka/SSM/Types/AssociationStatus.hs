@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.AssociationStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.AssociationStatus where
@@ -102,7 +102,8 @@ instance Data.FromJSON AssociationStatus where
 
 instance Prelude.Hashable AssociationStatus where
   hashWithSalt _salt AssociationStatus' {..} =
-    _salt `Prelude.hashWithSalt` additionalInfo
+    _salt
+      `Prelude.hashWithSalt` additionalInfo
       `Prelude.hashWithSalt` date
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` message

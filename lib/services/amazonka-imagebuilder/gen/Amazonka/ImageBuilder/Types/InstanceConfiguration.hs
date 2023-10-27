@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ImageBuilder.Types.InstanceConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ImageBuilder.Types.InstanceConfiguration where
@@ -80,7 +80,8 @@ instance Data.FromJSON InstanceConfiguration where
       "InstanceConfiguration"
       ( \x ->
           InstanceConfiguration'
-            Prelude.<$> ( x Data..:? "blockDeviceMappings"
+            Prelude.<$> ( x
+                            Data..:? "blockDeviceMappings"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "image")
@@ -88,7 +89,8 @@ instance Data.FromJSON InstanceConfiguration where
 
 instance Prelude.Hashable InstanceConfiguration where
   hashWithSalt _salt InstanceConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` blockDeviceMappings
+    _salt
+      `Prelude.hashWithSalt` blockDeviceMappings
       `Prelude.hashWithSalt` image
 
 instance Prelude.NFData InstanceConfiguration where

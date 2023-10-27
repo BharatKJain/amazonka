@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.GetRelationalDatabaseMasterUserPassword
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,8 +134,8 @@ instance
       ( \s h x ->
           GetRelationalDatabaseMasterUserPasswordResponse'
             Prelude.<$> (x Data..?> "createdAt")
-              Prelude.<*> (x Data..?> "masterUserPassword")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "masterUserPassword")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -145,7 +145,8 @@ instance
   hashWithSalt
     _salt
     GetRelationalDatabaseMasterUserPassword' {..} =
-      _salt `Prelude.hashWithSalt` passwordVersion
+      _salt
+        `Prelude.hashWithSalt` passwordVersion
         `Prelude.hashWithSalt` relationalDatabaseName
 
 instance

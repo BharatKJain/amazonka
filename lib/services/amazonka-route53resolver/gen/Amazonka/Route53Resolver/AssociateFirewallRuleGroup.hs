@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53Resolver.AssociateFirewallRuleGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -224,7 +224,8 @@ instance Core.AWSRequest AssociateFirewallRuleGroup where
 
 instance Prelude.Hashable AssociateFirewallRuleGroup where
   hashWithSalt _salt AssociateFirewallRuleGroup' {..} =
-    _salt `Prelude.hashWithSalt` mutationProtection
+    _salt
+      `Prelude.hashWithSalt` mutationProtection
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` creatorRequestId
       `Prelude.hashWithSalt` firewallRuleGroupId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.RegistrationMetadataItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.RegistrationMetadataItem where
@@ -68,7 +68,8 @@ registrationMetadataItem_value = Lens.lens (\RegistrationMetadataItem' {value} -
 
 instance Prelude.Hashable RegistrationMetadataItem where
   hashWithSalt _salt RegistrationMetadataItem' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData RegistrationMetadataItem where

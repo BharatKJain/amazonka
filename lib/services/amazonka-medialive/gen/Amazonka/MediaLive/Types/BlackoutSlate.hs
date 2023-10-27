@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.BlackoutSlate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.BlackoutSlate where
@@ -135,7 +135,8 @@ instance Data.FromJSON BlackoutSlate where
 
 instance Prelude.Hashable BlackoutSlate where
   hashWithSalt _salt BlackoutSlate' {..} =
-    _salt `Prelude.hashWithSalt` blackoutSlateImage
+    _salt
+      `Prelude.hashWithSalt` blackoutSlateImage
       `Prelude.hashWithSalt` networkEndBlackout
       `Prelude.hashWithSalt` networkEndBlackoutImage
       `Prelude.hashWithSalt` networkId

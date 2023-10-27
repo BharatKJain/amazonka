@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectConnect.Types.MacSecKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectConnect.Types.MacSecKey where
@@ -139,7 +139,8 @@ instance Data.FromJSON MacSecKey where
 
 instance Prelude.Hashable MacSecKey where
   hashWithSalt _salt MacSecKey' {..} =
-    _salt `Prelude.hashWithSalt` ckn
+    _salt
+      `Prelude.hashWithSalt` ckn
       `Prelude.hashWithSalt` secretARN
       `Prelude.hashWithSalt` startOn
       `Prelude.hashWithSalt` state

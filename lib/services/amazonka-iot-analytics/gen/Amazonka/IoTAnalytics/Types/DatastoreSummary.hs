@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.DatastoreSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.DatastoreSummary where
@@ -159,7 +159,8 @@ instance Data.FromJSON DatastoreSummary where
 
 instance Prelude.Hashable DatastoreSummary where
   hashWithSalt _salt DatastoreSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` datastoreName
       `Prelude.hashWithSalt` datastorePartitions
       `Prelude.hashWithSalt` datastoreStorage

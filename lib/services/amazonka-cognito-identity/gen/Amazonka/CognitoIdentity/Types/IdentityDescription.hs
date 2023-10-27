@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentity.Types.IdentityDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentity.Types.IdentityDescription where
@@ -95,7 +95,8 @@ instance Data.FromJSON IdentityDescription where
 
 instance Prelude.Hashable IdentityDescription where
   hashWithSalt _salt IdentityDescription' {..} =
-    _salt `Prelude.hashWithSalt` creationDate
+    _salt
+      `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` identityId
       `Prelude.hashWithSalt` lastModifiedDate
       `Prelude.hashWithSalt` logins

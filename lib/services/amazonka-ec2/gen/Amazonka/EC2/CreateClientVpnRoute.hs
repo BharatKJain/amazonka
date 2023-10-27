@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.CreateClientVpnRoute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -216,7 +216,8 @@ instance Core.AWSRequest CreateClientVpnRoute where
 
 instance Prelude.Hashable CreateClientVpnRoute where
   hashWithSalt _salt CreateClientVpnRoute' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` clientVpnEndpointId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkDocs.Types.UserMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkDocs.Types.UserMetadata where
@@ -104,7 +104,8 @@ instance Data.FromJSON UserMetadata where
 
 instance Prelude.Hashable UserMetadata where
   hashWithSalt _salt UserMetadata' {..} =
-    _salt `Prelude.hashWithSalt` emailAddress
+    _salt
+      `Prelude.hashWithSalt` emailAddress
       `Prelude.hashWithSalt` givenName
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` surname

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.InputDataConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.InputDataConfig where
@@ -148,7 +148,8 @@ instance Data.FromJSON InputDataConfig where
 
 instance Prelude.Hashable InputDataConfig where
   hashWithSalt _salt InputDataConfig' {..} =
-    _salt `Prelude.hashWithSalt` tuningDataS3Uri
+    _salt
+      `Prelude.hashWithSalt` tuningDataS3Uri
       `Prelude.hashWithSalt` s3Uri
       `Prelude.hashWithSalt` dataAccessRoleArn
 

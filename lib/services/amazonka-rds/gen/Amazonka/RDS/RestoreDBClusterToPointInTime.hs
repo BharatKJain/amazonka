@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.RestoreDBClusterToPointInTime
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -1202,7 +1202,8 @@ instance
     RestoreDBClusterToPointInTime
   where
   hashWithSalt _salt RestoreDBClusterToPointInTime' {..} =
-    _salt `Prelude.hashWithSalt` backtrackWindow
+    _salt
+      `Prelude.hashWithSalt` backtrackWindow
       `Prelude.hashWithSalt` copyTagsToSnapshot
       `Prelude.hashWithSalt` dbClusterInstanceClass
       `Prelude.hashWithSalt` dbClusterParameterGroupName

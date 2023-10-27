@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.ADMChannelResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.ADMChannelResponse where
@@ -167,7 +167,8 @@ instance Data.FromJSON ADMChannelResponse where
 
 instance Prelude.Hashable ADMChannelResponse where
   hashWithSalt _salt ADMChannelResponse' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` hasCredential

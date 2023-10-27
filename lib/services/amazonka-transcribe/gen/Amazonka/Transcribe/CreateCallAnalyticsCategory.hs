@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Transcribe.CreateCallAnalyticsCategory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -204,7 +204,8 @@ instance Core.AWSRequest CreateCallAnalyticsCategory where
 
 instance Prelude.Hashable CreateCallAnalyticsCategory where
   hashWithSalt _salt CreateCallAnalyticsCategory' {..} =
-    _salt `Prelude.hashWithSalt` inputType
+    _salt
+      `Prelude.hashWithSalt` inputType
       `Prelude.hashWithSalt` categoryName
       `Prelude.hashWithSalt` rules
 

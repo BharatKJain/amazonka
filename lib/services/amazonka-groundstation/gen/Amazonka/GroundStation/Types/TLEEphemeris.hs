@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.TLEEphemeris
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.TLEEphemeris where
@@ -69,7 +69,8 @@ tLEEphemeris_tleData = Lens.lens (\TLEEphemeris' {tleData} -> tleData) (\s@TLEEp
 
 instance Prelude.Hashable TLEEphemeris where
   hashWithSalt _salt TLEEphemeris' {..} =
-    _salt `Prelude.hashWithSalt` s3Object
+    _salt
+      `Prelude.hashWithSalt` s3Object
       `Prelude.hashWithSalt` tleData
 
 instance Prelude.NFData TLEEphemeris where

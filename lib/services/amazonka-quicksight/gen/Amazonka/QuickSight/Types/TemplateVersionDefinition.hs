@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TemplateVersionDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TemplateVersionDefinition where
@@ -163,25 +163,30 @@ instance Data.FromJSON TemplateVersionDefinition where
       ( \x ->
           TemplateVersionDefinition'
             Prelude.<$> (x Data..:? "AnalysisDefaults")
-            Prelude.<*> ( x Data..:? "CalculatedFields"
+            Prelude.<*> ( x
+                            Data..:? "CalculatedFields"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "ColumnConfigurations"
+            Prelude.<*> ( x
+                            Data..:? "ColumnConfigurations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "FilterGroups" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "ParameterDeclarations"
+            Prelude.<*> ( x
+                            Data..:? "ParameterDeclarations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Sheets" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "DataSetConfigurations"
+            Prelude.<*> ( x
+                            Data..:? "DataSetConfigurations"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable TemplateVersionDefinition where
   hashWithSalt _salt TemplateVersionDefinition' {..} =
-    _salt `Prelude.hashWithSalt` analysisDefaults
+    _salt
+      `Prelude.hashWithSalt` analysisDefaults
       `Prelude.hashWithSalt` calculatedFields
       `Prelude.hashWithSalt` columnConfigurations
       `Prelude.hashWithSalt` filterGroups

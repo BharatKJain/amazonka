@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53Resolver.Types.IpAddressRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53Resolver.Types.IpAddressRequest where
@@ -71,7 +71,8 @@ ipAddressRequest_subnetId = Lens.lens (\IpAddressRequest' {subnetId} -> subnetId
 
 instance Prelude.Hashable IpAddressRequest where
   hashWithSalt _salt IpAddressRequest' {..} =
-    _salt `Prelude.hashWithSalt` ip
+    _salt
+      `Prelude.hashWithSalt` ip
       `Prelude.hashWithSalt` subnetId
 
 instance Prelude.NFData IpAddressRequest where

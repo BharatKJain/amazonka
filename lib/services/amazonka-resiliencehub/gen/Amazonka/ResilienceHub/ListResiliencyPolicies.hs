@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ResilienceHub.ListResiliencyPolicies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,14 +114,16 @@ instance Core.AWSRequest ListResiliencyPolicies where
           ListResiliencyPoliciesResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "resiliencyPolicies"
+            Prelude.<*> ( x
+                            Data..?> "resiliencyPolicies"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListResiliencyPolicies where
   hashWithSalt _salt ListResiliencyPolicies' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` policyName
 

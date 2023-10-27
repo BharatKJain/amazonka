@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.RemoveSchemaVersionMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,7 +141,8 @@ instance Core.AWSRequest RemoveSchemaVersionMetadata where
 
 instance Prelude.Hashable RemoveSchemaVersionMetadata where
   hashWithSalt _salt RemoveSchemaVersionMetadata' {..} =
-    _salt `Prelude.hashWithSalt` schemaId
+    _salt
+      `Prelude.hashWithSalt` schemaId
       `Prelude.hashWithSalt` schemaVersionId
       `Prelude.hashWithSalt` schemaVersionNumber
       `Prelude.hashWithSalt` metadataKeyValue

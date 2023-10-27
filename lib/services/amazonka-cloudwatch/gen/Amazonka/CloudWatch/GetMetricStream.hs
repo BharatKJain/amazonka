@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatch.GetMetricStream
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -97,11 +97,15 @@ instance Core.AWSRequest GetMetricStream where
           GetMetricStreamResponse'
             Prelude.<$> (x Data..@? "Arn")
             Prelude.<*> (x Data..@? "CreationDate")
-            Prelude.<*> ( x Data..@? "ExcludeFilters" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "ExcludeFilters"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (x Data..@? "FirehoseArn")
-            Prelude.<*> ( x Data..@? "IncludeFilters" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "IncludeFilters"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (x Data..@? "LastUpdateDate")
@@ -109,7 +113,8 @@ instance Core.AWSRequest GetMetricStream where
             Prelude.<*> (x Data..@? "OutputFormat")
             Prelude.<*> (x Data..@? "RoleArn")
             Prelude.<*> (x Data..@? "State")
-            Prelude.<*> ( x Data..@? "StatisticsConfigurations"
+            Prelude.<*> ( x
+                            Data..@? "StatisticsConfigurations"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )

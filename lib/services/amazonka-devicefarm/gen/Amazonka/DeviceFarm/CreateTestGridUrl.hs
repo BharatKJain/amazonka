@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DeviceFarm.CreateTestGridUrl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest CreateTestGridUrl where
 
 instance Prelude.Hashable CreateTestGridUrl where
   hashWithSalt _salt CreateTestGridUrl' {..} =
-    _salt `Prelude.hashWithSalt` projectArn
+    _salt
+      `Prelude.hashWithSalt` projectArn
       `Prelude.hashWithSalt` expiresInSeconds
 
 instance Prelude.NFData CreateTestGridUrl where

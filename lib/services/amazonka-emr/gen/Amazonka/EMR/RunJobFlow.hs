@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EMR.RunJobFlow
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -765,7 +765,8 @@ instance Core.AWSRequest RunJobFlow where
 
 instance Prelude.Hashable RunJobFlow where
   hashWithSalt _salt RunJobFlow' {..} =
-    _salt `Prelude.hashWithSalt` additionalInfo
+    _salt
+      `Prelude.hashWithSalt` additionalInfo
       `Prelude.hashWithSalt` amiVersion
       `Prelude.hashWithSalt` applications
       `Prelude.hashWithSalt` autoScalingRole

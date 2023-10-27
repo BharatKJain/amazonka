@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppConfig.Types.DeploymentEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppConfig.Types.DeploymentEvent where
@@ -120,7 +120,8 @@ instance Data.FromJSON DeploymentEvent where
       "DeploymentEvent"
       ( \x ->
           DeploymentEvent'
-            Prelude.<$> ( x Data..:? "ActionInvocations"
+            Prelude.<$> ( x
+                            Data..:? "ActionInvocations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Description")
@@ -131,7 +132,8 @@ instance Data.FromJSON DeploymentEvent where
 
 instance Prelude.Hashable DeploymentEvent where
   hashWithSalt _salt DeploymentEvent' {..} =
-    _salt `Prelude.hashWithSalt` actionInvocations
+    _salt
+      `Prelude.hashWithSalt` actionInvocations
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` eventType
       `Prelude.hashWithSalt` occurredAt

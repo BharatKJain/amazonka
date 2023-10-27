@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.SkillDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.SkillDetails where
@@ -153,11 +153,13 @@ instance Data.FromJSON SkillDetails where
             Prelude.<$> (x Data..:? "BulletPoints" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "DeveloperInfo")
             Prelude.<*> (x Data..:? "EndUserLicenseAgreement")
-            Prelude.<*> ( x Data..:? "GenericKeywords"
+            Prelude.<*> ( x
+                            Data..:? "GenericKeywords"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "InvocationPhrase")
-            Prelude.<*> ( x Data..:? "NewInThisVersionBulletPoints"
+            Prelude.<*> ( x
+                            Data..:? "NewInThisVersionBulletPoints"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ProductDescription")
@@ -168,7 +170,8 @@ instance Data.FromJSON SkillDetails where
 
 instance Prelude.Hashable SkillDetails where
   hashWithSalt _salt SkillDetails' {..} =
-    _salt `Prelude.hashWithSalt` bulletPoints
+    _salt
+      `Prelude.hashWithSalt` bulletPoints
       `Prelude.hashWithSalt` developerInfo
       `Prelude.hashWithSalt` endUserLicenseAgreement
       `Prelude.hashWithSalt` genericKeywords

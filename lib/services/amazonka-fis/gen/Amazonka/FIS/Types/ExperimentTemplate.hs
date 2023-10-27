@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FIS.Types.ExperimentTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FIS.Types.ExperimentTemplate where
@@ -158,7 +158,8 @@ instance Data.FromJSON ExperimentTemplate where
 
 instance Prelude.Hashable ExperimentTemplate where
   hashWithSalt _salt ExperimentTemplate' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` id

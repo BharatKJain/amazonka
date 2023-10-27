@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.AuthenticationConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.AuthenticationConfiguration where
@@ -71,7 +71,8 @@ instance Data.FromJSON AuthenticationConfiguration where
       "AuthenticationConfiguration"
       ( \x ->
           AuthenticationConfiguration'
-            Prelude.<$> ( x Data..:? "BasicAuthentication"
+            Prelude.<$> ( x
+                            Data..:? "BasicAuthentication"
                             Data..!= Prelude.mempty
                         )
       )

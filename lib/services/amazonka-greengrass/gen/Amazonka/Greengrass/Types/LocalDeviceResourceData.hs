@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.LocalDeviceResourceData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.LocalDeviceResourceData where
@@ -82,7 +82,8 @@ instance Data.FromJSON LocalDeviceResourceData where
 
 instance Prelude.Hashable LocalDeviceResourceData where
   hashWithSalt _salt LocalDeviceResourceData' {..} =
-    _salt `Prelude.hashWithSalt` groupOwnerSetting
+    _salt
+      `Prelude.hashWithSalt` groupOwnerSetting
       `Prelude.hashWithSalt` sourcePath
 
 instance Prelude.NFData LocalDeviceResourceData where

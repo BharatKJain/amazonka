@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.CdnConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.CdnConfiguration where
@@ -109,7 +109,8 @@ instance Data.FromJSON CdnConfiguration where
 
 instance Prelude.Hashable CdnConfiguration where
   hashWithSalt _salt CdnConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` adSegmentUrlPrefix
+    _salt
+      `Prelude.hashWithSalt` adSegmentUrlPrefix
       `Prelude.hashWithSalt` contentSegmentUrlPrefix
 
 instance Prelude.NFData CdnConfiguration where

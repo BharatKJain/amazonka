@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.FormCTA
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.FormCTA where
@@ -96,7 +96,8 @@ instance Data.FromJSON FormCTA where
 
 instance Prelude.Hashable FormCTA where
   hashWithSalt _salt FormCTA' {..} =
-    _salt `Prelude.hashWithSalt` cancel
+    _salt
+      `Prelude.hashWithSalt` cancel
       `Prelude.hashWithSalt` clear
       `Prelude.hashWithSalt` position
       `Prelude.hashWithSalt` submit

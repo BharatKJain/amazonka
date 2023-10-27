@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.TaggedTable
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.TaggedTable where
@@ -90,7 +90,8 @@ instance Data.FromJSON TaggedTable where
       ( \x ->
           TaggedTable'
             Prelude.<$> (x Data..:? "LFTagOnDatabase")
-            Prelude.<*> ( x Data..:? "LFTagsOnColumns"
+            Prelude.<*> ( x
+                            Data..:? "LFTagsOnColumns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "LFTagsOnTable")
@@ -99,7 +100,8 @@ instance Data.FromJSON TaggedTable where
 
 instance Prelude.Hashable TaggedTable where
   hashWithSalt _salt TaggedTable' {..} =
-    _salt `Prelude.hashWithSalt` lFTagOnDatabase
+    _salt
+      `Prelude.hashWithSalt` lFTagOnDatabase
       `Prelude.hashWithSalt` lFTagsOnColumns
       `Prelude.hashWithSalt` lFTagsOnTable
       `Prelude.hashWithSalt` table

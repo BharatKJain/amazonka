@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.Relationship
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.Relationship where
@@ -95,7 +95,8 @@ instance Data.FromJSON Relationship where
 
 instance Prelude.Hashable Relationship where
   hashWithSalt _salt Relationship' {..} =
-    _salt `Prelude.hashWithSalt` relationshipName
+    _salt
+      `Prelude.hashWithSalt` relationshipName
       `Prelude.hashWithSalt` resourceId
       `Prelude.hashWithSalt` resourceName
       `Prelude.hashWithSalt` resourceType

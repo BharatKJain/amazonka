@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MechanicalTurk.SendBonus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -171,7 +171,8 @@ instance Core.AWSRequest SendBonus where
 
 instance Prelude.Hashable SendBonus where
   hashWithSalt _salt SendBonus' {..} =
-    _salt `Prelude.hashWithSalt` uniqueRequestToken
+    _salt
+      `Prelude.hashWithSalt` uniqueRequestToken
       `Prelude.hashWithSalt` workerId
       `Prelude.hashWithSalt` bonusAmount
       `Prelude.hashWithSalt` assignmentId

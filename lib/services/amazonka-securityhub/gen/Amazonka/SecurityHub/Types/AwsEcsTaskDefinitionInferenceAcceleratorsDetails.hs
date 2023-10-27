@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionInferenceAcceleratorsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionInferenceAcceleratorsDetails where
@@ -74,7 +74,7 @@ instance
       ( \x ->
           AwsEcsTaskDefinitionInferenceAcceleratorsDetails'
             Prelude.<$> (x Data..:? "DeviceName")
-              Prelude.<*> (x Data..:? "DeviceType")
+            Prelude.<*> (x Data..:? "DeviceType")
       )
 
 instance
@@ -84,7 +84,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsTaskDefinitionInferenceAcceleratorsDetails' {..} =
-      _salt `Prelude.hashWithSalt` deviceName
+      _salt
+        `Prelude.hashWithSalt` deviceName
         `Prelude.hashWithSalt` deviceType
 
 instance

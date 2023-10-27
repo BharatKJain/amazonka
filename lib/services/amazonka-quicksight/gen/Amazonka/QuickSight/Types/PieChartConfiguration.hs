@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.PieChartConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.PieChartConfiguration where
@@ -178,7 +178,8 @@ instance Data.FromJSON PieChartConfiguration where
 
 instance Prelude.Hashable PieChartConfiguration where
   hashWithSalt _salt PieChartConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` categoryLabelOptions
+    _salt
+      `Prelude.hashWithSalt` categoryLabelOptions
       `Prelude.hashWithSalt` contributionAnalysisDefaults
       `Prelude.hashWithSalt` dataLabels
       `Prelude.hashWithSalt` donutOptions

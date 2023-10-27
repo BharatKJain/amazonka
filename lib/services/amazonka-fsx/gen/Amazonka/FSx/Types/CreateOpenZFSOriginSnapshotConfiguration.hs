@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.CreateOpenZFSOriginSnapshotConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.CreateOpenZFSOriginSnapshotConfiguration where
@@ -101,7 +101,8 @@ instance
   hashWithSalt
     _salt
     CreateOpenZFSOriginSnapshotConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` snapshotARN
+      _salt
+        `Prelude.hashWithSalt` snapshotARN
         `Prelude.hashWithSalt` copyStrategy
 
 instance

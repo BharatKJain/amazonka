@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.StaticImageDeactivateScheduleActionSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.StaticImageDeactivateScheduleActionSettings where
@@ -76,7 +76,7 @@ instance
       ( \x ->
           StaticImageDeactivateScheduleActionSettings'
             Prelude.<$> (x Data..:? "fadeOut")
-              Prelude.<*> (x Data..:? "layer")
+            Prelude.<*> (x Data..:? "layer")
       )
 
 instance
@@ -86,7 +86,8 @@ instance
   hashWithSalt
     _salt
     StaticImageDeactivateScheduleActionSettings' {..} =
-      _salt `Prelude.hashWithSalt` fadeOut
+      _salt
+        `Prelude.hashWithSalt` fadeOut
         `Prelude.hashWithSalt` layer
 
 instance

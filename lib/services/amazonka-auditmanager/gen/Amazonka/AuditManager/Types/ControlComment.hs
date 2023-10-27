@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.ControlComment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.ControlComment where
@@ -85,7 +85,8 @@ instance Data.FromJSON ControlComment where
 
 instance Prelude.Hashable ControlComment where
   hashWithSalt _salt ControlComment' {..} =
-    _salt `Prelude.hashWithSalt` authorName
+    _salt
+      `Prelude.hashWithSalt` authorName
       `Prelude.hashWithSalt` commentBody
       `Prelude.hashWithSalt` postedDate
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LakeFormation.PutDataLakeSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest PutDataLakeSettings where
 
 instance Prelude.Hashable PutDataLakeSettings where
   hashWithSalt _salt PutDataLakeSettings' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` dataLakeSettings
 
 instance Prelude.NFData PutDataLakeSettings where

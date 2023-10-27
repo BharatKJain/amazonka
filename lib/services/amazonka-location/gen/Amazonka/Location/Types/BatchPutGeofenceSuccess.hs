@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.BatchPutGeofenceSuccess
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.BatchPutGeofenceSuccess where
@@ -107,7 +107,8 @@ instance Data.FromJSON BatchPutGeofenceSuccess where
 
 instance Prelude.Hashable BatchPutGeofenceSuccess where
   hashWithSalt _salt BatchPutGeofenceSuccess' {..} =
-    _salt `Prelude.hashWithSalt` createTime
+    _salt
+      `Prelude.hashWithSalt` createTime
       `Prelude.hashWithSalt` geofenceId
       `Prelude.hashWithSalt` updateTime
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.VirtualGatewayPortMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.VirtualGatewayPortMapping where
@@ -79,7 +79,8 @@ instance Data.FromJSON VirtualGatewayPortMapping where
 
 instance Prelude.Hashable VirtualGatewayPortMapping where
   hashWithSalt _salt VirtualGatewayPortMapping' {..} =
-    _salt `Prelude.hashWithSalt` port
+    _salt
+      `Prelude.hashWithSalt` port
       `Prelude.hashWithSalt` protocol
 
 instance Prelude.NFData VirtualGatewayPortMapping where

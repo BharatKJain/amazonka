@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ApiGatewayV2.DeleteRouteSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest DeleteRouteSettings where
 
 instance Prelude.Hashable DeleteRouteSettings where
   hashWithSalt _salt DeleteRouteSettings' {..} =
-    _salt `Prelude.hashWithSalt` stageName
+    _salt
+      `Prelude.hashWithSalt` stageName
       `Prelude.hashWithSalt` routeKey
       `Prelude.hashWithSalt` apiId
 

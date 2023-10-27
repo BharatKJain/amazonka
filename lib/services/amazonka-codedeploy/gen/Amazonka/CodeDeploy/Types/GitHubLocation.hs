@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.GitHubLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.GitHubLocation where
@@ -90,7 +90,8 @@ instance Data.FromJSON GitHubLocation where
 
 instance Prelude.Hashable GitHubLocation where
   hashWithSalt _salt GitHubLocation' {..} =
-    _salt `Prelude.hashWithSalt` commitId
+    _salt
+      `Prelude.hashWithSalt` commitId
       `Prelude.hashWithSalt` repository
 
 instance Prelude.NFData GitHubLocation where

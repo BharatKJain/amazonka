@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DMS.ImportCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -149,7 +149,8 @@ instance Core.AWSRequest ImportCertificate where
 
 instance Prelude.Hashable ImportCertificate where
   hashWithSalt _salt ImportCertificate' {..} =
-    _salt `Prelude.hashWithSalt` certificatePem
+    _salt
+      `Prelude.hashWithSalt` certificatePem
       `Prelude.hashWithSalt` certificateWallet
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` certificateIdentifier

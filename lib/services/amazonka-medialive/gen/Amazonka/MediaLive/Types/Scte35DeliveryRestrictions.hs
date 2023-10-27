@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.Scte35DeliveryRestrictions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.Scte35DeliveryRestrictions where
@@ -116,7 +116,8 @@ instance Data.FromJSON Scte35DeliveryRestrictions where
 
 instance Prelude.Hashable Scte35DeliveryRestrictions where
   hashWithSalt _salt Scte35DeliveryRestrictions' {..} =
-    _salt `Prelude.hashWithSalt` deviceRestrictions
+    _salt
+      `Prelude.hashWithSalt` deviceRestrictions
       `Prelude.hashWithSalt` archiveAllowedFlag
       `Prelude.hashWithSalt` webDeliveryAllowedFlag
       `Prelude.hashWithSalt` noRegionalBlackoutFlag

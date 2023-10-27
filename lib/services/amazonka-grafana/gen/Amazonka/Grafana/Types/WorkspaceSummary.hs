@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Grafana.Types.WorkspaceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Grafana.Types.WorkspaceSummary where
@@ -185,7 +185,8 @@ instance Data.FromJSON WorkspaceSummary where
           WorkspaceSummary'
             Prelude.<$> (x Data..:? "description")
             Prelude.<*> (x Data..:? "name")
-            Prelude.<*> ( x Data..:? "notificationDestinations"
+            Prelude.<*> ( x
+                            Data..:? "notificationDestinations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "tags" Data..!= Prelude.mempty)
@@ -200,7 +201,8 @@ instance Data.FromJSON WorkspaceSummary where
 
 instance Prelude.Hashable WorkspaceSummary where
   hashWithSalt _salt WorkspaceSummary' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` notificationDestinations
       `Prelude.hashWithSalt` tags

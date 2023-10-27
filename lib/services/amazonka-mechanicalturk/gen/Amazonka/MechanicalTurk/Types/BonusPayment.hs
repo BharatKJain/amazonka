@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MechanicalTurk.Types.BonusPayment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MechanicalTurk.Types.BonusPayment where
@@ -103,7 +103,8 @@ instance Data.FromJSON BonusPayment where
 
 instance Prelude.Hashable BonusPayment where
   hashWithSalt _salt BonusPayment' {..} =
-    _salt `Prelude.hashWithSalt` assignmentId
+    _salt
+      `Prelude.hashWithSalt` assignmentId
       `Prelude.hashWithSalt` bonusAmount
       `Prelude.hashWithSalt` grantTime
       `Prelude.hashWithSalt` reason

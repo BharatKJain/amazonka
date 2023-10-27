@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pi.Types.DimensionGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pi.Types.DimensionGroup where
@@ -557,7 +557,8 @@ dimensionGroup_group = Lens.lens (\DimensionGroup' {group'} -> group') (\s@Dimen
 
 instance Prelude.Hashable DimensionGroup where
   hashWithSalt _salt DimensionGroup' {..} =
-    _salt `Prelude.hashWithSalt` dimensions
+    _salt
+      `Prelude.hashWithSalt` dimensions
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` group'
 

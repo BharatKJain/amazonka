@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.ADMChannelRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.ADMChannelRequest where
@@ -84,7 +84,8 @@ aDMChannelRequest_clientId = Lens.lens (\ADMChannelRequest' {clientId} -> client
 
 instance Prelude.Hashable ADMChannelRequest where
   hashWithSalt _salt ADMChannelRequest' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` clientSecret
       `Prelude.hashWithSalt` clientId
 

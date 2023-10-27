@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.AttachmentStateChange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.AttachmentStateChange where
@@ -69,7 +69,8 @@ attachmentStateChange_status = Lens.lens (\AttachmentStateChange' {status} -> st
 
 instance Prelude.Hashable AttachmentStateChange where
   hashWithSalt _salt AttachmentStateChange' {..} =
-    _salt `Prelude.hashWithSalt` attachmentArn
+    _salt
+      `Prelude.hashWithSalt` attachmentArn
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData AttachmentStateChange where

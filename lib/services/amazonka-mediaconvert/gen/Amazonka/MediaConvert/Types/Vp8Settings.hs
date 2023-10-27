@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.Vp8Settings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.Vp8Settings where
@@ -367,7 +367,8 @@ instance Data.FromJSON Vp8Settings where
 
 instance Prelude.Hashable Vp8Settings where
   hashWithSalt _salt Vp8Settings' {..} =
-    _salt `Prelude.hashWithSalt` bitrate
+    _salt
+      `Prelude.hashWithSalt` bitrate
       `Prelude.hashWithSalt` framerateControl
       `Prelude.hashWithSalt` framerateConversionAlgorithm
       `Prelude.hashWithSalt` framerateDenominator

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.DelegatedAdminAccount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.DelegatedAdminAccount where
@@ -79,7 +79,8 @@ instance Data.FromJSON DelegatedAdminAccount where
 
 instance Prelude.Hashable DelegatedAdminAccount where
   hashWithSalt _salt DelegatedAdminAccount' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData DelegatedAdminAccount where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.SearchResourcesSimpleCriterion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.SearchResourcesSimpleCriterion where
@@ -145,7 +145,8 @@ instance
   hashWithSalt
     _salt
     SearchResourcesSimpleCriterion' {..} =
-      _salt `Prelude.hashWithSalt` comparator
+      _salt
+        `Prelude.hashWithSalt` comparator
         `Prelude.hashWithSalt` key
         `Prelude.hashWithSalt` values
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudSearch.DescribeSuggesters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,14 +124,17 @@ instance Core.AWSRequest DescribeSuggesters where
       ( \s h x ->
           DescribeSuggestersResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..@? "Suggesters" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "Suggesters"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Data.parseXMLList "member"
                         )
       )
 
 instance Prelude.Hashable DescribeSuggesters where
   hashWithSalt _salt DescribeSuggesters' {..} =
-    _salt `Prelude.hashWithSalt` deployed
+    _salt
+      `Prelude.hashWithSalt` deployed
       `Prelude.hashWithSalt` suggesterNames
       `Prelude.hashWithSalt` domainName
 

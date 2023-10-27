@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.CustomAuthConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.CustomAuthConfig where
@@ -75,7 +75,8 @@ instance Data.FromJSON CustomAuthConfig where
 
 instance Prelude.Hashable CustomAuthConfig where
   hashWithSalt _salt CustomAuthConfig' {..} =
-    _salt `Prelude.hashWithSalt` authParameters
+    _salt
+      `Prelude.hashWithSalt` authParameters
       `Prelude.hashWithSalt` customAuthenticationType
 
 instance Prelude.NFData CustomAuthConfig where

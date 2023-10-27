@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecretsManager.ReplicateSecretToRegions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,7 +129,8 @@ instance Core.AWSRequest ReplicateSecretToRegions where
       ( \s h x ->
           ReplicateSecretToRegionsResponse'
             Prelude.<$> (x Data..?> "ARN")
-            Prelude.<*> ( x Data..?> "ReplicationStatus"
+            Prelude.<*> ( x
+                            Data..?> "ReplicationStatus"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

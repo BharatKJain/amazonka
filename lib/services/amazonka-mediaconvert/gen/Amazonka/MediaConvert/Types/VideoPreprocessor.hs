@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.VideoPreprocessor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.VideoPreprocessor where
@@ -181,7 +181,8 @@ instance Data.FromJSON VideoPreprocessor where
 
 instance Prelude.Hashable VideoPreprocessor where
   hashWithSalt _salt VideoPreprocessor' {..} =
-    _salt `Prelude.hashWithSalt` colorCorrector
+    _salt
+      `Prelude.hashWithSalt` colorCorrector
       `Prelude.hashWithSalt` deinterlacer
       `Prelude.hashWithSalt` dolbyVision
       `Prelude.hashWithSalt` hdr10Plus

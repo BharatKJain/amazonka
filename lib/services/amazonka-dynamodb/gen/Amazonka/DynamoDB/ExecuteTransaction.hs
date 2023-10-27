@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.ExecuteTransaction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest ExecuteTransaction where
     Response.receiveJSON
       ( \s h x ->
           ExecuteTransactionResponse'
-            Prelude.<$> ( x Data..?> "ConsumedCapacity"
+            Prelude.<$> ( x
+                            Data..?> "ConsumedCapacity"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "Responses")
@@ -144,7 +145,8 @@ instance Core.AWSRequest ExecuteTransaction where
 
 instance Prelude.Hashable ExecuteTransaction where
   hashWithSalt _salt ExecuteTransaction' {..} =
-    _salt `Prelude.hashWithSalt` clientRequestToken
+    _salt
+      `Prelude.hashWithSalt` clientRequestToken
       `Prelude.hashWithSalt` returnConsumedCapacity
       `Prelude.hashWithSalt` transactStatements
 

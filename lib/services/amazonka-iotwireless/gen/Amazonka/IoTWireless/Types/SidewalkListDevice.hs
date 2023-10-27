@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.SidewalkListDevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.SidewalkListDevice where
@@ -88,7 +88,8 @@ instance Data.FromJSON SidewalkListDevice where
       ( \x ->
           SidewalkListDevice'
             Prelude.<$> (x Data..:? "AmazonId")
-            Prelude.<*> ( x Data..:? "DeviceCertificates"
+            Prelude.<*> ( x
+                            Data..:? "DeviceCertificates"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SidewalkId")
@@ -97,7 +98,8 @@ instance Data.FromJSON SidewalkListDevice where
 
 instance Prelude.Hashable SidewalkListDevice where
   hashWithSalt _salt SidewalkListDevice' {..} =
-    _salt `Prelude.hashWithSalt` amazonId
+    _salt
+      `Prelude.hashWithSalt` amazonId
       `Prelude.hashWithSalt` deviceCertificates
       `Prelude.hashWithSalt` sidewalkId
       `Prelude.hashWithSalt` sidewalkManufacturingSn

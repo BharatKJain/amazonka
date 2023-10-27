@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WellArchitected.ListShareInvitations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,7 +130,8 @@ instance Core.AWSRequest ListShareInvitations where
       ( \s h x ->
           ListShareInvitationsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "ShareInvitationSummaries"
+            Prelude.<*> ( x
+                            Data..?> "ShareInvitationSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -138,7 +139,8 @@ instance Core.AWSRequest ListShareInvitations where
 
 instance Prelude.Hashable ListShareInvitations where
   hashWithSalt _salt ListShareInvitations' {..} =
-    _salt `Prelude.hashWithSalt` lensNamePrefix
+    _salt
+      `Prelude.hashWithSalt` lensNamePrefix
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` shareResourceType

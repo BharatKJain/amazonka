@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.LoadBalancerTlsCertificateDomainValidationOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.LoadBalancerTlsCertificateDomainValidationOption where
@@ -76,7 +76,7 @@ instance
       ( \x ->
           LoadBalancerTlsCertificateDomainValidationOption'
             Prelude.<$> (x Data..:? "domainName")
-              Prelude.<*> (x Data..:? "validationStatus")
+            Prelude.<*> (x Data..:? "validationStatus")
       )
 
 instance
@@ -86,7 +86,8 @@ instance
   hashWithSalt
     _salt
     LoadBalancerTlsCertificateDomainValidationOption' {..} =
-      _salt `Prelude.hashWithSalt` domainName
+      _salt
+        `Prelude.hashWithSalt` domainName
         `Prelude.hashWithSalt` validationStatus
 
 instance

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TableCellStyle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TableCellStyle where
@@ -143,7 +143,8 @@ instance Data.FromJSON TableCellStyle where
 
 instance Prelude.Hashable TableCellStyle where
   hashWithSalt _salt TableCellStyle' {..} =
-    _salt `Prelude.hashWithSalt` backgroundColor
+    _salt
+      `Prelude.hashWithSalt` backgroundColor
       `Prelude.hashWithSalt` border
       `Prelude.hashWithSalt` fontConfiguration
       `Prelude.hashWithSalt` height

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.HTTPHeader
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.HTTPHeader where
@@ -71,12 +71,14 @@ instance Data.FromJSON HTTPHeader where
       "HTTPHeader"
       ( \x ->
           HTTPHeader'
-            Prelude.<$> (x Data..:? "Name") Prelude.<*> (x Data..:? "Value")
+            Prelude.<$> (x Data..:? "Name")
+            Prelude.<*> (x Data..:? "Value")
       )
 
 instance Prelude.Hashable HTTPHeader where
   hashWithSalt _salt HTTPHeader' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData HTTPHeader where

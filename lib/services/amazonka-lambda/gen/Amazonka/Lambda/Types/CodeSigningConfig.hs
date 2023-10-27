@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.CodeSigningConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.CodeSigningConfig where
@@ -138,7 +138,8 @@ instance Data.FromJSON CodeSigningConfig where
 
 instance Prelude.Hashable CodeSigningConfig where
   hashWithSalt _salt CodeSigningConfig' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` codeSigningConfigId
       `Prelude.hashWithSalt` codeSigningConfigArn
       `Prelude.hashWithSalt` allowedPublishers

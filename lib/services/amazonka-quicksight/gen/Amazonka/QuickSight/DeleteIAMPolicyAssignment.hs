@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.DeleteIAMPolicyAssignment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,8 @@ instance Core.AWSRequest DeleteIAMPolicyAssignment where
 
 instance Prelude.Hashable DeleteIAMPolicyAssignment where
   hashWithSalt _salt DeleteIAMPolicyAssignment' {..} =
-    _salt `Prelude.hashWithSalt` awsAccountId
+    _salt
+      `Prelude.hashWithSalt` awsAccountId
       `Prelude.hashWithSalt` assignmentName
       `Prelude.hashWithSalt` namespace
 

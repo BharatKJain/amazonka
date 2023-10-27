@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.DBParameterGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.DBParameterGroup where
@@ -97,7 +97,8 @@ instance Data.FromXML DBParameterGroup where
 
 instance Prelude.Hashable DBParameterGroup where
   hashWithSalt _salt DBParameterGroup' {..} =
-    _salt `Prelude.hashWithSalt` dbParameterGroupArn
+    _salt
+      `Prelude.hashWithSalt` dbParameterGroupArn
       `Prelude.hashWithSalt` dbParameterGroupFamily
       `Prelude.hashWithSalt` dbParameterGroupName
       `Prelude.hashWithSalt` description

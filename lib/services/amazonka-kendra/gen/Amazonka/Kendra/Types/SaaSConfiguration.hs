@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.SaaSConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.SaaSConfiguration where
@@ -92,7 +92,8 @@ instance Data.FromJSON SaaSConfiguration where
 
 instance Prelude.Hashable SaaSConfiguration where
   hashWithSalt _salt SaaSConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` organizationName
+    _salt
+      `Prelude.hashWithSalt` organizationName
       `Prelude.hashWithSalt` hostUrl
 
 instance Prelude.NFData SaaSConfiguration where

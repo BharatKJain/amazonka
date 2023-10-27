@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.RefreshPreferences
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.RefreshPreferences where
@@ -175,7 +175,8 @@ instance Data.FromXML RefreshPreferences where
   parseXML x =
     RefreshPreferences'
       Prelude.<$> (x Data..@? "CheckpointDelay")
-      Prelude.<*> ( x Data..@? "CheckpointPercentages"
+      Prelude.<*> ( x
+                      Data..@? "CheckpointPercentages"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
@@ -185,7 +186,8 @@ instance Data.FromXML RefreshPreferences where
 
 instance Prelude.Hashable RefreshPreferences where
   hashWithSalt _salt RefreshPreferences' {..} =
-    _salt `Prelude.hashWithSalt` checkpointDelay
+    _salt
+      `Prelude.hashWithSalt` checkpointDelay
       `Prelude.hashWithSalt` checkpointPercentages
       `Prelude.hashWithSalt` instanceWarmup
       `Prelude.hashWithSalt` minHealthyPercentage

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.ListVirtualMFADevices
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -154,22 +154,22 @@ instance Core.AWSPager ListVirtualMFADevices where
     | Core.stop
         ( rs
             Lens.^? listVirtualMFADevicesResponse_isTruncated
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.isNothing
         ( rs
             Lens.^? listVirtualMFADevicesResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listVirtualMFADevices_marker
           Lens..~ rs
           Lens.^? listVirtualMFADevicesResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListVirtualMFADevices where
   type
@@ -185,7 +185,8 @@ instance Core.AWSRequest ListVirtualMFADevices where
             Prelude.<$> (x Data..@? "IsTruncated")
             Prelude.<*> (x Data..@? "Marker")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..@? "VirtualMFADevices"
+            Prelude.<*> ( x
+                            Data..@? "VirtualMFADevices"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Data.parseXMLList "member"
                         )
@@ -193,7 +194,8 @@ instance Core.AWSRequest ListVirtualMFADevices where
 
 instance Prelude.Hashable ListVirtualMFADevices where
   hashWithSalt _salt ListVirtualMFADevices' {..} =
-    _salt `Prelude.hashWithSalt` assignmentStatus
+    _salt
+      `Prelude.hashWithSalt` assignmentStatus
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxItems
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.AssociateBot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest AssociateBot where
 
 instance Prelude.Hashable AssociateBot where
   hashWithSalt _salt AssociateBot' {..} =
-    _salt `Prelude.hashWithSalt` lexBot
+    _salt
+      `Prelude.hashWithSalt` lexBot
       `Prelude.hashWithSalt` lexV2Bot
       `Prelude.hashWithSalt` instanceId
 

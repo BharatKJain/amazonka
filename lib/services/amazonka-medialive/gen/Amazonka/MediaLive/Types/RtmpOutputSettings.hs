@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.RtmpOutputSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.RtmpOutputSettings where
@@ -114,7 +114,8 @@ instance Data.FromJSON RtmpOutputSettings where
 
 instance Prelude.Hashable RtmpOutputSettings where
   hashWithSalt _salt RtmpOutputSettings' {..} =
-    _salt `Prelude.hashWithSalt` certificateMode
+    _salt
+      `Prelude.hashWithSalt` certificateMode
       `Prelude.hashWithSalt` connectionRetryInterval
       `Prelude.hashWithSalt` numRetries
       `Prelude.hashWithSalt` destination

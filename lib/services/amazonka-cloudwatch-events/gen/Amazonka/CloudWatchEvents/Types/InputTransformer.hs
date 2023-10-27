@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.InputTransformer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.InputTransformer where
@@ -242,7 +242,8 @@ instance Data.FromJSON InputTransformer where
 
 instance Prelude.Hashable InputTransformer where
   hashWithSalt _salt InputTransformer' {..} =
-    _salt `Prelude.hashWithSalt` inputPathsMap
+    _salt
+      `Prelude.hashWithSalt` inputPathsMap
       `Prelude.hashWithSalt` inputTemplate
 
 instance Prelude.NFData InputTransformer where

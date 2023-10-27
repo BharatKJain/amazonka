@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.NetworkFirewallUnexpectedFirewallRoutesViolation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.NetworkFirewallUnexpectedFirewallRoutesViolation where
@@ -105,12 +105,13 @@ instance
       ( \x ->
           NetworkFirewallUnexpectedFirewallRoutesViolation'
             Prelude.<$> (x Data..:? "FirewallEndpoint")
-              Prelude.<*> (x Data..:? "FirewallSubnetId")
-              Prelude.<*> (x Data..:? "RouteTableId")
-              Prelude.<*> ( x Data..:? "ViolatingRoutes"
-                              Data..!= Prelude.mempty
-                          )
-              Prelude.<*> (x Data..:? "VpcId")
+            Prelude.<*> (x Data..:? "FirewallSubnetId")
+            Prelude.<*> (x Data..:? "RouteTableId")
+            Prelude.<*> ( x
+                            Data..:? "ViolatingRoutes"
+                            Data..!= Prelude.mempty
+                        )
+            Prelude.<*> (x Data..:? "VpcId")
       )
 
 instance
@@ -120,7 +121,8 @@ instance
   hashWithSalt
     _salt
     NetworkFirewallUnexpectedFirewallRoutesViolation' {..} =
-      _salt `Prelude.hashWithSalt` firewallEndpoint
+      _salt
+        `Prelude.hashWithSalt` firewallEndpoint
         `Prelude.hashWithSalt` firewallSubnetId
         `Prelude.hashWithSalt` routeTableId
         `Prelude.hashWithSalt` violatingRoutes

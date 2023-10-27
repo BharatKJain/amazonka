@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.BotLocaleSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.BotLocaleSummary where
@@ -121,7 +121,8 @@ instance Data.FromJSON BotLocaleSummary where
 
 instance Prelude.Hashable BotLocaleSummary where
   hashWithSalt _salt BotLocaleSummary' {..} =
-    _salt `Prelude.hashWithSalt` botLocaleStatus
+    _salt
+      `Prelude.hashWithSalt` botLocaleStatus
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` lastBuildSubmittedDateTime
       `Prelude.hashWithSalt` lastUpdatedDateTime

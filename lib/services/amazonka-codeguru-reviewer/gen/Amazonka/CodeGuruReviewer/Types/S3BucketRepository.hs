@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.S3BucketRepository
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.S3BucketRepository where
@@ -88,7 +88,8 @@ instance Data.FromJSON S3BucketRepository where
 
 instance Prelude.Hashable S3BucketRepository where
   hashWithSalt _salt S3BucketRepository' {..} =
-    _salt `Prelude.hashWithSalt` details
+    _salt
+      `Prelude.hashWithSalt` details
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData S3BucketRepository where

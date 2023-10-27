@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.FilledMapConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.FilledMapConfiguration where
@@ -121,7 +121,8 @@ instance Data.FromJSON FilledMapConfiguration where
 
 instance Prelude.Hashable FilledMapConfiguration where
   hashWithSalt _salt FilledMapConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` fieldWells
+    _salt
+      `Prelude.hashWithSalt` fieldWells
       `Prelude.hashWithSalt` legend
       `Prelude.hashWithSalt` mapStyleOptions
       `Prelude.hashWithSalt` sortConfiguration

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.GenericRevisionInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.GenericRevisionInfo where
@@ -96,7 +96,8 @@ instance Data.FromJSON GenericRevisionInfo where
       "GenericRevisionInfo"
       ( \x ->
           GenericRevisionInfo'
-            Prelude.<$> ( x Data..:? "deploymentGroups"
+            Prelude.<$> ( x
+                            Data..:? "deploymentGroups"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "description")
@@ -107,7 +108,8 @@ instance Data.FromJSON GenericRevisionInfo where
 
 instance Prelude.Hashable GenericRevisionInfo where
   hashWithSalt _salt GenericRevisionInfo' {..} =
-    _salt `Prelude.hashWithSalt` deploymentGroups
+    _salt
+      `Prelude.hashWithSalt` deploymentGroups
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` firstUsedTime
       `Prelude.hashWithSalt` lastUsedTime

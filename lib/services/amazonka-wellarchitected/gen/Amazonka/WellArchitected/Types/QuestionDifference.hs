@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.QuestionDifference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.QuestionDifference where
@@ -84,7 +84,8 @@ instance Data.FromJSON QuestionDifference where
 
 instance Prelude.Hashable QuestionDifference where
   hashWithSalt _salt QuestionDifference' {..} =
-    _salt `Prelude.hashWithSalt` differenceStatus
+    _salt
+      `Prelude.hashWithSalt` differenceStatus
       `Prelude.hashWithSalt` questionId
       `Prelude.hashWithSalt` questionTitle
 

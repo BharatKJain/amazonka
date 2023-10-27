@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FinSpaceData.UpdatePermissionGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -212,7 +212,8 @@ instance Core.AWSRequest UpdatePermissionGroup where
 
 instance Prelude.Hashable UpdatePermissionGroup where
   hashWithSalt _salt UpdatePermissionGroup' {..} =
-    _salt `Prelude.hashWithSalt` applicationPermissions
+    _salt
+      `Prelude.hashWithSalt` applicationPermissions
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name

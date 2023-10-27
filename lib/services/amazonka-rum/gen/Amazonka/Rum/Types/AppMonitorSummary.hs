@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rum.Types.AppMonitorSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rum.Types.AppMonitorSummary where
@@ -109,7 +109,8 @@ instance Data.FromJSON AppMonitorSummary where
 
 instance Prelude.Hashable AppMonitorSummary where
   hashWithSalt _salt AppMonitorSummary' {..} =
-    _salt `Prelude.hashWithSalt` created
+    _salt
+      `Prelude.hashWithSalt` created
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` lastModified
       `Prelude.hashWithSalt` name

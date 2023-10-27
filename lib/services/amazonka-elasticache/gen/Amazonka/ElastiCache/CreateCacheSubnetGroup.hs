@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElastiCache.CreateCacheSubnetGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -154,7 +154,8 @@ instance Core.AWSRequest CreateCacheSubnetGroup where
 
 instance Prelude.Hashable CreateCacheSubnetGroup where
   hashWithSalt _salt CreateCacheSubnetGroup' {..} =
-    _salt `Prelude.hashWithSalt` tags
+    _salt
+      `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` cacheSubnetGroupName
       `Prelude.hashWithSalt` cacheSubnetGroupDescription
       `Prelude.hashWithSalt` subnetIds

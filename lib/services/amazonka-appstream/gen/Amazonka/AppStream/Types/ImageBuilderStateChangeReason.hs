@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.ImageBuilderStateChangeReason
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.ImageBuilderStateChangeReason where
@@ -79,7 +79,8 @@ instance
     ImageBuilderStateChangeReason
   where
   hashWithSalt _salt ImageBuilderStateChangeReason' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData ImageBuilderStateChangeReason where

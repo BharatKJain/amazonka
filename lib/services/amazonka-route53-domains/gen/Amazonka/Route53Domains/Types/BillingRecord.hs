@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53Domains.Types.BillingRecord
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53Domains.Types.BillingRecord where
@@ -126,7 +126,8 @@ instance Data.FromJSON BillingRecord where
 
 instance Prelude.Hashable BillingRecord where
   hashWithSalt _salt BillingRecord' {..} =
-    _salt `Prelude.hashWithSalt` billDate
+    _salt
+      `Prelude.hashWithSalt` billDate
       `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` invoiceId
       `Prelude.hashWithSalt` operation

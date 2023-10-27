@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.CustomResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.CustomResponse where
@@ -152,7 +152,8 @@ instance Data.FromJSON CustomResponse where
 
 instance Prelude.Hashable CustomResponse where
   hashWithSalt _salt CustomResponse' {..} =
-    _salt `Prelude.hashWithSalt` customResponseBodyKey
+    _salt
+      `Prelude.hashWithSalt` customResponseBodyKey
       `Prelude.hashWithSalt` responseHeaders
       `Prelude.hashWithSalt` responseCode
 

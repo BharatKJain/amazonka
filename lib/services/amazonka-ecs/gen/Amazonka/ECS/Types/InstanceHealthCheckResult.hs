@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.InstanceHealthCheckResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.InstanceHealthCheckResult where
@@ -104,7 +104,8 @@ instance Data.FromJSON InstanceHealthCheckResult where
 
 instance Prelude.Hashable InstanceHealthCheckResult where
   hashWithSalt _salt InstanceHealthCheckResult' {..} =
-    _salt `Prelude.hashWithSalt` lastStatusChange
+    _salt
+      `Prelude.hashWithSalt` lastStatusChange
       `Prelude.hashWithSalt` lastUpdated
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` type'

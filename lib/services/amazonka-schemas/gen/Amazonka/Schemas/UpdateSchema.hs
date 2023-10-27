@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Schemas.UpdateSchema
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,7 +158,8 @@ instance Core.AWSRequest UpdateSchema where
 
 instance Prelude.Hashable UpdateSchema where
   hashWithSalt _salt UpdateSchema' {..} =
-    _salt `Prelude.hashWithSalt` clientTokenId
+    _salt
+      `Prelude.hashWithSalt` clientTokenId
       `Prelude.hashWithSalt` content
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` type'

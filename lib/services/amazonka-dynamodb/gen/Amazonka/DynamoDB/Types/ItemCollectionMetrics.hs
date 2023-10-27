@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.ItemCollectionMetrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.ItemCollectionMetrics where
@@ -101,17 +101,20 @@ instance Data.FromJSON ItemCollectionMetrics where
       "ItemCollectionMetrics"
       ( \x ->
           ItemCollectionMetrics'
-            Prelude.<$> ( x Data..:? "ItemCollectionKey"
+            Prelude.<$> ( x
+                            Data..:? "ItemCollectionKey"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "SizeEstimateRangeGB"
+            Prelude.<*> ( x
+                            Data..:? "SizeEstimateRangeGB"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ItemCollectionMetrics where
   hashWithSalt _salt ItemCollectionMetrics' {..} =
-    _salt `Prelude.hashWithSalt` itemCollectionKey
+    _salt
+      `Prelude.hashWithSalt` itemCollectionKey
       `Prelude.hashWithSalt` sizeEstimateRangeGB
 
 instance Prelude.NFData ItemCollectionMetrics where

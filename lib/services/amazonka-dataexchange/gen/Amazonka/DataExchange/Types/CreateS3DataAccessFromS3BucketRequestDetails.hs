@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.CreateS3DataAccessFromS3BucketRequestDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.CreateS3DataAccessFromS3BucketRequestDetails where
@@ -93,7 +93,8 @@ instance
   hashWithSalt
     _salt
     CreateS3DataAccessFromS3BucketRequestDetails' {..} =
-      _salt `Prelude.hashWithSalt` assetSource
+      _salt
+        `Prelude.hashWithSalt` assetSource
         `Prelude.hashWithSalt` dataSetId
         `Prelude.hashWithSalt` revisionId
 

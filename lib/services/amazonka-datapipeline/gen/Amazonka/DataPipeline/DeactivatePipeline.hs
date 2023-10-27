@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataPipeline.DeactivatePipeline
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance Core.AWSRequest DeactivatePipeline where
 
 instance Prelude.Hashable DeactivatePipeline where
   hashWithSalt _salt DeactivatePipeline' {..} =
-    _salt `Prelude.hashWithSalt` cancelActive
+    _salt
+      `Prelude.hashWithSalt` cancelActive
       `Prelude.hashWithSalt` pipelineId
 
 instance Prelude.NFData DeactivatePipeline where

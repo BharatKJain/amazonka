@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.ListenerTlsFileCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.ListenerTlsFileCertificate where
@@ -87,7 +87,8 @@ instance Data.FromJSON ListenerTlsFileCertificate where
 
 instance Prelude.Hashable ListenerTlsFileCertificate where
   hashWithSalt _salt ListenerTlsFileCertificate' {..} =
-    _salt `Prelude.hashWithSalt` certificateChain
+    _salt
+      `Prelude.hashWithSalt` certificateChain
       `Prelude.hashWithSalt` privateKey
 
 instance Prelude.NFData ListenerTlsFileCertificate where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyBackend.Types.UpdateBackendAuthVerificationMessageConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyBackend.Types.UpdateBackendAuthVerificationMessageConfig where
@@ -87,7 +87,8 @@ instance
   hashWithSalt
     _salt
     UpdateBackendAuthVerificationMessageConfig' {..} =
-      _salt `Prelude.hashWithSalt` emailSettings
+      _salt
+        `Prelude.hashWithSalt` emailSettings
         `Prelude.hashWithSalt` smsSettings
         `Prelude.hashWithSalt` deliveryMethod
 

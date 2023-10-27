@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.ColumnInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.ColumnInfo where
@@ -165,7 +165,8 @@ instance Data.FromJSON ColumnInfo where
 
 instance Prelude.Hashable ColumnInfo where
   hashWithSalt _salt ColumnInfo' {..} =
-    _salt `Prelude.hashWithSalt` caseSensitive
+    _salt
+      `Prelude.hashWithSalt` caseSensitive
       `Prelude.hashWithSalt` catalogName
       `Prelude.hashWithSalt` label
       `Prelude.hashWithSalt` nullable

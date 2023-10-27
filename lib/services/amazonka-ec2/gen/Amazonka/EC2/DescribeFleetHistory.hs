@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeFleetHistory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -174,7 +174,8 @@ instance Core.AWSRequest DescribeFleetHistory where
       ( \s h x ->
           DescribeFleetHistoryResponse'
             Prelude.<$> (x Data..@? "fleetId")
-            Prelude.<*> ( x Data..@? "historyRecordSet"
+            Prelude.<*> ( x
+                            Data..@? "historyRecordSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -186,7 +187,8 @@ instance Core.AWSRequest DescribeFleetHistory where
 
 instance Prelude.Hashable DescribeFleetHistory where
   hashWithSalt _salt DescribeFleetHistory' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` eventType
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

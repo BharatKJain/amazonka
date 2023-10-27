@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.LocationAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.LocationAttributes where
@@ -97,7 +97,8 @@ instance Data.FromJSON LocationAttributes where
 
 instance Prelude.Hashable LocationAttributes where
   hashWithSalt _salt LocationAttributes' {..} =
-    _salt `Prelude.hashWithSalt` locationState
+    _salt
+      `Prelude.hashWithSalt` locationState
       `Prelude.hashWithSalt` stoppedActions
       `Prelude.hashWithSalt` updateStatus
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VpcClassicLink
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VpcClassicLink where
@@ -83,14 +83,17 @@ instance Data.FromXML VpcClassicLink where
   parseXML x =
     VpcClassicLink'
       Prelude.<$> (x Data..@? "classicLinkEnabled")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "vpcId")
 
 instance Prelude.Hashable VpcClassicLink where
   hashWithSalt _salt VpcClassicLink' {..} =
-    _salt `Prelude.hashWithSalt` classicLinkEnabled
+    _salt
+      `Prelude.hashWithSalt` classicLinkEnabled
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` vpcId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.ApplicationFleetAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.ApplicationFleetAssociation where
@@ -81,7 +81,8 @@ instance Data.FromJSON ApplicationFleetAssociation where
 
 instance Prelude.Hashable ApplicationFleetAssociation where
   hashWithSalt _salt ApplicationFleetAssociation' {..} =
-    _salt `Prelude.hashWithSalt` fleetName
+    _salt
+      `Prelude.hashWithSalt` fleetName
       `Prelude.hashWithSalt` applicationArn
 
 instance Prelude.NFData ApplicationFleetAssociation where

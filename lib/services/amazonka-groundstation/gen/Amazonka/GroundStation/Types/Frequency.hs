@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.Frequency
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.Frequency where
@@ -73,12 +73,14 @@ instance Data.FromJSON Frequency where
       "Frequency"
       ( \x ->
           Frequency'
-            Prelude.<$> (x Data..: "units") Prelude.<*> (x Data..: "value")
+            Prelude.<$> (x Data..: "units")
+            Prelude.<*> (x Data..: "value")
       )
 
 instance Prelude.Hashable Frequency where
   hashWithSalt _salt Frequency' {..} =
-    _salt `Prelude.hashWithSalt` units
+    _salt
+      `Prelude.hashWithSalt` units
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData Frequency where

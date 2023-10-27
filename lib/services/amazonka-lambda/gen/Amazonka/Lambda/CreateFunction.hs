@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lambda.CreateFunction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -574,7 +574,8 @@ instance Core.AWSRequest CreateFunction where
 
 instance Prelude.Hashable CreateFunction where
   hashWithSalt _salt CreateFunction' {..} =
-    _salt `Prelude.hashWithSalt` architectures
+    _salt
+      `Prelude.hashWithSalt` architectures
       `Prelude.hashWithSalt` codeSigningConfigArn
       `Prelude.hashWithSalt` deadLetterConfig
       `Prelude.hashWithSalt` description

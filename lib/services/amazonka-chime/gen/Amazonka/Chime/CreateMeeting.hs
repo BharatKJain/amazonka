@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.CreateMeeting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -174,7 +174,8 @@ instance Core.AWSRequest CreateMeeting where
 
 instance Prelude.Hashable CreateMeeting where
   hashWithSalt _salt CreateMeeting' {..} =
-    _salt `Prelude.hashWithSalt` externalMeetingId
+    _salt
+      `Prelude.hashWithSalt` externalMeetingId
       `Prelude.hashWithSalt` mediaRegion
       `Prelude.hashWithSalt` meetingHostId
       `Prelude.hashWithSalt` notificationsConfiguration

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.CloudWatchLoggingOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.CloudWatchLoggingOptions where
@@ -92,7 +92,8 @@ instance Data.FromJSON CloudWatchLoggingOptions where
 
 instance Prelude.Hashable CloudWatchLoggingOptions where
   hashWithSalt _salt CloudWatchLoggingOptions' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` logGroupName
       `Prelude.hashWithSalt` logStreamName
 

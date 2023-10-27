@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpaces.Types.RelatedWorkspaceProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpaces.Types.RelatedWorkspaceProperties where
@@ -99,7 +99,8 @@ instance Data.FromJSON RelatedWorkspaceProperties where
 
 instance Prelude.Hashable RelatedWorkspaceProperties where
   hashWithSalt _salt RelatedWorkspaceProperties' {..} =
-    _salt `Prelude.hashWithSalt` region
+    _salt
+      `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` workspaceId

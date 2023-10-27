@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.CodeRepositorySummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.CodeRepositorySummary where
@@ -124,7 +124,8 @@ instance Data.FromJSON CodeRepositorySummary where
 
 instance Prelude.Hashable CodeRepositorySummary where
   hashWithSalt _salt CodeRepositorySummary' {..} =
-    _salt `Prelude.hashWithSalt` gitConfig
+    _salt
+      `Prelude.hashWithSalt` gitConfig
       `Prelude.hashWithSalt` codeRepositoryName
       `Prelude.hashWithSalt` codeRepositoryArn
       `Prelude.hashWithSalt` creationTime

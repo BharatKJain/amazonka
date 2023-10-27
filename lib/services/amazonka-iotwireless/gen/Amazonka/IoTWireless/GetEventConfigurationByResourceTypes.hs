@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTWireless.GetEventConfigurationByResourceTypes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -77,11 +77,11 @@ instance
       ( \s h x ->
           GetEventConfigurationByResourceTypesResponse'
             Prelude.<$> (x Data..?> "ConnectionStatus")
-              Prelude.<*> (x Data..?> "DeviceRegistrationState")
-              Prelude.<*> (x Data..?> "Join")
-              Prelude.<*> (x Data..?> "MessageDeliveryStatus")
-              Prelude.<*> (x Data..?> "Proximity")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "DeviceRegistrationState")
+            Prelude.<*> (x Data..?> "Join")
+            Prelude.<*> (x Data..?> "MessageDeliveryStatus")
+            Prelude.<*> (x Data..?> "Proximity")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance

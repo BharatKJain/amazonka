@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.LayerVersionContentInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.LayerVersionContentInput where
@@ -97,7 +97,8 @@ layerVersionContentInput_zipFile = Lens.lens (\LayerVersionContentInput' {zipFil
 
 instance Prelude.Hashable LayerVersionContentInput where
   hashWithSalt _salt LayerVersionContentInput' {..} =
-    _salt `Prelude.hashWithSalt` s3Bucket
+    _salt
+      `Prelude.hashWithSalt` s3Bucket
       `Prelude.hashWithSalt` s3Key
       `Prelude.hashWithSalt` s3ObjectVersion
       `Prelude.hashWithSalt` zipFile

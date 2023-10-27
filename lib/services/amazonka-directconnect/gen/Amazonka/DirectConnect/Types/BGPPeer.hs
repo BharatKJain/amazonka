@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectConnect.Types.BGPPeer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectConnect.Types.BGPPeer where
@@ -232,7 +232,8 @@ instance Data.FromJSON BGPPeer where
 
 instance Prelude.Hashable BGPPeer where
   hashWithSalt _salt BGPPeer' {..} =
-    _salt `Prelude.hashWithSalt` addressFamily
+    _salt
+      `Prelude.hashWithSalt` addressFamily
       `Prelude.hashWithSalt` amazonAddress
       `Prelude.hashWithSalt` asn
       `Prelude.hashWithSalt` authKey

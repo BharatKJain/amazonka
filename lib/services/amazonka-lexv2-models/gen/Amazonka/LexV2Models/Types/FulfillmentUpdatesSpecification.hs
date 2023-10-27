@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.FulfillmentUpdatesSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.FulfillmentUpdatesSpecification where
@@ -129,7 +129,8 @@ instance
   hashWithSalt
     _salt
     FulfillmentUpdatesSpecification' {..} =
-      _salt `Prelude.hashWithSalt` startResponse
+      _salt
+        `Prelude.hashWithSalt` startResponse
         `Prelude.hashWithSalt` timeoutInSeconds
         `Prelude.hashWithSalt` updateResponse
         `Prelude.hashWithSalt` active

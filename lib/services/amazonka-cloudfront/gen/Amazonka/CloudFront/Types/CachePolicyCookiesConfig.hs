@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.CachePolicyCookiesConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.CachePolicyCookiesConfig where
@@ -139,7 +139,8 @@ instance Data.FromXML CachePolicyCookiesConfig where
 
 instance Prelude.Hashable CachePolicyCookiesConfig where
   hashWithSalt _salt CachePolicyCookiesConfig' {..} =
-    _salt `Prelude.hashWithSalt` cookies
+    _salt
+      `Prelude.hashWithSalt` cookies
       `Prelude.hashWithSalt` cookieBehavior
 
 instance Prelude.NFData CachePolicyCookiesConfig where

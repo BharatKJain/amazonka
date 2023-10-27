@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.ExperimentResultsData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.ExperimentResultsData where
@@ -100,7 +100,8 @@ instance Data.FromJSON ExperimentResultsData where
 
 instance Prelude.Hashable ExperimentResultsData where
   hashWithSalt _salt ExperimentResultsData' {..} =
-    _salt `Prelude.hashWithSalt` metricName
+    _salt
+      `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` resultStat
       `Prelude.hashWithSalt` treatmentName
       `Prelude.hashWithSalt` values

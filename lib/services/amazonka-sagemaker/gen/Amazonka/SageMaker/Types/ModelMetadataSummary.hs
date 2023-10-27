@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ModelMetadataSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ModelMetadataSummary where
@@ -119,7 +119,8 @@ instance Data.FromJSON ModelMetadataSummary where
 
 instance Prelude.Hashable ModelMetadataSummary where
   hashWithSalt _salt ModelMetadataSummary' {..} =
-    _salt `Prelude.hashWithSalt` domain
+    _salt
+      `Prelude.hashWithSalt` domain
       `Prelude.hashWithSalt` framework
       `Prelude.hashWithSalt` task
       `Prelude.hashWithSalt` model

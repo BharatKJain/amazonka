@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.DecimalColumnStatisticsData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.DecimalColumnStatisticsData where
@@ -103,7 +103,8 @@ instance Data.FromJSON DecimalColumnStatisticsData where
 
 instance Prelude.Hashable DecimalColumnStatisticsData where
   hashWithSalt _salt DecimalColumnStatisticsData' {..} =
-    _salt `Prelude.hashWithSalt` maximumValue
+    _salt
+      `Prelude.hashWithSalt` maximumValue
       `Prelude.hashWithSalt` minimumValue
       `Prelude.hashWithSalt` numberOfNulls
       `Prelude.hashWithSalt` numberOfDistinctValues

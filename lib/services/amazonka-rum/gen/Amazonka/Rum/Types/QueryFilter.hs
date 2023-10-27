@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rum.Types.QueryFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rum.Types.QueryFilter where
@@ -91,7 +91,8 @@ queryFilter_values = Lens.lens (\QueryFilter' {values} -> values) (\s@QueryFilte
 
 instance Prelude.Hashable QueryFilter where
   hashWithSalt _salt QueryFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData QueryFilter where

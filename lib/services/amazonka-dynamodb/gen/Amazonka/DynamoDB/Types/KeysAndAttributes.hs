@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.KeysAndAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.KeysAndAttributes where
@@ -267,7 +267,8 @@ instance Data.FromJSON KeysAndAttributes where
           KeysAndAttributes'
             Prelude.<$> (x Data..:? "AttributesToGet")
             Prelude.<*> (x Data..:? "ConsistentRead")
-            Prelude.<*> ( x Data..:? "ExpressionAttributeNames"
+            Prelude.<*> ( x
+                            Data..:? "ExpressionAttributeNames"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ProjectionExpression")
@@ -276,7 +277,8 @@ instance Data.FromJSON KeysAndAttributes where
 
 instance Prelude.Hashable KeysAndAttributes where
   hashWithSalt _salt KeysAndAttributes' {..} =
-    _salt `Prelude.hashWithSalt` attributesToGet
+    _salt
+      `Prelude.hashWithSalt` attributesToGet
       `Prelude.hashWithSalt` consistentRead
       `Prelude.hashWithSalt` expressionAttributeNames
       `Prelude.hashWithSalt` projectionExpression

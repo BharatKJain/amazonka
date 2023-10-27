@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatchLogs.DescribeQueryDefinitions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest DescribeQueryDefinitions where
       ( \s h x ->
           DescribeQueryDefinitionsResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "queryDefinitions"
+            Prelude.<*> ( x
+                            Data..?> "queryDefinitions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -122,7 +123,8 @@ instance Core.AWSRequest DescribeQueryDefinitions where
 
 instance Prelude.Hashable DescribeQueryDefinitions where
   hashWithSalt _salt DescribeQueryDefinitions' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` queryDefinitionNamePrefix
 

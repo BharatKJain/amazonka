@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.ProvisioningHook
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.ProvisioningHook where
@@ -88,7 +88,8 @@ instance Data.FromJSON ProvisioningHook where
 
 instance Prelude.Hashable ProvisioningHook where
   hashWithSalt _salt ProvisioningHook' {..} =
-    _salt `Prelude.hashWithSalt` payloadVersion
+    _salt
+      `Prelude.hashWithSalt` payloadVersion
       `Prelude.hashWithSalt` targetArn
 
 instance Prelude.NFData ProvisioningHook where

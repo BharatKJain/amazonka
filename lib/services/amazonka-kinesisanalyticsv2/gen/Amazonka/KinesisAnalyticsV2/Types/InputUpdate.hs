@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.InputUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.InputUpdate where
@@ -137,7 +137,8 @@ inputUpdate_inputId = Lens.lens (\InputUpdate' {inputId} -> inputId) (\s@InputUp
 
 instance Prelude.Hashable InputUpdate where
   hashWithSalt _salt InputUpdate' {..} =
-    _salt `Prelude.hashWithSalt` inputParallelismUpdate
+    _salt
+      `Prelude.hashWithSalt` inputParallelismUpdate
       `Prelude.hashWithSalt` inputProcessingConfigurationUpdate
       `Prelude.hashWithSalt` inputSchemaUpdate
       `Prelude.hashWithSalt` kinesisFirehoseInputUpdate

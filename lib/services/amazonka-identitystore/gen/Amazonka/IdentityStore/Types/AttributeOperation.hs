@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IdentityStore.Types.AttributeOperation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IdentityStore.Types.AttributeOperation where
@@ -75,7 +75,8 @@ attributeOperation_attributePath = Lens.lens (\AttributeOperation' {attributePat
 
 instance Prelude.Hashable AttributeOperation where
   hashWithSalt _salt AttributeOperation' {..} =
-    _salt `Prelude.hashWithSalt` attributeValue
+    _salt
+      `Prelude.hashWithSalt` attributeValue
       `Prelude.hashWithSalt` attributePath
 
 instance Prelude.NFData AttributeOperation where

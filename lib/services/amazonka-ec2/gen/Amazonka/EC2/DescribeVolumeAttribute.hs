@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeVolumeAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,9 @@ instance Core.AWSRequest DescribeVolumeAttribute where
       ( \s h x ->
           DescribeVolumeAttributeResponse'
             Prelude.<$> (x Data..@? "autoEnableIO")
-            Prelude.<*> ( x Data..@? "productCodes" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "productCodes"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
             Prelude.<*> (x Data..@? "volumeId")
@@ -134,7 +136,8 @@ instance Core.AWSRequest DescribeVolumeAttribute where
 
 instance Prelude.Hashable DescribeVolumeAttribute where
   hashWithSalt _salt DescribeVolumeAttribute' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` attribute
       `Prelude.hashWithSalt` volumeId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.FeaturizationConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.FeaturizationConfig where
@@ -174,7 +174,8 @@ instance Data.FromJSON FeaturizationConfig where
 
 instance Prelude.Hashable FeaturizationConfig where
   hashWithSalt _salt FeaturizationConfig' {..} =
-    _salt `Prelude.hashWithSalt` featurizations
+    _salt
+      `Prelude.hashWithSalt` featurizations
       `Prelude.hashWithSalt` forecastDimensions
       `Prelude.hashWithSalt` forecastFrequency
 

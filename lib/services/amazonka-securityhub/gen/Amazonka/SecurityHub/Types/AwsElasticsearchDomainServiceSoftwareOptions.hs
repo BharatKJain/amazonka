@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsElasticsearchDomainServiceSoftwareOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsElasticsearchDomainServiceSoftwareOptions where
@@ -161,12 +161,12 @@ instance
       ( \x ->
           AwsElasticsearchDomainServiceSoftwareOptions'
             Prelude.<$> (x Data..:? "AutomatedUpdateDate")
-              Prelude.<*> (x Data..:? "Cancellable")
-              Prelude.<*> (x Data..:? "CurrentVersion")
-              Prelude.<*> (x Data..:? "Description")
-              Prelude.<*> (x Data..:? "NewVersion")
-              Prelude.<*> (x Data..:? "UpdateAvailable")
-              Prelude.<*> (x Data..:? "UpdateStatus")
+            Prelude.<*> (x Data..:? "Cancellable")
+            Prelude.<*> (x Data..:? "CurrentVersion")
+            Prelude.<*> (x Data..:? "Description")
+            Prelude.<*> (x Data..:? "NewVersion")
+            Prelude.<*> (x Data..:? "UpdateAvailable")
+            Prelude.<*> (x Data..:? "UpdateStatus")
       )
 
 instance
@@ -176,7 +176,8 @@ instance
   hashWithSalt
     _salt
     AwsElasticsearchDomainServiceSoftwareOptions' {..} =
-      _salt `Prelude.hashWithSalt` automatedUpdateDate
+      _salt
+        `Prelude.hashWithSalt` automatedUpdateDate
         `Prelude.hashWithSalt` cancellable
         `Prelude.hashWithSalt` currentVersion
         `Prelude.hashWithSalt` description

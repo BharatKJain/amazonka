@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.ListHubContents
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -188,14 +188,16 @@ instance Core.AWSRequest ListHubContents where
           ListHubContentsResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "HubContentSummaries"
+            Prelude.<*> ( x
+                            Data..?> "HubContentSummaries"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListHubContents where
   hashWithSalt _salt ListHubContents' {..} =
-    _salt `Prelude.hashWithSalt` creationTimeAfter
+    _salt
+      `Prelude.hashWithSalt` creationTimeAfter
       `Prelude.hashWithSalt` creationTimeBefore
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` maxSchemaVersion

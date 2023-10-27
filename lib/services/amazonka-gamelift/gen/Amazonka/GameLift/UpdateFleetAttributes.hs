@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.UpdateFleetAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -213,7 +213,8 @@ instance Core.AWSRequest UpdateFleetAttributes where
 
 instance Prelude.Hashable UpdateFleetAttributes where
   hashWithSalt _salt UpdateFleetAttributes' {..} =
-    _salt `Prelude.hashWithSalt` anywhereConfiguration
+    _salt
+      `Prelude.hashWithSalt` anywhereConfiguration
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` metricGroups
       `Prelude.hashWithSalt` name

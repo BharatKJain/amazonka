@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.CloudFormationHealth
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.CloudFormationHealth where
@@ -100,7 +100,8 @@ instance Data.FromJSON CloudFormationHealth where
 
 instance Prelude.Hashable CloudFormationHealth where
   hashWithSalt _salt CloudFormationHealth' {..} =
-    _salt `Prelude.hashWithSalt` analyzedResourceCount
+    _salt
+      `Prelude.hashWithSalt` analyzedResourceCount
       `Prelude.hashWithSalt` insight
       `Prelude.hashWithSalt` stackName
 

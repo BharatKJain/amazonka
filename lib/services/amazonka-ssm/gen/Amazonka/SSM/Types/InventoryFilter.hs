@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.InventoryFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.InventoryFilter where
@@ -100,7 +100,8 @@ inventoryFilter_values = Lens.lens (\InventoryFilter' {values} -> values) (\s@In
 
 instance Prelude.Hashable InventoryFilter where
   hashWithSalt _salt InventoryFilter' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` values
 

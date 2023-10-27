@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.Origin
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.Origin where
@@ -341,7 +341,8 @@ instance Data.FromXML Origin where
 
 instance Prelude.Hashable Origin where
   hashWithSalt _salt Origin' {..} =
-    _salt `Prelude.hashWithSalt` connectionAttempts
+    _salt
+      `Prelude.hashWithSalt` connectionAttempts
       `Prelude.hashWithSalt` connectionTimeout
       `Prelude.hashWithSalt` customHeaders
       `Prelude.hashWithSalt` customOriginConfig

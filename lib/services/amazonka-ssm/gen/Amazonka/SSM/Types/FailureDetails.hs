@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.FailureDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.FailureDetails where
@@ -93,7 +93,8 @@ instance Data.FromJSON FailureDetails where
 
 instance Prelude.Hashable FailureDetails where
   hashWithSalt _salt FailureDetails' {..} =
-    _salt `Prelude.hashWithSalt` details
+    _salt
+      `Prelude.hashWithSalt` details
       `Prelude.hashWithSalt` failureStage
       `Prelude.hashWithSalt` failureType
 

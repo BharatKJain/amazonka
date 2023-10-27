@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.Origin
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.Origin where
@@ -105,7 +105,8 @@ instance Data.FromJSON Origin where
 
 instance Prelude.Hashable Origin where
   hashWithSalt _salt Origin' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` protocolPolicy
       `Prelude.hashWithSalt` regionName
       `Prelude.hashWithSalt` resourceType

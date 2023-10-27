@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.AggregationConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.AggregationConfig where
@@ -92,7 +92,8 @@ instance Data.FromJSON AggregationConfig where
 
 instance Prelude.Hashable AggregationConfig where
   hashWithSalt _salt AggregationConfig' {..} =
-    _salt `Prelude.hashWithSalt` aggregationType
+    _salt
+      `Prelude.hashWithSalt` aggregationType
       `Prelude.hashWithSalt` targetFileSize
 
 instance Prelude.NFData AggregationConfig where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.Filter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.Filter where
@@ -343,7 +343,8 @@ filter_name = Lens.lens (\Filter' {name} -> name) (\s@Filter' {} a -> s {name = 
 
 instance Prelude.Hashable Filter where
   hashWithSalt _salt Filter' {..} =
-    _salt `Prelude.hashWithSalt` operator
+    _salt
+      `Prelude.hashWithSalt` operator
       `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` name
 

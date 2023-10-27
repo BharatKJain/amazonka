@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.DataConnector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.DataConnector where
@@ -78,7 +78,8 @@ instance Data.FromJSON DataConnector where
 
 instance Prelude.Hashable DataConnector where
   hashWithSalt _salt DataConnector' {..} =
-    _salt `Prelude.hashWithSalt` isNative
+    _salt
+      `Prelude.hashWithSalt` isNative
       `Prelude.hashWithSalt` lambda
 
 instance Prelude.NFData DataConnector where

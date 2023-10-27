@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.ProjectSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.ProjectSummary where
@@ -108,7 +108,8 @@ instance Data.FromJSON ProjectSummary where
 
 instance Prelude.Hashable ProjectSummary where
   hashWithSalt _salt ProjectSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationDate
+    _salt
+      `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` lastUpdateDate
       `Prelude.hashWithSalt` id

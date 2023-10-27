@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.TemplateMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.TemplateMetadata where
@@ -71,7 +71,8 @@ instance Data.FromXML TemplateMetadata where
 
 instance Prelude.Hashable TemplateMetadata where
   hashWithSalt _salt TemplateMetadata' {..} =
-    _salt `Prelude.hashWithSalt` createdTimestamp
+    _salt
+      `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData TemplateMetadata where

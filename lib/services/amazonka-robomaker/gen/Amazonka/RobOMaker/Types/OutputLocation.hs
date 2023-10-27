@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RobOMaker.Types.OutputLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RobOMaker.Types.OutputLocation where
@@ -74,7 +74,8 @@ instance Data.FromJSON OutputLocation where
 
 instance Prelude.Hashable OutputLocation where
   hashWithSalt _salt OutputLocation' {..} =
-    _salt `Prelude.hashWithSalt` s3Bucket
+    _salt
+      `Prelude.hashWithSalt` s3Bucket
       `Prelude.hashWithSalt` s3Prefix
 
 instance Prelude.NFData OutputLocation where

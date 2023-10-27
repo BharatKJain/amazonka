@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResourceGroups.Types.GroupConfigurationParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResourceGroups.Types.GroupConfigurationParameter where
@@ -91,7 +91,8 @@ instance Data.FromJSON GroupConfigurationParameter where
 
 instance Prelude.Hashable GroupConfigurationParameter where
   hashWithSalt _salt GroupConfigurationParameter' {..} =
-    _salt `Prelude.hashWithSalt` values
+    _salt
+      `Prelude.hashWithSalt` values
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData GroupConfigurationParameter where

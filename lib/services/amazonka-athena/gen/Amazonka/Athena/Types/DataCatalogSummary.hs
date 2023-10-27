@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.DataCatalogSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.DataCatalogSummary where
@@ -85,7 +85,8 @@ instance Data.FromJSON DataCatalogSummary where
 
 instance Prelude.Hashable DataCatalogSummary where
   hashWithSalt _salt DataCatalogSummary' {..} =
-    _salt `Prelude.hashWithSalt` catalogName
+    _salt
+      `Prelude.hashWithSalt` catalogName
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData DataCatalogSummary where

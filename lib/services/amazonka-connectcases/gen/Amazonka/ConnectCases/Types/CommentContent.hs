@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCases.Types.CommentContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCases.Types.CommentContent where
@@ -79,7 +79,8 @@ instance Data.FromJSON CommentContent where
 
 instance Prelude.Hashable CommentContent where
   hashWithSalt _salt CommentContent' {..} =
-    _salt `Prelude.hashWithSalt` body
+    _salt
+      `Prelude.hashWithSalt` body
       `Prelude.hashWithSalt` contentType
 
 instance Prelude.NFData CommentContent where

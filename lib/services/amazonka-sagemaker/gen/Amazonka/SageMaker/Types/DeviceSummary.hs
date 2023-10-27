@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.DeviceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.DeviceSummary where
@@ -152,7 +152,8 @@ instance Data.FromJSON DeviceSummary where
 
 instance Prelude.Hashable DeviceSummary where
   hashWithSalt _salt DeviceSummary' {..} =
-    _salt `Prelude.hashWithSalt` agentVersion
+    _salt
+      `Prelude.hashWithSalt` agentVersion
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` deviceFleetName
       `Prelude.hashWithSalt` iotThingName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostAndUsageReport.Types.ReportDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostAndUsageReport.Types.ReportDefinition where
@@ -206,7 +206,8 @@ instance Data.FromJSON ReportDefinition where
       "ReportDefinition"
       ( \x ->
           ReportDefinition'
-            Prelude.<$> ( x Data..:? "AdditionalArtifacts"
+            Prelude.<$> ( x
+                            Data..:? "AdditionalArtifacts"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "BillingViewArn")
@@ -216,7 +217,8 @@ instance Data.FromJSON ReportDefinition where
             Prelude.<*> (x Data..: "TimeUnit")
             Prelude.<*> (x Data..: "Format")
             Prelude.<*> (x Data..: "Compression")
-            Prelude.<*> ( x Data..:? "AdditionalSchemaElements"
+            Prelude.<*> ( x
+                            Data..:? "AdditionalSchemaElements"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "S3Bucket")
@@ -226,7 +228,8 @@ instance Data.FromJSON ReportDefinition where
 
 instance Prelude.Hashable ReportDefinition where
   hashWithSalt _salt ReportDefinition' {..} =
-    _salt `Prelude.hashWithSalt` additionalArtifacts
+    _salt
+      `Prelude.hashWithSalt` additionalArtifacts
       `Prelude.hashWithSalt` billingViewArn
       `Prelude.hashWithSalt` refreshClosedReports
       `Prelude.hashWithSalt` reportVersioning

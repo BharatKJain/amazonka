@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ClientVpnEndpointStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ClientVpnEndpointStatus where
@@ -114,7 +114,8 @@ instance Data.FromXML ClientVpnEndpointStatus where
 
 instance Prelude.Hashable ClientVpnEndpointStatus where
   hashWithSalt _salt ClientVpnEndpointStatus' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData ClientVpnEndpointStatus where

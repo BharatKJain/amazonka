@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.BuildPhase
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.BuildPhase where
@@ -279,7 +279,8 @@ instance Data.FromJSON BuildPhase where
 
 instance Prelude.Hashable BuildPhase where
   hashWithSalt _salt BuildPhase' {..} =
-    _salt `Prelude.hashWithSalt` contexts
+    _salt
+      `Prelude.hashWithSalt` contexts
       `Prelude.hashWithSalt` durationInSeconds
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` phaseStatus

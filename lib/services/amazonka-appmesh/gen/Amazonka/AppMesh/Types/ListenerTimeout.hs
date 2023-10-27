@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.ListenerTimeout
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.ListenerTimeout where
@@ -97,7 +97,8 @@ instance Data.FromJSON ListenerTimeout where
 
 instance Prelude.Hashable ListenerTimeout where
   hashWithSalt _salt ListenerTimeout' {..} =
-    _salt `Prelude.hashWithSalt` grpc
+    _salt
+      `Prelude.hashWithSalt` grpc
       `Prelude.hashWithSalt` http
       `Prelude.hashWithSalt` http2
       `Prelude.hashWithSalt` tcp

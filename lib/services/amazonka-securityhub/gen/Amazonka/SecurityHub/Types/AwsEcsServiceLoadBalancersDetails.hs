@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsServiceLoadBalancersDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsServiceLoadBalancersDetails where
@@ -142,7 +142,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsServiceLoadBalancersDetails' {..} =
-      _salt `Prelude.hashWithSalt` containerName
+      _salt
+        `Prelude.hashWithSalt` containerName
         `Prelude.hashWithSalt` containerPort
         `Prelude.hashWithSalt` loadBalancerName
         `Prelude.hashWithSalt` targetGroupArn

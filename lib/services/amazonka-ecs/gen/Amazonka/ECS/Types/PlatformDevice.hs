@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.PlatformDevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.PlatformDevice where
@@ -76,7 +76,8 @@ platformDevice_type = Lens.lens (\PlatformDevice' {type'} -> type') (\s@Platform
 
 instance Prelude.Hashable PlatformDevice where
   hashWithSalt _salt PlatformDevice' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData PlatformDevice where

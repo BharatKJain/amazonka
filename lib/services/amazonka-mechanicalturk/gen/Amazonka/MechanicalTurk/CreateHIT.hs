@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MechanicalTurk.CreateHIT
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -464,7 +464,8 @@ instance Core.AWSRequest CreateHIT where
 
 instance Prelude.Hashable CreateHIT where
   hashWithSalt _salt CreateHIT' {..} =
-    _salt `Prelude.hashWithSalt` assignmentReviewPolicy
+    _salt
+      `Prelude.hashWithSalt` assignmentReviewPolicy
       `Prelude.hashWithSalt` autoApprovalDelayInSeconds
       `Prelude.hashWithSalt` hITLayoutId
       `Prelude.hashWithSalt` hITLayoutParameters

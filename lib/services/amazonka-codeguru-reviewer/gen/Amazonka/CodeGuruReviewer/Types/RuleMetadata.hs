@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.RuleMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.RuleMetadata where
@@ -107,7 +107,8 @@ instance Data.FromJSON RuleMetadata where
 
 instance Prelude.Hashable RuleMetadata where
   hashWithSalt _salt RuleMetadata' {..} =
-    _salt `Prelude.hashWithSalt` longDescription
+    _salt
+      `Prelude.hashWithSalt` longDescription
       `Prelude.hashWithSalt` ruleId
       `Prelude.hashWithSalt` ruleName
       `Prelude.hashWithSalt` ruleTags

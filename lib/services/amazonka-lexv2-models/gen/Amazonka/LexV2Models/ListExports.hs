@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexV2Models.ListExports
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -191,7 +191,8 @@ instance Core.AWSRequest ListExports where
           ListExportsResponse'
             Prelude.<$> (x Data..?> "botId")
             Prelude.<*> (x Data..?> "botVersion")
-            Prelude.<*> ( x Data..?> "exportSummaries"
+            Prelude.<*> ( x
+                            Data..?> "exportSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "localeId")
@@ -201,7 +202,8 @@ instance Core.AWSRequest ListExports where
 
 instance Prelude.Hashable ListExports where
   hashWithSalt _salt ListExports' {..} =
-    _salt `Prelude.hashWithSalt` botId
+    _salt
+      `Prelude.hashWithSalt` botId
       `Prelude.hashWithSalt` botVersion
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` localeId

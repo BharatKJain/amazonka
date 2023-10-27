@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.AssessmentEvidenceFolder
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.AssessmentEvidenceFolder where
@@ -261,7 +261,8 @@ instance Data.FromJSON AssessmentEvidenceFolder where
 
 instance Prelude.Hashable AssessmentEvidenceFolder where
   hashWithSalt _salt AssessmentEvidenceFolder' {..} =
-    _salt `Prelude.hashWithSalt` assessmentId
+    _salt
+      `Prelude.hashWithSalt` assessmentId
       `Prelude.hashWithSalt` assessmentReportSelectionCount
       `Prelude.hashWithSalt` author
       `Prelude.hashWithSalt` controlId

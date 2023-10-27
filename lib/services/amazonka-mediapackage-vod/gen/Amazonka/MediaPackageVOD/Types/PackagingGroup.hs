@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaPackageVOD.Types.PackagingGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaPackageVOD.Types.PackagingGroup where
@@ -124,7 +124,8 @@ instance Data.FromJSON PackagingGroup where
 
 instance Prelude.Hashable PackagingGroup where
   hashWithSalt _salt PackagingGroup' {..} =
-    _salt `Prelude.hashWithSalt` approximateAssetCount
+    _salt
+      `Prelude.hashWithSalt` approximateAssetCount
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` authorization
       `Prelude.hashWithSalt` domainName

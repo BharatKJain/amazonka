@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerEdge.Types.Model
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerEdge.Types.Model where
@@ -93,7 +93,8 @@ model_modelVersion = Lens.lens (\Model' {modelVersion} -> modelVersion) (\s@Mode
 
 instance Prelude.Hashable Model where
   hashWithSalt _salt Model' {..} =
-    _salt `Prelude.hashWithSalt` latestInference
+    _salt
+      `Prelude.hashWithSalt` latestInference
       `Prelude.hashWithSalt` latestSampleTime
       `Prelude.hashWithSalt` modelMetrics
       `Prelude.hashWithSalt` modelName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.AnomalyGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.AnomalyGroup where
@@ -108,7 +108,8 @@ instance Data.FromJSON AnomalyGroup where
             Prelude.<$> (x Data..:? "AnomalyGroupId")
             Prelude.<*> (x Data..:? "AnomalyGroupScore")
             Prelude.<*> (x Data..:? "EndTime")
-            Prelude.<*> ( x Data..:? "MetricLevelImpactList"
+            Prelude.<*> ( x
+                            Data..:? "MetricLevelImpactList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "PrimaryMetricName")
@@ -117,7 +118,8 @@ instance Data.FromJSON AnomalyGroup where
 
 instance Prelude.Hashable AnomalyGroup where
   hashWithSalt _salt AnomalyGroup' {..} =
-    _salt `Prelude.hashWithSalt` anomalyGroupId
+    _salt
+      `Prelude.hashWithSalt` anomalyGroupId
       `Prelude.hashWithSalt` anomalyGroupScore
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` metricLevelImpactList

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDetails where
@@ -107,7 +107,8 @@ instance Data.FromJSON AwsEc2LaunchTemplateDetails where
 
 instance Prelude.Hashable AwsEc2LaunchTemplateDetails where
   hashWithSalt _salt AwsEc2LaunchTemplateDetails' {..} =
-    _salt `Prelude.hashWithSalt` defaultVersionNumber
+    _salt
+      `Prelude.hashWithSalt` defaultVersionNumber
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` latestVersionNumber
       `Prelude.hashWithSalt` launchTemplateData

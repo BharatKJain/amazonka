@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.LoggingFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.LoggingFilter where
@@ -88,7 +88,8 @@ instance Data.FromJSON LoggingFilter where
 
 instance Prelude.Hashable LoggingFilter where
   hashWithSalt _salt LoggingFilter' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` defaultBehavior
 
 instance Prelude.NFData LoggingFilter where

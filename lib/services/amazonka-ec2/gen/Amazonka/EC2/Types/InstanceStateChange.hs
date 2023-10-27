@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstanceStateChange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstanceStateChange where
@@ -83,7 +83,8 @@ instance Data.FromXML InstanceStateChange where
 
 instance Prelude.Hashable InstanceStateChange where
   hashWithSalt _salt InstanceStateChange' {..} =
-    _salt `Prelude.hashWithSalt` currentState
+    _salt
+      `Prelude.hashWithSalt` currentState
       `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` previousState
 

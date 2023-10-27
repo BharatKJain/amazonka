@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.PhoneNumberCountry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.PhoneNumberCountry where
@@ -70,14 +70,16 @@ instance Data.FromJSON PhoneNumberCountry where
       ( \x ->
           PhoneNumberCountry'
             Prelude.<$> (x Data..:? "CountryCode")
-            Prelude.<*> ( x Data..:? "SupportedPhoneNumberTypes"
+            Prelude.<*> ( x
+                            Data..:? "SupportedPhoneNumberTypes"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable PhoneNumberCountry where
   hashWithSalt _salt PhoneNumberCountry' {..} =
-    _salt `Prelude.hashWithSalt` countryCode
+    _salt
+      `Prelude.hashWithSalt` countryCode
       `Prelude.hashWithSalt` supportedPhoneNumberTypes
 
 instance Prelude.NFData PhoneNumberCountry where

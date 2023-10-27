@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.EC2DeleteRouteAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.EC2DeleteRouteAction where
@@ -114,7 +114,8 @@ instance Data.FromJSON EC2DeleteRouteAction where
 
 instance Prelude.Hashable EC2DeleteRouteAction where
   hashWithSalt _salt EC2DeleteRouteAction' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` destinationCidrBlock
       `Prelude.hashWithSalt` destinationIpv6CidrBlock
       `Prelude.hashWithSalt` destinationPrefixListId

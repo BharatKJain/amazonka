@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.CollectorShortInfoResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.CollectorShortInfoResponse where
@@ -75,7 +75,8 @@ instance Data.FromJSON CollectorShortInfoResponse where
 
 instance Prelude.Hashable CollectorShortInfoResponse where
   hashWithSalt _salt CollectorShortInfoResponse' {..} =
-    _salt `Prelude.hashWithSalt` collectorName
+    _salt
+      `Prelude.hashWithSalt` collectorName
       `Prelude.hashWithSalt` collectorReferencedId
 
 instance Prelude.NFData CollectorShortInfoResponse where

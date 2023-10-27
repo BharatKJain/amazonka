@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.ContentSourceConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.ContentSourceConfiguration where
@@ -96,7 +96,8 @@ instance Data.FromJSON ContentSourceConfiguration where
 
 instance Prelude.Hashable ContentSourceConfiguration where
   hashWithSalt _salt ContentSourceConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` dataSourceIds
+    _salt
+      `Prelude.hashWithSalt` dataSourceIds
       `Prelude.hashWithSalt` directPutContent
       `Prelude.hashWithSalt` faqIds
 

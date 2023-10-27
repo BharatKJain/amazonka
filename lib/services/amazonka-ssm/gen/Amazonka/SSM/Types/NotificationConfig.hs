@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.NotificationConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.NotificationConfig where
@@ -117,7 +117,8 @@ instance Data.FromJSON NotificationConfig where
       ( \x ->
           NotificationConfig'
             Prelude.<$> (x Data..:? "NotificationArn")
-            Prelude.<*> ( x Data..:? "NotificationEvents"
+            Prelude.<*> ( x
+                            Data..:? "NotificationEvents"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "NotificationType")
@@ -125,7 +126,8 @@ instance Data.FromJSON NotificationConfig where
 
 instance Prelude.Hashable NotificationConfig where
   hashWithSalt _salt NotificationConfig' {..} =
-    _salt `Prelude.hashWithSalt` notificationArn
+    _salt
+      `Prelude.hashWithSalt` notificationArn
       `Prelude.hashWithSalt` notificationEvents
       `Prelude.hashWithSalt` notificationType
 

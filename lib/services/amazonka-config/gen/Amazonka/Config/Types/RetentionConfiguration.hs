@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.RetentionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.RetentionConfiguration where
@@ -88,7 +88,8 @@ instance Data.FromJSON RetentionConfiguration where
 
 instance Prelude.Hashable RetentionConfiguration where
   hashWithSalt _salt RetentionConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` retentionPeriodInDays
 
 instance Prelude.NFData RetentionConfiguration where

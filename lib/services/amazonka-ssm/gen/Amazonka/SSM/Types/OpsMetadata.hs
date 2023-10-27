@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.OpsMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.OpsMetadata where
@@ -104,7 +104,8 @@ instance Data.FromJSON OpsMetadata where
 
 instance Prelude.Hashable OpsMetadata where
   hashWithSalt _salt OpsMetadata' {..} =
-    _salt `Prelude.hashWithSalt` creationDate
+    _salt
+      `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` lastModifiedDate
       `Prelude.hashWithSalt` lastModifiedUser
       `Prelude.hashWithSalt` opsMetadataArn

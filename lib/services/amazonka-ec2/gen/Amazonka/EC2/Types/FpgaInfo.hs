@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.FpgaInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.FpgaInfo where
@@ -67,14 +67,17 @@ fpgaInfo_totalFpgaMemoryInMiB = Lens.lens (\FpgaInfo' {totalFpgaMemoryInMiB} -> 
 instance Data.FromXML FpgaInfo where
   parseXML x =
     FpgaInfo'
-      Prelude.<$> ( x Data..@? "fpgas" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "fpgas"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "totalFpgaMemoryInMiB")
 
 instance Prelude.Hashable FpgaInfo where
   hashWithSalt _salt FpgaInfo' {..} =
-    _salt `Prelude.hashWithSalt` fpgas
+    _salt
+      `Prelude.hashWithSalt` fpgas
       `Prelude.hashWithSalt` totalFpgaMemoryInMiB
 
 instance Prelude.NFData FpgaInfo where

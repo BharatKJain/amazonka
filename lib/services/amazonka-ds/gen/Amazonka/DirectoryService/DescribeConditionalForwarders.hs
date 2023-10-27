@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectoryService.DescribeConditionalForwarders
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance
     Response.receiveJSON
       ( \s h x ->
           DescribeConditionalForwardersResponse'
-            Prelude.<$> ( x Data..?> "ConditionalForwarders"
+            Prelude.<$> ( x
+                            Data..?> "ConditionalForwarders"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -125,7 +126,8 @@ instance
     DescribeConditionalForwarders
   where
   hashWithSalt _salt DescribeConditionalForwarders' {..} =
-    _salt `Prelude.hashWithSalt` remoteDomainNames
+    _salt
+      `Prelude.hashWithSalt` remoteDomainNames
       `Prelude.hashWithSalt` directoryId
 
 instance Prelude.NFData DescribeConditionalForwarders where

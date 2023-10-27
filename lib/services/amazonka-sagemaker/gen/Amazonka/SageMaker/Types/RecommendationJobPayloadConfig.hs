@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.RecommendationJobPayloadConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.RecommendationJobPayloadConfig where
@@ -76,7 +76,8 @@ instance Data.FromJSON RecommendationJobPayloadConfig where
       ( \x ->
           RecommendationJobPayloadConfig'
             Prelude.<$> (x Data..:? "SamplePayloadUrl")
-            Prelude.<*> ( x Data..:? "SupportedContentTypes"
+            Prelude.<*> ( x
+                            Data..:? "SupportedContentTypes"
                             Data..!= Prelude.mempty
                         )
       )
@@ -88,7 +89,8 @@ instance
   hashWithSalt
     _salt
     RecommendationJobPayloadConfig' {..} =
-      _salt `Prelude.hashWithSalt` samplePayloadUrl
+      _salt
+        `Prelude.hashWithSalt` samplePayloadUrl
         `Prelude.hashWithSalt` supportedContentTypes
 
 instance

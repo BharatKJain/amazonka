@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.DescribeProvisionedProduct
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,7 +153,8 @@ instance Core.AWSRequest DescribeProvisionedProduct where
     Response.receiveJSON
       ( \s h x ->
           DescribeProvisionedProductResponse'
-            Prelude.<$> ( x Data..?> "CloudWatchDashboards"
+            Prelude.<$> ( x
+                            Data..?> "CloudWatchDashboards"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "ProvisionedProductDetail")
@@ -162,7 +163,8 @@ instance Core.AWSRequest DescribeProvisionedProduct where
 
 instance Prelude.Hashable DescribeProvisionedProduct where
   hashWithSalt _salt DescribeProvisionedProduct' {..} =
-    _salt `Prelude.hashWithSalt` acceptLanguage
+    _salt
+      `Prelude.hashWithSalt` acceptLanguage
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name
 

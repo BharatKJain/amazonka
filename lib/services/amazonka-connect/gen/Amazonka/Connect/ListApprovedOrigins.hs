@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.ListApprovedOrigins
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,22 +117,22 @@ instance Core.AWSPager ListApprovedOrigins where
     | Core.stop
         ( rs
             Lens.^? listApprovedOriginsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listApprovedOriginsResponse_origins
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listApprovedOrigins_nextToken
           Lens..~ rs
           Lens.^? listApprovedOriginsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListApprovedOrigins where
   type
@@ -151,7 +151,8 @@ instance Core.AWSRequest ListApprovedOrigins where
 
 instance Prelude.Hashable ListApprovedOrigins where
   hashWithSalt _salt ListApprovedOrigins' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` instanceId
 

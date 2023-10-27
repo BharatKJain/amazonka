@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.SourceRevision
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.SourceRevision where
@@ -121,7 +121,8 @@ instance Data.FromJSON SourceRevision where
 
 instance Prelude.Hashable SourceRevision where
   hashWithSalt _salt SourceRevision' {..} =
-    _salt `Prelude.hashWithSalt` revisionId
+    _salt
+      `Prelude.hashWithSalt` revisionId
       `Prelude.hashWithSalt` revisionSummary
       `Prelude.hashWithSalt` revisionUrl
       `Prelude.hashWithSalt` actionName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.SecretsManagerSecretResourceData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.SecretsManagerSecretResourceData where
@@ -86,7 +86,8 @@ instance
       ( \x ->
           SecretsManagerSecretResourceData'
             Prelude.<$> (x Data..:? "ARN")
-            Prelude.<*> ( x Data..:? "AdditionalStagingLabelsToDownload"
+            Prelude.<*> ( x
+                            Data..:? "AdditionalStagingLabelsToDownload"
                             Data..!= Prelude.mempty
                         )
       )
@@ -98,7 +99,8 @@ instance
   hashWithSalt
     _salt
     SecretsManagerSecretResourceData' {..} =
-      _salt `Prelude.hashWithSalt` arn
+      _salt
+        `Prelude.hashWithSalt` arn
         `Prelude.hashWithSalt` additionalStagingLabelsToDownload
 
 instance

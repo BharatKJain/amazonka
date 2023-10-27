@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.SalesforceAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.SalesforceAction where
@@ -82,12 +82,14 @@ instance Data.FromJSON SalesforceAction where
       "SalesforceAction"
       ( \x ->
           SalesforceAction'
-            Prelude.<$> (x Data..: "token") Prelude.<*> (x Data..: "url")
+            Prelude.<$> (x Data..: "token")
+            Prelude.<*> (x Data..: "url")
       )
 
 instance Prelude.Hashable SalesforceAction where
   hashWithSalt _salt SalesforceAction' {..} =
-    _salt `Prelude.hashWithSalt` token
+    _salt
+      `Prelude.hashWithSalt` token
       `Prelude.hashWithSalt` url
 
 instance Prelude.NFData SalesforceAction where

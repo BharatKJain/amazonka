@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSMIncidents.UpdateIncidentRecord
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -230,7 +230,8 @@ instance Core.AWSRequest UpdateIncidentRecord where
 
 instance Prelude.Hashable UpdateIncidentRecord where
   hashWithSalt _salt UpdateIncidentRecord' {..} =
-    _salt `Prelude.hashWithSalt` chatChannel
+    _salt
+      `Prelude.hashWithSalt` chatChannel
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` impact
       `Prelude.hashWithSalt` notificationTargets

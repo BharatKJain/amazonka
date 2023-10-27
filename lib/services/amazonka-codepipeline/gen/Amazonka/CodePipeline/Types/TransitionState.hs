@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.TransitionState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.TransitionState where
@@ -101,7 +101,8 @@ instance Data.FromJSON TransitionState where
 
 instance Prelude.Hashable TransitionState where
   hashWithSalt _salt TransitionState' {..} =
-    _salt `Prelude.hashWithSalt` disabledReason
+    _salt
+      `Prelude.hashWithSalt` disabledReason
       `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` lastChangedAt
       `Prelude.hashWithSalt` lastChangedBy

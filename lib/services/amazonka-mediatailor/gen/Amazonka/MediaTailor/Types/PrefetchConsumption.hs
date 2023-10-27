@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.PrefetchConsumption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.PrefetchConsumption where
@@ -103,7 +103,8 @@ instance Data.FromJSON PrefetchConsumption where
       "PrefetchConsumption"
       ( \x ->
           PrefetchConsumption'
-            Prelude.<$> ( x Data..:? "AvailMatchingCriteria"
+            Prelude.<$> ( x
+                            Data..:? "AvailMatchingCriteria"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "StartTime")
@@ -112,7 +113,8 @@ instance Data.FromJSON PrefetchConsumption where
 
 instance Prelude.Hashable PrefetchConsumption where
   hashWithSalt _salt PrefetchConsumption' {..} =
-    _salt `Prelude.hashWithSalt` availMatchingCriteria
+    _salt
+      `Prelude.hashWithSalt` availMatchingCriteria
       `Prelude.hashWithSalt` startTime
       `Prelude.hashWithSalt` endTime
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.UpdateIdentityProvider
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest UpdateIdentityProvider where
 
 instance Prelude.Hashable UpdateIdentityProvider where
   hashWithSalt _salt UpdateIdentityProvider' {..} =
-    _salt `Prelude.hashWithSalt` attributeMapping
+    _salt
+      `Prelude.hashWithSalt` attributeMapping
       `Prelude.hashWithSalt` idpIdentifiers
       `Prelude.hashWithSalt` providerDetails
       `Prelude.hashWithSalt` userPoolId

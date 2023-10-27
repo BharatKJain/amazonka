@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.BundleInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.BundleInformation where
@@ -77,7 +77,8 @@ instance Data.FromJSON BundleInformation where
 
 instance Prelude.Hashable BundleInformation where
   hashWithSalt _salt BundleInformation' {..} =
-    _salt `Prelude.hashWithSalt` pricingTier
+    _salt
+      `Prelude.hashWithSalt` pricingTier
       `Prelude.hashWithSalt` bundleNames
 
 instance Prelude.NFData BundleInformation where

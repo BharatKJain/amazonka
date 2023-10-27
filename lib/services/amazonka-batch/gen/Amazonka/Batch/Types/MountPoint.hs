@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.MountPoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.MountPoint where
@@ -94,7 +94,8 @@ instance Data.FromJSON MountPoint where
 
 instance Prelude.Hashable MountPoint where
   hashWithSalt _salt MountPoint' {..} =
-    _salt `Prelude.hashWithSalt` containerPath
+    _salt
+      `Prelude.hashWithSalt` containerPath
       `Prelude.hashWithSalt` readOnly
       `Prelude.hashWithSalt` sourceVolume
 

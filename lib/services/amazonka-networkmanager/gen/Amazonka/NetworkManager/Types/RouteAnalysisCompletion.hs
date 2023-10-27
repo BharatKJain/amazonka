@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.RouteAnalysisCompletion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.RouteAnalysisCompletion where
@@ -171,7 +171,8 @@ instance Data.FromJSON RouteAnalysisCompletion where
 
 instance Prelude.Hashable RouteAnalysisCompletion where
   hashWithSalt _salt RouteAnalysisCompletion' {..} =
-    _salt `Prelude.hashWithSalt` reasonCode
+    _salt
+      `Prelude.hashWithSalt` reasonCode
       `Prelude.hashWithSalt` reasonContext
       `Prelude.hashWithSalt` resultCode
 

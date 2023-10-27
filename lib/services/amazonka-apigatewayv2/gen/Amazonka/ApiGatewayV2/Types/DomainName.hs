@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApiGatewayV2.Types.DomainName
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApiGatewayV2.Types.DomainName where
@@ -101,7 +101,8 @@ instance Data.FromJSON DomainName where
       ( \x ->
           DomainName'
             Prelude.<$> (x Data..:? "apiMappingSelectionExpression")
-            Prelude.<*> ( x Data..:? "domainNameConfigurations"
+            Prelude.<*> ( x
+                            Data..:? "domainNameConfigurations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "mutualTlsAuthentication")

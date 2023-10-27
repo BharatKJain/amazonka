@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.Snapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.Snapshot where
@@ -161,7 +161,8 @@ instance Data.FromJSON Snapshot where
       "Snapshot"
       ( \x ->
           Snapshot'
-            Prelude.<$> ( x Data..:? "AdministrativeActions"
+            Prelude.<$> ( x
+                            Data..:? "AdministrativeActions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CreationTime")
@@ -176,7 +177,8 @@ instance Data.FromJSON Snapshot where
 
 instance Prelude.Hashable Snapshot where
   hashWithSalt _salt Snapshot' {..} =
-    _salt `Prelude.hashWithSalt` administrativeActions
+    _salt
+      `Prelude.hashWithSalt` administrativeActions
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` lifecycle
       `Prelude.hashWithSalt` lifecycleTransitionReason

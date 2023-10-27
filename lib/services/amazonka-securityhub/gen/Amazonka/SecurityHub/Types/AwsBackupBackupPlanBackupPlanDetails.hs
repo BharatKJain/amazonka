@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsBackupBackupPlanBackupPlanDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsBackupBackupPlanBackupPlanDetails where
@@ -87,11 +87,13 @@ instance
       "AwsBackupBackupPlanBackupPlanDetails"
       ( \x ->
           AwsBackupBackupPlanBackupPlanDetails'
-            Prelude.<$> ( x Data..:? "AdvancedBackupSettings"
+            Prelude.<$> ( x
+                            Data..:? "AdvancedBackupSettings"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "BackupPlanName")
-            Prelude.<*> ( x Data..:? "BackupPlanRule"
+            Prelude.<*> ( x
+                            Data..:? "BackupPlanRule"
                             Data..!= Prelude.mempty
                         )
       )
@@ -103,7 +105,8 @@ instance
   hashWithSalt
     _salt
     AwsBackupBackupPlanBackupPlanDetails' {..} =
-      _salt `Prelude.hashWithSalt` advancedBackupSettings
+      _salt
+        `Prelude.hashWithSalt` advancedBackupSettings
         `Prelude.hashWithSalt` backupPlanName
         `Prelude.hashWithSalt` backupPlanRule
 

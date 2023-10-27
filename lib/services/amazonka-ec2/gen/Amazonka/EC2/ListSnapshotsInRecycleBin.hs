@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ListSnapshotsInRecycleBin
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -131,22 +131,22 @@ instance Core.AWSPager ListSnapshotsInRecycleBin where
     | Core.stop
         ( rs
             Lens.^? listSnapshotsInRecycleBinResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listSnapshotsInRecycleBinResponse_snapshots
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSnapshotsInRecycleBin_nextToken
           Lens..~ rs
           Lens.^? listSnapshotsInRecycleBinResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListSnapshotsInRecycleBin where
   type
@@ -159,7 +159,9 @@ instance Core.AWSRequest ListSnapshotsInRecycleBin where
       ( \s h x ->
           ListSnapshotsInRecycleBinResponse'
             Prelude.<$> (x Data..@? "nextToken")
-            Prelude.<*> ( x Data..@? "snapshotSet" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "snapshotSet"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -167,7 +169,8 @@ instance Core.AWSRequest ListSnapshotsInRecycleBin where
 
 instance Prelude.Hashable ListSnapshotsInRecycleBin where
   hashWithSalt _salt ListSnapshotsInRecycleBin' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` snapshotIds

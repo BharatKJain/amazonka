@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.GitHubDocumentCrawlProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.GitHubDocumentCrawlProperties where
@@ -133,7 +133,8 @@ instance
     GitHubDocumentCrawlProperties
   where
   hashWithSalt _salt GitHubDocumentCrawlProperties' {..} =
-    _salt `Prelude.hashWithSalt` crawlIssue
+    _salt
+      `Prelude.hashWithSalt` crawlIssue
       `Prelude.hashWithSalt` crawlIssueComment
       `Prelude.hashWithSalt` crawlIssueCommentAttachment
       `Prelude.hashWithSalt` crawlPullRequest

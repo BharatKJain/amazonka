@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DataColorPalette
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DataColorPalette where
@@ -87,14 +87,16 @@ instance Data.FromJSON DataColorPalette where
           DataColorPalette'
             Prelude.<$> (x Data..:? "Colors" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "EmptyFillColor")
-            Prelude.<*> ( x Data..:? "MinMaxGradient"
+            Prelude.<*> ( x
+                            Data..:? "MinMaxGradient"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable DataColorPalette where
   hashWithSalt _salt DataColorPalette' {..} =
-    _salt `Prelude.hashWithSalt` colors
+    _salt
+      `Prelude.hashWithSalt` colors
       `Prelude.hashWithSalt` emptyFillColor
       `Prelude.hashWithSalt` minMaxGradient
 

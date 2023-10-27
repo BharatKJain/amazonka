@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.SecurityServicePolicyData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.SecurityServicePolicyData where
@@ -546,7 +546,8 @@ instance Data.FromJSON SecurityServicePolicyData where
 
 instance Prelude.Hashable SecurityServicePolicyData where
   hashWithSalt _salt SecurityServicePolicyData' {..} =
-    _salt `Prelude.hashWithSalt` managedServiceData
+    _salt
+      `Prelude.hashWithSalt` managedServiceData
       `Prelude.hashWithSalt` policyOption
       `Prelude.hashWithSalt` type'
 

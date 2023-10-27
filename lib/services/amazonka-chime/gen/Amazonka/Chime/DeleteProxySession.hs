@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.DeleteProxySession
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -99,7 +99,8 @@ instance Core.AWSRequest DeleteProxySession where
 
 instance Prelude.Hashable DeleteProxySession where
   hashWithSalt _salt DeleteProxySession' {..} =
-    _salt `Prelude.hashWithSalt` voiceConnectorId
+    _salt
+      `Prelude.hashWithSalt` voiceConnectorId
       `Prelude.hashWithSalt` proxySessionId
 
 instance Prelude.NFData DeleteProxySession where

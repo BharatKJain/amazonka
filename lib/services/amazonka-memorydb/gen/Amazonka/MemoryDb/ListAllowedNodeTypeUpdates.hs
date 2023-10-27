@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MemoryDb.ListAllowedNodeTypeUpdates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -97,10 +97,12 @@ instance Core.AWSRequest ListAllowedNodeTypeUpdates where
     Response.receiveJSON
       ( \s h x ->
           ListAllowedNodeTypeUpdatesResponse'
-            Prelude.<$> ( x Data..?> "ScaleDownNodeTypes"
+            Prelude.<$> ( x
+                            Data..?> "ScaleDownNodeTypes"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "ScaleUpNodeTypes"
+            Prelude.<*> ( x
+                            Data..?> "ScaleUpNodeTypes"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GroundStation.ListEphemerides
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,23 +153,23 @@ instance Core.AWSPager ListEphemerides where
     | Core.stop
         ( rs
             Lens.^? listEphemeridesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listEphemeridesResponse_ephemerides
-              Prelude.. Lens._Just
-              Prelude.. Lens.to Prelude.toList
+            Prelude.. Lens._Just
+            Prelude.. Lens.to Prelude.toList
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listEphemerides_nextToken
           Lens..~ rs
           Lens.^? listEphemeridesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListEphemerides where
   type
@@ -188,7 +188,8 @@ instance Core.AWSRequest ListEphemerides where
 
 instance Prelude.Hashable ListEphemerides where
   hashWithSalt _salt ListEphemerides' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` statusList
       `Prelude.hashWithSalt` endTime

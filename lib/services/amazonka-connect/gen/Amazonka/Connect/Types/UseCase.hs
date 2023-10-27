@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.UseCase
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.UseCase where
@@ -88,7 +88,8 @@ instance Data.FromJSON UseCase where
 
 instance Prelude.Hashable UseCase where
   hashWithSalt _salt UseCase' {..} =
-    _salt `Prelude.hashWithSalt` useCaseArn
+    _salt
+      `Prelude.hashWithSalt` useCaseArn
       `Prelude.hashWithSalt` useCaseId
       `Prelude.hashWithSalt` useCaseType
 

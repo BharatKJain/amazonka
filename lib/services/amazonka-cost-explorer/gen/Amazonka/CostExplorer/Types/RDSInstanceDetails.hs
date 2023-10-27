@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.RDSInstanceDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.RDSInstanceDetails where
@@ -155,7 +155,8 @@ instance Data.FromJSON RDSInstanceDetails where
 
 instance Prelude.Hashable RDSInstanceDetails where
   hashWithSalt _salt RDSInstanceDetails' {..} =
-    _salt `Prelude.hashWithSalt` currentGeneration
+    _salt
+      `Prelude.hashWithSalt` currentGeneration
       `Prelude.hashWithSalt` databaseEdition
       `Prelude.hashWithSalt` databaseEngine
       `Prelude.hashWithSalt` deploymentOption

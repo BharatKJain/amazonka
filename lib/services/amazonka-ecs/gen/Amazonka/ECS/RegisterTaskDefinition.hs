@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECS.RegisterTaskDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -1001,7 +1001,8 @@ instance Core.AWSRequest RegisterTaskDefinition where
 
 instance Prelude.Hashable RegisterTaskDefinition where
   hashWithSalt _salt RegisterTaskDefinition' {..} =
-    _salt `Prelude.hashWithSalt` cpu
+    _salt
+      `Prelude.hashWithSalt` cpu
       `Prelude.hashWithSalt` ephemeralStorage
       `Prelude.hashWithSalt` executionRoleArn
       `Prelude.hashWithSalt` inferenceAccelerators

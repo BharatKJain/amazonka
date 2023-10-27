@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.Alarms
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.Alarms where
@@ -105,7 +105,8 @@ instance Data.FromJSON Alarms where
 
 instance Prelude.Hashable Alarms where
   hashWithSalt _salt Alarms' {..} =
-    _salt `Prelude.hashWithSalt` notificationLambdaArn
+    _salt
+      `Prelude.hashWithSalt` notificationLambdaArn
       `Prelude.hashWithSalt` alarmRoleArn
 
 instance Prelude.NFData Alarms where

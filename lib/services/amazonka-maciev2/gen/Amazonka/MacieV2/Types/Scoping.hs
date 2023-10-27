@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.Scoping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.Scoping where
@@ -83,7 +83,8 @@ instance Data.FromJSON Scoping where
 
 instance Prelude.Hashable Scoping where
   hashWithSalt _salt Scoping' {..} =
-    _salt `Prelude.hashWithSalt` excludes
+    _salt
+      `Prelude.hashWithSalt` excludes
       `Prelude.hashWithSalt` includes
 
 instance Prelude.NFData Scoping where

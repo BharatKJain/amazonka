@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.UpdateSegment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest UpdateSegment where
 
 instance Prelude.Hashable UpdateSegment where
   hashWithSalt _salt UpdateSegment' {..} =
-    _salt `Prelude.hashWithSalt` segmentId
+    _salt
+      `Prelude.hashWithSalt` segmentId
       `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` writeSegmentRequest
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTAnalytics.UpdatePipeline
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,7 +128,8 @@ instance Core.AWSRequest UpdatePipeline where
 
 instance Prelude.Hashable UpdatePipeline where
   hashWithSalt _salt UpdatePipeline' {..} =
-    _salt `Prelude.hashWithSalt` pipelineName
+    _salt
+      `Prelude.hashWithSalt` pipelineName
       `Prelude.hashWithSalt` pipelineActivities
 
 instance Prelude.NFData UpdatePipeline where

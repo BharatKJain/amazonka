@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StorageGateway.CreateSMBFileShare
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -743,7 +743,8 @@ instance Core.AWSRequest CreateSMBFileShare where
 
 instance Prelude.Hashable CreateSMBFileShare where
   hashWithSalt _salt CreateSMBFileShare' {..} =
-    _salt `Prelude.hashWithSalt` accessBasedEnumeration
+    _salt
+      `Prelude.hashWithSalt` accessBasedEnumeration
       `Prelude.hashWithSalt` adminUserList
       `Prelude.hashWithSalt` auditDestinationARN
       `Prelude.hashWithSalt` authentication

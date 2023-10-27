@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.EarthObservationJobErrorDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.EarthObservationJobErrorDetails where
@@ -54,11 +54,9 @@ newEarthObservationJobErrorDetails =
       type' = Prelude.Nothing
     }
 
--- |
 earthObservationJobErrorDetails_message :: Lens.Lens' EarthObservationJobErrorDetails (Prelude.Maybe Prelude.Text)
 earthObservationJobErrorDetails_message = Lens.lens (\EarthObservationJobErrorDetails' {message} -> message) (\s@EarthObservationJobErrorDetails' {} a -> s {message = a} :: EarthObservationJobErrorDetails)
 
--- |
 earthObservationJobErrorDetails_type :: Lens.Lens' EarthObservationJobErrorDetails (Prelude.Maybe EarthObservationJobErrorType)
 earthObservationJobErrorDetails_type = Lens.lens (\EarthObservationJobErrorDetails' {type'} -> type') (\s@EarthObservationJobErrorDetails' {} a -> s {type' = a} :: EarthObservationJobErrorDetails)
 
@@ -82,7 +80,8 @@ instance
   hashWithSalt
     _salt
     EarthObservationJobErrorDetails' {..} =
-      _salt `Prelude.hashWithSalt` message
+      _salt
+        `Prelude.hashWithSalt` message
         `Prelude.hashWithSalt` type'
 
 instance

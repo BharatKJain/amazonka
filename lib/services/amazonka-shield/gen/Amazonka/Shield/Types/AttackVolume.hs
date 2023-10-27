@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Shield.Types.AttackVolume
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Shield.Types.AttackVolume where
@@ -99,7 +99,8 @@ instance Data.FromJSON AttackVolume where
 
 instance Prelude.Hashable AttackVolume where
   hashWithSalt _salt AttackVolume' {..} =
-    _salt `Prelude.hashWithSalt` bitsPerSecond
+    _salt
+      `Prelude.hashWithSalt` bitsPerSecond
       `Prelude.hashWithSalt` packetsPerSecond
       `Prelude.hashWithSalt` requestsPerSecond
 

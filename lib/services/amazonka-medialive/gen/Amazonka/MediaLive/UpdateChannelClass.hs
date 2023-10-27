@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaLive.UpdateChannelClass
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,7 +117,8 @@ instance Core.AWSRequest UpdateChannelClass' where
 
 instance Prelude.Hashable UpdateChannelClass' where
   hashWithSalt _salt UpdateChannelClass'' {..} =
-    _salt `Prelude.hashWithSalt` destinations
+    _salt
+      `Prelude.hashWithSalt` destinations
       `Prelude.hashWithSalt` channelId
       `Prelude.hashWithSalt` channelClass
 

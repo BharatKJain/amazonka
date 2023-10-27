@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.LendingField
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.LendingField where
@@ -80,14 +80,16 @@ instance Data.FromJSON LendingField where
           LendingField'
             Prelude.<$> (x Data..:? "KeyDetection")
             Prelude.<*> (x Data..:? "Type")
-            Prelude.<*> ( x Data..:? "ValueDetections"
+            Prelude.<*> ( x
+                            Data..:? "ValueDetections"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable LendingField where
   hashWithSalt _salt LendingField' {..} =
-    _salt `Prelude.hashWithSalt` keyDetection
+    _salt
+      `Prelude.hashWithSalt` keyDetection
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` valueDetections
 

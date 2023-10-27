@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCases.Types.RelatedItemContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCases.Types.RelatedItemContent where
@@ -76,7 +76,8 @@ instance Data.FromJSON RelatedItemContent where
 
 instance Prelude.Hashable RelatedItemContent where
   hashWithSalt _salt RelatedItemContent' {..} =
-    _salt `Prelude.hashWithSalt` comment
+    _salt
+      `Prelude.hashWithSalt` comment
       `Prelude.hashWithSalt` contact
 
 instance Prelude.NFData RelatedItemContent where

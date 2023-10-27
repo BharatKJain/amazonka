@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.BlueprintDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.BlueprintDetails where
@@ -74,7 +74,8 @@ instance Data.FromJSON BlueprintDetails where
 
 instance Prelude.Hashable BlueprintDetails where
   hashWithSalt _salt BlueprintDetails' {..} =
-    _salt `Prelude.hashWithSalt` blueprintName
+    _salt
+      `Prelude.hashWithSalt` blueprintName
       `Prelude.hashWithSalt` runId
 
 instance Prelude.NFData BlueprintDetails where

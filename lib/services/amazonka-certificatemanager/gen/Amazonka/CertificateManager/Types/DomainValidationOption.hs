@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManager.Types.DomainValidationOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManager.Types.DomainValidationOption where
@@ -119,7 +119,8 @@ domainValidationOption_validationDomain = Lens.lens (\DomainValidationOption' {v
 
 instance Prelude.Hashable DomainValidationOption where
   hashWithSalt _salt DomainValidationOption' {..} =
-    _salt `Prelude.hashWithSalt` domainName
+    _salt
+      `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` validationDomain
 
 instance Prelude.NFData DomainValidationOption where

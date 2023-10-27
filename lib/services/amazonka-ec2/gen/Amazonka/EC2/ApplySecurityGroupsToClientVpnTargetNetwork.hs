@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ApplySecurityGroupsToClientVpnTargetNetwork
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,11 +144,12 @@ instance
     Response.receiveXML
       ( \s h x ->
           ApplySecurityGroupsToClientVpnTargetNetworkResponse'
-            Prelude.<$> ( x Data..@? "securityGroupIds"
+            Prelude.<$> ( x
+                            Data..@? "securityGroupIds"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -158,7 +159,8 @@ instance
   hashWithSalt
     _salt
     ApplySecurityGroupsToClientVpnTargetNetwork' {..} =
-      _salt `Prelude.hashWithSalt` dryRun
+      _salt
+        `Prelude.hashWithSalt` dryRun
         `Prelude.hashWithSalt` clientVpnEndpointId
         `Prelude.hashWithSalt` vpcId
         `Prelude.hashWithSalt` securityGroupIds

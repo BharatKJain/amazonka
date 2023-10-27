@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexV2Models.CreateResourcePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,7 +130,8 @@ instance Core.AWSRequest CreateResourcePolicy where
 
 instance Prelude.Hashable CreateResourcePolicy where
   hashWithSalt _salt CreateResourcePolicy' {..} =
-    _salt `Prelude.hashWithSalt` resourceArn
+    _salt
+      `Prelude.hashWithSalt` resourceArn
       `Prelude.hashWithSalt` policy
 
 instance Prelude.NFData CreateResourcePolicy where

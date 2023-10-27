@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.DirectKinesisSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.DirectKinesisSource where
@@ -109,7 +109,8 @@ instance Data.FromJSON DirectKinesisSource where
 
 instance Prelude.Hashable DirectKinesisSource where
   hashWithSalt _salt DirectKinesisSource' {..} =
-    _salt `Prelude.hashWithSalt` dataPreviewOptions
+    _salt
+      `Prelude.hashWithSalt` dataPreviewOptions
       `Prelude.hashWithSalt` detectSchema
       `Prelude.hashWithSalt` streamingOptions
       `Prelude.hashWithSalt` windowSize

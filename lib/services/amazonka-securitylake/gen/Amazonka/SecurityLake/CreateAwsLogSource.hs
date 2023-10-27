@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecurityLake.CreateAwsLogSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,7 +153,8 @@ instance Core.AWSRequest CreateAwsLogSource where
 
 instance Prelude.Hashable CreateAwsLogSource where
   hashWithSalt _salt CreateAwsLogSource' {..} =
-    _salt `Prelude.hashWithSalt` enableAllDimensions
+    _salt
+      `Prelude.hashWithSalt` enableAllDimensions
       `Prelude.hashWithSalt` enableSingleDimension
       `Prelude.hashWithSalt` enableTwoDimensions
       `Prelude.hashWithSalt` inputOrder

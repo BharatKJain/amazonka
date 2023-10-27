@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.RadiusSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.RadiusSettings where
@@ -155,7 +155,8 @@ instance Data.FromJSON RadiusSettings where
 
 instance Prelude.Hashable RadiusSettings where
   hashWithSalt _salt RadiusSettings' {..} =
-    _salt `Prelude.hashWithSalt` authenticationProtocol
+    _salt
+      `Prelude.hashWithSalt` authenticationProtocol
       `Prelude.hashWithSalt` displayLabel
       `Prelude.hashWithSalt` radiusPort
       `Prelude.hashWithSalt` radiusRetries

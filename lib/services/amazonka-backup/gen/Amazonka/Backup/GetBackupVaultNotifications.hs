@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Backup.GetBackupVaultNotifications
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,7 +100,8 @@ instance Core.AWSRequest GetBackupVaultNotifications where
       ( \s h x ->
           GetBackupVaultNotificationsResponse'
             Prelude.<$> (x Data..?> "BackupVaultArn")
-            Prelude.<*> ( x Data..?> "BackupVaultEvents"
+            Prelude.<*> ( x
+                            Data..?> "BackupVaultEvents"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "BackupVaultName")

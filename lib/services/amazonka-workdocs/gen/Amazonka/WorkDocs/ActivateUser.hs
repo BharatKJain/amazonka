@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkDocs.ActivateUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest ActivateUser where
 
 instance Prelude.Hashable ActivateUser where
   hashWithSalt _salt ActivateUser' {..} =
-    _salt `Prelude.hashWithSalt` authenticationToken
+    _salt
+      `Prelude.hashWithSalt` authenticationToken
       `Prelude.hashWithSalt` userId
 
 instance Prelude.NFData ActivateUser where

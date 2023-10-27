@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.ServiceError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.ServiceError where
@@ -114,7 +114,8 @@ instance Data.FromJSON ServiceError where
 
 instance Prelude.Hashable ServiceError where
   hashWithSalt _salt ServiceError' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` serviceErrorId

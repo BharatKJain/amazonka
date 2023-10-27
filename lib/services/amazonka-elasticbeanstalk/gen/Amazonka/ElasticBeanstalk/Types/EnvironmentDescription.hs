@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.EnvironmentDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.EnvironmentDescription where
@@ -378,7 +378,8 @@ instance Data.FromXML EnvironmentDescription where
       Prelude.<*> (x Data..@? "EndpointURL")
       Prelude.<*> (x Data..@? "EnvironmentArn")
       Prelude.<*> (x Data..@? "EnvironmentId")
-      Prelude.<*> ( x Data..@? "EnvironmentLinks"
+      Prelude.<*> ( x
+                      Data..@? "EnvironmentLinks"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )

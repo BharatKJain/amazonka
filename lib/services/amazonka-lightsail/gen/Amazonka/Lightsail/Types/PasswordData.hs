@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.PasswordData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.PasswordData where
@@ -135,7 +135,8 @@ instance Data.FromJSON PasswordData where
 
 instance Prelude.Hashable PasswordData where
   hashWithSalt _salt PasswordData' {..} =
-    _salt `Prelude.hashWithSalt` ciphertext
+    _salt
+      `Prelude.hashWithSalt` ciphertext
       `Prelude.hashWithSalt` keyPairName
 
 instance Prelude.NFData PasswordData where

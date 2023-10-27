@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.AddHeaderAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.AddHeaderAction where
@@ -87,7 +87,8 @@ instance Data.FromXML AddHeaderAction where
 
 instance Prelude.Hashable AddHeaderAction where
   hashWithSalt _salt AddHeaderAction' {..} =
-    _salt `Prelude.hashWithSalt` headerName
+    _salt
+      `Prelude.hashWithSalt` headerName
       `Prelude.hashWithSalt` headerValue
 
 instance Prelude.NFData AddHeaderAction where

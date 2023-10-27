@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.SetDefaultPolicyVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest SetDefaultPolicyVersion where
 
 instance Prelude.Hashable SetDefaultPolicyVersion where
   hashWithSalt _salt SetDefaultPolicyVersion' {..} =
-    _salt `Prelude.hashWithSalt` policyName
+    _salt
+      `Prelude.hashWithSalt` policyName
       `Prelude.hashWithSalt` policyVersionId
 
 instance Prelude.NFData SetDefaultPolicyVersion where

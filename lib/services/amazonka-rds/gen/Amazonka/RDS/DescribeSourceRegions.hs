@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.DescribeSourceRegions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -168,22 +168,22 @@ instance Core.AWSPager DescribeSourceRegions where
     | Core.stop
         ( rs
             Lens.^? describeSourceRegionsResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeSourceRegionsResponse_sourceRegions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeSourceRegions_marker
           Lens..~ rs
           Lens.^? describeSourceRegionsResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeSourceRegions where
   type
@@ -197,7 +197,9 @@ instance Core.AWSRequest DescribeSourceRegions where
       ( \s h x ->
           DescribeSourceRegionsResponse'
             Prelude.<$> (x Data..@? "Marker")
-            Prelude.<*> ( x Data..@? "SourceRegions" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "SourceRegions"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "SourceRegion")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -205,7 +207,8 @@ instance Core.AWSRequest DescribeSourceRegions where
 
 instance Prelude.Hashable DescribeSourceRegions where
   hashWithSalt _salt DescribeSourceRegions' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxRecords
       `Prelude.hashWithSalt` regionName

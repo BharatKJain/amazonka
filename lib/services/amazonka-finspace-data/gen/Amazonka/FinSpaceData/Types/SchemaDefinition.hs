@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FinSpaceData.Types.SchemaDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FinSpaceData.Types.SchemaDefinition where
@@ -70,14 +70,16 @@ instance Data.FromJSON SchemaDefinition where
       ( \x ->
           SchemaDefinition'
             Prelude.<$> (x Data..:? "columns" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "primaryKeyColumns"
+            Prelude.<*> ( x
+                            Data..:? "primaryKeyColumns"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable SchemaDefinition where
   hashWithSalt _salt SchemaDefinition' {..} =
-    _salt `Prelude.hashWithSalt` columns
+    _salt
+      `Prelude.hashWithSalt` columns
       `Prelude.hashWithSalt` primaryKeyColumns
 
 instance Prelude.NFData SchemaDefinition where

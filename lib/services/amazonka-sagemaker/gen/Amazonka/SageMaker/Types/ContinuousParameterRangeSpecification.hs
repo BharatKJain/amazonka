@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ContinuousParameterRangeSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ContinuousParameterRangeSpecification where
@@ -89,7 +89,8 @@ instance
   hashWithSalt
     _salt
     ContinuousParameterRangeSpecification' {..} =
-      _salt `Prelude.hashWithSalt` minValue
+      _salt
+        `Prelude.hashWithSalt` minValue
         `Prelude.hashWithSalt` maxValue
 
 instance

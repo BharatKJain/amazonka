@@ -16,7 +16,7 @@
 -- Module      : Amazonka.S3.GetBucketWebsite
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,9 @@ instance Core.AWSRequest GetBucketWebsite where
             Prelude.<$> (x Data..@? "ErrorDocument")
             Prelude.<*> (x Data..@? "IndexDocument")
             Prelude.<*> (x Data..@? "RedirectAllRequestsTo")
-            Prelude.<*> ( x Data..@? "RoutingRules" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "RoutingRules"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "RoutingRule")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -133,7 +135,8 @@ instance Core.AWSRequest GetBucketWebsite where
 
 instance Prelude.Hashable GetBucketWebsite where
   hashWithSalt _salt GetBucketWebsite' {..} =
-    _salt `Prelude.hashWithSalt` expectedBucketOwner
+    _salt
+      `Prelude.hashWithSalt` expectedBucketOwner
       `Prelude.hashWithSalt` bucket
 
 instance Prelude.NFData GetBucketWebsite where

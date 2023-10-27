@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.EndpointLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.EndpointLocation where
@@ -129,7 +129,8 @@ instance Data.FromJSON EndpointLocation where
 
 instance Prelude.Hashable EndpointLocation where
   hashWithSalt _salt EndpointLocation' {..} =
-    _salt `Prelude.hashWithSalt` city
+    _salt
+      `Prelude.hashWithSalt` city
       `Prelude.hashWithSalt` country
       `Prelude.hashWithSalt` latitude
       `Prelude.hashWithSalt` longitude

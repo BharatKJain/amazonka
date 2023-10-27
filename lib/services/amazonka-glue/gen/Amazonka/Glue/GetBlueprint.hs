@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.GetBlueprint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest GetBlueprint where
 
 instance Prelude.Hashable GetBlueprint where
   hashWithSalt _salt GetBlueprint' {..} =
-    _salt `Prelude.hashWithSalt` includeBlueprint
+    _salt
+      `Prelude.hashWithSalt` includeBlueprint
       `Prelude.hashWithSalt` includeParameterSpec
       `Prelude.hashWithSalt` name
 

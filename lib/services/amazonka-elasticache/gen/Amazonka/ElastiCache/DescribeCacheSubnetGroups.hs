@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElastiCache.DescribeCacheSubnetGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,22 +135,22 @@ instance Core.AWSPager DescribeCacheSubnetGroups where
     | Core.stop
         ( rs
             Lens.^? describeCacheSubnetGroupsResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeCacheSubnetGroupsResponse_cacheSubnetGroups
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeCacheSubnetGroups_marker
           Lens..~ rs
           Lens.^? describeCacheSubnetGroupsResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeCacheSubnetGroups where
   type
@@ -163,7 +163,8 @@ instance Core.AWSRequest DescribeCacheSubnetGroups where
       "DescribeCacheSubnetGroupsResult"
       ( \s h x ->
           DescribeCacheSubnetGroupsResponse'
-            Prelude.<$> ( x Data..@? "CacheSubnetGroups"
+            Prelude.<$> ( x
+                            Data..@? "CacheSubnetGroups"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "CacheSubnetGroup")
                         )
@@ -173,7 +174,8 @@ instance Core.AWSRequest DescribeCacheSubnetGroups where
 
 instance Prelude.Hashable DescribeCacheSubnetGroups where
   hashWithSalt _salt DescribeCacheSubnetGroups' {..} =
-    _salt `Prelude.hashWithSalt` cacheSubnetGroupName
+    _salt
+      `Prelude.hashWithSalt` cacheSubnetGroupName
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxRecords
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.STS.GetSessionToken
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -255,7 +255,8 @@ instance Core.AWSRequest GetSessionToken where
 
 instance Prelude.Hashable GetSessionToken where
   hashWithSalt _salt GetSessionToken' {..} =
-    _salt `Prelude.hashWithSalt` durationSeconds
+    _salt
+      `Prelude.hashWithSalt` durationSeconds
       `Prelude.hashWithSalt` serialNumber
       `Prelude.hashWithSalt` tokenCode
 

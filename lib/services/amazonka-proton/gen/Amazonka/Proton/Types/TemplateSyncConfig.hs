@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Proton.Types.TemplateSyncConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Proton.Types.TemplateSyncConfig where
@@ -131,7 +131,8 @@ instance Data.FromJSON TemplateSyncConfig where
 
 instance Prelude.Hashable TemplateSyncConfig where
   hashWithSalt _salt TemplateSyncConfig' {..} =
-    _salt `Prelude.hashWithSalt` subdirectory
+    _salt
+      `Prelude.hashWithSalt` subdirectory
       `Prelude.hashWithSalt` branch
       `Prelude.hashWithSalt` repositoryName
       `Prelude.hashWithSalt` repositoryProvider

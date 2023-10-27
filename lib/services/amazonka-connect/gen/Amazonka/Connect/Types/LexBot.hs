@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.LexBot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.LexBot where
@@ -74,7 +74,8 @@ instance Data.FromJSON LexBot where
 
 instance Prelude.Hashable LexBot where
   hashWithSalt _salt LexBot' {..} =
-    _salt `Prelude.hashWithSalt` lexRegion
+    _salt
+      `Prelude.hashWithSalt` lexRegion
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData LexBot where

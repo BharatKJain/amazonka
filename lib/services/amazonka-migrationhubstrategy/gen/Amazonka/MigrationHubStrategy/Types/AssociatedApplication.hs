@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.AssociatedApplication
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.AssociatedApplication where
@@ -69,12 +69,14 @@ instance Data.FromJSON AssociatedApplication where
       "AssociatedApplication"
       ( \x ->
           AssociatedApplication'
-            Prelude.<$> (x Data..:? "id") Prelude.<*> (x Data..:? "name")
+            Prelude.<$> (x Data..:? "id")
+            Prelude.<*> (x Data..:? "name")
       )
 
 instance Prelude.Hashable AssociatedApplication where
   hashWithSalt _salt AssociatedApplication' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData AssociatedApplication where

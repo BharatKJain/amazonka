@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.GlobalClusterMember
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.GlobalClusterMember where
@@ -104,13 +104,16 @@ instance Data.FromXML GlobalClusterMember where
       Prelude.<$> (x Data..@? "DBClusterArn")
       Prelude.<*> (x Data..@? "GlobalWriteForwardingStatus")
       Prelude.<*> (x Data..@? "IsWriter")
-      Prelude.<*> ( x Data..@? "Readers" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Readers"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 
 instance Prelude.Hashable GlobalClusterMember where
   hashWithSalt _salt GlobalClusterMember' {..} =
-    _salt `Prelude.hashWithSalt` dbClusterArn
+    _salt
+      `Prelude.hashWithSalt` dbClusterArn
       `Prelude.hashWithSalt` globalWriteForwardingStatus
       `Prelude.hashWithSalt` isWriter
       `Prelude.hashWithSalt` readers

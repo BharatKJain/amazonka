@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.StackInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.StackInstance where
@@ -306,7 +306,8 @@ instance Data.FromXML StackInstance where
       Prelude.<*> (x Data..@? "LastDriftCheckTimestamp")
       Prelude.<*> (x Data..@? "LastOperationId")
       Prelude.<*> (x Data..@? "OrganizationalUnitId")
-      Prelude.<*> ( x Data..@? "ParameterOverrides"
+      Prelude.<*> ( x
+                      Data..@? "ParameterOverrides"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
@@ -319,7 +320,8 @@ instance Data.FromXML StackInstance where
 
 instance Prelude.Hashable StackInstance where
   hashWithSalt _salt StackInstance' {..} =
-    _salt `Prelude.hashWithSalt` account
+    _salt
+      `Prelude.hashWithSalt` account
       `Prelude.hashWithSalt` driftStatus
       `Prelude.hashWithSalt` lastDriftCheckTimestamp
       `Prelude.hashWithSalt` lastOperationId

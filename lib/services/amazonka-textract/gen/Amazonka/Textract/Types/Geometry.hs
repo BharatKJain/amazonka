@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.Geometry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.Geometry where
@@ -84,7 +84,8 @@ instance Data.FromJSON Geometry where
 
 instance Prelude.Hashable Geometry where
   hashWithSalt _salt Geometry' {..} =
-    _salt `Prelude.hashWithSalt` boundingBox
+    _salt
+      `Prelude.hashWithSalt` boundingBox
       `Prelude.hashWithSalt` polygon
 
 instance Prelude.NFData Geometry where

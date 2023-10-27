@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeBuild.ImportSourceCredentials
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -160,7 +160,8 @@ instance Core.AWSRequest ImportSourceCredentials where
 
 instance Prelude.Hashable ImportSourceCredentials where
   hashWithSalt _salt ImportSourceCredentials' {..} =
-    _salt `Prelude.hashWithSalt` shouldOverwrite
+    _salt
+      `Prelude.hashWithSalt` shouldOverwrite
       `Prelude.hashWithSalt` username
       `Prelude.hashWithSalt` token
       `Prelude.hashWithSalt` serverType

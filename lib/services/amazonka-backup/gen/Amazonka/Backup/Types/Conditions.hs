@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.Conditions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.Conditions where
@@ -108,7 +108,8 @@ instance Data.FromJSON Conditions where
           Conditions'
             Prelude.<$> (x Data..:? "StringEquals" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "StringLike" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "StringNotEquals"
+            Prelude.<*> ( x
+                            Data..:? "StringNotEquals"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "StringNotLike" Data..!= Prelude.mempty)
@@ -116,7 +117,8 @@ instance Data.FromJSON Conditions where
 
 instance Prelude.Hashable Conditions where
   hashWithSalt _salt Conditions' {..} =
-    _salt `Prelude.hashWithSalt` stringEquals
+    _salt
+      `Prelude.hashWithSalt` stringEquals
       `Prelude.hashWithSalt` stringLike
       `Prelude.hashWithSalt` stringNotEquals
       `Prelude.hashWithSalt` stringNotLike

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.EventTrackerSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.EventTrackerSummary where
@@ -129,7 +129,8 @@ instance Data.FromJSON EventTrackerSummary where
 
 instance Prelude.Hashable EventTrackerSummary where
   hashWithSalt _salt EventTrackerSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationDateTime
+    _salt
+      `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` eventTrackerArn
       `Prelude.hashWithSalt` lastUpdatedDateTime
       `Prelude.hashWithSalt` name

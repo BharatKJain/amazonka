@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.FailureException
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.FailureException where
@@ -77,7 +77,8 @@ instance Data.FromJSON FailureException where
 
 instance Prelude.Hashable FailureException where
   hashWithSalt _salt FailureException' {..} =
-    _salt `Prelude.hashWithSalt` exceptionDescription
+    _salt
+      `Prelude.hashWithSalt` exceptionDescription
       `Prelude.hashWithSalt` exceptionName
 
 instance Prelude.NFData FailureException where

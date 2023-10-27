@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.Framework
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.Framework where
@@ -143,7 +143,8 @@ instance Data.FromJSON Framework where
 
 instance Prelude.Hashable Framework where
   hashWithSalt _salt Framework' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` deploymentStatus
       `Prelude.hashWithSalt` frameworkArn
       `Prelude.hashWithSalt` frameworkDescription

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CostExplorer.GetCostAndUsageWithResources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -294,10 +294,12 @@ instance Core.AWSRequest GetCostAndUsageWithResources where
     Response.receiveJSON
       ( \s h x ->
           GetCostAndUsageWithResourcesResponse'
-            Prelude.<$> ( x Data..?> "DimensionValueAttributes"
+            Prelude.<$> ( x
+                            Data..?> "DimensionValueAttributes"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "GroupDefinitions"
+            Prelude.<*> ( x
+                            Data..?> "GroupDefinitions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextPageToken")
@@ -310,7 +312,8 @@ instance
     GetCostAndUsageWithResources
   where
   hashWithSalt _salt GetCostAndUsageWithResources' {..} =
-    _salt `Prelude.hashWithSalt` groupBy
+    _salt
+      `Prelude.hashWithSalt` groupBy
       `Prelude.hashWithSalt` metrics
       `Prelude.hashWithSalt` nextPageToken
       `Prelude.hashWithSalt` timePeriod

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.Total
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.Total where
@@ -75,7 +75,8 @@ instance Data.FromJSON Total where
 
 instance Prelude.Hashable Total where
   hashWithSalt _salt Total' {..} =
-    _salt `Prelude.hashWithSalt` amount
+    _salt
+      `Prelude.hashWithSalt` amount
       `Prelude.hashWithSalt` unit
 
 instance Prelude.NFData Total where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.HttpGatewayRouteAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.HttpGatewayRouteAction where
@@ -81,7 +81,8 @@ instance Data.FromJSON HttpGatewayRouteAction where
 
 instance Prelude.Hashable HttpGatewayRouteAction where
   hashWithSalt _salt HttpGatewayRouteAction' {..} =
-    _salt `Prelude.hashWithSalt` rewrite
+    _salt
+      `Prelude.hashWithSalt` rewrite
       `Prelude.hashWithSalt` target
 
 instance Prelude.NFData HttpGatewayRouteAction where

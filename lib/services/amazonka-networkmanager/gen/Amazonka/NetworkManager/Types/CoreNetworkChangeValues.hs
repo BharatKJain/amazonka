@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.CoreNetworkChangeValues
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.CoreNetworkChangeValues where
@@ -117,18 +117,21 @@ instance Data.FromJSON CoreNetworkChangeValues where
             Prelude.<*> (x Data..:? "Cidr")
             Prelude.<*> (x Data..:? "DestinationIdentifier")
             Prelude.<*> (x Data..:? "EdgeLocations" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "InsideCidrBlocks"
+            Prelude.<*> ( x
+                            Data..:? "InsideCidrBlocks"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SegmentName")
-            Prelude.<*> ( x Data..:? "SharedSegments"
+            Prelude.<*> ( x
+                            Data..:? "SharedSegments"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable CoreNetworkChangeValues where
   hashWithSalt _salt CoreNetworkChangeValues' {..} =
-    _salt `Prelude.hashWithSalt` asn
+    _salt
+      `Prelude.hashWithSalt` asn
       `Prelude.hashWithSalt` cidr
       `Prelude.hashWithSalt` destinationIdentifier
       `Prelude.hashWithSalt` edgeLocations

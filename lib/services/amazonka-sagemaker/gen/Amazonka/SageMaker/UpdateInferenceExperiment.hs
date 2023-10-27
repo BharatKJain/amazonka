@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.UpdateInferenceExperiment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -173,7 +173,8 @@ instance Core.AWSRequest UpdateInferenceExperiment where
 
 instance Prelude.Hashable UpdateInferenceExperiment where
   hashWithSalt _salt UpdateInferenceExperiment' {..} =
-    _salt `Prelude.hashWithSalt` dataStorageConfig
+    _salt
+      `Prelude.hashWithSalt` dataStorageConfig
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` modelVariants
       `Prelude.hashWithSalt` schedule

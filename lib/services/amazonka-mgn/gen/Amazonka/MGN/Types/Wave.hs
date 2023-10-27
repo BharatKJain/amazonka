@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.Wave
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.Wave where
@@ -143,7 +143,8 @@ instance Data.FromJSON Wave where
 
 instance Prelude.Hashable Wave where
   hashWithSalt _salt Wave' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` isArchived

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WellArchitected.GetMilestone
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest GetMilestone where
 
 instance Prelude.Hashable GetMilestone where
   hashWithSalt _salt GetMilestone' {..} =
-    _salt `Prelude.hashWithSalt` workloadId
+    _salt
+      `Prelude.hashWithSalt` workloadId
       `Prelude.hashWithSalt` milestoneNumber
 
 instance Prelude.NFData GetMilestone where

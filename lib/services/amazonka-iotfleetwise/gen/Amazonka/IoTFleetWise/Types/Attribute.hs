@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTFleetWise.Types.Attribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTFleetWise.Types.Attribute where
@@ -153,7 +153,8 @@ instance Data.FromJSON Attribute where
 
 instance Prelude.Hashable Attribute where
   hashWithSalt _salt Attribute' {..} =
-    _salt `Prelude.hashWithSalt` allowedValues
+    _salt
+      `Prelude.hashWithSalt` allowedValues
       `Prelude.hashWithSalt` assignedValue
       `Prelude.hashWithSalt` defaultValue
       `Prelude.hashWithSalt` description

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Discovery.Types.ContinuousExportDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Discovery.Types.ContinuousExportDescription where
@@ -410,7 +410,8 @@ instance Data.FromJSON ContinuousExportDescription where
             Prelude.<$> (x Data..:? "dataSource")
             Prelude.<*> (x Data..:? "exportId")
             Prelude.<*> (x Data..:? "s3Bucket")
-            Prelude.<*> ( x Data..:? "schemaStorageConfig"
+            Prelude.<*> ( x
+                            Data..:? "schemaStorageConfig"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "startTime")
@@ -421,7 +422,8 @@ instance Data.FromJSON ContinuousExportDescription where
 
 instance Prelude.Hashable ContinuousExportDescription where
   hashWithSalt _salt ContinuousExportDescription' {..} =
-    _salt `Prelude.hashWithSalt` dataSource
+    _salt
+      `Prelude.hashWithSalt` dataSource
       `Prelude.hashWithSalt` exportId
       `Prelude.hashWithSalt` s3Bucket
       `Prelude.hashWithSalt` schemaStorageConfig

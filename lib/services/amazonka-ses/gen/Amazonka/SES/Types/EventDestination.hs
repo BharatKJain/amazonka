@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.EventDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.EventDestination where
@@ -158,14 +158,16 @@ instance Data.FromXML EventDestination where
       Prelude.<*> (x Data..@? "KinesisFirehoseDestination")
       Prelude.<*> (x Data..@? "SNSDestination")
       Prelude.<*> (x Data..@ "Name")
-      Prelude.<*> ( x Data..@? "MatchingEventTypes"
+      Prelude.<*> ( x
+                      Data..@? "MatchingEventTypes"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Data.parseXMLList "member"
                   )
 
 instance Prelude.Hashable EventDestination where
   hashWithSalt _salt EventDestination' {..} =
-    _salt `Prelude.hashWithSalt` cloudWatchDestination
+    _salt
+      `Prelude.hashWithSalt` cloudWatchDestination
       `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` kinesisFirehoseDestination
       `Prelude.hashWithSalt` sNSDestination

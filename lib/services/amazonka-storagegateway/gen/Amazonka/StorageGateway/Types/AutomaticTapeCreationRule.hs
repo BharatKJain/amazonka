@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StorageGateway.Types.AutomaticTapeCreationRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StorageGateway.Types.AutomaticTapeCreationRule where
@@ -164,7 +164,8 @@ instance Data.FromJSON AutomaticTapeCreationRule where
 
 instance Prelude.Hashable AutomaticTapeCreationRule where
   hashWithSalt _salt AutomaticTapeCreationRule' {..} =
-    _salt `Prelude.hashWithSalt` worm
+    _salt
+      `Prelude.hashWithSalt` worm
       `Prelude.hashWithSalt` tapeBarcodePrefix
       `Prelude.hashWithSalt` poolId
       `Prelude.hashWithSalt` tapeSizeInBytes

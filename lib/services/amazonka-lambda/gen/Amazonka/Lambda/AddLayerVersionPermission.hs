@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lambda.AddLayerVersionPermission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -202,7 +202,8 @@ instance Core.AWSRequest AddLayerVersionPermission where
 
 instance Prelude.Hashable AddLayerVersionPermission where
   hashWithSalt _salt AddLayerVersionPermission' {..} =
-    _salt `Prelude.hashWithSalt` organizationId
+    _salt
+      `Prelude.hashWithSalt` organizationId
       `Prelude.hashWithSalt` revisionId
       `Prelude.hashWithSalt` layerName
       `Prelude.hashWithSalt` versionNumber

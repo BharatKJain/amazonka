@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.ProactiveOrganizationInsightSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.ProactiveOrganizationInsightSummary where
@@ -175,7 +175,8 @@ instance
   hashWithSalt
     _salt
     ProactiveOrganizationInsightSummary' {..} =
-      _salt `Prelude.hashWithSalt` accountId
+      _salt
+        `Prelude.hashWithSalt` accountId
         `Prelude.hashWithSalt` id
         `Prelude.hashWithSalt` insightTimeRange
         `Prelude.hashWithSalt` name

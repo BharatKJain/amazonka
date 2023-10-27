@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.IdentityDocumentField
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.IdentityDocumentField where
@@ -75,7 +75,8 @@ instance Data.FromJSON IdentityDocumentField where
 
 instance Prelude.Hashable IdentityDocumentField where
   hashWithSalt _salt IdentityDocumentField' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` valueDetection
 
 instance Prelude.NFData IdentityDocumentField where

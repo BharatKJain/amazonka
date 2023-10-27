@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kendra.GetSnapshots
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -217,7 +217,8 @@ instance Core.AWSRequest GetSnapshots where
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (x Data..?> "SnapShotTimeFilter")
             Prelude.<*> (x Data..?> "SnapshotsData" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "SnapshotsDataHeader"
+            Prelude.<*> ( x
+                            Data..?> "SnapshotsDataHeader"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -225,7 +226,8 @@ instance Core.AWSRequest GetSnapshots where
 
 instance Prelude.Hashable GetSnapshots where
   hashWithSalt _salt GetSnapshots' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` indexId
       `Prelude.hashWithSalt` interval

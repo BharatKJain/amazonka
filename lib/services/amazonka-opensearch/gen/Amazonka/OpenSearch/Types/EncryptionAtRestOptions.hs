@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.EncryptionAtRestOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.EncryptionAtRestOptions where
@@ -76,7 +76,8 @@ instance Data.FromJSON EncryptionAtRestOptions where
 
 instance Prelude.Hashable EncryptionAtRestOptions where
   hashWithSalt _salt EncryptionAtRestOptions' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` kmsKeyId
 
 instance Prelude.NFData EncryptionAtRestOptions where

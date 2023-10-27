@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.UsageResourceResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.UsageResourceResult where
@@ -76,7 +76,8 @@ instance Data.FromJSON UsageResourceResult where
 
 instance Prelude.Hashable UsageResourceResult where
   hashWithSalt _salt UsageResourceResult' {..} =
-    _salt `Prelude.hashWithSalt` resource
+    _salt
+      `Prelude.hashWithSalt` resource
       `Prelude.hashWithSalt` total
 
 instance Prelude.NFData UsageResourceResult where

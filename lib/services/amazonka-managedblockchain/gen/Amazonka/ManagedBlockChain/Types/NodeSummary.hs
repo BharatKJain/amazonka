@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ManagedBlockChain.Types.NodeSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ManagedBlockChain.Types.NodeSummary where
@@ -124,7 +124,8 @@ instance Data.FromJSON NodeSummary where
 
 instance Prelude.Hashable NodeSummary where
   hashWithSalt _salt NodeSummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` id

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.ListModelMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,21 +121,21 @@ instance Core.AWSPager ListModelMetadata where
     | Core.stop
         ( rs
             Lens.^? listModelMetadataResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listModelMetadataResponse_modelMetadataSummaries
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listModelMetadata_nextToken
           Lens..~ rs
           Lens.^? listModelMetadataResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListModelMetadata where
   type
@@ -149,14 +149,16 @@ instance Core.AWSRequest ListModelMetadata where
           ListModelMetadataResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "ModelMetadataSummaries"
+            Prelude.<*> ( x
+                            Data..?> "ModelMetadataSummaries"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListModelMetadata where
   hashWithSalt _salt ListModelMetadata' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` searchExpression
 

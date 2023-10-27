@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.StorageDescriptor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.StorageDescriptor where
@@ -212,7 +212,8 @@ instance Data.FromJSON StorageDescriptor where
       "StorageDescriptor"
       ( \x ->
           StorageDescriptor'
-            Prelude.<$> ( x Data..:? "AdditionalLocations"
+            Prelude.<$> ( x
+                            Data..:? "AdditionalLocations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "BucketColumns" Data..!= Prelude.mempty)
@@ -232,7 +233,8 @@ instance Data.FromJSON StorageDescriptor where
 
 instance Prelude.Hashable StorageDescriptor where
   hashWithSalt _salt StorageDescriptor' {..} =
-    _salt `Prelude.hashWithSalt` additionalLocations
+    _salt
+      `Prelude.hashWithSalt` additionalLocations
       `Prelude.hashWithSalt` bucketColumns
       `Prelude.hashWithSalt` columns
       `Prelude.hashWithSalt` compressed

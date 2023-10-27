@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Forecast.CreateWhatIfForecastExport
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -187,7 +187,8 @@ instance Core.AWSRequest CreateWhatIfForecastExport where
 
 instance Prelude.Hashable CreateWhatIfForecastExport where
   hashWithSalt _salt CreateWhatIfForecastExport' {..} =
-    _salt `Prelude.hashWithSalt` format
+    _salt
+      `Prelude.hashWithSalt` format
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` whatIfForecastExportName
       `Prelude.hashWithSalt` whatIfForecastArns

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.InferenceMetrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.InferenceMetrics where
@@ -83,7 +83,8 @@ instance Data.FromJSON InferenceMetrics where
 
 instance Prelude.Hashable InferenceMetrics where
   hashWithSalt _salt InferenceMetrics' {..} =
-    _salt `Prelude.hashWithSalt` maxInvocations
+    _salt
+      `Prelude.hashWithSalt` maxInvocations
       `Prelude.hashWithSalt` modelLatency
 
 instance Prelude.NFData InferenceMetrics where

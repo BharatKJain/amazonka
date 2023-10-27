@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.RecommendedIntentSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.RecommendedIntentSummary where
@@ -91,7 +91,8 @@ instance Data.FromJSON RecommendedIntentSummary where
 
 instance Prelude.Hashable RecommendedIntentSummary where
   hashWithSalt _salt RecommendedIntentSummary' {..} =
-    _salt `Prelude.hashWithSalt` intentId
+    _salt
+      `Prelude.hashWithSalt` intentId
       `Prelude.hashWithSalt` intentName
       `Prelude.hashWithSalt` sampleUtterancesCount
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.BackupStorage.Types.BackupObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.BackupStorage.Types.BackupObject where
@@ -127,7 +127,8 @@ instance Data.FromJSON BackupObject where
 
 instance Prelude.Hashable BackupObject where
   hashWithSalt _salt BackupObject' {..} =
-    _salt `Prelude.hashWithSalt` chunksCount
+    _salt
+      `Prelude.hashWithSalt` chunksCount
       `Prelude.hashWithSalt` metadataString
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` objectChecksum

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.BlockReference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.BlockReference where
@@ -95,7 +95,8 @@ instance Data.FromJSON BlockReference where
 
 instance Prelude.Hashable BlockReference where
   hashWithSalt _salt BlockReference' {..} =
-    _salt `Prelude.hashWithSalt` beginOffset
+    _salt
+      `Prelude.hashWithSalt` beginOffset
       `Prelude.hashWithSalt` blockId
       `Prelude.hashWithSalt` childBlocks
       `Prelude.hashWithSalt` endOffset

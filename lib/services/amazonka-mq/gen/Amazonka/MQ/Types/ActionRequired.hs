@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MQ.Types.ActionRequired
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MQ.Types.ActionRequired where
@@ -97,7 +97,8 @@ instance Data.FromJSON ActionRequired where
 
 instance Prelude.Hashable ActionRequired where
   hashWithSalt _salt ActionRequired' {..} =
-    _salt `Prelude.hashWithSalt` actionRequiredCode
+    _salt
+      `Prelude.hashWithSalt` actionRequiredCode
       `Prelude.hashWithSalt` actionRequiredInfo
 
 instance Prelude.NFData ActionRequired where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.InventoryEncryption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.InventoryEncryption where
@@ -74,7 +74,8 @@ instance Data.FromXML InventoryEncryption where
 
 instance Prelude.Hashable InventoryEncryption where
   hashWithSalt _salt InventoryEncryption' {..} =
-    _salt `Prelude.hashWithSalt` ssekms
+    _salt
+      `Prelude.hashWithSalt` ssekms
       `Prelude.hashWithSalt` sses3
 
 instance Prelude.NFData InventoryEncryption where

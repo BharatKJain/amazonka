@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.MetricToRetain
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.MetricToRetain where
@@ -77,7 +77,8 @@ instance Data.FromJSON MetricToRetain where
 
 instance Prelude.Hashable MetricToRetain where
   hashWithSalt _salt MetricToRetain' {..} =
-    _salt `Prelude.hashWithSalt` metricDimension
+    _salt
+      `Prelude.hashWithSalt` metricDimension
       `Prelude.hashWithSalt` metric
 
 instance Prelude.NFData MetricToRetain where

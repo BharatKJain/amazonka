@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.InferenceRecommendationsJobStep
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.InferenceRecommendationsJobStep where
@@ -126,7 +126,8 @@ instance
   hashWithSalt
     _salt
     InferenceRecommendationsJobStep' {..} =
-      _salt `Prelude.hashWithSalt` inferenceBenchmark
+      _salt
+        `Prelude.hashWithSalt` inferenceBenchmark
         `Prelude.hashWithSalt` stepType
         `Prelude.hashWithSalt` jobName
         `Prelude.hashWithSalt` status

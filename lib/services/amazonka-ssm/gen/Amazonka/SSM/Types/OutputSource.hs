@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.OutputSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.OutputSource where
@@ -78,7 +78,8 @@ instance Data.FromJSON OutputSource where
 
 instance Prelude.Hashable OutputSource where
   hashWithSalt _salt OutputSource' {..} =
-    _salt `Prelude.hashWithSalt` outputSourceId
+    _salt
+      `Prelude.hashWithSalt` outputSourceId
       `Prelude.hashWithSalt` outputSourceType
 
 instance Prelude.NFData OutputSource where

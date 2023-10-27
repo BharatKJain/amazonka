@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.UpdateHoursOfOperation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,8 @@ instance Core.AWSRequest UpdateHoursOfOperation where
 
 instance Prelude.Hashable UpdateHoursOfOperation where
   hashWithSalt _salt UpdateHoursOfOperation' {..} =
-    _salt `Prelude.hashWithSalt` config
+    _salt
+      `Prelude.hashWithSalt` config
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` timeZone

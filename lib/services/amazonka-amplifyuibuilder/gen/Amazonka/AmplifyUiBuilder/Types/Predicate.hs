@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.Predicate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.Predicate where
@@ -105,7 +105,8 @@ instance Data.FromJSON Predicate where
 
 instance Prelude.Hashable Predicate where
   hashWithSalt _salt Predicate' {..} =
-    _salt `Prelude.hashWithSalt` and
+    _salt
+      `Prelude.hashWithSalt` and
       `Prelude.hashWithSalt` field
       `Prelude.hashWithSalt` operand
       `Prelude.hashWithSalt` operator

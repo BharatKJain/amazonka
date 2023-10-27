@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.OpusSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.OpusSettings where
@@ -100,7 +100,8 @@ instance Data.FromJSON OpusSettings where
 
 instance Prelude.Hashable OpusSettings where
   hashWithSalt _salt OpusSettings' {..} =
-    _salt `Prelude.hashWithSalt` bitrate
+    _salt
+      `Prelude.hashWithSalt` bitrate
       `Prelude.hashWithSalt` channels
       `Prelude.hashWithSalt` sampleRate
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.NotebookExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.NotebookExecution where
@@ -296,7 +296,8 @@ instance Data.FromJSON NotebookExecution where
 
 instance Prelude.Hashable NotebookExecution where
   hashWithSalt _salt NotebookExecution' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` editorId
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` executionEngine

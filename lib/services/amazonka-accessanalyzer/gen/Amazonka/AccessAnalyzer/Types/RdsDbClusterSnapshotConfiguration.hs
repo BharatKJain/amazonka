@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.RdsDbClusterSnapshotConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.RdsDbClusterSnapshotConfiguration where
@@ -131,7 +131,8 @@ instance
   hashWithSalt
     _salt
     RdsDbClusterSnapshotConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` attributes
+      _salt
+        `Prelude.hashWithSalt` attributes
         `Prelude.hashWithSalt` kmsKeyId
 
 instance

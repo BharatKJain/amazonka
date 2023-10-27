@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurationDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurationDetails where
@@ -104,10 +104,10 @@ instance
       ( \x ->
           AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurationDetails'
             Prelude.<$> (x Data..:? "CloudWatchEncryptionEnabled")
-              Prelude.<*> (x Data..:? "CloudWatchLogGroupName")
-              Prelude.<*> (x Data..:? "S3BucketName")
-              Prelude.<*> (x Data..:? "S3EncryptionEnabled")
-              Prelude.<*> (x Data..:? "S3KeyPrefix")
+            Prelude.<*> (x Data..:? "CloudWatchLogGroupName")
+            Prelude.<*> (x Data..:? "S3BucketName")
+            Prelude.<*> (x Data..:? "S3EncryptionEnabled")
+            Prelude.<*> (x Data..:? "S3KeyPrefix")
       )
 
 instance

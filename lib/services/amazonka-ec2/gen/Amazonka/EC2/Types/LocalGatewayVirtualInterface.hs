@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.LocalGatewayVirtualInterface
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.LocalGatewayVirtualInterface where
@@ -145,7 +145,9 @@ instance Data.FromXML LocalGatewayVirtualInterface where
       Prelude.<*> (x Data..@? "ownerId")
       Prelude.<*> (x Data..@? "peerAddress")
       Prelude.<*> (x Data..@? "peerBgpAsn")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "vlan")
@@ -155,7 +157,8 @@ instance
     LocalGatewayVirtualInterface
   where
   hashWithSalt _salt LocalGatewayVirtualInterface' {..} =
-    _salt `Prelude.hashWithSalt` localAddress
+    _salt
+      `Prelude.hashWithSalt` localAddress
       `Prelude.hashWithSalt` localBgpAsn
       `Prelude.hashWithSalt` localGatewayId
       `Prelude.hashWithSalt` localGatewayVirtualInterfaceId

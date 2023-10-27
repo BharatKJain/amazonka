@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.Addon
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.Addon where
@@ -214,7 +214,8 @@ instance Data.FromJSON Addon where
 
 instance Prelude.Hashable Addon where
   hashWithSalt _salt Addon' {..} =
-    _salt `Prelude.hashWithSalt` addonArn
+    _salt
+      `Prelude.hashWithSalt` addonArn
       `Prelude.hashWithSalt` addonName
       `Prelude.hashWithSalt` addonVersion
       `Prelude.hashWithSalt` clusterName

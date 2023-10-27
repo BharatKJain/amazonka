@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.ExportEarthObservationJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -147,7 +147,8 @@ instance Core.AWSRequest ExportEarthObservationJob where
 
 instance Prelude.Hashable ExportEarthObservationJob where
   hashWithSalt _salt ExportEarthObservationJob' {..} =
-    _salt `Prelude.hashWithSalt` exportSourceImages
+    _salt
+      `Prelude.hashWithSalt` exportSourceImages
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` executionRoleArn
       `Prelude.hashWithSalt` outputConfig

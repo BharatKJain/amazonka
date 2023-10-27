@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.MotionGraphicsActivateScheduleActionSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.MotionGraphicsActivateScheduleActionSettings where
@@ -99,9 +99,9 @@ instance
       ( \x ->
           MotionGraphicsActivateScheduleActionSettings'
             Prelude.<$> (x Data..:? "duration")
-              Prelude.<*> (x Data..:? "passwordParam")
-              Prelude.<*> (x Data..:? "url")
-              Prelude.<*> (x Data..:? "username")
+            Prelude.<*> (x Data..:? "passwordParam")
+            Prelude.<*> (x Data..:? "url")
+            Prelude.<*> (x Data..:? "username")
       )
 
 instance
@@ -111,7 +111,8 @@ instance
   hashWithSalt
     _salt
     MotionGraphicsActivateScheduleActionSettings' {..} =
-      _salt `Prelude.hashWithSalt` duration
+      _salt
+        `Prelude.hashWithSalt` duration
         `Prelude.hashWithSalt` passwordParam
         `Prelude.hashWithSalt` url
         `Prelude.hashWithSalt` username

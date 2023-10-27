@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.ChannelStorageSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.ChannelStorageSummary where
@@ -77,7 +77,8 @@ instance Data.FromJSON ChannelStorageSummary where
 
 instance Prelude.Hashable ChannelStorageSummary where
   hashWithSalt _salt ChannelStorageSummary' {..} =
-    _salt `Prelude.hashWithSalt` customerManagedS3
+    _salt
+      `Prelude.hashWithSalt` customerManagedS3
       `Prelude.hashWithSalt` serviceManagedS3
 
 instance Prelude.NFData ChannelStorageSummary where

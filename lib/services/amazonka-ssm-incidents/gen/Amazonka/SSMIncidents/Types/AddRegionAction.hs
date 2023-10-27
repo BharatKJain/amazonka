@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.AddRegionAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.AddRegionAction where
@@ -67,7 +67,8 @@ addRegionAction_regionName = Lens.lens (\AddRegionAction' {regionName} -> region
 
 instance Prelude.Hashable AddRegionAction where
   hashWithSalt _salt AddRegionAction' {..} =
-    _salt `Prelude.hashWithSalt` sseKmsKeyId
+    _salt
+      `Prelude.hashWithSalt` sseKmsKeyId
       `Prelude.hashWithSalt` regionName
 
 instance Prelude.NFData AddRegionAction where

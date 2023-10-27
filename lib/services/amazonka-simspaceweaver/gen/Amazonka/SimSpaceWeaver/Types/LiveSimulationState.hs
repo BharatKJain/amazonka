@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SimSpaceWeaver.Types.LiveSimulationState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SimSpaceWeaver.Types.LiveSimulationState where
@@ -92,7 +92,8 @@ instance Data.FromJSON LiveSimulationState where
 
 instance Prelude.Hashable LiveSimulationState where
   hashWithSalt _salt LiveSimulationState' {..} =
-    _salt `Prelude.hashWithSalt` clocks
+    _salt
+      `Prelude.hashWithSalt` clocks
       `Prelude.hashWithSalt` domains
 
 instance Prelude.NFData LiveSimulationState where

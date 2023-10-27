@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.ApplicationDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.ApplicationDetail where
@@ -213,18 +213,22 @@ instance Data.FromJSON ApplicationDetail where
           ApplicationDetail'
             Prelude.<$> (x Data..:? "ApplicationCode")
             Prelude.<*> (x Data..:? "ApplicationDescription")
-            Prelude.<*> ( x Data..:? "CloudWatchLoggingOptionDescriptions"
+            Prelude.<*> ( x
+                            Data..:? "CloudWatchLoggingOptionDescriptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CreateTimestamp")
-            Prelude.<*> ( x Data..:? "InputDescriptions"
+            Prelude.<*> ( x
+                            Data..:? "InputDescriptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "LastUpdateTimestamp")
-            Prelude.<*> ( x Data..:? "OutputDescriptions"
+            Prelude.<*> ( x
+                            Data..:? "OutputDescriptions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "ReferenceDataSourceDescriptions"
+            Prelude.<*> ( x
+                            Data..:? "ReferenceDataSourceDescriptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "ApplicationName")
@@ -235,7 +239,8 @@ instance Data.FromJSON ApplicationDetail where
 
 instance Prelude.Hashable ApplicationDetail where
   hashWithSalt _salt ApplicationDetail' {..} =
-    _salt `Prelude.hashWithSalt` applicationCode
+    _salt
+      `Prelude.hashWithSalt` applicationCode
       `Prelude.hashWithSalt` applicationDescription
       `Prelude.hashWithSalt` cloudWatchLoggingOptionDescriptions
       `Prelude.hashWithSalt` createTimestamp

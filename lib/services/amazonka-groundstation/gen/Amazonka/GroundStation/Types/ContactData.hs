@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.ContactData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.ContactData where
@@ -192,7 +192,8 @@ instance Data.FromJSON ContactData where
 
 instance Prelude.Hashable ContactData where
   hashWithSalt _salt ContactData' {..} =
-    _salt `Prelude.hashWithSalt` contactId
+    _salt
+      `Prelude.hashWithSalt` contactId
       `Prelude.hashWithSalt` contactStatus
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` errorMessage

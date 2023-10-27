@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppConfig.Types.Deployment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppConfig.Types.Deployment where
@@ -242,7 +242,8 @@ instance Data.FromJSON Deployment where
       ( \x ->
           Deployment'
             Prelude.<$> (x Data..:? "ApplicationId")
-            Prelude.<*> ( x Data..:? "AppliedExtensions"
+            Prelude.<*> ( x
+                            Data..:? "AppliedExtensions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CompletedAt")
@@ -266,7 +267,8 @@ instance Data.FromJSON Deployment where
 
 instance Prelude.Hashable Deployment where
   hashWithSalt _salt Deployment' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` appliedExtensions
       `Prelude.hashWithSalt` completedAt
       `Prelude.hashWithSalt` configurationLocationUri

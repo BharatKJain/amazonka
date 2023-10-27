@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRContainers.Types.JobTemplateData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRContainers.Types.JobTemplateData where
@@ -122,7 +122,8 @@ instance Data.FromJSON JobTemplateData where
           JobTemplateData'
             Prelude.<$> (x Data..:? "configurationOverrides")
             Prelude.<*> (x Data..:? "jobTags" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "parameterConfiguration"
+            Prelude.<*> ( x
+                            Data..:? "parameterConfiguration"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "executionRoleArn")
@@ -132,7 +133,8 @@ instance Data.FromJSON JobTemplateData where
 
 instance Prelude.Hashable JobTemplateData where
   hashWithSalt _salt JobTemplateData' {..} =
-    _salt `Prelude.hashWithSalt` configurationOverrides
+    _salt
+      `Prelude.hashWithSalt` configurationOverrides
       `Prelude.hashWithSalt` jobTags
       `Prelude.hashWithSalt` parameterConfiguration
       `Prelude.hashWithSalt` executionRoleArn

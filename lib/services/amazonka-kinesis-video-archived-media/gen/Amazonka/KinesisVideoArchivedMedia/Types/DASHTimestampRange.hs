@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisVideoArchivedMedia.Types.DASHTimestampRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisVideoArchivedMedia.Types.DASHTimestampRange where
@@ -140,7 +140,8 @@ dASHTimestampRange_startTimestamp = Lens.lens (\DASHTimestampRange' {startTimest
 
 instance Prelude.Hashable DASHTimestampRange where
   hashWithSalt _salt DASHTimestampRange' {..} =
-    _salt `Prelude.hashWithSalt` endTimestamp
+    _salt
+      `Prelude.hashWithSalt` endTimestamp
       `Prelude.hashWithSalt` startTimestamp
 
 instance Prelude.NFData DASHTimestampRange where

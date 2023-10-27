@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataSync.Types.QopConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataSync.Types.QopConfiguration where
@@ -91,7 +91,8 @@ instance Data.FromJSON QopConfiguration where
 
 instance Prelude.Hashable QopConfiguration where
   hashWithSalt _salt QopConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` dataTransferProtection
+    _salt
+      `Prelude.hashWithSalt` dataTransferProtection
       `Prelude.hashWithSalt` rpcProtection
 
 instance Prelude.NFData QopConfiguration where

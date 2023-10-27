@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.OrderableReplicationInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.OrderableReplicationInstance where
@@ -178,7 +178,8 @@ instance Data.FromJSON OrderableReplicationInstance where
       "OrderableReplicationInstance"
       ( \x ->
           OrderableReplicationInstance'
-            Prelude.<$> ( x Data..:? "AvailabilityZones"
+            Prelude.<$> ( x
+                            Data..:? "AvailabilityZones"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "DefaultAllocatedStorage")
@@ -196,7 +197,8 @@ instance
     OrderableReplicationInstance
   where
   hashWithSalt _salt OrderableReplicationInstance' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZones
+    _salt
+      `Prelude.hashWithSalt` availabilityZones
       `Prelude.hashWithSalt` defaultAllocatedStorage
       `Prelude.hashWithSalt` engineVersion
       `Prelude.hashWithSalt` includedAllocatedStorage

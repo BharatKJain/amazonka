@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GlobalAccelerator.Types.SocketAddress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GlobalAccelerator.Types.SocketAddress where
@@ -74,7 +74,8 @@ instance Data.FromJSON SocketAddress where
 
 instance Prelude.Hashable SocketAddress where
   hashWithSalt _salt SocketAddress' {..} =
-    _salt `Prelude.hashWithSalt` ipAddress
+    _salt
+      `Prelude.hashWithSalt` ipAddress
       `Prelude.hashWithSalt` port
 
 instance Prelude.NFData SocketAddress where

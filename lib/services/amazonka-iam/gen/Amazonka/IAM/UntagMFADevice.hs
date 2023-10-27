@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.UntagMFADevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest UntagMFADevice where
 
 instance Prelude.Hashable UntagMFADevice where
   hashWithSalt _salt UntagMFADevice' {..} =
-    _salt `Prelude.hashWithSalt` serialNumber
+    _salt
+      `Prelude.hashWithSalt` serialNumber
       `Prelude.hashWithSalt` tagKeys
 
 instance Prelude.NFData UntagMFADevice where

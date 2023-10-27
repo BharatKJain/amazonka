@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.AutoMLContainerDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.AutoMLContainerDefinition where
@@ -96,7 +96,8 @@ instance Data.FromJSON AutoMLContainerDefinition where
 
 instance Prelude.Hashable AutoMLContainerDefinition where
   hashWithSalt _salt AutoMLContainerDefinition' {..} =
-    _salt `Prelude.hashWithSalt` environment
+    _salt
+      `Prelude.hashWithSalt` environment
       `Prelude.hashWithSalt` image
       `Prelude.hashWithSalt` modelDataUrl
 

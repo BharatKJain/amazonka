@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.ModelOutputConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.ModelOutputConfiguration where
@@ -87,10 +87,12 @@ instance Data.FromJSON ModelOutputConfiguration where
       "ModelOutputConfiguration"
       ( \x ->
           ModelOutputConfiguration'
-            Prelude.<$> ( x Data..:? "csvIndexToVariableMap"
+            Prelude.<$> ( x
+                            Data..:? "csvIndexToVariableMap"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "jsonKeyToVariableMap"
+            Prelude.<*> ( x
+                            Data..:? "jsonKeyToVariableMap"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "format")
@@ -98,7 +100,8 @@ instance Data.FromJSON ModelOutputConfiguration where
 
 instance Prelude.Hashable ModelOutputConfiguration where
   hashWithSalt _salt ModelOutputConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` csvIndexToVariableMap
+    _salt
+      `Prelude.hashWithSalt` csvIndexToVariableMap
       `Prelude.hashWithSalt` jsonKeyToVariableMap
       `Prelude.hashWithSalt` format
 

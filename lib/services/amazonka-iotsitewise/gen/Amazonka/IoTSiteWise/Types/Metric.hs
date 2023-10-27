@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.Metric
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.Metric where
@@ -144,7 +144,8 @@ instance Data.FromJSON Metric where
 
 instance Prelude.Hashable Metric where
   hashWithSalt _salt Metric' {..} =
-    _salt `Prelude.hashWithSalt` processingConfig
+    _salt
+      `Prelude.hashWithSalt` processingConfig
       `Prelude.hashWithSalt` expression
       `Prelude.hashWithSalt` variables
       `Prelude.hashWithSalt` window

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LookoutEquipment.ListLabels
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,7 +158,8 @@ instance Core.AWSRequest ListLabels where
 
 instance Prelude.Hashable ListLabels where
   hashWithSalt _salt ListLabels' {..} =
-    _salt `Prelude.hashWithSalt` equipment
+    _salt
+      `Prelude.hashWithSalt` equipment
       `Prelude.hashWithSalt` faultCode
       `Prelude.hashWithSalt` intervalEndTime
       `Prelude.hashWithSalt` intervalStartTime

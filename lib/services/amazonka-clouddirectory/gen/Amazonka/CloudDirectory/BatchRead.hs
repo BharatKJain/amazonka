@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudDirectory.BatchRead
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest BatchRead where
 
 instance Prelude.Hashable BatchRead where
   hashWithSalt _salt BatchRead' {..} =
-    _salt `Prelude.hashWithSalt` consistencyLevel
+    _salt
+      `Prelude.hashWithSalt` consistencyLevel
       `Prelude.hashWithSalt` directoryArn
       `Prelude.hashWithSalt` operations
 

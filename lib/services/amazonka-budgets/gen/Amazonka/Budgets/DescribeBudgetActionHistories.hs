@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Budgets.DescribeBudgetActionHistories
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,21 +137,21 @@ instance Core.AWSPager DescribeBudgetActionHistories where
     | Core.stop
         ( rs
             Lens.^? describeBudgetActionHistoriesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. describeBudgetActionHistoriesResponse_actionHistories
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeBudgetActionHistories_nextToken
           Lens..~ rs
           Lens.^? describeBudgetActionHistoriesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -168,7 +168,8 @@ instance
           DescribeBudgetActionHistoriesResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "ActionHistories"
+            Prelude.<*> ( x
+                            Data..?> "ActionHistories"
                             Core..!@ Prelude.mempty
                         )
       )
@@ -178,7 +179,8 @@ instance
     DescribeBudgetActionHistories
   where
   hashWithSalt _salt DescribeBudgetActionHistories' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` timePeriod
       `Prelude.hashWithSalt` accountId

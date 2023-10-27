@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.MonitoringJobDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.MonitoringJobDefinition where
@@ -190,7 +190,8 @@ instance Data.FromJSON MonitoringJobDefinition where
 
 instance Prelude.Hashable MonitoringJobDefinition where
   hashWithSalt _salt MonitoringJobDefinition' {..} =
-    _salt `Prelude.hashWithSalt` baselineConfig
+    _salt
+      `Prelude.hashWithSalt` baselineConfig
       `Prelude.hashWithSalt` environment
       `Prelude.hashWithSalt` networkConfig
       `Prelude.hashWithSalt` stoppingCondition

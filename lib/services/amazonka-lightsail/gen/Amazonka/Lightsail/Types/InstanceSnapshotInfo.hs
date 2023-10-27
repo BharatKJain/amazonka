@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.InstanceSnapshotInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.InstanceSnapshotInfo where
@@ -92,7 +92,8 @@ instance Data.FromJSON InstanceSnapshotInfo where
 
 instance Prelude.Hashable InstanceSnapshotInfo where
   hashWithSalt _salt InstanceSnapshotInfo' {..} =
-    _salt `Prelude.hashWithSalt` fromBlueprintId
+    _salt
+      `Prelude.hashWithSalt` fromBlueprintId
       `Prelude.hashWithSalt` fromBundleId
       `Prelude.hashWithSalt` fromDiskInfo
 

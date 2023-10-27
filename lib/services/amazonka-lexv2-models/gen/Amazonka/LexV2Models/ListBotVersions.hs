@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexV2Models.ListBotVersions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,7 +148,8 @@ instance Core.AWSRequest ListBotVersions where
       ( \s h x ->
           ListBotVersionsResponse'
             Prelude.<$> (x Data..?> "botId")
-            Prelude.<*> ( x Data..?> "botVersionSummaries"
+            Prelude.<*> ( x
+                            Data..?> "botVersionSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -157,7 +158,8 @@ instance Core.AWSRequest ListBotVersions where
 
 instance Prelude.Hashable ListBotVersions where
   hashWithSalt _salt ListBotVersions' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` sortBy
       `Prelude.hashWithSalt` botId

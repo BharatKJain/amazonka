@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamQuery.Types.DimensionMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamQuery.Types.DimensionMapping where
@@ -80,7 +80,8 @@ instance Data.FromJSON DimensionMapping where
 
 instance Prelude.Hashable DimensionMapping where
   hashWithSalt _salt DimensionMapping' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` dimensionValueType
 
 instance Prelude.NFData DimensionMapping where

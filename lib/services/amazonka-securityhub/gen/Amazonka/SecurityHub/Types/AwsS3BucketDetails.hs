@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsS3BucketDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsS3BucketDetails where
@@ -203,7 +203,8 @@ instance Data.FromJSON AwsS3BucketDetails where
 
 instance Prelude.Hashable AwsS3BucketDetails where
   hashWithSalt _salt AwsS3BucketDetails' {..} =
-    _salt `Prelude.hashWithSalt` accessControlList
+    _salt
+      `Prelude.hashWithSalt` accessControlList
       `Prelude.hashWithSalt` bucketLifecycleConfiguration
       `Prelude.hashWithSalt` bucketLoggingConfiguration
       `Prelude.hashWithSalt` bucketNotificationConfiguration

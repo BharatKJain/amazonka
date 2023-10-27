@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StorageGateway.DetachVolume
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest DetachVolume where
 
 instance Prelude.Hashable DetachVolume where
   hashWithSalt _salt DetachVolume' {..} =
-    _salt `Prelude.hashWithSalt` forceDetach
+    _salt
+      `Prelude.hashWithSalt` forceDetach
       `Prelude.hashWithSalt` volumeARN
 
 instance Prelude.NFData DetachVolume where

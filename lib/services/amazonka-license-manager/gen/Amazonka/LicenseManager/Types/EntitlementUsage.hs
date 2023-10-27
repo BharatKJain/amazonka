@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManager.Types.EntitlementUsage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManager.Types.EntitlementUsage where
@@ -101,7 +101,8 @@ instance Data.FromJSON EntitlementUsage where
 
 instance Prelude.Hashable EntitlementUsage where
   hashWithSalt _salt EntitlementUsage' {..} =
-    _salt `Prelude.hashWithSalt` maxCount
+    _salt
+      `Prelude.hashWithSalt` maxCount
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` consumedValue
       `Prelude.hashWithSalt` unit

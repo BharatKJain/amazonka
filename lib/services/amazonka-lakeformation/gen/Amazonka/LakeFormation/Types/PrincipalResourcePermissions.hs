@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.PrincipalResourcePermissions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.PrincipalResourcePermissions where
@@ -111,7 +111,8 @@ instance Data.FromJSON PrincipalResourcePermissions where
           PrincipalResourcePermissions'
             Prelude.<$> (x Data..:? "AdditionalDetails")
             Prelude.<*> (x Data..:? "Permissions" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "PermissionsWithGrantOption"
+            Prelude.<*> ( x
+                            Data..:? "PermissionsWithGrantOption"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Principal")
@@ -123,7 +124,8 @@ instance
     PrincipalResourcePermissions
   where
   hashWithSalt _salt PrincipalResourcePermissions' {..} =
-    _salt `Prelude.hashWithSalt` additionalDetails
+    _salt
+      `Prelude.hashWithSalt` additionalDetails
       `Prelude.hashWithSalt` permissions
       `Prelude.hashWithSalt` permissionsWithGrantOption
       `Prelude.hashWithSalt` principal

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.NetworkOriginConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.NetworkOriginConfiguration where
@@ -86,7 +86,8 @@ instance Data.FromJSON NetworkOriginConfiguration where
 
 instance Prelude.Hashable NetworkOriginConfiguration where
   hashWithSalt _salt NetworkOriginConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` internetConfiguration
+    _salt
+      `Prelude.hashWithSalt` internetConfiguration
       `Prelude.hashWithSalt` vpcConfiguration
 
 instance Prelude.NFData NetworkOriginConfiguration where

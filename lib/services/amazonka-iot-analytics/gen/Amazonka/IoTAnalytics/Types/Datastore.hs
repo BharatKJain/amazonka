@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.Datastore
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.Datastore where
@@ -234,7 +234,8 @@ instance Data.FromJSON Datastore where
 
 instance Prelude.Hashable Datastore where
   hashWithSalt _salt Datastore' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` datastorePartitions
       `Prelude.hashWithSalt` fileFormatConfiguration

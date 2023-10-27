@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DevOpsGuru.DescribeAccountOverview
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,7 +124,8 @@ instance Core.AWSRequest DescribeAccountOverview where
 
 instance Prelude.Hashable DescribeAccountOverview where
   hashWithSalt _salt DescribeAccountOverview' {..} =
-    _salt `Prelude.hashWithSalt` toTime
+    _salt
+      `Prelude.hashWithSalt` toTime
       `Prelude.hashWithSalt` fromTime
 
 instance Prelude.NFData DescribeAccountOverview where

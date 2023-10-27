@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.DataQualityResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.DataQualityResult where
@@ -184,7 +184,8 @@ instance Data.FromJSON DataQualityResult where
 
 instance Prelude.Hashable DataQualityResult where
   hashWithSalt _salt DataQualityResult' {..} =
-    _salt `Prelude.hashWithSalt` completedOn
+    _salt
+      `Prelude.hashWithSalt` completedOn
       `Prelude.hashWithSalt` dataSource
       `Prelude.hashWithSalt` evaluationContext
       `Prelude.hashWithSalt` jobName

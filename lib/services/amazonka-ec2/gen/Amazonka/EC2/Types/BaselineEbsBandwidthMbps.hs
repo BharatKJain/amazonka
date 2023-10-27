@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.BaselineEbsBandwidthMbps
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.BaselineEbsBandwidthMbps where
@@ -75,11 +75,13 @@ baselineEbsBandwidthMbps_min = Lens.lens (\BaselineEbsBandwidthMbps' {min} -> mi
 instance Data.FromXML BaselineEbsBandwidthMbps where
   parseXML x =
     BaselineEbsBandwidthMbps'
-      Prelude.<$> (x Data..@? "max") Prelude.<*> (x Data..@? "min")
+      Prelude.<$> (x Data..@? "max")
+      Prelude.<*> (x Data..@? "min")
 
 instance Prelude.Hashable BaselineEbsBandwidthMbps where
   hashWithSalt _salt BaselineEbsBandwidthMbps' {..} =
-    _salt `Prelude.hashWithSalt` max
+    _salt
+      `Prelude.hashWithSalt` max
       `Prelude.hashWithSalt` min
 
 instance Prelude.NFData BaselineEbsBandwidthMbps where

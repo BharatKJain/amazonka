@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.TrialComponent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.TrialComponent where
@@ -271,7 +271,8 @@ instance Data.FromJSON TrialComponent where
             Prelude.<*> (x Data..:? "LineageGroupArn")
             Prelude.<*> (x Data..:? "MetadataProperties")
             Prelude.<*> (x Data..:? "Metrics" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "OutputArtifacts"
+            Prelude.<*> ( x
+                            Data..:? "OutputArtifacts"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Parameters" Data..!= Prelude.mempty)
@@ -288,7 +289,8 @@ instance Data.FromJSON TrialComponent where
 
 instance Prelude.Hashable TrialComponent where
   hashWithSalt _salt TrialComponent' {..} =
-    _salt `Prelude.hashWithSalt` createdBy
+    _salt
+      `Prelude.hashWithSalt` createdBy
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` endTime

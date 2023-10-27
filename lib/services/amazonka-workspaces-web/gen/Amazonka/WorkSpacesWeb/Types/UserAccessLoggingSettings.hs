@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.Types.UserAccessLoggingSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpacesWeb.Types.UserAccessLoggingSettings where
@@ -86,7 +86,8 @@ instance Data.FromJSON UserAccessLoggingSettings where
       "UserAccessLoggingSettings"
       ( \x ->
           UserAccessLoggingSettings'
-            Prelude.<$> ( x Data..:? "associatedPortalArns"
+            Prelude.<$> ( x
+                            Data..:? "associatedPortalArns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "kinesisStreamArn")
@@ -95,7 +96,8 @@ instance Data.FromJSON UserAccessLoggingSettings where
 
 instance Prelude.Hashable UserAccessLoggingSettings where
   hashWithSalt _salt UserAccessLoggingSettings' {..} =
-    _salt `Prelude.hashWithSalt` associatedPortalArns
+    _salt
+      `Prelude.hashWithSalt` associatedPortalArns
       `Prelude.hashWithSalt` kinesisStreamArn
       `Prelude.hashWithSalt` userAccessLoggingSettingsArn
 

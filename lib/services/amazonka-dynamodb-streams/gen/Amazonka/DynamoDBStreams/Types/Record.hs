@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDBStreams.Types.Record
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDBStreams.Types.Record where
@@ -203,7 +203,8 @@ instance Data.FromJSON Record where
 
 instance Prelude.Hashable Record where
   hashWithSalt _salt Record' {..} =
-    _salt `Prelude.hashWithSalt` awsRegion
+    _salt
+      `Prelude.hashWithSalt` awsRegion
       `Prelude.hashWithSalt` dynamodb
       `Prelude.hashWithSalt` eventID
       `Prelude.hashWithSalt` eventName

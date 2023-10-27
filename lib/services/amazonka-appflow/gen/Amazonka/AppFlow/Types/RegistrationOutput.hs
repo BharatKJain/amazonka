@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.RegistrationOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.RegistrationOutput where
@@ -98,7 +98,8 @@ instance Data.FromJSON RegistrationOutput where
 
 instance Prelude.Hashable RegistrationOutput where
   hashWithSalt _salt RegistrationOutput' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` result
       `Prelude.hashWithSalt` status
 

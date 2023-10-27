@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsIamPermissionsBoundary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsIamPermissionsBoundary where
@@ -76,7 +76,8 @@ instance Data.FromJSON AwsIamPermissionsBoundary where
 
 instance Prelude.Hashable AwsIamPermissionsBoundary where
   hashWithSalt _salt AwsIamPermissionsBoundary' {..} =
-    _salt `Prelude.hashWithSalt` permissionsBoundaryArn
+    _salt
+      `Prelude.hashWithSalt` permissionsBoundaryArn
       `Prelude.hashWithSalt` permissionsBoundaryType
 
 instance Prelude.NFData AwsIamPermissionsBoundary where

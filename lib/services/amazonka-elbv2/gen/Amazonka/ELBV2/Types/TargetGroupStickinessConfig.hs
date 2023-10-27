@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.TargetGroupStickinessConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.TargetGroupStickinessConfig where
@@ -77,7 +77,8 @@ instance Data.FromXML TargetGroupStickinessConfig where
 
 instance Prelude.Hashable TargetGroupStickinessConfig where
   hashWithSalt _salt TargetGroupStickinessConfig' {..} =
-    _salt `Prelude.hashWithSalt` durationSeconds
+    _salt
+      `Prelude.hashWithSalt` durationSeconds
       `Prelude.hashWithSalt` enabled
 
 instance Prelude.NFData TargetGroupStickinessConfig where

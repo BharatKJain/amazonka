@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.DataSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.DataSource where
@@ -234,7 +234,8 @@ instance Data.FromJSON DataSource where
 
 instance Prelude.Hashable DataSource where
   hashWithSalt _salt DataSource' {..} =
-    _salt `Prelude.hashWithSalt` dataSourceArn
+    _salt
+      `Prelude.hashWithSalt` dataSourceArn
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` dynamodbConfig
       `Prelude.hashWithSalt` elasticsearchConfig

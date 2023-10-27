@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.CustomOriginConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.CustomOriginConfig where
@@ -215,7 +215,8 @@ instance Data.FromXML CustomOriginConfig where
 
 instance Prelude.Hashable CustomOriginConfig where
   hashWithSalt _salt CustomOriginConfig' {..} =
-    _salt `Prelude.hashWithSalt` originKeepaliveTimeout
+    _salt
+      `Prelude.hashWithSalt` originKeepaliveTimeout
       `Prelude.hashWithSalt` originReadTimeout
       `Prelude.hashWithSalt` originSslProtocols
       `Prelude.hashWithSalt` hTTPPort

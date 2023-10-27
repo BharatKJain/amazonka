@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.ServerProcess
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.ServerProcess where
@@ -124,7 +124,8 @@ instance Data.FromJSON ServerProcess where
 
 instance Prelude.Hashable ServerProcess where
   hashWithSalt _salt ServerProcess' {..} =
-    _salt `Prelude.hashWithSalt` parameters
+    _salt
+      `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` launchPath
       `Prelude.hashWithSalt` concurrentExecutions
 

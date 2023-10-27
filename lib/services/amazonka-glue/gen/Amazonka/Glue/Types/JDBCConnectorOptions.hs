@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.JDBCConnectorOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.JDBCConnectorOptions where
@@ -188,11 +188,13 @@ instance Data.FromJSON JDBCConnectorOptions where
       "JDBCConnectorOptions"
       ( \x ->
           JDBCConnectorOptions'
-            Prelude.<$> ( x Data..:? "DataTypeMapping"
+            Prelude.<$> ( x
+                            Data..:? "DataTypeMapping"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "FilterPredicate")
-            Prelude.<*> ( x Data..:? "JobBookmarkKeys"
+            Prelude.<*> ( x
+                            Data..:? "JobBookmarkKeys"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "JobBookmarkKeysSortOrder")
@@ -204,7 +206,8 @@ instance Data.FromJSON JDBCConnectorOptions where
 
 instance Prelude.Hashable JDBCConnectorOptions where
   hashWithSalt _salt JDBCConnectorOptions' {..} =
-    _salt `Prelude.hashWithSalt` dataTypeMapping
+    _salt
+      `Prelude.hashWithSalt` dataTypeMapping
       `Prelude.hashWithSalt` filterPredicate
       `Prelude.hashWithSalt` jobBookmarkKeys
       `Prelude.hashWithSalt` jobBookmarkKeysSortOrder

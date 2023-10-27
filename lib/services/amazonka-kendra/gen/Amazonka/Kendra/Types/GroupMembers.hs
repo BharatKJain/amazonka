@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.GroupMembers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.GroupMembers where
@@ -117,7 +117,8 @@ groupMembers_s3PathforGroupMembers = Lens.lens (\GroupMembers' {s3PathforGroupMe
 
 instance Prelude.Hashable GroupMembers where
   hashWithSalt _salt GroupMembers' {..} =
-    _salt `Prelude.hashWithSalt` memberGroups
+    _salt
+      `Prelude.hashWithSalt` memberGroups
       `Prelude.hashWithSalt` memberUsers
       `Prelude.hashWithSalt` s3PathforGroupMembers
 

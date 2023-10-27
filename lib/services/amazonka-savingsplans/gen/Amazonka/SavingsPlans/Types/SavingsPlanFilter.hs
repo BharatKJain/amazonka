@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SavingsPlans.Types.SavingsPlanFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SavingsPlans.Types.SavingsPlanFilter where
@@ -65,7 +65,8 @@ savingsPlanFilter_values = Lens.lens (\SavingsPlanFilter' {values} -> values) (\
 
 instance Prelude.Hashable SavingsPlanFilter where
   hashWithSalt _salt SavingsPlanFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData SavingsPlanFilter where

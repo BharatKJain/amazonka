@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.GovernedCatalogTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.GovernedCatalogTarget where
@@ -129,7 +129,8 @@ instance Data.FromJSON GovernedCatalogTarget where
 
 instance Prelude.Hashable GovernedCatalogTarget where
   hashWithSalt _salt GovernedCatalogTarget' {..} =
-    _salt `Prelude.hashWithSalt` partitionKeys
+    _salt
+      `Prelude.hashWithSalt` partitionKeys
       `Prelude.hashWithSalt` schemaChangePolicy
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inputs

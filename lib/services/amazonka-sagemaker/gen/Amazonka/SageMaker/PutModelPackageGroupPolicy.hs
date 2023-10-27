@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.PutModelPackageGroupPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest PutModelPackageGroupPolicy where
 
 instance Prelude.Hashable PutModelPackageGroupPolicy where
   hashWithSalt _salt PutModelPackageGroupPolicy' {..} =
-    _salt `Prelude.hashWithSalt` modelPackageGroupName
+    _salt
+      `Prelude.hashWithSalt` modelPackageGroupName
       `Prelude.hashWithSalt` resourcePolicy
 
 instance Prelude.NFData PutModelPackageGroupPolicy where

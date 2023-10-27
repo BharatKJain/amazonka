@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EFS.Types.PosixUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EFS.Types.PosixUser where
@@ -99,7 +99,8 @@ instance Data.FromJSON PosixUser where
 
 instance Prelude.Hashable PosixUser where
   hashWithSalt _salt PosixUser' {..} =
-    _salt `Prelude.hashWithSalt` secondaryGids
+    _salt
+      `Prelude.hashWithSalt` secondaryGids
       `Prelude.hashWithSalt` uid
       `Prelude.hashWithSalt` gid
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WellArchitected.ListAnswers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,7 +138,8 @@ instance Core.AWSRequest ListAnswers where
     Response.receiveJSON
       ( \s h x ->
           ListAnswersResponse'
-            Prelude.<$> ( x Data..?> "AnswerSummaries"
+            Prelude.<$> ( x
+                            Data..?> "AnswerSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "LensAlias")
@@ -151,7 +152,8 @@ instance Core.AWSRequest ListAnswers where
 
 instance Prelude.Hashable ListAnswers where
   hashWithSalt _salt ListAnswers' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` milestoneNumber
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` pillarId

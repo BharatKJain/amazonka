@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ResourceGroupsTagging.GetTagKeys
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -95,21 +95,22 @@ instance Core.AWSPager GetTagKeys where
     | Core.stop
         ( rs
             Lens.^? getTagKeysResponse_paginationToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? getTagKeysResponse_tagKeys Prelude.. Lens._Just
+            Lens.^? getTagKeysResponse_tagKeys
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getTagKeys_paginationToken
           Lens..~ rs
           Lens.^? getTagKeysResponse_paginationToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetTagKeys where
   type AWSResponse GetTagKeys = GetTagKeysResponse

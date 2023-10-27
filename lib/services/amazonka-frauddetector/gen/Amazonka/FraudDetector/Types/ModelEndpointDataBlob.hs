@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.ModelEndpointDataBlob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.ModelEndpointDataBlob where
@@ -75,7 +75,8 @@ modelEndpointDataBlob_contentType = Lens.lens (\ModelEndpointDataBlob' {contentT
 
 instance Prelude.Hashable ModelEndpointDataBlob where
   hashWithSalt _salt ModelEndpointDataBlob' {..} =
-    _salt `Prelude.hashWithSalt` byteBuffer
+    _salt
+      `Prelude.hashWithSalt` byteBuffer
       `Prelude.hashWithSalt` contentType
 
 instance Prelude.NFData ModelEndpointDataBlob where

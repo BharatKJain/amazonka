@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.CacheNodeTypeSpecificParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.CacheNodeTypeSpecificParameter where
@@ -157,7 +157,8 @@ instance Data.FromXML CacheNodeTypeSpecificParameter where
   parseXML x =
     CacheNodeTypeSpecificParameter'
       Prelude.<$> (x Data..@? "AllowedValues")
-      Prelude.<*> ( x Data..@? "CacheNodeTypeSpecificValues"
+      Prelude.<*> ( x
+                      Data..@? "CacheNodeTypeSpecificValues"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may
                         (Data.parseXMLList "CacheNodeTypeSpecificValue")
@@ -177,7 +178,8 @@ instance
   hashWithSalt
     _salt
     CacheNodeTypeSpecificParameter' {..} =
-      _salt `Prelude.hashWithSalt` allowedValues
+      _salt
+        `Prelude.hashWithSalt` allowedValues
         `Prelude.hashWithSalt` cacheNodeTypeSpecificValues
         `Prelude.hashWithSalt` changeType
         `Prelude.hashWithSalt` dataType

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.SlotTypeSortBy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.SlotTypeSortBy where
@@ -70,7 +70,8 @@ slotTypeSortBy_order = Lens.lens (\SlotTypeSortBy' {order} -> order) (\s@SlotTyp
 
 instance Prelude.Hashable SlotTypeSortBy where
   hashWithSalt _salt SlotTypeSortBy' {..} =
-    _salt `Prelude.hashWithSalt` attribute
+    _salt
+      `Prelude.hashWithSalt` attribute
       `Prelude.hashWithSalt` order
 
 instance Prelude.NFData SlotTypeSortBy where

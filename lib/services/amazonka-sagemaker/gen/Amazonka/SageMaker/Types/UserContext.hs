@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.UserContext
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.UserContext where
@@ -85,7 +85,8 @@ instance Data.FromJSON UserContext where
 
 instance Prelude.Hashable UserContext where
   hashWithSalt _salt UserContext' {..} =
-    _salt `Prelude.hashWithSalt` domainId
+    _salt
+      `Prelude.hashWithSalt` domainId
       `Prelude.hashWithSalt` userProfileArn
       `Prelude.hashWithSalt` userProfileName
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kendra.ListGroupsOlderThanOrderingId
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -160,7 +160,8 @@ instance
     Response.receiveJSON
       ( \s h x ->
           ListGroupsOlderThanOrderingIdResponse'
-            Prelude.<$> ( x Data..?> "GroupsSummaries"
+            Prelude.<$> ( x
+                            Data..?> "GroupsSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -172,7 +173,8 @@ instance
     ListGroupsOlderThanOrderingId
   where
   hashWithSalt _salt ListGroupsOlderThanOrderingId' {..} =
-    _salt `Prelude.hashWithSalt` dataSourceId
+    _salt
+      `Prelude.hashWithSalt` dataSourceId
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` indexId

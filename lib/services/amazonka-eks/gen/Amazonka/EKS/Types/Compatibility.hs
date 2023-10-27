@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.Compatibility
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.Compatibility where
@@ -79,14 +79,16 @@ instance Data.FromJSON Compatibility where
           Compatibility'
             Prelude.<$> (x Data..:? "clusterVersion")
             Prelude.<*> (x Data..:? "defaultVersion")
-            Prelude.<*> ( x Data..:? "platformVersions"
+            Prelude.<*> ( x
+                            Data..:? "platformVersions"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable Compatibility where
   hashWithSalt _salt Compatibility' {..} =
-    _salt `Prelude.hashWithSalt` clusterVersion
+    _salt
+      `Prelude.hashWithSalt` clusterVersion
       `Prelude.hashWithSalt` defaultVersion
       `Prelude.hashWithSalt` platformVersions
 

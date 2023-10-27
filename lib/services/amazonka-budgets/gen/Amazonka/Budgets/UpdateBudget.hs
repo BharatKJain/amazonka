@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Budgets.UpdateBudget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest UpdateBudget where
 
 instance Prelude.Hashable UpdateBudget where
   hashWithSalt _salt UpdateBudget' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` newBudget'
 
 instance Prelude.NFData UpdateBudget where

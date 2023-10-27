@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.VolumeFrom
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.VolumeFrom where
@@ -84,7 +84,8 @@ instance Data.FromJSON VolumeFrom where
 
 instance Prelude.Hashable VolumeFrom where
   hashWithSalt _salt VolumeFrom' {..} =
-    _salt `Prelude.hashWithSalt` readOnly
+    _salt
+      `Prelude.hashWithSalt` readOnly
       `Prelude.hashWithSalt` sourceContainer
 
 instance Prelude.NFData VolumeFrom where

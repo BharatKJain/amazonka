@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SDB.Types.DeletableItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SDB.Types.DeletableItem where
@@ -63,7 +63,8 @@ deletableItem_name = Lens.lens (\DeletableItem' {name} -> name) (\s@DeletableIte
 
 instance Prelude.Hashable DeletableItem where
   hashWithSalt _salt DeletableItem' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData DeletableItem where

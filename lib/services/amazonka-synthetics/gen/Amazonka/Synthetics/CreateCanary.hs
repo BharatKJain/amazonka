@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Synthetics.CreateCanary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -377,7 +377,8 @@ instance Core.AWSRequest CreateCanary where
 
 instance Prelude.Hashable CreateCanary where
   hashWithSalt _salt CreateCanary' {..} =
-    _salt `Prelude.hashWithSalt` artifactConfig
+    _salt
+      `Prelude.hashWithSalt` artifactConfig
       `Prelude.hashWithSalt` failureRetentionPeriodInDays
       `Prelude.hashWithSalt` runConfig
       `Prelude.hashWithSalt` successRetentionPeriodInDays

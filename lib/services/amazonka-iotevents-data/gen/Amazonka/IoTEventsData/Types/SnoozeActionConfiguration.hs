@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEventsData.Types.SnoozeActionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEventsData.Types.SnoozeActionConfiguration where
@@ -77,7 +77,8 @@ instance Data.FromJSON SnoozeActionConfiguration where
 
 instance Prelude.Hashable SnoozeActionConfiguration where
   hashWithSalt _salt SnoozeActionConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` note
+    _salt
+      `Prelude.hashWithSalt` note
       `Prelude.hashWithSalt` snoozeDuration
 
 instance Prelude.NFData SnoozeActionConfiguration where

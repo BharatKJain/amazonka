@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GreengrassV2.UpdateConnectivityInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance Core.AWSRequest UpdateConnectivityInfo where
 
 instance Prelude.Hashable UpdateConnectivityInfo where
   hashWithSalt _salt UpdateConnectivityInfo' {..} =
-    _salt `Prelude.hashWithSalt` thingName
+    _salt
+      `Prelude.hashWithSalt` thingName
       `Prelude.hashWithSalt` connectivityInfo
 
 instance Prelude.NFData UpdateConnectivityInfo where

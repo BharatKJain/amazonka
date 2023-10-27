@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.GatewaySummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.GatewaySummary where
@@ -107,7 +107,8 @@ instance Data.FromJSON GatewaySummary where
 
 instance Prelude.Hashable GatewaySummary where
   hashWithSalt _salt GatewaySummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` gatewayGroupArn
       `Prelude.hashWithSalt` name

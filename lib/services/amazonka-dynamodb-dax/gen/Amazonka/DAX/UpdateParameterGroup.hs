@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DAX.UpdateParameterGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest UpdateParameterGroup where
 
 instance Prelude.Hashable UpdateParameterGroup where
   hashWithSalt _salt UpdateParameterGroup' {..} =
-    _salt `Prelude.hashWithSalt` parameterGroupName
+    _salt
+      `Prelude.hashWithSalt` parameterGroupName
       `Prelude.hashWithSalt` parameterNameValues
 
 instance Prelude.NFData UpdateParameterGroup where

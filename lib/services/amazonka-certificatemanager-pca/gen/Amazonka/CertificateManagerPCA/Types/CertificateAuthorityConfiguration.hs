@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.CertificateAuthorityConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.CertificateAuthorityConfiguration where
@@ -144,7 +144,8 @@ instance
   hashWithSalt
     _salt
     CertificateAuthorityConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` csrExtensions
+      _salt
+        `Prelude.hashWithSalt` csrExtensions
         `Prelude.hashWithSalt` keyAlgorithm
         `Prelude.hashWithSalt` signingAlgorithm
         `Prelude.hashWithSalt` subject

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.MouthOpen
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.MouthOpen where
@@ -78,7 +78,8 @@ instance Data.FromJSON MouthOpen where
 
 instance Prelude.Hashable MouthOpen where
   hashWithSalt _salt MouthOpen' {..} =
-    _salt `Prelude.hashWithSalt` confidence
+    _salt
+      `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData MouthOpen where

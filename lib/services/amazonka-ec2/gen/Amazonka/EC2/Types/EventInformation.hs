@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.EventInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.EventInformation where
@@ -343,7 +343,8 @@ instance Data.FromXML EventInformation where
 
 instance Prelude.Hashable EventInformation where
   hashWithSalt _salt EventInformation' {..} =
-    _salt `Prelude.hashWithSalt` eventDescription
+    _salt
+      `Prelude.hashWithSalt` eventDescription
       `Prelude.hashWithSalt` eventSubType
       `Prelude.hashWithSalt` instanceId
 

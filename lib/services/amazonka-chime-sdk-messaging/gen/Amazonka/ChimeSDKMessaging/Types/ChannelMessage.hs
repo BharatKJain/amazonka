@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSDKMessaging.Types.ChannelMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSDKMessaging.Types.ChannelMessage where
@@ -189,7 +189,8 @@ instance Data.FromJSON ChannelMessage where
             Prelude.<*> (x Data..:? "CreatedTimestamp")
             Prelude.<*> (x Data..:? "LastEditedTimestamp")
             Prelude.<*> (x Data..:? "LastUpdatedTimestamp")
-            Prelude.<*> ( x Data..:? "MessageAttributes"
+            Prelude.<*> ( x
+                            Data..:? "MessageAttributes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "MessageId")
@@ -204,7 +205,8 @@ instance Data.FromJSON ChannelMessage where
 
 instance Prelude.Hashable ChannelMessage where
   hashWithSalt _salt ChannelMessage' {..} =
-    _salt `Prelude.hashWithSalt` channelArn
+    _salt
+      `Prelude.hashWithSalt` channelArn
       `Prelude.hashWithSalt` content
       `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` lastEditedTimestamp

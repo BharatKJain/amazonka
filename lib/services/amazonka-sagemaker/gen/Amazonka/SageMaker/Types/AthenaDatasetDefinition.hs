@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.AthenaDatasetDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.AthenaDatasetDefinition where
@@ -152,7 +152,8 @@ instance Data.FromJSON AthenaDatasetDefinition where
 
 instance Prelude.Hashable AthenaDatasetDefinition where
   hashWithSalt _salt AthenaDatasetDefinition' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyId
+    _salt
+      `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` outputCompression
       `Prelude.hashWithSalt` workGroup
       `Prelude.hashWithSalt` catalog

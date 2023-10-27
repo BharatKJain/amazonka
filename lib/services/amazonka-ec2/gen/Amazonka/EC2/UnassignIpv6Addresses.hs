@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.UnassignIpv6Addresses
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,11 +111,13 @@ instance Core.AWSRequest UnassignIpv6Addresses where
       ( \s h x ->
           UnassignIpv6AddressesResponse'
             Prelude.<$> (x Data..@? "networkInterfaceId")
-            Prelude.<*> ( x Data..@? "unassignedIpv6Addresses"
+            Prelude.<*> ( x
+                            Data..@? "unassignedIpv6Addresses"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
-            Prelude.<*> ( x Data..@? "unassignedIpv6PrefixSet"
+            Prelude.<*> ( x
+                            Data..@? "unassignedIpv6PrefixSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -124,7 +126,8 @@ instance Core.AWSRequest UnassignIpv6Addresses where
 
 instance Prelude.Hashable UnassignIpv6Addresses where
   hashWithSalt _salt UnassignIpv6Addresses' {..} =
-    _salt `Prelude.hashWithSalt` ipv6Addresses
+    _salt
+      `Prelude.hashWithSalt` ipv6Addresses
       `Prelude.hashWithSalt` ipv6Prefixes
       `Prelude.hashWithSalt` networkInterfaceId
 

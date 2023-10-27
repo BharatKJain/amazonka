@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.CustomPlugin
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.CustomPlugin where
@@ -69,7 +69,8 @@ customPlugin_revision = Lens.lens (\CustomPlugin' {revision} -> revision) (\s@Cu
 
 instance Prelude.Hashable CustomPlugin where
   hashWithSalt _salt CustomPlugin' {..} =
-    _salt `Prelude.hashWithSalt` customPluginArn
+    _salt
+      `Prelude.hashWithSalt` customPluginArn
       `Prelude.hashWithSalt` revision
 
 instance Prelude.NFData CustomPlugin where

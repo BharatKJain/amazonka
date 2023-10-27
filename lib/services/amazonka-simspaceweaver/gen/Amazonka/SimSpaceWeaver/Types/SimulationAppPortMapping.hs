@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SimSpaceWeaver.Types.SimulationAppPortMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SimSpaceWeaver.Types.SimulationAppPortMapping where
@@ -89,7 +89,8 @@ instance Data.FromJSON SimulationAppPortMapping where
 
 instance Prelude.Hashable SimulationAppPortMapping where
   hashWithSalt _salt SimulationAppPortMapping' {..} =
-    _salt `Prelude.hashWithSalt` actual
+    _salt
+      `Prelude.hashWithSalt` actual
       `Prelude.hashWithSalt` declared
 
 instance Prelude.NFData SimulationAppPortMapping where

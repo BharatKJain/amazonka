@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.LoRaWANGetServiceProfileInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.LoRaWANGetServiceProfileInfo where
@@ -251,7 +251,8 @@ instance
     LoRaWANGetServiceProfileInfo
   where
   hashWithSalt _salt LoRaWANGetServiceProfileInfo' {..} =
-    _salt `Prelude.hashWithSalt` addGwMetadata
+    _salt
+      `Prelude.hashWithSalt` addGwMetadata
       `Prelude.hashWithSalt` channelMask
       `Prelude.hashWithSalt` devStatusReqFreq
       `Prelude.hashWithSalt` dlBucketSize

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.PutFileEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.PutFileEntry where
@@ -106,7 +106,8 @@ putFileEntry_filePath = Lens.lens (\PutFileEntry' {filePath} -> filePath) (\s@Pu
 
 instance Prelude.Hashable PutFileEntry where
   hashWithSalt _salt PutFileEntry' {..} =
-    _salt `Prelude.hashWithSalt` fileContent
+    _salt
+      `Prelude.hashWithSalt` fileContent
       `Prelude.hashWithSalt` fileMode
       `Prelude.hashWithSalt` sourceFile
       `Prelude.hashWithSalt` filePath

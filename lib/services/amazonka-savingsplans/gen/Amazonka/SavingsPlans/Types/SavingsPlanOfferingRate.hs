@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SavingsPlans.Types.SavingsPlanOfferingRate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SavingsPlans.Types.SavingsPlanOfferingRate where
@@ -140,7 +140,8 @@ instance Data.FromJSON SavingsPlanOfferingRate where
 
 instance Prelude.Hashable SavingsPlanOfferingRate where
   hashWithSalt _salt SavingsPlanOfferingRate' {..} =
-    _salt `Prelude.hashWithSalt` operation
+    _salt
+      `Prelude.hashWithSalt` operation
       `Prelude.hashWithSalt` productType
       `Prelude.hashWithSalt` properties
       `Prelude.hashWithSalt` rate

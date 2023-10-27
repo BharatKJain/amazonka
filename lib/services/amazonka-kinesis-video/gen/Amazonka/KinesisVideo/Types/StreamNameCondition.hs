@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisVideo.Types.StreamNameCondition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisVideo.Types.StreamNameCondition where
@@ -73,7 +73,8 @@ streamNameCondition_comparisonValue = Lens.lens (\StreamNameCondition' {comparis
 
 instance Prelude.Hashable StreamNameCondition where
   hashWithSalt _salt StreamNameCondition' {..} =
-    _salt `Prelude.hashWithSalt` comparisonOperator
+    _salt
+      `Prelude.hashWithSalt` comparisonOperator
       `Prelude.hashWithSalt` comparisonValue
 
 instance Prelude.NFData StreamNameCondition where

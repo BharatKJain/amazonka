@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Transfer.UpdateProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest UpdateProfile where
 
 instance Prelude.Hashable UpdateProfile where
   hashWithSalt _salt UpdateProfile' {..} =
-    _salt `Prelude.hashWithSalt` certificateIds
+    _salt
+      `Prelude.hashWithSalt` certificateIds
       `Prelude.hashWithSalt` profileId
 
 instance Prelude.NFData UpdateProfile where

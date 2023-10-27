@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.EventBatchingCondition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.EventBatchingCondition where
@@ -84,7 +84,8 @@ instance Data.FromJSON EventBatchingCondition where
 
 instance Prelude.Hashable EventBatchingCondition where
   hashWithSalt _salt EventBatchingCondition' {..} =
-    _salt `Prelude.hashWithSalt` batchWindow
+    _salt
+      `Prelude.hashWithSalt` batchWindow
       `Prelude.hashWithSalt` batchSize
 
 instance Prelude.NFData EventBatchingCondition where

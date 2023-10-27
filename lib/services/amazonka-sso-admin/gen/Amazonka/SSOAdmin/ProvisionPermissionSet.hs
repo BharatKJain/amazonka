@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSOAdmin.ProvisionPermissionSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -142,7 +142,8 @@ instance Core.AWSRequest ProvisionPermissionSet where
 
 instance Prelude.Hashable ProvisionPermissionSet where
   hashWithSalt _salt ProvisionPermissionSet' {..} =
-    _salt `Prelude.hashWithSalt` targetId
+    _salt
+      `Prelude.hashWithSalt` targetId
       `Prelude.hashWithSalt` instanceArn
       `Prelude.hashWithSalt` permissionSetArn
       `Prelude.hashWithSalt` targetType

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.StatementOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.StatementOutput where
@@ -116,7 +116,8 @@ instance Data.FromJSON StatementOutput where
 
 instance Prelude.Hashable StatementOutput where
   hashWithSalt _salt StatementOutput' {..} =
-    _salt `Prelude.hashWithSalt` data'
+    _salt
+      `Prelude.hashWithSalt` data'
       `Prelude.hashWithSalt` errorName
       `Prelude.hashWithSalt` errorValue
       `Prelude.hashWithSalt` executionCount

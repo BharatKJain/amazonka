@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MechanicalTurk.Types.Locale
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MechanicalTurk.Types.Locale where
@@ -82,7 +82,8 @@ instance Data.FromJSON Locale where
 
 instance Prelude.Hashable Locale where
   hashWithSalt _salt Locale' {..} =
-    _salt `Prelude.hashWithSalt` subdivision
+    _salt
+      `Prelude.hashWithSalt` subdivision
       `Prelude.hashWithSalt` country
 
 instance Prelude.NFData Locale where

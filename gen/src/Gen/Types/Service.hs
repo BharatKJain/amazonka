@@ -32,7 +32,7 @@ data Signature
   | V4
   | S3
   | S3V4
-  deriving (Eq, Show, Generic)
+  deriving stock (Eq, Show, Generic)
 
 sigToText :: Signature -> Text
 sigToText = \case
@@ -52,7 +52,7 @@ data Protocol
   | Query
   | EC2
   | APIGateway
-  deriving (Eq, Show, Generic)
+  deriving stock (Eq, Show, Generic)
 
 instance FromJSON Protocol where
   parseJSON = Aeson.withText "protocol" $ \case
@@ -86,7 +86,7 @@ timestamp = \case
 data Checksum
   = MD5
   | SHA256
-  deriving (Eq, Show, Generic)
+  deriving stock (Eq, Show, Generic)
 
 instance FromJSON Checksum where
   parseJSON = gParseJSON' lower
@@ -101,7 +101,7 @@ data Location
   | Querystring
   | StatusCode
   | Body
-  deriving (Eq, Show, Generic)
+  deriving stock (Eq, Show, Generic)
 
 instance FromJSON Location where
   parseJSON = gParseJSON' camel
@@ -113,7 +113,7 @@ data XML = XML'
   { _xmlPrefix :: Maybe Text,
     _xmlUri :: Text
   }
-  deriving (Eq, Show, Generic)
+  deriving stock (Eq, Show, Generic)
 
 $(Lens.makeLenses ''XML)
 
@@ -132,10 +132,9 @@ data RefF a = RefF
     _refXMLAttribute :: Bool,
     _refXMLNamespace :: Maybe XML
   }
-  deriving (Functor, Foldable, Traversable, Generic)
+  deriving stock (Functor, Foldable, Traversable, Generic, Show)
 
 $(Deriving.deriveShow1 ''RefF)
-$(Deriving.deriveShow ''RefF)
 $(Lens.makeLenses ''RefF)
 
 instance HasId (RefF a) where
@@ -162,7 +161,7 @@ data ErrorInfo = ErrorInfo
     _errStatus :: Int,
     _errSenderFault :: Bool
   }
-  deriving (Show, Generic)
+  deriving stock (Show, Generic)
 
 $(Lens.makeLenses ''ErrorInfo)
 
@@ -183,7 +182,7 @@ data Info = Info
     _infoException :: Bool,
     _infoError :: Maybe ErrorInfo
   }
-  deriving (Show, Generic)
+  deriving stock (Show, Generic)
 
 $(Lens.makeClassy ''Info)
 
@@ -206,10 +205,9 @@ data ListF a = ListF
   { _listInfo :: Info,
     _listItem :: RefF a
   }
-  deriving (Functor, Foldable, Traversable)
+  deriving stock (Functor, Foldable, Traversable, Show)
 
 $(Deriving.deriveShow1 ''ListF)
-$(Deriving.deriveShow ''ListF)
 $(Lens.makeLenses ''ListF)
 
 instance HasInfo (ListF a) where
@@ -228,10 +226,9 @@ data MapF a = MapF
     _mapKey :: RefF a,
     _mapValue :: RefF a
   }
-  deriving (Functor, Foldable, Traversable)
+  deriving stock (Functor, Foldable, Traversable, Show)
 
 $(Deriving.deriveShow1 ''MapF)
-$(Deriving.deriveShow ''MapF)
 $(Lens.makeLenses ''MapF)
 
 instance HasInfo (MapF a) where
@@ -253,10 +250,9 @@ data StructF a = StructF
     _required' :: [Id],
     _payload :: Maybe Id
   }
-  deriving (Functor, Foldable, Traversable)
+  deriving stock (Functor, Foldable, Traversable, Show)
 
 $(Deriving.deriveShow1 ''StructF)
-$(Deriving.deriveShow ''StructF)
 $(Lens.makeLenses ''StructF)
 
 instance HasInfo (StructF a) where
@@ -289,10 +285,9 @@ data ShapeF a
   | Struct (StructF a)
   | Enum Info (HashMap Id Text)
   | Lit Info Lit
-  deriving (Functor, Foldable, Traversable)
+  deriving stock (Functor, Foldable, Traversable, Show)
 
 $(Deriving.deriveShow1 ''ShapeF)
-$(Deriving.deriveShow ''ShapeF)
 $(Lens.makePrisms ''ShapeF)
 
 instance HasInfo (ShapeF a) where
@@ -322,7 +317,7 @@ instance FromJSON (ShapeF ()) where
   parseJSON = Aeson.withObject "shape" $ \o -> do
     i <- Aeson.parseJSON (Aeson.Object o)
     t <- o .: "type"
-    m <- o .:? "enum"
+    enum <- o .:? "enum"
     ts <- o .:? "timestampFormat"
 
     case t of
@@ -338,9 +333,10 @@ instance FromJSON (ShapeF ()) where
       "boolean" -> pure (Lit i Bool)
       "timestamp" -> pure (Lit i (Time ts))
       "json" -> pure (Lit i Json)
-      "string" -> pure (maybe (Lit i Text) f m)
-        where
-          f = Enum i . HashMap.fromList . map (first mkId . renameBranch)
+      "string" -> pure $ case enum of
+        Nothing -> Lit i Text
+        Just values ->
+          Enum i . HashMap.fromList $ map (first mkId . renameEnumValue) values
       _ -> fail $ "Unknown Shape type: " ++ Text.unpack t
 
 data Operation f a b = Operation
@@ -400,7 +396,7 @@ data Metadata f = Metadata
     _jsonVersion :: Maybe Text,
     _targetPrefix :: Maybe Text
   }
-  deriving (Generic)
+  deriving stock (Generic)
 
 deriving instance Show (Metadata Maybe)
 
@@ -445,7 +441,7 @@ data Service f a b c = Service
     _waiters :: HashMap Id c,
     _retry :: Retry
   }
-  deriving (Generic)
+  deriving stock (Generic)
 
 $(Lens.makeClassy ''Service)
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53RecoveryControlConfig.UpdateSafetyRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest UpdateSafetyRule where
 
 instance Prelude.Hashable UpdateSafetyRule where
   hashWithSalt _salt UpdateSafetyRule' {..} =
-    _salt `Prelude.hashWithSalt` assertionRuleUpdate
+    _salt
+      `Prelude.hashWithSalt` assertionRuleUpdate
       `Prelude.hashWithSalt` gatingRuleUpdate
 
 instance Prelude.NFData UpdateSafetyRule where

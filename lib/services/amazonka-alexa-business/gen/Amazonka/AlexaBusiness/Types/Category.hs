@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.Category
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.Category where
@@ -76,7 +76,8 @@ instance Data.FromJSON Category where
 
 instance Prelude.Hashable Category where
   hashWithSalt _salt Category' {..} =
-    _salt `Prelude.hashWithSalt` categoryId
+    _salt
+      `Prelude.hashWithSalt` categoryId
       `Prelude.hashWithSalt` categoryName
 
 instance Prelude.NFData Category where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.GlobalTableBorderOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.GlobalTableBorderOptions where
@@ -77,7 +77,8 @@ instance Data.FromJSON GlobalTableBorderOptions where
 
 instance Prelude.Hashable GlobalTableBorderOptions where
   hashWithSalt _salt GlobalTableBorderOptions' {..} =
-    _salt `Prelude.hashWithSalt` sideSpecificBorder
+    _salt
+      `Prelude.hashWithSalt` sideSpecificBorder
       `Prelude.hashWithSalt` uniformBorder
 
 instance Prelude.NFData GlobalTableBorderOptions where

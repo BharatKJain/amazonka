@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Support.Types.TrustedAdvisorResourcesSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Support.Types.TrustedAdvisorResourcesSummary where
@@ -125,7 +125,8 @@ instance
   hashWithSalt
     _salt
     TrustedAdvisorResourcesSummary' {..} =
-      _salt `Prelude.hashWithSalt` resourcesProcessed
+      _salt
+        `Prelude.hashWithSalt` resourcesProcessed
         `Prelude.hashWithSalt` resourcesFlagged
         `Prelude.hashWithSalt` resourcesIgnored
         `Prelude.hashWithSalt` resourcesSuppressed

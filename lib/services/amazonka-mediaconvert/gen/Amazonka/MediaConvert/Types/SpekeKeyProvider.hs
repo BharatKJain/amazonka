@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.SpekeKeyProvider
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.SpekeKeyProvider where
@@ -121,7 +121,8 @@ instance Data.FromJSON SpekeKeyProvider where
 
 instance Prelude.Hashable SpekeKeyProvider where
   hashWithSalt _salt SpekeKeyProvider' {..} =
-    _salt `Prelude.hashWithSalt` certificateArn
+    _salt
+      `Prelude.hashWithSalt` certificateArn
       `Prelude.hashWithSalt` resourceId
       `Prelude.hashWithSalt` systemIds
       `Prelude.hashWithSalt` url

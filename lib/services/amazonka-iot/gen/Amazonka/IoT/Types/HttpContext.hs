@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.HttpContext
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.HttpContext where
@@ -64,7 +64,8 @@ httpContext_queryString = Lens.lens (\HttpContext' {queryString} -> queryString)
 
 instance Prelude.Hashable HttpContext where
   hashWithSalt _salt HttpContext' {..} =
-    _salt `Prelude.hashWithSalt` headers
+    _salt
+      `Prelude.hashWithSalt` headers
       `Prelude.hashWithSalt` queryString
 
 instance Prelude.NFData HttpContext where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeArtifact.Types.PackageVersionDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeArtifact.Types.PackageVersionDescription where
@@ -246,7 +246,8 @@ instance Data.FromJSON PackageVersionDescription where
 
 instance Prelude.Hashable PackageVersionDescription where
   hashWithSalt _salt PackageVersionDescription' {..} =
-    _salt `Prelude.hashWithSalt` displayName
+    _salt
+      `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` format
       `Prelude.hashWithSalt` homePage
       `Prelude.hashWithSalt` licenses

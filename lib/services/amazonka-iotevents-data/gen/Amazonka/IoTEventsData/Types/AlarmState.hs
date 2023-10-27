@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEventsData.Types.AlarmState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEventsData.Types.AlarmState where
@@ -173,7 +173,8 @@ instance Data.FromJSON AlarmState where
 
 instance Prelude.Hashable AlarmState where
   hashWithSalt _salt AlarmState' {..} =
-    _salt `Prelude.hashWithSalt` customerAction
+    _salt
+      `Prelude.hashWithSalt` customerAction
       `Prelude.hashWithSalt` ruleEvaluation
       `Prelude.hashWithSalt` stateName
       `Prelude.hashWithSalt` systemEvent

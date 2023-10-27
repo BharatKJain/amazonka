@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Nimble.GetStreamingSessionBackup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest GetStreamingSessionBackup where
 
 instance Prelude.Hashable GetStreamingSessionBackup where
   hashWithSalt _salt GetStreamingSessionBackup' {..} =
-    _salt `Prelude.hashWithSalt` backupId
+    _salt
+      `Prelude.hashWithSalt` backupId
       `Prelude.hashWithSalt` studioId
 
 instance Prelude.NFData GetStreamingSessionBackup where

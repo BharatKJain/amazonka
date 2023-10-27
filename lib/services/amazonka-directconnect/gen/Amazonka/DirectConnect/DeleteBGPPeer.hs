@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectConnect.DeleteBGPPeer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -126,7 +126,8 @@ instance Core.AWSRequest DeleteBGPPeer where
 
 instance Prelude.Hashable DeleteBGPPeer where
   hashWithSalt _salt DeleteBGPPeer' {..} =
-    _salt `Prelude.hashWithSalt` asn
+    _salt
+      `Prelude.hashWithSalt` asn
       `Prelude.hashWithSalt` bgpPeerId
       `Prelude.hashWithSalt` customerAddress
       `Prelude.hashWithSalt` virtualInterfaceId

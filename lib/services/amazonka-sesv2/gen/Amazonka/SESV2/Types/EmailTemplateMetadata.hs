@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.EmailTemplateMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.EmailTemplateMetadata where
@@ -75,7 +75,8 @@ instance Data.FromJSON EmailTemplateMetadata where
 
 instance Prelude.Hashable EmailTemplateMetadata where
   hashWithSalt _salt EmailTemplateMetadata' {..} =
-    _salt `Prelude.hashWithSalt` createdTimestamp
+    _salt
+      `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` templateName
 
 instance Prelude.NFData EmailTemplateMetadata where

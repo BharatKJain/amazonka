@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.CPUUtilization
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.CPUUtilization where
@@ -190,7 +190,8 @@ instance Data.FromXML CPUUtilization where
 
 instance Prelude.Hashable CPUUtilization where
   hashWithSalt _salt CPUUtilization' {..} =
-    _salt `Prelude.hashWithSalt` iOWait
+    _salt
+      `Prelude.hashWithSalt` iOWait
       `Prelude.hashWithSalt` irq
       `Prelude.hashWithSalt` idle
       `Prelude.hashWithSalt` nice

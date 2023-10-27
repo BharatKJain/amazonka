@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Wisdom.DeleteAssistantAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest DeleteAssistantAssociation where
 
 instance Prelude.Hashable DeleteAssistantAssociation where
   hashWithSalt _salt DeleteAssistantAssociation' {..} =
-    _salt `Prelude.hashWithSalt` assistantAssociationId
+    _salt
+      `Prelude.hashWithSalt` assistantAssociationId
       `Prelude.hashWithSalt` assistantId
 
 instance Prelude.NFData DeleteAssistantAssociation where

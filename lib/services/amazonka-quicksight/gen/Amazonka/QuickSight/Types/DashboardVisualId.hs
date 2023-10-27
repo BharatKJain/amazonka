@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DashboardVisualId
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DashboardVisualId where
@@ -122,7 +122,8 @@ dashboardVisualId_visualId = Lens.lens (\DashboardVisualId' {visualId} -> visual
 
 instance Prelude.Hashable DashboardVisualId where
   hashWithSalt _salt DashboardVisualId' {..} =
-    _salt `Prelude.hashWithSalt` dashboardId
+    _salt
+      `Prelude.hashWithSalt` dashboardId
       `Prelude.hashWithSalt` sheetId
       `Prelude.hashWithSalt` visualId
 

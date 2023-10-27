@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.Paths
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.Paths where
@@ -76,14 +76,17 @@ paths_quantity = Lens.lens (\Paths' {quantity} -> quantity) (\s@Paths' {} a -> s
 instance Data.FromXML Paths where
   parseXML x =
     Paths'
-      Prelude.<$> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Path")
                   )
       Prelude.<*> (x Data..@ "Quantity")
 
 instance Prelude.Hashable Paths where
   hashWithSalt _salt Paths' {..} =
-    _salt `Prelude.hashWithSalt` items
+    _salt
+      `Prelude.hashWithSalt` items
       `Prelude.hashWithSalt` quantity
 
 instance Prelude.NFData Paths where

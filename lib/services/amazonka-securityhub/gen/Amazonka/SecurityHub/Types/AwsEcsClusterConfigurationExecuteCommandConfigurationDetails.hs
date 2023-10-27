@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsClusterConfigurationExecuteCommandConfigurationDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsClusterConfigurationExecuteCommandConfigurationDetails where
@@ -91,8 +91,8 @@ instance
       ( \x ->
           AwsEcsClusterConfigurationExecuteCommandConfigurationDetails'
             Prelude.<$> (x Data..:? "KmsKeyId")
-              Prelude.<*> (x Data..:? "LogConfiguration")
-              Prelude.<*> (x Data..:? "Logging")
+            Prelude.<*> (x Data..:? "LogConfiguration")
+            Prelude.<*> (x Data..:? "Logging")
       )
 
 instance
@@ -102,7 +102,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsClusterConfigurationExecuteCommandConfigurationDetails' {..} =
-      _salt `Prelude.hashWithSalt` kmsKeyId
+      _salt
+        `Prelude.hashWithSalt` kmsKeyId
         `Prelude.hashWithSalt` logConfiguration
         `Prelude.hashWithSalt` logging
 

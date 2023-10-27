@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.UpdateDevices
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -93,7 +93,8 @@ instance Core.AWSRequest UpdateDevices where
 
 instance Prelude.Hashable UpdateDevices where
   hashWithSalt _salt UpdateDevices' {..} =
-    _salt `Prelude.hashWithSalt` deviceFleetName
+    _salt
+      `Prelude.hashWithSalt` deviceFleetName
       `Prelude.hashWithSalt` devices
 
 instance Prelude.NFData UpdateDevices where

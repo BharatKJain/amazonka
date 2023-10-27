@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.MessageResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.MessageResponse where
@@ -117,7 +117,8 @@ instance Data.FromJSON MessageResponse where
 
 instance Prelude.Hashable MessageResponse where
   hashWithSalt _salt MessageResponse' {..} =
-    _salt `Prelude.hashWithSalt` endpointResult
+    _salt
+      `Prelude.hashWithSalt` endpointResult
       `Prelude.hashWithSalt` requestId
       `Prelude.hashWithSalt` result
       `Prelude.hashWithSalt` applicationId

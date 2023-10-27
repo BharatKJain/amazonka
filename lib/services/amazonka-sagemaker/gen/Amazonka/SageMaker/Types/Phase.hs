@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.Phase
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.Phase where
@@ -84,7 +84,8 @@ instance Data.FromJSON Phase where
 
 instance Prelude.Hashable Phase where
   hashWithSalt _salt Phase' {..} =
-    _salt `Prelude.hashWithSalt` durationInSeconds
+    _salt
+      `Prelude.hashWithSalt` durationInSeconds
       `Prelude.hashWithSalt` initialNumberOfUsers
       `Prelude.hashWithSalt` spawnRate
 

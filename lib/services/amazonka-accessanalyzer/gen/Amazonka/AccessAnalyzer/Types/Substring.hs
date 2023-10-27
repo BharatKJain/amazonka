@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.Substring
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.Substring where
@@ -69,12 +69,14 @@ instance Data.FromJSON Substring where
       "Substring"
       ( \x ->
           Substring'
-            Prelude.<$> (x Data..: "start") Prelude.<*> (x Data..: "length")
+            Prelude.<$> (x Data..: "start")
+            Prelude.<*> (x Data..: "length")
       )
 
 instance Prelude.Hashable Substring where
   hashWithSalt _salt Substring' {..} =
-    _salt `Prelude.hashWithSalt` start
+    _salt
+      `Prelude.hashWithSalt` start
       `Prelude.hashWithSalt` length
 
 instance Prelude.NFData Substring where

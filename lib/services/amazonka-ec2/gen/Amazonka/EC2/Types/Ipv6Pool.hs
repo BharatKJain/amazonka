@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.Ipv6Pool
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.Ipv6Pool where
@@ -87,18 +87,22 @@ instance Data.FromXML Ipv6Pool where
   parseXML x =
     Ipv6Pool'
       Prelude.<$> (x Data..@? "description")
-      Prelude.<*> ( x Data..@? "poolCidrBlockSet"
+      Prelude.<*> ( x
+                      Data..@? "poolCidrBlockSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "poolId")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable Ipv6Pool where
   hashWithSalt _salt Ipv6Pool' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` poolCidrBlocks
       `Prelude.hashWithSalt` poolId
       `Prelude.hashWithSalt` tags

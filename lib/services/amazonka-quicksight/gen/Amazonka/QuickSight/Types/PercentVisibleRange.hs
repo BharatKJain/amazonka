@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.PercentVisibleRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.PercentVisibleRange where
@@ -68,12 +68,14 @@ instance Data.FromJSON PercentVisibleRange where
       "PercentVisibleRange"
       ( \x ->
           PercentVisibleRange'
-            Prelude.<$> (x Data..:? "From") Prelude.<*> (x Data..:? "To")
+            Prelude.<$> (x Data..:? "From")
+            Prelude.<*> (x Data..:? "To")
       )
 
 instance Prelude.Hashable PercentVisibleRange where
   hashWithSalt _salt PercentVisibleRange' {..} =
-    _salt `Prelude.hashWithSalt` from
+    _salt
+      `Prelude.hashWithSalt` from
       `Prelude.hashWithSalt` to
 
 instance Prelude.NFData PercentVisibleRange where

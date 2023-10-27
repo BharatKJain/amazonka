@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsRdsDbStatusInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsRdsDbStatusInfo where
@@ -100,7 +100,8 @@ instance Data.FromJSON AwsRdsDbStatusInfo where
 
 instance Prelude.Hashable AwsRdsDbStatusInfo where
   hashWithSalt _salt AwsRdsDbStatusInfo' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` normal
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` statusType

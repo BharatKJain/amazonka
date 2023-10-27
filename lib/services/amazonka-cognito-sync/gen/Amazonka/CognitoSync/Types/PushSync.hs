@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoSync.Types.PushSync
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoSync.Types.PushSync where
@@ -71,7 +71,8 @@ instance Data.FromJSON PushSync where
       "PushSync"
       ( \x ->
           PushSync'
-            Prelude.<$> ( x Data..:? "ApplicationArns"
+            Prelude.<$> ( x
+                            Data..:? "ApplicationArns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "RoleArn")
@@ -79,7 +80,8 @@ instance Data.FromJSON PushSync where
 
 instance Prelude.Hashable PushSync where
   hashWithSalt _salt PushSync' {..} =
-    _salt `Prelude.hashWithSalt` applicationArns
+    _salt
+      `Prelude.hashWithSalt` applicationArns
       `Prelude.hashWithSalt` roleArn
 
 instance Prelude.NFData PushSync where

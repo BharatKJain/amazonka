@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataPipeline.QueryObjects
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -154,20 +154,22 @@ instance Core.AWSPager QueryObjects where
     | Core.stop
         ( rs
             Lens.^? queryObjectsResponse_hasMoreResults
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.isNothing
         ( rs
-            Lens.^? queryObjectsResponse_marker Prelude.. Lens._Just
+            Lens.^? queryObjectsResponse_marker
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& queryObjects_marker
           Lens..~ rs
-          Lens.^? queryObjectsResponse_marker Prelude.. Lens._Just
+          Lens.^? queryObjectsResponse_marker
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest QueryObjects where
   type AWSResponse QueryObjects = QueryObjectsResponse
@@ -185,7 +187,8 @@ instance Core.AWSRequest QueryObjects where
 
 instance Prelude.Hashable QueryObjects where
   hashWithSalt _salt QueryObjects' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` query
       `Prelude.hashWithSalt` pipelineId

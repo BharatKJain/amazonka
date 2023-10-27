@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.EntityDisplayData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.EntityDisplayData where
@@ -104,7 +104,8 @@ instance Data.FromJSON EntityDisplayData where
 
 instance Prelude.Hashable EntityDisplayData where
   hashWithSalt _salt EntityDisplayData' {..} =
-    _salt `Prelude.hashWithSalt` firstName
+    _salt
+      `Prelude.hashWithSalt` firstName
       `Prelude.hashWithSalt` groupName
       `Prelude.hashWithSalt` identifiedUserName
       `Prelude.hashWithSalt` lastName

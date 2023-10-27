@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.AutoScalingPolicyStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.AutoScalingPolicyStatus where
@@ -76,7 +76,8 @@ instance Data.FromJSON AutoScalingPolicyStatus where
 
 instance Prelude.Hashable AutoScalingPolicyStatus where
   hashWithSalt _salt AutoScalingPolicyStatus' {..} =
-    _salt `Prelude.hashWithSalt` state
+    _salt
+      `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` stateChangeReason
 
 instance Prelude.NFData AutoScalingPolicyStatus where

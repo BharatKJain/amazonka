@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.HttpHeaderConditionConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.HttpHeaderConditionConfig where
@@ -115,13 +115,16 @@ instance Data.FromXML HttpHeaderConditionConfig where
   parseXML x =
     HttpHeaderConditionConfig'
       Prelude.<$> (x Data..@? "HttpHeaderName")
-      Prelude.<*> ( x Data..@? "Values" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Values"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 
 instance Prelude.Hashable HttpHeaderConditionConfig where
   hashWithSalt _salt HttpHeaderConditionConfig' {..} =
-    _salt `Prelude.hashWithSalt` httpHeaderName
+    _salt
+      `Prelude.hashWithSalt` httpHeaderName
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData HttpHeaderConditionConfig where

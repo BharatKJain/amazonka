@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.GpuInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.GpuInfo where
@@ -70,14 +70,17 @@ gpuInfo_totalGpuMemoryInMiB = Lens.lens (\GpuInfo' {totalGpuMemoryInMiB} -> tota
 instance Data.FromXML GpuInfo where
   parseXML x =
     GpuInfo'
-      Prelude.<$> ( x Data..@? "gpus" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "gpus"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "totalGpuMemoryInMiB")
 
 instance Prelude.Hashable GpuInfo where
   hashWithSalt _salt GpuInfo' {..} =
-    _salt `Prelude.hashWithSalt` gpus
+    _salt
+      `Prelude.hashWithSalt` gpus
       `Prelude.hashWithSalt` totalGpuMemoryInMiB
 
 instance Prelude.NFData GpuInfo where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.Place
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.Place where
@@ -270,7 +270,8 @@ instance Data.FromJSON Place where
 
 instance Prelude.Hashable Place where
   hashWithSalt _salt Place' {..} =
-    _salt `Prelude.hashWithSalt` addressNumber
+    _salt
+      `Prelude.hashWithSalt` addressNumber
       `Prelude.hashWithSalt` country
       `Prelude.hashWithSalt` interpolated
       `Prelude.hashWithSalt` label

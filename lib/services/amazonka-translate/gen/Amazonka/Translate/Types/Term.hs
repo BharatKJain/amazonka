@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Translate.Types.Term
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Translate.Types.Term where
@@ -74,7 +74,8 @@ instance Data.FromJSON Term where
 
 instance Prelude.Hashable Term where
   hashWithSalt _salt Term' {..} =
-    _salt `Prelude.hashWithSalt` sourceText
+    _salt
+      `Prelude.hashWithSalt` sourceText
       `Prelude.hashWithSalt` targetText
 
 instance Prelude.NFData Term where

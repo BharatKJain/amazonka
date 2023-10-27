@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApplicationCostProfiler.Types.SourceS3Location
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApplicationCostProfiler.Types.SourceS3Location where
@@ -91,7 +91,8 @@ sourceS3Location_key = Lens.lens (\SourceS3Location' {key} -> key) (\s@SourceS3L
 
 instance Prelude.Hashable SourceS3Location where
   hashWithSalt _salt SourceS3Location' {..} =
-    _salt `Prelude.hashWithSalt` region
+    _salt
+      `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` key
 

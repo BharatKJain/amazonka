@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.EksEmptyDir
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.EksEmptyDir where
@@ -113,7 +113,8 @@ instance Data.FromJSON EksEmptyDir where
 
 instance Prelude.Hashable EksEmptyDir where
   hashWithSalt _salt EksEmptyDir' {..} =
-    _salt `Prelude.hashWithSalt` medium
+    _salt
+      `Prelude.hashWithSalt` medium
       `Prelude.hashWithSalt` sizeLimit
 
 instance Prelude.NFData EksEmptyDir where

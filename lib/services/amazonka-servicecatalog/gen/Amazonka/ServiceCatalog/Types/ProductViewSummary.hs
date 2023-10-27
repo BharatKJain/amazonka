@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ProductViewSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ProductViewSummary where
@@ -189,7 +189,8 @@ instance Data.FromJSON ProductViewSummary where
 
 instance Prelude.Hashable ProductViewSummary where
   hashWithSalt _salt ProductViewSummary' {..} =
-    _salt `Prelude.hashWithSalt` distributor
+    _salt
+      `Prelude.hashWithSalt` distributor
       `Prelude.hashWithSalt` hasDefaultPath
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name

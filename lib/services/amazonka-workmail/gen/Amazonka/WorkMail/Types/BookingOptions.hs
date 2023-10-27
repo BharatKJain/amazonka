@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkMail.Types.BookingOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkMail.Types.BookingOptions where
@@ -92,7 +92,8 @@ instance Data.FromJSON BookingOptions where
 
 instance Prelude.Hashable BookingOptions where
   hashWithSalt _salt BookingOptions' {..} =
-    _salt `Prelude.hashWithSalt` autoAcceptRequests
+    _salt
+      `Prelude.hashWithSalt` autoAcceptRequests
       `Prelude.hashWithSalt` autoDeclineConflictingRequests
       `Prelude.hashWithSalt` autoDeclineRecurringRequests
 

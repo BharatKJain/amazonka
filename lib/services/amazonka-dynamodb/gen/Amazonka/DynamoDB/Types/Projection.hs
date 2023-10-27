@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.Projection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.Projection where
@@ -124,7 +124,8 @@ instance Data.FromJSON Projection where
 
 instance Prelude.Hashable Projection where
   hashWithSalt _salt Projection' {..} =
-    _salt `Prelude.hashWithSalt` nonKeyAttributes
+    _salt
+      `Prelude.hashWithSalt` nonKeyAttributes
       `Prelude.hashWithSalt` projectionType
 
 instance Prelude.NFData Projection where

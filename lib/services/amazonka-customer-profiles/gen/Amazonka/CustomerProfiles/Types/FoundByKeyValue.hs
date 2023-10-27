@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CustomerProfiles.Types.FoundByKeyValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CustomerProfiles.Types.FoundByKeyValue where
@@ -77,7 +77,8 @@ instance Data.FromJSON FoundByKeyValue where
 
 instance Prelude.Hashable FoundByKeyValue where
   hashWithSalt _salt FoundByKeyValue' {..} =
-    _salt `Prelude.hashWithSalt` keyName
+    _salt
+      `Prelude.hashWithSalt` keyName
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData FoundByKeyValue where

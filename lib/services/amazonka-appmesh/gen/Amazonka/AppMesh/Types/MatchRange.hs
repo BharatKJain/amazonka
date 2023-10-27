@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.MatchRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.MatchRange where
@@ -72,12 +72,14 @@ instance Data.FromJSON MatchRange where
       "MatchRange"
       ( \x ->
           MatchRange'
-            Prelude.<$> (x Data..: "end") Prelude.<*> (x Data..: "start")
+            Prelude.<$> (x Data..: "end")
+            Prelude.<*> (x Data..: "start")
       )
 
 instance Prelude.Hashable MatchRange where
   hashWithSalt _salt MatchRange' {..} =
-    _salt `Prelude.hashWithSalt` end
+    _salt
+      `Prelude.hashWithSalt` end
       `Prelude.hashWithSalt` start
 
 instance Prelude.NFData MatchRange where

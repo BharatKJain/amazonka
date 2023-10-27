@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.NetworkFirewallMissingExpectedRTViolation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.NetworkFirewallMissingExpectedRTViolation where
@@ -110,10 +110,10 @@ instance
       ( \x ->
           NetworkFirewallMissingExpectedRTViolation'
             Prelude.<$> (x Data..:? "AvailabilityZone")
-              Prelude.<*> (x Data..:? "CurrentRouteTable")
-              Prelude.<*> (x Data..:? "ExpectedRouteTable")
-              Prelude.<*> (x Data..:? "VPC")
-              Prelude.<*> (x Data..:? "ViolationTarget")
+            Prelude.<*> (x Data..:? "CurrentRouteTable")
+            Prelude.<*> (x Data..:? "ExpectedRouteTable")
+            Prelude.<*> (x Data..:? "VPC")
+            Prelude.<*> (x Data..:? "ViolationTarget")
       )
 
 instance
@@ -123,7 +123,8 @@ instance
   hashWithSalt
     _salt
     NetworkFirewallMissingExpectedRTViolation' {..} =
-      _salt `Prelude.hashWithSalt` availabilityZone
+      _salt
+        `Prelude.hashWithSalt` availabilityZone
         `Prelude.hashWithSalt` currentRouteTable
         `Prelude.hashWithSalt` expectedRouteTable
         `Prelude.hashWithSalt` vpc

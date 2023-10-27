@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.ExportServerSideEncryption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.ExportServerSideEncryption where
@@ -89,7 +89,8 @@ instance Data.FromJSON ExportServerSideEncryption where
 
 instance Prelude.Hashable ExportServerSideEncryption where
   hashWithSalt _salt ExportServerSideEncryption' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyArn
+    _salt
+      `Prelude.hashWithSalt` kmsKeyArn
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData ExportServerSideEncryption where

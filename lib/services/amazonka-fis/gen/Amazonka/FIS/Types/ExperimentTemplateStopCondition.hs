@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FIS.Types.ExperimentTemplateStopCondition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FIS.Types.ExperimentTemplateStopCondition where
@@ -83,7 +83,8 @@ instance
   hashWithSalt
     _salt
     ExperimentTemplateStopCondition' {..} =
-      _salt `Prelude.hashWithSalt` source
+      _salt
+        `Prelude.hashWithSalt` source
         `Prelude.hashWithSalt` value
 
 instance

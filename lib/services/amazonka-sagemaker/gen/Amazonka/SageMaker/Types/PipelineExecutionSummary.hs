@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.PipelineExecutionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.PipelineExecutionSummary where
@@ -119,7 +119,8 @@ instance Data.FromJSON PipelineExecutionSummary where
 
 instance Prelude.Hashable PipelineExecutionSummary where
   hashWithSalt _salt PipelineExecutionSummary' {..} =
-    _salt `Prelude.hashWithSalt` pipelineExecutionArn
+    _salt
+      `Prelude.hashWithSalt` pipelineExecutionArn
       `Prelude.hashWithSalt` pipelineExecutionDescription
       `Prelude.hashWithSalt` pipelineExecutionDisplayName
       `Prelude.hashWithSalt` pipelineExecutionFailureReason

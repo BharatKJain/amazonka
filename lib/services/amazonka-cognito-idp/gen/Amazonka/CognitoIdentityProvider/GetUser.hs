@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.GetUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -96,12 +96,14 @@ instance Core.AWSRequest GetUser where
           GetUserResponse'
             Prelude.<$> (x Data..?> "MFAOptions" Core..!@ Prelude.mempty)
             Prelude.<*> (x Data..?> "PreferredMfaSetting")
-            Prelude.<*> ( x Data..?> "UserMFASettingList"
+            Prelude.<*> ( x
+                            Data..?> "UserMFASettingList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
             Prelude.<*> (x Data..:> "Username")
-            Prelude.<*> ( x Data..?> "UserAttributes"
+            Prelude.<*> ( x
+                            Data..?> "UserAttributes"
                             Core..!@ Prelude.mempty
                         )
       )

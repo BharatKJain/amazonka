@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.DeleteUserPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest DeleteUserPolicy where
 
 instance Prelude.Hashable DeleteUserPolicy where
   hashWithSalt _salt DeleteUserPolicy' {..} =
-    _salt `Prelude.hashWithSalt` userName
+    _salt
+      `Prelude.hashWithSalt` userName
       `Prelude.hashWithSalt` policyName
 
 instance Prelude.NFData DeleteUserPolicy where

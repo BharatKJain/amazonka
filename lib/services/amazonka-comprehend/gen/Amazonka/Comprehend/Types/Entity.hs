@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.Entity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.Entity where
@@ -143,7 +143,8 @@ instance Data.FromJSON Entity where
       ( \x ->
           Entity'
             Prelude.<$> (x Data..:? "BeginOffset")
-            Prelude.<*> ( x Data..:? "BlockReferences"
+            Prelude.<*> ( x
+                            Data..:? "BlockReferences"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "EndOffset")
@@ -154,7 +155,8 @@ instance Data.FromJSON Entity where
 
 instance Prelude.Hashable Entity where
   hashWithSalt _salt Entity' {..} =
-    _salt `Prelude.hashWithSalt` beginOffset
+    _salt
+      `Prelude.hashWithSalt` beginOffset
       `Prelude.hashWithSalt` blockReferences
       `Prelude.hashWithSalt` endOffset
       `Prelude.hashWithSalt` score

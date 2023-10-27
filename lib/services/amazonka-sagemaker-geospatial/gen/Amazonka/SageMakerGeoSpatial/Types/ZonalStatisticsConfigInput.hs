@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.ZonalStatisticsConfigInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.ZonalStatisticsConfigInput where
@@ -64,15 +64,12 @@ newZonalStatisticsConfigInput
         zoneS3Path = pZoneS3Path_
       }
 
--- |
 zonalStatisticsConfigInput_targetBands :: Lens.Lens' ZonalStatisticsConfigInput (Prelude.Maybe (Prelude.NonEmpty Prelude.Text))
 zonalStatisticsConfigInput_targetBands = Lens.lens (\ZonalStatisticsConfigInput' {targetBands} -> targetBands) (\s@ZonalStatisticsConfigInput' {} a -> s {targetBands = a} :: ZonalStatisticsConfigInput) Prelude.. Lens.mapping Lens.coerced
 
--- |
 zonalStatisticsConfigInput_statistics :: Lens.Lens' ZonalStatisticsConfigInput (Prelude.NonEmpty ZonalStatistics)
 zonalStatisticsConfigInput_statistics = Lens.lens (\ZonalStatisticsConfigInput' {statistics} -> statistics) (\s@ZonalStatisticsConfigInput' {} a -> s {statistics = a} :: ZonalStatisticsConfigInput) Prelude.. Lens.coerced
 
--- |
 zonalStatisticsConfigInput_zoneS3Path :: Lens.Lens' ZonalStatisticsConfigInput Prelude.Text
 zonalStatisticsConfigInput_zoneS3Path = Lens.lens (\ZonalStatisticsConfigInput' {zoneS3Path} -> zoneS3Path) (\s@ZonalStatisticsConfigInput' {} a -> s {zoneS3Path = a} :: ZonalStatisticsConfigInput)
 
@@ -89,7 +86,8 @@ instance Data.FromJSON ZonalStatisticsConfigInput where
 
 instance Prelude.Hashable ZonalStatisticsConfigInput where
   hashWithSalt _salt ZonalStatisticsConfigInput' {..} =
-    _salt `Prelude.hashWithSalt` targetBands
+    _salt
+      `Prelude.hashWithSalt` targetBands
       `Prelude.hashWithSalt` statistics
       `Prelude.hashWithSalt` zoneS3Path
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRServerless.Types.InitialCapacityConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRServerless.Types.InitialCapacityConfig where
@@ -78,7 +78,8 @@ instance Data.FromJSON InitialCapacityConfig where
 
 instance Prelude.Hashable InitialCapacityConfig where
   hashWithSalt _salt InitialCapacityConfig' {..} =
-    _salt `Prelude.hashWithSalt` workerConfiguration
+    _salt
+      `Prelude.hashWithSalt` workerConfiguration
       `Prelude.hashWithSalt` workerCount
 
 instance Prelude.NFData InitialCapacityConfig where

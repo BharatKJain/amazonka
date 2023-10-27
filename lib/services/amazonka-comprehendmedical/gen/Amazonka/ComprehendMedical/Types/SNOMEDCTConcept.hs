@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComprehendMedical.Types.SNOMEDCTConcept
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComprehendMedical.Types.SNOMEDCTConcept where
@@ -88,7 +88,8 @@ instance Data.FromJSON SNOMEDCTConcept where
 
 instance Prelude.Hashable SNOMEDCTConcept where
   hashWithSalt _salt SNOMEDCTConcept' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` score
 

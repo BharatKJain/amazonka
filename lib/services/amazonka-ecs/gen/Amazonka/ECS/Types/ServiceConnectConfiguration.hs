@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.ServiceConnectConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.ServiceConnectConfiguration where
@@ -163,7 +163,8 @@ instance Data.FromJSON ServiceConnectConfiguration where
 
 instance Prelude.Hashable ServiceConnectConfiguration where
   hashWithSalt _salt ServiceConnectConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` logConfiguration
+    _salt
+      `Prelude.hashWithSalt` logConfiguration
       `Prelude.hashWithSalt` namespace
       `Prelude.hashWithSalt` services
       `Prelude.hashWithSalt` enabled

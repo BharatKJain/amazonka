@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.ContainerImage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.ContainerImage where
@@ -85,7 +85,8 @@ instance Data.FromJSON ContainerImage where
 
 instance Prelude.Hashable ContainerImage where
   hashWithSalt _salt ContainerImage' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` digest
       `Prelude.hashWithSalt` image
 

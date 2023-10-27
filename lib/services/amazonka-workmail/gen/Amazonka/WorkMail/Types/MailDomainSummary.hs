@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkMail.Types.MailDomainSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkMail.Types.MailDomainSummary where
@@ -74,7 +74,8 @@ instance Data.FromJSON MailDomainSummary where
 
 instance Prelude.Hashable MailDomainSummary where
   hashWithSalt _salt MailDomainSummary' {..} =
-    _salt `Prelude.hashWithSalt` defaultDomain
+    _salt
+      `Prelude.hashWithSalt` defaultDomain
       `Prelude.hashWithSalt` domainName
 
 instance Prelude.NFData MailDomainSummary where

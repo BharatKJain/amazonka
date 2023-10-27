@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRServerless.Types.TotalResourceUtilization
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRServerless.Types.TotalResourceUtilization where
@@ -96,7 +96,8 @@ instance Data.FromJSON TotalResourceUtilization where
 
 instance Prelude.Hashable TotalResourceUtilization where
   hashWithSalt _salt TotalResourceUtilization' {..} =
-    _salt `Prelude.hashWithSalt` memoryGBHour
+    _salt
+      `Prelude.hashWithSalt` memoryGBHour
       `Prelude.hashWithSalt` storageGBHour
       `Prelude.hashWithSalt` vCPUHour
 

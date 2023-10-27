@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.PendingLogDeliveryConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.PendingLogDeliveryConfiguration where
@@ -106,7 +106,8 @@ instance
   hashWithSalt
     _salt
     PendingLogDeliveryConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` destinationDetails
+      _salt
+        `Prelude.hashWithSalt` destinationDetails
         `Prelude.hashWithSalt` destinationType
         `Prelude.hashWithSalt` logFormat
         `Prelude.hashWithSalt` logType

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.Signer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.Signer where
@@ -85,7 +85,8 @@ instance Data.FromXML Signer where
 
 instance Prelude.Hashable Signer where
   hashWithSalt _salt Signer' {..} =
-    _salt `Prelude.hashWithSalt` awsAccountNumber
+    _salt
+      `Prelude.hashWithSalt` awsAccountNumber
       `Prelude.hashWithSalt` keyPairIds
 
 instance Prelude.NFData Signer where

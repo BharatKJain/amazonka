@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.TrainingJobStatusCounters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.TrainingJobStatusCounters where
@@ -127,7 +127,8 @@ instance Data.FromJSON TrainingJobStatusCounters where
 
 instance Prelude.Hashable TrainingJobStatusCounters where
   hashWithSalt _salt TrainingJobStatusCounters' {..} =
-    _salt `Prelude.hashWithSalt` completed
+    _salt
+      `Prelude.hashWithSalt` completed
       `Prelude.hashWithSalt` inProgress
       `Prelude.hashWithSalt` nonRetryableError
       `Prelude.hashWithSalt` retryableError

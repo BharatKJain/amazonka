@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.VdmOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.VdmOptions where
@@ -83,7 +83,8 @@ instance Data.FromJSON VdmOptions where
 
 instance Prelude.Hashable VdmOptions where
   hashWithSalt _salt VdmOptions' {..} =
-    _salt `Prelude.hashWithSalt` dashboardOptions
+    _salt
+      `Prelude.hashWithSalt` dashboardOptions
       `Prelude.hashWithSalt` guardianOptions
 
 instance Prelude.NFData VdmOptions where

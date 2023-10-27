@@ -16,7 +16,7 @@
 -- Module      : Amazonka.S3.GetObjectTorrent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -151,7 +151,8 @@ instance Core.AWSRequest GetObjectTorrent where
 
 instance Prelude.Hashable GetObjectTorrent where
   hashWithSalt _salt GetObjectTorrent' {..} =
-    _salt `Prelude.hashWithSalt` expectedBucketOwner
+    _salt
+      `Prelude.hashWithSalt` expectedBucketOwner
       `Prelude.hashWithSalt` requestPayer
       `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` key

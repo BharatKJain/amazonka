@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FinSpaceData.Types.ColumnDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FinSpaceData.Types.ColumnDefinition where
@@ -158,7 +158,8 @@ instance Data.FromJSON ColumnDefinition where
 
 instance Prelude.Hashable ColumnDefinition where
   hashWithSalt _salt ColumnDefinition' {..} =
-    _salt `Prelude.hashWithSalt` columnDescription
+    _salt
+      `Prelude.hashWithSalt` columnDescription
       `Prelude.hashWithSalt` columnName
       `Prelude.hashWithSalt` dataType
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeSpotInstanceRequests
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -510,22 +510,22 @@ instance Core.AWSPager DescribeSpotInstanceRequests where
     | Core.stop
         ( rs
             Lens.^? describeSpotInstanceRequestsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeSpotInstanceRequestsResponse_spotInstanceRequests
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeSpotInstanceRequests_nextToken
           Lens..~ rs
           Lens.^? describeSpotInstanceRequestsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeSpotInstanceRequests where
   type
@@ -538,7 +538,8 @@ instance Core.AWSRequest DescribeSpotInstanceRequests where
       ( \s h x ->
           DescribeSpotInstanceRequestsResponse'
             Prelude.<$> (x Data..@? "nextToken")
-            Prelude.<*> ( x Data..@? "spotInstanceRequestSet"
+            Prelude.<*> ( x
+                            Data..@? "spotInstanceRequestSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -550,7 +551,8 @@ instance
     DescribeSpotInstanceRequests
   where
   hashWithSalt _salt DescribeSpotInstanceRequests' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

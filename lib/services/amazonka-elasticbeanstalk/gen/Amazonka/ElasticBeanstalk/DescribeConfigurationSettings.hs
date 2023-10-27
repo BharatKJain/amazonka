@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.DescribeConfigurationSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -159,7 +159,8 @@ instance
       "DescribeConfigurationSettingsResult"
       ( \s h x ->
           DescribeConfigurationSettingsResponse'
-            Prelude.<$> ( x Data..@? "ConfigurationSettings"
+            Prelude.<$> ( x
+                            Data..@? "ConfigurationSettings"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
@@ -171,7 +172,8 @@ instance
     DescribeConfigurationSettings
   where
   hashWithSalt _salt DescribeConfigurationSettings' {..} =
-    _salt `Prelude.hashWithSalt` environmentName
+    _salt
+      `Prelude.hashWithSalt` environmentName
       `Prelude.hashWithSalt` templateName
       `Prelude.hashWithSalt` applicationName
 

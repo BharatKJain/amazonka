@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Location.BatchUpdateDevicePosition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,7 +129,8 @@ instance Core.AWSRequest BatchUpdateDevicePosition where
 
 instance Prelude.Hashable BatchUpdateDevicePosition where
   hashWithSalt _salt BatchUpdateDevicePosition' {..} =
-    _salt `Prelude.hashWithSalt` trackerName
+    _salt
+      `Prelude.hashWithSalt` trackerName
       `Prelude.hashWithSalt` updates
 
 instance Prelude.NFData BatchUpdateDevicePosition where

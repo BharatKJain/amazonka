@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.GetTrustStoreCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest GetTrustStoreCertificate where
 
 instance Prelude.Hashable GetTrustStoreCertificate where
   hashWithSalt _salt GetTrustStoreCertificate' {..} =
-    _salt `Prelude.hashWithSalt` thumbprint
+    _salt
+      `Prelude.hashWithSalt` thumbprint
       `Prelude.hashWithSalt` trustStoreArn
 
 instance Prelude.NFData GetTrustStoreCertificate where

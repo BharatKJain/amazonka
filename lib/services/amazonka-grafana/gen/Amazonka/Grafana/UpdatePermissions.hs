@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Grafana.UpdatePermissions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest UpdatePermissions where
 
 instance Prelude.Hashable UpdatePermissions where
   hashWithSalt _salt UpdatePermissions' {..} =
-    _salt `Prelude.hashWithSalt` updateInstructionBatch
+    _salt
+      `Prelude.hashWithSalt` updateInstructionBatch
       `Prelude.hashWithSalt` workspaceId
 
 instance Prelude.NFData UpdatePermissions where

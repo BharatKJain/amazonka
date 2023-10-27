@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.DocumentVersionInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.DocumentVersionInfo where
@@ -184,7 +184,8 @@ instance Data.FromJSON DocumentVersionInfo where
 
 instance Prelude.Hashable DocumentVersionInfo where
   hashWithSalt _salt DocumentVersionInfo' {..} =
-    _salt `Prelude.hashWithSalt` createdDate
+    _salt
+      `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` documentFormat
       `Prelude.hashWithSalt` documentVersion

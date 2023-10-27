@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.DmsTransferSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.DmsTransferSettings where
@@ -77,7 +77,8 @@ instance Data.FromJSON DmsTransferSettings where
 
 instance Prelude.Hashable DmsTransferSettings where
   hashWithSalt _salt DmsTransferSettings' {..} =
-    _salt `Prelude.hashWithSalt` bucketName
+    _salt
+      `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` serviceAccessRoleArn
 
 instance Prelude.NFData DmsTransferSettings where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.CreateBot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest CreateBot where
 
 instance Prelude.Hashable CreateBot where
   hashWithSalt _salt CreateBot' {..} =
-    _salt `Prelude.hashWithSalt` domain
+    _salt
+      `Prelude.hashWithSalt` domain
       `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` accountId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.NumericalDimensionField
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.NumericalDimensionField where
@@ -101,7 +101,8 @@ instance Data.FromJSON NumericalDimensionField where
 
 instance Prelude.Hashable NumericalDimensionField where
   hashWithSalt _salt NumericalDimensionField' {..} =
-    _salt `Prelude.hashWithSalt` formatConfiguration
+    _salt
+      `Prelude.hashWithSalt` formatConfiguration
       `Prelude.hashWithSalt` hierarchyId
       `Prelude.hashWithSalt` fieldId
       `Prelude.hashWithSalt` column

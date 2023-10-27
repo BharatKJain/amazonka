@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDevicesDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDevicesDetails where
@@ -90,8 +90,8 @@ instance
       ( \x ->
           AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDevicesDetails'
             Prelude.<$> (x Data..:? "ContainerPath")
-              Prelude.<*> (x Data..:? "HostPath")
-              Prelude.<*> (x Data..:? "Permissions" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "HostPath")
+            Prelude.<*> (x Data..:? "Permissions" Data..!= Prelude.mempty)
       )
 
 instance
@@ -101,7 +101,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDevicesDetails' {..} =
-      _salt `Prelude.hashWithSalt` containerPath
+      _salt
+        `Prelude.hashWithSalt` containerPath
         `Prelude.hashWithSalt` hostPath
         `Prelude.hashWithSalt` permissions
 

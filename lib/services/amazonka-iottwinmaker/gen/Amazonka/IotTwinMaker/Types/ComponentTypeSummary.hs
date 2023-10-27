@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.ComponentTypeSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.ComponentTypeSummary where
@@ -139,7 +139,8 @@ instance Data.FromJSON ComponentTypeSummary where
 
 instance Prelude.Hashable ComponentTypeSummary where
   hashWithSalt _salt ComponentTypeSummary' {..} =
-    _salt `Prelude.hashWithSalt` componentTypeName
+    _salt
+      `Prelude.hashWithSalt` componentTypeName
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` arn

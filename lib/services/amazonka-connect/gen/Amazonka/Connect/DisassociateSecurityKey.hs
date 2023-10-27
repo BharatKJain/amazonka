@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.DisassociateSecurityKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest DisassociateSecurityKey where
 
 instance Prelude.Hashable DisassociateSecurityKey where
   hashWithSalt _salt DisassociateSecurityKey' {..} =
-    _salt `Prelude.hashWithSalt` instanceId
+    _salt
+      `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` associationId
 
 instance Prelude.NFData DisassociateSecurityKey where

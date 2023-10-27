@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2VpcPeeringConnectionVpcInfoDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2VpcPeeringConnectionVpcInfoDetails where
@@ -126,7 +126,8 @@ instance
           AwsEc2VpcPeeringConnectionVpcInfoDetails'
             Prelude.<$> (x Data..:? "CidrBlock")
             Prelude.<*> (x Data..:? "CidrBlockSet" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "Ipv6CidrBlockSet"
+            Prelude.<*> ( x
+                            Data..:? "Ipv6CidrBlockSet"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "OwnerId")
@@ -142,7 +143,8 @@ instance
   hashWithSalt
     _salt
     AwsEc2VpcPeeringConnectionVpcInfoDetails' {..} =
-      _salt `Prelude.hashWithSalt` cidrBlock
+      _salt
+        `Prelude.hashWithSalt` cidrBlock
         `Prelude.hashWithSalt` cidrBlockSet
         `Prelude.hashWithSalt` ipv6CidrBlockSet
         `Prelude.hashWithSalt` ownerId

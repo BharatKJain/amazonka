@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.SegmentReference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.SegmentReference where
@@ -70,12 +70,14 @@ instance Data.FromJSON SegmentReference where
       "SegmentReference"
       ( \x ->
           SegmentReference'
-            Prelude.<$> (x Data..:? "Version") Prelude.<*> (x Data..: "Id")
+            Prelude.<$> (x Data..:? "Version")
+            Prelude.<*> (x Data..: "Id")
       )
 
 instance Prelude.Hashable SegmentReference where
   hashWithSalt _salt SegmentReference' {..} =
-    _salt `Prelude.hashWithSalt` version
+    _salt
+      `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData SegmentReference where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.EcsInferenceAcceleratorOverride
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.EcsInferenceAcceleratorOverride where
@@ -93,7 +93,8 @@ instance
   hashWithSalt
     _salt
     EcsInferenceAcceleratorOverride' {..} =
-      _salt `Prelude.hashWithSalt` deviceName
+      _salt
+        `Prelude.hashWithSalt` deviceName
         `Prelude.hashWithSalt` deviceType
 
 instance

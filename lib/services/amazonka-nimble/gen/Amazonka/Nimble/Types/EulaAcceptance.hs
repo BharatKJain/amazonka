@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Nimble.Types.EulaAcceptance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Nimble.Types.EulaAcceptance where
@@ -105,7 +105,8 @@ instance Data.FromJSON EulaAcceptance where
 
 instance Prelude.Hashable EulaAcceptance where
   hashWithSalt _salt EulaAcceptance' {..} =
-    _salt `Prelude.hashWithSalt` acceptedAt
+    _salt
+      `Prelude.hashWithSalt` acceptedAt
       `Prelude.hashWithSalt` acceptedBy
       `Prelude.hashWithSalt` accepteeId
       `Prelude.hashWithSalt` eulaAcceptanceId

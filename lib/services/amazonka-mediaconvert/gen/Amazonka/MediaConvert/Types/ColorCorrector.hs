@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.ColorCorrector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.ColorCorrector where
@@ -251,7 +251,8 @@ instance Data.FromJSON ColorCorrector where
 
 instance Prelude.Hashable ColorCorrector where
   hashWithSalt _salt ColorCorrector' {..} =
-    _salt `Prelude.hashWithSalt` brightness
+    _salt
+      `Prelude.hashWithSalt` brightness
       `Prelude.hashWithSalt` colorSpaceConversion
       `Prelude.hashWithSalt` contrast
       `Prelude.hashWithSalt` hdr10Metadata

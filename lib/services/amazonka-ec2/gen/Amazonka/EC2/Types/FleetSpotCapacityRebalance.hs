@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.FleetSpotCapacityRebalance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.FleetSpotCapacityRebalance where
@@ -140,7 +140,8 @@ instance Data.FromXML FleetSpotCapacityRebalance where
 
 instance Prelude.Hashable FleetSpotCapacityRebalance where
   hashWithSalt _salt FleetSpotCapacityRebalance' {..} =
-    _salt `Prelude.hashWithSalt` replacementStrategy
+    _salt
+      `Prelude.hashWithSalt` replacementStrategy
       `Prelude.hashWithSalt` terminationDelay
 
 instance Prelude.NFData FleetSpotCapacityRebalance where

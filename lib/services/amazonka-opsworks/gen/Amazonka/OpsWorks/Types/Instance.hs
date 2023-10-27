@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.Instance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.Instance where
@@ -587,7 +587,8 @@ instance Data.FromJSON Instance where
             Prelude.<*> (x Data..:? "Arn")
             Prelude.<*> (x Data..:? "AutoScalingType")
             Prelude.<*> (x Data..:? "AvailabilityZone")
-            Prelude.<*> ( x Data..:? "BlockDeviceMappings"
+            Prelude.<*> ( x
+                            Data..:? "BlockDeviceMappings"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CreatedAt")
@@ -615,7 +616,8 @@ instance Data.FromJSON Instance where
             Prelude.<*> (x Data..:? "ReportedOs")
             Prelude.<*> (x Data..:? "RootDeviceType")
             Prelude.<*> (x Data..:? "RootDeviceVolumeId")
-            Prelude.<*> ( x Data..:? "SecurityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "SecurityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SshHostDsaKeyFingerprint")
@@ -630,7 +632,8 @@ instance Data.FromJSON Instance where
 
 instance Prelude.Hashable Instance where
   hashWithSalt _salt Instance' {..} =
-    _salt `Prelude.hashWithSalt` agentVersion
+    _salt
+      `Prelude.hashWithSalt` agentVersion
       `Prelude.hashWithSalt` amiId
       `Prelude.hashWithSalt` architecture
       `Prelude.hashWithSalt` arn

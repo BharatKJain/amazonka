@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glacier.Types.UploadListElement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glacier.Types.UploadListElement where
@@ -114,7 +114,8 @@ instance Data.FromJSON UploadListElement where
 
 instance Prelude.Hashable UploadListElement where
   hashWithSalt _salt UploadListElement' {..} =
-    _salt `Prelude.hashWithSalt` archiveDescription
+    _salt
+      `Prelude.hashWithSalt` archiveDescription
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` multipartUploadId
       `Prelude.hashWithSalt` partSizeInBytes

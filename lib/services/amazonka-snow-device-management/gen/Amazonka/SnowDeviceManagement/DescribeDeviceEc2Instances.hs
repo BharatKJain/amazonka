@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SnowDeviceManagement.DescribeDeviceEc2Instances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest DescribeDeviceEc2Instances where
 
 instance Prelude.Hashable DescribeDeviceEc2Instances where
   hashWithSalt _salt DescribeDeviceEc2Instances' {..} =
-    _salt `Prelude.hashWithSalt` instanceIds
+    _salt
+      `Prelude.hashWithSalt` instanceIds
       `Prelude.hashWithSalt` managedDeviceId
 
 instance Prelude.NFData DescribeDeviceEc2Instances where

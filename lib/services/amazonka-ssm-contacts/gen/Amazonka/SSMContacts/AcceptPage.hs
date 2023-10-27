@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSMContacts.AcceptPage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -170,7 +170,8 @@ instance Core.AWSRequest AcceptPage where
 
 instance Prelude.Hashable AcceptPage where
   hashWithSalt _salt AcceptPage' {..} =
-    _salt `Prelude.hashWithSalt` acceptCodeValidation
+    _salt
+      `Prelude.hashWithSalt` acceptCodeValidation
       `Prelude.hashWithSalt` contactChannelId
       `Prelude.hashWithSalt` note
       `Prelude.hashWithSalt` pageId

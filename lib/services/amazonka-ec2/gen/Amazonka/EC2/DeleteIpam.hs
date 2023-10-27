@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DeleteIpam
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -181,7 +181,8 @@ instance Core.AWSRequest DeleteIpam where
 
 instance Prelude.Hashable DeleteIpam where
   hashWithSalt _salt DeleteIpam' {..} =
-    _salt `Prelude.hashWithSalt` cascade
+    _salt
+      `Prelude.hashWithSalt` cascade
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` ipamId
 

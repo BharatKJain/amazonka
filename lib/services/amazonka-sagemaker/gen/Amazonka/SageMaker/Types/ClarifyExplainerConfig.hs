@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ClarifyExplainerConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ClarifyExplainerConfig where
@@ -98,7 +98,8 @@ instance Data.FromJSON ClarifyExplainerConfig where
 
 instance Prelude.Hashable ClarifyExplainerConfig where
   hashWithSalt _salt ClarifyExplainerConfig' {..} =
-    _salt `Prelude.hashWithSalt` enableExplanations
+    _salt
+      `Prelude.hashWithSalt` enableExplanations
       `Prelude.hashWithSalt` inferenceConfig
       `Prelude.hashWithSalt` shapConfig
 

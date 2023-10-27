@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.IspPlacement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.IspPlacement where
@@ -79,7 +79,8 @@ instance Data.FromJSON IspPlacement where
 
 instance Prelude.Hashable IspPlacement where
   hashWithSalt _salt IspPlacement' {..} =
-    _salt `Prelude.hashWithSalt` ispName
+    _salt
+      `Prelude.hashWithSalt` ispName
       `Prelude.hashWithSalt` placementStatistics
 
 instance Prelude.NFData IspPlacement where

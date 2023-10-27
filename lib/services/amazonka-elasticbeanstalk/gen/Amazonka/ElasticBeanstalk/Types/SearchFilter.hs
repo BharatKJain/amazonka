@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.SearchFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.SearchFilter where
@@ -94,7 +94,8 @@ searchFilter_values = Lens.lens (\SearchFilter' {values} -> values) (\s@SearchFi
 
 instance Prelude.Hashable SearchFilter where
   hashWithSalt _salt SearchFilter' {..} =
-    _salt `Prelude.hashWithSalt` attribute
+    _salt
+      `Prelude.hashWithSalt` attribute
       `Prelude.hashWithSalt` operator
       `Prelude.hashWithSalt` values
 

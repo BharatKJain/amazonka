@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.StreamFile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.StreamFile where
@@ -75,7 +75,8 @@ instance Data.FromJSON StreamFile where
 
 instance Prelude.Hashable StreamFile where
   hashWithSalt _salt StreamFile' {..} =
-    _salt `Prelude.hashWithSalt` fileId
+    _salt
+      `Prelude.hashWithSalt` fileId
       `Prelude.hashWithSalt` s3Location
 
 instance Prelude.NFData StreamFile where

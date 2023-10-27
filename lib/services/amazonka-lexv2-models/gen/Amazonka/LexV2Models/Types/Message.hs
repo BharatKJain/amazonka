@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.Message
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.Message where
@@ -101,7 +101,8 @@ instance Data.FromJSON Message where
 
 instance Prelude.Hashable Message where
   hashWithSalt _salt Message' {..} =
-    _salt `Prelude.hashWithSalt` customPayload
+    _salt
+      `Prelude.hashWithSalt` customPayload
       `Prelude.hashWithSalt` imageResponseCard
       `Prelude.hashWithSalt` plainTextMessage
       `Prelude.hashWithSalt` ssmlMessage

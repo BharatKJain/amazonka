@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ActionExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ActionExecution where
@@ -187,7 +187,8 @@ instance Data.FromJSON ActionExecution where
 
 instance Prelude.Hashable ActionExecution where
   hashWithSalt _salt ActionExecution' {..} =
-    _salt `Prelude.hashWithSalt` actionExecutionId
+    _salt
+      `Prelude.hashWithSalt` actionExecutionId
       `Prelude.hashWithSalt` errorDetails
       `Prelude.hashWithSalt` externalExecutionId
       `Prelude.hashWithSalt` externalExecutionUrl

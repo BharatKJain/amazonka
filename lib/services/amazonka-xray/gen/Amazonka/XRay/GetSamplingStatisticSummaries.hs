@@ -16,7 +16,7 @@
 -- Module      : Amazonka.XRay.GetSamplingStatisticSummaries
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -84,22 +84,22 @@ instance Core.AWSPager GetSamplingStatisticSummaries where
     | Core.stop
         ( rs
             Lens.^? getSamplingStatisticSummariesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getSamplingStatisticSummariesResponse_samplingStatisticSummaries
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getSamplingStatisticSummaries_nextToken
           Lens..~ rs
           Lens.^? getSamplingStatisticSummariesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -115,7 +115,8 @@ instance
       ( \s h x ->
           GetSamplingStatisticSummariesResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "SamplingStatisticSummaries"
+            Prelude.<*> ( x
+                            Data..?> "SamplingStatisticSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

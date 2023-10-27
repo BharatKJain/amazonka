@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsElasticsearchDomainLogPublishingOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsElasticsearchDomainLogPublishingOptions where
@@ -83,8 +83,8 @@ instance
       ( \x ->
           AwsElasticsearchDomainLogPublishingOptions'
             Prelude.<$> (x Data..:? "AuditLogs")
-              Prelude.<*> (x Data..:? "IndexSlowLogs")
-              Prelude.<*> (x Data..:? "SearchSlowLogs")
+            Prelude.<*> (x Data..:? "IndexSlowLogs")
+            Prelude.<*> (x Data..:? "SearchSlowLogs")
       )
 
 instance
@@ -94,7 +94,8 @@ instance
   hashWithSalt
     _salt
     AwsElasticsearchDomainLogPublishingOptions' {..} =
-      _salt `Prelude.hashWithSalt` auditLogs
+      _salt
+        `Prelude.hashWithSalt` auditLogs
         `Prelude.hashWithSalt` indexSlowLogs
         `Prelude.hashWithSalt` searchSlowLogs
 

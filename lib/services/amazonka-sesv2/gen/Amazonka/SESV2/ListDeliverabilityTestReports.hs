@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SESV2.ListDeliverabilityTestReports
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -131,7 +131,8 @@ instance
           ListDeliverabilityTestReportsResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "DeliverabilityTestReports"
+            Prelude.<*> ( x
+                            Data..?> "DeliverabilityTestReports"
                             Core..!@ Prelude.mempty
                         )
       )
@@ -141,7 +142,8 @@ instance
     ListDeliverabilityTestReports
   where
   hashWithSalt _salt ListDeliverabilityTestReports' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` pageSize
 
 instance Prelude.NFData ListDeliverabilityTestReports where

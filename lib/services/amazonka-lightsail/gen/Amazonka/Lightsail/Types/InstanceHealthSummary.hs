@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.InstanceHealthSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.InstanceHealthSummary where
@@ -240,7 +240,8 @@ instance Data.FromJSON InstanceHealthSummary where
 
 instance Prelude.Hashable InstanceHealthSummary where
   hashWithSalt _salt InstanceHealthSummary' {..} =
-    _salt `Prelude.hashWithSalt` instanceHealth
+    _salt
+      `Prelude.hashWithSalt` instanceHealth
       `Prelude.hashWithSalt` instanceHealthReason
       `Prelude.hashWithSalt` instanceName
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppRunner.DeleteObservabilityConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -55,8 +55,9 @@ data DeleteObservabilityConfiguration = DeleteObservabilityConfiguration'
     -- configuration that you want to delete.
     --
     -- The ARN can be a full observability configuration ARN, or a partial ARN
-    -- ending with either @...\/name @ or @...\/name\/revision @. If a revision
-    -- isn\'t specified, the latest active revision is deleted.
+    -- ending with either @...\/@/@name@/@ @ or
+    -- @...\/@/@name@/@\/@/@revision@/@ @. If a revision isn\'t specified, the
+    -- latest active revision is deleted.
     observabilityConfigurationArn :: Prelude.Text
   }
   deriving (Prelude.Eq, Prelude.Read, Prelude.Show, Prelude.Generic)
@@ -73,8 +74,9 @@ data DeleteObservabilityConfiguration = DeleteObservabilityConfiguration'
 -- configuration that you want to delete.
 --
 -- The ARN can be a full observability configuration ARN, or a partial ARN
--- ending with either @...\/name @ or @...\/name\/revision @. If a revision
--- isn\'t specified, the latest active revision is deleted.
+-- ending with either @...\/@/@name@/@ @ or
+-- @...\/@/@name@/@\/@/@revision@/@ @. If a revision isn\'t specified, the
+-- latest active revision is deleted.
 newDeleteObservabilityConfiguration ::
   -- | 'observabilityConfigurationArn'
   Prelude.Text ->
@@ -90,8 +92,9 @@ newDeleteObservabilityConfiguration
 -- configuration that you want to delete.
 --
 -- The ARN can be a full observability configuration ARN, or a partial ARN
--- ending with either @...\/name @ or @...\/name\/revision @. If a revision
--- isn\'t specified, the latest active revision is deleted.
+-- ending with either @...\/@/@name@/@ @ or
+-- @...\/@/@name@/@\/@/@revision@/@ @. If a revision isn\'t specified, the
+-- latest active revision is deleted.
 deleteObservabilityConfiguration_observabilityConfigurationArn :: Lens.Lens' DeleteObservabilityConfiguration Prelude.Text
 deleteObservabilityConfiguration_observabilityConfigurationArn = Lens.lens (\DeleteObservabilityConfiguration' {observabilityConfigurationArn} -> observabilityConfigurationArn) (\s@DeleteObservabilityConfiguration' {} a -> s {observabilityConfigurationArn = a} :: DeleteObservabilityConfiguration)
 

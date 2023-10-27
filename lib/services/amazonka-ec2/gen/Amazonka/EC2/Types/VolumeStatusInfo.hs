@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VolumeStatusInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VolumeStatusInfo where
@@ -68,14 +68,17 @@ volumeStatusInfo_status = Lens.lens (\VolumeStatusInfo' {status} -> status) (\s@
 instance Data.FromXML VolumeStatusInfo where
   parseXML x =
     VolumeStatusInfo'
-      Prelude.<$> ( x Data..@? "details" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "details"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "status")
 
 instance Prelude.Hashable VolumeStatusInfo where
   hashWithSalt _salt VolumeStatusInfo' {..} =
-    _salt `Prelude.hashWithSalt` details
+    _salt
+      `Prelude.hashWithSalt` details
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData VolumeStatusInfo where

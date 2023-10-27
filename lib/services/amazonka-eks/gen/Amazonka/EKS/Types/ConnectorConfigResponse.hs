@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.ConnectorConfigResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.ConnectorConfigResponse where
@@ -111,7 +111,8 @@ instance Data.FromJSON ConnectorConfigResponse where
 
 instance Prelude.Hashable ConnectorConfigResponse where
   hashWithSalt _salt ConnectorConfigResponse' {..} =
-    _salt `Prelude.hashWithSalt` activationCode
+    _salt
+      `Prelude.hashWithSalt` activationCode
       `Prelude.hashWithSalt` activationExpiry
       `Prelude.hashWithSalt` activationId
       `Prelude.hashWithSalt` provider

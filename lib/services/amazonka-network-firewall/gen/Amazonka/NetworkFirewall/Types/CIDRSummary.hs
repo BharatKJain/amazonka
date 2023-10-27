@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.CIDRSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.CIDRSummary where
@@ -84,7 +84,8 @@ instance Data.FromJSON CIDRSummary where
       ( \x ->
           CIDRSummary'
             Prelude.<$> (x Data..:? "AvailableCIDRCount")
-            Prelude.<*> ( x Data..:? "IPSetReferences"
+            Prelude.<*> ( x
+                            Data..:? "IPSetReferences"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "UtilizedCIDRCount")
@@ -92,7 +93,8 @@ instance Data.FromJSON CIDRSummary where
 
 instance Prelude.Hashable CIDRSummary where
   hashWithSalt _salt CIDRSummary' {..} =
-    _salt `Prelude.hashWithSalt` availableCIDRCount
+    _salt
+      `Prelude.hashWithSalt` availableCIDRCount
       `Prelude.hashWithSalt` iPSetReferences
       `Prelude.hashWithSalt` utilizedCIDRCount
 

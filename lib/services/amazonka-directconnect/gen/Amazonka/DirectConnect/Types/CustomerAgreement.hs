@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectConnect.Types.CustomerAgreement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectConnect.Types.CustomerAgreement where
@@ -77,7 +77,8 @@ instance Data.FromJSON CustomerAgreement where
 
 instance Prelude.Hashable CustomerAgreement where
   hashWithSalt _salt CustomerAgreement' {..} =
-    _salt `Prelude.hashWithSalt` agreementName
+    _salt
+      `Prelude.hashWithSalt` agreementName
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData CustomerAgreement where

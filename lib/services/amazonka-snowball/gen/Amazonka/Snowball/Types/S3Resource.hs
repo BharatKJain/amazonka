@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Snowball.Types.S3Resource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Snowball.Types.S3Resource where
@@ -101,14 +101,16 @@ instance Data.FromJSON S3Resource where
           S3Resource'
             Prelude.<$> (x Data..:? "BucketArn")
             Prelude.<*> (x Data..:? "KeyRange")
-            Prelude.<*> ( x Data..:? "TargetOnDeviceServices"
+            Prelude.<*> ( x
+                            Data..:? "TargetOnDeviceServices"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable S3Resource where
   hashWithSalt _salt S3Resource' {..} =
-    _salt `Prelude.hashWithSalt` bucketArn
+    _salt
+      `Prelude.hashWithSalt` bucketArn
       `Prelude.hashWithSalt` keyRange
       `Prelude.hashWithSalt` targetOnDeviceServices
 

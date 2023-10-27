@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.ImportAssetFromApiGatewayApiResponseDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.ImportAssetFromApiGatewayApiResponseDetails where
@@ -189,16 +189,16 @@ instance
       ( \x ->
           ImportAssetFromApiGatewayApiResponseDetails'
             Prelude.<$> (x Data..:? "ApiDescription")
-              Prelude.<*> (x Data..:? "ApiKey")
-              Prelude.<*> (x Data..: "ApiId")
-              Prelude.<*> (x Data..: "ApiName")
-              Prelude.<*> (x Data..: "ApiSpecificationMd5Hash")
-              Prelude.<*> (x Data..: "ApiSpecificationUploadUrl")
-              Prelude.<*> (x Data..: "ApiSpecificationUploadUrlExpiresAt")
-              Prelude.<*> (x Data..: "DataSetId")
-              Prelude.<*> (x Data..: "ProtocolType")
-              Prelude.<*> (x Data..: "RevisionId")
-              Prelude.<*> (x Data..: "Stage")
+            Prelude.<*> (x Data..:? "ApiKey")
+            Prelude.<*> (x Data..: "ApiId")
+            Prelude.<*> (x Data..: "ApiName")
+            Prelude.<*> (x Data..: "ApiSpecificationMd5Hash")
+            Prelude.<*> (x Data..: "ApiSpecificationUploadUrl")
+            Prelude.<*> (x Data..: "ApiSpecificationUploadUrlExpiresAt")
+            Prelude.<*> (x Data..: "DataSetId")
+            Prelude.<*> (x Data..: "ProtocolType")
+            Prelude.<*> (x Data..: "RevisionId")
+            Prelude.<*> (x Data..: "Stage")
       )
 
 instance
@@ -208,7 +208,8 @@ instance
   hashWithSalt
     _salt
     ImportAssetFromApiGatewayApiResponseDetails' {..} =
-      _salt `Prelude.hashWithSalt` apiDescription
+      _salt
+        `Prelude.hashWithSalt` apiDescription
         `Prelude.hashWithSalt` apiKey
         `Prelude.hashWithSalt` apiId
         `Prelude.hashWithSalt` apiName

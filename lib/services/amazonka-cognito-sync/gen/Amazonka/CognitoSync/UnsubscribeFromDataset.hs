@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoSync.UnsubscribeFromDataset
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -143,7 +143,8 @@ instance Core.AWSRequest UnsubscribeFromDataset where
 
 instance Prelude.Hashable UnsubscribeFromDataset where
   hashWithSalt _salt UnsubscribeFromDataset' {..} =
-    _salt `Prelude.hashWithSalt` identityPoolId
+    _salt
+      `Prelude.hashWithSalt` identityPoolId
       `Prelude.hashWithSalt` identityId
       `Prelude.hashWithSalt` datasetName
       `Prelude.hashWithSalt` deviceId

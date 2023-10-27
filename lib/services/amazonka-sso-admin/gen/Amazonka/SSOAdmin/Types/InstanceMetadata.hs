@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSOAdmin.Types.InstanceMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSOAdmin.Types.InstanceMetadata where
@@ -87,7 +87,8 @@ instance Data.FromJSON InstanceMetadata where
 
 instance Prelude.Hashable InstanceMetadata where
   hashWithSalt _salt InstanceMetadata' {..} =
-    _salt `Prelude.hashWithSalt` identityStoreId
+    _salt
+      `Prelude.hashWithSalt` identityStoreId
       `Prelude.hashWithSalt` instanceArn
 
 instance Prelude.NFData InstanceMetadata where

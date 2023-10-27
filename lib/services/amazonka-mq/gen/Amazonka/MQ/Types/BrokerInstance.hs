@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MQ.Types.BrokerInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MQ.Types.BrokerInstance where
@@ -87,7 +87,8 @@ instance Data.FromJSON BrokerInstance where
 
 instance Prelude.Hashable BrokerInstance where
   hashWithSalt _salt BrokerInstance' {..} =
-    _salt `Prelude.hashWithSalt` consoleURL
+    _salt
+      `Prelude.hashWithSalt` consoleURL
       `Prelude.hashWithSalt` endpoints
       `Prelude.hashWithSalt` ipAddress
 

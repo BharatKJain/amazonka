@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ELBV2.CreateRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -139,7 +139,9 @@ instance Core.AWSRequest CreateRule where
       "CreateRuleResult"
       ( \s h x ->
           CreateRuleResponse'
-            Prelude.<$> ( x Data..@? "Rules" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "Rules"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -147,7 +149,8 @@ instance Core.AWSRequest CreateRule where
 
 instance Prelude.Hashable CreateRule where
   hashWithSalt _salt CreateRule' {..} =
-    _salt `Prelude.hashWithSalt` tags
+    _salt
+      `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` listenerArn
       `Prelude.hashWithSalt` conditions
       `Prelude.hashWithSalt` priority

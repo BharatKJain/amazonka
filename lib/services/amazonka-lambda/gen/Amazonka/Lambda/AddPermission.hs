@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lambda.AddPermission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -328,7 +328,8 @@ instance Core.AWSRequest AddPermission where
 
 instance Prelude.Hashable AddPermission where
   hashWithSalt _salt AddPermission' {..} =
-    _salt `Prelude.hashWithSalt` eventSourceToken
+    _salt
+      `Prelude.hashWithSalt` eventSourceToken
       `Prelude.hashWithSalt` functionUrlAuthType
       `Prelude.hashWithSalt` principalOrgID
       `Prelude.hashWithSalt` qualifier

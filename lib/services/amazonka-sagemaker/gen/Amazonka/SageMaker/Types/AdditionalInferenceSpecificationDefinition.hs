@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.AdditionalInferenceSpecificationDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.AdditionalInferenceSpecificationDefinition where
@@ -150,18 +150,21 @@ instance
       ( \x ->
           AdditionalInferenceSpecificationDefinition'
             Prelude.<$> (x Data..:? "Description")
-              Prelude.<*> ( x Data..:? "SupportedContentTypes"
-                              Data..!= Prelude.mempty
-                          )
-              Prelude.<*> ( x Data..:? "SupportedRealtimeInferenceInstanceTypes"
-                              Data..!= Prelude.mempty
-                          )
-              Prelude.<*> ( x Data..:? "SupportedResponseMIMETypes"
-                              Data..!= Prelude.mempty
-                          )
-              Prelude.<*> (x Data..:? "SupportedTransformInstanceTypes")
-              Prelude.<*> (x Data..: "Name")
-              Prelude.<*> (x Data..: "Containers")
+            Prelude.<*> ( x
+                            Data..:? "SupportedContentTypes"
+                            Data..!= Prelude.mempty
+                        )
+            Prelude.<*> ( x
+                            Data..:? "SupportedRealtimeInferenceInstanceTypes"
+                            Data..!= Prelude.mempty
+                        )
+            Prelude.<*> ( x
+                            Data..:? "SupportedResponseMIMETypes"
+                            Data..!= Prelude.mempty
+                        )
+            Prelude.<*> (x Data..:? "SupportedTransformInstanceTypes")
+            Prelude.<*> (x Data..: "Name")
+            Prelude.<*> (x Data..: "Containers")
       )
 
 instance
@@ -171,7 +174,8 @@ instance
   hashWithSalt
     _salt
     AdditionalInferenceSpecificationDefinition' {..} =
-      _salt `Prelude.hashWithSalt` description
+      _salt
+        `Prelude.hashWithSalt` description
         `Prelude.hashWithSalt` supportedContentTypes
         `Prelude.hashWithSalt` supportedRealtimeInferenceInstanceTypes
         `Prelude.hashWithSalt` supportedResponseMIMETypes

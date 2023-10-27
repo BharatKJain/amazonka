@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.ValidStorageOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.ValidStorageOptions where
@@ -136,21 +136,28 @@ validStorageOptions_supportsStorageAutoscaling = Lens.lens (\ValidStorageOptions
 instance Data.FromXML ValidStorageOptions where
   parseXML x =
     ValidStorageOptions'
-      Prelude.<$> ( x Data..@? "IopsToStorageRatio"
+      Prelude.<$> ( x
+                      Data..@? "IopsToStorageRatio"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "DoubleRange")
                   )
-      Prelude.<*> ( x Data..@? "ProvisionedIops" Core..!@ Prelude.mempty
-                      Prelude.>>= Core.may (Data.parseXMLList "Range")
-                  )
-      Prelude.<*> ( x Data..@? "ProvisionedStorageThroughput"
+      Prelude.<*> ( x
+                      Data..@? "ProvisionedIops"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Range")
                   )
-      Prelude.<*> ( x Data..@? "StorageSize" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "ProvisionedStorageThroughput"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Range")
                   )
-      Prelude.<*> ( x Data..@? "StorageThroughputToIopsRatio"
+      Prelude.<*> ( x
+                      Data..@? "StorageSize"
+                      Core..!@ Prelude.mempty
+                      Prelude.>>= Core.may (Data.parseXMLList "Range")
+                  )
+      Prelude.<*> ( x
+                      Data..@? "StorageThroughputToIopsRatio"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "DoubleRange")
                   )
@@ -159,7 +166,8 @@ instance Data.FromXML ValidStorageOptions where
 
 instance Prelude.Hashable ValidStorageOptions where
   hashWithSalt _salt ValidStorageOptions' {..} =
-    _salt `Prelude.hashWithSalt` iopsToStorageRatio
+    _salt
+      `Prelude.hashWithSalt` iopsToStorageRatio
       `Prelude.hashWithSalt` provisionedIops
       `Prelude.hashWithSalt` provisionedStorageThroughput
       `Prelude.hashWithSalt` storageSize

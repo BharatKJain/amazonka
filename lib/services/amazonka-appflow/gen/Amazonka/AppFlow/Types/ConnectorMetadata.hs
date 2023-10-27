@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.ConnectorMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.ConnectorMetadata where
@@ -285,7 +285,8 @@ instance Data.FromJSON ConnectorMetadata where
 
 instance Prelude.Hashable ConnectorMetadata where
   hashWithSalt _salt ConnectorMetadata' {..} =
-    _salt `Prelude.hashWithSalt` amplitude
+    _salt
+      `Prelude.hashWithSalt` amplitude
       `Prelude.hashWithSalt` customerProfiles
       `Prelude.hashWithSalt` datadog
       `Prelude.hashWithSalt` dynatrace

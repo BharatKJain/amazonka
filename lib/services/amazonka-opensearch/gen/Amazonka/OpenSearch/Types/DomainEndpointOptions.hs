@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.DomainEndpointOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.DomainEndpointOptions where
@@ -136,7 +136,8 @@ instance Data.FromJSON DomainEndpointOptions where
 
 instance Prelude.Hashable DomainEndpointOptions where
   hashWithSalt _salt DomainEndpointOptions' {..} =
-    _salt `Prelude.hashWithSalt` customEndpoint
+    _salt
+      `Prelude.hashWithSalt` customEndpoint
       `Prelude.hashWithSalt` customEndpointCertificateArn
       `Prelude.hashWithSalt` customEndpointEnabled
       `Prelude.hashWithSalt` enforceHTTPS

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.DolbyVision
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.DolbyVision where
@@ -140,7 +140,8 @@ instance Data.FromJSON DolbyVision where
 
 instance Prelude.Hashable DolbyVision where
   hashWithSalt _salt DolbyVision' {..} =
-    _salt `Prelude.hashWithSalt` l6Metadata
+    _salt
+      `Prelude.hashWithSalt` l6Metadata
       `Prelude.hashWithSalt` l6Mode
       `Prelude.hashWithSalt` mapping
       `Prelude.hashWithSalt` profile

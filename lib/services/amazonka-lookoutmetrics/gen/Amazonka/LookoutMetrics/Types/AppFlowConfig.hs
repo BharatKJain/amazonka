@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.AppFlowConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.AppFlowConfig where
@@ -77,7 +77,8 @@ instance Data.FromJSON AppFlowConfig where
 
 instance Prelude.Hashable AppFlowConfig where
   hashWithSalt _salt AppFlowConfig' {..} =
-    _salt `Prelude.hashWithSalt` flowName
+    _salt
+      `Prelude.hashWithSalt` flowName
       `Prelude.hashWithSalt` roleArn
 
 instance Prelude.NFData AppFlowConfig where

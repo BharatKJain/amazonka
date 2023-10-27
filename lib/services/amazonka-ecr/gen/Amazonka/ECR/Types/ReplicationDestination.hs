@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECR.Types.ReplicationDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECR.Types.ReplicationDestination where
@@ -84,7 +84,8 @@ instance Data.FromJSON ReplicationDestination where
 
 instance Prelude.Hashable ReplicationDestination where
   hashWithSalt _salt ReplicationDestination' {..} =
-    _salt `Prelude.hashWithSalt` region
+    _salt
+      `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` registryId
 
 instance Prelude.NFData ReplicationDestination where

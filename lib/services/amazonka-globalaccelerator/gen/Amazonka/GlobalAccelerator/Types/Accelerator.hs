@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GlobalAccelerator.Types.Accelerator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GlobalAccelerator.Types.Accelerator where
@@ -282,7 +282,8 @@ instance Data.FromJSON Accelerator where
 
 instance Prelude.Hashable Accelerator where
   hashWithSalt _salt Accelerator' {..} =
-    _salt `Prelude.hashWithSalt` acceleratorArn
+    _salt
+      `Prelude.hashWithSalt` acceleratorArn
       `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` dnsName
       `Prelude.hashWithSalt` dualStackDnsName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.CreateConnectionOAuthRequestParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.CreateConnectionOAuthRequestParameters where
@@ -111,7 +111,8 @@ instance
   hashWithSalt
     _salt
     CreateConnectionOAuthRequestParameters' {..} =
-      _salt `Prelude.hashWithSalt` oAuthHttpParameters
+      _salt
+        `Prelude.hashWithSalt` oAuthHttpParameters
         `Prelude.hashWithSalt` clientParameters
         `Prelude.hashWithSalt` authorizationEndpoint
         `Prelude.hashWithSalt` httpMethod

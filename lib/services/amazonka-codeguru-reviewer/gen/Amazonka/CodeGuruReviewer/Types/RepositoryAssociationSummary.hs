@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.RepositoryAssociationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.RepositoryAssociationSummary where
@@ -277,7 +277,8 @@ instance
     RepositoryAssociationSummary
   where
   hashWithSalt _salt RepositoryAssociationSummary' {..} =
-    _salt `Prelude.hashWithSalt` associationArn
+    _salt
+      `Prelude.hashWithSalt` associationArn
       `Prelude.hashWithSalt` associationId
       `Prelude.hashWithSalt` connectionArn
       `Prelude.hashWithSalt` lastUpdatedTimeStamp

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.OpsItemEventSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.OpsItemEventSummary where
@@ -126,7 +126,8 @@ instance Data.FromJSON OpsItemEventSummary where
 
 instance Prelude.Hashable OpsItemEventSummary where
   hashWithSalt _salt OpsItemEventSummary' {..} =
-    _salt `Prelude.hashWithSalt` createdBy
+    _salt
+      `Prelude.hashWithSalt` createdBy
       `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` detail
       `Prelude.hashWithSalt` detailType

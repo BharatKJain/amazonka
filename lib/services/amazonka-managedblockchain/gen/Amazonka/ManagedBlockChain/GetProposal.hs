@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ManagedBlockChain.GetProposal
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest GetProposal where
 
 instance Prelude.Hashable GetProposal where
   hashWithSalt _salt GetProposal' {..} =
-    _salt `Prelude.hashWithSalt` networkId
+    _salt
+      `Prelude.hashWithSalt` networkId
       `Prelude.hashWithSalt` proposalId
 
 instance Prelude.NFData GetProposal where

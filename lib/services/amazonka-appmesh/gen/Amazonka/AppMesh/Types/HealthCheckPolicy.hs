@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.HealthCheckPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.HealthCheckPolicy where
@@ -165,7 +165,8 @@ instance Data.FromJSON HealthCheckPolicy where
 
 instance Prelude.Hashable HealthCheckPolicy where
   hashWithSalt _salt HealthCheckPolicy' {..} =
-    _salt `Prelude.hashWithSalt` path
+    _salt
+      `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` port
       `Prelude.hashWithSalt` healthyThreshold
       `Prelude.hashWithSalt` intervalMillis

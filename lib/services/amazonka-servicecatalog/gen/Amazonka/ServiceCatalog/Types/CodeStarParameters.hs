@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.CodeStarParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.CodeStarParameters where
@@ -116,7 +116,8 @@ instance Data.FromJSON CodeStarParameters where
 
 instance Prelude.Hashable CodeStarParameters where
   hashWithSalt _salt CodeStarParameters' {..} =
-    _salt `Prelude.hashWithSalt` connectionArn
+    _salt
+      `Prelude.hashWithSalt` connectionArn
       `Prelude.hashWithSalt` repository
       `Prelude.hashWithSalt` branch
       `Prelude.hashWithSalt` artifactPath

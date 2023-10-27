@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FSx.RestoreVolumeFromSnapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -154,7 +154,8 @@ instance Core.AWSRequest RestoreVolumeFromSnapshot where
     Response.receiveJSON
       ( \s h x ->
           RestoreVolumeFromSnapshotResponse'
-            Prelude.<$> ( x Data..?> "AdministrativeActions"
+            Prelude.<$> ( x
+                            Data..?> "AdministrativeActions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "Lifecycle")
@@ -164,7 +165,8 @@ instance Core.AWSRequest RestoreVolumeFromSnapshot where
 
 instance Prelude.Hashable RestoreVolumeFromSnapshot where
   hashWithSalt _salt RestoreVolumeFromSnapshot' {..} =
-    _salt `Prelude.hashWithSalt` clientRequestToken
+    _salt
+      `Prelude.hashWithSalt` clientRequestToken
       `Prelude.hashWithSalt` options
       `Prelude.hashWithSalt` volumeId
       `Prelude.hashWithSalt` snapshotId

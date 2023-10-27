@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.EyeOpen
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.EyeOpen where
@@ -75,7 +75,8 @@ instance Data.FromJSON EyeOpen where
 
 instance Prelude.Hashable EyeOpen where
   hashWithSalt _salt EyeOpen' {..} =
-    _salt `Prelude.hashWithSalt` confidence
+    _salt
+      `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData EyeOpen where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ModelDataQuality
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ModelDataQuality where
@@ -75,7 +75,8 @@ instance Data.FromJSON ModelDataQuality where
 
 instance Prelude.Hashable ModelDataQuality where
   hashWithSalt _salt ModelDataQuality' {..} =
-    _salt `Prelude.hashWithSalt` constraints
+    _salt
+      `Prelude.hashWithSalt` constraints
       `Prelude.hashWithSalt` statistics
 
 instance Prelude.NFData ModelDataQuality where

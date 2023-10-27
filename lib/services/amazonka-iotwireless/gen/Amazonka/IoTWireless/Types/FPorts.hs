@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.FPorts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.FPorts where
@@ -109,7 +109,8 @@ instance Data.FromJSON FPorts where
 
 instance Prelude.Hashable FPorts where
   hashWithSalt _salt FPorts' {..} =
-    _salt `Prelude.hashWithSalt` applications
+    _salt
+      `Prelude.hashWithSalt` applications
       `Prelude.hashWithSalt` clockSync
       `Prelude.hashWithSalt` fuota
       `Prelude.hashWithSalt` multicast

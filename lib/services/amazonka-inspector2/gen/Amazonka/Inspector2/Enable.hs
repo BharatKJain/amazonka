@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Inspector2.Enable
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance Core.AWSRequest Enable where
 
 instance Prelude.Hashable Enable where
   hashWithSalt _salt Enable' {..} =
-    _salt `Prelude.hashWithSalt` accountIds
+    _salt
+      `Prelude.hashWithSalt` accountIds
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` resourceTypes
 

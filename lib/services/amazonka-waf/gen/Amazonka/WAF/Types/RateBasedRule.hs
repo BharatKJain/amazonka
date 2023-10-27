@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.RateBasedRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.RateBasedRule where
@@ -198,7 +198,8 @@ instance Data.FromJSON RateBasedRule where
             Prelude.<$> (x Data..:? "MetricName")
             Prelude.<*> (x Data..:? "Name")
             Prelude.<*> (x Data..: "RuleId")
-            Prelude.<*> ( x Data..:? "MatchPredicates"
+            Prelude.<*> ( x
+                            Data..:? "MatchPredicates"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "RateKey")
@@ -207,7 +208,8 @@ instance Data.FromJSON RateBasedRule where
 
 instance Prelude.Hashable RateBasedRule where
   hashWithSalt _salt RateBasedRule' {..} =
-    _salt `Prelude.hashWithSalt` metricName
+    _salt
+      `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` ruleId
       `Prelude.hashWithSalt` matchPredicates

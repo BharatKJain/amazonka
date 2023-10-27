@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.CreateProvisioningTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -226,7 +226,8 @@ instance Core.AWSRequest CreateProvisioningTemplate where
 
 instance Prelude.Hashable CreateProvisioningTemplate where
   hashWithSalt _salt CreateProvisioningTemplate' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` preProvisioningHook
       `Prelude.hashWithSalt` tags

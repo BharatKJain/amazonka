@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.AutoScalingDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.AutoScalingDescription where
@@ -110,7 +110,8 @@ instance Data.FromJSON AutoScalingDescription where
 
 instance Prelude.Hashable AutoScalingDescription where
   hashWithSalt _salt AutoScalingDescription' {..} =
-    _salt `Prelude.hashWithSalt` maxWorkerCount
+    _salt
+      `Prelude.hashWithSalt` maxWorkerCount
       `Prelude.hashWithSalt` mcuCount
       `Prelude.hashWithSalt` minWorkerCount
       `Prelude.hashWithSalt` scaleInPolicy

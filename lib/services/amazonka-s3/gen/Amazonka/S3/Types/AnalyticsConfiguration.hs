@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.AnalyticsConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.AnalyticsConfiguration where
@@ -100,7 +100,8 @@ instance Data.FromXML AnalyticsConfiguration where
 
 instance Prelude.Hashable AnalyticsConfiguration where
   hashWithSalt _salt AnalyticsConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` storageClassAnalysis
 

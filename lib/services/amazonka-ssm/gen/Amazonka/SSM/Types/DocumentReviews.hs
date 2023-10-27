@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.DocumentReviews
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.DocumentReviews where
@@ -71,7 +71,8 @@ documentReviews_action = Lens.lens (\DocumentReviews' {action} -> action) (\s@Do
 
 instance Prelude.Hashable DocumentReviews where
   hashWithSalt _salt DocumentReviews' {..} =
-    _salt `Prelude.hashWithSalt` comment
+    _salt
+      `Prelude.hashWithSalt` comment
       `Prelude.hashWithSalt` action
 
 instance Prelude.NFData DocumentReviews where

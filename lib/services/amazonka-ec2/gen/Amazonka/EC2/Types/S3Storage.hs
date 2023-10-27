@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.S3Storage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.S3Storage where
@@ -128,7 +128,8 @@ instance Data.FromXML S3Storage where
 
 instance Prelude.Hashable S3Storage where
   hashWithSalt _salt S3Storage' {..} =
-    _salt `Prelude.hashWithSalt` aWSAccessKeyId
+    _salt
+      `Prelude.hashWithSalt` aWSAccessKeyId
       `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` prefix
       `Prelude.hashWithSalt` uploadPolicy

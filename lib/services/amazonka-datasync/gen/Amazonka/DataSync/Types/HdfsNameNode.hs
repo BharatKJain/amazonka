@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataSync.Types.HdfsNameNode
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataSync.Types.HdfsNameNode where
@@ -88,7 +88,8 @@ instance Data.FromJSON HdfsNameNode where
 
 instance Prelude.Hashable HdfsNameNode where
   hashWithSalt _salt HdfsNameNode' {..} =
-    _salt `Prelude.hashWithSalt` hostname
+    _salt
+      `Prelude.hashWithSalt` hostname
       `Prelude.hashWithSalt` port
 
 instance Prelude.NFData HdfsNameNode where

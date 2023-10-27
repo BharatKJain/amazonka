@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.SavingsPlansDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.SavingsPlansDetails where
@@ -94,7 +94,8 @@ instance Data.FromJSON SavingsPlansDetails where
 
 instance Prelude.Hashable SavingsPlansDetails where
   hashWithSalt _salt SavingsPlansDetails' {..} =
-    _salt `Prelude.hashWithSalt` instanceFamily
+    _salt
+      `Prelude.hashWithSalt` instanceFamily
       `Prelude.hashWithSalt` offeringId
       `Prelude.hashWithSalt` region
 

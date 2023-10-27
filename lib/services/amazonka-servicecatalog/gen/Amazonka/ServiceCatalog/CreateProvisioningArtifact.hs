@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.CreateProvisioningArtifact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -167,7 +167,8 @@ instance Core.AWSRequest CreateProvisioningArtifact where
 
 instance Prelude.Hashable CreateProvisioningArtifact where
   hashWithSalt _salt CreateProvisioningArtifact' {..} =
-    _salt `Prelude.hashWithSalt` acceptLanguage
+    _salt
+      `Prelude.hashWithSalt` acceptLanguage
       `Prelude.hashWithSalt` productId
       `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` idempotencyToken

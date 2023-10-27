@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.NetworkConnectionAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.NetworkConnectionAction where
@@ -129,7 +129,8 @@ instance Data.FromJSON NetworkConnectionAction where
 
 instance Prelude.Hashable NetworkConnectionAction where
   hashWithSalt _salt NetworkConnectionAction' {..} =
-    _salt `Prelude.hashWithSalt` blocked
+    _salt
+      `Prelude.hashWithSalt` blocked
       `Prelude.hashWithSalt` connectionDirection
       `Prelude.hashWithSalt` localIpDetails
       `Prelude.hashWithSalt` localPortDetails

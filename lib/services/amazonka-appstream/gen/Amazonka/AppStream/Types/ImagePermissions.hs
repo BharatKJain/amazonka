@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.ImagePermissions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.ImagePermissions where
@@ -74,7 +74,8 @@ instance Data.FromJSON ImagePermissions where
 
 instance Prelude.Hashable ImagePermissions where
   hashWithSalt _salt ImagePermissions' {..} =
-    _salt `Prelude.hashWithSalt` allowFleet
+    _salt
+      `Prelude.hashWithSalt` allowFleet
       `Prelude.hashWithSalt` allowImageBuilder
 
 instance Prelude.NFData ImagePermissions where

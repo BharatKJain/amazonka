@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.PanelTitleOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.PanelTitleOptions where
@@ -88,7 +88,8 @@ instance Data.FromJSON PanelTitleOptions where
 
 instance Prelude.Hashable PanelTitleOptions where
   hashWithSalt _salt PanelTitleOptions' {..} =
-    _salt `Prelude.hashWithSalt` fontConfiguration
+    _salt
+      `Prelude.hashWithSalt` fontConfiguration
       `Prelude.hashWithSalt` horizontalTextAlignment
       `Prelude.hashWithSalt` visibility
 

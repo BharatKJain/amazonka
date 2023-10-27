@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.SourceKeyword
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.SourceKeyword where
@@ -217,7 +217,8 @@ instance Data.FromJSON SourceKeyword where
 
 instance Prelude.Hashable SourceKeyword where
   hashWithSalt _salt SourceKeyword' {..} =
-    _salt `Prelude.hashWithSalt` keywordInputType
+    _salt
+      `Prelude.hashWithSalt` keywordInputType
       `Prelude.hashWithSalt` keywordValue
 
 instance Prelude.NFData SourceKeyword where

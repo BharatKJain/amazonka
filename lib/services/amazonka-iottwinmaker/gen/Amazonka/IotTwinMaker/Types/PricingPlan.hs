@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.PricingPlan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.PricingPlan where
@@ -130,7 +130,8 @@ instance Data.FromJSON PricingPlan where
 
 instance Prelude.Hashable PricingPlan where
   hashWithSalt _salt PricingPlan' {..} =
-    _salt `Prelude.hashWithSalt` billableEntityCount
+    _salt
+      `Prelude.hashWithSalt` billableEntityCount
       `Prelude.hashWithSalt` bundleInformation
       `Prelude.hashWithSalt` effectiveDateTime
       `Prelude.hashWithSalt` pricingMode

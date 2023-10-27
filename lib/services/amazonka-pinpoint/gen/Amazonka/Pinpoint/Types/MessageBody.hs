@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.MessageBody
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.MessageBody where
@@ -74,7 +74,8 @@ instance Data.FromJSON MessageBody where
 
 instance Prelude.Hashable MessageBody where
   hashWithSalt _salt MessageBody' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` requestID
 
 instance Prelude.NFData MessageBody where

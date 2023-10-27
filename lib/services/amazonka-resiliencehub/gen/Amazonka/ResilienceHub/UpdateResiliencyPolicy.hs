@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ResilienceHub.UpdateResiliencyPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -167,7 +167,8 @@ instance Core.AWSRequest UpdateResiliencyPolicy where
 
 instance Prelude.Hashable UpdateResiliencyPolicy where
   hashWithSalt _salt UpdateResiliencyPolicy' {..} =
-    _salt `Prelude.hashWithSalt` dataLocationConstraint
+    _salt
+      `Prelude.hashWithSalt` dataLocationConstraint
       `Prelude.hashWithSalt` policy
       `Prelude.hashWithSalt` policyDescription
       `Prelude.hashWithSalt` policyName

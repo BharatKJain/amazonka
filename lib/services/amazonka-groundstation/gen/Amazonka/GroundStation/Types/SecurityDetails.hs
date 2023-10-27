@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.SecurityDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.SecurityDetails where
@@ -83,7 +83,8 @@ instance Data.FromJSON SecurityDetails where
       ( \x ->
           SecurityDetails'
             Prelude.<$> (x Data..: "roleArn")
-            Prelude.<*> ( x Data..:? "securityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "securityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "subnetIds" Data..!= Prelude.mempty)
@@ -91,7 +92,8 @@ instance Data.FromJSON SecurityDetails where
 
 instance Prelude.Hashable SecurityDetails where
   hashWithSalt _salt SecurityDetails' {..} =
-    _salt `Prelude.hashWithSalt` roleArn
+    _salt
+      `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` securityGroupIds
       `Prelude.hashWithSalt` subnetIds
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EMR.PutAutoTerminationPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest PutAutoTerminationPolicy where
 
 instance Prelude.Hashable PutAutoTerminationPolicy where
   hashWithSalt _salt PutAutoTerminationPolicy' {..} =
-    _salt `Prelude.hashWithSalt` autoTerminationPolicy
+    _salt
+      `Prelude.hashWithSalt` autoTerminationPolicy
       `Prelude.hashWithSalt` clusterId
 
 instance Prelude.NFData PutAutoTerminationPolicy where

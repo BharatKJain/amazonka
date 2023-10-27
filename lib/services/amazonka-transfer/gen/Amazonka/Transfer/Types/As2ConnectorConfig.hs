@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.As2ConnectorConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.As2ConnectorConfig where
@@ -177,7 +177,8 @@ instance Data.FromJSON As2ConnectorConfig where
 
 instance Prelude.Hashable As2ConnectorConfig where
   hashWithSalt _salt As2ConnectorConfig' {..} =
-    _salt `Prelude.hashWithSalt` compression
+    _salt
+      `Prelude.hashWithSalt` compression
       `Prelude.hashWithSalt` encryptionAlgorithm
       `Prelude.hashWithSalt` localProfileId
       `Prelude.hashWithSalt` mdnResponse

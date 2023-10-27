@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.ComplianceExecutionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.ComplianceExecutionSummary where
@@ -100,7 +100,8 @@ instance Data.FromJSON ComplianceExecutionSummary where
 
 instance Prelude.Hashable ComplianceExecutionSummary where
   hashWithSalt _salt ComplianceExecutionSummary' {..} =
-    _salt `Prelude.hashWithSalt` executionId
+    _salt
+      `Prelude.hashWithSalt` executionId
       `Prelude.hashWithSalt` executionType
       `Prelude.hashWithSalt` executionTime
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.DeleteContactFlowModule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest DeleteContactFlowModule where
 
 instance Prelude.Hashable DeleteContactFlowModule where
   hashWithSalt _salt DeleteContactFlowModule' {..} =
-    _salt `Prelude.hashWithSalt` instanceId
+    _salt
+      `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` contactFlowModuleId
 
 instance Prelude.NFData DeleteContactFlowModule where

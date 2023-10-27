@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.LanguageModel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.LanguageModel where
@@ -263,7 +263,8 @@ instance Data.FromJSON LanguageModel where
 
 instance Prelude.Hashable LanguageModel where
   hashWithSalt _salt LanguageModel' {..} =
-    _salt `Prelude.hashWithSalt` baseModelName
+    _salt
+      `Prelude.hashWithSalt` baseModelName
       `Prelude.hashWithSalt` createTime
       `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` inputDataConfig

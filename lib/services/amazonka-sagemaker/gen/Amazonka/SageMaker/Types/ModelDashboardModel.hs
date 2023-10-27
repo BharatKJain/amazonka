@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ModelDashboardModel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ModelDashboardModel where
@@ -103,14 +103,16 @@ instance Data.FromJSON ModelDashboardModel where
             Prelude.<*> (x Data..:? "LastBatchTransformJob")
             Prelude.<*> (x Data..:? "Model")
             Prelude.<*> (x Data..:? "ModelCard")
-            Prelude.<*> ( x Data..:? "MonitoringSchedules"
+            Prelude.<*> ( x
+                            Data..:? "MonitoringSchedules"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ModelDashboardModel where
   hashWithSalt _salt ModelDashboardModel' {..} =
-    _salt `Prelude.hashWithSalt` endpoints
+    _salt
+      `Prelude.hashWithSalt` endpoints
       `Prelude.hashWithSalt` lastBatchTransformJob
       `Prelude.hashWithSalt` model
       `Prelude.hashWithSalt` modelCard

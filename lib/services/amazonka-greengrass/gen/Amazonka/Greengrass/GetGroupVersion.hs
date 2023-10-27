@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Greengrass.GetGroupVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,7 +127,8 @@ instance Core.AWSRequest GetGroupVersion where
 
 instance Prelude.Hashable GetGroupVersion where
   hashWithSalt _salt GetGroupVersion' {..} =
-    _salt `Prelude.hashWithSalt` groupVersionId
+    _salt
+      `Prelude.hashWithSalt` groupVersionId
       `Prelude.hashWithSalt` groupId
 
 instance Prelude.NFData GetGroupVersion where

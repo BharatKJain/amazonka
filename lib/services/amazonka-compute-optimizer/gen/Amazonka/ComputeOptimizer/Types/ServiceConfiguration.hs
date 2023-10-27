@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.ServiceConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.ServiceConfiguration where
@@ -156,7 +156,8 @@ instance Data.FromJSON ServiceConfiguration where
       ( \x ->
           ServiceConfiguration'
             Prelude.<$> (x Data..:? "autoScalingConfiguration")
-            Prelude.<*> ( x Data..:? "containerConfigurations"
+            Prelude.<*> ( x
+                            Data..:? "containerConfigurations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "cpu")

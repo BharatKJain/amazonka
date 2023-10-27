@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.TagOptionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.TagOptionSummary where
@@ -74,7 +74,8 @@ instance Data.FromJSON TagOptionSummary where
 
 instance Prelude.Hashable TagOptionSummary where
   hashWithSalt _salt TagOptionSummary' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData TagOptionSummary where

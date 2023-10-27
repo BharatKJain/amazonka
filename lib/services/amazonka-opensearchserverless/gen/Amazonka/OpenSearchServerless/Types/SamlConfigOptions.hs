@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearchServerless.Types.SamlConfigOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearchServerless.Types.SamlConfigOptions where
@@ -101,7 +101,8 @@ instance Data.FromJSON SamlConfigOptions where
 
 instance Prelude.Hashable SamlConfigOptions where
   hashWithSalt _salt SamlConfigOptions' {..} =
-    _salt `Prelude.hashWithSalt` groupAttribute
+    _salt
+      `Prelude.hashWithSalt` groupAttribute
       `Prelude.hashWithSalt` sessionTimeout
       `Prelude.hashWithSalt` userAttribute
       `Prelude.hashWithSalt` metadata

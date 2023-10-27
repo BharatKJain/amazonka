@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerA2IRuntime.Types.HumanLoopSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerA2IRuntime.Types.HumanLoopSummary where
@@ -111,7 +111,8 @@ instance Data.FromJSON HumanLoopSummary where
 
 instance Prelude.Hashable HumanLoopSummary where
   hashWithSalt _salt HumanLoopSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` flowDefinitionArn
       `Prelude.hashWithSalt` humanLoopName

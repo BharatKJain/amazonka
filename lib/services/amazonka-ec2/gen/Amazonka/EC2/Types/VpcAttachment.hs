@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VpcAttachment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VpcAttachment where
@@ -67,11 +67,13 @@ vpcAttachment_vpcId = Lens.lens (\VpcAttachment' {vpcId} -> vpcId) (\s@VpcAttach
 instance Data.FromXML VpcAttachment where
   parseXML x =
     VpcAttachment'
-      Prelude.<$> (x Data..@? "state") Prelude.<*> (x Data..@? "vpcId")
+      Prelude.<$> (x Data..@? "state")
+      Prelude.<*> (x Data..@? "vpcId")
 
 instance Prelude.Hashable VpcAttachment where
   hashWithSalt _salt VpcAttachment' {..} =
-    _salt `Prelude.hashWithSalt` state
+    _salt
+      `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` vpcId
 
 instance Prelude.NFData VpcAttachment where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CustomerProfiles.Types.ListWorkflowsItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CustomerProfiles.Types.ListWorkflowsItem where
@@ -134,7 +134,8 @@ instance Data.FromJSON ListWorkflowsItem where
 
 instance Prelude.Hashable ListWorkflowsItem where
   hashWithSalt _salt ListWorkflowsItem' {..} =
-    _salt `Prelude.hashWithSalt` workflowType
+    _salt
+      `Prelude.hashWithSalt` workflowType
       `Prelude.hashWithSalt` workflowId
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` statusDescription

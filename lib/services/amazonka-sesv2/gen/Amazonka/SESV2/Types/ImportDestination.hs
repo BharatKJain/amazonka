@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.ImportDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.ImportDestination where
@@ -84,7 +84,8 @@ instance Data.FromJSON ImportDestination where
 
 instance Prelude.Hashable ImportDestination where
   hashWithSalt _salt ImportDestination' {..} =
-    _salt `Prelude.hashWithSalt` contactListDestination
+    _salt
+      `Prelude.hashWithSalt` contactListDestination
       `Prelude.hashWithSalt` suppressionListDestination
 
 instance Prelude.NFData ImportDestination where

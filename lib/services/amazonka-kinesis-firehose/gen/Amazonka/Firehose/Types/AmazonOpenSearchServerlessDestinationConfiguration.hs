@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.AmazonOpenSearchServerlessDestinationConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.AmazonOpenSearchServerlessDestinationConfiguration where
@@ -198,7 +198,8 @@ instance
   hashWithSalt
     _salt
     AmazonOpenSearchServerlessDestinationConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` bufferingHints
+      _salt
+        `Prelude.hashWithSalt` bufferingHints
         `Prelude.hashWithSalt` cloudWatchLoggingOptions
         `Prelude.hashWithSalt` collectionEndpoint
         `Prelude.hashWithSalt` processingConfiguration

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.TumblingWindow
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.TumblingWindow where
@@ -259,7 +259,8 @@ instance Data.FromJSON TumblingWindow where
 
 instance Prelude.Hashable TumblingWindow where
   hashWithSalt _salt TumblingWindow' {..} =
-    _salt `Prelude.hashWithSalt` offset
+    _salt
+      `Prelude.hashWithSalt` offset
       `Prelude.hashWithSalt` interval
 
 instance Prelude.NFData TumblingWindow where

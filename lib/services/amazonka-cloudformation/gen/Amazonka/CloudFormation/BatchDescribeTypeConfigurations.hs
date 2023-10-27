@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFormation.BatchDescribeTypeConfigurations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,14 +100,18 @@ instance
       "BatchDescribeTypeConfigurationsResult"
       ( \s h x ->
           BatchDescribeTypeConfigurationsResponse'
-            Prelude.<$> ( x Data..@? "Errors" Core..!@ Prelude.mempty
-                            Prelude.>>= Core.may (Data.parseXMLList "member")
-                        )
-            Prelude.<*> ( x Data..@? "TypeConfigurations"
+            Prelude.<$> ( x
+                            Data..@? "Errors"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
-            Prelude.<*> ( x Data..@? "UnprocessedTypeConfigurations"
+            Prelude.<*> ( x
+                            Data..@? "TypeConfigurations"
+                            Core..!@ Prelude.mempty
+                            Prelude.>>= Core.may (Data.parseXMLList "member")
+                        )
+            Prelude.<*> ( x
+                            Data..@? "UnprocessedTypeConfigurations"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )

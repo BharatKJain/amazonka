@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeDeploy.BatchGetDeploymentGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,7 +103,8 @@ instance Core.AWSRequest BatchGetDeploymentGroups where
     Response.receiveJSON
       ( \s h x ->
           BatchGetDeploymentGroupsResponse'
-            Prelude.<$> ( x Data..?> "deploymentGroupsInfo"
+            Prelude.<$> ( x
+                            Data..?> "deploymentGroupsInfo"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "errorMessage")
@@ -112,7 +113,8 @@ instance Core.AWSRequest BatchGetDeploymentGroups where
 
 instance Prelude.Hashable BatchGetDeploymentGroups where
   hashWithSalt _salt BatchGetDeploymentGroups' {..} =
-    _salt `Prelude.hashWithSalt` applicationName
+    _salt
+      `Prelude.hashWithSalt` applicationName
       `Prelude.hashWithSalt` deploymentGroupNames
 
 instance Prelude.NFData BatchGetDeploymentGroups where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GlobalAccelerator.Types.Listener
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GlobalAccelerator.Types.Listener where
@@ -160,7 +160,8 @@ instance Data.FromJSON Listener where
 
 instance Prelude.Hashable Listener where
   hashWithSalt _salt Listener' {..} =
-    _salt `Prelude.hashWithSalt` clientAffinity
+    _salt
+      `Prelude.hashWithSalt` clientAffinity
       `Prelude.hashWithSalt` listenerArn
       `Prelude.hashWithSalt` portRanges
       `Prelude.hashWithSalt` protocol

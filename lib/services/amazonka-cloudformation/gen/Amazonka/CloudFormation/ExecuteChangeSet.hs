@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFormation.ExecuteChangeSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -168,7 +168,8 @@ instance Core.AWSRequest ExecuteChangeSet where
 
 instance Prelude.Hashable ExecuteChangeSet where
   hashWithSalt _salt ExecuteChangeSet' {..} =
-    _salt `Prelude.hashWithSalt` clientRequestToken
+    _salt
+      `Prelude.hashWithSalt` clientRequestToken
       `Prelude.hashWithSalt` disableRollback
       `Prelude.hashWithSalt` stackName
       `Prelude.hashWithSalt` changeSetName

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTAnalytics.CreateDatasetContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest CreateDatasetContent where
 
 instance Prelude.Hashable CreateDatasetContent where
   hashWithSalt _salt CreateDatasetContent' {..} =
-    _salt `Prelude.hashWithSalt` versionId
+    _salt
+      `Prelude.hashWithSalt` versionId
       `Prelude.hashWithSalt` datasetName
 
 instance Prelude.NFData CreateDatasetContent where

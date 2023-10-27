@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.PostLaunchActions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.PostLaunchActions where
@@ -107,7 +107,8 @@ instance Data.FromJSON PostLaunchActions where
 
 instance Prelude.Hashable PostLaunchActions where
   hashWithSalt _salt PostLaunchActions' {..} =
-    _salt `Prelude.hashWithSalt` cloudWatchLogGroupName
+    _salt
+      `Prelude.hashWithSalt` cloudWatchLogGroupName
       `Prelude.hashWithSalt` deployment
       `Prelude.hashWithSalt` s3LogBucket
       `Prelude.hashWithSalt` s3OutputKeyPrefix

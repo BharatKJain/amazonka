@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectConnect.Types.DirectConnectGatewayAssociationProposal
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectConnect.Types.DirectConnectGatewayAssociationProposal where
@@ -183,7 +183,8 @@ instance
   hashWithSalt
     _salt
     DirectConnectGatewayAssociationProposal' {..} =
-      _salt `Prelude.hashWithSalt` associatedGateway
+      _salt
+        `Prelude.hashWithSalt` associatedGateway
         `Prelude.hashWithSalt` directConnectGatewayId
         `Prelude.hashWithSalt` directConnectGatewayOwnerAccount
         `Prelude.hashWithSalt` existingAllowedPrefixesToDirectConnectGateway

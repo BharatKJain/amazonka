@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.GetResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -131,7 +131,8 @@ instance Core.AWSRequest GetResource where
 
 instance Prelude.Hashable GetResource where
   hashWithSalt _salt GetResource' {..} =
-    _salt `Prelude.hashWithSalt` embed
+    _salt
+      `Prelude.hashWithSalt` embed
       `Prelude.hashWithSalt` restApiId
       `Prelude.hashWithSalt` resourceId
 

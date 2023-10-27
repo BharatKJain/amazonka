@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.BatchJobIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.BatchJobIdentifier where
@@ -70,7 +70,8 @@ batchJobIdentifier_scriptBatchJobIdentifier = Lens.lens (\BatchJobIdentifier' {s
 
 instance Prelude.Hashable BatchJobIdentifier where
   hashWithSalt _salt BatchJobIdentifier' {..} =
-    _salt `Prelude.hashWithSalt` fileBatchJobIdentifier
+    _salt
+      `Prelude.hashWithSalt` fileBatchJobIdentifier
       `Prelude.hashWithSalt` scriptBatchJobIdentifier
 
 instance Prelude.NFData BatchJobIdentifier where

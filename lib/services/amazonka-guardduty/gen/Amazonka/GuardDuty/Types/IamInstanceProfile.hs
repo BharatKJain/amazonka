@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.IamInstanceProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.IamInstanceProfile where
@@ -68,12 +68,14 @@ instance Data.FromJSON IamInstanceProfile where
       "IamInstanceProfile"
       ( \x ->
           IamInstanceProfile'
-            Prelude.<$> (x Data..:? "arn") Prelude.<*> (x Data..:? "id")
+            Prelude.<$> (x Data..:? "arn")
+            Prelude.<*> (x Data..:? "id")
       )
 
 instance Prelude.Hashable IamInstanceProfile where
   hashWithSalt _salt IamInstanceProfile' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData IamInstanceProfile where

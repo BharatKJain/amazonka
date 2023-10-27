@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StepFunctions.Types.MapRunExecutionCounts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StepFunctions.Types.MapRunExecutionCounts where
@@ -192,7 +192,8 @@ instance Data.FromJSON MapRunExecutionCounts where
 
 instance Prelude.Hashable MapRunExecutionCounts where
   hashWithSalt _salt MapRunExecutionCounts' {..} =
-    _salt `Prelude.hashWithSalt` pending
+    _salt
+      `Prelude.hashWithSalt` pending
       `Prelude.hashWithSalt` running
       `Prelude.hashWithSalt` succeeded
       `Prelude.hashWithSalt` failed

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MemoryDb.Types.ACLPendingChanges
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MemoryDb.Types.ACLPendingChanges where
@@ -70,14 +70,16 @@ instance Data.FromJSON ACLPendingChanges where
       ( \x ->
           ACLPendingChanges'
             Prelude.<$> (x Data..:? "UserNamesToAdd" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "UserNamesToRemove"
+            Prelude.<*> ( x
+                            Data..:? "UserNamesToRemove"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ACLPendingChanges where
   hashWithSalt _salt ACLPendingChanges' {..} =
-    _salt `Prelude.hashWithSalt` userNamesToAdd
+    _salt
+      `Prelude.hashWithSalt` userNamesToAdd
       `Prelude.hashWithSalt` userNamesToRemove
 
 instance Prelude.NFData ACLPendingChanges where

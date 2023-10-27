@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSecureTunneling.Types.ConnectionState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSecureTunneling.Types.ConnectionState where
@@ -78,7 +78,8 @@ instance Data.FromJSON ConnectionState where
 
 instance Prelude.Hashable ConnectionState where
   hashWithSalt _salt ConnectionState' {..} =
-    _salt `Prelude.hashWithSalt` lastUpdatedAt
+    _salt
+      `Prelude.hashWithSalt` lastUpdatedAt
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData ConnectionState where

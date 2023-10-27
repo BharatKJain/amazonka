@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticTranscoder.ListPipelines
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,21 +107,22 @@ instance Core.AWSPager ListPipelines where
     | Core.stop
         ( rs
             Lens.^? listPipelinesResponse_nextPageToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listPipelinesResponse_pipelines Prelude.. Lens._Just
+            Lens.^? listPipelinesResponse_pipelines
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listPipelines_pageToken
           Lens..~ rs
           Lens.^? listPipelinesResponse_nextPageToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListPipelines where
   type
@@ -140,7 +141,8 @@ instance Core.AWSRequest ListPipelines where
 
 instance Prelude.Hashable ListPipelines where
   hashWithSalt _salt ListPipelines' {..} =
-    _salt `Prelude.hashWithSalt` ascending
+    _salt
+      `Prelude.hashWithSalt` ascending
       `Prelude.hashWithSalt` pageToken
 
 instance Prelude.NFData ListPipelines where

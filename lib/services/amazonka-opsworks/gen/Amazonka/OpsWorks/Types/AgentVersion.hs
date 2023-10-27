@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.AgentVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.AgentVersion where
@@ -76,7 +76,8 @@ instance Data.FromJSON AgentVersion where
 
 instance Prelude.Hashable AgentVersion where
   hashWithSalt _salt AgentVersion' {..} =
-    _salt `Prelude.hashWithSalt` configurationManager
+    _salt
+      `Prelude.hashWithSalt` configurationManager
       `Prelude.hashWithSalt` version
 
 instance Prelude.NFData AgentVersion where

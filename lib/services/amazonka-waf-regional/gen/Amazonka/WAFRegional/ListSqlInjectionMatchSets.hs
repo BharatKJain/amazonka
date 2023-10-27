@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFRegional.ListSqlInjectionMatchSets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest ListSqlInjectionMatchSets where
       ( \s h x ->
           ListSqlInjectionMatchSetsResponse'
             Prelude.<$> (x Data..?> "NextMarker")
-            Prelude.<*> ( x Data..?> "SqlInjectionMatchSets"
+            Prelude.<*> ( x
+                            Data..?> "SqlInjectionMatchSets"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -143,7 +144,8 @@ instance Core.AWSRequest ListSqlInjectionMatchSets where
 
 instance Prelude.Hashable ListSqlInjectionMatchSets where
   hashWithSalt _salt ListSqlInjectionMatchSets' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextMarker
 
 instance Prelude.NFData ListSqlInjectionMatchSets where

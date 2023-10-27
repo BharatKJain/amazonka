@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatch.GetMetricWidgetImage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -238,7 +238,8 @@ instance Core.AWSRequest GetMetricWidgetImage where
 
 instance Prelude.Hashable GetMetricWidgetImage where
   hashWithSalt _salt GetMetricWidgetImage' {..} =
-    _salt `Prelude.hashWithSalt` outputFormat
+    _salt
+      `Prelude.hashWithSalt` outputFormat
       `Prelude.hashWithSalt` metricWidget
 
 instance Prelude.NFData GetMetricWidgetImage where

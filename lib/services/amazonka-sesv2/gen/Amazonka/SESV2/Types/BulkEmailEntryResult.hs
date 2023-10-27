@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.BulkEmailEntryResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.BulkEmailEntryResult where
@@ -245,7 +245,8 @@ instance Data.FromJSON BulkEmailEntryResult where
 
 instance Prelude.Hashable BulkEmailEntryResult where
   hashWithSalt _salt BulkEmailEntryResult' {..} =
-    _salt `Prelude.hashWithSalt` error
+    _salt
+      `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` messageId
       `Prelude.hashWithSalt` status
 

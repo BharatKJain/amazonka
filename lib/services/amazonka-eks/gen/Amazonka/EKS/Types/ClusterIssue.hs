@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.ClusterIssue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.ClusterIssue where
@@ -87,7 +87,8 @@ instance Data.FromJSON ClusterIssue where
 
 instance Prelude.Hashable ClusterIssue where
   hashWithSalt _salt ClusterIssue' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` resourceIds
 

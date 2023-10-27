@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.ChangeProgressStatusDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.ChangeProgressStatusDetails where
@@ -135,13 +135,16 @@ instance Data.FromJSON ChangeProgressStatusDetails where
       ( \x ->
           ChangeProgressStatusDetails'
             Prelude.<$> (x Data..:? "ChangeId")
-            Prelude.<*> ( x Data..:? "ChangeProgressStages"
+            Prelude.<*> ( x
+                            Data..:? "ChangeProgressStages"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "CompletedProperties"
+            Prelude.<*> ( x
+                            Data..:? "CompletedProperties"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "PendingProperties"
+            Prelude.<*> ( x
+                            Data..:? "PendingProperties"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "StartTime")
@@ -151,7 +154,8 @@ instance Data.FromJSON ChangeProgressStatusDetails where
 
 instance Prelude.Hashable ChangeProgressStatusDetails where
   hashWithSalt _salt ChangeProgressStatusDetails' {..} =
-    _salt `Prelude.hashWithSalt` changeId
+    _salt
+      `Prelude.hashWithSalt` changeId
       `Prelude.hashWithSalt` changeProgressStages
       `Prelude.hashWithSalt` completedProperties
       `Prelude.hashWithSalt` pendingProperties

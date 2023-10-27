@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.BehaviorModelTrainingSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.BehaviorModelTrainingSummary where
@@ -121,7 +121,8 @@ instance
     BehaviorModelTrainingSummary
   where
   hashWithSalt _salt BehaviorModelTrainingSummary' {..} =
-    _salt `Prelude.hashWithSalt` behaviorName
+    _salt
+      `Prelude.hashWithSalt` behaviorName
       `Prelude.hashWithSalt` datapointsCollectionPercentage
       `Prelude.hashWithSalt` lastModelRefreshDate
       `Prelude.hashWithSalt` modelStatus

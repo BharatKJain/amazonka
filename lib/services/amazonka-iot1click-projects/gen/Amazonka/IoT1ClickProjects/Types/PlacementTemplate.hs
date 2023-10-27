@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT1ClickProjects.Types.PlacementTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT1ClickProjects.Types.PlacementTemplate where
@@ -76,17 +76,20 @@ instance Data.FromJSON PlacementTemplate where
       "PlacementTemplate"
       ( \x ->
           PlacementTemplate'
-            Prelude.<$> ( x Data..:? "defaultAttributes"
+            Prelude.<$> ( x
+                            Data..:? "defaultAttributes"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "deviceTemplates"
+            Prelude.<*> ( x
+                            Data..:? "deviceTemplates"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable PlacementTemplate where
   hashWithSalt _salt PlacementTemplate' {..} =
-    _salt `Prelude.hashWithSalt` defaultAttributes
+    _salt
+      `Prelude.hashWithSalt` defaultAttributes
       `Prelude.hashWithSalt` deviceTemplates
 
 instance Prelude.NFData PlacementTemplate where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.ListHumanTaskUis
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -142,21 +142,21 @@ instance Core.AWSPager ListHumanTaskUis where
     | Core.stop
         ( rs
             Lens.^? listHumanTaskUisResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listHumanTaskUisResponse_humanTaskUiSummaries
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listHumanTaskUis_nextToken
           Lens..~ rs
           Lens.^? listHumanTaskUisResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListHumanTaskUis where
   type
@@ -170,14 +170,16 @@ instance Core.AWSRequest ListHumanTaskUis where
           ListHumanTaskUisResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "HumanTaskUiSummaries"
+            Prelude.<*> ( x
+                            Data..?> "HumanTaskUiSummaries"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListHumanTaskUis where
   hashWithSalt _salt ListHumanTaskUis' {..} =
-    _salt `Prelude.hashWithSalt` creationTimeAfter
+    _salt
+      `Prelude.hashWithSalt` creationTimeAfter
       `Prelude.hashWithSalt` creationTimeBefore
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

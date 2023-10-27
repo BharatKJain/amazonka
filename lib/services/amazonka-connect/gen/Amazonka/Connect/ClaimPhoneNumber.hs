@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.ClaimPhoneNumber
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -180,7 +180,8 @@ instance Core.AWSRequest ClaimPhoneNumber where
 
 instance Prelude.Hashable ClaimPhoneNumber where
   hashWithSalt _salt ClaimPhoneNumber' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` phoneNumberDescription
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` targetArn

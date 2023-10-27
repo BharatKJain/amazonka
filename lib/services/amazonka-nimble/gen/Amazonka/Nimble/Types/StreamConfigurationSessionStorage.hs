@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Nimble.Types.StreamConfigurationSessionStorage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Nimble.Types.StreamConfigurationSessionStorage where
@@ -79,7 +79,8 @@ instance
       "StreamConfigurationSessionStorage"
       ( \x ->
           StreamConfigurationSessionStorage'
-            Prelude.<$> (x Data..:? "root") Prelude.<*> (x Data..: "mode")
+            Prelude.<$> (x Data..:? "root")
+            Prelude.<*> (x Data..: "mode")
       )
 
 instance
@@ -89,7 +90,8 @@ instance
   hashWithSalt
     _salt
     StreamConfigurationSessionStorage' {..} =
-      _salt `Prelude.hashWithSalt` root
+      _salt
+        `Prelude.hashWithSalt` root
         `Prelude.hashWithSalt` mode
 
 instance

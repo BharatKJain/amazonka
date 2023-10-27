@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.AuthResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.AuthResult where
@@ -109,14 +109,16 @@ instance Data.FromJSON AuthResult where
             Prelude.<*> (x Data..:? "authDecision")
             Prelude.<*> (x Data..:? "authInfo")
             Prelude.<*> (x Data..:? "denied")
-            Prelude.<*> ( x Data..:? "missingContextValues"
+            Prelude.<*> ( x
+                            Data..:? "missingContextValues"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable AuthResult where
   hashWithSalt _salt AuthResult' {..} =
-    _salt `Prelude.hashWithSalt` allowed
+    _salt
+      `Prelude.hashWithSalt` allowed
       `Prelude.hashWithSalt` authDecision
       `Prelude.hashWithSalt` authInfo
       `Prelude.hashWithSalt` denied

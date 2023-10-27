@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.FilterListConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.FilterListConfiguration where
@@ -98,7 +98,8 @@ instance Data.FromJSON FilterListConfiguration where
 
 instance Prelude.Hashable FilterListConfiguration where
   hashWithSalt _salt FilterListConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` categoryValues
+    _salt
+      `Prelude.hashWithSalt` categoryValues
       `Prelude.hashWithSalt` selectAllOptions
       `Prelude.hashWithSalt` matchOperator
 

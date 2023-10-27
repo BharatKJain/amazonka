@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceQuotas.Types.RequestedServiceQuotaChange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceQuotas.Types.RequestedServiceQuotaChange where
@@ -199,7 +199,8 @@ instance Data.FromJSON RequestedServiceQuotaChange where
 
 instance Prelude.Hashable RequestedServiceQuotaChange where
   hashWithSalt _salt RequestedServiceQuotaChange' {..} =
-    _salt `Prelude.hashWithSalt` caseId
+    _salt
+      `Prelude.hashWithSalt` caseId
       `Prelude.hashWithSalt` created
       `Prelude.hashWithSalt` desiredValue
       `Prelude.hashWithSalt` globalQuota

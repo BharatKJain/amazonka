@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.LastCrawlInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.LastCrawlInfo where
@@ -115,7 +115,8 @@ instance Data.FromJSON LastCrawlInfo where
 
 instance Prelude.Hashable LastCrawlInfo where
   hashWithSalt _salt LastCrawlInfo' {..} =
-    _salt `Prelude.hashWithSalt` errorMessage
+    _salt
+      `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` logGroup
       `Prelude.hashWithSalt` logStream
       `Prelude.hashWithSalt` messagePrefix

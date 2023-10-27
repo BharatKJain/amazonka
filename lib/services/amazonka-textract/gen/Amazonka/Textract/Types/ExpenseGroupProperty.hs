@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.ExpenseGroupProperty
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.ExpenseGroupProperty where
@@ -79,7 +79,8 @@ instance Data.FromJSON ExpenseGroupProperty where
 
 instance Prelude.Hashable ExpenseGroupProperty where
   hashWithSalt _salt ExpenseGroupProperty' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` types
 
 instance Prelude.NFData ExpenseGroupProperty where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ModifyInstanceAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -439,7 +439,8 @@ instance Core.AWSRequest ModifyInstanceAttribute where
 
 instance Prelude.Hashable ModifyInstanceAttribute where
   hashWithSalt _salt ModifyInstanceAttribute' {..} =
-    _salt `Prelude.hashWithSalt` attribute
+    _salt
+      `Prelude.hashWithSalt` attribute
       `Prelude.hashWithSalt` blockDeviceMappings
       `Prelude.hashWithSalt` disableApiStop
       `Prelude.hashWithSalt` disableApiTermination

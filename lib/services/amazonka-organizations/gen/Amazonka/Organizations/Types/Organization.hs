@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Organizations.Types.Organization
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Organizations.Types.Organization where
@@ -203,7 +203,8 @@ instance Data.FromJSON Organization where
       ( \x ->
           Organization'
             Prelude.<$> (x Data..:? "Arn")
-            Prelude.<*> ( x Data..:? "AvailablePolicyTypes"
+            Prelude.<*> ( x
+                            Data..:? "AvailablePolicyTypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "FeatureSet")
@@ -215,7 +216,8 @@ instance Data.FromJSON Organization where
 
 instance Prelude.Hashable Organization where
   hashWithSalt _salt Organization' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` availablePolicyTypes
       `Prelude.hashWithSalt` featureSet
       `Prelude.hashWithSalt` id

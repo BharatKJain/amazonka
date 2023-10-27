@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GlobalAccelerator.Types.PortOverride
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GlobalAccelerator.Types.PortOverride where
@@ -91,7 +91,8 @@ instance Data.FromJSON PortOverride where
 
 instance Prelude.Hashable PortOverride where
   hashWithSalt _salt PortOverride' {..} =
-    _salt `Prelude.hashWithSalt` endpointPort
+    _salt
+      `Prelude.hashWithSalt` endpointPort
       `Prelude.hashWithSalt` listenerPort
 
 instance Prelude.NFData PortOverride where

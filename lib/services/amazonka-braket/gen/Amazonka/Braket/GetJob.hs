@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Braket.GetJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,10 +105,12 @@ instance Core.AWSRequest GetJob where
             Prelude.<*> (x Data..?> "endedAt")
             Prelude.<*> (x Data..?> "events" Core..!@ Prelude.mempty)
             Prelude.<*> (x Data..?> "failureReason")
-            Prelude.<*> ( x Data..?> "hyperParameters"
+            Prelude.<*> ( x
+                            Data..?> "hyperParameters"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "inputDataConfig"
+            Prelude.<*> ( x
+                            Data..?> "inputDataConfig"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "startedAt")

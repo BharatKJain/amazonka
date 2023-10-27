@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.HistogramBinOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.HistogramBinOptions where
@@ -97,7 +97,8 @@ instance Data.FromJSON HistogramBinOptions where
 
 instance Prelude.Hashable HistogramBinOptions where
   hashWithSalt _salt HistogramBinOptions' {..} =
-    _salt `Prelude.hashWithSalt` binCount
+    _salt
+      `Prelude.hashWithSalt` binCount
       `Prelude.hashWithSalt` binWidth
       `Prelude.hashWithSalt` selectedBinType
       `Prelude.hashWithSalt` startValue

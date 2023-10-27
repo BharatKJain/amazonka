@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.CancelSpotFleetRequests
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,11 +129,13 @@ instance Core.AWSRequest CancelSpotFleetRequests where
     Response.receiveXML
       ( \s h x ->
           CancelSpotFleetRequestsResponse'
-            Prelude.<$> ( x Data..@? "successfulFleetRequestSet"
+            Prelude.<$> ( x
+                            Data..@? "successfulFleetRequestSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
-            Prelude.<*> ( x Data..@? "unsuccessfulFleetRequestSet"
+            Prelude.<*> ( x
+                            Data..@? "unsuccessfulFleetRequestSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -142,7 +144,8 @@ instance Core.AWSRequest CancelSpotFleetRequests where
 
 instance Prelude.Hashable CancelSpotFleetRequests where
   hashWithSalt _salt CancelSpotFleetRequests' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` spotFleetRequestIds
       `Prelude.hashWithSalt` terminateInstances
 

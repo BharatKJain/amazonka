@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppConfig.Types.ConfigurationProfileSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppConfig.Types.ConfigurationProfileSummary where
@@ -135,14 +135,16 @@ instance Data.FromJSON ConfigurationProfileSummary where
             Prelude.<*> (x Data..:? "LocationUri")
             Prelude.<*> (x Data..:? "Name")
             Prelude.<*> (x Data..:? "Type")
-            Prelude.<*> ( x Data..:? "ValidatorTypes"
+            Prelude.<*> ( x
+                            Data..:? "ValidatorTypes"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ConfigurationProfileSummary where
   hashWithSalt _salt ConfigurationProfileSummary' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` locationUri
       `Prelude.hashWithSalt` name

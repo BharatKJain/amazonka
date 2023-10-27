@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMakerEdge.GetDeviceRegistration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest GetDeviceRegistration where
 
 instance Prelude.Hashable GetDeviceRegistration where
   hashWithSalt _salt GetDeviceRegistration' {..} =
-    _salt `Prelude.hashWithSalt` deviceName
+    _salt
+      `Prelude.hashWithSalt` deviceName
       `Prelude.hashWithSalt` deviceFleetName
 
 instance Prelude.NFData GetDeviceRegistration where

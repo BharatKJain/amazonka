@@ -16,7 +16,7 @@
 -- Module      : Amazonka.BackupGateway.AssociateGatewayToServer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,7 +116,8 @@ instance Core.AWSRequest AssociateGatewayToServer where
 
 instance Prelude.Hashable AssociateGatewayToServer where
   hashWithSalt _salt AssociateGatewayToServer' {..} =
-    _salt `Prelude.hashWithSalt` gatewayArn
+    _salt
+      `Prelude.hashWithSalt` gatewayArn
       `Prelude.hashWithSalt` serverArn
 
 instance Prelude.NFData AssociateGatewayToServer where

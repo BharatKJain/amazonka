@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkMail.Types.ImpersonationRole
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkMail.Types.ImpersonationRole where
@@ -105,7 +105,8 @@ instance Data.FromJSON ImpersonationRole where
 
 instance Prelude.Hashable ImpersonationRole where
   hashWithSalt _salt ImpersonationRole' {..} =
-    _salt `Prelude.hashWithSalt` dateCreated
+    _salt
+      `Prelude.hashWithSalt` dateCreated
       `Prelude.hashWithSalt` dateModified
       `Prelude.hashWithSalt` impersonationRoleId
       `Prelude.hashWithSalt` name

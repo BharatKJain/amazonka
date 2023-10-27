@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SNS.Types.PhoneNumberInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SNS.Types.PhoneNumberInformation where
@@ -109,7 +109,8 @@ instance Data.FromXML PhoneNumberInformation where
     PhoneNumberInformation'
       Prelude.<$> (x Data..@? "CreatedAt")
       Prelude.<*> (x Data..@? "Iso2CountryCode")
-      Prelude.<*> ( x Data..@? "NumberCapabilities"
+      Prelude.<*> ( x
+                      Data..@? "NumberCapabilities"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
@@ -119,7 +120,8 @@ instance Data.FromXML PhoneNumberInformation where
 
 instance Prelude.Hashable PhoneNumberInformation where
   hashWithSalt _salt PhoneNumberInformation' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` iso2CountryCode
       `Prelude.hashWithSalt` numberCapabilities
       `Prelude.hashWithSalt` phoneNumber

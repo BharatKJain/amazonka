@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ReferencedSecurityGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ReferencedSecurityGroup where
@@ -102,7 +102,8 @@ instance Data.FromXML ReferencedSecurityGroup where
 
 instance Prelude.Hashable ReferencedSecurityGroup where
   hashWithSalt _salt ReferencedSecurityGroup' {..} =
-    _salt `Prelude.hashWithSalt` groupId
+    _salt
+      `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` peeringStatus
       `Prelude.hashWithSalt` userId
       `Prelude.hashWithSalt` vpcId

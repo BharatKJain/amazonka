@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.SqsAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.SqsAction where
@@ -94,7 +94,8 @@ instance Data.FromJSON SqsAction where
 
 instance Prelude.Hashable SqsAction where
   hashWithSalt _salt SqsAction' {..} =
-    _salt `Prelude.hashWithSalt` payload
+    _salt
+      `Prelude.hashWithSalt` payload
       `Prelude.hashWithSalt` useBase64
       `Prelude.hashWithSalt` queueUrl
 

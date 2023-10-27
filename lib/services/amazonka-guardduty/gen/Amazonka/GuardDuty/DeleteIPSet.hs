@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GuardDuty.DeleteIPSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -101,7 +101,8 @@ instance Core.AWSRequest DeleteIPSet where
 
 instance Prelude.Hashable DeleteIPSet where
   hashWithSalt _salt DeleteIPSet' {..} =
-    _salt `Prelude.hashWithSalt` detectorId
+    _salt
+      `Prelude.hashWithSalt` detectorId
       `Prelude.hashWithSalt` ipSetId
 
 instance Prelude.NFData DeleteIPSet where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatch.Types.Range
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatch.Types.Range where
@@ -81,7 +81,8 @@ instance Data.FromXML Range where
 
 instance Prelude.Hashable Range where
   hashWithSalt _salt Range' {..} =
-    _salt `Prelude.hashWithSalt` startTime
+    _salt
+      `Prelude.hashWithSalt` startTime
       `Prelude.hashWithSalt` endTime
 
 instance Prelude.NFData Range where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.AuthenticationConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.AuthenticationConfig where
@@ -111,7 +111,8 @@ instance Data.FromJSON AuthenticationConfig where
       "AuthenticationConfig"
       ( \x ->
           AuthenticationConfig'
-            Prelude.<$> ( x Data..:? "customAuthConfigs"
+            Prelude.<$> ( x
+                            Data..:? "customAuthConfigs"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "isApiKeyAuthSupported")
@@ -123,7 +124,8 @@ instance Data.FromJSON AuthenticationConfig where
 
 instance Prelude.Hashable AuthenticationConfig where
   hashWithSalt _salt AuthenticationConfig' {..} =
-    _salt `Prelude.hashWithSalt` customAuthConfigs
+    _salt
+      `Prelude.hashWithSalt` customAuthConfigs
       `Prelude.hashWithSalt` isApiKeyAuthSupported
       `Prelude.hashWithSalt` isBasicAuthSupported
       `Prelude.hashWithSalt` isCustomAuthSupported

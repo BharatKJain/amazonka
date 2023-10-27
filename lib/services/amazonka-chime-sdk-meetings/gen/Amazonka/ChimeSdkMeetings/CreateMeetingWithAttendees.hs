@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSdkMeetings.CreateMeetingWithAttendees
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -247,7 +247,8 @@ instance Core.AWSRequest CreateMeetingWithAttendees where
 
 instance Prelude.Hashable CreateMeetingWithAttendees where
   hashWithSalt _salt CreateMeetingWithAttendees' {..} =
-    _salt `Prelude.hashWithSalt` meetingFeatures
+    _salt
+      `Prelude.hashWithSalt` meetingFeatures
       `Prelude.hashWithSalt` meetingHostId
       `Prelude.hashWithSalt` notificationsConfiguration
       `Prelude.hashWithSalt` primaryMeetingId

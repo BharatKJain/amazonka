@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.Positioning
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.Positioning where
@@ -81,7 +81,8 @@ instance Data.FromJSON Positioning where
 
 instance Prelude.Hashable Positioning where
   hashWithSalt _salt Positioning' {..} =
-    _salt `Prelude.hashWithSalt` clockSync
+    _salt
+      `Prelude.hashWithSalt` clockSync
       `Prelude.hashWithSalt` gnss
       `Prelude.hashWithSalt` stream
 

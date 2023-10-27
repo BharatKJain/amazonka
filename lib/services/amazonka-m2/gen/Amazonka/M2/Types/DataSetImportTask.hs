@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.DataSetImportTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.DataSetImportTask where
@@ -92,7 +92,8 @@ instance Data.FromJSON DataSetImportTask where
 
 instance Prelude.Hashable DataSetImportTask where
   hashWithSalt _salt DataSetImportTask' {..} =
-    _salt `Prelude.hashWithSalt` status
+    _salt
+      `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` summary
       `Prelude.hashWithSalt` taskId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.SourceConnectorProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.SourceConnectorProperties where
@@ -233,7 +233,8 @@ instance Data.FromJSON SourceConnectorProperties where
 
 instance Prelude.Hashable SourceConnectorProperties where
   hashWithSalt _salt SourceConnectorProperties' {..} =
-    _salt `Prelude.hashWithSalt` amplitude
+    _salt
+      `Prelude.hashWithSalt` amplitude
       `Prelude.hashWithSalt` customConnector
       `Prelude.hashWithSalt` datadog
       `Prelude.hashWithSalt` dynatrace

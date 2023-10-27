@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.Scope
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.Scope where
@@ -70,12 +70,14 @@ instance Data.FromJSON Scope where
       "Scope"
       ( \x ->
           Scope'
-            Prelude.<$> (x Data..:? "key") Prelude.<*> (x Data..:? "value")
+            Prelude.<$> (x Data..:? "key")
+            Prelude.<*> (x Data..:? "value")
       )
 
 instance Prelude.Hashable Scope where
   hashWithSalt _salt Scope' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData Scope where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Backup.GetBackupPlan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest GetBackupPlan where
     Response.receiveJSON
       ( \s h x ->
           GetBackupPlanResponse'
-            Prelude.<$> ( x Data..?> "AdvancedBackupSettings"
+            Prelude.<$> ( x
+                            Data..?> "AdvancedBackupSettings"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "BackupPlan")
@@ -125,7 +126,8 @@ instance Core.AWSRequest GetBackupPlan where
 
 instance Prelude.Hashable GetBackupPlan where
   hashWithSalt _salt GetBackupPlan' {..} =
-    _salt `Prelude.hashWithSalt` versionId
+    _salt
+      `Prelude.hashWithSalt` versionId
       `Prelude.hashWithSalt` backupPlanId
 
 instance Prelude.NFData GetBackupPlan where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.VirtualNodeData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.VirtualNodeData where
@@ -123,7 +123,8 @@ instance Data.FromJSON VirtualNodeData where
 
 instance Prelude.Hashable VirtualNodeData where
   hashWithSalt _salt VirtualNodeData' {..} =
-    _salt `Prelude.hashWithSalt` meshName
+    _salt
+      `Prelude.hashWithSalt` meshName
       `Prelude.hashWithSalt` metadata
       `Prelude.hashWithSalt` spec
       `Prelude.hashWithSalt` status

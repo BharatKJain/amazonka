@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.State
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.State where
@@ -108,7 +108,8 @@ instance Data.FromJSON State where
 
 instance Prelude.Hashable State where
   hashWithSalt _salt State' {..} =
-    _salt `Prelude.hashWithSalt` onEnter
+    _salt
+      `Prelude.hashWithSalt` onEnter
       `Prelude.hashWithSalt` onExit
       `Prelude.hashWithSalt` onInput
       `Prelude.hashWithSalt` stateName

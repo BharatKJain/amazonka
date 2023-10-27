@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.Archive
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.Archive where
@@ -141,7 +141,8 @@ instance Data.FromJSON Archive where
 
 instance Prelude.Hashable Archive where
   hashWithSalt _salt Archive' {..} =
-    _salt `Prelude.hashWithSalt` archiveName
+    _salt
+      `Prelude.hashWithSalt` archiveName
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` eventCount
       `Prelude.hashWithSalt` eventSourceArn

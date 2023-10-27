@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsBackupBackupPlanDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsBackupBackupPlanDetails where
@@ -103,7 +103,8 @@ instance Data.FromJSON AwsBackupBackupPlanDetails where
 
 instance Prelude.Hashable AwsBackupBackupPlanDetails where
   hashWithSalt _salt AwsBackupBackupPlanDetails' {..} =
-    _salt `Prelude.hashWithSalt` backupPlan
+    _salt
+      `Prelude.hashWithSalt` backupPlan
       `Prelude.hashWithSalt` backupPlanArn
       `Prelude.hashWithSalt` backupPlanId
       `Prelude.hashWithSalt` versionId

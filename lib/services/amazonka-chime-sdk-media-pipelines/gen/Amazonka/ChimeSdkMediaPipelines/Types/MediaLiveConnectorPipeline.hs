@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkMediaPipelines.Types.MediaLiveConnectorPipeline
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkMediaPipelines.Types.MediaLiveConnectorPipeline where
@@ -128,7 +128,8 @@ instance Data.FromJSON MediaLiveConnectorPipeline where
 
 instance Prelude.Hashable MediaLiveConnectorPipeline where
   hashWithSalt _salt MediaLiveConnectorPipeline' {..} =
-    _salt `Prelude.hashWithSalt` createdTimestamp
+    _salt
+      `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` mediaPipelineArn
       `Prelude.hashWithSalt` mediaPipelineId
       `Prelude.hashWithSalt` sinks

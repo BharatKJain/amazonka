@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ResilienceHub.ListAppAssessments
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -182,14 +182,16 @@ instance Core.AWSRequest ListAppAssessments where
           ListAppAssessmentsResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "assessmentSummaries"
+            Prelude.<*> ( x
+                            Data..?> "assessmentSummaries"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListAppAssessments where
   hashWithSalt _salt ListAppAssessments' {..} =
-    _salt `Prelude.hashWithSalt` appArn
+    _salt
+      `Prelude.hashWithSalt` appArn
       `Prelude.hashWithSalt` assessmentName
       `Prelude.hashWithSalt` assessmentStatus
       `Prelude.hashWithSalt` complianceStatus

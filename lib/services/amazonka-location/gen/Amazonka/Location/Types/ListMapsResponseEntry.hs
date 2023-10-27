@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.ListMapsResponseEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.ListMapsResponseEntry where
@@ -143,7 +143,8 @@ instance Data.FromJSON ListMapsResponseEntry where
 
 instance Prelude.Hashable ListMapsResponseEntry where
   hashWithSalt _salt ListMapsResponseEntry' {..} =
-    _salt `Prelude.hashWithSalt` pricingPlan
+    _salt
+      `Prelude.hashWithSalt` pricingPlan
       `Prelude.hashWithSalt` createTime
       `Prelude.hashWithSalt` dataSource
       `Prelude.hashWithSalt` description

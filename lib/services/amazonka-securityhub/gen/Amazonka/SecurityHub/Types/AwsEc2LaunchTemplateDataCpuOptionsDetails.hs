@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataCpuOptionsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataCpuOptionsDetails where
@@ -79,7 +79,7 @@ instance
       ( \x ->
           AwsEc2LaunchTemplateDataCpuOptionsDetails'
             Prelude.<$> (x Data..:? "CoreCount")
-              Prelude.<*> (x Data..:? "ThreadsPerCore")
+            Prelude.<*> (x Data..:? "ThreadsPerCore")
       )
 
 instance
@@ -89,7 +89,8 @@ instance
   hashWithSalt
     _salt
     AwsEc2LaunchTemplateDataCpuOptionsDetails' {..} =
-      _salt `Prelude.hashWithSalt` coreCount
+      _salt
+        `Prelude.hashWithSalt` coreCount
         `Prelude.hashWithSalt` threadsPerCore
 
 instance

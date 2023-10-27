@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFV2.GetRuleGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -162,7 +162,8 @@ instance Core.AWSRequest GetRuleGroup where
 
 instance Prelude.Hashable GetRuleGroup where
   hashWithSalt _salt GetRuleGroup' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` scope
@@ -265,7 +266,6 @@ newGetRuleGroupResponse pHttpStatus_ =
 getRuleGroupResponse_lockToken :: Lens.Lens' GetRuleGroupResponse (Prelude.Maybe Prelude.Text)
 getRuleGroupResponse_lockToken = Lens.lens (\GetRuleGroupResponse' {lockToken} -> lockToken) (\s@GetRuleGroupResponse' {} a -> s {lockToken = a} :: GetRuleGroupResponse)
 
--- |
 getRuleGroupResponse_ruleGroup :: Lens.Lens' GetRuleGroupResponse (Prelude.Maybe RuleGroup)
 getRuleGroupResponse_ruleGroup = Lens.lens (\GetRuleGroupResponse' {ruleGroup} -> ruleGroup) (\s@GetRuleGroupResponse' {} a -> s {ruleGroup = a} :: GetRuleGroupResponse)
 

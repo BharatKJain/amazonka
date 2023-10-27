@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.Bias
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.Bias where
@@ -85,7 +85,8 @@ instance Data.FromJSON Bias where
 
 instance Prelude.Hashable Bias where
   hashWithSalt _salt Bias' {..} =
-    _salt `Prelude.hashWithSalt` postTrainingReport
+    _salt
+      `Prelude.hashWithSalt` postTrainingReport
       `Prelude.hashWithSalt` preTrainingReport
       `Prelude.hashWithSalt` report
 

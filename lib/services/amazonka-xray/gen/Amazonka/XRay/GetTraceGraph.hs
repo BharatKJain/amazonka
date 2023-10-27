@@ -16,7 +16,7 @@
 -- Module      : Amazonka.XRay.GetTraceGraph
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -91,20 +91,23 @@ instance Core.AWSPager GetTraceGraph where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? getTraceGraphResponse_nextToken Prelude.. Lens._Just
+            Lens.^? getTraceGraphResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? getTraceGraphResponse_services Prelude.. Lens._Just
+            Lens.^? getTraceGraphResponse_services
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getTraceGraph_nextToken
           Lens..~ rs
-          Lens.^? getTraceGraphResponse_nextToken Prelude.. Lens._Just
+          Lens.^? getTraceGraphResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetTraceGraph where
   type
@@ -123,7 +126,8 @@ instance Core.AWSRequest GetTraceGraph where
 
 instance Prelude.Hashable GetTraceGraph where
   hashWithSalt _salt GetTraceGraph' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` traceIds
 
 instance Prelude.NFData GetTraceGraph where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.CdmaLocalId
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.CdmaLocalId where
@@ -72,7 +72,8 @@ cdmaLocalId_cdmaChannel = Lens.lens (\CdmaLocalId' {cdmaChannel} -> cdmaChannel)
 
 instance Prelude.Hashable CdmaLocalId where
   hashWithSalt _salt CdmaLocalId' {..} =
-    _salt `Prelude.hashWithSalt` pnOffset
+    _salt
+      `Prelude.hashWithSalt` pnOffset
       `Prelude.hashWithSalt` cdmaChannel
 
 instance Prelude.NFData CdmaLocalId where

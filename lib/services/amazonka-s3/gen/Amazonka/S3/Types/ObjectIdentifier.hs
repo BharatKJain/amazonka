@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.ObjectIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.ObjectIdentifier where
@@ -82,7 +82,8 @@ objectIdentifier_key = Lens.lens (\ObjectIdentifier' {key} -> key) (\s@ObjectIde
 
 instance Prelude.Hashable ObjectIdentifier where
   hashWithSalt _salt ObjectIdentifier' {..} =
-    _salt `Prelude.hashWithSalt` versionId
+    _salt
+      `Prelude.hashWithSalt` versionId
       `Prelude.hashWithSalt` key
 
 instance Prelude.NFData ObjectIdentifier where

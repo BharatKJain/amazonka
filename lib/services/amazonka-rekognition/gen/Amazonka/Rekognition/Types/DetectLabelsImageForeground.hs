@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.DetectLabelsImageForeground
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.DetectLabelsImageForeground where
@@ -87,7 +87,8 @@ instance Data.FromJSON DetectLabelsImageForeground where
 
 instance Prelude.Hashable DetectLabelsImageForeground where
   hashWithSalt _salt DetectLabelsImageForeground' {..} =
-    _salt `Prelude.hashWithSalt` dominantColors
+    _salt
+      `Prelude.hashWithSalt` dominantColors
       `Prelude.hashWithSalt` quality
 
 instance Prelude.NFData DetectLabelsImageForeground where

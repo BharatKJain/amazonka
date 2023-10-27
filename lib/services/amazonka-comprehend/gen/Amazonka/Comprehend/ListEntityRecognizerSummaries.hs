@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Comprehend.ListEntityRecognizerSummaries
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,7 +103,8 @@ instance
     Response.receiveJSON
       ( \s h x ->
           ListEntityRecognizerSummariesResponse'
-            Prelude.<$> ( x Data..?> "EntityRecognizerSummariesList"
+            Prelude.<$> ( x
+                            Data..?> "EntityRecognizerSummariesList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -115,7 +116,8 @@ instance
     ListEntityRecognizerSummaries
   where
   hashWithSalt _salt ListEntityRecognizerSummaries' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListEntityRecognizerSummaries where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.KGKeyPairIds
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.KGKeyPairIds where
@@ -71,7 +71,8 @@ instance Data.FromXML KGKeyPairIds where
 
 instance Prelude.Hashable KGKeyPairIds where
   hashWithSalt _salt KGKeyPairIds' {..} =
-    _salt `Prelude.hashWithSalt` keyGroupId
+    _salt
+      `Prelude.hashWithSalt` keyGroupId
       `Prelude.hashWithSalt` keyPairIds
 
 instance Prelude.NFData KGKeyPairIds where

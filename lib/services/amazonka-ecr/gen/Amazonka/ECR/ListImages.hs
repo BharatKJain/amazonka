@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECR.ListImages
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -181,20 +181,23 @@ instance Core.AWSPager ListImages where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listImagesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listImagesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listImagesResponse_imageIds Prelude.. Lens._Just
+            Lens.^? listImagesResponse_imageIds
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listImages_nextToken
           Lens..~ rs
-          Lens.^? listImagesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listImagesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListImages where
   type AWSResponse ListImages = ListImagesResponse
@@ -211,7 +214,8 @@ instance Core.AWSRequest ListImages where
 
 instance Prelude.Hashable ListImages where
   hashWithSalt _salt ListImages' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` registryId

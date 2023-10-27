@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MigrationHubOrchestrator.GetTemplateStepGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest GetTemplateStepGroup where
 
 instance Prelude.Hashable GetTemplateStepGroup where
   hashWithSalt _salt GetTemplateStepGroup' {..} =
-    _salt `Prelude.hashWithSalt` templateId
+    _salt
+      `Prelude.hashWithSalt` templateId
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData GetTemplateStepGroup where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.DeviceType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.DeviceType where
@@ -96,7 +96,8 @@ instance Data.FromJSON DeviceType where
       "DeviceType"
       ( \x ->
           DeviceType'
-            Prelude.<$> ( x Data..:? "DeviceAttributes"
+            Prelude.<$> ( x
+                            Data..:? "DeviceAttributes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "DeviceCreateDate")
@@ -107,7 +108,8 @@ instance Data.FromJSON DeviceType where
 
 instance Prelude.Hashable DeviceType where
   hashWithSalt _salt DeviceType' {..} =
-    _salt `Prelude.hashWithSalt` deviceAttributes
+    _salt
+      `Prelude.hashWithSalt` deviceAttributes
       `Prelude.hashWithSalt` deviceCreateDate
       `Prelude.hashWithSalt` deviceKey
       `Prelude.hashWithSalt` deviceLastAuthenticatedDate

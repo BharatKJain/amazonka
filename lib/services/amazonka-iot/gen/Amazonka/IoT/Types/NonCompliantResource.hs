@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.NonCompliantResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.NonCompliantResource where
@@ -88,7 +88,8 @@ instance Data.FromJSON NonCompliantResource where
 
 instance Prelude.Hashable NonCompliantResource where
   hashWithSalt _salt NonCompliantResource' {..} =
-    _salt `Prelude.hashWithSalt` additionalInfo
+    _salt
+      `Prelude.hashWithSalt` additionalInfo
       `Prelude.hashWithSalt` resourceIdentifier
       `Prelude.hashWithSalt` resourceType
 

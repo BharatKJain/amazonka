@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.ParallelismConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.ParallelismConfiguration where
@@ -139,7 +139,8 @@ parallelismConfiguration_configurationType = Lens.lens (\ParallelismConfiguratio
 
 instance Prelude.Hashable ParallelismConfiguration where
   hashWithSalt _salt ParallelismConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` autoScalingEnabled
+    _salt
+      `Prelude.hashWithSalt` autoScalingEnabled
       `Prelude.hashWithSalt` parallelism
       `Prelude.hashWithSalt` parallelismPerKPU
       `Prelude.hashWithSalt` configurationType

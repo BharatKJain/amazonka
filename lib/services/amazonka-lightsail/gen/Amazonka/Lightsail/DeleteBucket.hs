@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.DeleteBucket
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -167,7 +167,8 @@ instance Core.AWSRequest DeleteBucket where
 
 instance Prelude.Hashable DeleteBucket where
   hashWithSalt _salt DeleteBucket' {..} =
-    _salt `Prelude.hashWithSalt` forceDelete
+    _salt
+      `Prelude.hashWithSalt` forceDelete
       `Prelude.hashWithSalt` bucketName
 
 instance Prelude.NFData DeleteBucket where

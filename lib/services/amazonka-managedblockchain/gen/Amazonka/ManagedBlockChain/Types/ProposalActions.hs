@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ManagedBlockChain.Types.ProposalActions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ManagedBlockChain.Types.ProposalActions where
@@ -87,7 +87,8 @@ instance Data.FromJSON ProposalActions where
 
 instance Prelude.Hashable ProposalActions where
   hashWithSalt _salt ProposalActions' {..} =
-    _salt `Prelude.hashWithSalt` invitations
+    _salt
+      `Prelude.hashWithSalt` invitations
       `Prelude.hashWithSalt` removals
 
 instance Prelude.NFData ProposalActions where

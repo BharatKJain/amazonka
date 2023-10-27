@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataSync.Types.LocationFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataSync.Types.LocationFilter where
@@ -97,7 +97,8 @@ locationFilter_operator = Lens.lens (\LocationFilter' {operator} -> operator) (\
 
 instance Prelude.Hashable LocationFilter where
   hashWithSalt _salt LocationFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
       `Prelude.hashWithSalt` operator
 

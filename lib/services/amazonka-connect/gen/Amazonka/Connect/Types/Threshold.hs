@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.Threshold
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.Threshold where
@@ -78,7 +78,8 @@ instance Data.FromJSON Threshold where
 
 instance Prelude.Hashable Threshold where
   hashWithSalt _salt Threshold' {..} =
-    _salt `Prelude.hashWithSalt` comparison
+    _salt
+      `Prelude.hashWithSalt` comparison
       `Prelude.hashWithSalt` thresholdValue
 
 instance Prelude.NFData Threshold where

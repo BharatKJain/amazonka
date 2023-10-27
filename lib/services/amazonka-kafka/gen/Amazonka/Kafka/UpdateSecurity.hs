@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kafka.UpdateSecurity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest UpdateSecurity where
 
 instance Prelude.Hashable UpdateSecurity where
   hashWithSalt _salt UpdateSecurity' {..} =
-    _salt `Prelude.hashWithSalt` clientAuthentication
+    _salt
+      `Prelude.hashWithSalt` clientAuthentication
       `Prelude.hashWithSalt` encryptionInfo
       `Prelude.hashWithSalt` clusterArn
       `Prelude.hashWithSalt` currentVersion

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.BrokerNodeInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.BrokerNodeInfo where
@@ -118,7 +118,8 @@ instance Data.FromJSON BrokerNodeInfo where
 
 instance Prelude.Hashable BrokerNodeInfo where
   hashWithSalt _salt BrokerNodeInfo' {..} =
-    _salt `Prelude.hashWithSalt` attachedENIId
+    _salt
+      `Prelude.hashWithSalt` attachedENIId
       `Prelude.hashWithSalt` brokerId
       `Prelude.hashWithSalt` clientSubnet
       `Prelude.hashWithSalt` clientVpcIpAddress

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.RealtimeLogConfigs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.RealtimeLogConfigs where
@@ -120,7 +120,9 @@ realtimeLogConfigs_marker = Lens.lens (\RealtimeLogConfigs' {marker} -> marker) 
 instance Data.FromXML RealtimeLogConfigs where
   parseXML x =
     RealtimeLogConfigs'
-      Prelude.<$> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "NextMarker")
@@ -130,7 +132,8 @@ instance Data.FromXML RealtimeLogConfigs where
 
 instance Prelude.Hashable RealtimeLogConfigs where
   hashWithSalt _salt RealtimeLogConfigs' {..} =
-    _salt `Prelude.hashWithSalt` items
+    _salt
+      `Prelude.hashWithSalt` items
       `Prelude.hashWithSalt` nextMarker
       `Prelude.hashWithSalt` maxItems
       `Prelude.hashWithSalt` isTruncated

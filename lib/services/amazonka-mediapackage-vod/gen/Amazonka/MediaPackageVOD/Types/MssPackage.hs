@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaPackageVOD.Types.MssPackage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaPackageVOD.Types.MssPackage where
@@ -85,7 +85,8 @@ instance Data.FromJSON MssPackage where
 
 instance Prelude.Hashable MssPackage where
   hashWithSalt _salt MssPackage' {..} =
-    _salt `Prelude.hashWithSalt` encryption
+    _salt
+      `Prelude.hashWithSalt` encryption
       `Prelude.hashWithSalt` segmentDurationSeconds
       `Prelude.hashWithSalt` mssManifests
 

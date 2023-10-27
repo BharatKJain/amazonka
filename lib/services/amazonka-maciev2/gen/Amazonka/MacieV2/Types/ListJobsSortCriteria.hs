@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.ListJobsSortCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.ListJobsSortCriteria where
@@ -77,7 +77,8 @@ listJobsSortCriteria_orderBy = Lens.lens (\ListJobsSortCriteria' {orderBy} -> or
 
 instance Prelude.Hashable ListJobsSortCriteria where
   hashWithSalt _salt ListJobsSortCriteria' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` orderBy
 
 instance Prelude.NFData ListJobsSortCriteria where

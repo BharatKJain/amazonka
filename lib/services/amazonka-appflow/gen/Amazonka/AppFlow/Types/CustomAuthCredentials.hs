@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.CustomAuthCredentials
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.CustomAuthCredentials where
@@ -68,7 +68,8 @@ customAuthCredentials_customAuthenticationType = Lens.lens (\CustomAuthCredentia
 
 instance Prelude.Hashable CustomAuthCredentials where
   hashWithSalt _salt CustomAuthCredentials' {..} =
-    _salt `Prelude.hashWithSalt` credentialsMap
+    _salt
+      `Prelude.hashWithSalt` credentialsMap
       `Prelude.hashWithSalt` customAuthenticationType
 
 instance Prelude.NFData CustomAuthCredentials where

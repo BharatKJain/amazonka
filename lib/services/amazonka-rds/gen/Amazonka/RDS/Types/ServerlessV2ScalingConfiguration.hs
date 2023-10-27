@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.ServerlessV2ScalingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.ServerlessV2ScalingConfiguration where
@@ -93,7 +93,8 @@ instance
   hashWithSalt
     _salt
     ServerlessV2ScalingConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` maxCapacity
+      _salt
+        `Prelude.hashWithSalt` maxCapacity
         `Prelude.hashWithSalt` minCapacity
 
 instance

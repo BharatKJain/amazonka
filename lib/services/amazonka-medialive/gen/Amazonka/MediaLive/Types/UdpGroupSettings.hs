@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.UdpGroupSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.UdpGroupSettings where
@@ -108,7 +108,8 @@ instance Data.FromJSON UdpGroupSettings where
 
 instance Prelude.Hashable UdpGroupSettings where
   hashWithSalt _salt UdpGroupSettings' {..} =
-    _salt `Prelude.hashWithSalt` inputLossAction
+    _salt
+      `Prelude.hashWithSalt` inputLossAction
       `Prelude.hashWithSalt` timedMetadataId3Frame
       `Prelude.hashWithSalt` timedMetadataId3Period
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaPackageVOD.UpdatePackagingGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,7 +117,8 @@ instance Core.AWSRequest UpdatePackagingGroup where
 
 instance Prelude.Hashable UpdatePackagingGroup where
   hashWithSalt _salt UpdatePackagingGroup' {..} =
-    _salt `Prelude.hashWithSalt` authorization
+    _salt
+      `Prelude.hashWithSalt` authorization
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData UpdatePackagingGroup where

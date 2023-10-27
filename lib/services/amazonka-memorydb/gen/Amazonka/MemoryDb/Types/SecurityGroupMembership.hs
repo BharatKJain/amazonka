@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MemoryDb.Types.SecurityGroupMembership
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MemoryDb.Types.SecurityGroupMembership where
@@ -81,7 +81,8 @@ instance Data.FromJSON SecurityGroupMembership where
 
 instance Prelude.Hashable SecurityGroupMembership where
   hashWithSalt _salt SecurityGroupMembership' {..} =
-    _salt `Prelude.hashWithSalt` securityGroupId
+    _salt
+      `Prelude.hashWithSalt` securityGroupId
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData SecurityGroupMembership where

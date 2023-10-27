@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.CmafGroupSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.CmafGroupSettings where
@@ -622,7 +622,8 @@ instance Data.FromJSON CmafGroupSettings where
       "CmafGroupSettings"
       ( \x ->
           CmafGroupSettings'
-            Prelude.<$> ( x Data..:? "additionalManifests"
+            Prelude.<$> ( x
+                            Data..:? "additionalManifests"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "baseUrl")
@@ -654,7 +655,8 @@ instance Data.FromJSON CmafGroupSettings where
 
 instance Prelude.Hashable CmafGroupSettings where
   hashWithSalt _salt CmafGroupSettings' {..} =
-    _salt `Prelude.hashWithSalt` additionalManifests
+    _salt
+      `Prelude.hashWithSalt` additionalManifests
       `Prelude.hashWithSalt` baseUrl
       `Prelude.hashWithSalt` clientCache
       `Prelude.hashWithSalt` codecSpecification

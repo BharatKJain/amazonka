@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.EndpointUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.EndpointUser where
@@ -108,7 +108,8 @@ instance Data.FromJSON EndpointUser where
 
 instance Prelude.Hashable EndpointUser where
   hashWithSalt _salt EndpointUser' {..} =
-    _salt `Prelude.hashWithSalt` userAttributes
+    _salt
+      `Prelude.hashWithSalt` userAttributes
       `Prelude.hashWithSalt` userId
 
 instance Prelude.NFData EndpointUser where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.ServerSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.ServerSummary where
@@ -76,7 +76,8 @@ instance Data.FromJSON ServerSummary where
 
 instance Prelude.Hashable ServerSummary where
   hashWithSalt _salt ServerSummary' {..} =
-    _salt `Prelude.hashWithSalt` serverOsType
+    _salt
+      `Prelude.hashWithSalt` serverOsType
       `Prelude.hashWithSalt` count
 
 instance Prelude.NFData ServerSummary where

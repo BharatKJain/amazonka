@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.ErrorDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.ErrorDetail where
@@ -74,7 +74,8 @@ instance Data.FromJSON ErrorDetail where
 
 instance Prelude.Hashable ErrorDetail where
   hashWithSalt _salt ErrorDetail' {..} =
-    _salt `Prelude.hashWithSalt` detailedErrorCode
+    _salt
+      `Prelude.hashWithSalt` detailedErrorCode
       `Prelude.hashWithSalt` detailedErrorMessage
 
 instance Prelude.NFData ErrorDetail where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.Duration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.Duration where
@@ -69,12 +69,14 @@ instance Data.FromJSON Duration where
       "Duration"
       ( \x ->
           Duration'
-            Prelude.<$> (x Data..:? "unit") Prelude.<*> (x Data..:? "value")
+            Prelude.<$> (x Data..:? "unit")
+            Prelude.<*> (x Data..:? "value")
       )
 
 instance Prelude.Hashable Duration where
   hashWithSalt _salt Duration' {..} =
-    _salt `Prelude.hashWithSalt` unit
+    _salt
+      `Prelude.hashWithSalt` unit
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData Duration where

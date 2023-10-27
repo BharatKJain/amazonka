@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Braket.Types.JobCheckpointConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Braket.Types.JobCheckpointConfig where
@@ -82,7 +82,8 @@ instance Data.FromJSON JobCheckpointConfig where
 
 instance Prelude.Hashable JobCheckpointConfig where
   hashWithSalt _salt JobCheckpointConfig' {..} =
-    _salt `Prelude.hashWithSalt` localPath
+    _salt
+      `Prelude.hashWithSalt` localPath
       `Prelude.hashWithSalt` s3Uri
 
 instance Prelude.NFData JobCheckpointConfig where

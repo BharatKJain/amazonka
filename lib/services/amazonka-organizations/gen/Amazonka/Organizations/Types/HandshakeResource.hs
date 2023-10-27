@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Organizations.Types.HandshakeResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Organizations.Types.HandshakeResource where
@@ -145,7 +145,8 @@ instance Data.FromJSON HandshakeResource where
 
 instance Prelude.Hashable HandshakeResource where
   hashWithSalt _salt HandshakeResource' {..} =
-    _salt `Prelude.hashWithSalt` resources
+    _salt
+      `Prelude.hashWithSalt` resources
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` value
 

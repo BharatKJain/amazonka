@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.AssociateUserSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest AssociateUserSettings where
 
 instance Prelude.Hashable AssociateUserSettings where
   hashWithSalt _salt AssociateUserSettings' {..} =
-    _salt `Prelude.hashWithSalt` portalArn
+    _salt
+      `Prelude.hashWithSalt` portalArn
       `Prelude.hashWithSalt` userSettingsArn
 
 instance Prelude.NFData AssociateUserSettings where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StepFunctions.Types.TaskStartedEventDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StepFunctions.Types.TaskStartedEventDetails where
@@ -79,7 +79,8 @@ instance Data.FromJSON TaskStartedEventDetails where
 
 instance Prelude.Hashable TaskStartedEventDetails where
   hashWithSalt _salt TaskStartedEventDetails' {..} =
-    _salt `Prelude.hashWithSalt` resourceType
+    _salt
+      `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` resource
 
 instance Prelude.NFData TaskStartedEventDetails where

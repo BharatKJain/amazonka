@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.ChoiceImprovementPlan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.ChoiceImprovementPlan where
@@ -82,7 +82,8 @@ instance Data.FromJSON ChoiceImprovementPlan where
 
 instance Prelude.Hashable ChoiceImprovementPlan where
   hashWithSalt _salt ChoiceImprovementPlan' {..} =
-    _salt `Prelude.hashWithSalt` choiceId
+    _salt
+      `Prelude.hashWithSalt` choiceId
       `Prelude.hashWithSalt` displayText
       `Prelude.hashWithSalt` improvementPlanUrl
 

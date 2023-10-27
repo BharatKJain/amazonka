@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.CustomerGatewayAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.CustomerGatewayAssociation where
@@ -107,7 +107,8 @@ instance Data.FromJSON CustomerGatewayAssociation where
 
 instance Prelude.Hashable CustomerGatewayAssociation where
   hashWithSalt _salt CustomerGatewayAssociation' {..} =
-    _salt `Prelude.hashWithSalt` customerGatewayArn
+    _salt
+      `Prelude.hashWithSalt` customerGatewayArn
       `Prelude.hashWithSalt` deviceId
       `Prelude.hashWithSalt` globalNetworkId
       `Prelude.hashWithSalt` linkId

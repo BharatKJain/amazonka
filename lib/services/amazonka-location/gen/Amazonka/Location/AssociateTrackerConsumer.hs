@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Location.AssociateTrackerConsumer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance Core.AWSRequest AssociateTrackerConsumer where
 
 instance Prelude.Hashable AssociateTrackerConsumer where
   hashWithSalt _salt AssociateTrackerConsumer' {..} =
-    _salt `Prelude.hashWithSalt` consumerArn
+    _salt
+      `Prelude.hashWithSalt` consumerArn
       `Prelude.hashWithSalt` trackerName
 
 instance Prelude.NFData AssociateTrackerConsumer where

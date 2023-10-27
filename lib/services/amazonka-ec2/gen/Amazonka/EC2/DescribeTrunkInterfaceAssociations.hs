@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeTrunkInterfaceAssociations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -159,22 +159,22 @@ instance
     | Core.stop
         ( rs
             Lens.^? describeTrunkInterfaceAssociationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeTrunkInterfaceAssociationsResponse_interfaceAssociations
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeTrunkInterfaceAssociations_nextToken
           Lens..~ rs
           Lens.^? describeTrunkInterfaceAssociationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -189,12 +189,13 @@ instance
     Response.receiveXML
       ( \s h x ->
           DescribeTrunkInterfaceAssociationsResponse'
-            Prelude.<$> ( x Data..@? "interfaceAssociationSet"
+            Prelude.<$> ( x
+                            Data..@? "interfaceAssociationSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
-              Prelude.<*> (x Data..@? "nextToken")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..@? "nextToken")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -204,7 +205,8 @@ instance
   hashWithSalt
     _salt
     DescribeTrunkInterfaceAssociations' {..} =
-      _salt `Prelude.hashWithSalt` associationIds
+      _salt
+        `Prelude.hashWithSalt` associationIds
         `Prelude.hashWithSalt` dryRun
         `Prelude.hashWithSalt` filters
         `Prelude.hashWithSalt` maxResults

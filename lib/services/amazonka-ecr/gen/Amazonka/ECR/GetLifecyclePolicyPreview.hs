@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECR.GetLifecyclePolicyPreview
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -195,22 +195,22 @@ instance Core.AWSPager GetLifecyclePolicyPreview where
     | Core.stop
         ( rs
             Lens.^? getLifecyclePolicyPreviewResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getLifecyclePolicyPreviewResponse_previewResults
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getLifecyclePolicyPreview_nextToken
           Lens..~ rs
           Lens.^? getLifecyclePolicyPreviewResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetLifecyclePolicyPreview where
   type
@@ -234,7 +234,8 @@ instance Core.AWSRequest GetLifecyclePolicyPreview where
 
 instance Prelude.Hashable GetLifecyclePolicyPreview where
   hashWithSalt _salt GetLifecyclePolicyPreview' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` imageIds
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

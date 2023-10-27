@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.DistributionConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.DistributionConfig where
@@ -674,7 +674,8 @@ instance Data.FromXML DistributionConfig where
 
 instance Prelude.Hashable DistributionConfig where
   hashWithSalt _salt DistributionConfig' {..} =
-    _salt `Prelude.hashWithSalt` aliases
+    _salt
+      `Prelude.hashWithSalt` aliases
       `Prelude.hashWithSalt` cacheBehaviors
       `Prelude.hashWithSalt` continuousDeploymentPolicyId
       `Prelude.hashWithSalt` customErrorResponses

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.NotificationConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.NotificationConfiguration where
@@ -111,7 +111,8 @@ instance Data.FromXML NotificationConfiguration where
 
 instance Prelude.Hashable NotificationConfiguration where
   hashWithSalt _salt NotificationConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` autoScalingGroupName
+    _salt
+      `Prelude.hashWithSalt` autoScalingGroupName
       `Prelude.hashWithSalt` notificationType
       `Prelude.hashWithSalt` topicARN
 

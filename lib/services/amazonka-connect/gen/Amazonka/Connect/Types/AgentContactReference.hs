@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.AgentContactReference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.AgentContactReference where
@@ -133,7 +133,8 @@ instance Data.FromJSON AgentContactReference where
 
 instance Prelude.Hashable AgentContactReference where
   hashWithSalt _salt AgentContactReference' {..} =
-    _salt `Prelude.hashWithSalt` agentContactState
+    _salt
+      `Prelude.hashWithSalt` agentContactState
       `Prelude.hashWithSalt` channel
       `Prelude.hashWithSalt` connectedToAgentTimestamp
       `Prelude.hashWithSalt` contactId

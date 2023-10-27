@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SQS.AddPermission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -31,8 +31,8 @@
 -- in the /Amazon SQS Developer Guide/.
 --
 -- -   @AddPermission@ generates a policy for you. You can use
---     @ SetQueueAttributes @ to upload your policy. For more information,
---     see
+--     @ @@SetQueueAttributes@@ @ to upload your policy. For more
+--     information, see
 --     <https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-creating-custom-policies.html Using Custom Policies with the Amazon SQS Access Policy Language>
 --     in the /Amazon SQS Developer Guide/.
 --
@@ -207,7 +207,8 @@ instance Core.AWSRequest AddPermission where
 
 instance Prelude.Hashable AddPermission where
   hashWithSalt _salt AddPermission' {..} =
-    _salt `Prelude.hashWithSalt` queueUrl
+    _salt
+      `Prelude.hashWithSalt` queueUrl
       `Prelude.hashWithSalt` label
       `Prelude.hashWithSalt` aWSAccountIds
       `Prelude.hashWithSalt` actions

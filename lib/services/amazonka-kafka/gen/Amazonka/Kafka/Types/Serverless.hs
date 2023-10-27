@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.Serverless
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.Serverless where
@@ -76,7 +76,8 @@ instance Data.FromJSON Serverless where
 
 instance Prelude.Hashable Serverless where
   hashWithSalt _salt Serverless' {..} =
-    _salt `Prelude.hashWithSalt` clientAuthentication
+    _salt
+      `Prelude.hashWithSalt` clientAuthentication
       `Prelude.hashWithSalt` vpcConfigs
 
 instance Prelude.NFData Serverless where

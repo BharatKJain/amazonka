@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.CreateProvisioningTemplateVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,10 +122,10 @@ instance
       ( \s h x ->
           CreateProvisioningTemplateVersionResponse'
             Prelude.<$> (x Data..?> "isDefaultVersion")
-              Prelude.<*> (x Data..?> "templateArn")
-              Prelude.<*> (x Data..?> "templateName")
-              Prelude.<*> (x Data..?> "versionId")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "templateArn")
+            Prelude.<*> (x Data..?> "templateName")
+            Prelude.<*> (x Data..?> "versionId")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -135,7 +135,8 @@ instance
   hashWithSalt
     _salt
     CreateProvisioningTemplateVersion' {..} =
-      _salt `Prelude.hashWithSalt` setAsDefault
+      _salt
+        `Prelude.hashWithSalt` setAsDefault
         `Prelude.hashWithSalt` templateName
         `Prelude.hashWithSalt` templateBody
 

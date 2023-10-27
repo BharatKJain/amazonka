@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.CloudWatchMetricsDataSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.CloudWatchMetricsDataSummary where
@@ -77,7 +77,8 @@ instance Data.FromJSON CloudWatchMetricsDataSummary where
       ( \x ->
           CloudWatchMetricsDataSummary'
             Prelude.<$> (x Data..:? "StatusCode")
-            Prelude.<*> ( x Data..:? "TimestampMetricValuePairList"
+            Prelude.<*> ( x
+                            Data..:? "TimestampMetricValuePairList"
                             Data..!= Prelude.mempty
                         )
       )
@@ -87,7 +88,8 @@ instance
     CloudWatchMetricsDataSummary
   where
   hashWithSalt _salt CloudWatchMetricsDataSummary' {..} =
-    _salt `Prelude.hashWithSalt` statusCode
+    _salt
+      `Prelude.hashWithSalt` statusCode
       `Prelude.hashWithSalt` timestampMetricValuePairList
 
 instance Prelude.NFData CloudWatchMetricsDataSummary where

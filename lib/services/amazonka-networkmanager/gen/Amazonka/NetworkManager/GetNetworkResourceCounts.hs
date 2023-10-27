@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkManager.GetNetworkResourceCounts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -212,22 +212,22 @@ instance Core.AWSPager GetNetworkResourceCounts where
     | Core.stop
         ( rs
             Lens.^? getNetworkResourceCountsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getNetworkResourceCountsResponse_networkResourceCounts
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getNetworkResourceCounts_nextToken
           Lens..~ rs
           Lens.^? getNetworkResourceCountsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetNetworkResourceCounts where
   type
@@ -239,7 +239,8 @@ instance Core.AWSRequest GetNetworkResourceCounts where
     Response.receiveJSON
       ( \s h x ->
           GetNetworkResourceCountsResponse'
-            Prelude.<$> ( x Data..?> "NetworkResourceCounts"
+            Prelude.<$> ( x
+                            Data..?> "NetworkResourceCounts"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -248,7 +249,8 @@ instance Core.AWSRequest GetNetworkResourceCounts where
 
 instance Prelude.Hashable GetNetworkResourceCounts where
   hashWithSalt _salt GetNetworkResourceCounts' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` globalNetworkId

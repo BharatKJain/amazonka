@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CostExplorer.GetAnomalySubscriptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -126,14 +126,16 @@ instance Core.AWSRequest GetAnomalySubscriptions where
           GetAnomalySubscriptionsResponse'
             Prelude.<$> (x Data..?> "NextPageToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "AnomalySubscriptions"
+            Prelude.<*> ( x
+                            Data..?> "AnomalySubscriptions"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable GetAnomalySubscriptions where
   hashWithSalt _salt GetAnomalySubscriptions' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` monitorArn
       `Prelude.hashWithSalt` nextPageToken
       `Prelude.hashWithSalt` subscriptionArnList

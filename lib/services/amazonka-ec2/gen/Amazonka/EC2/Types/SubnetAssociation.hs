@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.SubnetAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.SubnetAssociation where
@@ -73,7 +73,8 @@ instance Data.FromXML SubnetAssociation where
 
 instance Prelude.Hashable SubnetAssociation where
   hashWithSalt _salt SubnetAssociation' {..} =
-    _salt `Prelude.hashWithSalt` state
+    _salt
+      `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` subnetId
 
 instance Prelude.NFData SubnetAssociation where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEventsData.Types.Timer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEventsData.Types.Timer where
@@ -78,7 +78,8 @@ instance Data.FromJSON Timer where
 
 instance Prelude.Hashable Timer where
   hashWithSalt _salt Timer' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` timestamp
 
 instance Prelude.NFData Timer where

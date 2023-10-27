@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.Pipeline
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.Pipeline where
@@ -571,7 +571,8 @@ instance Data.FromJSON Pipeline where
 
 instance Prelude.Hashable Pipeline where
   hashWithSalt _salt Pipeline' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` awsKmsKeyArn
       `Prelude.hashWithSalt` contentConfig
       `Prelude.hashWithSalt` id

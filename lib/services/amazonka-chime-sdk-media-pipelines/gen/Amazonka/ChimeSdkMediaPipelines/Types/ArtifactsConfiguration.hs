@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkMediaPipelines.Types.ArtifactsConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkMediaPipelines.Types.ArtifactsConfiguration where
@@ -105,7 +105,8 @@ instance Data.FromJSON ArtifactsConfiguration where
 
 instance Prelude.Hashable ArtifactsConfiguration where
   hashWithSalt _salt ArtifactsConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` compositedVideo
+    _salt
+      `Prelude.hashWithSalt` compositedVideo
       `Prelude.hashWithSalt` audio
       `Prelude.hashWithSalt` video
       `Prelude.hashWithSalt` content

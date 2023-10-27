@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELB.Types.PolicyAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELB.Types.PolicyAttribute where
@@ -65,7 +65,8 @@ policyAttribute_attributeValue = Lens.lens (\PolicyAttribute' {attributeValue} -
 
 instance Prelude.Hashable PolicyAttribute where
   hashWithSalt _salt PolicyAttribute' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` attributeValue
 
 instance Prelude.NFData PolicyAttribute where

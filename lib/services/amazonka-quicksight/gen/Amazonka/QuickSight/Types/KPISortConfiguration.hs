@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.KPISortConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.KPISortConfiguration where
@@ -61,7 +61,8 @@ instance Data.FromJSON KPISortConfiguration where
       "KPISortConfiguration"
       ( \x ->
           KPISortConfiguration'
-            Prelude.<$> ( x Data..:? "TrendGroupSort"
+            Prelude.<$> ( x
+                            Data..:? "TrendGroupSort"
                             Data..!= Prelude.mempty
                         )
       )

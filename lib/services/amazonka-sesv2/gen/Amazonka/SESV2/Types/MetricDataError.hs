@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.MetricDataError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.MetricDataError where
@@ -104,7 +104,8 @@ instance Data.FromJSON MetricDataError where
 
 instance Prelude.Hashable MetricDataError where
   hashWithSalt _salt MetricDataError' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` message
 

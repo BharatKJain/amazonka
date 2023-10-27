@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.Eac3AtmosSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.Eac3AtmosSettings where
@@ -148,7 +148,8 @@ instance Data.FromJSON Eac3AtmosSettings where
 
 instance Prelude.Hashable Eac3AtmosSettings where
   hashWithSalt _salt Eac3AtmosSettings' {..} =
-    _salt `Prelude.hashWithSalt` bitrate
+    _salt
+      `Prelude.hashWithSalt` bitrate
       `Prelude.hashWithSalt` codingMode
       `Prelude.hashWithSalt` dialnorm
       `Prelude.hashWithSalt` drcLine

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FraudDetector.GetEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,7 +103,8 @@ instance Core.AWSRequest GetEvent where
 
 instance Prelude.Hashable GetEvent where
   hashWithSalt _salt GetEvent' {..} =
-    _salt `Prelude.hashWithSalt` eventId
+    _salt
+      `Prelude.hashWithSalt` eventId
       `Prelude.hashWithSalt` eventTypeName
 
 instance Prelude.NFData GetEvent where

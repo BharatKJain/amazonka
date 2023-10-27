@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.SegmentDetection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.SegmentDetection where
@@ -215,7 +215,8 @@ instance Data.FromJSON SegmentDetection where
 
 instance Prelude.Hashable SegmentDetection where
   hashWithSalt _salt SegmentDetection' {..} =
-    _salt `Prelude.hashWithSalt` durationFrames
+    _salt
+      `Prelude.hashWithSalt` durationFrames
       `Prelude.hashWithSalt` durationMillis
       `Prelude.hashWithSalt` durationSMPTE
       `Prelude.hashWithSalt` endFrameNumber

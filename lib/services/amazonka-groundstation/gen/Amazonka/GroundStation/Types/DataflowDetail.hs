@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.DataflowDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.DataflowDetail where
@@ -84,7 +84,8 @@ instance Data.FromJSON DataflowDetail where
 
 instance Prelude.Hashable DataflowDetail where
   hashWithSalt _salt DataflowDetail' {..} =
-    _salt `Prelude.hashWithSalt` destination
+    _salt
+      `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` source
 

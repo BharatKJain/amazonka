@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.EngineDefaults
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.EngineDefaults where
@@ -104,14 +104,17 @@ engineDefaults_parameters = Lens.lens (\EngineDefaults' {parameters} -> paramete
 instance Data.FromXML EngineDefaults where
   parseXML x =
     EngineDefaults'
-      Prelude.<$> ( x Data..@? "CacheNodeTypeSpecificParameters"
+      Prelude.<$> ( x
+                      Data..@? "CacheNodeTypeSpecificParameters"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may
                         (Data.parseXMLList "CacheNodeTypeSpecificParameter")
                   )
       Prelude.<*> (x Data..@? "CacheParameterGroupFamily")
       Prelude.<*> (x Data..@? "Marker")
-      Prelude.<*> ( x Data..@? "Parameters" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Parameters"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Parameter")
                   )
 

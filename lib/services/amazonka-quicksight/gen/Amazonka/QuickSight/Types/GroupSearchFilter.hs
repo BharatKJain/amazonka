@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.GroupSearchFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.GroupSearchFilter where
@@ -96,7 +96,8 @@ groupSearchFilter_value = Lens.lens (\GroupSearchFilter' {value} -> value) (\s@G
 
 instance Prelude.Hashable GroupSearchFilter where
   hashWithSalt _salt GroupSearchFilter' {..} =
-    _salt `Prelude.hashWithSalt` operator
+    _salt
+      `Prelude.hashWithSalt` operator
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 

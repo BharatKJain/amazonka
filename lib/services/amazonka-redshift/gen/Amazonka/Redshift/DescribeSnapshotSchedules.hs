@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.DescribeSnapshotSchedules
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -163,22 +163,22 @@ instance Core.AWSPager DescribeSnapshotSchedules where
     | Core.stop
         ( rs
             Lens.^? describeSnapshotSchedulesResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeSnapshotSchedulesResponse_snapshotSchedules
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeSnapshotSchedules_marker
           Lens..~ rs
           Lens.^? describeSnapshotSchedulesResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeSnapshotSchedules where
   type
@@ -192,7 +192,8 @@ instance Core.AWSRequest DescribeSnapshotSchedules where
       ( \s h x ->
           DescribeSnapshotSchedulesResponse'
             Prelude.<$> (x Data..@? "Marker")
-            Prelude.<*> ( x Data..@? "SnapshotSchedules"
+            Prelude.<*> ( x
+                            Data..@? "SnapshotSchedules"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "SnapshotSchedule")
                         )
@@ -201,7 +202,8 @@ instance Core.AWSRequest DescribeSnapshotSchedules where
 
 instance Prelude.Hashable DescribeSnapshotSchedules where
   hashWithSalt _salt DescribeSnapshotSchedules' {..} =
-    _salt `Prelude.hashWithSalt` clusterIdentifier
+    _salt
+      `Prelude.hashWithSalt` clusterIdentifier
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxRecords
       `Prelude.hashWithSalt` scheduleIdentifier

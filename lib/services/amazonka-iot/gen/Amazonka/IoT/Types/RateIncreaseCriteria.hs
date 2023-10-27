@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.RateIncreaseCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.RateIncreaseCriteria where
@@ -82,7 +82,8 @@ instance Data.FromJSON RateIncreaseCriteria where
 
 instance Prelude.Hashable RateIncreaseCriteria where
   hashWithSalt _salt RateIncreaseCriteria' {..} =
-    _salt `Prelude.hashWithSalt` numberOfNotifiedThings
+    _salt
+      `Prelude.hashWithSalt` numberOfNotifiedThings
       `Prelude.hashWithSalt` numberOfSucceededThings
 
 instance Prelude.NFData RateIncreaseCriteria where

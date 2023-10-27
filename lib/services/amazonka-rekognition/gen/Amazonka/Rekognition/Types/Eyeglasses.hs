@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.Eyeglasses
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.Eyeglasses where
@@ -78,7 +78,8 @@ instance Data.FromJSON Eyeglasses where
 
 instance Prelude.Hashable Eyeglasses where
   hashWithSalt _salt Eyeglasses' {..} =
-    _salt `Prelude.hashWithSalt` confidence
+    _salt
+      `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData Eyeglasses where

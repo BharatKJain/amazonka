@@ -14,7 +14,7 @@
 -- Module      : Amazonka.HoneyCode.Types.FailedBatchItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.HoneyCode.Types.FailedBatchItem where
@@ -85,7 +85,8 @@ instance Data.FromJSON FailedBatchItem where
 
 instance Prelude.Hashable FailedBatchItem where
   hashWithSalt _salt FailedBatchItem' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` errorMessage
 
 instance Prelude.NFData FailedBatchItem where

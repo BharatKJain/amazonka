@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFRegional.Types.RegexMatchSetSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFRegional.Types.RegexMatchSetSummary where
@@ -110,7 +110,8 @@ instance Data.FromJSON RegexMatchSetSummary where
 
 instance Prelude.Hashable RegexMatchSetSummary where
   hashWithSalt _salt RegexMatchSetSummary' {..} =
-    _salt `Prelude.hashWithSalt` regexMatchSetId
+    _salt
+      `Prelude.hashWithSalt` regexMatchSetId
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData RegexMatchSetSummary where

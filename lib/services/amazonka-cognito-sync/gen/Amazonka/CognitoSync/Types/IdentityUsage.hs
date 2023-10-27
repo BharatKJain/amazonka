@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoSync.Types.IdentityUsage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoSync.Types.IdentityUsage where
@@ -116,7 +116,8 @@ instance Data.FromJSON IdentityUsage where
 
 instance Prelude.Hashable IdentityUsage where
   hashWithSalt _salt IdentityUsage' {..} =
-    _salt `Prelude.hashWithSalt` dataStorage
+    _salt
+      `Prelude.hashWithSalt` dataStorage
       `Prelude.hashWithSalt` datasetCount
       `Prelude.hashWithSalt` identityId
       `Prelude.hashWithSalt` identityPoolId

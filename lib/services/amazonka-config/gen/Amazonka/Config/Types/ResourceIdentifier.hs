@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.ResourceIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.ResourceIdentifier where
@@ -98,7 +98,8 @@ instance Data.FromJSON ResourceIdentifier where
 
 instance Prelude.Hashable ResourceIdentifier where
   hashWithSalt _salt ResourceIdentifier' {..} =
-    _salt `Prelude.hashWithSalt` resourceDeletionTime
+    _salt
+      `Prelude.hashWithSalt` resourceDeletionTime
       `Prelude.hashWithSalt` resourceId
       `Prelude.hashWithSalt` resourceName
       `Prelude.hashWithSalt` resourceType

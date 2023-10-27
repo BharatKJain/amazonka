@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.FirewallPolicyDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.FirewallPolicyDetails where
@@ -132,19 +132,24 @@ instance Data.FromJSON FirewallPolicyDetails where
       "FirewallPolicyDetails"
       ( \x ->
           FirewallPolicyDetails'
-            Prelude.<$> ( x Data..:? "StatefulRuleGroupReferences"
+            Prelude.<$> ( x
+                            Data..:? "StatefulRuleGroupReferences"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "StatelessCustomActions"
+            Prelude.<*> ( x
+                            Data..:? "StatelessCustomActions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "StatelessDefaultActions"
+            Prelude.<*> ( x
+                            Data..:? "StatelessDefaultActions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "StatelessFragmentDefaultActions"
+            Prelude.<*> ( x
+                            Data..:? "StatelessFragmentDefaultActions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "StatelessRuleGroupReferences"
+            Prelude.<*> ( x
+                            Data..:? "StatelessRuleGroupReferences"
                             Data..!= Prelude.mempty
                         )
       )

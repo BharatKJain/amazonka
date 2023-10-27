@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Inspector.DescribeRulesPackages
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest DescribeRulesPackages where
 
 instance Prelude.Hashable DescribeRulesPackages where
   hashWithSalt _salt DescribeRulesPackages' {..} =
-    _salt `Prelude.hashWithSalt` locale
+    _salt
+      `Prelude.hashWithSalt` locale
       `Prelude.hashWithSalt` rulesPackageArns
 
 instance Prelude.NFData DescribeRulesPackages where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.SslPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.SslPolicy where
@@ -84,21 +84,27 @@ sslPolicy_supportedLoadBalancerTypes = Lens.lens (\SslPolicy' {supportedLoadBala
 instance Data.FromXML SslPolicy where
   parseXML x =
     SslPolicy'
-      Prelude.<$> ( x Data..@? "Ciphers" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Ciphers"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "Name")
-      Prelude.<*> ( x Data..@? "SslProtocols" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "SslProtocols"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "SupportedLoadBalancerTypes"
+      Prelude.<*> ( x
+                      Data..@? "SupportedLoadBalancerTypes"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 
 instance Prelude.Hashable SslPolicy where
   hashWithSalt _salt SslPolicy' {..} =
-    _salt `Prelude.hashWithSalt` ciphers
+    _salt
+      `Prelude.hashWithSalt` ciphers
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` sslProtocols
       `Prelude.hashWithSalt` supportedLoadBalancerTypes

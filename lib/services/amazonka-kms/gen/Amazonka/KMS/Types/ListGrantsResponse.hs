@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KMS.Types.ListGrantsResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KMS.Types.ListGrantsResponse where
@@ -95,7 +95,8 @@ instance Data.FromJSON ListGrantsResponse where
 
 instance Prelude.Hashable ListGrantsResponse where
   hashWithSalt _salt ListGrantsResponse' {..} =
-    _salt `Prelude.hashWithSalt` grants
+    _salt
+      `Prelude.hashWithSalt` grants
       `Prelude.hashWithSalt` nextMarker
       `Prelude.hashWithSalt` truncated
 

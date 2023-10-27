@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsElbLoadBalancerBackendServerDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsElbLoadBalancerBackendServerDescription where
@@ -74,7 +74,7 @@ instance
       ( \x ->
           AwsElbLoadBalancerBackendServerDescription'
             Prelude.<$> (x Data..:? "InstancePort")
-              Prelude.<*> (x Data..:? "PolicyNames" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "PolicyNames" Data..!= Prelude.mempty)
       )
 
 instance
@@ -84,7 +84,8 @@ instance
   hashWithSalt
     _salt
     AwsElbLoadBalancerBackendServerDescription' {..} =
-      _salt `Prelude.hashWithSalt` instancePort
+      _salt
+        `Prelude.hashWithSalt` instancePort
         `Prelude.hashWithSalt` policyNames
 
 instance

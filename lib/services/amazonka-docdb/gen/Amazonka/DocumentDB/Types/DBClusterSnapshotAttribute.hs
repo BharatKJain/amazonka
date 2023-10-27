@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DocumentDB.Types.DBClusterSnapshotAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DocumentDB.Types.DBClusterSnapshotAttribute where
@@ -100,13 +100,16 @@ instance Data.FromXML DBClusterSnapshotAttribute where
   parseXML x =
     DBClusterSnapshotAttribute'
       Prelude.<$> (x Data..@? "AttributeName")
-      Prelude.<*> ( x Data..@? "AttributeValues" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "AttributeValues"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "AttributeValue")
                   )
 
 instance Prelude.Hashable DBClusterSnapshotAttribute where
   hashWithSalt _salt DBClusterSnapshotAttribute' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` attributeValues
 
 instance Prelude.NFData DBClusterSnapshotAttribute where

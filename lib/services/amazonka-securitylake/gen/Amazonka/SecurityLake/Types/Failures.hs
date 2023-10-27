@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityLake.Types.Failures
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityLake.Types.Failures where
@@ -96,7 +96,8 @@ instance Data.FromJSON Failures where
 
 instance Prelude.Hashable Failures where
   hashWithSalt _salt Failures' {..} =
-    _salt `Prelude.hashWithSalt` exceptionMessage
+    _salt
+      `Prelude.hashWithSalt` exceptionMessage
       `Prelude.hashWithSalt` remediation
       `Prelude.hashWithSalt` timestamp
 

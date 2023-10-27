@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.EndpointDemographic
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.EndpointDemographic where
@@ -147,7 +147,8 @@ instance Data.FromJSON EndpointDemographic where
 
 instance Prelude.Hashable EndpointDemographic where
   hashWithSalt _salt EndpointDemographic' {..} =
-    _salt `Prelude.hashWithSalt` appVersion
+    _salt
+      `Prelude.hashWithSalt` appVersion
       `Prelude.hashWithSalt` locale
       `Prelude.hashWithSalt` make
       `Prelude.hashWithSalt` model

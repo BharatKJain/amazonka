@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.SimulateCustomPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -206,7 +206,7 @@ data SimulateCustomPolicy = SimulateCustomPolicy'
     -- @CallerArn@.
     --
     -- The ARN for an account uses the following syntax:
-    -- @arn:aws:iam::AWS-account-ID:root@. For example, to represent the
+    -- @arn:aws:iam::@/@AWS-account-ID@/@:root@. For example, to represent the
     -- account with the 112233445566 ID, use the following ARN:
     -- @arn:aws:iam::112233445566-ID:root@.
     resourceOwner :: Prelude.Maybe Prelude.Text,
@@ -397,7 +397,7 @@ data SimulateCustomPolicy = SimulateCustomPolicy'
 -- @CallerArn@.
 --
 -- The ARN for an account uses the following syntax:
--- @arn:aws:iam::AWS-account-ID:root@. For example, to represent the
+-- @arn:aws:iam::@/@AWS-account-ID@/@:root@. For example, to represent the
 -- account with the 112233445566 ID, use the following ARN:
 -- @arn:aws:iam::112233445566-ID:root@.
 --
@@ -607,7 +607,7 @@ simulateCustomPolicy_resourceHandlingOption = Lens.lens (\SimulateCustomPolicy' 
 -- @CallerArn@.
 --
 -- The ARN for an account uses the following syntax:
--- @arn:aws:iam::AWS-account-ID:root@. For example, to represent the
+-- @arn:aws:iam::@/@AWS-account-ID@/@:root@. For example, to represent the
 -- account with the 112233445566 ID, use the following ARN:
 -- @arn:aws:iam::112233445566-ID:root@.
 simulateCustomPolicy_resourceOwner :: Lens.Lens' SimulateCustomPolicy (Prelude.Maybe Prelude.Text)
@@ -680,20 +680,22 @@ instance Core.AWSPager SimulateCustomPolicy where
     | Core.stop
         ( rs
             Lens.^? simulatePolicyResponse_isTruncated
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.isNothing
         ( rs
-            Lens.^? simulatePolicyResponse_marker Prelude.. Lens._Just
+            Lens.^? simulatePolicyResponse_marker
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& simulateCustomPolicy_marker
           Lens..~ rs
-          Lens.^? simulatePolicyResponse_marker Prelude.. Lens._Just
+          Lens.^? simulatePolicyResponse_marker
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest SimulateCustomPolicy where
   type
@@ -708,7 +710,8 @@ instance Core.AWSRequest SimulateCustomPolicy where
 
 instance Prelude.Hashable SimulateCustomPolicy where
   hashWithSalt _salt SimulateCustomPolicy' {..} =
-    _salt `Prelude.hashWithSalt` callerArn
+    _salt
+      `Prelude.hashWithSalt` callerArn
       `Prelude.hashWithSalt` contextEntries
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxItems

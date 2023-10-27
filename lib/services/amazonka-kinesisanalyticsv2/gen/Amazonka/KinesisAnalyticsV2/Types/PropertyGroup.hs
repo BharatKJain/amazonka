@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.PropertyGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.PropertyGroup where
@@ -76,7 +76,8 @@ instance Data.FromJSON PropertyGroup where
 
 instance Prelude.Hashable PropertyGroup where
   hashWithSalt _salt PropertyGroup' {..} =
-    _salt `Prelude.hashWithSalt` propertyGroupId
+    _salt
+      `Prelude.hashWithSalt` propertyGroupId
       `Prelude.hashWithSalt` propertyMap
 
 instance Prelude.NFData PropertyGroup where

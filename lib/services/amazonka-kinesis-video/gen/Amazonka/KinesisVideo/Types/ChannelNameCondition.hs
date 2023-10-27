@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisVideo.Types.ChannelNameCondition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisVideo.Types.ChannelNameCondition where
@@ -75,7 +75,8 @@ channelNameCondition_comparisonValue = Lens.lens (\ChannelNameCondition' {compar
 
 instance Prelude.Hashable ChannelNameCondition where
   hashWithSalt _salt ChannelNameCondition' {..} =
-    _salt `Prelude.hashWithSalt` comparisonOperator
+    _salt
+      `Prelude.hashWithSalt` comparisonOperator
       `Prelude.hashWithSalt` comparisonValue
 
 instance Prelude.NFData ChannelNameCondition where

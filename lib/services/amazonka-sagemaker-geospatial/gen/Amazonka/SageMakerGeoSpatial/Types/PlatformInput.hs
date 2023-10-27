@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.PlatformInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.PlatformInput where
@@ -57,7 +57,6 @@ newPlatformInput pValue_ =
       value = pValue_
     }
 
--- |
 platformInput_comparisonOperator :: Lens.Lens' PlatformInput (Prelude.Maybe ComparisonOperator)
 platformInput_comparisonOperator = Lens.lens (\PlatformInput' {comparisonOperator} -> comparisonOperator) (\s@PlatformInput' {} a -> s {comparisonOperator = a} :: PlatformInput)
 
@@ -77,7 +76,8 @@ instance Data.FromJSON PlatformInput where
 
 instance Prelude.Hashable PlatformInput where
   hashWithSalt _salt PlatformInput' {..} =
-    _salt `Prelude.hashWithSalt` comparisonOperator
+    _salt
+      `Prelude.hashWithSalt` comparisonOperator
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData PlatformInput where

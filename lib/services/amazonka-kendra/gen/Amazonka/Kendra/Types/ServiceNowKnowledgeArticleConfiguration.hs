@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.ServiceNowKnowledgeArticleConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.ServiceNowKnowledgeArticleConfiguration where
@@ -209,12 +209,14 @@ instance
           ServiceNowKnowledgeArticleConfiguration'
             Prelude.<$> (x Data..:? "CrawlAttachments")
             Prelude.<*> (x Data..:? "DocumentTitleFieldName")
-            Prelude.<*> ( x Data..:? "ExcludeAttachmentFilePatterns"
+            Prelude.<*> ( x
+                            Data..:? "ExcludeAttachmentFilePatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "FieldMappings")
             Prelude.<*> (x Data..:? "FilterQuery")
-            Prelude.<*> ( x Data..:? "IncludeAttachmentFilePatterns"
+            Prelude.<*> ( x
+                            Data..:? "IncludeAttachmentFilePatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "DocumentDataFieldName")
@@ -227,7 +229,8 @@ instance
   hashWithSalt
     _salt
     ServiceNowKnowledgeArticleConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` crawlAttachments
+      _salt
+        `Prelude.hashWithSalt` crawlAttachments
         `Prelude.hashWithSalt` documentTitleFieldName
         `Prelude.hashWithSalt` excludeAttachmentFilePatterns
         `Prelude.hashWithSalt` fieldMappings

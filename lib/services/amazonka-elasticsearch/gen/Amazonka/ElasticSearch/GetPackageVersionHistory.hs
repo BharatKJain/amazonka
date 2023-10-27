@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticSearch.GetPackageVersionHistory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -52,7 +52,7 @@ import qualified Amazonka.Prelude as Prelude
 import qualified Amazonka.Request as Request
 import qualified Amazonka.Response as Response
 
--- | Container for request parameters to @ GetPackageVersionHistory @
+-- | Container for request parameters to @ @@GetPackageVersionHistory@@ @
 -- operation.
 --
 -- /See:/ 'newGetPackageVersionHistory' smart constructor.
@@ -121,7 +121,8 @@ instance Core.AWSRequest GetPackageVersionHistory where
           GetPackageVersionHistoryResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (x Data..?> "PackageID")
-            Prelude.<*> ( x Data..?> "PackageVersionHistoryList"
+            Prelude.<*> ( x
+                            Data..?> "PackageVersionHistoryList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -129,7 +130,8 @@ instance Core.AWSRequest GetPackageVersionHistory where
 
 instance Prelude.Hashable GetPackageVersionHistory where
   hashWithSalt _salt GetPackageVersionHistory' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` packageID
 
@@ -157,7 +159,7 @@ instance Data.ToQuery GetPackageVersionHistory where
         "nextToken" Data.=: nextToken
       ]
 
--- | Container for response returned by @ GetPackageVersionHistory @
+-- | Container for response returned by @ @@GetPackageVersionHistory@@ @
 -- operation.
 --
 -- /See:/ 'newGetPackageVersionHistoryResponse' smart constructor.

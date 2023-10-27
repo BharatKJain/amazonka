@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppFlow.CreateConnectorProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -186,7 +186,8 @@ instance Core.AWSRequest CreateConnectorProfile where
 
 instance Prelude.Hashable CreateConnectorProfile where
   hashWithSalt _salt CreateConnectorProfile' {..} =
-    _salt `Prelude.hashWithSalt` connectorLabel
+    _salt
+      `Prelude.hashWithSalt` connectorLabel
       `Prelude.hashWithSalt` kmsArn
       `Prelude.hashWithSalt` connectorProfileName
       `Prelude.hashWithSalt` connectorType

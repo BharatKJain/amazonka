@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexModels.CreateSlotTypeVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -140,13 +140,15 @@ instance Core.AWSRequest CreateSlotTypeVersion where
             Prelude.<$> (x Data..?> "checksum")
             Prelude.<*> (x Data..?> "createdDate")
             Prelude.<*> (x Data..?> "description")
-            Prelude.<*> ( x Data..?> "enumerationValues"
+            Prelude.<*> ( x
+                            Data..?> "enumerationValues"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "lastUpdatedDate")
             Prelude.<*> (x Data..?> "name")
             Prelude.<*> (x Data..?> "parentSlotTypeSignature")
-            Prelude.<*> ( x Data..?> "slotTypeConfigurations"
+            Prelude.<*> ( x
+                            Data..?> "slotTypeConfigurations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "valueSelectionStrategy")
@@ -156,7 +158,8 @@ instance Core.AWSRequest CreateSlotTypeVersion where
 
 instance Prelude.Hashable CreateSlotTypeVersion where
   hashWithSalt _salt CreateSlotTypeVersion' {..} =
-    _salt `Prelude.hashWithSalt` checksum
+    _salt
+      `Prelude.hashWithSalt` checksum
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData CreateSlotTypeVersion where

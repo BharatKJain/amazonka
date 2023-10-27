@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.ExtensionField
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.ExtensionField where
@@ -78,7 +78,8 @@ extensionField_value = Lens.lens (\ExtensionField' {value} -> value) (\s@Extensi
 
 instance Prelude.Hashable ExtensionField where
   hashWithSalt _salt ExtensionField' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData ExtensionField where

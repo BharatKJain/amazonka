@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamQuery.Types.TimeSeriesDataPoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamQuery.Types.TimeSeriesDataPoint where
@@ -77,12 +77,14 @@ instance Data.FromJSON TimeSeriesDataPoint where
       "TimeSeriesDataPoint"
       ( \x ->
           TimeSeriesDataPoint'
-            Prelude.<$> (x Data..: "Time") Prelude.<*> (x Data..: "Value")
+            Prelude.<$> (x Data..: "Time")
+            Prelude.<*> (x Data..: "Value")
       )
 
 instance Prelude.Hashable TimeSeriesDataPoint where
   hashWithSalt _salt TimeSeriesDataPoint' {..} =
-    _salt `Prelude.hashWithSalt` time
+    _salt
+      `Prelude.hashWithSalt` time
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData TimeSeriesDataPoint where

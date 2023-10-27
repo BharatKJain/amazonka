@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StepFunctions.Types.LambdaFunctionScheduledEventDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StepFunctions.Types.LambdaFunctionScheduledEventDetails where
@@ -120,7 +120,8 @@ instance
   hashWithSalt
     _salt
     LambdaFunctionScheduledEventDetails' {..} =
-      _salt `Prelude.hashWithSalt` input
+      _salt
+        `Prelude.hashWithSalt` input
         `Prelude.hashWithSalt` inputDetails
         `Prelude.hashWithSalt` taskCredentials
         `Prelude.hashWithSalt` timeoutInSeconds

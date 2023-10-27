@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsElbv2LoadBalancerAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsElbv2LoadBalancerAttribute where
@@ -69,7 +69,8 @@ instance Data.FromJSON AwsElbv2LoadBalancerAttribute where
       "AwsElbv2LoadBalancerAttribute"
       ( \x ->
           AwsElbv2LoadBalancerAttribute'
-            Prelude.<$> (x Data..:? "Key") Prelude.<*> (x Data..:? "Value")
+            Prelude.<$> (x Data..:? "Key")
+            Prelude.<*> (x Data..:? "Value")
       )
 
 instance
@@ -77,7 +78,8 @@ instance
     AwsElbv2LoadBalancerAttribute
   where
   hashWithSalt _salt AwsElbv2LoadBalancerAttribute' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData AwsElbv2LoadBalancerAttribute where

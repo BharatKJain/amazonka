@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.SourceServerActionDocument
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.SourceServerActionDocument where
@@ -144,7 +144,8 @@ instance Data.FromJSON SourceServerActionDocument where
 
 instance Prelude.Hashable SourceServerActionDocument where
   hashWithSalt _salt SourceServerActionDocument' {..} =
-    _salt `Prelude.hashWithSalt` actionID
+    _salt
+      `Prelude.hashWithSalt` actionID
       `Prelude.hashWithSalt` actionName
       `Prelude.hashWithSalt` active
       `Prelude.hashWithSalt` documentIdentifier

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.KmsKeyConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.KmsKeyConfiguration where
@@ -100,7 +100,8 @@ instance Data.FromJSON KmsKeyConfiguration where
 
 instance Prelude.Hashable KmsKeyConfiguration where
   hashWithSalt _salt KmsKeyConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` grants
+    _salt
+      `Prelude.hashWithSalt` grants
       `Prelude.hashWithSalt` keyPolicies
 
 instance Prelude.NFData KmsKeyConfiguration where

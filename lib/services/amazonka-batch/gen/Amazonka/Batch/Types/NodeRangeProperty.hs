@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.NodeRangeProperty
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.NodeRangeProperty where
@@ -99,7 +99,8 @@ instance Data.FromJSON NodeRangeProperty where
 
 instance Prelude.Hashable NodeRangeProperty where
   hashWithSalt _salt NodeRangeProperty' {..} =
-    _salt `Prelude.hashWithSalt` container
+    _salt
+      `Prelude.hashWithSalt` container
       `Prelude.hashWithSalt` targetNodes
 
 instance Prelude.NFData NodeRangeProperty where

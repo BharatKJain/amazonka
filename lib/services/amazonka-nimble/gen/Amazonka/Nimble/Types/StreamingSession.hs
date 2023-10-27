@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Nimble.Types.StreamingSession
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Nimble.Types.StreamingSession where
@@ -419,7 +419,8 @@ instance Data.FromJSON StreamingSession where
 
 instance Prelude.Hashable StreamingSession where
   hashWithSalt _salt StreamingSession' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` automaticTerminationMode
       `Prelude.hashWithSalt` backupMode
       `Prelude.hashWithSalt` createdAt

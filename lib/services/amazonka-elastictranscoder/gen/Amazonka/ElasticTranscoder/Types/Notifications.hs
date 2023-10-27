@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.Notifications
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.Notifications where
@@ -110,7 +110,8 @@ instance Data.FromJSON Notifications where
 
 instance Prelude.Hashable Notifications where
   hashWithSalt _salt Notifications' {..} =
-    _salt `Prelude.hashWithSalt` completed
+    _salt
+      `Prelude.hashWithSalt` completed
       `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` progressing
       `Prelude.hashWithSalt` warning

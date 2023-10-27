@@ -14,7 +14,7 @@
 -- Module      : Amazonka.BackupGateway.Types.GatewayDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.BackupGateway.Types.GatewayDetails where
@@ -154,7 +154,8 @@ instance Data.FromJSON GatewayDetails where
 
 instance Prelude.Hashable GatewayDetails where
   hashWithSalt _salt GatewayDetails' {..} =
-    _salt `Prelude.hashWithSalt` gatewayArn
+    _salt
+      `Prelude.hashWithSalt` gatewayArn
       `Prelude.hashWithSalt` gatewayDisplayName
       `Prelude.hashWithSalt` gatewayType
       `Prelude.hashWithSalt` hypervisorId

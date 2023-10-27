@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FSx.DescribeBackups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -162,21 +162,22 @@ instance Core.AWSPager DescribeBackups where
     | Core.stop
         ( rs
             Lens.^? describeBackupsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? describeBackupsResponse_backups Prelude.. Lens._Just
+            Lens.^? describeBackupsResponse_backups
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeBackups_nextToken
           Lens..~ rs
           Lens.^? describeBackupsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeBackups where
   type
@@ -195,7 +196,8 @@ instance Core.AWSRequest DescribeBackups where
 
 instance Prelude.Hashable DescribeBackups where
   hashWithSalt _salt DescribeBackups' {..} =
-    _salt `Prelude.hashWithSalt` backupIds
+    _salt
+      `Prelude.hashWithSalt` backupIds
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

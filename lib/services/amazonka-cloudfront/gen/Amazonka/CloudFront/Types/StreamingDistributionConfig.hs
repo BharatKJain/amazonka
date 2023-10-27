@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.StreamingDistributionConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.StreamingDistributionConfig where
@@ -211,7 +211,8 @@ instance Data.FromXML StreamingDistributionConfig where
 
 instance Prelude.Hashable StreamingDistributionConfig where
   hashWithSalt _salt StreamingDistributionConfig' {..} =
-    _salt `Prelude.hashWithSalt` aliases
+    _salt
+      `Prelude.hashWithSalt` aliases
       `Prelude.hashWithSalt` logging
       `Prelude.hashWithSalt` priceClass
       `Prelude.hashWithSalt` callerReference

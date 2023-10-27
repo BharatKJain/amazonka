@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchLogs.Types.ExportTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchLogs.Types.ExportTask where
@@ -161,7 +161,8 @@ instance Data.FromJSON ExportTask where
 
 instance Prelude.Hashable ExportTask where
   hashWithSalt _salt ExportTask' {..} =
-    _salt `Prelude.hashWithSalt` destination
+    _salt
+      `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` destinationPrefix
       `Prelude.hashWithSalt` executionInfo
       `Prelude.hashWithSalt` from

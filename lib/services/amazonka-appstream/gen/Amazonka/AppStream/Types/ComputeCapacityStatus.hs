@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.ComputeCapacityStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.ComputeCapacityStatus where
@@ -99,7 +99,8 @@ instance Data.FromJSON ComputeCapacityStatus where
 
 instance Prelude.Hashable ComputeCapacityStatus where
   hashWithSalt _salt ComputeCapacityStatus' {..} =
-    _salt `Prelude.hashWithSalt` available
+    _salt
+      `Prelude.hashWithSalt` available
       `Prelude.hashWithSalt` inUse
       `Prelude.hashWithSalt` running
       `Prelude.hashWithSalt` desired

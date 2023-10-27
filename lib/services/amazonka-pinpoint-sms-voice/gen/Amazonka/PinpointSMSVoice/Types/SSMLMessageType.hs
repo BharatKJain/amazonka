@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PinpointSMSVoice.Types.SSMLMessageType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PinpointSMSVoice.Types.SSMLMessageType where
@@ -79,7 +79,8 @@ sSMLMessageType_voiceId = Lens.lens (\SSMLMessageType' {voiceId} -> voiceId) (\s
 
 instance Prelude.Hashable SSMLMessageType where
   hashWithSalt _salt SSMLMessageType' {..} =
-    _salt `Prelude.hashWithSalt` languageCode
+    _salt
+      `Prelude.hashWithSalt` languageCode
       `Prelude.hashWithSalt` text
       `Prelude.hashWithSalt` voiceId
 

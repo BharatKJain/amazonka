@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.LabelCountersForWorkteam
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.LabelCountersForWorkteam where
@@ -88,7 +88,8 @@ instance Data.FromJSON LabelCountersForWorkteam where
 
 instance Prelude.Hashable LabelCountersForWorkteam where
   hashWithSalt _salt LabelCountersForWorkteam' {..} =
-    _salt `Prelude.hashWithSalt` humanLabeled
+    _salt
+      `Prelude.hashWithSalt` humanLabeled
       `Prelude.hashWithSalt` pendingHuman
       `Prelude.hashWithSalt` total
 

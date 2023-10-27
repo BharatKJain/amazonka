@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.AreaOfInterest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.AreaOfInterest where
@@ -50,7 +50,6 @@ newAreaOfInterest =
         Prelude.Nothing
     }
 
--- |
 areaOfInterest_areaOfInterestGeometry :: Lens.Lens' AreaOfInterest (Prelude.Maybe AreaOfInterestGeometry)
 areaOfInterest_areaOfInterestGeometry = Lens.lens (\AreaOfInterest' {areaOfInterestGeometry} -> areaOfInterestGeometry) (\s@AreaOfInterest' {} a -> s {areaOfInterestGeometry = a} :: AreaOfInterest)
 

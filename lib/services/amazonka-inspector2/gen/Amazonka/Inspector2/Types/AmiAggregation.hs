@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.AmiAggregation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.AmiAggregation where
@@ -77,7 +77,8 @@ amiAggregation_sortOrder = Lens.lens (\AmiAggregation' {sortOrder} -> sortOrder)
 
 instance Prelude.Hashable AmiAggregation where
   hashWithSalt _salt AmiAggregation' {..} =
-    _salt `Prelude.hashWithSalt` amis
+    _salt
+      `Prelude.hashWithSalt` amis
       `Prelude.hashWithSalt` sortBy
       `Prelude.hashWithSalt` sortOrder
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComprehendMedical.Types.SNOMEDCTEntity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComprehendMedical.Types.SNOMEDCTEntity where
@@ -187,7 +187,8 @@ instance Data.FromJSON SNOMEDCTEntity where
             Prelude.<*> (x Data..:? "Category")
             Prelude.<*> (x Data..:? "EndOffset")
             Prelude.<*> (x Data..:? "Id")
-            Prelude.<*> ( x Data..:? "SNOMEDCTConcepts"
+            Prelude.<*> ( x
+                            Data..:? "SNOMEDCTConcepts"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Score")
@@ -198,7 +199,8 @@ instance Data.FromJSON SNOMEDCTEntity where
 
 instance Prelude.Hashable SNOMEDCTEntity where
   hashWithSalt _salt SNOMEDCTEntity' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` beginOffset
       `Prelude.hashWithSalt` category
       `Prelude.hashWithSalt` endOffset

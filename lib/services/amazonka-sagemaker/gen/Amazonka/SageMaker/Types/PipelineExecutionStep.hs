@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.PipelineExecutionStep
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.PipelineExecutionStep where
@@ -164,7 +164,8 @@ instance Data.FromJSON PipelineExecutionStep where
 
 instance Prelude.Hashable PipelineExecutionStep where
   hashWithSalt _salt PipelineExecutionStep' {..} =
-    _salt `Prelude.hashWithSalt` attemptCount
+    _salt
+      `Prelude.hashWithSalt` attemptCount
       `Prelude.hashWithSalt` cacheHitResult
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` failureReason

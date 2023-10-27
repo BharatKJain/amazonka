@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Rekognition.StartStreamProcessor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,7 +153,8 @@ instance Core.AWSRequest StartStreamProcessor where
 
 instance Prelude.Hashable StartStreamProcessor where
   hashWithSalt _salt StartStreamProcessor' {..} =
-    _salt `Prelude.hashWithSalt` startSelector
+    _salt
+      `Prelude.hashWithSalt` startSelector
       `Prelude.hashWithSalt` stopSelector
       `Prelude.hashWithSalt` name
 

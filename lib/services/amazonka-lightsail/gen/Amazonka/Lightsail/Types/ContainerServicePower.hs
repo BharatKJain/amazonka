@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.ContainerServicePower
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.ContainerServicePower where
@@ -121,7 +121,8 @@ instance Data.FromJSON ContainerServicePower where
 
 instance Prelude.Hashable ContainerServicePower where
   hashWithSalt _salt ContainerServicePower' {..} =
-    _salt `Prelude.hashWithSalt` cpuCount
+    _salt
+      `Prelude.hashWithSalt` cpuCount
       `Prelude.hashWithSalt` isActive
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` powerId

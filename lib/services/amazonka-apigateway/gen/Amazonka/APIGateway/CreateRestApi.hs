@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.CreateRestApi
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -250,7 +250,8 @@ instance Core.AWSRequest CreateRestApi where
 
 instance Prelude.Hashable CreateRestApi where
   hashWithSalt _salt CreateRestApi' {..} =
-    _salt `Prelude.hashWithSalt` apiKeySource
+    _salt
+      `Prelude.hashWithSalt` apiKeySource
       `Prelude.hashWithSalt` binaryMediaTypes
       `Prelude.hashWithSalt` cloneFrom
       `Prelude.hashWithSalt` description

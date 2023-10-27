@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.S3ArtifactLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.S3ArtifactLocation where
@@ -81,7 +81,8 @@ instance Data.FromJSON S3ArtifactLocation where
 
 instance Prelude.Hashable S3ArtifactLocation where
   hashWithSalt _salt S3ArtifactLocation' {..} =
-    _salt `Prelude.hashWithSalt` bucketName
+    _salt
+      `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` objectKey
 
 instance Prelude.NFData S3ArtifactLocation where

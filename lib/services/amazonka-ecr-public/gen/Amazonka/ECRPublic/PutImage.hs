@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECRPublic.PutImage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -168,7 +168,8 @@ instance Core.AWSRequest PutImage where
 
 instance Prelude.Hashable PutImage where
   hashWithSalt _salt PutImage' {..} =
-    _salt `Prelude.hashWithSalt` imageDigest
+    _salt
+      `Prelude.hashWithSalt` imageDigest
       `Prelude.hashWithSalt` imageManifestMediaType
       `Prelude.hashWithSalt` imageTag
       `Prelude.hashWithSalt` registryId

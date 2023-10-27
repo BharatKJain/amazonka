@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.DeltaTime
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.DeltaTime where
@@ -109,7 +109,8 @@ instance Data.FromJSON DeltaTime where
 
 instance Prelude.Hashable DeltaTime where
   hashWithSalt _salt DeltaTime' {..} =
-    _salt `Prelude.hashWithSalt` offsetSeconds
+    _salt
+      `Prelude.hashWithSalt` offsetSeconds
       `Prelude.hashWithSalt` timeExpression
 
 instance Prelude.NFData DeltaTime where

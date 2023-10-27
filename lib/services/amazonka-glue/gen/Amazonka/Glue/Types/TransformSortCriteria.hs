@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.TransformSortCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.TransformSortCriteria where
@@ -77,7 +77,8 @@ transformSortCriteria_sortDirection = Lens.lens (\TransformSortCriteria' {sortDi
 
 instance Prelude.Hashable TransformSortCriteria where
   hashWithSalt _salt TransformSortCriteria' {..} =
-    _salt `Prelude.hashWithSalt` column
+    _salt
+      `Prelude.hashWithSalt` column
       `Prelude.hashWithSalt` sortDirection
 
 instance Prelude.NFData TransformSortCriteria where

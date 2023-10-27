@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsIamPolicyVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsIamPolicyVersion where
@@ -99,7 +99,8 @@ instance Data.FromJSON AwsIamPolicyVersion where
 
 instance Prelude.Hashable AwsIamPolicyVersion where
   hashWithSalt _salt AwsIamPolicyVersion' {..} =
-    _salt `Prelude.hashWithSalt` createDate
+    _salt
+      `Prelude.hashWithSalt` createDate
       `Prelude.hashWithSalt` isDefaultVersion
       `Prelude.hashWithSalt` versionId
 

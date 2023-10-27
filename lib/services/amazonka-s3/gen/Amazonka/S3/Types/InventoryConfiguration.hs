@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.InventoryConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.InventoryConfiguration where
@@ -153,7 +153,9 @@ instance Data.FromXML InventoryConfiguration where
   parseXML x =
     InventoryConfiguration'
       Prelude.<$> (x Data..@? "Filter")
-      Prelude.<*> ( x Data..@? "OptionalFields" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "OptionalFields"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Field")
                   )
       Prelude.<*> (x Data..@ "Destination")
@@ -164,7 +166,8 @@ instance Data.FromXML InventoryConfiguration where
 
 instance Prelude.Hashable InventoryConfiguration where
   hashWithSalt _salt InventoryConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` optionalFields
       `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` isEnabled

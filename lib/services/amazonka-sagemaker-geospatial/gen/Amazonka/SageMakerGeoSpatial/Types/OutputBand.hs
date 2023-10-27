@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.OutputBand
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.OutputBand where
@@ -79,7 +79,8 @@ instance Data.FromJSON OutputBand where
 
 instance Prelude.Hashable OutputBand where
   hashWithSalt _salt OutputBand' {..} =
-    _salt `Prelude.hashWithSalt` bandName
+    _salt
+      `Prelude.hashWithSalt` bandName
       `Prelude.hashWithSalt` outputDataType
 
 instance Prelude.NFData OutputBand where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.RestoreTableFromBackup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -188,7 +188,8 @@ instance Core.AWSRequest RestoreTableFromBackup where
 
 instance Prelude.Hashable RestoreTableFromBackup where
   hashWithSalt _salt RestoreTableFromBackup' {..} =
-    _salt `Prelude.hashWithSalt` billingModeOverride
+    _salt
+      `Prelude.hashWithSalt` billingModeOverride
       `Prelude.hashWithSalt` globalSecondaryIndexOverride
       `Prelude.hashWithSalt` localSecondaryIndexOverride
       `Prelude.hashWithSalt` provisionedThroughputOverride

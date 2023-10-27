@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Location.CalculateRoute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -326,10 +326,12 @@ newCalculateRoute
         waypointPositions = Prelude.Nothing,
         calculatorName = pCalculatorName_,
         departurePosition =
-          Data._Sensitive Prelude.. Lens.coerced
+          Data._Sensitive
+            Prelude.. Lens.coerced
             Lens.# pDeparturePosition_,
         destinationPosition =
-          Data._Sensitive Prelude.. Lens.coerced
+          Data._Sensitive
+            Prelude.. Lens.coerced
             Lens.# pDestinationPosition_
       }
 
@@ -476,7 +478,8 @@ instance Core.AWSRequest CalculateRoute where
 
 instance Prelude.Hashable CalculateRoute where
   hashWithSalt _salt CalculateRoute' {..} =
-    _salt `Prelude.hashWithSalt` carModeOptions
+    _salt
+      `Prelude.hashWithSalt` carModeOptions
       `Prelude.hashWithSalt` departNow
       `Prelude.hashWithSalt` departureTime
       `Prelude.hashWithSalt` distanceUnit

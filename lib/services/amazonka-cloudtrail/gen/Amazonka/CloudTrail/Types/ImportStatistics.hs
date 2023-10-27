@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudTrail.Types.ImportStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudTrail.Types.ImportStatistics where
@@ -109,7 +109,8 @@ instance Data.FromJSON ImportStatistics where
 
 instance Prelude.Hashable ImportStatistics where
   hashWithSalt _salt ImportStatistics' {..} =
-    _salt `Prelude.hashWithSalt` eventsCompleted
+    _salt
+      `Prelude.hashWithSalt` eventsCompleted
       `Prelude.hashWithSalt` failedEntries
       `Prelude.hashWithSalt` filesCompleted
       `Prelude.hashWithSalt` prefixesCompleted

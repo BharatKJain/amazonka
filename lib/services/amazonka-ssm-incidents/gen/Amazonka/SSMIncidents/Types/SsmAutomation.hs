@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.SsmAutomation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.SsmAutomation where
@@ -124,7 +124,8 @@ instance Data.FromJSON SsmAutomation where
       ( \x ->
           SsmAutomation'
             Prelude.<$> (x Data..:? "documentVersion")
-            Prelude.<*> ( x Data..:? "dynamicParameters"
+            Prelude.<*> ( x
+                            Data..:? "dynamicParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "parameters" Data..!= Prelude.mempty)
@@ -135,7 +136,8 @@ instance Data.FromJSON SsmAutomation where
 
 instance Prelude.Hashable SsmAutomation where
   hashWithSalt _salt SsmAutomation' {..} =
-    _salt `Prelude.hashWithSalt` documentVersion
+    _salt
+      `Prelude.hashWithSalt` documentVersion
       `Prelude.hashWithSalt` dynamicParameters
       `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` targetAccount

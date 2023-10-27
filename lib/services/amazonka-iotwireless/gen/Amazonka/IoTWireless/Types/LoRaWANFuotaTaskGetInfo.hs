@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.LoRaWANFuotaTaskGetInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.LoRaWANFuotaTaskGetInfo where
@@ -73,7 +73,8 @@ instance Data.FromJSON LoRaWANFuotaTaskGetInfo where
 
 instance Prelude.Hashable LoRaWANFuotaTaskGetInfo where
   hashWithSalt _salt LoRaWANFuotaTaskGetInfo' {..} =
-    _salt `Prelude.hashWithSalt` rfRegion
+    _salt
+      `Prelude.hashWithSalt` rfRegion
       `Prelude.hashWithSalt` startTime
 
 instance Prelude.NFData LoRaWANFuotaTaskGetInfo where

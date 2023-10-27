@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataPipeline.Types.Selector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataPipeline.Types.Selector where
@@ -74,7 +74,8 @@ selector_operator = Lens.lens (\Selector' {operator} -> operator) (\s@Selector' 
 
 instance Prelude.Hashable Selector where
   hashWithSalt _salt Selector' {..} =
-    _salt `Prelude.hashWithSalt` fieldName
+    _salt
+      `Prelude.hashWithSalt` fieldName
       `Prelude.hashWithSalt` operator
 
 instance Prelude.NFData Selector where

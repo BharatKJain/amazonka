@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Proton.Types.RepositorySyncDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Proton.Types.RepositorySyncDefinition where
@@ -106,7 +106,8 @@ instance Data.FromJSON RepositorySyncDefinition where
 
 instance Prelude.Hashable RepositorySyncDefinition where
   hashWithSalt _salt RepositorySyncDefinition' {..} =
-    _salt `Prelude.hashWithSalt` branch
+    _salt
+      `Prelude.hashWithSalt` branch
       `Prelude.hashWithSalt` directory
       `Prelude.hashWithSalt` parent
       `Prelude.hashWithSalt` target

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ComboChartConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ComboChartConfiguration where
@@ -279,7 +279,8 @@ instance Data.FromJSON ComboChartConfiguration where
 
 instance Prelude.Hashable ComboChartConfiguration where
   hashWithSalt _salt ComboChartConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` barDataLabels
+    _salt
+      `Prelude.hashWithSalt` barDataLabels
       `Prelude.hashWithSalt` barsArrangement
       `Prelude.hashWithSalt` categoryAxis
       `Prelude.hashWithSalt` categoryLabelOptions

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeStar.CreateUserProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,7 +158,8 @@ instance Core.AWSRequest CreateUserProfile where
 
 instance Prelude.Hashable CreateUserProfile where
   hashWithSalt _salt CreateUserProfile' {..} =
-    _salt `Prelude.hashWithSalt` sshPublicKey
+    _salt
+      `Prelude.hashWithSalt` sshPublicKey
       `Prelude.hashWithSalt` userArn
       `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` emailAddress

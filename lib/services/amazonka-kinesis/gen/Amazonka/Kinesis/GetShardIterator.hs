@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kinesis.GetShardIterator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -278,7 +278,8 @@ instance Core.AWSRequest GetShardIterator where
 
 instance Prelude.Hashable GetShardIterator where
   hashWithSalt _salt GetShardIterator' {..} =
-    _salt `Prelude.hashWithSalt` startingSequenceNumber
+    _salt
+      `Prelude.hashWithSalt` startingSequenceNumber
       `Prelude.hashWithSalt` streamARN
       `Prelude.hashWithSalt` streamName
       `Prelude.hashWithSalt` timestamp

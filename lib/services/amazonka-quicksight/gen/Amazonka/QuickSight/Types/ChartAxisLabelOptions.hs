@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ChartAxisLabelOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ChartAxisLabelOptions where
@@ -95,7 +95,8 @@ instance Data.FromJSON ChartAxisLabelOptions where
       "ChartAxisLabelOptions"
       ( \x ->
           ChartAxisLabelOptions'
-            Prelude.<$> ( x Data..:? "AxisLabelOptions"
+            Prelude.<$> ( x
+                            Data..:? "AxisLabelOptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SortIconVisibility")
@@ -104,7 +105,8 @@ instance Data.FromJSON ChartAxisLabelOptions where
 
 instance Prelude.Hashable ChartAxisLabelOptions where
   hashWithSalt _salt ChartAxisLabelOptions' {..} =
-    _salt `Prelude.hashWithSalt` axisLabelOptions
+    _salt
+      `Prelude.hashWithSalt` axisLabelOptions
       `Prelude.hashWithSalt` sortIconVisibility
       `Prelude.hashWithSalt` visibility
 

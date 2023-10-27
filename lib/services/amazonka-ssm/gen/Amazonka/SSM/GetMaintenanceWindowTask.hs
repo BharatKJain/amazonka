@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.GetMaintenanceWindowTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -143,7 +143,8 @@ instance Core.AWSRequest GetMaintenanceWindowTask where
 
 instance Prelude.Hashable GetMaintenanceWindowTask where
   hashWithSalt _salt GetMaintenanceWindowTask' {..} =
-    _salt `Prelude.hashWithSalt` windowId
+    _salt
+      `Prelude.hashWithSalt` windowId
       `Prelude.hashWithSalt` windowTaskId
 
 instance Prelude.NFData GetMaintenanceWindowTask where

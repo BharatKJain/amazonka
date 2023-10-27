@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.WarmPoolConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.WarmPoolConfiguration where
@@ -110,7 +110,8 @@ instance Data.FromXML WarmPoolConfiguration where
 
 instance Prelude.Hashable WarmPoolConfiguration where
   hashWithSalt _salt WarmPoolConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` instanceReusePolicy
+    _salt
+      `Prelude.hashWithSalt` instanceReusePolicy
       `Prelude.hashWithSalt` maxGroupPreparedCapacity
       `Prelude.hashWithSalt` minSize
       `Prelude.hashWithSalt` poolState

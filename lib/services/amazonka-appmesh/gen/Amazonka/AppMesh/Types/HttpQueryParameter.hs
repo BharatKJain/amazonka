@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.HttpQueryParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.HttpQueryParameter where
@@ -71,12 +71,14 @@ instance Data.FromJSON HttpQueryParameter where
       "HttpQueryParameter"
       ( \x ->
           HttpQueryParameter'
-            Prelude.<$> (x Data..:? "match") Prelude.<*> (x Data..: "name")
+            Prelude.<$> (x Data..:? "match")
+            Prelude.<*> (x Data..: "name")
       )
 
 instance Prelude.Hashable HttpQueryParameter where
   hashWithSalt _salt HttpQueryParameter' {..} =
-    _salt `Prelude.hashWithSalt` match
+    _salt
+      `Prelude.hashWithSalt` match
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData HttpQueryParameter where

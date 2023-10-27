@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ManagedBlockChain.CreateNode
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -220,7 +220,8 @@ instance Core.AWSRequest CreateNode where
 
 instance Prelude.Hashable CreateNode where
   hashWithSalt _salt CreateNode' {..} =
-    _salt `Prelude.hashWithSalt` memberId
+    _salt
+      `Prelude.hashWithSalt` memberId
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` clientRequestToken
       `Prelude.hashWithSalt` networkId

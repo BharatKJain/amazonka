@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.ThingGroupDocument
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.ThingGroupDocument where
@@ -96,7 +96,8 @@ instance Data.FromJSON ThingGroupDocument where
       ( \x ->
           ThingGroupDocument'
             Prelude.<$> (x Data..:? "attributes" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "parentGroupNames"
+            Prelude.<*> ( x
+                            Data..:? "parentGroupNames"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "thingGroupDescription")
@@ -106,7 +107,8 @@ instance Data.FromJSON ThingGroupDocument where
 
 instance Prelude.Hashable ThingGroupDocument where
   hashWithSalt _salt ThingGroupDocument' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` parentGroupNames
       `Prelude.hashWithSalt` thingGroupDescription
       `Prelude.hashWithSalt` thingGroupId

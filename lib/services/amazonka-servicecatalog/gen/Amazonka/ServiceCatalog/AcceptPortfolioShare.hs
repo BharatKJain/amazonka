@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.AcceptPortfolioShare
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -165,7 +165,8 @@ instance Core.AWSRequest AcceptPortfolioShare where
 
 instance Prelude.Hashable AcceptPortfolioShare where
   hashWithSalt _salt AcceptPortfolioShare' {..} =
-    _salt `Prelude.hashWithSalt` acceptLanguage
+    _salt
+      `Prelude.hashWithSalt` acceptLanguage
       `Prelude.hashWithSalt` portfolioShareType
       `Prelude.hashWithSalt` portfolioId
 

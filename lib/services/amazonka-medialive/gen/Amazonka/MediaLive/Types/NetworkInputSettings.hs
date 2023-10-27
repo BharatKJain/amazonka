@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.NetworkInputSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.NetworkInputSettings where
@@ -93,7 +93,8 @@ instance Data.FromJSON NetworkInputSettings where
 
 instance Prelude.Hashable NetworkInputSettings where
   hashWithSalt _salt NetworkInputSettings' {..} =
-    _salt `Prelude.hashWithSalt` hlsInputSettings
+    _salt
+      `Prelude.hashWithSalt` hlsInputSettings
       `Prelude.hashWithSalt` serverValidation
 
 instance Prelude.NFData NetworkInputSettings where

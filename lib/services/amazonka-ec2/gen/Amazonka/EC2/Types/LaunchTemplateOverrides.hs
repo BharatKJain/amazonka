@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.LaunchTemplateOverrides
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.LaunchTemplateOverrides where
@@ -208,7 +208,8 @@ instance Data.FromXML LaunchTemplateOverrides where
 
 instance Prelude.Hashable LaunchTemplateOverrides where
   hashWithSalt _salt LaunchTemplateOverrides' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZone
+    _salt
+      `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` instanceRequirements
       `Prelude.hashWithSalt` instanceType
       `Prelude.hashWithSalt` priority

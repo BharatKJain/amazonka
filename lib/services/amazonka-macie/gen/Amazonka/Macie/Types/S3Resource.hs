@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Macie.Types.S3Resource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Macie.Types.S3Resource where
@@ -79,7 +79,8 @@ instance Data.FromJSON S3Resource where
 
 instance Prelude.Hashable S3Resource where
   hashWithSalt _salt S3Resource' {..} =
-    _salt `Prelude.hashWithSalt` prefix
+    _salt
+      `Prelude.hashWithSalt` prefix
       `Prelude.hashWithSalt` bucketName
 
 instance Prelude.NFData S3Resource where

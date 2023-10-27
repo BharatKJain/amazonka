@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.GsmLocalId
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.GsmLocalId where
@@ -66,7 +66,8 @@ gsmLocalId_bcch = Lens.lens (\GsmLocalId' {bcch} -> bcch) (\s@GsmLocalId' {} a -
 
 instance Prelude.Hashable GsmLocalId where
   hashWithSalt _salt GsmLocalId' {..} =
-    _salt `Prelude.hashWithSalt` bsic
+    _salt
+      `Prelude.hashWithSalt` bsic
       `Prelude.hashWithSalt` bcch
 
 instance Prelude.NFData GsmLocalId where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.DeletePipeline
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance Core.AWSRequest DeletePipeline where
 
 instance Prelude.Hashable DeletePipeline where
   hashWithSalt _salt DeletePipeline' {..} =
-    _salt `Prelude.hashWithSalt` pipelineName
+    _salt
+      `Prelude.hashWithSalt` pipelineName
       `Prelude.hashWithSalt` clientRequestToken
 
 instance Prelude.NFData DeletePipeline where

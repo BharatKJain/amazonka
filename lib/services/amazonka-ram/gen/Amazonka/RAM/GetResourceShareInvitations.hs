@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RAM.GetResourceShareInvitations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -165,22 +165,22 @@ instance Core.AWSPager GetResourceShareInvitations where
     | Core.stop
         ( rs
             Lens.^? getResourceShareInvitationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getResourceShareInvitationsResponse_resourceShareInvitations
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getResourceShareInvitations_nextToken
           Lens..~ rs
           Lens.^? getResourceShareInvitationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetResourceShareInvitations where
   type
@@ -193,7 +193,8 @@ instance Core.AWSRequest GetResourceShareInvitations where
       ( \s h x ->
           GetResourceShareInvitationsResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "resourceShareInvitations"
+            Prelude.<*> ( x
+                            Data..?> "resourceShareInvitations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -201,7 +202,8 @@ instance Core.AWSRequest GetResourceShareInvitations where
 
 instance Prelude.Hashable GetResourceShareInvitations where
   hashWithSalt _salt GetResourceShareInvitations' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` resourceShareArns
       `Prelude.hashWithSalt` resourceShareInvitationArns

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.AutoTuneOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.AutoTuneOptions where
@@ -97,7 +97,8 @@ instance Data.FromJSON AutoTuneOptions where
       ( \x ->
           AutoTuneOptions'
             Prelude.<$> (x Data..:? "DesiredState")
-            Prelude.<*> ( x Data..:? "MaintenanceSchedules"
+            Prelude.<*> ( x
+                            Data..:? "MaintenanceSchedules"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "RollbackOnDisable")
@@ -105,7 +106,8 @@ instance Data.FromJSON AutoTuneOptions where
 
 instance Prelude.Hashable AutoTuneOptions where
   hashWithSalt _salt AutoTuneOptions' {..} =
-    _salt `Prelude.hashWithSalt` desiredState
+    _salt
+      `Prelude.hashWithSalt` desiredState
       `Prelude.hashWithSalt` maintenanceSchedules
       `Prelude.hashWithSalt` rollbackOnDisable
 

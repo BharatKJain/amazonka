@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2NetworkAclEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2NetworkAclEntry where
@@ -146,7 +146,8 @@ instance Data.FromJSON AwsEc2NetworkAclEntry where
 
 instance Prelude.Hashable AwsEc2NetworkAclEntry where
   hashWithSalt _salt AwsEc2NetworkAclEntry' {..} =
-    _salt `Prelude.hashWithSalt` cidrBlock
+    _salt
+      `Prelude.hashWithSalt` cidrBlock
       `Prelude.hashWithSalt` egress
       `Prelude.hashWithSalt` icmpTypeCode
       `Prelude.hashWithSalt` ipv6CidrBlock

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeBuild.ListProjects
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -171,21 +171,24 @@ instance Core.AWSPager ListProjects where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listProjectsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listProjectsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listProjectsResponse_projects Prelude.. Lens._Just
-              Prelude.. Lens.to Prelude.toList
+            Lens.^? listProjectsResponse_projects
+            Prelude.. Lens._Just
+            Prelude.. Lens.to Prelude.toList
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listProjects_nextToken
           Lens..~ rs
-          Lens.^? listProjectsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listProjectsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListProjects where
   type AWSResponse ListProjects = ListProjectsResponse
@@ -202,7 +205,8 @@ instance Core.AWSRequest ListProjects where
 
 instance Prelude.Hashable ListProjects where
   hashWithSalt _salt ListProjects' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` sortBy
       `Prelude.hashWithSalt` sortOrder
 

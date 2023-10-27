@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTFleetWise.Types.NodeCounts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTFleetWise.Types.NodeCounts where
@@ -108,7 +108,8 @@ instance Data.FromJSON NodeCounts where
 
 instance Prelude.Hashable NodeCounts where
   hashWithSalt _salt NodeCounts' {..} =
-    _salt `Prelude.hashWithSalt` totalActuators
+    _salt
+      `Prelude.hashWithSalt` totalActuators
       `Prelude.hashWithSalt` totalAttributes
       `Prelude.hashWithSalt` totalBranches
       `Prelude.hashWithSalt` totalNodes

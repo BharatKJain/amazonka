@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.MotionImageInsertionFramerate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.MotionImageInsertionFramerate where
@@ -87,7 +87,8 @@ instance
     MotionImageInsertionFramerate
   where
   hashWithSalt _salt MotionImageInsertionFramerate' {..} =
-    _salt `Prelude.hashWithSalt` framerateDenominator
+    _salt
+      `Prelude.hashWithSalt` framerateDenominator
       `Prelude.hashWithSalt` framerateNumerator
 
 instance Prelude.NFData MotionImageInsertionFramerate where

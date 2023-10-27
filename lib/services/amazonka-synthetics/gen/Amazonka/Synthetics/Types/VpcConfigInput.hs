@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Synthetics.Types.VpcConfigInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Synthetics.Types.VpcConfigInput where
@@ -67,7 +67,8 @@ vpcConfigInput_subnetIds = Lens.lens (\VpcConfigInput' {subnetIds} -> subnetIds)
 
 instance Prelude.Hashable VpcConfigInput where
   hashWithSalt _salt VpcConfigInput' {..} =
-    _salt `Prelude.hashWithSalt` securityGroupIds
+    _salt
+      `Prelude.hashWithSalt` securityGroupIds
       `Prelude.hashWithSalt` subnetIds
 
 instance Prelude.NFData VpcConfigInput where

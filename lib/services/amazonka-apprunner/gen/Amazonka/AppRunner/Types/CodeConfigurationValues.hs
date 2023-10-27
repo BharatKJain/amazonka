@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppRunner.Types.CodeConfigurationValues
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppRunner.Types.CodeConfigurationValues where
@@ -164,10 +164,12 @@ instance Data.FromJSON CodeConfigurationValues where
           CodeConfigurationValues'
             Prelude.<$> (x Data..:? "BuildCommand")
             Prelude.<*> (x Data..:? "Port")
-            Prelude.<*> ( x Data..:? "RuntimeEnvironmentSecrets"
+            Prelude.<*> ( x
+                            Data..:? "RuntimeEnvironmentSecrets"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "RuntimeEnvironmentVariables"
+            Prelude.<*> ( x
+                            Data..:? "RuntimeEnvironmentVariables"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "StartCommand")
@@ -176,7 +178,8 @@ instance Data.FromJSON CodeConfigurationValues where
 
 instance Prelude.Hashable CodeConfigurationValues where
   hashWithSalt _salt CodeConfigurationValues' {..} =
-    _salt `Prelude.hashWithSalt` buildCommand
+    _salt
+      `Prelude.hashWithSalt` buildCommand
       `Prelude.hashWithSalt` port
       `Prelude.hashWithSalt` runtimeEnvironmentSecrets
       `Prelude.hashWithSalt` runtimeEnvironmentVariables

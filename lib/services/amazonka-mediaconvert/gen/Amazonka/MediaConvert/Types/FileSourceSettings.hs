@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.FileSourceSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.FileSourceSettings where
@@ -204,7 +204,8 @@ instance Data.FromJSON FileSourceSettings where
 
 instance Prelude.Hashable FileSourceSettings where
   hashWithSalt _salt FileSourceSettings' {..} =
-    _salt `Prelude.hashWithSalt` convert608To708
+    _salt
+      `Prelude.hashWithSalt` convert608To708
       `Prelude.hashWithSalt` framerate
       `Prelude.hashWithSalt` sourceFile
       `Prelude.hashWithSalt` timeDelta

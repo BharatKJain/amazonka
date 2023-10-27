@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeBuild.UpdateProject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -474,7 +474,8 @@ instance Core.AWSRequest UpdateProject where
 
 instance Prelude.Hashable UpdateProject where
   hashWithSalt _salt UpdateProject' {..} =
-    _salt `Prelude.hashWithSalt` artifacts
+    _salt
+      `Prelude.hashWithSalt` artifacts
       `Prelude.hashWithSalt` badgeEnabled
       `Prelude.hashWithSalt` buildBatchConfig
       `Prelude.hashWithSalt` cache

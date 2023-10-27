@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatchLogs.PutLogEvents
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -188,7 +188,8 @@ instance Core.AWSRequest PutLogEvents where
 
 instance Prelude.Hashable PutLogEvents where
   hashWithSalt _salt PutLogEvents' {..} =
-    _salt `Prelude.hashWithSalt` sequenceToken
+    _salt
+      `Prelude.hashWithSalt` sequenceToken
       `Prelude.hashWithSalt` logGroupName
       `Prelude.hashWithSalt` logStreamName
       `Prelude.hashWithSalt` logEvents

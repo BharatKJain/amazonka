@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Condition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Condition where
@@ -119,7 +119,8 @@ instance Data.FromJSON Condition where
 
 instance Prelude.Hashable Condition where
   hashWithSalt _salt Condition' {..} =
-    _salt `Prelude.hashWithSalt` crawlState
+    _salt
+      `Prelude.hashWithSalt` crawlState
       `Prelude.hashWithSalt` crawlerName
       `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` logicalOperator

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.WriteCampaignRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.WriteCampaignRequest where
@@ -246,7 +246,8 @@ writeCampaignRequest_tags = Lens.lens (\WriteCampaignRequest' {tags} -> tags) (\
 
 instance Prelude.Hashable WriteCampaignRequest where
   hashWithSalt _salt WriteCampaignRequest' {..} =
-    _salt `Prelude.hashWithSalt` additionalTreatments
+    _salt
+      `Prelude.hashWithSalt` additionalTreatments
       `Prelude.hashWithSalt` customDeliveryConfiguration
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` holdoutPercent

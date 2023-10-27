@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MemoryDb.Types.ReservedNode
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MemoryDb.Types.ReservedNode where
@@ -156,7 +156,8 @@ instance Data.FromJSON ReservedNode where
             Prelude.<*> (x Data..:? "NodeCount")
             Prelude.<*> (x Data..:? "NodeType")
             Prelude.<*> (x Data..:? "OfferingType")
-            Prelude.<*> ( x Data..:? "RecurringCharges"
+            Prelude.<*> ( x
+                            Data..:? "RecurringCharges"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ReservationId")
@@ -167,7 +168,8 @@ instance Data.FromJSON ReservedNode where
 
 instance Prelude.Hashable ReservedNode where
   hashWithSalt _salt ReservedNode' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` fixedPrice
       `Prelude.hashWithSalt` nodeCount

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Polly.SynthesizeSpeech
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -344,7 +344,8 @@ instance Core.AWSRequest SynthesizeSpeech where
 
 instance Prelude.Hashable SynthesizeSpeech where
   hashWithSalt _salt SynthesizeSpeech' {..} =
-    _salt `Prelude.hashWithSalt` engine
+    _salt
+      `Prelude.hashWithSalt` engine
       `Prelude.hashWithSalt` languageCode
       `Prelude.hashWithSalt` lexiconNames
       `Prelude.hashWithSalt` sampleRate

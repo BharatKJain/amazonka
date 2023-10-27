@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Inspector.UpdateAssessmentTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,7 +116,8 @@ instance Core.AWSRequest UpdateAssessmentTarget where
 
 instance Prelude.Hashable UpdateAssessmentTarget where
   hashWithSalt _salt UpdateAssessmentTarget' {..} =
-    _salt `Prelude.hashWithSalt` resourceGroupArn
+    _salt
+      `Prelude.hashWithSalt` resourceGroupArn
       `Prelude.hashWithSalt` assessmentTargetArn
       `Prelude.hashWithSalt` assessmentTargetName
 

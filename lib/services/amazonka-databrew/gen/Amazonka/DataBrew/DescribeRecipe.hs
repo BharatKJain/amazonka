@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataBrew.DescribeRecipe
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,7 +130,8 @@ instance Core.AWSRequest DescribeRecipe where
 
 instance Prelude.Hashable DescribeRecipe where
   hashWithSalt _salt DescribeRecipe' {..} =
-    _salt `Prelude.hashWithSalt` recipeVersion
+    _salt
+      `Prelude.hashWithSalt` recipeVersion
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData DescribeRecipe where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MwAA.Types.ModuleLoggingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MwAA.Types.ModuleLoggingConfiguration where
@@ -102,7 +102,8 @@ instance Data.FromJSON ModuleLoggingConfiguration where
 
 instance Prelude.Hashable ModuleLoggingConfiguration where
   hashWithSalt _salt ModuleLoggingConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` cloudWatchLogGroupArn
+    _salt
+      `Prelude.hashWithSalt` cloudWatchLogGroupArn
       `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` logLevel
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.ScheduledSplitConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.ScheduledSplitConfig where
@@ -118,7 +118,8 @@ scheduledSplitConfig_startTime = Lens.lens (\ScheduledSplitConfig' {startTime} -
 
 instance Prelude.Hashable ScheduledSplitConfig where
   hashWithSalt _salt ScheduledSplitConfig' {..} =
-    _salt `Prelude.hashWithSalt` segmentOverrides
+    _salt
+      `Prelude.hashWithSalt` segmentOverrides
       `Prelude.hashWithSalt` groupWeights
       `Prelude.hashWithSalt` startTime
 

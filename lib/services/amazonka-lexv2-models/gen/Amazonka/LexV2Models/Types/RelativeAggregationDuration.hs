@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.RelativeAggregationDuration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.RelativeAggregationDuration where
@@ -121,7 +121,8 @@ instance Data.FromJSON RelativeAggregationDuration where
 
 instance Prelude.Hashable RelativeAggregationDuration where
   hashWithSalt _salt RelativeAggregationDuration' {..} =
-    _salt `Prelude.hashWithSalt` timeDimension
+    _salt
+      `Prelude.hashWithSalt` timeDimension
       `Prelude.hashWithSalt` timeValue
 
 instance Prelude.NFData RelativeAggregationDuration where

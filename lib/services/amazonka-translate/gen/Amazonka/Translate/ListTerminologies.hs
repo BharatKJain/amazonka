@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Translate.ListTerminologies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -95,22 +95,22 @@ instance Core.AWSPager ListTerminologies where
     | Core.stop
         ( rs
             Lens.^? listTerminologiesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listTerminologiesResponse_terminologyPropertiesList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listTerminologies_nextToken
           Lens..~ rs
           Lens.^? listTerminologiesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListTerminologies where
   type
@@ -123,7 +123,8 @@ instance Core.AWSRequest ListTerminologies where
       ( \s h x ->
           ListTerminologiesResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "TerminologyPropertiesList"
+            Prelude.<*> ( x
+                            Data..?> "TerminologyPropertiesList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -131,7 +132,8 @@ instance Core.AWSRequest ListTerminologies where
 
 instance Prelude.Hashable ListTerminologies where
   hashWithSalt _salt ListTerminologies' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListTerminologies where

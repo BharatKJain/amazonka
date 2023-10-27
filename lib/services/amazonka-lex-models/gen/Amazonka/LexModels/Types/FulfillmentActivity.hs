@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexModels.Types.FulfillmentActivity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexModels.Types.FulfillmentActivity where
@@ -99,7 +99,8 @@ instance Data.FromJSON FulfillmentActivity where
 
 instance Prelude.Hashable FulfillmentActivity where
   hashWithSalt _salt FulfillmentActivity' {..} =
-    _salt `Prelude.hashWithSalt` codeHook
+    _salt
+      `Prelude.hashWithSalt` codeHook
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData FulfillmentActivity where

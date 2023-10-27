@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.LakeFormationConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.LakeFormationConfiguration where
@@ -81,7 +81,8 @@ instance Data.FromJSON LakeFormationConfiguration where
 
 instance Prelude.Hashable LakeFormationConfiguration where
   hashWithSalt _salt LakeFormationConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` useLakeFormationCredentials
 
 instance Prelude.NFData LakeFormationConfiguration where

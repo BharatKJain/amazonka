@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.EndpointConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.EndpointConfiguration where
@@ -86,14 +86,16 @@ instance Data.FromJSON EndpointConfiguration where
       ( \x ->
           EndpointConfiguration'
             Prelude.<$> (x Data..:? "types" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "vpcEndpointIds"
+            Prelude.<*> ( x
+                            Data..:? "vpcEndpointIds"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable EndpointConfiguration where
   hashWithSalt _salt EndpointConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` types
+    _salt
+      `Prelude.hashWithSalt` types
       `Prelude.hashWithSalt` vpcEndpointIds
 
 instance Prelude.NFData EndpointConfiguration where

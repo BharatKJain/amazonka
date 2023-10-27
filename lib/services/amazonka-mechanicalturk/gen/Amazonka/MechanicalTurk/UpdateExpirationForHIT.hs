@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MechanicalTurk.UpdateExpirationForHIT
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest UpdateExpirationForHIT where
 
 instance Prelude.Hashable UpdateExpirationForHIT where
   hashWithSalt _salt UpdateExpirationForHIT' {..} =
-    _salt `Prelude.hashWithSalt` hITId
+    _salt
+      `Prelude.hashWithSalt` hITId
       `Prelude.hashWithSalt` expireAt
 
 instance Prelude.NFData UpdateExpirationForHIT where

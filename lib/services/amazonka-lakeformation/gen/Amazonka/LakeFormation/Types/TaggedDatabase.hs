@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.TaggedDatabase
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.TaggedDatabase where
@@ -76,7 +76,8 @@ instance Data.FromJSON TaggedDatabase where
 
 instance Prelude.Hashable TaggedDatabase where
   hashWithSalt _salt TaggedDatabase' {..} =
-    _salt `Prelude.hashWithSalt` database
+    _salt
+      `Prelude.hashWithSalt` database
       `Prelude.hashWithSalt` lFTags
 
 instance Prelude.NFData TaggedDatabase where

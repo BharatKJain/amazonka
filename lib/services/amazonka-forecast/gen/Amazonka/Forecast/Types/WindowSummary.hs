@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.WindowSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.WindowSummary where
@@ -122,7 +122,8 @@ instance Data.FromJSON WindowSummary where
 
 instance Prelude.Hashable WindowSummary where
   hashWithSalt _salt WindowSummary' {..} =
-    _salt `Prelude.hashWithSalt` evaluationType
+    _salt
+      `Prelude.hashWithSalt` evaluationType
       `Prelude.hashWithSalt` itemCount
       `Prelude.hashWithSalt` metrics
       `Prelude.hashWithSalt` testWindowEnd

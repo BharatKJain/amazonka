@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MemoryDb.UpdateCluster
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -314,7 +314,8 @@ instance Core.AWSRequest UpdateCluster where
 
 instance Prelude.Hashable UpdateCluster where
   hashWithSalt _salt UpdateCluster' {..} =
-    _salt `Prelude.hashWithSalt` aCLName
+    _salt
+      `Prelude.hashWithSalt` aCLName
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` engineVersion
       `Prelude.hashWithSalt` maintenanceWindow

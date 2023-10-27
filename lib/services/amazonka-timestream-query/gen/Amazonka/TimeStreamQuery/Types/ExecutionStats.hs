@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamQuery.Types.ExecutionStats
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamQuery.Types.ExecutionStats where
@@ -113,7 +113,8 @@ instance Data.FromJSON ExecutionStats where
 
 instance Prelude.Hashable ExecutionStats where
   hashWithSalt _salt ExecutionStats' {..} =
-    _salt `Prelude.hashWithSalt` bytesMetered
+    _salt
+      `Prelude.hashWithSalt` bytesMetered
       `Prelude.hashWithSalt` dataWrites
       `Prelude.hashWithSalt` executionTimeInMillis
       `Prelude.hashWithSalt` queryResultRows

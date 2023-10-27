@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.ResourceUri
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.ResourceUri where
@@ -75,7 +75,8 @@ instance Data.FromJSON ResourceUri where
 
 instance Prelude.Hashable ResourceUri where
   hashWithSalt _salt ResourceUri' {..} =
-    _salt `Prelude.hashWithSalt` resourceType
+    _salt
+      `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` uri
 
 instance Prelude.NFData ResourceUri where

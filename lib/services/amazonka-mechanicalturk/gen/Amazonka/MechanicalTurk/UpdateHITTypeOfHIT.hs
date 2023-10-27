@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MechanicalTurk.UpdateHITTypeOfHIT
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest UpdateHITTypeOfHIT where
 
 instance Prelude.Hashable UpdateHITTypeOfHIT where
   hashWithSalt _salt UpdateHITTypeOfHIT' {..} =
-    _salt `Prelude.hashWithSalt` hITId
+    _salt
+      `Prelude.hashWithSalt` hITId
       `Prelude.hashWithSalt` hITTypeId
 
 instance Prelude.NFData UpdateHITTypeOfHIT where

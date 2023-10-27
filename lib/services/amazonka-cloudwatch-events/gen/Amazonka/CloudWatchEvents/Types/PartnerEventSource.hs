@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.PartnerEventSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.PartnerEventSource where
@@ -71,12 +71,14 @@ instance Data.FromJSON PartnerEventSource where
       "PartnerEventSource"
       ( \x ->
           PartnerEventSource'
-            Prelude.<$> (x Data..:? "Arn") Prelude.<*> (x Data..:? "Name")
+            Prelude.<$> (x Data..:? "Arn")
+            Prelude.<*> (x Data..:? "Name")
       )
 
 instance Prelude.Hashable PartnerEventSource where
   hashWithSalt _salt PartnerEventSource' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData PartnerEventSource where

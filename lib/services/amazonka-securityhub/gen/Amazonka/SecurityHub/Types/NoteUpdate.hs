@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.NoteUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.NoteUpdate where
@@ -65,7 +65,8 @@ noteUpdate_updatedBy = Lens.lens (\NoteUpdate' {updatedBy} -> updatedBy) (\s@Not
 
 instance Prelude.Hashable NoteUpdate where
   hashWithSalt _salt NoteUpdate' {..} =
-    _salt `Prelude.hashWithSalt` text
+    _salt
+      `Prelude.hashWithSalt` text
       `Prelude.hashWithSalt` updatedBy
 
 instance Prelude.NFData NoteUpdate where

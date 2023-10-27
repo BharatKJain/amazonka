@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsKinesisStreamDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsKinesisStreamDetails where
@@ -117,7 +117,8 @@ instance Data.FromJSON AwsKinesisStreamDetails where
 
 instance Prelude.Hashable AwsKinesisStreamDetails where
   hashWithSalt _salt AwsKinesisStreamDetails' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` retentionPeriodHours
       `Prelude.hashWithSalt` shardCount

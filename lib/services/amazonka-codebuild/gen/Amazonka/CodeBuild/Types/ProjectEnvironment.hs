@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.ProjectEnvironment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.ProjectEnvironment where
@@ -458,7 +458,8 @@ instance Data.FromJSON ProjectEnvironment where
       ( \x ->
           ProjectEnvironment'
             Prelude.<$> (x Data..:? "certificate")
-            Prelude.<*> ( x Data..:? "environmentVariables"
+            Prelude.<*> ( x
+                            Data..:? "environmentVariables"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "imagePullCredentialsType")
@@ -471,7 +472,8 @@ instance Data.FromJSON ProjectEnvironment where
 
 instance Prelude.Hashable ProjectEnvironment where
   hashWithSalt _salt ProjectEnvironment' {..} =
-    _salt `Prelude.hashWithSalt` certificate
+    _salt
+      `Prelude.hashWithSalt` certificate
       `Prelude.hashWithSalt` environmentVariables
       `Prelude.hashWithSalt` imagePullCredentialsType
       `Prelude.hashWithSalt` privilegedMode

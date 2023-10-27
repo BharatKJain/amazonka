@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElastiCache.DescribeReservedCacheNodes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -519,22 +519,22 @@ instance Core.AWSPager DescribeReservedCacheNodes where
     | Core.stop
         ( rs
             Lens.^? describeReservedCacheNodesResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeReservedCacheNodesResponse_reservedCacheNodes
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeReservedCacheNodes_marker
           Lens..~ rs
           Lens.^? describeReservedCacheNodesResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeReservedCacheNodes where
   type
@@ -548,7 +548,8 @@ instance Core.AWSRequest DescribeReservedCacheNodes where
       ( \s h x ->
           DescribeReservedCacheNodesResponse'
             Prelude.<$> (x Data..@? "Marker")
-            Prelude.<*> ( x Data..@? "ReservedCacheNodes"
+            Prelude.<*> ( x
+                            Data..@? "ReservedCacheNodes"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "ReservedCacheNode")
                         )
@@ -557,7 +558,8 @@ instance Core.AWSRequest DescribeReservedCacheNodes where
 
 instance Prelude.Hashable DescribeReservedCacheNodes where
   hashWithSalt _salt DescribeReservedCacheNodes' {..} =
-    _salt `Prelude.hashWithSalt` cacheNodeType
+    _salt
+      `Prelude.hashWithSalt` cacheNodeType
       `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxRecords

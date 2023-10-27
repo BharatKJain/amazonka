@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.VideoBlackFailoverSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.VideoBlackFailoverSettings where
@@ -105,7 +105,8 @@ instance Data.FromJSON VideoBlackFailoverSettings where
 
 instance Prelude.Hashable VideoBlackFailoverSettings where
   hashWithSalt _salt VideoBlackFailoverSettings' {..} =
-    _salt `Prelude.hashWithSalt` blackDetectThreshold
+    _salt
+      `Prelude.hashWithSalt` blackDetectThreshold
       `Prelude.hashWithSalt` videoBlackThresholdMsec
 
 instance Prelude.NFData VideoBlackFailoverSettings where

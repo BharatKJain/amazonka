@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsRdsDbOptionGroupMembership
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsRdsDbOptionGroupMembership where
@@ -78,7 +78,8 @@ instance
     AwsRdsDbOptionGroupMembership
   where
   hashWithSalt _salt AwsRdsDbOptionGroupMembership' {..} =
-    _salt `Prelude.hashWithSalt` optionGroupName
+    _salt
+      `Prelude.hashWithSalt` optionGroupName
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData AwsRdsDbOptionGroupMembership where

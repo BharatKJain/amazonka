@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.Vocabulary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.Vocabulary where
@@ -186,7 +186,8 @@ instance Data.FromJSON Vocabulary where
 
 instance Prelude.Hashable Vocabulary where
   hashWithSalt _salt Vocabulary' {..} =
-    _salt `Prelude.hashWithSalt` content
+    _salt
+      `Prelude.hashWithSalt` content
       `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` name

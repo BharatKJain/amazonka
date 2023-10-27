@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT1ClickDevices.Types.Device
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT1ClickDevices.Types.Device where
@@ -83,7 +83,8 @@ instance Data.FromJSON Device where
 
 instance Prelude.Hashable Device where
   hashWithSalt _salt Device' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` deviceId
       `Prelude.hashWithSalt` type'
 

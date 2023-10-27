@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeImages
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -535,20 +535,22 @@ instance Core.AWSPager DescribeImages where
     | Core.stop
         ( rs
             Lens.^? describeImagesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? describeImagesResponse_images Prelude.. Lens._Just
+            Lens.^? describeImagesResponse_images
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeImages_nextToken
           Lens..~ rs
-          Lens.^? describeImagesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? describeImagesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeImages where
   type
@@ -560,7 +562,9 @@ instance Core.AWSRequest DescribeImages where
     Response.receiveXML
       ( \s h x ->
           DescribeImagesResponse'
-            Prelude.<$> ( x Data..@? "imagesSet" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "imagesSet"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
             Prelude.<*> (x Data..@? "nextToken")
@@ -569,7 +573,8 @@ instance Core.AWSRequest DescribeImages where
 
 instance Prelude.Hashable DescribeImages where
   hashWithSalt _salt DescribeImages' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` executableUsers
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` imageIds

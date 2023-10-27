@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.AssessmentControl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.AssessmentControl where
@@ -140,7 +140,8 @@ instance Data.FromJSON AssessmentControl where
             Prelude.<*> (x Data..:? "comments" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "description")
             Prelude.<*> (x Data..:? "evidenceCount")
-            Prelude.<*> ( x Data..:? "evidenceSources"
+            Prelude.<*> ( x
+                            Data..:? "evidenceSources"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "id")

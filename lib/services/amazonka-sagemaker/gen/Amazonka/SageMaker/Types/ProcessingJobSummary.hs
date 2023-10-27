@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ProcessingJobSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ProcessingJobSummary where
@@ -157,7 +157,8 @@ instance Data.FromJSON ProcessingJobSummary where
 
 instance Prelude.Hashable ProcessingJobSummary where
   hashWithSalt _salt ProcessingJobSummary' {..} =
-    _salt `Prelude.hashWithSalt` exitMessage
+    _salt
+      `Prelude.hashWithSalt` exitMessage
       `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` lastModifiedTime
       `Prelude.hashWithSalt` processingEndTime

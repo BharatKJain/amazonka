@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.ExperienceEntitiesSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.ExperienceEntitiesSummary where
@@ -94,7 +94,8 @@ instance Data.FromJSON ExperienceEntitiesSummary where
 
 instance Prelude.Hashable ExperienceEntitiesSummary where
   hashWithSalt _salt ExperienceEntitiesSummary' {..} =
-    _salt `Prelude.hashWithSalt` displayData
+    _salt
+      `Prelude.hashWithSalt` displayData
       `Prelude.hashWithSalt` entityId
       `Prelude.hashWithSalt` entityType
 

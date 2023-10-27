@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.TrainingMetrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.TrainingMetrics where
@@ -79,14 +79,16 @@ instance Data.FromJSON TrainingMetrics where
       ( \x ->
           TrainingMetrics'
             Prelude.<$> (x Data..:? "auc")
-            Prelude.<*> ( x Data..:? "metricDataPoints"
+            Prelude.<*> ( x
+                            Data..:? "metricDataPoints"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable TrainingMetrics where
   hashWithSalt _salt TrainingMetrics' {..} =
-    _salt `Prelude.hashWithSalt` auc
+    _salt
+      `Prelude.hashWithSalt` auc
       `Prelude.hashWithSalt` metricDataPoints
 
 instance Prelude.NFData TrainingMetrics where

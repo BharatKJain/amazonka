@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.WaitTime
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.WaitTime where
@@ -88,7 +88,8 @@ instance Data.FromJSON WaitTime where
 
 instance Prelude.Hashable WaitTime where
   hashWithSalt _salt WaitTime' {..} =
-    _salt `Prelude.hashWithSalt` waitFor
+    _salt
+      `Prelude.hashWithSalt` waitFor
       `Prelude.hashWithSalt` waitUntil
 
 instance Prelude.NFData WaitTime where

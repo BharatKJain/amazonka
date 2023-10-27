@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kendra.ListFaqs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest ListFaqs where
     Response.receiveJSON
       ( \s h x ->
           ListFaqsResponse'
-            Prelude.<$> ( x Data..?> "FaqSummaryItems"
+            Prelude.<$> ( x
+                            Data..?> "FaqSummaryItems"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -123,7 +124,8 @@ instance Core.AWSRequest ListFaqs where
 
 instance Prelude.Hashable ListFaqs where
   hashWithSalt _salt ListFaqs' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` indexId
 

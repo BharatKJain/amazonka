@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexModels.Types.ConversationLogsRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexModels.Types.ConversationLogsRequest where
@@ -86,7 +86,8 @@ conversationLogsRequest_iamRoleArn = Lens.lens (\ConversationLogsRequest' {iamRo
 
 instance Prelude.Hashable ConversationLogsRequest where
   hashWithSalt _salt ConversationLogsRequest' {..} =
-    _salt `Prelude.hashWithSalt` logSettings
+    _salt
+      `Prelude.hashWithSalt` logSettings
       `Prelude.hashWithSalt` iamRoleArn
 
 instance Prelude.NFData ConversationLogsRequest where

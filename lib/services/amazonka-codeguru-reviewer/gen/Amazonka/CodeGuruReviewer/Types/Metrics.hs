@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.Metrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.Metrics where
@@ -102,7 +102,8 @@ instance Data.FromJSON Metrics where
 
 instance Prelude.Hashable Metrics where
   hashWithSalt _salt Metrics' {..} =
-    _salt `Prelude.hashWithSalt` findingsCount
+    _salt
+      `Prelude.hashWithSalt` findingsCount
       `Prelude.hashWithSalt` meteredLinesOfCodeCount
       `Prelude.hashWithSalt` suppressedLinesOfCodeCount
 

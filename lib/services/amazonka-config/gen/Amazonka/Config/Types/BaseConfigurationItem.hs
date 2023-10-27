@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.BaseConfigurationItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.BaseConfigurationItem where
@@ -247,7 +247,8 @@ instance Data.FromJSON BaseConfigurationItem where
             Prelude.<*> (x Data..:? "resourceId")
             Prelude.<*> (x Data..:? "resourceName")
             Prelude.<*> (x Data..:? "resourceType")
-            Prelude.<*> ( x Data..:? "supplementaryConfiguration"
+            Prelude.<*> ( x
+                            Data..:? "supplementaryConfiguration"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "version")
@@ -255,7 +256,8 @@ instance Data.FromJSON BaseConfigurationItem where
 
 instance Prelude.Hashable BaseConfigurationItem where
   hashWithSalt _salt BaseConfigurationItem' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` awsRegion

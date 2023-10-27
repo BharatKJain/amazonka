@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ReservedInstancesModification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ReservedInstancesModification where
@@ -145,11 +145,13 @@ instance Data.FromXML ReservedInstancesModification where
       Prelude.<$> (x Data..@? "clientToken")
       Prelude.<*> (x Data..@? "createDate")
       Prelude.<*> (x Data..@? "effectiveDate")
-      Prelude.<*> ( x Data..@? "modificationResultSet"
+      Prelude.<*> ( x
+                      Data..@? "modificationResultSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "reservedInstancesSet"
+      Prelude.<*> ( x
+                      Data..@? "reservedInstancesSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
@@ -163,7 +165,8 @@ instance
     ReservedInstancesModification
   where
   hashWithSalt _salt ReservedInstancesModification' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` createDate
       `Prelude.hashWithSalt` effectiveDate
       `Prelude.hashWithSalt` modificationResults

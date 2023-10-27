@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Support.Types.TrustedAdvisorCheckResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Support.Types.TrustedAdvisorCheckResult where
@@ -134,14 +134,16 @@ instance Data.FromJSON TrustedAdvisorCheckResult where
             Prelude.<*> (x Data..: "status")
             Prelude.<*> (x Data..: "resourcesSummary")
             Prelude.<*> (x Data..: "categorySpecificSummary")
-            Prelude.<*> ( x Data..:? "flaggedResources"
+            Prelude.<*> ( x
+                            Data..:? "flaggedResources"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable TrustedAdvisorCheckResult where
   hashWithSalt _salt TrustedAdvisorCheckResult' {..} =
-    _salt `Prelude.hashWithSalt` checkId
+    _salt
+      `Prelude.hashWithSalt` checkId
       `Prelude.hashWithSalt` timestamp
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` resourcesSummary

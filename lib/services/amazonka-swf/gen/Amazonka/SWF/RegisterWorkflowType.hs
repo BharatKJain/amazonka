@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SWF.RegisterWorkflowType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -407,7 +407,8 @@ instance Core.AWSRequest RegisterWorkflowType where
 
 instance Prelude.Hashable RegisterWorkflowType where
   hashWithSalt _salt RegisterWorkflowType' {..} =
-    _salt `Prelude.hashWithSalt` defaultChildPolicy
+    _salt
+      `Prelude.hashWithSalt` defaultChildPolicy
       `Prelude.hashWithSalt` defaultExecutionStartToCloseTimeout
       `Prelude.hashWithSalt` defaultLambdaRole
       `Prelude.hashWithSalt` defaultTaskList

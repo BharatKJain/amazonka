@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.TemplateConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.TemplateConfiguration where
@@ -100,7 +100,8 @@ instance Data.FromJSON TemplateConfiguration where
 
 instance Prelude.Hashable TemplateConfiguration where
   hashWithSalt _salt TemplateConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` emailTemplate
+    _salt
+      `Prelude.hashWithSalt` emailTemplate
       `Prelude.hashWithSalt` pushTemplate
       `Prelude.hashWithSalt` sMSTemplate
       `Prelude.hashWithSalt` voiceTemplate

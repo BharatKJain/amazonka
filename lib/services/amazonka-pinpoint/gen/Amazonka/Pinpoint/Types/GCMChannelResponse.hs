@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.GCMChannelResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.GCMChannelResponse where
@@ -184,7 +184,8 @@ instance Data.FromJSON GCMChannelResponse where
 
 instance Prelude.Hashable GCMChannelResponse where
   hashWithSalt _salt GCMChannelResponse' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` hasCredential

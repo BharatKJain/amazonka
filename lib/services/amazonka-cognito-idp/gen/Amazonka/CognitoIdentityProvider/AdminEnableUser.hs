@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.AdminEnableUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest AdminEnableUser where
 
 instance Prelude.Hashable AdminEnableUser where
   hashWithSalt _salt AdminEnableUser' {..} =
-    _salt `Prelude.hashWithSalt` userPoolId
+    _salt
+      `Prelude.hashWithSalt` userPoolId
       `Prelude.hashWithSalt` username
 
 instance Prelude.NFData AdminEnableUser where

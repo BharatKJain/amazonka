@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.DeleteUserProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -97,7 +97,8 @@ instance Core.AWSRequest DeleteUserProfile where
 
 instance Prelude.Hashable DeleteUserProfile where
   hashWithSalt _salt DeleteUserProfile' {..} =
-    _salt `Prelude.hashWithSalt` domainId
+    _salt
+      `Prelude.hashWithSalt` domainId
       `Prelude.hashWithSalt` userProfileName
 
 instance Prelude.NFData DeleteUserProfile where

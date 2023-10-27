@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Edge
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Edge where
@@ -75,7 +75,8 @@ instance Data.FromJSON Edge where
 
 instance Prelude.Hashable Edge where
   hashWithSalt _salt Edge' {..} =
-    _salt `Prelude.hashWithSalt` destinationId
+    _salt
+      `Prelude.hashWithSalt` destinationId
       `Prelude.hashWithSalt` sourceId
 
 instance Prelude.NFData Edge where

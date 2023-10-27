@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LicenseManager.ListLicenseConfigurations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -152,22 +152,22 @@ instance Core.AWSPager ListLicenseConfigurations where
     | Core.stop
         ( rs
             Lens.^? listLicenseConfigurationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listLicenseConfigurationsResponse_licenseConfigurations
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listLicenseConfigurations_nextToken
           Lens..~ rs
           Lens.^? listLicenseConfigurationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListLicenseConfigurations where
   type
@@ -179,7 +179,8 @@ instance Core.AWSRequest ListLicenseConfigurations where
     Response.receiveJSON
       ( \s h x ->
           ListLicenseConfigurationsResponse'
-            Prelude.<$> ( x Data..?> "LicenseConfigurations"
+            Prelude.<$> ( x
+                            Data..?> "LicenseConfigurations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -188,7 +189,8 @@ instance Core.AWSRequest ListLicenseConfigurations where
 
 instance Prelude.Hashable ListLicenseConfigurations where
   hashWithSalt _salt ListLicenseConfigurations' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` licenseConfigurationArns
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

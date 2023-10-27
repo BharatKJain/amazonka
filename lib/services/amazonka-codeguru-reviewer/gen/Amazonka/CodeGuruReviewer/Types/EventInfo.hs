@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.EventInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.EventInfo where
@@ -75,12 +75,14 @@ instance Data.FromJSON EventInfo where
       "EventInfo"
       ( \x ->
           EventInfo'
-            Prelude.<$> (x Data..:? "Name") Prelude.<*> (x Data..:? "State")
+            Prelude.<$> (x Data..:? "Name")
+            Prelude.<*> (x Data..:? "State")
       )
 
 instance Prelude.Hashable EventInfo where
   hashWithSalt _salt EventInfo' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` state
 
 instance Prelude.NFData EventInfo where

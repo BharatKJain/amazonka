@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.ScalingPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.ScalingPolicy where
@@ -455,7 +455,8 @@ instance Data.FromJSON ScalingPolicy where
 
 instance Prelude.Hashable ScalingPolicy where
   hashWithSalt _salt ScalingPolicy' {..} =
-    _salt `Prelude.hashWithSalt` comparisonOperator
+    _salt
+      `Prelude.hashWithSalt` comparisonOperator
       `Prelude.hashWithSalt` evaluationPeriods
       `Prelude.hashWithSalt` fleetArn
       `Prelude.hashWithSalt` fleetId

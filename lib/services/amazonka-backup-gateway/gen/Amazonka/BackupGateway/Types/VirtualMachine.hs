@@ -14,7 +14,7 @@
 -- Module      : Amazonka.BackupGateway.Types.VirtualMachine
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.BackupGateway.Types.VirtualMachine where
@@ -120,7 +120,8 @@ instance Data.FromJSON VirtualMachine where
 
 instance Prelude.Hashable VirtualMachine where
   hashWithSalt _salt VirtualMachine' {..} =
-    _salt `Prelude.hashWithSalt` hostName
+    _salt
+      `Prelude.hashWithSalt` hostName
       `Prelude.hashWithSalt` hypervisorId
       `Prelude.hashWithSalt` lastBackupDate
       `Prelude.hashWithSalt` name

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeCommit.GetCommit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest GetCommit where
 
 instance Prelude.Hashable GetCommit where
   hashWithSalt _salt GetCommit' {..} =
-    _salt `Prelude.hashWithSalt` repositoryName
+    _salt
+      `Prelude.hashWithSalt` repositoryName
       `Prelude.hashWithSalt` commitId
 
 instance Prelude.NFData GetCommit where

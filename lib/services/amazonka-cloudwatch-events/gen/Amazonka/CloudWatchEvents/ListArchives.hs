@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatchEvents.ListArchives
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,7 +138,8 @@ instance Core.AWSRequest ListArchives where
 
 instance Prelude.Hashable ListArchives where
   hashWithSalt _salt ListArchives' {..} =
-    _salt `Prelude.hashWithSalt` eventSourceArn
+    _salt
+      `Prelude.hashWithSalt` eventSourceArn
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` namePrefix
       `Prelude.hashWithSalt` nextToken

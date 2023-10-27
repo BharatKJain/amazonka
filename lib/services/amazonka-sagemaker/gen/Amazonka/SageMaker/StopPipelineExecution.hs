@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.StopPipelineExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -139,7 +139,8 @@ instance Core.AWSRequest StopPipelineExecution where
 
 instance Prelude.Hashable StopPipelineExecution where
   hashWithSalt _salt StopPipelineExecution' {..} =
-    _salt `Prelude.hashWithSalt` pipelineExecutionArn
+    _salt
+      `Prelude.hashWithSalt` pipelineExecutionArn
       `Prelude.hashWithSalt` clientRequestToken
 
 instance Prelude.NFData StopPipelineExecution where

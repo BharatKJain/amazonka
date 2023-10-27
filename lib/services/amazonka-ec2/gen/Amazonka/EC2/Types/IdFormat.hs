@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.IdFormat
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.IdFormat where
@@ -90,7 +90,8 @@ instance Data.FromXML IdFormat where
 
 instance Prelude.Hashable IdFormat where
   hashWithSalt _salt IdFormat' {..} =
-    _salt `Prelude.hashWithSalt` deadline
+    _salt
+      `Prelude.hashWithSalt` deadline
       `Prelude.hashWithSalt` resource
       `Prelude.hashWithSalt` useLongIds
 

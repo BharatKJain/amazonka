@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Budgets.Types.SsmActionDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Budgets.Types.SsmActionDefinition where
@@ -95,7 +95,8 @@ instance Data.FromJSON SsmActionDefinition where
 
 instance Prelude.Hashable SsmActionDefinition where
   hashWithSalt _salt SsmActionDefinition' {..} =
-    _salt `Prelude.hashWithSalt` actionSubType
+    _salt
+      `Prelude.hashWithSalt` actionSubType
       `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` instanceIds
 

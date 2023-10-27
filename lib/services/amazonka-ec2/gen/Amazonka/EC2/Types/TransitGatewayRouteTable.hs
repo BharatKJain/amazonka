@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TransitGatewayRouteTable
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TransitGatewayRouteTable where
@@ -124,7 +124,9 @@ instance Data.FromXML TransitGatewayRouteTable where
       Prelude.<*> (x Data..@? "defaultAssociationRouteTable")
       Prelude.<*> (x Data..@? "defaultPropagationRouteTable")
       Prelude.<*> (x Data..@? "state")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "transitGatewayId")
@@ -132,7 +134,8 @@ instance Data.FromXML TransitGatewayRouteTable where
 
 instance Prelude.Hashable TransitGatewayRouteTable where
   hashWithSalt _salt TransitGatewayRouteTable' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` defaultAssociationRouteTable
       `Prelude.hashWithSalt` defaultPropagationRouteTable
       `Prelude.hashWithSalt` state

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.MultiplexProgramServiceDescriptor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.MultiplexProgramServiceDescriptor where
@@ -90,7 +90,8 @@ instance
   hashWithSalt
     _salt
     MultiplexProgramServiceDescriptor' {..} =
-      _salt `Prelude.hashWithSalt` providerName
+      _salt
+        `Prelude.hashWithSalt` providerName
         `Prelude.hashWithSalt` serviceName
 
 instance

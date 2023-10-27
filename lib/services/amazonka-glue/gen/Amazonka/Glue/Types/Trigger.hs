@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Trigger
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Trigger where
@@ -171,7 +171,8 @@ instance Data.FromJSON Trigger where
 
 instance Prelude.Hashable Trigger where
   hashWithSalt _salt Trigger' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` eventBatchingCondition
       `Prelude.hashWithSalt` id

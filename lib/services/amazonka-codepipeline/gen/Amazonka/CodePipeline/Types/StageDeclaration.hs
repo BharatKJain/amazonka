@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.StageDeclaration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.StageDeclaration where
@@ -88,7 +88,8 @@ instance Data.FromJSON StageDeclaration where
 
 instance Prelude.Hashable StageDeclaration where
   hashWithSalt _salt StageDeclaration' {..} =
-    _salt `Prelude.hashWithSalt` blockers
+    _salt
+      `Prelude.hashWithSalt` blockers
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` actions
 

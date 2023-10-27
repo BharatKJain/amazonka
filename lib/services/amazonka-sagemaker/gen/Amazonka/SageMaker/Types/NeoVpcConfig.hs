@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.NeoVpcConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.NeoVpcConfig where
@@ -91,7 +91,8 @@ instance Data.FromJSON NeoVpcConfig where
 
 instance Prelude.Hashable NeoVpcConfig where
   hashWithSalt _salt NeoVpcConfig' {..} =
-    _salt `Prelude.hashWithSalt` securityGroupIds
+    _salt
+      `Prelude.hashWithSalt` securityGroupIds
       `Prelude.hashWithSalt` subnets
 
 instance Prelude.NFData NeoVpcConfig where

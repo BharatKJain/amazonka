@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Macie.Types.S3ResourceClassification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Macie.Types.S3ResourceClassification where
@@ -103,7 +103,8 @@ instance Data.FromJSON S3ResourceClassification where
 
 instance Prelude.Hashable S3ResourceClassification where
   hashWithSalt _salt S3ResourceClassification' {..} =
-    _salt `Prelude.hashWithSalt` prefix
+    _salt
+      `Prelude.hashWithSalt` prefix
       `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` classificationType
 

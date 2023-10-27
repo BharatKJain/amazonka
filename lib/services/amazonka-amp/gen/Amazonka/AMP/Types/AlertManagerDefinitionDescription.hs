@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AMP.Types.AlertManagerDefinitionDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AMP.Types.AlertManagerDefinitionDescription where
@@ -125,7 +125,8 @@ instance
   hashWithSalt
     _salt
     AlertManagerDefinitionDescription' {..} =
-      _salt `Prelude.hashWithSalt` createdAt
+      _salt
+        `Prelude.hashWithSalt` createdAt
         `Prelude.hashWithSalt` data'
         `Prelude.hashWithSalt` modifiedAt
         `Prelude.hashWithSalt` status

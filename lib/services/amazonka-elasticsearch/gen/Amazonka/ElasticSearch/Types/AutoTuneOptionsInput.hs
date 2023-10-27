@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.AutoTuneOptionsInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.AutoTuneOptionsInput where
@@ -77,7 +77,8 @@ autoTuneOptionsInput_maintenanceSchedules = Lens.lens (\AutoTuneOptionsInput' {m
 
 instance Prelude.Hashable AutoTuneOptionsInput where
   hashWithSalt _salt AutoTuneOptionsInput' {..} =
-    _salt `Prelude.hashWithSalt` desiredState
+    _salt
+      `Prelude.hashWithSalt` desiredState
       `Prelude.hashWithSalt` maintenanceSchedules
 
 instance Prelude.NFData AutoTuneOptionsInput where

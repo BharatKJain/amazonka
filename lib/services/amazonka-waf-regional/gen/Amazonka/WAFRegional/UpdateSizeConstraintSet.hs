@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFRegional.UpdateSizeConstraintSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -209,7 +209,8 @@ instance Core.AWSRequest UpdateSizeConstraintSet where
 
 instance Prelude.Hashable UpdateSizeConstraintSet where
   hashWithSalt _salt UpdateSizeConstraintSet' {..} =
-    _salt `Prelude.hashWithSalt` sizeConstraintSetId
+    _salt
+      `Prelude.hashWithSalt` sizeConstraintSetId
       `Prelude.hashWithSalt` changeToken
       `Prelude.hashWithSalt` updates
 

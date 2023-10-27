@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.Hdr10Metadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.Hdr10Metadata where
@@ -268,7 +268,8 @@ instance Data.FromJSON Hdr10Metadata where
 
 instance Prelude.Hashable Hdr10Metadata where
   hashWithSalt _salt Hdr10Metadata' {..} =
-    _salt `Prelude.hashWithSalt` bluePrimaryX
+    _salt
+      `Prelude.hashWithSalt` bluePrimaryX
       `Prelude.hashWithSalt` bluePrimaryY
       `Prelude.hashWithSalt` greenPrimaryX
       `Prelude.hashWithSalt` greenPrimaryY

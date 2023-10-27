@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.MetricDefinitionConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.MetricDefinitionConfig where
@@ -114,7 +114,8 @@ metricDefinitionConfig_valueKey = Lens.lens (\MetricDefinitionConfig' {valueKey}
 
 instance Prelude.Hashable MetricDefinitionConfig where
   hashWithSalt _salt MetricDefinitionConfig' {..} =
-    _salt `Prelude.hashWithSalt` eventPattern
+    _salt
+      `Prelude.hashWithSalt` eventPattern
       `Prelude.hashWithSalt` unitLabel
       `Prelude.hashWithSalt` entityIdKey
       `Prelude.hashWithSalt` name

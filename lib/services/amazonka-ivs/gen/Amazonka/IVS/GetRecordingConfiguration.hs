@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IVS.GetRecordingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -149,7 +149,6 @@ newGetRecordingConfigurationResponse pHttpStatus_ =
       httpStatus = pHttpStatus_
     }
 
--- |
 getRecordingConfigurationResponse_recordingConfiguration :: Lens.Lens' GetRecordingConfigurationResponse (Prelude.Maybe RecordingConfiguration)
 getRecordingConfigurationResponse_recordingConfiguration = Lens.lens (\GetRecordingConfigurationResponse' {recordingConfiguration} -> recordingConfiguration) (\s@GetRecordingConfigurationResponse' {} a -> s {recordingConfiguration = a} :: GetRecordingConfigurationResponse)
 

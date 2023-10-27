@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.AnnotationImportItemDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.AnnotationImportItemDetail where
@@ -80,7 +80,8 @@ instance Data.FromJSON AnnotationImportItemDetail where
 
 instance Prelude.Hashable AnnotationImportItemDetail where
   hashWithSalt _salt AnnotationImportItemDetail' {..} =
-    _salt `Prelude.hashWithSalt` jobStatus
+    _salt
+      `Prelude.hashWithSalt` jobStatus
       `Prelude.hashWithSalt` source
 
 instance Prelude.NFData AnnotationImportItemDetail where

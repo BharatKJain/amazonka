@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFront.GetInvalidation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest GetInvalidation where
 
 instance Prelude.Hashable GetInvalidation where
   hashWithSalt _salt GetInvalidation' {..} =
-    _salt `Prelude.hashWithSalt` distributionId
+    _salt
+      `Prelude.hashWithSalt` distributionId
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData GetInvalidation where

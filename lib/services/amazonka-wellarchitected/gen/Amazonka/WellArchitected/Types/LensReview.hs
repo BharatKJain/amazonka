@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.LensReview
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.LensReview where
@@ -143,7 +143,8 @@ instance Data.FromJSON LensReview where
             Prelude.<*> (x Data..:? "LensVersion")
             Prelude.<*> (x Data..:? "NextToken")
             Prelude.<*> (x Data..:? "Notes")
-            Prelude.<*> ( x Data..:? "PillarReviewSummaries"
+            Prelude.<*> ( x
+                            Data..:? "PillarReviewSummaries"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "RiskCounts" Data..!= Prelude.mempty)
@@ -152,7 +153,8 @@ instance Data.FromJSON LensReview where
 
 instance Prelude.Hashable LensReview where
   hashWithSalt _salt LensReview' {..} =
-    _salt `Prelude.hashWithSalt` lensAlias
+    _salt
+      `Prelude.hashWithSalt` lensAlias
       `Prelude.hashWithSalt` lensArn
       `Prelude.hashWithSalt` lensName
       `Prelude.hashWithSalt` lensStatus

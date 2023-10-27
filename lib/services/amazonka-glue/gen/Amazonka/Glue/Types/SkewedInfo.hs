@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.SkewedInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.SkewedInfo where
@@ -78,20 +78,24 @@ instance Data.FromJSON SkewedInfo where
       "SkewedInfo"
       ( \x ->
           SkewedInfo'
-            Prelude.<$> ( x Data..:? "SkewedColumnNames"
+            Prelude.<$> ( x
+                            Data..:? "SkewedColumnNames"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "SkewedColumnValueLocationMaps"
+            Prelude.<*> ( x
+                            Data..:? "SkewedColumnValueLocationMaps"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "SkewedColumnValues"
+            Prelude.<*> ( x
+                            Data..:? "SkewedColumnValues"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable SkewedInfo where
   hashWithSalt _salt SkewedInfo' {..} =
-    _salt `Prelude.hashWithSalt` skewedColumnNames
+    _salt
+      `Prelude.hashWithSalt` skewedColumnNames
       `Prelude.hashWithSalt` skewedColumnValueLocationMaps
       `Prelude.hashWithSalt` skewedColumnValues
 

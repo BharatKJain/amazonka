@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.UpdateDistributionBundle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance Core.AWSRequest UpdateDistributionBundle where
 
 instance Prelude.Hashable UpdateDistributionBundle where
   hashWithSalt _salt UpdateDistributionBundle' {..} =
-    _salt `Prelude.hashWithSalt` bundleId
+    _salt
+      `Prelude.hashWithSalt` bundleId
       `Prelude.hashWithSalt` distributionName
 
 instance Prelude.NFData UpdateDistributionBundle where

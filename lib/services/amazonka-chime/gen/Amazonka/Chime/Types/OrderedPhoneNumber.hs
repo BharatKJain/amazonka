@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.OrderedPhoneNumber
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.OrderedPhoneNumber where
@@ -76,7 +76,8 @@ instance Data.FromJSON OrderedPhoneNumber where
 
 instance Prelude.Hashable OrderedPhoneNumber where
   hashWithSalt _salt OrderedPhoneNumber' {..} =
-    _salt `Prelude.hashWithSalt` e164PhoneNumber
+    _salt
+      `Prelude.hashWithSalt` e164PhoneNumber
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData OrderedPhoneNumber where

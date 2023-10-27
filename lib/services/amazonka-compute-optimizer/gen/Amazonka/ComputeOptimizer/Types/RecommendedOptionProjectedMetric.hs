@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.RecommendedOptionProjectedMetric
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.RecommendedOptionProjectedMetric where
@@ -107,7 +107,8 @@ instance
       "RecommendedOptionProjectedMetric"
       ( \x ->
           RecommendedOptionProjectedMetric'
-            Prelude.<$> ( x Data..:? "projectedMetrics"
+            Prelude.<$> ( x
+                            Data..:? "projectedMetrics"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "rank")
@@ -121,7 +122,8 @@ instance
   hashWithSalt
     _salt
     RecommendedOptionProjectedMetric' {..} =
-      _salt `Prelude.hashWithSalt` projectedMetrics
+      _salt
+        `Prelude.hashWithSalt` projectedMetrics
         `Prelude.hashWithSalt` rank
         `Prelude.hashWithSalt` recommendedInstanceType
 

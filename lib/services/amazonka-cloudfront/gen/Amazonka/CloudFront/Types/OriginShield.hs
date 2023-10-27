@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.OriginShield
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.OriginShield where
@@ -125,7 +125,8 @@ instance Data.FromXML OriginShield where
 
 instance Prelude.Hashable OriginShield where
   hashWithSalt _salt OriginShield' {..} =
-    _salt `Prelude.hashWithSalt` originShieldRegion
+    _salt
+      `Prelude.hashWithSalt` originShieldRegion
       `Prelude.hashWithSalt` enabled
 
 instance Prelude.NFData OriginShield where

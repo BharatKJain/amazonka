@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.AppsListDataSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.AppsListDataSummary where
@@ -95,7 +95,8 @@ instance Data.FromJSON AppsListDataSummary where
 
 instance Prelude.Hashable AppsListDataSummary where
   hashWithSalt _salt AppsListDataSummary' {..} =
-    _salt `Prelude.hashWithSalt` appsList
+    _salt
+      `Prelude.hashWithSalt` appsList
       `Prelude.hashWithSalt` listArn
       `Prelude.hashWithSalt` listId
       `Prelude.hashWithSalt` listName

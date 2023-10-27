@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.HttpRouteHeader
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.HttpRouteHeader where
@@ -93,7 +93,8 @@ instance Data.FromJSON HttpRouteHeader where
 
 instance Prelude.Hashable HttpRouteHeader where
   hashWithSalt _salt HttpRouteHeader' {..} =
-    _salt `Prelude.hashWithSalt` invert
+    _salt
+      `Prelude.hashWithSalt` invert
       `Prelude.hashWithSalt` match
       `Prelude.hashWithSalt` name
 

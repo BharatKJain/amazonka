@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.GetComputeAuthToken
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest GetComputeAuthToken where
 
 instance Prelude.Hashable GetComputeAuthToken where
   hashWithSalt _salt GetComputeAuthToken' {..} =
-    _salt `Prelude.hashWithSalt` fleetId
+    _salt
+      `Prelude.hashWithSalt` fleetId
       `Prelude.hashWithSalt` computeName
 
 instance Prelude.NFData GetComputeAuthToken where

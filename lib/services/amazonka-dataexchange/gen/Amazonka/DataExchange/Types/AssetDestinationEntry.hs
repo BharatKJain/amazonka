@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.AssetDestinationEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.AssetDestinationEntry where
@@ -88,7 +88,8 @@ instance Data.FromJSON AssetDestinationEntry where
 
 instance Prelude.Hashable AssetDestinationEntry where
   hashWithSalt _salt AssetDestinationEntry' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` assetId
       `Prelude.hashWithSalt` bucket
 

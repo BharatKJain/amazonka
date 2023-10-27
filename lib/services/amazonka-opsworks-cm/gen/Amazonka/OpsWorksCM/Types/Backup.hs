@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorksCM.Types.Backup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorksCM.Types.Backup where
@@ -335,7 +335,8 @@ instance Data.FromJSON Backup where
             Prelude.<*> (x Data..:? "S3DataSize")
             Prelude.<*> (x Data..:? "S3DataUrl")
             Prelude.<*> (x Data..:? "S3LogUrl")
-            Prelude.<*> ( x Data..:? "SecurityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "SecurityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ServerName")
@@ -349,7 +350,8 @@ instance Data.FromJSON Backup where
 
 instance Prelude.Hashable Backup where
   hashWithSalt _salt Backup' {..} =
-    _salt `Prelude.hashWithSalt` backupArn
+    _salt
+      `Prelude.hashWithSalt` backupArn
       `Prelude.hashWithSalt` backupId
       `Prelude.hashWithSalt` backupType
       `Prelude.hashWithSalt` createdAt

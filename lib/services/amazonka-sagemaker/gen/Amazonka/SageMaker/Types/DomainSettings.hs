@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.DomainSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.DomainSettings where
@@ -95,7 +95,8 @@ instance Data.FromJSON DomainSettings where
           DomainSettings'
             Prelude.<$> (x Data..:? "ExecutionRoleIdentityConfig")
             Prelude.<*> (x Data..:? "RStudioServerProDomainSettings")
-            Prelude.<*> ( x Data..:? "SecurityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "SecurityGroupIds"
                             Data..!= Prelude.mempty
                         )
       )

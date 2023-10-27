@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.SqlServerParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.SqlServerParameters where
@@ -90,7 +90,8 @@ instance Data.FromJSON SqlServerParameters where
 
 instance Prelude.Hashable SqlServerParameters where
   hashWithSalt _salt SqlServerParameters' {..} =
-    _salt `Prelude.hashWithSalt` host
+    _salt
+      `Prelude.hashWithSalt` host
       `Prelude.hashWithSalt` port
       `Prelude.hashWithSalt` database
 

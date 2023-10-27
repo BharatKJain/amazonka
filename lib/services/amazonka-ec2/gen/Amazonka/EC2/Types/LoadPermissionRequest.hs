@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.LoadPermissionRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.LoadPermissionRequest where
@@ -66,7 +66,8 @@ loadPermissionRequest_userId = Lens.lens (\LoadPermissionRequest' {userId} -> us
 
 instance Prelude.Hashable LoadPermissionRequest where
   hashWithSalt _salt LoadPermissionRequest' {..} =
-    _salt `Prelude.hashWithSalt` group'
+    _salt
+      `Prelude.hashWithSalt` group'
       `Prelude.hashWithSalt` userId
 
 instance Prelude.NFData LoadPermissionRequest where

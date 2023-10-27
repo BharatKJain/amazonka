@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.DomainConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.DomainConfig where
@@ -237,7 +237,8 @@ instance Data.FromJSON DomainConfig where
 
 instance Prelude.Hashable DomainConfig where
   hashWithSalt _salt DomainConfig' {..} =
-    _salt `Prelude.hashWithSalt` accessPolicies
+    _salt
+      `Prelude.hashWithSalt` accessPolicies
       `Prelude.hashWithSalt` advancedOptions
       `Prelude.hashWithSalt` advancedSecurityOptions
       `Prelude.hashWithSalt` autoTuneOptions

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.PathOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.PathOptions where
@@ -97,7 +97,8 @@ instance Data.FromJSON PathOptions where
 
 instance Prelude.Hashable PathOptions where
   hashWithSalt _salt PathOptions' {..} =
-    _salt `Prelude.hashWithSalt` filesLimit
+    _salt
+      `Prelude.hashWithSalt` filesLimit
       `Prelude.hashWithSalt` lastModifiedDateCondition
       `Prelude.hashWithSalt` parameters
 

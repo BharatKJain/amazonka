@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DMS.DescribePendingMaintenanceActions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,6 @@ newDescribePendingMaintenanceActions =
       replicationInstanceArn = Prelude.Nothing
     }
 
--- |
 describePendingMaintenanceActions_filters :: Lens.Lens' DescribePendingMaintenanceActions (Prelude.Maybe [Filter])
 describePendingMaintenanceActions_filters = Lens.lens (\DescribePendingMaintenanceActions' {filters} -> filters) (\s@DescribePendingMaintenanceActions' {} a -> s {filters = a} :: DescribePendingMaintenanceActions) Prelude.. Lens.mapping Lens.coerced
 
@@ -148,10 +147,11 @@ instance
       ( \s h x ->
           DescribePendingMaintenanceActionsResponse'
             Prelude.<$> (x Data..?> "Marker")
-              Prelude.<*> ( x Data..?> "PendingMaintenanceActions"
-                              Core..!@ Prelude.mempty
-                          )
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> ( x
+                            Data..?> "PendingMaintenanceActions"
+                            Core..!@ Prelude.mempty
+                        )
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -161,7 +161,8 @@ instance
   hashWithSalt
     _salt
     DescribePendingMaintenanceActions' {..} =
-      _salt `Prelude.hashWithSalt` filters
+      _salt
+        `Prelude.hashWithSalt` filters
         `Prelude.hashWithSalt` marker
         `Prelude.hashWithSalt` maxRecords
         `Prelude.hashWithSalt` replicationInstanceArn

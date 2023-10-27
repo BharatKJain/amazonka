@@ -2,7 +2,7 @@
 
 -- |
 -- Module      : Amazonka
--- Copyright   : (c) 2013-2021 Brendan Hay
+-- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
 -- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
 -- Stability   : provisional
@@ -16,9 +16,9 @@ module Amazonka
     -- $usage
 
     -- * Authentication and Environment
-    Env.Env' (..),
     Env.Env,
     Env.EnvNoAuth,
+    Env.Env' (..),
     Env.newEnv,
     Env.newEnvFromManager,
     Env.newEnvNoAuth,
@@ -36,11 +36,11 @@ module Amazonka
     runResourceT,
 
     -- ** Credential Discovery
+    -- $discovery
     AccessKey (..),
     SecretKey (..),
     SessionToken (..),
     discover,
-    -- $discovery
 
     -- ** Supported Regions
     Region (..),
@@ -102,14 +102,6 @@ module Amazonka
     presignURL,
     presign,
 
-    -- * EC2 Instance Metadata
-    -- $metadata
-    EC2.Dynamic (..),
-    dynamic,
-    EC2.Metadata (..),
-    metadata,
-    userdata,
-
     -- * Running Asynchronous Actions
     -- $async
 
@@ -144,7 +136,6 @@ import Amazonka.Core hiding (presign)
 import qualified Amazonka.Core.Lens.Internal as Lens
 import qualified Amazonka.Crypto as Crypto
 import qualified Amazonka.Data.Body as Body
-import qualified Amazonka.EC2.Metadata as EC2
 import qualified Amazonka.Endpoint as Endpoint
 import qualified Amazonka.Env as Env
 import qualified Amazonka.Error as Error
@@ -177,7 +168,7 @@ import Control.Monad.Trans.Resource (runResourceT)
 -- satisfy. To utilise these, you will need to specify what 'Region' you wish to
 -- operate in and your Amazon credentials for AuthN/AuthZ purposes.
 --
--- 'Credentials' can be supplied in a number of ways. Either via explicit keys,
+-- Credentials can be supplied in a number of ways. Either via explicit keys,
 -- via session profiles, or have Amazonka retrieve the credentials from an
 -- underlying IAM Role/Profile.
 --
@@ -195,19 +186,19 @@ import Control.Monad.Trans.Resource (runResourceT)
 -- example = do
 --     -- A new 'Logger' to replace the default noop logger is created, with the logger
 --     -- set to print debug information and errors to stdout:
---     logger <- AWS.newLogger AWS.Debug IO.stdout
+--     logger <- AWS.'Amazonka.newLogger' AWS.'Amazonka.Debug' IO.stdout
 --
---     -- To specify configuration preferences, 'newEnv' is used to create a new
---     -- configuration environment. The argument to 'newEnv' is used to specify the
+--     -- To specify configuration preferences, 'Amazonka.newEnv' is used to create a new
+--     -- configuration environment. The argument to 'Amazonka.newEnv' is used to specify the
 --     -- mechanism for supplying or retrieving AuthN/AuthZ information.
---     -- In this case 'discover' will cause the library to try a number of options such
+--     -- In this case 'Amazonka.discover' will cause the library to try a number of options such
 --     -- as default environment variables, or an instance's IAM Profile and identity document:
---     discoveredEnv <- AWS.newEnv AWS.discover
+--     discoveredEnv <- AWS.'Amazonka.newEnv' AWS.'Amazonka.discover'
 --
 --     let env =
 --             discoveredEnv
 --                 { AWS.logger = logger
---                 , AWS.region = AWS.Frankfurt
+--                 , AWS.region = AWS.'Amazonka.Frankfurt'
 --                 }
 --
 --     -- The payload (and hash) for the S3 object is retrieved from a 'FilePath',
@@ -218,12 +209,14 @@ import Control.Monad.Trans.Resource (runResourceT)
 --     -- We now run the 'AWS' computation with the overriden logger, performing the
 --     -- 'PutObject' request.
 --     AWS.runResourceT $
---         AWS.send env (S3.newPutObject "bucket-name" "object-key" body)
+--         AWS.'Amazonka.send' env (S3.newPutObject "bucket-name" "object-key" body)
 -- @
 
--- $discovery
--- AuthN/AuthZ information is handled similarly to other AWS SDKs. You can read
--- some of the options available <http://blogs.aws.amazon.com/security/post/Tx3D6U6WSFGOK2H/A-New-and-Standardized-Way-to-Manage-Credentials-in-the-AWS-SDKs here>.
+-- $discovery AuthN/AuthZ information is handled similarly to other AWS SDKs. You can read some of
+-- the options available <http://blogs.aws.amazon.com/security/post/Tx3D6U6WSFGOK2H/A-New-and-Standardized-Way-to-Manage-Credentials-in-the-AWS-SDKs here>.
+--
+-- 'Amazonka.Auth.discover' should be your default way of requesting credentials, as it searches the
+-- standard places that the official AWS SDKs use.
 --
 -- Authentication methods which return short-lived credentials (e.g., when running on
 -- an EC2 instance) fork a background thread which transparently handles the expiry
@@ -256,7 +249,7 @@ import Control.Monad.Trans.Resource (runResourceT)
 -- appropriate Marker in order to retrieve the next page of results.
 --
 -- Operations that have an 'AWSPager' instance can transparently perform subsequent
--- requests, correctly setting Markers and other request facets to iterate through
+-- requests, correctly setting markers and other request facets to iterate through
 -- the entire result set of a truncated API operation. Operations which support
 -- this have an additional note in the documentation.
 --
@@ -281,46 +274,52 @@ import Control.Monad.Trans.Resource (runResourceT)
 -- configuration when sending 'PutItem', 'Query' and all other operations.
 --
 -- You can modify a specific 'Service''s default configuration by using
--- 'configure'. To modify all configurations simultaneously, see 'override'.
+-- 'Amazonka.Env.configureService'. To modify all configurations simultaneously, see
+-- 'Amazonka.Env.overrideService'.
 --
 -- An example of how you might alter default configuration using these mechanisms
 -- is demonstrated below. Firstly, the default 'dynamoDB' service is configured to
 -- use non-SSL localhost as the endpoint:
 --
+-- @
+-- import qualified Amazonka as AWS
+-- import qualified Amazonka.DynamoDB as DynamoDB
 --
--- > import qualified Amazonka as AWS
--- > import qualified Amazonka.DynamoDB as DynamoDB
--- >
--- > let dynamo :: AWS.Service
--- >     dynamo = AWS.setEndpoint False "localhost" 8000 DynamoDB.defaultService
+-- let dynamo :: AWS.Service
+--     dynamo = AWS.setEndpoint False "localhost" 8000 DynamoDB.defaultService
+-- @
 --
 -- The updated configuration is then passed to the 'Env' during setup:
 --
--- > env <- AWS.configure dynamo <$> AWS.newEnv AWS.discover
--- >
--- > AWS.runResourceT $ do
--- >     -- This S3 operation will communicate with remote AWS APIs.
--- >     x <- AWS.send env newListBuckets
--- >
--- >     -- DynamoDB operations will communicate with localhost:8000.
--- >     y <- AWS.send env Dynamo.newListTables
--- >
--- >     -- Any operations for services other than DynamoDB, are not affected.
--- >     ...
+-- @
+-- env <- AWS.'Amazonka.configureService' dynamo \<$\> AWS.'Amazonka.newEnv' AWS.'Amazonka.discover'
+--
+-- AWS.runResourceT $ do
+--     -- This S3 operation will communicate with remote AWS APIs.
+--     x <- AWS.send env newListBuckets
+--
+--     -- DynamoDB operations will communicate with localhost:8000.
+--     y <- AWS.send env Dynamo.newListTables
+--
+--     -- Any operations for services other than DynamoDB, are not affected.
+--     ...
+-- @
 --
 -- You can also scope the service configuration modifications to specific actions:
 --
--- > env <- AWS.newEnv AWS.discover
--- >
--- > AWS.runResourceT $ do
--- >     -- Service operations here will communicate with AWS, even remote DynamoDB.
--- >     x <- AWS.send env Dynamo.newListTables
--- >
--- >     -- Here DynamoDB operations will communicate with localhost:8000.
--- >     y <- AWS.send (AWS.configure dynamo env) Dynamo.newListTables
+-- @
+-- env <- AWS.'Amazonka.newEnv' AWS.'Amazonka.discover'
 --
--- Functions such as 'within', 'once', and 'globalTimeout' can also be
--- used to modify service configuration for all (or specific)
+-- AWS.runResourceT $ do
+--     -- Service operations here will communicate with AWS, even remote DynamoDB.
+--     x <- AWS.send env Dynamo.newListTables
+--
+--     -- Here DynamoDB operations will communicate with localhost:8000.
+--     y <- AWS.send (AWS.configure dynamo env) Dynamo.newListTables
+-- @
+--
+-- Functions such as 'Amazonka.once' and 'Amazonka.globalTimeout' can
+-- also be used to modify service configuration for all (or specific)
 -- requests.
 
 -- $streaming
@@ -344,10 +343,6 @@ import Control.Monad.Trans.Resource (runResourceT)
 -- $presigning
 -- Presigning requires the 'Service' signer to be an instance of 'AWSPresigner'.
 -- Not all signing algorithms support this.
-
--- $metadata
--- Metadata can be retrieved from the underlying host assuming that you're running
--- the code on an EC2 instance or have a compatible @instance-data@ endpoint available.
 
 -- $async
 -- Requests can be sent asynchronously, but due to guarantees about resource closure
@@ -386,10 +381,10 @@ import Control.Monad.Trans.Resource (runResourceT)
 -- appropriate 'AsError' 'Prism' when using the non-'Either' send variants:
 --
 -- @
--- trying '_Error'          (send $ newListObjects "bucket-name") :: Either 'Error'          ListObjectsResponse
+-- trying '_Error'          (send $ newListObjects "bucket-name") :: Either 'Amazonka.Types.Error'          ListObjectsResponse
 -- trying '_TransportError' (send $ newListObjects "bucket-name") :: Either 'HttpException'  ListObjectsResponse
--- trying '_SerializeError' (send $ newListObjects "bucket-name") :: Either 'SerializeError' ListObjectsResponse
--- trying '_ServiceError'   (send $ newListObjects "bucket-name") :: Either 'ServiceError'   ListObjectsResponse
+-- trying '_SerializeError' (send $ newListObjects "bucket-name") :: Either 'Amazonka.Types.SerializeError' ListObjectsResponse
+-- trying '_ServiceError'   (send $ newListObjects "bucket-name") :: Either 'Amazonka.Types.ServiceError'   ListObjectsResponse
 -- @
 --
 -- Many of the individual @amazonka-*@ libraries export compatible 'Control.Lens.Fold's for
@@ -440,23 +435,11 @@ presign ::
   a ->
   m ClientRequest
 presign env time expires rq = withAuth (runIdentity $ Env.auth env) $ \ae ->
-  pure $! Presign.presignWith
-    (Env.overrides env)
-    ae
-    (Env.region env)
-    time
-    expires
-    rq
-
--- | Retrieve the specified 'Dynamic' data.
-dynamic :: MonadIO m => Env -> EC2.Dynamic -> m ByteString
-dynamic env = EC2.dynamic (Env.manager env)
-
--- | Retrieve the specified 'Metadata'.
-metadata :: MonadIO m => Env -> EC2.Metadata -> m ByteString
-metadata env = EC2.metadata (Env.manager env)
-
--- | Retrieve the user data. Returns 'Nothing' if no user data is assigned
--- to the instance.
-userdata :: MonadIO m => Env -> m (Maybe ByteString)
-userdata = EC2.userdata . Env.manager
+  pure $!
+    Presign.presignWith
+      (Env.overrides env)
+      ae
+      (Env.region env)
+      time
+      expires
+      rq

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexModels.DeleteBotChannelAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,7 +118,8 @@ instance Core.AWSRequest DeleteBotChannelAssociation where
 
 instance Prelude.Hashable DeleteBotChannelAssociation where
   hashWithSalt _salt DeleteBotChannelAssociation' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` botName
       `Prelude.hashWithSalt` botAlias
 

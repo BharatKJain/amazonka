@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.EffectiveRecommendationPreferences
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.EffectiveRecommendationPreferences where
@@ -204,7 +204,8 @@ instance
       "EffectiveRecommendationPreferences"
       ( \x ->
           EffectiveRecommendationPreferences'
-            Prelude.<$> ( x Data..:? "cpuVendorArchitectures"
+            Prelude.<$> ( x
+                            Data..:? "cpuVendorArchitectures"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "enhancedInfrastructureMetrics")
@@ -219,7 +220,8 @@ instance
   hashWithSalt
     _salt
     EffectiveRecommendationPreferences' {..} =
-      _salt `Prelude.hashWithSalt` cpuVendorArchitectures
+      _salt
+        `Prelude.hashWithSalt` cpuVendorArchitectures
         `Prelude.hashWithSalt` enhancedInfrastructureMetrics
         `Prelude.hashWithSalt` externalMetricsPreference
         `Prelude.hashWithSalt` inferredWorkloadTypes

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rum.Types.UserDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rum.Types.UserDetails where
@@ -71,7 +71,8 @@ userDetails_userId = Lens.lens (\UserDetails' {userId} -> userId) (\s@UserDetail
 
 instance Prelude.Hashable UserDetails where
   hashWithSalt _salt UserDetails' {..} =
-    _salt `Prelude.hashWithSalt` sessionId
+    _salt
+      `Prelude.hashWithSalt` sessionId
       `Prelude.hashWithSalt` userId
 
 instance Prelude.NFData UserDetails where

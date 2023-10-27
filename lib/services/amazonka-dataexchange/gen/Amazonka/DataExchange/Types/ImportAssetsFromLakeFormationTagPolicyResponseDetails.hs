@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.ImportAssetsFromLakeFormationTagPolicyResponseDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.ImportAssetsFromLakeFormationTagPolicyResponseDetails where
@@ -130,11 +130,11 @@ instance
       ( \x ->
           ImportAssetsFromLakeFormationTagPolicyResponseDetails'
             Prelude.<$> (x Data..:? "Database")
-              Prelude.<*> (x Data..:? "Table")
-              Prelude.<*> (x Data..: "CatalogId")
-              Prelude.<*> (x Data..: "RoleArn")
-              Prelude.<*> (x Data..: "DataSetId")
-              Prelude.<*> (x Data..: "RevisionId")
+            Prelude.<*> (x Data..:? "Table")
+            Prelude.<*> (x Data..: "CatalogId")
+            Prelude.<*> (x Data..: "RoleArn")
+            Prelude.<*> (x Data..: "DataSetId")
+            Prelude.<*> (x Data..: "RevisionId")
       )
 
 instance
@@ -144,7 +144,8 @@ instance
   hashWithSalt
     _salt
     ImportAssetsFromLakeFormationTagPolicyResponseDetails' {..} =
-      _salt `Prelude.hashWithSalt` database
+      _salt
+        `Prelude.hashWithSalt` database
         `Prelude.hashWithSalt` table
         `Prelude.hashWithSalt` catalogId
         `Prelude.hashWithSalt` roleArn

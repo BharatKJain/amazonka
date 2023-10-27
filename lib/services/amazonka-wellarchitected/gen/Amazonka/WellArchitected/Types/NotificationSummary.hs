@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.NotificationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.NotificationSummary where
@@ -77,7 +77,8 @@ instance Data.FromJSON NotificationSummary where
 
 instance Prelude.Hashable NotificationSummary where
   hashWithSalt _salt NotificationSummary' {..} =
-    _salt `Prelude.hashWithSalt` lensUpgradeSummary
+    _salt
+      `Prelude.hashWithSalt` lensUpgradeSummary
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData NotificationSummary where

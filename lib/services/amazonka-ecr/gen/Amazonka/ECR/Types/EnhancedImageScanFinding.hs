@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECR.Types.EnhancedImageScanFinding
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECR.Types.EnhancedImageScanFinding where
@@ -210,7 +210,8 @@ instance Data.FromJSON EnhancedImageScanFinding where
 
 instance Prelude.Hashable EnhancedImageScanFinding where
   hashWithSalt _salt EnhancedImageScanFinding' {..} =
-    _salt `Prelude.hashWithSalt` awsAccountId
+    _salt
+      `Prelude.hashWithSalt` awsAccountId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` findingArn
       `Prelude.hashWithSalt` firstObservedAt

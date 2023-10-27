@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.CapacityReservationFleetCancellationState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.CapacityReservationFleetCancellationState where
@@ -86,8 +86,8 @@ instance
   parseXML x =
     CapacityReservationFleetCancellationState'
       Prelude.<$> (x Data..@? "capacityReservationFleetId")
-        Prelude.<*> (x Data..@? "currentFleetState")
-        Prelude.<*> (x Data..@? "previousFleetState")
+      Prelude.<*> (x Data..@? "currentFleetState")
+      Prelude.<*> (x Data..@? "previousFleetState")
 
 instance
   Prelude.Hashable

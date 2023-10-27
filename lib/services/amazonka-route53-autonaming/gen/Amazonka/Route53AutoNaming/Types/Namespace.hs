@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53AutoNaming.Types.Namespace
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53AutoNaming.Types.Namespace where
@@ -203,7 +203,8 @@ instance Data.FromJSON Namespace where
 
 instance Prelude.Hashable Namespace where
   hashWithSalt _salt Namespace' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createDate
       `Prelude.hashWithSalt` creatorRequestId
       `Prelude.hashWithSalt` description

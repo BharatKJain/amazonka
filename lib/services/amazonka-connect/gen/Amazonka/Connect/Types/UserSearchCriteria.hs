@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.UserSearchCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.UserSearchCriteria where
@@ -98,7 +98,8 @@ userSearchCriteria_stringCondition = Lens.lens (\UserSearchCriteria' {stringCond
 
 instance Prelude.Hashable UserSearchCriteria where
   hashWithSalt _salt UserSearchCriteria' {..} =
-    _salt `Prelude.hashWithSalt` andConditions
+    _salt
+      `Prelude.hashWithSalt` andConditions
       `Prelude.hashWithSalt` hierarchyGroupCondition
       `Prelude.hashWithSalt` orConditions
       `Prelude.hashWithSalt` stringCondition

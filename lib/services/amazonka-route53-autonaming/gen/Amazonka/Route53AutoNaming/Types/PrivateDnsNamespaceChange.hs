@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53AutoNaming.Types.PrivateDnsNamespaceChange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53AutoNaming.Types.PrivateDnsNamespaceChange where
@@ -66,7 +66,8 @@ privateDnsNamespaceChange_properties = Lens.lens (\PrivateDnsNamespaceChange' {p
 
 instance Prelude.Hashable PrivateDnsNamespaceChange where
   hashWithSalt _salt PrivateDnsNamespaceChange' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` properties
 
 instance Prelude.NFData PrivateDnsNamespaceChange where

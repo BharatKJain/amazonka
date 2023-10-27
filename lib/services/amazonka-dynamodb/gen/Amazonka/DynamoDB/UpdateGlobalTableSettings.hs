@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.UpdateGlobalTableSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -184,7 +184,8 @@ instance Core.AWSRequest UpdateGlobalTableSettings where
       ( \s h x ->
           UpdateGlobalTableSettingsResponse'
             Prelude.<$> (x Data..?> "GlobalTableName")
-            Prelude.<*> ( x Data..?> "ReplicaSettings"
+            Prelude.<*> ( x
+                            Data..?> "ReplicaSettings"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -192,7 +193,8 @@ instance Core.AWSRequest UpdateGlobalTableSettings where
 
 instance Prelude.Hashable UpdateGlobalTableSettings where
   hashWithSalt _salt UpdateGlobalTableSettings' {..} =
-    _salt `Prelude.hashWithSalt` globalTableBillingMode
+    _salt
+      `Prelude.hashWithSalt` globalTableBillingMode
       `Prelude.hashWithSalt` globalTableGlobalSecondaryIndexSettingsUpdate
       `Prelude.hashWithSalt` globalTableProvisionedWriteCapacityAutoScalingSettingsUpdate
       `Prelude.hashWithSalt` globalTableProvisionedWriteCapacityUnits

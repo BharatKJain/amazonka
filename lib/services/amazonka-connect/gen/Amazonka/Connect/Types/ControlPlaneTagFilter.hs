@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.ControlPlaneTagFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.ControlPlaneTagFilter where
@@ -89,7 +89,8 @@ controlPlaneTagFilter_tagCondition = Lens.lens (\ControlPlaneTagFilter' {tagCond
 
 instance Prelude.Hashable ControlPlaneTagFilter where
   hashWithSalt _salt ControlPlaneTagFilter' {..} =
-    _salt `Prelude.hashWithSalt` andConditions
+    _salt
+      `Prelude.hashWithSalt` andConditions
       `Prelude.hashWithSalt` orConditions
       `Prelude.hashWithSalt` tagCondition
 

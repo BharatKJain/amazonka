@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.SegmentTypeInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.SegmentTypeInfo where
@@ -77,7 +77,8 @@ instance Data.FromJSON SegmentTypeInfo where
 
 instance Prelude.Hashable SegmentTypeInfo where
   hashWithSalt _salt SegmentTypeInfo' {..} =
-    _salt `Prelude.hashWithSalt` modelVersion
+    _salt
+      `Prelude.hashWithSalt` modelVersion
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData SegmentTypeInfo where

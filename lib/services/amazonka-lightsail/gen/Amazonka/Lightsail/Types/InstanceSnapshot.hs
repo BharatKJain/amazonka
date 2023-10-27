@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.InstanceSnapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.InstanceSnapshot where
@@ -246,7 +246,8 @@ instance Data.FromJSON InstanceSnapshot where
           InstanceSnapshot'
             Prelude.<$> (x Data..:? "arn")
             Prelude.<*> (x Data..:? "createdAt")
-            Prelude.<*> ( x Data..:? "fromAttachedDisks"
+            Prelude.<*> ( x
+                            Data..:? "fromAttachedDisks"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "fromBlueprintId")
@@ -266,7 +267,8 @@ instance Data.FromJSON InstanceSnapshot where
 
 instance Prelude.Hashable InstanceSnapshot where
   hashWithSalt _salt InstanceSnapshot' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` fromAttachedDisks
       `Prelude.hashWithSalt` fromBlueprintId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEventsData.Types.UpdateDetectorRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEventsData.Types.UpdateDetectorRequest where
@@ -101,7 +101,8 @@ updateDetectorRequest_state = Lens.lens (\UpdateDetectorRequest' {state} -> stat
 
 instance Prelude.Hashable UpdateDetectorRequest where
   hashWithSalt _salt UpdateDetectorRequest' {..} =
-    _salt `Prelude.hashWithSalt` keyValue
+    _salt
+      `Prelude.hashWithSalt` keyValue
       `Prelude.hashWithSalt` messageId
       `Prelude.hashWithSalt` detectorModelName
       `Prelude.hashWithSalt` state

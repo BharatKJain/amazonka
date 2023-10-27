@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Inspector.DescribeFindings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest DescribeFindings where
 
 instance Prelude.Hashable DescribeFindings where
   hashWithSalt _salt DescribeFindings' {..} =
-    _salt `Prelude.hashWithSalt` locale
+    _salt
+      `Prelude.hashWithSalt` locale
       `Prelude.hashWithSalt` findingArns
 
 instance Prelude.NFData DescribeFindings where

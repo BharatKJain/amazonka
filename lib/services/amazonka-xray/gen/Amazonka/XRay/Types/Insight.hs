@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.Insight
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.Insight where
@@ -189,14 +189,16 @@ instance Data.FromJSON Insight where
             Prelude.<*> (x Data..:? "StartTime")
             Prelude.<*> (x Data..:? "State")
             Prelude.<*> (x Data..:? "Summary")
-            Prelude.<*> ( x Data..:? "TopAnomalousServices"
+            Prelude.<*> ( x
+                            Data..:? "TopAnomalousServices"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable Insight where
   hashWithSalt _salt Insight' {..} =
-    _salt `Prelude.hashWithSalt` categories
+    _salt
+      `Prelude.hashWithSalt` categories
       `Prelude.hashWithSalt` clientRequestImpactStatistics
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` groupARN

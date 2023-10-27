@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchLogs.Types.FilteredLogEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchLogs.Types.FilteredLogEvent where
@@ -110,7 +110,8 @@ instance Data.FromJSON FilteredLogEvent where
 
 instance Prelude.Hashable FilteredLogEvent where
   hashWithSalt _salt FilteredLogEvent' {..} =
-    _salt `Prelude.hashWithSalt` eventId
+    _salt
+      `Prelude.hashWithSalt` eventId
       `Prelude.hashWithSalt` ingestionTime
       `Prelude.hashWithSalt` logStreamName
       `Prelude.hashWithSalt` message

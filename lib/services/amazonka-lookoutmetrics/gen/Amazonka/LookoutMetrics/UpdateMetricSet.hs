@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LookoutMetrics.UpdateMetricSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -190,7 +190,8 @@ instance Core.AWSRequest UpdateMetricSet where
 
 instance Prelude.Hashable UpdateMetricSet where
   hashWithSalt _salt UpdateMetricSet' {..} =
-    _salt `Prelude.hashWithSalt` dimensionFilterList
+    _salt
+      `Prelude.hashWithSalt` dimensionFilterList
       `Prelude.hashWithSalt` dimensionList
       `Prelude.hashWithSalt` metricList
       `Prelude.hashWithSalt` metricSetDescription

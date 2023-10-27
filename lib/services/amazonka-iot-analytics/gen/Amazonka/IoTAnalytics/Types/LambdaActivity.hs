@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.LambdaActivity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.LambdaActivity where
@@ -112,7 +112,8 @@ instance Data.FromJSON LambdaActivity where
 
 instance Prelude.Hashable LambdaActivity where
   hashWithSalt _salt LambdaActivity' {..} =
-    _salt `Prelude.hashWithSalt` next
+    _salt
+      `Prelude.hashWithSalt` next
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` lambdaName
       `Prelude.hashWithSalt` batchSize

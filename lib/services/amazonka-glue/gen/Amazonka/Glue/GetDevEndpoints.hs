@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.GetDevEndpoints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,22 +98,22 @@ instance Core.AWSPager GetDevEndpoints where
     | Core.stop
         ( rs
             Lens.^? getDevEndpointsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getDevEndpointsResponse_devEndpoints
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getDevEndpoints_nextToken
           Lens..~ rs
           Lens.^? getDevEndpointsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetDevEndpoints where
   type
@@ -132,7 +132,8 @@ instance Core.AWSRequest GetDevEndpoints where
 
 instance Prelude.Hashable GetDevEndpoints where
   hashWithSalt _salt GetDevEndpoints' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData GetDevEndpoints where

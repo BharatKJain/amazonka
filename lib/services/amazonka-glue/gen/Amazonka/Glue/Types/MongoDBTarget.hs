@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.MongoDBTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.MongoDBTarget where
@@ -108,7 +108,8 @@ instance Data.FromJSON MongoDBTarget where
 
 instance Prelude.Hashable MongoDBTarget where
   hashWithSalt _salt MongoDBTarget' {..} =
-    _salt `Prelude.hashWithSalt` connectionName
+    _salt
+      `Prelude.hashWithSalt` connectionName
       `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` scanAll
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MachineLearning.GetMLModel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -149,7 +149,8 @@ instance Core.AWSRequest GetMLModel where
             Prelude.<*> (x Data..?> "StartedAt")
             Prelude.<*> (x Data..?> "Status")
             Prelude.<*> (x Data..?> "TrainingDataSourceId")
-            Prelude.<*> ( x Data..?> "TrainingParameters"
+            Prelude.<*> ( x
+                            Data..?> "TrainingParameters"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -157,7 +158,8 @@ instance Core.AWSRequest GetMLModel where
 
 instance Prelude.Hashable GetMLModel where
   hashWithSalt _salt GetMLModel' {..} =
-    _salt `Prelude.hashWithSalt` verbose
+    _salt
+      `Prelude.hashWithSalt` verbose
       `Prelude.hashWithSalt` mLModelId
 
 instance Prelude.NFData GetMLModel where

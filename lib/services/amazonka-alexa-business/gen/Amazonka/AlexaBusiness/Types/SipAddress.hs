@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.SipAddress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.SipAddress where
@@ -73,12 +73,14 @@ instance Data.FromJSON SipAddress where
       "SipAddress"
       ( \x ->
           SipAddress'
-            Prelude.<$> (x Data..: "Uri") Prelude.<*> (x Data..: "Type")
+            Prelude.<$> (x Data..: "Uri")
+            Prelude.<*> (x Data..: "Type")
       )
 
 instance Prelude.Hashable SipAddress where
   hashWithSalt _salt SipAddress' {..} =
-    _salt `Prelude.hashWithSalt` uri
+    _salt
+      `Prelude.hashWithSalt` uri
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData SipAddress where

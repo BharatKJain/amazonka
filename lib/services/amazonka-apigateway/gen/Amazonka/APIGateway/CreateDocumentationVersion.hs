@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.CreateDocumentationVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -126,7 +126,8 @@ instance Core.AWSRequest CreateDocumentationVersion where
 
 instance Prelude.Hashable CreateDocumentationVersion where
   hashWithSalt _salt CreateDocumentationVersion' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` stageName
       `Prelude.hashWithSalt` restApiId
       `Prelude.hashWithSalt` documentationVersion

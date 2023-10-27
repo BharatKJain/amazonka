@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ImportExport.CreateJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,7 +136,9 @@ instance Core.AWSRequest CreateJob where
       "CreateJobResult"
       ( \s h x ->
           CreateJobResponse'
-            Prelude.<$> ( x Data..@? "ArtifactList" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "ArtifactList"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (x Data..@? "JobId")
@@ -149,7 +151,8 @@ instance Core.AWSRequest CreateJob where
 
 instance Prelude.Hashable CreateJob where
   hashWithSalt _salt CreateJob' {..} =
-    _salt `Prelude.hashWithSalt` aPIVersion
+    _salt
+      `Prelude.hashWithSalt` aPIVersion
       `Prelude.hashWithSalt` manifestAddendum
       `Prelude.hashWithSalt` jobType
       `Prelude.hashWithSalt` manifest

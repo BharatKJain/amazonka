@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.VoiceTemplateRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.VoiceTemplateRequest where
@@ -143,7 +143,8 @@ voiceTemplateRequest_tags = Lens.lens (\VoiceTemplateRequest' {tags} -> tags) (\
 
 instance Prelude.Hashable VoiceTemplateRequest where
   hashWithSalt _salt VoiceTemplateRequest' {..} =
-    _salt `Prelude.hashWithSalt` body
+    _salt
+      `Prelude.hashWithSalt` body
       `Prelude.hashWithSalt` defaultSubstitutions
       `Prelude.hashWithSalt` languageCode
       `Prelude.hashWithSalt` templateDescription

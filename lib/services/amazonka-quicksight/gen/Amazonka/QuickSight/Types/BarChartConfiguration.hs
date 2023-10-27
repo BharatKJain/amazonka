@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.BarChartConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.BarChartConfiguration where
@@ -273,7 +273,8 @@ instance Data.FromJSON BarChartConfiguration where
 
 instance Prelude.Hashable BarChartConfiguration where
   hashWithSalt _salt BarChartConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` barsArrangement
+    _salt
+      `Prelude.hashWithSalt` barsArrangement
       `Prelude.hashWithSalt` categoryAxis
       `Prelude.hashWithSalt` categoryLabelOptions
       `Prelude.hashWithSalt` colorLabelOptions

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ImageBuilder.Types.InstanceBlockDeviceMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ImageBuilder.Types.InstanceBlockDeviceMapping where
@@ -97,7 +97,8 @@ instance Data.FromJSON InstanceBlockDeviceMapping where
 
 instance Prelude.Hashable InstanceBlockDeviceMapping where
   hashWithSalt _salt InstanceBlockDeviceMapping' {..} =
-    _salt `Prelude.hashWithSalt` deviceName
+    _salt
+      `Prelude.hashWithSalt` deviceName
       `Prelude.hashWithSalt` ebs
       `Prelude.hashWithSalt` noDevice
       `Prelude.hashWithSalt` virtualName

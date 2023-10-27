@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.CloudWatchLogsConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.CloudWatchLogsConfig where
@@ -111,7 +111,8 @@ instance Data.FromJSON CloudWatchLogsConfig where
 
 instance Prelude.Hashable CloudWatchLogsConfig where
   hashWithSalt _salt CloudWatchLogsConfig' {..} =
-    _salt `Prelude.hashWithSalt` groupName
+    _salt
+      `Prelude.hashWithSalt` groupName
       `Prelude.hashWithSalt` streamName
       `Prelude.hashWithSalt` status
 

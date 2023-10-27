@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.Instance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.Instance where
@@ -85,14 +85,16 @@ instance Data.FromJSON Instance where
           Instance'
             Prelude.<$> (x Data..:? "BoundingBox")
             Prelude.<*> (x Data..:? "Confidence")
-            Prelude.<*> ( x Data..:? "DominantColors"
+            Prelude.<*> ( x
+                            Data..:? "DominantColors"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable Instance where
   hashWithSalt _salt Instance' {..} =
-    _salt `Prelude.hashWithSalt` boundingBox
+    _salt
+      `Prelude.hashWithSalt` boundingBox
       `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` dominantColors
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.Termination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.Termination where
@@ -103,7 +103,8 @@ instance Data.FromJSON Termination where
       ( \x ->
           Termination'
             Prelude.<$> (x Data..:? "CallingRegions" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "CidrAllowedList"
+            Prelude.<*> ( x
+                            Data..:? "CidrAllowedList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CpsLimit")
@@ -113,7 +114,8 @@ instance Data.FromJSON Termination where
 
 instance Prelude.Hashable Termination where
   hashWithSalt _salt Termination' {..} =
-    _salt `Prelude.hashWithSalt` callingRegions
+    _salt
+      `Prelude.hashWithSalt` callingRegions
       `Prelude.hashWithSalt` cidrAllowedList
       `Prelude.hashWithSalt` cpsLimit
       `Prelude.hashWithSalt` defaultPhoneNumber

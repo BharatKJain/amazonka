@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudSearch.Types.AnalysisScheme
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudSearch.Types.AnalysisScheme where
@@ -89,7 +89,8 @@ instance Data.FromXML AnalysisScheme where
 
 instance Prelude.Hashable AnalysisScheme where
   hashWithSalt _salt AnalysisScheme' {..} =
-    _salt `Prelude.hashWithSalt` analysisOptions
+    _salt
+      `Prelude.hashWithSalt` analysisOptions
       `Prelude.hashWithSalt` analysisSchemeName
       `Prelude.hashWithSalt` analysisSchemeLanguage
 

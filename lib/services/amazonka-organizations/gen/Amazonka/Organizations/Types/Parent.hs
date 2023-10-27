@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Organizations.Types.Parent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Organizations.Types.Parent where
@@ -103,12 +103,14 @@ instance Data.FromJSON Parent where
       "Parent"
       ( \x ->
           Parent'
-            Prelude.<$> (x Data..:? "Id") Prelude.<*> (x Data..:? "Type")
+            Prelude.<$> (x Data..:? "Id")
+            Prelude.<*> (x Data..:? "Type")
       )
 
 instance Prelude.Hashable Parent where
   hashWithSalt _salt Parent' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData Parent where

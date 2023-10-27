@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SNS.Types.SMSSandboxPhoneNumber
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SNS.Types.SMSSandboxPhoneNumber where
@@ -83,7 +83,8 @@ instance Data.FromXML SMSSandboxPhoneNumber where
 
 instance Prelude.Hashable SMSSandboxPhoneNumber where
   hashWithSalt _salt SMSSandboxPhoneNumber' {..} =
-    _salt `Prelude.hashWithSalt` phoneNumber
+    _salt
+      `Prelude.hashWithSalt` phoneNumber
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData SMSSandboxPhoneNumber where

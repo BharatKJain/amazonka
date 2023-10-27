@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.OutboundCallerConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.OutboundCallerConfig where
@@ -85,7 +85,8 @@ instance Data.FromJSON OutboundCallerConfig where
 
 instance Prelude.Hashable OutboundCallerConfig where
   hashWithSalt _salt OutboundCallerConfig' {..} =
-    _salt `Prelude.hashWithSalt` outboundCallerIdName
+    _salt
+      `Prelude.hashWithSalt` outboundCallerIdName
       `Prelude.hashWithSalt` outboundCallerIdNumberId
       `Prelude.hashWithSalt` outboundFlowId
 

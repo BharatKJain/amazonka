@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Snowball.Types.OnDeviceServiceConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Snowball.Types.OnDeviceServiceConfiguration where
@@ -87,7 +87,8 @@ instance
     OnDeviceServiceConfiguration
   where
   hashWithSalt _salt OnDeviceServiceConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` nFSOnDeviceService
+    _salt
+      `Prelude.hashWithSalt` nFSOnDeviceService
       `Prelude.hashWithSalt` tGWOnDeviceService
 
 instance Prelude.NFData OnDeviceServiceConfiguration where

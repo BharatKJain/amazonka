@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IotTwinMaker.CreateComponentType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -165,7 +165,6 @@ createComponentType_isSingleton = Lens.lens (\CreateComponentType' {isSingleton}
 createComponentType_propertyDefinitions :: Lens.Lens' CreateComponentType (Prelude.Maybe (Prelude.HashMap Prelude.Text PropertyDefinitionRequest))
 createComponentType_propertyDefinitions = Lens.lens (\CreateComponentType' {propertyDefinitions} -> propertyDefinitions) (\s@CreateComponentType' {} a -> s {propertyDefinitions = a} :: CreateComponentType) Prelude.. Lens.mapping Lens.coerced
 
--- |
 createComponentType_propertyGroups :: Lens.Lens' CreateComponentType (Prelude.Maybe (Prelude.HashMap Prelude.Text PropertyGroupRequest))
 createComponentType_propertyGroups = Lens.lens (\CreateComponentType' {propertyGroups} -> propertyGroups) (\s@CreateComponentType' {} a -> s {propertyGroups = a} :: CreateComponentType) Prelude.. Lens.mapping Lens.coerced
 
@@ -199,7 +198,8 @@ instance Core.AWSRequest CreateComponentType where
 
 instance Prelude.Hashable CreateComponentType where
   hashWithSalt _salt CreateComponentType' {..} =
-    _salt `Prelude.hashWithSalt` componentTypeName
+    _salt
+      `Prelude.hashWithSalt` componentTypeName
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` extendsFrom
       `Prelude.hashWithSalt` functions

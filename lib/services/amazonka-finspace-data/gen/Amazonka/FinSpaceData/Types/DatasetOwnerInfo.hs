@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FinSpaceData.Types.DatasetOwnerInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FinSpaceData.Types.DatasetOwnerInfo where
@@ -84,7 +84,8 @@ instance Data.FromJSON DatasetOwnerInfo where
 
 instance Prelude.Hashable DatasetOwnerInfo where
   hashWithSalt _salt DatasetOwnerInfo' {..} =
-    _salt `Prelude.hashWithSalt` email
+    _salt
+      `Prelude.hashWithSalt` email
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` phoneNumber
 

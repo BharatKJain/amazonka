@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFormation.ActivateType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -300,7 +300,8 @@ instance Core.AWSRequest ActivateType where
 
 instance Prelude.Hashable ActivateType where
   hashWithSalt _salt ActivateType' {..} =
-    _salt `Prelude.hashWithSalt` autoUpdate
+    _salt
+      `Prelude.hashWithSalt` autoUpdate
       `Prelude.hashWithSalt` executionRoleArn
       `Prelude.hashWithSalt` loggingConfig
       `Prelude.hashWithSalt` majorVersion

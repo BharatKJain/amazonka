@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.DeleteApplicationReferenceDataSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -143,8 +143,8 @@ instance
       ( \s h x ->
           DeleteApplicationReferenceDataSourceResponse'
             Prelude.<$> (x Data..?> "ApplicationARN")
-              Prelude.<*> (x Data..?> "ApplicationVersionId")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "ApplicationVersionId")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -154,7 +154,8 @@ instance
   hashWithSalt
     _salt
     DeleteApplicationReferenceDataSource' {..} =
-      _salt `Prelude.hashWithSalt` applicationName
+      _salt
+        `Prelude.hashWithSalt` applicationName
         `Prelude.hashWithSalt` currentApplicationVersionId
         `Prelude.hashWithSalt` referenceId
 

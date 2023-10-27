@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectParticipant.Types.AttachmentItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectParticipant.Types.AttachmentItem where
@@ -105,7 +105,8 @@ instance Data.FromJSON AttachmentItem where
 
 instance Prelude.Hashable AttachmentItem where
   hashWithSalt _salt AttachmentItem' {..} =
-    _salt `Prelude.hashWithSalt` attachmentId
+    _salt
+      `Prelude.hashWithSalt` attachmentId
       `Prelude.hashWithSalt` attachmentName
       `Prelude.hashWithSalt` contentType
       `Prelude.hashWithSalt` status

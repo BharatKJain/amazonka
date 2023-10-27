@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.RegexPatternSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.RegexPatternSet where
@@ -113,14 +113,16 @@ instance Data.FromJSON RegexPatternSet where
             Prelude.<*> (x Data..:? "Description")
             Prelude.<*> (x Data..:? "Id")
             Prelude.<*> (x Data..:? "Name")
-            Prelude.<*> ( x Data..:? "RegularExpressionList"
+            Prelude.<*> ( x
+                            Data..:? "RegularExpressionList"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable RegexPatternSet where
   hashWithSalt _salt RegexPatternSet' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name

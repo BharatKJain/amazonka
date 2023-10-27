@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.WorkerConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.WorkerConfiguration where
@@ -71,7 +71,8 @@ workerConfiguration_workerConfigurationArn = Lens.lens (\WorkerConfiguration' {w
 
 instance Prelude.Hashable WorkerConfiguration where
   hashWithSalt _salt WorkerConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` revision
+    _salt
+      `Prelude.hashWithSalt` revision
       `Prelude.hashWithSalt` workerConfigurationArn
 
 instance Prelude.NFData WorkerConfiguration where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.LambdaDeviceMount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.LambdaDeviceMount where
@@ -95,7 +95,8 @@ lambdaDeviceMount_path = Lens.lens (\LambdaDeviceMount' {path} -> path) (\s@Lamb
 
 instance Prelude.Hashable LambdaDeviceMount where
   hashWithSalt _salt LambdaDeviceMount' {..} =
-    _salt `Prelude.hashWithSalt` addGroupOwner
+    _salt
+      `Prelude.hashWithSalt` addGroupOwner
       `Prelude.hashWithSalt` permission
       `Prelude.hashWithSalt` path
 

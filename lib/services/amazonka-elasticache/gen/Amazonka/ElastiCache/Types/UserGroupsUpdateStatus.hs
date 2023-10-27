@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.UserGroupsUpdateStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.UserGroupsUpdateStatus where
@@ -66,18 +66,21 @@ userGroupsUpdateStatus_userGroupIdsToRemove = Lens.lens (\UserGroupsUpdateStatus
 instance Data.FromXML UserGroupsUpdateStatus where
   parseXML x =
     UserGroupsUpdateStatus'
-      Prelude.<$> ( x Data..@? "UserGroupIdsToAdd"
+      Prelude.<$> ( x
+                      Data..@? "UserGroupIdsToAdd"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "UserGroupIdsToRemove"
+      Prelude.<*> ( x
+                      Data..@? "UserGroupIdsToRemove"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 
 instance Prelude.Hashable UserGroupsUpdateStatus where
   hashWithSalt _salt UserGroupsUpdateStatus' {..} =
-    _salt `Prelude.hashWithSalt` userGroupIdsToAdd
+    _salt
+      `Prelude.hashWithSalt` userGroupIdsToAdd
       `Prelude.hashWithSalt` userGroupIdsToRemove
 
 instance Prelude.NFData UserGroupsUpdateStatus where

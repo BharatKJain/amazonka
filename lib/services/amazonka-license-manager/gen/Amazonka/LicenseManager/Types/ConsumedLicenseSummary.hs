@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManager.Types.ConsumedLicenseSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManager.Types.ConsumedLicenseSummary where
@@ -76,7 +76,8 @@ instance Data.FromJSON ConsumedLicenseSummary where
 
 instance Prelude.Hashable ConsumedLicenseSummary where
   hashWithSalt _salt ConsumedLicenseSummary' {..} =
-    _salt `Prelude.hashWithSalt` consumedLicenses
+    _salt
+      `Prelude.hashWithSalt` consumedLicenses
       `Prelude.hashWithSalt` resourceType
 
 instance Prelude.NFData ConsumedLicenseSummary where

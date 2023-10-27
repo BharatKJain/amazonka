@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.CreateUserSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -233,7 +233,8 @@ instance Core.AWSRequest CreateUserSettings where
 
 instance Prelude.Hashable CreateUserSettings where
   hashWithSalt _salt CreateUserSettings' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` disconnectTimeoutInMinutes
       `Prelude.hashWithSalt` idleDisconnectTimeoutInMinutes
       `Prelude.hashWithSalt` tags

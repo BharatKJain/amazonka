@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.RelationalDatabaseSnapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.RelationalDatabaseSnapshot where
@@ -245,7 +245,8 @@ instance Data.FromJSON RelationalDatabaseSnapshot where
 
 instance Prelude.Hashable RelationalDatabaseSnapshot where
   hashWithSalt _salt RelationalDatabaseSnapshot' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` engine
       `Prelude.hashWithSalt` engineVersion

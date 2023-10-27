@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.H264QvbrSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.H264QvbrSettings where
@@ -156,7 +156,8 @@ instance Data.FromJSON H264QvbrSettings where
 
 instance Prelude.Hashable H264QvbrSettings where
   hashWithSalt _salt H264QvbrSettings' {..} =
-    _salt `Prelude.hashWithSalt` maxAverageBitrate
+    _salt
+      `Prelude.hashWithSalt` maxAverageBitrate
       `Prelude.hashWithSalt` qvbrQualityLevel
       `Prelude.hashWithSalt` qvbrQualityLevelFineTune
 

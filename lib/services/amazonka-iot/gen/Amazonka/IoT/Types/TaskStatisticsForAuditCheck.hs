@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.TaskStatisticsForAuditCheck
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.TaskStatisticsForAuditCheck where
@@ -119,7 +119,8 @@ instance Data.FromJSON TaskStatisticsForAuditCheck where
 
 instance Prelude.Hashable TaskStatisticsForAuditCheck where
   hashWithSalt _salt TaskStatisticsForAuditCheck' {..} =
-    _salt `Prelude.hashWithSalt` canceledFindingsCount
+    _salt
+      `Prelude.hashWithSalt` canceledFindingsCount
       `Prelude.hashWithSalt` failedFindingsCount
       `Prelude.hashWithSalt` skippedFindingsCount
       `Prelude.hashWithSalt` succeededFindingsCount

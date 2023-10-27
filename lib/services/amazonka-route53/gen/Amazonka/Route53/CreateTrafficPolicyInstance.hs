@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53.CreateTrafficPolicyInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -178,7 +178,8 @@ instance Core.AWSRequest CreateTrafficPolicyInstance where
 
 instance Prelude.Hashable CreateTrafficPolicyInstance where
   hashWithSalt _salt CreateTrafficPolicyInstance' {..} =
-    _salt `Prelude.hashWithSalt` hostedZoneId
+    _salt
+      `Prelude.hashWithSalt` hostedZoneId
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` ttl
       `Prelude.hashWithSalt` trafficPolicyId

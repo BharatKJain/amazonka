@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MechanicalTurk.DeleteWorkerBlock
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest DeleteWorkerBlock where
 
 instance Prelude.Hashable DeleteWorkerBlock where
   hashWithSalt _salt DeleteWorkerBlock' {..} =
-    _salt `Prelude.hashWithSalt` reason
+    _salt
+      `Prelude.hashWithSalt` reason
       `Prelude.hashWithSalt` workerId
 
 instance Prelude.NFData DeleteWorkerBlock where

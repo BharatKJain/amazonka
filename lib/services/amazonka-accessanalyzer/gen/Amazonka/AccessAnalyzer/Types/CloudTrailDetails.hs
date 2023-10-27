@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.CloudTrailDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.CloudTrailDetails where
@@ -105,7 +105,8 @@ cloudTrailDetails_startTime = Lens.lens (\CloudTrailDetails' {startTime} -> star
 
 instance Prelude.Hashable CloudTrailDetails where
   hashWithSalt _salt CloudTrailDetails' {..} =
-    _salt `Prelude.hashWithSalt` endTime
+    _salt
+      `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` trails
       `Prelude.hashWithSalt` accessRole
       `Prelude.hashWithSalt` startTime

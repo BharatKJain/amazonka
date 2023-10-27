@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.ValidateE911Address
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -174,7 +174,8 @@ instance Core.AWSRequest ValidateE911Address where
           ValidateE911AddressResponse'
             Prelude.<$> (x Data..?> "Address")
             Prelude.<*> (x Data..?> "AddressExternalId")
-            Prelude.<*> ( x Data..?> "CandidateAddressList"
+            Prelude.<*> ( x
+                            Data..?> "CandidateAddressList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "ValidationResult")
@@ -183,7 +184,8 @@ instance Core.AWSRequest ValidateE911Address where
 
 instance Prelude.Hashable ValidateE911Address where
   hashWithSalt _salt ValidateE911Address' {..} =
-    _salt `Prelude.hashWithSalt` awsAccountId
+    _salt
+      `Prelude.hashWithSalt` awsAccountId
       `Prelude.hashWithSalt` streetNumber
       `Prelude.hashWithSalt` streetInfo
       `Prelude.hashWithSalt` city

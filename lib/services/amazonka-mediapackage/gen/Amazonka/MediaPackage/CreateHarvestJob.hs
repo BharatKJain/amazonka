@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaPackage.CreateHarvestJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -168,7 +168,8 @@ instance Core.AWSRequest CreateHarvestJob where
 
 instance Prelude.Hashable CreateHarvestJob where
   hashWithSalt _salt CreateHarvestJob' {..} =
-    _salt `Prelude.hashWithSalt` s3Destination
+    _salt
+      `Prelude.hashWithSalt` s3Destination
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` originEndpointId
       `Prelude.hashWithSalt` startTime

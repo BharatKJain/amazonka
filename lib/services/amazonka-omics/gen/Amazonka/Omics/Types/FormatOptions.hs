@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.FormatOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.FormatOptions where
@@ -76,7 +76,8 @@ instance Data.FromJSON FormatOptions where
 
 instance Prelude.Hashable FormatOptions where
   hashWithSalt _salt FormatOptions' {..} =
-    _salt `Prelude.hashWithSalt` tsvOptions
+    _salt
+      `Prelude.hashWithSalt` tsvOptions
       `Prelude.hashWithSalt` vcfOptions
 
 instance Prelude.NFData FormatOptions where

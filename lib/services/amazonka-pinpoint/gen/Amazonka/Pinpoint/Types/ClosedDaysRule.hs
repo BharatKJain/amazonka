@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.ClosedDaysRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.ClosedDaysRule where
@@ -84,7 +84,8 @@ instance Data.FromJSON ClosedDaysRule where
 
 instance Prelude.Hashable ClosedDaysRule where
   hashWithSalt _salt ClosedDaysRule' {..} =
-    _salt `Prelude.hashWithSalt` endDateTime
+    _salt
+      `Prelude.hashWithSalt` endDateTime
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` startDateTime
 

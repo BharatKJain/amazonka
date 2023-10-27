@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.Types.IdentityProviderSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpacesWeb.Types.IdentityProviderSummary where
@@ -86,7 +86,8 @@ instance Data.FromJSON IdentityProviderSummary where
 
 instance Prelude.Hashable IdentityProviderSummary where
   hashWithSalt _salt IdentityProviderSummary' {..} =
-    _salt `Prelude.hashWithSalt` identityProviderArn
+    _salt
+      `Prelude.hashWithSalt` identityProviderArn
       `Prelude.hashWithSalt` identityProviderName
       `Prelude.hashWithSalt` identityProviderType
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsOpenSearchServiceDomainEncryptionAtRestOptionsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsOpenSearchServiceDomainEncryptionAtRestOptionsDetails where
@@ -75,7 +75,7 @@ instance
       ( \x ->
           AwsOpenSearchServiceDomainEncryptionAtRestOptionsDetails'
             Prelude.<$> (x Data..:? "Enabled")
-              Prelude.<*> (x Data..:? "KmsKeyId")
+            Prelude.<*> (x Data..:? "KmsKeyId")
       )
 
 instance
@@ -85,7 +85,8 @@ instance
   hashWithSalt
     _salt
     AwsOpenSearchServiceDomainEncryptionAtRestOptionsDetails' {..} =
-      _salt `Prelude.hashWithSalt` enabled
+      _salt
+        `Prelude.hashWithSalt` enabled
         `Prelude.hashWithSalt` kmsKeyId
 
 instance

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFront.DeleteCachePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest DeleteCachePolicy where
 
 instance Prelude.Hashable DeleteCachePolicy where
   hashWithSalt _salt DeleteCachePolicy' {..} =
-    _salt `Prelude.hashWithSalt` ifMatch
+    _salt
+      `Prelude.hashWithSalt` ifMatch
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData DeleteCachePolicy where

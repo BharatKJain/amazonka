@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.SchemaFacet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.SchemaFacet where
@@ -86,7 +86,8 @@ instance Data.FromJSON SchemaFacet where
 
 instance Prelude.Hashable SchemaFacet where
   hashWithSalt _salt SchemaFacet' {..} =
-    _salt `Prelude.hashWithSalt` facetName
+    _salt
+      `Prelude.hashWithSalt` facetName
       `Prelude.hashWithSalt` schemaArn
 
 instance Prelude.NFData SchemaFacet where

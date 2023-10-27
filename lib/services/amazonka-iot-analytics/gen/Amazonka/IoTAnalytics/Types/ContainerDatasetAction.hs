@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.ContainerDatasetAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.ContainerDatasetAction where
@@ -131,7 +131,8 @@ instance Data.FromJSON ContainerDatasetAction where
 
 instance Prelude.Hashable ContainerDatasetAction where
   hashWithSalt _salt ContainerDatasetAction' {..} =
-    _salt `Prelude.hashWithSalt` variables
+    _salt
+      `Prelude.hashWithSalt` variables
       `Prelude.hashWithSalt` image
       `Prelude.hashWithSalt` executionRoleArn
       `Prelude.hashWithSalt` resourceConfiguration

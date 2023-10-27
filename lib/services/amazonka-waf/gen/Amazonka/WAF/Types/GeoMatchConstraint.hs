@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.GeoMatchConstraint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.GeoMatchConstraint where
@@ -87,12 +87,14 @@ instance Data.FromJSON GeoMatchConstraint where
       "GeoMatchConstraint"
       ( \x ->
           GeoMatchConstraint'
-            Prelude.<$> (x Data..: "Type") Prelude.<*> (x Data..: "Value")
+            Prelude.<$> (x Data..: "Type")
+            Prelude.<*> (x Data..: "Value")
       )
 
 instance Prelude.Hashable GeoMatchConstraint where
   hashWithSalt _salt GeoMatchConstraint' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData GeoMatchConstraint where

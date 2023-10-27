@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CostExplorer.GetReservationPurchaseRecommendation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -232,11 +232,12 @@ instance
       ( \s h x ->
           GetReservationPurchaseRecommendationResponse'
             Prelude.<$> (x Data..?> "Metadata")
-              Prelude.<*> (x Data..?> "NextPageToken")
-              Prelude.<*> ( x Data..?> "Recommendations"
-                              Core..!@ Prelude.mempty
-                          )
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "NextPageToken")
+            Prelude.<*> ( x
+                            Data..?> "Recommendations"
+                            Core..!@ Prelude.mempty
+                        )
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -246,7 +247,8 @@ instance
   hashWithSalt
     _salt
     GetReservationPurchaseRecommendation' {..} =
-      _salt `Prelude.hashWithSalt` accountId
+      _salt
+        `Prelude.hashWithSalt` accountId
         `Prelude.hashWithSalt` accountScope
         `Prelude.hashWithSalt` filter'
         `Prelude.hashWithSalt` lookbackPeriodInDays

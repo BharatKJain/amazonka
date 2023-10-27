@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.TextTransformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.TextTransformation where
@@ -440,7 +440,8 @@ instance Data.FromJSON TextTransformation where
 
 instance Prelude.Hashable TextTransformation where
   hashWithSalt _salt TextTransformation' {..} =
-    _salt `Prelude.hashWithSalt` priority
+    _salt
+      `Prelude.hashWithSalt` priority
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData TextTransformation where

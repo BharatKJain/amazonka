@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.TelemetryMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.TelemetryMetadata where
@@ -96,7 +96,8 @@ instance Data.FromJSON TelemetryMetadata where
 
 instance Prelude.Hashable TelemetryMetadata where
   hashWithSalt _salt TelemetryMetadata' {..} =
-    _salt `Prelude.hashWithSalt` dataSize
+    _salt
+      `Prelude.hashWithSalt` dataSize
       `Prelude.hashWithSalt` messageType
       `Prelude.hashWithSalt` count
 

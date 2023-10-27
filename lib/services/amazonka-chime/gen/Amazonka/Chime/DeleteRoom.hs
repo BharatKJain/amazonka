@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.DeleteRoom
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -92,7 +92,8 @@ instance Core.AWSRequest DeleteRoom where
 
 instance Prelude.Hashable DeleteRoom where
   hashWithSalt _salt DeleteRoom' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` roomId
 
 instance Prelude.NFData DeleteRoom where

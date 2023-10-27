@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Schemas.SearchSchemas
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,20 +123,23 @@ instance Core.AWSPager SearchSchemas where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? searchSchemasResponse_nextToken Prelude.. Lens._Just
+            Lens.^? searchSchemasResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? searchSchemasResponse_schemas Prelude.. Lens._Just
+            Lens.^? searchSchemasResponse_schemas
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& searchSchemas_nextToken
           Lens..~ rs
-          Lens.^? searchSchemasResponse_nextToken Prelude.. Lens._Just
+          Lens.^? searchSchemasResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest SearchSchemas where
   type
@@ -155,7 +158,8 @@ instance Core.AWSRequest SearchSchemas where
 
 instance Prelude.Hashable SearchSchemas where
   hashWithSalt _salt SearchSchemas' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` registryName
       `Prelude.hashWithSalt` keywords

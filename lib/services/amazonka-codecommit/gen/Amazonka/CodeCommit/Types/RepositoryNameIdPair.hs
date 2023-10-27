@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.RepositoryNameIdPair
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.RepositoryNameIdPair where
@@ -75,7 +75,8 @@ instance Data.FromJSON RepositoryNameIdPair where
 
 instance Prelude.Hashable RepositoryNameIdPair where
   hashWithSalt _salt RepositoryNameIdPair' {..} =
-    _salt `Prelude.hashWithSalt` repositoryId
+    _salt
+      `Prelude.hashWithSalt` repositoryId
       `Prelude.hashWithSalt` repositoryName
 
 instance Prelude.NFData RepositoryNameIdPair where

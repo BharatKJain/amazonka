@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.EnterStandby
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -126,7 +126,9 @@ instance Core.AWSRequest EnterStandby where
       "EnterStandbyResult"
       ( \s h x ->
           EnterStandbyResponse'
-            Prelude.<$> ( x Data..@? "Activities" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "Activities"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -134,7 +136,8 @@ instance Core.AWSRequest EnterStandby where
 
 instance Prelude.Hashable EnterStandby where
   hashWithSalt _salt EnterStandby' {..} =
-    _salt `Prelude.hashWithSalt` instanceIds
+    _salt
+      `Prelude.hashWithSalt` instanceIds
       `Prelude.hashWithSalt` autoScalingGroupName
       `Prelude.hashWithSalt` shouldDecrementDesiredCapacity
 

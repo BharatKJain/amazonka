@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.RunListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.RunListItem where
@@ -155,7 +155,8 @@ instance Data.FromJSON RunListItem where
 
 instance Prelude.Hashable RunListItem where
   hashWithSalt _salt RunListItem' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name

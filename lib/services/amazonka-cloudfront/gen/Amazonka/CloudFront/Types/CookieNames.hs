@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.CookieNames
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.CookieNames where
@@ -67,14 +67,17 @@ cookieNames_quantity = Lens.lens (\CookieNames' {quantity} -> quantity) (\s@Cook
 instance Data.FromXML CookieNames where
   parseXML x =
     CookieNames'
-      Prelude.<$> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Name")
                   )
       Prelude.<*> (x Data..@ "Quantity")
 
 instance Prelude.Hashable CookieNames where
   hashWithSalt _salt CookieNames' {..} =
-    _salt `Prelude.hashWithSalt` items
+    _salt
+      `Prelude.hashWithSalt` items
       `Prelude.hashWithSalt` quantity
 
 instance Prelude.NFData CookieNames where

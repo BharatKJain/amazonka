@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.RowInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.RowInfo where
@@ -84,7 +84,8 @@ instance Data.FromJSON RowInfo where
 
 instance Prelude.Hashable RowInfo where
   hashWithSalt _salt RowInfo' {..} =
-    _salt `Prelude.hashWithSalt` rowsDropped
+    _salt
+      `Prelude.hashWithSalt` rowsDropped
       `Prelude.hashWithSalt` rowsIngested
       `Prelude.hashWithSalt` totalRowsInDataset
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DLM.Types.Parameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DLM.Types.Parameters where
@@ -134,7 +134,8 @@ instance Data.FromJSON Parameters where
       ( \x ->
           Parameters'
             Prelude.<$> (x Data..:? "ExcludeBootVolume")
-            Prelude.<*> ( x Data..:? "ExcludeDataVolumeTags"
+            Prelude.<*> ( x
+                            Data..:? "ExcludeDataVolumeTags"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "NoReboot")
@@ -142,7 +143,8 @@ instance Data.FromJSON Parameters where
 
 instance Prelude.Hashable Parameters where
   hashWithSalt _salt Parameters' {..} =
-    _salt `Prelude.hashWithSalt` excludeBootVolume
+    _salt
+      `Prelude.hashWithSalt` excludeBootVolume
       `Prelude.hashWithSalt` excludeDataVolumeTags
       `Prelude.hashWithSalt` noReboot
 

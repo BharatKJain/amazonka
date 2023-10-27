@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.DocumentAttributeCondition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.DocumentAttributeCondition where
@@ -142,7 +142,8 @@ instance Data.FromJSON DocumentAttributeCondition where
 
 instance Prelude.Hashable DocumentAttributeCondition where
   hashWithSalt _salt DocumentAttributeCondition' {..} =
-    _salt `Prelude.hashWithSalt` conditionOnValue
+    _salt
+      `Prelude.hashWithSalt` conditionOnValue
       `Prelude.hashWithSalt` conditionDocumentAttributeKey
       `Prelude.hashWithSalt` operator
 

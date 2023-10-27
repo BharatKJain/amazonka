@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DataSourceSearchFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DataSourceSearchFilter where
@@ -192,7 +192,8 @@ dataSourceSearchFilter_value = Lens.lens (\DataSourceSearchFilter' {value} -> va
 
 instance Prelude.Hashable DataSourceSearchFilter where
   hashWithSalt _salt DataSourceSearchFilter' {..} =
-    _salt `Prelude.hashWithSalt` operator
+    _salt
+      `Prelude.hashWithSalt` operator
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 

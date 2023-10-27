@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.DeleteSegment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest DeleteSegment where
 
 instance Prelude.Hashable DeleteSegment where
   hashWithSalt _salt DeleteSegment' {..} =
-    _salt `Prelude.hashWithSalt` segmentId
+    _salt
+      `Prelude.hashWithSalt` segmentId
       `Prelude.hashWithSalt` applicationId
 
 instance Prelude.NFData DeleteSegment where

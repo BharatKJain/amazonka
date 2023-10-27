@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppIntegrationS.Types.EventIntegrationAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppIntegrationS.Types.EventIntegrationAssociation where
@@ -110,7 +110,8 @@ instance Data.FromJSON EventIntegrationAssociation where
       "EventIntegrationAssociation"
       ( \x ->
           EventIntegrationAssociation'
-            Prelude.<$> ( x Data..:? "ClientAssociationMetadata"
+            Prelude.<$> ( x
+                            Data..:? "ClientAssociationMetadata"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ClientId")

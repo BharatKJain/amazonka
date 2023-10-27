@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.BodySectionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.BodySectionConfiguration where
@@ -102,7 +102,8 @@ instance Data.FromJSON BodySectionConfiguration where
 
 instance Prelude.Hashable BodySectionConfiguration where
   hashWithSalt _salt BodySectionConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` pageBreakConfiguration
+    _salt
+      `Prelude.hashWithSalt` pageBreakConfiguration
       `Prelude.hashWithSalt` style
       `Prelude.hashWithSalt` sectionId
       `Prelude.hashWithSalt` content

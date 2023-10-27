@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.NotificationAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.NotificationAction where
@@ -97,7 +97,8 @@ instance Data.FromJSON NotificationAction where
 
 instance Prelude.Hashable NotificationAction where
   hashWithSalt _salt NotificationAction' {..} =
-    _salt `Prelude.hashWithSalt` emailConfigurations
+    _salt
+      `Prelude.hashWithSalt` emailConfigurations
       `Prelude.hashWithSalt` smsConfigurations
       `Prelude.hashWithSalt` action
 

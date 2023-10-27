@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.S3Source
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.S3Source where
@@ -99,7 +99,8 @@ instance Data.FromJSON S3Source where
 
 instance Prelude.Hashable S3Source where
   hashWithSalt _salt S3Source' {..} =
-    _salt `Prelude.hashWithSalt` uploadSettings
+    _salt
+      `Prelude.hashWithSalt` uploadSettings
       `Prelude.hashWithSalt` dataSourceArn
       `Prelude.hashWithSalt` inputColumns
 

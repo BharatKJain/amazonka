@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.OidcConfigForResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.OidcConfigForResponse where
@@ -134,7 +134,8 @@ instance Data.FromJSON OidcConfigForResponse where
 
 instance Prelude.Hashable OidcConfigForResponse where
   hashWithSalt _salt OidcConfigForResponse' {..} =
-    _salt `Prelude.hashWithSalt` authorizationEndpoint
+    _salt
+      `Prelude.hashWithSalt` authorizationEndpoint
       `Prelude.hashWithSalt` clientId
       `Prelude.hashWithSalt` issuer
       `Prelude.hashWithSalt` jwksUri

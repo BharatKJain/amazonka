@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.ChoiceAnswerSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.ChoiceAnswerSummary where
@@ -88,7 +88,8 @@ instance Data.FromJSON ChoiceAnswerSummary where
 
 instance Prelude.Hashable ChoiceAnswerSummary where
   hashWithSalt _salt ChoiceAnswerSummary' {..} =
-    _salt `Prelude.hashWithSalt` choiceId
+    _salt
+      `Prelude.hashWithSalt` choiceId
       `Prelude.hashWithSalt` reason
       `Prelude.hashWithSalt` status
 

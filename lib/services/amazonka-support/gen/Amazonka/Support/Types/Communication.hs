@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Support.Types.Communication
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Support.Types.Communication where
@@ -129,7 +129,8 @@ instance Data.FromJSON Communication where
 
 instance Prelude.Hashable Communication where
   hashWithSalt _salt Communication' {..} =
-    _salt `Prelude.hashWithSalt` attachmentSet
+    _salt
+      `Prelude.hashWithSalt` attachmentSet
       `Prelude.hashWithSalt` body
       `Prelude.hashWithSalt` caseId
       `Prelude.hashWithSalt` submittedBy

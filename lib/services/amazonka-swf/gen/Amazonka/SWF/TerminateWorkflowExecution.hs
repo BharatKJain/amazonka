@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SWF.TerminateWorkflowExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -232,7 +232,8 @@ instance Core.AWSRequest TerminateWorkflowExecution where
 
 instance Prelude.Hashable TerminateWorkflowExecution where
   hashWithSalt _salt TerminateWorkflowExecution' {..} =
-    _salt `Prelude.hashWithSalt` childPolicy
+    _salt
+      `Prelude.hashWithSalt` childPolicy
       `Prelude.hashWithSalt` details
       `Prelude.hashWithSalt` reason
       `Prelude.hashWithSalt` runId

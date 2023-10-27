@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.SNSConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.SNSConfiguration where
@@ -120,7 +120,8 @@ instance Data.FromJSON SNSConfiguration where
 
 instance Prelude.Hashable SNSConfiguration where
   hashWithSalt _salt SNSConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` snsFormat
+    _salt
+      `Prelude.hashWithSalt` snsFormat
       `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` snsTopicArn
 

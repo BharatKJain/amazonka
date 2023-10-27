@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkSpaces.AssociateConnectionAlias
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest AssociateConnectionAlias where
 
 instance Prelude.Hashable AssociateConnectionAlias where
   hashWithSalt _salt AssociateConnectionAlias' {..} =
-    _salt `Prelude.hashWithSalt` aliasId
+    _salt
+      `Prelude.hashWithSalt` aliasId
       `Prelude.hashWithSalt` resourceId
 
 instance Prelude.NFData AssociateConnectionAlias where

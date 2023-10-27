@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LookoutEquipment.CreateDataset
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -151,7 +151,8 @@ instance Core.AWSRequest CreateDataset where
 
 instance Prelude.Hashable CreateDataset where
   hashWithSalt _salt CreateDataset' {..} =
-    _salt `Prelude.hashWithSalt` datasetSchema
+    _salt
+      `Prelude.hashWithSalt` datasetSchema
       `Prelude.hashWithSalt` serverSideKmsKeyId
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` datasetName

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KMS.ListGrants
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -226,20 +226,23 @@ instance Core.AWSPager ListGrants where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listGrantsResponse_truncated Prelude.. Lens._Just
+            Lens.^? listGrantsResponse_truncated
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.isNothing
         ( rs
-            Lens.^? listGrantsResponse_nextMarker Prelude.. Lens._Just
+            Lens.^? listGrantsResponse_nextMarker
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listGrants_marker
           Lens..~ rs
-          Lens.^? listGrantsResponse_nextMarker Prelude.. Lens._Just
+          Lens.^? listGrantsResponse_nextMarker
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListGrants where
   type AWSResponse ListGrants = ListGrantsResponse
@@ -251,7 +254,8 @@ instance Core.AWSRequest ListGrants where
 
 instance Prelude.Hashable ListGrants where
   hashWithSalt _salt ListGrants' {..} =
-    _salt `Prelude.hashWithSalt` grantId
+    _salt
+      `Prelude.hashWithSalt` grantId
       `Prelude.hashWithSalt` granteePrincipal
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` marker

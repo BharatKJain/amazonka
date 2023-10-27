@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.EventTimeRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.EventTimeRange where
@@ -72,7 +72,8 @@ eventTimeRange_toTime = Lens.lens (\EventTimeRange' {toTime} -> toTime) (\s@Even
 
 instance Prelude.Hashable EventTimeRange where
   hashWithSalt _salt EventTimeRange' {..} =
-    _salt `Prelude.hashWithSalt` fromTime
+    _salt
+      `Prelude.hashWithSalt` fromTime
       `Prelude.hashWithSalt` toTime
 
 instance Prelude.NFData EventTimeRange where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.CdmaNmrObj
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.CdmaNmrObj where
@@ -92,7 +92,8 @@ cdmaNmrObj_cdmaChannel = Lens.lens (\CdmaNmrObj' {cdmaChannel} -> cdmaChannel) (
 
 instance Prelude.Hashable CdmaNmrObj where
   hashWithSalt _salt CdmaNmrObj' {..} =
-    _salt `Prelude.hashWithSalt` baseStationId
+    _salt
+      `Prelude.hashWithSalt` baseStationId
       `Prelude.hashWithSalt` pilotPower
       `Prelude.hashWithSalt` pnOffset
       `Prelude.hashWithSalt` cdmaChannel

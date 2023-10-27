@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SESV2.PutDedicatedIpWarmupAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.PutDedicatedIpWarmupAttributes
@@ -120,7 +120,8 @@ instance
   hashWithSalt
     _salt
     PutDedicatedIpWarmupAttributes' {..} =
-      _salt `Prelude.hashWithSalt` ip
+      _salt
+        `Prelude.hashWithSalt` ip
         `Prelude.hashWithSalt` warmupPercentage
 
 instance

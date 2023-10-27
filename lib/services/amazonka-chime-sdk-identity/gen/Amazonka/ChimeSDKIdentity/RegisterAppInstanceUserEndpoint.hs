@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSDKIdentity.RegisterAppInstanceUserEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -217,7 +217,8 @@ instance
   hashWithSalt
     _salt
     RegisterAppInstanceUserEndpoint' {..} =
-      _salt `Prelude.hashWithSalt` allowMessages
+      _salt
+        `Prelude.hashWithSalt` allowMessages
         `Prelude.hashWithSalt` name
         `Prelude.hashWithSalt` appInstanceUserArn
         `Prelude.hashWithSalt` type'

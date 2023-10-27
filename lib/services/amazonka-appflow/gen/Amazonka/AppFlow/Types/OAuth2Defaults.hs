@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.OAuth2Defaults
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.OAuth2Defaults where
@@ -98,10 +98,12 @@ instance Data.FromJSON OAuth2Defaults where
       ( \x ->
           OAuth2Defaults'
             Prelude.<$> (x Data..:? "authCodeUrls" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "oauth2CustomProperties"
+            Prelude.<*> ( x
+                            Data..:? "oauth2CustomProperties"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "oauth2GrantTypesSupported"
+            Prelude.<*> ( x
+                            Data..:? "oauth2GrantTypesSupported"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "oauthScopes" Data..!= Prelude.mempty)
@@ -110,7 +112,8 @@ instance Data.FromJSON OAuth2Defaults where
 
 instance Prelude.Hashable OAuth2Defaults where
   hashWithSalt _salt OAuth2Defaults' {..} =
-    _salt `Prelude.hashWithSalt` authCodeUrls
+    _salt
+      `Prelude.hashWithSalt` authCodeUrls
       `Prelude.hashWithSalt` oauth2CustomProperties
       `Prelude.hashWithSalt` oauth2GrantTypesSupported
       `Prelude.hashWithSalt` oauthScopes

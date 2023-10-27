@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.LambdaStepMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.LambdaStepMetadata where
@@ -73,14 +73,16 @@ instance Data.FromJSON LambdaStepMetadata where
       ( \x ->
           LambdaStepMetadata'
             Prelude.<$> (x Data..:? "Arn")
-            Prelude.<*> ( x Data..:? "OutputParameters"
+            Prelude.<*> ( x
+                            Data..:? "OutputParameters"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable LambdaStepMetadata where
   hashWithSalt _salt LambdaStepMetadata' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` outputParameters
 
 instance Prelude.NFData LambdaStepMetadata where

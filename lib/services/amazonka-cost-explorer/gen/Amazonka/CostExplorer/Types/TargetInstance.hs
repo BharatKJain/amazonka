@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.TargetInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.TargetInstance where
@@ -133,7 +133,8 @@ instance Data.FromJSON TargetInstance where
             Prelude.<*> (x Data..:? "EstimatedMonthlyCost")
             Prelude.<*> (x Data..:? "EstimatedMonthlySavings")
             Prelude.<*> (x Data..:? "ExpectedResourceUtilization")
-            Prelude.<*> ( x Data..:? "PlatformDifferences"
+            Prelude.<*> ( x
+                            Data..:? "PlatformDifferences"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ResourceDetails")
@@ -141,7 +142,8 @@ instance Data.FromJSON TargetInstance where
 
 instance Prelude.Hashable TargetInstance where
   hashWithSalt _salt TargetInstance' {..} =
-    _salt `Prelude.hashWithSalt` currencyCode
+    _salt
+      `Prelude.hashWithSalt` currencyCode
       `Prelude.hashWithSalt` defaultTargetInstance
       `Prelude.hashWithSalt` estimatedMonthlyCost
       `Prelude.hashWithSalt` estimatedMonthlySavings

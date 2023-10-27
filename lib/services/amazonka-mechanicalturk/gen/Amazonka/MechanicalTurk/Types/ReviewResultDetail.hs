@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MechanicalTurk.Types.ReviewResultDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MechanicalTurk.Types.ReviewResultDetail where
@@ -139,7 +139,8 @@ instance Data.FromJSON ReviewResultDetail where
 
 instance Prelude.Hashable ReviewResultDetail where
   hashWithSalt _salt ReviewResultDetail' {..} =
-    _salt `Prelude.hashWithSalt` actionId
+    _salt
+      `Prelude.hashWithSalt` actionId
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` questionId
       `Prelude.hashWithSalt` subjectId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.UserStackAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.UserStackAssociation where
@@ -114,7 +114,8 @@ instance Data.FromJSON UserStackAssociation where
 
 instance Prelude.Hashable UserStackAssociation where
   hashWithSalt _salt UserStackAssociation' {..} =
-    _salt `Prelude.hashWithSalt` sendEmailNotification
+    _salt
+      `Prelude.hashWithSalt` sendEmailNotification
       `Prelude.hashWithSalt` stackName
       `Prelude.hashWithSalt` userName
       `Prelude.hashWithSalt` authenticationType

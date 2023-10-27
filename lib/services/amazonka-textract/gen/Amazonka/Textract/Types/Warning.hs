@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.Warning
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.Warning where
@@ -76,7 +76,8 @@ instance Data.FromJSON Warning where
 
 instance Prelude.Hashable Warning where
   hashWithSalt _salt Warning' {..} =
-    _salt `Prelude.hashWithSalt` errorCode
+    _salt
+      `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` pages
 
 instance Prelude.NFData Warning where

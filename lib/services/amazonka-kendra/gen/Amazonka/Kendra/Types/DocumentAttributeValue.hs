@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.DocumentAttributeValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.DocumentAttributeValue where
@@ -108,7 +108,8 @@ instance Data.FromJSON DocumentAttributeValue where
           DocumentAttributeValue'
             Prelude.<$> (x Data..:? "DateValue")
             Prelude.<*> (x Data..:? "LongValue")
-            Prelude.<*> ( x Data..:? "StringListValue"
+            Prelude.<*> ( x
+                            Data..:? "StringListValue"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "StringValue")
@@ -116,7 +117,8 @@ instance Data.FromJSON DocumentAttributeValue where
 
 instance Prelude.Hashable DocumentAttributeValue where
   hashWithSalt _salt DocumentAttributeValue' {..} =
-    _salt `Prelude.hashWithSalt` dateValue
+    _salt
+      `Prelude.hashWithSalt` dateValue
       `Prelude.hashWithSalt` longValue
       `Prelude.hashWithSalt` stringListValue
       `Prelude.hashWithSalt` stringValue

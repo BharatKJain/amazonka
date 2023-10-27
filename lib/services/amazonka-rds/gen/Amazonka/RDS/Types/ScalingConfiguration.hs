@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.ScalingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.ScalingConfiguration where
@@ -243,7 +243,8 @@ scalingConfiguration_timeoutAction = Lens.lens (\ScalingConfiguration' {timeoutA
 
 instance Prelude.Hashable ScalingConfiguration where
   hashWithSalt _salt ScalingConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` autoPause
+    _salt
+      `Prelude.hashWithSalt` autoPause
       `Prelude.hashWithSalt` maxCapacity
       `Prelude.hashWithSalt` minCapacity
       `Prelude.hashWithSalt` secondsBeforeTimeout

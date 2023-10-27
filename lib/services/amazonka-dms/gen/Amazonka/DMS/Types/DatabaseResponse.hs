@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.DatabaseResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.DatabaseResponse where
@@ -130,7 +130,8 @@ instance Data.FromJSON DatabaseResponse where
 
 instance Prelude.Hashable DatabaseResponse where
   hashWithSalt _salt DatabaseResponse' {..} =
-    _salt `Prelude.hashWithSalt` collectors
+    _salt
+      `Prelude.hashWithSalt` collectors
       `Prelude.hashWithSalt` databaseId
       `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` ipAddress

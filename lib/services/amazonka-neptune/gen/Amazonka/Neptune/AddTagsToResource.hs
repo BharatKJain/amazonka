@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Neptune.AddTagsToResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,7 +102,8 @@ instance Core.AWSRequest AddTagsToResource where
 
 instance Prelude.Hashable AddTagsToResource where
   hashWithSalt _salt AddTagsToResource' {..} =
-    _salt `Prelude.hashWithSalt` resourceName
+    _salt
+      `Prelude.hashWithSalt` resourceName
       `Prelude.hashWithSalt` tags
 
 instance Prelude.NFData AddTagsToResource where

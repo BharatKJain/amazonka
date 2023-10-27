@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.CheckSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.CheckSummary where
@@ -162,7 +162,8 @@ instance Data.FromJSON CheckSummary where
 
 instance Prelude.Hashable CheckSummary where
   hashWithSalt _salt CheckSummary' {..} =
-    _salt `Prelude.hashWithSalt` accountSummary
+    _salt
+      `Prelude.hashWithSalt` accountSummary
       `Prelude.hashWithSalt` choiceId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` id

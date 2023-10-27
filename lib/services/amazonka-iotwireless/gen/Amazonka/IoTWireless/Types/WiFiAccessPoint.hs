@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.WiFiAccessPoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.WiFiAccessPoint where
@@ -68,7 +68,8 @@ wiFiAccessPoint_rss = Lens.lens (\WiFiAccessPoint' {rss} -> rss) (\s@WiFiAccessP
 
 instance Prelude.Hashable WiFiAccessPoint where
   hashWithSalt _salt WiFiAccessPoint' {..} =
-    _salt `Prelude.hashWithSalt` macAddress
+    _salt
+      `Prelude.hashWithSalt` macAddress
       `Prelude.hashWithSalt` rss
 
 instance Prelude.NFData WiFiAccessPoint where

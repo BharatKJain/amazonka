@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.OnlineStoreConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.OnlineStoreConfig where
@@ -94,7 +94,8 @@ instance Data.FromJSON OnlineStoreConfig where
 
 instance Prelude.Hashable OnlineStoreConfig where
   hashWithSalt _salt OnlineStoreConfig' {..} =
-    _salt `Prelude.hashWithSalt` enableOnlineStore
+    _salt
+      `Prelude.hashWithSalt` enableOnlineStore
       `Prelude.hashWithSalt` securityConfig
 
 instance Prelude.NFData OnlineStoreConfig where

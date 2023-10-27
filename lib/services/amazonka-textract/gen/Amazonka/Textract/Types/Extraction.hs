@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.Extraction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.Extraction where
@@ -89,7 +89,8 @@ instance Data.FromJSON Extraction where
 
 instance Prelude.Hashable Extraction where
   hashWithSalt _salt Extraction' {..} =
-    _salt `Prelude.hashWithSalt` expenseDocument
+    _salt
+      `Prelude.hashWithSalt` expenseDocument
       `Prelude.hashWithSalt` identityDocument
       `Prelude.hashWithSalt` lendingDocument
 

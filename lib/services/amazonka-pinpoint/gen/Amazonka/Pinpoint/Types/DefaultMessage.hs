@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.DefaultMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.DefaultMessage where
@@ -67,7 +67,8 @@ defaultMessage_substitutions = Lens.lens (\DefaultMessage' {substitutions} -> su
 
 instance Prelude.Hashable DefaultMessage where
   hashWithSalt _salt DefaultMessage' {..} =
-    _salt `Prelude.hashWithSalt` body
+    _salt
+      `Prelude.hashWithSalt` body
       `Prelude.hashWithSalt` substitutions
 
 instance Prelude.NFData DefaultMessage where

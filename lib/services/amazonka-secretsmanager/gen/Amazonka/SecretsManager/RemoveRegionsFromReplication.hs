@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecretsManager.RemoveRegionsFromReplication
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,7 +116,8 @@ instance Core.AWSRequest RemoveRegionsFromReplication where
       ( \s h x ->
           RemoveRegionsFromReplicationResponse'
             Prelude.<$> (x Data..?> "ARN")
-            Prelude.<*> ( x Data..?> "ReplicationStatus"
+            Prelude.<*> ( x
+                            Data..?> "ReplicationStatus"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -127,7 +128,8 @@ instance
     RemoveRegionsFromReplication
   where
   hashWithSalt _salt RemoveRegionsFromReplication' {..} =
-    _salt `Prelude.hashWithSalt` secretId
+    _salt
+      `Prelude.hashWithSalt` secretId
       `Prelude.hashWithSalt` removeReplicaRegions
 
 instance Prelude.NFData RemoveRegionsFromReplication where

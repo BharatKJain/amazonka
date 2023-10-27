@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityLake.Types.SubscriberResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityLake.Types.SubscriberResource where
@@ -256,7 +256,8 @@ instance Data.FromJSON SubscriberResource where
 
 instance Prelude.Hashable SubscriberResource where
   hashWithSalt _salt SubscriberResource' {..} =
-    _salt `Prelude.hashWithSalt` accessTypes
+    _salt
+      `Prelude.hashWithSalt` accessTypes
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` externalId
       `Prelude.hashWithSalt` roleArn

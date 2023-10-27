@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubOrchestrator.Types.StepInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubOrchestrator.Types.StepInput where
@@ -89,10 +89,12 @@ instance Data.FromJSON StepInput where
       ( \x ->
           StepInput'
             Prelude.<$> (x Data..:? "integerValue")
-            Prelude.<*> ( x Data..:? "listOfStringsValue"
+            Prelude.<*> ( x
+                            Data..:? "listOfStringsValue"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "mapOfStringValue"
+            Prelude.<*> ( x
+                            Data..:? "mapOfStringValue"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "stringValue")
@@ -100,7 +102,8 @@ instance Data.FromJSON StepInput where
 
 instance Prelude.Hashable StepInput where
   hashWithSalt _salt StepInput' {..} =
-    _salt `Prelude.hashWithSalt` integerValue
+    _salt
+      `Prelude.hashWithSalt` integerValue
       `Prelude.hashWithSalt` listOfStringsValue
       `Prelude.hashWithSalt` mapOfStringValue
       `Prelude.hashWithSalt` stringValue

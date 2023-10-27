@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecurityHub.GetInsights
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,17 +122,19 @@ instance Core.AWSPager GetInsights where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? getInsightsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? getInsightsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop (rs Lens.^. getInsightsResponse_insights) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getInsights_nextToken
           Lens..~ rs
-          Lens.^? getInsightsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? getInsightsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetInsights where
   type AWSResponse GetInsights = GetInsightsResponse
@@ -149,7 +151,8 @@ instance Core.AWSRequest GetInsights where
 
 instance Prelude.Hashable GetInsights where
   hashWithSalt _salt GetInsights' {..} =
-    _salt `Prelude.hashWithSalt` insightArns
+    _salt
+      `Prelude.hashWithSalt` insightArns
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

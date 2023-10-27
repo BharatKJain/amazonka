@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.Task
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.Task where
@@ -891,7 +891,8 @@ instance Data.FromJSON Task where
             Prelude.<*> (x Data..:? "executionStoppedAt")
             Prelude.<*> (x Data..:? "group")
             Prelude.<*> (x Data..:? "healthStatus")
-            Prelude.<*> ( x Data..:? "inferenceAccelerators"
+            Prelude.<*> ( x
+                            Data..:? "inferenceAccelerators"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "lastStatus")
@@ -916,7 +917,8 @@ instance Data.FromJSON Task where
 
 instance Prelude.Hashable Task where
   hashWithSalt _salt Task' {..} =
-    _salt `Prelude.hashWithSalt` attachments
+    _salt
+      `Prelude.hashWithSalt` attachments
       `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` capacityProviderName

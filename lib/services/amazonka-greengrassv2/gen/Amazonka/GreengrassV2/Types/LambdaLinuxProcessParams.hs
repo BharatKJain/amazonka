@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.LambdaLinuxProcessParams
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.LambdaLinuxProcessParams where
@@ -80,7 +80,8 @@ lambdaLinuxProcessParams_isolationMode = Lens.lens (\LambdaLinuxProcessParams' {
 
 instance Prelude.Hashable LambdaLinuxProcessParams where
   hashWithSalt _salt LambdaLinuxProcessParams' {..} =
-    _salt `Prelude.hashWithSalt` containerParams
+    _salt
+      `Prelude.hashWithSalt` containerParams
       `Prelude.hashWithSalt` isolationMode
 
 instance Prelude.NFData LambdaLinuxProcessParams where

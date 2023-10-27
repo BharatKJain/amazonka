@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudTrail.PutInsightSelectors
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest PutInsightSelectors where
     Response.receiveJSON
       ( \s h x ->
           PutInsightSelectorsResponse'
-            Prelude.<$> ( x Data..?> "InsightSelectors"
+            Prelude.<$> ( x
+                            Data..?> "InsightSelectors"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "TrailARN")
@@ -119,7 +120,8 @@ instance Core.AWSRequest PutInsightSelectors where
 
 instance Prelude.Hashable PutInsightSelectors where
   hashWithSalt _salt PutInsightSelectors' {..} =
-    _salt `Prelude.hashWithSalt` trailName
+    _salt
+      `Prelude.hashWithSalt` trailName
       `Prelude.hashWithSalt` insightSelectors
 
 instance Prelude.NFData PutInsightSelectors where

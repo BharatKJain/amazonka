@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KinesisVideoArchivedMedia.ListFragments
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -177,20 +177,23 @@ instance Core.AWSPager ListFragments where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listFragmentsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listFragmentsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listFragmentsResponse_fragments Prelude.. Lens._Just
+            Lens.^? listFragmentsResponse_fragments
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listFragments_nextToken
           Lens..~ rs
-          Lens.^? listFragmentsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listFragmentsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListFragments where
   type
@@ -209,7 +212,8 @@ instance Core.AWSRequest ListFragments where
 
 instance Prelude.Hashable ListFragments where
   hashWithSalt _salt ListFragments' {..} =
-    _salt `Prelude.hashWithSalt` fragmentSelector
+    _salt
+      `Prelude.hashWithSalt` fragmentSelector
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` streamARN

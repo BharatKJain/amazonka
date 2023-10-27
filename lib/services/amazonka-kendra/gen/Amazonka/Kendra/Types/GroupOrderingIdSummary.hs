@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.GroupOrderingIdSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.GroupOrderingIdSummary where
@@ -125,7 +125,8 @@ instance Data.FromJSON GroupOrderingIdSummary where
 
 instance Prelude.Hashable GroupOrderingIdSummary where
   hashWithSalt _salt GroupOrderingIdSummary' {..} =
-    _salt `Prelude.hashWithSalt` failureReason
+    _salt
+      `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` lastUpdatedAt
       `Prelude.hashWithSalt` orderingId
       `Prelude.hashWithSalt` receivedAt

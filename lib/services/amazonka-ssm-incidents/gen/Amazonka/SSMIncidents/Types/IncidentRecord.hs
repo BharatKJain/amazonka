@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.IncidentRecord
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.IncidentRecord where
@@ -225,11 +225,13 @@ instance Data.FromJSON IncidentRecord where
       "IncidentRecord"
       ( \x ->
           IncidentRecord'
-            Prelude.<$> ( x Data..:? "automationExecutions"
+            Prelude.<$> ( x
+                            Data..:? "automationExecutions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "chatChannel")
-            Prelude.<*> ( x Data..:? "notificationTargets"
+            Prelude.<*> ( x
+                            Data..:? "notificationTargets"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "resolvedTime")
@@ -247,7 +249,8 @@ instance Data.FromJSON IncidentRecord where
 
 instance Prelude.Hashable IncidentRecord where
   hashWithSalt _salt IncidentRecord' {..} =
-    _salt `Prelude.hashWithSalt` automationExecutions
+    _salt
+      `Prelude.hashWithSalt` automationExecutions
       `Prelude.hashWithSalt` chatChannel
       `Prelude.hashWithSalt` notificationTargets
       `Prelude.hashWithSalt` resolvedTime

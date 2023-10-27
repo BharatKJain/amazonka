@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Organizations.ListOrganizationalUnitsForParent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -194,22 +194,22 @@ instance
     | Core.stop
         ( rs
             Lens.^? listOrganizationalUnitsForParentResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listOrganizationalUnitsForParentResponse_organizationalUnits
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listOrganizationalUnitsForParent_nextToken
           Lens..~ rs
           Lens.^? listOrganizationalUnitsForParentResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -225,7 +225,8 @@ instance
       ( \s h x ->
           ListOrganizationalUnitsForParentResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "OrganizationalUnits"
+            Prelude.<*> ( x
+                            Data..?> "OrganizationalUnits"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -238,7 +239,8 @@ instance
   hashWithSalt
     _salt
     ListOrganizationalUnitsForParent' {..} =
-      _salt `Prelude.hashWithSalt` maxResults
+      _salt
+        `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` parentId
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.CreateCustomEntityType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,7 +138,8 @@ instance Core.AWSRequest CreateCustomEntityType where
 
 instance Prelude.Hashable CreateCustomEntityType where
   hashWithSalt _salt CreateCustomEntityType' {..} =
-    _salt `Prelude.hashWithSalt` contextWords
+    _salt
+      `Prelude.hashWithSalt` contextWords
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` regexString
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.HistoricalMetricResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.HistoricalMetricResult where
@@ -77,7 +77,8 @@ instance Data.FromJSON HistoricalMetricResult where
 
 instance Prelude.Hashable HistoricalMetricResult where
   hashWithSalt _salt HistoricalMetricResult' {..} =
-    _salt `Prelude.hashWithSalt` collections
+    _salt
+      `Prelude.hashWithSalt` collections
       `Prelude.hashWithSalt` dimensions
 
 instance Prelude.NFData HistoricalMetricResult where

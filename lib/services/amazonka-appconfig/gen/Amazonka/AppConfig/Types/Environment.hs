@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppConfig.Types.Environment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppConfig.Types.Environment where
@@ -120,7 +120,8 @@ instance Data.FromJSON Environment where
 
 instance Prelude.Hashable Environment where
   hashWithSalt _salt Environment' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` monitors

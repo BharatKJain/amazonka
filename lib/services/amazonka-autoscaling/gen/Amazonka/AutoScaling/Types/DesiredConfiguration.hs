@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.DesiredConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.DesiredConfiguration where
@@ -74,7 +74,8 @@ instance Data.FromXML DesiredConfiguration where
 
 instance Prelude.Hashable DesiredConfiguration where
   hashWithSalt _salt DesiredConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` launchTemplate
+    _salt
+      `Prelude.hashWithSalt` launchTemplate
       `Prelude.hashWithSalt` mixedInstancesPolicy
 
 instance Prelude.NFData DesiredConfiguration where

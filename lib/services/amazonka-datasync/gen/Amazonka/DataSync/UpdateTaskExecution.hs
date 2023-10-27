@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataSync.UpdateTaskExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -27,7 +27,7 @@
 -- <https://docs.aws.amazon.com/datasync/latest/userguide/working-with-task-executions.html#adjust-bandwidth-throttling Adjusting Bandwidth Throttling for a Task Execution>.
 --
 -- The only @Option@ that can be modified by @UpdateTaskExecution@ is
--- @ BytesPerSecond @.
+-- @ @<https://docs.aws.amazon.com/datasync/latest/userguide/API_Options.html#DataSync-Type-Options-BytesPerSecond BytesPerSecond>@ @.
 module Amazonka.DataSync.UpdateTaskExecution
   ( -- * Creating a Request
     UpdateTaskExecution (..),
@@ -112,7 +112,8 @@ instance Core.AWSRequest UpdateTaskExecution where
 
 instance Prelude.Hashable UpdateTaskExecution where
   hashWithSalt _salt UpdateTaskExecution' {..} =
-    _salt `Prelude.hashWithSalt` taskExecutionArn
+    _salt
+      `Prelude.hashWithSalt` taskExecutionArn
       `Prelude.hashWithSalt` options
 
 instance Prelude.NFData UpdateTaskExecution where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.DeletePushTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -175,7 +175,8 @@ instance Core.AWSRequest DeletePushTemplate where
 
 instance Prelude.Hashable DeletePushTemplate where
   hashWithSalt _salt DeletePushTemplate' {..} =
-    _salt `Prelude.hashWithSalt` version
+    _salt
+      `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` templateName
 
 instance Prelude.NFData DeletePushTemplate where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatch.Types.InsightRuleMetricDatapoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatch.Types.InsightRuleMetricDatapoint where
@@ -221,7 +221,8 @@ instance Data.FromXML InsightRuleMetricDatapoint where
 
 instance Prelude.Hashable InsightRuleMetricDatapoint where
   hashWithSalt _salt InsightRuleMetricDatapoint' {..} =
-    _salt `Prelude.hashWithSalt` average
+    _salt
+      `Prelude.hashWithSalt` average
       `Prelude.hashWithSalt` maxContributorValue
       `Prelude.hashWithSalt` maximum
       `Prelude.hashWithSalt` minimum

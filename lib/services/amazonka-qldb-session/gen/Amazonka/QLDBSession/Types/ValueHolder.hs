@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QLDBSession.Types.ValueHolder
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QLDBSession.Types.ValueHolder where
@@ -82,7 +82,8 @@ instance Data.FromJSON ValueHolder where
 
 instance Prelude.Hashable ValueHolder where
   hashWithSalt _salt ValueHolder' {..} =
-    _salt `Prelude.hashWithSalt` ionBinary
+    _salt
+      `Prelude.hashWithSalt` ionBinary
       `Prelude.hashWithSalt` ionText
 
 instance Prelude.NFData ValueHolder where

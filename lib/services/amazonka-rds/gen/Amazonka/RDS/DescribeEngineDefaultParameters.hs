@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.DescribeEngineDefaultParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -440,25 +440,25 @@ instance
     | Core.stop
         ( rs
             Lens.^? describeEngineDefaultParametersResponse_engineDefaults
-              Prelude.. engineDefaults_marker
-              Prelude.. Lens._Just
+            Prelude.. engineDefaults_marker
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeEngineDefaultParametersResponse_engineDefaults
-              Prelude.. engineDefaults_parameters
-              Prelude.. Lens._Just
+            Prelude.. engineDefaults_parameters
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeEngineDefaultParameters_marker
           Lens..~ rs
           Lens.^? describeEngineDefaultParametersResponse_engineDefaults
-            Prelude.. engineDefaults_marker
-            Prelude.. Lens._Just
+          Prelude.. engineDefaults_marker
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -485,7 +485,8 @@ instance
   hashWithSalt
     _salt
     DescribeEngineDefaultParameters' {..} =
-      _salt `Prelude.hashWithSalt` filters
+      _salt
+        `Prelude.hashWithSalt` filters
         `Prelude.hashWithSalt` marker
         `Prelude.hashWithSalt` maxRecords
         `Prelude.hashWithSalt` dbParameterGroupFamily

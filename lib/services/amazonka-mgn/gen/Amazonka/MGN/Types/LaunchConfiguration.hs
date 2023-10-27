@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.LaunchConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.LaunchConfiguration where
@@ -177,7 +177,8 @@ instance Data.FromJSON LaunchConfiguration where
 
 instance Prelude.Hashable LaunchConfiguration where
   hashWithSalt _salt LaunchConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` bootMode
+    _salt
+      `Prelude.hashWithSalt` bootMode
       `Prelude.hashWithSalt` copyPrivateIp
       `Prelude.hashWithSalt` copyTags
       `Prelude.hashWithSalt` ec2LaunchTemplateID

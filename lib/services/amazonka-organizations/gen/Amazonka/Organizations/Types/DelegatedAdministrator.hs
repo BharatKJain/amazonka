@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Organizations.Types.DelegatedAdministrator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Organizations.Types.DelegatedAdministrator where
@@ -151,7 +151,8 @@ instance Data.FromJSON DelegatedAdministrator where
 
 instance Prelude.Hashable DelegatedAdministrator where
   hashWithSalt _salt DelegatedAdministrator' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` delegationEnabledDate
       `Prelude.hashWithSalt` email
       `Prelude.hashWithSalt` id

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ShadowModeConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ShadowModeConfig where
@@ -90,7 +90,8 @@ instance Data.FromJSON ShadowModeConfig where
 
 instance Prelude.Hashable ShadowModeConfig where
   hashWithSalt _salt ShadowModeConfig' {..} =
-    _salt `Prelude.hashWithSalt` sourceModelVariantName
+    _salt
+      `Prelude.hashWithSalt` sourceModelVariantName
       `Prelude.hashWithSalt` shadowModelVariants
 
 instance Prelude.NFData ShadowModeConfig where

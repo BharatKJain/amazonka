@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StorageGateway.DisassociateFileSystem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest DisassociateFileSystem where
 
 instance Prelude.Hashable DisassociateFileSystem where
   hashWithSalt _salt DisassociateFileSystem' {..} =
-    _salt `Prelude.hashWithSalt` forceDelete
+    _salt
+      `Prelude.hashWithSalt` forceDelete
       `Prelude.hashWithSalt` fileSystemAssociationARN
 
 instance Prelude.NFData DisassociateFileSystem where

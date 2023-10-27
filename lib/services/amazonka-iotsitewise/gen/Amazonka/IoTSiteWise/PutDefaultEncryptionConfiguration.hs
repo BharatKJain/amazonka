@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTSiteWise.PutDefaultEncryptionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,9 +109,9 @@ instance
       ( \s h x ->
           PutDefaultEncryptionConfigurationResponse'
             Prelude.<$> (x Data..?> "kmsKeyArn")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> (x Data..:> "encryptionType")
-              Prelude.<*> (x Data..:> "configurationStatus")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..:> "encryptionType")
+            Prelude.<*> (x Data..:> "configurationStatus")
       )
 
 instance
@@ -121,7 +121,8 @@ instance
   hashWithSalt
     _salt
     PutDefaultEncryptionConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` kmsKeyId
+      _salt
+        `Prelude.hashWithSalt` kmsKeyId
         `Prelude.hashWithSalt` encryptionType
 
 instance

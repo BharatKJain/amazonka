@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTEvents.CreateAlarmModel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -238,7 +238,8 @@ instance Core.AWSRequest CreateAlarmModel where
 
 instance Prelude.Hashable CreateAlarmModel where
   hashWithSalt _salt CreateAlarmModel' {..} =
-    _salt `Prelude.hashWithSalt` alarmCapabilities
+    _salt
+      `Prelude.hashWithSalt` alarmCapabilities
       `Prelude.hashWithSalt` alarmEventActions
       `Prelude.hashWithSalt` alarmModelDescription
       `Prelude.hashWithSalt` alarmNotification

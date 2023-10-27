@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.DescribeDBClusterSnapshots
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -392,22 +392,22 @@ instance Core.AWSPager DescribeDBClusterSnapshots where
     | Core.stop
         ( rs
             Lens.^? describeDBClusterSnapshotsResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeDBClusterSnapshotsResponse_dbClusterSnapshots
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeDBClusterSnapshots_marker
           Lens..~ rs
           Lens.^? describeDBClusterSnapshotsResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeDBClusterSnapshots where
   type
@@ -420,7 +420,8 @@ instance Core.AWSRequest DescribeDBClusterSnapshots where
       "DescribeDBClusterSnapshotsResult"
       ( \s h x ->
           DescribeDBClusterSnapshotsResponse'
-            Prelude.<$> ( x Data..@? "DBClusterSnapshots"
+            Prelude.<$> ( x
+                            Data..@? "DBClusterSnapshots"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "DBClusterSnapshot")
                         )
@@ -430,7 +431,8 @@ instance Core.AWSRequest DescribeDBClusterSnapshots where
 
 instance Prelude.Hashable DescribeDBClusterSnapshots where
   hashWithSalt _salt DescribeDBClusterSnapshots' {..} =
-    _salt `Prelude.hashWithSalt` dbClusterIdentifier
+    _salt
+      `Prelude.hashWithSalt` dbClusterIdentifier
       `Prelude.hashWithSalt` dbClusterSnapshotIdentifier
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` includePublic

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.GetDistributionMetricData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -500,7 +500,8 @@ instance Core.AWSRequest GetDistributionMetricData where
 
 instance Prelude.Hashable GetDistributionMetricData where
   hashWithSalt _salt GetDistributionMetricData' {..} =
-    _salt `Prelude.hashWithSalt` distributionName
+    _salt
+      `Prelude.hashWithSalt` distributionName
       `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` startTime
       `Prelude.hashWithSalt` endTime

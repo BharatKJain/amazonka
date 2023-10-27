@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.PivotTableSortBy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.PivotTableSortBy where
@@ -96,7 +96,8 @@ instance Data.FromJSON PivotTableSortBy where
 
 instance Prelude.Hashable PivotTableSortBy where
   hashWithSalt _salt PivotTableSortBy' {..} =
-    _salt `Prelude.hashWithSalt` column
+    _salt
+      `Prelude.hashWithSalt` column
       `Prelude.hashWithSalt` dataPath
       `Prelude.hashWithSalt` field
 

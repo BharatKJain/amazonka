@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.UserImportJobType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.UserImportJobType where
@@ -258,7 +258,8 @@ instance Data.FromJSON UserImportJobType where
 
 instance Prelude.Hashable UserImportJobType where
   hashWithSalt _salt UserImportJobType' {..} =
-    _salt `Prelude.hashWithSalt` cloudWatchLogsRoleArn
+    _salt
+      `Prelude.hashWithSalt` cloudWatchLogsRoleArn
       `Prelude.hashWithSalt` completionDate
       `Prelude.hashWithSalt` completionMessage
       `Prelude.hashWithSalt` creationDate

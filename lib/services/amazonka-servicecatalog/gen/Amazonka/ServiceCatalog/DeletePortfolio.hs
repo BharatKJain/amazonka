@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.DeletePortfolio
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest DeletePortfolio where
 
 instance Prelude.Hashable DeletePortfolio where
   hashWithSalt _salt DeletePortfolio' {..} =
-    _salt `Prelude.hashWithSalt` acceptLanguage
+    _salt
+      `Prelude.hashWithSalt` acceptLanguage
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData DeletePortfolio where

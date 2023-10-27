@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.DetectedJsonFormatDescriptor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.DetectedJsonFormatDescriptor where
@@ -79,7 +79,8 @@ instance
     DetectedJsonFormatDescriptor
   where
   hashWithSalt _salt DetectedJsonFormatDescriptor' {..} =
-    _salt `Prelude.hashWithSalt` charset
+    _salt
+      `Prelude.hashWithSalt` charset
       `Prelude.hashWithSalt` fileCompression
 
 instance Prelude.NFData DetectedJsonFormatDescriptor where

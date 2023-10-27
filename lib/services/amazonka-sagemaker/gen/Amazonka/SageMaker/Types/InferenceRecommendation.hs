@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.InferenceRecommendation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.InferenceRecommendation where
@@ -97,7 +97,8 @@ instance Data.FromJSON InferenceRecommendation where
 
 instance Prelude.Hashable InferenceRecommendation where
   hashWithSalt _salt InferenceRecommendation' {..} =
-    _salt `Prelude.hashWithSalt` metrics
+    _salt
+      `Prelude.hashWithSalt` metrics
       `Prelude.hashWithSalt` endpointConfiguration
       `Prelude.hashWithSalt` modelConfiguration
 

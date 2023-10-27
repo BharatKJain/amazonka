@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.KinesisFirehoseDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.KinesisFirehoseDestination where
@@ -89,7 +89,8 @@ instance Data.FromXML KinesisFirehoseDestination where
 
 instance Prelude.Hashable KinesisFirehoseDestination where
   hashWithSalt _salt KinesisFirehoseDestination' {..} =
-    _salt `Prelude.hashWithSalt` iAMRoleARN
+    _salt
+      `Prelude.hashWithSalt` iAMRoleARN
       `Prelude.hashWithSalt` deliveryStreamARN
 
 instance Prelude.NFData KinesisFirehoseDestination where

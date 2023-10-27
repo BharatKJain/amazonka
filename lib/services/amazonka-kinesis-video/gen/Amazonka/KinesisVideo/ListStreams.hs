@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KinesisVideo.ListStreams
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,21 +121,23 @@ instance Core.AWSPager ListStreams where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listStreamsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listStreamsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listStreamsResponse_streamInfoList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listStreams_nextToken
           Lens..~ rs
-          Lens.^? listStreamsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listStreamsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListStreams where
   type AWSResponse ListStreams = ListStreamsResponse
@@ -152,7 +154,8 @@ instance Core.AWSRequest ListStreams where
 
 instance Prelude.Hashable ListStreams where
   hashWithSalt _salt ListStreams' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` streamNameCondition
 

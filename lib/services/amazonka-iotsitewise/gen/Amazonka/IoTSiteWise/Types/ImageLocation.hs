@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.ImageLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.ImageLocation where
@@ -73,12 +73,14 @@ instance Data.FromJSON ImageLocation where
       "ImageLocation"
       ( \x ->
           ImageLocation'
-            Prelude.<$> (x Data..: "id") Prelude.<*> (x Data..: "url")
+            Prelude.<$> (x Data..: "id")
+            Prelude.<*> (x Data..: "url")
       )
 
 instance Prelude.Hashable ImageLocation where
   hashWithSalt _salt ImageLocation' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` url
 
 instance Prelude.NFData ImageLocation where

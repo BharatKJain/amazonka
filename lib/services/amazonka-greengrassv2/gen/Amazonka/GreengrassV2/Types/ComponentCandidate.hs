@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.ComponentCandidate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.ComponentCandidate where
@@ -87,7 +87,8 @@ componentCandidate_versionRequirements = Lens.lens (\ComponentCandidate' {versio
 
 instance Prelude.Hashable ComponentCandidate where
   hashWithSalt _salt ComponentCandidate' {..} =
-    _salt `Prelude.hashWithSalt` componentName
+    _salt
+      `Prelude.hashWithSalt` componentName
       `Prelude.hashWithSalt` componentVersion
       `Prelude.hashWithSalt` versionRequirements
 

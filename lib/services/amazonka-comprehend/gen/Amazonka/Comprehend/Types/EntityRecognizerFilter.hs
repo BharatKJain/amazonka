@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.EntityRecognizerFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.EntityRecognizerFilter where
@@ -98,7 +98,8 @@ entityRecognizerFilter_submitTimeBefore = Lens.lens (\EntityRecognizerFilter' {s
 
 instance Prelude.Hashable EntityRecognizerFilter where
   hashWithSalt _salt EntityRecognizerFilter' {..} =
-    _salt `Prelude.hashWithSalt` recognizerName
+    _salt
+      `Prelude.hashWithSalt` recognizerName
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` submitTimeAfter
       `Prelude.hashWithSalt` submitTimeBefore

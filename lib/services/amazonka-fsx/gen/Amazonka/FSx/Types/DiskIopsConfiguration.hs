@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.DiskIopsConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.DiskIopsConfiguration where
@@ -80,12 +80,14 @@ instance Data.FromJSON DiskIopsConfiguration where
       "DiskIopsConfiguration"
       ( \x ->
           DiskIopsConfiguration'
-            Prelude.<$> (x Data..:? "Iops") Prelude.<*> (x Data..:? "Mode")
+            Prelude.<$> (x Data..:? "Iops")
+            Prelude.<*> (x Data..:? "Mode")
       )
 
 instance Prelude.Hashable DiskIopsConfiguration where
   hashWithSalt _salt DiskIopsConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` iops
+    _salt
+      `Prelude.hashWithSalt` iops
       `Prelude.hashWithSalt` mode
 
 instance Prelude.NFData DiskIopsConfiguration where

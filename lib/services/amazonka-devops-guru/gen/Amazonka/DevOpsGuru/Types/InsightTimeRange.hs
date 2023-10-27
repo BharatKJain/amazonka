@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.InsightTimeRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.InsightTimeRange where
@@ -77,7 +77,8 @@ instance Data.FromJSON InsightTimeRange where
 
 instance Prelude.Hashable InsightTimeRange where
   hashWithSalt _salt InsightTimeRange' {..} =
-    _salt `Prelude.hashWithSalt` endTime
+    _salt
+      `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` startTime
 
 instance Prelude.NFData InsightTimeRange where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecretsManager.UpdateSecretVersionStage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -200,7 +200,8 @@ instance Core.AWSRequest UpdateSecretVersionStage where
 
 instance Prelude.Hashable UpdateSecretVersionStage where
   hashWithSalt _salt UpdateSecretVersionStage' {..} =
-    _salt `Prelude.hashWithSalt` moveToVersionId
+    _salt
+      `Prelude.hashWithSalt` moveToVersionId
       `Prelude.hashWithSalt` removeFromVersionId
       `Prelude.hashWithSalt` secretId
       `Prelude.hashWithSalt` versionStage

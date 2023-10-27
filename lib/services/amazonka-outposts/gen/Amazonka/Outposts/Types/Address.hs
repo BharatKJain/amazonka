@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Outposts.Types.Address
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Outposts.Types.Address where
@@ -179,7 +179,8 @@ instance Data.FromJSON Address where
 
 instance Prelude.Hashable Address where
   hashWithSalt _salt Address' {..} =
-    _salt `Prelude.hashWithSalt` addressLine2
+    _salt
+      `Prelude.hashWithSalt` addressLine2
       `Prelude.hashWithSalt` addressLine3
       `Prelude.hashWithSalt` contactName
       `Prelude.hashWithSalt` contactPhoneNumber

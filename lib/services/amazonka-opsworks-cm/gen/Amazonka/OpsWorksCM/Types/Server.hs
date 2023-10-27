@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorksCM.Types.Server
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorksCM.Types.Server where
@@ -412,7 +412,8 @@ instance Data.FromJSON Server where
             Prelude.<*> (x Data..:? "DisableAutomatedBackup")
             Prelude.<*> (x Data..:? "Endpoint")
             Prelude.<*> (x Data..:? "Engine")
-            Prelude.<*> ( x Data..:? "EngineAttributes"
+            Prelude.<*> ( x
+                            Data..:? "EngineAttributes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "EngineModel")
@@ -423,7 +424,8 @@ instance Data.FromJSON Server where
             Prelude.<*> (x Data..:? "MaintenanceStatus")
             Prelude.<*> (x Data..:? "PreferredBackupWindow")
             Prelude.<*> (x Data..:? "PreferredMaintenanceWindow")
-            Prelude.<*> ( x Data..:? "SecurityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "SecurityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ServerArn")

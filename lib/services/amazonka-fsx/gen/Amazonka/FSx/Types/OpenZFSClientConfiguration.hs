@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.OpenZFSClientConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.OpenZFSClientConfiguration where
@@ -121,7 +121,8 @@ instance Data.FromJSON OpenZFSClientConfiguration where
 
 instance Prelude.Hashable OpenZFSClientConfiguration where
   hashWithSalt _salt OpenZFSClientConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` clients
+    _salt
+      `Prelude.hashWithSalt` clients
       `Prelude.hashWithSalt` options
 
 instance Prelude.NFData OpenZFSClientConfiguration where

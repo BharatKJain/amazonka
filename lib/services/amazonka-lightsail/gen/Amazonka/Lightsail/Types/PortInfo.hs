@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.PortInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.PortInfo where
@@ -369,7 +369,8 @@ portInfo_toPort = Lens.lens (\PortInfo' {toPort} -> toPort) (\s@PortInfo' {} a -
 
 instance Prelude.Hashable PortInfo where
   hashWithSalt _salt PortInfo' {..} =
-    _salt `Prelude.hashWithSalt` cidrListAliases
+    _salt
+      `Prelude.hashWithSalt` cidrListAliases
       `Prelude.hashWithSalt` cidrs
       `Prelude.hashWithSalt` fromPort
       `Prelude.hashWithSalt` ipv6Cidrs

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.SecurityGroupIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.SecurityGroupIdentifier where
@@ -71,7 +71,8 @@ instance Data.FromXML SecurityGroupIdentifier where
 
 instance Prelude.Hashable SecurityGroupIdentifier where
   hashWithSalt _salt SecurityGroupIdentifier' {..} =
-    _salt `Prelude.hashWithSalt` groupId
+    _salt
+      `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` groupName
 
 instance Prelude.NFData SecurityGroupIdentifier where

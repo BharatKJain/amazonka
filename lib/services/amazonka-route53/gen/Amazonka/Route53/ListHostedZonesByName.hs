@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53.ListHostedZonesByName
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -231,7 +231,9 @@ instance Core.AWSRequest ListHostedZonesByName where
             Prelude.<*> (x Data..@? "NextDNSName")
             Prelude.<*> (x Data..@? "NextHostedZoneId")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..@? "HostedZones" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "HostedZones"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Data.parseXMLList "HostedZone"
                         )
             Prelude.<*> (x Data..@ "IsTruncated")
@@ -240,7 +242,8 @@ instance Core.AWSRequest ListHostedZonesByName where
 
 instance Prelude.Hashable ListHostedZonesByName where
   hashWithSalt _salt ListHostedZonesByName' {..} =
-    _salt `Prelude.hashWithSalt` dNSName
+    _salt
+      `Prelude.hashWithSalt` dNSName
       `Prelude.hashWithSalt` hostedZoneId
       `Prelude.hashWithSalt` maxItems
 

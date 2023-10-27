@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.EngineVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.EngineVersion where
@@ -100,7 +100,8 @@ instance Data.FromJSON EngineVersion where
 
 instance Prelude.Hashable EngineVersion where
   hashWithSalt _salt EngineVersion' {..} =
-    _salt `Prelude.hashWithSalt` effectiveEngineVersion
+    _salt
+      `Prelude.hashWithSalt` effectiveEngineVersion
       `Prelude.hashWithSalt` selectedEngineVersion
 
 instance Prelude.NFData EngineVersion where

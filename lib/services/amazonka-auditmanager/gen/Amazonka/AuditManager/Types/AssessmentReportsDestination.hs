@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.AssessmentReportsDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.AssessmentReportsDestination where
@@ -80,7 +80,8 @@ instance
     AssessmentReportsDestination
   where
   hashWithSalt _salt AssessmentReportsDestination' {..} =
-    _salt `Prelude.hashWithSalt` destination
+    _salt
+      `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` destinationType
 
 instance Prelude.NFData AssessmentReportsDestination where

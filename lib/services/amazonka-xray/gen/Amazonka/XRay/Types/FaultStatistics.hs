@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.FaultStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.FaultStatistics where
@@ -81,7 +81,8 @@ instance Data.FromJSON FaultStatistics where
 
 instance Prelude.Hashable FaultStatistics where
   hashWithSalt _salt FaultStatistics' {..} =
-    _salt `Prelude.hashWithSalt` otherCount
+    _salt
+      `Prelude.hashWithSalt` otherCount
       `Prelude.hashWithSalt` totalCount
 
 instance Prelude.NFData FaultStatistics where

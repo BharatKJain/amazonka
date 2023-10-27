@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSDKIdentity.Types.EndpointAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSDKIdentity.Types.EndpointAttributes where
@@ -77,7 +77,8 @@ instance Data.FromJSON EndpointAttributes where
 
 instance Prelude.Hashable EndpointAttributes where
   hashWithSalt _salt EndpointAttributes' {..} =
-    _salt `Prelude.hashWithSalt` voipDeviceToken
+    _salt
+      `Prelude.hashWithSalt` voipDeviceToken
       `Prelude.hashWithSalt` deviceToken
 
 instance Prelude.NFData EndpointAttributes where

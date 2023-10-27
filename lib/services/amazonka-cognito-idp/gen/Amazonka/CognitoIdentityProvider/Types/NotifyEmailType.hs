@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.NotifyEmailType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.NotifyEmailType where
@@ -86,7 +86,8 @@ instance Data.FromJSON NotifyEmailType where
 
 instance Prelude.Hashable NotifyEmailType where
   hashWithSalt _salt NotifyEmailType' {..} =
-    _salt `Prelude.hashWithSalt` htmlBody
+    _salt
+      `Prelude.hashWithSalt` htmlBody
       `Prelude.hashWithSalt` textBody
       `Prelude.hashWithSalt` subject
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.FunctionCodeLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.FunctionCodeLocation where
@@ -94,7 +94,8 @@ instance Data.FromJSON FunctionCodeLocation where
 
 instance Prelude.Hashable FunctionCodeLocation where
   hashWithSalt _salt FunctionCodeLocation' {..} =
-    _salt `Prelude.hashWithSalt` imageUri
+    _salt
+      `Prelude.hashWithSalt` imageUri
       `Prelude.hashWithSalt` location
       `Prelude.hashWithSalt` repositoryType
       `Prelude.hashWithSalt` resolvedImageUri

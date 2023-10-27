@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.ConfigStreamDeliveryInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.ConfigStreamDeliveryInfo where
@@ -112,7 +112,8 @@ instance Data.FromJSON ConfigStreamDeliveryInfo where
 
 instance Prelude.Hashable ConfigStreamDeliveryInfo where
   hashWithSalt _salt ConfigStreamDeliveryInfo' {..} =
-    _salt `Prelude.hashWithSalt` lastErrorCode
+    _salt
+      `Prelude.hashWithSalt` lastErrorCode
       `Prelude.hashWithSalt` lastErrorMessage
       `Prelude.hashWithSalt` lastStatus
       `Prelude.hashWithSalt` lastStatusChangeTime

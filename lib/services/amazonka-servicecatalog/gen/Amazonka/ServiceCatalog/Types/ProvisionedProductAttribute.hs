@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ProvisionedProductAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ProvisionedProductAttribute where
@@ -388,7 +388,8 @@ instance Data.FromJSON ProvisionedProductAttribute where
 
 instance Prelude.Hashable ProvisionedProductAttribute where
   hashWithSalt _salt ProvisionedProductAttribute' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` idempotencyToken

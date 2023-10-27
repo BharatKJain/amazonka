@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeReservedInstancesListings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -164,11 +164,12 @@ instance
     Response.receiveXML
       ( \s h x ->
           DescribeReservedInstancesListingsResponse'
-            Prelude.<$> ( x Data..@? "reservedInstancesListingsSet"
+            Prelude.<$> ( x
+                            Data..@? "reservedInstancesListingsSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -178,7 +179,8 @@ instance
   hashWithSalt
     _salt
     DescribeReservedInstancesListings' {..} =
-      _salt `Prelude.hashWithSalt` filters
+      _salt
+        `Prelude.hashWithSalt` filters
         `Prelude.hashWithSalt` reservedInstancesId
         `Prelude.hashWithSalt` reservedInstancesListingId
 

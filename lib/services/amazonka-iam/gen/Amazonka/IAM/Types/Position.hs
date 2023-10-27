@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.Position
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.Position where
@@ -27,7 +27,7 @@ import qualified Amazonka.Prelude as Prelude
 -- | Contains the row and column of a location of a @Statement@ element in a
 -- policy document.
 --
--- This data type is used as a member of the @ Statement @ type.
+-- This data type is used as a member of the @ @@Statement@@ @ type.
 --
 -- /See:/ 'newPosition' smart constructor.
 data Position = Position'
@@ -71,11 +71,13 @@ position_line = Lens.lens (\Position' {line} -> line) (\s@Position' {} a -> s {l
 instance Data.FromXML Position where
   parseXML x =
     Position'
-      Prelude.<$> (x Data..@? "Column") Prelude.<*> (x Data..@? "Line")
+      Prelude.<$> (x Data..@? "Column")
+      Prelude.<*> (x Data..@? "Line")
 
 instance Prelude.Hashable Position where
   hashWithSalt _salt Position' {..} =
-    _salt `Prelude.hashWithSalt` column
+    _salt
+      `Prelude.hashWithSalt` column
       `Prelude.hashWithSalt` line
 
 instance Prelude.NFData Position where

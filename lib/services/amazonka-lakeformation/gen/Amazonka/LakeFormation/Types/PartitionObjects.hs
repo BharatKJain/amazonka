@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.PartitionObjects
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.PartitionObjects where
@@ -75,7 +75,8 @@ instance Data.FromJSON PartitionObjects where
 
 instance Prelude.Hashable PartitionObjects where
   hashWithSalt _salt PartitionObjects' {..} =
-    _salt `Prelude.hashWithSalt` objects
+    _salt
+      `Prelude.hashWithSalt` objects
       `Prelude.hashWithSalt` partitionValues
 
 instance Prelude.NFData PartitionObjects where

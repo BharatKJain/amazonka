@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.FeatureDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.FeatureDefinition where
@@ -85,7 +85,8 @@ instance Data.FromJSON FeatureDefinition where
 
 instance Prelude.Hashable FeatureDefinition where
   hashWithSalt _salt FeatureDefinition' {..} =
-    _salt `Prelude.hashWithSalt` featureName
+    _salt
+      `Prelude.hashWithSalt` featureName
       `Prelude.hashWithSalt` featureType
 
 instance Prelude.NFData FeatureDefinition where

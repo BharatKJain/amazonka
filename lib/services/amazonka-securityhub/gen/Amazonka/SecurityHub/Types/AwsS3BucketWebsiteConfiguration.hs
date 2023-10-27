@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsS3BucketWebsiteConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsS3BucketWebsiteConfiguration where
@@ -105,7 +105,8 @@ instance
   hashWithSalt
     _salt
     AwsS3BucketWebsiteConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` errorDocument
+      _salt
+        `Prelude.hashWithSalt` errorDocument
         `Prelude.hashWithSalt` indexDocumentSuffix
         `Prelude.hashWithSalt` redirectAllRequestsTo
         `Prelude.hashWithSalt` routingRules

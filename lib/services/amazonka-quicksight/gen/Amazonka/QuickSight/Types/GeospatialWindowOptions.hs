@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.GeospatialWindowOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.GeospatialWindowOptions where
@@ -79,7 +79,8 @@ instance Data.FromJSON GeospatialWindowOptions where
 
 instance Prelude.Hashable GeospatialWindowOptions where
   hashWithSalt _salt GeospatialWindowOptions' {..} =
-    _salt `Prelude.hashWithSalt` bounds
+    _salt
+      `Prelude.hashWithSalt` bounds
       `Prelude.hashWithSalt` mapZoomMode
 
 instance Prelude.NFData GeospatialWindowOptions where

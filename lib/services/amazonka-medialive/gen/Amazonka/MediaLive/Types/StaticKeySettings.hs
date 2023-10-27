@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.StaticKeySettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.StaticKeySettings where
@@ -78,7 +78,8 @@ instance Data.FromJSON StaticKeySettings where
 
 instance Prelude.Hashable StaticKeySettings where
   hashWithSalt _salt StaticKeySettings' {..} =
-    _salt `Prelude.hashWithSalt` keyProviderServer
+    _salt
+      `Prelude.hashWithSalt` keyProviderServer
       `Prelude.hashWithSalt` staticKeyValue
 
 instance Prelude.NFData StaticKeySettings where

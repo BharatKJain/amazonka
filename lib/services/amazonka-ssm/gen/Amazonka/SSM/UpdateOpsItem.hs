@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.UpdateOpsItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -367,7 +367,8 @@ instance Core.AWSRequest UpdateOpsItem where
 
 instance Prelude.Hashable UpdateOpsItem where
   hashWithSalt _salt UpdateOpsItem' {..} =
-    _salt `Prelude.hashWithSalt` actualEndTime
+    _salt
+      `Prelude.hashWithSalt` actualEndTime
       `Prelude.hashWithSalt` actualStartTime
       `Prelude.hashWithSalt` category
       `Prelude.hashWithSalt` description

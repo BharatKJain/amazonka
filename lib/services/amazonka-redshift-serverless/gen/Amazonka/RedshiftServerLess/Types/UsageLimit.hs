@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RedshiftServerLess.Types.UsageLimit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RedshiftServerLess.Types.UsageLimit where
@@ -145,7 +145,8 @@ instance Data.FromJSON UsageLimit where
 
 instance Prelude.Hashable UsageLimit where
   hashWithSalt _salt UsageLimit' {..} =
-    _salt `Prelude.hashWithSalt` amount
+    _salt
+      `Prelude.hashWithSalt` amount
       `Prelude.hashWithSalt` breachAction
       `Prelude.hashWithSalt` period
       `Prelude.hashWithSalt` resourceArn

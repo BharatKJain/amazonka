@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.DiskImageDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.DiskImageDescription where
@@ -116,7 +116,8 @@ instance Data.FromXML DiskImageDescription where
 
 instance Prelude.Hashable DiskImageDescription where
   hashWithSalt _salt DiskImageDescription' {..} =
-    _salt `Prelude.hashWithSalt` checksum
+    _salt
+      `Prelude.hashWithSalt` checksum
       `Prelude.hashWithSalt` format
       `Prelude.hashWithSalt` importManifestUrl
       `Prelude.hashWithSalt` size

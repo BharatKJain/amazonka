@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerEdge.Types.EdgeMetric
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerEdge.Types.EdgeMetric where
@@ -82,7 +82,8 @@ edgeMetric_value = Lens.lens (\EdgeMetric' {value} -> value) (\s@EdgeMetric' {} 
 
 instance Prelude.Hashable EdgeMetric where
   hashWithSalt _salt EdgeMetric' {..} =
-    _salt `Prelude.hashWithSalt` dimension
+    _salt
+      `Prelude.hashWithSalt` dimension
       `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` timestamp
       `Prelude.hashWithSalt` value

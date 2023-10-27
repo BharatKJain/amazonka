@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.SchemaAttributeType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.SchemaAttributeType where
@@ -182,7 +182,8 @@ instance Data.FromJSON SchemaAttributeType where
 
 instance Prelude.Hashable SchemaAttributeType where
   hashWithSalt _salt SchemaAttributeType' {..} =
-    _salt `Prelude.hashWithSalt` attributeDataType
+    _salt
+      `Prelude.hashWithSalt` attributeDataType
       `Prelude.hashWithSalt` developerOnlyAttribute
       `Prelude.hashWithSalt` mutable
       `Prelude.hashWithSalt` name

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataSync.Types.Options
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataSync.Types.Options where
@@ -794,7 +794,8 @@ instance Data.FromJSON Options where
 
 instance Prelude.Hashable Options where
   hashWithSalt _salt Options' {..} =
-    _salt `Prelude.hashWithSalt` atime
+    _salt
+      `Prelude.hashWithSalt` atime
       `Prelude.hashWithSalt` bytesPerSecond
       `Prelude.hashWithSalt` gid
       `Prelude.hashWithSalt` logLevel

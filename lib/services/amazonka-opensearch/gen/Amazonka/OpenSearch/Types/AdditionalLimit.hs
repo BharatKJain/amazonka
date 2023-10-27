@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.AdditionalLimit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.AdditionalLimit where
@@ -95,7 +95,8 @@ instance Data.FromJSON AdditionalLimit where
 
 instance Prelude.Hashable AdditionalLimit where
   hashWithSalt _salt AdditionalLimit' {..} =
-    _salt `Prelude.hashWithSalt` limitName
+    _salt
+      `Prelude.hashWithSalt` limitName
       `Prelude.hashWithSalt` limitValues
 
 instance Prelude.NFData AdditionalLimit where

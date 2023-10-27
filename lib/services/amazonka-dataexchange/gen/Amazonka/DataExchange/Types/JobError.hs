@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.JobError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.JobError where
@@ -132,7 +132,8 @@ instance Data.FromJSON JobError where
 
 instance Prelude.Hashable JobError where
   hashWithSalt _salt JobError' {..} =
-    _salt `Prelude.hashWithSalt` details
+    _salt
+      `Prelude.hashWithSalt` details
       `Prelude.hashWithSalt` limitName
       `Prelude.hashWithSalt` limitValue
       `Prelude.hashWithSalt` resourceId

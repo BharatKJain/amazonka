@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.ReceiptIpFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.ReceiptIpFilter where
@@ -86,11 +86,13 @@ receiptIpFilter_cidr = Lens.lens (\ReceiptIpFilter' {cidr} -> cidr) (\s@ReceiptI
 instance Data.FromXML ReceiptIpFilter where
   parseXML x =
     ReceiptIpFilter'
-      Prelude.<$> (x Data..@ "Policy") Prelude.<*> (x Data..@ "Cidr")
+      Prelude.<$> (x Data..@ "Policy")
+      Prelude.<*> (x Data..@ "Cidr")
 
 instance Prelude.Hashable ReceiptIpFilter where
   hashWithSalt _salt ReceiptIpFilter' {..} =
-    _salt `Prelude.hashWithSalt` policy
+    _salt
+      `Prelude.hashWithSalt` policy
       `Prelude.hashWithSalt` cidr
 
 instance Prelude.NFData ReceiptIpFilter where

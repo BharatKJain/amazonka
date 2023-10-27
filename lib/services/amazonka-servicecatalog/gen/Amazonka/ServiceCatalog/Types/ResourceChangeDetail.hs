@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ResourceChangeDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ResourceChangeDetail where
@@ -93,7 +93,8 @@ instance Data.FromJSON ResourceChangeDetail where
 
 instance Prelude.Hashable ResourceChangeDetail where
   hashWithSalt _salt ResourceChangeDetail' {..} =
-    _salt `Prelude.hashWithSalt` causingEntity
+    _salt
+      `Prelude.hashWithSalt` causingEntity
       `Prelude.hashWithSalt` evaluation
       `Prelude.hashWithSalt` target
 

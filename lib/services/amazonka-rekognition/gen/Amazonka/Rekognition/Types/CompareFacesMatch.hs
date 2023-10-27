@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.CompareFacesMatch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.CompareFacesMatch where
@@ -82,7 +82,8 @@ instance Data.FromJSON CompareFacesMatch where
 
 instance Prelude.Hashable CompareFacesMatch where
   hashWithSalt _salt CompareFacesMatch' {..} =
-    _salt `Prelude.hashWithSalt` face
+    _salt
+      `Prelude.hashWithSalt` face
       `Prelude.hashWithSalt` similarity
 
 instance Prelude.NFData CompareFacesMatch where

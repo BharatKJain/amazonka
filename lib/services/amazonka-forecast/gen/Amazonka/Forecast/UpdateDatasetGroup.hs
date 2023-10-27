@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Forecast.UpdateDatasetGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest UpdateDatasetGroup where
 
 instance Prelude.Hashable UpdateDatasetGroup where
   hashWithSalt _salt UpdateDatasetGroup' {..} =
-    _salt `Prelude.hashWithSalt` datasetGroupArn
+    _salt
+      `Prelude.hashWithSalt` datasetGroupArn
       `Prelude.hashWithSalt` datasetArns
 
 instance Prelude.NFData UpdateDatasetGroup where

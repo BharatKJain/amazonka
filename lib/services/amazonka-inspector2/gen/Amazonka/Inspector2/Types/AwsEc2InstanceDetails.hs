@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.AwsEc2InstanceDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.AwsEc2InstanceDetails where
@@ -155,7 +155,8 @@ instance Data.FromJSON AwsEc2InstanceDetails where
 
 instance Prelude.Hashable AwsEc2InstanceDetails where
   hashWithSalt _salt AwsEc2InstanceDetails' {..} =
-    _salt `Prelude.hashWithSalt` iamInstanceProfileArn
+    _salt
+      `Prelude.hashWithSalt` iamInstanceProfileArn
       `Prelude.hashWithSalt` imageId
       `Prelude.hashWithSalt` ipV4Addresses
       `Prelude.hashWithSalt` ipV6Addresses

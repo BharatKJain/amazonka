@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchAttachToIndex
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchAttachToIndex where
@@ -74,7 +74,8 @@ batchAttachToIndex_targetReference = Lens.lens (\BatchAttachToIndex' {targetRefe
 
 instance Prelude.Hashable BatchAttachToIndex where
   hashWithSalt _salt BatchAttachToIndex' {..} =
-    _salt `Prelude.hashWithSalt` indexReference
+    _salt
+      `Prelude.hashWithSalt` indexReference
       `Prelude.hashWithSalt` targetReference
 
 instance Prelude.NFData BatchAttachToIndex where

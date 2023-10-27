@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.Encryption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.Encryption where
@@ -251,7 +251,8 @@ instance Data.FromJSON Encryption where
 
 instance Prelude.Hashable Encryption where
   hashWithSalt _salt Encryption' {..} =
-    _salt `Prelude.hashWithSalt` initializationVector
+    _salt
+      `Prelude.hashWithSalt` initializationVector
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` keyMd5
       `Prelude.hashWithSalt` mode

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerFeatureStoreRuntime.Types.FeatureValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerFeatureStoreRuntime.Types.FeatureValue where
@@ -84,7 +84,8 @@ instance Data.FromJSON FeatureValue where
 
 instance Prelude.Hashable FeatureValue where
   hashWithSalt _salt FeatureValue' {..} =
-    _salt `Prelude.hashWithSalt` featureName
+    _salt
+      `Prelude.hashWithSalt` featureName
       `Prelude.hashWithSalt` valueAsString
 
 instance Prelude.NFData FeatureValue where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ModifySpotFleetRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -191,7 +191,8 @@ instance Core.AWSRequest ModifySpotFleetRequest where
 
 instance Prelude.Hashable ModifySpotFleetRequest where
   hashWithSalt _salt ModifySpotFleetRequest' {..} =
-    _salt `Prelude.hashWithSalt` context
+    _salt
+      `Prelude.hashWithSalt` context
       `Prelude.hashWithSalt` excessCapacityTerminationPolicy
       `Prelude.hashWithSalt` launchTemplateConfigs
       `Prelude.hashWithSalt` onDemandTargetCapacity

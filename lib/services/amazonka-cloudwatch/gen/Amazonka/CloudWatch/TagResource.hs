@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatch.TagResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -69,10 +69,10 @@ data TagResource = TagResource'
   { -- | The ARN of the CloudWatch resource that you\'re adding tags to.
     --
     -- The ARN format of an alarm is
-    -- @arn:aws:cloudwatch:Region:account-id:alarm:alarm-name @
+    -- @arn:aws:cloudwatch:@/@Region@/@:@/@account-id@/@:alarm:@/@alarm-name@/@ @
     --
     -- The ARN format of a Contributor Insights rule is
-    -- @arn:aws:cloudwatch:Region:account-id:insight-rule:insight-rule-name @
+    -- @arn:aws:cloudwatch:@/@Region@/@:@/@account-id@/@:insight-rule:@/@insight-rule-name@/@ @
     --
     -- For more information about ARN format, see
     -- <https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncloudwatch.html#amazoncloudwatch-resources-for-iam-policies Resource Types Defined by Amazon CloudWatch>
@@ -94,10 +94,10 @@ data TagResource = TagResource'
 -- 'resourceARN', 'tagResource_resourceARN' - The ARN of the CloudWatch resource that you\'re adding tags to.
 --
 -- The ARN format of an alarm is
--- @arn:aws:cloudwatch:Region:account-id:alarm:alarm-name @
+-- @arn:aws:cloudwatch:@/@Region@/@:@/@account-id@/@:alarm:@/@alarm-name@/@ @
 --
 -- The ARN format of a Contributor Insights rule is
--- @arn:aws:cloudwatch:Region:account-id:insight-rule:insight-rule-name @
+-- @arn:aws:cloudwatch:@/@Region@/@:@/@account-id@/@:insight-rule:@/@insight-rule-name@/@ @
 --
 -- For more information about ARN format, see
 -- <https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncloudwatch.html#amazoncloudwatch-resources-for-iam-policies Resource Types Defined by Amazon CloudWatch>
@@ -117,10 +117,10 @@ newTagResource pResourceARN_ =
 -- | The ARN of the CloudWatch resource that you\'re adding tags to.
 --
 -- The ARN format of an alarm is
--- @arn:aws:cloudwatch:Region:account-id:alarm:alarm-name @
+-- @arn:aws:cloudwatch:@/@Region@/@:@/@account-id@/@:alarm:@/@alarm-name@/@ @
 --
 -- The ARN format of a Contributor Insights rule is
--- @arn:aws:cloudwatch:Region:account-id:insight-rule:insight-rule-name @
+-- @arn:aws:cloudwatch:@/@Region@/@:@/@account-id@/@:insight-rule:@/@insight-rule-name@/@ @
 --
 -- For more information about ARN format, see
 -- <https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncloudwatch.html#amazoncloudwatch-resources-for-iam-policies Resource Types Defined by Amazon CloudWatch>
@@ -146,7 +146,8 @@ instance Core.AWSRequest TagResource where
 
 instance Prelude.Hashable TagResource where
   hashWithSalt _salt TagResource' {..} =
-    _salt `Prelude.hashWithSalt` resourceARN
+    _salt
+      `Prelude.hashWithSalt` resourceARN
       `Prelude.hashWithSalt` tags
 
 instance Prelude.NFData TagResource where

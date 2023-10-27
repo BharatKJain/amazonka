@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.Change
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.Change where
@@ -92,7 +92,8 @@ instance Data.FromXML Change where
 
 instance Prelude.Hashable Change where
   hashWithSalt _salt Change' {..} =
-    _salt `Prelude.hashWithSalt` hookInvocationCount
+    _salt
+      `Prelude.hashWithSalt` hookInvocationCount
       `Prelude.hashWithSalt` resourceChange
       `Prelude.hashWithSalt` type'
 

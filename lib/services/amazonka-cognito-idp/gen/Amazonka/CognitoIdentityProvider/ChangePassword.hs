@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.ChangePassword
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,7 +124,8 @@ instance Core.AWSRequest ChangePassword where
 
 instance Prelude.Hashable ChangePassword where
   hashWithSalt _salt ChangePassword' {..} =
-    _salt `Prelude.hashWithSalt` previousPassword
+    _salt
+      `Prelude.hashWithSalt` previousPassword
       `Prelude.hashWithSalt` proposedPassword
       `Prelude.hashWithSalt` accessToken
 

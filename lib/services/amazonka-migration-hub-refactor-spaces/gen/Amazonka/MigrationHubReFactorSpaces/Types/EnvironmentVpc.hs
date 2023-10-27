@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubReFactorSpaces.Types.EnvironmentVpc
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubReFactorSpaces.Types.EnvironmentVpc where
@@ -134,7 +134,8 @@ instance Data.FromJSON EnvironmentVpc where
 
 instance Prelude.Hashable EnvironmentVpc where
   hashWithSalt _salt EnvironmentVpc' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` cidrBlocks
       `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` environmentId

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Omics.GetReadSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,7 +124,8 @@ instance Core.AWSRequest GetReadSet where
 
 instance Prelude.Hashable GetReadSet where
   hashWithSalt _salt GetReadSet' {..} =
-    _salt `Prelude.hashWithSalt` file
+    _salt
+      `Prelude.hashWithSalt` file
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` partNumber
       `Prelude.hashWithSalt` sequenceStoreId

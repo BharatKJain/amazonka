@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ArtifactSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ArtifactSource where
@@ -77,7 +77,8 @@ instance Data.FromJSON ArtifactSource where
 
 instance Prelude.Hashable ArtifactSource where
   hashWithSalt _salt ArtifactSource' {..} =
-    _salt `Prelude.hashWithSalt` sourceTypes
+    _salt
+      `Prelude.hashWithSalt` sourceTypes
       `Prelude.hashWithSalt` sourceUri
 
 instance Prelude.NFData ArtifactSource where

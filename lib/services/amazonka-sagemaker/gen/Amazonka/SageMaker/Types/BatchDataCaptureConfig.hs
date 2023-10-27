@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.BatchDataCaptureConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.BatchDataCaptureConfig where
@@ -130,7 +130,8 @@ instance Data.FromJSON BatchDataCaptureConfig where
 
 instance Prelude.Hashable BatchDataCaptureConfig where
   hashWithSalt _salt BatchDataCaptureConfig' {..} =
-    _salt `Prelude.hashWithSalt` generateInferenceId
+    _salt
+      `Prelude.hashWithSalt` generateInferenceId
       `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` destinationS3Uri
 

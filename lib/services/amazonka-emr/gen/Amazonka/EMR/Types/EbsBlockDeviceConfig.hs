@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.EbsBlockDeviceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.EbsBlockDeviceConfig where
@@ -78,7 +78,8 @@ ebsBlockDeviceConfig_volumeSpecification = Lens.lens (\EbsBlockDeviceConfig' {vo
 
 instance Prelude.Hashable EbsBlockDeviceConfig where
   hashWithSalt _salt EbsBlockDeviceConfig' {..} =
-    _salt `Prelude.hashWithSalt` volumesPerInstance
+    _salt
+      `Prelude.hashWithSalt` volumesPerInstance
       `Prelude.hashWithSalt` volumeSpecification
 
 instance Prelude.NFData EbsBlockDeviceConfig where

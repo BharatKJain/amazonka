@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.NodegroupScalingConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.NodegroupScalingConfig where
@@ -157,7 +157,8 @@ instance Data.FromJSON NodegroupScalingConfig where
 
 instance Prelude.Hashable NodegroupScalingConfig where
   hashWithSalt _salt NodegroupScalingConfig' {..} =
-    _salt `Prelude.hashWithSalt` desiredSize
+    _salt
+      `Prelude.hashWithSalt` desiredSize
       `Prelude.hashWithSalt` maxSize
       `Prelude.hashWithSalt` minSize
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatchEvents.ListPartnerEventSources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest ListPartnerEventSources where
       ( \s h x ->
           ListPartnerEventSourcesResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "PartnerEventSources"
+            Prelude.<*> ( x
+                            Data..?> "PartnerEventSources"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -130,7 +131,8 @@ instance Core.AWSRequest ListPartnerEventSources where
 
 instance Prelude.Hashable ListPartnerEventSources where
   hashWithSalt _salt ListPartnerEventSources' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` namePrefix
 

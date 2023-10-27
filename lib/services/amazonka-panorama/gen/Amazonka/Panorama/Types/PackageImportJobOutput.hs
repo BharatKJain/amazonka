@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Panorama.Types.PackageImportJobOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Panorama.Types.PackageImportJobOutput where
@@ -108,7 +108,8 @@ instance Data.FromJSON PackageImportJobOutput where
 
 instance Prelude.Hashable PackageImportJobOutput where
   hashWithSalt _salt PackageImportJobOutput' {..} =
-    _salt `Prelude.hashWithSalt` outputS3Location
+    _salt
+      `Prelude.hashWithSalt` outputS3Location
       `Prelude.hashWithSalt` packageId
       `Prelude.hashWithSalt` packageVersion
       `Prelude.hashWithSalt` patchVersion

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpsWorks.UpdateLayer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -290,7 +290,6 @@ updateLayer_enableAutoHealing = Lens.lens (\UpdateLayer' {enableAutoHealing} -> 
 updateLayer_installUpdatesOnBoot :: Lens.Lens' UpdateLayer (Prelude.Maybe Prelude.Bool)
 updateLayer_installUpdatesOnBoot = Lens.lens (\UpdateLayer' {installUpdatesOnBoot} -> installUpdatesOnBoot) (\s@UpdateLayer' {} a -> s {installUpdatesOnBoot = a} :: UpdateLayer)
 
--- |
 updateLayer_lifecycleEventConfiguration :: Lens.Lens' UpdateLayer (Prelude.Maybe LifecycleEventConfiguration)
 updateLayer_lifecycleEventConfiguration = Lens.lens (\UpdateLayer' {lifecycleEventConfiguration} -> lifecycleEventConfiguration) (\s@UpdateLayer' {} a -> s {lifecycleEventConfiguration = a} :: UpdateLayer)
 
@@ -335,7 +334,8 @@ instance Core.AWSRequest UpdateLayer where
 
 instance Prelude.Hashable UpdateLayer where
   hashWithSalt _salt UpdateLayer' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` autoAssignElasticIps
       `Prelude.hashWithSalt` autoAssignPublicIps
       `Prelude.hashWithSalt` cloudWatchLogsConfiguration

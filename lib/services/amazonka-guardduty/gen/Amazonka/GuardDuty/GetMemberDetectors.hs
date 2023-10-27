@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GuardDuty.GetMemberDetectors
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,14 +102,16 @@ instance Core.AWSRequest GetMemberDetectors where
           GetMemberDetectorsResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
             Prelude.<*> (x Data..:> "members")
-            Prelude.<*> ( x Data..?> "unprocessedAccounts"
+            Prelude.<*> ( x
+                            Data..?> "unprocessedAccounts"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable GetMemberDetectors where
   hashWithSalt _salt GetMemberDetectors' {..} =
-    _salt `Prelude.hashWithSalt` detectorId
+    _salt
+      `Prelude.hashWithSalt` detectorId
       `Prelude.hashWithSalt` accountIds
 
 instance Prelude.NFData GetMemberDetectors where

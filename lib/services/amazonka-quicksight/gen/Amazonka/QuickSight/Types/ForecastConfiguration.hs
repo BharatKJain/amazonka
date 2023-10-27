@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ForecastConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ForecastConfiguration where
@@ -78,7 +78,8 @@ instance Data.FromJSON ForecastConfiguration where
 
 instance Prelude.Hashable ForecastConfiguration where
   hashWithSalt _salt ForecastConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` forecastProperties
+    _salt
+      `Prelude.hashWithSalt` forecastProperties
       `Prelude.hashWithSalt` scenario
 
 instance Prelude.NFData ForecastConfiguration where

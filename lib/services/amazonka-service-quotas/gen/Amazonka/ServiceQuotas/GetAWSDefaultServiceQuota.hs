@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceQuotas.GetAWSDefaultServiceQuota
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest GetAWSDefaultServiceQuota where
 
 instance Prelude.Hashable GetAWSDefaultServiceQuota where
   hashWithSalt _salt GetAWSDefaultServiceQuota' {..} =
-    _salt `Prelude.hashWithSalt` serviceCode
+    _salt
+      `Prelude.hashWithSalt` serviceCode
       `Prelude.hashWithSalt` quotaCode
 
 instance Prelude.NFData GetAWSDefaultServiceQuota where

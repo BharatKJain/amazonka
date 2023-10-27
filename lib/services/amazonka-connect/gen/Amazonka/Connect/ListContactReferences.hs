@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.ListContactReferences
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,22 +138,22 @@ instance Core.AWSPager ListContactReferences where
     | Core.stop
         ( rs
             Lens.^? listContactReferencesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listContactReferencesResponse_referenceSummaryList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listContactReferences_nextToken
           Lens..~ rs
           Lens.^? listContactReferencesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListContactReferences where
   type
@@ -166,7 +166,8 @@ instance Core.AWSRequest ListContactReferences where
       ( \s h x ->
           ListContactReferencesResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "ReferenceSummaryList"
+            Prelude.<*> ( x
+                            Data..?> "ReferenceSummaryList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -174,7 +175,8 @@ instance Core.AWSRequest ListContactReferences where
 
 instance Prelude.Hashable ListContactReferences where
   hashWithSalt _salt ListContactReferences' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` contactId
       `Prelude.hashWithSalt` referenceTypes

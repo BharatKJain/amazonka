@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VCpuCountRangeRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VCpuCountRangeRequest where
@@ -70,7 +70,8 @@ vCpuCountRangeRequest_min = Lens.lens (\VCpuCountRangeRequest' {min} -> min) (\s
 
 instance Prelude.Hashable VCpuCountRangeRequest where
   hashWithSalt _salt VCpuCountRangeRequest' {..} =
-    _salt `Prelude.hashWithSalt` max
+    _salt
+      `Prelude.hashWithSalt` max
       `Prelude.hashWithSalt` min
 
 instance Prelude.NFData VCpuCountRangeRequest where

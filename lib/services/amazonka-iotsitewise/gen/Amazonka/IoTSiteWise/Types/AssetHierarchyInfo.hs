@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.AssetHierarchyInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.AssetHierarchyInfo where
@@ -75,7 +75,8 @@ instance Data.FromJSON AssetHierarchyInfo where
 
 instance Prelude.Hashable AssetHierarchyInfo where
   hashWithSalt _salt AssetHierarchyInfo' {..} =
-    _salt `Prelude.hashWithSalt` childAssetId
+    _salt
+      `Prelude.hashWithSalt` childAssetId
       `Prelude.hashWithSalt` parentAssetId
 
 instance Prelude.NFData AssetHierarchyInfo where

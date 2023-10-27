@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.TransformOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.TransformOutput where
@@ -238,7 +238,8 @@ instance Data.FromJSON TransformOutput where
 
 instance Prelude.Hashable TransformOutput where
   hashWithSalt _salt TransformOutput' {..} =
-    _salt `Prelude.hashWithSalt` accept
+    _salt
+      `Prelude.hashWithSalt` accept
       `Prelude.hashWithSalt` assembleWith
       `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` s3OutputPath

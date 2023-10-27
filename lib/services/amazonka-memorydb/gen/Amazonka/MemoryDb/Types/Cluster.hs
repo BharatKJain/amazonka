@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MemoryDb.Types.Cluster
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MemoryDb.Types.Cluster where
@@ -368,7 +368,8 @@ instance Data.FromJSON Cluster where
 
 instance Prelude.Hashable Cluster where
   hashWithSalt _salt Cluster' {..} =
-    _salt `Prelude.hashWithSalt` aCLName
+    _salt
+      `Prelude.hashWithSalt` aCLName
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` autoMinorVersionUpgrade
       `Prelude.hashWithSalt` availabilityMode

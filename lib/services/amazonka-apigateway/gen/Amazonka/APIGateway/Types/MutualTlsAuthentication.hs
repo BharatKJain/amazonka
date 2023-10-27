@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.MutualTlsAuthentication
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.MutualTlsAuthentication where
@@ -113,14 +113,16 @@ instance Data.FromJSON MutualTlsAuthentication where
           MutualTlsAuthentication'
             Prelude.<$> (x Data..:? "truststoreUri")
             Prelude.<*> (x Data..:? "truststoreVersion")
-            Prelude.<*> ( x Data..:? "truststoreWarnings"
+            Prelude.<*> ( x
+                            Data..:? "truststoreWarnings"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable MutualTlsAuthentication where
   hashWithSalt _salt MutualTlsAuthentication' {..} =
-    _salt `Prelude.hashWithSalt` truststoreUri
+    _salt
+      `Prelude.hashWithSalt` truststoreUri
       `Prelude.hashWithSalt` truststoreVersion
       `Prelude.hashWithSalt` truststoreWarnings
 

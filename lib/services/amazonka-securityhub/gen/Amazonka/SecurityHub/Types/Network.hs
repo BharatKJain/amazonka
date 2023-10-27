@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.Network
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.Network where
@@ -185,7 +185,8 @@ instance Data.FromJSON Network where
 
 instance Prelude.Hashable Network where
   hashWithSalt _salt Network' {..} =
-    _salt `Prelude.hashWithSalt` destinationDomain
+    _salt
+      `Prelude.hashWithSalt` destinationDomain
       `Prelude.hashWithSalt` destinationIpV4
       `Prelude.hashWithSalt` destinationIpV6
       `Prelude.hashWithSalt` destinationPort

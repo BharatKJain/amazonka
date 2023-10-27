@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GlobalAccelerator.UpdateAcceleratorAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -171,7 +171,8 @@ instance Core.AWSRequest UpdateAcceleratorAttributes where
 
 instance Prelude.Hashable UpdateAcceleratorAttributes where
   hashWithSalt _salt UpdateAcceleratorAttributes' {..} =
-    _salt `Prelude.hashWithSalt` flowLogsEnabled
+    _salt
+      `Prelude.hashWithSalt` flowLogsEnabled
       `Prelude.hashWithSalt` flowLogsS3Bucket
       `Prelude.hashWithSalt` flowLogsS3Prefix
       `Prelude.hashWithSalt` acceleratorArn

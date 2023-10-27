@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFormation.ListStackSets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -198,20 +198,23 @@ instance Core.AWSPager ListStackSets where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listStackSetsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listStackSetsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listStackSetsResponse_summaries Prelude.. Lens._Just
+            Lens.^? listStackSetsResponse_summaries
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listStackSets_nextToken
           Lens..~ rs
-          Lens.^? listStackSetsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listStackSetsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListStackSets where
   type
@@ -225,7 +228,9 @@ instance Core.AWSRequest ListStackSets where
       ( \s h x ->
           ListStackSetsResponse'
             Prelude.<$> (x Data..@? "NextToken")
-            Prelude.<*> ( x Data..@? "Summaries" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "Summaries"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -233,7 +238,8 @@ instance Core.AWSRequest ListStackSets where
 
 instance Prelude.Hashable ListStackSets where
   hashWithSalt _salt ListStackSets' {..} =
-    _salt `Prelude.hashWithSalt` callAs
+    _salt
+      `Prelude.hashWithSalt` callAs
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` status

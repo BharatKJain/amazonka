@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.LocationTimestamp
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.LocationTimestamp where
@@ -83,12 +83,14 @@ instance Data.FromJSON LocationTimestamp where
       "LocationTimestamp"
       ( \x ->
           LocationTimestamp'
-            Prelude.<$> (x Data..:? "unit") Prelude.<*> (x Data..: "value")
+            Prelude.<$> (x Data..:? "unit")
+            Prelude.<*> (x Data..: "value")
       )
 
 instance Prelude.Hashable LocationTimestamp where
   hashWithSalt _salt LocationTimestamp' {..} =
-    _salt `Prelude.hashWithSalt` unit
+    _salt
+      `Prelude.hashWithSalt` unit
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData LocationTimestamp where

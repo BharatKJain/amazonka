@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SQS.DeleteMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,7 +124,8 @@ instance Core.AWSRequest DeleteMessage where
 
 instance Prelude.Hashable DeleteMessage where
   hashWithSalt _salt DeleteMessage' {..} =
-    _salt `Prelude.hashWithSalt` queueUrl
+    _salt
+      `Prelude.hashWithSalt` queueUrl
       `Prelude.hashWithSalt` receiptHandle
 
 instance Prelude.NFData DeleteMessage where

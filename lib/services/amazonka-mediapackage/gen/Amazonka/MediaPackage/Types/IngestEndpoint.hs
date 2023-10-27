@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaPackage.Types.IngestEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaPackage.Types.IngestEndpoint where
@@ -94,7 +94,8 @@ instance Data.FromJSON IngestEndpoint where
 
 instance Prelude.Hashable IngestEndpoint where
   hashWithSalt _salt IngestEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` password
       `Prelude.hashWithSalt` url
       `Prelude.hashWithSalt` username

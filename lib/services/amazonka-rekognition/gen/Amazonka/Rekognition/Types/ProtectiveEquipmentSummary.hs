@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.ProtectiveEquipmentSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.ProtectiveEquipmentSummary where
@@ -108,20 +108,24 @@ instance Data.FromJSON ProtectiveEquipmentSummary where
       "ProtectiveEquipmentSummary"
       ( \x ->
           ProtectiveEquipmentSummary'
-            Prelude.<$> ( x Data..:? "PersonsIndeterminate"
+            Prelude.<$> ( x
+                            Data..:? "PersonsIndeterminate"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "PersonsWithRequiredEquipment"
+            Prelude.<*> ( x
+                            Data..:? "PersonsWithRequiredEquipment"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "PersonsWithoutRequiredEquipment"
+            Prelude.<*> ( x
+                            Data..:? "PersonsWithoutRequiredEquipment"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ProtectiveEquipmentSummary where
   hashWithSalt _salt ProtectiveEquipmentSummary' {..} =
-    _salt `Prelude.hashWithSalt` personsIndeterminate
+    _salt
+      `Prelude.hashWithSalt` personsIndeterminate
       `Prelude.hashWithSalt` personsWithRequiredEquipment
       `Prelude.hashWithSalt` personsWithoutRequiredEquipment
 

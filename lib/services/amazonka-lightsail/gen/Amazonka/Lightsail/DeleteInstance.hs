@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.DeleteInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest DeleteInstance where
 
 instance Prelude.Hashable DeleteInstance where
   hashWithSalt _salt DeleteInstance' {..} =
-    _salt `Prelude.hashWithSalt` forceDeleteAddOns
+    _salt
+      `Prelude.hashWithSalt` forceDeleteAddOns
       `Prelude.hashWithSalt` instanceName
 
 instance Prelude.NFData DeleteInstance where

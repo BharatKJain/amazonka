@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServerlessApplicationRepository.CreateApplication
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -426,7 +426,8 @@ instance Core.AWSRequest CreateApplication where
 
 instance Prelude.Hashable CreateApplication where
   hashWithSalt _salt CreateApplication' {..} =
-    _salt `Prelude.hashWithSalt` homePageUrl
+    _salt
+      `Prelude.hashWithSalt` homePageUrl
       `Prelude.hashWithSalt` labels
       `Prelude.hashWithSalt` licenseBody
       `Prelude.hashWithSalt` licenseUrl

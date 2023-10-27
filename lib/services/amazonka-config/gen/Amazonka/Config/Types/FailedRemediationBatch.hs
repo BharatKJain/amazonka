@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.FailedRemediationBatch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.FailedRemediationBatch where
@@ -79,7 +79,8 @@ instance Data.FromJSON FailedRemediationBatch where
 
 instance Prelude.Hashable FailedRemediationBatch where
   hashWithSalt _salt FailedRemediationBatch' {..} =
-    _salt `Prelude.hashWithSalt` failedItems
+    _salt
+      `Prelude.hashWithSalt` failedItems
       `Prelude.hashWithSalt` failureMessage
 
 instance Prelude.NFData FailedRemediationBatch where

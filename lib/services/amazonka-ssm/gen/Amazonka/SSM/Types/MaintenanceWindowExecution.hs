@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.MaintenanceWindowExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.MaintenanceWindowExecution where
@@ -116,7 +116,8 @@ instance Data.FromJSON MaintenanceWindowExecution where
 
 instance Prelude.Hashable MaintenanceWindowExecution where
   hashWithSalt _salt MaintenanceWindowExecution' {..} =
-    _salt `Prelude.hashWithSalt` endTime
+    _salt
+      `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` startTime
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` statusDetails

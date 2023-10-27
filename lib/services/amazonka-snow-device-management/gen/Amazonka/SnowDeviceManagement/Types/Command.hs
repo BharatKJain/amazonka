@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SnowDeviceManagement.Types.Command
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SnowDeviceManagement.Types.Command where
@@ -66,7 +66,8 @@ command_unlock = Lens.lens (\Command' {unlock} -> unlock) (\s@Command' {} a -> s
 
 instance Prelude.Hashable Command where
   hashWithSalt _salt Command' {..} =
-    _salt `Prelude.hashWithSalt` reboot
+    _salt
+      `Prelude.hashWithSalt` reboot
       `Prelude.hashWithSalt` unlock
 
 instance Prelude.NFData Command where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.VcfOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.VcfOptions where
@@ -74,7 +74,8 @@ instance Data.FromJSON VcfOptions where
 
 instance Prelude.Hashable VcfOptions where
   hashWithSalt _salt VcfOptions' {..} =
-    _salt `Prelude.hashWithSalt` ignoreFilterField
+    _salt
+      `Prelude.hashWithSalt` ignoreFilterField
       `Prelude.hashWithSalt` ignoreQualField
 
 instance Prelude.NFData VcfOptions where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Firehose.PutRecord
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -145,7 +145,8 @@ instance Core.AWSRequest PutRecord where
 
 instance Prelude.Hashable PutRecord where
   hashWithSalt _salt PutRecord' {..} =
-    _salt `Prelude.hashWithSalt` deliveryStreamName
+    _salt
+      `Prelude.hashWithSalt` deliveryStreamName
       `Prelude.hashWithSalt` record
 
 instance Prelude.NFData PutRecord where

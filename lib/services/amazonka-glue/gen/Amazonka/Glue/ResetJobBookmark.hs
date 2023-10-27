@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.ResetJobBookmark
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest ResetJobBookmark where
 
 instance Prelude.Hashable ResetJobBookmark where
   hashWithSalt _salt ResetJobBookmark' {..} =
-    _salt `Prelude.hashWithSalt` runId
+    _salt
+      `Prelude.hashWithSalt` runId
       `Prelude.hashWithSalt` jobName
 
 instance Prelude.NFData ResetJobBookmark where

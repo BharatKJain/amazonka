@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AmplifyBackend.CreateBackendConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest CreateBackendConfig where
 
 instance Prelude.Hashable CreateBackendConfig where
   hashWithSalt _salt CreateBackendConfig' {..} =
-    _salt `Prelude.hashWithSalt` backendManagerAppId
+    _salt
+      `Prelude.hashWithSalt` backendManagerAppId
       `Prelude.hashWithSalt` appId
 
 instance Prelude.NFData CreateBackendConfig where

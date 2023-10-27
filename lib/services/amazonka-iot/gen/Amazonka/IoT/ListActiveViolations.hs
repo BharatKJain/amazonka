@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.ListActiveViolations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -151,22 +151,22 @@ instance Core.AWSPager ListActiveViolations where
     | Core.stop
         ( rs
             Lens.^? listActiveViolationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listActiveViolationsResponse_activeViolations
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listActiveViolations_nextToken
           Lens..~ rs
           Lens.^? listActiveViolationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListActiveViolations where
   type
@@ -178,7 +178,8 @@ instance Core.AWSRequest ListActiveViolations where
     Response.receiveJSON
       ( \s h x ->
           ListActiveViolationsResponse'
-            Prelude.<$> ( x Data..?> "activeViolations"
+            Prelude.<$> ( x
+                            Data..?> "activeViolations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -187,7 +188,8 @@ instance Core.AWSRequest ListActiveViolations where
 
 instance Prelude.Hashable ListActiveViolations where
   hashWithSalt _salt ListActiveViolations' {..} =
-    _salt `Prelude.hashWithSalt` behaviorCriteriaType
+    _salt
+      `Prelude.hashWithSalt` behaviorCriteriaType
       `Prelude.hashWithSalt` listSuppressedAlerts
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

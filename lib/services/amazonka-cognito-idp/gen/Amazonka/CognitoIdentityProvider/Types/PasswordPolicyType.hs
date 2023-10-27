@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.PasswordPolicyType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.PasswordPolicyType where
@@ -148,7 +148,8 @@ instance Data.FromJSON PasswordPolicyType where
 
 instance Prelude.Hashable PasswordPolicyType where
   hashWithSalt _salt PasswordPolicyType' {..} =
-    _salt `Prelude.hashWithSalt` minimumLength
+    _salt
+      `Prelude.hashWithSalt` minimumLength
       `Prelude.hashWithSalt` requireLowercase
       `Prelude.hashWithSalt` requireNumbers
       `Prelude.hashWithSalt` requireSymbols

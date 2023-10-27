@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.EdgeModelStat
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.EdgeModelStat where
@@ -144,7 +144,8 @@ instance Data.FromJSON EdgeModelStat where
 
 instance Prelude.Hashable EdgeModelStat where
   hashWithSalt _salt EdgeModelStat' {..} =
-    _salt `Prelude.hashWithSalt` modelName
+    _salt
+      `Prelude.hashWithSalt` modelName
       `Prelude.hashWithSalt` modelVersion
       `Prelude.hashWithSalt` offlineDeviceCount
       `Prelude.hashWithSalt` connectedDeviceCount

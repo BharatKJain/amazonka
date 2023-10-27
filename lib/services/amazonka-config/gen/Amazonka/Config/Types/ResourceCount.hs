@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.ResourceCount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.ResourceCount where
@@ -75,7 +75,8 @@ instance Data.FromJSON ResourceCount where
 
 instance Prelude.Hashable ResourceCount where
   hashWithSalt _salt ResourceCount' {..} =
-    _salt `Prelude.hashWithSalt` count
+    _salt
+      `Prelude.hashWithSalt` count
       `Prelude.hashWithSalt` resourceType
 
 instance Prelude.NFData ResourceCount where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.ImportDataSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.ImportDataSource where
@@ -79,7 +79,8 @@ instance Data.FromJSON ImportDataSource where
 
 instance Prelude.Hashable ImportDataSource where
   hashWithSalt _salt ImportDataSource' {..} =
-    _salt `Prelude.hashWithSalt` s3Url
+    _salt
+      `Prelude.hashWithSalt` s3Url
       `Prelude.hashWithSalt` dataFormat
 
 instance Prelude.NFData ImportDataSource where

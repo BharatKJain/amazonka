@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppConfig.Types.Validator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppConfig.Types.Validator where
@@ -81,12 +81,14 @@ instance Data.FromJSON Validator where
       "Validator"
       ( \x ->
           Validator'
-            Prelude.<$> (x Data..: "Type") Prelude.<*> (x Data..: "Content")
+            Prelude.<$> (x Data..: "Type")
+            Prelude.<*> (x Data..: "Content")
       )
 
 instance Prelude.Hashable Validator where
   hashWithSalt _salt Validator' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` content
 
 instance Prelude.NFData Validator where

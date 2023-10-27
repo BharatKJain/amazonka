@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsCertificateManagerCertificateDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsCertificateManagerCertificateDetails where
@@ -472,10 +472,12 @@ instance
             Prelude.<$> (x Data..:? "CertificateAuthorityArn")
             Prelude.<*> (x Data..:? "CreatedAt")
             Prelude.<*> (x Data..:? "DomainName")
-            Prelude.<*> ( x Data..:? "DomainValidationOptions"
+            Prelude.<*> ( x
+                            Data..:? "DomainValidationOptions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "ExtendedKeyUsages"
+            Prelude.<*> ( x
+                            Data..:? "ExtendedKeyUsages"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "FailureReason")
@@ -494,7 +496,8 @@ instance
             Prelude.<*> (x Data..:? "SignatureAlgorithm")
             Prelude.<*> (x Data..:? "Status")
             Prelude.<*> (x Data..:? "Subject")
-            Prelude.<*> ( x Data..:? "SubjectAlternativeNames"
+            Prelude.<*> ( x
+                            Data..:? "SubjectAlternativeNames"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Type")

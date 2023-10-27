@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.AssociationExecutionTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.AssociationExecutionTarget where
@@ -149,7 +149,8 @@ instance Data.FromJSON AssociationExecutionTarget where
 
 instance Prelude.Hashable AssociationExecutionTarget where
   hashWithSalt _salt AssociationExecutionTarget' {..} =
-    _salt `Prelude.hashWithSalt` associationId
+    _salt
+      `Prelude.hashWithSalt` associationId
       `Prelude.hashWithSalt` associationVersion
       `Prelude.hashWithSalt` detailedStatus
       `Prelude.hashWithSalt` executionId

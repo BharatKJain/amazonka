@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TableBorderOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TableBorderOptions where
@@ -85,7 +85,8 @@ instance Data.FromJSON TableBorderOptions where
 
 instance Prelude.Hashable TableBorderOptions where
   hashWithSalt _salt TableBorderOptions' {..} =
-    _salt `Prelude.hashWithSalt` color
+    _salt
+      `Prelude.hashWithSalt` color
       `Prelude.hashWithSalt` style
       `Prelude.hashWithSalt` thickness
 

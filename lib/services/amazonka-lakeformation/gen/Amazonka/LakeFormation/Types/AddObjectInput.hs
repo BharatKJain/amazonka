@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.AddObjectInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.AddObjectInput where
@@ -106,7 +106,8 @@ addObjectInput_size = Lens.lens (\AddObjectInput' {size} -> size) (\s@AddObjectI
 
 instance Prelude.Hashable AddObjectInput where
   hashWithSalt _salt AddObjectInput' {..} =
-    _salt `Prelude.hashWithSalt` partitionValues
+    _salt
+      `Prelude.hashWithSalt` partitionValues
       `Prelude.hashWithSalt` uri
       `Prelude.hashWithSalt` eTag
       `Prelude.hashWithSalt` size

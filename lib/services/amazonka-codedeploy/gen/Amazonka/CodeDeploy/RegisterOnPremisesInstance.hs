@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeDeploy.RegisterOnPremisesInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest RegisterOnPremisesInstance where
 
 instance Prelude.Hashable RegisterOnPremisesInstance where
   hashWithSalt _salt RegisterOnPremisesInstance' {..} =
-    _salt `Prelude.hashWithSalt` iamSessionArn
+    _salt
+      `Prelude.hashWithSalt` iamSessionArn
       `Prelude.hashWithSalt` iamUserArn
       `Prelude.hashWithSalt` instanceName
 

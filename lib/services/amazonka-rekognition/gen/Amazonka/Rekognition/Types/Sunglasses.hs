@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.Sunglasses
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.Sunglasses where
@@ -78,7 +78,8 @@ instance Data.FromJSON Sunglasses where
 
 instance Prelude.Hashable Sunglasses where
   hashWithSalt _salt Sunglasses' {..} =
-    _salt `Prelude.hashWithSalt` confidence
+    _salt
+      `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData Sunglasses where

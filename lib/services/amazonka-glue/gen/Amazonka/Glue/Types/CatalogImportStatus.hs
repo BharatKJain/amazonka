@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.CatalogImportStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.CatalogImportStatus where
@@ -85,7 +85,8 @@ instance Data.FromJSON CatalogImportStatus where
 
 instance Prelude.Hashable CatalogImportStatus where
   hashWithSalt _salt CatalogImportStatus' {..} =
-    _salt `Prelude.hashWithSalt` importCompleted
+    _salt
+      `Prelude.hashWithSalt` importCompleted
       `Prelude.hashWithSalt` importTime
       `Prelude.hashWithSalt` importedBy
 

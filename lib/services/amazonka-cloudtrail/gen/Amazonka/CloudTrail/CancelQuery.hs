@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudTrail.CancelQuery
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest CancelQuery where
 
 instance Prelude.Hashable CancelQuery where
   hashWithSalt _salt CancelQuery' {..} =
-    _salt `Prelude.hashWithSalt` eventDataStore
+    _salt
+      `Prelude.hashWithSalt` eventDataStore
       `Prelude.hashWithSalt` queryId
 
 instance Prelude.NFData CancelQuery where

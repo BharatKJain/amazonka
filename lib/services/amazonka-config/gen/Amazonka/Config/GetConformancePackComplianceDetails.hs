@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Config.GetConformancePackComplianceDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -131,12 +131,13 @@ instance
     Response.receiveJSON
       ( \s h x ->
           GetConformancePackComplianceDetailsResponse'
-            Prelude.<$> ( x Data..?> "ConformancePackRuleEvaluationResults"
+            Prelude.<$> ( x
+                            Data..?> "ConformancePackRuleEvaluationResults"
                             Core..!@ Prelude.mempty
                         )
-              Prelude.<*> (x Data..?> "NextToken")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> (x Data..:> "ConformancePackName")
+            Prelude.<*> (x Data..?> "NextToken")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..:> "ConformancePackName")
       )
 
 instance
@@ -146,7 +147,8 @@ instance
   hashWithSalt
     _salt
     GetConformancePackComplianceDetails' {..} =
-      _salt `Prelude.hashWithSalt` filters
+      _salt
+        `Prelude.hashWithSalt` filters
         `Prelude.hashWithSalt` limit
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` conformancePackName

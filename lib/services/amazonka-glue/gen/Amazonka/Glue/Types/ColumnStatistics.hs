@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.ColumnStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.ColumnStatistics where
@@ -108,7 +108,8 @@ instance Data.FromJSON ColumnStatistics where
 
 instance Prelude.Hashable ColumnStatistics where
   hashWithSalt _salt ColumnStatistics' {..} =
-    _salt `Prelude.hashWithSalt` columnName
+    _salt
+      `Prelude.hashWithSalt` columnName
       `Prelude.hashWithSalt` columnType
       `Prelude.hashWithSalt` analyzedTime
       `Prelude.hashWithSalt` statisticsData

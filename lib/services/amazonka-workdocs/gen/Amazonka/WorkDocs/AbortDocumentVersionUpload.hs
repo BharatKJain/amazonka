@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkDocs.AbortDocumentVersionUpload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest AbortDocumentVersionUpload where
 
 instance Prelude.Hashable AbortDocumentVersionUpload where
   hashWithSalt _salt AbortDocumentVersionUpload' {..} =
-    _salt `Prelude.hashWithSalt` authenticationToken
+    _salt
+      `Prelude.hashWithSalt` authenticationToken
       `Prelude.hashWithSalt` documentId
       `Prelude.hashWithSalt` versionId
 

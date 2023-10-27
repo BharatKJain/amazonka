@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.EncryptionConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.EncryptionConfig where
@@ -93,7 +93,8 @@ instance Data.FromJSON EncryptionConfig where
 
 instance Prelude.Hashable EncryptionConfig where
   hashWithSalt _salt EncryptionConfig' {..} =
-    _salt `Prelude.hashWithSalt` roleArn
+    _salt
+      `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` kmsKeyArn
 
 instance Prelude.NFData EncryptionConfig where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.RenewalSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.RenewalSummary where
@@ -159,7 +159,8 @@ instance Data.FromJSON RenewalSummary where
       "RenewalSummary"
       ( \x ->
           RenewalSummary'
-            Prelude.<$> ( x Data..:? "domainValidationRecords"
+            Prelude.<$> ( x
+                            Data..:? "domainValidationRecords"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "renewalStatus")

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DAX.ListTags
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,20 +100,23 @@ instance Core.AWSPager ListTags where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listTagsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listTagsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listTagsResponse_tags Prelude.. Lens._Just
+            Lens.^? listTagsResponse_tags
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listTags_nextToken
           Lens..~ rs
-          Lens.^? listTagsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listTagsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListTags where
   type AWSResponse ListTags = ListTagsResponse
@@ -130,7 +133,8 @@ instance Core.AWSRequest ListTags where
 
 instance Prelude.Hashable ListTags where
   hashWithSalt _salt ListTags' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` resourceName
 
 instance Prelude.NFData ListTags where

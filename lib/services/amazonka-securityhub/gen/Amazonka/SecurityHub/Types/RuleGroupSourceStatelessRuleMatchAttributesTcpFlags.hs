@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.RuleGroupSourceStatelessRuleMatchAttributesTcpFlags
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.RuleGroupSourceStatelessRuleMatchAttributesTcpFlags where
@@ -83,7 +83,7 @@ instance
       ( \x ->
           RuleGroupSourceStatelessRuleMatchAttributesTcpFlags'
             Prelude.<$> (x Data..:? "Flags" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "Masks" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "Masks" Data..!= Prelude.mempty)
       )
 
 instance
@@ -93,7 +93,8 @@ instance
   hashWithSalt
     _salt
     RuleGroupSourceStatelessRuleMatchAttributesTcpFlags' {..} =
-      _salt `Prelude.hashWithSalt` flags
+      _salt
+        `Prelude.hashWithSalt` flags
         `Prelude.hashWithSalt` masks
 
 instance

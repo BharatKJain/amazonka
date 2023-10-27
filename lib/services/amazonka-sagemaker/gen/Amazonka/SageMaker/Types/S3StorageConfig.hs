@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.S3StorageConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.S3StorageConfig where
@@ -114,7 +114,8 @@ instance Data.FromJSON S3StorageConfig where
 
 instance Prelude.Hashable S3StorageConfig where
   hashWithSalt _salt S3StorageConfig' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyId
+    _salt
+      `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` resolvedOutputS3Uri
       `Prelude.hashWithSalt` s3Uri
 

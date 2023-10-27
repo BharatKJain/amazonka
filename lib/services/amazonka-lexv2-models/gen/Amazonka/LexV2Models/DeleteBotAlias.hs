@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexV2Models.DeleteBotAlias
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest DeleteBotAlias where
 
 instance Prelude.Hashable DeleteBotAlias where
   hashWithSalt _salt DeleteBotAlias' {..} =
-    _salt `Prelude.hashWithSalt` skipResourceInUseCheck
+    _salt
+      `Prelude.hashWithSalt` skipResourceInUseCheck
       `Prelude.hashWithSalt` botAliasId
       `Prelude.hashWithSalt` botId
 

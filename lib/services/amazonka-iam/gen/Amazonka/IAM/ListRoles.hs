@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.ListRoles
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -179,20 +179,23 @@ instance Core.AWSPager ListRoles where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listRolesResponse_isTruncated Prelude.. Lens._Just
+            Lens.^? listRolesResponse_isTruncated
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.isNothing
         ( rs
-            Lens.^? listRolesResponse_marker Prelude.. Lens._Just
+            Lens.^? listRolesResponse_marker
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listRoles_marker
           Lens..~ rs
-          Lens.^? listRolesResponse_marker Prelude.. Lens._Just
+          Lens.^? listRolesResponse_marker
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListRoles where
   type AWSResponse ListRoles = ListRolesResponse
@@ -206,14 +209,17 @@ instance Core.AWSRequest ListRoles where
             Prelude.<$> (x Data..@? "IsTruncated")
             Prelude.<*> (x Data..@? "Marker")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..@? "Roles" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "Roles"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Data.parseXMLList "member"
                         )
       )
 
 instance Prelude.Hashable ListRoles where
   hashWithSalt _salt ListRoles' {..} =
-    _salt `Prelude.hashWithSalt` marker
+    _salt
+      `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxItems
       `Prelude.hashWithSalt` pathPrefix
 

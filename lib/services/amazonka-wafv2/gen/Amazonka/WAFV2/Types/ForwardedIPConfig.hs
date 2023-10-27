@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.ForwardedIPConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.ForwardedIPConfig where
@@ -139,7 +139,8 @@ instance Data.FromJSON ForwardedIPConfig where
 
 instance Prelude.Hashable ForwardedIPConfig where
   hashWithSalt _salt ForwardedIPConfig' {..} =
-    _salt `Prelude.hashWithSalt` headerName
+    _salt
+      `Prelude.hashWithSalt` headerName
       `Prelude.hashWithSalt` fallbackBehavior
 
 instance Prelude.NFData ForwardedIPConfig where

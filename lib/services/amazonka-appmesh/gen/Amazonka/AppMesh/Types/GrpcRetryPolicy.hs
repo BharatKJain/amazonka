@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.GrpcRetryPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.GrpcRetryPolicy where
@@ -149,7 +149,8 @@ instance Data.FromJSON GrpcRetryPolicy where
 
 instance Prelude.Hashable GrpcRetryPolicy where
   hashWithSalt _salt GrpcRetryPolicy' {..} =
-    _salt `Prelude.hashWithSalt` grpcRetryEvents
+    _salt
+      `Prelude.hashWithSalt` grpcRetryEvents
       `Prelude.hashWithSalt` httpRetryEvents
       `Prelude.hashWithSalt` tcpRetryEvents
       `Prelude.hashWithSalt` maxRetries

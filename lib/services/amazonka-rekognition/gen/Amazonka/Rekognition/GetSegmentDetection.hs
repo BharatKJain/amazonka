@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Rekognition.GetSegmentDetection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -165,7 +165,8 @@ instance Core.AWSRequest GetSegmentDetection where
             Prelude.<*> (x Data..?> "JobStatus")
             Prelude.<*> (x Data..?> "NextToken")
             Prelude.<*> (x Data..?> "Segments" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "SelectedSegmentTypes"
+            Prelude.<*> ( x
+                            Data..?> "SelectedSegmentTypes"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "StatusMessage")
@@ -175,7 +176,8 @@ instance Core.AWSRequest GetSegmentDetection where
 
 instance Prelude.Hashable GetSegmentDetection where
   hashWithSalt _salt GetSegmentDetection' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` jobId
 

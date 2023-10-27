@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.AdvancedBackupSetting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.AdvancedBackupSetting where
@@ -138,7 +138,8 @@ instance Data.FromJSON AdvancedBackupSetting where
 
 instance Prelude.Hashable AdvancedBackupSetting where
   hashWithSalt _salt AdvancedBackupSetting' {..} =
-    _salt `Prelude.hashWithSalt` backupOptions
+    _salt
+      `Prelude.hashWithSalt` backupOptions
       `Prelude.hashWithSalt` resourceType
 
 instance Prelude.NFData AdvancedBackupSetting where

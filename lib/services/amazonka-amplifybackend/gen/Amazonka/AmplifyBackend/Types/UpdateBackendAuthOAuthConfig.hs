@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyBackend.Types.UpdateBackendAuthOAuthConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyBackend.Types.UpdateBackendAuthOAuthConfig where
@@ -119,7 +119,8 @@ instance
     UpdateBackendAuthOAuthConfig
   where
   hashWithSalt _salt UpdateBackendAuthOAuthConfig' {..} =
-    _salt `Prelude.hashWithSalt` domainPrefix
+    _salt
+      `Prelude.hashWithSalt` domainPrefix
       `Prelude.hashWithSalt` oAuthGrantType
       `Prelude.hashWithSalt` oAuthScopes
       `Prelude.hashWithSalt` redirectSignInURIs

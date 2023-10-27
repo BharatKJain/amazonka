@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.ObjectLockConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.ObjectLockConfiguration where
@@ -92,7 +92,8 @@ instance Data.FromXML ObjectLockConfiguration where
 
 instance Prelude.Hashable ObjectLockConfiguration where
   hashWithSalt _salt ObjectLockConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` objectLockEnabled
+    _salt
+      `Prelude.hashWithSalt` objectLockEnabled
       `Prelude.hashWithSalt` rule
 
 instance Prelude.NFData ObjectLockConfiguration where

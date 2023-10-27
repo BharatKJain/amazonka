@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.NumberValidateResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.NumberValidateResponse where
@@ -233,7 +233,8 @@ instance Data.FromJSON NumberValidateResponse where
 
 instance Prelude.Hashable NumberValidateResponse where
   hashWithSalt _salt NumberValidateResponse' {..} =
-    _salt `Prelude.hashWithSalt` carrier
+    _salt
+      `Prelude.hashWithSalt` carrier
       `Prelude.hashWithSalt` city
       `Prelude.hashWithSalt` cleansedPhoneNumberE164
       `Prelude.hashWithSalt` cleansedPhoneNumberNational

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.Approval
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.Approval where
@@ -78,7 +78,8 @@ instance Data.FromJSON Approval where
 
 instance Prelude.Hashable Approval where
   hashWithSalt _salt Approval' {..} =
-    _salt `Prelude.hashWithSalt` approvalState
+    _salt
+      `Prelude.hashWithSalt` approvalState
       `Prelude.hashWithSalt` userArn
 
 instance Prelude.NFData Approval where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lambda.UpdateCodeSigningConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,8 @@ instance Core.AWSRequest UpdateCodeSigningConfig where
 
 instance Prelude.Hashable UpdateCodeSigningConfig where
   hashWithSalt _salt UpdateCodeSigningConfig' {..} =
-    _salt `Prelude.hashWithSalt` allowedPublishers
+    _salt
+      `Prelude.hashWithSalt` allowedPublishers
       `Prelude.hashWithSalt` codeSigningPolicies
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` codeSigningConfigArn

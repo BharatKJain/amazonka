@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkFirewall.CreateFirewall
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -272,7 +272,8 @@ instance Core.AWSRequest CreateFirewall where
 
 instance Prelude.Hashable CreateFirewall where
   hashWithSalt _salt CreateFirewall' {..} =
-    _salt `Prelude.hashWithSalt` deleteProtection
+    _salt
+      `Prelude.hashWithSalt` deleteProtection
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` encryptionConfiguration
       `Prelude.hashWithSalt` firewallPolicyChangeProtection

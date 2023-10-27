@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification where
@@ -93,8 +93,8 @@ instance
       ( \x ->
           AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification'
             Prelude.<$> (x Data..:? "LaunchTemplateId")
-              Prelude.<*> (x Data..:? "LaunchTemplateName")
-              Prelude.<*> (x Data..:? "Version")
+            Prelude.<*> (x Data..:? "LaunchTemplateName")
+            Prelude.<*> (x Data..:? "Version")
       )
 
 instance
@@ -104,7 +104,8 @@ instance
   hashWithSalt
     _salt
     AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification' {..} =
-      _salt `Prelude.hashWithSalt` launchTemplateId
+      _salt
+        `Prelude.hashWithSalt` launchTemplateId
         `Prelude.hashWithSalt` launchTemplateName
         `Prelude.hashWithSalt` version
 

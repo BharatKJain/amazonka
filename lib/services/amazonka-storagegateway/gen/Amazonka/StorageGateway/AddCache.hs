@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StorageGateway.AddCache
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest AddCache where
 
 instance Prelude.Hashable AddCache where
   hashWithSalt _salt AddCache' {..} =
-    _salt `Prelude.hashWithSalt` gatewayARN
+    _salt
+      `Prelude.hashWithSalt` gatewayARN
       `Prelude.hashWithSalt` diskIds
 
 instance Prelude.NFData AddCache where

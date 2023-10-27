@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.ErrorStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.ErrorStatistics where
@@ -91,7 +91,8 @@ instance Data.FromJSON ErrorStatistics where
 
 instance Prelude.Hashable ErrorStatistics where
   hashWithSalt _salt ErrorStatistics' {..} =
-    _salt `Prelude.hashWithSalt` otherCount
+    _salt
+      `Prelude.hashWithSalt` otherCount
       `Prelude.hashWithSalt` throttleCount
       `Prelude.hashWithSalt` totalCount
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTSiteWise.ListAssetProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -146,21 +146,21 @@ instance Core.AWSPager ListAssetProperties where
     | Core.stop
         ( rs
             Lens.^? listAssetPropertiesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listAssetPropertiesResponse_assetPropertySummaries
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAssetProperties_nextToken
           Lens..~ rs
           Lens.^? listAssetPropertiesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAssetProperties where
   type
@@ -174,14 +174,16 @@ instance Core.AWSRequest ListAssetProperties where
           ListAssetPropertiesResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "assetPropertySummaries"
+            Prelude.<*> ( x
+                            Data..?> "assetPropertySummaries"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListAssetProperties where
   hashWithSalt _salt ListAssetProperties' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` assetId

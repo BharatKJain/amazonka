@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.ModifyClusterIamRoles
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,7 +141,8 @@ instance Core.AWSRequest ModifyClusterIamRoles where
 
 instance Prelude.Hashable ModifyClusterIamRoles where
   hashWithSalt _salt ModifyClusterIamRoles' {..} =
-    _salt `Prelude.hashWithSalt` addIamRoles
+    _salt
+      `Prelude.hashWithSalt` addIamRoles
       `Prelude.hashWithSalt` defaultIamRoleArn
       `Prelude.hashWithSalt` removeIamRoles
       `Prelude.hashWithSalt` clusterIdentifier

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsS3BucketWebsiteConfigurationRedirectTo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsS3BucketWebsiteConfigurationRedirectTo where
@@ -79,7 +79,7 @@ instance
       ( \x ->
           AwsS3BucketWebsiteConfigurationRedirectTo'
             Prelude.<$> (x Data..:? "Hostname")
-              Prelude.<*> (x Data..:? "Protocol")
+            Prelude.<*> (x Data..:? "Protocol")
       )
 
 instance
@@ -89,7 +89,8 @@ instance
   hashWithSalt
     _salt
     AwsS3BucketWebsiteConfigurationRedirectTo' {..} =
-      _salt `Prelude.hashWithSalt` hostname
+      _salt
+        `Prelude.hashWithSalt` hostname
         `Prelude.hashWithSalt` protocol
 
 instance

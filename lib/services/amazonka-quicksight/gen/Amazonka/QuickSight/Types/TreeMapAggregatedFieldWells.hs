@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TreeMapAggregatedFieldWells
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TreeMapAggregatedFieldWells where
@@ -96,7 +96,8 @@ instance Data.FromJSON TreeMapAggregatedFieldWells where
 
 instance Prelude.Hashable TreeMapAggregatedFieldWells where
   hashWithSalt _salt TreeMapAggregatedFieldWells' {..} =
-    _salt `Prelude.hashWithSalt` colors
+    _salt
+      `Prelude.hashWithSalt` colors
       `Prelude.hashWithSalt` groups
       `Prelude.hashWithSalt` sizes
 

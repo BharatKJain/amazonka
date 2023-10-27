@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Cloud9.Types.EnvironmentLifecycle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Cloud9.Types.EnvironmentLifecycle where
@@ -120,7 +120,8 @@ instance Data.FromJSON EnvironmentLifecycle where
 
 instance Prelude.Hashable EnvironmentLifecycle where
   hashWithSalt _salt EnvironmentLifecycle' {..} =
-    _salt `Prelude.hashWithSalt` failureResource
+    _salt
+      `Prelude.hashWithSalt` failureResource
       `Prelude.hashWithSalt` reason
       `Prelude.hashWithSalt` status
 

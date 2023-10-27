@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KMS.Types.KeyMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KMS.Types.KeyMetadata where
@@ -580,7 +580,8 @@ instance Data.FromJSON KeyMetadata where
             Prelude.<*> (x Data..:? "DeletionDate")
             Prelude.<*> (x Data..:? "Description")
             Prelude.<*> (x Data..:? "Enabled")
-            Prelude.<*> ( x Data..:? "EncryptionAlgorithms"
+            Prelude.<*> ( x
+                            Data..:? "EncryptionAlgorithms"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ExpirationModel")
@@ -593,7 +594,8 @@ instance Data.FromJSON KeyMetadata where
             Prelude.<*> (x Data..:? "MultiRegionConfiguration")
             Prelude.<*> (x Data..:? "Origin")
             Prelude.<*> (x Data..:? "PendingDeletionWindowInDays")
-            Prelude.<*> ( x Data..:? "SigningAlgorithms"
+            Prelude.<*> ( x
+                            Data..:? "SigningAlgorithms"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ValidTo")
@@ -603,7 +605,8 @@ instance Data.FromJSON KeyMetadata where
 
 instance Prelude.Hashable KeyMetadata where
   hashWithSalt _salt KeyMetadata' {..} =
-    _salt `Prelude.hashWithSalt` aWSAccountId
+    _salt
+      `Prelude.hashWithSalt` aWSAccountId
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` cloudHsmClusterId
       `Prelude.hashWithSalt` creationDate

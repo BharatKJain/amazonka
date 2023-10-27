@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.StaticKeyProvider
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.StaticKeyProvider where
@@ -109,7 +109,8 @@ instance Data.FromJSON StaticKeyProvider where
 
 instance Prelude.Hashable StaticKeyProvider where
   hashWithSalt _salt StaticKeyProvider' {..} =
-    _salt `Prelude.hashWithSalt` keyFormat
+    _salt
+      `Prelude.hashWithSalt` keyFormat
       `Prelude.hashWithSalt` keyFormatVersions
       `Prelude.hashWithSalt` staticKeyValue
       `Prelude.hashWithSalt` url

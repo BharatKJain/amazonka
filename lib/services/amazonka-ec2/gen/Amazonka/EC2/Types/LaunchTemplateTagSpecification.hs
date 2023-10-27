@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.LaunchTemplateTagSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.LaunchTemplateTagSpecification where
@@ -70,7 +70,9 @@ instance Data.FromXML LaunchTemplateTagSpecification where
   parseXML x =
     LaunchTemplateTagSpecification'
       Prelude.<$> (x Data..@? "resourceType")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
@@ -81,7 +83,8 @@ instance
   hashWithSalt
     _salt
     LaunchTemplateTagSpecification' {..} =
-      _salt `Prelude.hashWithSalt` resourceType
+      _salt
+        `Prelude.hashWithSalt` resourceType
         `Prelude.hashWithSalt` tags
 
 instance

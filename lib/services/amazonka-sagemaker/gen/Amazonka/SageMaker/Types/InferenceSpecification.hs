@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.InferenceSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.InferenceSpecification where
@@ -128,15 +128,18 @@ instance Data.FromJSON InferenceSpecification where
       "InferenceSpecification"
       ( \x ->
           InferenceSpecification'
-            Prelude.<$> ( x Data..:? "SupportedRealtimeInferenceInstanceTypes"
+            Prelude.<$> ( x
+                            Data..:? "SupportedRealtimeInferenceInstanceTypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SupportedTransformInstanceTypes")
             Prelude.<*> (x Data..: "Containers")
-            Prelude.<*> ( x Data..:? "SupportedContentTypes"
+            Prelude.<*> ( x
+                            Data..:? "SupportedContentTypes"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "SupportedResponseMIMETypes"
+            Prelude.<*> ( x
+                            Data..:? "SupportedResponseMIMETypes"
                             Data..!= Prelude.mempty
                         )
       )

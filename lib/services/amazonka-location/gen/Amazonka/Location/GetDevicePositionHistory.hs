@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Location.GetDevicePositionHistory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -209,21 +209,21 @@ instance Core.AWSPager GetDevicePositionHistory where
     | Core.stop
         ( rs
             Lens.^? getDevicePositionHistoryResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. getDevicePositionHistoryResponse_devicePositions
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getDevicePositionHistory_nextToken
           Lens..~ rs
           Lens.^? getDevicePositionHistoryResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetDevicePositionHistory where
   type
@@ -237,14 +237,16 @@ instance Core.AWSRequest GetDevicePositionHistory where
           GetDevicePositionHistoryResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "DevicePositions"
+            Prelude.<*> ( x
+                            Data..?> "DevicePositions"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable GetDevicePositionHistory where
   hashWithSalt _salt GetDevicePositionHistory' {..} =
-    _salt `Prelude.hashWithSalt` endTimeExclusive
+    _salt
+      `Prelude.hashWithSalt` endTimeExclusive
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` startTimeInclusive

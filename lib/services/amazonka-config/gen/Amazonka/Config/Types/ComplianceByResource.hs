@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.ComplianceByResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.ComplianceByResource where
@@ -92,7 +92,8 @@ instance Data.FromJSON ComplianceByResource where
 
 instance Prelude.Hashable ComplianceByResource where
   hashWithSalt _salt ComplianceByResource' {..} =
-    _salt `Prelude.hashWithSalt` compliance
+    _salt
+      `Prelude.hashWithSalt` compliance
       `Prelude.hashWithSalt` resourceId
       `Prelude.hashWithSalt` resourceType
 

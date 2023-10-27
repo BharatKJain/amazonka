@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTFleetWise.UpdateSignalCatalog
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest UpdateSignalCatalog where
 
 instance Prelude.Hashable UpdateSignalCatalog where
   hashWithSalt _salt UpdateSignalCatalog' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` nodesToAdd
       `Prelude.hashWithSalt` nodesToRemove
       `Prelude.hashWithSalt` nodesToUpdate

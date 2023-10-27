@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Amplify.DeleteJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,7 +116,8 @@ instance Core.AWSRequest DeleteJob where
 
 instance Prelude.Hashable DeleteJob where
   hashWithSalt _salt DeleteJob' {..} =
-    _salt `Prelude.hashWithSalt` appId
+    _salt
+      `Prelude.hashWithSalt` appId
       `Prelude.hashWithSalt` branchName
       `Prelude.hashWithSalt` jobId
 

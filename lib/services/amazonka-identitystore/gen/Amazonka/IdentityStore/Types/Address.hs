@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IdentityStore.Types.Address
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IdentityStore.Types.Address where
@@ -137,7 +137,8 @@ instance Data.FromJSON Address where
 
 instance Prelude.Hashable Address where
   hashWithSalt _salt Address' {..} =
-    _salt `Prelude.hashWithSalt` country
+    _salt
+      `Prelude.hashWithSalt` country
       `Prelude.hashWithSalt` formatted
       `Prelude.hashWithSalt` locality
       `Prelude.hashWithSalt` postalCode

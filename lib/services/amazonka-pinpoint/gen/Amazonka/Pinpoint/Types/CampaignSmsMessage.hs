@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.CampaignSmsMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.CampaignSmsMessage where
@@ -146,7 +146,8 @@ instance Data.FromJSON CampaignSmsMessage where
 
 instance Prelude.Hashable CampaignSmsMessage where
   hashWithSalt _salt CampaignSmsMessage' {..} =
-    _salt `Prelude.hashWithSalt` body
+    _salt
+      `Prelude.hashWithSalt` body
       `Prelude.hashWithSalt` entityId
       `Prelude.hashWithSalt` messageType
       `Prelude.hashWithSalt` originationNumber

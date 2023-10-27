@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticSearch.CreateOutboundCrossClusterSearchConnection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,11 +135,11 @@ instance
       ( \s h x ->
           CreateOutboundCrossClusterSearchConnectionResponse'
             Prelude.<$> (x Data..?> "ConnectionAlias")
-              Prelude.<*> (x Data..?> "ConnectionStatus")
-              Prelude.<*> (x Data..?> "CrossClusterSearchConnectionId")
-              Prelude.<*> (x Data..?> "DestinationDomainInfo")
-              Prelude.<*> (x Data..?> "SourceDomainInfo")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "ConnectionStatus")
+            Prelude.<*> (x Data..?> "CrossClusterSearchConnectionId")
+            Prelude.<*> (x Data..?> "DestinationDomainInfo")
+            Prelude.<*> (x Data..?> "SourceDomainInfo")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -149,7 +149,8 @@ instance
   hashWithSalt
     _salt
     CreateOutboundCrossClusterSearchConnection' {..} =
-      _salt `Prelude.hashWithSalt` sourceDomainInfo
+      _salt
+        `Prelude.hashWithSalt` sourceDomainInfo
         `Prelude.hashWithSalt` destinationDomainInfo
         `Prelude.hashWithSalt` connectionAlias
 

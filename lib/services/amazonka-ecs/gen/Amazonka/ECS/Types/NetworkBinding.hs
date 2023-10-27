@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.NetworkBinding
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.NetworkBinding where
@@ -292,7 +292,8 @@ instance Data.FromJSON NetworkBinding where
 
 instance Prelude.Hashable NetworkBinding where
   hashWithSalt _salt NetworkBinding' {..} =
-    _salt `Prelude.hashWithSalt` bindIP
+    _salt
+      `Prelude.hashWithSalt` bindIP
       `Prelude.hashWithSalt` containerPort
       `Prelude.hashWithSalt` containerPortRange
       `Prelude.hashWithSalt` hostPort

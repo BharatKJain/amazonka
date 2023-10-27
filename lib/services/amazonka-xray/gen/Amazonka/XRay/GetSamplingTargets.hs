@@ -16,7 +16,7 @@
 -- Module      : Amazonka.XRay.GetSamplingTargets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -89,10 +89,12 @@ instance Core.AWSRequest GetSamplingTargets where
       ( \s h x ->
           GetSamplingTargetsResponse'
             Prelude.<$> (x Data..?> "LastRuleModification")
-            Prelude.<*> ( x Data..?> "SamplingTargetDocuments"
+            Prelude.<*> ( x
+                            Data..?> "SamplingTargetDocuments"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "UnprocessedStatistics"
+            Prelude.<*> ( x
+                            Data..?> "UnprocessedStatistics"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

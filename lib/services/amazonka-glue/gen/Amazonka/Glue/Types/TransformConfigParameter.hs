@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.TransformConfigParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.TransformConfigParameter where
@@ -151,7 +151,8 @@ instance Data.FromJSON TransformConfigParameter where
 
 instance Prelude.Hashable TransformConfigParameter where
   hashWithSalt _salt TransformConfigParameter' {..} =
-    _salt `Prelude.hashWithSalt` isOptional
+    _salt
+      `Prelude.hashWithSalt` isOptional
       `Prelude.hashWithSalt` listType
       `Prelude.hashWithSalt` validationMessage
       `Prelude.hashWithSalt` validationRule

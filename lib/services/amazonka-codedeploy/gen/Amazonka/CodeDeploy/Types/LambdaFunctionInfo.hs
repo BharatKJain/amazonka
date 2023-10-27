@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.LambdaFunctionInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.LambdaFunctionInfo where
@@ -117,7 +117,8 @@ instance Data.FromJSON LambdaFunctionInfo where
 
 instance Prelude.Hashable LambdaFunctionInfo where
   hashWithSalt _salt LambdaFunctionInfo' {..} =
-    _salt `Prelude.hashWithSalt` currentVersion
+    _salt
+      `Prelude.hashWithSalt` currentVersion
       `Prelude.hashWithSalt` functionAlias
       `Prelude.hashWithSalt` functionName
       `Prelude.hashWithSalt` targetVersion

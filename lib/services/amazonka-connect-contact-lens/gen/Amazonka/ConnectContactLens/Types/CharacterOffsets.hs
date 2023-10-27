@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectContactLens.Types.CharacterOffsets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectContactLens.Types.CharacterOffsets where
@@ -80,7 +80,8 @@ instance Data.FromJSON CharacterOffsets where
 
 instance Prelude.Hashable CharacterOffsets where
   hashWithSalt _salt CharacterOffsets' {..} =
-    _salt `Prelude.hashWithSalt` beginOffsetChar
+    _salt
+      `Prelude.hashWithSalt` beginOffsetChar
       `Prelude.hashWithSalt` endOffsetChar
 
 instance Prelude.NFData CharacterOffsets where

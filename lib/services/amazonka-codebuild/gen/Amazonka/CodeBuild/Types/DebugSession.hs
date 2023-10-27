@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.DebugSession
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.DebugSession where
@@ -82,7 +82,8 @@ instance Data.FromJSON DebugSession where
 
 instance Prelude.Hashable DebugSession where
   hashWithSalt _salt DebugSession' {..} =
-    _salt `Prelude.hashWithSalt` sessionEnabled
+    _salt
+      `Prelude.hashWithSalt` sessionEnabled
       `Prelude.hashWithSalt` sessionTarget
 
 instance Prelude.NFData DebugSession where

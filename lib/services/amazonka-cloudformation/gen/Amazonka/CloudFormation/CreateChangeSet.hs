@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFormation.CreateChangeSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -695,7 +695,8 @@ instance Core.AWSRequest CreateChangeSet where
 
 instance Prelude.Hashable CreateChangeSet where
   hashWithSalt _salt CreateChangeSet' {..} =
-    _salt `Prelude.hashWithSalt` capabilities
+    _salt
+      `Prelude.hashWithSalt` capabilities
       `Prelude.hashWithSalt` changeSetType
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` description

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CostExplorer.CreateAnomalyMonitor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -176,7 +176,8 @@ instance Core.AWSRequest CreateAnomalyMonitor where
 
 instance Prelude.Hashable CreateAnomalyMonitor where
   hashWithSalt _salt CreateAnomalyMonitor' {..} =
-    _salt `Prelude.hashWithSalt` resourceTags
+    _salt
+      `Prelude.hashWithSalt` resourceTags
       `Prelude.hashWithSalt` anomalyMonitor
 
 instance Prelude.NFData CreateAnomalyMonitor where

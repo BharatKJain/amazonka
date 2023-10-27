@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.IdentityDocument
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.IdentityDocument where
@@ -91,14 +91,16 @@ instance Data.FromJSON IdentityDocument where
           IdentityDocument'
             Prelude.<$> (x Data..:? "Blocks" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "DocumentIndex")
-            Prelude.<*> ( x Data..:? "IdentityDocumentFields"
+            Prelude.<*> ( x
+                            Data..:? "IdentityDocumentFields"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable IdentityDocument where
   hashWithSalt _salt IdentityDocument' {..} =
-    _salt `Prelude.hashWithSalt` blocks
+    _salt
+      `Prelude.hashWithSalt` blocks
       `Prelude.hashWithSalt` documentIndex
       `Prelude.hashWithSalt` identityDocumentFields
 

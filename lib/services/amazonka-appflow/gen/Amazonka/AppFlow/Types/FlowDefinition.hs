@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.FlowDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.FlowDefinition where
@@ -221,7 +221,8 @@ instance Data.FromJSON FlowDefinition where
 
 instance Prelude.Hashable FlowDefinition where
   hashWithSalt _salt FlowDefinition' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` createdBy
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` destinationConnectorLabel

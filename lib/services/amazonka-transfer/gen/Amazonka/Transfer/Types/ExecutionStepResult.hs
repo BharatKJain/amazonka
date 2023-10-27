@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.ExecutionStepResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.ExecutionStepResult where
@@ -117,7 +117,8 @@ instance Data.FromJSON ExecutionStepResult where
 
 instance Prelude.Hashable ExecutionStepResult where
   hashWithSalt _salt ExecutionStepResult' {..} =
-    _salt `Prelude.hashWithSalt` error
+    _salt
+      `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` outputs
       `Prelude.hashWithSalt` stepType
 

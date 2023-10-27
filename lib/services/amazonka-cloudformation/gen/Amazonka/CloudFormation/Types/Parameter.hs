@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.Parameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.Parameter where
@@ -111,7 +111,8 @@ instance Data.FromXML Parameter where
 
 instance Prelude.Hashable Parameter where
   hashWithSalt _salt Parameter' {..} =
-    _salt `Prelude.hashWithSalt` parameterKey
+    _salt
+      `Prelude.hashWithSalt` parameterKey
       `Prelude.hashWithSalt` parameterValue
       `Prelude.hashWithSalt` resolvedValue
       `Prelude.hashWithSalt` usePreviousValue

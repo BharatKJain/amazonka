@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.DetectedMetricSetConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.DetectedMetricSetConfig where
@@ -87,7 +87,8 @@ instance Data.FromJSON DetectedMetricSetConfig where
 
 instance Prelude.Hashable DetectedMetricSetConfig where
   hashWithSalt _salt DetectedMetricSetConfig' {..} =
-    _salt `Prelude.hashWithSalt` metricSetFrequency
+    _salt
+      `Prelude.hashWithSalt` metricSetFrequency
       `Prelude.hashWithSalt` metricSource
       `Prelude.hashWithSalt` offset
 

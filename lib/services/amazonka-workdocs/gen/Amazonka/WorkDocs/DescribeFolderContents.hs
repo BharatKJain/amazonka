@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkDocs.DescribeFolderContents
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -171,28 +171,28 @@ instance Core.AWSPager DescribeFolderContents where
     | Core.stop
         ( rs
             Lens.^? describeFolderContentsResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeFolderContentsResponse_folders
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeFolderContentsResponse_documents
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeFolderContents_marker
           Lens..~ rs
           Lens.^? describeFolderContentsResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeFolderContents where
   type
@@ -212,7 +212,8 @@ instance Core.AWSRequest DescribeFolderContents where
 
 instance Prelude.Hashable DescribeFolderContents where
   hashWithSalt _salt DescribeFolderContents' {..} =
-    _salt `Prelude.hashWithSalt` authenticationToken
+    _salt
+      `Prelude.hashWithSalt` authenticationToken
       `Prelude.hashWithSalt` include
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` marker

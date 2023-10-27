@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.AddOn
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.AddOn where
@@ -130,7 +130,8 @@ instance Data.FromJSON AddOn where
 
 instance Prelude.Hashable AddOn where
   hashWithSalt _salt AddOn' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` nextSnapshotTimeOfDay
       `Prelude.hashWithSalt` snapshotTimeOfDay
       `Prelude.hashWithSalt` status

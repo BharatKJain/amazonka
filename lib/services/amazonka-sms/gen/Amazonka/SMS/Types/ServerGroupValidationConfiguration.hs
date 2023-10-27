@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SMS.Types.ServerGroupValidationConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SMS.Types.ServerGroupValidationConfiguration where
@@ -75,7 +75,8 @@ instance
       ( \x ->
           ServerGroupValidationConfiguration'
             Prelude.<$> (x Data..:? "serverGroupId")
-            Prelude.<*> ( x Data..:? "serverValidationConfigurations"
+            Prelude.<*> ( x
+                            Data..:? "serverValidationConfigurations"
                             Data..!= Prelude.mempty
                         )
       )
@@ -87,7 +88,8 @@ instance
   hashWithSalt
     _salt
     ServerGroupValidationConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` serverGroupId
+      _salt
+        `Prelude.hashWithSalt` serverGroupId
         `Prelude.hashWithSalt` serverValidationConfigurations
 
 instance

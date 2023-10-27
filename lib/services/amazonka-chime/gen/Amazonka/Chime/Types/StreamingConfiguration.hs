@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.StreamingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.StreamingConfiguration where
@@ -90,7 +90,8 @@ instance Data.FromJSON StreamingConfiguration where
 
 instance Prelude.Hashable StreamingConfiguration where
   hashWithSalt _salt StreamingConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` disabled
+    _salt
+      `Prelude.hashWithSalt` disabled
       `Prelude.hashWithSalt` streamingNotificationTargets
       `Prelude.hashWithSalt` dataRetentionInHours
 

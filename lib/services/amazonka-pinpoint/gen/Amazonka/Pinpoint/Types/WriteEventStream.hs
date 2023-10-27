@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.WriteEventStream
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.WriteEventStream where
@@ -97,7 +97,8 @@ writeEventStream_destinationStreamArn = Lens.lens (\WriteEventStream' {destinati
 
 instance Prelude.Hashable WriteEventStream where
   hashWithSalt _salt WriteEventStream' {..} =
-    _salt `Prelude.hashWithSalt` roleArn
+    _salt
+      `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` destinationStreamArn
 
 instance Prelude.NFData WriteEventStream where

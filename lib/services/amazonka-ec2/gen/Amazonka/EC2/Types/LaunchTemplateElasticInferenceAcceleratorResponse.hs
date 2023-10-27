@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.LaunchTemplateElasticInferenceAcceleratorResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.LaunchTemplateElasticInferenceAcceleratorResponse where
@@ -79,7 +79,8 @@ instance
   where
   parseXML x =
     LaunchTemplateElasticInferenceAcceleratorResponse'
-      Prelude.<$> (x Data..@? "count") Prelude.<*> (x Data..@? "type")
+      Prelude.<$> (x Data..@? "count")
+      Prelude.<*> (x Data..@? "type")
 
 instance
   Prelude.Hashable
@@ -88,7 +89,8 @@ instance
   hashWithSalt
     _salt
     LaunchTemplateElasticInferenceAcceleratorResponse' {..} =
-      _salt `Prelude.hashWithSalt` count
+      _salt
+        `Prelude.hashWithSalt` count
         `Prelude.hashWithSalt` type'
 
 instance

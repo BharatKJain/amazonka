@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.TimeSeriesCondition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.TimeSeriesCondition where
@@ -107,7 +107,8 @@ instance Data.FromJSON TimeSeriesCondition where
 
 instance Prelude.Hashable TimeSeriesCondition where
   hashWithSalt _salt TimeSeriesCondition' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` attributeValue
       `Prelude.hashWithSalt` condition
 

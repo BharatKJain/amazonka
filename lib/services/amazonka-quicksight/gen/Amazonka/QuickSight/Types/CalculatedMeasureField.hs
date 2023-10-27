@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.CalculatedMeasureField
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.CalculatedMeasureField where
@@ -78,7 +78,8 @@ instance Data.FromJSON CalculatedMeasureField where
 
 instance Prelude.Hashable CalculatedMeasureField where
   hashWithSalt _salt CalculatedMeasureField' {..} =
-    _salt `Prelude.hashWithSalt` fieldId
+    _salt
+      `Prelude.hashWithSalt` fieldId
       `Prelude.hashWithSalt` expression
 
 instance Prelude.NFData CalculatedMeasureField where

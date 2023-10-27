@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.OidcConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.OidcConfig where
@@ -151,7 +151,8 @@ oidcConfig_jwksUri = Lens.lens (\OidcConfig' {jwksUri} -> jwksUri) (\s@OidcConfi
 
 instance Prelude.Hashable OidcConfig where
   hashWithSalt _salt OidcConfig' {..} =
-    _salt `Prelude.hashWithSalt` clientId
+    _salt
+      `Prelude.hashWithSalt` clientId
       `Prelude.hashWithSalt` clientSecret
       `Prelude.hashWithSalt` issuer
       `Prelude.hashWithSalt` authorizationEndpoint

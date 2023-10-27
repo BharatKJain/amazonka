@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.ClientAuthentication
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.ClientAuthentication where
@@ -87,7 +87,8 @@ instance Data.FromJSON ClientAuthentication where
 
 instance Prelude.Hashable ClientAuthentication where
   hashWithSalt _salt ClientAuthentication' {..} =
-    _salt `Prelude.hashWithSalt` sasl
+    _salt
+      `Prelude.hashWithSalt` sasl
       `Prelude.hashWithSalt` tls
       `Prelude.hashWithSalt` unauthenticated
 

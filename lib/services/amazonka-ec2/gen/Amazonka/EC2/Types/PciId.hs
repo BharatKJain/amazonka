@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.PciId
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.PciId where
@@ -92,7 +92,8 @@ instance Data.FromXML PciId where
 
 instance Prelude.Hashable PciId where
   hashWithSalt _salt PciId' {..} =
-    _salt `Prelude.hashWithSalt` deviceId
+    _salt
+      `Prelude.hashWithSalt` deviceId
       `Prelude.hashWithSalt` subsystemId
       `Prelude.hashWithSalt` subsystemVendorId
       `Prelude.hashWithSalt` vendorId

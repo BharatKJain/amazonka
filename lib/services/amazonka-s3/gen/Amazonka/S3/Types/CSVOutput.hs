@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.CSVOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.CSVOutput where
@@ -121,7 +121,8 @@ cSVOutput_recordDelimiter = Lens.lens (\CSVOutput' {recordDelimiter} -> recordDe
 
 instance Prelude.Hashable CSVOutput where
   hashWithSalt _salt CSVOutput' {..} =
-    _salt `Prelude.hashWithSalt` fieldDelimiter
+    _salt
+      `Prelude.hashWithSalt` fieldDelimiter
       `Prelude.hashWithSalt` quoteCharacter
       `Prelude.hashWithSalt` quoteEscapeCharacter
       `Prelude.hashWithSalt` quoteFields

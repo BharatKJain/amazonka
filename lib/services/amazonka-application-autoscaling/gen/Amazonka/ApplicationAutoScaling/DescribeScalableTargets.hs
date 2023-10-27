@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ApplicationAutoScaling.DescribeScalableTargets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -550,22 +550,22 @@ instance Core.AWSPager DescribeScalableTargets where
     | Core.stop
         ( rs
             Lens.^? describeScalableTargetsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeScalableTargetsResponse_scalableTargets
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeScalableTargets_nextToken
           Lens..~ rs
           Lens.^? describeScalableTargetsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeScalableTargets where
   type
@@ -578,7 +578,8 @@ instance Core.AWSRequest DescribeScalableTargets where
       ( \s h x ->
           DescribeScalableTargetsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "ScalableTargets"
+            Prelude.<*> ( x
+                            Data..?> "ScalableTargets"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -586,7 +587,8 @@ instance Core.AWSRequest DescribeScalableTargets where
 
 instance Prelude.Hashable DescribeScalableTargets where
   hashWithSalt _salt DescribeScalableTargets' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` resourceIds
       `Prelude.hashWithSalt` scalableDimension

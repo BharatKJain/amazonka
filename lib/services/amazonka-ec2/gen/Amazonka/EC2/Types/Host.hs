@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.Host
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.Host where
@@ -265,7 +265,9 @@ instance Data.FromXML Host where
       Prelude.<*> (x Data..@? "hostProperties")
       Prelude.<*> (x Data..@? "hostRecovery")
       Prelude.<*> (x Data..@? "hostReservationId")
-      Prelude.<*> ( x Data..@? "instances" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "instances"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "memberOfServiceLinkedResourceGroup")
@@ -273,13 +275,16 @@ instance Data.FromXML Host where
       Prelude.<*> (x Data..@? "ownerId")
       Prelude.<*> (x Data..@? "releaseTime")
       Prelude.<*> (x Data..@? "state")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable Host where
   hashWithSalt _salt Host' {..} =
-    _salt `Prelude.hashWithSalt` allocationTime
+    _salt
+      `Prelude.hashWithSalt` allocationTime
       `Prelude.hashWithSalt` allowsMultipleInstanceTypes
       `Prelude.hashWithSalt` autoPlacement
       `Prelude.hashWithSalt` availabilityZone

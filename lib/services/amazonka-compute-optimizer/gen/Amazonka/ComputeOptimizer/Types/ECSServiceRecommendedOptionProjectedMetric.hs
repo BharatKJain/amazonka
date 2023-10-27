@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.ECSServiceRecommendedOptionProjectedMetric
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.ECSServiceRecommendedOptionProjectedMetric where
@@ -89,11 +89,12 @@ instance
       "ECSServiceRecommendedOptionProjectedMetric"
       ( \x ->
           ECSServiceRecommendedOptionProjectedMetric'
-            Prelude.<$> ( x Data..:? "projectedMetrics"
+            Prelude.<$> ( x
+                            Data..:? "projectedMetrics"
                             Data..!= Prelude.mempty
                         )
-              Prelude.<*> (x Data..:? "recommendedCpuUnits")
-              Prelude.<*> (x Data..:? "recommendedMemorySize")
+            Prelude.<*> (x Data..:? "recommendedCpuUnits")
+            Prelude.<*> (x Data..:? "recommendedMemorySize")
       )
 
 instance
@@ -103,7 +104,8 @@ instance
   hashWithSalt
     _salt
     ECSServiceRecommendedOptionProjectedMetric' {..} =
-      _salt `Prelude.hashWithSalt` projectedMetrics
+      _salt
+        `Prelude.hashWithSalt` projectedMetrics
         `Prelude.hashWithSalt` recommendedCpuUnits
         `Prelude.hashWithSalt` recommendedMemorySize
 

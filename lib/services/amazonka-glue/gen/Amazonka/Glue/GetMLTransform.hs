@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.GetMLTransform
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest GetMLTransform where
             Prelude.<*> (x Data..?> "Description")
             Prelude.<*> (x Data..?> "EvaluationMetrics")
             Prelude.<*> (x Data..?> "GlueVersion")
-            Prelude.<*> ( x Data..?> "InputRecordTables"
+            Prelude.<*> ( x
+                            Data..?> "InputRecordTables"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "LabelCount")

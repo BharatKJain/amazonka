@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.ListedExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.ListedExecution where
@@ -109,7 +109,8 @@ instance Data.FromJSON ListedExecution where
 
 instance Prelude.Hashable ListedExecution where
   hashWithSalt _salt ListedExecution' {..} =
-    _salt `Prelude.hashWithSalt` executionId
+    _salt
+      `Prelude.hashWithSalt` executionId
       `Prelude.hashWithSalt` initialFileLocation
       `Prelude.hashWithSalt` serviceMetadata
       `Prelude.hashWithSalt` status

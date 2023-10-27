@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.RegisterTaskWithMaintenanceWindow
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -507,7 +507,7 @@ instance
       ( \s h x ->
           RegisterTaskWithMaintenanceWindowResponse'
             Prelude.<$> (x Data..?> "WindowTaskId")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -517,7 +517,8 @@ instance
   hashWithSalt
     _salt
     RegisterTaskWithMaintenanceWindow' {..} =
-      _salt `Prelude.hashWithSalt` alarmConfiguration
+      _salt
+        `Prelude.hashWithSalt` alarmConfiguration
         `Prelude.hashWithSalt` clientToken
         `Prelude.hashWithSalt` cutoffBehavior
         `Prelude.hashWithSalt` description

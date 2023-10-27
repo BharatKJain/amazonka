@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisVideoArchivedMedia.Types.ClipFragmentSelector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisVideoArchivedMedia.Types.ClipFragmentSelector where
@@ -82,7 +82,8 @@ clipFragmentSelector_timestampRange = Lens.lens (\ClipFragmentSelector' {timesta
 
 instance Prelude.Hashable ClipFragmentSelector where
   hashWithSalt _salt ClipFragmentSelector' {..} =
-    _salt `Prelude.hashWithSalt` fragmentSelectorType
+    _salt
+      `Prelude.hashWithSalt` fragmentSelectorType
       `Prelude.hashWithSalt` timestampRange
 
 instance Prelude.NFData ClipFragmentSelector where

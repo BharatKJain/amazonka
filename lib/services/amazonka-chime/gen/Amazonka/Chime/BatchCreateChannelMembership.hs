@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.BatchCreateChannelMembership
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,8 @@ instance
     BatchCreateChannelMembership
   where
   hashWithSalt _salt BatchCreateChannelMembership' {..} =
-    _salt `Prelude.hashWithSalt` chimeBearer
+    _salt
+      `Prelude.hashWithSalt` chimeBearer
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` channelArn
       `Prelude.hashWithSalt` memberArns

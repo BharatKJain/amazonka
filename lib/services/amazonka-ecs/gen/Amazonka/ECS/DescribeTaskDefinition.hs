@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECS.DescribeTaskDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest DescribeTaskDefinition where
 
 instance Prelude.Hashable DescribeTaskDefinition where
   hashWithSalt _salt DescribeTaskDefinition' {..} =
-    _salt `Prelude.hashWithSalt` include
+    _salt
+      `Prelude.hashWithSalt` include
       `Prelude.hashWithSalt` taskDefinition
 
 instance Prelude.NFData DescribeTaskDefinition where

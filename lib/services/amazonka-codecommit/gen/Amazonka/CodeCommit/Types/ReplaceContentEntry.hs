@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.ReplaceContentEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.ReplaceContentEntry where
@@ -103,7 +103,8 @@ replaceContentEntry_replacementType = Lens.lens (\ReplaceContentEntry' {replacem
 
 instance Prelude.Hashable ReplaceContentEntry where
   hashWithSalt _salt ReplaceContentEntry' {..} =
-    _salt `Prelude.hashWithSalt` content
+    _salt
+      `Prelude.hashWithSalt` content
       `Prelude.hashWithSalt` fileMode
       `Prelude.hashWithSalt` filePath
       `Prelude.hashWithSalt` replacementType

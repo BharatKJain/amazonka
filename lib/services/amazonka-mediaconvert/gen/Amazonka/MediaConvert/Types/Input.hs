@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.Input
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.Input where
@@ -562,11 +562,13 @@ instance Data.FromJSON Input where
       "Input"
       ( \x ->
           Input'
-            Prelude.<$> ( x Data..:? "audioSelectorGroups"
+            Prelude.<$> ( x
+                            Data..:? "audioSelectorGroups"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "audioSelectors" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "captionSelectors"
+            Prelude.<*> ( x
+                            Data..:? "captionSelectors"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "crop")
@@ -583,7 +585,8 @@ instance Data.FromJSON Input where
             Prelude.<*> (x Data..:? "position")
             Prelude.<*> (x Data..:? "programNumber")
             Prelude.<*> (x Data..:? "psiControl")
-            Prelude.<*> ( x Data..:? "supplementalImps"
+            Prelude.<*> ( x
+                            Data..:? "supplementalImps"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "timecodeSource")
@@ -594,7 +597,8 @@ instance Data.FromJSON Input where
 
 instance Prelude.Hashable Input where
   hashWithSalt _salt Input' {..} =
-    _salt `Prelude.hashWithSalt` audioSelectorGroups
+    _salt
+      `Prelude.hashWithSalt` audioSelectorGroups
       `Prelude.hashWithSalt` audioSelectors
       `Prelude.hashWithSalt` captionSelectors
       `Prelude.hashWithSalt` crop

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.DeleteAutoScalingGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,7 +127,8 @@ instance Core.AWSRequest DeleteAutoScalingGroup where
 
 instance Prelude.Hashable DeleteAutoScalingGroup where
   hashWithSalt _salt DeleteAutoScalingGroup' {..} =
-    _salt `Prelude.hashWithSalt` forceDelete
+    _salt
+      `Prelude.hashWithSalt` forceDelete
       `Prelude.hashWithSalt` autoScalingGroupName
 
 instance Prelude.NFData DeleteAutoScalingGroup where

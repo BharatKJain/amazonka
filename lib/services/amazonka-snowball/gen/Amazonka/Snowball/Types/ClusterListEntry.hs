@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Snowball.Types.ClusterListEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Snowball.Types.ClusterListEntry where
@@ -105,7 +105,8 @@ instance Data.FromJSON ClusterListEntry where
 
 instance Prelude.Hashable ClusterListEntry where
   hashWithSalt _salt ClusterListEntry' {..} =
-    _salt `Prelude.hashWithSalt` clusterId
+    _salt
+      `Prelude.hashWithSalt` clusterId
       `Prelude.hashWithSalt` clusterState
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` description

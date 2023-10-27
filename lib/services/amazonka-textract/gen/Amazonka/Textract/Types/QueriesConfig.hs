@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.QueriesConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.QueriesConfig where
@@ -52,7 +52,6 @@ newQueriesConfig pQueries_ =
         Lens.coerced Lens.# pQueries_
     }
 
--- |
 queriesConfig_queries :: Lens.Lens' QueriesConfig (Prelude.NonEmpty Query)
 queriesConfig_queries = Lens.lens (\QueriesConfig' {queries} -> queries) (\s@QueriesConfig' {} a -> s {queries = a} :: QueriesConfig) Prelude.. Lens.coerced
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Translate.Types.TextTranslationJobFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Translate.Types.TextTranslationJobFilter where
@@ -97,7 +97,8 @@ textTranslationJobFilter_submittedBeforeTime = Lens.lens (\TextTranslationJobFil
 
 instance Prelude.Hashable TextTranslationJobFilter where
   hashWithSalt _salt TextTranslationJobFilter' {..} =
-    _salt `Prelude.hashWithSalt` jobName
+    _salt
+      `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` jobStatus
       `Prelude.hashWithSalt` submittedAfterTime
       `Prelude.hashWithSalt` submittedBeforeTime

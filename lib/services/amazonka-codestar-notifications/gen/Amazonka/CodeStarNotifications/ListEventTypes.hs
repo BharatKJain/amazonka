@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeStarNotifications.ListEventTypes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,21 +112,22 @@ instance Core.AWSPager ListEventTypes where
     | Core.stop
         ( rs
             Lens.^? listEventTypesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listEventTypesResponse_eventTypes
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listEventTypes_nextToken
           Lens..~ rs
-          Lens.^? listEventTypesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listEventTypesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListEventTypes where
   type
@@ -145,7 +146,8 @@ instance Core.AWSRequest ListEventTypes where
 
 instance Prelude.Hashable ListEventTypes where
   hashWithSalt _salt ListEventTypes' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

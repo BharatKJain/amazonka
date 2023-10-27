@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.OriginCustomHeader
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.OriginCustomHeader where
@@ -84,7 +84,8 @@ instance Data.FromXML OriginCustomHeader where
 
 instance Prelude.Hashable OriginCustomHeader where
   hashWithSalt _salt OriginCustomHeader' {..} =
-    _salt `Prelude.hashWithSalt` headerName
+    _salt
+      `Prelude.hashWithSalt` headerName
       `Prelude.hashWithSalt` headerValue
 
 instance Prelude.NFData OriginCustomHeader where

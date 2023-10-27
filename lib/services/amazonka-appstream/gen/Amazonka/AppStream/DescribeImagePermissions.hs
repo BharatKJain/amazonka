@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppStream.DescribeImagePermissions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -131,7 +131,8 @@ instance Core.AWSRequest DescribeImagePermissions where
           DescribeImagePermissionsResponse'
             Prelude.<$> (x Data..?> "Name")
             Prelude.<*> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "SharedImagePermissionsList"
+            Prelude.<*> ( x
+                            Data..?> "SharedImagePermissionsList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -139,7 +140,8 @@ instance Core.AWSRequest DescribeImagePermissions where
 
 instance Prelude.Hashable DescribeImagePermissions where
   hashWithSalt _salt DescribeImagePermissions' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` sharedAwsAccountIds
       `Prelude.hashWithSalt` name

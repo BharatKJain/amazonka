@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManager.Types.InventoryFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManager.Types.InventoryFilter where
@@ -78,7 +78,8 @@ inventoryFilter_condition = Lens.lens (\InventoryFilter' {condition} -> conditio
 
 instance Prelude.Hashable InventoryFilter where
   hashWithSalt _salt InventoryFilter' {..} =
-    _salt `Prelude.hashWithSalt` value
+    _salt
+      `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` condition
 

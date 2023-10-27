@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.SendOTPMessageRequestParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.SendOTPMessageRequestParameters where
@@ -183,7 +183,8 @@ instance
   hashWithSalt
     _salt
     SendOTPMessageRequestParameters' {..} =
-      _salt `Prelude.hashWithSalt` allowedAttempts
+      _salt
+        `Prelude.hashWithSalt` allowedAttempts
         `Prelude.hashWithSalt` codeLength
         `Prelude.hashWithSalt` entityId
         `Prelude.hashWithSalt` language

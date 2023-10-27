@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.ReadSetFiles
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.ReadSetFiles where
@@ -85,7 +85,8 @@ instance Data.FromJSON ReadSetFiles where
 
 instance Prelude.Hashable ReadSetFiles where
   hashWithSalt _salt ReadSetFiles' {..} =
-    _salt `Prelude.hashWithSalt` index
+    _salt
+      `Prelude.hashWithSalt` index
       `Prelude.hashWithSalt` source1
       `Prelude.hashWithSalt` source2
 

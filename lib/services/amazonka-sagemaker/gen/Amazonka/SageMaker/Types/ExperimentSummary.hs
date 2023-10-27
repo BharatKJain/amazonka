@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ExperimentSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ExperimentSummary where
@@ -119,7 +119,8 @@ instance Data.FromJSON ExperimentSummary where
 
 instance Prelude.Hashable ExperimentSummary where
   hashWithSalt _salt ExperimentSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` experimentArn
       `Prelude.hashWithSalt` experimentName

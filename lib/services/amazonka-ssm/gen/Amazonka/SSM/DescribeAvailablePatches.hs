@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.DescribeAvailablePatches
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -373,22 +373,22 @@ instance Core.AWSPager DescribeAvailablePatches where
     | Core.stop
         ( rs
             Lens.^? describeAvailablePatchesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeAvailablePatchesResponse_patches
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeAvailablePatches_nextToken
           Lens..~ rs
           Lens.^? describeAvailablePatchesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeAvailablePatches where
   type
@@ -407,7 +407,8 @@ instance Core.AWSRequest DescribeAvailablePatches where
 
 instance Prelude.Hashable DescribeAvailablePatches where
   hashWithSalt _salt DescribeAvailablePatches' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

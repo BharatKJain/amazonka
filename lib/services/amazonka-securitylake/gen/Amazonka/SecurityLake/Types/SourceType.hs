@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityLake.Types.SourceType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityLake.Types.SourceType where
@@ -84,7 +84,8 @@ instance Data.FromJSON SourceType where
 
 instance Prelude.Hashable SourceType where
   hashWithSalt _salt SourceType' {..} =
-    _salt `Prelude.hashWithSalt` awsSourceType
+    _salt
+      `Prelude.hashWithSalt` awsSourceType
       `Prelude.hashWithSalt` customSourceType
 
 instance Prelude.NFData SourceType where

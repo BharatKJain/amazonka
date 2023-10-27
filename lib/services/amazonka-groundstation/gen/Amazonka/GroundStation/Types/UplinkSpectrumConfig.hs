@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.UplinkSpectrumConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.UplinkSpectrumConfig where
@@ -88,7 +88,8 @@ instance Data.FromJSON UplinkSpectrumConfig where
 
 instance Prelude.Hashable UplinkSpectrumConfig where
   hashWithSalt _salt UplinkSpectrumConfig' {..} =
-    _salt `Prelude.hashWithSalt` polarization
+    _salt
+      `Prelude.hashWithSalt` polarization
       `Prelude.hashWithSalt` centerFrequency
 
 instance Prelude.NFData UplinkSpectrumConfig where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.DatasetImportJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.DatasetImportJob where
@@ -191,7 +191,8 @@ instance Data.FromJSON DatasetImportJob where
 
 instance Prelude.Hashable DatasetImportJob where
   hashWithSalt _salt DatasetImportJob' {..} =
-    _salt `Prelude.hashWithSalt` creationDateTime
+    _salt
+      `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` dataSource
       `Prelude.hashWithSalt` datasetArn
       `Prelude.hashWithSalt` datasetImportJobArn

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpenSearch.ListVpcEndpointsForDomain
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest ListVpcEndpointsForDomain where
       ( \s h x ->
           ListVpcEndpointsForDomainResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "VpcEndpointSummaryList"
+            Prelude.<*> ( x
+                            Data..?> "VpcEndpointSummaryList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..:> "NextToken")
@@ -117,7 +118,8 @@ instance Core.AWSRequest ListVpcEndpointsForDomain where
 
 instance Prelude.Hashable ListVpcEndpointsForDomain where
   hashWithSalt _salt ListVpcEndpointsForDomain' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` domainName
 
 instance Prelude.NFData ListVpcEndpointsForDomain where

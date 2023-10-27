@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTFleetWise.Types.SignalDecoder
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTFleetWise.Types.SignalDecoder where
@@ -137,7 +137,8 @@ instance Data.FromJSON SignalDecoder where
 
 instance Prelude.Hashable SignalDecoder where
   hashWithSalt _salt SignalDecoder' {..} =
-    _salt `Prelude.hashWithSalt` canSignal
+    _salt
+      `Prelude.hashWithSalt` canSignal
       `Prelude.hashWithSalt` obdSignal
       `Prelude.hashWithSalt` fullyQualifiedName
       `Prelude.hashWithSalt` type'

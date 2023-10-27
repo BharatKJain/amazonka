@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.SdkConfigurationProperty
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.SdkConfigurationProperty where
@@ -111,7 +111,8 @@ instance Data.FromJSON SdkConfigurationProperty where
 
 instance Prelude.Hashable SdkConfigurationProperty where
   hashWithSalt _salt SdkConfigurationProperty' {..} =
-    _salt `Prelude.hashWithSalt` defaultValue
+    _salt
+      `Prelude.hashWithSalt` defaultValue
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` friendlyName
       `Prelude.hashWithSalt` name

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.SegmentDimensions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.SegmentDimensions where
@@ -123,14 +123,16 @@ instance Data.FromJSON SegmentDimensions where
             Prelude.<*> (x Data..:? "Demographic")
             Prelude.<*> (x Data..:? "Location")
             Prelude.<*> (x Data..:? "Metrics" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "UserAttributes"
+            Prelude.<*> ( x
+                            Data..:? "UserAttributes"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable SegmentDimensions where
   hashWithSalt _salt SegmentDimensions' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` behavior
       `Prelude.hashWithSalt` demographic
       `Prelude.hashWithSalt` location

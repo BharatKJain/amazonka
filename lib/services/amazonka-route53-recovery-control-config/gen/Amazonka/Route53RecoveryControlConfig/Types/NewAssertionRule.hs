@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53RecoveryControlConfig.Types.NewAssertionRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53RecoveryControlConfig.Types.NewAssertionRule where
@@ -141,7 +141,8 @@ newAssertionRule_name = Lens.lens (\NewAssertionRule' {name} -> name) (\s@NewAss
 
 instance Prelude.Hashable NewAssertionRule where
   hashWithSalt _salt NewAssertionRule' {..} =
-    _salt `Prelude.hashWithSalt` controlPanelArn
+    _salt
+      `Prelude.hashWithSalt` controlPanelArn
       `Prelude.hashWithSalt` assertedControls
       `Prelude.hashWithSalt` ruleConfig
       `Prelude.hashWithSalt` waitPeriodMs

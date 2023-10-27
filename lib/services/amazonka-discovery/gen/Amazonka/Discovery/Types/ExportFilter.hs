@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Discovery.Types.ExportFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Discovery.Types.ExportFilter where
@@ -89,7 +89,8 @@ exportFilter_condition = Lens.lens (\ExportFilter' {condition} -> condition) (\s
 
 instance Prelude.Hashable ExportFilter where
   hashWithSalt _salt ExportFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
       `Prelude.hashWithSalt` condition
 

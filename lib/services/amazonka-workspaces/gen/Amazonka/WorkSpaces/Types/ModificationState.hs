@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpaces.Types.ModificationState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpaces.Types.ModificationState where
@@ -76,7 +76,8 @@ instance Data.FromJSON ModificationState where
 
 instance Prelude.Hashable ModificationState where
   hashWithSalt _salt ModificationState' {..} =
-    _salt `Prelude.hashWithSalt` resource
+    _salt
+      `Prelude.hashWithSalt` resource
       `Prelude.hashWithSalt` state
 
 instance Prelude.NFData ModificationState where

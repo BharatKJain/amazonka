@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.EndpointProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.EndpointProperties where
@@ -200,7 +200,8 @@ instance Data.FromJSON EndpointProperties where
 
 instance Prelude.Hashable EndpointProperties where
   hashWithSalt _salt EndpointProperties' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` currentInferenceUnits
       `Prelude.hashWithSalt` dataAccessRoleArn
       `Prelude.hashWithSalt` desiredDataAccessRoleArn

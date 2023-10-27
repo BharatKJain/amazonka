@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.RootCause
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.RootCause where
@@ -107,7 +107,8 @@ instance Data.FromJSON RootCause where
 
 instance Prelude.Hashable RootCause where
   hashWithSalt _salt RootCause' {..} =
-    _salt `Prelude.hashWithSalt` linkedAccount
+    _salt
+      `Prelude.hashWithSalt` linkedAccount
       `Prelude.hashWithSalt` linkedAccountName
       `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` service

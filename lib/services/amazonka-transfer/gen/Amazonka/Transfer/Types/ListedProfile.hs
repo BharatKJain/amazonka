@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.ListedProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.ListedProfile where
@@ -116,7 +116,8 @@ instance Data.FromJSON ListedProfile where
 
 instance Prelude.Hashable ListedProfile where
   hashWithSalt _salt ListedProfile' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` as2Id
       `Prelude.hashWithSalt` profileId
       `Prelude.hashWithSalt` profileType

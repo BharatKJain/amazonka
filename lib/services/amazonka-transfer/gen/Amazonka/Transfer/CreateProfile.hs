@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Transfer.CreateProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -163,7 +163,8 @@ instance Core.AWSRequest CreateProfile where
 
 instance Prelude.Hashable CreateProfile where
   hashWithSalt _salt CreateProfile' {..} =
-    _salt `Prelude.hashWithSalt` certificateIds
+    _salt
+      `Prelude.hashWithSalt` certificateIds
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` as2Id
       `Prelude.hashWithSalt` profileType

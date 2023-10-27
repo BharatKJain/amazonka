@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.PatchStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.PatchStatus where
@@ -89,7 +89,8 @@ instance Data.FromJSON PatchStatus where
 
 instance Prelude.Hashable PatchStatus where
   hashWithSalt _salt PatchStatus' {..} =
-    _salt `Prelude.hashWithSalt` approvalDate
+    _salt
+      `Prelude.hashWithSalt` approvalDate
       `Prelude.hashWithSalt` complianceLevel
       `Prelude.hashWithSalt` deploymentStatus
 

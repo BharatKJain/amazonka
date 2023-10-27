@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IdentityStore.Types.PhoneNumber
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IdentityStore.Types.PhoneNumber where
@@ -93,7 +93,8 @@ instance Data.FromJSON PhoneNumber where
 
 instance Prelude.Hashable PhoneNumber where
   hashWithSalt _salt PhoneNumber' {..} =
-    _salt `Prelude.hashWithSalt` primary
+    _salt
+      `Prelude.hashWithSalt` primary
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` value
 

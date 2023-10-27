@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.ApiGatewayApiAsset
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.ApiGatewayApiAsset where
@@ -147,7 +147,8 @@ instance Data.FromJSON ApiGatewayApiAsset where
 
 instance Prelude.Hashable ApiGatewayApiAsset where
   hashWithSalt _salt ApiGatewayApiAsset' {..} =
-    _salt `Prelude.hashWithSalt` apiDescription
+    _salt
+      `Prelude.hashWithSalt` apiDescription
       `Prelude.hashWithSalt` apiEndpoint
       `Prelude.hashWithSalt` apiId
       `Prelude.hashWithSalt` apiKey

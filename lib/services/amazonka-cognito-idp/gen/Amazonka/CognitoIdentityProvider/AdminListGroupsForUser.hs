@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.AdminListGroupsForUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,22 +124,22 @@ instance Core.AWSPager AdminListGroupsForUser where
     | Core.stop
         ( rs
             Lens.^? adminListGroupsForUserResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? adminListGroupsForUserResponse_groups
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& adminListGroupsForUser_nextToken
           Lens..~ rs
           Lens.^? adminListGroupsForUserResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest AdminListGroupsForUser where
   type
@@ -158,7 +158,8 @@ instance Core.AWSRequest AdminListGroupsForUser where
 
 instance Prelude.Hashable AdminListGroupsForUser where
   hashWithSalt _salt AdminListGroupsForUser' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` username
       `Prelude.hashWithSalt` userPoolId

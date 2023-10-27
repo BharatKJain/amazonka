@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Macie.Types.ClassificationTypeUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Macie.Types.ClassificationTypeUpdate where
@@ -81,7 +81,8 @@ classificationTypeUpdate_oneTime = Lens.lens (\ClassificationTypeUpdate' {oneTim
 
 instance Prelude.Hashable ClassificationTypeUpdate where
   hashWithSalt _salt ClassificationTypeUpdate' {..} =
-    _salt `Prelude.hashWithSalt` continuous
+    _salt
+      `Prelude.hashWithSalt` continuous
       `Prelude.hashWithSalt` oneTime
 
 instance Prelude.NFData ClassificationTypeUpdate where

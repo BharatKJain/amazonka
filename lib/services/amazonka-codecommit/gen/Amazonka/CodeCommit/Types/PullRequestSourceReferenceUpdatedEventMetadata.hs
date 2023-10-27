@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.PullRequestSourceReferenceUpdatedEventMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.PullRequestSourceReferenceUpdatedEventMetadata where
@@ -102,9 +102,9 @@ instance
       ( \x ->
           PullRequestSourceReferenceUpdatedEventMetadata'
             Prelude.<$> (x Data..:? "afterCommitId")
-              Prelude.<*> (x Data..:? "beforeCommitId")
-              Prelude.<*> (x Data..:? "mergeBase")
-              Prelude.<*> (x Data..:? "repositoryName")
+            Prelude.<*> (x Data..:? "beforeCommitId")
+            Prelude.<*> (x Data..:? "mergeBase")
+            Prelude.<*> (x Data..:? "repositoryName")
       )
 
 instance
@@ -114,7 +114,8 @@ instance
   hashWithSalt
     _salt
     PullRequestSourceReferenceUpdatedEventMetadata' {..} =
-      _salt `Prelude.hashWithSalt` afterCommitId
+      _salt
+        `Prelude.hashWithSalt` afterCommitId
         `Prelude.hashWithSalt` beforeCommitId
         `Prelude.hashWithSalt` mergeBase
         `Prelude.hashWithSalt` repositoryName

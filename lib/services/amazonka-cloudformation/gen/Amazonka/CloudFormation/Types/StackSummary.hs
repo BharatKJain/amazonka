@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.StackSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.StackSummary where
@@ -222,7 +222,8 @@ instance Data.FromXML StackSummary where
 
 instance Prelude.Hashable StackSummary where
   hashWithSalt _salt StackSummary' {..} =
-    _salt `Prelude.hashWithSalt` deletionTime
+    _salt
+      `Prelude.hashWithSalt` deletionTime
       `Prelude.hashWithSalt` driftInformation
       `Prelude.hashWithSalt` lastUpdatedTime
       `Prelude.hashWithSalt` parentId

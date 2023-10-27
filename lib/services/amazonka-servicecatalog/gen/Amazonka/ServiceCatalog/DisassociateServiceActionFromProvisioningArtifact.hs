@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.DisassociateServiceActionFromProvisioningArtifact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -161,7 +161,8 @@ instance
   hashWithSalt
     _salt
     DisassociateServiceActionFromProvisioningArtifact' {..} =
-      _salt `Prelude.hashWithSalt` acceptLanguage
+      _salt
+        `Prelude.hashWithSalt` acceptLanguage
         `Prelude.hashWithSalt` productId
         `Prelude.hashWithSalt` provisioningArtifactId
         `Prelude.hashWithSalt` serviceActionId

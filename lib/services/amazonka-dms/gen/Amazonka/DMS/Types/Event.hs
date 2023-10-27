@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.Event
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.Event where
@@ -106,7 +106,8 @@ instance Data.FromJSON Event where
       ( \x ->
           Event'
             Prelude.<$> (x Data..:? "Date")
-            Prelude.<*> ( x Data..:? "EventCategories"
+            Prelude.<*> ( x
+                            Data..:? "EventCategories"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Message")
@@ -116,7 +117,8 @@ instance Data.FromJSON Event where
 
 instance Prelude.Hashable Event where
   hashWithSalt _salt Event' {..} =
-    _salt `Prelude.hashWithSalt` date
+    _salt
+      `Prelude.hashWithSalt` date
       `Prelude.hashWithSalt` eventCategories
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` sourceIdentifier

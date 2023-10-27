@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.S3ReportExportConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.S3ReportExportConfig where
@@ -140,7 +140,8 @@ instance Data.FromJSON S3ReportExportConfig where
 
 instance Prelude.Hashable S3ReportExportConfig where
   hashWithSalt _salt S3ReportExportConfig' {..} =
-    _salt `Prelude.hashWithSalt` bucket
+    _salt
+      `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` bucketOwner
       `Prelude.hashWithSalt` encryptionDisabled
       `Prelude.hashWithSalt` encryptionKey

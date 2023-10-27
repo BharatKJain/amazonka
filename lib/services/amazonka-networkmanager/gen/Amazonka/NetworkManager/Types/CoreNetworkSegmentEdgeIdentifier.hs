@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.CoreNetworkSegmentEdgeIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.CoreNetworkSegmentEdgeIdentifier where
@@ -93,7 +93,8 @@ instance
   hashWithSalt
     _salt
     CoreNetworkSegmentEdgeIdentifier' {..} =
-      _salt `Prelude.hashWithSalt` coreNetworkId
+      _salt
+        `Prelude.hashWithSalt` coreNetworkId
         `Prelude.hashWithSalt` edgeLocation
         `Prelude.hashWithSalt` segmentName
 

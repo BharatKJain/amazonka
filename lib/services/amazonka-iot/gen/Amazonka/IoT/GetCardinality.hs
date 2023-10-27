@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.GetCardinality
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -126,7 +126,8 @@ instance Core.AWSRequest GetCardinality where
 
 instance Prelude.Hashable GetCardinality where
   hashWithSalt _salt GetCardinality' {..} =
-    _salt `Prelude.hashWithSalt` aggregationField
+    _salt
+      `Prelude.hashWithSalt` aggregationField
       `Prelude.hashWithSalt` indexName
       `Prelude.hashWithSalt` queryVersion
       `Prelude.hashWithSalt` queryString

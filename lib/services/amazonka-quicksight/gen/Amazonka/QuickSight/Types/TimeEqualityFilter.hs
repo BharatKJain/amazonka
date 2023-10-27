@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TimeEqualityFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TimeEqualityFilter where
@@ -126,7 +126,8 @@ instance Data.FromJSON TimeEqualityFilter where
 
 instance Prelude.Hashable TimeEqualityFilter where
   hashWithSalt _salt TimeEqualityFilter' {..} =
-    _salt `Prelude.hashWithSalt` parameterName
+    _salt
+      `Prelude.hashWithSalt` parameterName
       `Prelude.hashWithSalt` timeGranularity
       `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` filterId

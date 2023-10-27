@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.DescribeDocumentPermission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,7 +138,8 @@ instance Core.AWSRequest DescribeDocumentPermission where
       ( \s h x ->
           DescribeDocumentPermissionResponse'
             Prelude.<$> (x Data..?> "AccountIds" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "AccountSharingInfoList"
+            Prelude.<*> ( x
+                            Data..?> "AccountSharingInfoList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -147,7 +148,8 @@ instance Core.AWSRequest DescribeDocumentPermission where
 
 instance Prelude.Hashable DescribeDocumentPermission where
   hashWithSalt _salt DescribeDocumentPermission' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` permissionType

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Rekognition.StartProjectVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -164,7 +164,8 @@ instance Core.AWSRequest StartProjectVersion where
 
 instance Prelude.Hashable StartProjectVersion where
   hashWithSalt _salt StartProjectVersion' {..} =
-    _salt `Prelude.hashWithSalt` maxInferenceUnits
+    _salt
+      `Prelude.hashWithSalt` maxInferenceUnits
       `Prelude.hashWithSalt` projectVersionArn
       `Prelude.hashWithSalt` minInferenceUnits
 

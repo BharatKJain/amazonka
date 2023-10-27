@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FraudDetector.GetModelVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest GetModelVersion where
 
 instance Prelude.Hashable GetModelVersion where
   hashWithSalt _salt GetModelVersion' {..} =
-    _salt `Prelude.hashWithSalt` modelId
+    _salt
+      `Prelude.hashWithSalt` modelId
       `Prelude.hashWithSalt` modelType
       `Prelude.hashWithSalt` modelVersionNumber
 

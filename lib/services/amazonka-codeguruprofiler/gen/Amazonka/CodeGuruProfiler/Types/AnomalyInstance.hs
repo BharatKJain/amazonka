@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruProfiler.Types.AnomalyInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruProfiler.Types.AnomalyInstance where
@@ -120,7 +120,8 @@ instance Data.FromJSON AnomalyInstance where
 
 instance Prelude.Hashable AnomalyInstance where
   hashWithSalt _salt AnomalyInstance' {..} =
-    _salt `Prelude.hashWithSalt` endTime
+    _salt
+      `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` userFeedback
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` startTime

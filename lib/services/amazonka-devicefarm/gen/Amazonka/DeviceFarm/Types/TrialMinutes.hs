@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.TrialMinutes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.TrialMinutes where
@@ -75,7 +75,8 @@ instance Data.FromJSON TrialMinutes where
 
 instance Prelude.Hashable TrialMinutes where
   hashWithSalt _salt TrialMinutes' {..} =
-    _salt `Prelude.hashWithSalt` remaining
+    _salt
+      `Prelude.hashWithSalt` remaining
       `Prelude.hashWithSalt` total
 
 instance Prelude.NFData TrialMinutes where

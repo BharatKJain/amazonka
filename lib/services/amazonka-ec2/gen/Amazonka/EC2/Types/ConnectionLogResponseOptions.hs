@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ConnectionLogResponseOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ConnectionLogResponseOptions where
@@ -95,7 +95,8 @@ instance
     ConnectionLogResponseOptions
   where
   hashWithSalt _salt ConnectionLogResponseOptions' {..} =
-    _salt `Prelude.hashWithSalt` cloudwatchLogGroup
+    _salt
+      `Prelude.hashWithSalt` cloudwatchLogGroup
       `Prelude.hashWithSalt` cloudwatchLogStream
       `Prelude.hashWithSalt` enabled
 

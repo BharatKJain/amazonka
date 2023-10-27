@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCases.Types.Sort
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCases.Types.Sort where
@@ -66,7 +66,8 @@ sort_sortOrder = Lens.lens (\Sort' {sortOrder} -> sortOrder) (\s@Sort' {} a -> s
 
 instance Prelude.Hashable Sort where
   hashWithSalt _salt Sort' {..} =
-    _salt `Prelude.hashWithSalt` fieldId
+    _salt
+      `Prelude.hashWithSalt` fieldId
       `Prelude.hashWithSalt` sortOrder
 
 instance Prelude.NFData Sort where

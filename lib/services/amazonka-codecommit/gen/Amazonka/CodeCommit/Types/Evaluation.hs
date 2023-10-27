@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.Evaluation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.Evaluation where
@@ -91,10 +91,12 @@ instance Data.FromJSON Evaluation where
       "Evaluation"
       ( \x ->
           Evaluation'
-            Prelude.<$> ( x Data..:? "approvalRulesNotSatisfied"
+            Prelude.<$> ( x
+                            Data..:? "approvalRulesNotSatisfied"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "approvalRulesSatisfied"
+            Prelude.<*> ( x
+                            Data..:? "approvalRulesSatisfied"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "approved")

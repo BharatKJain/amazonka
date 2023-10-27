@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DateDimensionField
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DateDimensionField where
@@ -169,7 +169,8 @@ instance Data.FromJSON DateDimensionField where
 
 instance Prelude.Hashable DateDimensionField where
   hashWithSalt _salt DateDimensionField' {..} =
-    _salt `Prelude.hashWithSalt` dateGranularity
+    _salt
+      `Prelude.hashWithSalt` dateGranularity
       `Prelude.hashWithSalt` formatConfiguration
       `Prelude.hashWithSalt` hierarchyId
       `Prelude.hashWithSalt` fieldId

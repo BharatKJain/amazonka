@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFRegional.ListRegexPatternSets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest ListRegexPatternSets where
       ( \s h x ->
           ListRegexPatternSetsResponse'
             Prelude.<$> (x Data..?> "NextMarker")
-            Prelude.<*> ( x Data..?> "RegexPatternSets"
+            Prelude.<*> ( x
+                            Data..?> "RegexPatternSets"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -143,7 +144,8 @@ instance Core.AWSRequest ListRegexPatternSets where
 
 instance Prelude.Hashable ListRegexPatternSets where
   hashWithSalt _salt ListRegexPatternSets' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextMarker
 
 instance Prelude.NFData ListRegexPatternSets where

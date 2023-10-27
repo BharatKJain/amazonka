@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SESV2.CreateDedicatedIpPool
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest CreateDedicatedIpPool where
 
 instance Prelude.Hashable CreateDedicatedIpPool where
   hashWithSalt _salt CreateDedicatedIpPool' {..} =
-    _salt `Prelude.hashWithSalt` scalingMode
+    _salt
+      `Prelude.hashWithSalt` scalingMode
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` poolName
 

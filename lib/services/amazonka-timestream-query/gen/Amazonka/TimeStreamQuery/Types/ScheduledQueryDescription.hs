@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamQuery.Types.ScheduledQueryDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamQuery.Types.ScheduledQueryDescription where
@@ -221,7 +221,8 @@ instance Data.FromJSON ScheduledQueryDescription where
             Prelude.<*> (x Data..:? "LastRunSummary")
             Prelude.<*> (x Data..:? "NextInvocationTime")
             Prelude.<*> (x Data..:? "PreviousInvocationTime")
-            Prelude.<*> ( x Data..:? "RecentlyFailedRuns"
+            Prelude.<*> ( x
+                            Data..:? "RecentlyFailedRuns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ScheduledQueryExecutionRoleArn")
@@ -236,7 +237,8 @@ instance Data.FromJSON ScheduledQueryDescription where
 
 instance Prelude.Hashable ScheduledQueryDescription where
   hashWithSalt _salt ScheduledQueryDescription' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` errorReportConfiguration
       `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` lastRunSummary

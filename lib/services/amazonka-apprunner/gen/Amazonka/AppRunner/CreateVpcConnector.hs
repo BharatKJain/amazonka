@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppRunner.CreateVpcConnector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -152,7 +152,8 @@ instance Core.AWSRequest CreateVpcConnector where
 
 instance Prelude.Hashable CreateVpcConnector where
   hashWithSalt _salt CreateVpcConnector' {..} =
-    _salt `Prelude.hashWithSalt` securityGroups
+    _salt
+      `Prelude.hashWithSalt` securityGroups
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` vpcConnectorName
       `Prelude.hashWithSalt` subnets

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.DeleteResourceDataSync
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,7 +102,8 @@ instance Core.AWSRequest DeleteResourceDataSync where
 
 instance Prelude.Hashable DeleteResourceDataSync where
   hashWithSalt _salt DeleteResourceDataSync' {..} =
-    _salt `Prelude.hashWithSalt` syncType
+    _salt
+      `Prelude.hashWithSalt` syncType
       `Prelude.hashWithSalt` syncName
 
 instance Prelude.NFData DeleteResourceDataSync where

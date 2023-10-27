@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Shield.Types.SummarizedCounter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Shield.Types.SummarizedCounter where
@@ -114,7 +114,8 @@ instance Data.FromJSON SummarizedCounter where
 
 instance Prelude.Hashable SummarizedCounter where
   hashWithSalt _salt SummarizedCounter' {..} =
-    _salt `Prelude.hashWithSalt` average
+    _salt
+      `Prelude.hashWithSalt` average
       `Prelude.hashWithSalt` max
       `Prelude.hashWithSalt` n
       `Prelude.hashWithSalt` name

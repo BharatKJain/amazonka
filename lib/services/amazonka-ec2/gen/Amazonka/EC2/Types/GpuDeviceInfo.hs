@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.GpuDeviceInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.GpuDeviceInfo where
@@ -92,7 +92,8 @@ instance Data.FromXML GpuDeviceInfo where
 
 instance Prelude.Hashable GpuDeviceInfo where
   hashWithSalt _salt GpuDeviceInfo' {..} =
-    _salt `Prelude.hashWithSalt` count
+    _salt
+      `Prelude.hashWithSalt` count
       `Prelude.hashWithSalt` manufacturer
       `Prelude.hashWithSalt` memoryInfo
       `Prelude.hashWithSalt` name

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpenSearch.DescribeReservedInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,7 +130,8 @@ instance Core.AWSRequest DescribeReservedInstances where
       ( \s h x ->
           DescribeReservedInstancesResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "ReservedInstances"
+            Prelude.<*> ( x
+                            Data..?> "ReservedInstances"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -138,7 +139,8 @@ instance Core.AWSRequest DescribeReservedInstances where
 
 instance Prelude.Hashable DescribeReservedInstances where
   hashWithSalt _salt DescribeReservedInstances' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` reservedInstanceId
 

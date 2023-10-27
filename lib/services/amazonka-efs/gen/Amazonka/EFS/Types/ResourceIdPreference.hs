@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EFS.Types.ResourceIdPreference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EFS.Types.ResourceIdPreference where
@@ -84,7 +84,8 @@ instance Data.FromJSON ResourceIdPreference where
 
 instance Prelude.Hashable ResourceIdPreference where
   hashWithSalt _salt ResourceIdPreference' {..} =
-    _salt `Prelude.hashWithSalt` resourceIdType
+    _salt
+      `Prelude.hashWithSalt` resourceIdType
       `Prelude.hashWithSalt` resources
 
 instance Prelude.NFData ResourceIdPreference where

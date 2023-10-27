@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FMS.BatchDisassociateResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest BatchDisassociateResource where
 
 instance Prelude.Hashable BatchDisassociateResource where
   hashWithSalt _salt BatchDisassociateResource' {..} =
-    _salt `Prelude.hashWithSalt` resourceSetIdentifier
+    _salt
+      `Prelude.hashWithSalt` resourceSetIdentifier
       `Prelude.hashWithSalt` items
 
 instance Prelude.NFData BatchDisassociateResource where

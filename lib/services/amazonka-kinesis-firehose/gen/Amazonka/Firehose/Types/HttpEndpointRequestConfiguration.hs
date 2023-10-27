@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.HttpEndpointRequestConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.HttpEndpointRequestConfiguration where
@@ -86,7 +86,8 @@ instance
       "HttpEndpointRequestConfiguration"
       ( \x ->
           HttpEndpointRequestConfiguration'
-            Prelude.<$> ( x Data..:? "CommonAttributes"
+            Prelude.<$> ( x
+                            Data..:? "CommonAttributes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ContentEncoding")
@@ -99,7 +100,8 @@ instance
   hashWithSalt
     _salt
     HttpEndpointRequestConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` commonAttributes
+      _salt
+        `Prelude.hashWithSalt` commonAttributes
         `Prelude.hashWithSalt` contentEncoding
 
 instance

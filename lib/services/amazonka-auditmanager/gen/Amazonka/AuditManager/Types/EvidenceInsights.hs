@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.EvidenceInsights
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.EvidenceInsights where
@@ -128,7 +128,8 @@ instance Data.FromJSON EvidenceInsights where
 
 instance Prelude.Hashable EvidenceInsights where
   hashWithSalt _salt EvidenceInsights' {..} =
-    _salt `Prelude.hashWithSalt` compliantEvidenceCount
+    _salt
+      `Prelude.hashWithSalt` compliantEvidenceCount
       `Prelude.hashWithSalt` inconclusiveEvidenceCount
       `Prelude.hashWithSalt` noncompliantEvidenceCount
 

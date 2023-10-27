@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.TestResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.TestResult where
@@ -120,7 +120,8 @@ instance Data.FromXML TestResult where
     TestResult'
       Prelude.<$> (x Data..@? "ComputeUtilization")
       Prelude.<*> (x Data..@? "FunctionErrorMessage")
-      Prelude.<*> ( x Data..@? "FunctionExecutionLogs"
+      Prelude.<*> ( x
+                      Data..@? "FunctionExecutionLogs"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may
                         ( Prelude.fmap
@@ -133,7 +134,8 @@ instance Data.FromXML TestResult where
 
 instance Prelude.Hashable TestResult where
   hashWithSalt _salt TestResult' {..} =
-    _salt `Prelude.hashWithSalt` computeUtilization
+    _salt
+      `Prelude.hashWithSalt` computeUtilization
       `Prelude.hashWithSalt` functionErrorMessage
       `Prelude.hashWithSalt` functionExecutionLogs
       `Prelude.hashWithSalt` functionOutput

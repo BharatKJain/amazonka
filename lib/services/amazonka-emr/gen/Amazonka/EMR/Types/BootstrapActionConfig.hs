@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.BootstrapActionConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.BootstrapActionConfig where
@@ -71,7 +71,8 @@ bootstrapActionConfig_scriptBootstrapAction = Lens.lens (\BootstrapActionConfig'
 
 instance Prelude.Hashable BootstrapActionConfig where
   hashWithSalt _salt BootstrapActionConfig' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` scriptBootstrapAction
 
 instance Prelude.NFData BootstrapActionConfig where

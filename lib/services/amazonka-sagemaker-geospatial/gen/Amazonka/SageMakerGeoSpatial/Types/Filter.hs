@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.Filter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.Filter where
@@ -99,7 +99,8 @@ instance Data.FromJSON Filter where
 
 instance Prelude.Hashable Filter where
   hashWithSalt _salt Filter' {..} =
-    _salt `Prelude.hashWithSalt` maximum
+    _salt
+      `Prelude.hashWithSalt` maximum
       `Prelude.hashWithSalt` minimum
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'

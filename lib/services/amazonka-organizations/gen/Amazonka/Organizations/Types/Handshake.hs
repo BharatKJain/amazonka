@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Organizations.Types.Handshake
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Organizations.Types.Handshake where
@@ -305,7 +305,8 @@ instance Data.FromJSON Handshake where
 
 instance Prelude.Hashable Handshake where
   hashWithSalt _salt Handshake' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` expirationTimestamp
       `Prelude.hashWithSalt` id

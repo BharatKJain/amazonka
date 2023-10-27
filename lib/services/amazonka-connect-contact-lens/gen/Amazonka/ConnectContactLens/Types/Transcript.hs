@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectContactLens.Types.Transcript
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectContactLens.Types.Transcript where
@@ -160,7 +160,8 @@ instance Data.FromJSON Transcript where
 
 instance Prelude.Hashable Transcript where
   hashWithSalt _salt Transcript' {..} =
-    _salt `Prelude.hashWithSalt` issuesDetected
+    _salt
+      `Prelude.hashWithSalt` issuesDetected
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` participantId
       `Prelude.hashWithSalt` participantRole

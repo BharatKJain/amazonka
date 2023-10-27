@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.CustomExtension
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.CustomExtension where
@@ -86,7 +86,8 @@ customExtension_value = Lens.lens (\CustomExtension' {value} -> value) (\s@Custo
 
 instance Prelude.Hashable CustomExtension where
   hashWithSalt _salt CustomExtension' {..} =
-    _salt `Prelude.hashWithSalt` critical
+    _salt
+      `Prelude.hashWithSalt` critical
       `Prelude.hashWithSalt` objectIdentifier
       `Prelude.hashWithSalt` value
 

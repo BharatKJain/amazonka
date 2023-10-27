@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.EncryptionInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.EncryptionInfo where
@@ -78,7 +78,8 @@ instance Data.FromJSON EncryptionInfo where
 
 instance Prelude.Hashable EncryptionInfo where
   hashWithSalt _salt EncryptionInfo' {..} =
-    _salt `Prelude.hashWithSalt` encryptionAtRest
+    _salt
+      `Prelude.hashWithSalt` encryptionAtRest
       `Prelude.hashWithSalt` encryptionInTransit
 
 instance Prelude.NFData EncryptionInfo where

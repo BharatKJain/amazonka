@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.WebvttHlsSourceSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.WebvttHlsSourceSettings where
@@ -94,7 +94,8 @@ instance Data.FromJSON WebvttHlsSourceSettings where
 
 instance Prelude.Hashable WebvttHlsSourceSettings where
   hashWithSalt _salt WebvttHlsSourceSettings' {..} =
-    _salt `Prelude.hashWithSalt` renditionGroupId
+    _salt
+      `Prelude.hashWithSalt` renditionGroupId
       `Prelude.hashWithSalt` renditionLanguageCode
       `Prelude.hashWithSalt` renditionName
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.SelfManagedKafkaAccessConfigurationVpc
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.SelfManagedKafkaAccessConfigurationVpc where
@@ -96,7 +96,8 @@ instance
   hashWithSalt
     _salt
     SelfManagedKafkaAccessConfigurationVpc' {..} =
-      _salt `Prelude.hashWithSalt` securityGroup
+      _salt
+        `Prelude.hashWithSalt` securityGroup
         `Prelude.hashWithSalt` subnets
 
 instance

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTSecureTunneling.ListTunnels
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance Core.AWSRequest ListTunnels where
       ( \s h x ->
           ListTunnelsResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "tunnelSummaries"
+            Prelude.<*> ( x
+                            Data..?> "tunnelSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -121,7 +122,8 @@ instance Core.AWSRequest ListTunnels where
 
 instance Prelude.Hashable ListTunnels where
   hashWithSalt _salt ListTunnels' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` thingName
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.SMSMessageActivity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.SMSMessageActivity where
@@ -136,7 +136,8 @@ instance Data.FromJSON SMSMessageActivity where
 
 instance Prelude.Hashable SMSMessageActivity where
   hashWithSalt _salt SMSMessageActivity' {..} =
-    _salt `Prelude.hashWithSalt` messageConfig
+    _salt
+      `Prelude.hashWithSalt` messageConfig
       `Prelude.hashWithSalt` nextActivity
       `Prelude.hashWithSalt` templateName
       `Prelude.hashWithSalt` templateVersion

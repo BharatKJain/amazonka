@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkDocs.Types.User
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkDocs.Types.User where
@@ -208,7 +208,8 @@ instance Data.FromJSON User where
 
 instance Prelude.Hashable User where
   hashWithSalt _salt User' {..} =
-    _salt `Prelude.hashWithSalt` createdTimestamp
+    _salt
+      `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` emailAddress
       `Prelude.hashWithSalt` givenName
       `Prelude.hashWithSalt` id

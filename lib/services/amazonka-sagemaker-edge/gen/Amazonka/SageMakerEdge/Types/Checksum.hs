@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerEdge.Types.Checksum
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerEdge.Types.Checksum where
@@ -69,12 +69,14 @@ instance Data.FromJSON Checksum where
       "Checksum"
       ( \x ->
           Checksum'
-            Prelude.<$> (x Data..:? "Sum") Prelude.<*> (x Data..:? "Type")
+            Prelude.<$> (x Data..:? "Sum")
+            Prelude.<*> (x Data..:? "Type")
       )
 
 instance Prelude.Hashable Checksum where
   hashWithSalt _salt Checksum' {..} =
-    _salt `Prelude.hashWithSalt` sum
+    _salt
+      `Prelude.hashWithSalt` sum
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData Checksum where

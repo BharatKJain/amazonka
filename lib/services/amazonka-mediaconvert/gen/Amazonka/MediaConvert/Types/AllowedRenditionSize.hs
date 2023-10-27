@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.AllowedRenditionSize
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.AllowedRenditionSize where
@@ -99,7 +99,8 @@ instance Data.FromJSON AllowedRenditionSize where
 
 instance Prelude.Hashable AllowedRenditionSize where
   hashWithSalt _salt AllowedRenditionSize' {..} =
-    _salt `Prelude.hashWithSalt` height
+    _salt
+      `Prelude.hashWithSalt` height
       `Prelude.hashWithSalt` required
       `Prelude.hashWithSalt` width
 

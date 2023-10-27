@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.User
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.User where
@@ -255,7 +255,9 @@ instance Data.FromXML User where
       Prelude.<$> (x Data..@? "PasswordLastUsed")
       Prelude.<*> (x Data..@? "Path")
       Prelude.<*> (x Data..@? "PermissionsBoundary")
-      Prelude.<*> ( x Data..@? "Tags" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Tags"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@ "UserName")
@@ -265,7 +267,8 @@ instance Data.FromXML User where
 
 instance Prelude.Hashable User where
   hashWithSalt _salt User' {..} =
-    _salt `Prelude.hashWithSalt` passwordLastUsed
+    _salt
+      `Prelude.hashWithSalt` passwordLastUsed
       `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` permissionsBoundary
       `Prelude.hashWithSalt` tags

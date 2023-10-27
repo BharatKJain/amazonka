@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManagerUserSubscriptions.Types.InstanceUserSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManagerUserSubscriptions.Types.InstanceUserSummary where
@@ -148,7 +148,8 @@ instance Data.FromJSON InstanceUserSummary where
 
 instance Prelude.Hashable InstanceUserSummary where
   hashWithSalt _salt InstanceUserSummary' {..} =
-    _salt `Prelude.hashWithSalt` associationDate
+    _salt
+      `Prelude.hashWithSalt` associationDate
       `Prelude.hashWithSalt` disassociationDate
       `Prelude.hashWithSalt` domain
       `Prelude.hashWithSalt` statusMessage

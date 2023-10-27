@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.DeletionTaskFailureReasonType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.DeletionTaskFailureReasonType where
@@ -92,7 +92,9 @@ instance Data.FromXML DeletionTaskFailureReasonType where
   parseXML x =
     DeletionTaskFailureReasonType'
       Prelude.<$> (x Data..@? "Reason")
-      Prelude.<*> ( x Data..@? "RoleUsageList" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "RoleUsageList"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 
@@ -101,7 +103,8 @@ instance
     DeletionTaskFailureReasonType
   where
   hashWithSalt _salt DeletionTaskFailureReasonType' {..} =
-    _salt `Prelude.hashWithSalt` reason
+    _salt
+      `Prelude.hashWithSalt` reason
       `Prelude.hashWithSalt` roleUsageList
 
 instance Prelude.NFData DeletionTaskFailureReasonType where

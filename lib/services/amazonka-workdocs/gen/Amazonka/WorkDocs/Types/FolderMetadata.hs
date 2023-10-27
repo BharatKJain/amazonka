@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkDocs.Types.FolderMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkDocs.Types.FolderMetadata where
@@ -168,7 +168,8 @@ instance Data.FromJSON FolderMetadata where
 
 instance Prelude.Hashable FolderMetadata where
   hashWithSalt _salt FolderMetadata' {..} =
-    _salt `Prelude.hashWithSalt` createdTimestamp
+    _salt
+      `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` creatorId
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` labels

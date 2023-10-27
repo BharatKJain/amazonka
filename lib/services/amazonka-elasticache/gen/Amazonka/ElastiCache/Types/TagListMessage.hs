@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.TagListMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.TagListMessage where
@@ -56,7 +56,9 @@ tagListMessage_tagList = Lens.lens (\TagListMessage' {tagList} -> tagList) (\s@T
 instance Data.FromXML TagListMessage where
   parseXML x =
     TagListMessage'
-      Prelude.<$> ( x Data..@? "TagList" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "TagList"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Tag")
                   )
 

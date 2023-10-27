@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataExchange.SendApiAsset
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -185,7 +185,8 @@ instance Core.AWSRequest SendApiAsset where
 
 instance Prelude.Hashable SendApiAsset where
   hashWithSalt _salt SendApiAsset' {..} =
-    _salt `Prelude.hashWithSalt` body
+    _salt
+      `Prelude.hashWithSalt` body
       `Prelude.hashWithSalt` method
       `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` queryStringParameters

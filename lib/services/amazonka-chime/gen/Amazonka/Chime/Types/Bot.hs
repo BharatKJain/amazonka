@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.Bot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.Bot where
@@ -149,7 +149,8 @@ instance Data.FromJSON Bot where
 
 instance Prelude.Hashable Bot where
   hashWithSalt _salt Bot' {..} =
-    _salt `Prelude.hashWithSalt` botEmail
+    _salt
+      `Prelude.hashWithSalt` botEmail
       `Prelude.hashWithSalt` botId
       `Prelude.hashWithSalt` botType
       `Prelude.hashWithSalt` createdTimestamp

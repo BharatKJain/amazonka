@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCampaigns.Types.InstanceOnboardingJobStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCampaigns.Types.InstanceOnboardingJobStatus where
@@ -90,7 +90,8 @@ instance Data.FromJSON InstanceOnboardingJobStatus where
 
 instance Prelude.Hashable InstanceOnboardingJobStatus where
   hashWithSalt _salt InstanceOnboardingJobStatus' {..} =
-    _salt `Prelude.hashWithSalt` failureCode
+    _salt
+      `Prelude.hashWithSalt` failureCode
       `Prelude.hashWithSalt` connectInstanceId
       `Prelude.hashWithSalt` status
 

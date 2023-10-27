@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.GatewayRouteTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.GatewayRouteTarget where
@@ -77,7 +77,8 @@ instance Data.FromJSON GatewayRouteTarget where
 
 instance Prelude.Hashable GatewayRouteTarget where
   hashWithSalt _salt GatewayRouteTarget' {..} =
-    _salt `Prelude.hashWithSalt` port
+    _salt
+      `Prelude.hashWithSalt` port
       `Prelude.hashWithSalt` virtualService
 
 instance Prelude.NFData GatewayRouteTarget where

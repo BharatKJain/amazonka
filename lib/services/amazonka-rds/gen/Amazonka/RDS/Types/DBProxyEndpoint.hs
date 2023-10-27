@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.DBProxyEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.DBProxyEndpoint where
@@ -203,17 +203,21 @@ instance Data.FromXML DBProxyEndpoint where
       Prelude.<*> (x Data..@? "Status")
       Prelude.<*> (x Data..@? "TargetRole")
       Prelude.<*> (x Data..@? "VpcId")
-      Prelude.<*> ( x Data..@? "VpcSecurityGroupIds"
+      Prelude.<*> ( x
+                      Data..@? "VpcSecurityGroupIds"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "VpcSubnetIds" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "VpcSubnetIds"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 
 instance Prelude.Hashable DBProxyEndpoint where
   hashWithSalt _salt DBProxyEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` createdDate
+    _salt
+      `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` dbProxyEndpointArn
       `Prelude.hashWithSalt` dbProxyEndpointName
       `Prelude.hashWithSalt` dbProxyName

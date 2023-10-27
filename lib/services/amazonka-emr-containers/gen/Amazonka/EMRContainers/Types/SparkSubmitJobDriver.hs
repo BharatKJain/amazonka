@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRContainers.Types.SparkSubmitJobDriver
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRContainers.Types.SparkSubmitJobDriver where
@@ -80,7 +80,8 @@ instance Data.FromJSON SparkSubmitJobDriver where
       "SparkSubmitJobDriver"
       ( \x ->
           SparkSubmitJobDriver'
-            Prelude.<$> ( x Data..:? "entryPointArguments"
+            Prelude.<$> ( x
+                            Data..:? "entryPointArguments"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "sparkSubmitParameters")
@@ -89,7 +90,8 @@ instance Data.FromJSON SparkSubmitJobDriver where
 
 instance Prelude.Hashable SparkSubmitJobDriver where
   hashWithSalt _salt SparkSubmitJobDriver' {..} =
-    _salt `Prelude.hashWithSalt` entryPointArguments
+    _salt
+      `Prelude.hashWithSalt` entryPointArguments
       `Prelude.hashWithSalt` sparkSubmitParameters
       `Prelude.hashWithSalt` entryPoint
 

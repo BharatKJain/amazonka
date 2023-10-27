@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudSearch.UpdateDomainEndpointOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,8 @@ instance Core.AWSRequest UpdateDomainEndpointOptions where
 
 instance Prelude.Hashable UpdateDomainEndpointOptions where
   hashWithSalt _salt UpdateDomainEndpointOptions' {..} =
-    _salt `Prelude.hashWithSalt` domainName
+    _salt
+      `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` domainEndpointOptions
 
 instance Prelude.NFData UpdateDomainEndpointOptions where

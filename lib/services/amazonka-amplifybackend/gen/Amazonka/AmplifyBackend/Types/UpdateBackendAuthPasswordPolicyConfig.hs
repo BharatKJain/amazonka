@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyBackend.Types.UpdateBackendAuthPasswordPolicyConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyBackend.Types.UpdateBackendAuthPasswordPolicyConfig where
@@ -78,7 +78,8 @@ instance
   hashWithSalt
     _salt
     UpdateBackendAuthPasswordPolicyConfig' {..} =
-      _salt `Prelude.hashWithSalt` additionalConstraints
+      _salt
+        `Prelude.hashWithSalt` additionalConstraints
         `Prelude.hashWithSalt` minimumLength
 
 instance

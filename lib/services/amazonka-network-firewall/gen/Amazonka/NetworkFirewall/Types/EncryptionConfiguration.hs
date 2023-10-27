@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.EncryptionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.EncryptionConfiguration where
@@ -100,12 +100,14 @@ instance Data.FromJSON EncryptionConfiguration where
       "EncryptionConfiguration"
       ( \x ->
           EncryptionConfiguration'
-            Prelude.<$> (x Data..:? "KeyId") Prelude.<*> (x Data..: "Type")
+            Prelude.<$> (x Data..:? "KeyId")
+            Prelude.<*> (x Data..: "Type")
       )
 
 instance Prelude.Hashable EncryptionConfiguration where
   hashWithSalt _salt EncryptionConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` keyId
+    _salt
+      `Prelude.hashWithSalt` keyId
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData EncryptionConfiguration where

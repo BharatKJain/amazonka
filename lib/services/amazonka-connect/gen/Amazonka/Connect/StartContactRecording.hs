@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.StartContactRecording
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -157,7 +157,8 @@ instance Core.AWSRequest StartContactRecording where
 
 instance Prelude.Hashable StartContactRecording where
   hashWithSalt _salt StartContactRecording' {..} =
-    _salt `Prelude.hashWithSalt` instanceId
+    _salt
+      `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` contactId
       `Prelude.hashWithSalt` initialContactId
       `Prelude.hashWithSalt` voiceRecordingConfiguration

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchListIncomingTypedLinks
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchListIncomingTypedLinks where
@@ -114,7 +114,8 @@ batchListIncomingTypedLinks_objectReference = Lens.lens (\BatchListIncomingTyped
 
 instance Prelude.Hashable BatchListIncomingTypedLinks where
   hashWithSalt _salt BatchListIncomingTypedLinks' {..} =
-    _salt `Prelude.hashWithSalt` filterAttributeRanges
+    _salt
+      `Prelude.hashWithSalt` filterAttributeRanges
       `Prelude.hashWithSalt` filterTypedLink
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

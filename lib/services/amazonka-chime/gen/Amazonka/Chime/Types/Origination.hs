@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.Origination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.Origination where
@@ -91,7 +91,8 @@ instance Data.FromJSON Origination where
 
 instance Prelude.Hashable Origination where
   hashWithSalt _salt Origination' {..} =
-    _salt `Prelude.hashWithSalt` disabled
+    _salt
+      `Prelude.hashWithSalt` disabled
       `Prelude.hashWithSalt` routes
 
 instance Prelude.NFData Origination where

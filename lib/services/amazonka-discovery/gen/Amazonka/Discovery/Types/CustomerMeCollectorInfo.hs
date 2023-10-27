@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Discovery.Types.CustomerMeCollectorInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Discovery.Types.CustomerMeCollectorInfo where
@@ -146,7 +146,8 @@ instance Data.FromJSON CustomerMeCollectorInfo where
 
 instance Prelude.Hashable CustomerMeCollectorInfo where
   hashWithSalt _salt CustomerMeCollectorInfo' {..} =
-    _salt `Prelude.hashWithSalt` activeMeCollectors
+    _salt
+      `Prelude.hashWithSalt` activeMeCollectors
       `Prelude.hashWithSalt` healthyMeCollectors
       `Prelude.hashWithSalt` denyListedMeCollectors
       `Prelude.hashWithSalt` shutdownMeCollectors

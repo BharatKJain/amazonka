@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsWafWebAclDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsWafWebAclDetails where
@@ -105,7 +105,8 @@ instance Data.FromJSON AwsWafWebAclDetails where
 
 instance Prelude.Hashable AwsWafWebAclDetails where
   hashWithSalt _salt AwsWafWebAclDetails' {..} =
-    _salt `Prelude.hashWithSalt` defaultAction
+    _salt
+      `Prelude.hashWithSalt` defaultAction
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` rules
       `Prelude.hashWithSalt` webAclId

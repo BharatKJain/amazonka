@@ -16,7 +16,7 @@
 -- Module      : Amazonka.PinpointEmail.GetDeliverabilityDashboardOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -101,15 +101,17 @@ instance
       ( \s h x ->
           GetDeliverabilityDashboardOptionsResponse'
             Prelude.<$> (x Data..?> "AccountStatus")
-              Prelude.<*> ( x Data..?> "ActiveSubscribedDomains"
-                              Core..!@ Prelude.mempty
-                          )
-              Prelude.<*> ( x Data..?> "PendingExpirationSubscribedDomains"
-                              Core..!@ Prelude.mempty
-                          )
-              Prelude.<*> (x Data..?> "SubscriptionExpiryDate")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> (x Data..:> "DashboardEnabled")
+            Prelude.<*> ( x
+                            Data..?> "ActiveSubscribedDomains"
+                            Core..!@ Prelude.mempty
+                        )
+            Prelude.<*> ( x
+                            Data..?> "PendingExpirationSubscribedDomains"
+                            Core..!@ Prelude.mempty
+                        )
+            Prelude.<*> (x Data..?> "SubscriptionExpiryDate")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..:> "DashboardEnabled")
       )
 
 instance

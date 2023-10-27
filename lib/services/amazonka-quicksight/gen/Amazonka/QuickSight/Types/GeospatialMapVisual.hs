@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.GeospatialMapVisual
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.GeospatialMapVisual where
@@ -123,7 +123,8 @@ instance Data.FromJSON GeospatialMapVisual where
           GeospatialMapVisual'
             Prelude.<$> (x Data..:? "Actions" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "ChartConfiguration")
-            Prelude.<*> ( x Data..:? "ColumnHierarchies"
+            Prelude.<*> ( x
+                            Data..:? "ColumnHierarchies"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Subtitle")
@@ -133,7 +134,8 @@ instance Data.FromJSON GeospatialMapVisual where
 
 instance Prelude.Hashable GeospatialMapVisual where
   hashWithSalt _salt GeospatialMapVisual' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` chartConfiguration
       `Prelude.hashWithSalt` columnHierarchies
       `Prelude.hashWithSalt` subtitle

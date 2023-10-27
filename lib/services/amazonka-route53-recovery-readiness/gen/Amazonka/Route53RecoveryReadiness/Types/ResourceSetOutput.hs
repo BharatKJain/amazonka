@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53RecoveryReadiness.Types.ResourceSetOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53RecoveryReadiness.Types.ResourceSetOutput where
@@ -146,7 +146,8 @@ instance Data.FromJSON ResourceSetOutput where
 
 instance Prelude.Hashable ResourceSetOutput where
   hashWithSalt _salt ResourceSetOutput' {..} =
-    _salt `Prelude.hashWithSalt` tags
+    _salt
+      `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` resourceSetType
       `Prelude.hashWithSalt` resourceSetName
       `Prelude.hashWithSalt` resourceSetArn

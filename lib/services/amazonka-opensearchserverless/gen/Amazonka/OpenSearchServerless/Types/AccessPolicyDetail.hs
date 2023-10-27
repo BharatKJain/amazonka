@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearchServerless.Types.AccessPolicyDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearchServerless.Types.AccessPolicyDetail where
@@ -126,7 +126,8 @@ instance Data.FromJSON AccessPolicyDetail where
 
 instance Prelude.Hashable AccessPolicyDetail where
   hashWithSalt _salt AccessPolicyDetail' {..} =
-    _salt `Prelude.hashWithSalt` createdDate
+    _salt
+      `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` lastModifiedDate
       `Prelude.hashWithSalt` name

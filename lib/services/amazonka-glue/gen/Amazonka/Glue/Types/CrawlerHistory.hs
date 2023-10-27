@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.CrawlerHistory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.CrawlerHistory where
@@ -158,7 +158,8 @@ instance Data.FromJSON CrawlerHistory where
 
 instance Prelude.Hashable CrawlerHistory where
   hashWithSalt _salt CrawlerHistory' {..} =
-    _salt `Prelude.hashWithSalt` crawlId
+    _salt
+      `Prelude.hashWithSalt` crawlId
       `Prelude.hashWithSalt` dPUHour
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` errorMessage

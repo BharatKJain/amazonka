@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.GetStaticIps
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -92,21 +92,22 @@ instance Core.AWSPager GetStaticIps where
     | Core.stop
         ( rs
             Lens.^? getStaticIpsResponse_nextPageToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? getStaticIpsResponse_staticIps Prelude.. Lens._Just
+            Lens.^? getStaticIpsResponse_staticIps
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getStaticIps_pageToken
           Lens..~ rs
           Lens.^? getStaticIpsResponse_nextPageToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetStaticIps where
   type AWSResponse GetStaticIps = GetStaticIpsResponse

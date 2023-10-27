@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.CaptionSelector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.CaptionSelector where
@@ -134,7 +134,8 @@ instance Data.FromJSON CaptionSelector where
 
 instance Prelude.Hashable CaptionSelector where
   hashWithSalt _salt CaptionSelector' {..} =
-    _salt `Prelude.hashWithSalt` customLanguageCode
+    _salt
+      `Prelude.hashWithSalt` customLanguageCode
       `Prelude.hashWithSalt` languageCode
       `Prelude.hashWithSalt` sourceSettings
 

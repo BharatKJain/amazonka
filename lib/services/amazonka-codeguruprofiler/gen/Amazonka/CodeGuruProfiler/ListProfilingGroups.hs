@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeGuruProfiler.ListProfilingGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -160,18 +160,21 @@ instance Core.AWSRequest ListProfilingGroups where
       ( \s h x ->
           ListProfilingGroupsResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "profilingGroups"
+            Prelude.<*> ( x
+                            Data..?> "profilingGroups"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "profilingGroupNames"
+            Prelude.<*> ( x
+                            Data..?> "profilingGroupNames"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListProfilingGroups where
   hashWithSalt _salt ListProfilingGroups' {..} =
-    _salt `Prelude.hashWithSalt` includeDescription
+    _salt
+      `Prelude.hashWithSalt` includeDescription
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

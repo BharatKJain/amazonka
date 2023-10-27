@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataSync.CreateAgent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -263,7 +263,8 @@ instance Core.AWSRequest CreateAgent where
 
 instance Prelude.Hashable CreateAgent where
   hashWithSalt _salt CreateAgent' {..} =
-    _salt `Prelude.hashWithSalt` agentName
+    _salt
+      `Prelude.hashWithSalt` agentName
       `Prelude.hashWithSalt` securityGroupArns
       `Prelude.hashWithSalt` subnetArns
       `Prelude.hashWithSalt` tags

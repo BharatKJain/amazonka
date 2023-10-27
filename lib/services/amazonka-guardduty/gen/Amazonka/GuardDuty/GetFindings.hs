@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GuardDuty.GetFindings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance Core.AWSRequest GetFindings where
 
 instance Prelude.Hashable GetFindings where
   hashWithSalt _salt GetFindings' {..} =
-    _salt `Prelude.hashWithSalt` sortCriteria
+    _salt
+      `Prelude.hashWithSalt` sortCriteria
       `Prelude.hashWithSalt` detectorId
       `Prelude.hashWithSalt` findingIds
 

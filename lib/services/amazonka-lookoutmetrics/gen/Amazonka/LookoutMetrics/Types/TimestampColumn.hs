@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.TimestampColumn
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.TimestampColumn where
@@ -75,7 +75,8 @@ instance Data.FromJSON TimestampColumn where
 
 instance Prelude.Hashable TimestampColumn where
   hashWithSalt _salt TimestampColumn' {..} =
-    _salt `Prelude.hashWithSalt` columnFormat
+    _salt
+      `Prelude.hashWithSalt` columnFormat
       `Prelude.hashWithSalt` columnName
 
 instance Prelude.NFData TimestampColumn where

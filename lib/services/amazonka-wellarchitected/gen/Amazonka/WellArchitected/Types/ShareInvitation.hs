@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.ShareInvitation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.ShareInvitation where
@@ -103,7 +103,8 @@ instance Data.FromJSON ShareInvitation where
 
 instance Prelude.Hashable ShareInvitation where
   hashWithSalt _salt ShareInvitation' {..} =
-    _salt `Prelude.hashWithSalt` lensAlias
+    _salt
+      `Prelude.hashWithSalt` lensAlias
       `Prelude.hashWithSalt` lensArn
       `Prelude.hashWithSalt` shareInvitationId
       `Prelude.hashWithSalt` shareResourceType

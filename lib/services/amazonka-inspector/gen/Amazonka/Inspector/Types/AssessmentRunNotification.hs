@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.AssessmentRunNotification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.AssessmentRunNotification where
@@ -126,7 +126,8 @@ instance Data.FromJSON AssessmentRunNotification where
 
 instance Prelude.Hashable AssessmentRunNotification where
   hashWithSalt _salt AssessmentRunNotification' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` snsPublishStatusCode
       `Prelude.hashWithSalt` snsTopicArn
       `Prelude.hashWithSalt` date

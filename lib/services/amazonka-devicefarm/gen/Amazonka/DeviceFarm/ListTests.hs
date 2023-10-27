@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DeviceFarm.ListTests
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -101,20 +101,23 @@ instance Core.AWSPager ListTests where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listTestsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listTestsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listTestsResponse_tests Prelude.. Lens._Just
+            Lens.^? listTestsResponse_tests
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listTests_nextToken
           Lens..~ rs
-          Lens.^? listTestsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listTestsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListTests where
   type AWSResponse ListTests = ListTestsResponse
@@ -131,7 +134,8 @@ instance Core.AWSRequest ListTests where
 
 instance Prelude.Hashable ListTests where
   hashWithSalt _salt ListTests' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` arn
 
 instance Prelude.NFData ListTests where

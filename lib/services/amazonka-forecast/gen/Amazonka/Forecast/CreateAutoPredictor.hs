@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Forecast.CreateAutoPredictor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -466,7 +466,8 @@ instance Core.AWSRequest CreateAutoPredictor where
 
 instance Prelude.Hashable CreateAutoPredictor where
   hashWithSalt _salt CreateAutoPredictor' {..} =
-    _salt `Prelude.hashWithSalt` dataConfig
+    _salt
+      `Prelude.hashWithSalt` dataConfig
       `Prelude.hashWithSalt` encryptionConfig
       `Prelude.hashWithSalt` explainPredictor
       `Prelude.hashWithSalt` forecastDimensions

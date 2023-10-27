@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Nimble.Types.ScriptParameterKeyValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Nimble.Types.ScriptParameterKeyValue where
@@ -69,12 +69,14 @@ instance Data.FromJSON ScriptParameterKeyValue where
       "ScriptParameterKeyValue"
       ( \x ->
           ScriptParameterKeyValue'
-            Prelude.<$> (x Data..:? "key") Prelude.<*> (x Data..:? "value")
+            Prelude.<$> (x Data..:? "key")
+            Prelude.<*> (x Data..:? "value")
       )
 
 instance Prelude.Hashable ScriptParameterKeyValue where
   hashWithSalt _salt ScriptParameterKeyValue' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData ScriptParameterKeyValue where

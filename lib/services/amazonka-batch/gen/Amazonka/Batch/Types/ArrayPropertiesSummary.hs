@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.ArrayPropertiesSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.ArrayPropertiesSummary where
@@ -74,12 +74,14 @@ instance Data.FromJSON ArrayPropertiesSummary where
       "ArrayPropertiesSummary"
       ( \x ->
           ArrayPropertiesSummary'
-            Prelude.<$> (x Data..:? "index") Prelude.<*> (x Data..:? "size")
+            Prelude.<$> (x Data..:? "index")
+            Prelude.<*> (x Data..:? "size")
       )
 
 instance Prelude.Hashable ArrayPropertiesSummary where
   hashWithSalt _salt ArrayPropertiesSummary' {..} =
-    _salt `Prelude.hashWithSalt` index
+    _salt
+      `Prelude.hashWithSalt` index
       `Prelude.hashWithSalt` size
 
 instance Prelude.NFData ArrayPropertiesSummary where

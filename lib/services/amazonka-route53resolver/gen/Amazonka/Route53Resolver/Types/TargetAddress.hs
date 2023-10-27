@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53Resolver.Types.TargetAddress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53Resolver.Types.TargetAddress where
@@ -72,12 +72,14 @@ instance Data.FromJSON TargetAddress where
       "TargetAddress"
       ( \x ->
           TargetAddress'
-            Prelude.<$> (x Data..:? "Port") Prelude.<*> (x Data..: "Ip")
+            Prelude.<$> (x Data..:? "Port")
+            Prelude.<*> (x Data..: "Ip")
       )
 
 instance Prelude.Hashable TargetAddress where
   hashWithSalt _salt TargetAddress' {..} =
-    _salt `Prelude.hashWithSalt` port
+    _salt
+      `Prelude.hashWithSalt` port
       `Prelude.hashWithSalt` ip
 
 instance Prelude.NFData TargetAddress where

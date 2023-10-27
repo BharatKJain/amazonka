@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DMS.RebootReplicationInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,7 +136,8 @@ instance Core.AWSRequest RebootReplicationInstance where
 
 instance Prelude.Hashable RebootReplicationInstance where
   hashWithSalt _salt RebootReplicationInstance' {..} =
-    _salt `Prelude.hashWithSalt` forceFailover
+    _salt
+      `Prelude.hashWithSalt` forceFailover
       `Prelude.hashWithSalt` forcePlannedFailover
       `Prelude.hashWithSalt` replicationInstanceArn
 

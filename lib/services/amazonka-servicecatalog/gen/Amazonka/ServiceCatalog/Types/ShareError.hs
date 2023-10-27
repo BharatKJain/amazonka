@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ShareError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ShareError where
@@ -84,7 +84,8 @@ instance Data.FromJSON ShareError where
 
 instance Prelude.Hashable ShareError where
   hashWithSalt _salt ShareError' {..} =
-    _salt `Prelude.hashWithSalt` accounts
+    _salt
+      `Prelude.hashWithSalt` accounts
       `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` message
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.ComponentConditionProperty
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.ComponentConditionProperty where
@@ -131,7 +131,8 @@ instance Data.FromJSON ComponentConditionProperty where
 
 instance Prelude.Hashable ComponentConditionProperty where
   hashWithSalt _salt ComponentConditionProperty' {..} =
-    _salt `Prelude.hashWithSalt` else'
+    _salt
+      `Prelude.hashWithSalt` else'
       `Prelude.hashWithSalt` field
       `Prelude.hashWithSalt` operand
       `Prelude.hashWithSalt` operandType

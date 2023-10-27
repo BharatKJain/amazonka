@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RedshiftServerLess.Types.RecoveryPoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RedshiftServerLess.Types.RecoveryPoint where
@@ -118,7 +118,8 @@ instance Data.FromJSON RecoveryPoint where
 
 instance Prelude.Hashable RecoveryPoint where
   hashWithSalt _salt RecoveryPoint' {..} =
-    _salt `Prelude.hashWithSalt` namespaceArn
+    _salt
+      `Prelude.hashWithSalt` namespaceArn
       `Prelude.hashWithSalt` namespaceName
       `Prelude.hashWithSalt` recoveryPointCreateTime
       `Prelude.hashWithSalt` recoveryPointId

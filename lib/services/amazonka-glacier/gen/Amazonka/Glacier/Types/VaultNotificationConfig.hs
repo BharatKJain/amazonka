@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glacier.Types.VaultNotificationConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glacier.Types.VaultNotificationConfig where
@@ -80,7 +80,8 @@ instance Data.FromJSON VaultNotificationConfig where
 
 instance Prelude.Hashable VaultNotificationConfig where
   hashWithSalt _salt VaultNotificationConfig' {..} =
-    _salt `Prelude.hashWithSalt` events
+    _salt
+      `Prelude.hashWithSalt` events
       `Prelude.hashWithSalt` sNSTopic
 
 instance Prelude.NFData VaultNotificationConfig where

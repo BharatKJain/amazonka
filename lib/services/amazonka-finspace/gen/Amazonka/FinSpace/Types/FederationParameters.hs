@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FinSpace.Types.FederationParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FinSpace.Types.FederationParameters where
@@ -139,7 +139,8 @@ instance Data.FromJSON FederationParameters where
 
 instance Prelude.Hashable FederationParameters where
   hashWithSalt _salt FederationParameters' {..} =
-    _salt `Prelude.hashWithSalt` applicationCallBackURL
+    _salt
+      `Prelude.hashWithSalt` applicationCallBackURL
       `Prelude.hashWithSalt` attributeMap
       `Prelude.hashWithSalt` federationProviderName
       `Prelude.hashWithSalt` federationURN

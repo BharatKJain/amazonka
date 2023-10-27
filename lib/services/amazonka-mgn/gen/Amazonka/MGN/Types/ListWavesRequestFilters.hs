@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.ListWavesRequestFilters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.ListWavesRequestFilters where
@@ -65,7 +65,8 @@ listWavesRequestFilters_waveIDs = Lens.lens (\ListWavesRequestFilters' {waveIDs}
 
 instance Prelude.Hashable ListWavesRequestFilters where
   hashWithSalt _salt ListWavesRequestFilters' {..} =
-    _salt `Prelude.hashWithSalt` isArchived
+    _salt
+      `Prelude.hashWithSalt` isArchived
       `Prelude.hashWithSalt` waveIDs
 
 instance Prelude.NFData ListWavesRequestFilters where

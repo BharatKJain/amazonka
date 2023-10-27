@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.CaptionLanguageMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.CaptionLanguageMapping where
@@ -105,7 +105,8 @@ instance Data.FromJSON CaptionLanguageMapping where
 
 instance Prelude.Hashable CaptionLanguageMapping where
   hashWithSalt _salt CaptionLanguageMapping' {..} =
-    _salt `Prelude.hashWithSalt` languageCode
+    _salt
+      `Prelude.hashWithSalt` languageCode
       `Prelude.hashWithSalt` languageDescription
       `Prelude.hashWithSalt` captionChannel
 

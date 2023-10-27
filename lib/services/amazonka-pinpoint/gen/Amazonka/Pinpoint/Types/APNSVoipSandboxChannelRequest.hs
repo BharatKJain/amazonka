@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.APNSVoipSandboxChannelRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.APNSVoipSandboxChannelRequest where
@@ -154,7 +154,8 @@ instance
     APNSVoipSandboxChannelRequest
   where
   hashWithSalt _salt APNSVoipSandboxChannelRequest' {..} =
-    _salt `Prelude.hashWithSalt` bundleId
+    _salt
+      `Prelude.hashWithSalt` bundleId
       `Prelude.hashWithSalt` certificate
       `Prelude.hashWithSalt` defaultAuthenticationMethod
       `Prelude.hashWithSalt` enabled

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResourceGroupsTagging.Types.ResourceTagMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResourceGroupsTagging.Types.ResourceTagMapping where
@@ -94,7 +94,8 @@ instance Data.FromJSON ResourceTagMapping where
 
 instance Prelude.Hashable ResourceTagMapping where
   hashWithSalt _salt ResourceTagMapping' {..} =
-    _salt `Prelude.hashWithSalt` complianceDetails
+    _salt
+      `Prelude.hashWithSalt` complianceDetails
       `Prelude.hashWithSalt` resourceARN
       `Prelude.hashWithSalt` tags
 

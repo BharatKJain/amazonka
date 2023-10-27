@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.TypeConfigurationDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.TypeConfigurationDetails where
@@ -179,7 +179,8 @@ instance Data.FromXML TypeConfigurationDetails where
 
 instance Prelude.Hashable TypeConfigurationDetails where
   hashWithSalt _salt TypeConfigurationDetails' {..} =
-    _salt `Prelude.hashWithSalt` alias
+    _salt
+      `Prelude.hashWithSalt` alias
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` configuration
       `Prelude.hashWithSalt` isDefaultConfiguration

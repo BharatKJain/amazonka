@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Backup.ListReportJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -178,7 +178,8 @@ instance Core.AWSRequest ListReportJobs where
 
 instance Prelude.Hashable ListReportJobs where
   hashWithSalt _salt ListReportJobs' {..} =
-    _salt `Prelude.hashWithSalt` byCreationAfter
+    _salt
+      `Prelude.hashWithSalt` byCreationAfter
       `Prelude.hashWithSalt` byCreationBefore
       `Prelude.hashWithSalt` byReportPlanName
       `Prelude.hashWithSalt` byStatus

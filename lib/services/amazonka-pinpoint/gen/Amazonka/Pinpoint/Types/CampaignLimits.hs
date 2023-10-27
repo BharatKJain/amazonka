@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.CampaignLimits
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.CampaignLimits where
@@ -142,7 +142,8 @@ instance Data.FromJSON CampaignLimits where
 
 instance Prelude.Hashable CampaignLimits where
   hashWithSalt _salt CampaignLimits' {..} =
-    _salt `Prelude.hashWithSalt` daily
+    _salt
+      `Prelude.hashWithSalt` daily
       `Prelude.hashWithSalt` maximumDuration
       `Prelude.hashWithSalt` messagesPerSecond
       `Prelude.hashWithSalt` session

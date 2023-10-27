@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.WcdmaLocalId
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.WcdmaLocalId where
@@ -65,7 +65,8 @@ wcdmaLocalId_psc = Lens.lens (\WcdmaLocalId' {psc} -> psc) (\s@WcdmaLocalId' {} 
 
 instance Prelude.Hashable WcdmaLocalId where
   hashWithSalt _salt WcdmaLocalId' {..} =
-    _salt `Prelude.hashWithSalt` uarfcndl
+    _salt
+      `Prelude.hashWithSalt` uarfcndl
       `Prelude.hashWithSalt` psc
 
 instance Prelude.NFData WcdmaLocalId where

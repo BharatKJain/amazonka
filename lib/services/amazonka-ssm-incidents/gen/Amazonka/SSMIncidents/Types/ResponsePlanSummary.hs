@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.ResponsePlanSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.ResponsePlanSummary where
@@ -88,7 +88,8 @@ instance Data.FromJSON ResponsePlanSummary where
 
 instance Prelude.Hashable ResponsePlanSummary where
   hashWithSalt _salt ResponsePlanSummary' {..} =
-    _salt `Prelude.hashWithSalt` displayName
+    _salt
+      `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` name
 

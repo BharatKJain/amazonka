@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.EmailChannelRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.EmailChannelRequest where
@@ -118,7 +118,8 @@ emailChannelRequest_identity = Lens.lens (\EmailChannelRequest' {identity} -> id
 
 instance Prelude.Hashable EmailChannelRequest where
   hashWithSalt _salt EmailChannelRequest' {..} =
-    _salt `Prelude.hashWithSalt` configurationSet
+    _salt
+      `Prelude.hashWithSalt` configurationSet
       `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` fromAddress

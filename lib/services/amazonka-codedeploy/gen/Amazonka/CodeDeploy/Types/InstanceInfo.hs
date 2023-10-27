@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.InstanceInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.InstanceInfo where
@@ -128,7 +128,8 @@ instance Data.FromJSON InstanceInfo where
 
 instance Prelude.Hashable InstanceInfo where
   hashWithSalt _salt InstanceInfo' {..} =
-    _salt `Prelude.hashWithSalt` deregisterTime
+    _salt
+      `Prelude.hashWithSalt` deregisterTime
       `Prelude.hashWithSalt` iamSessionArn
       `Prelude.hashWithSalt` iamUserArn
       `Prelude.hashWithSalt` instanceArn

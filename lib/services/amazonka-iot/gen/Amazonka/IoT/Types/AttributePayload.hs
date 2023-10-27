@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.AttributePayload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.AttributePayload where
@@ -107,7 +107,8 @@ instance Data.FromJSON AttributePayload where
 
 instance Prelude.Hashable AttributePayload where
   hashWithSalt _salt AttributePayload' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` merge
 
 instance Prelude.NFData AttributePayload where

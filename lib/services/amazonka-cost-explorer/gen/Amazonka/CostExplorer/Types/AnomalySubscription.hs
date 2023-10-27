@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.AnomalySubscription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.AnomalySubscription where
@@ -240,7 +240,8 @@ instance Data.FromJSON AnomalySubscription where
 
 instance Prelude.Hashable AnomalySubscription where
   hashWithSalt _salt AnomalySubscription' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` subscriptionArn
       `Prelude.hashWithSalt` threshold
       `Prelude.hashWithSalt` thresholdExpression

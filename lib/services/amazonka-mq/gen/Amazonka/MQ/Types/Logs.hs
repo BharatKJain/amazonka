@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MQ.Types.Logs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MQ.Types.Logs where
@@ -78,7 +78,8 @@ instance Data.FromJSON Logs where
 
 instance Prelude.Hashable Logs where
   hashWithSalt _salt Logs' {..} =
-    _salt `Prelude.hashWithSalt` audit
+    _salt
+      `Prelude.hashWithSalt` audit
       `Prelude.hashWithSalt` general
 
 instance Prelude.NFData Logs where

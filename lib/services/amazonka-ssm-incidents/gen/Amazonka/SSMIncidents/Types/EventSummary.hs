@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.EventSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.EventSummary where
@@ -124,7 +124,8 @@ instance Data.FromJSON EventSummary where
       "EventSummary"
       ( \x ->
           EventSummary'
-            Prelude.<$> ( x Data..:? "eventReferences"
+            Prelude.<$> ( x
+                            Data..:? "eventReferences"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "eventId")
@@ -136,7 +137,8 @@ instance Data.FromJSON EventSummary where
 
 instance Prelude.Hashable EventSummary where
   hashWithSalt _salt EventSummary' {..} =
-    _salt `Prelude.hashWithSalt` eventReferences
+    _salt
+      `Prelude.hashWithSalt` eventReferences
       `Prelude.hashWithSalt` eventId
       `Prelude.hashWithSalt` eventTime
       `Prelude.hashWithSalt` eventType

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.DeltaSyncConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.DeltaSyncConfig where
@@ -87,7 +87,8 @@ instance Data.FromJSON DeltaSyncConfig where
 
 instance Prelude.Hashable DeltaSyncConfig where
   hashWithSalt _salt DeltaSyncConfig' {..} =
-    _salt `Prelude.hashWithSalt` baseTableTTL
+    _salt
+      `Prelude.hashWithSalt` baseTableTTL
       `Prelude.hashWithSalt` deltaSyncTableName
       `Prelude.hashWithSalt` deltaSyncTableTTL
 

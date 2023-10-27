@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.SearchRecord
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.SearchRecord where
@@ -215,7 +215,8 @@ instance Data.FromJSON SearchRecord where
 
 instance Prelude.Hashable SearchRecord where
   hashWithSalt _salt SearchRecord' {..} =
-    _salt `Prelude.hashWithSalt` endpoint
+    _salt
+      `Prelude.hashWithSalt` endpoint
       `Prelude.hashWithSalt` experiment
       `Prelude.hashWithSalt` featureGroup
       `Prelude.hashWithSalt` featureMetadata

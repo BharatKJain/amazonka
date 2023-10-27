@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.WorkerConfigurationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.WorkerConfigurationSummary where
@@ -106,7 +106,8 @@ instance Data.FromJSON WorkerConfigurationSummary where
 
 instance Prelude.Hashable WorkerConfigurationSummary where
   hashWithSalt _salt WorkerConfigurationSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` latestRevision
       `Prelude.hashWithSalt` name

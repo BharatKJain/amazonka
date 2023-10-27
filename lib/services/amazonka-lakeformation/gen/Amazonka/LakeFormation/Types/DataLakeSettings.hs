@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.DataLakeSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.DataLakeSettings where
@@ -278,21 +278,26 @@ instance Data.FromJSON DataLakeSettings where
       ( \x ->
           DataLakeSettings'
             Prelude.<$> (x Data..:? "AllowExternalDataFiltering")
-            Prelude.<*> ( x Data..:? "AuthorizedSessionTagValueList"
+            Prelude.<*> ( x
+                            Data..:? "AuthorizedSessionTagValueList"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "CreateDatabaseDefaultPermissions"
+            Prelude.<*> ( x
+                            Data..:? "CreateDatabaseDefaultPermissions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "CreateTableDefaultPermissions"
+            Prelude.<*> ( x
+                            Data..:? "CreateTableDefaultPermissions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "DataLakeAdmins" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "ExternalDataFilteringAllowList"
+            Prelude.<*> ( x
+                            Data..:? "ExternalDataFilteringAllowList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Parameters" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "TrustedResourceOwners"
+            Prelude.<*> ( x
+                            Data..:? "TrustedResourceOwners"
                             Data..!= Prelude.mempty
                         )
       )

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.DatastoreStorage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.DatastoreStorage where
@@ -109,7 +109,8 @@ instance Data.FromJSON DatastoreStorage where
 
 instance Prelude.Hashable DatastoreStorage where
   hashWithSalt _salt DatastoreStorage' {..} =
-    _salt `Prelude.hashWithSalt` customerManagedS3
+    _salt
+      `Prelude.hashWithSalt` customerManagedS3
       `Prelude.hashWithSalt` iotSiteWiseMultiLayerStorage
       `Prelude.hashWithSalt` serviceManagedS3
 

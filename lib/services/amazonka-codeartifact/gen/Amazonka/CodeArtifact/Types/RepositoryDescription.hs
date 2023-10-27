@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeArtifact.Types.RepositoryDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeArtifact.Types.RepositoryDescription where
@@ -157,7 +157,8 @@ instance Data.FromJSON RepositoryDescription where
             Prelude.<*> (x Data..:? "description")
             Prelude.<*> (x Data..:? "domainName")
             Prelude.<*> (x Data..:? "domainOwner")
-            Prelude.<*> ( x Data..:? "externalConnections"
+            Prelude.<*> ( x
+                            Data..:? "externalConnections"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "name")
@@ -166,7 +167,8 @@ instance Data.FromJSON RepositoryDescription where
 
 instance Prelude.Hashable RepositoryDescription where
   hashWithSalt _salt RepositoryDescription' {..} =
-    _salt `Prelude.hashWithSalt` administratorAccount
+    _salt
+      `Prelude.hashWithSalt` administratorAccount
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` domainName

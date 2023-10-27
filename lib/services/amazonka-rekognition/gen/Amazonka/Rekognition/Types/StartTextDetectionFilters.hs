@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.StartTextDetectionFilters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.StartTextDetectionFilters where
@@ -73,7 +73,8 @@ startTextDetectionFilters_wordFilter = Lens.lens (\StartTextDetectionFilters' {w
 
 instance Prelude.Hashable StartTextDetectionFilters where
   hashWithSalt _salt StartTextDetectionFilters' {..} =
-    _salt `Prelude.hashWithSalt` regionsOfInterest
+    _salt
+      `Prelude.hashWithSalt` regionsOfInterest
       `Prelude.hashWithSalt` wordFilter
 
 instance Prelude.NFData StartTextDetectionFilters where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.UICustomizationType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.UICustomizationType where
@@ -125,7 +125,8 @@ instance Data.FromJSON UICustomizationType where
 
 instance Prelude.Hashable UICustomizationType where
   hashWithSalt _salt UICustomizationType' {..} =
-    _salt `Prelude.hashWithSalt` css
+    _salt
+      `Prelude.hashWithSalt` css
       `Prelude.hashWithSalt` cSSVersion
       `Prelude.hashWithSalt` clientId
       `Prelude.hashWithSalt` creationDate

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.ReplayDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.ReplayDestination where
@@ -79,7 +79,8 @@ instance Data.FromJSON ReplayDestination where
 
 instance Prelude.Hashable ReplayDestination where
   hashWithSalt _salt ReplayDestination' {..} =
-    _salt `Prelude.hashWithSalt` filterArns
+    _salt
+      `Prelude.hashWithSalt` filterArns
       `Prelude.hashWithSalt` arn
 
 instance Prelude.NFData ReplayDestination where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.MaintenanceWindowTaskInvocationParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.MaintenanceWindowTaskInvocationParameters where
@@ -95,9 +95,9 @@ instance
       ( \x ->
           MaintenanceWindowTaskInvocationParameters'
             Prelude.<$> (x Data..:? "Automation")
-              Prelude.<*> (x Data..:? "Lambda")
-              Prelude.<*> (x Data..:? "RunCommand")
-              Prelude.<*> (x Data..:? "StepFunctions")
+            Prelude.<*> (x Data..:? "Lambda")
+            Prelude.<*> (x Data..:? "RunCommand")
+            Prelude.<*> (x Data..:? "StepFunctions")
       )
 
 instance
@@ -107,7 +107,8 @@ instance
   hashWithSalt
     _salt
     MaintenanceWindowTaskInvocationParameters' {..} =
-      _salt `Prelude.hashWithSalt` automation
+      _salt
+        `Prelude.hashWithSalt` automation
         `Prelude.hashWithSalt` lambda
         `Prelude.hashWithSalt` runCommand
         `Prelude.hashWithSalt` stepFunctions

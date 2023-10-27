@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.AnalysisLoadBalancerListener
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.AnalysisLoadBalancerListener where
@@ -75,7 +75,8 @@ instance
     AnalysisLoadBalancerListener
   where
   hashWithSalt _salt AnalysisLoadBalancerListener' {..} =
-    _salt `Prelude.hashWithSalt` instancePort
+    _salt
+      `Prelude.hashWithSalt` instancePort
       `Prelude.hashWithSalt` loadBalancerPort
 
 instance Prelude.NFData AnalysisLoadBalancerListener where

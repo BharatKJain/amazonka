@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.ApplicationUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.ApplicationUpdate where
@@ -97,7 +97,8 @@ applicationUpdate_referenceDataSourceUpdates = Lens.lens (\ApplicationUpdate' {r
 
 instance Prelude.Hashable ApplicationUpdate where
   hashWithSalt _salt ApplicationUpdate' {..} =
-    _salt `Prelude.hashWithSalt` applicationCodeUpdate
+    _salt
+      `Prelude.hashWithSalt` applicationCodeUpdate
       `Prelude.hashWithSalt` cloudWatchLoggingOptionUpdates
       `Prelude.hashWithSalt` inputUpdates
       `Prelude.hashWithSalt` outputUpdates

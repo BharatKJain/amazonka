@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MachineLearning.Types.RDSDataSpec
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MachineLearning.Types.RDSDataSpec where
@@ -571,7 +571,8 @@ rDSDataSpec_securityGroupIds = Lens.lens (\RDSDataSpec' {securityGroupIds} -> se
 
 instance Prelude.Hashable RDSDataSpec where
   hashWithSalt _salt RDSDataSpec' {..} =
-    _salt `Prelude.hashWithSalt` dataRearrangement
+    _salt
+      `Prelude.hashWithSalt` dataRearrangement
       `Prelude.hashWithSalt` dataSchema
       `Prelude.hashWithSalt` dataSchemaUri
       `Prelude.hashWithSalt` databaseInformation

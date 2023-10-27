@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.AliasTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.AliasTarget where
@@ -173,7 +173,8 @@ data AliasTarget = AliasTarget'
     --     If the domain name for your Elastic Beanstalk environment includes
     --     the region that you deployed the environment in, you can create an
     --     alias record that routes traffic to the environment. For example,
-    --     the domain name @my-environment.us-west-2.elasticbeanstalk.com@ is a
+    --     the domain name
+    --     @my-environment.@/@us-west-2@/@.elasticbeanstalk.com@ is a
     --     regionalized domain name.
     --
     --     For environments that were created before early 2016, the domain
@@ -494,7 +495,8 @@ data AliasTarget = AliasTarget'
 --     If the domain name for your Elastic Beanstalk environment includes
 --     the region that you deployed the environment in, you can create an
 --     alias record that routes traffic to the environment. For example,
---     the domain name @my-environment.us-west-2.elasticbeanstalk.com@ is a
+--     the domain name
+--     @my-environment.@/@us-west-2@/@.elasticbeanstalk.com@ is a
 --     regionalized domain name.
 --
 --     For environments that were created before early 2016, the domain
@@ -823,7 +825,8 @@ aliasTarget_hostedZoneId = Lens.lens (\AliasTarget' {hostedZoneId} -> hostedZone
 --     If the domain name for your Elastic Beanstalk environment includes
 --     the region that you deployed the environment in, you can create an
 --     alias record that routes traffic to the environment. For example,
---     the domain name @my-environment.us-west-2.elasticbeanstalk.com@ is a
+--     the domain name
+--     @my-environment.@/@us-west-2@/@.elasticbeanstalk.com@ is a
 --     regionalized domain name.
 --
 --     For environments that were created before early 2016, the domain
@@ -1011,7 +1014,8 @@ instance Data.FromXML AliasTarget where
 
 instance Prelude.Hashable AliasTarget where
   hashWithSalt _salt AliasTarget' {..} =
-    _salt `Prelude.hashWithSalt` hostedZoneId
+    _salt
+      `Prelude.hashWithSalt` hostedZoneId
       `Prelude.hashWithSalt` dNSName
       `Prelude.hashWithSalt` evaluateTargetHealth
 

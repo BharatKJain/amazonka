@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperandsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperandsDetails where
@@ -87,8 +87,9 @@ instance
       "AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperandsDetails"
       ( \x ->
           AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperandsDetails'
-            Prelude.<$> (x Data..:? "Prefix") Prelude.<*> (x Data..:? "Tag")
-              Prelude.<*> (x Data..:? "Type")
+            Prelude.<$> (x Data..:? "Prefix")
+            Prelude.<*> (x Data..:? "Tag")
+            Prelude.<*> (x Data..:? "Type")
       )
 
 instance
@@ -98,7 +99,8 @@ instance
   hashWithSalt
     _salt
     AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperandsDetails' {..} =
-      _salt `Prelude.hashWithSalt` prefix
+      _salt
+        `Prelude.hashWithSalt` prefix
         `Prelude.hashWithSalt` tag
         `Prelude.hashWithSalt` type'
 

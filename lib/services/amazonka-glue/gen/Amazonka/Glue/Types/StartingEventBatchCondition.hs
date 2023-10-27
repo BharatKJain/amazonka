@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.StartingEventBatchCondition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.StartingEventBatchCondition where
@@ -78,7 +78,8 @@ instance Data.FromJSON StartingEventBatchCondition where
 
 instance Prelude.Hashable StartingEventBatchCondition where
   hashWithSalt _salt StartingEventBatchCondition' {..} =
-    _salt `Prelude.hashWithSalt` batchSize
+    _salt
+      `Prelude.hashWithSalt` batchSize
       `Prelude.hashWithSalt` batchWindow
 
 instance Prelude.NFData StartingEventBatchCondition where

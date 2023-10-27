@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.BatchPutAssetPropertyError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.BatchPutAssetPropertyError where
@@ -94,7 +94,8 @@ instance Data.FromJSON BatchPutAssetPropertyError where
 
 instance Prelude.Hashable BatchPutAssetPropertyError where
   hashWithSalt _salt BatchPutAssetPropertyError' {..} =
-    _salt `Prelude.hashWithSalt` errorCode
+    _salt
+      `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` timestamps
 

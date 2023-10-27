@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResilienceHub.Types.RecommendationTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResilienceHub.Types.RecommendationTemplate where
@@ -297,7 +297,8 @@ instance Data.FromJSON RecommendationTemplate where
 
 instance Prelude.Hashable RecommendationTemplate where
   hashWithSalt _salt RecommendationTemplate' {..} =
-    _salt `Prelude.hashWithSalt` appArn
+    _salt
+      `Prelude.hashWithSalt` appArn
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` needsReplacements

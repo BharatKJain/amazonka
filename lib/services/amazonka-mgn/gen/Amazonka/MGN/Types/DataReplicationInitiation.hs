@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.DataReplicationInitiation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.DataReplicationInitiation where
@@ -86,7 +86,8 @@ instance Data.FromJSON DataReplicationInitiation where
 
 instance Prelude.Hashable DataReplicationInitiation where
   hashWithSalt _salt DataReplicationInitiation' {..} =
-    _salt `Prelude.hashWithSalt` nextAttemptDateTime
+    _salt
+      `Prelude.hashWithSalt` nextAttemptDateTime
       `Prelude.hashWithSalt` startDateTime
       `Prelude.hashWithSalt` steps
 

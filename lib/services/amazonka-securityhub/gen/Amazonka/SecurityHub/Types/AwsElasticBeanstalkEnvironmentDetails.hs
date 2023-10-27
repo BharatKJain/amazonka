@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsElasticBeanstalkEnvironmentDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsElasticBeanstalkEnvironmentDetails where
@@ -266,7 +266,8 @@ instance
             Prelude.<*> (x Data..:? "EndpointUrl")
             Prelude.<*> (x Data..:? "EnvironmentArn")
             Prelude.<*> (x Data..:? "EnvironmentId")
-            Prelude.<*> ( x Data..:? "EnvironmentLinks"
+            Prelude.<*> ( x
+                            Data..:? "EnvironmentLinks"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "EnvironmentName")
@@ -285,7 +286,8 @@ instance
   hashWithSalt
     _salt
     AwsElasticBeanstalkEnvironmentDetails' {..} =
-      _salt `Prelude.hashWithSalt` applicationName
+      _salt
+        `Prelude.hashWithSalt` applicationName
         `Prelude.hashWithSalt` cname
         `Prelude.hashWithSalt` dateCreated
         `Prelude.hashWithSalt` dateUpdated

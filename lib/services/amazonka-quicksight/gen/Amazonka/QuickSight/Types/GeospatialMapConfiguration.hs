@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.GeospatialMapConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.GeospatialMapConfiguration where
@@ -131,7 +131,8 @@ instance Data.FromJSON GeospatialMapConfiguration where
 
 instance Prelude.Hashable GeospatialMapConfiguration where
   hashWithSalt _salt GeospatialMapConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` fieldWells
+    _salt
+      `Prelude.hashWithSalt` fieldWells
       `Prelude.hashWithSalt` legend
       `Prelude.hashWithSalt` mapStyleOptions
       `Prelude.hashWithSalt` pointStyleOptions

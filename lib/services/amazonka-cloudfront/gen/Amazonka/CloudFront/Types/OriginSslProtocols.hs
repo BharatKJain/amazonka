@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.OriginSslProtocols
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.OriginSslProtocols where
@@ -74,13 +74,16 @@ instance Data.FromXML OriginSslProtocols where
   parseXML x =
     OriginSslProtocols'
       Prelude.<$> (x Data..@ "Quantity")
-      Prelude.<*> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Data.parseXMLList "SslProtocol"
                   )
 
 instance Prelude.Hashable OriginSslProtocols where
   hashWithSalt _salt OriginSslProtocols' {..} =
-    _salt `Prelude.hashWithSalt` quantity
+    _salt
+      `Prelude.hashWithSalt` quantity
       `Prelude.hashWithSalt` items
 
 instance Prelude.NFData OriginSslProtocols where

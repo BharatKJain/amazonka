@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Evidently.ListFeatures
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,20 +107,23 @@ instance Core.AWSPager ListFeatures where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listFeaturesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listFeaturesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listFeaturesResponse_features Prelude.. Lens._Just
+            Lens.^? listFeaturesResponse_features
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listFeatures_nextToken
           Lens..~ rs
-          Lens.^? listFeaturesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listFeaturesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListFeatures where
   type AWSResponse ListFeatures = ListFeaturesResponse
@@ -137,7 +140,8 @@ instance Core.AWSRequest ListFeatures where
 
 instance Prelude.Hashable ListFeatures where
   hashWithSalt _salt ListFeatures' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` project
 

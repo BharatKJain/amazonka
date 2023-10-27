@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.Event
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.Event where
@@ -125,7 +125,9 @@ instance Data.FromXML Event where
   parseXML x =
     Event'
       Prelude.<$> (x Data..@? "Date")
-      Prelude.<*> ( x Data..@? "EventCategories" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "EventCategories"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "EventCategory")
                   )
       Prelude.<*> (x Data..@? "EventId")
@@ -136,7 +138,8 @@ instance Data.FromXML Event where
 
 instance Prelude.Hashable Event where
   hashWithSalt _salt Event' {..} =
-    _salt `Prelude.hashWithSalt` date
+    _salt
+      `Prelude.hashWithSalt` date
       `Prelude.hashWithSalt` eventCategories
       `Prelude.hashWithSalt` eventId
       `Prelude.hashWithSalt` message

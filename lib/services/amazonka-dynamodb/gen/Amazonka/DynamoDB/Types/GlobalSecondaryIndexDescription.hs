@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.GlobalSecondaryIndexDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.GlobalSecondaryIndexDescription where
@@ -300,7 +300,8 @@ instance
   hashWithSalt
     _salt
     GlobalSecondaryIndexDescription' {..} =
-      _salt `Prelude.hashWithSalt` backfilling
+      _salt
+        `Prelude.hashWithSalt` backfilling
         `Prelude.hashWithSalt` indexArn
         `Prelude.hashWithSalt` indexName
         `Prelude.hashWithSalt` indexSizeBytes

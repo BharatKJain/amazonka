@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53Domains.CheckDomainAvailability
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -176,7 +176,8 @@ instance Core.AWSRequest CheckDomainAvailability where
 
 instance Prelude.Hashable CheckDomainAvailability where
   hashWithSalt _salt CheckDomainAvailability' {..} =
-    _salt `Prelude.hashWithSalt` idnLangCode
+    _salt
+      `Prelude.hashWithSalt` idnLangCode
       `Prelude.hashWithSalt` domainName
 
 instance Prelude.NFData CheckDomainAvailability where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkMediaPipelines.Types.SelectedVideoStreams
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkMediaPipelines.Types.SelectedVideoStreams where
@@ -76,7 +76,8 @@ instance Data.FromJSON SelectedVideoStreams where
 
 instance Prelude.Hashable SelectedVideoStreams where
   hashWithSalt _salt SelectedVideoStreams' {..} =
-    _salt `Prelude.hashWithSalt` attendeeIds
+    _salt
+      `Prelude.hashWithSalt` attendeeIds
       `Prelude.hashWithSalt` externalUserIds
 
 instance Prelude.NFData SelectedVideoStreams where

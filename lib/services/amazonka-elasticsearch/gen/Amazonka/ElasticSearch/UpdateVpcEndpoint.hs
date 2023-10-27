@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticSearch.UpdateVpcEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest UpdateVpcEndpoint where
 
 instance Prelude.Hashable UpdateVpcEndpoint where
   hashWithSalt _salt UpdateVpcEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` vpcEndpointId
+    _salt
+      `Prelude.hashWithSalt` vpcEndpointId
       `Prelude.hashWithSalt` vpcOptions
 
 instance Prelude.NFData UpdateVpcEndpoint where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ClientVpnEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ClientVpnEndpoint where
@@ -313,11 +313,13 @@ clientVpnEndpoint_vpnProtocol = Lens.lens (\ClientVpnEndpoint' {vpnProtocol} -> 
 instance Data.FromXML ClientVpnEndpoint where
   parseXML x =
     ClientVpnEndpoint'
-      Prelude.<$> ( x Data..@? "associatedTargetNetwork"
+      Prelude.<$> ( x
+                      Data..@? "associatedTargetNetwork"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "authenticationOptions"
+      Prelude.<*> ( x
+                      Data..@? "authenticationOptions"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
@@ -330,10 +332,13 @@ instance Data.FromXML ClientVpnEndpoint where
       Prelude.<*> (x Data..@? "deletionTime")
       Prelude.<*> (x Data..@? "description")
       Prelude.<*> (x Data..@? "dnsName")
-      Prelude.<*> ( x Data..@? "dnsServer" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "dnsServer"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "securityGroupIdSet"
+      Prelude.<*> ( x
+                      Data..@? "securityGroupIdSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
@@ -342,7 +347,9 @@ instance Data.FromXML ClientVpnEndpoint where
       Prelude.<*> (x Data..@? "sessionTimeoutHours")
       Prelude.<*> (x Data..@? "splitTunnel")
       Prelude.<*> (x Data..@? "status")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "transportProtocol")

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.RevisionInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.RevisionInfo where
@@ -80,7 +80,8 @@ instance Data.FromJSON RevisionInfo where
 
 instance Prelude.Hashable RevisionInfo where
   hashWithSalt _salt RevisionInfo' {..} =
-    _salt `Prelude.hashWithSalt` genericRevisionInfo
+    _salt
+      `Prelude.hashWithSalt` genericRevisionInfo
       `Prelude.hashWithSalt` revisionLocation
 
 instance Prelude.NFData RevisionInfo where

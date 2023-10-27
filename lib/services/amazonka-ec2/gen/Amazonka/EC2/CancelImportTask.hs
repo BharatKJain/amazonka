@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.CancelImportTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest CancelImportTask where
 
 instance Prelude.Hashable CancelImportTask where
   hashWithSalt _salt CancelImportTask' {..} =
-    _salt `Prelude.hashWithSalt` cancelReason
+    _salt
+      `Prelude.hashWithSalt` cancelReason
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` importTaskId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFRegional.Types.XssMatchSetSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFRegional.Types.XssMatchSetSummary where
@@ -109,7 +109,8 @@ instance Data.FromJSON XssMatchSetSummary where
 
 instance Prelude.Hashable XssMatchSetSummary where
   hashWithSalt _salt XssMatchSetSummary' {..} =
-    _salt `Prelude.hashWithSalt` xssMatchSetId
+    _salt
+      `Prelude.hashWithSalt` xssMatchSetId
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData XssMatchSetSummary where

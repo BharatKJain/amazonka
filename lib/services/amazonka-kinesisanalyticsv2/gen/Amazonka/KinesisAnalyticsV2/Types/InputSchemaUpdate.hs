@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.InputSchemaUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.InputSchemaUpdate where
@@ -86,7 +86,8 @@ inputSchemaUpdate_recordFormatUpdate = Lens.lens (\InputSchemaUpdate' {recordFor
 
 instance Prelude.Hashable InputSchemaUpdate where
   hashWithSalt _salt InputSchemaUpdate' {..} =
-    _salt `Prelude.hashWithSalt` recordColumnUpdates
+    _salt
+      `Prelude.hashWithSalt` recordColumnUpdates
       `Prelude.hashWithSalt` recordEncodingUpdate
       `Prelude.hashWithSalt` recordFormatUpdate
 

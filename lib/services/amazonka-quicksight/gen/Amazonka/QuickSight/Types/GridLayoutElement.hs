@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.GridLayoutElement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.GridLayoutElement where
@@ -127,7 +127,8 @@ instance Data.FromJSON GridLayoutElement where
 
 instance Prelude.Hashable GridLayoutElement where
   hashWithSalt _salt GridLayoutElement' {..} =
-    _salt `Prelude.hashWithSalt` columnIndex
+    _salt
+      `Prelude.hashWithSalt` columnIndex
       `Prelude.hashWithSalt` rowIndex
       `Prelude.hashWithSalt` elementId
       `Prelude.hashWithSalt` elementType

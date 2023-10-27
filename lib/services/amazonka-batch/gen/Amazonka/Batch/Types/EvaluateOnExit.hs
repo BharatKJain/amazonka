@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.EvaluateOnExit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.EvaluateOnExit where
@@ -148,7 +148,8 @@ instance Data.FromJSON EvaluateOnExit where
 
 instance Prelude.Hashable EvaluateOnExit where
   hashWithSalt _salt EvaluateOnExit' {..} =
-    _salt `Prelude.hashWithSalt` onExitCode
+    _salt
+      `Prelude.hashWithSalt` onExitCode
       `Prelude.hashWithSalt` onReason
       `Prelude.hashWithSalt` onStatusReason
       `Prelude.hashWithSalt` action

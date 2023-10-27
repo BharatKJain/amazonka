@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.SystemStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.SystemStatus where
@@ -73,13 +73,16 @@ instance Data.FromXML SystemStatus where
   parseXML x =
     SystemStatus'
       Prelude.<$> (x Data..@? "CPUUtilization")
-      Prelude.<*> ( x Data..@? "LoadAverage" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "LoadAverage"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 
 instance Prelude.Hashable SystemStatus where
   hashWithSalt _salt SystemStatus' {..} =
-    _salt `Prelude.hashWithSalt` cPUUtilization
+    _salt
+      `Prelude.hashWithSalt` cPUUtilization
       `Prelude.hashWithSalt` loadAverage
 
 instance Prelude.NFData SystemStatus where

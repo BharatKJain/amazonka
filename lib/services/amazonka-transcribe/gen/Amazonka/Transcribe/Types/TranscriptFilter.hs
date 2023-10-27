@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.TranscriptFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.TranscriptFilter where
@@ -178,7 +178,8 @@ instance Data.FromJSON TranscriptFilter where
 
 instance Prelude.Hashable TranscriptFilter where
   hashWithSalt _salt TranscriptFilter' {..} =
-    _salt `Prelude.hashWithSalt` absoluteTimeRange
+    _salt
+      `Prelude.hashWithSalt` absoluteTimeRange
       `Prelude.hashWithSalt` negate
       `Prelude.hashWithSalt` participantRole
       `Prelude.hashWithSalt` relativeTimeRange

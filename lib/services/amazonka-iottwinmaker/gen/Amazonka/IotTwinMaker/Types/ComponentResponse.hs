@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.ComponentResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.ComponentResponse where
@@ -144,7 +144,8 @@ instance Data.FromJSON ComponentResponse where
 
 instance Prelude.Hashable ComponentResponse where
   hashWithSalt _salt ComponentResponse' {..} =
-    _salt `Prelude.hashWithSalt` componentName
+    _salt
+      `Prelude.hashWithSalt` componentName
       `Prelude.hashWithSalt` componentTypeId
       `Prelude.hashWithSalt` definedIn
       `Prelude.hashWithSalt` description

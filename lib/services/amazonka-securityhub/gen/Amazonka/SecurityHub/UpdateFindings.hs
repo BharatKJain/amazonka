@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecurityHub.UpdateFindings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,7 +118,8 @@ instance Core.AWSRequest UpdateFindings where
 
 instance Prelude.Hashable UpdateFindings where
   hashWithSalt _salt UpdateFindings' {..} =
-    _salt `Prelude.hashWithSalt` note
+    _salt
+      `Prelude.hashWithSalt` note
       `Prelude.hashWithSalt` recordState
       `Prelude.hashWithSalt` filters
 

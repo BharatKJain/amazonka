@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTFleetWise.Types.CanInterface
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTFleetWise.Types.CanInterface where
@@ -86,7 +86,8 @@ instance Data.FromJSON CanInterface where
 
 instance Prelude.Hashable CanInterface where
   hashWithSalt _salt CanInterface' {..} =
-    _salt `Prelude.hashWithSalt` protocolName
+    _salt
+      `Prelude.hashWithSalt` protocolName
       `Prelude.hashWithSalt` protocolVersion
       `Prelude.hashWithSalt` name
 

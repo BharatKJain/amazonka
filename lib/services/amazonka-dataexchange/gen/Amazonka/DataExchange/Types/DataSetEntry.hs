@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.DataSetEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.DataSetEntry where
@@ -196,7 +196,8 @@ instance Data.FromJSON DataSetEntry where
 
 instance Prelude.Hashable DataSetEntry where
   hashWithSalt _salt DataSetEntry' {..} =
-    _salt `Prelude.hashWithSalt` originDetails
+    _salt
+      `Prelude.hashWithSalt` originDetails
       `Prelude.hashWithSalt` sourceId
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` assetType

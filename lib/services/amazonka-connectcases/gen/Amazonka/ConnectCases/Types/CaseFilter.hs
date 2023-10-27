@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCases.Types.CaseFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCases.Types.CaseFilter where
@@ -73,7 +73,8 @@ caseFilter_not = Lens.lens (\CaseFilter' {not} -> not) (\s@CaseFilter' {} a -> s
 
 instance Prelude.Hashable CaseFilter where
   hashWithSalt _salt CaseFilter' {..} =
-    _salt `Prelude.hashWithSalt` andAll
+    _salt
+      `Prelude.hashWithSalt` andAll
       `Prelude.hashWithSalt` field
       `Prelude.hashWithSalt` not
 

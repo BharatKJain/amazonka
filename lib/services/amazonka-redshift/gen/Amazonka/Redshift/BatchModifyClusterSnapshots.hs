@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.BatchModifyClusterSnapshots
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,10 +135,14 @@ instance Core.AWSRequest BatchModifyClusterSnapshots where
       "BatchModifyClusterSnapshotsResult"
       ( \s h x ->
           BatchModifyClusterSnapshotsResponse'
-            Prelude.<$> ( x Data..@? "Errors" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "Errors"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "SnapshotErrorMessage")
                         )
-            Prelude.<*> ( x Data..@? "Resources" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "Resources"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "String")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -146,7 +150,8 @@ instance Core.AWSRequest BatchModifyClusterSnapshots where
 
 instance Prelude.Hashable BatchModifyClusterSnapshots where
   hashWithSalt _salt BatchModifyClusterSnapshots' {..} =
-    _salt `Prelude.hashWithSalt` force
+    _salt
+      `Prelude.hashWithSalt` force
       `Prelude.hashWithSalt` manualSnapshotRetentionPeriod
       `Prelude.hashWithSalt` snapshotIdentifierList
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RedshiftData.Types.ColumnMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RedshiftData.Types.ColumnMetadata where
@@ -184,7 +184,8 @@ instance Data.FromJSON ColumnMetadata where
 
 instance Prelude.Hashable ColumnMetadata where
   hashWithSalt _salt ColumnMetadata' {..} =
-    _salt `Prelude.hashWithSalt` columnDefault
+    _salt
+      `Prelude.hashWithSalt` columnDefault
       `Prelude.hashWithSalt` isCaseSensitive
       `Prelude.hashWithSalt` isCurrency
       `Prelude.hashWithSalt` isSigned

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.TemporaryCredential
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.TemporaryCredential where
@@ -104,7 +104,8 @@ instance Data.FromJSON TemporaryCredential where
 
 instance Prelude.Hashable TemporaryCredential where
   hashWithSalt _salt TemporaryCredential' {..} =
-    _salt `Prelude.hashWithSalt` instanceId
+    _salt
+      `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` password
       `Prelude.hashWithSalt` username
       `Prelude.hashWithSalt` validForInMinutes

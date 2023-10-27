@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamWrite.Types.RecordsIngested
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamWrite.Types.RecordsIngested where
@@ -84,7 +84,8 @@ instance Data.FromJSON RecordsIngested where
 
 instance Prelude.Hashable RecordsIngested where
   hashWithSalt _salt RecordsIngested' {..} =
-    _salt `Prelude.hashWithSalt` magneticStore
+    _salt
+      `Prelude.hashWithSalt` magneticStore
       `Prelude.hashWithSalt` memoryStore
       `Prelude.hashWithSalt` total
 

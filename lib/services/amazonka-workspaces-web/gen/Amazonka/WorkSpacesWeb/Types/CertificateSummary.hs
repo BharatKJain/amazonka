@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.Types.CertificateSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpacesWeb.Types.CertificateSummary where
@@ -104,7 +104,8 @@ instance Data.FromJSON CertificateSummary where
 
 instance Prelude.Hashable CertificateSummary where
   hashWithSalt _salt CertificateSummary' {..} =
-    _salt `Prelude.hashWithSalt` issuer
+    _salt
+      `Prelude.hashWithSalt` issuer
       `Prelude.hashWithSalt` notValidAfter
       `Prelude.hashWithSalt` notValidBefore
       `Prelude.hashWithSalt` subject

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QLDB.Types.S3EncryptionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QLDB.Types.S3EncryptionConfiguration where
@@ -112,7 +112,8 @@ instance Data.FromJSON S3EncryptionConfiguration where
 
 instance Prelude.Hashable S3EncryptionConfiguration where
   hashWithSalt _salt S3EncryptionConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyArn
+    _salt
+      `Prelude.hashWithSalt` kmsKeyArn
       `Prelude.hashWithSalt` objectEncryptionType
 
 instance Prelude.NFData S3EncryptionConfiguration where

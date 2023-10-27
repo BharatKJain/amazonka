@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.LoggingConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.LoggingConfig where
@@ -151,7 +151,8 @@ instance Data.FromXML LoggingConfig where
 
 instance Prelude.Hashable LoggingConfig where
   hashWithSalt _salt LoggingConfig' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` includeCookies
       `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` prefix

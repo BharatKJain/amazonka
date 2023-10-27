@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.StepStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.StepStatus where
@@ -101,7 +101,8 @@ instance Data.FromJSON StepStatus where
 
 instance Prelude.Hashable StepStatus where
   hashWithSalt _salt StepStatus' {..} =
-    _salt `Prelude.hashWithSalt` failureDetails
+    _salt
+      `Prelude.hashWithSalt` failureDetails
       `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` stateChangeReason
       `Prelude.hashWithSalt` timeline

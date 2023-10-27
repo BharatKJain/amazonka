@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.TimeSeriesFeedback
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.TimeSeriesFeedback where
@@ -74,7 +74,8 @@ instance Data.FromJSON TimeSeriesFeedback where
 
 instance Prelude.Hashable TimeSeriesFeedback where
   hashWithSalt _salt TimeSeriesFeedback' {..} =
-    _salt `Prelude.hashWithSalt` isAnomaly
+    _salt
+      `Prelude.hashWithSalt` isAnomaly
       `Prelude.hashWithSalt` timeSeriesId
 
 instance Prelude.NFData TimeSeriesFeedback where

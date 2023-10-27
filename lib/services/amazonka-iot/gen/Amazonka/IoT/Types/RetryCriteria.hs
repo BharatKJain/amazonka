@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.RetryCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.RetryCriteria where
@@ -80,7 +80,8 @@ instance Data.FromJSON RetryCriteria where
 
 instance Prelude.Hashable RetryCriteria where
   hashWithSalt _salt RetryCriteria' {..} =
-    _salt `Prelude.hashWithSalt` failureType
+    _salt
+      `Prelude.hashWithSalt` failureType
       `Prelude.hashWithSalt` numberOfRetries
 
 instance Prelude.NFData RetryCriteria where

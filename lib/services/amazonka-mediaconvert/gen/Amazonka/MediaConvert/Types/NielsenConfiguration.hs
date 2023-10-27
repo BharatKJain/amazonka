@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.NielsenConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.NielsenConfiguration where
@@ -88,7 +88,8 @@ instance Data.FromJSON NielsenConfiguration where
 
 instance Prelude.Hashable NielsenConfiguration where
   hashWithSalt _salt NielsenConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` breakoutCode
+    _salt
+      `Prelude.hashWithSalt` breakoutCode
       `Prelude.hashWithSalt` distributorId
 
 instance Prelude.NFData NielsenConfiguration where

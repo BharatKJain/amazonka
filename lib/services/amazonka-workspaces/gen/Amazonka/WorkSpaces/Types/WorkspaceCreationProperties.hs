@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpaces.Types.WorkspaceCreationProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpaces.Types.WorkspaceCreationProperties where
@@ -35,9 +35,10 @@ data WorkspaceCreationProperties = WorkspaceCreationProperties'
     -- | The default organizational unit (OU) for your WorkSpaces directories.
     -- This string must be the full Lightweight Directory Access Protocol
     -- (LDAP) distinguished name for the target domain and OU. It must be in
-    -- the form @\"OU=value,DC=value,DC=value\"@, where /value/ is any string
-    -- of characters, and the number of domain components (DCs) is two or more.
-    -- For example, @OU=WorkSpaces_machines,DC=machines,DC=example,DC=com@.
+    -- the form @\"OU=@/@value@/@,DC=@/@value@/@,DC=@/@value@/@\"@, where
+    -- /value/ is any string of characters, and the number of domain components
+    -- (DCs) is two or more. For example,
+    -- @OU=WorkSpaces_machines,DC=machines,DC=example,DC=com@.
     --
     -- -   To avoid errors, certain characters in the distinguished name must
     --     be escaped. For more information, see
@@ -87,9 +88,10 @@ data WorkspaceCreationProperties = WorkspaceCreationProperties'
 -- 'defaultOu', 'workspaceCreationProperties_defaultOu' - The default organizational unit (OU) for your WorkSpaces directories.
 -- This string must be the full Lightweight Directory Access Protocol
 -- (LDAP) distinguished name for the target domain and OU. It must be in
--- the form @\"OU=value,DC=value,DC=value\"@, where /value/ is any string
--- of characters, and the number of domain components (DCs) is two or more.
--- For example, @OU=WorkSpaces_machines,DC=machines,DC=example,DC=com@.
+-- the form @\"OU=@/@value@/@,DC=@/@value@/@,DC=@/@value@/@\"@, where
+-- /value/ is any string of characters, and the number of domain components
+-- (DCs) is two or more. For example,
+-- @OU=WorkSpaces_machines,DC=machines,DC=example,DC=com@.
 --
 -- -   To avoid errors, certain characters in the distinguished name must
 --     be escaped. For more information, see
@@ -143,9 +145,10 @@ workspaceCreationProperties_customSecurityGroupId = Lens.lens (\WorkspaceCreatio
 -- | The default organizational unit (OU) for your WorkSpaces directories.
 -- This string must be the full Lightweight Directory Access Protocol
 -- (LDAP) distinguished name for the target domain and OU. It must be in
--- the form @\"OU=value,DC=value,DC=value\"@, where /value/ is any string
--- of characters, and the number of domain components (DCs) is two or more.
--- For example, @OU=WorkSpaces_machines,DC=machines,DC=example,DC=com@.
+-- the form @\"OU=@/@value@/@,DC=@/@value@/@,DC=@/@value@/@\"@, where
+-- /value/ is any string of characters, and the number of domain components
+-- (DCs) is two or more. For example,
+-- @OU=WorkSpaces_machines,DC=machines,DC=example,DC=com@.
 --
 -- -   To avoid errors, certain characters in the distinguished name must
 --     be escaped. For more information, see
@@ -191,7 +194,8 @@ workspaceCreationProperties_userEnabledAsLocalAdministrator = Lens.lens (\Worksp
 
 instance Prelude.Hashable WorkspaceCreationProperties where
   hashWithSalt _salt WorkspaceCreationProperties' {..} =
-    _salt `Prelude.hashWithSalt` customSecurityGroupId
+    _salt
+      `Prelude.hashWithSalt` customSecurityGroupId
       `Prelude.hashWithSalt` defaultOu
       `Prelude.hashWithSalt` enableInternetAccess
       `Prelude.hashWithSalt` enableMaintenanceMode

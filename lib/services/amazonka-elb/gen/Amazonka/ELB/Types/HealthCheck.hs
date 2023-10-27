@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELB.Types.HealthCheck
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELB.Types.HealthCheck where
@@ -185,7 +185,8 @@ instance Data.FromXML HealthCheck where
 
 instance Prelude.Hashable HealthCheck where
   hashWithSalt _salt HealthCheck' {..} =
-    _salt `Prelude.hashWithSalt` target
+    _salt
+      `Prelude.hashWithSalt` target
       `Prelude.hashWithSalt` interval
       `Prelude.hashWithSalt` timeout
       `Prelude.hashWithSalt` unhealthyThreshold

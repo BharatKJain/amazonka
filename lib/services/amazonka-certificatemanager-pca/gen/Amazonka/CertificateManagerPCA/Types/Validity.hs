@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.Validity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.Validity where
@@ -180,7 +180,8 @@ validity_type = Lens.lens (\Validity' {type'} -> type') (\s@Validity' {} a -> s 
 
 instance Prelude.Hashable Validity where
   hashWithSalt _salt Validity' {..} =
-    _salt `Prelude.hashWithSalt` value
+    _salt
+      `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData Validity where

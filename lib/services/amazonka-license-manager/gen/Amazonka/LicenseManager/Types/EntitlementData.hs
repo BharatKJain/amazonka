@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManager.Types.EntitlementData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManager.Types.EntitlementData where
@@ -89,7 +89,8 @@ instance Data.FromJSON EntitlementData where
 
 instance Prelude.Hashable EntitlementData where
   hashWithSalt _salt EntitlementData' {..} =
-    _salt `Prelude.hashWithSalt` value
+    _salt
+      `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` unit
 

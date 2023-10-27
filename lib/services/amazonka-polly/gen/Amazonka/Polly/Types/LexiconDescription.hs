@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Polly.Types.LexiconDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Polly.Types.LexiconDescription where
@@ -75,7 +75,8 @@ instance Data.FromJSON LexiconDescription where
 
 instance Prelude.Hashable LexiconDescription where
   hashWithSalt _salt LexiconDescription' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData LexiconDescription where

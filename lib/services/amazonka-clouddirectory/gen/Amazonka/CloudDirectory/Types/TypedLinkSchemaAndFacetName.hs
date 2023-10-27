@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.TypedLinkSchemaAndFacetName
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.TypedLinkSchemaAndFacetName where
@@ -85,7 +85,8 @@ instance Data.FromJSON TypedLinkSchemaAndFacetName where
 
 instance Prelude.Hashable TypedLinkSchemaAndFacetName where
   hashWithSalt _salt TypedLinkSchemaAndFacetName' {..} =
-    _salt `Prelude.hashWithSalt` schemaArn
+    _salt
+      `Prelude.hashWithSalt` schemaArn
       `Prelude.hashWithSalt` typedLinkName
 
 instance Prelude.NFData TypedLinkSchemaAndFacetName where

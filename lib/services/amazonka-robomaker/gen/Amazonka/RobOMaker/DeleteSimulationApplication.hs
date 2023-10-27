@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RobOMaker.DeleteSimulationApplication
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -101,7 +101,8 @@ instance Core.AWSRequest DeleteSimulationApplication where
 
 instance Prelude.Hashable DeleteSimulationApplication where
   hashWithSalt _salt DeleteSimulationApplication' {..} =
-    _salt `Prelude.hashWithSalt` applicationVersion
+    _salt
+      `Prelude.hashWithSalt` applicationVersion
       `Prelude.hashWithSalt` application
 
 instance Prelude.NFData DeleteSimulationApplication where

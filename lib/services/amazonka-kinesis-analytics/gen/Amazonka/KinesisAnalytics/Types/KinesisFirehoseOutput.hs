@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.KinesisFirehoseOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.KinesisFirehoseOutput where
@@ -80,7 +80,8 @@ kinesisFirehoseOutput_roleARN = Lens.lens (\KinesisFirehoseOutput' {roleARN} -> 
 
 instance Prelude.Hashable KinesisFirehoseOutput where
   hashWithSalt _salt KinesisFirehoseOutput' {..} =
-    _salt `Prelude.hashWithSalt` resourceARN
+    _salt
+      `Prelude.hashWithSalt` resourceARN
       `Prelude.hashWithSalt` roleARN
 
 instance Prelude.NFData KinesisFirehoseOutput where

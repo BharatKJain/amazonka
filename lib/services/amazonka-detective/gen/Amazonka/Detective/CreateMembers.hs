@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Detective.CreateMembers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -183,7 +183,8 @@ instance Core.AWSRequest CreateMembers where
       ( \s h x ->
           CreateMembersResponse'
             Prelude.<$> (x Data..?> "Members" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "UnprocessedAccounts"
+            Prelude.<*> ( x
+                            Data..?> "UnprocessedAccounts"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

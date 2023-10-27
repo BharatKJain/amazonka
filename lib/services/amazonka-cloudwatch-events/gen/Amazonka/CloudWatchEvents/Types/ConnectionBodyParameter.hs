@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.ConnectionBodyParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.ConnectionBodyParameter where
@@ -87,7 +87,8 @@ instance Data.FromJSON ConnectionBodyParameter where
 
 instance Prelude.Hashable ConnectionBodyParameter where
   hashWithSalt _salt ConnectionBodyParameter' {..} =
-    _salt `Prelude.hashWithSalt` isValueSecret
+    _salt
+      `Prelude.hashWithSalt` isValueSecret
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 

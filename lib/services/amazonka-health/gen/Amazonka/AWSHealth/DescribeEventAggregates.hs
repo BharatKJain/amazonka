@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AWSHealth.DescribeEventAggregates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,22 +134,22 @@ instance Core.AWSPager DescribeEventAggregates where
     | Core.stop
         ( rs
             Lens.^? describeEventAggregatesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeEventAggregatesResponse_eventAggregates
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeEventAggregates_nextToken
           Lens..~ rs
           Lens.^? describeEventAggregatesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeEventAggregates where
   type
@@ -161,7 +161,8 @@ instance Core.AWSRequest DescribeEventAggregates where
     Response.receiveJSON
       ( \s h x ->
           DescribeEventAggregatesResponse'
-            Prelude.<$> ( x Data..?> "eventAggregates"
+            Prelude.<$> ( x
+                            Data..?> "eventAggregates"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -170,7 +171,8 @@ instance Core.AWSRequest DescribeEventAggregates where
 
 instance Prelude.Hashable DescribeEventAggregates where
   hashWithSalt _salt DescribeEventAggregates' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` aggregateField

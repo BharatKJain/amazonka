@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Config.GetResourceConfigHistory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -188,22 +188,22 @@ instance Core.AWSPager GetResourceConfigHistory where
     | Core.stop
         ( rs
             Lens.^? getResourceConfigHistoryResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getResourceConfigHistoryResponse_configurationItems
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getResourceConfigHistory_nextToken
           Lens..~ rs
           Lens.^? getResourceConfigHistoryResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetResourceConfigHistory where
   type
@@ -215,7 +215,8 @@ instance Core.AWSRequest GetResourceConfigHistory where
     Response.receiveJSON
       ( \s h x ->
           GetResourceConfigHistoryResponse'
-            Prelude.<$> ( x Data..?> "configurationItems"
+            Prelude.<$> ( x
+                            Data..?> "configurationItems"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -224,7 +225,8 @@ instance Core.AWSRequest GetResourceConfigHistory where
 
 instance Prelude.Hashable GetResourceConfigHistory where
   hashWithSalt _salt GetResourceConfigHistory' {..} =
-    _salt `Prelude.hashWithSalt` chronologicalOrder
+    _salt
+      `Prelude.hashWithSalt` chronologicalOrder
       `Prelude.hashWithSalt` earlierTime
       `Prelude.hashWithSalt` laterTime
       `Prelude.hashWithSalt` limit

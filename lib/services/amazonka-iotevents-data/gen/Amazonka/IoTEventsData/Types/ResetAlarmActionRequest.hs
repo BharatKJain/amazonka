@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEventsData.Types.ResetAlarmActionRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEventsData.Types.ResetAlarmActionRequest where
@@ -95,7 +95,8 @@ resetAlarmActionRequest_alarmModelName = Lens.lens (\ResetAlarmActionRequest' {a
 
 instance Prelude.Hashable ResetAlarmActionRequest where
   hashWithSalt _salt ResetAlarmActionRequest' {..} =
-    _salt `Prelude.hashWithSalt` keyValue
+    _salt
+      `Prelude.hashWithSalt` keyValue
       `Prelude.hashWithSalt` note
       `Prelude.hashWithSalt` requestId
       `Prelude.hashWithSalt` alarmModelName

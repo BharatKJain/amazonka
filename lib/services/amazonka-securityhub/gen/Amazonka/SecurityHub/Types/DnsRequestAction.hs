@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.DnsRequestAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.DnsRequestAction where
@@ -85,7 +85,8 @@ instance Data.FromJSON DnsRequestAction where
 
 instance Prelude.Hashable DnsRequestAction where
   hashWithSalt _salt DnsRequestAction' {..} =
-    _salt `Prelude.hashWithSalt` blocked
+    _salt
+      `Prelude.hashWithSalt` blocked
       `Prelude.hashWithSalt` domain
       `Prelude.hashWithSalt` protocol
 

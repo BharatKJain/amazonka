@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.SearchForTextResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.SearchForTextResult where
@@ -140,7 +140,8 @@ instance Data.FromJSON SearchForTextResult where
 
 instance Prelude.Hashable SearchForTextResult where
   hashWithSalt _salt SearchForTextResult' {..} =
-    _salt `Prelude.hashWithSalt` distance
+    _salt
+      `Prelude.hashWithSalt` distance
       `Prelude.hashWithSalt` placeId
       `Prelude.hashWithSalt` relevance
       `Prelude.hashWithSalt` place

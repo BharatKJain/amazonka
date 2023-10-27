@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.TemplateParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.TemplateParameter where
@@ -93,7 +93,8 @@ instance Data.FromXML TemplateParameter where
 
 instance Prelude.Hashable TemplateParameter where
   hashWithSalt _salt TemplateParameter' {..} =
-    _salt `Prelude.hashWithSalt` defaultValue
+    _salt
+      `Prelude.hashWithSalt` defaultValue
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` noEcho
       `Prelude.hashWithSalt` parameterKey

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.DestinationDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.DestinationDetails where
@@ -74,7 +74,8 @@ instance Data.FromXML DestinationDetails where
 
 instance Prelude.Hashable DestinationDetails where
   hashWithSalt _salt DestinationDetails' {..} =
-    _salt `Prelude.hashWithSalt` cloudWatchLogsDetails
+    _salt
+      `Prelude.hashWithSalt` cloudWatchLogsDetails
       `Prelude.hashWithSalt` kinesisFirehoseDetails
 
 instance Prelude.NFData DestinationDetails where

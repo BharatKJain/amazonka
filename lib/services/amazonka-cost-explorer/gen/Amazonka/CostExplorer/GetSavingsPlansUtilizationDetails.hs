@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CostExplorer.GetSavingsPlansUtilizationDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -273,12 +273,13 @@ instance
       ( \s h x ->
           GetSavingsPlansUtilizationDetailsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-              Prelude.<*> (x Data..?> "Total")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> ( x Data..?> "SavingsPlansUtilizationDetails"
-                              Core..!@ Prelude.mempty
-                          )
-              Prelude.<*> (x Data..:> "TimePeriod")
+            Prelude.<*> (x Data..?> "Total")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> ( x
+                            Data..?> "SavingsPlansUtilizationDetails"
+                            Core..!@ Prelude.mempty
+                        )
+            Prelude.<*> (x Data..:> "TimePeriod")
       )
 
 instance
@@ -288,7 +289,8 @@ instance
   hashWithSalt
     _salt
     GetSavingsPlansUtilizationDetails' {..} =
-      _salt `Prelude.hashWithSalt` dataType
+      _salt
+        `Prelude.hashWithSalt` dataType
         `Prelude.hashWithSalt` filter'
         `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken

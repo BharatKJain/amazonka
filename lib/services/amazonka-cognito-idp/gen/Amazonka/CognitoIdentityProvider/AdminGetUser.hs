@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.AdminGetUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,7 +118,8 @@ instance Core.AWSRequest AdminGetUser where
             Prelude.<*> (x Data..?> "UserAttributes" Core..!@ Prelude.mempty)
             Prelude.<*> (x Data..?> "UserCreateDate")
             Prelude.<*> (x Data..?> "UserLastModifiedDate")
-            Prelude.<*> ( x Data..?> "UserMFASettingList"
+            Prelude.<*> ( x
+                            Data..?> "UserMFASettingList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "UserStatus")
@@ -128,7 +129,8 @@ instance Core.AWSRequest AdminGetUser where
 
 instance Prelude.Hashable AdminGetUser where
   hashWithSalt _salt AdminGetUser' {..} =
-    _salt `Prelude.hashWithSalt` userPoolId
+    _salt
+      `Prelude.hashWithSalt` userPoolId
       `Prelude.hashWithSalt` username
 
 instance Prelude.NFData AdminGetUser where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFormation.GetTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -163,7 +163,9 @@ instance Core.AWSRequest GetTemplate where
       "GetTemplateResult"
       ( \s h x ->
           GetTemplateResponse'
-            Prelude.<$> ( x Data..@? "StagesAvailable" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "StagesAvailable"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (x Data..@? "TemplateBody")
@@ -172,7 +174,8 @@ instance Core.AWSRequest GetTemplate where
 
 instance Prelude.Hashable GetTemplate where
   hashWithSalt _salt GetTemplate' {..} =
-    _salt `Prelude.hashWithSalt` changeSetName
+    _salt
+      `Prelude.hashWithSalt` changeSetName
       `Prelude.hashWithSalt` stackName
       `Prelude.hashWithSalt` templateStage
 

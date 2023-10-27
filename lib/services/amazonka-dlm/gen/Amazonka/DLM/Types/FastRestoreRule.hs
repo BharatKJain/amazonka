@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DLM.Types.FastRestoreRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DLM.Types.FastRestoreRule where
@@ -103,7 +103,8 @@ instance Data.FromJSON FastRestoreRule where
 
 instance Prelude.Hashable FastRestoreRule where
   hashWithSalt _salt FastRestoreRule' {..} =
-    _salt `Prelude.hashWithSalt` count
+    _salt
+      `Prelude.hashWithSalt` count
       `Prelude.hashWithSalt` interval
       `Prelude.hashWithSalt` intervalUnit
       `Prelude.hashWithSalt` availabilityZones

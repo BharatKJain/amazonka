@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.LambdaVpcConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.LambdaVpcConfig where
@@ -86,7 +86,8 @@ instance Data.FromJSON LambdaVpcConfig where
       "LambdaVpcConfig"
       ( \x ->
           LambdaVpcConfig'
-            Prelude.<$> ( x Data..:? "securityGroupIds"
+            Prelude.<$> ( x
+                            Data..:? "securityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "subnetIds" Data..!= Prelude.mempty)
@@ -95,7 +96,8 @@ instance Data.FromJSON LambdaVpcConfig where
 
 instance Prelude.Hashable LambdaVpcConfig where
   hashWithSalt _salt LambdaVpcConfig' {..} =
-    _salt `Prelude.hashWithSalt` securityGroupIds
+    _salt
+      `Prelude.hashWithSalt` securityGroupIds
       `Prelude.hashWithSalt` subnetIds
       `Prelude.hashWithSalt` vpcId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResourceGroups.Types.GroupFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResourceGroups.Types.GroupFilter where
@@ -73,7 +73,8 @@ groupFilter_values = Lens.lens (\GroupFilter' {values} -> values) (\s@GroupFilte
 
 instance Prelude.Hashable GroupFilter where
   hashWithSalt _salt GroupFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData GroupFilter where

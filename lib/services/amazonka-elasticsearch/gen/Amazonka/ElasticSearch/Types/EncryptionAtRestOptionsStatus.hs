@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.EncryptionAtRestOptionsStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.EncryptionAtRestOptionsStatus where
@@ -90,7 +90,8 @@ instance
     EncryptionAtRestOptionsStatus
   where
   hashWithSalt _salt EncryptionAtRestOptionsStatus' {..} =
-    _salt `Prelude.hashWithSalt` options
+    _salt
+      `Prelude.hashWithSalt` options
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData EncryptionAtRestOptionsStatus where

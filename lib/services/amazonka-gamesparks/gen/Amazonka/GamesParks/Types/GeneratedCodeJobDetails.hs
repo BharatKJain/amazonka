@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GamesParks.Types.GeneratedCodeJobDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GamesParks.Types.GeneratedCodeJobDetails where
@@ -112,7 +112,8 @@ instance Data.FromJSON GeneratedCodeJobDetails where
 
 instance Prelude.Hashable GeneratedCodeJobDetails where
   hashWithSalt _salt GeneratedCodeJobDetails' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` expirationTime
       `Prelude.hashWithSalt` generatedCodeJobId
       `Prelude.hashWithSalt` s3Url

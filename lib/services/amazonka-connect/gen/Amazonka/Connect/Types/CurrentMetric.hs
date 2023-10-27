@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.CurrentMetric
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.CurrentMetric where
@@ -73,12 +73,14 @@ instance Data.FromJSON CurrentMetric where
       "CurrentMetric"
       ( \x ->
           CurrentMetric'
-            Prelude.<$> (x Data..:? "Name") Prelude.<*> (x Data..:? "Unit")
+            Prelude.<$> (x Data..:? "Name")
+            Prelude.<*> (x Data..:? "Unit")
       )
 
 instance Prelude.Hashable CurrentMetric where
   hashWithSalt _salt CurrentMetric' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` unit
 
 instance Prelude.NFData CurrentMetric where

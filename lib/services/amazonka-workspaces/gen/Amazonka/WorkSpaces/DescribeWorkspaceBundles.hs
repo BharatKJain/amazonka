@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkSpaces.DescribeWorkspaceBundles
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,22 +127,22 @@ instance Core.AWSPager DescribeWorkspaceBundles where
     | Core.stop
         ( rs
             Lens.^? describeWorkspaceBundlesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeWorkspaceBundlesResponse_bundles
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeWorkspaceBundles_nextToken
           Lens..~ rs
           Lens.^? describeWorkspaceBundlesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeWorkspaceBundles where
   type
@@ -161,7 +161,8 @@ instance Core.AWSRequest DescribeWorkspaceBundles where
 
 instance Prelude.Hashable DescribeWorkspaceBundles where
   hashWithSalt _salt DescribeWorkspaceBundles' {..} =
-    _salt `Prelude.hashWithSalt` bundleIds
+    _salt
+      `Prelude.hashWithSalt` bundleIds
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` owner
 

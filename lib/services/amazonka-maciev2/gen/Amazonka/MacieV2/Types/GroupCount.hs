@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.GroupCount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.GroupCount where
@@ -78,7 +78,8 @@ instance Data.FromJSON GroupCount where
 
 instance Prelude.Hashable GroupCount where
   hashWithSalt _salt GroupCount' {..} =
-    _salt `Prelude.hashWithSalt` count
+    _salt
+      `Prelude.hashWithSalt` count
       `Prelude.hashWithSalt` groupKey
 
 instance Prelude.NFData GroupCount where

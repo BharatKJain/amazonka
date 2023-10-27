@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.VisualCustomAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.VisualCustomAction where
@@ -153,7 +153,8 @@ instance Data.FromJSON VisualCustomAction where
 
 instance Prelude.Hashable VisualCustomAction where
   hashWithSalt _salt VisualCustomAction' {..} =
-    _salt `Prelude.hashWithSalt` status
+    _salt
+      `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` customActionId
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` trigger

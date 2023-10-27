@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.TagRole
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -146,7 +146,8 @@ instance Core.AWSRequest TagRole where
 
 instance Prelude.Hashable TagRole where
   hashWithSalt _salt TagRole' {..} =
-    _salt `Prelude.hashWithSalt` roleName
+    _salt
+      `Prelude.hashWithSalt` roleName
       `Prelude.hashWithSalt` tags
 
 instance Prelude.NFData TagRole where

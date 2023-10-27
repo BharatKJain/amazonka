@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.RuleDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.RuleDefinition where
@@ -183,7 +183,8 @@ instance Data.FromJSON RuleDefinition where
 
 instance Prelude.Hashable RuleDefinition where
   hashWithSalt _salt RuleDefinition' {..} =
-    _salt `Prelude.hashWithSalt` matchAttributes
+    _salt
+      `Prelude.hashWithSalt` matchAttributes
       `Prelude.hashWithSalt` actions
 
 instance Prelude.NFData RuleDefinition where

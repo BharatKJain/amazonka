@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.PullRequestTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.PullRequestTarget where
@@ -153,7 +153,8 @@ instance Data.FromJSON PullRequestTarget where
 
 instance Prelude.Hashable PullRequestTarget where
   hashWithSalt _salt PullRequestTarget' {..} =
-    _salt `Prelude.hashWithSalt` destinationCommit
+    _salt
+      `Prelude.hashWithSalt` destinationCommit
       `Prelude.hashWithSalt` destinationReference
       `Prelude.hashWithSalt` mergeBase
       `Prelude.hashWithSalt` mergeMetadata

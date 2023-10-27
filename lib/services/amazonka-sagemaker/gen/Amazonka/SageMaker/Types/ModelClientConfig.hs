@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ModelClientConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ModelClientConfig where
@@ -82,7 +82,8 @@ instance Data.FromJSON ModelClientConfig where
 
 instance Prelude.Hashable ModelClientConfig where
   hashWithSalt _salt ModelClientConfig' {..} =
-    _salt `Prelude.hashWithSalt` invocationsMaxRetries
+    _salt
+      `Prelude.hashWithSalt` invocationsMaxRetries
       `Prelude.hashWithSalt` invocationsTimeoutInSeconds
 
 instance Prelude.NFData ModelClientConfig where

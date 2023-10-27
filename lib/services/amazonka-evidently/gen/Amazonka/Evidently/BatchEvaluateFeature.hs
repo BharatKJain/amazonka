@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Evidently.BatchEvaluateFeature
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance Core.AWSRequest BatchEvaluateFeature where
 
 instance Prelude.Hashable BatchEvaluateFeature where
   hashWithSalt _salt BatchEvaluateFeature' {..} =
-    _salt `Prelude.hashWithSalt` project
+    _salt
+      `Prelude.hashWithSalt` project
       `Prelude.hashWithSalt` requests
 
 instance Prelude.NFData BatchEvaluateFeature where

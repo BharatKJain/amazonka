@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.FieldFolder
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.FieldFolder where
@@ -75,7 +75,8 @@ instance Data.FromJSON FieldFolder where
 
 instance Prelude.Hashable FieldFolder where
   hashWithSalt _salt FieldFolder' {..} =
-    _salt `Prelude.hashWithSalt` columns
+    _salt
+      `Prelude.hashWithSalt` columns
       `Prelude.hashWithSalt` description
 
 instance Prelude.NFData FieldFolder where

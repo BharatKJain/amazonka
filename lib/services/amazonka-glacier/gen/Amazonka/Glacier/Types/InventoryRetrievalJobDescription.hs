@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glacier.Types.InventoryRetrievalJobDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glacier.Types.InventoryRetrievalJobDescription where
@@ -155,7 +155,8 @@ instance
   hashWithSalt
     _salt
     InventoryRetrievalJobDescription' {..} =
-      _salt `Prelude.hashWithSalt` endDate
+      _salt
+        `Prelude.hashWithSalt` endDate
         `Prelude.hashWithSalt` format
         `Prelude.hashWithSalt` limit
         `Prelude.hashWithSalt` marker

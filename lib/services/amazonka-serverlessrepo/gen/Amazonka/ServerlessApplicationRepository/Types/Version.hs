@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServerlessApplicationRepository.Types.Version
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServerlessApplicationRepository.Types.Version where
@@ -283,12 +283,14 @@ instance Data.FromJSON Version where
             Prelude.<$> (x Data..:? "sourceCodeArchiveUrl")
             Prelude.<*> (x Data..:? "sourceCodeUrl")
             Prelude.<*> (x Data..: "templateUrl")
-            Prelude.<*> ( x Data..:? "parameterDefinitions"
+            Prelude.<*> ( x
+                            Data..:? "parameterDefinitions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "resourcesSupported")
             Prelude.<*> (x Data..: "creationTime")
-            Prelude.<*> ( x Data..:? "requiredCapabilities"
+            Prelude.<*> ( x
+                            Data..:? "requiredCapabilities"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "applicationId")
@@ -297,7 +299,8 @@ instance Data.FromJSON Version where
 
 instance Prelude.Hashable Version where
   hashWithSalt _salt Version' {..} =
-    _salt `Prelude.hashWithSalt` sourceCodeArchiveUrl
+    _salt
+      `Prelude.hashWithSalt` sourceCodeArchiveUrl
       `Prelude.hashWithSalt` sourceCodeUrl
       `Prelude.hashWithSalt` templateUrl
       `Prelude.hashWithSalt` parameterDefinitions

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.InterpolationParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.InterpolationParameters where
@@ -66,7 +66,8 @@ interpolationParameters_intervalInSeconds = Lens.lens (\InterpolationParameters'
 
 instance Prelude.Hashable InterpolationParameters where
   hashWithSalt _salt InterpolationParameters' {..} =
-    _salt `Prelude.hashWithSalt` interpolationType
+    _salt
+      `Prelude.hashWithSalt` interpolationType
       `Prelude.hashWithSalt` intervalInSeconds
 
 instance Prelude.NFData InterpolationParameters where

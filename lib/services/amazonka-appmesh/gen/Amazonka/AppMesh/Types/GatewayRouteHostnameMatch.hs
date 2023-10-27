@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.GatewayRouteHostnameMatch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.GatewayRouteHostnameMatch where
@@ -74,7 +74,8 @@ instance Data.FromJSON GatewayRouteHostnameMatch where
 
 instance Prelude.Hashable GatewayRouteHostnameMatch where
   hashWithSalt _salt GatewayRouteHostnameMatch' {..} =
-    _salt `Prelude.hashWithSalt` exact
+    _salt
+      `Prelude.hashWithSalt` exact
       `Prelude.hashWithSalt` suffix
 
 instance Prelude.NFData GatewayRouteHostnameMatch where

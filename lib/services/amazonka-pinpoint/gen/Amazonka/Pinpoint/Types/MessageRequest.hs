@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.MessageRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.MessageRequest where
@@ -160,7 +160,8 @@ messageRequest_messageConfiguration = Lens.lens (\MessageRequest' {messageConfig
 
 instance Prelude.Hashable MessageRequest where
   hashWithSalt _salt MessageRequest' {..} =
-    _salt `Prelude.hashWithSalt` addresses
+    _salt
+      `Prelude.hashWithSalt` addresses
       `Prelude.hashWithSalt` context
       `Prelude.hashWithSalt` endpoints
       `Prelude.hashWithSalt` templateConfiguration

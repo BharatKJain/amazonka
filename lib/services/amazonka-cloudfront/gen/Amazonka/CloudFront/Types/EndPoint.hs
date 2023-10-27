@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.EndPoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.EndPoint where
@@ -80,7 +80,8 @@ instance Data.FromXML EndPoint where
 
 instance Prelude.Hashable EndPoint where
   hashWithSalt _salt EndPoint' {..} =
-    _salt `Prelude.hashWithSalt` kinesisStreamConfig
+    _salt
+      `Prelude.hashWithSalt` kinesisStreamConfig
       `Prelude.hashWithSalt` streamType
 
 instance Prelude.NFData EndPoint where

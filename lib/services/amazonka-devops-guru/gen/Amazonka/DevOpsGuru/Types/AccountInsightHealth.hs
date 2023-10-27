@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.AccountInsightHealth
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.AccountInsightHealth where
@@ -82,7 +82,8 @@ instance Data.FromJSON AccountInsightHealth where
 
 instance Prelude.Hashable AccountInsightHealth where
   hashWithSalt _salt AccountInsightHealth' {..} =
-    _salt `Prelude.hashWithSalt` openProactiveInsights
+    _salt
+      `Prelude.hashWithSalt` openProactiveInsights
       `Prelude.hashWithSalt` openReactiveInsights
 
 instance Prelude.NFData AccountInsightHealth where

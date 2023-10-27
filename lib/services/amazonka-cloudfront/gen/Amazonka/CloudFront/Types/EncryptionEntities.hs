@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.EncryptionEntities
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.EncryptionEntities where
@@ -75,14 +75,17 @@ encryptionEntities_quantity = Lens.lens (\EncryptionEntities' {quantity} -> quan
 instance Data.FromXML EncryptionEntities where
   parseXML x =
     EncryptionEntities'
-      Prelude.<$> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "EncryptionEntity")
                   )
       Prelude.<*> (x Data..@ "Quantity")
 
 instance Prelude.Hashable EncryptionEntities where
   hashWithSalt _salt EncryptionEntities' {..} =
-    _salt `Prelude.hashWithSalt` items
+    _salt
+      `Prelude.hashWithSalt` items
       `Prelude.hashWithSalt` quantity
 
 instance Prelude.NFData EncryptionEntities where

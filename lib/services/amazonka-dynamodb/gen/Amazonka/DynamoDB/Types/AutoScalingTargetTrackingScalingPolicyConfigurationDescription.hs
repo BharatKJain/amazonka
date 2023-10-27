@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.AutoScalingTargetTrackingScalingPolicyConfigurationDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.AutoScalingTargetTrackingScalingPolicyConfigurationDescription where
@@ -147,9 +147,9 @@ instance
       ( \x ->
           AutoScalingTargetTrackingScalingPolicyConfigurationDescription'
             Prelude.<$> (x Data..:? "DisableScaleIn")
-              Prelude.<*> (x Data..:? "ScaleInCooldown")
-              Prelude.<*> (x Data..:? "ScaleOutCooldown")
-              Prelude.<*> (x Data..: "TargetValue")
+            Prelude.<*> (x Data..:? "ScaleInCooldown")
+            Prelude.<*> (x Data..:? "ScaleOutCooldown")
+            Prelude.<*> (x Data..: "TargetValue")
       )
 
 instance
@@ -159,7 +159,8 @@ instance
   hashWithSalt
     _salt
     AutoScalingTargetTrackingScalingPolicyConfigurationDescription' {..} =
-      _salt `Prelude.hashWithSalt` disableScaleIn
+      _salt
+        `Prelude.hashWithSalt` disableScaleIn
         `Prelude.hashWithSalt` scaleInCooldown
         `Prelude.hashWithSalt` scaleOutCooldown
         `Prelude.hashWithSalt` targetValue

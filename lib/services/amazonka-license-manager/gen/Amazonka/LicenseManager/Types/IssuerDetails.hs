@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManager.Types.IssuerDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManager.Types.IssuerDetails where
@@ -90,7 +90,8 @@ instance Data.FromJSON IssuerDetails where
 
 instance Prelude.Hashable IssuerDetails where
   hashWithSalt _salt IssuerDetails' {..} =
-    _salt `Prelude.hashWithSalt` keyFingerprint
+    _salt
+      `Prelude.hashWithSalt` keyFingerprint
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` signKey
 

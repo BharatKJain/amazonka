@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.FileCacheLustreConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.FileCacheLustreConfiguration where
@@ -144,7 +144,8 @@ instance
     FileCacheLustreConfiguration
   where
   hashWithSalt _salt FileCacheLustreConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` deploymentType
+    _salt
+      `Prelude.hashWithSalt` deploymentType
       `Prelude.hashWithSalt` logConfiguration
       `Prelude.hashWithSalt` metadataConfiguration
       `Prelude.hashWithSalt` mountName

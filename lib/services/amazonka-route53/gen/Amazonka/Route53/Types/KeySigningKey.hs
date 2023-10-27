@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.KeySigningKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.KeySigningKey where
@@ -437,7 +437,8 @@ instance Data.FromXML KeySigningKey where
 
 instance Prelude.Hashable KeySigningKey where
   hashWithSalt _salt KeySigningKey' {..} =
-    _salt `Prelude.hashWithSalt` createdDate
+    _salt
+      `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` dNSKEYRecord
       `Prelude.hashWithSalt` dSRecord
       `Prelude.hashWithSalt` digestAlgorithmMnemonic

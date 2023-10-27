@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Nimble.Types.LaunchProfileInitializationScript
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Nimble.Types.LaunchProfileInitializationScript where
@@ -127,7 +127,8 @@ instance
   hashWithSalt
     _salt
     LaunchProfileInitializationScript' {..} =
-      _salt `Prelude.hashWithSalt` runtimeRoleArn
+      _salt
+        `Prelude.hashWithSalt` runtimeRoleArn
         `Prelude.hashWithSalt` script
         `Prelude.hashWithSalt` secureInitializationRoleArn
         `Prelude.hashWithSalt` studioComponentId

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.DescribeConfigurationOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -162,7 +162,9 @@ instance Core.AWSRequest DescribeConfigurationOptions where
       "DescribeConfigurationOptionsResult"
       ( \s h x ->
           DescribeConfigurationOptionsResponse'
-            Prelude.<$> ( x Data..@? "Options" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "Options"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (x Data..@? "PlatformArn")
@@ -175,7 +177,8 @@ instance
     DescribeConfigurationOptions
   where
   hashWithSalt _salt DescribeConfigurationOptions' {..} =
-    _salt `Prelude.hashWithSalt` applicationName
+    _salt
+      `Prelude.hashWithSalt` applicationName
       `Prelude.hashWithSalt` environmentName
       `Prelude.hashWithSalt` options
       `Prelude.hashWithSalt` platformArn

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpenSearch.ListPackagesForDomain
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,8 @@ instance Core.AWSRequest ListPackagesForDomain where
     Response.receiveJSON
       ( \s h x ->
           ListPackagesForDomainResponse'
-            Prelude.<$> ( x Data..?> "DomainPackageDetailsList"
+            Prelude.<$> ( x
+                            Data..?> "DomainPackageDetailsList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -134,7 +135,8 @@ instance Core.AWSRequest ListPackagesForDomain where
 
 instance Prelude.Hashable ListPackagesForDomain where
   hashWithSalt _salt ListPackagesForDomain' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` domainName
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.DeploymentAlarms
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.DeploymentAlarms where
@@ -113,7 +113,8 @@ instance Data.FromJSON DeploymentAlarms where
 
 instance Prelude.Hashable DeploymentAlarms where
   hashWithSalt _salt DeploymentAlarms' {..} =
-    _salt `Prelude.hashWithSalt` alarmNames
+    _salt
+      `Prelude.hashWithSalt` alarmNames
       `Prelude.hashWithSalt` enable
       `Prelude.hashWithSalt` rollback
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.OutpostConfigRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.OutpostConfigRequest where
@@ -121,7 +121,8 @@ outpostConfigRequest_controlPlaneInstanceType = Lens.lens (\OutpostConfigRequest
 
 instance Prelude.Hashable OutpostConfigRequest where
   hashWithSalt _salt OutpostConfigRequest' {..} =
-    _salt `Prelude.hashWithSalt` controlPlanePlacement
+    _salt
+      `Prelude.hashWithSalt` controlPlanePlacement
       `Prelude.hashWithSalt` outpostArns
       `Prelude.hashWithSalt` controlPlaneInstanceType
 

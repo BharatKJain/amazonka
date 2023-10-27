@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Evidently.EvaluateFeature
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -165,7 +165,8 @@ instance Core.AWSRequest EvaluateFeature where
 
 instance Prelude.Hashable EvaluateFeature where
   hashWithSalt _salt EvaluateFeature' {..} =
-    _salt `Prelude.hashWithSalt` evaluationContext
+    _salt
+      `Prelude.hashWithSalt` evaluationContext
       `Prelude.hashWithSalt` entityId
       `Prelude.hashWithSalt` feature
       `Prelude.hashWithSalt` project

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.CertificateValidity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.CertificateValidity where
@@ -74,7 +74,8 @@ instance Data.FromJSON CertificateValidity where
 
 instance Prelude.Hashable CertificateValidity where
   hashWithSalt _salt CertificateValidity' {..} =
-    _salt `Prelude.hashWithSalt` notAfter
+    _salt
+      `Prelude.hashWithSalt` notAfter
       `Prelude.hashWithSalt` notBefore
 
 instance Prelude.NFData CertificateValidity where

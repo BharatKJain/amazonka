@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Budgets.Types.ActionHistoryDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Budgets.Types.ActionHistoryDetails where
@@ -78,7 +78,8 @@ instance Data.FromJSON ActionHistoryDetails where
 
 instance Prelude.Hashable ActionHistoryDetails where
   hashWithSalt _salt ActionHistoryDetails' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` action
 
 instance Prelude.NFData ActionHistoryDetails where

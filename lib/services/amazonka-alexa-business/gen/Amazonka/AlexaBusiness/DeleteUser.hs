@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AlexaBusiness.DeleteUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,7 +98,8 @@ instance Core.AWSRequest DeleteUser where
 
 instance Prelude.Hashable DeleteUser where
   hashWithSalt _salt DeleteUser' {..} =
-    _salt `Prelude.hashWithSalt` userArn
+    _salt
+      `Prelude.hashWithSalt` userArn
       `Prelude.hashWithSalt` enrollmentId
 
 instance Prelude.NFData DeleteUser where

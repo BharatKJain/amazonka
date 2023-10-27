@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.GdgDetailAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.GdgDetailAttributes where
@@ -79,7 +79,8 @@ instance Data.FromJSON GdgDetailAttributes where
 
 instance Prelude.Hashable GdgDetailAttributes where
   hashWithSalt _salt GdgDetailAttributes' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` rollDisposition
 
 instance Prelude.NFData GdgDetailAttributes where

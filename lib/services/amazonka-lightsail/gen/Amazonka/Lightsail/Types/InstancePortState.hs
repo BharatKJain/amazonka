@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.InstancePortState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.InstancePortState where
@@ -366,7 +366,8 @@ instance Data.FromJSON InstancePortState where
       "InstancePortState"
       ( \x ->
           InstancePortState'
-            Prelude.<$> ( x Data..:? "cidrListAliases"
+            Prelude.<$> ( x
+                            Data..:? "cidrListAliases"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "cidrs" Data..!= Prelude.mempty)
@@ -379,7 +380,8 @@ instance Data.FromJSON InstancePortState where
 
 instance Prelude.Hashable InstancePortState where
   hashWithSalt _salt InstancePortState' {..} =
-    _salt `Prelude.hashWithSalt` cidrListAliases
+    _salt
+      `Prelude.hashWithSalt` cidrListAliases
       `Prelude.hashWithSalt` cidrs
       `Prelude.hashWithSalt` fromPort
       `Prelude.hashWithSalt` ipv6Cidrs

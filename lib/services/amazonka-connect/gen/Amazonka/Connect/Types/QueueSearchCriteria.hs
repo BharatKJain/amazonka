@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.QueueSearchCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.QueueSearchCriteria where
@@ -94,7 +94,8 @@ queueSearchCriteria_stringCondition = Lens.lens (\QueueSearchCriteria' {stringCo
 
 instance Prelude.Hashable QueueSearchCriteria where
   hashWithSalt _salt QueueSearchCriteria' {..} =
-    _salt `Prelude.hashWithSalt` andConditions
+    _salt
+      `Prelude.hashWithSalt` andConditions
       `Prelude.hashWithSalt` orConditions
       `Prelude.hashWithSalt` queueTypeCondition
       `Prelude.hashWithSalt` stringCondition

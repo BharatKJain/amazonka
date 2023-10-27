@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StepFunctions.Types.TaskFailedEventDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StepFunctions.Types.TaskFailedEventDetails where
@@ -98,7 +98,8 @@ instance Data.FromJSON TaskFailedEventDetails where
 
 instance Prelude.Hashable TaskFailedEventDetails where
   hashWithSalt _salt TaskFailedEventDetails' {..} =
-    _salt `Prelude.hashWithSalt` cause
+    _salt
+      `Prelude.hashWithSalt` cause
       `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` resource

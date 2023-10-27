@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.Issue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.Issue where
@@ -283,7 +283,8 @@ instance Data.FromJSON Issue where
 
 instance Prelude.Hashable Issue where
   hashWithSalt _salt Issue' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` resourceIds
 

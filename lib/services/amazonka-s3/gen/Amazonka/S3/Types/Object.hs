@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.Object
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.Object where
@@ -199,7 +199,8 @@ instance Data.FromXML Object where
 
 instance Prelude.Hashable Object where
   hashWithSalt _salt Object' {..} =
-    _salt `Prelude.hashWithSalt` checksumAlgorithm
+    _salt
+      `Prelude.hashWithSalt` checksumAlgorithm
       `Prelude.hashWithSalt` owner
       `Prelude.hashWithSalt` eTag
       `Prelude.hashWithSalt` size

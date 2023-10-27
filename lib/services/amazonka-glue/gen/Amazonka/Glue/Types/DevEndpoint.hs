@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.DevEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.DevEndpoint where
@@ -514,7 +514,8 @@ instance Data.FromJSON DevEndpoint where
             Prelude.<*> (x Data..:? "PublicKeys" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "RoleArn")
             Prelude.<*> (x Data..:? "SecurityConfiguration")
-            Prelude.<*> ( x Data..:? "SecurityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "SecurityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Status")
@@ -527,7 +528,8 @@ instance Data.FromJSON DevEndpoint where
 
 instance Prelude.Hashable DevEndpoint where
   hashWithSalt _salt DevEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` arguments
+    _salt
+      `Prelude.hashWithSalt` arguments
       `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` endpointName

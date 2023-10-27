@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Schemas.Types.RegistrySummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Schemas.Types.RegistrySummary where
@@ -82,7 +82,8 @@ instance Data.FromJSON RegistrySummary where
 
 instance Prelude.Hashable RegistrySummary where
   hashWithSalt _salt RegistrySummary' {..} =
-    _salt `Prelude.hashWithSalt` registryArn
+    _salt
+      `Prelude.hashWithSalt` registryArn
       `Prelude.hashWithSalt` registryName
       `Prelude.hashWithSalt` tags
 

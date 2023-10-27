@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeRegions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -161,7 +161,9 @@ instance Core.AWSRequest DescribeRegions where
     Response.receiveXML
       ( \s h x ->
           DescribeRegionsResponse'
-            Prelude.<$> ( x Data..@? "regionInfo" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "regionInfo"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -169,7 +171,8 @@ instance Core.AWSRequest DescribeRegions where
 
 instance Prelude.Hashable DescribeRegions where
   hashWithSalt _salt DescribeRegions' {..} =
-    _salt `Prelude.hashWithSalt` allRegions
+    _salt
+      `Prelude.hashWithSalt` allRegions
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` regionNames

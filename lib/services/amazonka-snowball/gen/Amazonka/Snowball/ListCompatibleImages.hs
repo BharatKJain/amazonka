@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Snowball.ListCompatibleImages
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,22 +106,22 @@ instance Core.AWSPager ListCompatibleImages where
     | Core.stop
         ( rs
             Lens.^? listCompatibleImagesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listCompatibleImagesResponse_compatibleImages
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listCompatibleImages_nextToken
           Lens..~ rs
           Lens.^? listCompatibleImagesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListCompatibleImages where
   type
@@ -133,7 +133,8 @@ instance Core.AWSRequest ListCompatibleImages where
     Response.receiveJSON
       ( \s h x ->
           ListCompatibleImagesResponse'
-            Prelude.<$> ( x Data..?> "CompatibleImages"
+            Prelude.<$> ( x
+                            Data..?> "CompatibleImages"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -142,7 +143,8 @@ instance Core.AWSRequest ListCompatibleImages where
 
 instance Prelude.Hashable ListCompatibleImages where
   hashWithSalt _salt ListCompatibleImages' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListCompatibleImages where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ImportSnapshotTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ImportSnapshotTask where
@@ -89,13 +89,16 @@ instance Data.FromXML ImportSnapshotTask where
       Prelude.<$> (x Data..@? "description")
       Prelude.<*> (x Data..@? "importTaskId")
       Prelude.<*> (x Data..@? "snapshotTaskDetail")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable ImportSnapshotTask where
   hashWithSalt _salt ImportSnapshotTask' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` importTaskId
       `Prelude.hashWithSalt` snapshotTaskDetail
       `Prelude.hashWithSalt` tags

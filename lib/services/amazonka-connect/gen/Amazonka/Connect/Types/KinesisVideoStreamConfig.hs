@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.KinesisVideoStreamConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.KinesisVideoStreamConfig where
@@ -109,7 +109,8 @@ instance Data.FromJSON KinesisVideoStreamConfig where
 
 instance Prelude.Hashable KinesisVideoStreamConfig where
   hashWithSalt _salt KinesisVideoStreamConfig' {..} =
-    _salt `Prelude.hashWithSalt` prefix
+    _salt
+      `Prelude.hashWithSalt` prefix
       `Prelude.hashWithSalt` retentionPeriodHours
       `Prelude.hashWithSalt` encryptionConfig
 

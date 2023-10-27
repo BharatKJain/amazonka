@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudDirectory.ListAttachedIndices
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,22 +129,22 @@ instance Core.AWSPager ListAttachedIndices where
     | Core.stop
         ( rs
             Lens.^? listAttachedIndicesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listAttachedIndicesResponse_indexAttachments
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAttachedIndices_nextToken
           Lens..~ rs
           Lens.^? listAttachedIndicesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAttachedIndices where
   type
@@ -156,7 +156,8 @@ instance Core.AWSRequest ListAttachedIndices where
     Response.receiveJSON
       ( \s h x ->
           ListAttachedIndicesResponse'
-            Prelude.<$> ( x Data..?> "IndexAttachments"
+            Prelude.<$> ( x
+                            Data..?> "IndexAttachments"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -165,7 +166,8 @@ instance Core.AWSRequest ListAttachedIndices where
 
 instance Prelude.Hashable ListAttachedIndices where
   hashWithSalt _salt ListAttachedIndices' {..} =
-    _salt `Prelude.hashWithSalt` consistencyLevel
+    _salt
+      `Prelude.hashWithSalt` consistencyLevel
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` directoryArn

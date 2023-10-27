@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.ExportSortBy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.ExportSortBy where
@@ -70,7 +70,8 @@ exportSortBy_order = Lens.lens (\ExportSortBy' {order} -> order) (\s@ExportSortB
 
 instance Prelude.Hashable ExportSortBy where
   hashWithSalt _salt ExportSortBy' {..} =
-    _salt `Prelude.hashWithSalt` attribute
+    _salt
+      `Prelude.hashWithSalt` attribute
       `Prelude.hashWithSalt` order
 
 instance Prelude.NFData ExportSortBy where

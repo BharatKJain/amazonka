@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.TypedLinkAttributeRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.TypedLinkAttributeRange where
@@ -68,7 +68,8 @@ typedLinkAttributeRange_range = Lens.lens (\TypedLinkAttributeRange' {range} -> 
 
 instance Prelude.Hashable TypedLinkAttributeRange where
   hashWithSalt _salt TypedLinkAttributeRange' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` range
 
 instance Prelude.NFData TypedLinkAttributeRange where

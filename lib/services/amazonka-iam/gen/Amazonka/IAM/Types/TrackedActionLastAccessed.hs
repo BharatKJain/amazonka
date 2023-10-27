@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.TrackedActionLastAccessed
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.TrackedActionLastAccessed where
@@ -136,7 +136,8 @@ instance Data.FromXML TrackedActionLastAccessed where
 
 instance Prelude.Hashable TrackedActionLastAccessed where
   hashWithSalt _salt TrackedActionLastAccessed' {..} =
-    _salt `Prelude.hashWithSalt` actionName
+    _salt
+      `Prelude.hashWithSalt` actionName
       `Prelude.hashWithSalt` lastAccessedEntity
       `Prelude.hashWithSalt` lastAccessedRegion
       `Prelude.hashWithSalt` lastAccessedTime

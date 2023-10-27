@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QLDBSession.Types.FetchPageRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QLDBSession.Types.FetchPageRequest where
@@ -68,7 +68,8 @@ fetchPageRequest_nextPageToken = Lens.lens (\FetchPageRequest' {nextPageToken} -
 
 instance Prelude.Hashable FetchPageRequest where
   hashWithSalt _salt FetchPageRequest' {..} =
-    _salt `Prelude.hashWithSalt` transactionId
+    _salt
+      `Prelude.hashWithSalt` transactionId
       `Prelude.hashWithSalt` nextPageToken
 
 instance Prelude.NFData FetchPageRequest where

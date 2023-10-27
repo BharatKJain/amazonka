@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaStoreData.GetObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -198,7 +198,8 @@ instance Core.AWSRequest GetObject where
 
 instance Prelude.Hashable GetObject where
   hashWithSalt _salt GetObject' {..} =
-    _salt `Prelude.hashWithSalt` range
+    _salt
+      `Prelude.hashWithSalt` range
       `Prelude.hashWithSalt` path
 
 instance Prelude.NFData GetObject where

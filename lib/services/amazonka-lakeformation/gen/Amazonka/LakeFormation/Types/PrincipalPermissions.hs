@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.PrincipalPermissions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.PrincipalPermissions where
@@ -77,7 +77,8 @@ instance Data.FromJSON PrincipalPermissions where
 
 instance Prelude.Hashable PrincipalPermissions where
   hashWithSalt _salt PrincipalPermissions' {..} =
-    _salt `Prelude.hashWithSalt` permissions
+    _salt
+      `Prelude.hashWithSalt` permissions
       `Prelude.hashWithSalt` principal
 
 instance Prelude.NFData PrincipalPermissions where

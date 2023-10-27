@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.BatchGetWorkflows
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest BatchGetWorkflows where
 
 instance Prelude.Hashable BatchGetWorkflows where
   hashWithSalt _salt BatchGetWorkflows' {..} =
-    _salt `Prelude.hashWithSalt` includeGraph
+    _salt
+      `Prelude.hashWithSalt` includeGraph
       `Prelude.hashWithSalt` names
 
 instance Prelude.NFData BatchGetWorkflows where

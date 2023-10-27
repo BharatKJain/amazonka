@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTDeviceAdvisor.Types.SuiteDefinitionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTDeviceAdvisor.Types.SuiteDefinitionConfiguration where
@@ -140,7 +140,8 @@ instance
     SuiteDefinitionConfiguration
   where
   hashWithSalt _salt SuiteDefinitionConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` devices
+    _salt
+      `Prelude.hashWithSalt` devices
       `Prelude.hashWithSalt` intendedForQualification
       `Prelude.hashWithSalt` isLongDurationTest
       `Prelude.hashWithSalt` protocol

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LookoutEquipment.CreateLabelGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -159,7 +159,8 @@ instance Core.AWSRequest CreateLabelGroup where
 
 instance Prelude.Hashable CreateLabelGroup where
   hashWithSalt _salt CreateLabelGroup' {..} =
-    _salt `Prelude.hashWithSalt` faultCodes
+    _salt
+      `Prelude.hashWithSalt` faultCodes
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` labelGroupName
       `Prelude.hashWithSalt` clientToken

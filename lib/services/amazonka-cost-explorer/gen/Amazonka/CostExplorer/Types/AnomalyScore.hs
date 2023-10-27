@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.AnomalyScore
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.AnomalyScore where
@@ -79,7 +79,8 @@ instance Data.FromJSON AnomalyScore where
 
 instance Prelude.Hashable AnomalyScore where
   hashWithSalt _salt AnomalyScore' {..} =
-    _salt `Prelude.hashWithSalt` maxScore
+    _salt
+      `Prelude.hashWithSalt` maxScore
       `Prelude.hashWithSalt` currentScore
 
 instance Prelude.NFData AnomalyScore where

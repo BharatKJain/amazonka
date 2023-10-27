@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Discovery.StartExportTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -162,7 +162,8 @@ instance Core.AWSRequest StartExportTask where
 
 instance Prelude.Hashable StartExportTask where
   hashWithSalt _salt StartExportTask' {..} =
-    _salt `Prelude.hashWithSalt` endTime
+    _salt
+      `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` exportDataFormat
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` startTime

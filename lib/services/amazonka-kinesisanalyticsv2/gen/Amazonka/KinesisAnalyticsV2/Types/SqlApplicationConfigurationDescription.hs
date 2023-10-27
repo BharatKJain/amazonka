@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.SqlApplicationConfigurationDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.SqlApplicationConfigurationDescription where
@@ -96,13 +96,16 @@ instance
       "SqlApplicationConfigurationDescription"
       ( \x ->
           SqlApplicationConfigurationDescription'
-            Prelude.<$> ( x Data..:? "InputDescriptions"
+            Prelude.<$> ( x
+                            Data..:? "InputDescriptions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "OutputDescriptions"
+            Prelude.<*> ( x
+                            Data..:? "OutputDescriptions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "ReferenceDataSourceDescriptions"
+            Prelude.<*> ( x
+                            Data..:? "ReferenceDataSourceDescriptions"
                             Data..!= Prelude.mempty
                         )
       )
@@ -114,7 +117,8 @@ instance
   hashWithSalt
     _salt
     SqlApplicationConfigurationDescription' {..} =
-      _salt `Prelude.hashWithSalt` inputDescriptions
+      _salt
+        `Prelude.hashWithSalt` inputDescriptions
         `Prelude.hashWithSalt` outputDescriptions
         `Prelude.hashWithSalt` referenceDataSourceDescriptions
 

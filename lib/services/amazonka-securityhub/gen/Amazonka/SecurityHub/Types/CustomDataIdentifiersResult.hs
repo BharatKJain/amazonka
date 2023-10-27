@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.CustomDataIdentifiersResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.CustomDataIdentifiersResult where
@@ -77,7 +77,8 @@ instance Data.FromJSON CustomDataIdentifiersResult where
 
 instance Prelude.Hashable CustomDataIdentifiersResult where
   hashWithSalt _salt CustomDataIdentifiersResult' {..} =
-    _salt `Prelude.hashWithSalt` detections
+    _salt
+      `Prelude.hashWithSalt` detections
       `Prelude.hashWithSalt` totalCount
 
 instance Prelude.NFData CustomDataIdentifiersResult where

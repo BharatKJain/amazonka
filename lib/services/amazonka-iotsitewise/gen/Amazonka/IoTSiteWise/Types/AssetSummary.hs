@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.AssetSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.AssetSummary where
@@ -182,7 +182,8 @@ instance Data.FromJSON AssetSummary where
 
 instance Prelude.Hashable AssetSummary where
   hashWithSalt _salt AssetSummary' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` name

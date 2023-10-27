@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeDeploy.CreateDeploymentGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -407,7 +407,8 @@ instance Core.AWSRequest CreateDeploymentGroup where
 
 instance Prelude.Hashable CreateDeploymentGroup where
   hashWithSalt _salt CreateDeploymentGroup' {..} =
-    _salt `Prelude.hashWithSalt` alarmConfiguration
+    _salt
+      `Prelude.hashWithSalt` alarmConfiguration
       `Prelude.hashWithSalt` autoRollbackConfiguration
       `Prelude.hashWithSalt` autoScalingGroups
       `Prelude.hashWithSalt` blueGreenDeploymentConfiguration

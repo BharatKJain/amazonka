@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Personalize.CreateDatasetExportJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -195,7 +195,8 @@ instance Core.AWSRequest CreateDatasetExportJob where
 
 instance Prelude.Hashable CreateDatasetExportJob where
   hashWithSalt _salt CreateDatasetExportJob' {..} =
-    _salt `Prelude.hashWithSalt` ingestionMode
+    _salt
+      `Prelude.hashWithSalt` ingestionMode
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` datasetArn

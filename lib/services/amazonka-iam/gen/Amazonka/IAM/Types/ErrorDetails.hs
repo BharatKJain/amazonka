@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.ErrorDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.ErrorDetails where
@@ -70,11 +70,13 @@ errorDetails_code = Lens.lens (\ErrorDetails' {code} -> code) (\s@ErrorDetails' 
 instance Data.FromXML ErrorDetails where
   parseXML x =
     ErrorDetails'
-      Prelude.<$> (x Data..@ "Message") Prelude.<*> (x Data..@ "Code")
+      Prelude.<$> (x Data..@ "Message")
+      Prelude.<*> (x Data..@ "Code")
 
 instance Prelude.Hashable ErrorDetails where
   hashWithSalt _salt ErrorDetails' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` code
 
 instance Prelude.NFData ErrorDetails where

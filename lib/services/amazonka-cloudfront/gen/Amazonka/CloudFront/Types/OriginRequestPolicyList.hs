@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.OriginRequestPolicyList
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.OriginRequestPolicyList where
@@ -97,7 +97,9 @@ originRequestPolicyList_quantity = Lens.lens (\OriginRequestPolicyList' {quantit
 instance Data.FromXML OriginRequestPolicyList where
   parseXML x =
     OriginRequestPolicyList'
-      Prelude.<$> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may
                         (Data.parseXMLList "OriginRequestPolicySummary")
                   )
@@ -107,7 +109,8 @@ instance Data.FromXML OriginRequestPolicyList where
 
 instance Prelude.Hashable OriginRequestPolicyList where
   hashWithSalt _salt OriginRequestPolicyList' {..} =
-    _salt `Prelude.hashWithSalt` items
+    _salt
+      `Prelude.hashWithSalt` items
       `Prelude.hashWithSalt` nextMarker
       `Prelude.hashWithSalt` maxItems
       `Prelude.hashWithSalt` quantity

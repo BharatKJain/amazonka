@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.SchemaVersionNumber
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.SchemaVersionNumber where
@@ -65,7 +65,8 @@ schemaVersionNumber_versionNumber = Lens.lens (\SchemaVersionNumber' {versionNum
 
 instance Prelude.Hashable SchemaVersionNumber where
   hashWithSalt _salt SchemaVersionNumber' {..} =
-    _salt `Prelude.hashWithSalt` latestVersion
+    _salt
+      `Prelude.hashWithSalt` latestVersion
       `Prelude.hashWithSalt` versionNumber
 
 instance Prelude.NFData SchemaVersionNumber where

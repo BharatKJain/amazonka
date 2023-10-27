@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.TargetedSentimentMention
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.TargetedSentimentMention where
@@ -141,7 +141,8 @@ instance Data.FromJSON TargetedSentimentMention where
 
 instance Prelude.Hashable TargetedSentimentMention where
   hashWithSalt _salt TargetedSentimentMention' {..} =
-    _salt `Prelude.hashWithSalt` beginOffset
+    _salt
+      `Prelude.hashWithSalt` beginOffset
       `Prelude.hashWithSalt` endOffset
       `Prelude.hashWithSalt` groupScore
       `Prelude.hashWithSalt` mentionSentiment

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.Alert
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.Alert where
@@ -114,7 +114,8 @@ instance Data.FromJSON Alert where
             Prelude.<$> (x Data..: "AlertCode")
             Prelude.<*> (x Data..: "AlertMessage")
             Prelude.<*> (x Data..: "LastModifiedTime")
-            Prelude.<*> ( x Data..:? "RelatedResourceArns"
+            Prelude.<*> ( x
+                            Data..:? "RelatedResourceArns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "ResourceArn")
@@ -122,7 +123,8 @@ instance Data.FromJSON Alert where
 
 instance Prelude.Hashable Alert where
   hashWithSalt _salt Alert' {..} =
-    _salt `Prelude.hashWithSalt` alertCode
+    _salt
+      `Prelude.hashWithSalt` alertCode
       `Prelude.hashWithSalt` alertMessage
       `Prelude.hashWithSalt` lastModifiedTime
       `Prelude.hashWithSalt` relatedResourceArns

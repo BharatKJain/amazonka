@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.RecipeReference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.RecipeReference where
@@ -76,7 +76,8 @@ instance Data.FromJSON RecipeReference where
 
 instance Prelude.Hashable RecipeReference where
   hashWithSalt _salt RecipeReference' {..} =
-    _salt `Prelude.hashWithSalt` recipeVersion
+    _salt
+      `Prelude.hashWithSalt` recipeVersion
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData RecipeReference where

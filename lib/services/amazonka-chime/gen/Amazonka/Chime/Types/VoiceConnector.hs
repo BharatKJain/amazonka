@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.VoiceConnector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.VoiceConnector where
@@ -142,7 +142,8 @@ instance Data.FromJSON VoiceConnector where
 
 instance Prelude.Hashable VoiceConnector where
   hashWithSalt _salt VoiceConnector' {..} =
-    _salt `Prelude.hashWithSalt` awsRegion
+    _salt
+      `Prelude.hashWithSalt` awsRegion
       `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` outboundHostName

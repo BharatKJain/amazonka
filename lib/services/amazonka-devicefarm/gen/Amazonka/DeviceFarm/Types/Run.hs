@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.Run
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.Run where
@@ -695,7 +695,8 @@ instance Data.FromJSON Run where
 
 instance Prelude.Hashable Run where
   hashWithSalt _salt Run' {..} =
-    _salt `Prelude.hashWithSalt` appUpload
+    _salt
+      `Prelude.hashWithSalt` appUpload
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` billingMethod
       `Prelude.hashWithSalt` completedJobs

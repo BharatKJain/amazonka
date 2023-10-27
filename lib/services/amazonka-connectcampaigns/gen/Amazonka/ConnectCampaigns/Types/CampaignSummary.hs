@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCampaigns.Types.CampaignSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCampaigns.Types.CampaignSummary where
@@ -102,7 +102,8 @@ instance Data.FromJSON CampaignSummary where
 
 instance Prelude.Hashable CampaignSummary where
   hashWithSalt _salt CampaignSummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` connectInstanceId
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name

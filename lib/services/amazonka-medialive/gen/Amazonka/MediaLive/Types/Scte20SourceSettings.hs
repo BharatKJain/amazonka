@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.Scte20SourceSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.Scte20SourceSettings where
@@ -85,7 +85,8 @@ instance Data.FromJSON Scte20SourceSettings where
 
 instance Prelude.Hashable Scte20SourceSettings where
   hashWithSalt _salt Scte20SourceSettings' {..} =
-    _salt `Prelude.hashWithSalt` convert608To708
+    _salt
+      `Prelude.hashWithSalt` convert608To708
       `Prelude.hashWithSalt` source608ChannelNumber
 
 instance Prelude.NFData Scte20SourceSettings where

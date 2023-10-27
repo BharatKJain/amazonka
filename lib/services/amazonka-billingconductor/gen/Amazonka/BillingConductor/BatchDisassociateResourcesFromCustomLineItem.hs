@@ -16,7 +16,7 @@
 -- Module      : Amazonka.BillingConductor.BatchDisassociateResourcesFromCustomLineItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,13 +117,15 @@ instance
     Response.receiveJSON
       ( \s h x ->
           BatchDisassociateResourcesFromCustomLineItemResponse'
-            Prelude.<$> ( x Data..?> "FailedDisassociatedResources"
+            Prelude.<$> ( x
+                            Data..?> "FailedDisassociatedResources"
                             Core..!@ Prelude.mempty
                         )
-              Prelude.<*> ( x Data..?> "SuccessfullyDisassociatedResources"
-                              Core..!@ Prelude.mempty
-                          )
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> ( x
+                            Data..?> "SuccessfullyDisassociatedResources"
+                            Core..!@ Prelude.mempty
+                        )
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -133,7 +135,8 @@ instance
   hashWithSalt
     _salt
     BatchDisassociateResourcesFromCustomLineItem' {..} =
-      _salt `Prelude.hashWithSalt` billingPeriodRange
+      _salt
+        `Prelude.hashWithSalt` billingPeriodRange
         `Prelude.hashWithSalt` targetArn
         `Prelude.hashWithSalt` resourceArns
 

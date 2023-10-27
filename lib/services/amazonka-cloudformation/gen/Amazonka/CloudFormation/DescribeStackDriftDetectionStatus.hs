@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFormation.DescribeStackDriftDetectionStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,13 +125,13 @@ instance
       ( \s h x ->
           DescribeStackDriftDetectionStatusResponse'
             Prelude.<$> (x Data..@? "DetectionStatusReason")
-              Prelude.<*> (x Data..@? "DriftedStackResourceCount")
-              Prelude.<*> (x Data..@? "StackDriftStatus")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> (x Data..@ "StackId")
-              Prelude.<*> (x Data..@ "StackDriftDetectionId")
-              Prelude.<*> (x Data..@ "DetectionStatus")
-              Prelude.<*> (x Data..@ "Timestamp")
+            Prelude.<*> (x Data..@? "DriftedStackResourceCount")
+            Prelude.<*> (x Data..@? "StackDriftStatus")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..@ "StackId")
+            Prelude.<*> (x Data..@ "StackDriftDetectionId")
+            Prelude.<*> (x Data..@ "DetectionStatus")
+            Prelude.<*> (x Data..@ "Timestamp")
       )
 
 instance

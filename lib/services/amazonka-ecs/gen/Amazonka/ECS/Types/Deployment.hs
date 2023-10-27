@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.Deployment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.Deployment where
@@ -403,7 +403,8 @@ instance Data.FromJSON Deployment where
       "Deployment"
       ( \x ->
           Deployment'
-            Prelude.<$> ( x Data..:? "capacityProviderStrategy"
+            Prelude.<$> ( x
+                            Data..:? "capacityProviderStrategy"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "createdAt")
@@ -419,7 +420,8 @@ instance Data.FromJSON Deployment where
             Prelude.<*> (x Data..:? "rolloutStateReason")
             Prelude.<*> (x Data..:? "runningCount")
             Prelude.<*> (x Data..:? "serviceConnectConfiguration")
-            Prelude.<*> ( x Data..:? "serviceConnectResources"
+            Prelude.<*> ( x
+                            Data..:? "serviceConnectResources"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "status")

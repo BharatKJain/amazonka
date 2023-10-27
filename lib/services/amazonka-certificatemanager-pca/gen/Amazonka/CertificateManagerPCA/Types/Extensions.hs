@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.Extensions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.Extensions where
@@ -140,7 +140,8 @@ extensions_subjectAlternativeNames = Lens.lens (\Extensions' {subjectAlternative
 
 instance Prelude.Hashable Extensions where
   hashWithSalt _salt Extensions' {..} =
-    _salt `Prelude.hashWithSalt` certificatePolicies
+    _salt
+      `Prelude.hashWithSalt` certificatePolicies
       `Prelude.hashWithSalt` customExtensions
       `Prelude.hashWithSalt` extendedKeyUsage
       `Prelude.hashWithSalt` keyUsage

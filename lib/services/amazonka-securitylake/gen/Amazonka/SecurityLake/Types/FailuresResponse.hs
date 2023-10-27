@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityLake.Types.FailuresResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityLake.Types.FailuresResponse where
@@ -76,7 +76,8 @@ instance Data.FromJSON FailuresResponse where
 
 instance Prelude.Hashable FailuresResponse where
   hashWithSalt _salt FailuresResponse' {..} =
-    _salt `Prelude.hashWithSalt` failures
+    _salt
+      `Prelude.hashWithSalt` failures
       `Prelude.hashWithSalt` region
 
 instance Prelude.NFData FailuresResponse where

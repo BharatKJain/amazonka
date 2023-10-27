@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.IdentityProviderDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.IdentityProviderDetails where
@@ -106,7 +106,8 @@ instance Data.FromJSON IdentityProviderDetails where
 
 instance Prelude.Hashable IdentityProviderDetails where
   hashWithSalt _salt IdentityProviderDetails' {..} =
-    _salt `Prelude.hashWithSalt` directoryId
+    _salt
+      `Prelude.hashWithSalt` directoryId
       `Prelude.hashWithSalt` function
       `Prelude.hashWithSalt` invocationRole
       `Prelude.hashWithSalt` url

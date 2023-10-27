@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.InAppMessageContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.InAppMessageContent where
@@ -118,7 +118,8 @@ instance Data.FromJSON InAppMessageContent where
 
 instance Prelude.Hashable InAppMessageContent where
   hashWithSalt _salt InAppMessageContent' {..} =
-    _salt `Prelude.hashWithSalt` backgroundColor
+    _salt
+      `Prelude.hashWithSalt` backgroundColor
       `Prelude.hashWithSalt` bodyConfig
       `Prelude.hashWithSalt` headerConfig
       `Prelude.hashWithSalt` imageUrl

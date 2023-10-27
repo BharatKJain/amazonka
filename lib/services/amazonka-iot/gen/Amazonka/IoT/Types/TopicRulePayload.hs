@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.TopicRulePayload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.TopicRulePayload where
@@ -110,7 +110,8 @@ topicRulePayload_actions = Lens.lens (\TopicRulePayload' {actions} -> actions) (
 
 instance Prelude.Hashable TopicRulePayload where
   hashWithSalt _salt TopicRulePayload' {..} =
-    _salt `Prelude.hashWithSalt` awsIotSqlVersion
+    _salt
+      `Prelude.hashWithSalt` awsIotSqlVersion
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` errorAction
       `Prelude.hashWithSalt` ruleDisabled

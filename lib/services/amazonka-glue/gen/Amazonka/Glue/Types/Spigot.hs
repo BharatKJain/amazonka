@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Spigot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Spigot where
@@ -123,7 +123,8 @@ instance Data.FromJSON Spigot where
 
 instance Prelude.Hashable Spigot where
   hashWithSalt _salt Spigot' {..} =
-    _salt `Prelude.hashWithSalt` prob
+    _salt
+      `Prelude.hashWithSalt` prob
       `Prelude.hashWithSalt` topk
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inputs

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTWireless.SendDataToMulticastGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,7 +116,8 @@ instance Core.AWSRequest SendDataToMulticastGroup where
 
 instance Prelude.Hashable SendDataToMulticastGroup where
   hashWithSalt _salt SendDataToMulticastGroup' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` payloadData
       `Prelude.hashWithSalt` wirelessMetadata
 

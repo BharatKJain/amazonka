@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaLive.ListReservations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -175,22 +175,22 @@ instance Core.AWSPager ListReservations where
     | Core.stop
         ( rs
             Lens.^? listReservationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listReservationsResponse_reservations
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listReservations_nextToken
           Lens..~ rs
           Lens.^? listReservationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListReservations where
   type
@@ -209,7 +209,8 @@ instance Core.AWSRequest ListReservations where
 
 instance Prelude.Hashable ListReservations where
   hashWithSalt _salt ListReservations' {..} =
-    _salt `Prelude.hashWithSalt` channelClass
+    _salt
+      `Prelude.hashWithSalt` channelClass
       `Prelude.hashWithSalt` codec
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` maximumBitrate

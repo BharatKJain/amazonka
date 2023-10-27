@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.LifecycleEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.LifecycleEvent where
@@ -148,7 +148,8 @@ instance Data.FromJSON LifecycleEvent where
 
 instance Prelude.Hashable LifecycleEvent where
   hashWithSalt _salt LifecycleEvent' {..} =
-    _salt `Prelude.hashWithSalt` diagnostics
+    _salt
+      `Prelude.hashWithSalt` diagnostics
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` lifecycleEventName
       `Prelude.hashWithSalt` startTime

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMContacts.Types.TimeRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMContacts.Types.TimeRange where
@@ -64,7 +64,8 @@ timeRange_startTime = Lens.lens (\TimeRange' {startTime} -> startTime) (\s@TimeR
 
 instance Prelude.Hashable TimeRange where
   hashWithSalt _salt TimeRange' {..} =
-    _salt `Prelude.hashWithSalt` endTime
+    _salt
+      `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` startTime
 
 instance Prelude.NFData TimeRange where

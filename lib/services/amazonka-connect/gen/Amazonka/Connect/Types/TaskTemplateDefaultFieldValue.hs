@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.TaskTemplateDefaultFieldValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.TaskTemplateDefaultFieldValue where
@@ -79,7 +79,8 @@ instance
     TaskTemplateDefaultFieldValue
   where
   hashWithSalt _salt TaskTemplateDefaultFieldValue' {..} =
-    _salt `Prelude.hashWithSalt` defaultValue
+    _salt
+      `Prelude.hashWithSalt` defaultValue
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData TaskTemplateDefaultFieldValue where

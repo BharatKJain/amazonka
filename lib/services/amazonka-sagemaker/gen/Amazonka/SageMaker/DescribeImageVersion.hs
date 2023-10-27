@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.DescribeImageVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -145,7 +145,8 @@ instance Core.AWSRequest DescribeImageVersion where
 
 instance Prelude.Hashable DescribeImageVersion where
   hashWithSalt _salt DescribeImageVersion' {..} =
-    _salt `Prelude.hashWithSalt` alias
+    _salt
+      `Prelude.hashWithSalt` alias
       `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` imageName
 

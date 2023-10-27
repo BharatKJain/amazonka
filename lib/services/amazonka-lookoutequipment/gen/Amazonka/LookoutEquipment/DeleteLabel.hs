@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LookoutEquipment.DeleteLabel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,7 +98,8 @@ instance Core.AWSRequest DeleteLabel where
 
 instance Prelude.Hashable DeleteLabel where
   hashWithSalt _salt DeleteLabel' {..} =
-    _salt `Prelude.hashWithSalt` labelGroupName
+    _salt
+      `Prelude.hashWithSalt` labelGroupName
       `Prelude.hashWithSalt` labelId
 
 instance Prelude.NFData DeleteLabel where

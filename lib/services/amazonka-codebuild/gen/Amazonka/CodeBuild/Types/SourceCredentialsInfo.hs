@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.SourceCredentialsInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.SourceCredentialsInfo where
@@ -93,7 +93,8 @@ instance Data.FromJSON SourceCredentialsInfo where
 
 instance Prelude.Hashable SourceCredentialsInfo where
   hashWithSalt _salt SourceCredentialsInfo' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` authType
       `Prelude.hashWithSalt` serverType
 

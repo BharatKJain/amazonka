@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DrS.Types.LifeCycle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DrS.Types.LifeCycle where
@@ -112,7 +112,8 @@ instance Data.FromJSON LifeCycle where
 
 instance Prelude.Hashable LifeCycle where
   hashWithSalt _salt LifeCycle' {..} =
-    _salt `Prelude.hashWithSalt` addedToServiceDateTime
+    _salt
+      `Prelude.hashWithSalt` addedToServiceDateTime
       `Prelude.hashWithSalt` elapsedReplicationDuration
       `Prelude.hashWithSalt` firstByteDateTime
       `Prelude.hashWithSalt` lastLaunch

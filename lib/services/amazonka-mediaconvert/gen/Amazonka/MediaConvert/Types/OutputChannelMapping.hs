@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.OutputChannelMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.OutputChannelMapping where
@@ -79,14 +79,16 @@ instance Data.FromJSON OutputChannelMapping where
       ( \x ->
           OutputChannelMapping'
             Prelude.<$> (x Data..:? "inputChannels" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "inputChannelsFineTune"
+            Prelude.<*> ( x
+                            Data..:? "inputChannelsFineTune"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable OutputChannelMapping where
   hashWithSalt _salt OutputChannelMapping' {..} =
-    _salt `Prelude.hashWithSalt` inputChannels
+    _salt
+      `Prelude.hashWithSalt` inputChannels
       `Prelude.hashWithSalt` inputChannelsFineTune
 
 instance Prelude.NFData OutputChannelMapping where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaTailor.UpdateSourceLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -155,7 +155,8 @@ instance Core.AWSRequest UpdateSourceLocation where
             Prelude.<*> (x Data..?> "DefaultSegmentDeliveryConfiguration")
             Prelude.<*> (x Data..?> "HttpConfiguration")
             Prelude.<*> (x Data..?> "LastModifiedTime")
-            Prelude.<*> ( x Data..?> "SegmentDeliveryConfigurations"
+            Prelude.<*> ( x
+                            Data..?> "SegmentDeliveryConfigurations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "SourceLocationName")
@@ -165,7 +166,8 @@ instance Core.AWSRequest UpdateSourceLocation where
 
 instance Prelude.Hashable UpdateSourceLocation where
   hashWithSalt _salt UpdateSourceLocation' {..} =
-    _salt `Prelude.hashWithSalt` accessConfiguration
+    _salt
+      `Prelude.hashWithSalt` accessConfiguration
       `Prelude.hashWithSalt` defaultSegmentDeliveryConfiguration
       `Prelude.hashWithSalt` segmentDeliveryConfigurations
       `Prelude.hashWithSalt` httpConfiguration

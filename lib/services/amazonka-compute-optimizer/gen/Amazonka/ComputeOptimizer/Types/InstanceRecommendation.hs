@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.InstanceRecommendation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.InstanceRecommendation where
@@ -719,30 +719,36 @@ instance Data.FromJSON InstanceRecommendation where
             Prelude.<*> (x Data..:? "currentPerformanceRisk")
             Prelude.<*> (x Data..:? "effectiveRecommendationPreferences")
             Prelude.<*> (x Data..:? "finding")
-            Prelude.<*> ( x Data..:? "findingReasonCodes"
+            Prelude.<*> ( x
+                            Data..:? "findingReasonCodes"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "inferredWorkloadTypes"
+            Prelude.<*> ( x
+                            Data..:? "inferredWorkloadTypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "instanceArn")
             Prelude.<*> (x Data..:? "instanceName")
             Prelude.<*> (x Data..:? "lastRefreshTimestamp")
             Prelude.<*> (x Data..:? "lookBackPeriodInDays")
-            Prelude.<*> ( x Data..:? "recommendationOptions"
+            Prelude.<*> ( x
+                            Data..:? "recommendationOptions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "recommendationSources"
+            Prelude.<*> ( x
+                            Data..:? "recommendationSources"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "utilizationMetrics"
+            Prelude.<*> ( x
+                            Data..:? "utilizationMetrics"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable InstanceRecommendation where
   hashWithSalt _salt InstanceRecommendation' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` currentInstanceType
       `Prelude.hashWithSalt` currentPerformanceRisk
       `Prelude.hashWithSalt` effectiveRecommendationPreferences

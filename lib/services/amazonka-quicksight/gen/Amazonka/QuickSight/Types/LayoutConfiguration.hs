@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.LayoutConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.LayoutConfiguration where
@@ -110,7 +110,8 @@ instance Data.FromJSON LayoutConfiguration where
 
 instance Prelude.Hashable LayoutConfiguration where
   hashWithSalt _salt LayoutConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` freeFormLayout
+    _salt
+      `Prelude.hashWithSalt` freeFormLayout
       `Prelude.hashWithSalt` gridLayout
       `Prelude.hashWithSalt` sectionBasedLayout
 

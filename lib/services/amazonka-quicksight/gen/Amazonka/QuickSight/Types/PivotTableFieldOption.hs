@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.PivotTableFieldOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.PivotTableFieldOption where
@@ -88,7 +88,8 @@ instance Data.FromJSON PivotTableFieldOption where
 
 instance Prelude.Hashable PivotTableFieldOption where
   hashWithSalt _salt PivotTableFieldOption' {..} =
-    _salt `Prelude.hashWithSalt` customLabel
+    _salt
+      `Prelude.hashWithSalt` customLabel
       `Prelude.hashWithSalt` visibility
       `Prelude.hashWithSalt` fieldId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.PrincipalIdFormat
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.PrincipalIdFormat where
@@ -68,13 +68,16 @@ instance Data.FromXML PrincipalIdFormat where
   parseXML x =
     PrincipalIdFormat'
       Prelude.<$> (x Data..@? "arn")
-      Prelude.<*> ( x Data..@? "statusSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "statusSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable PrincipalIdFormat where
   hashWithSalt _salt PrincipalIdFormat' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` statuses
 
 instance Prelude.NFData PrincipalIdFormat where

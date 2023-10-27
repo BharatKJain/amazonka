@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.EcsContainerOverride
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.EcsContainerOverride where
@@ -179,20 +179,23 @@ instance Data.FromJSON EcsContainerOverride where
             Prelude.<$> (x Data..:? "Command" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "Cpu")
             Prelude.<*> (x Data..:? "Environment" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "EnvironmentFiles"
+            Prelude.<*> ( x
+                            Data..:? "EnvironmentFiles"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Memory")
             Prelude.<*> (x Data..:? "MemoryReservation")
             Prelude.<*> (x Data..:? "Name")
-            Prelude.<*> ( x Data..:? "ResourceRequirements"
+            Prelude.<*> ( x
+                            Data..:? "ResourceRequirements"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable EcsContainerOverride where
   hashWithSalt _salt EcsContainerOverride' {..} =
-    _salt `Prelude.hashWithSalt` command
+    _salt
+      `Prelude.hashWithSalt` command
       `Prelude.hashWithSalt` cpu
       `Prelude.hashWithSalt` environment
       `Prelude.hashWithSalt` environmentFiles

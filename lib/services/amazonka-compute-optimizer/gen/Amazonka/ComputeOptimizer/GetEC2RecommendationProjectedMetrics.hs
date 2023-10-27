@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ComputeOptimizer.GetEC2RecommendationProjectedMetrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -167,10 +167,11 @@ instance
     Response.receiveJSON
       ( \s h x ->
           GetEC2RecommendationProjectedMetricsResponse'
-            Prelude.<$> ( x Data..?> "recommendedOptionProjectedMetrics"
+            Prelude.<$> ( x
+                            Data..?> "recommendedOptionProjectedMetrics"
                             Core..!@ Prelude.mempty
                         )
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance

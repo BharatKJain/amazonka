@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApiGatewayV2.Types.Integration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApiGatewayV2.Types.Integration where
@@ -604,13 +604,16 @@ instance Data.FromJSON Integration where
             Prelude.<*> (x Data..:? "integrationUri")
             Prelude.<*> (x Data..:? "passthroughBehavior")
             Prelude.<*> (x Data..:? "payloadFormatVersion")
-            Prelude.<*> ( x Data..:? "requestParameters"
+            Prelude.<*> ( x
+                            Data..:? "requestParameters"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "requestTemplates"
+            Prelude.<*> ( x
+                            Data..:? "requestTemplates"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "responseParameters"
+            Prelude.<*> ( x
+                            Data..:? "responseParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "templateSelectionExpression")
@@ -620,7 +623,8 @@ instance Data.FromJSON Integration where
 
 instance Prelude.Hashable Integration where
   hashWithSalt _salt Integration' {..} =
-    _salt `Prelude.hashWithSalt` apiGatewayManaged
+    _salt
+      `Prelude.hashWithSalt` apiGatewayManaged
       `Prelude.hashWithSalt` connectionId
       `Prelude.hashWithSalt` connectionType
       `Prelude.hashWithSalt` contentHandlingStrategy

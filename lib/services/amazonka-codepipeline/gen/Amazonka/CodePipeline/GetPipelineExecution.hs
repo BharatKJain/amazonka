@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodePipeline.GetPipelineExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest GetPipelineExecution where
 
 instance Prelude.Hashable GetPipelineExecution where
   hashWithSalt _salt GetPipelineExecution' {..} =
-    _salt `Prelude.hashWithSalt` pipelineName
+    _salt
+      `Prelude.hashWithSalt` pipelineName
       `Prelude.hashWithSalt` pipelineExecutionId
 
 instance Prelude.NFData GetPipelineExecution where

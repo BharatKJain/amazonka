@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.Body
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.Body where
@@ -77,7 +77,8 @@ body_text = Lens.lens (\Body' {text} -> text) (\s@Body' {} a -> s {text = a} :: 
 
 instance Prelude.Hashable Body where
   hashWithSalt _salt Body' {..} =
-    _salt `Prelude.hashWithSalt` html
+    _salt
+      `Prelude.hashWithSalt` html
       `Prelude.hashWithSalt` text
 
 instance Prelude.NFData Body where

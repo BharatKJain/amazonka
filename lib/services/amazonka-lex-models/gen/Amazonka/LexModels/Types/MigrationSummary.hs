@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexModels.Types.MigrationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexModels.Types.MigrationSummary where
@@ -160,7 +160,8 @@ instance Data.FromJSON MigrationSummary where
 
 instance Prelude.Hashable MigrationSummary where
   hashWithSalt _salt MigrationSummary' {..} =
-    _salt `Prelude.hashWithSalt` migrationId
+    _salt
+      `Prelude.hashWithSalt` migrationId
       `Prelude.hashWithSalt` migrationStatus
       `Prelude.hashWithSalt` migrationStrategy
       `Prelude.hashWithSalt` migrationTimestamp

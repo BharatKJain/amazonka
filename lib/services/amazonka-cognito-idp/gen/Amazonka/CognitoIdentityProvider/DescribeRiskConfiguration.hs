@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.DescribeRiskConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,7 +103,8 @@ instance Core.AWSRequest DescribeRiskConfiguration where
 
 instance Prelude.Hashable DescribeRiskConfiguration where
   hashWithSalt _salt DescribeRiskConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` clientId
+    _salt
+      `Prelude.hashWithSalt` clientId
       `Prelude.hashWithSalt` userPoolId
 
 instance Prelude.NFData DescribeRiskConfiguration where

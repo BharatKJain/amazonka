@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GlobalAccelerator.Types.ByoipCidrEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GlobalAccelerator.Types.ByoipCidrEvent where
@@ -88,7 +88,8 @@ instance Data.FromJSON ByoipCidrEvent where
 
 instance Prelude.Hashable ByoipCidrEvent where
   hashWithSalt _salt ByoipCidrEvent' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` timestamp
 
 instance Prelude.NFData ByoipCidrEvent where

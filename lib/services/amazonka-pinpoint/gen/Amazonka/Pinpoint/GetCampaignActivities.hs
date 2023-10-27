@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.GetCampaignActivities
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,7 +136,8 @@ instance Core.AWSRequest GetCampaignActivities where
 
 instance Prelude.Hashable GetCampaignActivities where
   hashWithSalt _salt GetCampaignActivities' {..} =
-    _salt `Prelude.hashWithSalt` pageSize
+    _salt
+      `Prelude.hashWithSalt` pageSize
       `Prelude.hashWithSalt` token
       `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` campaignId

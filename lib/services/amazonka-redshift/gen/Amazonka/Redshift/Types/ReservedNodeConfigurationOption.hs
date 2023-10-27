@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.ReservedNodeConfigurationOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.ReservedNodeConfigurationOption where
@@ -90,7 +90,8 @@ instance
   hashWithSalt
     _salt
     ReservedNodeConfigurationOption' {..} =
-      _salt `Prelude.hashWithSalt` sourceReservedNode
+      _salt
+        `Prelude.hashWithSalt` sourceReservedNode
         `Prelude.hashWithSalt` targetReservedNodeCount
         `Prelude.hashWithSalt` targetReservedNodeOffering
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TransitGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TransitGateway where
@@ -128,7 +128,9 @@ instance Data.FromXML TransitGateway where
       Prelude.<*> (x Data..@? "options")
       Prelude.<*> (x Data..@? "ownerId")
       Prelude.<*> (x Data..@? "state")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "transitGatewayArn")
@@ -136,7 +138,8 @@ instance Data.FromXML TransitGateway where
 
 instance Prelude.Hashable TransitGateway where
   hashWithSalt _salt TransitGateway' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` options
       `Prelude.hashWithSalt` ownerId

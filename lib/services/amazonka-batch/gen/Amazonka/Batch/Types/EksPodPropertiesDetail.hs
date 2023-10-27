@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.EksPodPropertiesDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.EksPodPropertiesDetail where
@@ -226,7 +226,8 @@ instance Data.FromJSON EksPodPropertiesDetail where
 
 instance Prelude.Hashable EksPodPropertiesDetail where
   hashWithSalt _salt EksPodPropertiesDetail' {..} =
-    _salt `Prelude.hashWithSalt` containers
+    _salt
+      `Prelude.hashWithSalt` containers
       `Prelude.hashWithSalt` dnsPolicy
       `Prelude.hashWithSalt` hostNetwork
       `Prelude.hashWithSalt` nodeName

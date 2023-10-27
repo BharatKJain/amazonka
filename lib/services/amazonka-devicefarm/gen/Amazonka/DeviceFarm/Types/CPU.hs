@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.CPU
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.CPU where
@@ -88,7 +88,8 @@ instance Data.FromJSON CPU where
 
 instance Prelude.Hashable CPU where
   hashWithSalt _salt CPU' {..} =
-    _salt `Prelude.hashWithSalt` architecture
+    _salt
+      `Prelude.hashWithSalt` architecture
       `Prelude.hashWithSalt` clock
       `Prelude.hashWithSalt` frequency
 

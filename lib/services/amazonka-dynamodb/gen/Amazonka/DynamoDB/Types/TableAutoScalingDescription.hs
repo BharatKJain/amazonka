@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.TableAutoScalingDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.TableAutoScalingDescription where
@@ -113,7 +113,8 @@ instance Data.FromJSON TableAutoScalingDescription where
 
 instance Prelude.Hashable TableAutoScalingDescription where
   hashWithSalt _salt TableAutoScalingDescription' {..} =
-    _salt `Prelude.hashWithSalt` replicas
+    _salt
+      `Prelude.hashWithSalt` replicas
       `Prelude.hashWithSalt` tableName
       `Prelude.hashWithSalt` tableStatus
 

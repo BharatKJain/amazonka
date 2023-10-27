@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.QueryResultItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.QueryResultItem where
@@ -231,10 +231,12 @@ instance Data.FromJSON QueryResultItem where
       "QueryResultItem"
       ( \x ->
           QueryResultItem'
-            Prelude.<$> ( x Data..:? "AdditionalAttributes"
+            Prelude.<$> ( x
+                            Data..:? "AdditionalAttributes"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "DocumentAttributes"
+            Prelude.<*> ( x
+                            Data..:? "DocumentAttributes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "DocumentExcerpt")
@@ -251,7 +253,8 @@ instance Data.FromJSON QueryResultItem where
 
 instance Prelude.Hashable QueryResultItem where
   hashWithSalt _salt QueryResultItem' {..} =
-    _salt `Prelude.hashWithSalt` additionalAttributes
+    _salt
+      `Prelude.hashWithSalt` additionalAttributes
       `Prelude.hashWithSalt` documentAttributes
       `Prelude.hashWithSalt` documentExcerpt
       `Prelude.hashWithSalt` documentId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.RouteAnalysisPath
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.RouteAnalysisPath where
@@ -77,7 +77,8 @@ instance Data.FromJSON RouteAnalysisPath where
 
 instance Prelude.Hashable RouteAnalysisPath where
   hashWithSalt _salt RouteAnalysisPath' {..} =
-    _salt `Prelude.hashWithSalt` completionStatus
+    _salt
+      `Prelude.hashWithSalt` completionStatus
       `Prelude.hashWithSalt` path
 
 instance Prelude.NFData RouteAnalysisPath where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.ImportJobRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.ImportJobRequest where
@@ -198,7 +198,8 @@ importJobRequest_roleArn = Lens.lens (\ImportJobRequest' {roleArn} -> roleArn) (
 
 instance Prelude.Hashable ImportJobRequest where
   hashWithSalt _salt ImportJobRequest' {..} =
-    _salt `Prelude.hashWithSalt` defineSegment
+    _salt
+      `Prelude.hashWithSalt` defineSegment
       `Prelude.hashWithSalt` externalId
       `Prelude.hashWithSalt` registerEndpoints
       `Prelude.hashWithSalt` segmentId

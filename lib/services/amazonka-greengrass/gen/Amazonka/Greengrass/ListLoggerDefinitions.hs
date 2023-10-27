@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Greengrass.ListLoggerDefinitions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -96,22 +96,22 @@ instance Core.AWSPager ListLoggerDefinitions where
     | Core.stop
         ( rs
             Lens.^? listLoggerDefinitionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listLoggerDefinitionsResponse_definitions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listLoggerDefinitions_nextToken
           Lens..~ rs
           Lens.^? listLoggerDefinitionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListLoggerDefinitions where
   type
@@ -130,7 +130,8 @@ instance Core.AWSRequest ListLoggerDefinitions where
 
 instance Prelude.Hashable ListLoggerDefinitions where
   hashWithSalt _salt ListLoggerDefinitions' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListLoggerDefinitions where

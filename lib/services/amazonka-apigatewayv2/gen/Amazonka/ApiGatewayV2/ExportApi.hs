@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ApiGatewayV2.ExportApi
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -165,7 +165,8 @@ instance Core.AWSRequest ExportApi where
 
 instance Prelude.Hashable ExportApi where
   hashWithSalt _salt ExportApi' {..} =
-    _salt `Prelude.hashWithSalt` exportVersion
+    _salt
+      `Prelude.hashWithSalt` exportVersion
       `Prelude.hashWithSalt` includeExtensions
       `Prelude.hashWithSalt` stageName
       `Prelude.hashWithSalt` specification

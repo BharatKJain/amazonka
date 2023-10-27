@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.ConfigurationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.ConfigurationSummary where
@@ -101,17 +101,21 @@ instance Data.FromJSON ConfigurationSummary where
       "ConfigurationSummary"
       ( \x ->
           ConfigurationSummary'
-            Prelude.<$> ( x Data..:? "ipAddressBasedRemoteInfoList"
+            Prelude.<$> ( x
+                            Data..:? "ipAddressBasedRemoteInfoList"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "pipelineInfoList"
+            Prelude.<*> ( x
+                            Data..:? "pipelineInfoList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "remoteSourceCodeAnalysisServerInfo")
-            Prelude.<*> ( x Data..:? "vcenterBasedRemoteInfoList"
+            Prelude.<*> ( x
+                            Data..:? "vcenterBasedRemoteInfoList"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "versionControlInfoList"
+            Prelude.<*> ( x
+                            Data..:? "versionControlInfoList"
                             Data..!= Prelude.mempty
                         )
       )

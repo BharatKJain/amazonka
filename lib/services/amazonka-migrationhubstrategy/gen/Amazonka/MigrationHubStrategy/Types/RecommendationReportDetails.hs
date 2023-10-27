@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.RecommendationReportDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.RecommendationReportDetails where
@@ -116,7 +116,8 @@ instance Data.FromJSON RecommendationReportDetails where
 
 instance Prelude.Hashable RecommendationReportDetails where
   hashWithSalt _salt RecommendationReportDetails' {..} =
-    _salt `Prelude.hashWithSalt` completionTime
+    _salt
+      `Prelude.hashWithSalt` completionTime
       `Prelude.hashWithSalt` s3Bucket
       `Prelude.hashWithSalt` s3Keys
       `Prelude.hashWithSalt` startTime

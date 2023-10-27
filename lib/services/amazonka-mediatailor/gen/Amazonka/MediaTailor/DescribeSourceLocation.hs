@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaTailor.DescribeSourceLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest DescribeSourceLocation where
             Prelude.<*> (x Data..?> "DefaultSegmentDeliveryConfiguration")
             Prelude.<*> (x Data..?> "HttpConfiguration")
             Prelude.<*> (x Data..?> "LastModifiedTime")
-            Prelude.<*> ( x Data..?> "SegmentDeliveryConfigurations"
+            Prelude.<*> ( x
+                            Data..?> "SegmentDeliveryConfigurations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "SourceLocationName")

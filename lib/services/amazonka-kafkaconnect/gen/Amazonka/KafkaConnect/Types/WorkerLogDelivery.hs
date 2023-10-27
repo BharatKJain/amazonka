@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.WorkerLogDelivery
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.WorkerLogDelivery where
@@ -78,7 +78,8 @@ workerLogDelivery_s3 = Lens.lens (\WorkerLogDelivery' {s3} -> s3) (\s@WorkerLogD
 
 instance Prelude.Hashable WorkerLogDelivery where
   hashWithSalt _salt WorkerLogDelivery' {..} =
-    _salt `Prelude.hashWithSalt` cloudWatchLogs
+    _salt
+      `Prelude.hashWithSalt` cloudWatchLogs
       `Prelude.hashWithSalt` firehose
       `Prelude.hashWithSalt` s3
 

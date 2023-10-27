@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.EnvironmentError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.EnvironmentError where
@@ -74,7 +74,8 @@ instance Data.FromJSON EnvironmentError where
 
 instance Prelude.Hashable EnvironmentError where
   hashWithSalt _salt EnvironmentError' {..} =
-    _salt `Prelude.hashWithSalt` errorCode
+    _salt
+      `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData EnvironmentError where

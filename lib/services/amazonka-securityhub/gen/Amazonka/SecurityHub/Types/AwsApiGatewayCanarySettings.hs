@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsApiGatewayCanarySettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsApiGatewayCanarySettings where
@@ -104,7 +104,8 @@ instance Data.FromJSON AwsApiGatewayCanarySettings where
           AwsApiGatewayCanarySettings'
             Prelude.<$> (x Data..:? "DeploymentId")
             Prelude.<*> (x Data..:? "PercentTraffic")
-            Prelude.<*> ( x Data..:? "StageVariableOverrides"
+            Prelude.<*> ( x
+                            Data..:? "StageVariableOverrides"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "UseStageCache")
@@ -112,7 +113,8 @@ instance Data.FromJSON AwsApiGatewayCanarySettings where
 
 instance Prelude.Hashable AwsApiGatewayCanarySettings where
   hashWithSalt _salt AwsApiGatewayCanarySettings' {..} =
-    _salt `Prelude.hashWithSalt` deploymentId
+    _salt
+      `Prelude.hashWithSalt` deploymentId
       `Prelude.hashWithSalt` percentTraffic
       `Prelude.hashWithSalt` stageVariableOverrides
       `Prelude.hashWithSalt` useStageCache

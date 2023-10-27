@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SES.GetIdentityPolicies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,14 +141,17 @@ instance Core.AWSRequest GetIdentityPolicies where
       ( \s h x ->
           GetIdentityPoliciesResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..@? "Policies" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "Policies"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Data.parseXMLMap "entry" "key" "value"
                         )
       )
 
 instance Prelude.Hashable GetIdentityPolicies where
   hashWithSalt _salt GetIdentityPolicies' {..} =
-    _salt `Prelude.hashWithSalt` identity
+    _salt
+      `Prelude.hashWithSalt` identity
       `Prelude.hashWithSalt` policyNames
 
 instance Prelude.NFData GetIdentityPolicies where

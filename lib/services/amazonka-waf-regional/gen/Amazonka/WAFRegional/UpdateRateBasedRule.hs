@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFRegional.UpdateRateBasedRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -196,7 +196,8 @@ instance Core.AWSRequest UpdateRateBasedRule where
 
 instance Prelude.Hashable UpdateRateBasedRule where
   hashWithSalt _salt UpdateRateBasedRule' {..} =
-    _salt `Prelude.hashWithSalt` ruleId
+    _salt
+      `Prelude.hashWithSalt` ruleId
       `Prelude.hashWithSalt` changeToken
       `Prelude.hashWithSalt` updates
       `Prelude.hashWithSalt` rateLimit

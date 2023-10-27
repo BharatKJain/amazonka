@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.EventContextDataType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.EventContextDataType where
@@ -105,7 +105,8 @@ instance Data.FromJSON EventContextDataType where
 
 instance Prelude.Hashable EventContextDataType where
   hashWithSalt _salt EventContextDataType' {..} =
-    _salt `Prelude.hashWithSalt` city
+    _salt
+      `Prelude.hashWithSalt` city
       `Prelude.hashWithSalt` country
       `Prelude.hashWithSalt` deviceName
       `Prelude.hashWithSalt` ipAddress

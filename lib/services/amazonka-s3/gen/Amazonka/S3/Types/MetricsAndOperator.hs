@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.MetricsAndOperator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.MetricsAndOperator where
@@ -82,13 +82,16 @@ instance Data.FromXML MetricsAndOperator where
     MetricsAndOperator'
       Prelude.<$> (x Data..@? "AccessPointArn")
       Prelude.<*> (x Data..@? "Prefix")
-      Prelude.<*> ( x Data..@? "Tag" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Tag"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Tag")
                   )
 
 instance Prelude.Hashable MetricsAndOperator where
   hashWithSalt _salt MetricsAndOperator' {..} =
-    _salt `Prelude.hashWithSalt` accessPointArn
+    _salt
+      `Prelude.hashWithSalt` accessPointArn
       `Prelude.hashWithSalt` prefix
       `Prelude.hashWithSalt` tags
 

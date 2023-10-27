@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudTrail.Types.ImportsListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudTrail.Types.ImportsListItem where
@@ -107,7 +107,8 @@ instance Data.FromJSON ImportsListItem where
 
 instance Prelude.Hashable ImportsListItem where
   hashWithSalt _salt ImportsListItem' {..} =
-    _salt `Prelude.hashWithSalt` createdTimestamp
+    _salt
+      `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` destinations
       `Prelude.hashWithSalt` importId
       `Prelude.hashWithSalt` importStatus

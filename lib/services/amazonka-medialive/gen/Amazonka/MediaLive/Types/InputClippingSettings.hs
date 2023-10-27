@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.InputClippingSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.InputClippingSettings where
@@ -91,7 +91,8 @@ instance Data.FromJSON InputClippingSettings where
 
 instance Prelude.Hashable InputClippingSettings where
   hashWithSalt _salt InputClippingSettings' {..} =
-    _salt `Prelude.hashWithSalt` startTimecode
+    _salt
+      `Prelude.hashWithSalt` startTimecode
       `Prelude.hashWithSalt` stopTimecode
       `Prelude.hashWithSalt` inputTimecodeSource
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.ImportKeyPair
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest ImportKeyPair where
 
 instance Prelude.Hashable ImportKeyPair where
   hashWithSalt _salt ImportKeyPair' {..} =
-    _salt `Prelude.hashWithSalt` keyPairName
+    _salt
+      `Prelude.hashWithSalt` keyPairName
       `Prelude.hashWithSalt` publicKeyBase64
 
 instance Prelude.NFData ImportKeyPair where

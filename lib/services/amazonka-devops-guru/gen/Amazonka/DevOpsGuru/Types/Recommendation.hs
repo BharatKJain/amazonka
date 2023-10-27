@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.Recommendation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.Recommendation where
@@ -127,7 +127,8 @@ instance Data.FromJSON Recommendation where
             Prelude.<*> (x Data..:? "Link")
             Prelude.<*> (x Data..:? "Name")
             Prelude.<*> (x Data..:? "Reason")
-            Prelude.<*> ( x Data..:? "RelatedAnomalies"
+            Prelude.<*> ( x
+                            Data..:? "RelatedAnomalies"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "RelatedEvents" Data..!= Prelude.mempty)
@@ -135,7 +136,8 @@ instance Data.FromJSON Recommendation where
 
 instance Prelude.Hashable Recommendation where
   hashWithSalt _salt Recommendation' {..} =
-    _salt `Prelude.hashWithSalt` category
+    _salt
+      `Prelude.hashWithSalt` category
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` link
       `Prelude.hashWithSalt` name

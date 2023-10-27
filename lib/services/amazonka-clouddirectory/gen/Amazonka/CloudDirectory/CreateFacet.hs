@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudDirectory.CreateFacet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -176,7 +176,8 @@ instance Core.AWSRequest CreateFacet where
 
 instance Prelude.Hashable CreateFacet where
   hashWithSalt _salt CreateFacet' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` facetStyle
       `Prelude.hashWithSalt` objectType
       `Prelude.hashWithSalt` schemaArn

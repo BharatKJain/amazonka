@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SDB.Types.UpdateCondition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SDB.Types.UpdateCondition where
@@ -92,7 +92,8 @@ updateCondition_value = Lens.lens (\UpdateCondition' {value} -> value) (\s@Updat
 
 instance Prelude.Hashable UpdateCondition where
   hashWithSalt _salt UpdateCondition' {..} =
-    _salt `Prelude.hashWithSalt` exists
+    _salt
+      `Prelude.hashWithSalt` exists
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 

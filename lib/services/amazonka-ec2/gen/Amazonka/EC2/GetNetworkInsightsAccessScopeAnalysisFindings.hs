@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.GetNetworkInsightsAccessScopeAnalysisFindings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,14 +141,15 @@ instance
     Response.receiveXML
       ( \s h x ->
           GetNetworkInsightsAccessScopeAnalysisFindingsResponse'
-            Prelude.<$> ( x Data..@? "analysisFindingSet"
+            Prelude.<$> ( x
+                            Data..@? "analysisFindingSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
-              Prelude.<*> (x Data..@? "analysisStatus")
-              Prelude.<*> (x Data..@? "networkInsightsAccessScopeAnalysisId")
-              Prelude.<*> (x Data..@? "nextToken")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..@? "analysisStatus")
+            Prelude.<*> (x Data..@? "networkInsightsAccessScopeAnalysisId")
+            Prelude.<*> (x Data..@? "nextToken")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -158,7 +159,8 @@ instance
   hashWithSalt
     _salt
     GetNetworkInsightsAccessScopeAnalysisFindings' {..} =
-      _salt `Prelude.hashWithSalt` dryRun
+      _salt
+        `Prelude.hashWithSalt` dryRun
         `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` networkInsightsAccessScopeAnalysisId

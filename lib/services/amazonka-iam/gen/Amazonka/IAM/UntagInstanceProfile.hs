@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.UntagInstanceProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest UntagInstanceProfile where
 
 instance Prelude.Hashable UntagInstanceProfile where
   hashWithSalt _salt UntagInstanceProfile' {..} =
-    _salt `Prelude.hashWithSalt` instanceProfileName
+    _salt
+      `Prelude.hashWithSalt` instanceProfileName
       `Prelude.hashWithSalt` tagKeys
 
 instance Prelude.NFData UntagInstanceProfile where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECRPublic.Types.ImageTagDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECRPublic.Types.ImageTagDetail where
@@ -85,7 +85,8 @@ instance Data.FromJSON ImageTagDetail where
 
 instance Prelude.Hashable ImageTagDetail where
   hashWithSalt _salt ImageTagDetail' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` imageDetail
       `Prelude.hashWithSalt` imageTag
 

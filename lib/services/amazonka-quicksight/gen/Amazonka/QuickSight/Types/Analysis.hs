@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.Analysis
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.Analysis where
@@ -160,7 +160,8 @@ instance Data.FromJSON Analysis where
 
 instance Prelude.Hashable Analysis where
   hashWithSalt _salt Analysis' {..} =
-    _salt `Prelude.hashWithSalt` analysisId
+    _salt
+      `Prelude.hashWithSalt` analysisId
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` dataSetArns

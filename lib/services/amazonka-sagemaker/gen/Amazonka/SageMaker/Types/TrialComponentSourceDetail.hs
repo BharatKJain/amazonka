@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.TrialComponentSourceDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.TrialComponentSourceDetail where
@@ -108,7 +108,8 @@ instance Data.FromJSON TrialComponentSourceDetail where
 
 instance Prelude.Hashable TrialComponentSourceDetail where
   hashWithSalt _salt TrialComponentSourceDetail' {..} =
-    _salt `Prelude.hashWithSalt` processingJob
+    _salt
+      `Prelude.hashWithSalt` processingJob
       `Prelude.hashWithSalt` sourceArn
       `Prelude.hashWithSalt` trainingJob
       `Prelude.hashWithSalt` transformJob

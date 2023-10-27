@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.DescribeOptionGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -245,22 +245,22 @@ instance Core.AWSPager DescribeOptionGroups where
     | Core.stop
         ( rs
             Lens.^? describeOptionGroupsResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeOptionGroupsResponse_optionGroupsList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeOptionGroups_marker
           Lens..~ rs
           Lens.^? describeOptionGroupsResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeOptionGroups where
   type
@@ -274,7 +274,8 @@ instance Core.AWSRequest DescribeOptionGroups where
       ( \s h x ->
           DescribeOptionGroupsResponse'
             Prelude.<$> (x Data..@? "Marker")
-            Prelude.<*> ( x Data..@? "OptionGroupsList"
+            Prelude.<*> ( x
+                            Data..@? "OptionGroupsList"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "OptionGroup")
                         )
@@ -283,7 +284,8 @@ instance Core.AWSRequest DescribeOptionGroups where
 
 instance Prelude.Hashable DescribeOptionGroups where
   hashWithSalt _salt DescribeOptionGroups' {..} =
-    _salt `Prelude.hashWithSalt` engineName
+    _salt
+      `Prelude.hashWithSalt` engineName
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` majorEngineVersion
       `Prelude.hashWithSalt` marker

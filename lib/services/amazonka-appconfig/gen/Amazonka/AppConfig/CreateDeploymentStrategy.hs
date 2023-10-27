@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppConfig.CreateDeploymentStrategy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -285,7 +285,8 @@ instance Core.AWSRequest CreateDeploymentStrategy where
 
 instance Prelude.Hashable CreateDeploymentStrategy where
   hashWithSalt _salt CreateDeploymentStrategy' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` finalBakeTimeInMinutes
       `Prelude.hashWithSalt` growthType
       `Prelude.hashWithSalt` replicateTo

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.LFTagError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.LFTagError where
@@ -77,7 +77,8 @@ instance Data.FromJSON LFTagError where
 
 instance Prelude.Hashable LFTagError where
   hashWithSalt _salt LFTagError' {..} =
-    _salt `Prelude.hashWithSalt` error
+    _salt
+      `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` lFTag
 
 instance Prelude.NFData LFTagError where

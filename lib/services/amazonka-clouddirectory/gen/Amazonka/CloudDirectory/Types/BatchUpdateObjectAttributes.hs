@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchUpdateObjectAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchUpdateObjectAttributes where
@@ -69,7 +69,8 @@ batchUpdateObjectAttributes_attributeUpdates = Lens.lens (\BatchUpdateObjectAttr
 
 instance Prelude.Hashable BatchUpdateObjectAttributes where
   hashWithSalt _salt BatchUpdateObjectAttributes' {..} =
-    _salt `Prelude.hashWithSalt` objectReference
+    _salt
+      `Prelude.hashWithSalt` objectReference
       `Prelude.hashWithSalt` attributeUpdates
 
 instance Prelude.NFData BatchUpdateObjectAttributes where

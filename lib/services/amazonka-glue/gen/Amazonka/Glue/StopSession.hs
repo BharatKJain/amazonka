@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.StopSession
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,7 +100,8 @@ instance Core.AWSRequest StopSession where
 
 instance Prelude.Hashable StopSession where
   hashWithSalt _salt StopSession' {..} =
-    _salt `Prelude.hashWithSalt` requestOrigin
+    _salt
+      `Prelude.hashWithSalt` requestOrigin
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData StopSession where

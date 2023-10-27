@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.ChannelDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.ChannelDefinition where
@@ -81,7 +81,8 @@ instance Data.FromJSON ChannelDefinition where
 
 instance Prelude.Hashable ChannelDefinition where
   hashWithSalt _salt ChannelDefinition' {..} =
-    _salt `Prelude.hashWithSalt` channelId
+    _salt
+      `Prelude.hashWithSalt` channelId
       `Prelude.hashWithSalt` participantRole
 
 instance Prelude.NFData ChannelDefinition where

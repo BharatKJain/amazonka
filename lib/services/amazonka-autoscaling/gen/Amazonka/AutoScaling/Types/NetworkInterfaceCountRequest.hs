@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.NetworkInterfaceCountRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.NetworkInterfaceCountRequest where
@@ -67,14 +67,16 @@ networkInterfaceCountRequest_min = Lens.lens (\NetworkInterfaceCountRequest' {mi
 instance Data.FromXML NetworkInterfaceCountRequest where
   parseXML x =
     NetworkInterfaceCountRequest'
-      Prelude.<$> (x Data..@? "Max") Prelude.<*> (x Data..@? "Min")
+      Prelude.<$> (x Data..@? "Max")
+      Prelude.<*> (x Data..@? "Min")
 
 instance
   Prelude.Hashable
     NetworkInterfaceCountRequest
   where
   hashWithSalt _salt NetworkInterfaceCountRequest' {..} =
-    _salt `Prelude.hashWithSalt` max
+    _salt
+      `Prelude.hashWithSalt` max
       `Prelude.hashWithSalt` min
 
 instance Prelude.NFData NetworkInterfaceCountRequest where

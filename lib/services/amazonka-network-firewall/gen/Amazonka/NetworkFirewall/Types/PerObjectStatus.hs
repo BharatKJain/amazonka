@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.PerObjectStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.PerObjectStatus where
@@ -86,7 +86,8 @@ instance Data.FromJSON PerObjectStatus where
 
 instance Prelude.Hashable PerObjectStatus where
   hashWithSalt _salt PerObjectStatus' {..} =
-    _salt `Prelude.hashWithSalt` syncStatus
+    _salt
+      `Prelude.hashWithSalt` syncStatus
       `Prelude.hashWithSalt` updateToken
 
 instance Prelude.NFData PerObjectStatus where

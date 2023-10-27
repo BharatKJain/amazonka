@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisVideoArchivedMedia.Types.ClipTimestampRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisVideoArchivedMedia.Types.ClipTimestampRange where
@@ -117,7 +117,8 @@ clipTimestampRange_endTimestamp = Lens.lens (\ClipTimestampRange' {endTimestamp}
 
 instance Prelude.Hashable ClipTimestampRange where
   hashWithSalt _salt ClipTimestampRange' {..} =
-    _salt `Prelude.hashWithSalt` startTimestamp
+    _salt
+      `Prelude.hashWithSalt` startTimestamp
       `Prelude.hashWithSalt` endTimestamp
 
 instance Prelude.NFData ClipTimestampRange where

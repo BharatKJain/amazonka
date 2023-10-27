@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.LoggingOptionsPayload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.LoggingOptionsPayload where
@@ -67,7 +67,8 @@ loggingOptionsPayload_roleArn = Lens.lens (\LoggingOptionsPayload' {roleArn} -> 
 
 instance Prelude.Hashable LoggingOptionsPayload where
   hashWithSalt _salt LoggingOptionsPayload' {..} =
-    _salt `Prelude.hashWithSalt` logLevel
+    _salt
+      `Prelude.hashWithSalt` logLevel
       `Prelude.hashWithSalt` roleArn
 
 instance Prelude.NFData LoggingOptionsPayload where

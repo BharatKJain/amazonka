@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.TagCriterionForJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.TagCriterionForJob where
@@ -83,7 +83,8 @@ instance Data.FromJSON TagCriterionForJob where
 
 instance Prelude.Hashable TagCriterionForJob where
   hashWithSalt _salt TagCriterionForJob' {..} =
-    _salt `Prelude.hashWithSalt` comparator
+    _salt
+      `Prelude.hashWithSalt` comparator
       `Prelude.hashWithSalt` tagValues
 
 instance Prelude.NFData TagCriterionForJob where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.FieldSortOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.FieldSortOptions where
@@ -76,7 +76,8 @@ instance Data.FromJSON FieldSortOptions where
 
 instance Prelude.Hashable FieldSortOptions where
   hashWithSalt _salt FieldSortOptions' {..} =
-    _salt `Prelude.hashWithSalt` columnSort
+    _salt
+      `Prelude.hashWithSalt` columnSort
       `Prelude.hashWithSalt` fieldSort
 
 instance Prelude.NFData FieldSortOptions where

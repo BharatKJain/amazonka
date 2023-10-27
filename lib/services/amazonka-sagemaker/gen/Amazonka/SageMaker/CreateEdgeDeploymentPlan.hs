@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.CreateEdgeDeploymentPlan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -140,7 +140,8 @@ instance Core.AWSRequest CreateEdgeDeploymentPlan where
 
 instance Prelude.Hashable CreateEdgeDeploymentPlan where
   hashWithSalt _salt CreateEdgeDeploymentPlan' {..} =
-    _salt `Prelude.hashWithSalt` stages
+    _salt
+      `Prelude.hashWithSalt` stages
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` edgeDeploymentPlanName
       `Prelude.hashWithSalt` modelConfigs

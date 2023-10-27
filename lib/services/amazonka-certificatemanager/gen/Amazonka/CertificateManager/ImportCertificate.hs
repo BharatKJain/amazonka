@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CertificateManager.ImportCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -181,7 +181,8 @@ newImportCertificate pCertificate_ pPrivateKey_ =
       tags = Prelude.Nothing,
       certificate = Data._Base64 Lens.# pCertificate_,
       privateKey =
-        Data._Sensitive Prelude.. Data._Base64
+        Data._Sensitive
+          Prelude.. Data._Base64
           Lens.# pPrivateKey_
     }
 
@@ -238,7 +239,8 @@ instance Core.AWSRequest ImportCertificate where
 
 instance Prelude.Hashable ImportCertificate where
   hashWithSalt _salt ImportCertificate' {..} =
-    _salt `Prelude.hashWithSalt` certificateArn
+    _salt
+      `Prelude.hashWithSalt` certificateArn
       `Prelude.hashWithSalt` certificateChain
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` certificate

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.RelatedFinding
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.RelatedFinding where
@@ -78,7 +78,8 @@ instance Data.FromJSON RelatedFinding where
 
 instance Prelude.Hashable RelatedFinding where
   hashWithSalt _salt RelatedFinding' {..} =
-    _salt `Prelude.hashWithSalt` productArn
+    _salt
+      `Prelude.hashWithSalt` productArn
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData RelatedFinding where

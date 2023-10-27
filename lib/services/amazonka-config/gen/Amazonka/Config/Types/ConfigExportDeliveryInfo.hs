@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.ConfigExportDeliveryInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.ConfigExportDeliveryInfo where
@@ -119,7 +119,8 @@ instance Data.FromJSON ConfigExportDeliveryInfo where
 
 instance Prelude.Hashable ConfigExportDeliveryInfo where
   hashWithSalt _salt ConfigExportDeliveryInfo' {..} =
-    _salt `Prelude.hashWithSalt` lastAttemptTime
+    _salt
+      `Prelude.hashWithSalt` lastAttemptTime
       `Prelude.hashWithSalt` lastErrorCode
       `Prelude.hashWithSalt` lastErrorMessage
       `Prelude.hashWithSalt` lastStatus

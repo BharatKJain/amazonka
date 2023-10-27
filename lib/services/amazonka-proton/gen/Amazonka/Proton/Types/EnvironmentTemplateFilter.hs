@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Proton.Types.EnvironmentTemplateFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Proton.Types.EnvironmentTemplateFilter where
@@ -71,7 +71,8 @@ environmentTemplateFilter_templateName = Lens.lens (\EnvironmentTemplateFilter' 
 
 instance Prelude.Hashable EnvironmentTemplateFilter where
   hashWithSalt _salt EnvironmentTemplateFilter' {..} =
-    _salt `Prelude.hashWithSalt` majorVersion
+    _salt
+      `Prelude.hashWithSalt` majorVersion
       `Prelude.hashWithSalt` templateName
 
 instance Prelude.NFData EnvironmentTemplateFilter where

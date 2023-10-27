@@ -16,7 +16,7 @@
 -- Module      : Amazonka.TimeStreamWrite.WriteRecords
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -190,7 +190,8 @@ instance Core.AWSRequest WriteRecords where
 
 instance Prelude.Hashable WriteRecords where
   hashWithSalt _salt WriteRecords' {..} =
-    _salt `Prelude.hashWithSalt` commonAttributes
+    _salt
+      `Prelude.hashWithSalt` commonAttributes
       `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` tableName
       `Prelude.hashWithSalt` records

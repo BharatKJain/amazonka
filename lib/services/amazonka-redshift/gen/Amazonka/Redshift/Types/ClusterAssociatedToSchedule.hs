@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.ClusterAssociatedToSchedule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.ClusterAssociatedToSchedule where
@@ -55,11 +55,9 @@ newClusterAssociatedToSchedule =
       scheduleAssociationState = Prelude.Nothing
     }
 
--- |
 clusterAssociatedToSchedule_clusterIdentifier :: Lens.Lens' ClusterAssociatedToSchedule (Prelude.Maybe Prelude.Text)
 clusterAssociatedToSchedule_clusterIdentifier = Lens.lens (\ClusterAssociatedToSchedule' {clusterIdentifier} -> clusterIdentifier) (\s@ClusterAssociatedToSchedule' {} a -> s {clusterIdentifier = a} :: ClusterAssociatedToSchedule)
 
--- |
 clusterAssociatedToSchedule_scheduleAssociationState :: Lens.Lens' ClusterAssociatedToSchedule (Prelude.Maybe ScheduleState)
 clusterAssociatedToSchedule_scheduleAssociationState = Lens.lens (\ClusterAssociatedToSchedule' {scheduleAssociationState} -> scheduleAssociationState) (\s@ClusterAssociatedToSchedule' {} a -> s {scheduleAssociationState = a} :: ClusterAssociatedToSchedule)
 
@@ -71,7 +69,8 @@ instance Data.FromXML ClusterAssociatedToSchedule where
 
 instance Prelude.Hashable ClusterAssociatedToSchedule where
   hashWithSalt _salt ClusterAssociatedToSchedule' {..} =
-    _salt `Prelude.hashWithSalt` clusterIdentifier
+    _salt
+      `Prelude.hashWithSalt` clusterIdentifier
       `Prelude.hashWithSalt` scheduleAssociationState
 
 instance Prelude.NFData ClusterAssociatedToSchedule where

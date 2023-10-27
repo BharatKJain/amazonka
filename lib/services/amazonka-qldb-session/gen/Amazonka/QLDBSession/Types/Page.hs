@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QLDBSession.Types.Page
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QLDBSession.Types.Page where
@@ -75,7 +75,8 @@ instance Data.FromJSON Page where
 
 instance Prelude.Hashable Page where
   hashWithSalt _salt Page' {..} =
-    _salt `Prelude.hashWithSalt` nextPageToken
+    _salt
+      `Prelude.hashWithSalt` nextPageToken
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData Page where

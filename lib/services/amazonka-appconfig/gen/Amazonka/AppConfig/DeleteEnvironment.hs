@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppConfig.DeleteEnvironment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -99,7 +99,8 @@ instance Core.AWSRequest DeleteEnvironment where
 
 instance Prelude.Hashable DeleteEnvironment where
   hashWithSalt _salt DeleteEnvironment' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` environmentId
 
 instance Prelude.NFData DeleteEnvironment where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Nimble.ListStreamingImages
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,22 +110,22 @@ instance Core.AWSPager ListStreamingImages where
     | Core.stop
         ( rs
             Lens.^? listStreamingImagesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listStreamingImagesResponse_streamingImages
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listStreamingImages_nextToken
           Lens..~ rs
           Lens.^? listStreamingImagesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListStreamingImages where
   type
@@ -138,7 +138,8 @@ instance Core.AWSRequest ListStreamingImages where
       ( \s h x ->
           ListStreamingImagesResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "streamingImages"
+            Prelude.<*> ( x
+                            Data..?> "streamingImages"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -146,7 +147,8 @@ instance Core.AWSRequest ListStreamingImages where
 
 instance Prelude.Hashable ListStreamingImages where
   hashWithSalt _salt ListStreamingImages' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` owner
       `Prelude.hashWithSalt` studioId
 

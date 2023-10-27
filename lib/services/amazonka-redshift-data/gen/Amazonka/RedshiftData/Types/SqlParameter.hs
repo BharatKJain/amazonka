@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RedshiftData.Types.SqlParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RedshiftData.Types.SqlParameter where
@@ -78,12 +78,14 @@ instance Data.FromJSON SqlParameter where
       "SqlParameter"
       ( \x ->
           SqlParameter'
-            Prelude.<$> (x Data..: "name") Prelude.<*> (x Data..: "value")
+            Prelude.<$> (x Data..: "name")
+            Prelude.<*> (x Data..: "value")
       )
 
 instance Prelude.Hashable SqlParameter where
   hashWithSalt _salt SqlParameter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData SqlParameter where

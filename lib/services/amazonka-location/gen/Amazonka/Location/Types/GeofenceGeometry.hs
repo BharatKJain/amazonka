@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.GeofenceGeometry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.GeofenceGeometry where
@@ -140,7 +140,8 @@ instance Data.FromJSON GeofenceGeometry where
 
 instance Prelude.Hashable GeofenceGeometry where
   hashWithSalt _salt GeofenceGeometry' {..} =
-    _salt `Prelude.hashWithSalt` circle
+    _salt
+      `Prelude.hashWithSalt` circle
       `Prelude.hashWithSalt` polygon
 
 instance Prelude.NFData GeofenceGeometry where

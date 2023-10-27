@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudTrail.Types.EventDataStore
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudTrail.Types.EventDataStore where
@@ -174,7 +174,8 @@ instance Data.FromJSON EventDataStore where
       "EventDataStore"
       ( \x ->
           EventDataStore'
-            Prelude.<$> ( x Data..:? "AdvancedEventSelectors"
+            Prelude.<$> ( x
+                            Data..:? "AdvancedEventSelectors"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CreatedTimestamp")
@@ -190,7 +191,8 @@ instance Data.FromJSON EventDataStore where
 
 instance Prelude.Hashable EventDataStore where
   hashWithSalt _salt EventDataStore' {..} =
-    _salt `Prelude.hashWithSalt` advancedEventSelectors
+    _salt
+      `Prelude.hashWithSalt` advancedEventSelectors
       `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` eventDataStoreArn
       `Prelude.hashWithSalt` multiRegionEnabled

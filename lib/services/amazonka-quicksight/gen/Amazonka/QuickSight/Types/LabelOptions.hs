@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.LabelOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.LabelOptions where
@@ -86,7 +86,8 @@ instance Data.FromJSON LabelOptions where
 
 instance Prelude.Hashable LabelOptions where
   hashWithSalt _salt LabelOptions' {..} =
-    _salt `Prelude.hashWithSalt` customLabel
+    _salt
+      `Prelude.hashWithSalt` customLabel
       `Prelude.hashWithSalt` fontConfiguration
       `Prelude.hashWithSalt` visibility
 

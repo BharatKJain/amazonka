@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.SecurityConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.SecurityConfiguration where
@@ -89,7 +89,8 @@ instance Data.FromJSON SecurityConfiguration where
 
 instance Prelude.Hashable SecurityConfiguration where
   hashWithSalt _salt SecurityConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` createdTimeStamp
+    _salt
+      `Prelude.hashWithSalt` createdTimeStamp
       `Prelude.hashWithSalt` encryptionConfiguration
       `Prelude.hashWithSalt` name
 

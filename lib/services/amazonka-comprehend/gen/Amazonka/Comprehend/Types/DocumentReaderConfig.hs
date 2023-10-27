@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.DocumentReaderConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.DocumentReaderConfig where
@@ -179,7 +179,8 @@ instance Data.FromJSON DocumentReaderConfig where
 
 instance Prelude.Hashable DocumentReaderConfig where
   hashWithSalt _salt DocumentReaderConfig' {..} =
-    _salt `Prelude.hashWithSalt` documentReadMode
+    _salt
+      `Prelude.hashWithSalt` documentReadMode
       `Prelude.hashWithSalt` featureTypes
       `Prelude.hashWithSalt` documentReadAction
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.SyncConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.SyncConfig where
@@ -135,7 +135,8 @@ instance Data.FromJSON SyncConfig where
 
 instance Prelude.Hashable SyncConfig where
   hashWithSalt _salt SyncConfig' {..} =
-    _salt `Prelude.hashWithSalt` conflictDetection
+    _salt
+      `Prelude.hashWithSalt` conflictDetection
       `Prelude.hashWithSalt` conflictHandler
       `Prelude.hashWithSalt` lambdaConflictHandlerConfig
 

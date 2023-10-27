@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53.ListHostedZonesByVPC
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -195,7 +195,8 @@ instance Core.AWSRequest ListHostedZonesByVPC where
           ListHostedZonesByVPCResponse'
             Prelude.<$> (x Data..@? "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..@? "HostedZoneSummaries"
+            Prelude.<*> ( x
+                            Data..@? "HostedZoneSummaries"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Data.parseXMLList "HostedZoneSummary"
                         )
@@ -204,7 +205,8 @@ instance Core.AWSRequest ListHostedZonesByVPC where
 
 instance Prelude.Hashable ListHostedZonesByVPC where
   hashWithSalt _salt ListHostedZonesByVPC' {..} =
-    _salt `Prelude.hashWithSalt` maxItems
+    _salt
+      `Prelude.hashWithSalt` maxItems
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` vPCId
       `Prelude.hashWithSalt` vPCRegion

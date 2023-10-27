@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Proton.GetServiceTemplateVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,7 +129,8 @@ instance Core.AWSRequest GetServiceTemplateVersion where
 
 instance Prelude.Hashable GetServiceTemplateVersion where
   hashWithSalt _salt GetServiceTemplateVersion' {..} =
-    _salt `Prelude.hashWithSalt` majorVersion
+    _salt
+      `Prelude.hashWithSalt` majorVersion
       `Prelude.hashWithSalt` minorVersion
       `Prelude.hashWithSalt` templateName
 

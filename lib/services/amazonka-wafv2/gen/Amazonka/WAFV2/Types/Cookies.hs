@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.Cookies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.Cookies where
@@ -173,7 +173,8 @@ instance Data.FromJSON Cookies where
 
 instance Prelude.Hashable Cookies where
   hashWithSalt _salt Cookies' {..} =
-    _salt `Prelude.hashWithSalt` matchPattern
+    _salt
+      `Prelude.hashWithSalt` matchPattern
       `Prelude.hashWithSalt` matchScope
       `Prelude.hashWithSalt` oversizeHandling
 

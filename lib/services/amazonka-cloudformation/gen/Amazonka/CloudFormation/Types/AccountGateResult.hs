@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.AccountGateResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.AccountGateResult where
@@ -172,7 +172,8 @@ instance Data.FromXML AccountGateResult where
 
 instance Prelude.Hashable AccountGateResult where
   hashWithSalt _salt AccountGateResult' {..} =
-    _salt `Prelude.hashWithSalt` status
+    _salt
+      `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` statusReason
 
 instance Prelude.NFData AccountGateResult where

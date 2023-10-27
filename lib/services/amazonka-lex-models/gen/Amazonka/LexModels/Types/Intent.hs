@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexModels.Types.Intent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexModels.Types.Intent where
@@ -78,7 +78,8 @@ instance Data.FromJSON Intent where
 
 instance Prelude.Hashable Intent where
   hashWithSalt _salt Intent' {..} =
-    _salt `Prelude.hashWithSalt` intentName
+    _salt
+      `Prelude.hashWithSalt` intentName
       `Prelude.hashWithSalt` intentVersion
 
 instance Prelude.NFData Intent where

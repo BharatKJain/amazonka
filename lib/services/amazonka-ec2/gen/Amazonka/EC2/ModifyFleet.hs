@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ModifyFleet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -185,7 +185,8 @@ instance Core.AWSRequest ModifyFleet where
 
 instance Prelude.Hashable ModifyFleet where
   hashWithSalt _salt ModifyFleet' {..} =
-    _salt `Prelude.hashWithSalt` context
+    _salt
+      `Prelude.hashWithSalt` context
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` excessCapacityTerminationPolicy
       `Prelude.hashWithSalt` launchTemplateConfigs

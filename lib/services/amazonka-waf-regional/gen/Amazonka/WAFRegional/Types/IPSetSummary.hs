@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFRegional.Types.IPSetSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFRegional.Types.IPSetSummary where
@@ -84,12 +84,14 @@ instance Data.FromJSON IPSetSummary where
       "IPSetSummary"
       ( \x ->
           IPSetSummary'
-            Prelude.<$> (x Data..: "IPSetId") Prelude.<*> (x Data..: "Name")
+            Prelude.<$> (x Data..: "IPSetId")
+            Prelude.<*> (x Data..: "Name")
       )
 
 instance Prelude.Hashable IPSetSummary where
   hashWithSalt _salt IPSetSummary' {..} =
-    _salt `Prelude.hashWithSalt` iPSetId
+    _salt
+      `Prelude.hashWithSalt` iPSetId
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData IPSetSummary where

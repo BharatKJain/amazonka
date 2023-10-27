@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.IsBinaryFile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.IsBinaryFile where
@@ -94,7 +94,8 @@ instance Data.FromJSON IsBinaryFile where
 
 instance Prelude.Hashable IsBinaryFile where
   hashWithSalt _salt IsBinaryFile' {..} =
-    _salt `Prelude.hashWithSalt` base
+    _salt
+      `Prelude.hashWithSalt` base
       `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` source
 

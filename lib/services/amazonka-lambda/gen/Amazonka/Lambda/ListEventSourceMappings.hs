@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lambda.ListEventSourceMappings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -201,22 +201,22 @@ instance Core.AWSPager ListEventSourceMappings where
     | Core.stop
         ( rs
             Lens.^? listEventSourceMappingsResponse_nextMarker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listEventSourceMappingsResponse_eventSourceMappings
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listEventSourceMappings_marker
           Lens..~ rs
           Lens.^? listEventSourceMappingsResponse_nextMarker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListEventSourceMappings where
   type
@@ -228,7 +228,8 @@ instance Core.AWSRequest ListEventSourceMappings where
     Response.receiveJSON
       ( \s h x ->
           ListEventSourceMappingsResponse'
-            Prelude.<$> ( x Data..?> "EventSourceMappings"
+            Prelude.<$> ( x
+                            Data..?> "EventSourceMappings"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextMarker")
@@ -237,7 +238,8 @@ instance Core.AWSRequest ListEventSourceMappings where
 
 instance Prelude.Hashable ListEventSourceMappings where
   hashWithSalt _salt ListEventSourceMappings' {..} =
-    _salt `Prelude.hashWithSalt` eventSourceArn
+    _salt
+      `Prelude.hashWithSalt` eventSourceArn
       `Prelude.hashWithSalt` functionName
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxItems

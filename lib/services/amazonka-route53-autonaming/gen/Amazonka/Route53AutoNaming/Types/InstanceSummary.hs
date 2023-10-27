@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53AutoNaming.Types.InstanceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53AutoNaming.Types.InstanceSummary where
@@ -201,7 +201,8 @@ instance Data.FromJSON InstanceSummary where
 
 instance Prelude.Hashable InstanceSummary where
   hashWithSalt _salt InstanceSummary' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData InstanceSummary where

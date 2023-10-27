@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.User
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.User where
@@ -136,7 +136,9 @@ instance Data.FromXML User where
       Prelude.<*> (x Data..@? "Engine")
       Prelude.<*> (x Data..@? "MinimumEngineVersion")
       Prelude.<*> (x Data..@? "Status")
-      Prelude.<*> ( x Data..@? "UserGroupIds" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "UserGroupIds"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "UserId")
@@ -144,7 +146,8 @@ instance Data.FromXML User where
 
 instance Prelude.Hashable User where
   hashWithSalt _salt User' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` accessString
       `Prelude.hashWithSalt` authentication
       `Prelude.hashWithSalt` engine

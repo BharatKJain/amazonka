@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AuditManager.ListControlDomainInsights
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest ListControlDomainInsights where
     Response.receiveJSON
       ( \s h x ->
           ListControlDomainInsightsResponse'
-            Prelude.<$> ( x Data..?> "controlDomainInsights"
+            Prelude.<$> ( x
+                            Data..?> "controlDomainInsights"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -114,7 +115,8 @@ instance Core.AWSRequest ListControlDomainInsights where
 
 instance Prelude.Hashable ListControlDomainInsights where
   hashWithSalt _salt ListControlDomainInsights' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListControlDomainInsights where

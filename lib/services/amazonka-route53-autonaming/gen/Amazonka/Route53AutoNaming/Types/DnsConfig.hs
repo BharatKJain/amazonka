@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53AutoNaming.Types.DnsConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53AutoNaming.Types.DnsConfig where
@@ -249,7 +249,8 @@ instance Data.FromJSON DnsConfig where
 
 instance Prelude.Hashable DnsConfig where
   hashWithSalt _salt DnsConfig' {..} =
-    _salt `Prelude.hashWithSalt` namespaceId
+    _salt
+      `Prelude.hashWithSalt` namespaceId
       `Prelude.hashWithSalt` routingPolicy
       `Prelude.hashWithSalt` dnsRecords
 

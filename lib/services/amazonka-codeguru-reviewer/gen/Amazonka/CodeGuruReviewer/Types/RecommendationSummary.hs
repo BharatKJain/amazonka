@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.RecommendationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.RecommendationSummary where
@@ -165,7 +165,8 @@ instance Data.FromJSON RecommendationSummary where
 
 instance Prelude.Hashable RecommendationSummary where
   hashWithSalt _salt RecommendationSummary' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` endLine
       `Prelude.hashWithSalt` filePath
       `Prelude.hashWithSalt` recommendationCategory

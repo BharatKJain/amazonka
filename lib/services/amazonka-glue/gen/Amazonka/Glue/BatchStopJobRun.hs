@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.BatchStopJobRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,7 +103,8 @@ instance Core.AWSRequest BatchStopJobRun where
       ( \s h x ->
           BatchStopJobRunResponse'
             Prelude.<$> (x Data..?> "Errors" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "SuccessfulSubmissions"
+            Prelude.<*> ( x
+                            Data..?> "SuccessfulSubmissions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -111,7 +112,8 @@ instance Core.AWSRequest BatchStopJobRun where
 
 instance Prelude.Hashable BatchStopJobRun where
   hashWithSalt _salt BatchStopJobRun' {..} =
-    _salt `Prelude.hashWithSalt` jobName
+    _salt
+      `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` jobRunIds
 
 instance Prelude.NFData BatchStopJobRun where

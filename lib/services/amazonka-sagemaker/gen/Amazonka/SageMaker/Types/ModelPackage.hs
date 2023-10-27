@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ModelPackage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ModelPackage where
@@ -410,7 +410,8 @@ instance Data.FromJSON ModelPackage where
             Prelude.<*> (x Data..:? "CertifyForMarketplace")
             Prelude.<*> (x Data..:? "CreatedBy")
             Prelude.<*> (x Data..:? "CreationTime")
-            Prelude.<*> ( x Data..:? "CustomerMetadataProperties"
+            Prelude.<*> ( x
+                            Data..:? "CustomerMetadataProperties"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Domain")

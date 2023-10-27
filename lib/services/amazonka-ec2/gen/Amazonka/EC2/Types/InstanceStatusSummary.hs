@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstanceStatusSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstanceStatusSummary where
@@ -70,14 +70,17 @@ instanceStatusSummary_status = Lens.lens (\InstanceStatusSummary' {status} -> st
 instance Data.FromXML InstanceStatusSummary where
   parseXML x =
     InstanceStatusSummary'
-      Prelude.<$> ( x Data..@? "details" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "details"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@ "status")
 
 instance Prelude.Hashable InstanceStatusSummary where
   hashWithSalt _salt InstanceStatusSummary' {..} =
-    _salt `Prelude.hashWithSalt` details
+    _salt
+      `Prelude.hashWithSalt` details
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData InstanceStatusSummary where

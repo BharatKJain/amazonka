@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DocumentDB.Types.DBClusterRole
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DocumentDB.Types.DBClusterRole where
@@ -104,7 +104,8 @@ instance Data.FromXML DBClusterRole where
 
 instance Prelude.Hashable DBClusterRole where
   hashWithSalt _salt DBClusterRole' {..} =
-    _salt `Prelude.hashWithSalt` roleArn
+    _salt
+      `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData DBClusterRole where

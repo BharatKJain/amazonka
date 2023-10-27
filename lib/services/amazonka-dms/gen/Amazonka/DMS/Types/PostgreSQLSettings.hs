@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.PostgreSQLSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.PostgreSQLSettings where
@@ -423,7 +423,8 @@ instance Data.FromJSON PostgreSQLSettings where
 
 instance Prelude.Hashable PostgreSQLSettings where
   hashWithSalt _salt PostgreSQLSettings' {..} =
-    _salt `Prelude.hashWithSalt` afterConnectScript
+    _salt
+      `Prelude.hashWithSalt` afterConnectScript
       `Prelude.hashWithSalt` captureDdls
       `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` ddlArtifactsSchema

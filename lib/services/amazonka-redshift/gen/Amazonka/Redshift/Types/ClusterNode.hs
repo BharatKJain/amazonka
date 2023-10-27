@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.ClusterNode
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.ClusterNode where
@@ -81,7 +81,8 @@ instance Data.FromXML ClusterNode where
 
 instance Prelude.Hashable ClusterNode where
   hashWithSalt _salt ClusterNode' {..} =
-    _salt `Prelude.hashWithSalt` nodeRole
+    _salt
+      `Prelude.hashWithSalt` nodeRole
       `Prelude.hashWithSalt` privateIPAddress
       `Prelude.hashWithSalt` publicIPAddress
 

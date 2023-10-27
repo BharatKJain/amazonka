@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudTrail.Types.PublicKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudTrail.Types.PublicKey where
@@ -102,7 +102,8 @@ instance Data.FromJSON PublicKey where
 
 instance Prelude.Hashable PublicKey where
   hashWithSalt _salt PublicKey' {..} =
-    _salt `Prelude.hashWithSalt` fingerprint
+    _salt
+      `Prelude.hashWithSalt` fingerprint
       `Prelude.hashWithSalt` validityEndTime
       `Prelude.hashWithSalt` validityStartTime
       `Prelude.hashWithSalt` value

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.Core
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.Core where
@@ -109,7 +109,8 @@ instance Data.FromJSON Core where
 
 instance Prelude.Hashable Core where
   hashWithSalt _salt Core' {..} =
-    _salt `Prelude.hashWithSalt` syncShadow
+    _salt
+      `Prelude.hashWithSalt` syncShadow
       `Prelude.hashWithSalt` thingArn
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` certificateArn

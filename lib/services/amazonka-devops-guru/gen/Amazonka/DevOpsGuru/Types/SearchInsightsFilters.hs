@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.SearchInsightsFilters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.SearchInsightsFilters where
@@ -87,7 +87,8 @@ searchInsightsFilters_statuses = Lens.lens (\SearchInsightsFilters' {statuses} -
 
 instance Prelude.Hashable SearchInsightsFilters where
   hashWithSalt _salt SearchInsightsFilters' {..} =
-    _salt `Prelude.hashWithSalt` resourceCollection
+    _salt
+      `Prelude.hashWithSalt` resourceCollection
       `Prelude.hashWithSalt` serviceCollection
       `Prelude.hashWithSalt` severities
       `Prelude.hashWithSalt` statuses

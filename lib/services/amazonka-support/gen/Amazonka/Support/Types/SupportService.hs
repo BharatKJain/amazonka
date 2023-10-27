@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Support.Types.SupportService
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Support.Types.SupportService where
@@ -104,7 +104,8 @@ instance Data.FromJSON SupportService where
 
 instance Prelude.Hashable SupportService where
   hashWithSalt _salt SupportService' {..} =
-    _salt `Prelude.hashWithSalt` categories
+    _salt
+      `Prelude.hashWithSalt` categories
       `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` name
 

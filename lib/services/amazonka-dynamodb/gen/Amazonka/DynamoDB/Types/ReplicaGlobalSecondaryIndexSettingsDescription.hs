@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.ReplicaGlobalSecondaryIndexSettingsDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.ReplicaGlobalSecondaryIndexSettingsDescription where
@@ -159,15 +159,15 @@ instance
       ( \x ->
           ReplicaGlobalSecondaryIndexSettingsDescription'
             Prelude.<$> (x Data..:? "IndexStatus")
-              Prelude.<*> ( x
-                              Data..:? "ProvisionedReadCapacityAutoScalingSettings"
-                          )
-              Prelude.<*> (x Data..:? "ProvisionedReadCapacityUnits")
-              Prelude.<*> ( x
-                              Data..:? "ProvisionedWriteCapacityAutoScalingSettings"
-                          )
-              Prelude.<*> (x Data..:? "ProvisionedWriteCapacityUnits")
-              Prelude.<*> (x Data..: "IndexName")
+            Prelude.<*> ( x
+                            Data..:? "ProvisionedReadCapacityAutoScalingSettings"
+                        )
+            Prelude.<*> (x Data..:? "ProvisionedReadCapacityUnits")
+            Prelude.<*> ( x
+                            Data..:? "ProvisionedWriteCapacityAutoScalingSettings"
+                        )
+            Prelude.<*> (x Data..:? "ProvisionedWriteCapacityUnits")
+            Prelude.<*> (x Data..: "IndexName")
       )
 
 instance
@@ -177,7 +177,8 @@ instance
   hashWithSalt
     _salt
     ReplicaGlobalSecondaryIndexSettingsDescription' {..} =
-      _salt `Prelude.hashWithSalt` indexStatus
+      _salt
+        `Prelude.hashWithSalt` indexStatus
         `Prelude.hashWithSalt` provisionedReadCapacityAutoScalingSettings
         `Prelude.hashWithSalt` provisionedReadCapacityUnits
         `Prelude.hashWithSalt` provisionedWriteCapacityAutoScalingSettings

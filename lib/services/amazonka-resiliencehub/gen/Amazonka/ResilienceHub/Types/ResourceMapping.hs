@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResilienceHub.Types.ResourceMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResilienceHub.Types.ResourceMapping where
@@ -182,7 +182,8 @@ instance Data.FromJSON ResourceMapping where
 
 instance Prelude.Hashable ResourceMapping where
   hashWithSalt _salt ResourceMapping' {..} =
-    _salt `Prelude.hashWithSalt` appRegistryAppName
+    _salt
+      `Prelude.hashWithSalt` appRegistryAppName
       `Prelude.hashWithSalt` logicalStackName
       `Prelude.hashWithSalt` resourceGroupName
       `Prelude.hashWithSalt` resourceName

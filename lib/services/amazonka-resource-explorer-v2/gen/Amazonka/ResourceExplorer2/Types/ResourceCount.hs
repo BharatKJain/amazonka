@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResourceExplorer2.Types.ResourceCount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResourceExplorer2.Types.ResourceCount where
@@ -112,7 +112,8 @@ instance Data.FromJSON ResourceCount where
 
 instance Prelude.Hashable ResourceCount where
   hashWithSalt _salt ResourceCount' {..} =
-    _salt `Prelude.hashWithSalt` complete
+    _salt
+      `Prelude.hashWithSalt` complete
       `Prelude.hashWithSalt` totalResources
 
 instance Prelude.NFData ResourceCount where

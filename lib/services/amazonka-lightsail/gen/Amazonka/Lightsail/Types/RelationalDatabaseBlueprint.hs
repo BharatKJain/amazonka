@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.RelationalDatabaseBlueprint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.RelationalDatabaseBlueprint where
@@ -126,7 +126,8 @@ instance Data.FromJSON RelationalDatabaseBlueprint where
 
 instance Prelude.Hashable RelationalDatabaseBlueprint where
   hashWithSalt _salt RelationalDatabaseBlueprint' {..} =
-    _salt `Prelude.hashWithSalt` blueprintId
+    _salt
+      `Prelude.hashWithSalt` blueprintId
       `Prelude.hashWithSalt` engine
       `Prelude.hashWithSalt` engineDescription
       `Prelude.hashWithSalt` engineVersion

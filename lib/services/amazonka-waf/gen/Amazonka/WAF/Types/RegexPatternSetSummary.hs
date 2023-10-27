@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.RegexPatternSetSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.RegexPatternSetSummary where
@@ -110,7 +110,8 @@ instance Data.FromJSON RegexPatternSetSummary where
 
 instance Prelude.Hashable RegexPatternSetSummary where
   hashWithSalt _salt RegexPatternSetSummary' {..} =
-    _salt `Prelude.hashWithSalt` regexPatternSetId
+    _salt
+      `Prelude.hashWithSalt` regexPatternSetId
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData RegexPatternSetSummary where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.PackageFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.PackageFilter where
@@ -128,7 +128,8 @@ instance Data.FromJSON PackageFilter where
 
 instance Prelude.Hashable PackageFilter where
   hashWithSalt _salt PackageFilter' {..} =
-    _salt `Prelude.hashWithSalt` architecture
+    _salt
+      `Prelude.hashWithSalt` architecture
       `Prelude.hashWithSalt` epoch
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` release

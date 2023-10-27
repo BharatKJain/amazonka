@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchLogs.Types.InputLogEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchLogs.Types.InputLogEvent where
@@ -72,7 +72,8 @@ inputLogEvent_message = Lens.lens (\InputLogEvent' {message} -> message) (\s@Inp
 
 instance Prelude.Hashable InputLogEvent where
   hashWithSalt _salt InputLogEvent' {..} =
-    _salt `Prelude.hashWithSalt` timestamp
+    _salt
+      `Prelude.hashWithSalt` timestamp
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData InputLogEvent where

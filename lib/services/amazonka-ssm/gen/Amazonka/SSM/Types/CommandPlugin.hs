@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.CommandPlugin
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.CommandPlugin where
@@ -406,7 +406,8 @@ instance Data.FromJSON CommandPlugin where
 
 instance Prelude.Hashable CommandPlugin where
   hashWithSalt _salt CommandPlugin' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` output
       `Prelude.hashWithSalt` outputS3BucketName
       `Prelude.hashWithSalt` outputS3KeyPrefix

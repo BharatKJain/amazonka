@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ExperimentConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ExperimentConfig where
@@ -110,7 +110,8 @@ instance Data.FromJSON ExperimentConfig where
 
 instance Prelude.Hashable ExperimentConfig where
   hashWithSalt _salt ExperimentConfig' {..} =
-    _salt `Prelude.hashWithSalt` experimentName
+    _salt
+      `Prelude.hashWithSalt` experimentName
       `Prelude.hashWithSalt` runName
       `Prelude.hashWithSalt` trialComponentDisplayName
       `Prelude.hashWithSalt` trialName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.OpenHoursRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.OpenHoursRule where
@@ -74,7 +74,8 @@ instance Data.FromJSON OpenHoursRule where
 
 instance Prelude.Hashable OpenHoursRule where
   hashWithSalt _salt OpenHoursRule' {..} =
-    _salt `Prelude.hashWithSalt` endTime
+    _salt
+      `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` startTime
 
 instance Prelude.NFData OpenHoursRule where

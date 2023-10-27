@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.DataShareAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.DataShareAssociation where
@@ -110,7 +110,8 @@ instance Data.FromXML DataShareAssociation where
 
 instance Prelude.Hashable DataShareAssociation where
   hashWithSalt _salt DataShareAssociation' {..} =
-    _salt `Prelude.hashWithSalt` consumerIdentifier
+    _salt
+      `Prelude.hashWithSalt` consumerIdentifier
       `Prelude.hashWithSalt` consumerRegion
       `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` status

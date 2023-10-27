@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.CreateProcessingJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -234,7 +234,8 @@ instance Core.AWSRequest CreateProcessingJob where
 
 instance Prelude.Hashable CreateProcessingJob where
   hashWithSalt _salt CreateProcessingJob' {..} =
-    _salt `Prelude.hashWithSalt` environment
+    _salt
+      `Prelude.hashWithSalt` environment
       `Prelude.hashWithSalt` experimentConfig
       `Prelude.hashWithSalt` networkConfig
       `Prelude.hashWithSalt` processingInputs

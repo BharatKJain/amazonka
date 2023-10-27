@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.CreateSipMediaApplicationCall
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,8 @@ instance
     CreateSipMediaApplicationCall
   where
   hashWithSalt _salt CreateSipMediaApplicationCall' {..} =
-    _salt `Prelude.hashWithSalt` sipHeaders
+    _salt
+      `Prelude.hashWithSalt` sipHeaders
       `Prelude.hashWithSalt` fromPhoneNumber
       `Prelude.hashWithSalt` toPhoneNumber
       `Prelude.hashWithSalt` sipMediaApplicationId

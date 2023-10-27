@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudSearch.Types.ScalingParametersStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudSearch.Types.ScalingParametersStatus where
@@ -74,7 +74,8 @@ instance Data.FromXML ScalingParametersStatus where
 
 instance Prelude.Hashable ScalingParametersStatus where
   hashWithSalt _salt ScalingParametersStatus' {..} =
-    _salt `Prelude.hashWithSalt` options
+    _salt
+      `Prelude.hashWithSalt` options
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData ScalingParametersStatus where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.UpdateFileSystemLustreConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.UpdateFileSystemLustreConfiguration where
@@ -257,7 +257,8 @@ instance
   hashWithSalt
     _salt
     UpdateFileSystemLustreConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` autoImportPolicy
+      _salt
+        `Prelude.hashWithSalt` autoImportPolicy
         `Prelude.hashWithSalt` automaticBackupRetentionDays
         `Prelude.hashWithSalt` dailyAutomaticBackupStartTime
         `Prelude.hashWithSalt` dataCompressionType

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.PredictiveScalingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.PredictiveScalingConfiguration where
@@ -227,7 +227,8 @@ instance Data.FromXML PredictiveScalingConfiguration where
       Prelude.<*> (x Data..@? "MaxCapacityBuffer")
       Prelude.<*> (x Data..@? "Mode")
       Prelude.<*> (x Data..@? "SchedulingBufferTime")
-      Prelude.<*> ( x Data..@? "MetricSpecifications"
+      Prelude.<*> ( x
+                      Data..@? "MetricSpecifications"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Data.parseXMLList "member"
                   )

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.WorkflowExecutionInfos
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.WorkflowExecutionInfos where
@@ -89,14 +89,16 @@ instance Data.FromJSON WorkflowExecutionInfos where
       ( \x ->
           WorkflowExecutionInfos'
             Prelude.<$> (x Data..:? "nextPageToken")
-            Prelude.<*> ( x Data..:? "executionInfos"
+            Prelude.<*> ( x
+                            Data..:? "executionInfos"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable WorkflowExecutionInfos where
   hashWithSalt _salt WorkflowExecutionInfos' {..} =
-    _salt `Prelude.hashWithSalt` nextPageToken
+    _salt
+      `Prelude.hashWithSalt` nextPageToken
       `Prelude.hashWithSalt` executionInfos
 
 instance Prelude.NFData WorkflowExecutionInfos where

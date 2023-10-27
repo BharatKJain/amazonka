@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.SampledHTTPRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.SampledHTTPRequest where
@@ -226,7 +226,8 @@ instance Data.FromJSON SampledHTTPRequest where
             Prelude.<*> (x Data..:? "ChallengeResponse")
             Prelude.<*> (x Data..:? "Labels" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "OverriddenAction")
-            Prelude.<*> ( x Data..:? "RequestHeadersInserted"
+            Prelude.<*> ( x
+                            Data..:? "RequestHeadersInserted"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ResponseCodeSent")
@@ -238,7 +239,8 @@ instance Data.FromJSON SampledHTTPRequest where
 
 instance Prelude.Hashable SampledHTTPRequest where
   hashWithSalt _salt SampledHTTPRequest' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` captchaResponse
       `Prelude.hashWithSalt` challengeResponse
       `Prelude.hashWithSalt` labels

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataDetails where
@@ -416,7 +416,8 @@ instance
       "AwsEc2LaunchTemplateDataDetails"
       ( \x ->
           AwsEc2LaunchTemplateDataDetails'
-            Prelude.<$> ( x Data..:? "BlockDeviceMappingSet"
+            Prelude.<$> ( x
+                            Data..:? "BlockDeviceMappingSet"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CapacityReservationSpecification")
@@ -425,10 +426,12 @@ instance
             Prelude.<*> (x Data..:? "DisableApiStop")
             Prelude.<*> (x Data..:? "DisableApiTermination")
             Prelude.<*> (x Data..:? "EbsOptimized")
-            Prelude.<*> ( x Data..:? "ElasticGpuSpecificationSet"
+            Prelude.<*> ( x
+                            Data..:? "ElasticGpuSpecificationSet"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "ElasticInferenceAcceleratorSet"
+            Prelude.<*> ( x
+                            Data..:? "ElasticInferenceAcceleratorSet"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "EnclaveOptions")
@@ -445,16 +448,19 @@ instance
             Prelude.<*> (x Data..:? "MaintenanceOptions")
             Prelude.<*> (x Data..:? "MetadataOptions")
             Prelude.<*> (x Data..:? "Monitoring")
-            Prelude.<*> ( x Data..:? "NetworkInterfaceSet"
+            Prelude.<*> ( x
+                            Data..:? "NetworkInterfaceSet"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Placement")
             Prelude.<*> (x Data..:? "PrivateDnsNameOptions")
             Prelude.<*> (x Data..:? "RamDiskId")
-            Prelude.<*> ( x Data..:? "SecurityGroupIdSet"
+            Prelude.<*> ( x
+                            Data..:? "SecurityGroupIdSet"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "SecurityGroupSet"
+            Prelude.<*> ( x
+                            Data..:? "SecurityGroupSet"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "UserData")
@@ -467,7 +473,8 @@ instance
   hashWithSalt
     _salt
     AwsEc2LaunchTemplateDataDetails' {..} =
-      _salt `Prelude.hashWithSalt` blockDeviceMappingSet
+      _salt
+        `Prelude.hashWithSalt` blockDeviceMappingSet
         `Prelude.hashWithSalt` capacityReservationSpecification
         `Prelude.hashWithSalt` cpuOptions
         `Prelude.hashWithSalt` creditSpecification

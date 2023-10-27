@@ -16,7 +16,7 @@
 -- Module      : Amazonka.BillingConductor.UpdateCustomLineItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,7 +148,8 @@ instance Core.AWSRequest UpdateCustomLineItem where
 
 instance Prelude.Hashable UpdateCustomLineItem where
   hashWithSalt _salt UpdateCustomLineItem' {..} =
-    _salt `Prelude.hashWithSalt` billingPeriodRange
+    _salt
+      `Prelude.hashWithSalt` billingPeriodRange
       `Prelude.hashWithSalt` chargeDetails
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.Note
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.Note where
@@ -105,7 +105,8 @@ instance Data.FromJSON Note where
 
 instance Prelude.Hashable Note where
   hashWithSalt _salt Note' {..} =
-    _salt `Prelude.hashWithSalt` text
+    _salt
+      `Prelude.hashWithSalt` text
       `Prelude.hashWithSalt` updatedBy
       `Prelude.hashWithSalt` updatedAt
 

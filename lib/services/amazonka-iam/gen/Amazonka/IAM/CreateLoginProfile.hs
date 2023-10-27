@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.CreateLoginProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -178,7 +178,8 @@ instance Core.AWSRequest CreateLoginProfile where
 
 instance Prelude.Hashable CreateLoginProfile where
   hashWithSalt _salt CreateLoginProfile' {..} =
-    _salt `Prelude.hashWithSalt` passwordResetRequired
+    _salt
+      `Prelude.hashWithSalt` passwordResetRequired
       `Prelude.hashWithSalt` userName
       `Prelude.hashWithSalt` password
 

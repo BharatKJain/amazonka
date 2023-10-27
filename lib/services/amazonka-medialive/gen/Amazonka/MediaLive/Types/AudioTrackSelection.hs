@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.AudioTrackSelection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.AudioTrackSelection where
@@ -80,7 +80,8 @@ instance Data.FromJSON AudioTrackSelection where
 
 instance Prelude.Hashable AudioTrackSelection where
   hashWithSalt _salt AudioTrackSelection' {..} =
-    _salt `Prelude.hashWithSalt` dolbyEDecode
+    _salt
+      `Prelude.hashWithSalt` dolbyEDecode
       `Prelude.hashWithSalt` tracks
 
 instance Prelude.NFData AudioTrackSelection where

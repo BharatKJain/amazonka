@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CostExplorer.GetSavingsPlansCoverage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -316,14 +316,16 @@ instance Core.AWSRequest GetSavingsPlansCoverage where
           GetSavingsPlansCoverageResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "SavingsPlansCoverages"
+            Prelude.<*> ( x
+                            Data..?> "SavingsPlansCoverages"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable GetSavingsPlansCoverage where
   hashWithSalt _salt GetSavingsPlansCoverage' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` granularity
       `Prelude.hashWithSalt` groupBy
       `Prelude.hashWithSalt` maxResults

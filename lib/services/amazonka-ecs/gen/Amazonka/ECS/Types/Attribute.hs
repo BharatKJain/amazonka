@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.Attribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.Attribute where
@@ -131,7 +131,8 @@ instance Data.FromJSON Attribute where
 
 instance Prelude.Hashable Attribute where
   hashWithSalt _salt Attribute' {..} =
-    _salt `Prelude.hashWithSalt` targetId
+    _salt
+      `Prelude.hashWithSalt` targetId
       `Prelude.hashWithSalt` targetType
       `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` name

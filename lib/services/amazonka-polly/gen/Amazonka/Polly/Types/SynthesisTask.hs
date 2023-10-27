@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Polly.Types.SynthesisTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Polly.Types.SynthesisTask where
@@ -277,7 +277,8 @@ instance Data.FromJSON SynthesisTask where
             Prelude.<*> (x Data..:? "RequestCharacters")
             Prelude.<*> (x Data..:? "SampleRate")
             Prelude.<*> (x Data..:? "SnsTopicArn")
-            Prelude.<*> ( x Data..:? "SpeechMarkTypes"
+            Prelude.<*> ( x
+                            Data..:? "SpeechMarkTypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "TaskId")
@@ -289,7 +290,8 @@ instance Data.FromJSON SynthesisTask where
 
 instance Prelude.Hashable SynthesisTask where
   hashWithSalt _salt SynthesisTask' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` engine
       `Prelude.hashWithSalt` languageCode
       `Prelude.hashWithSalt` lexiconNames

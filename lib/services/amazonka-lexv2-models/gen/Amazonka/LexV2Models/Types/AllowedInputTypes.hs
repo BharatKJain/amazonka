@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.AllowedInputTypes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.AllowedInputTypes where
@@ -81,7 +81,8 @@ instance Data.FromJSON AllowedInputTypes where
 
 instance Prelude.Hashable AllowedInputTypes where
   hashWithSalt _salt AllowedInputTypes' {..} =
-    _salt `Prelude.hashWithSalt` allowAudioInput
+    _salt
+      `Prelude.hashWithSalt` allowAudioInput
       `Prelude.hashWithSalt` allowDTMFInput
 
 instance Prelude.NFData AllowedInputTypes where

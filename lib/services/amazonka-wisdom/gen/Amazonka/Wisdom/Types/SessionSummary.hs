@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Wisdom.Types.SessionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Wisdom.Types.SessionSummary where
@@ -106,7 +106,8 @@ instance Data.FromJSON SessionSummary where
 
 instance Prelude.Hashable SessionSummary where
   hashWithSalt _salt SessionSummary' {..} =
-    _salt `Prelude.hashWithSalt` assistantArn
+    _salt
+      `Prelude.hashWithSalt` assistantArn
       `Prelude.hashWithSalt` assistantId
       `Prelude.hashWithSalt` sessionArn
       `Prelude.hashWithSalt` sessionId

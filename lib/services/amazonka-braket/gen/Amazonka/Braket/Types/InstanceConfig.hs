@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Braket.Types.InstanceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Braket.Types.InstanceConfig where
@@ -96,7 +96,8 @@ instance Data.FromJSON InstanceConfig where
 
 instance Prelude.Hashable InstanceConfig where
   hashWithSalt _salt InstanceConfig' {..} =
-    _salt `Prelude.hashWithSalt` instanceCount
+    _salt
+      `Prelude.hashWithSalt` instanceCount
       `Prelude.hashWithSalt` instanceType
       `Prelude.hashWithSalt` volumeSizeInGb
 

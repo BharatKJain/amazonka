@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudControl.Types.ResourceDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudControl.Types.ResourceDescription where
@@ -86,7 +86,8 @@ instance Data.FromJSON ResourceDescription where
 
 instance Prelude.Hashable ResourceDescription where
   hashWithSalt _salt ResourceDescription' {..} =
-    _salt `Prelude.hashWithSalt` identifier
+    _salt
+      `Prelude.hashWithSalt` identifier
       `Prelude.hashWithSalt` properties
 
 instance Prelude.NFData ResourceDescription where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KeySpaces.Types.EncryptionSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KeySpaces.Types.EncryptionSpecification where
@@ -141,7 +141,8 @@ instance Data.FromJSON EncryptionSpecification where
 
 instance Prelude.Hashable EncryptionSpecification where
   hashWithSalt _salt EncryptionSpecification' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyIdentifier
+    _salt
+      `Prelude.hashWithSalt` kmsKeyIdentifier
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData EncryptionSpecification where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Organizations.ListChildren
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -203,20 +203,23 @@ instance Core.AWSPager ListChildren where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listChildrenResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listChildrenResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listChildrenResponse_children Prelude.. Lens._Just
+            Lens.^? listChildrenResponse_children
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listChildren_nextToken
           Lens..~ rs
-          Lens.^? listChildrenResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listChildrenResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListChildren where
   type AWSResponse ListChildren = ListChildrenResponse
@@ -233,7 +236,8 @@ instance Core.AWSRequest ListChildren where
 
 instance Prelude.Hashable ListChildren where
   hashWithSalt _salt ListChildren' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` parentId
       `Prelude.hashWithSalt` childType

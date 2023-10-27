@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.S3BucketOwner
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.S3BucketOwner where
@@ -75,7 +75,8 @@ instance Data.FromJSON S3BucketOwner where
 
 instance Prelude.Hashable S3BucketOwner where
   hashWithSalt _salt S3BucketOwner' {..} =
-    _salt `Prelude.hashWithSalt` displayName
+    _salt
+      `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData S3BucketOwner where

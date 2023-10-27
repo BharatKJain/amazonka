@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.TeletextDestinationSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.TeletextDestinationSettings where
@@ -102,7 +102,8 @@ instance Data.FromJSON TeletextDestinationSettings where
 
 instance Prelude.Hashable TeletextDestinationSettings where
   hashWithSalt _salt TeletextDestinationSettings' {..} =
-    _salt `Prelude.hashWithSalt` pageNumber
+    _salt
+      `Prelude.hashWithSalt` pageNumber
       `Prelude.hashWithSalt` pageTypes
 
 instance Prelude.NFData TeletextDestinationSettings where

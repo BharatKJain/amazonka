@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.MultiplexProgramSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.MultiplexProgramSummary where
@@ -75,7 +75,8 @@ instance Data.FromJSON MultiplexProgramSummary where
 
 instance Prelude.Hashable MultiplexProgramSummary where
   hashWithSalt _salt MultiplexProgramSummary' {..} =
-    _salt `Prelude.hashWithSalt` channelId
+    _salt
+      `Prelude.hashWithSalt` channelId
       `Prelude.hashWithSalt` programName
 
 instance Prelude.NFData MultiplexProgramSummary where

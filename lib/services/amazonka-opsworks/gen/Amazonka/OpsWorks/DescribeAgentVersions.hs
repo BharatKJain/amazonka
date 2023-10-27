@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpsWorks.DescribeAgentVersions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest DescribeAgentVersions where
 
 instance Prelude.Hashable DescribeAgentVersions where
   hashWithSalt _salt DescribeAgentVersions' {..} =
-    _salt `Prelude.hashWithSalt` configurationManager
+    _salt
+      `Prelude.hashWithSalt` configurationManager
       `Prelude.hashWithSalt` stackId
 
 instance Prelude.NFData DescribeAgentVersions where

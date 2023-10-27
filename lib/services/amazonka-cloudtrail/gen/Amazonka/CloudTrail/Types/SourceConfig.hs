@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudTrail.Types.SourceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudTrail.Types.SourceConfig where
@@ -73,7 +73,8 @@ instance Data.FromJSON SourceConfig where
       "SourceConfig"
       ( \x ->
           SourceConfig'
-            Prelude.<$> ( x Data..:? "AdvancedEventSelectors"
+            Prelude.<$> ( x
+                            Data..:? "AdvancedEventSelectors"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ApplyToAllRegions")
@@ -81,7 +82,8 @@ instance Data.FromJSON SourceConfig where
 
 instance Prelude.Hashable SourceConfig where
   hashWithSalt _salt SourceConfig' {..} =
-    _salt `Prelude.hashWithSalt` advancedEventSelectors
+    _salt
+      `Prelude.hashWithSalt` advancedEventSelectors
       `Prelude.hashWithSalt` applyToAllRegions
 
 instance Prelude.NFData SourceConfig where

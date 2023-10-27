@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AWSHealth.Types.EventFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AWSHealth.Types.EventFilter where
@@ -194,7 +194,8 @@ eventFilter_tags = Lens.lens (\EventFilter' {tags} -> tags) (\s@EventFilter' {} 
 
 instance Prelude.Hashable EventFilter where
   hashWithSalt _salt EventFilter' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZones
+    _salt
+      `Prelude.hashWithSalt` availabilityZones
       `Prelude.hashWithSalt` endTimes
       `Prelude.hashWithSalt` entityArns
       `Prelude.hashWithSalt` entityValues

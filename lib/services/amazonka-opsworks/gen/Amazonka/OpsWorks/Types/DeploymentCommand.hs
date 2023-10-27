@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.DeploymentCommand
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.DeploymentCommand where
@@ -248,7 +248,8 @@ instance Data.FromJSON DeploymentCommand where
 
 instance Prelude.Hashable DeploymentCommand where
   hashWithSalt _salt DeploymentCommand' {..} =
-    _salt `Prelude.hashWithSalt` args
+    _salt
+      `Prelude.hashWithSalt` args
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData DeploymentCommand where

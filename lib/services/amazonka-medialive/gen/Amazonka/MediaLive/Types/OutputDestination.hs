@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.OutputDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.OutputDestination where
@@ -99,7 +99,8 @@ instance Data.FromJSON OutputDestination where
       ( \x ->
           OutputDestination'
             Prelude.<$> (x Data..:? "id")
-            Prelude.<*> ( x Data..:? "mediaPackageSettings"
+            Prelude.<*> ( x
+                            Data..:? "mediaPackageSettings"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "multiplexSettings")
@@ -108,7 +109,8 @@ instance Data.FromJSON OutputDestination where
 
 instance Prelude.Hashable OutputDestination where
   hashWithSalt _salt OutputDestination' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` mediaPackageSettings
       `Prelude.hashWithSalt` multiplexSettings
       `Prelude.hashWithSalt` settings

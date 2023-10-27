@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.PutResourcePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -180,7 +180,8 @@ instance Core.AWSRequest PutResourcePolicy where
 
 instance Prelude.Hashable PutResourcePolicy where
   hashWithSalt _salt PutResourcePolicy' {..} =
-    _salt `Prelude.hashWithSalt` enableHybrid
+    _salt
+      `Prelude.hashWithSalt` enableHybrid
       `Prelude.hashWithSalt` policyExistsCondition
       `Prelude.hashWithSalt` policyHashCondition
       `Prelude.hashWithSalt` resourceArn

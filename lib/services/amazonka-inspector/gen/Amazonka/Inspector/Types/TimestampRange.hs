@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.TimestampRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.TimestampRange where
@@ -64,7 +64,8 @@ timestampRange_endDate = Lens.lens (\TimestampRange' {endDate} -> endDate) (\s@T
 
 instance Prelude.Hashable TimestampRange where
   hashWithSalt _salt TimestampRange' {..} =
-    _salt `Prelude.hashWithSalt` beginDate
+    _salt
+      `Prelude.hashWithSalt` beginDate
       `Prelude.hashWithSalt` endDate
 
 instance Prelude.NFData TimestampRange where

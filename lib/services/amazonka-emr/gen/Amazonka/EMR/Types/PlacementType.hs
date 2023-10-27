@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.PlacementType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.PlacementType where
@@ -89,7 +89,8 @@ placementType_availabilityZones = Lens.lens (\PlacementType' {availabilityZones}
 
 instance Prelude.Hashable PlacementType where
   hashWithSalt _salt PlacementType' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZone
+    _salt
+      `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` availabilityZones
 
 instance Prelude.NFData PlacementType where

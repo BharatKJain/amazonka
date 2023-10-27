@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.MaintenanceWindowIdentity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.MaintenanceWindowIdentity where
@@ -199,7 +199,8 @@ instance Data.FromJSON MaintenanceWindowIdentity where
 
 instance Prelude.Hashable MaintenanceWindowIdentity where
   hashWithSalt _salt MaintenanceWindowIdentity' {..} =
-    _salt `Prelude.hashWithSalt` cutoff
+    _salt
+      `Prelude.hashWithSalt` cutoff
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` enabled

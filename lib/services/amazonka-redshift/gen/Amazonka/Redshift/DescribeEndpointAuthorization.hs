@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.DescribeEndpointAuthorization
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -156,22 +156,22 @@ instance Core.AWSPager DescribeEndpointAuthorization where
     | Core.stop
         ( rs
             Lens.^? describeEndpointAuthorizationResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeEndpointAuthorizationResponse_endpointAuthorizationList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeEndpointAuthorization_marker
           Lens..~ rs
           Lens.^? describeEndpointAuthorizationResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -187,7 +187,8 @@ instance
       "DescribeEndpointAuthorizationResult"
       ( \s h x ->
           DescribeEndpointAuthorizationResponse'
-            Prelude.<$> ( x Data..@? "EndpointAuthorizationList"
+            Prelude.<$> ( x
+                            Data..@? "EndpointAuthorizationList"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
@@ -200,7 +201,8 @@ instance
     DescribeEndpointAuthorization
   where
   hashWithSalt _salt DescribeEndpointAuthorization' {..} =
-    _salt `Prelude.hashWithSalt` account
+    _salt
+      `Prelude.hashWithSalt` account
       `Prelude.hashWithSalt` clusterIdentifier
       `Prelude.hashWithSalt` grantee
       `Prelude.hashWithSalt` marker

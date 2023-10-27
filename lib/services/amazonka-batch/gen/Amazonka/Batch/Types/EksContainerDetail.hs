@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.EksContainerDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.EksContainerDetail where
@@ -298,7 +298,8 @@ instance Data.FromJSON EksContainerDetail where
 
 instance Prelude.Hashable EksContainerDetail where
   hashWithSalt _salt EksContainerDetail' {..} =
-    _salt `Prelude.hashWithSalt` args
+    _salt
+      `Prelude.hashWithSalt` args
       `Prelude.hashWithSalt` command
       `Prelude.hashWithSalt` env
       `Prelude.hashWithSalt` exitCode

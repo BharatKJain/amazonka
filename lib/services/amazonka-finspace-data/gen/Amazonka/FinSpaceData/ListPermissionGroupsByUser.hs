@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FinSpaceData.ListPermissionGroupsByUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest ListPermissionGroupsByUser where
       ( \s h x ->
           ListPermissionGroupsByUserResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "permissionGroups"
+            Prelude.<*> ( x
+                            Data..?> "permissionGroups"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -120,7 +121,8 @@ instance Core.AWSRequest ListPermissionGroupsByUser where
 
 instance Prelude.Hashable ListPermissionGroupsByUser where
   hashWithSalt _salt ListPermissionGroupsByUser' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` userId
       `Prelude.hashWithSalt` maxResults
 

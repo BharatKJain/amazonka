@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.TagCollection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.TagCollection where
@@ -171,7 +171,8 @@ instance Data.FromJSON TagCollection where
 
 instance Prelude.Hashable TagCollection where
   hashWithSalt _salt TagCollection' {..} =
-    _salt `Prelude.hashWithSalt` appBoundaryKey
+    _salt
+      `Prelude.hashWithSalt` appBoundaryKey
       `Prelude.hashWithSalt` tagValues
 
 instance Prelude.NFData TagCollection where

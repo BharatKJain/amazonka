@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.SourceAccessConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.SourceAccessConfiguration where
@@ -193,12 +193,14 @@ instance Data.FromJSON SourceAccessConfiguration where
       "SourceAccessConfiguration"
       ( \x ->
           SourceAccessConfiguration'
-            Prelude.<$> (x Data..:? "Type") Prelude.<*> (x Data..:? "URI")
+            Prelude.<$> (x Data..:? "Type")
+            Prelude.<*> (x Data..:? "URI")
       )
 
 instance Prelude.Hashable SourceAccessConfiguration where
   hashWithSalt _salt SourceAccessConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` uri
 
 instance Prelude.NFData SourceAccessConfiguration where

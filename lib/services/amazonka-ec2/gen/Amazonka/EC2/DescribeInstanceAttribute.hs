@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeInstanceAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -145,7 +145,8 @@ instance Core.AWSRequest DescribeInstanceAttribute where
     Response.receiveXML
       ( \s h x ->
           DescribeInstanceAttributeResponse'
-            Prelude.<$> ( x Data..@? "blockDeviceMapping"
+            Prelude.<$> ( x
+                            Data..@? "blockDeviceMapping"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -154,14 +155,18 @@ instance Core.AWSRequest DescribeInstanceAttribute where
             Prelude.<*> (x Data..@? "ebsOptimized")
             Prelude.<*> (x Data..@? "enaSupport")
             Prelude.<*> (x Data..@? "enclaveOptions")
-            Prelude.<*> ( x Data..@? "groupSet" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "groupSet"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
             Prelude.<*> (x Data..@? "instanceId")
             Prelude.<*> (x Data..@? "instanceInitiatedShutdownBehavior")
             Prelude.<*> (x Data..@? "instanceType")
             Prelude.<*> (x Data..@? "kernel")
-            Prelude.<*> ( x Data..@? "productCodes" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "productCodes"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
             Prelude.<*> (x Data..@? "ramdisk")
@@ -174,7 +179,8 @@ instance Core.AWSRequest DescribeInstanceAttribute where
 
 instance Prelude.Hashable DescribeInstanceAttribute where
   hashWithSalt _salt DescribeInstanceAttribute' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` attribute
       `Prelude.hashWithSalt` instanceId
 

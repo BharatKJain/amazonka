@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.EncoderSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.EncoderSettings where
@@ -175,17 +175,20 @@ instance Data.FromJSON EncoderSettings where
             Prelude.<$> (x Data..:? "availBlanking")
             Prelude.<*> (x Data..:? "availConfiguration")
             Prelude.<*> (x Data..:? "blackoutSlate")
-            Prelude.<*> ( x Data..:? "captionDescriptions"
+            Prelude.<*> ( x
+                            Data..:? "captionDescriptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "featureActivations")
             Prelude.<*> (x Data..:? "globalConfiguration")
             Prelude.<*> (x Data..:? "motionGraphicsConfiguration")
             Prelude.<*> (x Data..:? "nielsenConfiguration")
-            Prelude.<*> ( x Data..:? "videoDescriptions"
+            Prelude.<*> ( x
+                            Data..:? "videoDescriptions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "audioDescriptions"
+            Prelude.<*> ( x
+                            Data..:? "audioDescriptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "outputGroups" Data..!= Prelude.mempty)
@@ -194,7 +197,8 @@ instance Data.FromJSON EncoderSettings where
 
 instance Prelude.Hashable EncoderSettings where
   hashWithSalt _salt EncoderSettings' {..} =
-    _salt `Prelude.hashWithSalt` availBlanking
+    _salt
+      `Prelude.hashWithSalt` availBlanking
       `Prelude.hashWithSalt` availConfiguration
       `Prelude.hashWithSalt` blackoutSlate
       `Prelude.hashWithSalt` captionDescriptions

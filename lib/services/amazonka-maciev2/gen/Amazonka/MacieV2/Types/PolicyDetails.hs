@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.PolicyDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.PolicyDetails where
@@ -76,7 +76,8 @@ instance Data.FromJSON PolicyDetails where
 
 instance Prelude.Hashable PolicyDetails where
   hashWithSalt _salt PolicyDetails' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` actor
 
 instance Prelude.NFData PolicyDetails where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecretsManager.CreateSecret
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -571,7 +571,8 @@ instance Core.AWSRequest CreateSecret where
           CreateSecretResponse'
             Prelude.<$> (x Data..?> "ARN")
             Prelude.<*> (x Data..?> "Name")
-            Prelude.<*> ( x Data..?> "ReplicationStatus"
+            Prelude.<*> ( x
+                            Data..?> "ReplicationStatus"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "VersionId")
@@ -580,7 +581,8 @@ instance Core.AWSRequest CreateSecret where
 
 instance Prelude.Hashable CreateSecret where
   hashWithSalt _salt CreateSecret' {..} =
-    _salt `Prelude.hashWithSalt` addReplicaRegions
+    _salt
+      `Prelude.hashWithSalt` addReplicaRegions
       `Prelude.hashWithSalt` clientRequestToken
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` forceOverwriteReplicaSecret

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.OneDriveConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.OneDriveConfiguration where
@@ -196,11 +196,13 @@ instance Data.FromJSON OneDriveConfiguration where
       ( \x ->
           OneDriveConfiguration'
             Prelude.<$> (x Data..:? "DisableLocalGroups")
-            Prelude.<*> ( x Data..:? "ExclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "ExclusionPatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "FieldMappings")
-            Prelude.<*> ( x Data..:? "InclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "InclusionPatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "TenantDomain")
@@ -210,7 +212,8 @@ instance Data.FromJSON OneDriveConfiguration where
 
 instance Prelude.Hashable OneDriveConfiguration where
   hashWithSalt _salt OneDriveConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` disableLocalGroups
+    _salt
+      `Prelude.hashWithSalt` disableLocalGroups
       `Prelude.hashWithSalt` exclusionPatterns
       `Prelude.hashWithSalt` fieldMappings
       `Prelude.hashWithSalt` inclusionPatterns

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.WorkGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.WorkGroup where
@@ -142,7 +142,8 @@ instance Data.FromJSON WorkGroup where
 
 instance Prelude.Hashable WorkGroup where
   hashWithSalt _salt WorkGroup' {..} =
-    _salt `Prelude.hashWithSalt` configuration
+    _salt
+      `Prelude.hashWithSalt` configuration
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` state

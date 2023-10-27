@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MQ.Types.WeeklyStartTime
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MQ.Types.WeeklyStartTime where
@@ -93,7 +93,8 @@ instance Data.FromJSON WeeklyStartTime where
 
 instance Prelude.Hashable WeeklyStartTime where
   hashWithSalt _salt WeeklyStartTime' {..} =
-    _salt `Prelude.hashWithSalt` timeZone
+    _salt
+      `Prelude.hashWithSalt` timeZone
       `Prelude.hashWithSalt` timeOfDay
       `Prelude.hashWithSalt` dayOfWeek
 

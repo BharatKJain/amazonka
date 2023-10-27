@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ProvisionIpamPoolCidr
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -143,7 +143,8 @@ instance Core.AWSRequest ProvisionIpamPoolCidr where
 
 instance Prelude.Hashable ProvisionIpamPoolCidr where
   hashWithSalt _salt ProvisionIpamPoolCidr' {..} =
-    _salt `Prelude.hashWithSalt` cidr
+    _salt
+      `Prelude.hashWithSalt` cidr
       `Prelude.hashWithSalt` cidrAuthorizationContext
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` ipamPoolId

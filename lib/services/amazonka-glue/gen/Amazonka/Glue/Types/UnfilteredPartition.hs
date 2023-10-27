@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.UnfilteredPartition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.UnfilteredPartition where
@@ -74,7 +74,8 @@ instance Data.FromJSON UnfilteredPartition where
       "UnfilteredPartition"
       ( \x ->
           UnfilteredPartition'
-            Prelude.<$> ( x Data..:? "AuthorizedColumns"
+            Prelude.<$> ( x
+                            Data..:? "AuthorizedColumns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "IsRegisteredWithLakeFormation")
@@ -83,7 +84,8 @@ instance Data.FromJSON UnfilteredPartition where
 
 instance Prelude.Hashable UnfilteredPartition where
   hashWithSalt _salt UnfilteredPartition' {..} =
-    _salt `Prelude.hashWithSalt` authorizedColumns
+    _salt
+      `Prelude.hashWithSalt` authorizedColumns
       `Prelude.hashWithSalt` isRegisteredWithLakeFormation
       `Prelude.hashWithSalt` partition
 

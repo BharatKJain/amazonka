@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.PartnerEventSourceAccount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.PartnerEventSourceAccount where
@@ -118,7 +118,8 @@ instance Data.FromJSON PartnerEventSourceAccount where
 
 instance Prelude.Hashable PartnerEventSourceAccount where
   hashWithSalt _salt PartnerEventSourceAccount' {..} =
-    _salt `Prelude.hashWithSalt` account
+    _salt
+      `Prelude.hashWithSalt` account
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` expirationTime
       `Prelude.hashWithSalt` state

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComprehendMedical.Types.SNOMEDCTDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComprehendMedical.Types.SNOMEDCTDetails where
@@ -92,7 +92,8 @@ instance Data.FromJSON SNOMEDCTDetails where
 
 instance Prelude.Hashable SNOMEDCTDetails where
   hashWithSalt _salt SNOMEDCTDetails' {..} =
-    _salt `Prelude.hashWithSalt` edition
+    _salt
+      `Prelude.hashWithSalt` edition
       `Prelude.hashWithSalt` language
       `Prelude.hashWithSalt` versionDate
 

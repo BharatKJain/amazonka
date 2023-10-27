@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.AutoMLChannel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.AutoMLChannel where
@@ -140,7 +140,8 @@ instance Data.FromJSON AutoMLChannel where
 
 instance Prelude.Hashable AutoMLChannel where
   hashWithSalt _salt AutoMLChannel' {..} =
-    _salt `Prelude.hashWithSalt` channelType
+    _salt
+      `Prelude.hashWithSalt` channelType
       `Prelude.hashWithSalt` compressionType
       `Prelude.hashWithSalt` contentType
       `Prelude.hashWithSalt` dataSource

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.EntityRecognizerMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.EntityRecognizerMetadata where
@@ -109,7 +109,8 @@ instance Data.FromJSON EntityRecognizerMetadata where
 
 instance Prelude.Hashable EntityRecognizerMetadata where
   hashWithSalt _salt EntityRecognizerMetadata' {..} =
-    _salt `Prelude.hashWithSalt` entityTypes
+    _salt
+      `Prelude.hashWithSalt` entityTypes
       `Prelude.hashWithSalt` evaluationMetrics
       `Prelude.hashWithSalt` numberOfTestDocuments
       `Prelude.hashWithSalt` numberOfTrainedDocuments

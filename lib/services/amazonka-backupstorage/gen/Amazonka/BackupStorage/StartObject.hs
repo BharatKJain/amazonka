@@ -16,7 +16,7 @@
 -- Module      : Amazonka.BackupStorage.StartObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest StartObject where
 
 instance Prelude.Hashable StartObject where
   hashWithSalt _salt StartObject' {..} =
-    _salt `Prelude.hashWithSalt` throwOnDuplicate
+    _salt
+      `Prelude.hashWithSalt` throwOnDuplicate
       `Prelude.hashWithSalt` backupJobId
       `Prelude.hashWithSalt` objectName
 

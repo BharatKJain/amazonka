@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KMS.UpdateAlias
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -228,7 +228,8 @@ instance Core.AWSRequest UpdateAlias where
 
 instance Prelude.Hashable UpdateAlias where
   hashWithSalt _salt UpdateAlias' {..} =
-    _salt `Prelude.hashWithSalt` aliasName
+    _salt
+      `Prelude.hashWithSalt` aliasName
       `Prelude.hashWithSalt` targetKeyId
 
 instance Prelude.NFData UpdateAlias where

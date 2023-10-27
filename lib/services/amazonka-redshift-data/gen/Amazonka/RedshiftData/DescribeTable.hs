@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RedshiftData.DescribeTable
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -252,21 +252,23 @@ instance Core.AWSPager DescribeTable where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? describeTableResponse_nextToken Prelude.. Lens._Just
+            Lens.^? describeTableResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeTableResponse_columnList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeTable_nextToken
           Lens..~ rs
-          Lens.^? describeTableResponse_nextToken Prelude.. Lens._Just
+          Lens.^? describeTableResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeTable where
   type
@@ -286,7 +288,8 @@ instance Core.AWSRequest DescribeTable where
 
 instance Prelude.Hashable DescribeTable where
   hashWithSalt _salt DescribeTable' {..} =
-    _salt `Prelude.hashWithSalt` clusterIdentifier
+    _salt
+      `Prelude.hashWithSalt` clusterIdentifier
       `Prelude.hashWithSalt` connectedDatabase
       `Prelude.hashWithSalt` dbUser
       `Prelude.hashWithSalt` maxResults

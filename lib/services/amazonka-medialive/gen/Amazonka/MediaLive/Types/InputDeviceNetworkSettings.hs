@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.InputDeviceNetworkSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.InputDeviceNetworkSettings where
@@ -112,7 +112,8 @@ instance Data.FromJSON InputDeviceNetworkSettings where
 
 instance Prelude.Hashable InputDeviceNetworkSettings where
   hashWithSalt _salt InputDeviceNetworkSettings' {..} =
-    _salt `Prelude.hashWithSalt` dnsAddresses
+    _salt
+      `Prelude.hashWithSalt` dnsAddresses
       `Prelude.hashWithSalt` gateway
       `Prelude.hashWithSalt` ipAddress
       `Prelude.hashWithSalt` ipScheme

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.InputLambdaProcessor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.InputLambdaProcessor where
@@ -89,7 +89,8 @@ inputLambdaProcessor_roleARN = Lens.lens (\InputLambdaProcessor' {roleARN} -> ro
 
 instance Prelude.Hashable InputLambdaProcessor where
   hashWithSalt _salt InputLambdaProcessor' {..} =
-    _salt `Prelude.hashWithSalt` resourceARN
+    _salt
+      `Prelude.hashWithSalt` resourceARN
       `Prelude.hashWithSalt` roleARN
 
 instance Prelude.NFData InputLambdaProcessor where

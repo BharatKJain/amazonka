@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisVideo.Types.ChannelInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisVideo.Types.ChannelInfo where
@@ -131,7 +131,8 @@ instance Data.FromJSON ChannelInfo where
 
 instance Prelude.Hashable ChannelInfo where
   hashWithSalt _salt ChannelInfo' {..} =
-    _salt `Prelude.hashWithSalt` channelARN
+    _salt
+      `Prelude.hashWithSalt` channelARN
       `Prelude.hashWithSalt` channelName
       `Prelude.hashWithSalt` channelStatus
       `Prelude.hashWithSalt` channelType

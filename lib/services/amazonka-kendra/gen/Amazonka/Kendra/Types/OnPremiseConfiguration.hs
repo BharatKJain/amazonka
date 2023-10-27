@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.OnPremiseConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.OnPremiseConfiguration where
@@ -125,7 +125,8 @@ instance Data.FromJSON OnPremiseConfiguration where
 
 instance Prelude.Hashable OnPremiseConfiguration where
   hashWithSalt _salt OnPremiseConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` hostUrl
+    _salt
+      `Prelude.hashWithSalt` hostUrl
       `Prelude.hashWithSalt` organizationName
       `Prelude.hashWithSalt` sslCertificateS3Path
 

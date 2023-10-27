@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.Workload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.Workload where
@@ -289,7 +289,8 @@ instance Data.FromJSON Workload where
             Prelude.<*> (x Data..:? "NonAwsRegions" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "Notes")
             Prelude.<*> (x Data..:? "Owner")
-            Prelude.<*> ( x Data..:? "PillarPriorities"
+            Prelude.<*> ( x
+                            Data..:? "PillarPriorities"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ReviewOwner")
@@ -305,7 +306,8 @@ instance Data.FromJSON Workload where
 
 instance Prelude.Hashable Workload where
   hashWithSalt _salt Workload' {..} =
-    _salt `Prelude.hashWithSalt` accountIds
+    _salt
+      `Prelude.hashWithSalt` accountIds
       `Prelude.hashWithSalt` applications
       `Prelude.hashWithSalt` architecturalDesign
       `Prelude.hashWithSalt` awsRegions

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.SAMLIdp
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.SAMLIdp where
@@ -78,7 +78,8 @@ instance Data.FromJSON SAMLIdp where
 
 instance Prelude.Hashable SAMLIdp where
   hashWithSalt _salt SAMLIdp' {..} =
-    _salt `Prelude.hashWithSalt` metadataContent
+    _salt
+      `Prelude.hashWithSalt` metadataContent
       `Prelude.hashWithSalt` entityId
 
 instance Prelude.NFData SAMLIdp where

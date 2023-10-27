@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QLDBSession.Types.StartTransactionResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QLDBSession.Types.StartTransactionResult where
@@ -76,7 +76,8 @@ instance Data.FromJSON StartTransactionResult where
 
 instance Prelude.Hashable StartTransactionResult where
   hashWithSalt _salt StartTransactionResult' {..} =
-    _salt `Prelude.hashWithSalt` timingInformation
+    _salt
+      `Prelude.hashWithSalt` timingInformation
       `Prelude.hashWithSalt` transactionId
 
 instance Prelude.NFData StartTransactionResult where

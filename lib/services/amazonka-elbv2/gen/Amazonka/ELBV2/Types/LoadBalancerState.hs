@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.LoadBalancerState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.LoadBalancerState where
@@ -81,11 +81,13 @@ loadBalancerState_reason = Lens.lens (\LoadBalancerState' {reason} -> reason) (\
 instance Data.FromXML LoadBalancerState where
   parseXML x =
     LoadBalancerState'
-      Prelude.<$> (x Data..@? "Code") Prelude.<*> (x Data..@? "Reason")
+      Prelude.<$> (x Data..@? "Code")
+      Prelude.<*> (x Data..@? "Reason")
 
 instance Prelude.Hashable LoadBalancerState where
   hashWithSalt _salt LoadBalancerState' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` reason
 
 instance Prelude.NFData LoadBalancerState where

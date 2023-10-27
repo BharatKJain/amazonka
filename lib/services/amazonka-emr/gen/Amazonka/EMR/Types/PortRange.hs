@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.PortRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.PortRange where
@@ -78,7 +78,8 @@ instance Data.FromJSON PortRange where
 
 instance Prelude.Hashable PortRange where
   hashWithSalt _salt PortRange' {..} =
-    _salt `Prelude.hashWithSalt` maxRange
+    _salt
+      `Prelude.hashWithSalt` maxRange
       `Prelude.hashWithSalt` minRange
 
 instance Prelude.NFData PortRange where

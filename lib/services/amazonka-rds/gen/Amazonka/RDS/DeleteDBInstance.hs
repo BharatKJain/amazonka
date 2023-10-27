@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.DeleteDBInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -274,7 +274,8 @@ instance Core.AWSRequest DeleteDBInstance where
 
 instance Prelude.Hashable DeleteDBInstance where
   hashWithSalt _salt DeleteDBInstance' {..} =
-    _salt `Prelude.hashWithSalt` deleteAutomatedBackups
+    _salt
+      `Prelude.hashWithSalt` deleteAutomatedBackups
       `Prelude.hashWithSalt` finalDBSnapshotIdentifier
       `Prelude.hashWithSalt` skipFinalSnapshot
       `Prelude.hashWithSalt` dbInstanceIdentifier

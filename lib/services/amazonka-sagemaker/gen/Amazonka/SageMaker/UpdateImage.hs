@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.UpdateImage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest UpdateImage where
 
 instance Prelude.Hashable UpdateImage where
   hashWithSalt _salt UpdateImage' {..} =
-    _salt `Prelude.hashWithSalt` deleteProperties
+    _salt
+      `Prelude.hashWithSalt` deleteProperties
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` roleArn

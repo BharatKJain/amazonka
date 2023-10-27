@@ -16,7 +16,7 @@
 -- Module      : Amazonka.VoiceId.ListSpeakerEnrollmentJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,22 +132,22 @@ instance Core.AWSPager ListSpeakerEnrollmentJobs where
     | Core.stop
         ( rs
             Lens.^? listSpeakerEnrollmentJobsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listSpeakerEnrollmentJobsResponse_jobSummaries
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSpeakerEnrollmentJobs_nextToken
           Lens..~ rs
           Lens.^? listSpeakerEnrollmentJobsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListSpeakerEnrollmentJobs where
   type
@@ -166,7 +166,8 @@ instance Core.AWSRequest ListSpeakerEnrollmentJobs where
 
 instance Prelude.Hashable ListSpeakerEnrollmentJobs where
   hashWithSalt _salt ListSpeakerEnrollmentJobs' {..} =
-    _salt `Prelude.hashWithSalt` jobStatus
+    _salt
+      `Prelude.hashWithSalt` jobStatus
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` domainId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.Coverage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.Coverage where
@@ -90,7 +90,8 @@ instance Data.FromJSON Coverage where
 
 instance Prelude.Hashable Coverage where
   hashWithSalt _salt Coverage' {..} =
-    _salt `Prelude.hashWithSalt` coverageCost
+    _salt
+      `Prelude.hashWithSalt` coverageCost
       `Prelude.hashWithSalt` coverageHours
       `Prelude.hashWithSalt` coverageNormalizedUnits
 

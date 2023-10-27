@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.NetworkPathComponentDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.NetworkPathComponentDetails where
@@ -77,7 +77,8 @@ instance Data.FromJSON NetworkPathComponentDetails where
 
 instance Prelude.Hashable NetworkPathComponentDetails where
   hashWithSalt _salt NetworkPathComponentDetails' {..} =
-    _salt `Prelude.hashWithSalt` address
+    _salt
+      `Prelude.hashWithSalt` address
       `Prelude.hashWithSalt` portRanges
 
 instance Prelude.NFData NetworkPathComponentDetails where

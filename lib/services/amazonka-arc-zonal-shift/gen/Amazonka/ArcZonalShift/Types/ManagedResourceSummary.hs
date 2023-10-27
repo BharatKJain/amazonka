@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ArcZonalShift.Types.ManagedResourceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ArcZonalShift.Types.ManagedResourceSummary where
@@ -89,14 +89,16 @@ instance Data.FromJSON ManagedResourceSummary where
           ManagedResourceSummary'
             Prelude.<$> (x Data..:? "arn")
             Prelude.<*> (x Data..:? "name")
-            Prelude.<*> ( x Data..:? "availabilityZones"
+            Prelude.<*> ( x
+                            Data..:? "availabilityZones"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ManagedResourceSummary where
   hashWithSalt _salt ManagedResourceSummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` availabilityZones
 

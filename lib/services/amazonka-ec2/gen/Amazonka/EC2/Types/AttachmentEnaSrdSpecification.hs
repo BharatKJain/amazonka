@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.AttachmentEnaSrdSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.AttachmentEnaSrdSpecification where
@@ -80,7 +80,8 @@ instance
     AttachmentEnaSrdSpecification
   where
   hashWithSalt _salt AttachmentEnaSrdSpecification' {..} =
-    _salt `Prelude.hashWithSalt` enaSrdEnabled
+    _salt
+      `Prelude.hashWithSalt` enaSrdEnabled
       `Prelude.hashWithSalt` enaSrdUdpSpecification
 
 instance Prelude.NFData AttachmentEnaSrdSpecification where

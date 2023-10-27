@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.StartAutomationExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -348,7 +348,8 @@ instance Core.AWSRequest StartAutomationExecution where
 
 instance Prelude.Hashable StartAutomationExecution where
   hashWithSalt _salt StartAutomationExecution' {..} =
-    _salt `Prelude.hashWithSalt` alarmConfiguration
+    _salt
+      `Prelude.hashWithSalt` alarmConfiguration
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` documentVersion
       `Prelude.hashWithSalt` maxConcurrency

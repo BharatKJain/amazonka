@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchReadException
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchReadException where
@@ -76,7 +76,8 @@ instance Data.FromJSON BatchReadException where
 
 instance Prelude.Hashable BatchReadException where
   hashWithSalt _salt BatchReadException' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData BatchReadException where

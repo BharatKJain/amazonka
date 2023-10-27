@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.LifeCycleLastCutover
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.LifeCycleLastCutover where
@@ -87,7 +87,8 @@ instance Data.FromJSON LifeCycleLastCutover where
 
 instance Prelude.Hashable LifeCycleLastCutover where
   hashWithSalt _salt LifeCycleLastCutover' {..} =
-    _salt `Prelude.hashWithSalt` finalized
+    _salt
+      `Prelude.hashWithSalt` finalized
       `Prelude.hashWithSalt` initiated
       `Prelude.hashWithSalt` reverted
 

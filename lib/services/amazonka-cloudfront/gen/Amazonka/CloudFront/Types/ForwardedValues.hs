@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.ForwardedValues
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.ForwardedValues where
@@ -381,7 +381,8 @@ instance Data.FromXML ForwardedValues where
 
 instance Prelude.Hashable ForwardedValues where
   hashWithSalt _salt ForwardedValues' {..} =
-    _salt `Prelude.hashWithSalt` headers
+    _salt
+      `Prelude.hashWithSalt` headers
       `Prelude.hashWithSalt` queryStringCacheKeys
       `Prelude.hashWithSalt` queryString
       `Prelude.hashWithSalt` cookies

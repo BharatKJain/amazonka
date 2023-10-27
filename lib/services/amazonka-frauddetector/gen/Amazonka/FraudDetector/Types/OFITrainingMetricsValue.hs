@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.OFITrainingMetricsValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.OFITrainingMetricsValue where
@@ -71,7 +71,8 @@ instance Data.FromJSON OFITrainingMetricsValue where
       "OFITrainingMetricsValue"
       ( \x ->
           OFITrainingMetricsValue'
-            Prelude.<$> ( x Data..:? "metricDataPoints"
+            Prelude.<$> ( x
+                            Data..:? "metricDataPoints"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "modelPerformance")
@@ -79,7 +80,8 @@ instance Data.FromJSON OFITrainingMetricsValue where
 
 instance Prelude.Hashable OFITrainingMetricsValue where
   hashWithSalt _salt OFITrainingMetricsValue' {..} =
-    _salt `Prelude.hashWithSalt` metricDataPoints
+    _salt
+      `Prelude.hashWithSalt` metricDataPoints
       `Prelude.hashWithSalt` modelPerformance
 
 instance Prelude.NFData OFITrainingMetricsValue where

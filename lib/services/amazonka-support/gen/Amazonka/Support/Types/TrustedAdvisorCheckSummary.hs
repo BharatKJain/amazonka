@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Support.Types.TrustedAdvisorCheckSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Support.Types.TrustedAdvisorCheckSummary where
@@ -139,7 +139,8 @@ instance Data.FromJSON TrustedAdvisorCheckSummary where
 
 instance Prelude.Hashable TrustedAdvisorCheckSummary where
   hashWithSalt _salt TrustedAdvisorCheckSummary' {..} =
-    _salt `Prelude.hashWithSalt` hasFlaggedResources
+    _salt
+      `Prelude.hashWithSalt` hasFlaggedResources
       `Prelude.hashWithSalt` checkId
       `Prelude.hashWithSalt` timestamp
       `Prelude.hashWithSalt` status

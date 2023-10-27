@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.InstanceDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.InstanceDetails where
@@ -126,7 +126,8 @@ instance Data.FromJSON InstanceDetails where
 
 instance Prelude.Hashable InstanceDetails where
   hashWithSalt _salt InstanceDetails' {..} =
-    _salt `Prelude.hashWithSalt` eC2InstanceDetails
+    _salt
+      `Prelude.hashWithSalt` eC2InstanceDetails
       `Prelude.hashWithSalt` eSInstanceDetails
       `Prelude.hashWithSalt` elastiCacheInstanceDetails
       `Prelude.hashWithSalt` rDSInstanceDetails

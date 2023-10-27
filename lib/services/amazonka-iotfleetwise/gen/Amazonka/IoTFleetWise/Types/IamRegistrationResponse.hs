@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTFleetWise.Types.IamRegistrationResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTFleetWise.Types.IamRegistrationResponse where
@@ -97,7 +97,8 @@ instance Data.FromJSON IamRegistrationResponse where
 
 instance Prelude.Hashable IamRegistrationResponse where
   hashWithSalt _salt IamRegistrationResponse' {..} =
-    _salt `Prelude.hashWithSalt` errorMessage
+    _salt
+      `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` registrationStatus
 

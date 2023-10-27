@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.BusinessGoals
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.BusinessGoals where
@@ -107,7 +107,8 @@ instance Data.FromJSON BusinessGoals where
 
 instance Prelude.Hashable BusinessGoals where
   hashWithSalt _salt BusinessGoals' {..} =
-    _salt `Prelude.hashWithSalt` licenseCostReduction
+    _salt
+      `Prelude.hashWithSalt` licenseCostReduction
       `Prelude.hashWithSalt` modernizeInfrastructureWithCloudNativeTechnologies
       `Prelude.hashWithSalt` reduceOperationalOverheadWithManagedServices
       `Prelude.hashWithSalt` speedOfMigration

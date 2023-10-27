@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ELBV2.DescribeRules
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,20 +116,22 @@ instance Core.AWSPager DescribeRules where
     | Core.stop
         ( rs
             Lens.^? describeRulesResponse_nextMarker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? describeRulesResponse_rules Prelude.. Lens._Just
+            Lens.^? describeRulesResponse_rules
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeRules_marker
           Lens..~ rs
-          Lens.^? describeRulesResponse_nextMarker Prelude.. Lens._Just
+          Lens.^? describeRulesResponse_nextMarker
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeRules where
   type
@@ -143,7 +145,9 @@ instance Core.AWSRequest DescribeRules where
       ( \s h x ->
           DescribeRulesResponse'
             Prelude.<$> (x Data..@? "NextMarker")
-            Prelude.<*> ( x Data..@? "Rules" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "Rules"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -151,7 +155,8 @@ instance Core.AWSRequest DescribeRules where
 
 instance Prelude.Hashable DescribeRules where
   hashWithSalt _salt DescribeRules' {..} =
-    _salt `Prelude.hashWithSalt` listenerArn
+    _salt
+      `Prelude.hashWithSalt` listenerArn
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` pageSize
       `Prelude.hashWithSalt` ruleArns

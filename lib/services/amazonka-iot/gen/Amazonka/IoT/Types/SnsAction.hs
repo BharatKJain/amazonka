@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.SnsAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.SnsAction where
@@ -107,7 +107,8 @@ instance Data.FromJSON SnsAction where
 
 instance Prelude.Hashable SnsAction where
   hashWithSalt _salt SnsAction' {..} =
-    _salt `Prelude.hashWithSalt` messageFormat
+    _salt
+      `Prelude.hashWithSalt` messageFormat
       `Prelude.hashWithSalt` targetArn
       `Prelude.hashWithSalt` roleArn
 

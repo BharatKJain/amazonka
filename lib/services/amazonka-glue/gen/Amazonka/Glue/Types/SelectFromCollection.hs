@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.SelectFromCollection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.SelectFromCollection where
@@ -91,7 +91,8 @@ instance Data.FromJSON SelectFromCollection where
 
 instance Prelude.Hashable SelectFromCollection where
   hashWithSalt _salt SelectFromCollection' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inputs
       `Prelude.hashWithSalt` index
 

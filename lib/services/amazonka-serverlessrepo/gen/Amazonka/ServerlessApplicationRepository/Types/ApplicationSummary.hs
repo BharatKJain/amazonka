@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServerlessApplicationRepository.Types.ApplicationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServerlessApplicationRepository.Types.ApplicationSummary where
@@ -191,7 +191,8 @@ instance Data.FromJSON ApplicationSummary where
 
 instance Prelude.Hashable ApplicationSummary where
   hashWithSalt _salt ApplicationSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` homePageUrl
       `Prelude.hashWithSalt` labels
       `Prelude.hashWithSalt` spdxLicenseId

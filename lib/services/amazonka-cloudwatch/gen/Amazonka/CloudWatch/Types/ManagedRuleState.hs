@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatch.Types.ManagedRuleState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatch.Types.ManagedRuleState where
@@ -77,7 +77,8 @@ instance Data.FromXML ManagedRuleState where
 
 instance Prelude.Hashable ManagedRuleState where
   hashWithSalt _salt ManagedRuleState' {..} =
-    _salt `Prelude.hashWithSalt` ruleName
+    _salt
+      `Prelude.hashWithSalt` ruleName
       `Prelude.hashWithSalt` state
 
 instance Prelude.NFData ManagedRuleState where

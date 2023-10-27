@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ImageBuilder.Types.ComponentParameterDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ImageBuilder.Types.ComponentParameterDetail where
@@ -103,7 +103,8 @@ instance Data.FromJSON ComponentParameterDetail where
 
 instance Prelude.Hashable ComponentParameterDetail where
   hashWithSalt _salt ComponentParameterDetail' {..} =
-    _salt `Prelude.hashWithSalt` defaultValue
+    _salt
+      `Prelude.hashWithSalt` defaultValue
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'

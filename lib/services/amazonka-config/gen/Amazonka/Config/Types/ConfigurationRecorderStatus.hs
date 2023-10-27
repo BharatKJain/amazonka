@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.ConfigurationRecorderStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.ConfigurationRecorderStatus where
@@ -136,7 +136,8 @@ instance Data.FromJSON ConfigurationRecorderStatus where
 
 instance Prelude.Hashable ConfigurationRecorderStatus where
   hashWithSalt _salt ConfigurationRecorderStatus' {..} =
-    _salt `Prelude.hashWithSalt` lastErrorCode
+    _salt
+      `Prelude.hashWithSalt` lastErrorCode
       `Prelude.hashWithSalt` lastErrorMessage
       `Prelude.hashWithSalt` lastStartTime
       `Prelude.hashWithSalt` lastStatus

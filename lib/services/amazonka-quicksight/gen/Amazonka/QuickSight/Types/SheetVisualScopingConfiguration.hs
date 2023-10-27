@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.SheetVisualScopingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.SheetVisualScopingConfiguration where
@@ -110,7 +110,8 @@ instance
   hashWithSalt
     _salt
     SheetVisualScopingConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` visualIds
+      _salt
+        `Prelude.hashWithSalt` visualIds
         `Prelude.hashWithSalt` sheetId
         `Prelude.hashWithSalt` scope
 

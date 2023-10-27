@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.AutoScalingThresholds
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.AutoScalingThresholds where
@@ -192,7 +192,8 @@ instance Data.FromJSON AutoScalingThresholds where
 
 instance Prelude.Hashable AutoScalingThresholds where
   hashWithSalt _salt AutoScalingThresholds' {..} =
-    _salt `Prelude.hashWithSalt` alarms
+    _salt
+      `Prelude.hashWithSalt` alarms
       `Prelude.hashWithSalt` cpuThreshold
       `Prelude.hashWithSalt` ignoreMetricsTime
       `Prelude.hashWithSalt` instanceCount

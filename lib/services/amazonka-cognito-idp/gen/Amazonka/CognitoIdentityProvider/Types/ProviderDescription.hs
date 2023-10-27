@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.ProviderDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.ProviderDescription where
@@ -96,7 +96,8 @@ instance Data.FromJSON ProviderDescription where
 
 instance Prelude.Hashable ProviderDescription where
   hashWithSalt _salt ProviderDescription' {..} =
-    _salt `Prelude.hashWithSalt` creationDate
+    _salt
+      `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` lastModifiedDate
       `Prelude.hashWithSalt` providerName
       `Prelude.hashWithSalt` providerType

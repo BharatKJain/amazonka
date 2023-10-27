@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.UpdateThingGroupsForThing
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance Core.AWSRequest UpdateThingGroupsForThing where
 
 instance Prelude.Hashable UpdateThingGroupsForThing where
   hashWithSalt _salt UpdateThingGroupsForThing' {..} =
-    _salt `Prelude.hashWithSalt` overrideDynamicGroups
+    _salt
+      `Prelude.hashWithSalt` overrideDynamicGroups
       `Prelude.hashWithSalt` thingGroupsToAdd
       `Prelude.hashWithSalt` thingGroupsToRemove
       `Prelude.hashWithSalt` thingName

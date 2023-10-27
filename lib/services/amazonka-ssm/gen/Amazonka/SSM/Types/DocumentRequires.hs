@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.DocumentRequires
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.DocumentRequires where
@@ -105,7 +105,8 @@ instance Data.FromJSON DocumentRequires where
 
 instance Prelude.Hashable DocumentRequires where
   hashWithSalt _salt DocumentRequires' {..} =
-    _salt `Prelude.hashWithSalt` requireType
+    _salt
+      `Prelude.hashWithSalt` requireType
       `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` versionName
       `Prelude.hashWithSalt` name

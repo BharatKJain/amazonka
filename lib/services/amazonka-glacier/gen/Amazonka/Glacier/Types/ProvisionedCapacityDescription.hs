@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glacier.Types.ProvisionedCapacityDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glacier.Types.ProvisionedCapacityDescription where
@@ -96,7 +96,8 @@ instance
   hashWithSalt
     _salt
     ProvisionedCapacityDescription' {..} =
-      _salt `Prelude.hashWithSalt` capacityId
+      _salt
+        `Prelude.hashWithSalt` capacityId
         `Prelude.hashWithSalt` expirationDate
         `Prelude.hashWithSalt` startDate
 

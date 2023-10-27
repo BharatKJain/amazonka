@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.PlatformBranchSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.PlatformBranchSummary where
@@ -127,14 +127,16 @@ instance Data.FromXML PlatformBranchSummary where
       Prelude.<*> (x Data..@? "BranchOrder")
       Prelude.<*> (x Data..@? "LifecycleState")
       Prelude.<*> (x Data..@? "PlatformName")
-      Prelude.<*> ( x Data..@? "SupportedTierList"
+      Prelude.<*> ( x
+                      Data..@? "SupportedTierList"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 
 instance Prelude.Hashable PlatformBranchSummary where
   hashWithSalt _salt PlatformBranchSummary' {..} =
-    _salt `Prelude.hashWithSalt` branchName
+    _salt
+      `Prelude.hashWithSalt` branchName
       `Prelude.hashWithSalt` branchOrder
       `Prelude.hashWithSalt` lifecycleState
       `Prelude.hashWithSalt` platformName

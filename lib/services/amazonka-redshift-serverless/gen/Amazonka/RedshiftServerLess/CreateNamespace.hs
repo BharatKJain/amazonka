@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RedshiftServerLess.CreateNamespace
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -188,7 +188,8 @@ instance Core.AWSRequest CreateNamespace where
 
 instance Prelude.Hashable CreateNamespace where
   hashWithSalt _salt CreateNamespace' {..} =
-    _salt `Prelude.hashWithSalt` adminUserPassword
+    _salt
+      `Prelude.hashWithSalt` adminUserPassword
       `Prelude.hashWithSalt` adminUsername
       `Prelude.hashWithSalt` dbName
       `Prelude.hashWithSalt` defaultIamRoleArn

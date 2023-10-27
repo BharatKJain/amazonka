@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Outposts.Types.CatalogItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Outposts.Types.CatalogItem where
@@ -123,10 +123,12 @@ instance Data.FromJSON CatalogItem where
             Prelude.<*> (x Data..:? "EC2Capacities" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "ItemStatus")
             Prelude.<*> (x Data..:? "PowerKva")
-            Prelude.<*> ( x Data..:? "SupportedStorage"
+            Prelude.<*> ( x
+                            Data..:? "SupportedStorage"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "SupportedUplinkGbps"
+            Prelude.<*> ( x
+                            Data..:? "SupportedUplinkGbps"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "WeightLbs")
@@ -134,7 +136,8 @@ instance Data.FromJSON CatalogItem where
 
 instance Prelude.Hashable CatalogItem where
   hashWithSalt _salt CatalogItem' {..} =
-    _salt `Prelude.hashWithSalt` catalogItemId
+    _salt
+      `Prelude.hashWithSalt` catalogItemId
       `Prelude.hashWithSalt` eC2Capacities
       `Prelude.hashWithSalt` itemStatus
       `Prelude.hashWithSalt` powerKva

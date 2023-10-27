@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.UpdateLabelsPayload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.UpdateLabelsPayload where
@@ -66,7 +66,8 @@ updateLabelsPayload_removeLabels = Lens.lens (\UpdateLabelsPayload' {removeLabel
 
 instance Prelude.Hashable UpdateLabelsPayload where
   hashWithSalt _salt UpdateLabelsPayload' {..} =
-    _salt `Prelude.hashWithSalt` addOrUpdateLabels
+    _salt
+      `Prelude.hashWithSalt` addOrUpdateLabels
       `Prelude.hashWithSalt` removeLabels
 
 instance Prelude.NFData UpdateLabelsPayload where

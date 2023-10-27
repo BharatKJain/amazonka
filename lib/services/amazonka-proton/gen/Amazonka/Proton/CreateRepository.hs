@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Proton.CreateRepository
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -180,7 +180,8 @@ instance Core.AWSRequest CreateRepository where
 
 instance Prelude.Hashable CreateRepository where
   hashWithSalt _salt CreateRepository' {..} =
-    _salt `Prelude.hashWithSalt` encryptionKey
+    _salt
+      `Prelude.hashWithSalt` encryptionKey
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` connectionArn
       `Prelude.hashWithSalt` name

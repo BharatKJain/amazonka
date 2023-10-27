@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RAM.Types.Principal
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RAM.Types.Principal where
@@ -119,7 +119,8 @@ instance Data.FromJSON Principal where
 
 instance Prelude.Hashable Principal where
   hashWithSalt _salt Principal' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` external
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` lastUpdatedTime

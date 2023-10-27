@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.DataSourceGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.DataSourceGroup where
@@ -80,7 +80,8 @@ dataSourceGroup_dataSourceId = Lens.lens (\DataSourceGroup' {dataSourceId} -> da
 
 instance Prelude.Hashable DataSourceGroup where
   hashWithSalt _salt DataSourceGroup' {..} =
-    _salt `Prelude.hashWithSalt` groupId
+    _salt
+      `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` dataSourceId
 
 instance Prelude.NFData DataSourceGroup where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TargetConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TargetConfiguration where
@@ -78,7 +78,8 @@ instance Data.FromXML TargetConfiguration where
 
 instance Prelude.Hashable TargetConfiguration where
   hashWithSalt _salt TargetConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` instanceCount
+    _salt
+      `Prelude.hashWithSalt` instanceCount
       `Prelude.hashWithSalt` offeringId
 
 instance Prelude.NFData TargetConfiguration where

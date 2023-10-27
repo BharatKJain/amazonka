@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.QueryStagePlanNode
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.QueryStagePlanNode where
@@ -104,7 +104,8 @@ instance Data.FromJSON QueryStagePlanNode where
 
 instance Prelude.Hashable QueryStagePlanNode where
   hashWithSalt _salt QueryStagePlanNode' {..} =
-    _salt `Prelude.hashWithSalt` children
+    _salt
+      `Prelude.hashWithSalt` children
       `Prelude.hashWithSalt` identifier
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` remoteSources

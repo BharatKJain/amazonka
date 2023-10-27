@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.BatchPermissionsFailureEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.BatchPermissionsFailureEntry where
@@ -81,7 +81,8 @@ instance
     BatchPermissionsFailureEntry
   where
   hashWithSalt _salt BatchPermissionsFailureEntry' {..} =
-    _salt `Prelude.hashWithSalt` error
+    _salt
+      `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` requestEntry
 
 instance Prelude.NFData BatchPermissionsFailureEntry where

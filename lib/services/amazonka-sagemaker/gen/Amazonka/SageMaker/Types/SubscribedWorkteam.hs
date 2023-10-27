@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.SubscribedWorkteam
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.SubscribedWorkteam where
@@ -109,7 +109,8 @@ instance Data.FromJSON SubscribedWorkteam where
 
 instance Prelude.Hashable SubscribedWorkteam where
   hashWithSalt _salt SubscribedWorkteam' {..} =
-    _salt `Prelude.hashWithSalt` listingId
+    _salt
+      `Prelude.hashWithSalt` listingId
       `Prelude.hashWithSalt` marketplaceDescription
       `Prelude.hashWithSalt` marketplaceTitle
       `Prelude.hashWithSalt` sellerName

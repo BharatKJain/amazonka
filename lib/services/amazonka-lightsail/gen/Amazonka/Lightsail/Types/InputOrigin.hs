@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.InputOrigin
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.InputOrigin where
@@ -83,7 +83,8 @@ inputOrigin_regionName = Lens.lens (\InputOrigin' {regionName} -> regionName) (\
 
 instance Prelude.Hashable InputOrigin where
   hashWithSalt _salt InputOrigin' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` protocolPolicy
       `Prelude.hashWithSalt` regionName
 

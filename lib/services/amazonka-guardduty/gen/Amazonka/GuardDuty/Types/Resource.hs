@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.Resource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.Resource where
@@ -156,14 +156,16 @@ instance Data.FromJSON Resource where
             Prelude.<*> (x Data..:? "instanceDetails")
             Prelude.<*> (x Data..:? "kubernetesDetails")
             Prelude.<*> (x Data..:? "resourceType")
-            Prelude.<*> ( x Data..:? "s3BucketDetails"
+            Prelude.<*> ( x
+                            Data..:? "s3BucketDetails"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable Resource where
   hashWithSalt _salt Resource' {..} =
-    _salt `Prelude.hashWithSalt` accessKeyDetails
+    _salt
+      `Prelude.hashWithSalt` accessKeyDetails
       `Prelude.hashWithSalt` containerDetails
       `Prelude.hashWithSalt` ebsVolumeDetails
       `Prelude.hashWithSalt` ecsClusterDetails

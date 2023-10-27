@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Budgets.Types.CalculatedSpend
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Budgets.Types.CalculatedSpend where
@@ -90,7 +90,8 @@ instance Data.FromJSON CalculatedSpend where
 
 instance Prelude.Hashable CalculatedSpend where
   hashWithSalt _salt CalculatedSpend' {..} =
-    _salt `Prelude.hashWithSalt` forecastedSpend
+    _salt
+      `Prelude.hashWithSalt` forecastedSpend
       `Prelude.hashWithSalt` actualSpend
 
 instance Prelude.NFData CalculatedSpend where

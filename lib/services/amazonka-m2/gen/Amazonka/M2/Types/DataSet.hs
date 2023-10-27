@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.DataSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.DataSet where
@@ -108,7 +108,8 @@ dataSet_recordLength = Lens.lens (\DataSet' {recordLength} -> recordLength) (\s@
 
 instance Prelude.Hashable DataSet where
   hashWithSalt _salt DataSet' {..} =
-    _salt `Prelude.hashWithSalt` relativePath
+    _salt
+      `Prelude.hashWithSalt` relativePath
       `Prelude.hashWithSalt` storageType
       `Prelude.hashWithSalt` datasetName
       `Prelude.hashWithSalt` datasetOrg

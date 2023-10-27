@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.PredictorMonitorEvaluation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.PredictorMonitorEvaluation where
@@ -186,7 +186,8 @@ instance Data.FromJSON PredictorMonitorEvaluation where
 
 instance Prelude.Hashable PredictorMonitorEvaluation where
   hashWithSalt _salt PredictorMonitorEvaluation' {..} =
-    _salt `Prelude.hashWithSalt` evaluationState
+    _salt
+      `Prelude.hashWithSalt` evaluationState
       `Prelude.hashWithSalt` evaluationTime
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` metricResults

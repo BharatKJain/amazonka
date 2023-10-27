@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.RuleGroupSourceStatelessRuleMatchAttributesSourcePorts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.RuleGroupSourceStatelessRuleMatchAttributesSourcePorts where
@@ -74,7 +74,7 @@ instance
       ( \x ->
           RuleGroupSourceStatelessRuleMatchAttributesSourcePorts'
             Prelude.<$> (x Data..:? "FromPort")
-              Prelude.<*> (x Data..:? "ToPort")
+            Prelude.<*> (x Data..:? "ToPort")
       )
 
 instance
@@ -84,7 +84,8 @@ instance
   hashWithSalt
     _salt
     RuleGroupSourceStatelessRuleMatchAttributesSourcePorts' {..} =
-      _salt `Prelude.hashWithSalt` fromPort
+      _salt
+        `Prelude.hashWithSalt` fromPort
         `Prelude.hashWithSalt` toPort
 
 instance

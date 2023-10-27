@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkDocs.CreateFolder
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest CreateFolder where
 
 instance Prelude.Hashable CreateFolder where
   hashWithSalt _salt CreateFolder' {..} =
-    _salt `Prelude.hashWithSalt` authenticationToken
+    _salt
+      `Prelude.hashWithSalt` authenticationToken
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` parentFolderId
 

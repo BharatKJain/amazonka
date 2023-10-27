@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MQ.UpdateBroker
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -228,7 +228,8 @@ instance Core.AWSRequest UpdateBroker where
 
 instance Prelude.Hashable UpdateBroker where
   hashWithSalt _salt UpdateBroker' {..} =
-    _salt `Prelude.hashWithSalt` authenticationStrategy
+    _salt
+      `Prelude.hashWithSalt` authenticationStrategy
       `Prelude.hashWithSalt` autoMinorVersionUpgrade
       `Prelude.hashWithSalt` configuration
       `Prelude.hashWithSalt` engineVersion

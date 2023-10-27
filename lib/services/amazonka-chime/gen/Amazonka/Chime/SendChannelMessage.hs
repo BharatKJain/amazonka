@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.SendChannelMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -179,7 +179,8 @@ instance Core.AWSRequest SendChannelMessage where
 
 instance Prelude.Hashable SendChannelMessage where
   hashWithSalt _salt SendChannelMessage' {..} =
-    _salt `Prelude.hashWithSalt` chimeBearer
+    _salt
+      `Prelude.hashWithSalt` chimeBearer
       `Prelude.hashWithSalt` metadata
       `Prelude.hashWithSalt` channelArn
       `Prelude.hashWithSalt` content

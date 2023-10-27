@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.EmailMessageActivity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.EmailMessageActivity where
@@ -136,7 +136,8 @@ instance Data.FromJSON EmailMessageActivity where
 
 instance Prelude.Hashable EmailMessageActivity where
   hashWithSalt _salt EmailMessageActivity' {..} =
-    _salt `Prelude.hashWithSalt` messageConfig
+    _salt
+      `Prelude.hashWithSalt` messageConfig
       `Prelude.hashWithSalt` nextActivity
       `Prelude.hashWithSalt` templateName
       `Prelude.hashWithSalt` templateVersion

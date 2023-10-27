@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53.CreateReusableDelegationSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -172,7 +172,8 @@ instance Core.AWSRequest CreateReusableDelegationSet where
 
 instance Prelude.Hashable CreateReusableDelegationSet where
   hashWithSalt _salt CreateReusableDelegationSet' {..} =
-    _salt `Prelude.hashWithSalt` hostedZoneId
+    _salt
+      `Prelude.hashWithSalt` hostedZoneId
       `Prelude.hashWithSalt` callerReference
 
 instance Prelude.NFData CreateReusableDelegationSet where

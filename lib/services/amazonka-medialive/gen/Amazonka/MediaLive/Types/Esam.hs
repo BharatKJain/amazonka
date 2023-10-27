@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.Esam
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.Esam where
@@ -136,7 +136,8 @@ instance Data.FromJSON Esam where
 
 instance Prelude.Hashable Esam where
   hashWithSalt _salt Esam' {..} =
-    _salt `Prelude.hashWithSalt` adAvailOffset
+    _salt
+      `Prelude.hashWithSalt` adAvailOffset
       `Prelude.hashWithSalt` passwordParam
       `Prelude.hashWithSalt` username
       `Prelude.hashWithSalt` zoneIdentity

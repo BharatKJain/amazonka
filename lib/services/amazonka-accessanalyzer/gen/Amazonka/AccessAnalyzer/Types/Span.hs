@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.Span
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.Span where
@@ -71,12 +71,14 @@ instance Data.FromJSON Span where
       "Span"
       ( \x ->
           Span'
-            Prelude.<$> (x Data..: "start") Prelude.<*> (x Data..: "end")
+            Prelude.<$> (x Data..: "start")
+            Prelude.<*> (x Data..: "end")
       )
 
 instance Prelude.Hashable Span where
   hashWithSalt _salt Span' {..} =
-    _salt `Prelude.hashWithSalt` start
+    _salt
+      `Prelude.hashWithSalt` start
       `Prelude.hashWithSalt` end
 
 instance Prelude.NFData Span where

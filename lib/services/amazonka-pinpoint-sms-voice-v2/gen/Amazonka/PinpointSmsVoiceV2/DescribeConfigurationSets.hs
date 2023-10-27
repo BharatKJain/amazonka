@@ -16,7 +16,7 @@
 -- Module      : Amazonka.PinpointSmsVoiceV2.DescribeConfigurationSets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,22 +128,22 @@ instance Core.AWSPager DescribeConfigurationSets where
     | Core.stop
         ( rs
             Lens.^? describeConfigurationSetsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeConfigurationSetsResponse_configurationSets
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeConfigurationSets_nextToken
           Lens..~ rs
           Lens.^? describeConfigurationSetsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeConfigurationSets where
   type
@@ -155,7 +155,8 @@ instance Core.AWSRequest DescribeConfigurationSets where
     Response.receiveJSON
       ( \s h x ->
           DescribeConfigurationSetsResponse'
-            Prelude.<$> ( x Data..?> "ConfigurationSets"
+            Prelude.<$> ( x
+                            Data..?> "ConfigurationSets"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -164,7 +165,8 @@ instance Core.AWSRequest DescribeConfigurationSets where
 
 instance Prelude.Hashable DescribeConfigurationSets where
   hashWithSalt _salt DescribeConfigurationSets' {..} =
-    _salt `Prelude.hashWithSalt` configurationSetNames
+    _salt
+      `Prelude.hashWithSalt` configurationSetNames
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

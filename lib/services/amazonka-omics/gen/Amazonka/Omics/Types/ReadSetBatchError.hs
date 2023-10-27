@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.ReadSetBatchError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.ReadSetBatchError where
@@ -90,7 +90,8 @@ instance Data.FromJSON ReadSetBatchError where
 
 instance Prelude.Hashable ReadSetBatchError where
   hashWithSalt _salt ReadSetBatchError' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` message
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.SearchResourcesTagCriterion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.SearchResourcesTagCriterion where
@@ -74,7 +74,8 @@ searchResourcesTagCriterion_tagValues = Lens.lens (\SearchResourcesTagCriterion'
 
 instance Prelude.Hashable SearchResourcesTagCriterion where
   hashWithSalt _salt SearchResourcesTagCriterion' {..} =
-    _salt `Prelude.hashWithSalt` comparator
+    _salt
+      `Prelude.hashWithSalt` comparator
       `Prelude.hashWithSalt` tagValues
 
 instance Prelude.NFData SearchResourcesTagCriterion where

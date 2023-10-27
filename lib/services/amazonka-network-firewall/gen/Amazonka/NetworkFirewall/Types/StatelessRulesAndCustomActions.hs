@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.StatelessRulesAndCustomActions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.StatelessRulesAndCustomActions where
@@ -85,7 +85,8 @@ instance Data.FromJSON StatelessRulesAndCustomActions where
       ( \x ->
           StatelessRulesAndCustomActions'
             Prelude.<$> (x Data..:? "CustomActions" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "StatelessRules"
+            Prelude.<*> ( x
+                            Data..:? "StatelessRules"
                             Data..!= Prelude.mempty
                         )
       )
@@ -97,7 +98,8 @@ instance
   hashWithSalt
     _salt
     StatelessRulesAndCustomActions' {..} =
-      _salt `Prelude.hashWithSalt` customActions
+      _salt
+        `Prelude.hashWithSalt` customActions
         `Prelude.hashWithSalt` statelessRules
 
 instance

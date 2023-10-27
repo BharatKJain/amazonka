@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.ContinuousDeploymentSingleHeaderConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.ContinuousDeploymentSingleHeaderConfig where
@@ -81,7 +81,8 @@ instance
   where
   parseXML x =
     ContinuousDeploymentSingleHeaderConfig'
-      Prelude.<$> (x Data..@ "Header") Prelude.<*> (x Data..@ "Value")
+      Prelude.<$> (x Data..@ "Header")
+      Prelude.<*> (x Data..@ "Value")
 
 instance
   Prelude.Hashable
@@ -90,7 +91,8 @@ instance
   hashWithSalt
     _salt
     ContinuousDeploymentSingleHeaderConfig' {..} =
-      _salt `Prelude.hashWithSalt` header
+      _salt
+        `Prelude.hashWithSalt` header
         `Prelude.hashWithSalt` value
 
 instance

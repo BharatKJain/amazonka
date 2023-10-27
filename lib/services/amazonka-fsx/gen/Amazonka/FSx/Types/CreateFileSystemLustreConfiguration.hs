@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.CreateFileSystemLustreConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.CreateFileSystemLustreConfiguration where
@@ -693,7 +693,8 @@ instance
   hashWithSalt
     _salt
     CreateFileSystemLustreConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` autoImportPolicy
+      _salt
+        `Prelude.hashWithSalt` autoImportPolicy
         `Prelude.hashWithSalt` automaticBackupRetentionDays
         `Prelude.hashWithSalt` copyTagsToBackups
         `Prelude.hashWithSalt` dailyAutomaticBackupStartTime

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.CSVMappingParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.CSVMappingParameters where
@@ -94,7 +94,8 @@ instance Data.FromJSON CSVMappingParameters where
 
 instance Prelude.Hashable CSVMappingParameters where
   hashWithSalt _salt CSVMappingParameters' {..} =
-    _salt `Prelude.hashWithSalt` recordRowDelimiter
+    _salt
+      `Prelude.hashWithSalt` recordRowDelimiter
       `Prelude.hashWithSalt` recordColumnDelimiter
 
 instance Prelude.NFData CSVMappingParameters where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppSync.UpdateFunction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -225,7 +225,8 @@ instance Core.AWSRequest UpdateFunction where
 
 instance Prelude.Hashable UpdateFunction where
   hashWithSalt _salt UpdateFunction' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` functionVersion
       `Prelude.hashWithSalt` maxBatchSize

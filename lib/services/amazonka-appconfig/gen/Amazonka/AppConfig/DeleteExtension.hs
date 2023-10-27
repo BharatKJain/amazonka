@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppConfig.DeleteExtension
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,7 +100,8 @@ instance Core.AWSRequest DeleteExtension where
 
 instance Prelude.Hashable DeleteExtension where
   hashWithSalt _salt DeleteExtension' {..} =
-    _salt `Prelude.hashWithSalt` versionNumber
+    _salt
+      `Prelude.hashWithSalt` versionNumber
       `Prelude.hashWithSalt` extensionIdentifier
 
 instance Prelude.NFData DeleteExtension where

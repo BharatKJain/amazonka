@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.EnvironmentPlatform
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.EnvironmentPlatform where
@@ -80,7 +80,8 @@ instance Data.FromJSON EnvironmentPlatform where
 
 instance Prelude.Hashable EnvironmentPlatform where
   hashWithSalt _salt EnvironmentPlatform' {..} =
-    _salt `Prelude.hashWithSalt` languages
+    _salt
+      `Prelude.hashWithSalt` languages
       `Prelude.hashWithSalt` platform
 
 instance Prelude.NFData EnvironmentPlatform where

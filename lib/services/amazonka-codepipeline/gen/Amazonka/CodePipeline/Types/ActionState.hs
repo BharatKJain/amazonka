@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ActionState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ActionState where
@@ -112,7 +112,8 @@ instance Data.FromJSON ActionState where
 
 instance Prelude.Hashable ActionState where
   hashWithSalt _salt ActionState' {..} =
-    _salt `Prelude.hashWithSalt` actionName
+    _salt
+      `Prelude.hashWithSalt` actionName
       `Prelude.hashWithSalt` currentRevision
       `Prelude.hashWithSalt` entityUrl
       `Prelude.hashWithSalt` latestExecution

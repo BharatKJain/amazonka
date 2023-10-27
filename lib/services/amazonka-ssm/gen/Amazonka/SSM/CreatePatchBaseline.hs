@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.CreatePatchBaseline
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -342,7 +342,8 @@ instance Core.AWSRequest CreatePatchBaseline where
 
 instance Prelude.Hashable CreatePatchBaseline where
   hashWithSalt _salt CreatePatchBaseline' {..} =
-    _salt `Prelude.hashWithSalt` approvalRules
+    _salt
+      `Prelude.hashWithSalt` approvalRules
       `Prelude.hashWithSalt` approvedPatches
       `Prelude.hashWithSalt` approvedPatchesComplianceLevel
       `Prelude.hashWithSalt` approvedPatchesEnableNonSecurity

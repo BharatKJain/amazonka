@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.GatewayRouteSpec
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.GatewayRouteSpec where
@@ -97,7 +97,8 @@ instance Data.FromJSON GatewayRouteSpec where
 
 instance Prelude.Hashable GatewayRouteSpec where
   hashWithSalt _salt GatewayRouteSpec' {..} =
-    _salt `Prelude.hashWithSalt` grpcRoute
+    _salt
+      `Prelude.hashWithSalt` grpcRoute
       `Prelude.hashWithSalt` http2Route
       `Prelude.hashWithSalt` httpRoute
       `Prelude.hashWithSalt` priority

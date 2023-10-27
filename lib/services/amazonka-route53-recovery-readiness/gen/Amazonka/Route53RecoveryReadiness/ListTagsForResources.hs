@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53RecoveryReadiness.ListTagsForResources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,6 @@ newListTagsForResourcesResponse pHttpStatus_ =
       httpStatus = pHttpStatus_
     }
 
--- |
 listTagsForResourcesResponse_tags :: Lens.Lens' ListTagsForResourcesResponse (Prelude.Maybe (Prelude.HashMap Prelude.Text Prelude.Text))
 listTagsForResourcesResponse_tags = Lens.lens (\ListTagsForResourcesResponse' {tags} -> tags) (\s@ListTagsForResourcesResponse' {} a -> s {tags = a} :: ListTagsForResourcesResponse) Prelude.. Lens.mapping Lens.coerced
 

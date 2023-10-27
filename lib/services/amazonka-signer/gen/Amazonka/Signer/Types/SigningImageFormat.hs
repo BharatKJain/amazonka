@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Signer.Types.SigningImageFormat
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Signer.Types.SigningImageFormat where
@@ -72,7 +72,8 @@ instance Data.FromJSON SigningImageFormat where
       "SigningImageFormat"
       ( \x ->
           SigningImageFormat'
-            Prelude.<$> ( x Data..:? "supportedFormats"
+            Prelude.<$> ( x
+                            Data..:? "supportedFormats"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "defaultFormat")
@@ -80,7 +81,8 @@ instance Data.FromJSON SigningImageFormat where
 
 instance Prelude.Hashable SigningImageFormat where
   hashWithSalt _salt SigningImageFormat' {..} =
-    _salt `Prelude.hashWithSalt` supportedFormats
+    _salt
+      `Prelude.hashWithSalt` supportedFormats
       `Prelude.hashWithSalt` defaultFormat
 
 instance Prelude.NFData SigningImageFormat where

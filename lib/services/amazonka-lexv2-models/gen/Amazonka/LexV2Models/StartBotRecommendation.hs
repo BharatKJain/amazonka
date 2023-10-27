@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexV2Models.StartBotRecommendation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -176,7 +176,8 @@ instance Core.AWSRequest StartBotRecommendation where
 
 instance Prelude.Hashable StartBotRecommendation where
   hashWithSalt _salt StartBotRecommendation' {..} =
-    _salt `Prelude.hashWithSalt` encryptionSetting
+    _salt
+      `Prelude.hashWithSalt` encryptionSetting
       `Prelude.hashWithSalt` botId
       `Prelude.hashWithSalt` botVersion
       `Prelude.hashWithSalt` localeId

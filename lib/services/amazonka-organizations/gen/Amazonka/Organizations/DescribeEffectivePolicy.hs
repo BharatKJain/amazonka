@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Organizations.DescribeEffectivePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,8 @@ instance Core.AWSRequest DescribeEffectivePolicy where
 
 instance Prelude.Hashable DescribeEffectivePolicy where
   hashWithSalt _salt DescribeEffectivePolicy' {..} =
-    _salt `Prelude.hashWithSalt` targetId
+    _salt
+      `Prelude.hashWithSalt` targetId
       `Prelude.hashWithSalt` policyType
 
 instance Prelude.NFData DescribeEffectivePolicy where

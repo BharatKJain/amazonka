@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OAM.ListTagsForResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -53,10 +53,10 @@ data ListTagsForResource = ListTagsForResource'
   { -- | The ARN of the resource that you want to view tags for.
     --
     -- The ARN format of a sink is
-    -- @arn:aws:oam:Region:account-id:sink\/sink-id @
+    -- @arn:aws:oam:@/@Region@/@:@/@account-id@/@:sink\/@/@sink-id@/@ @
     --
     -- The ARN format of a link is
-    -- @arn:aws:oam:Region:account-id:link\/link-id @
+    -- @arn:aws:oam:@/@Region@/@:@/@account-id@/@:link\/@/@link-id@/@ @
     --
     -- For more information about ARN format, see
     -- <https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/iam-access-control-overview-cwl.html CloudWatch Logs resources and operations>.
@@ -80,10 +80,10 @@ data ListTagsForResource = ListTagsForResource'
 -- 'resourceArn', 'listTagsForResource_resourceArn' - The ARN of the resource that you want to view tags for.
 --
 -- The ARN format of a sink is
--- @arn:aws:oam:Region:account-id:sink\/sink-id @
+-- @arn:aws:oam:@/@Region@/@:@/@account-id@/@:sink\/@/@sink-id@/@ @
 --
 -- The ARN format of a link is
--- @arn:aws:oam:Region:account-id:link\/link-id @
+-- @arn:aws:oam:@/@Region@/@:@/@account-id@/@:link\/@/@link-id@/@ @
 --
 -- For more information about ARN format, see
 -- <https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/iam-access-control-overview-cwl.html CloudWatch Logs resources and operations>.
@@ -102,10 +102,10 @@ newListTagsForResource pResourceArn_ =
 -- | The ARN of the resource that you want to view tags for.
 --
 -- The ARN format of a sink is
--- @arn:aws:oam:Region:account-id:sink\/sink-id @
+-- @arn:aws:oam:@/@Region@/@:@/@account-id@/@:sink\/@/@sink-id@/@ @
 --
 -- The ARN format of a link is
--- @arn:aws:oam:Region:account-id:link\/link-id @
+-- @arn:aws:oam:@/@Region@/@:@/@account-id@/@:link\/@/@link-id@/@ @
 --
 -- For more information about ARN format, see
 -- <https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/iam-access-control-overview-cwl.html CloudWatch Logs resources and operations>.

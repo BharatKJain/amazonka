@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.ExplainabilityInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.ExplainabilityInfo where
@@ -99,7 +99,8 @@ instance Data.FromJSON ExplainabilityInfo where
 
 instance Prelude.Hashable ExplainabilityInfo where
   hashWithSalt _salt ExplainabilityInfo' {..} =
-    _salt `Prelude.hashWithSalt` explainabilityArn
+    _salt
+      `Prelude.hashWithSalt` explainabilityArn
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData ExplainabilityInfo where

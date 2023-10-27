@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53.CreateVPCAssociationAuthorization
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,8 +127,8 @@ instance
       ( \s h x ->
           CreateVPCAssociationAuthorizationResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> (x Data..@ "HostedZoneId")
-              Prelude.<*> (x Data..@ "VPC")
+            Prelude.<*> (x Data..@ "HostedZoneId")
+            Prelude.<*> (x Data..@ "VPC")
       )
 
 instance
@@ -138,7 +138,8 @@ instance
   hashWithSalt
     _salt
     CreateVPCAssociationAuthorization' {..} =
-      _salt `Prelude.hashWithSalt` hostedZoneId
+      _salt
+        `Prelude.hashWithSalt` hostedZoneId
         `Prelude.hashWithSalt` vpc
 
 instance

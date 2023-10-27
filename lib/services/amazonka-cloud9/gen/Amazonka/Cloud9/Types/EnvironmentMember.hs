@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Cloud9.Types.EnvironmentMember
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Cloud9.Types.EnvironmentMember where
@@ -145,7 +145,8 @@ instance Data.FromJSON EnvironmentMember where
 
 instance Prelude.Hashable EnvironmentMember where
   hashWithSalt _salt EnvironmentMember' {..} =
-    _salt `Prelude.hashWithSalt` lastAccess
+    _salt
+      `Prelude.hashWithSalt` lastAccess
       `Prelude.hashWithSalt` permissions
       `Prelude.hashWithSalt` userId
       `Prelude.hashWithSalt` userArn

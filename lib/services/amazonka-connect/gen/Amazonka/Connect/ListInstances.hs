@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.ListInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,21 +103,23 @@ instance Core.AWSPager ListInstances where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listInstancesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listInstancesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listInstancesResponse_instanceSummaryList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listInstances_nextToken
           Lens..~ rs
-          Lens.^? listInstancesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listInstancesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListInstances where
   type
@@ -129,7 +131,8 @@ instance Core.AWSRequest ListInstances where
     Response.receiveJSON
       ( \s h x ->
           ListInstancesResponse'
-            Prelude.<$> ( x Data..?> "InstanceSummaryList"
+            Prelude.<$> ( x
+                            Data..?> "InstanceSummaryList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -138,7 +141,8 @@ instance Core.AWSRequest ListInstances where
 
 instance Prelude.Hashable ListInstances where
   hashWithSalt _salt ListInstances' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListInstances where

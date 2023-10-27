@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53.GetHostedZone
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -89,7 +89,9 @@ instance Core.AWSRequest GetHostedZone where
       ( \s h x ->
           GetHostedZoneResponse'
             Prelude.<$> (x Data..@? "DelegationSet")
-            Prelude.<*> ( x Data..@? "VPCs" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "VPCs"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList1 "VPC")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

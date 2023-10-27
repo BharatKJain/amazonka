@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.StaticImageActivateScheduleActionSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.StaticImageActivateScheduleActionSettings where
@@ -211,15 +211,15 @@ instance
       ( \x ->
           StaticImageActivateScheduleActionSettings'
             Prelude.<$> (x Data..:? "duration")
-              Prelude.<*> (x Data..:? "fadeIn")
-              Prelude.<*> (x Data..:? "fadeOut")
-              Prelude.<*> (x Data..:? "height")
-              Prelude.<*> (x Data..:? "imageX")
-              Prelude.<*> (x Data..:? "imageY")
-              Prelude.<*> (x Data..:? "layer")
-              Prelude.<*> (x Data..:? "opacity")
-              Prelude.<*> (x Data..:? "width")
-              Prelude.<*> (x Data..: "image")
+            Prelude.<*> (x Data..:? "fadeIn")
+            Prelude.<*> (x Data..:? "fadeOut")
+            Prelude.<*> (x Data..:? "height")
+            Prelude.<*> (x Data..:? "imageX")
+            Prelude.<*> (x Data..:? "imageY")
+            Prelude.<*> (x Data..:? "layer")
+            Prelude.<*> (x Data..:? "opacity")
+            Prelude.<*> (x Data..:? "width")
+            Prelude.<*> (x Data..: "image")
       )
 
 instance
@@ -229,7 +229,8 @@ instance
   hashWithSalt
     _salt
     StaticImageActivateScheduleActionSettings' {..} =
-      _salt `Prelude.hashWithSalt` duration
+      _salt
+        `Prelude.hashWithSalt` duration
         `Prelude.hashWithSalt` fadeIn
         `Prelude.hashWithSalt` fadeOut
         `Prelude.hashWithSalt` height

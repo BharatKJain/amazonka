@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.JobExecutionSummaryForJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.JobExecutionSummaryForJob where
@@ -77,7 +77,8 @@ instance Data.FromJSON JobExecutionSummaryForJob where
 
 instance Prelude.Hashable JobExecutionSummaryForJob where
   hashWithSalt _salt JobExecutionSummaryForJob' {..} =
-    _salt `Prelude.hashWithSalt` jobExecutionSummary
+    _salt
+      `Prelude.hashWithSalt` jobExecutionSummary
       `Prelude.hashWithSalt` thingArn
 
 instance Prelude.NFData JobExecutionSummaryForJob where

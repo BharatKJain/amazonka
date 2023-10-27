@@ -14,7 +14,7 @@
 -- Module      : Amazonka.BillingConductor.Types.CustomLineItemListElement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.BillingConductor.Types.CustomLineItemListElement where
@@ -168,7 +168,8 @@ instance Data.FromJSON CustomLineItemListElement where
 
 instance Prelude.Hashable CustomLineItemListElement where
   hashWithSalt _salt CustomLineItemListElement' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` associationSize
       `Prelude.hashWithSalt` billingGroupArn
       `Prelude.hashWithSalt` chargeDetails

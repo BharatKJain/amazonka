@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.SpotCapacityRebalance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.SpotCapacityRebalance where
@@ -143,7 +143,8 @@ instance Data.FromXML SpotCapacityRebalance where
 
 instance Prelude.Hashable SpotCapacityRebalance where
   hashWithSalt _salt SpotCapacityRebalance' {..} =
-    _salt `Prelude.hashWithSalt` replacementStrategy
+    _salt
+      `Prelude.hashWithSalt` replacementStrategy
       `Prelude.hashWithSalt` terminationDelay
 
 instance Prelude.NFData SpotCapacityRebalance where

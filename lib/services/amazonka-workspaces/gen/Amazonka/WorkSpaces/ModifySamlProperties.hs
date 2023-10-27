@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkSpaces.ModifySamlProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,7 +138,8 @@ instance Core.AWSRequest ModifySamlProperties where
 
 instance Prelude.Hashable ModifySamlProperties where
   hashWithSalt _salt ModifySamlProperties' {..} =
-    _salt `Prelude.hashWithSalt` propertiesToDelete
+    _salt
+      `Prelude.hashWithSalt` propertiesToDelete
       `Prelude.hashWithSalt` samlProperties
       `Prelude.hashWithSalt` resourceId
 

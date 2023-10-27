@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.MergeMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.MergeMetadata where
@@ -96,7 +96,8 @@ instance Data.FromJSON MergeMetadata where
 
 instance Prelude.Hashable MergeMetadata where
   hashWithSalt _salt MergeMetadata' {..} =
-    _salt `Prelude.hashWithSalt` isMerged
+    _salt
+      `Prelude.hashWithSalt` isMerged
       `Prelude.hashWithSalt` mergeCommitId
       `Prelude.hashWithSalt` mergeOption
       `Prelude.hashWithSalt` mergedBy

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.RegexMatchTuple
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.RegexMatchTuple where
@@ -359,7 +359,8 @@ instance Data.FromJSON RegexMatchTuple where
 
 instance Prelude.Hashable RegexMatchTuple where
   hashWithSalt _salt RegexMatchTuple' {..} =
-    _salt `Prelude.hashWithSalt` fieldToMatch
+    _salt
+      `Prelude.hashWithSalt` fieldToMatch
       `Prelude.hashWithSalt` textTransformation
       `Prelude.hashWithSalt` regexPatternSetId
 

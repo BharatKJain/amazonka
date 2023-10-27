@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glacier.Types.ArchiveCreationOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glacier.Types.ArchiveCreationOutput where
@@ -92,7 +92,8 @@ instance Data.FromJSON ArchiveCreationOutput where
 
 instance Prelude.Hashable ArchiveCreationOutput where
   hashWithSalt _salt ArchiveCreationOutput' {..} =
-    _salt `Prelude.hashWithSalt` archiveId
+    _salt
+      `Prelude.hashWithSalt` archiveId
       `Prelude.hashWithSalt` checksum
       `Prelude.hashWithSalt` location
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DMS.ReloadTables
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest ReloadTables where
 
 instance Prelude.Hashable ReloadTables where
   hashWithSalt _salt ReloadTables' {..} =
-    _salt `Prelude.hashWithSalt` reloadOption
+    _salt
+      `Prelude.hashWithSalt` reloadOption
       `Prelude.hashWithSalt` replicationTaskArn
       `Prelude.hashWithSalt` tablesToReload
 

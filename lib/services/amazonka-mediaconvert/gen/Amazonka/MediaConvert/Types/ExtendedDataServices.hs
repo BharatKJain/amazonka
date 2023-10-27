@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.ExtendedDataServices
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.ExtendedDataServices where
@@ -93,7 +93,8 @@ instance Data.FromJSON ExtendedDataServices where
 
 instance Prelude.Hashable ExtendedDataServices where
   hashWithSalt _salt ExtendedDataServices' {..} =
-    _salt `Prelude.hashWithSalt` copyProtectionAction
+    _salt
+      `Prelude.hashWithSalt` copyProtectionAction
       `Prelude.hashWithSalt` vchipAction
 
 instance Prelude.NFData ExtendedDataServices where

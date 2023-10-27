@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53Domains.Types.OperationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53Domains.Types.OperationSummary where
@@ -197,7 +197,8 @@ instance Data.FromJSON OperationSummary where
 
 instance Prelude.Hashable OperationSummary where
   hashWithSalt _salt OperationSummary' {..} =
-    _salt `Prelude.hashWithSalt` domainName
+    _salt
+      `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` lastUpdatedDate
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` operationId

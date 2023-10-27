@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearchServerless.Types.SecurityPolicyStats
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearchServerless.Types.SecurityPolicyStats where
@@ -75,7 +75,8 @@ instance Data.FromJSON SecurityPolicyStats where
 
 instance Prelude.Hashable SecurityPolicyStats where
   hashWithSalt _salt SecurityPolicyStats' {..} =
-    _salt `Prelude.hashWithSalt` encryptionPolicyCount
+    _salt
+      `Prelude.hashWithSalt` encryptionPolicyCount
       `Prelude.hashWithSalt` networkPolicyCount
 
 instance Prelude.NFData SecurityPolicyStats where

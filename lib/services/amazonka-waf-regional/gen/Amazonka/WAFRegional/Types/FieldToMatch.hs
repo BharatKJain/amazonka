@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFRegional.Types.FieldToMatch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFRegional.Types.FieldToMatch where
@@ -209,12 +209,14 @@ instance Data.FromJSON FieldToMatch where
       "FieldToMatch"
       ( \x ->
           FieldToMatch'
-            Prelude.<$> (x Data..:? "Data") Prelude.<*> (x Data..: "Type")
+            Prelude.<$> (x Data..:? "Data")
+            Prelude.<*> (x Data..: "Type")
       )
 
 instance Prelude.Hashable FieldToMatch where
   hashWithSalt _salt FieldToMatch' {..} =
-    _salt `Prelude.hashWithSalt` data'
+    _salt
+      `Prelude.hashWithSalt` data'
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData FieldToMatch where

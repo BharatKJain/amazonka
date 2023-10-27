@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.WorkflowDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.WorkflowDetails where
@@ -103,7 +103,8 @@ instance Data.FromJSON WorkflowDetails where
       "WorkflowDetails"
       ( \x ->
           WorkflowDetails'
-            Prelude.<$> ( x Data..:? "OnPartialUpload"
+            Prelude.<$> ( x
+                            Data..:? "OnPartialUpload"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "OnUpload" Data..!= Prelude.mempty)
@@ -111,7 +112,8 @@ instance Data.FromJSON WorkflowDetails where
 
 instance Prelude.Hashable WorkflowDetails where
   hashWithSalt _salt WorkflowDetails' {..} =
-    _salt `Prelude.hashWithSalt` onPartialUpload
+    _salt
+      `Prelude.hashWithSalt` onPartialUpload
       `Prelude.hashWithSalt` onUpload
 
 instance Prelude.NFData WorkflowDetails where

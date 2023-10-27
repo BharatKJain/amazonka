@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VerifiedAccessLogKinesisDataFirehoseDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VerifiedAccessLogKinesisDataFirehoseDestination where
@@ -82,8 +82,8 @@ instance
   parseXML x =
     VerifiedAccessLogKinesisDataFirehoseDestination'
       Prelude.<$> (x Data..@? "deliveryStatus")
-        Prelude.<*> (x Data..@? "deliveryStream")
-        Prelude.<*> (x Data..@? "enabled")
+      Prelude.<*> (x Data..@? "deliveryStream")
+      Prelude.<*> (x Data..@? "enabled")
 
 instance
   Prelude.Hashable
@@ -92,7 +92,8 @@ instance
   hashWithSalt
     _salt
     VerifiedAccessLogKinesisDataFirehoseDestination' {..} =
-      _salt `Prelude.hashWithSalt` deliveryStatus
+      _salt
+        `Prelude.hashWithSalt` deliveryStatus
         `Prelude.hashWithSalt` deliveryStream
         `Prelude.hashWithSalt` enabled
 

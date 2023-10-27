@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2NetworkAclDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2NetworkAclDetails where
@@ -120,7 +120,8 @@ instance Data.FromJSON AwsEc2NetworkAclDetails where
 
 instance Prelude.Hashable AwsEc2NetworkAclDetails where
   hashWithSalt _salt AwsEc2NetworkAclDetails' {..} =
-    _salt `Prelude.hashWithSalt` associations
+    _salt
+      `Prelude.hashWithSalt` associations
       `Prelude.hashWithSalt` entries
       `Prelude.hashWithSalt` isDefault
       `Prelude.hashWithSalt` networkAclId

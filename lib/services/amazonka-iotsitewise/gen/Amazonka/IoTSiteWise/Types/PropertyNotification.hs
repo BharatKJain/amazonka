@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.PropertyNotification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.PropertyNotification where
@@ -80,12 +80,14 @@ instance Data.FromJSON PropertyNotification where
       "PropertyNotification"
       ( \x ->
           PropertyNotification'
-            Prelude.<$> (x Data..: "topic") Prelude.<*> (x Data..: "state")
+            Prelude.<$> (x Data..: "topic")
+            Prelude.<*> (x Data..: "state")
       )
 
 instance Prelude.Hashable PropertyNotification where
   hashWithSalt _salt PropertyNotification' {..} =
-    _salt `Prelude.hashWithSalt` topic
+    _salt
+      `Prelude.hashWithSalt` topic
       `Prelude.hashWithSalt` state
 
 instance Prelude.NFData PropertyNotification where

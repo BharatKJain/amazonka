@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaLive.ListOfferings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -197,20 +197,23 @@ instance Core.AWSPager ListOfferings where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listOfferingsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listOfferingsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listOfferingsResponse_offerings Prelude.. Lens._Just
+            Lens.^? listOfferingsResponse_offerings
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listOfferings_nextToken
           Lens..~ rs
-          Lens.^? listOfferingsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listOfferingsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListOfferings where
   type
@@ -229,7 +232,8 @@ instance Core.AWSRequest ListOfferings where
 
 instance Prelude.Hashable ListOfferings where
   hashWithSalt _salt ListOfferings' {..} =
-    _salt `Prelude.hashWithSalt` channelClass
+    _salt
+      `Prelude.hashWithSalt` channelClass
       `Prelude.hashWithSalt` channelConfiguration
       `Prelude.hashWithSalt` codec
       `Prelude.hashWithSalt` duration

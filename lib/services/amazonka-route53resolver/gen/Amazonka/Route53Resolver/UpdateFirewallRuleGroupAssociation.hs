@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53Resolver.UpdateFirewallRuleGroupAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -157,7 +157,7 @@ instance
       ( \s h x ->
           UpdateFirewallRuleGroupAssociationResponse'
             Prelude.<$> (x Data..?> "FirewallRuleGroupAssociation")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -167,7 +167,8 @@ instance
   hashWithSalt
     _salt
     UpdateFirewallRuleGroupAssociation' {..} =
-      _salt `Prelude.hashWithSalt` mutationProtection
+      _salt
+        `Prelude.hashWithSalt` mutationProtection
         `Prelude.hashWithSalt` name
         `Prelude.hashWithSalt` priority
         `Prelude.hashWithSalt` firewallRuleGroupAssociationId

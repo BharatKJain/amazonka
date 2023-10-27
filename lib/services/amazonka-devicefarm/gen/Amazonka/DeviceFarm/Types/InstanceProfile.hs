@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.InstanceProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.InstanceProfile where
@@ -124,7 +124,8 @@ instance Data.FromJSON InstanceProfile where
           InstanceProfile'
             Prelude.<$> (x Data..:? "arn")
             Prelude.<*> (x Data..:? "description")
-            Prelude.<*> ( x Data..:? "excludeAppPackagesFromCleanup"
+            Prelude.<*> ( x
+                            Data..:? "excludeAppPackagesFromCleanup"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "name")
@@ -134,7 +135,8 @@ instance Data.FromJSON InstanceProfile where
 
 instance Prelude.Hashable InstanceProfile where
   hashWithSalt _salt InstanceProfile' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` excludeAppPackagesFromCleanup
       `Prelude.hashWithSalt` name

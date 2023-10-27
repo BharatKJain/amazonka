@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSOAdmin.Types.AccountAssignment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSOAdmin.Types.AccountAssignment where
@@ -117,7 +117,8 @@ instance Data.FromJSON AccountAssignment where
 
 instance Prelude.Hashable AccountAssignment where
   hashWithSalt _salt AccountAssignment' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` permissionSetArn
       `Prelude.hashWithSalt` principalId
       `Prelude.hashWithSalt` principalType

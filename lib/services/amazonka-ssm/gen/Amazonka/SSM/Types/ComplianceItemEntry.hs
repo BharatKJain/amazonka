@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.ComplianceItemEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.ComplianceItemEntry where
@@ -115,7 +115,8 @@ complianceItemEntry_status = Lens.lens (\ComplianceItemEntry' {status} -> status
 
 instance Prelude.Hashable ComplianceItemEntry where
   hashWithSalt _salt ComplianceItemEntry' {..} =
-    _salt `Prelude.hashWithSalt` details
+    _salt
+      `Prelude.hashWithSalt` details
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` title
       `Prelude.hashWithSalt` severity

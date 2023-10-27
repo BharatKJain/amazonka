@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.Counters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.Counters where
@@ -124,7 +124,8 @@ instance Data.FromJSON Counters where
 
 instance Prelude.Hashable Counters where
   hashWithSalt _salt Counters' {..} =
-    _salt `Prelude.hashWithSalt` errored
+    _salt
+      `Prelude.hashWithSalt` errored
       `Prelude.hashWithSalt` failed
       `Prelude.hashWithSalt` passed
       `Prelude.hashWithSalt` skipped

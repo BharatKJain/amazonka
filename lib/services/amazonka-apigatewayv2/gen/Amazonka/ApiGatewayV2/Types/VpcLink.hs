@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApiGatewayV2.Types.VpcLink
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApiGatewayV2.Types.VpcLink where
@@ -143,7 +143,8 @@ instance Data.FromJSON VpcLink where
             Prelude.<*> (x Data..:? "vpcLinkStatusMessage")
             Prelude.<*> (x Data..:? "vpcLinkVersion")
             Prelude.<*> (x Data..: "vpcLinkId")
-            Prelude.<*> ( x Data..:? "securityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "securityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "subnetIds" Data..!= Prelude.mempty)
@@ -152,7 +153,8 @@ instance Data.FromJSON VpcLink where
 
 instance Prelude.Hashable VpcLink where
   hashWithSalt _salt VpcLink' {..} =
-    _salt `Prelude.hashWithSalt` createdDate
+    _salt
+      `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` vpcLinkStatus
       `Prelude.hashWithSalt` vpcLinkStatusMessage

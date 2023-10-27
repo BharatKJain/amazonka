@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.PendingMaintenanceAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.PendingMaintenanceAction where
@@ -84,7 +84,8 @@ instance Data.FromJSON PendingMaintenanceAction where
 
 instance Prelude.Hashable PendingMaintenanceAction where
   hashWithSalt _salt PendingMaintenanceAction' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` currentApplyDate
       `Prelude.hashWithSalt` description
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.DesiredWeightAndCapacity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.DesiredWeightAndCapacity where
@@ -76,7 +76,8 @@ desiredWeightAndCapacity_variantName = Lens.lens (\DesiredWeightAndCapacity' {va
 
 instance Prelude.Hashable DesiredWeightAndCapacity where
   hashWithSalt _salt DesiredWeightAndCapacity' {..} =
-    _salt `Prelude.hashWithSalt` desiredInstanceCount
+    _salt
+      `Prelude.hashWithSalt` desiredInstanceCount
       `Prelude.hashWithSalt` desiredWeight
       `Prelude.hashWithSalt` variantName
 

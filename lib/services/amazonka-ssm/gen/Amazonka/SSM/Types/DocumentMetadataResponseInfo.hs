@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.DocumentMetadataResponseInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.DocumentMetadataResponseInfo where
@@ -61,7 +61,8 @@ instance Data.FromJSON DocumentMetadataResponseInfo where
       "DocumentMetadataResponseInfo"
       ( \x ->
           DocumentMetadataResponseInfo'
-            Prelude.<$> ( x Data..:? "ReviewerResponse"
+            Prelude.<$> ( x
+                            Data..:? "ReviewerResponse"
                             Data..!= Prelude.mempty
                         )
       )

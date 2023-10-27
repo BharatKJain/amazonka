@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.ChoiceUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.ChoiceUpdate where
@@ -80,7 +80,8 @@ choiceUpdate_status = Lens.lens (\ChoiceUpdate' {status} -> status) (\s@ChoiceUp
 
 instance Prelude.Hashable ChoiceUpdate where
   hashWithSalt _salt ChoiceUpdate' {..} =
-    _salt `Prelude.hashWithSalt` notes
+    _salt
+      `Prelude.hashWithSalt` notes
       `Prelude.hashWithSalt` reason
       `Prelude.hashWithSalt` status
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.SocketAddress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.SocketAddress where
@@ -69,12 +69,14 @@ instance Data.FromJSON SocketAddress where
       "SocketAddress"
       ( \x ->
           SocketAddress'
-            Prelude.<$> (x Data..: "name") Prelude.<*> (x Data..: "port")
+            Prelude.<$> (x Data..: "name")
+            Prelude.<*> (x Data..: "port")
       )
 
 instance Prelude.Hashable SocketAddress where
   hashWithSalt _salt SocketAddress' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` port
 
 instance Prelude.NFData SocketAddress where

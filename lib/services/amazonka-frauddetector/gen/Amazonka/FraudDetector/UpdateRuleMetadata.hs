@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FraudDetector.UpdateRuleMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,7 +102,8 @@ instance Core.AWSRequest UpdateRuleMetadata where
 
 instance Prelude.Hashable UpdateRuleMetadata where
   hashWithSalt _salt UpdateRuleMetadata' {..} =
-    _salt `Prelude.hashWithSalt` rule
+    _salt
+      `Prelude.hashWithSalt` rule
       `Prelude.hashWithSalt` description
 
 instance Prelude.NFData UpdateRuleMetadata where

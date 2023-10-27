@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.CreateAuthorizer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -337,7 +337,8 @@ instance Core.AWSRequest CreateAuthorizer where
 
 instance Prelude.Hashable CreateAuthorizer where
   hashWithSalt _salt CreateAuthorizer' {..} =
-    _salt `Prelude.hashWithSalt` authType
+    _salt
+      `Prelude.hashWithSalt` authType
       `Prelude.hashWithSalt` authorizerCredentials
       `Prelude.hashWithSalt` authorizerResultTtlInSeconds
       `Prelude.hashWithSalt` authorizerUri

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.BatchGetAssetPropertyAggregatesSuccessEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.BatchGetAssetPropertyAggregatesSuccessEntry where
@@ -83,9 +83,10 @@ instance
       ( \x ->
           BatchGetAssetPropertyAggregatesSuccessEntry'
             Prelude.<$> (x Data..: "entryId")
-              Prelude.<*> ( x Data..:? "aggregatedValues"
-                              Data..!= Prelude.mempty
-                          )
+            Prelude.<*> ( x
+                            Data..:? "aggregatedValues"
+                            Data..!= Prelude.mempty
+                        )
       )
 
 instance
@@ -95,7 +96,8 @@ instance
   hashWithSalt
     _salt
     BatchGetAssetPropertyAggregatesSuccessEntry' {..} =
-      _salt `Prelude.hashWithSalt` entryId
+      _salt
+        `Prelude.hashWithSalt` entryId
         `Prelude.hashWithSalt` aggregatedValues
 
 instance

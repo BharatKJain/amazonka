@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTFleetWise.Types.Actuator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTFleetWise.Types.Actuator where
@@ -147,7 +147,8 @@ instance Data.FromJSON Actuator where
 
 instance Prelude.Hashable Actuator where
   hashWithSalt _salt Actuator' {..} =
-    _salt `Prelude.hashWithSalt` allowedValues
+    _salt
+      `Prelude.hashWithSalt` allowedValues
       `Prelude.hashWithSalt` assignedValue
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` max

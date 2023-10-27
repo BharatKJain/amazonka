@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MacieV2.GetFindingStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -162,7 +162,8 @@ instance Core.AWSRequest GetFindingStatistics where
 
 instance Prelude.Hashable GetFindingStatistics where
   hashWithSalt _salt GetFindingStatistics' {..} =
-    _salt `Prelude.hashWithSalt` findingCriteria
+    _salt
+      `Prelude.hashWithSalt` findingCriteria
       `Prelude.hashWithSalt` size
       `Prelude.hashWithSalt` sortCriteria
       `Prelude.hashWithSalt` groupBy

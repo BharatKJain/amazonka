@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.Build
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.Build where
@@ -235,7 +235,8 @@ instance Data.FromJSON Build where
 
 instance Prelude.Hashable Build where
   hashWithSalt _salt Build' {..} =
-    _salt `Prelude.hashWithSalt` buildArn
+    _salt
+      `Prelude.hashWithSalt` buildArn
       `Prelude.hashWithSalt` buildId
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` name

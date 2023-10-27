@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.TagServerCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -151,7 +151,8 @@ instance Core.AWSRequest TagServerCertificate where
 
 instance Prelude.Hashable TagServerCertificate where
   hashWithSalt _salt TagServerCertificate' {..} =
-    _salt `Prelude.hashWithSalt` serverCertificateName
+    _salt
+      `Prelude.hashWithSalt` serverCertificateName
       `Prelude.hashWithSalt` tags
 
 instance Prelude.NFData TagServerCertificate where

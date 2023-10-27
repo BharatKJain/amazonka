@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EMRContainers.ListVirtualClusters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -151,22 +151,22 @@ instance Core.AWSPager ListVirtualClusters where
     | Core.stop
         ( rs
             Lens.^? listVirtualClustersResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listVirtualClustersResponse_virtualClusters
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listVirtualClusters_nextToken
           Lens..~ rs
           Lens.^? listVirtualClustersResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListVirtualClusters where
   type
@@ -179,7 +179,8 @@ instance Core.AWSRequest ListVirtualClusters where
       ( \s h x ->
           ListVirtualClustersResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "virtualClusters"
+            Prelude.<*> ( x
+                            Data..?> "virtualClusters"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -187,7 +188,8 @@ instance Core.AWSRequest ListVirtualClusters where
 
 instance Prelude.Hashable ListVirtualClusters where
   hashWithSalt _salt ListVirtualClusters' {..} =
-    _salt `Prelude.hashWithSalt` containerProviderId
+    _salt
+      `Prelude.hashWithSalt` containerProviderId
       `Prelude.hashWithSalt` containerProviderType
       `Prelude.hashWithSalt` createdAfter
       `Prelude.hashWithSalt` createdBefore

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ConnectParticipant.CompleteAttachmentUpload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest CompleteAttachmentUpload where
 
 instance Prelude.Hashable CompleteAttachmentUpload where
   hashWithSalt _salt CompleteAttachmentUpload' {..} =
-    _salt `Prelude.hashWithSalt` attachmentIds
+    _salt
+      `Prelude.hashWithSalt` attachmentIds
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` connectionToken
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.JsonClassifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.JsonClassifier where
@@ -114,7 +114,8 @@ instance Data.FromJSON JsonClassifier where
 
 instance Prelude.Hashable JsonClassifier where
   hashWithSalt _salt JsonClassifier' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` lastUpdated
       `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` name

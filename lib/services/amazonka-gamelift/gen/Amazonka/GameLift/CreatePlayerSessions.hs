@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.CreatePlayerSessions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,7 +148,8 @@ instance Core.AWSRequest CreatePlayerSessions where
 
 instance Prelude.Hashable CreatePlayerSessions where
   hashWithSalt _salt CreatePlayerSessions' {..} =
-    _salt `Prelude.hashWithSalt` playerDataMap
+    _salt
+      `Prelude.hashWithSalt` playerDataMap
       `Prelude.hashWithSalt` gameSessionId
       `Prelude.hashWithSalt` playerIds
 

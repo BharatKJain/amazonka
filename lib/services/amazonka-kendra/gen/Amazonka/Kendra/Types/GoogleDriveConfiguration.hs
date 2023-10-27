@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.GoogleDriveConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.GoogleDriveConfiguration where
@@ -193,20 +193,25 @@ instance Data.FromJSON GoogleDriveConfiguration where
       "GoogleDriveConfiguration"
       ( \x ->
           GoogleDriveConfiguration'
-            Prelude.<$> ( x Data..:? "ExcludeMimeTypes"
+            Prelude.<$> ( x
+                            Data..:? "ExcludeMimeTypes"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "ExcludeSharedDrives"
+            Prelude.<*> ( x
+                            Data..:? "ExcludeSharedDrives"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "ExcludeUserAccounts"
+            Prelude.<*> ( x
+                            Data..:? "ExcludeUserAccounts"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "ExclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "ExclusionPatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "FieldMappings")
-            Prelude.<*> ( x Data..:? "InclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "InclusionPatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "SecretArn")
@@ -214,7 +219,8 @@ instance Data.FromJSON GoogleDriveConfiguration where
 
 instance Prelude.Hashable GoogleDriveConfiguration where
   hashWithSalt _salt GoogleDriveConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` excludeMimeTypes
+    _salt
+      `Prelude.hashWithSalt` excludeMimeTypes
       `Prelude.hashWithSalt` excludeSharedDrives
       `Prelude.hashWithSalt` excludeUserAccounts
       `Prelude.hashWithSalt` exclusionPatterns

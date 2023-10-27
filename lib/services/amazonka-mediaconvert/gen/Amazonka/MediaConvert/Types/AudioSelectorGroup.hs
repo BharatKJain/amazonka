@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.AudioSelectorGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.AudioSelectorGroup where
@@ -73,7 +73,8 @@ instance Data.FromJSON AudioSelectorGroup where
       "AudioSelectorGroup"
       ( \x ->
           AudioSelectorGroup'
-            Prelude.<$> ( x Data..:? "audioSelectorNames"
+            Prelude.<$> ( x
+                            Data..:? "audioSelectorNames"
                             Data..!= Prelude.mempty
                         )
       )

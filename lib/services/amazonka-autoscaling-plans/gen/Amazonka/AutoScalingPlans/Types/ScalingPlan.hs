@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScalingPlans.Types.ScalingPlan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScalingPlans.Types.ScalingPlan where
@@ -197,7 +197,8 @@ instance Data.FromJSON ScalingPlan where
             Prelude.<*> (x Data..: "ScalingPlanName")
             Prelude.<*> (x Data..: "ScalingPlanVersion")
             Prelude.<*> (x Data..: "ApplicationSource")
-            Prelude.<*> ( x Data..:? "ScalingInstructions"
+            Prelude.<*> ( x
+                            Data..:? "ScalingInstructions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "StatusCode")
@@ -205,7 +206,8 @@ instance Data.FromJSON ScalingPlan where
 
 instance Prelude.Hashable ScalingPlan where
   hashWithSalt _salt ScalingPlan' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` statusMessage
       `Prelude.hashWithSalt` statusStartTime
       `Prelude.hashWithSalt` scalingPlanName

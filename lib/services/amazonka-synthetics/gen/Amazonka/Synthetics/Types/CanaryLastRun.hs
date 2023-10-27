@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Synthetics.Types.CanaryLastRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Synthetics.Types.CanaryLastRun where
@@ -76,7 +76,8 @@ instance Data.FromJSON CanaryLastRun where
 
 instance Prelude.Hashable CanaryLastRun where
   hashWithSalt _salt CanaryLastRun' {..} =
-    _salt `Prelude.hashWithSalt` canaryName
+    _salt
+      `Prelude.hashWithSalt` canaryName
       `Prelude.hashWithSalt` lastRun
 
 instance Prelude.NFData CanaryLastRun where

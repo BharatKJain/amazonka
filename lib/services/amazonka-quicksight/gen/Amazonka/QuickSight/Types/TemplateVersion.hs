@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TemplateVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TemplateVersion where
@@ -148,7 +148,8 @@ instance Data.FromJSON TemplateVersion where
       ( \x ->
           TemplateVersion'
             Prelude.<$> (x Data..:? "CreatedTime")
-            Prelude.<*> ( x Data..:? "DataSetConfigurations"
+            Prelude.<*> ( x
+                            Data..:? "DataSetConfigurations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Description")
@@ -162,7 +163,8 @@ instance Data.FromJSON TemplateVersion where
 
 instance Prelude.Hashable TemplateVersion where
   hashWithSalt _salt TemplateVersion' {..} =
-    _salt `Prelude.hashWithSalt` createdTime
+    _salt
+      `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` dataSetConfigurations
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` errors

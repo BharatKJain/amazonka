@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.GameSession
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.GameSession where
@@ -389,7 +389,8 @@ instance Data.FromJSON GameSession where
 
 instance Prelude.Hashable GameSession where
   hashWithSalt _salt GameSession' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` creatorId
       `Prelude.hashWithSalt` currentPlayerSessionCount
       `Prelude.hashWithSalt` dnsName

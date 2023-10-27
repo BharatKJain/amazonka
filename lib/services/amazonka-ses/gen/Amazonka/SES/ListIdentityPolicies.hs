@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SES.ListIdentityPolicies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,9 @@ instance Core.AWSRequest ListIdentityPolicies where
       ( \s h x ->
           ListIdentityPoliciesResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..@? "PolicyNames" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "PolicyNames"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Data.parseXMLList "member"
                         )
       )

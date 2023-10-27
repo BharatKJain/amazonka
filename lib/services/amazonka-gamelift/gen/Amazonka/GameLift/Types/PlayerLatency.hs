@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.PlayerLatency
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.PlayerLatency where
@@ -93,7 +93,8 @@ instance Data.FromJSON PlayerLatency where
 
 instance Prelude.Hashable PlayerLatency where
   hashWithSalt _salt PlayerLatency' {..} =
-    _salt `Prelude.hashWithSalt` latencyInMilliseconds
+    _salt
+      `Prelude.hashWithSalt` latencyInMilliseconds
       `Prelude.hashWithSalt` playerId
       `Prelude.hashWithSalt` regionIdentifier
 

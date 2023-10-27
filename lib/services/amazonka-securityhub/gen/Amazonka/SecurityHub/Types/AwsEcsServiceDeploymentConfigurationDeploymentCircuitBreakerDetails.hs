@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsServiceDeploymentConfigurationDeploymentCircuitBreakerDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsServiceDeploymentConfigurationDeploymentCircuitBreakerDetails where
@@ -81,7 +81,7 @@ instance
       ( \x ->
           AwsEcsServiceDeploymentConfigurationDeploymentCircuitBreakerDetails'
             Prelude.<$> (x Data..:? "Enable")
-              Prelude.<*> (x Data..:? "Rollback")
+            Prelude.<*> (x Data..:? "Rollback")
       )
 
 instance
@@ -91,7 +91,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsServiceDeploymentConfigurationDeploymentCircuitBreakerDetails' {..} =
-      _salt `Prelude.hashWithSalt` enable
+      _salt
+        `Prelude.hashWithSalt` enable
         `Prelude.hashWithSalt` rollback
 
 instance

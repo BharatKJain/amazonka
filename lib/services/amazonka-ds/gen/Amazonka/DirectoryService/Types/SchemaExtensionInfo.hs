@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.SchemaExtensionInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.SchemaExtensionInfo where
@@ -131,7 +131,8 @@ instance Data.FromJSON SchemaExtensionInfo where
 
 instance Prelude.Hashable SchemaExtensionInfo where
   hashWithSalt _salt SchemaExtensionInfo' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` directoryId
       `Prelude.hashWithSalt` endDateTime
       `Prelude.hashWithSalt` schemaExtensionId

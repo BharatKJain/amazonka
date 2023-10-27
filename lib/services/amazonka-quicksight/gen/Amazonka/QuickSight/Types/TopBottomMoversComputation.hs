@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TopBottomMoversComputation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TopBottomMoversComputation where
@@ -163,7 +163,8 @@ instance Data.FromJSON TopBottomMoversComputation where
 
 instance Prelude.Hashable TopBottomMoversComputation where
   hashWithSalt _salt TopBottomMoversComputation' {..} =
-    _salt `Prelude.hashWithSalt` moverSize
+    _salt
+      `Prelude.hashWithSalt` moverSize
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` sortOrder
       `Prelude.hashWithSalt` value

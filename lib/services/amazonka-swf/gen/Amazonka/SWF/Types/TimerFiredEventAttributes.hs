@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.TimerFiredEventAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.TimerFiredEventAttributes where
@@ -86,7 +86,8 @@ instance Data.FromJSON TimerFiredEventAttributes where
 
 instance Prelude.Hashable TimerFiredEventAttributes where
   hashWithSalt _salt TimerFiredEventAttributes' {..} =
-    _salt `Prelude.hashWithSalt` timerId
+    _salt
+      `Prelude.hashWithSalt` timerId
       `Prelude.hashWithSalt` startedEventId
 
 instance Prelude.NFData TimerFiredEventAttributes where

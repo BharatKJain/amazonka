@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.Image
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.Image where
@@ -72,7 +72,8 @@ image_id = Lens.lens (\Image' {id} -> id) (\s@Image' {} a -> s {id = a} :: Image
 
 instance Prelude.Hashable Image where
   hashWithSalt _salt Image' {..} =
-    _salt `Prelude.hashWithSalt` file
+    _salt
+      `Prelude.hashWithSalt` file
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData Image where

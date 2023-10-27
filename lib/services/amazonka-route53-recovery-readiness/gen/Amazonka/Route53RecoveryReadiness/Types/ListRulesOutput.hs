@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53RecoveryReadiness.Types.ListRulesOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53RecoveryReadiness.Types.ListRulesOutput where
@@ -95,7 +95,8 @@ instance Data.FromJSON ListRulesOutput where
 
 instance Prelude.Hashable ListRulesOutput where
   hashWithSalt _salt ListRulesOutput' {..} =
-    _salt `Prelude.hashWithSalt` ruleDescription
+    _salt
+      `Prelude.hashWithSalt` ruleDescription
       `Prelude.hashWithSalt` ruleId
       `Prelude.hashWithSalt` resourceType
 

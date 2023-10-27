@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsRdsDbParameterGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsRdsDbParameterGroup where
@@ -75,7 +75,8 @@ instance Data.FromJSON AwsRdsDbParameterGroup where
 
 instance Prelude.Hashable AwsRdsDbParameterGroup where
   hashWithSalt _salt AwsRdsDbParameterGroup' {..} =
-    _salt `Prelude.hashWithSalt` dbParameterGroupName
+    _salt
+      `Prelude.hashWithSalt` dbParameterGroupName
       `Prelude.hashWithSalt` parameterApplyStatus
 
 instance Prelude.NFData AwsRdsDbParameterGroup where

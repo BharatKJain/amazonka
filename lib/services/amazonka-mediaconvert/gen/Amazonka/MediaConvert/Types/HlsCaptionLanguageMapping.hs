@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.HlsCaptionLanguageMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.HlsCaptionLanguageMapping where
@@ -102,7 +102,8 @@ instance Data.FromJSON HlsCaptionLanguageMapping where
 
 instance Prelude.Hashable HlsCaptionLanguageMapping where
   hashWithSalt _salt HlsCaptionLanguageMapping' {..} =
-    _salt `Prelude.hashWithSalt` captionChannel
+    _salt
+      `Prelude.hashWithSalt` captionChannel
       `Prelude.hashWithSalt` customLanguageCode
       `Prelude.hashWithSalt` languageCode
       `Prelude.hashWithSalt` languageDescription

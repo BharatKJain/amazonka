@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.ScannedItemCount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.ScannedItemCount where
@@ -84,7 +84,8 @@ instance Data.FromJSON ScannedItemCount where
 
 instance Prelude.Hashable ScannedItemCount where
   hashWithSalt _salt ScannedItemCount' {..} =
-    _salt `Prelude.hashWithSalt` files
+    _salt
+      `Prelude.hashWithSalt` files
       `Prelude.hashWithSalt` totalGb
       `Prelude.hashWithSalt` volumes
 

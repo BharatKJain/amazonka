@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataSync.Types.TagListEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataSync.Types.TagListEntry where
@@ -68,12 +68,14 @@ instance Data.FromJSON TagListEntry where
       "TagListEntry"
       ( \x ->
           TagListEntry'
-            Prelude.<$> (x Data..:? "Value") Prelude.<*> (x Data..: "Key")
+            Prelude.<$> (x Data..:? "Value")
+            Prelude.<*> (x Data..: "Key")
       )
 
 instance Prelude.Hashable TagListEntry where
   hashWithSalt _salt TagListEntry' {..} =
-    _salt `Prelude.hashWithSalt` value
+    _salt
+      `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` key
 
 instance Prelude.NFData TagListEntry where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.VsamAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.VsamAttributes where
@@ -110,7 +110,8 @@ vsamAttributes_format = Lens.lens (\VsamAttributes' {format} -> format) (\s@Vsam
 
 instance Prelude.Hashable VsamAttributes where
   hashWithSalt _salt VsamAttributes' {..} =
-    _salt `Prelude.hashWithSalt` alternateKeys
+    _salt
+      `Prelude.hashWithSalt` alternateKeys
       `Prelude.hashWithSalt` compressed
       `Prelude.hashWithSalt` encoding
       `Prelude.hashWithSalt` primaryKey

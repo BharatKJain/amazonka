@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.TimeBasedCanary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.TimeBasedCanary where
@@ -83,7 +83,8 @@ instance Data.FromJSON TimeBasedCanary where
 
 instance Prelude.Hashable TimeBasedCanary where
   hashWithSalt _salt TimeBasedCanary' {..} =
-    _salt `Prelude.hashWithSalt` canaryInterval
+    _salt
+      `Prelude.hashWithSalt` canaryInterval
       `Prelude.hashWithSalt` canaryPercentage
 
 instance Prelude.NFData TimeBasedCanary where

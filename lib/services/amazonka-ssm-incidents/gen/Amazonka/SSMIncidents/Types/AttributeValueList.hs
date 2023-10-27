@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.AttributeValueList
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.AttributeValueList where
@@ -65,7 +65,8 @@ attributeValueList_stringValues = Lens.lens (\AttributeValueList' {stringValues}
 
 instance Prelude.Hashable AttributeValueList where
   hashWithSalt _salt AttributeValueList' {..} =
-    _salt `Prelude.hashWithSalt` integerValues
+    _salt
+      `Prelude.hashWithSalt` integerValues
       `Prelude.hashWithSalt` stringValues
 
 instance Prelude.NFData AttributeValueList where

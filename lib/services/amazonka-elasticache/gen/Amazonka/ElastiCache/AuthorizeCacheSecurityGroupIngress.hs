@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElastiCache.AuthorizeCacheSecurityGroupIngress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,7 @@ instance
       ( \s h x ->
           AuthorizeCacheSecurityGroupIngressResponse'
             Prelude.<$> (x Data..@? "CacheSecurityGroup")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -147,7 +147,8 @@ instance
   hashWithSalt
     _salt
     AuthorizeCacheSecurityGroupIngress' {..} =
-      _salt `Prelude.hashWithSalt` cacheSecurityGroupName
+      _salt
+        `Prelude.hashWithSalt` cacheSecurityGroupName
         `Prelude.hashWithSalt` eC2SecurityGroupName
         `Prelude.hashWithSalt` eC2SecurityGroupOwnerId
 

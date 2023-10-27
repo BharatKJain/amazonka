@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.BoxPlotChartConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.BoxPlotChartConfiguration where
@@ -185,7 +185,8 @@ instance Data.FromJSON BoxPlotChartConfiguration where
 
 instance Prelude.Hashable BoxPlotChartConfiguration where
   hashWithSalt _salt BoxPlotChartConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` boxPlotOptions
+    _salt
+      `Prelude.hashWithSalt` boxPlotOptions
       `Prelude.hashWithSalt` categoryAxis
       `Prelude.hashWithSalt` categoryLabelOptions
       `Prelude.hashWithSalt` fieldWells

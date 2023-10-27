@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyBackend.Types.CreateBackendAuthPasswordPolicyConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyBackend.Types.CreateBackendAuthPasswordPolicyConfig where
@@ -83,7 +83,8 @@ instance
       "CreateBackendAuthPasswordPolicyConfig"
       ( \x ->
           CreateBackendAuthPasswordPolicyConfig'
-            Prelude.<$> ( x Data..:? "additionalConstraints"
+            Prelude.<$> ( x
+                            Data..:? "additionalConstraints"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "minimumLength")
@@ -96,7 +97,8 @@ instance
   hashWithSalt
     _salt
     CreateBackendAuthPasswordPolicyConfig' {..} =
-      _salt `Prelude.hashWithSalt` additionalConstraints
+      _salt
+        `Prelude.hashWithSalt` additionalConstraints
         `Prelude.hashWithSalt` minimumLength
 
 instance

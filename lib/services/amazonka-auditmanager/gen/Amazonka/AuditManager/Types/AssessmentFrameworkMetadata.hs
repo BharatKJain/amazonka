@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.AssessmentFrameworkMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.AssessmentFrameworkMetadata where
@@ -169,7 +169,8 @@ instance Data.FromJSON AssessmentFrameworkMetadata where
 
 instance Prelude.Hashable AssessmentFrameworkMetadata where
   hashWithSalt _salt AssessmentFrameworkMetadata' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` complianceType
       `Prelude.hashWithSalt` controlSetsCount
       `Prelude.hashWithSalt` controlsCount

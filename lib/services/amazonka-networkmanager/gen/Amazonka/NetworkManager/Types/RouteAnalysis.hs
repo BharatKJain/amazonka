@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.RouteAnalysis
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.RouteAnalysis where
@@ -173,7 +173,8 @@ instance Data.FromJSON RouteAnalysis where
 
 instance Prelude.Hashable RouteAnalysis where
   hashWithSalt _salt RouteAnalysis' {..} =
-    _salt `Prelude.hashWithSalt` destination
+    _salt
+      `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` forwardPath
       `Prelude.hashWithSalt` globalNetworkId
       `Prelude.hashWithSalt` includeReturnPath

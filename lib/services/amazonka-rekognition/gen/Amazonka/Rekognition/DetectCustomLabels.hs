@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Rekognition.DetectCustomLabels
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -189,7 +189,8 @@ instance Core.AWSRequest DetectCustomLabels where
 
 instance Prelude.Hashable DetectCustomLabels where
   hashWithSalt _salt DetectCustomLabels' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` minConfidence
       `Prelude.hashWithSalt` projectVersionArn
       `Prelude.hashWithSalt` image

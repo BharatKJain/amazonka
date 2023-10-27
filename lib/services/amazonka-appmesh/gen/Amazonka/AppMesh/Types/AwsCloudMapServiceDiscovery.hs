@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.AwsCloudMapServiceDiscovery
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.AwsCloudMapServiceDiscovery where
@@ -121,7 +121,8 @@ instance Data.FromJSON AwsCloudMapServiceDiscovery where
 
 instance Prelude.Hashable AwsCloudMapServiceDiscovery where
   hashWithSalt _salt AwsCloudMapServiceDiscovery' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` ipPreference
       `Prelude.hashWithSalt` namespaceName
       `Prelude.hashWithSalt` serviceName

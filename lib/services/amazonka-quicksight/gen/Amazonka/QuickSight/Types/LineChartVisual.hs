@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.LineChartVisual
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.LineChartVisual where
@@ -123,7 +123,8 @@ instance Data.FromJSON LineChartVisual where
           LineChartVisual'
             Prelude.<$> (x Data..:? "Actions" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "ChartConfiguration")
-            Prelude.<*> ( x Data..:? "ColumnHierarchies"
+            Prelude.<*> ( x
+                            Data..:? "ColumnHierarchies"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Subtitle")
@@ -133,7 +134,8 @@ instance Data.FromJSON LineChartVisual where
 
 instance Prelude.Hashable LineChartVisual where
   hashWithSalt _salt LineChartVisual' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` chartConfiguration
       `Prelude.hashWithSalt` columnHierarchies
       `Prelude.hashWithSalt` subtitle

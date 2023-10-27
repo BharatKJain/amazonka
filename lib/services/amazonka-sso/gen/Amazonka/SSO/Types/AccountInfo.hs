@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSO.Types.AccountInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSO.Types.AccountInfo where
@@ -84,7 +84,8 @@ instance Data.FromJSON AccountInfo where
 
 instance Prelude.Hashable AccountInfo where
   hashWithSalt _salt AccountInfo' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` accountName
       `Prelude.hashWithSalt` emailAddress
 

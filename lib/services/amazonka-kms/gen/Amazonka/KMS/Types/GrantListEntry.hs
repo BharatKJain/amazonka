@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KMS.Types.GrantListEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KMS.Types.GrantListEntry where
@@ -176,7 +176,8 @@ instance Data.FromJSON GrantListEntry where
 
 instance Prelude.Hashable GrantListEntry where
   hashWithSalt _salt GrantListEntry' {..} =
-    _salt `Prelude.hashWithSalt` constraints
+    _salt
+      `Prelude.hashWithSalt` constraints
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` grantId
       `Prelude.hashWithSalt` granteePrincipal

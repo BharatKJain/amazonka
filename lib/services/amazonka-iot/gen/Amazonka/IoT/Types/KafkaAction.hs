@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.KafkaAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.KafkaAction where
@@ -104,14 +104,16 @@ instance Data.FromJSON KafkaAction where
             Prelude.<*> (x Data..:? "partition")
             Prelude.<*> (x Data..: "destinationArn")
             Prelude.<*> (x Data..: "topic")
-            Prelude.<*> ( x Data..:? "clientProperties"
+            Prelude.<*> ( x
+                            Data..:? "clientProperties"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable KafkaAction where
   hashWithSalt _salt KafkaAction' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` partition
       `Prelude.hashWithSalt` destinationArn
       `Prelude.hashWithSalt` topic

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.S3LogDeliveryDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.S3LogDeliveryDescription where
@@ -87,7 +87,8 @@ instance Data.FromJSON S3LogDeliveryDescription where
 
 instance Prelude.Hashable S3LogDeliveryDescription where
   hashWithSalt _salt S3LogDeliveryDescription' {..} =
-    _salt `Prelude.hashWithSalt` bucket
+    _salt
+      `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` prefix
 

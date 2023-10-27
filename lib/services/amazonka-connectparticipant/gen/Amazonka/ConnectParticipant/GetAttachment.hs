@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ConnectParticipant.GetAttachment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance Core.AWSRequest GetAttachment where
 
 instance Prelude.Hashable GetAttachment where
   hashWithSalt _salt GetAttachment' {..} =
-    _salt `Prelude.hashWithSalt` attachmentId
+    _salt
+      `Prelude.hashWithSalt` attachmentId
       `Prelude.hashWithSalt` connectionToken
 
 instance Prelude.NFData GetAttachment where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.DateFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.DateFilter where
@@ -85,7 +85,8 @@ instance Data.FromJSON DateFilter where
 
 instance Prelude.Hashable DateFilter where
   hashWithSalt _salt DateFilter' {..} =
-    _salt `Prelude.hashWithSalt` dateRange
+    _salt
+      `Prelude.hashWithSalt` dateRange
       `Prelude.hashWithSalt` end
       `Prelude.hashWithSalt` start
 

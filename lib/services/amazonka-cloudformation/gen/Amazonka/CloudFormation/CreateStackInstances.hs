@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFormation.CreateStackInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -356,7 +356,8 @@ instance Core.AWSRequest CreateStackInstances where
 
 instance Prelude.Hashable CreateStackInstances where
   hashWithSalt _salt CreateStackInstances' {..} =
-    _salt `Prelude.hashWithSalt` accounts
+    _salt
+      `Prelude.hashWithSalt` accounts
       `Prelude.hashWithSalt` callAs
       `Prelude.hashWithSalt` deploymentTargets
       `Prelude.hashWithSalt` operationId

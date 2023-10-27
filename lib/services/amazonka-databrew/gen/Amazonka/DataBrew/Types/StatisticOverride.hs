@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.StatisticOverride
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.StatisticOverride where
@@ -76,7 +76,8 @@ instance Data.FromJSON StatisticOverride where
 
 instance Prelude.Hashable StatisticOverride where
   hashWithSalt _salt StatisticOverride' {..} =
-    _salt `Prelude.hashWithSalt` statistic
+    _salt
+      `Prelude.hashWithSalt` statistic
       `Prelude.hashWithSalt` parameters
 
 instance Prelude.NFData StatisticOverride where

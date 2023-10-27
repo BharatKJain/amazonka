@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.RegisterGameServer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -188,7 +188,8 @@ instance Core.AWSRequest RegisterGameServer where
 
 instance Prelude.Hashable RegisterGameServer where
   hashWithSalt _salt RegisterGameServer' {..} =
-    _salt `Prelude.hashWithSalt` connectionInfo
+    _salt
+      `Prelude.hashWithSalt` connectionInfo
       `Prelude.hashWithSalt` gameServerData
       `Prelude.hashWithSalt` gameServerGroupName
       `Prelude.hashWithSalt` gameServerId

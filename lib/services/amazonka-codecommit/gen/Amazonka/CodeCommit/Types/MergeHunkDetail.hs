@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.MergeHunkDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.MergeHunkDetail where
@@ -88,7 +88,8 @@ instance Data.FromJSON MergeHunkDetail where
 
 instance Prelude.Hashable MergeHunkDetail where
   hashWithSalt _salt MergeHunkDetail' {..} =
-    _salt `Prelude.hashWithSalt` endLine
+    _salt
+      `Prelude.hashWithSalt` endLine
       `Prelude.hashWithSalt` hunkContent
       `Prelude.hashWithSalt` startLine
 

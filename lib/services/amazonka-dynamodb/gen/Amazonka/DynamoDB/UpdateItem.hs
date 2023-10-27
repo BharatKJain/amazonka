@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.UpdateItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -794,7 +794,8 @@ instance Core.AWSRequest UpdateItem where
 
 instance Prelude.Hashable UpdateItem where
   hashWithSalt _salt UpdateItem' {..} =
-    _salt `Prelude.hashWithSalt` attributeUpdates
+    _salt
+      `Prelude.hashWithSalt` attributeUpdates
       `Prelude.hashWithSalt` conditionExpression
       `Prelude.hashWithSalt` conditionalOperator
       `Prelude.hashWithSalt` expected

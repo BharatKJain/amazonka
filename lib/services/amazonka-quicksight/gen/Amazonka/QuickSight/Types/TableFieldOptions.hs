@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TableFieldOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TableFieldOptions where
@@ -70,14 +70,16 @@ instance Data.FromJSON TableFieldOptions where
       ( \x ->
           TableFieldOptions'
             Prelude.<$> (x Data..:? "Order" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "SelectedFieldOptions"
+            Prelude.<*> ( x
+                            Data..:? "SelectedFieldOptions"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable TableFieldOptions where
   hashWithSalt _salt TableFieldOptions' {..} =
-    _salt `Prelude.hashWithSalt` order
+    _salt
+      `Prelude.hashWithSalt` order
       `Prelude.hashWithSalt` selectedFieldOptions
 
 instance Prelude.NFData TableFieldOptions where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkMail.Types.AccessControlRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkMail.Types.AccessControlRule where
@@ -185,13 +185,15 @@ instance Data.FromJSON AccessControlRule where
             Prelude.<*> (x Data..:? "DateModified")
             Prelude.<*> (x Data..:? "Description")
             Prelude.<*> (x Data..:? "Effect")
-            Prelude.<*> ( x Data..:? "ImpersonationRoleIds"
+            Prelude.<*> ( x
+                            Data..:? "ImpersonationRoleIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "IpRanges" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "Name")
             Prelude.<*> (x Data..:? "NotActions" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "NotImpersonationRoleIds"
+            Prelude.<*> ( x
+                            Data..:? "NotImpersonationRoleIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "NotIpRanges" Data..!= Prelude.mempty)
@@ -201,7 +203,8 @@ instance Data.FromJSON AccessControlRule where
 
 instance Prelude.Hashable AccessControlRule where
   hashWithSalt _salt AccessControlRule' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` dateCreated
       `Prelude.hashWithSalt` dateModified
       `Prelude.hashWithSalt` description

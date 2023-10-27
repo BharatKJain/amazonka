@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FinSpaceData.ListPermissionGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -94,22 +94,22 @@ instance Core.AWSPager ListPermissionGroups where
     | Core.stop
         ( rs
             Lens.^? listPermissionGroupsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listPermissionGroupsResponse_permissionGroups
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listPermissionGroups_nextToken
           Lens..~ rs
           Lens.^? listPermissionGroupsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListPermissionGroups where
   type
@@ -122,7 +122,8 @@ instance Core.AWSRequest ListPermissionGroups where
       ( \s h x ->
           ListPermissionGroupsResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "permissionGroups"
+            Prelude.<*> ( x
+                            Data..?> "permissionGroups"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -130,7 +131,8 @@ instance Core.AWSRequest ListPermissionGroups where
 
 instance Prelude.Hashable ListPermissionGroups where
   hashWithSalt _salt ListPermissionGroups' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` maxResults
 
 instance Prelude.NFData ListPermissionGroups where

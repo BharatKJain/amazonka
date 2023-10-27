@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.Subnet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.Subnet where
@@ -107,7 +107,8 @@ instance Data.FromXML Subnet where
 
 instance Prelude.Hashable Subnet where
   hashWithSalt _salt Subnet' {..} =
-    _salt `Prelude.hashWithSalt` subnetAvailabilityZone
+    _salt
+      `Prelude.hashWithSalt` subnetAvailabilityZone
       `Prelude.hashWithSalt` subnetIdentifier
       `Prelude.hashWithSalt` subnetOutpost
       `Prelude.hashWithSalt` subnetStatus

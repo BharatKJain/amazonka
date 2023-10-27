@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.Output
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.Output where
@@ -115,7 +115,8 @@ output_destinationSchema = Lens.lens (\Output' {destinationSchema} -> destinatio
 
 instance Prelude.Hashable Output where
   hashWithSalt _salt Output' {..} =
-    _salt `Prelude.hashWithSalt` kinesisFirehoseOutput
+    _salt
+      `Prelude.hashWithSalt` kinesisFirehoseOutput
       `Prelude.hashWithSalt` kinesisStreamsOutput
       `Prelude.hashWithSalt` lambdaOutput
       `Prelude.hashWithSalt` name

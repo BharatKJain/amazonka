@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.NotificationChannel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.NotificationChannel where
@@ -92,12 +92,14 @@ instance Data.FromJSON NotificationChannel where
       "NotificationChannel"
       ( \x ->
           NotificationChannel'
-            Prelude.<$> (x Data..:? "Config") Prelude.<*> (x Data..:? "Id")
+            Prelude.<$> (x Data..:? "Config")
+            Prelude.<*> (x Data..:? "Id")
       )
 
 instance Prelude.Hashable NotificationChannel where
   hashWithSalt _salt NotificationChannel' {..} =
-    _salt `Prelude.hashWithSalt` config
+    _salt
+      `Prelude.hashWithSalt` config
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData NotificationChannel where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.CustomErrorResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.CustomErrorResponse where
@@ -254,7 +254,8 @@ instance Data.FromXML CustomErrorResponse where
 
 instance Prelude.Hashable CustomErrorResponse where
   hashWithSalt _salt CustomErrorResponse' {..} =
-    _salt `Prelude.hashWithSalt` errorCachingMinTTL
+    _salt
+      `Prelude.hashWithSalt` errorCachingMinTTL
       `Prelude.hashWithSalt` responseCode
       `Prelude.hashWithSalt` responsePagePath
       `Prelude.hashWithSalt` errorCode

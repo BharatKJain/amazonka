@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.Warning
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.Warning where
@@ -88,7 +88,8 @@ instance Data.FromJSON Warning where
 
 instance Prelude.Hashable Warning where
   hashWithSalt _salt Warning' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData Warning where

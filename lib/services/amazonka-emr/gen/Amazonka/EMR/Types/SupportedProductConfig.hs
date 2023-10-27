@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.SupportedProductConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.SupportedProductConfig where
@@ -66,7 +66,8 @@ supportedProductConfig_name = Lens.lens (\SupportedProductConfig' {name} -> name
 
 instance Prelude.Hashable SupportedProductConfig where
   hashWithSalt _salt SupportedProductConfig' {..} =
-    _salt `Prelude.hashWithSalt` args
+    _salt
+      `Prelude.hashWithSalt` args
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData SupportedProductConfig where

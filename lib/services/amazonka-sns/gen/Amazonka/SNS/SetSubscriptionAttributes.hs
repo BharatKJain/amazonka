@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SNS.SetSubscriptionAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -250,7 +250,8 @@ instance Core.AWSRequest SetSubscriptionAttributes where
 
 instance Prelude.Hashable SetSubscriptionAttributes where
   hashWithSalt _salt SetSubscriptionAttributes' {..} =
-    _salt `Prelude.hashWithSalt` attributeValue
+    _salt
+      `Prelude.hashWithSalt` attributeValue
       `Prelude.hashWithSalt` subscriptionArn
       `Prelude.hashWithSalt` attributeName
 

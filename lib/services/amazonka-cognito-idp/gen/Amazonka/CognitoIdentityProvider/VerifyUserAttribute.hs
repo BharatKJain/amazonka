@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.VerifyUserAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,7 +128,8 @@ instance Core.AWSRequest VerifyUserAttribute where
 
 instance Prelude.Hashable VerifyUserAttribute where
   hashWithSalt _salt VerifyUserAttribute' {..} =
-    _salt `Prelude.hashWithSalt` accessToken
+    _salt
+      `Prelude.hashWithSalt` accessToken
       `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` code
 

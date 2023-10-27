@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.ColumnStatisticsConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.ColumnStatisticsConfiguration where
@@ -93,7 +93,8 @@ instance
     ColumnStatisticsConfiguration
   where
   hashWithSalt _salt ColumnStatisticsConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` selectors
+    _salt
+      `Prelude.hashWithSalt` selectors
       `Prelude.hashWithSalt` statistics
 
 instance Prelude.NFData ColumnStatisticsConfiguration where

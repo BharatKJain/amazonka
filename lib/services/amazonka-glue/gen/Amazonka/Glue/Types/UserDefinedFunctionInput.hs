@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.UserDefinedFunctionInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.UserDefinedFunctionInput where
@@ -94,7 +94,8 @@ userDefinedFunctionInput_resourceUris = Lens.lens (\UserDefinedFunctionInput' {r
 
 instance Prelude.Hashable UserDefinedFunctionInput where
   hashWithSalt _salt UserDefinedFunctionInput' {..} =
-    _salt `Prelude.hashWithSalt` className
+    _salt
+      `Prelude.hashWithSalt` className
       `Prelude.hashWithSalt` functionName
       `Prelude.hashWithSalt` ownerName
       `Prelude.hashWithSalt` ownerType

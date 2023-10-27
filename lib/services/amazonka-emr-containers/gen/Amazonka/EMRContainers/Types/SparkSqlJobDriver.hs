@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRContainers.Types.SparkSqlJobDriver
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRContainers.Types.SparkSqlJobDriver where
@@ -74,7 +74,8 @@ instance Data.FromJSON SparkSqlJobDriver where
 
 instance Prelude.Hashable SparkSqlJobDriver where
   hashWithSalt _salt SparkSqlJobDriver' {..} =
-    _salt `Prelude.hashWithSalt` entryPoint
+    _salt
+      `Prelude.hashWithSalt` entryPoint
       `Prelude.hashWithSalt` sparkSqlParameters
 
 instance Prelude.NFData SparkSqlJobDriver where

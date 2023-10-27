@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsElasticsearchDomainVPCOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsElasticsearchDomainVPCOptions where
@@ -94,10 +94,12 @@ instance
       "AwsElasticsearchDomainVPCOptions"
       ( \x ->
           AwsElasticsearchDomainVPCOptions'
-            Prelude.<$> ( x Data..:? "AvailabilityZones"
+            Prelude.<$> ( x
+                            Data..:? "AvailabilityZones"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "SecurityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "SecurityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SubnetIds" Data..!= Prelude.mempty)
@@ -111,7 +113,8 @@ instance
   hashWithSalt
     _salt
     AwsElasticsearchDomainVPCOptions' {..} =
-      _salt `Prelude.hashWithSalt` availabilityZones
+      _salt
+        `Prelude.hashWithSalt` availabilityZones
         `Prelude.hashWithSalt` securityGroupIds
         `Prelude.hashWithSalt` subnetIds
         `Prelude.hashWithSalt` vPCId

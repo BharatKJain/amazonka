@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.ListSSHPublicKeys
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -168,21 +168,22 @@ instance Core.AWSPager ListSSHPublicKeys where
     | Core.stop
         ( rs
             Lens.^? listSSHPublicKeysResponse_isTruncated
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.isNothing
         ( rs
             Lens.^? listSSHPublicKeysResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSSHPublicKeys_marker
           Lens..~ rs
-          Lens.^? listSSHPublicKeysResponse_marker Prelude.. Lens._Just
+          Lens.^? listSSHPublicKeysResponse_marker
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListSSHPublicKeys where
   type
@@ -197,7 +198,9 @@ instance Core.AWSRequest ListSSHPublicKeys where
           ListSSHPublicKeysResponse'
             Prelude.<$> (x Data..@? "IsTruncated")
             Prelude.<*> (x Data..@? "Marker")
-            Prelude.<*> ( x Data..@? "SSHPublicKeys" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "SSHPublicKeys"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -205,7 +208,8 @@ instance Core.AWSRequest ListSSHPublicKeys where
 
 instance Prelude.Hashable ListSSHPublicKeys where
   hashWithSalt _salt ListSSHPublicKeys' {..} =
-    _salt `Prelude.hashWithSalt` marker
+    _salt
+      `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxItems
       `Prelude.hashWithSalt` userName
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.DriftCheckModelDataQuality
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.DriftCheckModelDataQuality where
@@ -77,7 +77,8 @@ instance Data.FromJSON DriftCheckModelDataQuality where
 
 instance Prelude.Hashable DriftCheckModelDataQuality where
   hashWithSalt _salt DriftCheckModelDataQuality' {..} =
-    _salt `Prelude.hashWithSalt` constraints
+    _salt
+      `Prelude.hashWithSalt` constraints
       `Prelude.hashWithSalt` statistics
 
 instance Prelude.NFData DriftCheckModelDataQuality where

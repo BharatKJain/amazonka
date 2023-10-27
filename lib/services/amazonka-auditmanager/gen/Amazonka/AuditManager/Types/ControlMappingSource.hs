@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.ControlMappingSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.ControlMappingSource where
@@ -142,7 +142,8 @@ instance Data.FromJSON ControlMappingSource where
 
 instance Prelude.Hashable ControlMappingSource where
   hashWithSalt _salt ControlMappingSource' {..} =
-    _salt `Prelude.hashWithSalt` sourceDescription
+    _salt
+      `Prelude.hashWithSalt` sourceDescription
       `Prelude.hashWithSalt` sourceFrequency
       `Prelude.hashWithSalt` sourceId
       `Prelude.hashWithSalt` sourceKeyword

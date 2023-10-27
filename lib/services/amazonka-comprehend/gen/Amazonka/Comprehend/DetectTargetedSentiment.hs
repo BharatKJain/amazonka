@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Comprehend.DetectTargetedSentiment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest DetectTargetedSentiment where
 
 instance Prelude.Hashable DetectTargetedSentiment where
   hashWithSalt _salt DetectTargetedSentiment' {..} =
-    _salt `Prelude.hashWithSalt` text
+    _salt
+      `Prelude.hashWithSalt` text
       `Prelude.hashWithSalt` languageCode
 
 instance Prelude.NFData DetectTargetedSentiment where

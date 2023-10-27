@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MarketplaceAnalytics.GenerateDataSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -576,7 +576,8 @@ instance Core.AWSRequest GenerateDataSet where
 
 instance Prelude.Hashable GenerateDataSet where
   hashWithSalt _salt GenerateDataSet' {..} =
-    _salt `Prelude.hashWithSalt` customerDefinedValues
+    _salt
+      `Prelude.hashWithSalt` customerDefinedValues
       `Prelude.hashWithSalt` destinationS3Prefix
       `Prelude.hashWithSalt` dataSetType
       `Prelude.hashWithSalt` dataSetPublicationDate

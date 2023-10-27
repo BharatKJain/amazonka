@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ImageBuilder.PutImageRecipePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,7 +117,8 @@ instance Core.AWSRequest PutImageRecipePolicy where
 
 instance Prelude.Hashable PutImageRecipePolicy where
   hashWithSalt _salt PutImageRecipePolicy' {..} =
-    _salt `Prelude.hashWithSalt` imageRecipeArn
+    _salt
+      `Prelude.hashWithSalt` imageRecipeArn
       `Prelude.hashWithSalt` policy
 
 instance Prelude.NFData PutImageRecipePolicy where

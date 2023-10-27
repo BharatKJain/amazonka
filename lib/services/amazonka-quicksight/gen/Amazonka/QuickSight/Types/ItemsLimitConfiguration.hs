@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ItemsLimitConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ItemsLimitConfiguration where
@@ -94,7 +94,8 @@ instance Data.FromJSON ItemsLimitConfiguration where
 
 instance Prelude.Hashable ItemsLimitConfiguration where
   hashWithSalt _salt ItemsLimitConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` itemsLimit
+    _salt
+      `Prelude.hashWithSalt` itemsLimit
       `Prelude.hashWithSalt` otherCategories
 
 instance Prelude.NFData ItemsLimitConfiguration where

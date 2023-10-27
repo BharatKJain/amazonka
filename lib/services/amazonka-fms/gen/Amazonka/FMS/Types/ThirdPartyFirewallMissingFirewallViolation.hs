@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.ThirdPartyFirewallMissingFirewallViolation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.ThirdPartyFirewallMissingFirewallViolation where
@@ -100,9 +100,9 @@ instance
       ( \x ->
           ThirdPartyFirewallMissingFirewallViolation'
             Prelude.<$> (x Data..:? "AvailabilityZone")
-              Prelude.<*> (x Data..:? "TargetViolationReason")
-              Prelude.<*> (x Data..:? "VPC")
-              Prelude.<*> (x Data..:? "ViolationTarget")
+            Prelude.<*> (x Data..:? "TargetViolationReason")
+            Prelude.<*> (x Data..:? "VPC")
+            Prelude.<*> (x Data..:? "ViolationTarget")
       )
 
 instance
@@ -112,7 +112,8 @@ instance
   hashWithSalt
     _salt
     ThirdPartyFirewallMissingFirewallViolation' {..} =
-      _salt `Prelude.hashWithSalt` availabilityZone
+      _salt
+        `Prelude.hashWithSalt` availabilityZone
         `Prelude.hashWithSalt` targetViolationReason
         `Prelude.hashWithSalt` vpc
         `Prelude.hashWithSalt` violationTarget

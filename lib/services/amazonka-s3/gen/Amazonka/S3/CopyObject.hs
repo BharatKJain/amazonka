@@ -16,7 +16,7 @@
 -- Module      : Amazonka.S3.CopyObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -430,7 +430,7 @@ data CopyObject = CopyObject'
     -- When using this action with Amazon S3 on Outposts, you must direct
     -- requests to the S3 on Outposts hostname. The S3 on Outposts hostname
     -- takes the form
-    -- @ AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com@.
+    -- @ @/@AccessPointName@/@-@/@AccountId@/@.@/@outpostID@/@.s3-outposts.@/@Region@/@.amazonaws.com@.
     -- When using this action with S3 on Outposts through the Amazon Web
     -- Services SDKs, you provide the Outposts bucket ARN in place of the
     -- bucket name. For more information about S3 on Outposts ARNs, see
@@ -642,7 +642,7 @@ data CopyObject = CopyObject'
 -- When using this action with Amazon S3 on Outposts, you must direct
 -- requests to the S3 on Outposts hostname. The S3 on Outposts hostname
 -- takes the form
--- @ AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com@.
+-- @ @/@AccessPointName@/@-@/@AccountId@/@.@/@outpostID@/@.s3-outposts.@/@Region@/@.amazonaws.com@.
 -- When using this action with S3 on Outposts through the Amazon Web
 -- Services SDKs, you provide the Outposts bucket ARN in place of the
 -- bucket name. For more information about S3 on Outposts ARNs, see
@@ -971,7 +971,7 @@ copyObject_websiteRedirectLocation = Lens.lens (\CopyObject' {websiteRedirectLoc
 -- When using this action with Amazon S3 on Outposts, you must direct
 -- requests to the S3 on Outposts hostname. The S3 on Outposts hostname
 -- takes the form
--- @ AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com@.
+-- @ @/@AccessPointName@/@-@/@AccountId@/@.@/@outpostID@/@.s3-outposts.@/@Region@/@.amazonaws.com@.
 -- When using this action with S3 on Outposts through the Amazon Web
 -- Services SDKs, you provide the Outposts bucket ARN in place of the
 -- bucket name. For more information about S3 on Outposts ARNs, see
@@ -1060,7 +1060,8 @@ instance Core.AWSRequest CopyObject where
 
 instance Prelude.Hashable CopyObject where
   hashWithSalt _salt CopyObject' {..} =
-    _salt `Prelude.hashWithSalt` acl
+    _salt
+      `Prelude.hashWithSalt` acl
       `Prelude.hashWithSalt` bucketKeyEnabled
       `Prelude.hashWithSalt` cacheControl
       `Prelude.hashWithSalt` checksumAlgorithm

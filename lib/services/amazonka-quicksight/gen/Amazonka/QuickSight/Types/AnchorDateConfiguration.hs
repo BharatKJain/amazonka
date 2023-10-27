@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.AnchorDateConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.AnchorDateConfiguration where
@@ -85,7 +85,8 @@ instance Data.FromJSON AnchorDateConfiguration where
 
 instance Prelude.Hashable AnchorDateConfiguration where
   hashWithSalt _salt AnchorDateConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` anchorOption
+    _salt
+      `Prelude.hashWithSalt` anchorOption
       `Prelude.hashWithSalt` parameterName
 
 instance Prelude.NFData AnchorDateConfiguration where

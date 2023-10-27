@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECRPublic.CompleteLayerUpload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -157,7 +157,8 @@ instance Core.AWSRequest CompleteLayerUpload where
 
 instance Prelude.Hashable CompleteLayerUpload where
   hashWithSalt _salt CompleteLayerUpload' {..} =
-    _salt `Prelude.hashWithSalt` registryId
+    _salt
+      `Prelude.hashWithSalt` registryId
       `Prelude.hashWithSalt` repositoryName
       `Prelude.hashWithSalt` uploadId
       `Prelude.hashWithSalt` layerDigests

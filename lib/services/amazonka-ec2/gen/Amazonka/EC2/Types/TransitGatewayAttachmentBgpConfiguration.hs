@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TransitGatewayAttachmentBgpConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TransitGatewayAttachmentBgpConfiguration where
@@ -101,10 +101,10 @@ instance
   parseXML x =
     TransitGatewayAttachmentBgpConfiguration'
       Prelude.<$> (x Data..@? "bgpStatus")
-        Prelude.<*> (x Data..@? "peerAddress")
-        Prelude.<*> (x Data..@? "peerAsn")
-        Prelude.<*> (x Data..@? "transitGatewayAddress")
-        Prelude.<*> (x Data..@? "transitGatewayAsn")
+      Prelude.<*> (x Data..@? "peerAddress")
+      Prelude.<*> (x Data..@? "peerAsn")
+      Prelude.<*> (x Data..@? "transitGatewayAddress")
+      Prelude.<*> (x Data..@? "transitGatewayAsn")
 
 instance
   Prelude.Hashable
@@ -113,7 +113,8 @@ instance
   hashWithSalt
     _salt
     TransitGatewayAttachmentBgpConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` bgpStatus
+      _salt
+        `Prelude.hashWithSalt` bgpStatus
         `Prelude.hashWithSalt` peerAddress
         `Prelude.hashWithSalt` peerAsn
         `Prelude.hashWithSalt` transitGatewayAddress

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.ModifyClusterDbRevision
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest ModifyClusterDbRevision where
 
 instance Prelude.Hashable ModifyClusterDbRevision where
   hashWithSalt _salt ModifyClusterDbRevision' {..} =
-    _salt `Prelude.hashWithSalt` clusterIdentifier
+    _salt
+      `Prelude.hashWithSalt` clusterIdentifier
       `Prelude.hashWithSalt` revisionTarget
 
 instance Prelude.NFData ModifyClusterDbRevision where

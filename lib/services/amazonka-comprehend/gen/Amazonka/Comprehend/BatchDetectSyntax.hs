@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Comprehend.BatchDetectSyntax
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -92,7 +92,8 @@ newBatchDetectSyntax ::
 newBatchDetectSyntax pTextList_ pLanguageCode_ =
   BatchDetectSyntax'
     { textList =
-        Data._Sensitive Prelude.. Lens.coerced
+        Data._Sensitive
+          Prelude.. Lens.coerced
           Lens.# pTextList_,
       languageCode = pLanguageCode_
     }
@@ -127,7 +128,8 @@ instance Core.AWSRequest BatchDetectSyntax where
 
 instance Prelude.Hashable BatchDetectSyntax where
   hashWithSalt _salt BatchDetectSyntax' {..} =
-    _salt `Prelude.hashWithSalt` textList
+    _salt
+      `Prelude.hashWithSalt` textList
       `Prelude.hashWithSalt` languageCode
 
 instance Prelude.NFData BatchDetectSyntax where

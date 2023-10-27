@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.SystemResourceLimits
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.SystemResourceLimits where
@@ -104,7 +104,8 @@ instance Data.FromJSON SystemResourceLimits where
 
 instance Prelude.Hashable SystemResourceLimits where
   hashWithSalt _salt SystemResourceLimits' {..} =
-    _salt `Prelude.hashWithSalt` cpus
+    _salt
+      `Prelude.hashWithSalt` cpus
       `Prelude.hashWithSalt` memory
 
 instance Prelude.NFData SystemResourceLimits where

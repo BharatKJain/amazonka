@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.SortCriterion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.SortCriterion where
@@ -65,7 +65,8 @@ sortCriterion_sort = Lens.lens (\SortCriterion' {sort} -> sort) (\s@SortCriterio
 
 instance Prelude.Hashable SortCriterion where
   hashWithSalt _salt SortCriterion' {..} =
-    _salt `Prelude.hashWithSalt` fieldName
+    _salt
+      `Prelude.hashWithSalt` fieldName
       `Prelude.hashWithSalt` sort
 
 instance Prelude.NFData SortCriterion where

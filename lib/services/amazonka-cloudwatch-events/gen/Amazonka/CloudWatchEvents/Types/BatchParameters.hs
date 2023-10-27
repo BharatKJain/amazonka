@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.BatchParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.BatchParameters where
@@ -124,7 +124,8 @@ instance Data.FromJSON BatchParameters where
 
 instance Prelude.Hashable BatchParameters where
   hashWithSalt _salt BatchParameters' {..} =
-    _salt `Prelude.hashWithSalt` arrayProperties
+    _salt
+      `Prelude.hashWithSalt` arrayProperties
       `Prelude.hashWithSalt` retryStrategy
       `Prelude.hashWithSalt` jobDefinition
       `Prelude.hashWithSalt` jobName

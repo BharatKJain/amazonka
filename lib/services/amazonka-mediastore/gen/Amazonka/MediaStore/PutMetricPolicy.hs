@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaStore.PutMetricPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -152,7 +152,8 @@ instance Core.AWSRequest PutMetricPolicy where
 
 instance Prelude.Hashable PutMetricPolicy where
   hashWithSalt _salt PutMetricPolicy' {..} =
-    _salt `Prelude.hashWithSalt` containerName
+    _salt
+      `Prelude.hashWithSalt` containerName
       `Prelude.hashWithSalt` metricPolicy
 
 instance Prelude.NFData PutMetricPolicy where

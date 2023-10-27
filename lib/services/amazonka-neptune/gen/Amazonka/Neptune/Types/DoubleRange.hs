@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Neptune.Types.DoubleRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Neptune.Types.DoubleRange where
@@ -65,11 +65,13 @@ doubleRange_to = Lens.lens (\DoubleRange' {to} -> to) (\s@DoubleRange' {} a -> s
 instance Data.FromXML DoubleRange where
   parseXML x =
     DoubleRange'
-      Prelude.<$> (x Data..@? "From") Prelude.<*> (x Data..@? "To")
+      Prelude.<$> (x Data..@? "From")
+      Prelude.<*> (x Data..@? "To")
 
 instance Prelude.Hashable DoubleRange where
   hashWithSalt _salt DoubleRange' {..} =
-    _salt `Prelude.hashWithSalt` from
+    _salt
+      `Prelude.hashWithSalt` from
       `Prelude.hashWithSalt` to
 
 instance Prelude.NFData DoubleRange where

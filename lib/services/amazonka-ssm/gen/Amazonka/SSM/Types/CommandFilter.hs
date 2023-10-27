@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.CommandFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.CommandFilter where
@@ -321,7 +321,8 @@ commandFilter_value = Lens.lens (\CommandFilter' {value} -> value) (\s@CommandFi
 
 instance Prelude.Hashable CommandFilter where
   hashWithSalt _salt CommandFilter' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData CommandFilter where

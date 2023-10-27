@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53AutoNaming.Types.DnsProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53AutoNaming.Types.DnsProperties where
@@ -79,7 +79,8 @@ instance Data.FromJSON DnsProperties where
 
 instance Prelude.Hashable DnsProperties where
   hashWithSalt _salt DnsProperties' {..} =
-    _salt `Prelude.hashWithSalt` hostedZoneId
+    _salt
+      `Prelude.hashWithSalt` hostedZoneId
       `Prelude.hashWithSalt` soa
 
 instance Prelude.NFData DnsProperties where

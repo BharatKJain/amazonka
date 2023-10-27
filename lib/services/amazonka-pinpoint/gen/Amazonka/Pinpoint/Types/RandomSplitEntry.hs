@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.RandomSplitEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.RandomSplitEntry where
@@ -96,7 +96,8 @@ instance Data.FromJSON RandomSplitEntry where
 
 instance Prelude.Hashable RandomSplitEntry where
   hashWithSalt _salt RandomSplitEntry' {..} =
-    _salt `Prelude.hashWithSalt` nextActivity
+    _salt
+      `Prelude.hashWithSalt` nextActivity
       `Prelude.hashWithSalt` percentage
 
 instance Prelude.NFData RandomSplitEntry where

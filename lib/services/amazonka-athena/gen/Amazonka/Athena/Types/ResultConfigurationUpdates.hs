@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.ResultConfigurationUpdates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.ResultConfigurationUpdates where
@@ -263,7 +263,8 @@ resultConfigurationUpdates_removeOutputLocation = Lens.lens (\ResultConfiguratio
 
 instance Prelude.Hashable ResultConfigurationUpdates where
   hashWithSalt _salt ResultConfigurationUpdates' {..} =
-    _salt `Prelude.hashWithSalt` aclConfiguration
+    _salt
+      `Prelude.hashWithSalt` aclConfiguration
       `Prelude.hashWithSalt` encryptionConfiguration
       `Prelude.hashWithSalt` expectedBucketOwner
       `Prelude.hashWithSalt` outputLocation

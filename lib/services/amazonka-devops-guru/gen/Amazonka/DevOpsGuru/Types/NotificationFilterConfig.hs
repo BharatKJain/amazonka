@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.NotificationFilterConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.NotificationFilterConfig where
@@ -95,7 +95,8 @@ instance Data.FromJSON NotificationFilterConfig where
 
 instance Prelude.Hashable NotificationFilterConfig where
   hashWithSalt _salt NotificationFilterConfig' {..} =
-    _salt `Prelude.hashWithSalt` messageTypes
+    _salt
+      `Prelude.hashWithSalt` messageTypes
       `Prelude.hashWithSalt` severities
 
 instance Prelude.NFData NotificationFilterConfig where

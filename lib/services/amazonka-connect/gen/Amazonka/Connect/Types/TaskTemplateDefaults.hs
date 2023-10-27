@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.TaskTemplateDefaults
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.TaskTemplateDefaults where
@@ -61,7 +61,8 @@ instance Data.FromJSON TaskTemplateDefaults where
       "TaskTemplateDefaults"
       ( \x ->
           TaskTemplateDefaults'
-            Prelude.<$> ( x Data..:? "DefaultFieldValues"
+            Prelude.<$> ( x
+                            Data..:? "DefaultFieldValues"
                             Data..!= Prelude.mempty
                         )
       )

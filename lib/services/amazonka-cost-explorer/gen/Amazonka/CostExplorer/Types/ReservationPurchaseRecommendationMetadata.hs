@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.ReservationPurchaseRecommendationMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.ReservationPurchaseRecommendationMetadata where
@@ -75,7 +75,7 @@ instance
       ( \x ->
           ReservationPurchaseRecommendationMetadata'
             Prelude.<$> (x Data..:? "GenerationTimestamp")
-              Prelude.<*> (x Data..:? "RecommendationId")
+            Prelude.<*> (x Data..:? "RecommendationId")
       )
 
 instance
@@ -85,7 +85,8 @@ instance
   hashWithSalt
     _salt
     ReservationPurchaseRecommendationMetadata' {..} =
-      _salt `Prelude.hashWithSalt` generationTimestamp
+      _salt
+        `Prelude.hashWithSalt` generationTimestamp
         `Prelude.hashWithSalt` recommendationId
 
 instance

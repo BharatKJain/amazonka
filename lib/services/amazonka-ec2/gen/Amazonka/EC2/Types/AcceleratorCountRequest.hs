@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.AcceleratorCountRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.AcceleratorCountRequest where
@@ -76,7 +76,8 @@ acceleratorCountRequest_min = Lens.lens (\AcceleratorCountRequest' {min} -> min)
 
 instance Prelude.Hashable AcceleratorCountRequest where
   hashWithSalt _salt AcceleratorCountRequest' {..} =
-    _salt `Prelude.hashWithSalt` max
+    _salt
+      `Prelude.hashWithSalt` max
       `Prelude.hashWithSalt` min
 
 instance Prelude.NFData AcceleratorCountRequest where

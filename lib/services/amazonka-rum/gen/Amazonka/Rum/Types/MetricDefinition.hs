@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rum.Types.MetricDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rum.Types.MetricDefinition where
@@ -153,7 +153,8 @@ instance Data.FromJSON MetricDefinition where
 
 instance Prelude.Hashable MetricDefinition where
   hashWithSalt _salt MetricDefinition' {..} =
-    _salt `Prelude.hashWithSalt` dimensionKeys
+    _salt
+      `Prelude.hashWithSalt` dimensionKeys
       `Prelude.hashWithSalt` eventPattern
       `Prelude.hashWithSalt` unitLabel
       `Prelude.hashWithSalt` valueKey

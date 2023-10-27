@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MacieV2.ListAllowLists
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -99,21 +99,22 @@ instance Core.AWSPager ListAllowLists where
     | Core.stop
         ( rs
             Lens.^? listAllowListsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listAllowListsResponse_allowLists
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAllowLists_nextToken
           Lens..~ rs
-          Lens.^? listAllowListsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listAllowListsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAllowLists where
   type
@@ -132,7 +133,8 @@ instance Core.AWSRequest ListAllowLists where
 
 instance Prelude.Hashable ListAllowLists where
   hashWithSalt _salt ListAllowLists' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListAllowLists where

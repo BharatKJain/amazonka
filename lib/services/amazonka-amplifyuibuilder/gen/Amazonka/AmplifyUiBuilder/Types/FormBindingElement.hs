@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.FormBindingElement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.FormBindingElement where
@@ -78,7 +78,8 @@ instance Data.FromJSON FormBindingElement where
 
 instance Prelude.Hashable FormBindingElement where
   hashWithSalt _salt FormBindingElement' {..} =
-    _salt `Prelude.hashWithSalt` element
+    _salt
+      `Prelude.hashWithSalt` element
       `Prelude.hashWithSalt` property
 
 instance Prelude.NFData FormBindingElement where

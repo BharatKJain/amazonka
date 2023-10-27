@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.DirectoryConnectSettingsDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.DirectoryConnectSettingsDescription where
@@ -108,7 +108,8 @@ instance
       "DirectoryConnectSettingsDescription"
       ( \x ->
           DirectoryConnectSettingsDescription'
-            Prelude.<$> ( x Data..:? "AvailabilityZones"
+            Prelude.<$> ( x
+                            Data..:? "AvailabilityZones"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ConnectIps" Data..!= Prelude.mempty)
@@ -125,7 +126,8 @@ instance
   hashWithSalt
     _salt
     DirectoryConnectSettingsDescription' {..} =
-      _salt `Prelude.hashWithSalt` availabilityZones
+      _salt
+        `Prelude.hashWithSalt` availabilityZones
         `Prelude.hashWithSalt` connectIps
         `Prelude.hashWithSalt` customerUserName
         `Prelude.hashWithSalt` securityGroupId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.WorkmailAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.WorkmailAction where
@@ -103,7 +103,8 @@ instance Data.FromXML WorkmailAction where
 
 instance Prelude.Hashable WorkmailAction where
   hashWithSalt _salt WorkmailAction' {..} =
-    _salt `Prelude.hashWithSalt` topicArn
+    _salt
+      `Prelude.hashWithSalt` topicArn
       `Prelude.hashWithSalt` organizationArn
 
 instance Prelude.NFData WorkmailAction where

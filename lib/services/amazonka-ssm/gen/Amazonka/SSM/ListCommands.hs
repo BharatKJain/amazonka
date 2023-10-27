@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.ListCommands
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -146,20 +146,23 @@ instance Core.AWSPager ListCommands where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listCommandsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listCommandsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listCommandsResponse_commands Prelude.. Lens._Just
+            Lens.^? listCommandsResponse_commands
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listCommands_nextToken
           Lens..~ rs
-          Lens.^? listCommandsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listCommandsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListCommands where
   type AWSResponse ListCommands = ListCommandsResponse
@@ -176,7 +179,8 @@ instance Core.AWSRequest ListCommands where
 
 instance Prelude.Hashable ListCommands where
   hashWithSalt _salt ListCommands' {..} =
-    _salt `Prelude.hashWithSalt` commandId
+    _salt
+      `Prelude.hashWithSalt` commandId
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` maxResults

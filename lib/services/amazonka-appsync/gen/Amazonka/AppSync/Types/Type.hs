@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.Type
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.Type where
@@ -105,7 +105,8 @@ instance Data.FromJSON Type where
 
 instance Prelude.Hashable Type where
   hashWithSalt _salt Type' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` definition
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` format

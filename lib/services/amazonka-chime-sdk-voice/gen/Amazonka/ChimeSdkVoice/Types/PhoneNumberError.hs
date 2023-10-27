@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkVoice.Types.PhoneNumberError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkVoice.Types.PhoneNumberError where
@@ -80,7 +80,8 @@ instance Data.FromJSON PhoneNumberError where
 
 instance Prelude.Hashable PhoneNumberError where
   hashWithSalt _salt PhoneNumberError' {..} =
-    _salt `Prelude.hashWithSalt` errorCode
+    _salt
+      `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` phoneNumberId
 

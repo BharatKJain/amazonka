@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DeviceFarm.UpdateDeviceInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest UpdateDeviceInstance where
 
 instance Prelude.Hashable UpdateDeviceInstance where
   hashWithSalt _salt UpdateDeviceInstance' {..} =
-    _salt `Prelude.hashWithSalt` labels
+    _salt
+      `Prelude.hashWithSalt` labels
       `Prelude.hashWithSalt` profileArn
       `Prelude.hashWithSalt` arn
 

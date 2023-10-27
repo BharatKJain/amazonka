@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.LabelingJobResourceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.LabelingJobResourceConfig where
@@ -140,7 +140,8 @@ instance Data.FromJSON LabelingJobResourceConfig where
 
 instance Prelude.Hashable LabelingJobResourceConfig where
   hashWithSalt _salt LabelingJobResourceConfig' {..} =
-    _salt `Prelude.hashWithSalt` volumeKmsKeyId
+    _salt
+      `Prelude.hashWithSalt` volumeKmsKeyId
       `Prelude.hashWithSalt` vpcConfig
 
 instance Prelude.NFData LabelingJobResourceConfig where

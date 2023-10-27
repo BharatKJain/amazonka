@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.PlacementGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.PlacementGroup where
@@ -137,13 +137,16 @@ instance Data.FromXML PlacementGroup where
       Prelude.<*> (x Data..@? "spreadLevel")
       Prelude.<*> (x Data..@? "state")
       Prelude.<*> (x Data..@? "strategy")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable PlacementGroup where
   hashWithSalt _salt PlacementGroup' {..} =
-    _salt `Prelude.hashWithSalt` groupArn
+    _salt
+      `Prelude.hashWithSalt` groupArn
       `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` groupName
       `Prelude.hashWithSalt` partitionCount

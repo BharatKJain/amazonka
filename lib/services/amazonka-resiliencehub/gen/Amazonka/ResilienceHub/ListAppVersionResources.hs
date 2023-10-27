@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ResilienceHub.ListAppVersionResources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -151,7 +151,8 @@ instance Core.AWSRequest ListAppVersionResources where
           ListAppVersionResourcesResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "physicalResources"
+            Prelude.<*> ( x
+                            Data..?> "physicalResources"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..:> "resolutionId")
@@ -159,7 +160,8 @@ instance Core.AWSRequest ListAppVersionResources where
 
 instance Prelude.Hashable ListAppVersionResources where
   hashWithSalt _salt ListAppVersionResources' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` resolutionId
       `Prelude.hashWithSalt` appArn

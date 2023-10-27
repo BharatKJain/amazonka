@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.BucketAccessLogConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.BucketAccessLogConfig where
@@ -137,7 +137,8 @@ instance Data.FromJSON BucketAccessLogConfig where
 
 instance Prelude.Hashable BucketAccessLogConfig where
   hashWithSalt _salt BucketAccessLogConfig' {..} =
-    _salt `Prelude.hashWithSalt` destination
+    _salt
+      `Prelude.hashWithSalt` destination
       `Prelude.hashWithSalt` prefix
       `Prelude.hashWithSalt` enabled
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StorageGateway.Types.NFSFileShareDefaults
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StorageGateway.Types.NFSFileShareDefaults where
@@ -118,7 +118,8 @@ instance Data.FromJSON NFSFileShareDefaults where
 
 instance Prelude.Hashable NFSFileShareDefaults where
   hashWithSalt _salt NFSFileShareDefaults' {..} =
-    _salt `Prelude.hashWithSalt` directoryMode
+    _salt
+      `Prelude.hashWithSalt` directoryMode
       `Prelude.hashWithSalt` fileMode
       `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` ownerId

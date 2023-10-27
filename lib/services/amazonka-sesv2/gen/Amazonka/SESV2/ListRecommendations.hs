@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SESV2.ListRecommendations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,7 +136,8 @@ instance Core.AWSRequest ListRecommendations where
       ( \s h x ->
           ListRecommendationsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "Recommendations"
+            Prelude.<*> ( x
+                            Data..?> "Recommendations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -144,7 +145,8 @@ instance Core.AWSRequest ListRecommendations where
 
 instance Prelude.Hashable ListRecommendations where
   hashWithSalt _salt ListRecommendations' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` pageSize
 

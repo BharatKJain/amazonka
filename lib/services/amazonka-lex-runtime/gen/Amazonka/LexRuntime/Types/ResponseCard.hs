@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexRuntime.Types.ResponseCard
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexRuntime.Types.ResponseCard where
@@ -83,7 +83,8 @@ instance Data.FromJSON ResponseCard where
       ( \x ->
           ResponseCard'
             Prelude.<$> (x Data..:? "contentType")
-            Prelude.<*> ( x Data..:? "genericAttachments"
+            Prelude.<*> ( x
+                            Data..:? "genericAttachments"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "version")
@@ -91,7 +92,8 @@ instance Data.FromJSON ResponseCard where
 
 instance Prelude.Hashable ResponseCard where
   hashWithSalt _salt ResponseCard' {..} =
-    _salt `Prelude.hashWithSalt` contentType
+    _salt
+      `Prelude.hashWithSalt` contentType
       `Prelude.hashWithSalt` genericAttachments
       `Prelude.hashWithSalt` version
 

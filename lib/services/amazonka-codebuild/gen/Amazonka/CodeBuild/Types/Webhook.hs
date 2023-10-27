@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.Webhook
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.Webhook where
@@ -169,7 +169,8 @@ instance Data.FromJSON Webhook where
 
 instance Prelude.Hashable Webhook where
   hashWithSalt _salt Webhook' {..} =
-    _salt `Prelude.hashWithSalt` branchFilter
+    _salt
+      `Prelude.hashWithSalt` branchFilter
       `Prelude.hashWithSalt` buildType
       `Prelude.hashWithSalt` filterGroups
       `Prelude.hashWithSalt` lastModifiedSecret

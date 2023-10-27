@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.FormatOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.FormatOptions where
@@ -88,7 +88,8 @@ instance Data.FromJSON FormatOptions where
 
 instance Prelude.Hashable FormatOptions where
   hashWithSalt _salt FormatOptions' {..} =
-    _salt `Prelude.hashWithSalt` csv
+    _salt
+      `Prelude.hashWithSalt` csv
       `Prelude.hashWithSalt` excel
       `Prelude.hashWithSalt` json
 

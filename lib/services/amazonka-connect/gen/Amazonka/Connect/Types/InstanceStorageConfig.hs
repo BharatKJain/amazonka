@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.InstanceStorageConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.InstanceStorageConfig where
@@ -125,7 +125,8 @@ instance Data.FromJSON InstanceStorageConfig where
 
 instance Prelude.Hashable InstanceStorageConfig where
   hashWithSalt _salt InstanceStorageConfig' {..} =
-    _salt `Prelude.hashWithSalt` associationId
+    _salt
+      `Prelude.hashWithSalt` associationId
       `Prelude.hashWithSalt` kinesisFirehoseConfig
       `Prelude.hashWithSalt` kinesisStreamConfig
       `Prelude.hashWithSalt` kinesisVideoStreamConfig

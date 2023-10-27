@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.GetHostReservationPurchasePreview
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,12 +109,14 @@ instance
       ( \s h x ->
           GetHostReservationPurchasePreviewResponse'
             Prelude.<$> (x Data..@? "currencyCode")
-              Prelude.<*> ( x Data..@? "purchase" Core..!@ Prelude.mempty
-                              Prelude.>>= Core.may (Data.parseXMLList "item")
-                          )
-              Prelude.<*> (x Data..@? "totalHourlyPrice")
-              Prelude.<*> (x Data..@? "totalUpfrontPrice")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> ( x
+                            Data..@? "purchase"
+                            Core..!@ Prelude.mempty
+                            Prelude.>>= Core.may (Data.parseXMLList "item")
+                        )
+            Prelude.<*> (x Data..@? "totalHourlyPrice")
+            Prelude.<*> (x Data..@? "totalUpfrontPrice")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -124,7 +126,8 @@ instance
   hashWithSalt
     _salt
     GetHostReservationPurchasePreview' {..} =
-      _salt `Prelude.hashWithSalt` hostIdSet
+      _salt
+        `Prelude.hashWithSalt` hostIdSet
         `Prelude.hashWithSalt` offeringId
 
 instance

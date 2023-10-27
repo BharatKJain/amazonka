@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeGuruProfiler.AddNotificationChannels
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest AddNotificationChannels where
 
 instance Prelude.Hashable AddNotificationChannels where
   hashWithSalt _salt AddNotificationChannels' {..} =
-    _salt `Prelude.hashWithSalt` channels
+    _salt
+      `Prelude.hashWithSalt` channels
       `Prelude.hashWithSalt` profilingGroupName
 
 instance Prelude.NFData AddNotificationChannels where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.DevicePoolCompatibilityResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.DevicePoolCompatibilityResult where
@@ -82,7 +82,8 @@ instance Data.FromJSON DevicePoolCompatibilityResult where
           DevicePoolCompatibilityResult'
             Prelude.<$> (x Data..:? "compatible")
             Prelude.<*> (x Data..:? "device")
-            Prelude.<*> ( x Data..:? "incompatibilityMessages"
+            Prelude.<*> ( x
+                            Data..:? "incompatibilityMessages"
                             Data..!= Prelude.mempty
                         )
       )
@@ -92,7 +93,8 @@ instance
     DevicePoolCompatibilityResult
   where
   hashWithSalt _salt DevicePoolCompatibilityResult' {..} =
-    _salt `Prelude.hashWithSalt` compatible
+    _salt
+      `Prelude.hashWithSalt` compatible
       `Prelude.hashWithSalt` device
       `Prelude.hashWithSalt` incompatibilityMessages
 

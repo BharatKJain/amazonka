@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.AvailabilityZone
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.AvailabilityZone where
@@ -77,7 +77,8 @@ instance Data.FromJSON AvailabilityZone where
 
 instance Prelude.Hashable AvailabilityZone where
   hashWithSalt _salt AvailabilityZone' {..} =
-    _salt `Prelude.hashWithSalt` state
+    _salt
+      `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` zoneName
 
 instance Prelude.NFData AvailabilityZone where

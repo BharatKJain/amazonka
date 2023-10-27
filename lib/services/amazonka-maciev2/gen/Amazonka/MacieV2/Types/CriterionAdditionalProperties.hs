@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.CriterionAdditionalProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.CriterionAdditionalProperties where
@@ -177,7 +177,8 @@ instance
     CriterionAdditionalProperties
   where
   hashWithSalt _salt CriterionAdditionalProperties' {..} =
-    _salt `Prelude.hashWithSalt` eq
+    _salt
+      `Prelude.hashWithSalt` eq
       `Prelude.hashWithSalt` eqExactMatch
       `Prelude.hashWithSalt` gt
       `Prelude.hashWithSalt` gte

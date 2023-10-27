@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DocumentDB.CreateGlobalCluster
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -180,7 +180,8 @@ instance Core.AWSRequest CreateGlobalCluster where
 
 instance Prelude.Hashable CreateGlobalCluster where
   hashWithSalt _salt CreateGlobalCluster' {..} =
-    _salt `Prelude.hashWithSalt` databaseName
+    _salt
+      `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` deletionProtection
       `Prelude.hashWithSalt` engine
       `Prelude.hashWithSalt` engineVersion

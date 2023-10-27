@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.SnapStartResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.SnapStartResponse where
@@ -90,7 +90,8 @@ instance Data.FromJSON SnapStartResponse where
 
 instance Prelude.Hashable SnapStartResponse where
   hashWithSalt _salt SnapStartResponse' {..} =
-    _salt `Prelude.hashWithSalt` applyOn
+    _salt
+      `Prelude.hashWithSalt` applyOn
       `Prelude.hashWithSalt` optimizationStatus
 
 instance Prelude.NFData SnapStartResponse where

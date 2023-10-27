@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.DataValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.DataValue where
@@ -145,7 +145,8 @@ instance Data.FromJSON DataValue where
 
 instance Prelude.Hashable DataValue where
   hashWithSalt _salt DataValue' {..} =
-    _salt `Prelude.hashWithSalt` booleanValue
+    _salt
+      `Prelude.hashWithSalt` booleanValue
       `Prelude.hashWithSalt` doubleValue
       `Prelude.hashWithSalt` expression
       `Prelude.hashWithSalt` integerValue

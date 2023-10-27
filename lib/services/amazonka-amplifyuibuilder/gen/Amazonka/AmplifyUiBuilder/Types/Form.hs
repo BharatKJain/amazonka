@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.Form
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.Form where
@@ -204,7 +204,8 @@ instance Data.FromJSON Form where
             Prelude.<*> (x Data..: "id")
             Prelude.<*> (x Data..: "name")
             Prelude.<*> (x Data..: "schemaVersion")
-            Prelude.<*> ( x Data..:? "sectionalElements"
+            Prelude.<*> ( x
+                            Data..:? "sectionalElements"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "style")
@@ -212,7 +213,8 @@ instance Data.FromJSON Form where
 
 instance Prelude.Hashable Form where
   hashWithSalt _salt Form' {..} =
-    _salt `Prelude.hashWithSalt` cta
+    _salt
+      `Prelude.hashWithSalt` cta
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` appId
       `Prelude.hashWithSalt` dataType

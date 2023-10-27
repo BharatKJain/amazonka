@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DecimalDefaultValues
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DecimalDefaultValues where
@@ -79,7 +79,8 @@ instance Data.FromJSON DecimalDefaultValues where
 
 instance Prelude.Hashable DecimalDefaultValues where
   hashWithSalt _salt DecimalDefaultValues' {..} =
-    _salt `Prelude.hashWithSalt` dynamicValue
+    _salt
+      `Prelude.hashWithSalt` dynamicValue
       `Prelude.hashWithSalt` staticValues
 
 instance Prelude.NFData DecimalDefaultValues where

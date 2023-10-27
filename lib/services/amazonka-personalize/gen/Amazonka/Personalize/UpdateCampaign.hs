@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Personalize.UpdateCampaign
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -139,7 +139,8 @@ instance Core.AWSRequest UpdateCampaign where
 
 instance Prelude.Hashable UpdateCampaign where
   hashWithSalt _salt UpdateCampaign' {..} =
-    _salt `Prelude.hashWithSalt` campaignConfig
+    _salt
+      `Prelude.hashWithSalt` campaignConfig
       `Prelude.hashWithSalt` minProvisionedTPS
       `Prelude.hashWithSalt` solutionVersionArn
       `Prelude.hashWithSalt` campaignArn

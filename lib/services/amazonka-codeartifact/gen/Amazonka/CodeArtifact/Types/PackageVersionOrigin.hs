@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeArtifact.Types.PackageVersionOrigin
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeArtifact.Types.PackageVersionOrigin where
@@ -95,7 +95,8 @@ instance Data.FromJSON PackageVersionOrigin where
 
 instance Prelude.Hashable PackageVersionOrigin where
   hashWithSalt _salt PackageVersionOrigin' {..} =
-    _salt `Prelude.hashWithSalt` domainEntryPoint
+    _salt
+      `Prelude.hashWithSalt` domainEntryPoint
       `Prelude.hashWithSalt` originType
 
 instance Prelude.NFData PackageVersionOrigin where

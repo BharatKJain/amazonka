@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GamesParks.Types.Connection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GamesParks.Types.Connection where
@@ -68,12 +68,14 @@ instance Data.FromJSON Connection where
       "Connection"
       ( \x ->
           Connection'
-            Prelude.<$> (x Data..:? "Created") Prelude.<*> (x Data..:? "Id")
+            Prelude.<$> (x Data..:? "Created")
+            Prelude.<*> (x Data..:? "Id")
       )
 
 instance Prelude.Hashable Connection where
   hashWithSalt _salt Connection' {..} =
-    _salt `Prelude.hashWithSalt` created
+    _salt
+      `Prelude.hashWithSalt` created
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData Connection where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTJobsData.UpdateJobExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -236,7 +236,8 @@ instance Core.AWSRequest UpdateJobExecution where
 
 instance Prelude.Hashable UpdateJobExecution where
   hashWithSalt _salt UpdateJobExecution' {..} =
-    _salt `Prelude.hashWithSalt` executionNumber
+    _salt
+      `Prelude.hashWithSalt` executionNumber
       `Prelude.hashWithSalt` expectedVersion
       `Prelude.hashWithSalt` includeJobDocument
       `Prelude.hashWithSalt` includeJobExecutionState

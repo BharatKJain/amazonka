@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.MFADevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.MFADevice where
@@ -92,7 +92,8 @@ instance Data.FromXML MFADevice where
 
 instance Prelude.Hashable MFADevice where
   hashWithSalt _salt MFADevice' {..} =
-    _salt `Prelude.hashWithSalt` userName
+    _salt
+      `Prelude.hashWithSalt` userName
       `Prelude.hashWithSalt` serialNumber
       `Prelude.hashWithSalt` enableDate
 

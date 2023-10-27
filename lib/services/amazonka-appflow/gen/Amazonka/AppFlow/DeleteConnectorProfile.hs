@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppFlow.DeleteConnectorProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest DeleteConnectorProfile where
 
 instance Prelude.Hashable DeleteConnectorProfile where
   hashWithSalt _salt DeleteConnectorProfile' {..} =
-    _salt `Prelude.hashWithSalt` forceDelete
+    _salt
+      `Prelude.hashWithSalt` forceDelete
       `Prelude.hashWithSalt` connectorProfileName
 
 instance Prelude.NFData DeleteConnectorProfile where

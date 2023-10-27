@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.LaunchTemplateEbsBlockDevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.LaunchTemplateEbsBlockDevice where
@@ -139,7 +139,8 @@ instance
     LaunchTemplateEbsBlockDevice
   where
   hashWithSalt _salt LaunchTemplateEbsBlockDevice' {..} =
-    _salt `Prelude.hashWithSalt` deleteOnTermination
+    _salt
+      `Prelude.hashWithSalt` deleteOnTermination
       `Prelude.hashWithSalt` encrypted
       `Prelude.hashWithSalt` iops
       `Prelude.hashWithSalt` kmsKeyId

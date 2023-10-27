@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ClassicLinkInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ClassicLinkInstance where
@@ -91,18 +91,23 @@ classicLinkInstance_vpcId = Lens.lens (\ClassicLinkInstance' {vpcId} -> vpcId) (
 instance Data.FromXML ClassicLinkInstance where
   parseXML x =
     ClassicLinkInstance'
-      Prelude.<$> ( x Data..@? "groupSet" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "groupSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "instanceId")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "vpcId")
 
 instance Prelude.Hashable ClassicLinkInstance where
   hashWithSalt _salt ClassicLinkInstance' {..} =
-    _salt `Prelude.hashWithSalt` groups
+    _salt
+      `Prelude.hashWithSalt` groups
       `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` vpcId

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElastiCache.IncreaseReplicaCount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -155,7 +155,8 @@ instance Core.AWSRequest IncreaseReplicaCount where
 
 instance Prelude.Hashable IncreaseReplicaCount where
   hashWithSalt _salt IncreaseReplicaCount' {..} =
-    _salt `Prelude.hashWithSalt` newReplicaCount'
+    _salt
+      `Prelude.hashWithSalt` newReplicaCount'
       `Prelude.hashWithSalt` replicaConfiguration
       `Prelude.hashWithSalt` replicationGroupId
       `Prelude.hashWithSalt` applyImmediately

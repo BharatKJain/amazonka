@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53RecoveryCluster.Types.RoutingControl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53RecoveryCluster.Types.RoutingControl where
@@ -116,7 +116,8 @@ instance Data.FromJSON RoutingControl where
 
 instance Prelude.Hashable RoutingControl where
   hashWithSalt _salt RoutingControl' {..} =
-    _salt `Prelude.hashWithSalt` controlPanelArn
+    _salt
+      `Prelude.hashWithSalt` controlPanelArn
       `Prelude.hashWithSalt` controlPanelName
       `Prelude.hashWithSalt` routingControlArn
       `Prelude.hashWithSalt` routingControlName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Support.Types.Category
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Support.Types.Category where
@@ -70,12 +70,14 @@ instance Data.FromJSON Category where
       "Category"
       ( \x ->
           Category'
-            Prelude.<$> (x Data..:? "code") Prelude.<*> (x Data..:? "name")
+            Prelude.<$> (x Data..:? "code")
+            Prelude.<*> (x Data..:? "name")
       )
 
 instance Prelude.Hashable Category where
   hashWithSalt _salt Category' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData Category where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.SAMLProviderListEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.SAMLProviderListEntry where
@@ -80,7 +80,8 @@ instance Data.FromXML SAMLProviderListEntry where
 
 instance Prelude.Hashable SAMLProviderListEntry where
   hashWithSalt _salt SAMLProviderListEntry' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createDate
       `Prelude.hashWithSalt` validUntil
 

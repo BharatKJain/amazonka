@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFront.UpdateFunction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,7 +117,8 @@ newUpdateFunction
       { ifMatch = pIfMatch_,
         functionConfig = pFunctionConfig_,
         functionCode =
-          Data._Sensitive Prelude.. Data._Base64
+          Data._Sensitive
+            Prelude.. Data._Base64
             Lens.# pFunctionCode_,
         name = pName_
       }
@@ -163,7 +164,8 @@ instance Core.AWSRequest UpdateFunction where
 
 instance Prelude.Hashable UpdateFunction where
   hashWithSalt _salt UpdateFunction' {..} =
-    _salt `Prelude.hashWithSalt` ifMatch
+    _salt
+      `Prelude.hashWithSalt` ifMatch
       `Prelude.hashWithSalt` functionConfig
       `Prelude.hashWithSalt` functionCode
       `Prelude.hashWithSalt` name

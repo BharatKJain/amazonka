@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.BackupRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.BackupRule where
@@ -250,7 +250,8 @@ instance Data.FromJSON BackupRule where
             Prelude.<*> (x Data..:? "CopyActions" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "EnableContinuousBackup")
             Prelude.<*> (x Data..:? "Lifecycle")
-            Prelude.<*> ( x Data..:? "RecoveryPointTags"
+            Prelude.<*> ( x
+                            Data..:? "RecoveryPointTags"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "RuleId")

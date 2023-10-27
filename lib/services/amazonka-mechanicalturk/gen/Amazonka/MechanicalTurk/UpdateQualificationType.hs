@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MechanicalTurk.UpdateQualificationType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -276,7 +276,8 @@ instance Core.AWSRequest UpdateQualificationType where
 
 instance Prelude.Hashable UpdateQualificationType where
   hashWithSalt _salt UpdateQualificationType' {..} =
-    _salt `Prelude.hashWithSalt` answerKey
+    _salt
+      `Prelude.hashWithSalt` answerKey
       `Prelude.hashWithSalt` autoGranted
       `Prelude.hashWithSalt` autoGrantedValue
       `Prelude.hashWithSalt` description

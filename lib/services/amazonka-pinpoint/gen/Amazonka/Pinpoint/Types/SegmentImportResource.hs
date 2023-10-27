@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.SegmentImportResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.SegmentImportResource where
@@ -166,7 +166,8 @@ instance Data.FromJSON SegmentImportResource where
 
 instance Prelude.Hashable SegmentImportResource where
   hashWithSalt _salt SegmentImportResource' {..} =
-    _salt `Prelude.hashWithSalt` channelCounts
+    _salt
+      `Prelude.hashWithSalt` channelCounts
       `Prelude.hashWithSalt` format
       `Prelude.hashWithSalt` s3Url
       `Prelude.hashWithSalt` size

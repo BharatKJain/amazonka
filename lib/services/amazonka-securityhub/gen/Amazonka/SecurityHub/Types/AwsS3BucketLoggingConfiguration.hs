@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsS3BucketLoggingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsS3BucketLoggingConfiguration where
@@ -83,7 +83,8 @@ instance
   hashWithSalt
     _salt
     AwsS3BucketLoggingConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` destinationBucketName
+      _salt
+        `Prelude.hashWithSalt` destinationBucketName
         `Prelude.hashWithSalt` logFilePrefix
 
 instance

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FinSpaceData.ListChangesets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,21 +109,22 @@ instance Core.AWSPager ListChangesets where
     | Core.stop
         ( rs
             Lens.^? listChangesetsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listChangesetsResponse_changesets
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listChangesets_nextToken
           Lens..~ rs
-          Lens.^? listChangesetsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listChangesetsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListChangesets where
   type
@@ -142,7 +143,8 @@ instance Core.AWSRequest ListChangesets where
 
 instance Prelude.Hashable ListChangesets where
   hashWithSalt _salt ListChangesets' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` datasetId
 

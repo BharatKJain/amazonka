@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpsWorks.StopInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,7 +118,8 @@ instance Core.AWSRequest StopInstance where
 
 instance Prelude.Hashable StopInstance where
   hashWithSalt _salt StopInstance' {..} =
-    _salt `Prelude.hashWithSalt` force
+    _salt
+      `Prelude.hashWithSalt` force
       `Prelude.hashWithSalt` instanceId
 
 instance Prelude.NFData StopInstance where

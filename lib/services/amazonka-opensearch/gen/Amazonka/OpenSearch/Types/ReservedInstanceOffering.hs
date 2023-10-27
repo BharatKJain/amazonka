@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.ReservedInstanceOffering
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.ReservedInstanceOffering where
@@ -143,7 +143,8 @@ instance Data.FromJSON ReservedInstanceOffering where
             Prelude.<*> (x Data..:? "FixedPrice")
             Prelude.<*> (x Data..:? "InstanceType")
             Prelude.<*> (x Data..:? "PaymentOption")
-            Prelude.<*> ( x Data..:? "RecurringCharges"
+            Prelude.<*> ( x
+                            Data..:? "RecurringCharges"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ReservedInstanceOfferingId")
@@ -152,7 +153,8 @@ instance Data.FromJSON ReservedInstanceOffering where
 
 instance Prelude.Hashable ReservedInstanceOffering where
   hashWithSalt _salt ReservedInstanceOffering' {..} =
-    _salt `Prelude.hashWithSalt` currencyCode
+    _salt
+      `Prelude.hashWithSalt` currencyCode
       `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` fixedPrice
       `Prelude.hashWithSalt` instanceType

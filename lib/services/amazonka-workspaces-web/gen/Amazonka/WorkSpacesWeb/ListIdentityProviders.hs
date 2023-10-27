@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.ListIdentityProviders
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest ListIdentityProviders where
     Response.receiveJSON
       ( \s h x ->
           ListIdentityProvidersResponse'
-            Prelude.<$> ( x Data..?> "identityProviders"
+            Prelude.<$> ( x
+                            Data..?> "identityProviders"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -120,7 +121,8 @@ instance Core.AWSRequest ListIdentityProviders where
 
 instance Prelude.Hashable ListIdentityProviders where
   hashWithSalt _salt ListIdentityProviders' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` portalArn
 

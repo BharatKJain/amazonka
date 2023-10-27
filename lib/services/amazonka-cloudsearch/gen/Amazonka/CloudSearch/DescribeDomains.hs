@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudSearch.DescribeDomains
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -96,7 +96,8 @@ instance Core.AWSRequest DescribeDomains where
       ( \s h x ->
           DescribeDomainsResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..@? "DomainStatusList"
+            Prelude.<*> ( x
+                            Data..@? "DomainStatusList"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Data.parseXMLList "member"
                         )

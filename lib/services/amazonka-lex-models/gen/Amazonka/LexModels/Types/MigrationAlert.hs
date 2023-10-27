@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexModels.Types.MigrationAlert
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexModels.Types.MigrationAlert where
@@ -118,7 +118,8 @@ instance Data.FromJSON MigrationAlert where
 
 instance Prelude.Hashable MigrationAlert where
   hashWithSalt _salt MigrationAlert' {..} =
-    _salt `Prelude.hashWithSalt` details
+    _salt
+      `Prelude.hashWithSalt` details
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` referenceURLs
       `Prelude.hashWithSalt` type'

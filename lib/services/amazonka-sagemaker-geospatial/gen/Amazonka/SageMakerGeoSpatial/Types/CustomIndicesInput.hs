@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.CustomIndicesInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.CustomIndicesInput where
@@ -47,7 +47,6 @@ newCustomIndicesInput ::
 newCustomIndicesInput =
   CustomIndicesInput' {operations = Prelude.Nothing}
 
--- |
 customIndicesInput_operations :: Lens.Lens' CustomIndicesInput (Prelude.Maybe (Prelude.NonEmpty Operation))
 customIndicesInput_operations = Lens.lens (\CustomIndicesInput' {operations} -> operations) (\s@CustomIndicesInput' {} a -> s {operations = a} :: CustomIndicesInput) Prelude.. Lens.mapping Lens.coerced
 

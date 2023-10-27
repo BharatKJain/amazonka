@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFRegional.DeleteRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,7 +129,8 @@ instance Core.AWSRequest DeleteRule where
 
 instance Prelude.Hashable DeleteRule where
   hashWithSalt _salt DeleteRule' {..} =
-    _salt `Prelude.hashWithSalt` ruleId
+    _salt
+      `Prelude.hashWithSalt` ruleId
       `Prelude.hashWithSalt` changeToken
 
 instance Prelude.NFData DeleteRule where

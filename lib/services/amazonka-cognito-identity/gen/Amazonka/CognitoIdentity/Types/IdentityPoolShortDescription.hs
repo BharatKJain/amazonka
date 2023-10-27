@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentity.Types.IdentityPoolShortDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentity.Types.IdentityPoolShortDescription where
@@ -78,7 +78,8 @@ instance
     IdentityPoolShortDescription
   where
   hashWithSalt _salt IdentityPoolShortDescription' {..} =
-    _salt `Prelude.hashWithSalt` identityPoolId
+    _salt
+      `Prelude.hashWithSalt` identityPoolId
       `Prelude.hashWithSalt` identityPoolName
 
 instance Prelude.NFData IdentityPoolShortDescription where

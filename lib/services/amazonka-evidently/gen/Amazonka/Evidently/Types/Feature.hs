@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.Feature
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.Feature where
@@ -266,10 +266,12 @@ instance Data.FromJSON Feature where
           Feature'
             Prelude.<$> (x Data..:? "defaultVariation")
             Prelude.<*> (x Data..:? "description")
-            Prelude.<*> ( x Data..:? "entityOverrides"
+            Prelude.<*> ( x
+                            Data..:? "entityOverrides"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "evaluationRules"
+            Prelude.<*> ( x
+                            Data..:? "evaluationRules"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "project")
@@ -286,7 +288,8 @@ instance Data.FromJSON Feature where
 
 instance Prelude.Hashable Feature where
   hashWithSalt _salt Feature' {..} =
-    _salt `Prelude.hashWithSalt` defaultVariation
+    _salt
+      `Prelude.hashWithSalt` defaultVariation
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` entityOverrides
       `Prelude.hashWithSalt` evaluationRules

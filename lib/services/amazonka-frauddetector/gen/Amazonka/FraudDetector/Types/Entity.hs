@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.Entity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.Entity where
@@ -81,7 +81,8 @@ instance Data.FromJSON Entity where
 
 instance Prelude.Hashable Entity where
   hashWithSalt _salt Entity' {..} =
-    _salt `Prelude.hashWithSalt` entityType
+    _salt
+      `Prelude.hashWithSalt` entityType
       `Prelude.hashWithSalt` entityId
 
 instance Prelude.NFData Entity where

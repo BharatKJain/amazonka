@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.Collector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.Collector where
@@ -139,7 +139,8 @@ instance Data.FromJSON Collector where
 
 instance Prelude.Hashable Collector where
   hashWithSalt _salt Collector' {..} =
-    _salt `Prelude.hashWithSalt` collectorHealth
+    _salt
+      `Prelude.hashWithSalt` collectorHealth
       `Prelude.hashWithSalt` collectorId
       `Prelude.hashWithSalt` collectorVersion
       `Prelude.hashWithSalt` configurationSummary

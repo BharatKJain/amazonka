@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TargetReservationValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TargetReservationValue where
@@ -83,7 +83,8 @@ instance Data.FromXML TargetReservationValue where
 
 instance Prelude.Hashable TargetReservationValue where
   hashWithSalt _salt TargetReservationValue' {..} =
-    _salt `Prelude.hashWithSalt` reservationValue
+    _salt
+      `Prelude.hashWithSalt` reservationValue
       `Prelude.hashWithSalt` targetConfiguration
 
 instance Prelude.NFData TargetReservationValue where

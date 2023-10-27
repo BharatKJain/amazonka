@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.DescribeManagedJobTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest DescribeManagedJobTemplate where
           DescribeManagedJobTemplateResponse'
             Prelude.<$> (x Data..?> "description")
             Prelude.<*> (x Data..?> "document")
-            Prelude.<*> ( x Data..?> "documentParameters"
+            Prelude.<*> ( x
+                            Data..?> "documentParameters"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "environments" Core..!@ Prelude.mempty)
@@ -120,7 +121,8 @@ instance Core.AWSRequest DescribeManagedJobTemplate where
 
 instance Prelude.Hashable DescribeManagedJobTemplate where
   hashWithSalt _salt DescribeManagedJobTemplate' {..} =
-    _salt `Prelude.hashWithSalt` templateVersion
+    _salt
+      `Prelude.hashWithSalt` templateVersion
       `Prelude.hashWithSalt` templateName
 
 instance Prelude.NFData DescribeManagedJobTemplate where

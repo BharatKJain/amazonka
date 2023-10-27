@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Greengrass.CreateSubscriptionDefinitionVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,10 +117,10 @@ instance
       ( \s h x ->
           CreateSubscriptionDefinitionVersionResponse'
             Prelude.<$> (x Data..?> "Arn")
-              Prelude.<*> (x Data..?> "CreationTimestamp")
-              Prelude.<*> (x Data..?> "Id")
-              Prelude.<*> (x Data..?> "Version")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "CreationTimestamp")
+            Prelude.<*> (x Data..?> "Id")
+            Prelude.<*> (x Data..?> "Version")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -130,7 +130,8 @@ instance
   hashWithSalt
     _salt
     CreateSubscriptionDefinitionVersion' {..} =
-      _salt `Prelude.hashWithSalt` amznClientToken
+      _salt
+        `Prelude.hashWithSalt` amznClientToken
         `Prelude.hashWithSalt` subscriptions
         `Prelude.hashWithSalt` subscriptionDefinitionId
 

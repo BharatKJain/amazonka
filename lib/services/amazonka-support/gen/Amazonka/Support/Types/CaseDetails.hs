@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Support.Types.CaseDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Support.Types.CaseDetails where
@@ -295,7 +295,8 @@ instance Data.FromJSON CaseDetails where
           CaseDetails'
             Prelude.<$> (x Data..:? "caseId")
             Prelude.<*> (x Data..:? "categoryCode")
-            Prelude.<*> ( x Data..:? "ccEmailAddresses"
+            Prelude.<*> ( x
+                            Data..:? "ccEmailAddresses"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "displayId")
@@ -311,7 +312,8 @@ instance Data.FromJSON CaseDetails where
 
 instance Prelude.Hashable CaseDetails where
   hashWithSalt _salt CaseDetails' {..} =
-    _salt `Prelude.hashWithSalt` caseId
+    _salt
+      `Prelude.hashWithSalt` caseId
       `Prelude.hashWithSalt` categoryCode
       `Prelude.hashWithSalt` ccEmailAddresses
       `Prelude.hashWithSalt` displayId

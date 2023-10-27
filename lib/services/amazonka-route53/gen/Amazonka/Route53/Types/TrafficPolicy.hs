@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.TrafficPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.TrafficPolicy where
@@ -148,7 +148,8 @@ instance Data.FromXML TrafficPolicy where
 
 instance Prelude.Hashable TrafficPolicy where
   hashWithSalt _salt TrafficPolicy' {..} =
-    _salt `Prelude.hashWithSalt` comment
+    _salt
+      `Prelude.hashWithSalt` comment
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` name

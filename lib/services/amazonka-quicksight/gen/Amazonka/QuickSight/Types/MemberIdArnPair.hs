@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.MemberIdArnPair
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.MemberIdArnPair where
@@ -75,7 +75,8 @@ instance Data.FromJSON MemberIdArnPair where
 
 instance Prelude.Hashable MemberIdArnPair where
   hashWithSalt _salt MemberIdArnPair' {..} =
-    _salt `Prelude.hashWithSalt` memberArn
+    _salt
+      `Prelude.hashWithSalt` memberArn
       `Prelude.hashWithSalt` memberId
 
 instance Prelude.NFData MemberIdArnPair where

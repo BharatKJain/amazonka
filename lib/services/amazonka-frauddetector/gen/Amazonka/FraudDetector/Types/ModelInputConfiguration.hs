@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.ModelInputConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.ModelInputConfiguration where
@@ -132,7 +132,8 @@ instance Data.FromJSON ModelInputConfiguration where
 
 instance Prelude.Hashable ModelInputConfiguration where
   hashWithSalt _salt ModelInputConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` csvInputTemplate
+    _salt
+      `Prelude.hashWithSalt` csvInputTemplate
       `Prelude.hashWithSalt` eventTypeName
       `Prelude.hashWithSalt` format
       `Prelude.hashWithSalt` jsonInputTemplate

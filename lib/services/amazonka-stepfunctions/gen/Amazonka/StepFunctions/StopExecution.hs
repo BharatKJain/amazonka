@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StepFunctions.StopExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest StopExecution where
 
 instance Prelude.Hashable StopExecution where
   hashWithSalt _salt StopExecution' {..} =
-    _salt `Prelude.hashWithSalt` cause
+    _salt
+      `Prelude.hashWithSalt` cause
       `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` executionArn
 

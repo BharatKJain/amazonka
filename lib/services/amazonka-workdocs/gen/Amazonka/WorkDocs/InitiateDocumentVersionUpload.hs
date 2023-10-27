@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkDocs.InitiateDocumentVersionUpload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -180,7 +180,8 @@ instance
     InitiateDocumentVersionUpload
   where
   hashWithSalt _salt InitiateDocumentVersionUpload' {..} =
-    _salt `Prelude.hashWithSalt` authenticationToken
+    _salt
+      `Prelude.hashWithSalt` authenticationToken
       `Prelude.hashWithSalt` contentCreatedTimestamp
       `Prelude.hashWithSalt` contentModifiedTimestamp
       `Prelude.hashWithSalt` contentType

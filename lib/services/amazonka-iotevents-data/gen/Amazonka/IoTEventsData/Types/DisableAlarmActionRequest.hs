@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEventsData.Types.DisableAlarmActionRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEventsData.Types.DisableAlarmActionRequest where
@@ -95,7 +95,8 @@ disableAlarmActionRequest_alarmModelName = Lens.lens (\DisableAlarmActionRequest
 
 instance Prelude.Hashable DisableAlarmActionRequest where
   hashWithSalt _salt DisableAlarmActionRequest' {..} =
-    _salt `Prelude.hashWithSalt` keyValue
+    _salt
+      `Prelude.hashWithSalt` keyValue
       `Prelude.hashWithSalt` note
       `Prelude.hashWithSalt` requestId
       `Prelude.hashWithSalt` alarmModelName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Budgets.Types.Definition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Budgets.Types.Definition where
@@ -87,7 +87,8 @@ instance Data.FromJSON Definition where
 
 instance Prelude.Hashable Definition where
   hashWithSalt _salt Definition' {..} =
-    _salt `Prelude.hashWithSalt` iamActionDefinition
+    _salt
+      `Prelude.hashWithSalt` iamActionDefinition
       `Prelude.hashWithSalt` scpActionDefinition
       `Prelude.hashWithSalt` ssmActionDefinition
 

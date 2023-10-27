@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodePipeline.ListActionTypes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,19 +112,19 @@ instance Core.AWSPager ListActionTypes where
     | Core.stop
         ( rs
             Lens.^? listActionTypesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listActionTypesResponse_actionTypes) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listActionTypes_nextToken
           Lens..~ rs
           Lens.^? listActionTypesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListActionTypes where
   type
@@ -143,7 +143,8 @@ instance Core.AWSRequest ListActionTypes where
 
 instance Prelude.Hashable ListActionTypes where
   hashWithSalt _salt ListActionTypes' {..} =
-    _salt `Prelude.hashWithSalt` actionOwnerFilter
+    _salt
+      `Prelude.hashWithSalt` actionOwnerFilter
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` regionFilter
 

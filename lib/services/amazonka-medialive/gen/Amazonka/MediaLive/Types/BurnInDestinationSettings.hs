@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.BurnInDestinationSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.BurnInDestinationSettings where
@@ -370,7 +370,8 @@ instance Data.FromJSON BurnInDestinationSettings where
 
 instance Prelude.Hashable BurnInDestinationSettings where
   hashWithSalt _salt BurnInDestinationSettings' {..} =
-    _salt `Prelude.hashWithSalt` alignment
+    _salt
+      `Prelude.hashWithSalt` alignment
       `Prelude.hashWithSalt` backgroundColor
       `Prelude.hashWithSalt` backgroundOpacity
       `Prelude.hashWithSalt` font

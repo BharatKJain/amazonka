@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.ECSServiceProjectedUtilizationMetric
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.ECSServiceProjectedUtilizationMetric where
@@ -173,7 +173,8 @@ instance
   hashWithSalt
     _salt
     ECSServiceProjectedUtilizationMetric' {..} =
-      _salt `Prelude.hashWithSalt` lowerBoundValue
+      _salt
+        `Prelude.hashWithSalt` lowerBoundValue
         `Prelude.hashWithSalt` name
         `Prelude.hashWithSalt` statistic
         `Prelude.hashWithSalt` upperBoundValue

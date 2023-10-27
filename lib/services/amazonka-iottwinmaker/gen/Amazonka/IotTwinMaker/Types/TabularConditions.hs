@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.TabularConditions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.TabularConditions where
@@ -78,7 +78,8 @@ tabularConditions_propertyFilters = Lens.lens (\TabularConditions' {propertyFilt
 
 instance Prelude.Hashable TabularConditions where
   hashWithSalt _salt TabularConditions' {..} =
-    _salt `Prelude.hashWithSalt` orderBy
+    _salt
+      `Prelude.hashWithSalt` orderBy
       `Prelude.hashWithSalt` propertyFilters
 
 instance Prelude.NFData TabularConditions where

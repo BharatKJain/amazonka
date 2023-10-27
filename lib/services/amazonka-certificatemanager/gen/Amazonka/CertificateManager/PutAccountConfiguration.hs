@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CertificateManager.PutAccountConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,7 +116,8 @@ instance Core.AWSRequest PutAccountConfiguration where
 
 instance Prelude.Hashable PutAccountConfiguration where
   hashWithSalt _salt PutAccountConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` expiryEvents
+    _salt
+      `Prelude.hashWithSalt` expiryEvents
       `Prelude.hashWithSalt` idempotencyToken
 
 instance Prelude.NFData PutAccountConfiguration where

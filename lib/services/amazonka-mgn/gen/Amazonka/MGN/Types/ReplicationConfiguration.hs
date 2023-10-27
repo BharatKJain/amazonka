@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.ReplicationConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.ReplicationConfiguration where
@@ -200,16 +200,19 @@ instance Data.FromJSON ReplicationConfiguration where
             Prelude.<*> (x Data..:? "ebsEncryption")
             Prelude.<*> (x Data..:? "ebsEncryptionKeyArn")
             Prelude.<*> (x Data..:? "name")
-            Prelude.<*> ( x Data..:? "replicatedDisks"
+            Prelude.<*> ( x
+                            Data..:? "replicatedDisks"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "replicationServerInstanceType")
-            Prelude.<*> ( x Data..:? "replicationServersSecurityGroupsIDs"
+            Prelude.<*> ( x
+                            Data..:? "replicationServersSecurityGroupsIDs"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "sourceServerID")
             Prelude.<*> (x Data..:? "stagingAreaSubnetId")
-            Prelude.<*> ( x Data..:? "stagingAreaTags"
+            Prelude.<*> ( x
+                            Data..:? "stagingAreaTags"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "useDedicatedReplicationServer")

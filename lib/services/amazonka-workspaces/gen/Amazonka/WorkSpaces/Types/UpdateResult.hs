@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpaces.Types.UpdateResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpaces.Types.UpdateResult where
@@ -84,7 +84,8 @@ instance Data.FromJSON UpdateResult where
 
 instance Prelude.Hashable UpdateResult where
   hashWithSalt _salt UpdateResult' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` updateAvailable
 
 instance Prelude.NFData UpdateResult where

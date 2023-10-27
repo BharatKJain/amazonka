@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECRPublic.Types.Registry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECRPublic.Types.Registry where
@@ -132,7 +132,8 @@ instance Data.FromJSON Registry where
 
 instance Prelude.Hashable Registry where
   hashWithSalt _salt Registry' {..} =
-    _salt `Prelude.hashWithSalt` registryId
+    _salt
+      `Prelude.hashWithSalt` registryId
       `Prelude.hashWithSalt` registryArn
       `Prelude.hashWithSalt` registryUri
       `Prelude.hashWithSalt` verified

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.TestInvokeAuthorizer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -152,7 +152,8 @@ instance Core.AWSRequest TestInvokeAuthorizer where
           TestInvokeAuthorizerResponse'
             Prelude.<$> (x Data..?> "disconnectAfterInSeconds")
             Prelude.<*> (x Data..?> "isAuthenticated")
-            Prelude.<*> ( x Data..?> "policyDocuments"
+            Prelude.<*> ( x
+                            Data..?> "policyDocuments"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "principalId")
@@ -162,7 +163,8 @@ instance Core.AWSRequest TestInvokeAuthorizer where
 
 instance Prelude.Hashable TestInvokeAuthorizer where
   hashWithSalt _salt TestInvokeAuthorizer' {..} =
-    _salt `Prelude.hashWithSalt` httpContext
+    _salt
+      `Prelude.hashWithSalt` httpContext
       `Prelude.hashWithSalt` mqttContext
       `Prelude.hashWithSalt` tlsContext
       `Prelude.hashWithSalt` token

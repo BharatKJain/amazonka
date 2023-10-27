@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.SimpleCondition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.SimpleCondition where
@@ -93,7 +93,8 @@ instance Data.FromJSON SimpleCondition where
 
 instance Prelude.Hashable SimpleCondition where
   hashWithSalt _salt SimpleCondition' {..} =
-    _salt `Prelude.hashWithSalt` eventCondition
+    _salt
+      `Prelude.hashWithSalt` eventCondition
       `Prelude.hashWithSalt` segmentCondition
       `Prelude.hashWithSalt` segmentDimensions
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SQS.GetQueueUrl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -26,7 +26,7 @@
 -- @QueueOwnerAWSAccountId@ parameter to specify the account ID of the
 -- queue\'s owner. The queue\'s owner must grant you permission to access
 -- the queue. For more information about shared queue access, see
--- @ AddPermission @ or see
+-- @ @@AddPermission@@ @ or see
 -- <https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-writing-an-sqs-policy.html#write-messages-to-shared-queue Allow Developers to Write Messages to a Shared Queue>
 -- in the /Amazon SQS Developer Guide/.
 module Amazonka.SQS.GetQueueUrl
@@ -127,7 +127,8 @@ instance Core.AWSRequest GetQueueUrl where
 
 instance Prelude.Hashable GetQueueUrl where
   hashWithSalt _salt GetQueueUrl' {..} =
-    _salt `Prelude.hashWithSalt` queueOwnerAWSAccountId
+    _salt
+      `Prelude.hashWithSalt` queueOwnerAWSAccountId
       `Prelude.hashWithSalt` queueName
 
 instance Prelude.NFData GetQueueUrl where

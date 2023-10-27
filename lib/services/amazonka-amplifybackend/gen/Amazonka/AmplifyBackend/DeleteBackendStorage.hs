@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AmplifyBackend.DeleteBackendStorage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -140,7 +140,8 @@ instance Core.AWSRequest DeleteBackendStorage where
 
 instance Prelude.Hashable DeleteBackendStorage where
   hashWithSalt _salt DeleteBackendStorage' {..} =
-    _salt `Prelude.hashWithSalt` appId
+    _salt
+      `Prelude.hashWithSalt` appId
       `Prelude.hashWithSalt` backendEnvironmentName
       `Prelude.hashWithSalt` serviceName
       `Prelude.hashWithSalt` resourceName

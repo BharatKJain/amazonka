@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DateTimeParameterDeclaration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DateTimeParameterDeclaration where
@@ -109,7 +109,8 @@ instance
     DateTimeParameterDeclaration
   where
   hashWithSalt _salt DateTimeParameterDeclaration' {..} =
-    _salt `Prelude.hashWithSalt` defaultValues
+    _salt
+      `Prelude.hashWithSalt` defaultValues
       `Prelude.hashWithSalt` timeGranularity
       `Prelude.hashWithSalt` valueWhenUnset
       `Prelude.hashWithSalt` name

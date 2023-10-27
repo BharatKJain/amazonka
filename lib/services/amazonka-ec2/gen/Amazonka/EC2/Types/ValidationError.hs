@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ValidationError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ValidationError where
@@ -85,7 +85,8 @@ instance Data.FromXML ValidationError where
 
 instance Prelude.Hashable ValidationError where
   hashWithSalt _salt ValidationError' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData ValidationError where

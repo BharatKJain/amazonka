@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.Types.IdentityProvider
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpacesWeb.Types.IdentityProvider where
@@ -273,7 +273,8 @@ instance Data.FromJSON IdentityProvider where
       "IdentityProvider"
       ( \x ->
           IdentityProvider'
-            Prelude.<$> ( x Data..:? "identityProviderDetails"
+            Prelude.<$> ( x
+                            Data..:? "identityProviderDetails"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "identityProviderName")

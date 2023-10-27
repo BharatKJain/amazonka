@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Neptune.Types.OptionGroupMembership
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Neptune.Types.OptionGroupMembership where
@@ -71,7 +71,8 @@ instance Data.FromXML OptionGroupMembership where
 
 instance Prelude.Hashable OptionGroupMembership where
   hashWithSalt _salt OptionGroupMembership' {..} =
-    _salt `Prelude.hashWithSalt` optionGroupName
+    _salt
+      `Prelude.hashWithSalt` optionGroupName
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData OptionGroupMembership where

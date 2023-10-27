@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.ChallengeResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.ChallengeResponse where
@@ -95,7 +95,8 @@ instance Data.FromJSON ChallengeResponse where
 
 instance Prelude.Hashable ChallengeResponse where
   hashWithSalt _salt ChallengeResponse' {..} =
-    _salt `Prelude.hashWithSalt` failureReason
+    _salt
+      `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` responseCode
       `Prelude.hashWithSalt` solveTimestamp
 

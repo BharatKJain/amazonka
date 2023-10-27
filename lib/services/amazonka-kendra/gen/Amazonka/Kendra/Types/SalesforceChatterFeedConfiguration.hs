@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.SalesforceChatterFeedConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.SalesforceChatterFeedConfiguration where
@@ -128,7 +128,8 @@ instance
   hashWithSalt
     _salt
     SalesforceChatterFeedConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` documentTitleFieldName
+      _salt
+        `Prelude.hashWithSalt` documentTitleFieldName
         `Prelude.hashWithSalt` fieldMappings
         `Prelude.hashWithSalt` includeFilterTypes
         `Prelude.hashWithSalt` documentDataFieldName

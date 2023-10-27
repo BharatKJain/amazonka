@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTFleetWise.Types.UpdateVehicleRequestItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTFleetWise.Types.UpdateVehicleRequestItem where
@@ -119,7 +119,8 @@ updateVehicleRequestItem_vehicleName = Lens.lens (\UpdateVehicleRequestItem' {ve
 
 instance Prelude.Hashable UpdateVehicleRequestItem where
   hashWithSalt _salt UpdateVehicleRequestItem' {..} =
-    _salt `Prelude.hashWithSalt` attributeUpdateMode
+    _salt
+      `Prelude.hashWithSalt` attributeUpdateMode
       `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` decoderManifestArn
       `Prelude.hashWithSalt` modelManifestArn

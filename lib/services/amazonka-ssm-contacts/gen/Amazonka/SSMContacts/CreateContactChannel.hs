@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSMContacts.CreateContactChannel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -208,7 +208,8 @@ instance Core.AWSRequest CreateContactChannel where
 
 instance Prelude.Hashable CreateContactChannel where
   hashWithSalt _salt CreateContactChannel' {..} =
-    _salt `Prelude.hashWithSalt` deferActivation
+    _salt
+      `Prelude.hashWithSalt` deferActivation
       `Prelude.hashWithSalt` idempotencyToken
       `Prelude.hashWithSalt` contactId
       `Prelude.hashWithSalt` name

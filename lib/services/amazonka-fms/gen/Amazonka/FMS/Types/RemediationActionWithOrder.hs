@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.RemediationActionWithOrder
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.RemediationActionWithOrder where
@@ -76,7 +76,8 @@ instance Data.FromJSON RemediationActionWithOrder where
 
 instance Prelude.Hashable RemediationActionWithOrder where
   hashWithSalt _salt RemediationActionWithOrder' {..} =
-    _salt `Prelude.hashWithSalt` order
+    _salt
+      `Prelude.hashWithSalt` order
       `Prelude.hashWithSalt` remediationAction
 
 instance Prelude.NFData RemediationActionWithOrder where

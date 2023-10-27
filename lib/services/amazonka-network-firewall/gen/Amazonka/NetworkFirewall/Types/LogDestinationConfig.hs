@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.LogDestinationConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.LogDestinationConfig where
@@ -168,14 +168,16 @@ instance Data.FromJSON LogDestinationConfig where
           LogDestinationConfig'
             Prelude.<$> (x Data..: "LogType")
             Prelude.<*> (x Data..: "LogDestinationType")
-            Prelude.<*> ( x Data..:? "LogDestination"
+            Prelude.<*> ( x
+                            Data..:? "LogDestination"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable LogDestinationConfig where
   hashWithSalt _salt LogDestinationConfig' {..} =
-    _salt `Prelude.hashWithSalt` logType
+    _salt
+      `Prelude.hashWithSalt` logType
       `Prelude.hashWithSalt` logDestinationType
       `Prelude.hashWithSalt` logDestination
 

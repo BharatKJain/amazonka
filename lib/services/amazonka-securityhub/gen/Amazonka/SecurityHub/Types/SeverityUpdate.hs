@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.SeverityUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.SeverityUpdate where
@@ -152,7 +152,8 @@ severityUpdate_product = Lens.lens (\SeverityUpdate' {product} -> product) (\s@S
 
 instance Prelude.Hashable SeverityUpdate where
   hashWithSalt _salt SeverityUpdate' {..} =
-    _salt `Prelude.hashWithSalt` label
+    _salt
+      `Prelude.hashWithSalt` label
       `Prelude.hashWithSalt` normalized
       `Prelude.hashWithSalt` product
 

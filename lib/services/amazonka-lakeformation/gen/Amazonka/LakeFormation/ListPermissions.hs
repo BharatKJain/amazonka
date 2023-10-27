@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LakeFormation.ListPermissions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -179,7 +179,8 @@ instance Core.AWSRequest ListPermissions where
       ( \s h x ->
           ListPermissionsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "PrincipalResourcePermissions"
+            Prelude.<*> ( x
+                            Data..?> "PrincipalResourcePermissions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -187,7 +188,8 @@ instance Core.AWSRequest ListPermissions where
 
 instance Prelude.Hashable ListPermissions where
   hashWithSalt _salt ListPermissions' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` includeRelated
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

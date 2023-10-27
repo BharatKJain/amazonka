@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.MentionSentiment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.MentionSentiment where
@@ -78,7 +78,8 @@ instance Data.FromJSON MentionSentiment where
 
 instance Prelude.Hashable MentionSentiment where
   hashWithSalt _salt MentionSentiment' {..} =
-    _salt `Prelude.hashWithSalt` sentiment
+    _salt
+      `Prelude.hashWithSalt` sentiment
       `Prelude.hashWithSalt` sentimentScore
 
 instance Prelude.NFData MentionSentiment where

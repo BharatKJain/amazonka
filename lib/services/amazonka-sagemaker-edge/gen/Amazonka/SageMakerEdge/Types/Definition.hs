@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerEdge.Types.Definition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerEdge.Types.Definition where
@@ -96,7 +96,8 @@ instance Data.FromJSON Definition where
 
 instance Prelude.Hashable Definition where
   hashWithSalt _salt Definition' {..} =
-    _salt `Prelude.hashWithSalt` checksum
+    _salt
+      `Prelude.hashWithSalt` checksum
       `Prelude.hashWithSalt` modelHandle
       `Prelude.hashWithSalt` s3Url
       `Prelude.hashWithSalt` state

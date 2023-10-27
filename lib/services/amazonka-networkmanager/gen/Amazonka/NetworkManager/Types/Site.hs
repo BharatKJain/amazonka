@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.Site
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.Site where
@@ -137,7 +137,8 @@ instance Data.FromJSON Site where
 
 instance Prelude.Hashable Site where
   hashWithSalt _salt Site' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` globalNetworkId
       `Prelude.hashWithSalt` location

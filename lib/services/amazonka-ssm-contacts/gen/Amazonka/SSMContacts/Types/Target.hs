@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMContacts.Types.Target
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMContacts.Types.Target where
@@ -76,7 +76,8 @@ instance Data.FromJSON Target where
 
 instance Prelude.Hashable Target where
   hashWithSalt _salt Target' {..} =
-    _salt `Prelude.hashWithSalt` channelTargetInfo
+    _salt
+      `Prelude.hashWithSalt` channelTargetInfo
       `Prelude.hashWithSalt` contactTargetInfo
 
 instance Prelude.NFData Target where

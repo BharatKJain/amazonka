@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.Message
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.Message where
@@ -85,7 +85,8 @@ message_payload = Lens.lens (\Message' {payload} -> payload) (\s@Message' {} a -
 
 instance Prelude.Hashable Message where
   hashWithSalt _salt Message' {..} =
-    _salt `Prelude.hashWithSalt` messageId
+    _salt
+      `Prelude.hashWithSalt` messageId
       `Prelude.hashWithSalt` payload
 
 instance Prelude.NFData Message where

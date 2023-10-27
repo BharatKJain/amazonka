@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.Compute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.Compute where
@@ -211,7 +211,8 @@ instance Data.FromJSON Compute where
 
 instance Prelude.Hashable Compute where
   hashWithSalt _salt Compute' {..} =
-    _salt `Prelude.hashWithSalt` computeArn
+    _salt
+      `Prelude.hashWithSalt` computeArn
       `Prelude.hashWithSalt` computeName
       `Prelude.hashWithSalt` computeStatus
       `Prelude.hashWithSalt` creationTime

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFV2.CreateIPSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -289,7 +289,8 @@ instance Core.AWSRequest CreateIPSet where
 
 instance Prelude.Hashable CreateIPSet where
   hashWithSalt _salt CreateIPSet' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` scope

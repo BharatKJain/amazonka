@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ArtifactDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ArtifactDetail where
@@ -76,7 +76,8 @@ instance Data.FromJSON ArtifactDetail where
 
 instance Prelude.Hashable ArtifactDetail where
   hashWithSalt _salt ArtifactDetail' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` s3location
 
 instance Prelude.NFData ArtifactDetail where

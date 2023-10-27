@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LicenseManager.CreateLicenseVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -245,7 +245,8 @@ instance Core.AWSRequest CreateLicenseVersion where
 
 instance Prelude.Hashable CreateLicenseVersion where
   hashWithSalt _salt CreateLicenseVersion' {..} =
-    _salt `Prelude.hashWithSalt` licenseMetadata
+    _salt
+      `Prelude.hashWithSalt` licenseMetadata
       `Prelude.hashWithSalt` sourceVersion
       `Prelude.hashWithSalt` licenseArn
       `Prelude.hashWithSalt` licenseName

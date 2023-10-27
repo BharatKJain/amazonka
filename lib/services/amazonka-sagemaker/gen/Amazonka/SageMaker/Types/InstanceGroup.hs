@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.InstanceGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.InstanceGroup where
@@ -97,7 +97,8 @@ instance Data.FromJSON InstanceGroup where
 
 instance Prelude.Hashable InstanceGroup where
   hashWithSalt _salt InstanceGroup' {..} =
-    _salt `Prelude.hashWithSalt` instanceType
+    _salt
+      `Prelude.hashWithSalt` instanceType
       `Prelude.hashWithSalt` instanceCount
       `Prelude.hashWithSalt` instanceGroupName
 

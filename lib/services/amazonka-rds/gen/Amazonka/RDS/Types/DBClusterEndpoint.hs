@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.DBClusterEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.DBClusterEndpoint where
@@ -192,17 +192,22 @@ instance Data.FromXML DBClusterEndpoint where
       Prelude.<*> (x Data..@? "DBClusterIdentifier")
       Prelude.<*> (x Data..@? "Endpoint")
       Prelude.<*> (x Data..@? "EndpointType")
-      Prelude.<*> ( x Data..@? "ExcludedMembers" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "ExcludedMembers"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "StaticMembers" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "StaticMembers"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "Status")
 
 instance Prelude.Hashable DBClusterEndpoint where
   hashWithSalt _salt DBClusterEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` customEndpointType
+    _salt
+      `Prelude.hashWithSalt` customEndpointType
       `Prelude.hashWithSalt` dbClusterEndpointArn
       `Prelude.hashWithSalt` dbClusterEndpointIdentifier
       `Prelude.hashWithSalt` dbClusterEndpointResourceIdentifier

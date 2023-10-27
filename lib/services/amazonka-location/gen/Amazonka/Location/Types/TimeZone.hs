@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.TimeZone
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.TimeZone where
@@ -74,12 +74,14 @@ instance Data.FromJSON TimeZone where
       "TimeZone"
       ( \x ->
           TimeZone'
-            Prelude.<$> (x Data..:? "Offset") Prelude.<*> (x Data..: "Name")
+            Prelude.<$> (x Data..:? "Offset")
+            Prelude.<*> (x Data..: "Name")
       )
 
 instance Prelude.Hashable TimeZone where
   hashWithSalt _salt TimeZone' {..} =
-    _salt `Prelude.hashWithSalt` offset
+    _salt
+      `Prelude.hashWithSalt` offset
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData TimeZone where

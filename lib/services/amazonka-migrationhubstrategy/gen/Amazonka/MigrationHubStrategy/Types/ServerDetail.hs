@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.ServerDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.ServerDetail where
@@ -192,13 +192,15 @@ instance Data.FromJSON ServerDetail where
             Prelude.<$> (x Data..:? "antipatternReportS3Object")
             Prelude.<*> (x Data..:? "antipatternReportStatus")
             Prelude.<*> (x Data..:? "antipatternReportStatusMessage")
-            Prelude.<*> ( x Data..:? "applicationComponentStrategySummary"
+            Prelude.<*> ( x
+                            Data..:? "applicationComponentStrategySummary"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "dataCollectionStatus")
             Prelude.<*> (x Data..:? "id")
             Prelude.<*> (x Data..:? "lastAnalyzedTimestamp")
-            Prelude.<*> ( x Data..:? "listAntipatternSeveritySummary"
+            Prelude.<*> ( x
+                            Data..:? "listAntipatternSeveritySummary"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "name")

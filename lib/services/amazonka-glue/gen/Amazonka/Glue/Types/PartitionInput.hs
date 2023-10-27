@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.PartitionInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.PartitionInput where
@@ -116,7 +116,8 @@ partitionInput_values = Lens.lens (\PartitionInput' {values} -> values) (\s@Part
 
 instance Prelude.Hashable PartitionInput where
   hashWithSalt _salt PartitionInput' {..} =
-    _salt `Prelude.hashWithSalt` lastAccessTime
+    _salt
+      `Prelude.hashWithSalt` lastAccessTime
       `Prelude.hashWithSalt` lastAnalyzedTime
       `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` storageDescriptor

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.GlobalIdentity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.GlobalIdentity where
@@ -65,7 +65,8 @@ globalIdentity_geranCid = Lens.lens (\GlobalIdentity' {geranCid} -> geranCid) (\
 
 instance Prelude.Hashable GlobalIdentity where
   hashWithSalt _salt GlobalIdentity' {..} =
-    _salt `Prelude.hashWithSalt` lac
+    _salt
+      `Prelude.hashWithSalt` lac
       `Prelude.hashWithSalt` geranCid
 
 instance Prelude.NFData GlobalIdentity where

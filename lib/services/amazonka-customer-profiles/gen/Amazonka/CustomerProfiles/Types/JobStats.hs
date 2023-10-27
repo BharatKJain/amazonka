@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CustomerProfiles.Types.JobStats
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CustomerProfiles.Types.JobStats where
@@ -84,7 +84,8 @@ instance Data.FromJSON JobStats where
 
 instance Prelude.Hashable JobStats where
   hashWithSalt _salt JobStats' {..} =
-    _salt `Prelude.hashWithSalt` numberOfMatchesFound
+    _salt
+      `Prelude.hashWithSalt` numberOfMatchesFound
       `Prelude.hashWithSalt` numberOfMergesDone
       `Prelude.hashWithSalt` numberOfProfilesReviewed
 

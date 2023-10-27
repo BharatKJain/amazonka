@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.EffectivePatch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.EffectivePatch where
@@ -95,7 +95,8 @@ instance Data.FromJSON EffectivePatch where
 
 instance Prelude.Hashable EffectivePatch where
   hashWithSalt _salt EffectivePatch' {..} =
-    _salt `Prelude.hashWithSalt` patch
+    _salt
+      `Prelude.hashWithSalt` patch
       `Prelude.hashWithSalt` patchStatus
 
 instance Prelude.NFData EffectivePatch where

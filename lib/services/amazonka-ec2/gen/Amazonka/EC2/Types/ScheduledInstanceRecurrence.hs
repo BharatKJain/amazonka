@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ScheduledInstanceRecurrence
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ScheduledInstanceRecurrence where
@@ -108,7 +108,8 @@ instance Data.FromXML ScheduledInstanceRecurrence where
     ScheduledInstanceRecurrence'
       Prelude.<$> (x Data..@? "frequency")
       Prelude.<*> (x Data..@? "interval")
-      Prelude.<*> ( x Data..@? "occurrenceDaySet"
+      Prelude.<*> ( x
+                      Data..@? "occurrenceDaySet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
@@ -117,7 +118,8 @@ instance Data.FromXML ScheduledInstanceRecurrence where
 
 instance Prelude.Hashable ScheduledInstanceRecurrence where
   hashWithSalt _salt ScheduledInstanceRecurrence' {..} =
-    _salt `Prelude.hashWithSalt` frequency
+    _salt
+      `Prelude.hashWithSalt` frequency
       `Prelude.hashWithSalt` interval
       `Prelude.hashWithSalt` occurrenceDaySet
       `Prelude.hashWithSalt` occurrenceRelativeToEnd

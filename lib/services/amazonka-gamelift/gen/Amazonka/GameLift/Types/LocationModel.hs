@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.LocationModel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.LocationModel where
@@ -86,7 +86,8 @@ instance Data.FromJSON LocationModel where
 
 instance Prelude.Hashable LocationModel where
   hashWithSalt _salt LocationModel' {..} =
-    _salt `Prelude.hashWithSalt` locationArn
+    _salt
+      `Prelude.hashWithSalt` locationArn
       `Prelude.hashWithSalt` locationName
 
 instance Prelude.NFData LocationModel where

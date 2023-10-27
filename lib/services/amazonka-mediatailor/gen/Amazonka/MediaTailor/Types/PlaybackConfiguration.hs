@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.PlaybackConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.PlaybackConfiguration where
@@ -351,7 +351,8 @@ instance Data.FromJSON PlaybackConfiguration where
             Prelude.<*> (x Data..:? "AvailSuppression")
             Prelude.<*> (x Data..:? "Bumper")
             Prelude.<*> (x Data..:? "CdnConfiguration")
-            Prelude.<*> ( x Data..:? "ConfigurationAliases"
+            Prelude.<*> ( x
+                            Data..:? "ConfigurationAliases"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "DashConfiguration")
@@ -372,7 +373,8 @@ instance Data.FromJSON PlaybackConfiguration where
 
 instance Prelude.Hashable PlaybackConfiguration where
   hashWithSalt _salt PlaybackConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` adDecisionServerUrl
+    _salt
+      `Prelude.hashWithSalt` adDecisionServerUrl
       `Prelude.hashWithSalt` availSuppression
       `Prelude.hashWithSalt` bumper
       `Prelude.hashWithSalt` cdnConfiguration

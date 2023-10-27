@@ -16,7 +16,7 @@
 -- Module      : Amazonka.TimeStreamQuery.UpdateScheduledQuery
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -96,7 +96,8 @@ instance Core.AWSRequest UpdateScheduledQuery where
 
 instance Prelude.Hashable UpdateScheduledQuery where
   hashWithSalt _salt UpdateScheduledQuery' {..} =
-    _salt `Prelude.hashWithSalt` scheduledQueryArn
+    _salt
+      `Prelude.hashWithSalt` scheduledQueryArn
       `Prelude.hashWithSalt` state
 
 instance Prelude.NFData UpdateScheduledQuery where

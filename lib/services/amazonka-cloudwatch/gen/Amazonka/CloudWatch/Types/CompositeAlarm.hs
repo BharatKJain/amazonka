@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatch.Types.CompositeAlarm
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatch.Types.CompositeAlarm where
@@ -313,7 +313,9 @@ instance Data.FromXML CompositeAlarm where
       Prelude.<*> (x Data..@? "ActionsSuppressor")
       Prelude.<*> (x Data..@? "ActionsSuppressorExtensionPeriod")
       Prelude.<*> (x Data..@? "ActionsSuppressorWaitPeriod")
-      Prelude.<*> ( x Data..@? "AlarmActions" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "AlarmActions"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "AlarmArn")
@@ -321,11 +323,14 @@ instance Data.FromXML CompositeAlarm where
       Prelude.<*> (x Data..@? "AlarmDescription")
       Prelude.<*> (x Data..@? "AlarmName")
       Prelude.<*> (x Data..@? "AlarmRule")
-      Prelude.<*> ( x Data..@? "InsufficientDataActions"
+      Prelude.<*> ( x
+                      Data..@? "InsufficientDataActions"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
-      Prelude.<*> ( x Data..@? "OKActions" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "OKActions"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "StateReason")
@@ -336,7 +341,8 @@ instance Data.FromXML CompositeAlarm where
 
 instance Prelude.Hashable CompositeAlarm where
   hashWithSalt _salt CompositeAlarm' {..} =
-    _salt `Prelude.hashWithSalt` actionsEnabled
+    _salt
+      `Prelude.hashWithSalt` actionsEnabled
       `Prelude.hashWithSalt` actionsSuppressedBy
       `Prelude.hashWithSalt` actionsSuppressedReason
       `Prelude.hashWithSalt` actionsSuppressor

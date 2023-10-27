@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.CachePolicyQueryStringsConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.CachePolicyQueryStringsConfig where
@@ -166,7 +166,8 @@ instance
     CachePolicyQueryStringsConfig
   where
   hashWithSalt _salt CachePolicyQueryStringsConfig' {..} =
-    _salt `Prelude.hashWithSalt` queryStrings
+    _salt
+      `Prelude.hashWithSalt` queryStrings
       `Prelude.hashWithSalt` queryStringBehavior
 
 instance Prelude.NFData CachePolicyQueryStringsConfig where

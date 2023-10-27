@@ -16,7 +16,7 @@
 -- Module      : Amazonka.HoneyCode.StartTableDataImportJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -214,7 +214,8 @@ instance Core.AWSRequest StartTableDataImportJob where
 
 instance Prelude.Hashable StartTableDataImportJob where
   hashWithSalt _salt StartTableDataImportJob' {..} =
-    _salt `Prelude.hashWithSalt` workbookId
+    _salt
+      `Prelude.hashWithSalt` workbookId
       `Prelude.hashWithSalt` dataSource
       `Prelude.hashWithSalt` dataFormat
       `Prelude.hashWithSalt` destinationTableId

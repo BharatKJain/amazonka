@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.LabelSchema
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.LabelSchema where
@@ -102,7 +102,8 @@ instance Data.FromJSON LabelSchema where
 
 instance Prelude.Hashable LabelSchema where
   hashWithSalt _salt LabelSchema' {..} =
-    _salt `Prelude.hashWithSalt` labelMapper
+    _salt
+      `Prelude.hashWithSalt` labelMapper
       `Prelude.hashWithSalt` unlabeledEventsTreatment
 
 instance Prelude.NFData LabelSchema where

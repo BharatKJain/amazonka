@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ProcessingOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ProcessingOutput where
@@ -111,7 +111,8 @@ instance Data.FromJSON ProcessingOutput where
 
 instance Prelude.Hashable ProcessingOutput where
   hashWithSalt _salt ProcessingOutput' {..} =
-    _salt `Prelude.hashWithSalt` appManaged
+    _salt
+      `Prelude.hashWithSalt` appManaged
       `Prelude.hashWithSalt` featureStoreOutput
       `Prelude.hashWithSalt` s3Output
       `Prelude.hashWithSalt` outputName

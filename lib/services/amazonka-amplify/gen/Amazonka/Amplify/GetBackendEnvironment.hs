@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Amplify.GetBackendEnvironment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest GetBackendEnvironment where
 
 instance Prelude.Hashable GetBackendEnvironment where
   hashWithSalt _salt GetBackendEnvironment' {..} =
-    _salt `Prelude.hashWithSalt` appId
+    _salt
+      `Prelude.hashWithSalt` appId
       `Prelude.hashWithSalt` environmentName
 
 instance Prelude.NFData GetBackendEnvironment where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsIamPolicyDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsIamPolicyDetails where
@@ -193,7 +193,8 @@ instance Data.FromJSON AwsIamPolicyDetails where
             Prelude.<*> (x Data..:? "PermissionsBoundaryUsageCount")
             Prelude.<*> (x Data..:? "PolicyId")
             Prelude.<*> (x Data..:? "PolicyName")
-            Prelude.<*> ( x Data..:? "PolicyVersionList"
+            Prelude.<*> ( x
+                            Data..:? "PolicyVersionList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "UpdateDate")
@@ -201,7 +202,8 @@ instance Data.FromJSON AwsIamPolicyDetails where
 
 instance Prelude.Hashable AwsIamPolicyDetails where
   hashWithSalt _salt AwsIamPolicyDetails' {..} =
-    _salt `Prelude.hashWithSalt` attachmentCount
+    _salt
+      `Prelude.hashWithSalt` attachmentCount
       `Prelude.hashWithSalt` createDate
       `Prelude.hashWithSalt` defaultVersionId
       `Prelude.hashWithSalt` description

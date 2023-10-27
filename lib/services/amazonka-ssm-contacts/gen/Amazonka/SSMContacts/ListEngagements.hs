@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSMContacts.ListEngagements
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,19 +115,19 @@ instance Core.AWSPager ListEngagements where
     | Core.stop
         ( rs
             Lens.^? listEngagementsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listEngagementsResponse_engagements) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listEngagements_nextToken
           Lens..~ rs
           Lens.^? listEngagementsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListEngagements where
   type
@@ -146,7 +146,8 @@ instance Core.AWSRequest ListEngagements where
 
 instance Prelude.Hashable ListEngagements where
   hashWithSalt _salt ListEngagements' {..} =
-    _salt `Prelude.hashWithSalt` incidentId
+    _salt
+      `Prelude.hashWithSalt` incidentId
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` timeRangeValue

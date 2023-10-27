@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.DetectMitigationActionsTaskSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.DetectMitigationActionsTaskSummary where
@@ -155,7 +155,8 @@ instance
       "DetectMitigationActionsTaskSummary"
       ( \x ->
           DetectMitigationActionsTaskSummary'
-            Prelude.<$> ( x Data..:? "actionsDefinition"
+            Prelude.<$> ( x
+                            Data..:? "actionsDefinition"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "onlyActiveViolationsIncluded")
@@ -176,7 +177,8 @@ instance
   hashWithSalt
     _salt
     DetectMitigationActionsTaskSummary' {..} =
-      _salt `Prelude.hashWithSalt` actionsDefinition
+      _salt
+        `Prelude.hashWithSalt` actionsDefinition
         `Prelude.hashWithSalt` onlyActiveViolationsIncluded
         `Prelude.hashWithSalt` suppressedAlertsIncluded
         `Prelude.hashWithSalt` target

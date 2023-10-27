@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MQ.Types.User
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MQ.Types.User where
@@ -152,7 +152,8 @@ user_password = Lens.lens (\User' {password} -> password) (\s@User' {} a -> s {p
 
 instance Prelude.Hashable User where
   hashWithSalt _salt User' {..} =
-    _salt `Prelude.hashWithSalt` consoleAccess
+    _salt
+      `Prelude.hashWithSalt` consoleAccess
       `Prelude.hashWithSalt` groups
       `Prelude.hashWithSalt` username
       `Prelude.hashWithSalt` password

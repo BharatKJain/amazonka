@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.Recipes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.Recipes where
@@ -116,7 +116,8 @@ instance Data.FromJSON Recipes where
 
 instance Prelude.Hashable Recipes where
   hashWithSalt _salt Recipes' {..} =
-    _salt `Prelude.hashWithSalt` configure
+    _salt
+      `Prelude.hashWithSalt` configure
       `Prelude.hashWithSalt` deploy
       `Prelude.hashWithSalt` setup
       `Prelude.hashWithSalt` shutdown

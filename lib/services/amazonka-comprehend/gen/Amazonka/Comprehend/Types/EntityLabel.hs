@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.EntityLabel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.EntityLabel where
@@ -73,12 +73,14 @@ instance Data.FromJSON EntityLabel where
       "EntityLabel"
       ( \x ->
           EntityLabel'
-            Prelude.<$> (x Data..:? "Name") Prelude.<*> (x Data..:? "Score")
+            Prelude.<$> (x Data..:? "Name")
+            Prelude.<*> (x Data..:? "Score")
       )
 
 instance Prelude.Hashable EntityLabel where
   hashWithSalt _salt EntityLabel' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` score
 
 instance Prelude.NFData EntityLabel where

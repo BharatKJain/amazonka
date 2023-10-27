@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.Types.NetworkSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpacesWeb.Types.NetworkSettings where
@@ -109,7 +109,8 @@ instance Data.FromJSON NetworkSettings where
       "NetworkSettings"
       ( \x ->
           NetworkSettings'
-            Prelude.<$> ( x Data..:? "associatedPortalArns"
+            Prelude.<$> ( x
+                            Data..:? "associatedPortalArns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "securityGroupIds")
@@ -120,7 +121,8 @@ instance Data.FromJSON NetworkSettings where
 
 instance Prelude.Hashable NetworkSettings where
   hashWithSalt _salt NetworkSettings' {..} =
-    _salt `Prelude.hashWithSalt` associatedPortalArns
+    _salt
+      `Prelude.hashWithSalt` associatedPortalArns
       `Prelude.hashWithSalt` securityGroupIds
       `Prelude.hashWithSalt` subnetIds
       `Prelude.hashWithSalt` vpcId

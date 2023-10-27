@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatch.Types.MetricDatum
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatch.Types.MetricDatum where
@@ -238,7 +238,8 @@ metricDatum_metricName = Lens.lens (\MetricDatum' {metricName} -> metricName) (\
 
 instance Prelude.Hashable MetricDatum where
   hashWithSalt _salt MetricDatum' {..} =
-    _salt `Prelude.hashWithSalt` counts
+    _salt
+      `Prelude.hashWithSalt` counts
       `Prelude.hashWithSalt` dimensions
       `Prelude.hashWithSalt` statisticValues
       `Prelude.hashWithSalt` storageResolution

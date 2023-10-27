@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFRegional.CreateXssMatchSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,7 +141,8 @@ instance Core.AWSRequest CreateXssMatchSet where
 
 instance Prelude.Hashable CreateXssMatchSet where
   hashWithSalt _salt CreateXssMatchSet' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` changeToken
 
 instance Prelude.NFData CreateXssMatchSet where

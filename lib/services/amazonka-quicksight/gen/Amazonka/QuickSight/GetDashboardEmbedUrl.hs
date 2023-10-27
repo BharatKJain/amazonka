@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.GetDashboardEmbedUrl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -319,7 +319,8 @@ instance Core.AWSRequest GetDashboardEmbedUrl where
 
 instance Prelude.Hashable GetDashboardEmbedUrl where
   hashWithSalt _salt GetDashboardEmbedUrl' {..} =
-    _salt `Prelude.hashWithSalt` additionalDashboardIds
+    _salt
+      `Prelude.hashWithSalt` additionalDashboardIds
       `Prelude.hashWithSalt` namespace
       `Prelude.hashWithSalt` resetDisabled
       `Prelude.hashWithSalt` sessionLifetimeInMinutes

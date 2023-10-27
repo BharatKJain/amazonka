@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.ReservationPlan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.ReservationPlan where
@@ -151,7 +151,8 @@ instance Data.FromJSON ReservationPlan where
 
 instance Prelude.Hashable ReservationPlan where
   hashWithSalt _salt ReservationPlan' {..} =
-    _salt `Prelude.hashWithSalt` commitment
+    _salt
+      `Prelude.hashWithSalt` commitment
       `Prelude.hashWithSalt` expiresAt
       `Prelude.hashWithSalt` purchasedAt
       `Prelude.hashWithSalt` renewalType

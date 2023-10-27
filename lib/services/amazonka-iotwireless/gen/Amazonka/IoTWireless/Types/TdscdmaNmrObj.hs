@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.TdscdmaNmrObj
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.TdscdmaNmrObj where
@@ -101,7 +101,8 @@ tdscdmaNmrObj_cellParams = Lens.lens (\TdscdmaNmrObj' {cellParams} -> cellParams
 
 instance Prelude.Hashable TdscdmaNmrObj where
   hashWithSalt _salt TdscdmaNmrObj' {..} =
-    _salt `Prelude.hashWithSalt` pathLoss
+    _salt
+      `Prelude.hashWithSalt` pathLoss
       `Prelude.hashWithSalt` rscp
       `Prelude.hashWithSalt` utranCid
       `Prelude.hashWithSalt` uarfcn

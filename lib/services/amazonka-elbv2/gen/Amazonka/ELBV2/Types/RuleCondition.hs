@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.RuleCondition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.RuleCondition where
@@ -282,13 +282,16 @@ instance Data.FromXML RuleCondition where
       Prelude.<*> (x Data..@? "PathPatternConfig")
       Prelude.<*> (x Data..@? "QueryStringConfig")
       Prelude.<*> (x Data..@? "SourceIpConfig")
-      Prelude.<*> ( x Data..@? "Values" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Values"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 
 instance Prelude.Hashable RuleCondition where
   hashWithSalt _salt RuleCondition' {..} =
-    _salt `Prelude.hashWithSalt` field
+    _salt
+      `Prelude.hashWithSalt` field
       `Prelude.hashWithSalt` hostHeaderConfig
       `Prelude.hashWithSalt` httpHeaderConfig
       `Prelude.hashWithSalt` httpRequestMethodConfig

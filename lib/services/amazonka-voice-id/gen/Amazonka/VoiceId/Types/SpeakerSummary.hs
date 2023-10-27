@@ -14,7 +14,7 @@
 -- Module      : Amazonka.VoiceId.Types.SpeakerSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.VoiceId.Types.SpeakerSummary where
@@ -131,7 +131,8 @@ instance Data.FromJSON SpeakerSummary where
 
 instance Prelude.Hashable SpeakerSummary where
   hashWithSalt _salt SpeakerSummary' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` customerSpeakerId
       `Prelude.hashWithSalt` domainId
       `Prelude.hashWithSalt` generatedSpeakerId

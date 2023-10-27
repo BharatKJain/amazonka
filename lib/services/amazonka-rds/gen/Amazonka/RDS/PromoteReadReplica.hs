@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.PromoteReadReplica
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -230,7 +230,8 @@ instance Core.AWSRequest PromoteReadReplica where
 
 instance Prelude.Hashable PromoteReadReplica where
   hashWithSalt _salt PromoteReadReplica' {..} =
-    _salt `Prelude.hashWithSalt` backupRetentionPeriod
+    _salt
+      `Prelude.hashWithSalt` backupRetentionPeriod
       `Prelude.hashWithSalt` preferredBackupWindow
       `Prelude.hashWithSalt` dbInstanceIdentifier
 

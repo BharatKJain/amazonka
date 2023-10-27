@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.TypedLinkSpecifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.TypedLinkSpecifier where
@@ -108,14 +108,16 @@ instance Data.FromJSON TypedLinkSpecifier where
             Prelude.<$> (x Data..: "TypedLinkFacet")
             Prelude.<*> (x Data..: "SourceObjectReference")
             Prelude.<*> (x Data..: "TargetObjectReference")
-            Prelude.<*> ( x Data..:? "IdentityAttributeValues"
+            Prelude.<*> ( x
+                            Data..:? "IdentityAttributeValues"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable TypedLinkSpecifier where
   hashWithSalt _salt TypedLinkSpecifier' {..} =
-    _salt `Prelude.hashWithSalt` typedLinkFacet
+    _salt
+      `Prelude.hashWithSalt` typedLinkFacet
       `Prelude.hashWithSalt` sourceObjectReference
       `Prelude.hashWithSalt` targetObjectReference
       `Prelude.hashWithSalt` identityAttributeValues

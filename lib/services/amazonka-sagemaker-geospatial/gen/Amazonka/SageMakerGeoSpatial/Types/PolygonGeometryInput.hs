@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.PolygonGeometryInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.PolygonGeometryInput where
@@ -51,7 +51,6 @@ newPolygonGeometryInput pCoordinates_ =
         Lens.coerced Lens.# pCoordinates_
     }
 
--- |
 polygonGeometryInput_coordinates :: Lens.Lens' PolygonGeometryInput (Prelude.NonEmpty (Prelude.NonEmpty (Prelude.NonEmpty Prelude.Double)))
 polygonGeometryInput_coordinates = Lens.lens (\PolygonGeometryInput' {coordinates} -> coordinates) (\s@PolygonGeometryInput' {} a -> s {coordinates = a} :: PolygonGeometryInput) Prelude.. Lens.coerced
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.SearchResourcesSortCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.SearchResourcesSortCriteria where
@@ -78,7 +78,8 @@ searchResourcesSortCriteria_orderBy = Lens.lens (\SearchResourcesSortCriteria' {
 
 instance Prelude.Hashable SearchResourcesSortCriteria where
   hashWithSalt _salt SearchResourcesSortCriteria' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` orderBy
 
 instance Prelude.NFData SearchResourcesSortCriteria where

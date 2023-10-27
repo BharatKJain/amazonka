@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QLDB.ExportJournalToS3
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -270,7 +270,8 @@ instance Core.AWSRequest ExportJournalToS3 where
 
 instance Prelude.Hashable ExportJournalToS3 where
   hashWithSalt _salt ExportJournalToS3' {..} =
-    _salt `Prelude.hashWithSalt` outputFormat
+    _salt
+      `Prelude.hashWithSalt` outputFormat
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inclusiveStartTime
       `Prelude.hashWithSalt` exclusiveEndTime

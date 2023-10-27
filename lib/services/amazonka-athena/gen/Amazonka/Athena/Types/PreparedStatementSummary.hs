@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.PreparedStatementSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.PreparedStatementSummary where
@@ -75,7 +75,8 @@ instance Data.FromJSON PreparedStatementSummary where
 
 instance Prelude.Hashable PreparedStatementSummary where
   hashWithSalt _salt PreparedStatementSummary' {..} =
-    _salt `Prelude.hashWithSalt` lastModifiedTime
+    _salt
+      `Prelude.hashWithSalt` lastModifiedTime
       `Prelude.hashWithSalt` statementName
 
 instance Prelude.NFData PreparedStatementSummary where

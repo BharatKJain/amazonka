@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECR.DescribeImageScanFindings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -174,32 +174,32 @@ instance Core.AWSPager DescribeImageScanFindings where
     | Core.stop
         ( rs
             Lens.^? describeImageScanFindingsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeImageScanFindingsResponse_imageScanFindings
-              Prelude.. Lens._Just
-              Prelude.. imageScanFindings_findings
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
+            Prelude.. imageScanFindings_findings
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeImageScanFindingsResponse_imageScanFindings
-              Prelude.. Lens._Just
-              Prelude.. imageScanFindings_enhancedFindings
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
+            Prelude.. imageScanFindings_enhancedFindings
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeImageScanFindings_nextToken
           Lens..~ rs
           Lens.^? describeImageScanFindingsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeImageScanFindings where
   type
@@ -222,7 +222,8 @@ instance Core.AWSRequest DescribeImageScanFindings where
 
 instance Prelude.Hashable DescribeImageScanFindings where
   hashWithSalt _salt DescribeImageScanFindings' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` registryId
       `Prelude.hashWithSalt` repositoryName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.Occurrences
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.Occurrences where
@@ -197,7 +197,8 @@ instance Data.FromJSON Occurrences where
 
 instance Prelude.Hashable Occurrences where
   hashWithSalt _salt Occurrences' {..} =
-    _salt `Prelude.hashWithSalt` cells
+    _salt
+      `Prelude.hashWithSalt` cells
       `Prelude.hashWithSalt` lineRanges
       `Prelude.hashWithSalt` offsetRanges
       `Prelude.hashWithSalt` pages

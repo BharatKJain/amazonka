@@ -14,7 +14,7 @@
 -- Module      : Amazonka.VoiceId.Types.KnownFraudsterRisk
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.VoiceId.Types.KnownFraudsterRisk where
@@ -84,7 +84,8 @@ instance Data.FromJSON KnownFraudsterRisk where
 
 instance Prelude.Hashable KnownFraudsterRisk where
   hashWithSalt _salt KnownFraudsterRisk' {..} =
-    _salt `Prelude.hashWithSalt` generatedFraudsterId
+    _salt
+      `Prelude.hashWithSalt` generatedFraudsterId
       `Prelude.hashWithSalt` riskScore
 
 instance Prelude.NFData KnownFraudsterRisk where

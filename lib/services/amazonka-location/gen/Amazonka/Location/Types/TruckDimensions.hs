@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.TruckDimensions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.TruckDimensions where
@@ -137,7 +137,8 @@ truckDimensions_width = Lens.lens (\TruckDimensions' {width} -> width) (\s@Truck
 
 instance Prelude.Hashable TruckDimensions where
   hashWithSalt _salt TruckDimensions' {..} =
-    _salt `Prelude.hashWithSalt` height
+    _salt
+      `Prelude.hashWithSalt` height
       `Prelude.hashWithSalt` length
       `Prelude.hashWithSalt` unit
       `Prelude.hashWithSalt` width

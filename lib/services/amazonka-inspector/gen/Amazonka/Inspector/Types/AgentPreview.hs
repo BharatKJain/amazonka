@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.AgentPreview
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.AgentPreview where
@@ -152,7 +152,8 @@ instance Data.FromJSON AgentPreview where
 
 instance Prelude.Hashable AgentPreview where
   hashWithSalt _salt AgentPreview' {..} =
-    _salt `Prelude.hashWithSalt` agentHealth
+    _salt
+      `Prelude.hashWithSalt` agentHealth
       `Prelude.hashWithSalt` agentVersion
       `Prelude.hashWithSalt` autoScalingGroup
       `Prelude.hashWithSalt` hostname

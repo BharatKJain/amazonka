@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.ApplicationSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.ApplicationSettings where
@@ -79,7 +79,8 @@ applicationSettings_enabled = Lens.lens (\ApplicationSettings' {enabled} -> enab
 
 instance Prelude.Hashable ApplicationSettings where
   hashWithSalt _salt ApplicationSettings' {..} =
-    _salt `Prelude.hashWithSalt` settingsGroup
+    _salt
+      `Prelude.hashWithSalt` settingsGroup
       `Prelude.hashWithSalt` enabled
 
 instance Prelude.NFData ApplicationSettings where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.InventoryResultEntity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.InventoryResultEntity where
@@ -81,7 +81,8 @@ instance Data.FromJSON InventoryResultEntity where
 
 instance Prelude.Hashable InventoryResultEntity where
   hashWithSalt _salt InventoryResultEntity' {..} =
-    _salt `Prelude.hashWithSalt` data'
+    _salt
+      `Prelude.hashWithSalt` data'
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData InventoryResultEntity where

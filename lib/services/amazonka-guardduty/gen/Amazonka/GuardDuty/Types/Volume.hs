@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.Volume
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.Volume where
@@ -78,7 +78,8 @@ instance Data.FromJSON Volume where
 
 instance Prelude.Hashable Volume where
   hashWithSalt _salt Volume' {..} =
-    _salt `Prelude.hashWithSalt` hostPath
+    _salt
+      `Prelude.hashWithSalt` hostPath
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData Volume where

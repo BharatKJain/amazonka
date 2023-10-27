@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53AutoNaming.UpdateService
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest UpdateService where
 
 instance Prelude.Hashable UpdateService where
   hashWithSalt _salt UpdateService' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` service
 
 instance Prelude.NFData UpdateService where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Signer.Types.SignatureValidityPeriod
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Signer.Types.SignatureValidityPeriod where
@@ -69,12 +69,14 @@ instance Data.FromJSON SignatureValidityPeriod where
       "SignatureValidityPeriod"
       ( \x ->
           SignatureValidityPeriod'
-            Prelude.<$> (x Data..:? "type") Prelude.<*> (x Data..:? "value")
+            Prelude.<$> (x Data..:? "type")
+            Prelude.<*> (x Data..:? "value")
       )
 
 instance Prelude.Hashable SignatureValidityPeriod where
   hashWithSalt _salt SignatureValidityPeriod' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData SignatureValidityPeriod where

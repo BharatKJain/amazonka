@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.DataRepositoryTaskStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.DataRepositoryTaskStatus where
@@ -122,7 +122,8 @@ instance Data.FromJSON DataRepositoryTaskStatus where
 
 instance Prelude.Hashable DataRepositoryTaskStatus where
   hashWithSalt _salt DataRepositoryTaskStatus' {..} =
-    _salt `Prelude.hashWithSalt` failedCount
+    _salt
+      `Prelude.hashWithSalt` failedCount
       `Prelude.hashWithSalt` lastUpdatedTime
       `Prelude.hashWithSalt` releasedCapacity
       `Prelude.hashWithSalt` succeededCount

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.ImportRestApi
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -190,7 +190,8 @@ instance Core.AWSRequest ImportRestApi where
 
 instance Prelude.Hashable ImportRestApi where
   hashWithSalt _salt ImportRestApi' {..} =
-    _salt `Prelude.hashWithSalt` failOnWarnings
+    _salt
+      `Prelude.hashWithSalt` failOnWarnings
       `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` body
 

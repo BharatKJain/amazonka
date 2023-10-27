@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.FilterCriterion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.FilterCriterion where
@@ -73,7 +73,8 @@ filterCriterion_filterCondition = Lens.lens (\FilterCriterion' {filterCondition}
 
 instance Prelude.Hashable FilterCriterion where
   hashWithSalt _salt FilterCriterion' {..} =
-    _salt `Prelude.hashWithSalt` criterionKey
+    _salt
+      `Prelude.hashWithSalt` criterionKey
       `Prelude.hashWithSalt` filterCondition
 
 instance Prelude.NFData FilterCriterion where

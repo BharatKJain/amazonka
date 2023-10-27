@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.ReportedOs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.ReportedOs where
@@ -84,7 +84,8 @@ instance Data.FromJSON ReportedOs where
 
 instance Prelude.Hashable ReportedOs where
   hashWithSalt _salt ReportedOs' {..} =
-    _salt `Prelude.hashWithSalt` family
+    _salt
+      `Prelude.hashWithSalt` family
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` version
 

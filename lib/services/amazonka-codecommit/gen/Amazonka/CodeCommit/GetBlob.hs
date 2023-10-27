@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeCommit.GetBlob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest GetBlob where
 
 instance Prelude.Hashable GetBlob where
   hashWithSalt _salt GetBlob' {..} =
-    _salt `Prelude.hashWithSalt` repositoryName
+    _salt
+      `Prelude.hashWithSalt` repositoryName
       `Prelude.hashWithSalt` blobId
 
 instance Prelude.NFData GetBlob where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.NumberFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.NumberFilter where
@@ -74,7 +74,8 @@ instance Data.FromJSON NumberFilter where
 
 instance Prelude.Hashable NumberFilter where
   hashWithSalt _salt NumberFilter' {..} =
-    _salt `Prelude.hashWithSalt` lowerInclusive
+    _salt
+      `Prelude.hashWithSalt` lowerInclusive
       `Prelude.hashWithSalt` upperInclusive
 
 instance Prelude.NFData NumberFilter where

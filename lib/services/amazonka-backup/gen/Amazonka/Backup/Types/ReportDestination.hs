@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.ReportDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.ReportDestination where
@@ -74,7 +74,8 @@ instance Data.FromJSON ReportDestination where
 
 instance Prelude.Hashable ReportDestination where
   hashWithSalt _salt ReportDestination' {..} =
-    _salt `Prelude.hashWithSalt` s3BucketName
+    _salt
+      `Prelude.hashWithSalt` s3BucketName
       `Prelude.hashWithSalt` s3Keys
 
 instance Prelude.NFData ReportDestination where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeBuild.UpdateReportGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,7 +136,8 @@ instance Core.AWSRequest UpdateReportGroup where
 
 instance Prelude.Hashable UpdateReportGroup where
   hashWithSalt _salt UpdateReportGroup' {..} =
-    _salt `Prelude.hashWithSalt` exportConfig
+    _salt
+      `Prelude.hashWithSalt` exportConfig
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` arn
 

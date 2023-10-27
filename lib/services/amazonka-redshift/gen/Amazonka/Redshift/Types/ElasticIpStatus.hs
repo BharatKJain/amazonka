@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.ElasticIpStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.ElasticIpStatus where
@@ -71,7 +71,8 @@ instance Data.FromXML ElasticIpStatus where
 
 instance Prelude.Hashable ElasticIpStatus where
   hashWithSalt _salt ElasticIpStatus' {..} =
-    _salt `Prelude.hashWithSalt` elasticIp
+    _salt
+      `Prelude.hashWithSalt` elasticIp
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData ElasticIpStatus where

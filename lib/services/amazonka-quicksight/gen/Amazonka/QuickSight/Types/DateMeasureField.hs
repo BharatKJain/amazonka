@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DateMeasureField
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DateMeasureField where
@@ -102,7 +102,8 @@ instance Data.FromJSON DateMeasureField where
 
 instance Prelude.Hashable DateMeasureField where
   hashWithSalt _salt DateMeasureField' {..} =
-    _salt `Prelude.hashWithSalt` aggregationFunction
+    _salt
+      `Prelude.hashWithSalt` aggregationFunction
       `Prelude.hashWithSalt` formatConfiguration
       `Prelude.hashWithSalt` fieldId
       `Prelude.hashWithSalt` column

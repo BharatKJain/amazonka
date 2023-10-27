@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.NodeProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.NodeProperties where
@@ -94,14 +94,16 @@ instance Data.FromJSON NodeProperties where
           NodeProperties'
             Prelude.<$> (x Data..: "numNodes")
             Prelude.<*> (x Data..: "mainNode")
-            Prelude.<*> ( x Data..:? "nodeRangeProperties"
+            Prelude.<*> ( x
+                            Data..:? "nodeRangeProperties"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable NodeProperties where
   hashWithSalt _salt NodeProperties' {..} =
-    _salt `Prelude.hashWithSalt` numNodes
+    _salt
+      `Prelude.hashWithSalt` numNodes
       `Prelude.hashWithSalt` mainNode
       `Prelude.hashWithSalt` nodeRangeProperties
 

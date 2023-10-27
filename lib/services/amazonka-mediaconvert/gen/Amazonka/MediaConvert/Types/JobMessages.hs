@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.JobMessages
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.JobMessages where
@@ -81,7 +81,8 @@ instance Data.FromJSON JobMessages where
 
 instance Prelude.Hashable JobMessages where
   hashWithSalt _salt JobMessages' {..} =
-    _salt `Prelude.hashWithSalt` info
+    _salt
+      `Prelude.hashWithSalt` info
       `Prelude.hashWithSalt` warning
 
 instance Prelude.NFData JobMessages where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.TableCell
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.TableCell where
@@ -106,7 +106,8 @@ instance Data.FromJSON TableCell where
 
 instance Prelude.Hashable TableCell where
   hashWithSalt _salt TableCell' {..} =
-    _salt `Prelude.hashWithSalt` header
+    _salt
+      `Prelude.hashWithSalt` header
       `Prelude.hashWithSalt` highlighted
       `Prelude.hashWithSalt` topAnswer
       `Prelude.hashWithSalt` value

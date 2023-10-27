@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.SpellCorrectedQuery
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.SpellCorrectedQuery where
@@ -75,7 +75,8 @@ instance Data.FromJSON SpellCorrectedQuery where
 
 instance Prelude.Hashable SpellCorrectedQuery where
   hashWithSalt _salt SpellCorrectedQuery' {..} =
-    _salt `Prelude.hashWithSalt` corrections
+    _salt
+      `Prelude.hashWithSalt` corrections
       `Prelude.hashWithSalt` suggestedQueryText
 
 instance Prelude.NFData SpellCorrectedQuery where

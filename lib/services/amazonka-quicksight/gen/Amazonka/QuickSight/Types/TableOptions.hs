@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TableOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TableOptions where
@@ -100,7 +100,8 @@ instance Data.FromJSON TableOptions where
 
 instance Prelude.Hashable TableOptions where
   hashWithSalt _salt TableOptions' {..} =
-    _salt `Prelude.hashWithSalt` cellStyle
+    _salt
+      `Prelude.hashWithSalt` cellStyle
       `Prelude.hashWithSalt` headerStyle
       `Prelude.hashWithSalt` orientation
       `Prelude.hashWithSalt` rowAlternateColorOptions

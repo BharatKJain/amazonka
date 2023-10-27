@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.RedshiftDataParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.RedshiftDataParameters where
@@ -135,7 +135,8 @@ instance Data.FromJSON RedshiftDataParameters where
 
 instance Prelude.Hashable RedshiftDataParameters where
   hashWithSalt _salt RedshiftDataParameters' {..} =
-    _salt `Prelude.hashWithSalt` dbUser
+    _salt
+      `Prelude.hashWithSalt` dbUser
       `Prelude.hashWithSalt` secretManagerArn
       `Prelude.hashWithSalt` statementName
       `Prelude.hashWithSalt` withEvent

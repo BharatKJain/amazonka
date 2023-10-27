@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.ApacheKafkaCluster
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.ApacheKafkaCluster where
@@ -74,7 +74,8 @@ apacheKafkaCluster_vpc = Lens.lens (\ApacheKafkaCluster' {vpc} -> vpc) (\s@Apach
 
 instance Prelude.Hashable ApacheKafkaCluster where
   hashWithSalt _salt ApacheKafkaCluster' {..} =
-    _salt `Prelude.hashWithSalt` bootstrapServers
+    _salt
+      `Prelude.hashWithSalt` bootstrapServers
       `Prelude.hashWithSalt` vpc
 
 instance Prelude.NFData ApacheKafkaCluster where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Textract.GetDocumentTextDetection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -181,7 +181,8 @@ instance Core.AWSRequest GetDocumentTextDetection where
 
 instance Prelude.Hashable GetDocumentTextDetection where
   hashWithSalt _salt GetDocumentTextDetection' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` jobId
 
@@ -299,7 +300,6 @@ newGetDocumentTextDetectionResponse pHttpStatus_ =
 getDocumentTextDetectionResponse_blocks :: Lens.Lens' GetDocumentTextDetectionResponse (Prelude.Maybe [Block])
 getDocumentTextDetectionResponse_blocks = Lens.lens (\GetDocumentTextDetectionResponse' {blocks} -> blocks) (\s@GetDocumentTextDetectionResponse' {} a -> s {blocks = a} :: GetDocumentTextDetectionResponse) Prelude.. Lens.mapping Lens.coerced
 
--- |
 getDocumentTextDetectionResponse_detectDocumentTextModelVersion :: Lens.Lens' GetDocumentTextDetectionResponse (Prelude.Maybe Prelude.Text)
 getDocumentTextDetectionResponse_detectDocumentTextModelVersion = Lens.lens (\GetDocumentTextDetectionResponse' {detectDocumentTextModelVersion} -> detectDocumentTextModelVersion) (\s@GetDocumentTextDetectionResponse' {} a -> s {detectDocumentTextModelVersion = a} :: GetDocumentTextDetectionResponse)
 

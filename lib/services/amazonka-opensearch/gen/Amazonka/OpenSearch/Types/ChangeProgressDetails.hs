@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.ChangeProgressDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.ChangeProgressDetails where
@@ -75,7 +75,8 @@ instance Data.FromJSON ChangeProgressDetails where
 
 instance Prelude.Hashable ChangeProgressDetails where
   hashWithSalt _salt ChangeProgressDetails' {..} =
-    _salt `Prelude.hashWithSalt` changeId
+    _salt
+      `Prelude.hashWithSalt` changeId
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData ChangeProgressDetails where

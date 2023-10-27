@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Forecast.ListForecastExportJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -176,22 +176,22 @@ instance Core.AWSPager ListForecastExportJobs where
     | Core.stop
         ( rs
             Lens.^? listForecastExportJobsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listForecastExportJobsResponse_forecastExportJobs
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listForecastExportJobs_nextToken
           Lens..~ rs
           Lens.^? listForecastExportJobsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListForecastExportJobs where
   type
@@ -203,7 +203,8 @@ instance Core.AWSRequest ListForecastExportJobs where
     Response.receiveJSON
       ( \s h x ->
           ListForecastExportJobsResponse'
-            Prelude.<$> ( x Data..?> "ForecastExportJobs"
+            Prelude.<$> ( x
+                            Data..?> "ForecastExportJobs"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -212,7 +213,8 @@ instance Core.AWSRequest ListForecastExportJobs where
 
 instance Prelude.Hashable ListForecastExportJobs where
   hashWithSalt _salt ListForecastExportJobs' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

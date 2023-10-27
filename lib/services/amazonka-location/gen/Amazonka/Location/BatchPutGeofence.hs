@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Location.BatchPutGeofence
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest BatchPutGeofence where
 
 instance Prelude.Hashable BatchPutGeofence where
   hashWithSalt _salt BatchPutGeofence' {..} =
-    _salt `Prelude.hashWithSalt` collectionName
+    _salt
+      `Prelude.hashWithSalt` collectionName
       `Prelude.hashWithSalt` entries
 
 instance Prelude.NFData BatchPutGeofence where

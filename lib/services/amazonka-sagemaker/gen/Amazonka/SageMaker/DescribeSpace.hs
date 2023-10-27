@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.DescribeSpace
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest DescribeSpace where
 
 instance Prelude.Hashable DescribeSpace where
   hashWithSalt _salt DescribeSpace' {..} =
-    _salt `Prelude.hashWithSalt` domainId
+    _salt
+      `Prelude.hashWithSalt` domainId
       `Prelude.hashWithSalt` spaceName
 
 instance Prelude.NFData DescribeSpace where

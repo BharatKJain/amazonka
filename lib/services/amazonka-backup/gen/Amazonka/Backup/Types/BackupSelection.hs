@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.BackupSelection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.BackupSelection where
@@ -242,7 +242,8 @@ instance Data.FromJSON BackupSelection where
 
 instance Prelude.Hashable BackupSelection where
   hashWithSalt _salt BackupSelection' {..} =
-    _salt `Prelude.hashWithSalt` conditions
+    _salt
+      `Prelude.hashWithSalt` conditions
       `Prelude.hashWithSalt` listOfTags
       `Prelude.hashWithSalt` notResources
       `Prelude.hashWithSalt` resources

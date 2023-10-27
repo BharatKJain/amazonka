@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.TimeSeriesIdentifiers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.TimeSeriesIdentifiers where
@@ -86,7 +86,8 @@ instance Data.FromJSON TimeSeriesIdentifiers where
 
 instance Prelude.Hashable TimeSeriesIdentifiers where
   hashWithSalt _salt TimeSeriesIdentifiers' {..} =
-    _salt `Prelude.hashWithSalt` dataSource
+    _salt
+      `Prelude.hashWithSalt` dataSource
       `Prelude.hashWithSalt` format
       `Prelude.hashWithSalt` schema
 

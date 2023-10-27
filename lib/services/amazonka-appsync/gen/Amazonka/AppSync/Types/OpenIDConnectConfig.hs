@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.OpenIDConnectConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.OpenIDConnectConfig where
@@ -117,7 +117,8 @@ instance Data.FromJSON OpenIDConnectConfig where
 
 instance Prelude.Hashable OpenIDConnectConfig where
   hashWithSalt _salt OpenIDConnectConfig' {..} =
-    _salt `Prelude.hashWithSalt` authTTL
+    _salt
+      `Prelude.hashWithSalt` authTTL
       `Prelude.hashWithSalt` clientId
       `Prelude.hashWithSalt` iatTTL
       `Prelude.hashWithSalt` issuer

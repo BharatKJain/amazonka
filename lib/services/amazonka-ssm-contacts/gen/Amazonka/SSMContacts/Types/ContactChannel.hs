@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMContacts.Types.ContactChannel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMContacts.Types.ContactChannel where
@@ -162,7 +162,8 @@ instance Data.FromJSON ContactChannel where
 
 instance Prelude.Hashable ContactChannel where
   hashWithSalt _salt ContactChannel' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` contactChannelArn
       `Prelude.hashWithSalt` contactArn
       `Prelude.hashWithSalt` name

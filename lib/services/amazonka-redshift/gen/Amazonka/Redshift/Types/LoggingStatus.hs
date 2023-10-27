@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.LoggingStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.LoggingStatus where
@@ -132,7 +132,9 @@ instance Data.FromXML LoggingStatus where
       Prelude.<*> (x Data..@? "LastFailureTime")
       Prelude.<*> (x Data..@? "LastSuccessfulDeliveryTime")
       Prelude.<*> (x Data..@? "LogDestinationType")
-      Prelude.<*> ( x Data..@? "LogExports" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "LogExports"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "LoggingEnabled")
@@ -140,7 +142,8 @@ instance Data.FromXML LoggingStatus where
 
 instance Prelude.Hashable LoggingStatus where
   hashWithSalt _salt LoggingStatus' {..} =
-    _salt `Prelude.hashWithSalt` bucketName
+    _salt
+      `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` lastFailureMessage
       `Prelude.hashWithSalt` lastFailureTime
       `Prelude.hashWithSalt` lastSuccessfulDeliveryTime

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaPackageVOD.Types.PackagingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaPackageVOD.Types.PackagingConfiguration where
@@ -133,7 +133,8 @@ instance Data.FromJSON PackagingConfiguration where
 
 instance Prelude.Hashable PackagingConfiguration where
   hashWithSalt _salt PackagingConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` cmafPackage
       `Prelude.hashWithSalt` dashPackage
       `Prelude.hashWithSalt` hlsPackage

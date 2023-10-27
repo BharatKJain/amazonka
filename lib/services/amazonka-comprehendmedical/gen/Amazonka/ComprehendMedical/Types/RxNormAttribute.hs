@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComprehendMedical.Types.RxNormAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComprehendMedical.Types.RxNormAttribute where
@@ -165,7 +165,8 @@ instance Data.FromJSON RxNormAttribute where
 
 instance Prelude.Hashable RxNormAttribute where
   hashWithSalt _salt RxNormAttribute' {..} =
-    _salt `Prelude.hashWithSalt` beginOffset
+    _salt
+      `Prelude.hashWithSalt` beginOffset
       `Prelude.hashWithSalt` endOffset
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` relationshipScore

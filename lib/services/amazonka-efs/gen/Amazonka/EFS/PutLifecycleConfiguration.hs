@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EFS.PutLifecycleConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -198,7 +198,8 @@ instance Core.AWSRequest PutLifecycleConfiguration where
 
 instance Prelude.Hashable PutLifecycleConfiguration where
   hashWithSalt _salt PutLifecycleConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` fileSystemId
+    _salt
+      `Prelude.hashWithSalt` fileSystemId
       `Prelude.hashWithSalt` lifecyclePolicies
 
 instance Prelude.NFData PutLifecycleConfiguration where

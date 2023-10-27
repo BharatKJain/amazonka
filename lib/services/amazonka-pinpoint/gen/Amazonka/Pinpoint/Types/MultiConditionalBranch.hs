@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.MultiConditionalBranch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.MultiConditionalBranch where
@@ -79,7 +79,8 @@ instance Data.FromJSON MultiConditionalBranch where
 
 instance Prelude.Hashable MultiConditionalBranch where
   hashWithSalt _salt MultiConditionalBranch' {..} =
-    _salt `Prelude.hashWithSalt` condition
+    _salt
+      `Prelude.hashWithSalt` condition
       `Prelude.hashWithSalt` nextActivity
 
 instance Prelude.NFData MultiConditionalBranch where

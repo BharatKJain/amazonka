@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.IncidentRecordSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.IncidentRecordSummary where
@@ -148,7 +148,8 @@ instance Data.FromJSON IncidentRecordSummary where
 
 instance Prelude.Hashable IncidentRecordSummary where
   hashWithSalt _salt IncidentRecordSummary' {..} =
-    _salt `Prelude.hashWithSalt` resolvedTime
+    _salt
+      `Prelude.hashWithSalt` resolvedTime
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` impact

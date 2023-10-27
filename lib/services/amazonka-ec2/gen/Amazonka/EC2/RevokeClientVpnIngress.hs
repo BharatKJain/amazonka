@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.RevokeClientVpnIngress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -152,7 +152,8 @@ instance Core.AWSRequest RevokeClientVpnIngress where
 
 instance Prelude.Hashable RevokeClientVpnIngress where
   hashWithSalt _salt RevokeClientVpnIngress' {..} =
-    _salt `Prelude.hashWithSalt` accessGroupId
+    _salt
+      `Prelude.hashWithSalt` accessGroupId
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` revokeAllGroups
       `Prelude.hashWithSalt` clientVpnEndpointId

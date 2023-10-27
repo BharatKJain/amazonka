@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.Mp4Settings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.Mp4Settings where
@@ -198,7 +198,8 @@ instance Data.FromJSON Mp4Settings where
 
 instance Prelude.Hashable Mp4Settings where
   hashWithSalt _salt Mp4Settings' {..} =
-    _salt `Prelude.hashWithSalt` audioDuration
+    _salt
+      `Prelude.hashWithSalt` audioDuration
       `Prelude.hashWithSalt` cslgAtom
       `Prelude.hashWithSalt` cttsVersion
       `Prelude.hashWithSalt` freeSpaceBox

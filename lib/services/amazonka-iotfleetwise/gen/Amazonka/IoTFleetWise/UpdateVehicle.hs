@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTFleetWise.UpdateVehicle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,7 +153,8 @@ instance Core.AWSRequest UpdateVehicle where
 
 instance Prelude.Hashable UpdateVehicle where
   hashWithSalt _salt UpdateVehicle' {..} =
-    _salt `Prelude.hashWithSalt` attributeUpdateMode
+    _salt
+      `Prelude.hashWithSalt` attributeUpdateMode
       `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` decoderManifestArn
       `Prelude.hashWithSalt` modelManifestArn

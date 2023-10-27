@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.CreateMLTransform
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -472,7 +472,8 @@ instance Core.AWSRequest CreateMLTransform where
 
 instance Prelude.Hashable CreateMLTransform where
   hashWithSalt _salt CreateMLTransform' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` glueVersion
       `Prelude.hashWithSalt` maxCapacity
       `Prelude.hashWithSalt` maxRetries

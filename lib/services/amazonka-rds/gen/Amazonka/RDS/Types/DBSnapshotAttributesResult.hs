@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.DBSnapshotAttributesResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.DBSnapshotAttributesResult where
@@ -72,7 +72,8 @@ dbSnapshotAttributesResult_dbSnapshotIdentifier = Lens.lens (\DBSnapshotAttribut
 instance Data.FromXML DBSnapshotAttributesResult where
   parseXML x =
     DBSnapshotAttributesResult'
-      Prelude.<$> ( x Data..@? "DBSnapshotAttributes"
+      Prelude.<$> ( x
+                      Data..@? "DBSnapshotAttributes"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "DBSnapshotAttribute")
                   )
@@ -80,7 +81,8 @@ instance Data.FromXML DBSnapshotAttributesResult where
 
 instance Prelude.Hashable DBSnapshotAttributesResult where
   hashWithSalt _salt DBSnapshotAttributesResult' {..} =
-    _salt `Prelude.hashWithSalt` dbSnapshotAttributes
+    _salt
+      `Prelude.hashWithSalt` dbSnapshotAttributes
       `Prelude.hashWithSalt` dbSnapshotIdentifier
 
 instance Prelude.NFData DBSnapshotAttributesResult where

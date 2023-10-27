@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.ListExports
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest ListExports where
     Response.receiveJSON
       ( \s h x ->
           ListExportsResponse'
-            Prelude.<$> ( x Data..?> "ExportSummaries"
+            Prelude.<$> ( x
+                            Data..?> "ExportSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -118,7 +119,8 @@ instance Core.AWSRequest ListExports where
 
 instance Prelude.Hashable ListExports where
   hashWithSalt _salt ListExports' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` tableArn
 

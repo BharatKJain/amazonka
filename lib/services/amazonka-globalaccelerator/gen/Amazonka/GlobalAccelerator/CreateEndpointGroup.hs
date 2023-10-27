@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GlobalAccelerator.CreateEndpointGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -283,7 +283,8 @@ instance Core.AWSRequest CreateEndpointGroup where
 
 instance Prelude.Hashable CreateEndpointGroup where
   hashWithSalt _salt CreateEndpointGroup' {..} =
-    _salt `Prelude.hashWithSalt` endpointConfigurations
+    _salt
+      `Prelude.hashWithSalt` endpointConfigurations
       `Prelude.hashWithSalt` healthCheckIntervalSeconds
       `Prelude.hashWithSalt` healthCheckPath
       `Prelude.hashWithSalt` healthCheckPort

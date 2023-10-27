@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.AliasICPRecordal
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.AliasICPRecordal where
@@ -137,7 +137,8 @@ instance Data.FromXML AliasICPRecordal where
 
 instance Prelude.Hashable AliasICPRecordal where
   hashWithSalt _salt AliasICPRecordal' {..} =
-    _salt `Prelude.hashWithSalt` cname
+    _salt
+      `Prelude.hashWithSalt` cname
       `Prelude.hashWithSalt` iCPRecordalStatus
 
 instance Prelude.NFData AliasICPRecordal where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.Reference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.Reference where
@@ -78,12 +78,14 @@ instance Data.FromJSON Reference where
       "Reference"
       ( \x ->
           Reference'
-            Prelude.<$> (x Data..: "Value") Prelude.<*> (x Data..: "Type")
+            Prelude.<$> (x Data..: "Value")
+            Prelude.<*> (x Data..: "Type")
       )
 
 instance Prelude.Hashable Reference where
   hashWithSalt _salt Reference' {..} =
-    _salt `Prelude.hashWithSalt` value
+    _salt
+      `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData Reference where

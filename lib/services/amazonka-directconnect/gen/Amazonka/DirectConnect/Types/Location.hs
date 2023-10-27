@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectConnect.Types.Location
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectConnect.Types.Location where
@@ -108,13 +108,16 @@ instance Data.FromJSON Location where
       "Location"
       ( \x ->
           Location'
-            Prelude.<$> ( x Data..:? "availableMacSecPortSpeeds"
+            Prelude.<$> ( x
+                            Data..:? "availableMacSecPortSpeeds"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "availablePortSpeeds"
+            Prelude.<*> ( x
+                            Data..:? "availablePortSpeeds"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "availableProviders"
+            Prelude.<*> ( x
+                            Data..:? "availableProviders"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "locationCode")

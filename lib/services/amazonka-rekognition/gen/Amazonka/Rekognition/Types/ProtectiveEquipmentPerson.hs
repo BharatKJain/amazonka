@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.ProtectiveEquipmentPerson
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.ProtectiveEquipmentPerson where
@@ -108,7 +108,8 @@ instance Data.FromJSON ProtectiveEquipmentPerson where
 
 instance Prelude.Hashable ProtectiveEquipmentPerson where
   hashWithSalt _salt ProtectiveEquipmentPerson' {..} =
-    _salt `Prelude.hashWithSalt` bodyParts
+    _salt
+      `Prelude.hashWithSalt` bodyParts
       `Prelude.hashWithSalt` boundingBox
       `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` id

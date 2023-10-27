@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.MeasureField
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.MeasureField where
@@ -99,7 +99,8 @@ instance Data.FromJSON MeasureField where
 
 instance Prelude.Hashable MeasureField where
   hashWithSalt _salt MeasureField' {..} =
-    _salt `Prelude.hashWithSalt` calculatedMeasureField
+    _salt
+      `Prelude.hashWithSalt` calculatedMeasureField
       `Prelude.hashWithSalt` categoricalMeasureField
       `Prelude.hashWithSalt` dateMeasureField
       `Prelude.hashWithSalt` numericalMeasureField

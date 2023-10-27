@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.VectorEnrichmentJobS3Data
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.VectorEnrichmentJobS3Data where
@@ -80,7 +80,8 @@ instance Data.FromJSON VectorEnrichmentJobS3Data where
 
 instance Prelude.Hashable VectorEnrichmentJobS3Data where
   hashWithSalt _salt VectorEnrichmentJobS3Data' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyId
+    _salt
+      `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` s3Uri
 
 instance Prelude.NFData VectorEnrichmentJobS3Data where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.TagMFADevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,8 @@ instance Core.AWSRequest TagMFADevice where
 
 instance Prelude.Hashable TagMFADevice where
   hashWithSalt _salt TagMFADevice' {..} =
-    _salt `Prelude.hashWithSalt` serialNumber
+    _salt
+      `Prelude.hashWithSalt` serialNumber
       `Prelude.hashWithSalt` tags
 
 instance Prelude.NFData TagMFADevice where

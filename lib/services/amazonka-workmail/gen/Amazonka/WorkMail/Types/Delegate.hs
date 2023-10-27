@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkMail.Types.Delegate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkMail.Types.Delegate where
@@ -74,12 +74,14 @@ instance Data.FromJSON Delegate where
       "Delegate"
       ( \x ->
           Delegate'
-            Prelude.<$> (x Data..: "Id") Prelude.<*> (x Data..: "Type")
+            Prelude.<$> (x Data..: "Id")
+            Prelude.<*> (x Data..: "Type")
       )
 
 instance Prelude.Hashable Delegate where
   hashWithSalt _salt Delegate' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData Delegate where

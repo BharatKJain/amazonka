@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.ApplicationConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.ApplicationConfig where
@@ -95,7 +95,8 @@ instance Data.FromJSON ApplicationConfig where
 
 instance Prelude.Hashable ApplicationConfig where
   hashWithSalt _salt ApplicationConfig' {..} =
-    _salt `Prelude.hashWithSalt` destinationName
+    _salt
+      `Prelude.hashWithSalt` destinationName
       `Prelude.hashWithSalt` fPort
       `Prelude.hashWithSalt` type'
 

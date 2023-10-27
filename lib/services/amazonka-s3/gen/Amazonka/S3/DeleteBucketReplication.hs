@@ -16,7 +16,7 @@
 -- Module      : Amazonka.S3.DeleteBucketReplication
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest DeleteBucketReplication where
 
 instance Prelude.Hashable DeleteBucketReplication where
   hashWithSalt _salt DeleteBucketReplication' {..} =
-    _salt `Prelude.hashWithSalt` expectedBucketOwner
+    _salt
+      `Prelude.hashWithSalt` expectedBucketOwner
       `Prelude.hashWithSalt` bucket
 
 instance Prelude.NFData DeleteBucketReplication where

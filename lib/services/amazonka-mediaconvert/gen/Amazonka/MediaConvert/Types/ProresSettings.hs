@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.ProresSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.ProresSettings where
@@ -506,7 +506,8 @@ instance Data.FromJSON ProresSettings where
 
 instance Prelude.Hashable ProresSettings where
   hashWithSalt _salt ProresSettings' {..} =
-    _salt `Prelude.hashWithSalt` chromaSampling
+    _salt
+      `Prelude.hashWithSalt` chromaSampling
       `Prelude.hashWithSalt` codecProfile
       `Prelude.hashWithSalt` framerateControl
       `Prelude.hashWithSalt` framerateConversionAlgorithm

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectConnect.DescribeDirectConnectGatewayAttachments
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -139,22 +139,22 @@ instance
     | Core.stop
         ( rs
             Lens.^? describeDirectConnectGatewayAttachmentsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeDirectConnectGatewayAttachmentsResponse_directConnectGatewayAttachments
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeDirectConnectGatewayAttachments_nextToken
           Lens..~ rs
-            Lens.^? describeDirectConnectGatewayAttachmentsResponse_nextToken
-              Prelude.. Lens._Just
+          Lens.^? describeDirectConnectGatewayAttachmentsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -170,11 +170,12 @@ instance
     Response.receiveJSON
       ( \s h x ->
           DescribeDirectConnectGatewayAttachmentsResponse'
-            Prelude.<$> ( x Data..?> "directConnectGatewayAttachments"
+            Prelude.<$> ( x
+                            Data..?> "directConnectGatewayAttachments"
                             Core..!@ Prelude.mempty
                         )
-              Prelude.<*> (x Data..?> "nextToken")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "nextToken")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -184,7 +185,8 @@ instance
   hashWithSalt
     _salt
     DescribeDirectConnectGatewayAttachments' {..} =
-      _salt `Prelude.hashWithSalt` directConnectGatewayId
+      _salt
+        `Prelude.hashWithSalt` directConnectGatewayId
         `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` virtualInterfaceId

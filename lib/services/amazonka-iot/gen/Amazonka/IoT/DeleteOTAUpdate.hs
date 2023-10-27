@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.DeleteOTAUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,7 +129,8 @@ instance Core.AWSRequest DeleteOTAUpdate where
 
 instance Prelude.Hashable DeleteOTAUpdate where
   hashWithSalt _salt DeleteOTAUpdate' {..} =
-    _salt `Prelude.hashWithSalt` deleteStream
+    _salt
+      `Prelude.hashWithSalt` deleteStream
       `Prelude.hashWithSalt` forceDeleteAWSJob
       `Prelude.hashWithSalt` otaUpdateId
 

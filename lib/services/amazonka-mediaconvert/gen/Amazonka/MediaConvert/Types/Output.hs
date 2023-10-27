@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.Output
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.Output where
@@ -187,10 +187,12 @@ instance Data.FromJSON Output where
       "Output"
       ( \x ->
           Output'
-            Prelude.<$> ( x Data..:? "audioDescriptions"
+            Prelude.<$> ( x
+                            Data..:? "audioDescriptions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "captionDescriptions"
+            Prelude.<*> ( x
+                            Data..:? "captionDescriptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "containerSettings")
@@ -203,7 +205,8 @@ instance Data.FromJSON Output where
 
 instance Prelude.Hashable Output where
   hashWithSalt _salt Output' {..} =
-    _salt `Prelude.hashWithSalt` audioDescriptions
+    _salt
+      `Prelude.hashWithSalt` audioDescriptions
       `Prelude.hashWithSalt` captionDescriptions
       `Prelude.hashWithSalt` containerSettings
       `Prelude.hashWithSalt` extension

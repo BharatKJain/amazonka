@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECR.Types.ImageScanStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECR.Types.ImageScanStatus where
@@ -75,7 +75,8 @@ instance Data.FromJSON ImageScanStatus where
 
 instance Prelude.Hashable ImageScanStatus where
   hashWithSalt _salt ImageScanStatus' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData ImageScanStatus where

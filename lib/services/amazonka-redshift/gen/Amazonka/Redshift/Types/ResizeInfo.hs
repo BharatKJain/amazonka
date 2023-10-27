@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.ResizeInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.ResizeInfo where
@@ -71,7 +71,8 @@ instance Data.FromXML ResizeInfo where
 
 instance Prelude.Hashable ResizeInfo where
   hashWithSalt _salt ResizeInfo' {..} =
-    _salt `Prelude.hashWithSalt` allowCancelResize
+    _salt
+      `Prelude.hashWithSalt` allowCancelResize
       `Prelude.hashWithSalt` resizeType
 
 instance Prelude.NFData ResizeInfo where

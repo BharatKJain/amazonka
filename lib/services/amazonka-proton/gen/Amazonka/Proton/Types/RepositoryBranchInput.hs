@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Proton.Types.RepositoryBranchInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Proton.Types.RepositoryBranchInput where
@@ -80,7 +80,8 @@ repositoryBranchInput_provider = Lens.lens (\RepositoryBranchInput' {provider} -
 
 instance Prelude.Hashable RepositoryBranchInput where
   hashWithSalt _salt RepositoryBranchInput' {..} =
-    _salt `Prelude.hashWithSalt` branch
+    _salt
+      `Prelude.hashWithSalt` branch
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` provider
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsCodeBuildProjectSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsCodeBuildProjectSource where
@@ -233,7 +233,8 @@ instance Data.FromJSON AwsCodeBuildProjectSource where
 
 instance Prelude.Hashable AwsCodeBuildProjectSource where
   hashWithSalt _salt AwsCodeBuildProjectSource' {..} =
-    _salt `Prelude.hashWithSalt` gitCloneDepth
+    _salt
+      `Prelude.hashWithSalt` gitCloneDepth
       `Prelude.hashWithSalt` insecureSsl
       `Prelude.hashWithSalt` location
       `Prelude.hashWithSalt` type'

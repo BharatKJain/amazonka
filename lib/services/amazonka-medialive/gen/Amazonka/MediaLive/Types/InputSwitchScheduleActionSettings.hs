@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.InputSwitchScheduleActionSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.InputSwitchScheduleActionSettings where
@@ -114,7 +114,8 @@ instance
   hashWithSalt
     _salt
     InputSwitchScheduleActionSettings' {..} =
-      _salt `Prelude.hashWithSalt` inputClippingSettings
+      _salt
+        `Prelude.hashWithSalt` inputClippingSettings
         `Prelude.hashWithSalt` urlPath
         `Prelude.hashWithSalt` inputAttachmentNameReference
 

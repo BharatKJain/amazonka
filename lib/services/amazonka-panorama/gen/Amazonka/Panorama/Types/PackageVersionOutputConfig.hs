@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Panorama.Types.PackageVersionOutputConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Panorama.Types.PackageVersionOutputConfig where
@@ -91,7 +91,8 @@ instance Data.FromJSON PackageVersionOutputConfig where
 
 instance Prelude.Hashable PackageVersionOutputConfig where
   hashWithSalt _salt PackageVersionOutputConfig' {..} =
-    _salt `Prelude.hashWithSalt` markLatest
+    _salt
+      `Prelude.hashWithSalt` markLatest
       `Prelude.hashWithSalt` packageName
       `Prelude.hashWithSalt` packageVersion
 

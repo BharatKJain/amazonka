@@ -16,7 +16,7 @@
 -- Module      : Amazonka.BackupGateway.ListVirtualMachines
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,22 +115,22 @@ instance Core.AWSPager ListVirtualMachines where
     | Core.stop
         ( rs
             Lens.^? listVirtualMachinesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listVirtualMachinesResponse_virtualMachines
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listVirtualMachines_nextToken
           Lens..~ rs
           Lens.^? listVirtualMachinesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListVirtualMachines where
   type
@@ -143,7 +143,8 @@ instance Core.AWSRequest ListVirtualMachines where
       ( \s h x ->
           ListVirtualMachinesResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "VirtualMachines"
+            Prelude.<*> ( x
+                            Data..?> "VirtualMachines"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -151,7 +152,8 @@ instance Core.AWSRequest ListVirtualMachines where
 
 instance Prelude.Hashable ListVirtualMachines where
   hashWithSalt _salt ListVirtualMachines' {..} =
-    _salt `Prelude.hashWithSalt` hypervisorArn
+    _salt
+      `Prelude.hashWithSalt` hypervisorArn
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

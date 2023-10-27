@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SnowDeviceManagement.Types.PhysicalNetworkInterface
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SnowDeviceManagement.Types.PhysicalNetworkInterface where
@@ -127,7 +127,8 @@ instance Data.FromJSON PhysicalNetworkInterface where
 
 instance Prelude.Hashable PhysicalNetworkInterface where
   hashWithSalt _salt PhysicalNetworkInterface' {..} =
-    _salt `Prelude.hashWithSalt` defaultGateway
+    _salt
+      `Prelude.hashWithSalt` defaultGateway
       `Prelude.hashWithSalt` ipAddress
       `Prelude.hashWithSalt` ipAddressAssignment
       `Prelude.hashWithSalt` macAddress

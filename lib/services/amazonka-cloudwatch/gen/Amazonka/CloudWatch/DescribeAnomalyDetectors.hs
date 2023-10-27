@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatch.DescribeAnomalyDetectors
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -178,22 +178,22 @@ instance Core.AWSPager DescribeAnomalyDetectors where
     | Core.stop
         ( rs
             Lens.^? describeAnomalyDetectorsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeAnomalyDetectorsResponse_anomalyDetectors
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeAnomalyDetectors_nextToken
           Lens..~ rs
           Lens.^? describeAnomalyDetectorsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeAnomalyDetectors where
   type
@@ -206,7 +206,8 @@ instance Core.AWSRequest DescribeAnomalyDetectors where
       "DescribeAnomalyDetectorsResult"
       ( \s h x ->
           DescribeAnomalyDetectorsResponse'
-            Prelude.<$> ( x Data..@? "AnomalyDetectors"
+            Prelude.<$> ( x
+                            Data..@? "AnomalyDetectors"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
@@ -216,7 +217,8 @@ instance Core.AWSRequest DescribeAnomalyDetectors where
 
 instance Prelude.Hashable DescribeAnomalyDetectors where
   hashWithSalt _salt DescribeAnomalyDetectors' {..} =
-    _salt `Prelude.hashWithSalt` anomalyDetectorTypes
+    _salt
+      `Prelude.hashWithSalt` anomalyDetectorTypes
       `Prelude.hashWithSalt` dimensions
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` metricName

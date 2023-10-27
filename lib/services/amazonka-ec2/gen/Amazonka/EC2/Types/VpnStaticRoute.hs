@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VpnStaticRoute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VpnStaticRoute where
@@ -87,7 +87,8 @@ instance Data.FromXML VpnStaticRoute where
 
 instance Prelude.Hashable VpnStaticRoute where
   hashWithSalt _salt VpnStaticRoute' {..} =
-    _salt `Prelude.hashWithSalt` destinationCidrBlock
+    _salt
+      `Prelude.hashWithSalt` destinationCidrBlock
       `Prelude.hashWithSalt` source
       `Prelude.hashWithSalt` state
 

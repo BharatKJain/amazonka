@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glacier.Types.DescribeVaultOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glacier.Types.DescribeVaultOutput where
@@ -139,7 +139,8 @@ instance Data.FromJSON DescribeVaultOutput where
 
 instance Prelude.Hashable DescribeVaultOutput where
   hashWithSalt _salt DescribeVaultOutput' {..} =
-    _salt `Prelude.hashWithSalt` creationDate
+    _salt
+      `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` lastInventoryDate
       `Prelude.hashWithSalt` numberOfArchives
       `Prelude.hashWithSalt` sizeInBytes

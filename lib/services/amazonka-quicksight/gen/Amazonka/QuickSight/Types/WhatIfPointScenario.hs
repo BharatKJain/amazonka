@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.WhatIfPointScenario
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.WhatIfPointScenario where
@@ -73,12 +73,14 @@ instance Data.FromJSON WhatIfPointScenario where
       "WhatIfPointScenario"
       ( \x ->
           WhatIfPointScenario'
-            Prelude.<$> (x Data..: "Date") Prelude.<*> (x Data..: "Value")
+            Prelude.<$> (x Data..: "Date")
+            Prelude.<*> (x Data..: "Value")
       )
 
 instance Prelude.Hashable WhatIfPointScenario where
   hashWithSalt _salt WhatIfPointScenario' {..} =
-    _salt `Prelude.hashWithSalt` date
+    _salt
+      `Prelude.hashWithSalt` date
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData WhatIfPointScenario where

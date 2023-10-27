@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Backup.StartReportJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest StartReportJob where
 
 instance Prelude.Hashable StartReportJob where
   hashWithSalt _salt StartReportJob' {..} =
-    _salt `Prelude.hashWithSalt` idempotencyToken
+    _salt
+      `Prelude.hashWithSalt` idempotencyToken
       `Prelude.hashWithSalt` reportPlanName
 
 instance Prelude.NFData StartReportJob where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.DescribeDefaultClusterParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,25 +158,25 @@ instance
     | Core.stop
         ( rs
             Lens.^? describeDefaultClusterParametersResponse_defaultClusterParameters
-              Prelude.. defaultClusterParameters_marker
-              Prelude.. Lens._Just
+            Prelude.. defaultClusterParameters_marker
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeDefaultClusterParametersResponse_defaultClusterParameters
-              Prelude.. defaultClusterParameters_parameters
-              Prelude.. Lens._Just
+            Prelude.. defaultClusterParameters_parameters
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeDefaultClusterParameters_marker
           Lens..~ rs
           Lens.^? describeDefaultClusterParametersResponse_defaultClusterParameters
-            Prelude.. defaultClusterParameters_marker
-            Prelude.. Lens._Just
+          Prelude.. defaultClusterParameters_marker
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -203,7 +203,8 @@ instance
   hashWithSalt
     _salt
     DescribeDefaultClusterParameters' {..} =
-      _salt `Prelude.hashWithSalt` marker
+      _salt
+        `Prelude.hashWithSalt` marker
         `Prelude.hashWithSalt` maxRecords
         `Prelude.hashWithSalt` parameterGroupFamily
 

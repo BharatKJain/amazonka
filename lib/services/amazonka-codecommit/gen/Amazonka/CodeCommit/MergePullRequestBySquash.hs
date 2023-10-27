@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeCommit.MergePullRequestBySquash
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -238,7 +238,8 @@ instance Core.AWSRequest MergePullRequestBySquash where
 
 instance Prelude.Hashable MergePullRequestBySquash where
   hashWithSalt _salt MergePullRequestBySquash' {..} =
-    _salt `Prelude.hashWithSalt` authorName
+    _salt
+      `Prelude.hashWithSalt` authorName
       `Prelude.hashWithSalt` commitMessage
       `Prelude.hashWithSalt` conflictDetailLevel
       `Prelude.hashWithSalt` conflictResolution

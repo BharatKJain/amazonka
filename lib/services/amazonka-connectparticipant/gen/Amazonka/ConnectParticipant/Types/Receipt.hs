@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectParticipant.Types.Receipt
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectParticipant.Types.Receipt where
@@ -84,7 +84,8 @@ instance Data.FromJSON Receipt where
 
 instance Prelude.Hashable Receipt where
   hashWithSalt _salt Receipt' {..} =
-    _salt `Prelude.hashWithSalt` deliveredTimestamp
+    _salt
+      `Prelude.hashWithSalt` deliveredTimestamp
       `Prelude.hashWithSalt` readTimestamp
       `Prelude.hashWithSalt` recipientParticipantId
 

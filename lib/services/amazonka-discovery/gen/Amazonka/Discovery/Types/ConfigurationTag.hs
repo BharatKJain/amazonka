@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Discovery.Types.ConfigurationTag
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Discovery.Types.ConfigurationTag where
@@ -116,7 +116,8 @@ instance Data.FromJSON ConfigurationTag where
 
 instance Prelude.Hashable ConfigurationTag where
   hashWithSalt _salt ConfigurationTag' {..} =
-    _salt `Prelude.hashWithSalt` configurationId
+    _salt
+      `Prelude.hashWithSalt` configurationId
       `Prelude.hashWithSalt` configurationType
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` timeOfCreation

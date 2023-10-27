@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.DataProcessing
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.DataProcessing where
@@ -203,7 +203,8 @@ instance Data.FromJSON DataProcessing where
 
 instance Prelude.Hashable DataProcessing where
   hashWithSalt _salt DataProcessing' {..} =
-    _salt `Prelude.hashWithSalt` inputFilter
+    _salt
+      `Prelude.hashWithSalt` inputFilter
       `Prelude.hashWithSalt` joinSource
       `Prelude.hashWithSalt` outputFilter
 

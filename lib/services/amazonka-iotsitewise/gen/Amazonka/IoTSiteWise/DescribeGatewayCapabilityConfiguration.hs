@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTSiteWise.DescribeGatewayCapabilityConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,10 +128,10 @@ instance
       ( \s h x ->
           DescribeGatewayCapabilityConfigurationResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> (x Data..:> "gatewayId")
-              Prelude.<*> (x Data..:> "capabilityNamespace")
-              Prelude.<*> (x Data..:> "capabilityConfiguration")
-              Prelude.<*> (x Data..:> "capabilitySyncStatus")
+            Prelude.<*> (x Data..:> "gatewayId")
+            Prelude.<*> (x Data..:> "capabilityNamespace")
+            Prelude.<*> (x Data..:> "capabilityConfiguration")
+            Prelude.<*> (x Data..:> "capabilitySyncStatus")
       )
 
 instance
@@ -141,7 +141,8 @@ instance
   hashWithSalt
     _salt
     DescribeGatewayCapabilityConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` gatewayId
+      _salt
+        `Prelude.hashWithSalt` gatewayId
         `Prelude.hashWithSalt` capabilityNamespace
 
 instance

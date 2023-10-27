@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.OSInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.OSInfo where
@@ -75,7 +75,8 @@ instance Data.FromJSON OSInfo where
 
 instance Prelude.Hashable OSInfo where
   hashWithSalt _salt OSInfo' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` version
 
 instance Prelude.NFData OSInfo where

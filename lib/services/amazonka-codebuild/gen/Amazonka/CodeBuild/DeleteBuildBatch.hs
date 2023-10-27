@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeBuild.DeleteBuildBatch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -87,7 +87,8 @@ instance Core.AWSRequest DeleteBuildBatch where
       ( \s h x ->
           DeleteBuildBatchResponse'
             Prelude.<$> (x Data..?> "buildsDeleted")
-            Prelude.<*> ( x Data..?> "buildsNotDeleted"
+            Prelude.<*> ( x
+                            Data..?> "buildsNotDeleted"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "statusCode")

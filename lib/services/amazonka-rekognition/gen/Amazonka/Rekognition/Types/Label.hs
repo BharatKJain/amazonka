@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.Label
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.Label where
@@ -131,7 +131,8 @@ instance Data.FromJSON Label where
 
 instance Prelude.Hashable Label where
   hashWithSalt _salt Label' {..} =
-    _salt `Prelude.hashWithSalt` aliases
+    _salt
+      `Prelude.hashWithSalt` aliases
       `Prelude.hashWithSalt` categories
       `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` instances

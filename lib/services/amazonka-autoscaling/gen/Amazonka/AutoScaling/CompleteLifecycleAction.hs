@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.CompleteLifecycleAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -181,7 +181,8 @@ instance Core.AWSRequest CompleteLifecycleAction where
 
 instance Prelude.Hashable CompleteLifecycleAction where
   hashWithSalt _salt CompleteLifecycleAction' {..} =
-    _salt `Prelude.hashWithSalt` instanceId
+    _salt
+      `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` lifecycleActionToken
       `Prelude.hashWithSalt` lifecycleHookName
       `Prelude.hashWithSalt` autoScalingGroupName

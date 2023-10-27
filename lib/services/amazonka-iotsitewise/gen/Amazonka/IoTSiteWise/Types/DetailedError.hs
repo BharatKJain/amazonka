@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.DetailedError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.DetailedError where
@@ -70,12 +70,14 @@ instance Data.FromJSON DetailedError where
       "DetailedError"
       ( \x ->
           DetailedError'
-            Prelude.<$> (x Data..: "code") Prelude.<*> (x Data..: "message")
+            Prelude.<$> (x Data..: "code")
+            Prelude.<*> (x Data..: "message")
       )
 
 instance Prelude.Hashable DetailedError where
   hashWithSalt _salt DetailedError' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData DetailedError where

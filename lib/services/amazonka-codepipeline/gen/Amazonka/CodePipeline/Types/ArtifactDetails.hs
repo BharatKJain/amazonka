@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ArtifactDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ArtifactDetails where
@@ -78,7 +78,8 @@ instance Data.FromJSON ArtifactDetails where
 
 instance Prelude.Hashable ArtifactDetails where
   hashWithSalt _salt ArtifactDetails' {..} =
-    _salt `Prelude.hashWithSalt` minimumCount
+    _salt
+      `Prelude.hashWithSalt` minimumCount
       `Prelude.hashWithSalt` maximumCount
 
 instance Prelude.NFData ArtifactDetails where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Nimble.Types.NewStudioMember
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Nimble.Types.NewStudioMember where
@@ -69,7 +69,8 @@ newStudioMember_principalId = Lens.lens (\NewStudioMember' {principalId} -> prin
 
 instance Prelude.Hashable NewStudioMember where
   hashWithSalt _salt NewStudioMember' {..} =
-    _salt `Prelude.hashWithSalt` persona
+    _salt
+      `Prelude.hashWithSalt` persona
       `Prelude.hashWithSalt` principalId
 
 instance Prelude.NFData NewStudioMember where

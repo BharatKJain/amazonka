@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.ParquetSerDe
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.ParquetSerDe where
@@ -148,7 +148,8 @@ instance Data.FromJSON ParquetSerDe where
 
 instance Prelude.Hashable ParquetSerDe where
   hashWithSalt _salt ParquetSerDe' {..} =
-    _salt `Prelude.hashWithSalt` blockSizeBytes
+    _salt
+      `Prelude.hashWithSalt` blockSizeBytes
       `Prelude.hashWithSalt` compression
       `Prelude.hashWithSalt` enableDictionaryCompression
       `Prelude.hashWithSalt` maxPaddingBytes

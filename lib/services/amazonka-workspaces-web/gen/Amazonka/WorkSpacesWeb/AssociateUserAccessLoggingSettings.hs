@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.AssociateUserAccessLoggingSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,8 +107,8 @@ instance
       ( \s h x ->
           AssociateUserAccessLoggingSettingsResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
-              Prelude.<*> (x Data..:> "portalArn")
-              Prelude.<*> (x Data..:> "userAccessLoggingSettingsArn")
+            Prelude.<*> (x Data..:> "portalArn")
+            Prelude.<*> (x Data..:> "userAccessLoggingSettingsArn")
       )
 
 instance
@@ -118,7 +118,8 @@ instance
   hashWithSalt
     _salt
     AssociateUserAccessLoggingSettings' {..} =
-      _salt `Prelude.hashWithSalt` portalArn
+      _salt
+        `Prelude.hashWithSalt` portalArn
         `Prelude.hashWithSalt` userAccessLoggingSettingsArn
 
 instance

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.RedshiftSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.RedshiftSettings where
@@ -664,7 +664,8 @@ instance Data.FromJSON RedshiftSettings where
 
 instance Prelude.Hashable RedshiftSettings where
   hashWithSalt _salt RedshiftSettings' {..} =
-    _salt `Prelude.hashWithSalt` acceptAnyDate
+    _salt
+      `Prelude.hashWithSalt` acceptAnyDate
       `Prelude.hashWithSalt` afterConnectScript
       `Prelude.hashWithSalt` bucketFolder
       `Prelude.hashWithSalt` bucketName

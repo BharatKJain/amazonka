@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.Parameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.Parameter where
@@ -167,14 +167,16 @@ instance Data.FromXML Parameter where
       Prelude.<*> (x Data..@? "ParameterName")
       Prelude.<*> (x Data..@? "ParameterValue")
       Prelude.<*> (x Data..@? "Source")
-      Prelude.<*> ( x Data..@? "SupportedEngineModes"
+      Prelude.<*> ( x
+                      Data..@? "SupportedEngineModes"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 
 instance Prelude.Hashable Parameter where
   hashWithSalt _salt Parameter' {..} =
-    _salt `Prelude.hashWithSalt` allowedValues
+    _salt
+      `Prelude.hashWithSalt` allowedValues
       `Prelude.hashWithSalt` applyMethod
       `Prelude.hashWithSalt` applyType
       `Prelude.hashWithSalt` dataType

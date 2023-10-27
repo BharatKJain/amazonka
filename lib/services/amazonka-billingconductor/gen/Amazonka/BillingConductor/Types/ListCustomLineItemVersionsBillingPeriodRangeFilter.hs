@@ -14,7 +14,7 @@
 -- Module      : Amazonka.BillingConductor.Types.ListCustomLineItemVersionsBillingPeriodRangeFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.BillingConductor.Types.ListCustomLineItemVersionsBillingPeriodRangeFilter where
@@ -78,7 +78,8 @@ instance
   hashWithSalt
     _salt
     ListCustomLineItemVersionsBillingPeriodRangeFilter' {..} =
-      _salt `Prelude.hashWithSalt` endBillingPeriod
+      _salt
+        `Prelude.hashWithSalt` endBillingPeriod
         `Prelude.hashWithSalt` startBillingPeriod
 
 instance

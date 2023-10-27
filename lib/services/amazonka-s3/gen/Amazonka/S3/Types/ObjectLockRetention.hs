@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.ObjectLockRetention
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.ObjectLockRetention where
@@ -72,7 +72,8 @@ instance Data.FromXML ObjectLockRetention where
 
 instance Prelude.Hashable ObjectLockRetention where
   hashWithSalt _salt ObjectLockRetention' {..} =
-    _salt `Prelude.hashWithSalt` mode
+    _salt
+      `Prelude.hashWithSalt` mode
       `Prelude.hashWithSalt` retainUntilDate
 
 instance Prelude.NFData ObjectLockRetention where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.AccountAggregation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.AccountAggregation where
@@ -87,7 +87,8 @@ accountAggregation_sortOrder = Lens.lens (\AccountAggregation' {sortOrder} -> so
 
 instance Prelude.Hashable AccountAggregation where
   hashWithSalt _salt AccountAggregation' {..} =
-    _salt `Prelude.hashWithSalt` findingType
+    _salt
+      `Prelude.hashWithSalt` findingType
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` sortBy
       `Prelude.hashWithSalt` sortOrder

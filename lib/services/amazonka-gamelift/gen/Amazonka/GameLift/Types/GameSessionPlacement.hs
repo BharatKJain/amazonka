@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.GameSessionPlacement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.GameSessionPlacement where
@@ -421,11 +421,13 @@ instance Data.FromJSON GameSessionPlacement where
             Prelude.<*> (x Data..:? "IpAddress")
             Prelude.<*> (x Data..:? "MatchmakerData")
             Prelude.<*> (x Data..:? "MaximumPlayerSessionCount")
-            Prelude.<*> ( x Data..:? "PlacedPlayerSessions"
+            Prelude.<*> ( x
+                            Data..:? "PlacedPlayerSessions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "PlacementId")
-            Prelude.<*> ( x Data..:? "PlayerLatencies"
+            Prelude.<*> ( x
+                            Data..:? "PlayerLatencies"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Port")
@@ -435,7 +437,8 @@ instance Data.FromJSON GameSessionPlacement where
 
 instance Prelude.Hashable GameSessionPlacement where
   hashWithSalt _salt GameSessionPlacement' {..} =
-    _salt `Prelude.hashWithSalt` dnsName
+    _salt
+      `Prelude.hashWithSalt` dnsName
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` gameProperties
       `Prelude.hashWithSalt` gameSessionArn

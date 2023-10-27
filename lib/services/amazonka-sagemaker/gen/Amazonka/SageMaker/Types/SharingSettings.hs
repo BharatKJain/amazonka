@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.SharingSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.SharingSettings where
@@ -102,7 +102,8 @@ instance Data.FromJSON SharingSettings where
 
 instance Prelude.Hashable SharingSettings where
   hashWithSalt _salt SharingSettings' {..} =
-    _salt `Prelude.hashWithSalt` notebookOutputOption
+    _salt
+      `Prelude.hashWithSalt` notebookOutputOption
       `Prelude.hashWithSalt` s3KmsKeyId
       `Prelude.hashWithSalt` s3OutputPath
 

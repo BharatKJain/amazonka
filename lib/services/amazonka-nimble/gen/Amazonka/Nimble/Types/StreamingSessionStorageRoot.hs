@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Nimble.Types.StreamingSessionStorageRoot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Nimble.Types.StreamingSessionStorageRoot where
@@ -76,7 +76,8 @@ instance Data.FromJSON StreamingSessionStorageRoot where
 
 instance Prelude.Hashable StreamingSessionStorageRoot where
   hashWithSalt _salt StreamingSessionStorageRoot' {..} =
-    _salt `Prelude.hashWithSalt` linux
+    _salt
+      `Prelude.hashWithSalt` linux
       `Prelude.hashWithSalt` windows
 
 instance Prelude.NFData StreamingSessionStorageRoot where

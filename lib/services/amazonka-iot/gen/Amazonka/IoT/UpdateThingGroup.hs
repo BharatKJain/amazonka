@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.UpdateThingGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,7 +124,8 @@ instance Core.AWSRequest UpdateThingGroup where
 
 instance Prelude.Hashable UpdateThingGroup where
   hashWithSalt _salt UpdateThingGroup' {..} =
-    _salt `Prelude.hashWithSalt` expectedVersion
+    _salt
+      `Prelude.hashWithSalt` expectedVersion
       `Prelude.hashWithSalt` thingGroupName
       `Prelude.hashWithSalt` thingGroupProperties
 

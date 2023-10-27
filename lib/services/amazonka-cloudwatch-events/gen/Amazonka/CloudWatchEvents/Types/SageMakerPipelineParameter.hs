@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.SageMakerPipelineParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.SageMakerPipelineParameter where
@@ -79,12 +79,14 @@ instance Data.FromJSON SageMakerPipelineParameter where
       "SageMakerPipelineParameter"
       ( \x ->
           SageMakerPipelineParameter'
-            Prelude.<$> (x Data..: "Name") Prelude.<*> (x Data..: "Value")
+            Prelude.<$> (x Data..: "Name")
+            Prelude.<*> (x Data..: "Value")
       )
 
 instance Prelude.Hashable SageMakerPipelineParameter where
   hashWithSalt _salt SageMakerPipelineParameter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData SageMakerPipelineParameter where

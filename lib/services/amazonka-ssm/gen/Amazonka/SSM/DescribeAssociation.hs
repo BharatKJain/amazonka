@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.DescribeAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest DescribeAssociation where
 
 instance Prelude.Hashable DescribeAssociation where
   hashWithSalt _salt DescribeAssociation' {..} =
-    _salt `Prelude.hashWithSalt` associationId
+    _salt
+      `Prelude.hashWithSalt` associationId
       `Prelude.hashWithSalt` associationVersion
       `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` name

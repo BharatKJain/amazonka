@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.CreateInstantBooking
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.CreateInstantBooking where
@@ -75,7 +75,8 @@ createInstantBooking_enabled = Lens.lens (\CreateInstantBooking' {enabled} -> en
 
 instance Prelude.Hashable CreateInstantBooking where
   hashWithSalt _salt CreateInstantBooking' {..} =
-    _salt `Prelude.hashWithSalt` durationInMinutes
+    _salt
+      `Prelude.hashWithSalt` durationInMinutes
       `Prelude.hashWithSalt` enabled
 
 instance Prelude.NFData CreateInstantBooking where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.ConfusionMatrix
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.ConfusionMatrix where
@@ -112,7 +112,8 @@ instance Data.FromJSON ConfusionMatrix where
 
 instance Prelude.Hashable ConfusionMatrix where
   hashWithSalt _salt ConfusionMatrix' {..} =
-    _salt `Prelude.hashWithSalt` numFalseNegatives
+    _salt
+      `Prelude.hashWithSalt` numFalseNegatives
       `Prelude.hashWithSalt` numFalsePositives
       `Prelude.hashWithSalt` numTrueNegatives
       `Prelude.hashWithSalt` numTruePositives

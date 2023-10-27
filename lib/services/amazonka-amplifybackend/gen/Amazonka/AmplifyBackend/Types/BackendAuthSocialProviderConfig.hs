@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyBackend.Types.BackendAuthSocialProviderConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyBackend.Types.BackendAuthSocialProviderConfig where
@@ -90,7 +90,8 @@ instance
   hashWithSalt
     _salt
     BackendAuthSocialProviderConfig' {..} =
-      _salt `Prelude.hashWithSalt` clientId
+      _salt
+        `Prelude.hashWithSalt` clientId
         `Prelude.hashWithSalt` clientSecret
 
 instance

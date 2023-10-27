@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.TimestampMetricValuePair
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.TimestampMetricValuePair where
@@ -75,7 +75,8 @@ instance Data.FromJSON TimestampMetricValuePair where
 
 instance Prelude.Hashable TimestampMetricValuePair where
   hashWithSalt _salt TimestampMetricValuePair' {..} =
-    _salt `Prelude.hashWithSalt` metricValue
+    _salt
+      `Prelude.hashWithSalt` metricValue
       `Prelude.hashWithSalt` timestamp
 
 instance Prelude.NFData TimestampMetricValuePair where

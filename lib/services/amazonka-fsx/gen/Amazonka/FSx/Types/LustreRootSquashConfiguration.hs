@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.LustreRootSquashConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.LustreRootSquashConfiguration where
@@ -149,7 +149,8 @@ instance
     LustreRootSquashConfiguration
   where
   hashWithSalt _salt LustreRootSquashConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` noSquashNids
+    _salt
+      `Prelude.hashWithSalt` noSquashNids
       `Prelude.hashWithSalt` rootSquash
 
 instance Prelude.NFData LustreRootSquashConfiguration where

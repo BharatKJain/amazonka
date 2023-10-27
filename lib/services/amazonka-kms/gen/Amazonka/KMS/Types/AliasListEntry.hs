@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KMS.Types.AliasListEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KMS.Types.AliasListEntry where
@@ -113,7 +113,8 @@ instance Data.FromJSON AliasListEntry where
 
 instance Prelude.Hashable AliasListEntry where
   hashWithSalt _salt AliasListEntry' {..} =
-    _salt `Prelude.hashWithSalt` aliasArn
+    _salt
+      `Prelude.hashWithSalt` aliasArn
       `Prelude.hashWithSalt` aliasName
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` lastUpdatedDate

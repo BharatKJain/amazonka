@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApplicationCostProfiler.Types.ReportDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApplicationCostProfiler.Types.ReportDefinition where
@@ -130,7 +130,8 @@ instance Data.FromJSON ReportDefinition where
 
 instance Prelude.Hashable ReportDefinition where
   hashWithSalt _salt ReportDefinition' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` destinationS3Location
       `Prelude.hashWithSalt` format
       `Prelude.hashWithSalt` lastUpdatedAt

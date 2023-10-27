@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResilienceHub.Types.RecommendationItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResilienceHub.Types.RecommendationItem where
@@ -95,7 +95,8 @@ instance Data.FromJSON RecommendationItem where
 
 instance Prelude.Hashable RecommendationItem where
   hashWithSalt _salt RecommendationItem' {..} =
-    _salt `Prelude.hashWithSalt` alreadyImplemented
+    _salt
+      `Prelude.hashWithSalt` alreadyImplemented
       `Prelude.hashWithSalt` resourceId
       `Prelude.hashWithSalt` targetAccountId
       `Prelude.hashWithSalt` targetRegion

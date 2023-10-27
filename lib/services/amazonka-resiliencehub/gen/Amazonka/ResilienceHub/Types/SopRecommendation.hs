@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResilienceHub.Types.SopRecommendation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResilienceHub.Types.SopRecommendation where
@@ -146,7 +146,8 @@ instance Data.FromJSON SopRecommendation where
 
 instance Prelude.Hashable SopRecommendation where
   hashWithSalt _salt SopRecommendation' {..} =
-    _salt `Prelude.hashWithSalt` appComponentName
+    _salt
+      `Prelude.hashWithSalt` appComponentName
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` items
       `Prelude.hashWithSalt` name

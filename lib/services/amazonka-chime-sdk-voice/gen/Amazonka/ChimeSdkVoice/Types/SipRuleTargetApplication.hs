@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkVoice.Types.SipRuleTargetApplication
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkVoice.Types.SipRuleTargetApplication where
@@ -80,7 +80,8 @@ instance Data.FromJSON SipRuleTargetApplication where
 
 instance Prelude.Hashable SipRuleTargetApplication where
   hashWithSalt _salt SipRuleTargetApplication' {..} =
-    _salt `Prelude.hashWithSalt` awsRegion
+    _salt
+      `Prelude.hashWithSalt` awsRegion
       `Prelude.hashWithSalt` priority
       `Prelude.hashWithSalt` sipMediaApplicationId
 

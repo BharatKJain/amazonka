@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFront.CreateRealtimeLogConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -157,7 +157,8 @@ instance Core.AWSRequest CreateRealtimeLogConfig where
 
 instance Prelude.Hashable CreateRealtimeLogConfig where
   hashWithSalt _salt CreateRealtimeLogConfig' {..} =
-    _salt `Prelude.hashWithSalt` endPoints
+    _salt
+      `Prelude.hashWithSalt` endPoints
       `Prelude.hashWithSalt` fields
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` samplingRate

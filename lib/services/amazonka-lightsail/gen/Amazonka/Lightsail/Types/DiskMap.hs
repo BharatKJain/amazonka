@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.DiskMap
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.DiskMap where
@@ -67,7 +67,8 @@ diskMap_originalDiskPath = Lens.lens (\DiskMap' {originalDiskPath} -> originalDi
 
 instance Prelude.Hashable DiskMap where
   hashWithSalt _salt DiskMap' {..} =
-    _salt `Prelude.hashWithSalt` newDiskName'
+    _salt
+      `Prelude.hashWithSalt` newDiskName'
       `Prelude.hashWithSalt` originalDiskPath
 
 instance Prelude.NFData DiskMap where

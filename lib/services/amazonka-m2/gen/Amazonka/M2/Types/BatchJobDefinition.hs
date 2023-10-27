@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.BatchJobDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.BatchJobDefinition where
@@ -77,7 +77,8 @@ instance Data.FromJSON BatchJobDefinition where
 
 instance Prelude.Hashable BatchJobDefinition where
   hashWithSalt _salt BatchJobDefinition' {..} =
-    _salt `Prelude.hashWithSalt` fileBatchJobDefinition
+    _salt
+      `Prelude.hashWithSalt` fileBatchJobDefinition
       `Prelude.hashWithSalt` scriptBatchJobDefinition
 
 instance Prelude.NFData BatchJobDefinition where

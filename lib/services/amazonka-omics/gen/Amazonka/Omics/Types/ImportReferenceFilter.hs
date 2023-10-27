@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.ImportReferenceFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.ImportReferenceFilter where
@@ -75,7 +75,8 @@ importReferenceFilter_status = Lens.lens (\ImportReferenceFilter' {status} -> st
 
 instance Prelude.Hashable ImportReferenceFilter where
   hashWithSalt _salt ImportReferenceFilter' {..} =
-    _salt `Prelude.hashWithSalt` createdAfter
+    _salt
+      `Prelude.hashWithSalt` createdAfter
       `Prelude.hashWithSalt` createdBefore
       `Prelude.hashWithSalt` status
 

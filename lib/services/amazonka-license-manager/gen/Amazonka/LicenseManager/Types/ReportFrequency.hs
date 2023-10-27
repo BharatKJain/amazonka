@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManager.Types.ReportFrequency
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManager.Types.ReportFrequency where
@@ -81,7 +81,8 @@ instance Data.FromJSON ReportFrequency where
 
 instance Prelude.Hashable ReportFrequency where
   hashWithSalt _salt ReportFrequency' {..} =
-    _salt `Prelude.hashWithSalt` period
+    _salt
+      `Prelude.hashWithSalt` period
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData ReportFrequency where

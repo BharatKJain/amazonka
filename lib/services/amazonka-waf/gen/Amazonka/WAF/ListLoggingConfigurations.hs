@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAF.ListLoggingConfigurations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -131,22 +131,22 @@ instance Core.AWSPager ListLoggingConfigurations where
     | Core.stop
         ( rs
             Lens.^? listLoggingConfigurationsResponse_nextMarker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listLoggingConfigurationsResponse_loggingConfigurations
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listLoggingConfigurations_nextMarker
           Lens..~ rs
           Lens.^? listLoggingConfigurationsResponse_nextMarker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListLoggingConfigurations where
   type
@@ -158,7 +158,8 @@ instance Core.AWSRequest ListLoggingConfigurations where
     Response.receiveJSON
       ( \s h x ->
           ListLoggingConfigurationsResponse'
-            Prelude.<$> ( x Data..?> "LoggingConfigurations"
+            Prelude.<$> ( x
+                            Data..?> "LoggingConfigurations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextMarker")
@@ -167,7 +168,8 @@ instance Core.AWSRequest ListLoggingConfigurations where
 
 instance Prelude.Hashable ListLoggingConfigurations where
   hashWithSalt _salt ListLoggingConfigurations' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextMarker
 
 instance Prelude.NFData ListLoggingConfigurations where

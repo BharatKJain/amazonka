@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.SlotStartTimeRangeRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.SlotStartTimeRangeRequest where
@@ -67,7 +67,8 @@ slotStartTimeRangeRequest_latestTime = Lens.lens (\SlotStartTimeRangeRequest' {l
 
 instance Prelude.Hashable SlotStartTimeRangeRequest where
   hashWithSalt _salt SlotStartTimeRangeRequest' {..} =
-    _salt `Prelude.hashWithSalt` earliestTime
+    _salt
+      `Prelude.hashWithSalt` earliestTime
       `Prelude.hashWithSalt` latestTime
 
 instance Prelude.NFData SlotStartTimeRangeRequest where

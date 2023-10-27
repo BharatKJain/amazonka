@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.EBSFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.EBSFilter where
@@ -88,7 +88,8 @@ eBSFilter_values = Lens.lens (\EBSFilter' {values} -> values) (\s@EBSFilter' {} 
 
 instance Prelude.Hashable EBSFilter where
   hashWithSalt _salt EBSFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData EBSFilter where

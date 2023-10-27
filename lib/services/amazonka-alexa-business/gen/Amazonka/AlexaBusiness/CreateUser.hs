@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AlexaBusiness.CreateUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -143,7 +143,8 @@ instance Core.AWSRequest CreateUser where
 
 instance Prelude.Hashable CreateUser where
   hashWithSalt _salt CreateUser' {..} =
-    _salt `Prelude.hashWithSalt` clientRequestToken
+    _salt
+      `Prelude.hashWithSalt` clientRequestToken
       `Prelude.hashWithSalt` email
       `Prelude.hashWithSalt` firstName
       `Prelude.hashWithSalt` lastName

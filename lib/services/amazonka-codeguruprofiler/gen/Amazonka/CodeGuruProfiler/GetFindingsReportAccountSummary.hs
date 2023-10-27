@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeGuruProfiler.GetFindingsReportAccountSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -167,7 +167,8 @@ instance
           GetFindingsReportAccountSummaryResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "reportSummaries"
+            Prelude.<*> ( x
+                            Data..?> "reportSummaries"
                             Core..!@ Prelude.mempty
                         )
       )
@@ -179,7 +180,8 @@ instance
   hashWithSalt
     _salt
     GetFindingsReportAccountSummary' {..} =
-      _salt `Prelude.hashWithSalt` dailyReportsOnly
+      _salt
+        `Prelude.hashWithSalt` dailyReportsOnly
         `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectContactLens.Types.CategoryDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectContactLens.Types.CategoryDetails where
@@ -58,7 +58,8 @@ instance Data.FromJSON CategoryDetails where
       "CategoryDetails"
       ( \x ->
           CategoryDetails'
-            Prelude.<$> ( x Data..:? "PointsOfInterest"
+            Prelude.<$> ( x
+                            Data..:? "PointsOfInterest"
                             Data..!= Prelude.mempty
                         )
       )

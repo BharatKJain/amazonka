@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.FeaturizationMethod
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.FeaturizationMethod where
@@ -175,7 +175,8 @@ instance Data.FromJSON FeaturizationMethod where
       "FeaturizationMethod"
       ( \x ->
           FeaturizationMethod'
-            Prelude.<$> ( x Data..:? "FeaturizationMethodParameters"
+            Prelude.<$> ( x
+                            Data..:? "FeaturizationMethodParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "FeaturizationMethodName")

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTJobsData.StartNextPendingJobExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,8 @@ instance
     StartNextPendingJobExecution
   where
   hashWithSalt _salt StartNextPendingJobExecution' {..} =
-    _salt `Prelude.hashWithSalt` statusDetails
+    _salt
+      `Prelude.hashWithSalt` statusDetails
       `Prelude.hashWithSalt` stepTimeoutInMinutes
       `Prelude.hashWithSalt` thingName
 

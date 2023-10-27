@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Snowball.Types.ShippingDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Snowball.Types.ShippingDetails where
@@ -141,7 +141,8 @@ instance Data.FromJSON ShippingDetails where
 
 instance Prelude.Hashable ShippingDetails where
   hashWithSalt _salt ShippingDetails' {..} =
-    _salt `Prelude.hashWithSalt` inboundShipment
+    _salt
+      `Prelude.hashWithSalt` inboundShipment
       `Prelude.hashWithSalt` outboundShipment
       `Prelude.hashWithSalt` shippingOption
 

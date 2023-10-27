@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.NestedFilters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.NestedFilters where
@@ -95,7 +95,8 @@ nestedFilters_filters = Lens.lens (\NestedFilters' {filters} -> filters) (\s@Nes
 
 instance Prelude.Hashable NestedFilters where
   hashWithSalt _salt NestedFilters' {..} =
-    _salt `Prelude.hashWithSalt` nestedPropertyName
+    _salt
+      `Prelude.hashWithSalt` nestedPropertyName
       `Prelude.hashWithSalt` filters
 
 instance Prelude.NFData NestedFilters where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SESV2.CreateImportJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest CreateImportJob where
 
 instance Prelude.Hashable CreateImportJob where
   hashWithSalt _salt CreateImportJob' {..} =
-    _salt `Prelude.hashWithSalt` importDestination
+    _salt
+      `Prelude.hashWithSalt` importDestination
       `Prelude.hashWithSalt` importDataSource
 
 instance Prelude.NFData CreateImportJob where

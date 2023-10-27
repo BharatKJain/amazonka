@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Personalize.UpdateMetricAttribution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest UpdateMetricAttribution where
 
 instance Prelude.Hashable UpdateMetricAttribution where
   hashWithSalt _salt UpdateMetricAttribution' {..} =
-    _salt `Prelude.hashWithSalt` addMetrics
+    _salt
+      `Prelude.hashWithSalt` addMetrics
       `Prelude.hashWithSalt` metricAttributionArn
       `Prelude.hashWithSalt` metricsOutputConfig
       `Prelude.hashWithSalt` removeMetrics

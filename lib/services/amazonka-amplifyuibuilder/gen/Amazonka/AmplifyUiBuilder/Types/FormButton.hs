@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.FormButton
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.FormButton where
@@ -86,7 +86,8 @@ instance Data.FromJSON FormButton where
 
 instance Prelude.Hashable FormButton where
   hashWithSalt _salt FormButton' {..} =
-    _salt `Prelude.hashWithSalt` children
+    _salt
+      `Prelude.hashWithSalt` children
       `Prelude.hashWithSalt` excluded
       `Prelude.hashWithSalt` position
 

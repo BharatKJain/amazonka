@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamQuery.Types.TimestreamConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamQuery.Types.TimestreamConfiguration where
@@ -146,14 +146,16 @@ instance Data.FromJSON TimestreamConfiguration where
             Prelude.<*> (x Data..: "DatabaseName")
             Prelude.<*> (x Data..: "TableName")
             Prelude.<*> (x Data..: "TimeColumn")
-            Prelude.<*> ( x Data..:? "DimensionMappings"
+            Prelude.<*> ( x
+                            Data..:? "DimensionMappings"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable TimestreamConfiguration where
   hashWithSalt _salt TimestreamConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` measureNameColumn
+    _salt
+      `Prelude.hashWithSalt` measureNameColumn
       `Prelude.hashWithSalt` mixedMeasureMappings
       `Prelude.hashWithSalt` multiMeasureMappings
       `Prelude.hashWithSalt` databaseName

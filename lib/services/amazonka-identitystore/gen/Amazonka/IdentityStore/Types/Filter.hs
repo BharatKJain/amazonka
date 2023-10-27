@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IdentityStore.Types.Filter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IdentityStore.Types.Filter where
@@ -83,7 +83,8 @@ filter_attributeValue = Lens.lens (\Filter' {attributeValue} -> attributeValue) 
 
 instance Prelude.Hashable Filter where
   hashWithSalt _salt Filter' {..} =
-    _salt `Prelude.hashWithSalt` attributePath
+    _salt
+      `Prelude.hashWithSalt` attributePath
       `Prelude.hashWithSalt` attributeValue
 
 instance Prelude.NFData Filter where

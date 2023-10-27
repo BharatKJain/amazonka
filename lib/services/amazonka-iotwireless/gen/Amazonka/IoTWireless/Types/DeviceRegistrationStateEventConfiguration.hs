@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.DeviceRegistrationStateEventConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.DeviceRegistrationStateEventConfiguration where
@@ -83,7 +83,7 @@ instance
       ( \x ->
           DeviceRegistrationStateEventConfiguration'
             Prelude.<$> (x Data..:? "Sidewalk")
-              Prelude.<*> (x Data..:? "WirelessDeviceIdEventTopic")
+            Prelude.<*> (x Data..:? "WirelessDeviceIdEventTopic")
       )
 
 instance
@@ -93,7 +93,8 @@ instance
   hashWithSalt
     _salt
     DeviceRegistrationStateEventConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` sidewalk
+      _salt
+        `Prelude.hashWithSalt` sidewalk
         `Prelude.hashWithSalt` wirelessDeviceIdEventTopic
 
 instance

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.AttachmentsSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.AttachmentsSource where
@@ -154,7 +154,8 @@ attachmentsSource_values = Lens.lens (\AttachmentsSource' {values} -> values) (\
 
 instance Prelude.Hashable AttachmentsSource where
   hashWithSalt _salt AttachmentsSource' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
 

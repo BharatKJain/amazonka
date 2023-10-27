@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.Tag
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.Tag where
@@ -94,11 +94,13 @@ tag_value = Lens.lens (\Tag' {value} -> value) (\s@Tag' {} a -> s {value = a} ::
 instance Data.FromXML Tag where
   parseXML x =
     Tag'
-      Prelude.<$> (x Data..@? "Key") Prelude.<*> (x Data..@? "Value")
+      Prelude.<$> (x Data..@? "Key")
+      Prelude.<*> (x Data..@? "Value")
 
 instance Prelude.Hashable Tag where
   hashWithSalt _salt Tag' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData Tag where

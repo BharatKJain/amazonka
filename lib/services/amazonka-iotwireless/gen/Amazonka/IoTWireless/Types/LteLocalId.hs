@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.LteLocalId
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.LteLocalId where
@@ -68,7 +68,8 @@ lteLocalId_earfcn = Lens.lens (\LteLocalId' {earfcn} -> earfcn) (\s@LteLocalId' 
 
 instance Prelude.Hashable LteLocalId where
   hashWithSalt _salt LteLocalId' {..} =
-    _salt `Prelude.hashWithSalt` pci
+    _salt
+      `Prelude.hashWithSalt` pci
       `Prelude.hashWithSalt` earfcn
 
 instance Prelude.NFData LteLocalId where

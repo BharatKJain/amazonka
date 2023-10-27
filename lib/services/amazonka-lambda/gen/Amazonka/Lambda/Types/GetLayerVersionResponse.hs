@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.GetLayerVersionResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.GetLayerVersionResponse where
@@ -142,10 +142,12 @@ instance Data.FromJSON GetLayerVersionResponse where
       "GetLayerVersionResponse"
       ( \x ->
           GetLayerVersionResponse'
-            Prelude.<$> ( x Data..:? "CompatibleArchitectures"
+            Prelude.<$> ( x
+                            Data..:? "CompatibleArchitectures"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "CompatibleRuntimes"
+            Prelude.<*> ( x
+                            Data..:? "CompatibleRuntimes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Content")

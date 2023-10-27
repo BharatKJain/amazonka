@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.TdscdmaLocalId
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.TdscdmaLocalId where
@@ -71,7 +71,8 @@ tdscdmaLocalId_cellParams = Lens.lens (\TdscdmaLocalId' {cellParams} -> cellPara
 
 instance Prelude.Hashable TdscdmaLocalId where
   hashWithSalt _salt TdscdmaLocalId' {..} =
-    _salt `Prelude.hashWithSalt` uarfcn
+    _salt
+      `Prelude.hashWithSalt` uarfcn
       `Prelude.hashWithSalt` cellParams
 
 instance Prelude.NFData TdscdmaLocalId where

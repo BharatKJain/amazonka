@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PinpointSmsVoiceV2.Types.KeywordFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PinpointSmsVoiceV2.Types.KeywordFilter where
@@ -69,7 +69,8 @@ keywordFilter_values = Lens.lens (\KeywordFilter' {values} -> values) (\s@Keywor
 
 instance Prelude.Hashable KeywordFilter where
   hashWithSalt _salt KeywordFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData KeywordFilter where

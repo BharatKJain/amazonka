@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.AudioCodecOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.AudioCodecOptions where
@@ -223,7 +223,8 @@ instance Data.FromJSON AudioCodecOptions where
 
 instance Prelude.Hashable AudioCodecOptions where
   hashWithSalt _salt AudioCodecOptions' {..} =
-    _salt `Prelude.hashWithSalt` bitDepth
+    _salt
+      `Prelude.hashWithSalt` bitDepth
       `Prelude.hashWithSalt` bitOrder
       `Prelude.hashWithSalt` profile
       `Prelude.hashWithSalt` signed

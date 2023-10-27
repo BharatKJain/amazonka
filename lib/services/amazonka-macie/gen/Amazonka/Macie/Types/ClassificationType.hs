@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Macie.Types.ClassificationType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Macie.Types.ClassificationType where
@@ -93,7 +93,8 @@ instance Data.FromJSON ClassificationType where
 
 instance Prelude.Hashable ClassificationType where
   hashWithSalt _salt ClassificationType' {..} =
-    _salt `Prelude.hashWithSalt` oneTime
+    _salt
+      `Prelude.hashWithSalt` oneTime
       `Prelude.hashWithSalt` continuous
 
 instance Prelude.NFData ClassificationType where

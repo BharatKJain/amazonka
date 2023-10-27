@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.BatchInferenceJobSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.BatchInferenceJobSummary where
@@ -156,7 +156,8 @@ instance Data.FromJSON BatchInferenceJobSummary where
 
 instance Prelude.Hashable BatchInferenceJobSummary where
   hashWithSalt _salt BatchInferenceJobSummary' {..} =
-    _salt `Prelude.hashWithSalt` batchInferenceJobArn
+    _salt
+      `Prelude.hashWithSalt` batchInferenceJobArn
       `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` jobName

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.CreateAccountSubscription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -423,7 +423,8 @@ instance Core.AWSRequest CreateAccountSubscription where
 
 instance Prelude.Hashable CreateAccountSubscription where
   hashWithSalt _salt CreateAccountSubscription' {..} =
-    _salt `Prelude.hashWithSalt` activeDirectoryName
+    _salt
+      `Prelude.hashWithSalt` activeDirectoryName
       `Prelude.hashWithSalt` adminGroup
       `Prelude.hashWithSalt` authorGroup
       `Prelude.hashWithSalt` contactNumber

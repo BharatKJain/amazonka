@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.CapacityReservationFleet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.CapacityReservationFleet where
@@ -339,12 +339,15 @@ instance Data.FromXML CapacityReservationFleet where
       Prelude.<*> (x Data..@? "createTime")
       Prelude.<*> (x Data..@? "endDate")
       Prelude.<*> (x Data..@? "instanceMatchCriteria")
-      Prelude.<*> ( x Data..@? "instanceTypeSpecificationSet"
+      Prelude.<*> ( x
+                      Data..@? "instanceTypeSpecificationSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "state")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "tenancy")
@@ -353,7 +356,8 @@ instance Data.FromXML CapacityReservationFleet where
 
 instance Prelude.Hashable CapacityReservationFleet where
   hashWithSalt _salt CapacityReservationFleet' {..} =
-    _salt `Prelude.hashWithSalt` allocationStrategy
+    _salt
+      `Prelude.hashWithSalt` allocationStrategy
       `Prelude.hashWithSalt` capacityReservationFleetArn
       `Prelude.hashWithSalt` capacityReservationFleetId
       `Prelude.hashWithSalt` createTime

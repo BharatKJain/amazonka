@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Forecast.ListPredictorBacktestExportJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -167,22 +167,22 @@ instance
     | Core.stop
         ( rs
             Lens.^? listPredictorBacktestExportJobsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listPredictorBacktestExportJobsResponse_predictorBacktestExportJobs
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listPredictorBacktestExportJobs_nextToken
           Lens..~ rs
           Lens.^? listPredictorBacktestExportJobsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -198,7 +198,8 @@ instance
       ( \s h x ->
           ListPredictorBacktestExportJobsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "PredictorBacktestExportJobs"
+            Prelude.<*> ( x
+                            Data..?> "PredictorBacktestExportJobs"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -211,7 +212,8 @@ instance
   hashWithSalt
     _salt
     ListPredictorBacktestExportJobs' {..} =
-      _salt `Prelude.hashWithSalt` filters
+      _salt
+        `Prelude.hashWithSalt` filters
         `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken
 

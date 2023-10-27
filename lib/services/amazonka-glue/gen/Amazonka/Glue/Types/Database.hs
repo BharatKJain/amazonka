@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Database
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Database where
@@ -134,7 +134,8 @@ instance Data.FromJSON Database where
       ( \x ->
           Database'
             Prelude.<$> (x Data..:? "CatalogId")
-            Prelude.<*> ( x Data..:? "CreateTableDefaultPermissions"
+            Prelude.<*> ( x
+                            Data..:? "CreateTableDefaultPermissions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CreateTime")
@@ -147,7 +148,8 @@ instance Data.FromJSON Database where
 
 instance Prelude.Hashable Database where
   hashWithSalt _salt Database' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` createTableDefaultPermissions
       `Prelude.hashWithSalt` createTime
       `Prelude.hashWithSalt` description

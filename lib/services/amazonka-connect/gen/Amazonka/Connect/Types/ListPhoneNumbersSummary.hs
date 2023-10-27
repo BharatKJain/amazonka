@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.ListPhoneNumbersSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.ListPhoneNumbersSummary where
@@ -124,7 +124,8 @@ instance Data.FromJSON ListPhoneNumbersSummary where
 
 instance Prelude.Hashable ListPhoneNumbersSummary where
   hashWithSalt _salt ListPhoneNumbersSummary' {..} =
-    _salt `Prelude.hashWithSalt` phoneNumber
+    _salt
+      `Prelude.hashWithSalt` phoneNumber
       `Prelude.hashWithSalt` phoneNumberArn
       `Prelude.hashWithSalt` phoneNumberCountryCode
       `Prelude.hashWithSalt` phoneNumberId

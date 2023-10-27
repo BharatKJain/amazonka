@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ApplicationInsights.ListProblems
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -157,7 +157,8 @@ instance Core.AWSRequest ListProblems where
 
 instance Prelude.Hashable ListProblems where
   hashWithSalt _salt ListProblems' {..} =
-    _salt `Prelude.hashWithSalt` componentName
+    _salt
+      `Prelude.hashWithSalt` componentName
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

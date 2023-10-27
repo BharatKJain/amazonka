@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApplicationAutoScaling.Types.NotScaledReason
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApplicationAutoScaling.Types.NotScaledReason where
@@ -135,7 +135,8 @@ instance Data.FromJSON NotScaledReason where
 
 instance Prelude.Hashable NotScaledReason where
   hashWithSalt _salt NotScaledReason' {..} =
-    _salt `Prelude.hashWithSalt` currentCapacity
+    _salt
+      `Prelude.hashWithSalt` currentCapacity
       `Prelude.hashWithSalt` maxCapacity
       `Prelude.hashWithSalt` minCapacity
       `Prelude.hashWithSalt` code

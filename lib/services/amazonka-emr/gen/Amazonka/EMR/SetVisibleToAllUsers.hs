@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EMR.SetVisibleToAllUsers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,7 +124,8 @@ instance Core.AWSRequest SetVisibleToAllUsers where
 
 instance Prelude.Hashable SetVisibleToAllUsers where
   hashWithSalt _salt SetVisibleToAllUsers' {..} =
-    _salt `Prelude.hashWithSalt` jobFlowIds
+    _salt
+      `Prelude.hashWithSalt` jobFlowIds
       `Prelude.hashWithSalt` visibleToAllUsers
 
 instance Prelude.NFData SetVisibleToAllUsers where

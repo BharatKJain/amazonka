@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.AdditionalResources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.AdditionalResources where
@@ -79,7 +79,8 @@ instance Data.FromJSON AdditionalResources where
 
 instance Prelude.Hashable AdditionalResources where
   hashWithSalt _salt AdditionalResources' {..} =
-    _salt `Prelude.hashWithSalt` content
+    _salt
+      `Prelude.hashWithSalt` content
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData AdditionalResources where

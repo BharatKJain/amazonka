@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GlobalAccelerator.ListCustomRoutingListeners
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,22 +111,22 @@ instance Core.AWSPager ListCustomRoutingListeners where
     | Core.stop
         ( rs
             Lens.^? listCustomRoutingListenersResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listCustomRoutingListenersResponse_listeners
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listCustomRoutingListeners_nextToken
           Lens..~ rs
           Lens.^? listCustomRoutingListenersResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListCustomRoutingListeners where
   type
@@ -145,7 +145,8 @@ instance Core.AWSRequest ListCustomRoutingListeners where
 
 instance Prelude.Hashable ListCustomRoutingListeners where
   hashWithSalt _salt ListCustomRoutingListeners' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` acceleratorArn
 

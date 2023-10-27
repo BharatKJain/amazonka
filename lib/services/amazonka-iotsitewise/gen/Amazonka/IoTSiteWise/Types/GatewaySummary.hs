@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.GatewaySummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.GatewaySummary where
@@ -127,7 +127,8 @@ instance Data.FromJSON GatewaySummary where
       "GatewaySummary"
       ( \x ->
           GatewaySummary'
-            Prelude.<$> ( x Data..:? "gatewayCapabilitySummaries"
+            Prelude.<$> ( x
+                            Data..:? "gatewayCapabilitySummaries"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "gatewayPlatform")

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.SignupResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.SignupResponse where
@@ -104,7 +104,8 @@ instance Data.FromJSON SignupResponse where
 
 instance Prelude.Hashable SignupResponse where
   hashWithSalt _salt SignupResponse' {..} =
-    _salt `Prelude.hashWithSalt` iAMUser
+    _salt
+      `Prelude.hashWithSalt` iAMUser
       `Prelude.hashWithSalt` accountName
       `Prelude.hashWithSalt` directoryType
       `Prelude.hashWithSalt` userLoginName

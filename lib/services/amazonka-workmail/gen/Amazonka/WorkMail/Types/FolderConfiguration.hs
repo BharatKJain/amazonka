@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkMail.Types.FolderConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkMail.Types.FolderConfiguration where
@@ -94,7 +94,8 @@ instance Data.FromJSON FolderConfiguration where
 
 instance Prelude.Hashable FolderConfiguration where
   hashWithSalt _salt FolderConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` period
+    _salt
+      `Prelude.hashWithSalt` period
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` action
 

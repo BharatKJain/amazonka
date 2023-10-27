@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.WcdmaNmrObj
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.WcdmaNmrObj where
@@ -100,7 +100,8 @@ wcdmaNmrObj_utranCid = Lens.lens (\WcdmaNmrObj' {utranCid} -> utranCid) (\s@Wcdm
 
 instance Prelude.Hashable WcdmaNmrObj where
   hashWithSalt _salt WcdmaNmrObj' {..} =
-    _salt `Prelude.hashWithSalt` pathLoss
+    _salt
+      `Prelude.hashWithSalt` pathLoss
       `Prelude.hashWithSalt` rscp
       `Prelude.hashWithSalt` uarfcndl
       `Prelude.hashWithSalt` psc

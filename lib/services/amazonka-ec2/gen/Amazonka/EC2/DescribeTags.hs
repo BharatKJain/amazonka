@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeTags
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -190,20 +190,23 @@ instance Core.AWSPager DescribeTags where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? describeTagsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? describeTagsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? describeTagsResponse_tags Prelude.. Lens._Just
+            Lens.^? describeTagsResponse_tags
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeTags_nextToken
           Lens..~ rs
-          Lens.^? describeTagsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? describeTagsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeTags where
   type AWSResponse DescribeTags = DescribeTagsResponse
@@ -214,7 +217,9 @@ instance Core.AWSRequest DescribeTags where
       ( \s h x ->
           DescribeTagsResponse'
             Prelude.<$> (x Data..@? "nextToken")
-            Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "tagSet"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -222,7 +227,8 @@ instance Core.AWSRequest DescribeTags where
 
 instance Prelude.Hashable DescribeTags where
   hashWithSalt _salt DescribeTags' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

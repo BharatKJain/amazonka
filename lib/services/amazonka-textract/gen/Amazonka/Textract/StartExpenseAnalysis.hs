@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Textract.StartExpenseAnalysis
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -208,7 +208,8 @@ instance Core.AWSRequest StartExpenseAnalysis where
 
 instance Prelude.Hashable StartExpenseAnalysis where
   hashWithSalt _salt StartExpenseAnalysis' {..} =
-    _salt `Prelude.hashWithSalt` clientRequestToken
+    _salt
+      `Prelude.hashWithSalt` clientRequestToken
       `Prelude.hashWithSalt` jobTag
       `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` notificationChannel

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.LambdaEventSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.LambdaEventSource where
@@ -92,7 +92,8 @@ lambdaEventSource_type = Lens.lens (\LambdaEventSource' {type'} -> type') (\s@La
 
 instance Prelude.Hashable LambdaEventSource where
   hashWithSalt _salt LambdaEventSource' {..} =
-    _salt `Prelude.hashWithSalt` topic
+    _salt
+      `Prelude.hashWithSalt` topic
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData LambdaEventSource where

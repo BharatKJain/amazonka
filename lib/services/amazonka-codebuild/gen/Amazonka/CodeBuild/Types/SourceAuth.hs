@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.SourceAuth
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.SourceAuth where
@@ -90,7 +90,8 @@ instance Data.FromJSON SourceAuth where
 
 instance Prelude.Hashable SourceAuth where
   hashWithSalt _salt SourceAuth' {..} =
-    _salt `Prelude.hashWithSalt` resource
+    _salt
+      `Prelude.hashWithSalt` resource
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData SourceAuth where

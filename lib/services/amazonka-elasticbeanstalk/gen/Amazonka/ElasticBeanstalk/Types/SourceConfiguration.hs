@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.SourceConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.SourceConfiguration where
@@ -65,7 +65,8 @@ sourceConfiguration_templateName = Lens.lens (\SourceConfiguration' {templateNam
 
 instance Prelude.Hashable SourceConfiguration where
   hashWithSalt _salt SourceConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` applicationName
+    _salt
+      `Prelude.hashWithSalt` applicationName
       `Prelude.hashWithSalt` templateName
 
 instance Prelude.NFData SourceConfiguration where

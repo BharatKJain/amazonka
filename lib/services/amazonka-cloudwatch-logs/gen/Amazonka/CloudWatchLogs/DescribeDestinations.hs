@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatchLogs.DescribeDestinations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,22 +113,22 @@ instance Core.AWSPager DescribeDestinations where
     | Core.stop
         ( rs
             Lens.^? describeDestinationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeDestinationsResponse_destinations
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeDestinations_nextToken
           Lens..~ rs
           Lens.^? describeDestinationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeDestinations where
   type
@@ -147,7 +147,8 @@ instance Core.AWSRequest DescribeDestinations where
 
 instance Prelude.Hashable DescribeDestinations where
   hashWithSalt _salt DescribeDestinations' {..} =
-    _salt `Prelude.hashWithSalt` destinationNamePrefix
+    _salt
+      `Prelude.hashWithSalt` destinationNamePrefix
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nextToken
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Neptune.Types.DBClusterSnapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Neptune.Types.DBClusterSnapshot where
@@ -307,7 +307,8 @@ instance Data.FromXML DBClusterSnapshot where
   parseXML x =
     DBClusterSnapshot'
       Prelude.<$> (x Data..@? "AllocatedStorage")
-      Prelude.<*> ( x Data..@? "AvailabilityZones"
+      Prelude.<*> ( x
+                      Data..@? "AvailabilityZones"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "AvailabilityZone")
                   )
@@ -332,7 +333,8 @@ instance Data.FromXML DBClusterSnapshot where
 
 instance Prelude.Hashable DBClusterSnapshot where
   hashWithSalt _salt DBClusterSnapshot' {..} =
-    _salt `Prelude.hashWithSalt` allocatedStorage
+    _salt
+      `Prelude.hashWithSalt` allocatedStorage
       `Prelude.hashWithSalt` availabilityZones
       `Prelude.hashWithSalt` clusterCreateTime
       `Prelude.hashWithSalt` dbClusterIdentifier

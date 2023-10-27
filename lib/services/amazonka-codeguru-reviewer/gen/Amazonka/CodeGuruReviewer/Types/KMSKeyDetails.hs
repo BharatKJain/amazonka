@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.KMSKeyDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.KMSKeyDetails where
@@ -91,7 +91,8 @@ instance Data.FromJSON KMSKeyDetails where
 
 instance Prelude.Hashable KMSKeyDetails where
   hashWithSalt _salt KMSKeyDetails' {..} =
-    _salt `Prelude.hashWithSalt` encryptionOption
+    _salt
+      `Prelude.hashWithSalt` encryptionOption
       `Prelude.hashWithSalt` kmsKeyId
 
 instance Prelude.NFData KMSKeyDetails where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApiGatewayV2.Types.AccessLogSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApiGatewayV2.Types.AccessLogSettings where
@@ -81,7 +81,8 @@ instance Data.FromJSON AccessLogSettings where
 
 instance Prelude.Hashable AccessLogSettings where
   hashWithSalt _salt AccessLogSettings' {..} =
-    _salt `Prelude.hashWithSalt` destinationArn
+    _salt
+      `Prelude.hashWithSalt` destinationArn
       `Prelude.hashWithSalt` format
 
 instance Prelude.NFData AccessLogSettings where

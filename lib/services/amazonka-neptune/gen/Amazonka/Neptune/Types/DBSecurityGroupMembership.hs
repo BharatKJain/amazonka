@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Neptune.Types.DBSecurityGroupMembership
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Neptune.Types.DBSecurityGroupMembership where
@@ -71,7 +71,8 @@ instance Data.FromXML DBSecurityGroupMembership where
 
 instance Prelude.Hashable DBSecurityGroupMembership where
   hashWithSalt _salt DBSecurityGroupMembership' {..} =
-    _salt `Prelude.hashWithSalt` dbSecurityGroupName
+    _salt
+      `Prelude.hashWithSalt` dbSecurityGroupName
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData DBSecurityGroupMembership where

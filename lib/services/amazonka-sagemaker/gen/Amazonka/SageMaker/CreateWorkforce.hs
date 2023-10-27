@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.CreateWorkforce
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -188,7 +188,8 @@ instance Core.AWSRequest CreateWorkforce where
 
 instance Prelude.Hashable CreateWorkforce where
   hashWithSalt _salt CreateWorkforce' {..} =
-    _salt `Prelude.hashWithSalt` cognitoConfig
+    _salt
+      `Prelude.hashWithSalt` cognitoConfig
       `Prelude.hashWithSalt` oidcConfig
       `Prelude.hashWithSalt` sourceIpConfig
       `Prelude.hashWithSalt` tags

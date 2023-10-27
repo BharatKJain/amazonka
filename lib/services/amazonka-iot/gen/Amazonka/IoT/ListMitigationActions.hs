@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.ListMitigationActions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,22 +111,22 @@ instance Core.AWSPager ListMitigationActions where
     | Core.stop
         ( rs
             Lens.^? listMitigationActionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listMitigationActionsResponse_actionIdentifiers
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listMitigationActions_nextToken
           Lens..~ rs
           Lens.^? listMitigationActionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListMitigationActions where
   type
@@ -138,7 +138,8 @@ instance Core.AWSRequest ListMitigationActions where
     Response.receiveJSON
       ( \s h x ->
           ListMitigationActionsResponse'
-            Prelude.<$> ( x Data..?> "actionIdentifiers"
+            Prelude.<$> ( x
+                            Data..?> "actionIdentifiers"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -147,7 +148,8 @@ instance Core.AWSRequest ListMitigationActions where
 
 instance Prelude.Hashable ListMitigationActions where
   hashWithSalt _salt ListMitigationActions' {..} =
-    _salt `Prelude.hashWithSalt` actionType
+    _salt
+      `Prelude.hashWithSalt` actionType
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

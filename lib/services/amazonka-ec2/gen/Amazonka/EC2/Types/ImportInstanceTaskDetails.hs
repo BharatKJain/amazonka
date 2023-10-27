@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ImportInstanceTaskDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ImportInstanceTaskDetails where
@@ -90,13 +90,16 @@ instance Data.FromXML ImportInstanceTaskDetails where
       Prelude.<$> (x Data..@? "description")
       Prelude.<*> (x Data..@? "instanceId")
       Prelude.<*> (x Data..@? "platform")
-      Prelude.<*> ( x Data..@? "volumes" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "volumes"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable ImportInstanceTaskDetails where
   hashWithSalt _salt ImportInstanceTaskDetails' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` platform
       `Prelude.hashWithSalt` volumes

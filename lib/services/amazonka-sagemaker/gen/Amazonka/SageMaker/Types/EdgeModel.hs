@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.EdgeModel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.EdgeModel where
@@ -98,7 +98,8 @@ instance Data.FromJSON EdgeModel where
 
 instance Prelude.Hashable EdgeModel where
   hashWithSalt _salt EdgeModel' {..} =
-    _salt `Prelude.hashWithSalt` latestInference
+    _salt
+      `Prelude.hashWithSalt` latestInference
       `Prelude.hashWithSalt` latestSampleTime
       `Prelude.hashWithSalt` modelName
       `Prelude.hashWithSalt` modelVersion

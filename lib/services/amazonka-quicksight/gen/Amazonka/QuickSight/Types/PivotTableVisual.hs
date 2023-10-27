@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.PivotTableVisual
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.PivotTableVisual where
@@ -131,7 +131,8 @@ instance Data.FromJSON PivotTableVisual where
 
 instance Prelude.Hashable PivotTableVisual where
   hashWithSalt _salt PivotTableVisual' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` chartConfiguration
       `Prelude.hashWithSalt` conditionalFormatting
       `Prelude.hashWithSalt` subtitle

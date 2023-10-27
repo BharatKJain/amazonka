@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.WorkloadSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.WorkloadSummary where
@@ -129,7 +129,8 @@ instance Data.FromJSON WorkloadSummary where
 
 instance Prelude.Hashable WorkloadSummary where
   hashWithSalt _salt WorkloadSummary' {..} =
-    _salt `Prelude.hashWithSalt` improvementStatus
+    _salt
+      `Prelude.hashWithSalt` improvementStatus
       `Prelude.hashWithSalt` lenses
       `Prelude.hashWithSalt` owner
       `Prelude.hashWithSalt` riskCounts

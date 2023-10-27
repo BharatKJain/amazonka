@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AuditManager.Types.ControlInsightsMetadataItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AuditManager.Types.ControlInsightsMetadataItem where
@@ -103,7 +103,8 @@ instance Data.FromJSON ControlInsightsMetadataItem where
 
 instance Prelude.Hashable ControlInsightsMetadataItem where
   hashWithSalt _salt ControlInsightsMetadataItem' {..} =
-    _salt `Prelude.hashWithSalt` evidenceInsights
+    _salt
+      `Prelude.hashWithSalt` evidenceInsights
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` lastUpdated
       `Prelude.hashWithSalt` name

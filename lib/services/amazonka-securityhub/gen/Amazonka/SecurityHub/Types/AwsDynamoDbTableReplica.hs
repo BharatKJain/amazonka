@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsDynamoDbTableReplica
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsDynamoDbTableReplica where
@@ -140,7 +140,8 @@ instance Data.FromJSON AwsDynamoDbTableReplica where
       "AwsDynamoDbTableReplica"
       ( \x ->
           AwsDynamoDbTableReplica'
-            Prelude.<$> ( x Data..:? "GlobalSecondaryIndexes"
+            Prelude.<$> ( x
+                            Data..:? "GlobalSecondaryIndexes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "KmsMasterKeyId")
@@ -152,7 +153,8 @@ instance Data.FromJSON AwsDynamoDbTableReplica where
 
 instance Prelude.Hashable AwsDynamoDbTableReplica where
   hashWithSalt _salt AwsDynamoDbTableReplica' {..} =
-    _salt `Prelude.hashWithSalt` globalSecondaryIndexes
+    _salt
+      `Prelude.hashWithSalt` globalSecondaryIndexes
       `Prelude.hashWithSalt` kmsMasterKeyId
       `Prelude.hashWithSalt` provisionedThroughputOverride
       `Prelude.hashWithSalt` regionName

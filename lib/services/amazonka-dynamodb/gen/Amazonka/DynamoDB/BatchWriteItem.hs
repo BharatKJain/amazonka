@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.BatchWriteItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -281,21 +281,25 @@ instance Core.AWSRequest BatchWriteItem where
     Response.receiveJSON
       ( \s h x ->
           BatchWriteItemResponse'
-            Prelude.<$> ( x Data..?> "ConsumedCapacity"
+            Prelude.<$> ( x
+                            Data..?> "ConsumedCapacity"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "ItemCollectionMetrics"
+            Prelude.<*> ( x
+                            Data..?> "ItemCollectionMetrics"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "UnprocessedItems"
+            Prelude.<*> ( x
+                            Data..?> "UnprocessedItems"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable BatchWriteItem where
   hashWithSalt _salt BatchWriteItem' {..} =
-    _salt `Prelude.hashWithSalt` returnConsumedCapacity
+    _salt
+      `Prelude.hashWithSalt` returnConsumedCapacity
       `Prelude.hashWithSalt` returnItemCollectionMetrics
       `Prelude.hashWithSalt` requestItems
 

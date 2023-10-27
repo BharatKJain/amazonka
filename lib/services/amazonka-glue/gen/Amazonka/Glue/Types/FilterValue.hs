@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.FilterValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.FilterValue where
@@ -78,7 +78,8 @@ instance Data.FromJSON FilterValue where
 
 instance Prelude.Hashable FilterValue where
   hashWithSalt _salt FilterValue' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData FilterValue where

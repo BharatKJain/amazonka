@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.ReplicaGlobalSecondaryIndexAutoScalingDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.ReplicaGlobalSecondaryIndexAutoScalingDescription where
@@ -124,13 +124,13 @@ instance
       ( \x ->
           ReplicaGlobalSecondaryIndexAutoScalingDescription'
             Prelude.<$> (x Data..:? "IndexName")
-              Prelude.<*> (x Data..:? "IndexStatus")
-              Prelude.<*> ( x
-                              Data..:? "ProvisionedReadCapacityAutoScalingSettings"
-                          )
-              Prelude.<*> ( x
-                              Data..:? "ProvisionedWriteCapacityAutoScalingSettings"
-                          )
+            Prelude.<*> (x Data..:? "IndexStatus")
+            Prelude.<*> ( x
+                            Data..:? "ProvisionedReadCapacityAutoScalingSettings"
+                        )
+            Prelude.<*> ( x
+                            Data..:? "ProvisionedWriteCapacityAutoScalingSettings"
+                        )
       )
 
 instance
@@ -140,7 +140,8 @@ instance
   hashWithSalt
     _salt
     ReplicaGlobalSecondaryIndexAutoScalingDescription' {..} =
-      _salt `Prelude.hashWithSalt` indexName
+      _salt
+        `Prelude.hashWithSalt` indexName
         `Prelude.hashWithSalt` indexStatus
         `Prelude.hashWithSalt` provisionedReadCapacityAutoScalingSettings
         `Prelude.hashWithSalt` provisionedWriteCapacityAutoScalingSettings

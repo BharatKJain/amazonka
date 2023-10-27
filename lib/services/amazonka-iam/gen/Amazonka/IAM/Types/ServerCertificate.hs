@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.ServerCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.ServerCertificate where
@@ -109,7 +109,9 @@ instance Data.FromXML ServerCertificate where
   parseXML x =
     ServerCertificate'
       Prelude.<$> (x Data..@? "CertificateChain")
-      Prelude.<*> ( x Data..@? "Tags" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Tags"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@ "ServerCertificateMetadata")
@@ -117,7 +119,8 @@ instance Data.FromXML ServerCertificate where
 
 instance Prelude.Hashable ServerCertificate where
   hashWithSalt _salt ServerCertificate' {..} =
-    _salt `Prelude.hashWithSalt` certificateChain
+    _salt
+      `Prelude.hashWithSalt` certificateChain
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` serverCertificateMetadata
       `Prelude.hashWithSalt` certificateBody

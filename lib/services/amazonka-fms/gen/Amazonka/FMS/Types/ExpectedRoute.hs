@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.ExpectedRoute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.ExpectedRoute where
@@ -105,7 +105,8 @@ instance Data.FromJSON ExpectedRoute where
       ( \x ->
           ExpectedRoute'
             Prelude.<$> (x Data..:? "AllowedTargets" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "ContributingSubnets"
+            Prelude.<*> ( x
+                            Data..:? "ContributingSubnets"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "IpV4Cidr")
@@ -116,7 +117,8 @@ instance Data.FromJSON ExpectedRoute where
 
 instance Prelude.Hashable ExpectedRoute where
   hashWithSalt _salt ExpectedRoute' {..} =
-    _salt `Prelude.hashWithSalt` allowedTargets
+    _salt
+      `Prelude.hashWithSalt` allowedTargets
       `Prelude.hashWithSalt` contributingSubnets
       `Prelude.hashWithSalt` ipV4Cidr
       `Prelude.hashWithSalt` ipV6Cidr

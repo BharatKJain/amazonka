@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ServiceCatalogProvisioningDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ServiceCatalogProvisioningDetails where
@@ -103,7 +103,8 @@ instance
           ServiceCatalogProvisioningDetails'
             Prelude.<$> (x Data..:? "PathId")
             Prelude.<*> (x Data..:? "ProvisioningArtifactId")
-            Prelude.<*> ( x Data..:? "ProvisioningParameters"
+            Prelude.<*> ( x
+                            Data..:? "ProvisioningParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "ProductId")
@@ -116,7 +117,8 @@ instance
   hashWithSalt
     _salt
     ServiceCatalogProvisioningDetails' {..} =
-      _salt `Prelude.hashWithSalt` pathId
+      _salt
+        `Prelude.hashWithSalt` pathId
         `Prelude.hashWithSalt` provisioningArtifactId
         `Prelude.hashWithSalt` provisioningParameters
         `Prelude.hashWithSalt` productId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MemoryDb.Types.User
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MemoryDb.Types.User where
@@ -131,7 +131,8 @@ instance Data.FromJSON User where
 
 instance Prelude.Hashable User where
   hashWithSalt _salt User' {..} =
-    _salt `Prelude.hashWithSalt` aCLNames
+    _salt
+      `Prelude.hashWithSalt` aCLNames
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` accessString
       `Prelude.hashWithSalt` authentication

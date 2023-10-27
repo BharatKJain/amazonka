@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DevOpsGuru.ListEvents
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,17 +124,19 @@ instance Core.AWSPager ListEvents where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listEventsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listEventsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop (rs Lens.^. listEventsResponse_events) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listEvents_nextToken
           Lens..~ rs
-          Lens.^? listEventsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listEventsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListEvents where
   type AWSResponse ListEvents = ListEventsResponse
@@ -151,7 +153,8 @@ instance Core.AWSRequest ListEvents where
 
 instance Prelude.Hashable ListEvents where
   hashWithSalt _salt ListEvents' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` filters

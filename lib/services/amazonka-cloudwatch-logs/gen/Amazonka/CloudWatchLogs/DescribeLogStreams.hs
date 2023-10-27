@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatchLogs.DescribeLogStreams
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -232,22 +232,22 @@ instance Core.AWSPager DescribeLogStreams where
     | Core.stop
         ( rs
             Lens.^? describeLogStreamsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeLogStreamsResponse_logStreams
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeLogStreams_nextToken
           Lens..~ rs
           Lens.^? describeLogStreamsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeLogStreams where
   type
@@ -266,7 +266,8 @@ instance Core.AWSRequest DescribeLogStreams where
 
 instance Prelude.Hashable DescribeLogStreams where
   hashWithSalt _salt DescribeLogStreams' {..} =
-    _salt `Prelude.hashWithSalt` descending
+    _salt
+      `Prelude.hashWithSalt` descending
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` logGroupIdentifier
       `Prelude.hashWithSalt` logStreamNamePrefix

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.AuthorizeEndpointAccess
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,7 +117,8 @@ instance Core.AWSRequest AuthorizeEndpointAccess where
 
 instance Prelude.Hashable AuthorizeEndpointAccess where
   hashWithSalt _salt AuthorizeEndpointAccess' {..} =
-    _salt `Prelude.hashWithSalt` clusterIdentifier
+    _salt
+      `Prelude.hashWithSalt` clusterIdentifier
       `Prelude.hashWithSalt` vpcIds
       `Prelude.hashWithSalt` account
 

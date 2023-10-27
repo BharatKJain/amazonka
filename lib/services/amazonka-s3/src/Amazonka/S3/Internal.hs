@@ -9,9 +9,9 @@
 
 -- |
 -- Module      : Amazonka.S3.Internal
--- Copyright   : (c) 2013-2022 Brendan Hay
+-- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : This Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay@gmail.com>
+-- Maintainer  : Brendan Hay <brendan.g.hay+amazonka.com>
 -- Stability   : experimental
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Internal
@@ -240,7 +240,6 @@ objectKey_keyPrefix c = _ObjectKeySnoc True c . _1
 --
 -- >>> "/" ^? objectKey_keyName '/'
 -- Just ""
---
 objectKey_keyName :: Delimiter -> Traversal' ObjectKey Text
 objectKey_keyName c = _ObjectKeySnoc False c . _2
 {-# INLINE objectKey_keyName #-}
@@ -290,7 +289,6 @@ getWebsiteEndpoint = \case
   Jakarta -> Just "s3-website.ap-southeast-3.amazonaws.com"
   Melbourne -> Just "s3-website.ap-southeast-4.amazonaws.com"
   Mumbai -> Just "s3-website.ap-south-1.amazonaws.com"
-  Hyderabad -> Just "s3-website.ap-south-2.amazonaws.com."
   Osaka -> Just "s3-website.ap-northeast-3.amazonaws.com"
   Seoul -> Just "s3-website.ap-northeast-2.amazonaws.com"
   Singapore -> Just "s3-website-ap-southeast-1.amazonaws.com"

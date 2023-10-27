@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCases.Types.BasicLayout
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCases.Types.BasicLayout where
@@ -76,7 +76,8 @@ instance Data.FromJSON BasicLayout where
 
 instance Prelude.Hashable BasicLayout where
   hashWithSalt _salt BasicLayout' {..} =
-    _salt `Prelude.hashWithSalt` moreInfo
+    _salt
+      `Prelude.hashWithSalt` moreInfo
       `Prelude.hashWithSalt` topPanel
 
 instance Prelude.NFData BasicLayout where

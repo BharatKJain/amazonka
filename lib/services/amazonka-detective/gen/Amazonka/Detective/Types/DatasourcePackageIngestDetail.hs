@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Detective.Types.DatasourcePackageIngestDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Detective.Types.DatasourcePackageIngestDetail where
@@ -72,7 +72,8 @@ instance Data.FromJSON DatasourcePackageIngestDetail where
       ( \x ->
           DatasourcePackageIngestDetail'
             Prelude.<$> (x Data..:? "DatasourcePackageIngestState")
-            Prelude.<*> ( x Data..:? "LastIngestStateChange"
+            Prelude.<*> ( x
+                            Data..:? "LastIngestStateChange"
                             Data..!= Prelude.mempty
                         )
       )

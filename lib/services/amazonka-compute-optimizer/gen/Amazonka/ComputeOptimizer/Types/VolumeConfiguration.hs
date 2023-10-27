@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.VolumeConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.VolumeConfiguration where
@@ -128,7 +128,8 @@ instance Data.FromJSON VolumeConfiguration where
 
 instance Prelude.Hashable VolumeConfiguration where
   hashWithSalt _salt VolumeConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` volumeBaselineIOPS
+    _salt
+      `Prelude.hashWithSalt` volumeBaselineIOPS
       `Prelude.hashWithSalt` volumeBaselineThroughput
       `Prelude.hashWithSalt` volumeBurstIOPS
       `Prelude.hashWithSalt` volumeBurstThroughput

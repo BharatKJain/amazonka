@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DataSetReference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DataSetReference where
@@ -69,7 +69,8 @@ dataSetReference_dataSetArn = Lens.lens (\DataSetReference' {dataSetArn} -> data
 
 instance Prelude.Hashable DataSetReference where
   hashWithSalt _salt DataSetReference' {..} =
-    _salt `Prelude.hashWithSalt` dataSetPlaceholder
+    _salt
+      `Prelude.hashWithSalt` dataSetPlaceholder
       `Prelude.hashWithSalt` dataSetArn
 
 instance Prelude.NFData DataSetReference where

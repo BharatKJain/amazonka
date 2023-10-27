@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchReadSuccessfulResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchReadSuccessfulResponse where
@@ -263,7 +263,8 @@ instance Data.FromJSON BatchReadSuccessfulResponse where
 
 instance Prelude.Hashable BatchReadSuccessfulResponse where
   hashWithSalt _salt BatchReadSuccessfulResponse' {..} =
-    _salt `Prelude.hashWithSalt` getLinkAttributes
+    _salt
+      `Prelude.hashWithSalt` getLinkAttributes
       `Prelude.hashWithSalt` getObjectAttributes
       `Prelude.hashWithSalt` getObjectInformation
       `Prelude.hashWithSalt` listAttachedIndices

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.AvailBlanking
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.AvailBlanking where
@@ -83,7 +83,8 @@ instance Data.FromJSON AvailBlanking where
 
 instance Prelude.Hashable AvailBlanking where
   hashWithSalt _salt AvailBlanking' {..} =
-    _salt `Prelude.hashWithSalt` availBlankingImage
+    _salt
+      `Prelude.hashWithSalt` availBlankingImage
       `Prelude.hashWithSalt` state
 
 instance Prelude.NFData AvailBlanking where

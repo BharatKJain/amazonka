@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StepFunctions.Types.StateExitedEventDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StepFunctions.Types.StateExitedEventDetails where
@@ -135,7 +135,8 @@ instance Data.FromJSON StateExitedEventDetails where
 
 instance Prelude.Hashable StateExitedEventDetails where
   hashWithSalt _salt StateExitedEventDetails' {..} =
-    _salt `Prelude.hashWithSalt` output
+    _salt
+      `Prelude.hashWithSalt` output
       `Prelude.hashWithSalt` outputDetails
       `Prelude.hashWithSalt` name
 

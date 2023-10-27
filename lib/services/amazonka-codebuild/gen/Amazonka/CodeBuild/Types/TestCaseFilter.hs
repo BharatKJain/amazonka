@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.TestCaseFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.TestCaseFilter where
@@ -104,7 +104,8 @@ testCaseFilter_status = Lens.lens (\TestCaseFilter' {status} -> status) (\s@Test
 
 instance Prelude.Hashable TestCaseFilter where
   hashWithSalt _salt TestCaseFilter' {..} =
-    _salt `Prelude.hashWithSalt` keyword
+    _salt
+      `Prelude.hashWithSalt` keyword
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData TestCaseFilter where

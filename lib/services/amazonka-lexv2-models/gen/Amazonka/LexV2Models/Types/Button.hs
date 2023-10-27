@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.Button
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.Button where
@@ -76,12 +76,14 @@ instance Data.FromJSON Button where
       "Button"
       ( \x ->
           Button'
-            Prelude.<$> (x Data..: "text") Prelude.<*> (x Data..: "value")
+            Prelude.<$> (x Data..: "text")
+            Prelude.<*> (x Data..: "value")
       )
 
 instance Prelude.Hashable Button where
   hashWithSalt _salt Button' {..} =
-    _salt `Prelude.hashWithSalt` text
+    _salt
+      `Prelude.hashWithSalt` text
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData Button where

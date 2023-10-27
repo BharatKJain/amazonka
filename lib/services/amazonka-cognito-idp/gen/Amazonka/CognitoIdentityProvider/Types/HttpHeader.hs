@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.HttpHeader
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.HttpHeader where
@@ -64,7 +64,8 @@ httpHeader_headerValue = Lens.lens (\HttpHeader' {headerValue} -> headerValue) (
 
 instance Prelude.Hashable HttpHeader where
   hashWithSalt _salt HttpHeader' {..} =
-    _salt `Prelude.hashWithSalt` headerName
+    _salt
+      `Prelude.hashWithSalt` headerName
       `Prelude.hashWithSalt` headerValue
 
 instance Prelude.NFData HttpHeader where

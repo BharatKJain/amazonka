@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.SelectFields
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.SelectFields where
@@ -89,7 +89,8 @@ instance Data.FromJSON SelectFields where
 
 instance Prelude.Hashable SelectFields where
   hashWithSalt _salt SelectFields' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inputs
       `Prelude.hashWithSalt` paths
 

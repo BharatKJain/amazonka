@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.PrefixConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.PrefixConfig where
@@ -133,7 +133,8 @@ instance Data.FromJSON PrefixConfig where
       "PrefixConfig"
       ( \x ->
           PrefixConfig'
-            Prelude.<$> ( x Data..:? "pathPrefixHierarchy"
+            Prelude.<$> ( x
+                            Data..:? "pathPrefixHierarchy"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "prefixFormat")
@@ -142,7 +143,8 @@ instance Data.FromJSON PrefixConfig where
 
 instance Prelude.Hashable PrefixConfig where
   hashWithSalt _salt PrefixConfig' {..} =
-    _salt `Prelude.hashWithSalt` pathPrefixHierarchy
+    _salt
+      `Prelude.hashWithSalt` pathPrefixHierarchy
       `Prelude.hashWithSalt` prefixFormat
       `Prelude.hashWithSalt` prefixType
 

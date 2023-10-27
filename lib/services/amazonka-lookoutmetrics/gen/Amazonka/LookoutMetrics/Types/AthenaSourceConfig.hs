@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.AthenaSourceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.AthenaSourceConfig where
@@ -129,7 +129,8 @@ instance Data.FromJSON AthenaSourceConfig where
 
 instance Prelude.Hashable AthenaSourceConfig where
   hashWithSalt _salt AthenaSourceConfig' {..} =
-    _salt `Prelude.hashWithSalt` backTestConfiguration
+    _salt
+      `Prelude.hashWithSalt` backTestConfiguration
       `Prelude.hashWithSalt` dataCatalog
       `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` roleArn

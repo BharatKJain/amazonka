@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SavingsPlans.Types.SavingsPlanOfferingRateFilterElement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SavingsPlans.Types.SavingsPlanOfferingRateFilterElement where
@@ -71,7 +71,8 @@ instance
   hashWithSalt
     _salt
     SavingsPlanOfferingRateFilterElement' {..} =
-      _salt `Prelude.hashWithSalt` name
+      _salt
+        `Prelude.hashWithSalt` name
         `Prelude.hashWithSalt` values
 
 instance

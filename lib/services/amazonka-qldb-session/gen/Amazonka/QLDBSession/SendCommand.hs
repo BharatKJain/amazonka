@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QLDBSession.SendCommand
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -203,7 +203,8 @@ instance Core.AWSRequest SendCommand where
 
 instance Prelude.Hashable SendCommand where
   hashWithSalt _salt SendCommand' {..} =
-    _salt `Prelude.hashWithSalt` abortTransaction
+    _salt
+      `Prelude.hashWithSalt` abortTransaction
       `Prelude.hashWithSalt` commitTransaction
       `Prelude.hashWithSalt` endSession
       `Prelude.hashWithSalt` executeStatement

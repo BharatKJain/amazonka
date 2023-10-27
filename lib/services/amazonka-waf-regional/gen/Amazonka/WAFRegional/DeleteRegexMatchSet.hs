@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFRegional.DeleteRegexMatchSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest DeleteRegexMatchSet where
 
 instance Prelude.Hashable DeleteRegexMatchSet where
   hashWithSalt _salt DeleteRegexMatchSet' {..} =
-    _salt `Prelude.hashWithSalt` regexMatchSetId
+    _salt
+      `Prelude.hashWithSalt` regexMatchSetId
       `Prelude.hashWithSalt` changeToken
 
 instance Prelude.NFData DeleteRegexMatchSet where

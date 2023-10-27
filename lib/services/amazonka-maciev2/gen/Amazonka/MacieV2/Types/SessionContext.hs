@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.SessionContext
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.SessionContext where
@@ -83,7 +83,8 @@ instance Data.FromJSON SessionContext where
 
 instance Prelude.Hashable SessionContext where
   hashWithSalt _salt SessionContext' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` sessionIssuer
 
 instance Prelude.NFData SessionContext where

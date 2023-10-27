@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.ExtendedS3DestinationUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.ExtendedS3DestinationUpdate where
@@ -226,7 +226,8 @@ extendedS3DestinationUpdate_s3BackupUpdate = Lens.lens (\ExtendedS3DestinationUp
 
 instance Prelude.Hashable ExtendedS3DestinationUpdate where
   hashWithSalt _salt ExtendedS3DestinationUpdate' {..} =
-    _salt `Prelude.hashWithSalt` bucketARN
+    _salt
+      `Prelude.hashWithSalt` bucketARN
       `Prelude.hashWithSalt` bufferingHints
       `Prelude.hashWithSalt` cloudWatchLoggingOptions
       `Prelude.hashWithSalt` compressionFormat

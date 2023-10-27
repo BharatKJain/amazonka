@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataSync.Types.Ec2Config
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataSync.Types.Ec2Config where
@@ -122,7 +122,8 @@ instance Data.FromJSON Ec2Config where
 
 instance Prelude.Hashable Ec2Config where
   hashWithSalt _salt Ec2Config' {..} =
-    _salt `Prelude.hashWithSalt` subnetArn
+    _salt
+      `Prelude.hashWithSalt` subnetArn
       `Prelude.hashWithSalt` securityGroupArns
 
 instance Prelude.NFData Ec2Config where

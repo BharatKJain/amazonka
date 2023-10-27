@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.ApiCallDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.ApiCallDetails where
@@ -107,7 +107,8 @@ instance Data.FromJSON ApiCallDetails where
 
 instance Prelude.Hashable ApiCallDetails where
   hashWithSalt _salt ApiCallDetails' {..} =
-    _salt `Prelude.hashWithSalt` api
+    _salt
+      `Prelude.hashWithSalt` api
       `Prelude.hashWithSalt` apiServiceName
       `Prelude.hashWithSalt` firstSeen
       `Prelude.hashWithSalt` lastSeen

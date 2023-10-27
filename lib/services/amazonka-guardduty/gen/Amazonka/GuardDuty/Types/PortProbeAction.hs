@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.PortProbeAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.PortProbeAction where
@@ -74,14 +74,16 @@ instance Data.FromJSON PortProbeAction where
       ( \x ->
           PortProbeAction'
             Prelude.<$> (x Data..:? "blocked")
-            Prelude.<*> ( x Data..:? "portProbeDetails"
+            Prelude.<*> ( x
+                            Data..:? "portProbeDetails"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable PortProbeAction where
   hashWithSalt _salt PortProbeAction' {..} =
-    _salt `Prelude.hashWithSalt` blocked
+    _salt
+      `Prelude.hashWithSalt` blocked
       `Prelude.hashWithSalt` portProbeDetails
 
 instance Prelude.NFData PortProbeAction where

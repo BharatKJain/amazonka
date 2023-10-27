@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.DashIsoGroupSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.DashIsoGroupSettings where
@@ -529,7 +529,8 @@ instance Data.FromJSON DashIsoGroupSettings where
       "DashIsoGroupSettings"
       ( \x ->
           DashIsoGroupSettings'
-            Prelude.<$> ( x Data..:? "additionalManifests"
+            Prelude.<$> ( x
+                            Data..:? "additionalManifests"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "audioChannelConfigSchemeIdUri")
@@ -555,7 +556,8 @@ instance Data.FromJSON DashIsoGroupSettings where
 
 instance Prelude.Hashable DashIsoGroupSettings where
   hashWithSalt _salt DashIsoGroupSettings' {..} =
-    _salt `Prelude.hashWithSalt` additionalManifests
+    _salt
+      `Prelude.hashWithSalt` additionalManifests
       `Prelude.hashWithSalt` audioChannelConfigSchemeIdUri
       `Prelude.hashWithSalt` baseUrl
       `Prelude.hashWithSalt` destination

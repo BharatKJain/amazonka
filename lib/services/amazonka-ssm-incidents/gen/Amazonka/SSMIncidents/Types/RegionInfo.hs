@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMIncidents.Types.RegionInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMIncidents.Types.RegionInfo where
@@ -109,7 +109,8 @@ instance Data.FromJSON RegionInfo where
 
 instance Prelude.Hashable RegionInfo where
   hashWithSalt _salt RegionInfo' {..} =
-    _salt `Prelude.hashWithSalt` sseKmsKeyId
+    _salt
+      `Prelude.hashWithSalt` sseKmsKeyId
       `Prelude.hashWithSalt` statusMessage
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` statusUpdateDateTime

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.SegmentLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.SegmentLocation where
@@ -79,7 +79,8 @@ instance Data.FromJSON SegmentLocation where
 
 instance Prelude.Hashable SegmentLocation where
   hashWithSalt _salt SegmentLocation' {..} =
-    _salt `Prelude.hashWithSalt` country
+    _salt
+      `Prelude.hashWithSalt` country
       `Prelude.hashWithSalt` gPSPoint
 
 instance Prelude.NFData SegmentLocation where

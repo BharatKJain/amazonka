@@ -16,7 +16,7 @@
 -- Module      : Amazonka.S3.HeadBucket
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -88,7 +88,7 @@ data HeadBucket = HeadBucket'
     -- When using this action with Amazon S3 on Outposts, you must direct
     -- requests to the S3 on Outposts hostname. The S3 on Outposts hostname
     -- takes the form
-    -- @ AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com@.
+    -- @ @/@AccessPointName@/@-@/@AccountId@/@.@/@outpostID@/@.s3-outposts.@/@Region@/@.amazonaws.com@.
     -- When using this action with S3 on Outposts through the Amazon Web
     -- Services SDKs, you provide the Outposts bucket ARN in place of the
     -- bucket name. For more information about S3 on Outposts ARNs, see
@@ -124,7 +124,7 @@ data HeadBucket = HeadBucket'
 -- When using this action with Amazon S3 on Outposts, you must direct
 -- requests to the S3 on Outposts hostname. The S3 on Outposts hostname
 -- takes the form
--- @ AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com@.
+-- @ @/@AccessPointName@/@-@/@AccountId@/@.@/@outpostID@/@.s3-outposts.@/@Region@/@.amazonaws.com@.
 -- When using this action with S3 on Outposts through the Amazon Web
 -- Services SDKs, you provide the Outposts bucket ARN in place of the
 -- bucket name. For more information about S3 on Outposts ARNs, see
@@ -160,7 +160,7 @@ headBucket_expectedBucketOwner = Lens.lens (\HeadBucket' {expectedBucketOwner} -
 -- When using this action with Amazon S3 on Outposts, you must direct
 -- requests to the S3 on Outposts hostname. The S3 on Outposts hostname
 -- takes the form
--- @ AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com@.
+-- @ @/@AccessPointName@/@-@/@AccountId@/@.@/@outpostID@/@.s3-outposts.@/@Region@/@.amazonaws.com@.
 -- When using this action with S3 on Outposts through the Amazon Web
 -- Services SDKs, you provide the Outposts bucket ARN in place of the
 -- bucket name. For more information about S3 on Outposts ARNs, see
@@ -178,7 +178,8 @@ instance Core.AWSRequest HeadBucket where
 
 instance Prelude.Hashable HeadBucket where
   hashWithSalt _salt HeadBucket' {..} =
-    _salt `Prelude.hashWithSalt` expectedBucketOwner
+    _salt
+      `Prelude.hashWithSalt` expectedBucketOwner
       `Prelude.hashWithSalt` bucket
 
 instance Prelude.NFData HeadBucket where

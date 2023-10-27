@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.FieldLevelEncryptionList
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.FieldLevelEncryptionList where
@@ -94,7 +94,9 @@ fieldLevelEncryptionList_quantity = Lens.lens (\FieldLevelEncryptionList' {quant
 instance Data.FromXML FieldLevelEncryptionList where
   parseXML x =
     FieldLevelEncryptionList'
-      Prelude.<$> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may
                         (Data.parseXMLList "FieldLevelEncryptionSummary")
                   )
@@ -104,7 +106,8 @@ instance Data.FromXML FieldLevelEncryptionList where
 
 instance Prelude.Hashable FieldLevelEncryptionList where
   hashWithSalt _salt FieldLevelEncryptionList' {..} =
-    _salt `Prelude.hashWithSalt` items
+    _salt
+      `Prelude.hashWithSalt` items
       `Prelude.hashWithSalt` nextMarker
       `Prelude.hashWithSalt` maxItems
       `Prelude.hashWithSalt` quantity

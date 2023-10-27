@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.DataQualityJobInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.DataQualityJobInput where
@@ -77,7 +77,8 @@ instance Data.FromJSON DataQualityJobInput where
 
 instance Prelude.Hashable DataQualityJobInput where
   hashWithSalt _salt DataQualityJobInput' {..} =
-    _salt `Prelude.hashWithSalt` batchTransformInput
+    _salt
+      `Prelude.hashWithSalt` batchTransformInput
       `Prelude.hashWithSalt` endpointInput
 
 instance Prelude.NFData DataQualityJobInput where

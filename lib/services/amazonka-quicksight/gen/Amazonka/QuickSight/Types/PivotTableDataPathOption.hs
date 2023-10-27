@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.PivotTableDataPathOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.PivotTableDataPathOption where
@@ -75,7 +75,8 @@ instance Data.FromJSON PivotTableDataPathOption where
 
 instance Prelude.Hashable PivotTableDataPathOption where
   hashWithSalt _salt PivotTableDataPathOption' {..} =
-    _salt `Prelude.hashWithSalt` width
+    _salt
+      `Prelude.hashWithSalt` width
       `Prelude.hashWithSalt` dataPathList
 
 instance Prelude.NFData PivotTableDataPathOption where

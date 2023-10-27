@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.ListLambdaFunctions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,22 +117,22 @@ instance Core.AWSPager ListLambdaFunctions where
     | Core.stop
         ( rs
             Lens.^? listLambdaFunctionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listLambdaFunctionsResponse_lambdaFunctions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listLambdaFunctions_nextToken
           Lens..~ rs
           Lens.^? listLambdaFunctionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListLambdaFunctions where
   type
@@ -144,7 +144,8 @@ instance Core.AWSRequest ListLambdaFunctions where
     Response.receiveJSON
       ( \s h x ->
           ListLambdaFunctionsResponse'
-            Prelude.<$> ( x Data..?> "LambdaFunctions"
+            Prelude.<$> ( x
+                            Data..?> "LambdaFunctions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -153,7 +154,8 @@ instance Core.AWSRequest ListLambdaFunctions where
 
 instance Prelude.Hashable ListLambdaFunctions where
   hashWithSalt _salt ListLambdaFunctions' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` instanceId
 

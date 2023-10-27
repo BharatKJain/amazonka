@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.ProjectSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.ProjectSummary where
@@ -196,7 +196,8 @@ instance Data.FromJSON ProjectSummary where
 
 instance Prelude.Hashable ProjectSummary where
   hashWithSalt _salt ProjectSummary' {..} =
-    _salt `Prelude.hashWithSalt` activeExperimentCount
+    _salt
+      `Prelude.hashWithSalt` activeExperimentCount
       `Prelude.hashWithSalt` activeLaunchCount
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` experimentCount

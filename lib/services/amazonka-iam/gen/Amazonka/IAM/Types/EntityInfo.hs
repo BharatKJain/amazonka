@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.EntityInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.EntityInfo where
@@ -119,7 +119,8 @@ instance Data.FromXML EntityInfo where
 
 instance Prelude.Hashable EntityInfo where
   hashWithSalt _salt EntityInfo' {..} =
-    _salt `Prelude.hashWithSalt` path
+    _salt
+      `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'

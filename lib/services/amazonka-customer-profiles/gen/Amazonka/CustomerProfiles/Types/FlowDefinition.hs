@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CustomerProfiles.Types.FlowDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CustomerProfiles.Types.FlowDefinition where
@@ -129,7 +129,8 @@ flowDefinition_triggerConfig = Lens.lens (\FlowDefinition' {triggerConfig} -> tr
 
 instance Prelude.Hashable FlowDefinition where
   hashWithSalt _salt FlowDefinition' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` flowName
       `Prelude.hashWithSalt` kmsArn
       `Prelude.hashWithSalt` sourceFlowConfig

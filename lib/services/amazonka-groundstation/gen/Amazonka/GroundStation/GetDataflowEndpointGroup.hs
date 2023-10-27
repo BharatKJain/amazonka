@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GroundStation.GetDataflowEndpointGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -94,7 +94,8 @@ instance Core.AWSRequest GetDataflowEndpointGroup where
           GetDataflowEndpointGroupResponse'
             Prelude.<$> (x Data..?> "dataflowEndpointGroupArn")
             Prelude.<*> (x Data..?> "dataflowEndpointGroupId")
-            Prelude.<*> ( x Data..?> "endpointsDetails"
+            Prelude.<*> ( x
+                            Data..?> "endpointsDetails"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "tags" Core..!@ Prelude.mempty)

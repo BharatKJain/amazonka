@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.VideoDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.VideoDescription where
@@ -403,7 +403,8 @@ instance Data.FromJSON VideoDescription where
 
 instance Prelude.Hashable VideoDescription where
   hashWithSalt _salt VideoDescription' {..} =
-    _salt `Prelude.hashWithSalt` afdSignaling
+    _salt
+      `Prelude.hashWithSalt` afdSignaling
       `Prelude.hashWithSalt` antiAlias
       `Prelude.hashWithSalt` codecSettings
       `Prelude.hashWithSalt` colorMetadata

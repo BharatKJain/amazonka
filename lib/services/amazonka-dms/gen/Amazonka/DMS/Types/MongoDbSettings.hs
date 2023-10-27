@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.MongoDbSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.MongoDbSettings where
@@ -323,7 +323,8 @@ instance Data.FromJSON MongoDbSettings where
 
 instance Prelude.Hashable MongoDbSettings where
   hashWithSalt _salt MongoDbSettings' {..} =
-    _salt `Prelude.hashWithSalt` authMechanism
+    _salt
+      `Prelude.hashWithSalt` authMechanism
       `Prelude.hashWithSalt` authSource
       `Prelude.hashWithSalt` authType
       `Prelude.hashWithSalt` databaseName

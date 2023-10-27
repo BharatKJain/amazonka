@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.CacheSubnetGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.CacheSubnetGroup where
@@ -122,10 +122,13 @@ instance Data.FromXML CacheSubnetGroup where
       Prelude.<$> (x Data..@? "ARN")
       Prelude.<*> (x Data..@? "CacheSubnetGroupDescription")
       Prelude.<*> (x Data..@? "CacheSubnetGroupName")
-      Prelude.<*> ( x Data..@? "Subnets" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Subnets"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Subnet")
                   )
-      Prelude.<*> ( x Data..@? "SupportedNetworkTypes"
+      Prelude.<*> ( x
+                      Data..@? "SupportedNetworkTypes"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
@@ -133,7 +136,8 @@ instance Data.FromXML CacheSubnetGroup where
 
 instance Prelude.Hashable CacheSubnetGroup where
   hashWithSalt _salt CacheSubnetGroup' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` cacheSubnetGroupDescription
       `Prelude.hashWithSalt` cacheSubnetGroupName
       `Prelude.hashWithSalt` subnets

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.RecommenderUpdateSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.RecommenderUpdateSummary where
@@ -142,7 +142,8 @@ instance Data.FromJSON RecommenderUpdateSummary where
 
 instance Prelude.Hashable RecommenderUpdateSummary where
   hashWithSalt _salt RecommenderUpdateSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationDateTime
+    _salt
+      `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` lastUpdatedDateTime
       `Prelude.hashWithSalt` recommenderConfig

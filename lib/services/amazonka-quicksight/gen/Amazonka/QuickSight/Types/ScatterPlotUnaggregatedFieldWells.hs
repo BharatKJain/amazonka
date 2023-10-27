@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ScatterPlotUnaggregatedFieldWells
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ScatterPlotUnaggregatedFieldWells where
@@ -107,7 +107,8 @@ instance
   hashWithSalt
     _salt
     ScatterPlotUnaggregatedFieldWells' {..} =
-      _salt `Prelude.hashWithSalt` size
+      _salt
+        `Prelude.hashWithSalt` size
         `Prelude.hashWithSalt` xAxis
         `Prelude.hashWithSalt` yAxis
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.BooleanColumnStatisticsData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.BooleanColumnStatisticsData where
@@ -94,7 +94,8 @@ instance Data.FromJSON BooleanColumnStatisticsData where
 
 instance Prelude.Hashable BooleanColumnStatisticsData where
   hashWithSalt _salt BooleanColumnStatisticsData' {..} =
-    _salt `Prelude.hashWithSalt` numberOfTrues
+    _salt
+      `Prelude.hashWithSalt` numberOfTrues
       `Prelude.hashWithSalt` numberOfFalses
       `Prelude.hashWithSalt` numberOfNulls
 

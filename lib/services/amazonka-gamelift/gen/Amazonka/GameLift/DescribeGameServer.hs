@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.DescribeGameServer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,8 @@ instance Core.AWSRequest DescribeGameServer where
 
 instance Prelude.Hashable DescribeGameServer where
   hashWithSalt _salt DescribeGameServer' {..} =
-    _salt `Prelude.hashWithSalt` gameServerGroupName
+    _salt
+      `Prelude.hashWithSalt` gameServerGroupName
       `Prelude.hashWithSalt` gameServerId
 
 instance Prelude.NFData DescribeGameServer where

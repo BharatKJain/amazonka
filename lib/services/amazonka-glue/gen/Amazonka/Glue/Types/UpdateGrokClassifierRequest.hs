@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.UpdateGrokClassifierRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.UpdateGrokClassifierRequest where
@@ -88,7 +88,8 @@ updateGrokClassifierRequest_name = Lens.lens (\UpdateGrokClassifierRequest' {nam
 
 instance Prelude.Hashable UpdateGrokClassifierRequest where
   hashWithSalt _salt UpdateGrokClassifierRequest' {..} =
-    _salt `Prelude.hashWithSalt` classification
+    _salt
+      `Prelude.hashWithSalt` classification
       `Prelude.hashWithSalt` customPatterns
       `Prelude.hashWithSalt` grokPattern
       `Prelude.hashWithSalt` name

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkDocs.Types.Comment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkDocs.Types.Comment where
@@ -161,7 +161,8 @@ instance Data.FromJSON Comment where
 
 instance Prelude.Hashable Comment where
   hashWithSalt _salt Comment' {..} =
-    _salt `Prelude.hashWithSalt` contributor
+    _salt
+      `Prelude.hashWithSalt` contributor
       `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` parentId
       `Prelude.hashWithSalt` recipientId

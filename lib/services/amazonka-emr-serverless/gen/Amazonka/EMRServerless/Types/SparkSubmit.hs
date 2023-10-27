@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRServerless.Types.SparkSubmit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRServerless.Types.SparkSubmit where
@@ -79,7 +79,8 @@ instance Data.FromJSON SparkSubmit where
       "SparkSubmit"
       ( \x ->
           SparkSubmit'
-            Prelude.<$> ( x Data..:? "entryPointArguments"
+            Prelude.<$> ( x
+                            Data..:? "entryPointArguments"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "sparkSubmitParameters")
@@ -88,7 +89,8 @@ instance Data.FromJSON SparkSubmit where
 
 instance Prelude.Hashable SparkSubmit where
   hashWithSalt _salt SparkSubmit' {..} =
-    _salt `Prelude.hashWithSalt` entryPointArguments
+    _salt
+      `Prelude.hashWithSalt` entryPointArguments
       `Prelude.hashWithSalt` sparkSubmitParameters
       `Prelude.hashWithSalt` entryPoint
 

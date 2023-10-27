@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECS.UpdateContainerInstancesState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -184,7 +184,8 @@ instance
     Response.receiveJSON
       ( \s h x ->
           UpdateContainerInstancesStateResponse'
-            Prelude.<$> ( x Data..?> "containerInstances"
+            Prelude.<$> ( x
+                            Data..?> "containerInstances"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "failures" Core..!@ Prelude.mempty)
@@ -196,7 +197,8 @@ instance
     UpdateContainerInstancesState
   where
   hashWithSalt _salt UpdateContainerInstancesState' {..} =
-    _salt `Prelude.hashWithSalt` cluster
+    _salt
+      `Prelude.hashWithSalt` cluster
       `Prelude.hashWithSalt` containerInstances
       `Prelude.hashWithSalt` status
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.SubtitlesOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.SubtitlesOutput where
@@ -141,14 +141,16 @@ instance Data.FromJSON SubtitlesOutput where
           SubtitlesOutput'
             Prelude.<$> (x Data..:? "Formats" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "OutputStartIndex")
-            Prelude.<*> ( x Data..:? "SubtitleFileUris"
+            Prelude.<*> ( x
+                            Data..:? "SubtitleFileUris"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable SubtitlesOutput where
   hashWithSalt _salt SubtitlesOutput' {..} =
-    _salt `Prelude.hashWithSalt` formats
+    _salt
+      `Prelude.hashWithSalt` formats
       `Prelude.hashWithSalt` outputStartIndex
       `Prelude.hashWithSalt` subtitleFileUris
 

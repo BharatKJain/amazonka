@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.EbsVolumeDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.EbsVolumeDetails where
@@ -70,17 +70,20 @@ instance Data.FromJSON EbsVolumeDetails where
       "EbsVolumeDetails"
       ( \x ->
           EbsVolumeDetails'
-            Prelude.<$> ( x Data..:? "scannedVolumeDetails"
+            Prelude.<$> ( x
+                            Data..:? "scannedVolumeDetails"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "skippedVolumeDetails"
+            Prelude.<*> ( x
+                            Data..:? "skippedVolumeDetails"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable EbsVolumeDetails where
   hashWithSalt _salt EbsVolumeDetails' {..} =
-    _salt `Prelude.hashWithSalt` scannedVolumeDetails
+    _salt
+      `Prelude.hashWithSalt` scannedVolumeDetails
       `Prelude.hashWithSalt` skippedVolumeDetails
 
 instance Prelude.NFData EbsVolumeDetails where

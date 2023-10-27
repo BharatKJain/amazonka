@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.AlfrescoConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.AlfrescoConfiguration where
@@ -327,10 +327,12 @@ instance Data.FromJSON AlfrescoConfiguration where
             Prelude.<*> (x Data..:? "CrawlSystemFolders")
             Prelude.<*> (x Data..:? "DocumentLibraryFieldMappings")
             Prelude.<*> (x Data..:? "EntityFilter")
-            Prelude.<*> ( x Data..:? "ExclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "ExclusionPatterns"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "InclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "InclusionPatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "VpcConfiguration")
@@ -343,7 +345,8 @@ instance Data.FromJSON AlfrescoConfiguration where
 
 instance Prelude.Hashable AlfrescoConfiguration where
   hashWithSalt _salt AlfrescoConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` blogFieldMappings
+    _salt
+      `Prelude.hashWithSalt` blogFieldMappings
       `Prelude.hashWithSalt` crawlComments
       `Prelude.hashWithSalt` crawlSystemFolders
       `Prelude.hashWithSalt` documentLibraryFieldMappings

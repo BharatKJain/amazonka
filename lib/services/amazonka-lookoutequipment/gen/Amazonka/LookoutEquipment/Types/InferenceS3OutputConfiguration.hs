@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutEquipment.Types.InferenceS3OutputConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutEquipment.Types.InferenceS3OutputConfiguration where
@@ -86,7 +86,8 @@ instance
   hashWithSalt
     _salt
     InferenceS3OutputConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` prefix
+      _salt
+        `Prelude.hashWithSalt` prefix
         `Prelude.hashWithSalt` bucket
 
 instance

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.RedshiftTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.RedshiftTarget where
@@ -139,7 +139,8 @@ instance Data.FromJSON RedshiftTarget where
 
 instance Prelude.Hashable RedshiftTarget where
   hashWithSalt _salt RedshiftTarget' {..} =
-    _salt `Prelude.hashWithSalt` redshiftTmpDir
+    _salt
+      `Prelude.hashWithSalt` redshiftTmpDir
       `Prelude.hashWithSalt` tmpDirIAMRole
       `Prelude.hashWithSalt` upsertRedshiftOptions
       `Prelude.hashWithSalt` name

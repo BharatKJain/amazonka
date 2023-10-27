@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RedshiftData.BatchExecuteStatement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -243,7 +243,8 @@ instance Core.AWSRequest BatchExecuteStatement where
 
 instance Prelude.Hashable BatchExecuteStatement where
   hashWithSalt _salt BatchExecuteStatement' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` clusterIdentifier
       `Prelude.hashWithSalt` dbUser
       `Prelude.hashWithSalt` secretArn

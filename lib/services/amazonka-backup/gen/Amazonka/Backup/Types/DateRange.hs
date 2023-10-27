@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.DateRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.DateRange where
@@ -103,7 +103,8 @@ instance Data.FromJSON DateRange where
 
 instance Prelude.Hashable DateRange where
   hashWithSalt _salt DateRange' {..} =
-    _salt `Prelude.hashWithSalt` fromDate
+    _salt
+      `Prelude.hashWithSalt` fromDate
       `Prelude.hashWithSalt` toDate
 
 instance Prelude.NFData DateRange where

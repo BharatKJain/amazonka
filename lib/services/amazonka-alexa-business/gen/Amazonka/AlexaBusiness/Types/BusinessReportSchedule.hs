@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.BusinessReportSchedule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.BusinessReportSchedule where
@@ -145,7 +145,8 @@ instance Data.FromJSON BusinessReportSchedule where
 
 instance Prelude.Hashable BusinessReportSchedule where
   hashWithSalt _salt BusinessReportSchedule' {..} =
-    _salt `Prelude.hashWithSalt` contentRange
+    _salt
+      `Prelude.hashWithSalt` contentRange
       `Prelude.hashWithSalt` format
       `Prelude.hashWithSalt` lastBusinessReport
       `Prelude.hashWithSalt` recurrence

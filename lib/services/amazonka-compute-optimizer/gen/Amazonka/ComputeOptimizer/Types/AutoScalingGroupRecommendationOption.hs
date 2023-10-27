@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.AutoScalingGroupRecommendationOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.AutoScalingGroupRecommendationOption where
@@ -221,7 +221,8 @@ instance
             Prelude.<$> (x Data..:? "configuration")
             Prelude.<*> (x Data..:? "migrationEffort")
             Prelude.<*> (x Data..:? "performanceRisk")
-            Prelude.<*> ( x Data..:? "projectedUtilizationMetrics"
+            Prelude.<*> ( x
+                            Data..:? "projectedUtilizationMetrics"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "rank")
@@ -235,7 +236,8 @@ instance
   hashWithSalt
     _salt
     AutoScalingGroupRecommendationOption' {..} =
-      _salt `Prelude.hashWithSalt` configuration
+      _salt
+        `Prelude.hashWithSalt` configuration
         `Prelude.hashWithSalt` migrationEffort
         `Prelude.hashWithSalt` performanceRisk
         `Prelude.hashWithSalt` projectedUtilizationMetrics

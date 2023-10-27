@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glacier.Types.GlacierJobDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glacier.Types.GlacierJobDescription where
@@ -386,7 +386,8 @@ instance Data.FromJSON GlacierJobDescription where
 
 instance Prelude.Hashable GlacierJobDescription where
   hashWithSalt _salt GlacierJobDescription' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` archiveId
       `Prelude.hashWithSalt` archiveSHA256TreeHash
       `Prelude.hashWithSalt` archiveSizeInBytes

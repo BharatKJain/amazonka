@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Panorama.ListApplicationInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest ListApplicationInstances where
     Response.receiveJSON
       ( \s h x ->
           ListApplicationInstancesResponse'
-            Prelude.<$> ( x Data..?> "ApplicationInstances"
+            Prelude.<$> ( x
+                            Data..?> "ApplicationInstances"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -131,7 +132,8 @@ instance Core.AWSRequest ListApplicationInstances where
 
 instance Prelude.Hashable ListApplicationInstances where
   hashWithSalt _salt ListApplicationInstances' {..} =
-    _salt `Prelude.hashWithSalt` deviceId
+    _salt
+      `Prelude.hashWithSalt` deviceId
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` statusFilter

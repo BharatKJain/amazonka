@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.WirelessDeviceEventLogOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.WirelessDeviceEventLogOption where
@@ -87,7 +87,8 @@ instance
     WirelessDeviceEventLogOption
   where
   hashWithSalt _salt WirelessDeviceEventLogOption' {..} =
-    _salt `Prelude.hashWithSalt` event
+    _salt
+      `Prelude.hashWithSalt` event
       `Prelude.hashWithSalt` logLevel
 
 instance Prelude.NFData WirelessDeviceEventLogOption where

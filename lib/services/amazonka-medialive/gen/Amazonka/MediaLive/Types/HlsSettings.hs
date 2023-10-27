@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.HlsSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.HlsSettings where
@@ -95,7 +95,8 @@ instance Data.FromJSON HlsSettings where
 
 instance Prelude.Hashable HlsSettings where
   hashWithSalt _salt HlsSettings' {..} =
-    _salt `Prelude.hashWithSalt` audioOnlyHlsSettings
+    _salt
+      `Prelude.hashWithSalt` audioOnlyHlsSettings
       `Prelude.hashWithSalt` fmp4HlsSettings
       `Prelude.hashWithSalt` frameCaptureHlsSettings
       `Prelude.hashWithSalt` standardHlsSettings

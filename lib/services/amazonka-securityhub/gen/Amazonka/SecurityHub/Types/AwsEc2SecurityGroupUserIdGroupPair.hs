@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2SecurityGroupUserIdGroupPair
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2SecurityGroupUserIdGroupPair where
@@ -145,7 +145,8 @@ instance
   hashWithSalt
     _salt
     AwsEc2SecurityGroupUserIdGroupPair' {..} =
-      _salt `Prelude.hashWithSalt` groupId
+      _salt
+        `Prelude.hashWithSalt` groupId
         `Prelude.hashWithSalt` groupName
         `Prelude.hashWithSalt` peeringStatus
         `Prelude.hashWithSalt` userId

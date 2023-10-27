@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutVision.Types.DatasetImageStats
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutVision.Types.DatasetImageStats where
@@ -94,7 +94,8 @@ instance Data.FromJSON DatasetImageStats where
 
 instance Prelude.Hashable DatasetImageStats where
   hashWithSalt _salt DatasetImageStats' {..} =
-    _salt `Prelude.hashWithSalt` anomaly
+    _salt
+      `Prelude.hashWithSalt` anomaly
       `Prelude.hashWithSalt` labeled
       `Prelude.hashWithSalt` normal
       `Prelude.hashWithSalt` total

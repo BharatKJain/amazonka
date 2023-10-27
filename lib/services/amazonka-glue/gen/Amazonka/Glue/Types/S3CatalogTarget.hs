@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.S3CatalogTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.S3CatalogTarget where
@@ -124,7 +124,8 @@ instance Data.FromJSON S3CatalogTarget where
 
 instance Prelude.Hashable S3CatalogTarget where
   hashWithSalt _salt S3CatalogTarget' {..} =
-    _salt `Prelude.hashWithSalt` partitionKeys
+    _salt
+      `Prelude.hashWithSalt` partitionKeys
       `Prelude.hashWithSalt` schemaChangePolicy
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inputs

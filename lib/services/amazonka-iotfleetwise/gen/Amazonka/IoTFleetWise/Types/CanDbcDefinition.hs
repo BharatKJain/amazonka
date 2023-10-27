@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTFleetWise.Types.CanDbcDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTFleetWise.Types.CanDbcDefinition where
@@ -83,7 +83,8 @@ canDbcDefinition_canDbcFiles = Lens.lens (\CanDbcDefinition' {canDbcFiles} -> ca
 
 instance Prelude.Hashable CanDbcDefinition where
   hashWithSalt _salt CanDbcDefinition' {..} =
-    _salt `Prelude.hashWithSalt` signalsMap
+    _salt
+      `Prelude.hashWithSalt` signalsMap
       `Prelude.hashWithSalt` networkInterface
       `Prelude.hashWithSalt` canDbcFiles
 

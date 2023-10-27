@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.LoggingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.LoggingConfiguration where
@@ -64,7 +64,8 @@ instance Data.FromJSON LoggingConfiguration where
       "LoggingConfiguration"
       ( \x ->
           LoggingConfiguration'
-            Prelude.<$> ( x Data..:? "LogDestinationConfigs"
+            Prelude.<$> ( x
+                            Data..:? "LogDestinationConfigs"
                             Data..!= Prelude.mempty
                         )
       )

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.DnsRecordCreationState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.DnsRecordCreationState where
@@ -115,7 +115,8 @@ instance Data.FromJSON DnsRecordCreationState where
 
 instance Prelude.Hashable DnsRecordCreationState where
   hashWithSalt _salt DnsRecordCreationState' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData DnsRecordCreationState where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ApplicationAutoScaling.DescribeScalingActivities
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -577,22 +577,22 @@ instance Core.AWSPager DescribeScalingActivities where
     | Core.stop
         ( rs
             Lens.^? describeScalingActivitiesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeScalingActivitiesResponse_scalingActivities
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeScalingActivities_nextToken
           Lens..~ rs
           Lens.^? describeScalingActivitiesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeScalingActivities where
   type
@@ -605,7 +605,8 @@ instance Core.AWSRequest DescribeScalingActivities where
       ( \s h x ->
           DescribeScalingActivitiesResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "ScalingActivities"
+            Prelude.<*> ( x
+                            Data..?> "ScalingActivities"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

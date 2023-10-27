@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.UserPausedDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.UserPausedDetails where
@@ -106,7 +106,8 @@ instance Data.FromJSON UserPausedDetails where
 
 instance Prelude.Hashable UserPausedDetails where
   hashWithSalt _salt UserPausedDetails' {..} =
-    _salt `Prelude.hashWithSalt` jobExpiresAt
+    _salt
+      `Prelude.hashWithSalt` jobExpiresAt
       `Prelude.hashWithSalt` jobImminentExpirationHealthEventArn
       `Prelude.hashWithSalt` jobPausedAt
 

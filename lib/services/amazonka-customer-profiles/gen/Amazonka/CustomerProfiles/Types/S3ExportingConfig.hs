@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CustomerProfiles.Types.S3ExportingConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CustomerProfiles.Types.S3ExportingConfig where
@@ -83,7 +83,8 @@ instance Data.FromJSON S3ExportingConfig where
 
 instance Prelude.Hashable S3ExportingConfig where
   hashWithSalt _salt S3ExportingConfig' {..} =
-    _salt `Prelude.hashWithSalt` s3KeyName
+    _salt
+      `Prelude.hashWithSalt` s3KeyName
       `Prelude.hashWithSalt` s3BucketName
 
 instance Prelude.NFData S3ExportingConfig where

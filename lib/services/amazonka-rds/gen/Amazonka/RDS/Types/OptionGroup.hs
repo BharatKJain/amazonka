@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.OptionGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.OptionGroup where
@@ -185,7 +185,9 @@ instance Data.FromXML OptionGroup where
       Prelude.<*> (x Data..@? "OptionGroupArn")
       Prelude.<*> (x Data..@? "OptionGroupDescription")
       Prelude.<*> (x Data..@? "OptionGroupName")
-      Prelude.<*> ( x Data..@? "Options" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Options"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Option")
                   )
       Prelude.<*> (x Data..@? "SourceAccountId")

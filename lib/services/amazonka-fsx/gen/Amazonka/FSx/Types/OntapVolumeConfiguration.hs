@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.OntapVolumeConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.OntapVolumeConfiguration where
@@ -359,7 +359,8 @@ instance Data.FromJSON OntapVolumeConfiguration where
 
 instance Prelude.Hashable OntapVolumeConfiguration where
   hashWithSalt _salt OntapVolumeConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` copyTagsToBackups
+    _salt
+      `Prelude.hashWithSalt` copyTagsToBackups
       `Prelude.hashWithSalt` flexCacheEndpointType
       `Prelude.hashWithSalt` junctionPath
       `Prelude.hashWithSalt` ontapVolumeType

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.DomainStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.DomainStatus where
@@ -353,7 +353,8 @@ instance Data.FromJSON DomainStatus where
       ( \x ->
           DomainStatus'
             Prelude.<$> (x Data..:? "AccessPolicies")
-            Prelude.<*> ( x Data..:? "AdvancedOptions"
+            Prelude.<*> ( x
+                            Data..:? "AdvancedOptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "AdvancedSecurityOptions")
@@ -368,7 +369,8 @@ instance Data.FromJSON DomainStatus where
             Prelude.<*> (x Data..:? "Endpoint")
             Prelude.<*> (x Data..:? "Endpoints" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "EngineVersion")
-            Prelude.<*> ( x Data..:? "LogPublishingOptions"
+            Prelude.<*> ( x
+                            Data..:? "LogPublishingOptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "NodeToNodeEncryptionOptions")
@@ -385,7 +387,8 @@ instance Data.FromJSON DomainStatus where
 
 instance Prelude.Hashable DomainStatus where
   hashWithSalt _salt DomainStatus' {..} =
-    _salt `Prelude.hashWithSalt` accessPolicies
+    _salt
+      `Prelude.hashWithSalt` accessPolicies
       `Prelude.hashWithSalt` advancedOptions
       `Prelude.hashWithSalt` advancedSecurityOptions
       `Prelude.hashWithSalt` autoTuneOptions

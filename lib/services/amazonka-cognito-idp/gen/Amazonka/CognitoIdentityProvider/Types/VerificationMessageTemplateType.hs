@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.VerificationMessageTemplateType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.VerificationMessageTemplateType where
@@ -199,7 +199,8 @@ instance
   hashWithSalt
     _salt
     VerificationMessageTemplateType' {..} =
-      _salt `Prelude.hashWithSalt` defaultEmailOption
+      _salt
+        `Prelude.hashWithSalt` defaultEmailOption
         `Prelude.hashWithSalt` emailMessage
         `Prelude.hashWithSalt` emailMessageByLink
         `Prelude.hashWithSalt` emailSubject

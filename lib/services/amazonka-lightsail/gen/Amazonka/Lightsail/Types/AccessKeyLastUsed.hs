@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.AccessKeyLastUsed
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.AccessKeyLastUsed where
@@ -112,7 +112,8 @@ instance Data.FromJSON AccessKeyLastUsed where
 
 instance Prelude.Hashable AccessKeyLastUsed where
   hashWithSalt _salt AccessKeyLastUsed' {..} =
-    _salt `Prelude.hashWithSalt` lastUsedDate
+    _salt
+      `Prelude.hashWithSalt` lastUsedDate
       `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` serviceName
 

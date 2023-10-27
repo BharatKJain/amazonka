@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.DescribedAgreement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.DescribedAgreement where
@@ -197,7 +197,8 @@ instance Data.FromJSON DescribedAgreement where
 
 instance Prelude.Hashable DescribedAgreement where
   hashWithSalt _salt DescribedAgreement' {..} =
-    _salt `Prelude.hashWithSalt` accessRole
+    _salt
+      `Prelude.hashWithSalt` accessRole
       `Prelude.hashWithSalt` agreementId
       `Prelude.hashWithSalt` baseDirectory
       `Prelude.hashWithSalt` description

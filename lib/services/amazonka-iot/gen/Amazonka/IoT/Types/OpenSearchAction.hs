@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.OpenSearchAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.OpenSearchAction where
@@ -120,7 +120,8 @@ instance Data.FromJSON OpenSearchAction where
 
 instance Prelude.Hashable OpenSearchAction where
   hashWithSalt _salt OpenSearchAction' {..} =
-    _salt `Prelude.hashWithSalt` roleArn
+    _salt
+      `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` endpoint
       `Prelude.hashWithSalt` index
       `Prelude.hashWithSalt` type'

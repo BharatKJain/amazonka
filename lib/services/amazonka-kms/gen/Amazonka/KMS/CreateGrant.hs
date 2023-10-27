@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KMS.CreateGrant
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -509,7 +509,8 @@ instance Core.AWSRequest CreateGrant where
 
 instance Prelude.Hashable CreateGrant where
   hashWithSalt _salt CreateGrant' {..} =
-    _salt `Prelude.hashWithSalt` constraints
+    _salt
+      `Prelude.hashWithSalt` constraints
       `Prelude.hashWithSalt` grantTokens
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` retiringPrincipal

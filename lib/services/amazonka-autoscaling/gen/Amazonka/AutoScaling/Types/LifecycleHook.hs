@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.LifecycleHook
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.LifecycleHook where
@@ -186,7 +186,8 @@ instance Data.FromXML LifecycleHook where
 
 instance Prelude.Hashable LifecycleHook where
   hashWithSalt _salt LifecycleHook' {..} =
-    _salt `Prelude.hashWithSalt` autoScalingGroupName
+    _salt
+      `Prelude.hashWithSalt` autoScalingGroupName
       `Prelude.hashWithSalt` defaultResult
       `Prelude.hashWithSalt` globalTimeout
       `Prelude.hashWithSalt` heartbeatTimeout

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexModels.Types.Slot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexModels.Types.Slot where
@@ -222,7 +222,8 @@ instance Data.FromJSON Slot where
             Prelude.<*> (x Data..:? "obfuscationSetting")
             Prelude.<*> (x Data..:? "priority")
             Prelude.<*> (x Data..:? "responseCard")
-            Prelude.<*> ( x Data..:? "sampleUtterances"
+            Prelude.<*> ( x
+                            Data..:? "sampleUtterances"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "slotType")
@@ -234,7 +235,8 @@ instance Data.FromJSON Slot where
 
 instance Prelude.Hashable Slot where
   hashWithSalt _salt Slot' {..} =
-    _salt `Prelude.hashWithSalt` defaultValueSpec
+    _salt
+      `Prelude.hashWithSalt` defaultValueSpec
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` obfuscationSetting
       `Prelude.hashWithSalt` priority

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.ExportJobResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.ExportJobResponse where
@@ -239,7 +239,8 @@ instance Data.FromJSON ExportJobResponse where
 
 instance Prelude.Hashable ExportJobResponse where
   hashWithSalt _salt ExportJobResponse' {..} =
-    _salt `Prelude.hashWithSalt` completedPieces
+    _salt
+      `Prelude.hashWithSalt` completedPieces
       `Prelude.hashWithSalt` completionDate
       `Prelude.hashWithSalt` failedPieces
       `Prelude.hashWithSalt` failures

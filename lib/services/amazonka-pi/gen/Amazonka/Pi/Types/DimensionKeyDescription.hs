@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pi.Types.DimensionKeyDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pi.Types.DimensionKeyDescription where
@@ -94,7 +94,8 @@ instance Data.FromJSON DimensionKeyDescription where
       "DimensionKeyDescription"
       ( \x ->
           DimensionKeyDescription'
-            Prelude.<$> ( x Data..:? "AdditionalMetrics"
+            Prelude.<$> ( x
+                            Data..:? "AdditionalMetrics"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Dimensions" Data..!= Prelude.mempty)
@@ -104,7 +105,8 @@ instance Data.FromJSON DimensionKeyDescription where
 
 instance Prelude.Hashable DimensionKeyDescription where
   hashWithSalt _salt DimensionKeyDescription' {..} =
-    _salt `Prelude.hashWithSalt` additionalMetrics
+    _salt
+      `Prelude.hashWithSalt` additionalMetrics
       `Prelude.hashWithSalt` dimensions
       `Prelude.hashWithSalt` partitions
       `Prelude.hashWithSalt` total

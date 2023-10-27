@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.UpsolverDestinationProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.UpsolverDestinationProperties where
@@ -105,7 +105,8 @@ instance
     UpsolverDestinationProperties
   where
   hashWithSalt _salt UpsolverDestinationProperties' {..} =
-    _salt `Prelude.hashWithSalt` bucketPrefix
+    _salt
+      `Prelude.hashWithSalt` bucketPrefix
       `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` s3OutputFormatConfig
 

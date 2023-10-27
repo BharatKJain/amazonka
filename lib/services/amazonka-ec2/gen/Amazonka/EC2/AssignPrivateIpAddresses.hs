@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.AssignPrivateIpAddresses
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -207,11 +207,13 @@ instance Core.AWSRequest AssignPrivateIpAddresses where
     Response.receiveXML
       ( \s h x ->
           AssignPrivateIpAddressesResponse'
-            Prelude.<$> ( x Data..@? "assignedIpv4PrefixSet"
+            Prelude.<$> ( x
+                            Data..@? "assignedIpv4PrefixSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
-            Prelude.<*> ( x Data..@? "assignedPrivateIpAddressesSet"
+            Prelude.<*> ( x
+                            Data..@? "assignedPrivateIpAddressesSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -221,7 +223,8 @@ instance Core.AWSRequest AssignPrivateIpAddresses where
 
 instance Prelude.Hashable AssignPrivateIpAddresses where
   hashWithSalt _salt AssignPrivateIpAddresses' {..} =
-    _salt `Prelude.hashWithSalt` allowReassignment
+    _salt
+      `Prelude.hashWithSalt` allowReassignment
       `Prelude.hashWithSalt` ipv4PrefixCount
       `Prelude.hashWithSalt` ipv4Prefixes
       `Prelude.hashWithSalt` privateIpAddresses

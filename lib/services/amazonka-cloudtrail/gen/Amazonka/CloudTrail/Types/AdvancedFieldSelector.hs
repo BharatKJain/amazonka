@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudTrail.Types.AdvancedFieldSelector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudTrail.Types.AdvancedFieldSelector where
@@ -513,7 +513,8 @@ instance Data.FromJSON AdvancedFieldSelector where
 
 instance Prelude.Hashable AdvancedFieldSelector where
   hashWithSalt _salt AdvancedFieldSelector' {..} =
-    _salt `Prelude.hashWithSalt` endsWith
+    _salt
+      `Prelude.hashWithSalt` endsWith
       `Prelude.hashWithSalt` equals
       `Prelude.hashWithSalt` notEndsWith
       `Prelude.hashWithSalt` notEquals

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.SqlRunConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.SqlRunConfiguration where
@@ -79,7 +79,8 @@ sqlRunConfiguration_inputStartingPositionConfiguration = Lens.lens (\SqlRunConfi
 
 instance Prelude.Hashable SqlRunConfiguration where
   hashWithSalt _salt SqlRunConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` inputId
+    _salt
+      `Prelude.hashWithSalt` inputId
       `Prelude.hashWithSalt` inputStartingPositionConfiguration
 
 instance Prelude.NFData SqlRunConfiguration where

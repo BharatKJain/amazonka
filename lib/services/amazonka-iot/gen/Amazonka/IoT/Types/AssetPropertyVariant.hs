@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.AssetPropertyVariant
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.AssetPropertyVariant where
@@ -107,7 +107,8 @@ instance Data.FromJSON AssetPropertyVariant where
 
 instance Prelude.Hashable AssetPropertyVariant where
   hashWithSalt _salt AssetPropertyVariant' {..} =
-    _salt `Prelude.hashWithSalt` booleanValue
+    _salt
+      `Prelude.hashWithSalt` booleanValue
       `Prelude.hashWithSalt` doubleValue
       `Prelude.hashWithSalt` integerValue
       `Prelude.hashWithSalt` stringValue

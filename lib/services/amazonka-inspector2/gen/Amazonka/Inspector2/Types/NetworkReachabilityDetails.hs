@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.NetworkReachabilityDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.NetworkReachabilityDetails where
@@ -103,7 +103,8 @@ instance Data.FromJSON NetworkReachabilityDetails where
 
 instance Prelude.Hashable NetworkReachabilityDetails where
   hashWithSalt _salt NetworkReachabilityDetails' {..} =
-    _salt `Prelude.hashWithSalt` networkPath
+    _salt
+      `Prelude.hashWithSalt` networkPath
       `Prelude.hashWithSalt` openPortRange
       `Prelude.hashWithSalt` protocol
 

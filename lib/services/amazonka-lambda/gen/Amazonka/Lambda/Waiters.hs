@@ -11,7 +11,7 @@
 -- Module      : Amazonka.Lambda.Waiters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Waiters where
@@ -36,19 +36,22 @@ newFunctionActive =
         [ Core.matchAll
             "Active"
             Core.AcceptSuccess
-            ( functionConfiguration_state Prelude.. Lens._Just
+            ( functionConfiguration_state
+                Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
             ),
           Core.matchAll
             "Failed"
             Core.AcceptFailure
-            ( functionConfiguration_state Prelude.. Lens._Just
+            ( functionConfiguration_state
+                Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
             ),
           Core.matchAll
             "Pending"
             Core.AcceptRetry
-            ( functionConfiguration_state Prelude.. Lens._Just
+            ( functionConfiguration_state
+                Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
             )
         ]
@@ -188,19 +191,22 @@ newPublishedVersionActive =
         [ Core.matchAll
             "Active"
             Core.AcceptSuccess
-            ( functionConfiguration_state Prelude.. Lens._Just
+            ( functionConfiguration_state
+                Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
             ),
           Core.matchAll
             "Failed"
             Core.AcceptFailure
-            ( functionConfiguration_state Prelude.. Lens._Just
+            ( functionConfiguration_state
+                Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
             ),
           Core.matchAll
             "Pending"
             Core.AcceptRetry
-            ( functionConfiguration_state Prelude.. Lens._Just
+            ( functionConfiguration_state
+                Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
             )
         ]

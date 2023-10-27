@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.WorkloadShareSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.WorkloadShareSummary where
@@ -103,7 +103,8 @@ instance Data.FromJSON WorkloadShareSummary where
 
 instance Prelude.Hashable WorkloadShareSummary where
   hashWithSalt _salt WorkloadShareSummary' {..} =
-    _salt `Prelude.hashWithSalt` permissionType
+    _salt
+      `Prelude.hashWithSalt` permissionType
       `Prelude.hashWithSalt` shareId
       `Prelude.hashWithSalt` sharedWith
       `Prelude.hashWithSalt` status

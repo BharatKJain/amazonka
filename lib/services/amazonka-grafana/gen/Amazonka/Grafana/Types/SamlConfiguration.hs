@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Grafana.Types.SamlConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Grafana.Types.SamlConfiguration where
@@ -123,7 +123,8 @@ instance Data.FromJSON SamlConfiguration where
       "SamlConfiguration"
       ( \x ->
           SamlConfiguration'
-            Prelude.<$> ( x Data..:? "allowedOrganizations"
+            Prelude.<$> ( x
+                            Data..:? "allowedOrganizations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "assertionAttributes")
@@ -134,7 +135,8 @@ instance Data.FromJSON SamlConfiguration where
 
 instance Prelude.Hashable SamlConfiguration where
   hashWithSalt _salt SamlConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` allowedOrganizations
+    _salt
+      `Prelude.hashWithSalt` allowedOrganizations
       `Prelude.hashWithSalt` assertionAttributes
       `Prelude.hashWithSalt` loginValidityDuration
       `Prelude.hashWithSalt` roleValues

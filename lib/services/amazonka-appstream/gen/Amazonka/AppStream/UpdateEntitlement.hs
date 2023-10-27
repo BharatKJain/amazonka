@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppStream.UpdateEntitlement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest UpdateEntitlement where
 
 instance Prelude.Hashable UpdateEntitlement where
   hashWithSalt _salt UpdateEntitlement' {..} =
-    _salt `Prelude.hashWithSalt` appVisibility
+    _salt
+      `Prelude.hashWithSalt` appVisibility
       `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name

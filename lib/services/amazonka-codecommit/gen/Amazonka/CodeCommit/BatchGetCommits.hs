@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeCommit.BatchGetCommits
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest BatchGetCommits where
 
 instance Prelude.Hashable BatchGetCommits where
   hashWithSalt _salt BatchGetCommits' {..} =
-    _salt `Prelude.hashWithSalt` commitIds
+    _salt
+      `Prelude.hashWithSalt` commitIds
       `Prelude.hashWithSalt` repositoryName
 
 instance Prelude.NFData BatchGetCommits where

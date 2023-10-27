@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.AdminResetUserPassword
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -234,7 +234,8 @@ instance Core.AWSRequest AdminResetUserPassword where
 
 instance Prelude.Hashable AdminResetUserPassword where
   hashWithSalt _salt AdminResetUserPassword' {..} =
-    _salt `Prelude.hashWithSalt` clientMetadata
+    _salt
+      `Prelude.hashWithSalt` clientMetadata
       `Prelude.hashWithSalt` userPoolId
       `Prelude.hashWithSalt` username
 

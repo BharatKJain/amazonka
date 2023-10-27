@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SESV2.ListContactLists
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest ListContactLists where
 
 instance Prelude.Hashable ListContactLists where
   hashWithSalt _salt ListContactLists' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` pageSize
 
 instance Prelude.NFData ListContactLists where

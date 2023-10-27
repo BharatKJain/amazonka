@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.ProvisionedThroughput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.ProvisionedThroughput where
@@ -121,7 +121,8 @@ instance Data.FromJSON ProvisionedThroughput where
 
 instance Prelude.Hashable ProvisionedThroughput where
   hashWithSalt _salt ProvisionedThroughput' {..} =
-    _salt `Prelude.hashWithSalt` readCapacityUnits
+    _salt
+      `Prelude.hashWithSalt` readCapacityUnits
       `Prelude.hashWithSalt` writeCapacityUnits
 
 instance Prelude.NFData ProvisionedThroughput where

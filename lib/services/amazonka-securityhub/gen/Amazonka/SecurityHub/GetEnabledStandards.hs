@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecurityHub.GetEnabledStandards
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,22 +123,22 @@ instance Core.AWSPager GetEnabledStandards where
     | Core.stop
         ( rs
             Lens.^? getEnabledStandardsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getEnabledStandardsResponse_standardsSubscriptions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getEnabledStandards_nextToken
           Lens..~ rs
           Lens.^? getEnabledStandardsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetEnabledStandards where
   type
@@ -151,7 +151,8 @@ instance Core.AWSRequest GetEnabledStandards where
       ( \s h x ->
           GetEnabledStandardsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "StandardsSubscriptions"
+            Prelude.<*> ( x
+                            Data..?> "StandardsSubscriptions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -159,7 +160,8 @@ instance Core.AWSRequest GetEnabledStandards where
 
 instance Prelude.Hashable GetEnabledStandards where
   hashWithSalt _salt GetEnabledStandards' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` standardsSubscriptionArns
 

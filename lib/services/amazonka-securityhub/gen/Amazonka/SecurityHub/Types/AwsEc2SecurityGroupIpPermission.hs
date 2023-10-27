@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2SecurityGroupIpPermission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2SecurityGroupIpPermission where
@@ -193,7 +193,8 @@ instance
             Prelude.<*> (x Data..:? "Ipv6Ranges" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "PrefixListIds" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "ToPort")
-            Prelude.<*> ( x Data..:? "UserIdGroupPairs"
+            Prelude.<*> ( x
+                            Data..:? "UserIdGroupPairs"
                             Data..!= Prelude.mempty
                         )
       )
@@ -205,7 +206,8 @@ instance
   hashWithSalt
     _salt
     AwsEc2SecurityGroupIpPermission' {..} =
-      _salt `Prelude.hashWithSalt` fromPort
+      _salt
+        `Prelude.hashWithSalt` fromPort
         `Prelude.hashWithSalt` ipProtocol
         `Prelude.hashWithSalt` ipRanges
         `Prelude.hashWithSalt` ipv6Ranges

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchWriteOperationResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchWriteOperationResponse where
@@ -241,7 +241,8 @@ instance Data.FromJSON BatchWriteOperationResponse where
 
 instance Prelude.Hashable BatchWriteOperationResponse where
   hashWithSalt _salt BatchWriteOperationResponse' {..} =
-    _salt `Prelude.hashWithSalt` addFacetToObject
+    _salt
+      `Prelude.hashWithSalt` addFacetToObject
       `Prelude.hashWithSalt` attachObject
       `Prelude.hashWithSalt` attachPolicy
       `Prelude.hashWithSalt` attachToIndex

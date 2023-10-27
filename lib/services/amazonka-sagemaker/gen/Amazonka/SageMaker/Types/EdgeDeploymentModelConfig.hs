@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.EdgeDeploymentModelConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.EdgeDeploymentModelConfig where
@@ -81,7 +81,8 @@ instance Data.FromJSON EdgeDeploymentModelConfig where
 
 instance Prelude.Hashable EdgeDeploymentModelConfig where
   hashWithSalt _salt EdgeDeploymentModelConfig' {..} =
-    _salt `Prelude.hashWithSalt` modelHandle
+    _salt
+      `Prelude.hashWithSalt` modelHandle
       `Prelude.hashWithSalt` edgePackagingJobName
 
 instance Prelude.NFData EdgeDeploymentModelConfig where

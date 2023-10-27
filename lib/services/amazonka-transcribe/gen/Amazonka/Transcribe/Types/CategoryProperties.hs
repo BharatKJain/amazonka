@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.CategoryProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.CategoryProperties where
@@ -150,7 +150,8 @@ instance Data.FromJSON CategoryProperties where
 
 instance Prelude.Hashable CategoryProperties where
   hashWithSalt _salt CategoryProperties' {..} =
-    _salt `Prelude.hashWithSalt` categoryName
+    _salt
+      `Prelude.hashWithSalt` categoryName
       `Prelude.hashWithSalt` createTime
       `Prelude.hashWithSalt` inputType
       `Prelude.hashWithSalt` lastUpdateTime

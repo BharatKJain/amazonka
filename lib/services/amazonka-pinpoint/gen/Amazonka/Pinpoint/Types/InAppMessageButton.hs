@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.InAppMessageButton
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.InAppMessageButton where
@@ -96,7 +96,8 @@ instance Data.FromJSON InAppMessageButton where
 
 instance Prelude.Hashable InAppMessageButton where
   hashWithSalt _salt InAppMessageButton' {..} =
-    _salt `Prelude.hashWithSalt` android
+    _salt
+      `Prelude.hashWithSalt` android
       `Prelude.hashWithSalt` defaultConfig
       `Prelude.hashWithSalt` ios
       `Prelude.hashWithSalt` web

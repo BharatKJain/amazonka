@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KMS.GenerateMac
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -176,7 +176,8 @@ newGenerateMac pMessage_ pKeyId_ pMacAlgorithm_ =
   GenerateMac'
     { grantTokens = Prelude.Nothing,
       message =
-        Data._Sensitive Prelude.. Data._Base64
+        Data._Sensitive
+          Prelude.. Data._Base64
           Lens.# pMessage_,
       keyId = pKeyId_,
       macAlgorithm = pMacAlgorithm_
@@ -240,7 +241,8 @@ instance Core.AWSRequest GenerateMac where
 
 instance Prelude.Hashable GenerateMac where
   hashWithSalt _salt GenerateMac' {..} =
-    _salt `Prelude.hashWithSalt` grantTokens
+    _salt
+      `Prelude.hashWithSalt` grantTokens
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` keyId
       `Prelude.hashWithSalt` macAlgorithm

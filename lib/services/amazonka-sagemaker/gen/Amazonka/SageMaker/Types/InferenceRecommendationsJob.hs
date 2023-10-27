@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.InferenceRecommendationsJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.InferenceRecommendationsJob where
@@ -186,7 +186,8 @@ instance Data.FromJSON InferenceRecommendationsJob where
 
 instance Prelude.Hashable InferenceRecommendationsJob where
   hashWithSalt _salt InferenceRecommendationsJob' {..} =
-    _salt `Prelude.hashWithSalt` completionTime
+    _salt
+      `Prelude.hashWithSalt` completionTime
       `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` jobDescription

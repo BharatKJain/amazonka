@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.DeploymentStage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.DeploymentStage where
@@ -82,7 +82,8 @@ deploymentStage_deviceSelectionConfig = Lens.lens (\DeploymentStage' {deviceSele
 
 instance Prelude.Hashable DeploymentStage where
   hashWithSalt _salt DeploymentStage' {..} =
-    _salt `Prelude.hashWithSalt` deploymentConfig
+    _salt
+      `Prelude.hashWithSalt` deploymentConfig
       `Prelude.hashWithSalt` stageName
       `Prelude.hashWithSalt` deviceSelectionConfig
 

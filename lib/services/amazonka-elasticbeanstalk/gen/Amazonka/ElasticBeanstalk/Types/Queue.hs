@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.Queue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.Queue where
@@ -65,11 +65,13 @@ queue_url = Lens.lens (\Queue' {url} -> url) (\s@Queue' {} a -> s {url = a} :: Q
 instance Data.FromXML Queue where
   parseXML x =
     Queue'
-      Prelude.<$> (x Data..@? "Name") Prelude.<*> (x Data..@? "URL")
+      Prelude.<$> (x Data..@? "Name")
+      Prelude.<*> (x Data..@? "URL")
 
 instance Prelude.Hashable Queue where
   hashWithSalt _salt Queue' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` url
 
 instance Prelude.NFData Queue where

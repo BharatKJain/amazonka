@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.PendingTaskCount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.PendingTaskCount where
@@ -82,7 +82,8 @@ instance Data.FromJSON PendingTaskCount where
 
 instance Prelude.Hashable PendingTaskCount where
   hashWithSalt _salt PendingTaskCount' {..} =
-    _salt `Prelude.hashWithSalt` truncated
+    _salt
+      `Prelude.hashWithSalt` truncated
       `Prelude.hashWithSalt` count
 
 instance Prelude.NFData PendingTaskCount where

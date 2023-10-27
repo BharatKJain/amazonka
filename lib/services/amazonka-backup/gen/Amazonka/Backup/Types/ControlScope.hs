@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.ControlScope
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.ControlScope where
@@ -106,7 +106,8 @@ instance Data.FromJSON ControlScope where
       ( \x ->
           ControlScope'
             Prelude.<$> (x Data..:? "ComplianceResourceIds")
-            Prelude.<*> ( x Data..:? "ComplianceResourceTypes"
+            Prelude.<*> ( x
+                            Data..:? "ComplianceResourceTypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Tags" Data..!= Prelude.mempty)
@@ -114,7 +115,8 @@ instance Data.FromJSON ControlScope where
 
 instance Prelude.Hashable ControlScope where
   hashWithSalt _salt ControlScope' {..} =
-    _salt `Prelude.hashWithSalt` complianceResourceIds
+    _salt
+      `Prelude.hashWithSalt` complianceResourceIds
       `Prelude.hashWithSalt` complianceResourceTypes
       `Prelude.hashWithSalt` tags
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.PendingModifiedValues
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.PendingModifiedValues where
@@ -292,7 +292,8 @@ instance Data.FromXML PendingModifiedValues where
       Prelude.<*> (x Data..@? "MultiAZ")
       Prelude.<*> (x Data..@? "PendingCloudwatchLogsExports")
       Prelude.<*> (x Data..@? "Port")
-      Prelude.<*> ( x Data..@? "ProcessorFeatures"
+      Prelude.<*> ( x
+                      Data..@? "ProcessorFeatures"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "ProcessorFeature")
                   )
@@ -302,7 +303,8 @@ instance Data.FromXML PendingModifiedValues where
 
 instance Prelude.Hashable PendingModifiedValues where
   hashWithSalt _salt PendingModifiedValues' {..} =
-    _salt `Prelude.hashWithSalt` allocatedStorage
+    _salt
+      `Prelude.hashWithSalt` allocatedStorage
       `Prelude.hashWithSalt` automationMode
       `Prelude.hashWithSalt` backupRetentionPeriod
       `Prelude.hashWithSalt` cACertificateIdentifier

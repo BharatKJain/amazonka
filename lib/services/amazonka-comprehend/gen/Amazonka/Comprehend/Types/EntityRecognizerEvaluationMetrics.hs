@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.EntityRecognizerEvaluationMetrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.EntityRecognizerEvaluationMetrics where
@@ -120,7 +120,8 @@ instance
   hashWithSalt
     _salt
     EntityRecognizerEvaluationMetrics' {..} =
-      _salt `Prelude.hashWithSalt` f1Score
+      _salt
+        `Prelude.hashWithSalt` f1Score
         `Prelude.hashWithSalt` precision
         `Prelude.hashWithSalt` recall
 

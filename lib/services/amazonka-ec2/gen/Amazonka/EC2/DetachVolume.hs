@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DetachVolume
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -174,7 +174,8 @@ instance Core.AWSRequest DetachVolume where
 
 instance Prelude.Hashable DetachVolume where
   hashWithSalt _salt DetachVolume' {..} =
-    _salt `Prelude.hashWithSalt` device
+    _salt
+      `Prelude.hashWithSalt` device
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` force
       `Prelude.hashWithSalt` instanceId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.SolutionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.SolutionSummary where
@@ -136,7 +136,8 @@ instance Data.FromJSON SolutionSummary where
 
 instance Prelude.Hashable SolutionSummary where
   hashWithSalt _salt SolutionSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationDateTime
+    _salt
+      `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` lastUpdatedDateTime
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` recipeArn

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.BackupGateway.Types.MaintenanceStartTime
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.BackupGateway.Types.MaintenanceStartTime where
@@ -124,7 +124,8 @@ instance Data.FromJSON MaintenanceStartTime where
 
 instance Prelude.Hashable MaintenanceStartTime where
   hashWithSalt _salt MaintenanceStartTime' {..} =
-    _salt `Prelude.hashWithSalt` dayOfMonth
+    _salt
+      `Prelude.hashWithSalt` dayOfMonth
       `Prelude.hashWithSalt` dayOfWeek
       `Prelude.hashWithSalt` hourOfDay
       `Prelude.hashWithSalt` minuteOfHour

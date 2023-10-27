@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentity.MergeDeveloperIdentities
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -171,7 +171,8 @@ instance Core.AWSRequest MergeDeveloperIdentities where
 
 instance Prelude.Hashable MergeDeveloperIdentities where
   hashWithSalt _salt MergeDeveloperIdentities' {..} =
-    _salt `Prelude.hashWithSalt` sourceUserIdentifier
+    _salt
+      `Prelude.hashWithSalt` sourceUserIdentifier
       `Prelude.hashWithSalt` destinationUserIdentifier
       `Prelude.hashWithSalt` developerProviderName
       `Prelude.hashWithSalt` identityPoolId

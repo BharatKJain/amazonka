@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.UpdateWorkteam
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -195,7 +195,8 @@ instance Core.AWSRequest UpdateWorkteam where
 
 instance Prelude.Hashable UpdateWorkteam where
   hashWithSalt _salt UpdateWorkteam' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` memberDefinitions
       `Prelude.hashWithSalt` notificationConfiguration
       `Prelude.hashWithSalt` workteamName

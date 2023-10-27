@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.TypedAttributeValueRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.TypedAttributeValueRange where
@@ -90,7 +90,8 @@ typedAttributeValueRange_endMode = Lens.lens (\TypedAttributeValueRange' {endMod
 
 instance Prelude.Hashable TypedAttributeValueRange where
   hashWithSalt _salt TypedAttributeValueRange' {..} =
-    _salt `Prelude.hashWithSalt` endValue
+    _salt
+      `Prelude.hashWithSalt` endValue
       `Prelude.hashWithSalt` startValue
       `Prelude.hashWithSalt` startMode
       `Prelude.hashWithSalt` endMode

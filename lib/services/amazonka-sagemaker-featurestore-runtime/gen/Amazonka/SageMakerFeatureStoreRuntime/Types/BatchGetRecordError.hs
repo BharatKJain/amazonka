@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerFeatureStoreRuntime.Types.BatchGetRecordError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerFeatureStoreRuntime.Types.BatchGetRecordError where
@@ -121,7 +121,8 @@ instance Data.FromJSON BatchGetRecordError where
 
 instance Prelude.Hashable BatchGetRecordError where
   hashWithSalt _salt BatchGetRecordError' {..} =
-    _salt `Prelude.hashWithSalt` featureGroupName
+    _salt
+      `Prelude.hashWithSalt` featureGroupName
       `Prelude.hashWithSalt` recordIdentifierValueAsString
       `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` errorMessage

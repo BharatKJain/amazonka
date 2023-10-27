@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.SeriesItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.SeriesItem where
@@ -79,7 +79,8 @@ instance Data.FromJSON SeriesItem where
 
 instance Prelude.Hashable SeriesItem where
   hashWithSalt _salt SeriesItem' {..} =
-    _salt `Prelude.hashWithSalt` dataFieldSeriesItem
+    _salt
+      `Prelude.hashWithSalt` dataFieldSeriesItem
       `Prelude.hashWithSalt` fieldSeriesItem
 
 instance Prelude.NFData SeriesItem where

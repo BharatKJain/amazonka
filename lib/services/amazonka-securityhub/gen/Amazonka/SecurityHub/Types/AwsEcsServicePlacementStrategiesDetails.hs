@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsServicePlacementStrategiesDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsServicePlacementStrategiesDetails where
@@ -136,7 +136,8 @@ instance
       "AwsEcsServicePlacementStrategiesDetails"
       ( \x ->
           AwsEcsServicePlacementStrategiesDetails'
-            Prelude.<$> (x Data..:? "Field") Prelude.<*> (x Data..:? "Type")
+            Prelude.<$> (x Data..:? "Field")
+            Prelude.<*> (x Data..:? "Type")
       )
 
 instance
@@ -146,7 +147,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsServicePlacementStrategiesDetails' {..} =
-      _salt `Prelude.hashWithSalt` field
+      _salt
+        `Prelude.hashWithSalt` field
         `Prelude.hashWithSalt` type'
 
 instance

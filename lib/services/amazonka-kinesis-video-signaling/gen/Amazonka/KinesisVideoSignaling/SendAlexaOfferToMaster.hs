@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KinesisVideoSignaling.SendAlexaOfferToMaster
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,7 +128,8 @@ instance Core.AWSRequest SendAlexaOfferToMaster where
 
 instance Prelude.Hashable SendAlexaOfferToMaster where
   hashWithSalt _salt SendAlexaOfferToMaster' {..} =
-    _salt `Prelude.hashWithSalt` channelARN
+    _salt
+      `Prelude.hashWithSalt` channelARN
       `Prelude.hashWithSalt` senderClientId
       `Prelude.hashWithSalt` messagePayload
 

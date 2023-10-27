@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ImageBuilder.CreateImage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -193,7 +193,8 @@ instance Core.AWSRequest CreateImage where
 
 instance Prelude.Hashable CreateImage where
   hashWithSalt _salt CreateImage' {..} =
-    _salt `Prelude.hashWithSalt` containerRecipeArn
+    _salt
+      `Prelude.hashWithSalt` containerRecipeArn
       `Prelude.hashWithSalt` distributionConfigurationArn
       `Prelude.hashWithSalt` enhancedImageMetadataEnabled
       `Prelude.hashWithSalt` imageRecipeArn

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsIamRoleDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsIamRoleDetails where
@@ -164,11 +164,13 @@ instance Data.FromJSON AwsIamRoleDetails where
       ( \x ->
           AwsIamRoleDetails'
             Prelude.<$> (x Data..:? "AssumeRolePolicyDocument")
-            Prelude.<*> ( x Data..:? "AttachedManagedPolicies"
+            Prelude.<*> ( x
+                            Data..:? "AttachedManagedPolicies"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CreateDate")
-            Prelude.<*> ( x Data..:? "InstanceProfileList"
+            Prelude.<*> ( x
+                            Data..:? "InstanceProfileList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "MaxSessionDuration")
@@ -176,7 +178,8 @@ instance Data.FromJSON AwsIamRoleDetails where
             Prelude.<*> (x Data..:? "PermissionsBoundary")
             Prelude.<*> (x Data..:? "RoleId")
             Prelude.<*> (x Data..:? "RoleName")
-            Prelude.<*> ( x Data..:? "RolePolicyList"
+            Prelude.<*> ( x
+                            Data..:? "RolePolicyList"
                             Data..!= Prelude.mempty
                         )
       )

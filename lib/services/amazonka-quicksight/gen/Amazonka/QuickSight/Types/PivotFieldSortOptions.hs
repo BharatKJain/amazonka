@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.PivotFieldSortOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.PivotFieldSortOptions where
@@ -79,7 +79,8 @@ instance Data.FromJSON PivotFieldSortOptions where
 
 instance Prelude.Hashable PivotFieldSortOptions where
   hashWithSalt _salt PivotFieldSortOptions' {..} =
-    _salt `Prelude.hashWithSalt` fieldId
+    _salt
+      `Prelude.hashWithSalt` fieldId
       `Prelude.hashWithSalt` sortBy
 
 instance Prelude.NFData PivotFieldSortOptions where

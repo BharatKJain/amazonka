@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Grafana.Types.User
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Grafana.Types.User where
@@ -79,12 +79,14 @@ instance Data.FromJSON User where
       "User"
       ( \x ->
           User'
-            Prelude.<$> (x Data..: "id") Prelude.<*> (x Data..: "type")
+            Prelude.<$> (x Data..: "id")
+            Prelude.<*> (x Data..: "type")
       )
 
 instance Prelude.Hashable User where
   hashWithSalt _salt User' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData User where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.Metric
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.Metric where
@@ -90,7 +90,8 @@ instance Data.FromJSON Metric where
 
 instance Prelude.Hashable Metric where
   hashWithSalt _salt Metric' {..} =
-    _salt `Prelude.hashWithSalt` namespace
+    _salt
+      `Prelude.hashWithSalt` namespace
       `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` aggregationFunction
 

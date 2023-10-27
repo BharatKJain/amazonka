@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstanceSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstanceSpecification where
@@ -87,7 +87,8 @@ instanceSpecification_instanceId = Lens.lens (\InstanceSpecification' {instanceI
 
 instance Prelude.Hashable InstanceSpecification where
   hashWithSalt _salt InstanceSpecification' {..} =
-    _salt `Prelude.hashWithSalt` excludeBootVolume
+    _salt
+      `Prelude.hashWithSalt` excludeBootVolume
       `Prelude.hashWithSalt` excludeDataVolumeIds
       `Prelude.hashWithSalt` instanceId
 

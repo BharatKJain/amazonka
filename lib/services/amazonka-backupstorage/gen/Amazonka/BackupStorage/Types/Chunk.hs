@@ -14,7 +14,7 @@
 -- Module      : Amazonka.BackupStorage.Types.Chunk
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.BackupStorage.Types.Chunk where
@@ -120,7 +120,8 @@ instance Data.FromJSON Chunk where
 
 instance Prelude.Hashable Chunk where
   hashWithSalt _salt Chunk' {..} =
-    _salt `Prelude.hashWithSalt` index
+    _salt
+      `Prelude.hashWithSalt` index
       `Prelude.hashWithSalt` length
       `Prelude.hashWithSalt` checksum
       `Prelude.hashWithSalt` checksumAlgorithm

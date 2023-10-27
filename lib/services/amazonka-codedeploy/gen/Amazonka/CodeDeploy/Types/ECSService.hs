@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.ECSService
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.ECSService where
@@ -75,7 +75,8 @@ instance Data.FromJSON ECSService where
 
 instance Prelude.Hashable ECSService where
   hashWithSalt _salt ECSService' {..} =
-    _salt `Prelude.hashWithSalt` clusterName
+    _salt
+      `Prelude.hashWithSalt` clusterName
       `Prelude.hashWithSalt` serviceName
 
 instance Prelude.NFData ECSService where

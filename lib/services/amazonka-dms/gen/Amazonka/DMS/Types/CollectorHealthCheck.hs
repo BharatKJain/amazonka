@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.CollectorHealthCheck
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.CollectorHealthCheck where
@@ -102,7 +102,8 @@ instance Data.FromJSON CollectorHealthCheck where
 
 instance Prelude.Hashable CollectorHealthCheck where
   hashWithSalt _salt CollectorHealthCheck' {..} =
-    _salt `Prelude.hashWithSalt` collectorStatus
+    _salt
+      `Prelude.hashWithSalt` collectorStatus
       `Prelude.hashWithSalt` localCollectorS3Access
       `Prelude.hashWithSalt` webCollectorGrantedRoleBasedAccess
       `Prelude.hashWithSalt` webCollectorS3Access

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.SamplingRuleUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.SamplingRuleUpdate where
@@ -175,7 +175,8 @@ samplingRuleUpdate_uRLPath = Lens.lens (\SamplingRuleUpdate' {uRLPath} -> uRLPat
 
 instance Prelude.Hashable SamplingRuleUpdate where
   hashWithSalt _salt SamplingRuleUpdate' {..} =
-    _salt `Prelude.hashWithSalt` attributes
+    _salt
+      `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` fixedRate
       `Prelude.hashWithSalt` hTTPMethod
       `Prelude.hashWithSalt` host

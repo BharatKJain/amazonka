@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.SyncResourceFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.SyncResourceFilter where
@@ -84,7 +84,8 @@ syncResourceFilter_state = Lens.lens (\SyncResourceFilter' {state} -> state) (\s
 
 instance Prelude.Hashable SyncResourceFilter where
   hashWithSalt _salt SyncResourceFilter' {..} =
-    _salt `Prelude.hashWithSalt` externalId
+    _salt
+      `Prelude.hashWithSalt` externalId
       `Prelude.hashWithSalt` resourceId
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` state

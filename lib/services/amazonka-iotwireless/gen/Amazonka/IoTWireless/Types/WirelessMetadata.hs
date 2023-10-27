@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.WirelessMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.WirelessMetadata where
@@ -66,7 +66,8 @@ wirelessMetadata_sidewalk = Lens.lens (\WirelessMetadata' {sidewalk} -> sidewalk
 
 instance Prelude.Hashable WirelessMetadata where
   hashWithSalt _salt WirelessMetadata' {..} =
-    _salt `Prelude.hashWithSalt` loRaWAN
+    _salt
+      `Prelude.hashWithSalt` loRaWAN
       `Prelude.hashWithSalt` sidewalk
 
 instance Prelude.NFData WirelessMetadata where

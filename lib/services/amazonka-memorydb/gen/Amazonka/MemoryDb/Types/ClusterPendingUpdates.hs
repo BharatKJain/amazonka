@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MemoryDb.Types.ClusterPendingUpdates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MemoryDb.Types.ClusterPendingUpdates where
@@ -82,14 +82,16 @@ instance Data.FromJSON ClusterPendingUpdates where
           ClusterPendingUpdates'
             Prelude.<$> (x Data..:? "ACLs")
             Prelude.<*> (x Data..:? "Resharding")
-            Prelude.<*> ( x Data..:? "ServiceUpdates"
+            Prelude.<*> ( x
+                            Data..:? "ServiceUpdates"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ClusterPendingUpdates where
   hashWithSalt _salt ClusterPendingUpdates' {..} =
-    _salt `Prelude.hashWithSalt` aCLs
+    _salt
+      `Prelude.hashWithSalt` aCLs
       `Prelude.hashWithSalt` resharding
       `Prelude.hashWithSalt` serviceUpdates
 

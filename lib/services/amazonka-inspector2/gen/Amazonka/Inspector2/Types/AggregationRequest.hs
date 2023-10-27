@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.AggregationRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.AggregationRequest where
@@ -184,7 +184,8 @@ aggregationRequest_titleAggregation = Lens.lens (\AggregationRequest' {titleAggr
 
 instance Prelude.Hashable AggregationRequest where
   hashWithSalt _salt AggregationRequest' {..} =
-    _salt `Prelude.hashWithSalt` accountAggregation
+    _salt
+      `Prelude.hashWithSalt` accountAggregation
       `Prelude.hashWithSalt` amiAggregation
       `Prelude.hashWithSalt` awsEcrContainerAggregation
       `Prelude.hashWithSalt` ec2InstanceAggregation

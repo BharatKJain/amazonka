@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.S3BucketDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.S3BucketDetail where
@@ -138,7 +138,8 @@ instance Data.FromJSON S3BucketDetail where
 
 instance Prelude.Hashable S3BucketDetail where
   hashWithSalt _salt S3BucketDetail' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` defaultServerSideEncryption
       `Prelude.hashWithSalt` name

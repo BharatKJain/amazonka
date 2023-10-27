@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.RecommendationJobOutputConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.RecommendationJobOutputConfig where
@@ -151,7 +151,8 @@ instance
     RecommendationJobOutputConfig
   where
   hashWithSalt _salt RecommendationJobOutputConfig' {..} =
-    _salt `Prelude.hashWithSalt` compiledOutputConfig
+    _salt
+      `Prelude.hashWithSalt` compiledOutputConfig
       `Prelude.hashWithSalt` kmsKeyId
 
 instance Prelude.NFData RecommendationJobOutputConfig where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KMS.ImportKeyMaterial
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -362,7 +362,8 @@ instance Core.AWSRequest ImportKeyMaterial where
 
 instance Prelude.Hashable ImportKeyMaterial where
   hashWithSalt _salt ImportKeyMaterial' {..} =
-    _salt `Prelude.hashWithSalt` expirationModel
+    _salt
+      `Prelude.hashWithSalt` expirationModel
       `Prelude.hashWithSalt` validTo
       `Prelude.hashWithSalt` keyId
       `Prelude.hashWithSalt` importToken

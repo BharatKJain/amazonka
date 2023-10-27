@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.ModifyClusterMaintenance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -156,7 +156,8 @@ instance Core.AWSRequest ModifyClusterMaintenance where
 
 instance Prelude.Hashable ModifyClusterMaintenance where
   hashWithSalt _salt ModifyClusterMaintenance' {..} =
-    _salt `Prelude.hashWithSalt` deferMaintenance
+    _salt
+      `Prelude.hashWithSalt` deferMaintenance
       `Prelude.hashWithSalt` deferMaintenanceDuration
       `Prelude.hashWithSalt` deferMaintenanceEndTime
       `Prelude.hashWithSalt` deferMaintenanceIdentifier

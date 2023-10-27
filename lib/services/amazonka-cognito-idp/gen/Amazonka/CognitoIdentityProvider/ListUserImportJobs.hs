@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.ListUserImportJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,7 +128,8 @@ instance Core.AWSRequest ListUserImportJobs where
 
 instance Prelude.Hashable ListUserImportJobs where
   hashWithSalt _salt ListUserImportJobs' {..} =
-    _salt `Prelude.hashWithSalt` paginationToken
+    _salt
+      `Prelude.hashWithSalt` paginationToken
       `Prelude.hashWithSalt` userPoolId
       `Prelude.hashWithSalt` maxResults
 

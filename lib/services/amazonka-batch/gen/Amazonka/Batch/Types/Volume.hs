@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.Volume
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.Volume where
@@ -122,7 +122,8 @@ instance Data.FromJSON Volume where
 
 instance Prelude.Hashable Volume where
   hashWithSalt _salt Volume' {..} =
-    _salt `Prelude.hashWithSalt` efsVolumeConfiguration
+    _salt
+      `Prelude.hashWithSalt` efsVolumeConfiguration
       `Prelude.hashWithSalt` host
       `Prelude.hashWithSalt` name
 

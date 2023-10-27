@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppConfig.Types.AppliedExtension
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppConfig.Types.AppliedExtension where
@@ -95,7 +95,8 @@ instance Data.FromJSON AppliedExtension where
 
 instance Prelude.Hashable AppliedExtension where
   hashWithSalt _salt AppliedExtension' {..} =
-    _salt `Prelude.hashWithSalt` extensionAssociationId
+    _salt
+      `Prelude.hashWithSalt` extensionAssociationId
       `Prelude.hashWithSalt` extensionId
       `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` versionNumber

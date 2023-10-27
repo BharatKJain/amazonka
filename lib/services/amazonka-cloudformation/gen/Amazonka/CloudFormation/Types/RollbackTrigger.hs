@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.RollbackTrigger
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.RollbackTrigger where
@@ -90,11 +90,13 @@ rollbackTrigger_type = Lens.lens (\RollbackTrigger' {type'} -> type') (\s@Rollba
 instance Data.FromXML RollbackTrigger where
   parseXML x =
     RollbackTrigger'
-      Prelude.<$> (x Data..@ "Arn") Prelude.<*> (x Data..@ "Type")
+      Prelude.<$> (x Data..@ "Arn")
+      Prelude.<*> (x Data..@ "Type")
 
 instance Prelude.Hashable RollbackTrigger where
   hashWithSalt _salt RollbackTrigger' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData RollbackTrigger where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudTrail.Types.ResourceTag
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudTrail.Types.ResourceTag where
@@ -75,7 +75,8 @@ instance Data.FromJSON ResourceTag where
 
 instance Prelude.Hashable ResourceTag where
   hashWithSalt _salt ResourceTag' {..} =
-    _salt `Prelude.hashWithSalt` resourceId
+    _salt
+      `Prelude.hashWithSalt` resourceId
       `Prelude.hashWithSalt` tagsList
 
 instance Prelude.NFData ResourceTag where

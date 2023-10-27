@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.ReplicationTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.ReplicationTask where
@@ -680,7 +680,8 @@ instance Data.FromJSON ReplicationTask where
 
 instance Prelude.Hashable ReplicationTask where
   hashWithSalt _salt ReplicationTask' {..} =
-    _salt `Prelude.hashWithSalt` cdcStartPosition
+    _salt
+      `Prelude.hashWithSalt` cdcStartPosition
       `Prelude.hashWithSalt` cdcStopPosition
       `Prelude.hashWithSalt` lastFailureMessage
       `Prelude.hashWithSalt` migrationType

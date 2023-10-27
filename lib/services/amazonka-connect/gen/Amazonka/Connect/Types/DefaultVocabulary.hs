@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.DefaultVocabulary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.DefaultVocabulary where
@@ -116,7 +116,8 @@ instance Data.FromJSON DefaultVocabulary where
 
 instance Prelude.Hashable DefaultVocabulary where
   hashWithSalt _salt DefaultVocabulary' {..} =
-    _salt `Prelude.hashWithSalt` instanceId
+    _salt
+      `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` languageCode
       `Prelude.hashWithSalt` vocabularyId
       `Prelude.hashWithSalt` vocabularyName

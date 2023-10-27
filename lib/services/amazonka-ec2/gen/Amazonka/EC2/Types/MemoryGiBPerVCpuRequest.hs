@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.MemoryGiBPerVCpuRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.MemoryGiBPerVCpuRequest where
@@ -71,7 +71,8 @@ memoryGiBPerVCpuRequest_min = Lens.lens (\MemoryGiBPerVCpuRequest' {min} -> min)
 
 instance Prelude.Hashable MemoryGiBPerVCpuRequest where
   hashWithSalt _salt MemoryGiBPerVCpuRequest' {..} =
-    _salt `Prelude.hashWithSalt` max
+    _salt
+      `Prelude.hashWithSalt` max
       `Prelude.hashWithSalt` min
 
 instance Prelude.NFData MemoryGiBPerVCpuRequest where

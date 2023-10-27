@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.InstanceRecommendationOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.InstanceRecommendationOption where
@@ -496,10 +496,12 @@ instance Data.FromJSON InstanceRecommendationOption where
             Prelude.<$> (x Data..:? "instanceType")
             Prelude.<*> (x Data..:? "migrationEffort")
             Prelude.<*> (x Data..:? "performanceRisk")
-            Prelude.<*> ( x Data..:? "platformDifferences"
+            Prelude.<*> ( x
+                            Data..:? "platformDifferences"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "projectedUtilizationMetrics"
+            Prelude.<*> ( x
+                            Data..:? "projectedUtilizationMetrics"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "rank")
@@ -511,7 +513,8 @@ instance
     InstanceRecommendationOption
   where
   hashWithSalt _salt InstanceRecommendationOption' {..} =
-    _salt `Prelude.hashWithSalt` instanceType
+    _salt
+      `Prelude.hashWithSalt` instanceType
       `Prelude.hashWithSalt` migrationEffort
       `Prelude.hashWithSalt` performanceRisk
       `Prelude.hashWithSalt` platformDifferences

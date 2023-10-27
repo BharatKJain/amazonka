@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.InterruptionFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.InterruptionFilter where
@@ -147,7 +147,8 @@ instance Data.FromJSON InterruptionFilter where
 
 instance Prelude.Hashable InterruptionFilter where
   hashWithSalt _salt InterruptionFilter' {..} =
-    _salt `Prelude.hashWithSalt` absoluteTimeRange
+    _salt
+      `Prelude.hashWithSalt` absoluteTimeRange
       `Prelude.hashWithSalt` negate
       `Prelude.hashWithSalt` participantRole
       `Prelude.hashWithSalt` relativeTimeRange

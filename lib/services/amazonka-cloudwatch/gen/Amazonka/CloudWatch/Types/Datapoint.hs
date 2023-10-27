@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatch.Types.Datapoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatch.Types.Datapoint where
@@ -125,7 +125,8 @@ instance Data.FromXML Datapoint where
   parseXML x =
     Datapoint'
       Prelude.<$> (x Data..@? "Average")
-      Prelude.<*> ( x Data..@? "ExtendedStatistics"
+      Prelude.<*> ( x
+                      Data..@? "ExtendedStatistics"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLMap "entry" "key" "value")
                   )
@@ -138,7 +139,8 @@ instance Data.FromXML Datapoint where
 
 instance Prelude.Hashable Datapoint where
   hashWithSalt _salt Datapoint' {..} =
-    _salt `Prelude.hashWithSalt` average
+    _salt
+      `Prelude.hashWithSalt` average
       `Prelude.hashWithSalt` extendedStatistics
       `Prelude.hashWithSalt` maximum
       `Prelude.hashWithSalt` minimum

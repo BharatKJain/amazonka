@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.OutputResolutionResamplingInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.OutputResolutionResamplingInput where
@@ -52,7 +52,6 @@ newOutputResolutionResamplingInput pUserDefined_ =
         pUserDefined_
     }
 
--- |
 outputResolutionResamplingInput_userDefined :: Lens.Lens' OutputResolutionResamplingInput UserDefined
 outputResolutionResamplingInput_userDefined = Lens.lens (\OutputResolutionResamplingInput' {userDefined} -> userDefined) (\s@OutputResolutionResamplingInput' {} a -> s {userDefined = a} :: OutputResolutionResamplingInput)
 

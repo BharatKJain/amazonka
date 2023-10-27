@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.AnalysisSecurityGroupRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.AnalysisSecurityGroupRule where
@@ -124,7 +124,8 @@ instance Data.FromXML AnalysisSecurityGroupRule where
 
 instance Prelude.Hashable AnalysisSecurityGroupRule where
   hashWithSalt _salt AnalysisSecurityGroupRule' {..} =
-    _salt `Prelude.hashWithSalt` cidr
+    _salt
+      `Prelude.hashWithSalt` cidr
       `Prelude.hashWithSalt` direction
       `Prelude.hashWithSalt` portRange
       `Prelude.hashWithSalt` prefixListId

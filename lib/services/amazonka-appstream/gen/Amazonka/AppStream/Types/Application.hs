@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.Application
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.Application where
@@ -198,7 +198,8 @@ instance Data.FromJSON Application where
             Prelude.<*> (x Data..:? "Enabled")
             Prelude.<*> (x Data..:? "IconS3Location")
             Prelude.<*> (x Data..:? "IconURL")
-            Prelude.<*> ( x Data..:? "InstanceFamilies"
+            Prelude.<*> ( x
+                            Data..:? "InstanceFamilies"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "LaunchParameters")
@@ -211,7 +212,8 @@ instance Data.FromJSON Application where
 
 instance Prelude.Hashable Application where
   hashWithSalt _salt Application' {..} =
-    _salt `Prelude.hashWithSalt` appBlockArn
+    _salt
+      `Prelude.hashWithSalt` appBlockArn
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` description

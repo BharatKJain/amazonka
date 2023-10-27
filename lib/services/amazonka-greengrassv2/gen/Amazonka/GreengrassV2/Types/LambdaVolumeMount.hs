@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.LambdaVolumeMount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.LambdaVolumeMount where
@@ -107,7 +107,8 @@ lambdaVolumeMount_destinationPath = Lens.lens (\LambdaVolumeMount' {destinationP
 
 instance Prelude.Hashable LambdaVolumeMount where
   hashWithSalt _salt LambdaVolumeMount' {..} =
-    _salt `Prelude.hashWithSalt` addGroupOwner
+    _salt
+      `Prelude.hashWithSalt` addGroupOwner
       `Prelude.hashWithSalt` permission
       `Prelude.hashWithSalt` sourcePath
       `Prelude.hashWithSalt` destinationPath

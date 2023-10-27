@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CostAndUsageReport.DescribeReportDefinitions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -93,22 +93,22 @@ instance Core.AWSPager DescribeReportDefinitions where
     | Core.stop
         ( rs
             Lens.^? describeReportDefinitionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeReportDefinitionsResponse_reportDefinitions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeReportDefinitions_nextToken
           Lens..~ rs
           Lens.^? describeReportDefinitionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeReportDefinitions where
   type
@@ -121,7 +121,8 @@ instance Core.AWSRequest DescribeReportDefinitions where
       ( \s h x ->
           DescribeReportDefinitionsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "ReportDefinitions"
+            Prelude.<*> ( x
+                            Data..?> "ReportDefinitions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -129,7 +130,8 @@ instance Core.AWSRequest DescribeReportDefinitions where
 
 instance Prelude.Hashable DescribeReportDefinitions where
   hashWithSalt _salt DescribeReportDefinitions' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData DescribeReportDefinitions where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Neptune.RebootDBInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest RebootDBInstance where
 
 instance Prelude.Hashable RebootDBInstance where
   hashWithSalt _salt RebootDBInstance' {..} =
-    _salt `Prelude.hashWithSalt` forceFailover
+    _salt
+      `Prelude.hashWithSalt` forceFailover
       `Prelude.hashWithSalt` dbInstanceIdentifier
 
 instance Prelude.NFData RebootDBInstance where

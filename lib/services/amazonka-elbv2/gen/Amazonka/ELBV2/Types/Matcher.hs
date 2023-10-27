@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.Matcher
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.Matcher where
@@ -117,7 +117,8 @@ instance Data.FromXML Matcher where
 
 instance Prelude.Hashable Matcher where
   hashWithSalt _salt Matcher' {..} =
-    _salt `Prelude.hashWithSalt` grpcCode
+    _salt
+      `Prelude.hashWithSalt` grpcCode
       `Prelude.hashWithSalt` httpCode
 
 instance Prelude.NFData Matcher where

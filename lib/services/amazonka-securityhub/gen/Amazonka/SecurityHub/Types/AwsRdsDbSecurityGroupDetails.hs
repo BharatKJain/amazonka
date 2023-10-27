@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsRdsDbSecurityGroupDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsRdsDbSecurityGroupDetails where
@@ -122,7 +122,8 @@ instance Data.FromJSON AwsRdsDbSecurityGroupDetails where
             Prelude.<$> (x Data..:? "DbSecurityGroupArn")
             Prelude.<*> (x Data..:? "DbSecurityGroupDescription")
             Prelude.<*> (x Data..:? "DbSecurityGroupName")
-            Prelude.<*> ( x Data..:? "Ec2SecurityGroups"
+            Prelude.<*> ( x
+                            Data..:? "Ec2SecurityGroups"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "IpRanges" Data..!= Prelude.mempty)
@@ -135,7 +136,8 @@ instance
     AwsRdsDbSecurityGroupDetails
   where
   hashWithSalt _salt AwsRdsDbSecurityGroupDetails' {..} =
-    _salt `Prelude.hashWithSalt` dbSecurityGroupArn
+    _salt
+      `Prelude.hashWithSalt` dbSecurityGroupArn
       `Prelude.hashWithSalt` dbSecurityGroupDescription
       `Prelude.hashWithSalt` dbSecurityGroupName
       `Prelude.hashWithSalt` ec2SecurityGroups

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.DetectorModelConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.DetectorModelConfiguration where
@@ -187,7 +187,8 @@ instance Data.FromJSON DetectorModelConfiguration where
 
 instance Prelude.Hashable DetectorModelConfiguration where
   hashWithSalt _salt DetectorModelConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` detectorModelArn
       `Prelude.hashWithSalt` detectorModelDescription
       `Prelude.hashWithSalt` detectorModelName

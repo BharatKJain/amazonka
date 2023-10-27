@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.CompilationJobSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.CompilationJobSummary where
@@ -195,7 +195,8 @@ instance Data.FromJSON CompilationJobSummary where
 
 instance Prelude.Hashable CompilationJobSummary where
   hashWithSalt _salt CompilationJobSummary' {..} =
-    _salt `Prelude.hashWithSalt` compilationEndTime
+    _salt
+      `Prelude.hashWithSalt` compilationEndTime
       `Prelude.hashWithSalt` compilationStartTime
       `Prelude.hashWithSalt` compilationTargetDevice
       `Prelude.hashWithSalt` compilationTargetPlatformAccelerator

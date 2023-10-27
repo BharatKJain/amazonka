@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.CreateInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -295,7 +295,8 @@ instance Core.AWSRequest CreateInstances where
 
 instance Prelude.Hashable CreateInstances where
   hashWithSalt _salt CreateInstances' {..} =
-    _salt `Prelude.hashWithSalt` addOns
+    _salt
+      `Prelude.hashWithSalt` addOns
       `Prelude.hashWithSalt` customImageName
       `Prelude.hashWithSalt` ipAddressType
       `Prelude.hashWithSalt` keyPairName

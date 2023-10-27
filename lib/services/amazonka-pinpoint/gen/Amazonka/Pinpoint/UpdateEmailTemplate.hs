@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.UpdateEmailTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -223,7 +223,8 @@ instance Core.AWSRequest UpdateEmailTemplate where
 
 instance Prelude.Hashable UpdateEmailTemplate where
   hashWithSalt _salt UpdateEmailTemplate' {..} =
-    _salt `Prelude.hashWithSalt` createNewVersion
+    _salt
+      `Prelude.hashWithSalt` createNewVersion
       `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` templateName
       `Prelude.hashWithSalt` emailTemplateRequest

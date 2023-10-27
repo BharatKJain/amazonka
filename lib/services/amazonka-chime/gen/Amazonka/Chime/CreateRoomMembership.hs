@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.CreateRoomMembership
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -131,7 +131,8 @@ instance Core.AWSRequest CreateRoomMembership where
 
 instance Prelude.Hashable CreateRoomMembership where
   hashWithSalt _salt CreateRoomMembership' {..} =
-    _salt `Prelude.hashWithSalt` role'
+    _salt
+      `Prelude.hashWithSalt` role'
       `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` roomId
       `Prelude.hashWithSalt` memberId

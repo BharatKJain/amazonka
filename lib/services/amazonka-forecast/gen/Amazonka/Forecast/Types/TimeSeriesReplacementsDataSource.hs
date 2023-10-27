@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.TimeSeriesReplacementsDataSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.TimeSeriesReplacementsDataSource where
@@ -115,7 +115,8 @@ instance
   hashWithSalt
     _salt
     TimeSeriesReplacementsDataSource' {..} =
-      _salt `Prelude.hashWithSalt` format
+      _salt
+        `Prelude.hashWithSalt` format
         `Prelude.hashWithSalt` timestampFormat
         `Prelude.hashWithSalt` s3Config
         `Prelude.hashWithSalt` schema

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEventsData.Types.DetectorStateDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEventsData.Types.DetectorStateDefinition where
@@ -84,7 +84,8 @@ detectorStateDefinition_timers = Lens.lens (\DetectorStateDefinition' {timers} -
 
 instance Prelude.Hashable DetectorStateDefinition where
   hashWithSalt _salt DetectorStateDefinition' {..} =
-    _salt `Prelude.hashWithSalt` stateName
+    _salt
+      `Prelude.hashWithSalt` stateName
       `Prelude.hashWithSalt` variables
       `Prelude.hashWithSalt` timers
 

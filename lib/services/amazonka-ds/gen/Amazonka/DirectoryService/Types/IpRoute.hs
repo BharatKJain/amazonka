@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.IpRoute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.IpRoute where
@@ -74,7 +74,8 @@ ipRoute_description = Lens.lens (\IpRoute' {description} -> description) (\s@IpR
 
 instance Prelude.Hashable IpRoute where
   hashWithSalt _salt IpRoute' {..} =
-    _salt `Prelude.hashWithSalt` cidrIp
+    _salt
+      `Prelude.hashWithSalt` cidrIp
       `Prelude.hashWithSalt` description
 
 instance Prelude.NFData IpRoute where

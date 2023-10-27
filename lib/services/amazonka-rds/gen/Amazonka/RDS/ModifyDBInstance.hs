@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.ModifyDBInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -2677,7 +2677,8 @@ instance Core.AWSRequest ModifyDBInstance where
 
 instance Prelude.Hashable ModifyDBInstance where
   hashWithSalt _salt ModifyDBInstance' {..} =
-    _salt `Prelude.hashWithSalt` allocatedStorage
+    _salt
+      `Prelude.hashWithSalt` allocatedStorage
       `Prelude.hashWithSalt` allowMajorVersionUpgrade
       `Prelude.hashWithSalt` applyImmediately
       `Prelude.hashWithSalt` autoMinorVersionUpgrade

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.DataSourceSyncJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.DataSourceSyncJob where
@@ -168,7 +168,8 @@ instance Data.FromJSON DataSourceSyncJob where
 
 instance Prelude.Hashable DataSourceSyncJob where
   hashWithSalt _salt DataSourceSyncJob' {..} =
-    _salt `Prelude.hashWithSalt` dataSourceErrorCode
+    _salt
+      `Prelude.hashWithSalt` dataSourceErrorCode
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` errorMessage

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.VocabularySummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.VocabularySummary where
@@ -151,7 +151,8 @@ instance Data.FromJSON VocabularySummary where
 
 instance Prelude.Hashable VocabularySummary where
   hashWithSalt _salt VocabularySummary' {..} =
-    _salt `Prelude.hashWithSalt` failureReason
+    _salt
+      `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` arn

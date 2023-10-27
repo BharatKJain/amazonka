@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.Vpc
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.Vpc where
@@ -158,17 +158,21 @@ vpc_vpcId = Lens.lens (\Vpc' {vpcId} -> vpcId) (\s@Vpc' {} a -> s {vpcId = a} ::
 instance Data.FromXML Vpc where
   parseXML x =
     Vpc'
-      Prelude.<$> ( x Data..@? "cidrBlockAssociationSet"
+      Prelude.<$> ( x
+                      Data..@? "cidrBlockAssociationSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "ipv6CidrBlockAssociationSet"
+      Prelude.<*> ( x
+                      Data..@? "ipv6CidrBlockAssociationSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "isDefault")
       Prelude.<*> (x Data..@? "ownerId")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@ "cidrBlock")

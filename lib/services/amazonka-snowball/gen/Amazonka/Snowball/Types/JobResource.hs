@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Snowball.Types.JobResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Snowball.Types.JobResource where
@@ -83,10 +83,12 @@ instance Data.FromJSON JobResource where
       "JobResource"
       ( \x ->
           JobResource'
-            Prelude.<$> ( x Data..:? "Ec2AmiResources"
+            Prelude.<$> ( x
+                            Data..:? "Ec2AmiResources"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "LambdaResources"
+            Prelude.<*> ( x
+                            Data..:? "LambdaResources"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "S3Resources" Data..!= Prelude.mempty)
@@ -94,7 +96,8 @@ instance Data.FromJSON JobResource where
 
 instance Prelude.Hashable JobResource where
   hashWithSalt _salt JobResource' {..} =
-    _salt `Prelude.hashWithSalt` ec2AmiResources
+    _salt
+      `Prelude.hashWithSalt` ec2AmiResources
       `Prelude.hashWithSalt` lambdaResources
       `Prelude.hashWithSalt` s3Resources
 

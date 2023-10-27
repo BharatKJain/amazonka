@@ -11,7 +11,7 @@
 -- Module      : Amazonka.LexV2Models.Waiters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Waiters where
@@ -72,25 +72,29 @@ newBotAvailable =
         [ Core.matchAll
             "Available"
             Core.AcceptSuccess
-            ( describeBotResponse_botStatus Prelude.. Lens._Just
+            ( describeBotResponse_botStatus
+                Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
             ),
           Core.matchAll
             "Deleting"
             Core.AcceptFailure
-            ( describeBotResponse_botStatus Prelude.. Lens._Just
+            ( describeBotResponse_botStatus
+                Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
             ),
           Core.matchAll
             "Failed"
             Core.AcceptFailure
-            ( describeBotResponse_botStatus Prelude.. Lens._Just
+            ( describeBotResponse_botStatus
+                Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
             ),
           Core.matchAll
             "Inactive"
             Core.AcceptFailure
-            ( describeBotResponse_botStatus Prelude.. Lens._Just
+            ( describeBotResponse_botStatus
+                Prelude.. Lens._Just
                 Prelude.. Lens.to Data.toTextCI
             )
         ]

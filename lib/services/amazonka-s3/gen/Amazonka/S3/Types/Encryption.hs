@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.Encryption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.Encryption where
@@ -98,7 +98,8 @@ encryption_encryptionType = Lens.lens (\Encryption' {encryptionType} -> encrypti
 
 instance Prelude.Hashable Encryption where
   hashWithSalt _salt Encryption' {..} =
-    _salt `Prelude.hashWithSalt` kmsContext
+    _salt
+      `Prelude.hashWithSalt` kmsContext
       `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` encryptionType
 

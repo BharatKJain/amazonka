@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.ForgotPassword
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -283,7 +283,8 @@ instance Core.AWSRequest ForgotPassword where
 
 instance Prelude.Hashable ForgotPassword where
   hashWithSalt _salt ForgotPassword' {..} =
-    _salt `Prelude.hashWithSalt` analyticsMetadata
+    _salt
+      `Prelude.hashWithSalt` analyticsMetadata
       `Prelude.hashWithSalt` clientMetadata
       `Prelude.hashWithSalt` secretHash
       `Prelude.hashWithSalt` userContextData

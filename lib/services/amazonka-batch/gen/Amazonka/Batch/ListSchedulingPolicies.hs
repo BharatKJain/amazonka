@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Batch.ListSchedulingPolicies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -140,22 +140,22 @@ instance Core.AWSPager ListSchedulingPolicies where
     | Core.stop
         ( rs
             Lens.^? listSchedulingPoliciesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listSchedulingPoliciesResponse_schedulingPolicies
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listSchedulingPolicies_nextToken
           Lens..~ rs
           Lens.^? listSchedulingPoliciesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListSchedulingPolicies where
   type
@@ -168,7 +168,8 @@ instance Core.AWSRequest ListSchedulingPolicies where
       ( \s h x ->
           ListSchedulingPoliciesResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "schedulingPolicies"
+            Prelude.<*> ( x
+                            Data..?> "schedulingPolicies"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -176,7 +177,8 @@ instance Core.AWSRequest ListSchedulingPolicies where
 
 instance Prelude.Hashable ListSchedulingPolicies where
   hashWithSalt _salt ListSchedulingPolicies' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListSchedulingPolicies where

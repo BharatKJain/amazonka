@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Wisdom.StartContentUpload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest StartContentUpload where
       ( \s h x ->
           StartContentUploadResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "headersToInclude"
+            Prelude.<*> ( x
+                            Data..?> "headersToInclude"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..:> "uploadId")
@@ -122,7 +123,8 @@ instance Core.AWSRequest StartContentUpload where
 
 instance Prelude.Hashable StartContentUpload where
   hashWithSalt _salt StartContentUpload' {..} =
-    _salt `Prelude.hashWithSalt` contentType
+    _salt
+      `Prelude.hashWithSalt` contentType
       `Prelude.hashWithSalt` knowledgeBaseId
 
 instance Prelude.NFData StartContentUpload where

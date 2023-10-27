@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.LateDataRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.LateDataRule where
@@ -78,7 +78,8 @@ instance Data.FromJSON LateDataRule where
 
 instance Prelude.Hashable LateDataRule where
   hashWithSalt _salt LateDataRule' {..} =
-    _salt `Prelude.hashWithSalt` ruleName
+    _salt
+      `Prelude.hashWithSalt` ruleName
       `Prelude.hashWithSalt` ruleConfiguration
 
 instance Prelude.NFData LateDataRule where

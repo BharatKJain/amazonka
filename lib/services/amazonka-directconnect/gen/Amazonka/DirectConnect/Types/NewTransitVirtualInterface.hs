@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectConnect.Types.NewTransitVirtualInterface
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectConnect.Types.NewTransitVirtualInterface where
@@ -169,7 +169,8 @@ newTransitVirtualInterface_vlan = Lens.lens (\NewTransitVirtualInterface' {vlan}
 
 instance Prelude.Hashable NewTransitVirtualInterface where
   hashWithSalt _salt NewTransitVirtualInterface' {..} =
-    _salt `Prelude.hashWithSalt` addressFamily
+    _salt
+      `Prelude.hashWithSalt` addressFamily
       `Prelude.hashWithSalt` amazonAddress
       `Prelude.hashWithSalt` asn
       `Prelude.hashWithSalt` authKey

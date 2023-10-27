@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kinesis.Types.ChildShard
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kinesis.Types.ChildShard where
@@ -89,7 +89,8 @@ instance Data.FromJSON ChildShard where
 
 instance Prelude.Hashable ChildShard where
   hashWithSalt _salt ChildShard' {..} =
-    _salt `Prelude.hashWithSalt` shardId
+    _salt
+      `Prelude.hashWithSalt` shardId
       `Prelude.hashWithSalt` parentShards
       `Prelude.hashWithSalt` hashKeyRange
 

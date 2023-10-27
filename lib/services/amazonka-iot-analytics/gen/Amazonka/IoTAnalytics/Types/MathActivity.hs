@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.MathActivity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.MathActivity where
@@ -107,7 +107,8 @@ instance Data.FromJSON MathActivity where
 
 instance Prelude.Hashable MathActivity where
   hashWithSalt _salt MathActivity' {..} =
-    _salt `Prelude.hashWithSalt` next
+    _salt
+      `Prelude.hashWithSalt` next
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` attribute
       `Prelude.hashWithSalt` math

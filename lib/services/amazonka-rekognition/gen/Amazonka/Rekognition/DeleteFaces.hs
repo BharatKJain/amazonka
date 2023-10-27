@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Rekognition.DeleteFaces
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest DeleteFaces where
 
 instance Prelude.Hashable DeleteFaces where
   hashWithSalt _salt DeleteFaces' {..} =
-    _salt `Prelude.hashWithSalt` collectionId
+    _salt
+      `Prelude.hashWithSalt` collectionId
       `Prelude.hashWithSalt` faceIds
 
 instance Prelude.NFData DeleteFaces where

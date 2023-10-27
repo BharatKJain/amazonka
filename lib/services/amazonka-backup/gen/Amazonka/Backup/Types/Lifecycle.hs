@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.Lifecycle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.Lifecycle where
@@ -92,7 +92,8 @@ instance Data.FromJSON Lifecycle where
 
 instance Prelude.Hashable Lifecycle where
   hashWithSalt _salt Lifecycle' {..} =
-    _salt `Prelude.hashWithSalt` deleteAfterDays
+    _salt
+      `Prelude.hashWithSalt` deleteAfterDays
       `Prelude.hashWithSalt` moveToColdStorageAfterDays
 
 instance Prelude.NFData Lifecycle where

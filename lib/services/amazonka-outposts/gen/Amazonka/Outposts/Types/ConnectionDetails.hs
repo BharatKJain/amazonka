@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Outposts.Types.ConnectionDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Outposts.Types.ConnectionDetails where
@@ -114,7 +114,8 @@ instance Data.FromJSON ConnectionDetails where
 
 instance Prelude.Hashable ConnectionDetails where
   hashWithSalt _salt ConnectionDetails' {..} =
-    _salt `Prelude.hashWithSalt` allowedIps
+    _salt
+      `Prelude.hashWithSalt` allowedIps
       `Prelude.hashWithSalt` clientPublicKey
       `Prelude.hashWithSalt` clientTunnelAddress
       `Prelude.hashWithSalt` serverEndpoint

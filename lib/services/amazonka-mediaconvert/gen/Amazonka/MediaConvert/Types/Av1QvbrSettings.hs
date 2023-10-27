@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.Av1QvbrSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.Av1QvbrSettings where
@@ -131,7 +131,8 @@ instance Data.FromJSON Av1QvbrSettings where
 
 instance Prelude.Hashable Av1QvbrSettings where
   hashWithSalt _salt Av1QvbrSettings' {..} =
-    _salt `Prelude.hashWithSalt` qvbrQualityLevel
+    _salt
+      `Prelude.hashWithSalt` qvbrQualityLevel
       `Prelude.hashWithSalt` qvbrQualityLevelFineTune
 
 instance Prelude.NFData Av1QvbrSettings where

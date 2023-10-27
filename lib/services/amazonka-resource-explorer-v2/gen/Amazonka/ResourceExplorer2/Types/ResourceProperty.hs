@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResourceExplorer2.Types.ResourceProperty
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResourceExplorer2.Types.ResourceProperty where
@@ -91,7 +91,8 @@ instance Data.FromJSON ResourceProperty where
 
 instance Prelude.Hashable ResourceProperty where
   hashWithSalt _salt ResourceProperty' {..} =
-    _salt `Prelude.hashWithSalt` data'
+    _salt
+      `Prelude.hashWithSalt` data'
       `Prelude.hashWithSalt` lastReportedAt
       `Prelude.hashWithSalt` name
 

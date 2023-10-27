@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.GetGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest GetGroup where
 
 instance Prelude.Hashable GetGroup where
   hashWithSalt _salt GetGroup' {..} =
-    _salt `Prelude.hashWithSalt` groupName
+    _salt
+      `Prelude.hashWithSalt` groupName
       `Prelude.hashWithSalt` userPoolId
 
 instance Prelude.NFData GetGroup where

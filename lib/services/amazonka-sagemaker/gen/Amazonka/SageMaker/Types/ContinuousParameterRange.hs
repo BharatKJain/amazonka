@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ContinuousParameterRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ContinuousParameterRange where
@@ -189,7 +189,8 @@ instance Data.FromJSON ContinuousParameterRange where
 
 instance Prelude.Hashable ContinuousParameterRange where
   hashWithSalt _salt ContinuousParameterRange' {..} =
-    _salt `Prelude.hashWithSalt` scalingType
+    _salt
+      `Prelude.hashWithSalt` scalingType
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` minValue
       `Prelude.hashWithSalt` maxValue

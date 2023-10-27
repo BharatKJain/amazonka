@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.PurchaseHostReservation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -179,7 +179,9 @@ instance Core.AWSRequest PurchaseHostReservation where
           PurchaseHostReservationResponse'
             Prelude.<$> (x Data..@? "clientToken")
             Prelude.<*> (x Data..@? "currencyCode")
-            Prelude.<*> ( x Data..@? "purchase" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "purchase"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
             Prelude.<*> (x Data..@? "totalHourlyPrice")
@@ -189,7 +191,8 @@ instance Core.AWSRequest PurchaseHostReservation where
 
 instance Prelude.Hashable PurchaseHostReservation where
   hashWithSalt _salt PurchaseHostReservation' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` currencyCode
       `Prelude.hashWithSalt` limitPrice
       `Prelude.hashWithSalt` tagSpecifications

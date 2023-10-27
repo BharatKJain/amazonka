@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyBackend.Types.GetBackendStorageResourceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyBackend.Types.GetBackendStorageResourceConfig where
@@ -111,7 +111,8 @@ instance
   hashWithSalt
     _salt
     GetBackendStorageResourceConfig' {..} =
-      _salt `Prelude.hashWithSalt` bucketName
+      _salt
+        `Prelude.hashWithSalt` bucketName
         `Prelude.hashWithSalt` permissions
         `Prelude.hashWithSalt` serviceName
         `Prelude.hashWithSalt` imported

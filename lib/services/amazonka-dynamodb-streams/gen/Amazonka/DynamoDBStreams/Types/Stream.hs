@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDBStreams.Types.Stream
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDBStreams.Types.Stream where
@@ -118,7 +118,8 @@ instance Data.FromJSON Stream where
 
 instance Prelude.Hashable Stream where
   hashWithSalt _salt Stream' {..} =
-    _salt `Prelude.hashWithSalt` streamArn
+    _salt
+      `Prelude.hashWithSalt` streamArn
       `Prelude.hashWithSalt` streamLabel
       `Prelude.hashWithSalt` tableName
 

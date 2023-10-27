@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AmplifyBackend.CreateBackendStorage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -140,7 +140,8 @@ instance Core.AWSRequest CreateBackendStorage where
 
 instance Prelude.Hashable CreateBackendStorage where
   hashWithSalt _salt CreateBackendStorage' {..} =
-    _salt `Prelude.hashWithSalt` appId
+    _salt
+      `Prelude.hashWithSalt` appId
       `Prelude.hashWithSalt` resourceName
       `Prelude.hashWithSalt` backendEnvironmentName
       `Prelude.hashWithSalt` resourceConfig

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.ResponseHeadersPolicyAccessControlAllowOrigins
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.ResponseHeadersPolicyAccessControlAllowOrigins where
@@ -82,9 +82,11 @@ instance
   parseXML x =
     ResponseHeadersPolicyAccessControlAllowOrigins'
       Prelude.<$> (x Data..@ "Quantity")
-        Prelude.<*> ( x Data..@? "Items" Core..!@ Prelude.mempty
-                        Prelude.>>= Data.parseXMLList "Origin"
-                    )
+      Prelude.<*> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
+                      Prelude.>>= Data.parseXMLList "Origin"
+                  )
 
 instance
   Prelude.Hashable
@@ -93,7 +95,8 @@ instance
   hashWithSalt
     _salt
     ResponseHeadersPolicyAccessControlAllowOrigins' {..} =
-      _salt `Prelude.hashWithSalt` quantity
+      _salt
+        `Prelude.hashWithSalt` quantity
         `Prelude.hashWithSalt` items
 
 instance

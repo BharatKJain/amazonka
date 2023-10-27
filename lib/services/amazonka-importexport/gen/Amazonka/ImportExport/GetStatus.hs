@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ImportExport.GetStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,9 @@ instance Core.AWSRequest GetStatus where
       "GetStatusResult"
       ( \s h x ->
           GetStatusResponse'
-            Prelude.<$> ( x Data..@? "ArtifactList" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "ArtifactList"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (x Data..@? "Carrier")
@@ -136,7 +138,8 @@ instance Core.AWSRequest GetStatus where
 
 instance Prelude.Hashable GetStatus where
   hashWithSalt _salt GetStatus' {..} =
-    _salt `Prelude.hashWithSalt` aPIVersion
+    _salt
+      `Prelude.hashWithSalt` aPIVersion
       `Prelude.hashWithSalt` jobId
 
 instance Prelude.NFData GetStatus where

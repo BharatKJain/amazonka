@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LakeFormation.RegisterResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -147,7 +147,8 @@ instance Core.AWSRequest RegisterResource where
 
 instance Prelude.Hashable RegisterResource where
   hashWithSalt _salt RegisterResource' {..} =
-    _salt `Prelude.hashWithSalt` roleArn
+    _salt
+      `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` useServiceLinkedRole
       `Prelude.hashWithSalt` resourceArn
 

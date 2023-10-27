@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.MethodSetting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.MethodSetting where
@@ -247,7 +247,8 @@ instance Data.FromJSON MethodSetting where
 
 instance Prelude.Hashable MethodSetting where
   hashWithSalt _salt MethodSetting' {..} =
-    _salt `Prelude.hashWithSalt` cacheDataEncrypted
+    _salt
+      `Prelude.hashWithSalt` cacheDataEncrypted
       `Prelude.hashWithSalt` cacheTtlInSeconds
       `Prelude.hashWithSalt` cachingEnabled
       `Prelude.hashWithSalt` dataTraceEnabled

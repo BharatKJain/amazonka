@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ThirdPartyJobData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ThirdPartyJobData where
@@ -180,7 +180,8 @@ instance Data.FromJSON ThirdPartyJobData where
             Prelude.<*> (x Data..:? "continuationToken")
             Prelude.<*> (x Data..:? "encryptionKey")
             Prelude.<*> (x Data..:? "inputArtifacts" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "outputArtifacts"
+            Prelude.<*> ( x
+                            Data..:? "outputArtifacts"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "pipelineContext")
@@ -188,7 +189,8 @@ instance Data.FromJSON ThirdPartyJobData where
 
 instance Prelude.Hashable ThirdPartyJobData where
   hashWithSalt _salt ThirdPartyJobData' {..} =
-    _salt `Prelude.hashWithSalt` actionConfiguration
+    _salt
+      `Prelude.hashWithSalt` actionConfiguration
       `Prelude.hashWithSalt` actionTypeId
       `Prelude.hashWithSalt` artifactCredentials
       `Prelude.hashWithSalt` continuationToken

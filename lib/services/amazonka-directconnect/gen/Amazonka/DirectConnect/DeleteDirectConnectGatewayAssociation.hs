@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectConnect.DeleteDirectConnectGatewayAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,7 +117,7 @@ instance
       ( \s h x ->
           DeleteDirectConnectGatewayAssociationResponse'
             Prelude.<$> (x Data..?> "directConnectGatewayAssociation")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -127,7 +127,8 @@ instance
   hashWithSalt
     _salt
     DeleteDirectConnectGatewayAssociation' {..} =
-      _salt `Prelude.hashWithSalt` associationId
+      _salt
+        `Prelude.hashWithSalt` associationId
         `Prelude.hashWithSalt` directConnectGatewayId
         `Prelude.hashWithSalt` virtualGatewayId
 

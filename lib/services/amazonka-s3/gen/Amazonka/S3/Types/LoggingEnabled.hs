@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.LoggingEnabled
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.LoggingEnabled where
@@ -119,7 +119,9 @@ loggingEnabled_targetPrefix = Lens.lens (\LoggingEnabled' {targetPrefix} -> targ
 instance Data.FromXML LoggingEnabled where
   parseXML x =
     LoggingEnabled'
-      Prelude.<$> ( x Data..@? "TargetGrants" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "TargetGrants"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Grant")
                   )
       Prelude.<*> (x Data..@ "TargetBucket")
@@ -127,7 +129,8 @@ instance Data.FromXML LoggingEnabled where
 
 instance Prelude.Hashable LoggingEnabled where
   hashWithSalt _salt LoggingEnabled' {..} =
-    _salt `Prelude.hashWithSalt` targetGrants
+    _salt
+      `Prelude.hashWithSalt` targetGrants
       `Prelude.hashWithSalt` targetBucket
       `Prelude.hashWithSalt` targetPrefix
 

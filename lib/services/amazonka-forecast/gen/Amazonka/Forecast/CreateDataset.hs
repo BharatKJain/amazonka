@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Forecast.CreateDataset
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -350,7 +350,8 @@ instance Core.AWSRequest CreateDataset where
 
 instance Prelude.Hashable CreateDataset where
   hashWithSalt _salt CreateDataset' {..} =
-    _salt `Prelude.hashWithSalt` dataFrequency
+    _salt
+      `Prelude.hashWithSalt` dataFrequency
       `Prelude.hashWithSalt` encryptionConfig
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` datasetName

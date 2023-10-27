@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.BackupPlan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.BackupPlan where
@@ -91,7 +91,8 @@ instance Data.FromJSON BackupPlan where
       "BackupPlan"
       ( \x ->
           BackupPlan'
-            Prelude.<$> ( x Data..:? "AdvancedBackupSettings"
+            Prelude.<$> ( x
+                            Data..:? "AdvancedBackupSettings"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "BackupPlanName")
@@ -100,7 +101,8 @@ instance Data.FromJSON BackupPlan where
 
 instance Prelude.Hashable BackupPlan where
   hashWithSalt _salt BackupPlan' {..} =
-    _salt `Prelude.hashWithSalt` advancedBackupSettings
+    _salt
+      `Prelude.hashWithSalt` advancedBackupSettings
       `Prelude.hashWithSalt` backupPlanName
       `Prelude.hashWithSalt` rules
 

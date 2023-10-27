@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Budgets.Types.CostTypes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Budgets.Types.CostTypes where
@@ -237,7 +237,8 @@ instance Data.FromJSON CostTypes where
 
 instance Prelude.Hashable CostTypes where
   hashWithSalt _salt CostTypes' {..} =
-    _salt `Prelude.hashWithSalt` includeCredit
+    _salt
+      `Prelude.hashWithSalt` includeCredit
       `Prelude.hashWithSalt` includeDiscount
       `Prelude.hashWithSalt` includeOtherSubscription
       `Prelude.hashWithSalt` includeRecurring

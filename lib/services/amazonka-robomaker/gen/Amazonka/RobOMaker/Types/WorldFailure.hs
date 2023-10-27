@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RobOMaker.Types.WorldFailure
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RobOMaker.Types.WorldFailure where
@@ -139,7 +139,8 @@ instance Data.FromJSON WorldFailure where
 
 instance Prelude.Hashable WorldFailure where
   hashWithSalt _salt WorldFailure' {..} =
-    _salt `Prelude.hashWithSalt` failureCode
+    _salt
+      `Prelude.hashWithSalt` failureCode
       `Prelude.hashWithSalt` failureCount
       `Prelude.hashWithSalt` sampleFailureReason
 

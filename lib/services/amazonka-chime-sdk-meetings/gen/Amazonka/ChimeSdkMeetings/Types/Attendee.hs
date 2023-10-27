@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkMeetings.Types.Attendee
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkMeetings.Types.Attendee where
@@ -178,7 +178,8 @@ instance Data.FromJSON Attendee where
 
 instance Prelude.Hashable Attendee where
   hashWithSalt _salt Attendee' {..} =
-    _salt `Prelude.hashWithSalt` attendeeId
+    _salt
+      `Prelude.hashWithSalt` attendeeId
       `Prelude.hashWithSalt` capabilities
       `Prelude.hashWithSalt` externalUserId
       `Prelude.hashWithSalt` joinToken

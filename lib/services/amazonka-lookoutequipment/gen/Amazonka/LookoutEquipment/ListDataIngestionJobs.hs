@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LookoutEquipment.ListDataIngestionJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest ListDataIngestionJobs where
     Response.receiveJSON
       ( \s h x ->
           ListDataIngestionJobsResponse'
-            Prelude.<$> ( x Data..?> "DataIngestionJobSummaries"
+            Prelude.<$> ( x
+                            Data..?> "DataIngestionJobSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -129,7 +130,8 @@ instance Core.AWSRequest ListDataIngestionJobs where
 
 instance Prelude.Hashable ListDataIngestionJobs where
   hashWithSalt _salt ListDataIngestionJobs' {..} =
-    _salt `Prelude.hashWithSalt` datasetName
+    _salt
+      `Prelude.hashWithSalt` datasetName
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` status

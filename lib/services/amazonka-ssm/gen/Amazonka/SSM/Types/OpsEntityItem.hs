@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.OpsEntityItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.OpsEntityItem where
@@ -74,7 +74,8 @@ instance Data.FromJSON OpsEntityItem where
 
 instance Prelude.Hashable OpsEntityItem where
   hashWithSalt _salt OpsEntityItem' {..} =
-    _salt `Prelude.hashWithSalt` captureTime
+    _salt
+      `Prelude.hashWithSalt` captureTime
       `Prelude.hashWithSalt` content
 
 instance Prelude.NFData OpsEntityItem where

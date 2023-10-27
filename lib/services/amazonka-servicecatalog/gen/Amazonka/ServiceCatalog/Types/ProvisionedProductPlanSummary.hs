@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ProvisionedProductPlanSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ProvisionedProductPlanSummary where
@@ -119,7 +119,8 @@ instance
     ProvisionedProductPlanSummary
   where
   hashWithSalt _salt ProvisionedProductPlanSummary' {..} =
-    _salt `Prelude.hashWithSalt` planId
+    _salt
+      `Prelude.hashWithSalt` planId
       `Prelude.hashWithSalt` planName
       `Prelude.hashWithSalt` planType
       `Prelude.hashWithSalt` provisionProductId

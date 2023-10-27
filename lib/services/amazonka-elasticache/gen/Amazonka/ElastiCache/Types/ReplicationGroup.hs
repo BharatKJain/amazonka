@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.ReplicationGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.ReplicationGroup where
@@ -522,22 +522,28 @@ instance Data.FromXML ReplicationGroup where
       Prelude.<*> (x Data..@? "GlobalReplicationGroupInfo")
       Prelude.<*> (x Data..@? "IpDiscovery")
       Prelude.<*> (x Data..@? "KmsKeyId")
-      Prelude.<*> ( x Data..@? "LogDeliveryConfigurations"
+      Prelude.<*> ( x
+                      Data..@? "LogDeliveryConfigurations"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may
                         (Data.parseXMLList "LogDeliveryConfiguration")
                   )
-      Prelude.<*> ( x Data..@? "MemberClusters" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "MemberClusters"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "ClusterId")
                   )
-      Prelude.<*> ( x Data..@? "MemberClustersOutpostArns"
+      Prelude.<*> ( x
+                      Data..@? "MemberClustersOutpostArns"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may
                         (Data.parseXMLList "ReplicationGroupOutpostArn")
                   )
       Prelude.<*> (x Data..@? "MultiAZ")
       Prelude.<*> (x Data..@? "NetworkType")
-      Prelude.<*> ( x Data..@? "NodeGroups" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "NodeGroups"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "NodeGroup")
                   )
       Prelude.<*> (x Data..@? "PendingModifiedValues")
@@ -549,13 +555,16 @@ instance Data.FromXML ReplicationGroup where
       Prelude.<*> (x Data..@? "Status")
       Prelude.<*> (x Data..@? "TransitEncryptionEnabled")
       Prelude.<*> (x Data..@? "TransitEncryptionMode")
-      Prelude.<*> ( x Data..@? "UserGroupIds" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "UserGroupIds"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 
 instance Prelude.Hashable ReplicationGroup where
   hashWithSalt _salt ReplicationGroup' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` atRestEncryptionEnabled
       `Prelude.hashWithSalt` authTokenEnabled
       `Prelude.hashWithSalt` authTokenLastModifiedDate

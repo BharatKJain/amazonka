@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RAM.GetResourceShareAssociations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -245,22 +245,22 @@ instance Core.AWSPager GetResourceShareAssociations where
     | Core.stop
         ( rs
             Lens.^? getResourceShareAssociationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getResourceShareAssociationsResponse_resourceShareAssociations
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getResourceShareAssociations_nextToken
           Lens..~ rs
           Lens.^? getResourceShareAssociationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetResourceShareAssociations where
   type
@@ -273,7 +273,8 @@ instance Core.AWSRequest GetResourceShareAssociations where
       ( \s h x ->
           GetResourceShareAssociationsResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "resourceShareAssociations"
+            Prelude.<*> ( x
+                            Data..?> "resourceShareAssociations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -284,7 +285,8 @@ instance
     GetResourceShareAssociations
   where
   hashWithSalt _salt GetResourceShareAssociations' {..} =
-    _salt `Prelude.hashWithSalt` associationStatus
+    _salt
+      `Prelude.hashWithSalt` associationStatus
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` principal

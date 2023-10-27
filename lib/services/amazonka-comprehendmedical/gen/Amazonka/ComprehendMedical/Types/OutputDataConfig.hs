@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComprehendMedical.Types.OutputDataConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComprehendMedical.Types.OutputDataConfig where
@@ -94,7 +94,8 @@ instance Data.FromJSON OutputDataConfig where
 
 instance Prelude.Hashable OutputDataConfig where
   hashWithSalt _salt OutputDataConfig' {..} =
-    _salt `Prelude.hashWithSalt` s3Key
+    _salt
+      `Prelude.hashWithSalt` s3Key
       `Prelude.hashWithSalt` s3Bucket
 
 instance Prelude.NFData OutputDataConfig where

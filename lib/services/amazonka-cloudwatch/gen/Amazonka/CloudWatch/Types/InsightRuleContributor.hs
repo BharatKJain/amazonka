@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatch.Types.InsightRuleContributor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatch.Types.InsightRuleContributor where
@@ -95,17 +95,22 @@ insightRuleContributor_datapoints = Lens.lens (\InsightRuleContributor' {datapoi
 instance Data.FromXML InsightRuleContributor where
   parseXML x =
     InsightRuleContributor'
-      Prelude.<$> ( x Data..@? "Keys" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Keys"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Data.parseXMLList "member"
                   )
       Prelude.<*> (x Data..@ "ApproximateAggregateValue")
-      Prelude.<*> ( x Data..@? "Datapoints" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Datapoints"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Data.parseXMLList "member"
                   )
 
 instance Prelude.Hashable InsightRuleContributor where
   hashWithSalt _salt InsightRuleContributor' {..} =
-    _salt `Prelude.hashWithSalt` keys
+    _salt
+      `Prelude.hashWithSalt` keys
       `Prelude.hashWithSalt` approximateAggregateValue
       `Prelude.hashWithSalt` datapoints
 

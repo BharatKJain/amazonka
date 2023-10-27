@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.TaskSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.TaskSet where
@@ -539,7 +539,8 @@ instance Data.FromJSON TaskSet where
       "TaskSet"
       ( \x ->
           TaskSet'
-            Prelude.<$> ( x Data..:? "capacityProviderStrategy"
+            Prelude.<$> ( x
+                            Data..:? "capacityProviderStrategy"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "clusterArn")
@@ -556,7 +557,8 @@ instance Data.FromJSON TaskSet where
             Prelude.<*> (x Data..:? "runningCount")
             Prelude.<*> (x Data..:? "scale")
             Prelude.<*> (x Data..:? "serviceArn")
-            Prelude.<*> ( x Data..:? "serviceRegistries"
+            Prelude.<*> ( x
+                            Data..:? "serviceRegistries"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "stabilityStatus")

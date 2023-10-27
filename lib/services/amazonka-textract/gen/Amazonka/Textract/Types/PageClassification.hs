@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.PageClassification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.PageClassification where
@@ -84,7 +84,8 @@ instance Data.FromJSON PageClassification where
 
 instance Prelude.Hashable PageClassification where
   hashWithSalt _salt PageClassification' {..} =
-    _salt `Prelude.hashWithSalt` pageType
+    _salt
+      `Prelude.hashWithSalt` pageType
       `Prelude.hashWithSalt` pageNumber
 
 instance Prelude.NFData PageClassification where

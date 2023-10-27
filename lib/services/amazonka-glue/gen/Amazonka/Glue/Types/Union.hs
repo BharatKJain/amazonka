@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Union
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Union where
@@ -110,7 +110,8 @@ instance Data.FromJSON Union where
 
 instance Prelude.Hashable Union where
   hashWithSalt _salt Union' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inputs
       `Prelude.hashWithSalt` unionType
 

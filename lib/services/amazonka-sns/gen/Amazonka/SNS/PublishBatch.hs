@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SNS.PublishBatch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,10 +127,14 @@ instance Core.AWSRequest PublishBatch where
       "PublishBatchResult"
       ( \s h x ->
           PublishBatchResponse'
-            Prelude.<$> ( x Data..@? "Failed" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "Failed"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
-            Prelude.<*> ( x Data..@? "Successful" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "Successful"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -138,7 +142,8 @@ instance Core.AWSRequest PublishBatch where
 
 instance Prelude.Hashable PublishBatch where
   hashWithSalt _salt PublishBatch' {..} =
-    _salt `Prelude.hashWithSalt` topicArn
+    _salt
+      `Prelude.hashWithSalt` topicArn
       `Prelude.hashWithSalt` publishBatchRequestEntries
 
 instance Prelude.NFData PublishBatch where

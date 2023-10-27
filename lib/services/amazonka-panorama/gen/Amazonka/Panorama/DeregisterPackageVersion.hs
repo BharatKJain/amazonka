@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Panorama.DeregisterPackageVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,7 +138,8 @@ instance Core.AWSRequest DeregisterPackageVersion where
 
 instance Prelude.Hashable DeregisterPackageVersion where
   hashWithSalt _salt DeregisterPackageVersion' {..} =
-    _salt `Prelude.hashWithSalt` ownerAccount
+    _salt
+      `Prelude.hashWithSalt` ownerAccount
       `Prelude.hashWithSalt` updatedLatestPatchVersion
       `Prelude.hashWithSalt` packageId
       `Prelude.hashWithSalt` packageVersion

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.DeploymentCanarySettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.DeploymentCanarySettings where
@@ -86,7 +86,8 @@ deploymentCanarySettings_useStageCache = Lens.lens (\DeploymentCanarySettings' {
 
 instance Prelude.Hashable DeploymentCanarySettings where
   hashWithSalt _salt DeploymentCanarySettings' {..} =
-    _salt `Prelude.hashWithSalt` percentTraffic
+    _salt
+      `Prelude.hashWithSalt` percentTraffic
       `Prelude.hashWithSalt` stageVariableOverrides
       `Prelude.hashWithSalt` useStageCache
 

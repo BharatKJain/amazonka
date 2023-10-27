@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.InboundConnection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.InboundConnection where
@@ -98,7 +98,8 @@ instance Data.FromJSON InboundConnection where
 
 instance Prelude.Hashable InboundConnection where
   hashWithSalt _salt InboundConnection' {..} =
-    _salt `Prelude.hashWithSalt` connectionId
+    _salt
+      `Prelude.hashWithSalt` connectionId
       `Prelude.hashWithSalt` connectionStatus
       `Prelude.hashWithSalt` localDomainInfo
       `Prelude.hashWithSalt` remoteDomainInfo

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.S3Action
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.S3Action where
@@ -110,7 +110,8 @@ instance Data.FromJSON S3Action where
 
 instance Prelude.Hashable S3Action where
   hashWithSalt _salt S3Action' {..} =
-    _salt `Prelude.hashWithSalt` cannedAcl
+    _salt
+      `Prelude.hashWithSalt` cannedAcl
       `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` key

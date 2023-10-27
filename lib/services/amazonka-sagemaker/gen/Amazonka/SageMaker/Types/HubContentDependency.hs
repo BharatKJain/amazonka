@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.HubContentDependency
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.HubContentDependency where
@@ -76,7 +76,8 @@ instance Data.FromJSON HubContentDependency where
 
 instance Prelude.Hashable HubContentDependency where
   hashWithSalt _salt HubContentDependency' {..} =
-    _salt `Prelude.hashWithSalt` dependencyCopyPath
+    _salt
+      `Prelude.hashWithSalt` dependencyCopyPath
       `Prelude.hashWithSalt` dependencyOriginPath
 
 instance Prelude.NFData HubContentDependency where

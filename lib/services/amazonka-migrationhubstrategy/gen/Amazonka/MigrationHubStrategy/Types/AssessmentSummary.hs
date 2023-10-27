@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.AssessmentSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.AssessmentSummary where
@@ -164,25 +164,32 @@ instance Data.FromJSON AssessmentSummary where
             Prelude.<*> (x Data..:? "antipatternReportStatus")
             Prelude.<*> (x Data..:? "antipatternReportStatusMessage")
             Prelude.<*> (x Data..:? "lastAnalyzedTimestamp")
-            Prelude.<*> ( x Data..:? "listAntipatternSeveritySummary"
+            Prelude.<*> ( x
+                            Data..:? "listAntipatternSeveritySummary"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "listApplicationComponentStatusSummary"
+            Prelude.<*> ( x
+                            Data..:? "listApplicationComponentStatusSummary"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "listApplicationComponentStrategySummary"
+            Prelude.<*> ( x
+                            Data..:? "listApplicationComponentStrategySummary"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "listApplicationComponentSummary"
+            Prelude.<*> ( x
+                            Data..:? "listApplicationComponentSummary"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "listServerStatusSummary"
+            Prelude.<*> ( x
+                            Data..:? "listServerStatusSummary"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "listServerStrategySummary"
+            Prelude.<*> ( x
+                            Data..:? "listServerStrategySummary"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "listServerSummary"
+            Prelude.<*> ( x
+                            Data..:? "listServerSummary"
                             Data..!= Prelude.mempty
                         )
       )

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.Result
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.Result where
@@ -74,7 +74,8 @@ instance Data.FromJSON Result where
 
 instance Prelude.Hashable Result where
   hashWithSalt _salt Result' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` processingResult
 
 instance Prelude.NFData Result where

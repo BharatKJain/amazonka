@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudDirectory.ListObjectPolicies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,22 +141,22 @@ instance Core.AWSPager ListObjectPolicies where
     | Core.stop
         ( rs
             Lens.^? listObjectPoliciesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listObjectPoliciesResponse_attachedPolicyIds
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listObjectPolicies_nextToken
           Lens..~ rs
           Lens.^? listObjectPoliciesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListObjectPolicies where
   type
@@ -168,7 +168,8 @@ instance Core.AWSRequest ListObjectPolicies where
     Response.receiveJSON
       ( \s h x ->
           ListObjectPoliciesResponse'
-            Prelude.<$> ( x Data..?> "AttachedPolicyIds"
+            Prelude.<$> ( x
+                            Data..?> "AttachedPolicyIds"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -177,7 +178,8 @@ instance Core.AWSRequest ListObjectPolicies where
 
 instance Prelude.Hashable ListObjectPolicies where
   hashWithSalt _salt ListObjectPolicies' {..} =
-    _salt `Prelude.hashWithSalt` consistencyLevel
+    _salt
+      `Prelude.hashWithSalt` consistencyLevel
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` directoryArn

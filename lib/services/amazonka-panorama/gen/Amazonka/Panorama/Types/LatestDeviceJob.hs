@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Panorama.Types.LatestDeviceJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Panorama.Types.LatestDeviceJob where
@@ -86,7 +86,8 @@ instance Data.FromJSON LatestDeviceJob where
 
 instance Prelude.Hashable LatestDeviceJob where
   hashWithSalt _salt LatestDeviceJob' {..} =
-    _salt `Prelude.hashWithSalt` imageVersion
+    _salt
+      `Prelude.hashWithSalt` imageVersion
       `Prelude.hashWithSalt` jobType
       `Prelude.hashWithSalt` status
 

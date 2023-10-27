@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Snowball.Types.JobLogs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Snowball.Types.JobLogs where
@@ -114,7 +114,8 @@ instance Data.FromJSON JobLogs where
 
 instance Prelude.Hashable JobLogs where
   hashWithSalt _salt JobLogs' {..} =
-    _salt `Prelude.hashWithSalt` jobCompletionReportURI
+    _salt
+      `Prelude.hashWithSalt` jobCompletionReportURI
       `Prelude.hashWithSalt` jobFailureLogURI
       `Prelude.hashWithSalt` jobSuccessLogURI
 

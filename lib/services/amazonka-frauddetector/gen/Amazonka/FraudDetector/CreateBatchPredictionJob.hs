@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FraudDetector.CreateBatchPredictionJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -195,7 +195,8 @@ instance Core.AWSRequest CreateBatchPredictionJob where
 
 instance Prelude.Hashable CreateBatchPredictionJob where
   hashWithSalt _salt CreateBatchPredictionJob' {..} =
-    _salt `Prelude.hashWithSalt` detectorVersion
+    _salt
+      `Prelude.hashWithSalt` detectorVersion
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` jobId
       `Prelude.hashWithSalt` inputPath

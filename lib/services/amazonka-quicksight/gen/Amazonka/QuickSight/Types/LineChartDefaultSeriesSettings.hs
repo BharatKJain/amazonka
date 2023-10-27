@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.LineChartDefaultSeriesSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.LineChartDefaultSeriesSettings where
@@ -94,7 +94,8 @@ instance
   hashWithSalt
     _salt
     LineChartDefaultSeriesSettings' {..} =
-      _salt `Prelude.hashWithSalt` axisBinding
+      _salt
+        `Prelude.hashWithSalt` axisBinding
         `Prelude.hashWithSalt` lineStyleSettings
         `Prelude.hashWithSalt` markerStyleSettings
 

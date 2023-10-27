@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.ResponseHeadersPolicyStrictTransportSecurity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.ResponseHeadersPolicyStrictTransportSecurity where
@@ -119,9 +119,9 @@ instance
   parseXML x =
     ResponseHeadersPolicyStrictTransportSecurity'
       Prelude.<$> (x Data..@? "IncludeSubdomains")
-        Prelude.<*> (x Data..@? "Preload")
-        Prelude.<*> (x Data..@ "Override")
-        Prelude.<*> (x Data..@ "AccessControlMaxAgeSec")
+      Prelude.<*> (x Data..@? "Preload")
+      Prelude.<*> (x Data..@ "Override")
+      Prelude.<*> (x Data..@ "AccessControlMaxAgeSec")
 
 instance
   Prelude.Hashable
@@ -130,7 +130,8 @@ instance
   hashWithSalt
     _salt
     ResponseHeadersPolicyStrictTransportSecurity' {..} =
-      _salt `Prelude.hashWithSalt` includeSubdomains
+      _salt
+        `Prelude.hashWithSalt` includeSubdomains
         `Prelude.hashWithSalt` preload
         `Prelude.hashWithSalt` override
         `Prelude.hashWithSalt` accessControlMaxAgeSec

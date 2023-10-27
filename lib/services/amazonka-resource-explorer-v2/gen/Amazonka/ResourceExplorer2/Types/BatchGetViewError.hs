@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResourceExplorer2.Types.BatchGetViewError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResourceExplorer2.Types.BatchGetViewError where
@@ -85,7 +85,8 @@ instance Data.FromJSON BatchGetViewError where
 
 instance Prelude.Hashable BatchGetViewError where
   hashWithSalt _salt BatchGetViewError' {..} =
-    _salt `Prelude.hashWithSalt` errorMessage
+    _salt
+      `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` viewArn
 
 instance Prelude.NFData BatchGetViewError where

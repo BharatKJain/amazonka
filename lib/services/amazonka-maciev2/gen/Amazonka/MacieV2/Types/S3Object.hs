@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.S3Object
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.S3Object where
@@ -195,7 +195,8 @@ instance Data.FromJSON S3Object where
 
 instance Prelude.Hashable S3Object where
   hashWithSalt _salt S3Object' {..} =
-    _salt `Prelude.hashWithSalt` bucketArn
+    _salt
+      `Prelude.hashWithSalt` bucketArn
       `Prelude.hashWithSalt` eTag
       `Prelude.hashWithSalt` extension
       `Prelude.hashWithSalt` key

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.SentimentDetectionJobFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.SentimentDetectionJobFilter where
@@ -100,7 +100,8 @@ sentimentDetectionJobFilter_submitTimeBefore = Lens.lens (\SentimentDetectionJob
 
 instance Prelude.Hashable SentimentDetectionJobFilter where
   hashWithSalt _salt SentimentDetectionJobFilter' {..} =
-    _salt `Prelude.hashWithSalt` jobName
+    _salt
+      `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` jobStatus
       `Prelude.hashWithSalt` submitTimeAfter
       `Prelude.hashWithSalt` submitTimeBefore

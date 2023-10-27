@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.Detection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.Detection where
@@ -153,7 +153,8 @@ instance Data.FromJSON Detection where
 
 instance Prelude.Hashable Detection where
   hashWithSalt _salt Detection' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` count
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name

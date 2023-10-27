@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.AwsIamConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.AwsIamConfig where
@@ -74,7 +74,8 @@ instance Data.FromJSON AwsIamConfig where
 
 instance Prelude.Hashable AwsIamConfig where
   hashWithSalt _salt AwsIamConfig' {..} =
-    _salt `Prelude.hashWithSalt` signingRegion
+    _salt
+      `Prelude.hashWithSalt` signingRegion
       `Prelude.hashWithSalt` signingServiceName
 
 instance Prelude.NFData AwsIamConfig where

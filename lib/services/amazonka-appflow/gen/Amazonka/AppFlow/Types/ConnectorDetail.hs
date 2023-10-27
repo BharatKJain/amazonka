@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.ConnectorDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.ConnectorDetail where
@@ -166,7 +166,8 @@ instance Data.FromJSON ConnectorDetail where
 
 instance Prelude.Hashable ConnectorDetail where
   hashWithSalt _salt ConnectorDetail' {..} =
-    _salt `Prelude.hashWithSalt` applicationType
+    _salt
+      `Prelude.hashWithSalt` applicationType
       `Prelude.hashWithSalt` connectorDescription
       `Prelude.hashWithSalt` connectorLabel
       `Prelude.hashWithSalt` connectorModes

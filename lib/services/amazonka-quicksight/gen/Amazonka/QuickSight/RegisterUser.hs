@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.RegisterUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -83,7 +83,8 @@ data RegisterUser = RegisterUser'
     --
     -- -   Subscribe to email reports
     --
-    -- To add custom permissions to an existing user, use @ UpdateUser @
+    -- To add custom permissions to an existing user, use
+    -- @ @<https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateUser.html UpdateUser>@ @
     -- instead.
     --
     -- A set of custom permissions includes any combination of these
@@ -192,7 +193,8 @@ data RegisterUser = RegisterUser'
 --
 -- -   Subscribe to email reports
 --
--- To add custom permissions to an existing user, use @ UpdateUser @
+-- To add custom permissions to an existing user, use
+-- @ @<https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateUser.html UpdateUser>@ @
 -- instead.
 --
 -- A set of custom permissions includes any combination of these
@@ -326,7 +328,8 @@ registerUser_customFederationProviderUrl = Lens.lens (\RegisterUser' {customFede
 --
 -- -   Subscribe to email reports
 --
--- To add custom permissions to an existing user, use @ UpdateUser @
+-- To add custom permissions to an existing user, use
+-- @ @<https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateUser.html UpdateUser>@ @
 -- instead.
 --
 -- A set of custom permissions includes any combination of these

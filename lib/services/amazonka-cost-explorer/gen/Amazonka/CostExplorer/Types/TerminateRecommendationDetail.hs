@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.TerminateRecommendationDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.TerminateRecommendationDetail where
@@ -81,7 +81,8 @@ instance
     TerminateRecommendationDetail
   where
   hashWithSalt _salt TerminateRecommendationDetail' {..} =
-    _salt `Prelude.hashWithSalt` currencyCode
+    _salt
+      `Prelude.hashWithSalt` currencyCode
       `Prelude.hashWithSalt` estimatedMonthlySavings
 
 instance Prelude.NFData TerminateRecommendationDetail where

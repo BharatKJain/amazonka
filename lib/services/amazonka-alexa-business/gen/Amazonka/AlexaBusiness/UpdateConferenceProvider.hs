@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AlexaBusiness.UpdateConferenceProvider
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,7 +138,8 @@ instance Core.AWSRequest UpdateConferenceProvider where
 
 instance Prelude.Hashable UpdateConferenceProvider where
   hashWithSalt _salt UpdateConferenceProvider' {..} =
-    _salt `Prelude.hashWithSalt` iPDialIn
+    _salt
+      `Prelude.hashWithSalt` iPDialIn
       `Prelude.hashWithSalt` pSTNDialIn
       `Prelude.hashWithSalt` conferenceProviderArn
       `Prelude.hashWithSalt` conferenceProviderType

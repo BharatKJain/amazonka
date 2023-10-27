@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.ListConstraintsForPortfolio
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -146,22 +146,22 @@ instance Core.AWSPager ListConstraintsForPortfolio where
     | Core.stop
         ( rs
             Lens.^? listConstraintsForPortfolioResponse_nextPageToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listConstraintsForPortfolioResponse_constraintDetails
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listConstraintsForPortfolio_pageToken
           Lens..~ rs
           Lens.^? listConstraintsForPortfolioResponse_nextPageToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListConstraintsForPortfolio where
   type
@@ -173,7 +173,8 @@ instance Core.AWSRequest ListConstraintsForPortfolio where
     Response.receiveJSON
       ( \s h x ->
           ListConstraintsForPortfolioResponse'
-            Prelude.<$> ( x Data..?> "ConstraintDetails"
+            Prelude.<$> ( x
+                            Data..?> "ConstraintDetails"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextPageToken")
@@ -182,7 +183,8 @@ instance Core.AWSRequest ListConstraintsForPortfolio where
 
 instance Prelude.Hashable ListConstraintsForPortfolio where
   hashWithSalt _salt ListConstraintsForPortfolio' {..} =
-    _salt `Prelude.hashWithSalt` acceptLanguage
+    _salt
+      `Prelude.hashWithSalt` acceptLanguage
       `Prelude.hashWithSalt` pageSize
       `Prelude.hashWithSalt` pageToken
       `Prelude.hashWithSalt` productId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppRunner.Types.HealthCheckConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppRunner.Types.HealthCheckConfiguration where
@@ -180,7 +180,8 @@ instance Data.FromJSON HealthCheckConfiguration where
 
 instance Prelude.Hashable HealthCheckConfiguration where
   hashWithSalt _salt HealthCheckConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` healthyThreshold
+    _salt
+      `Prelude.hashWithSalt` healthyThreshold
       `Prelude.hashWithSalt` interval
       `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` protocol

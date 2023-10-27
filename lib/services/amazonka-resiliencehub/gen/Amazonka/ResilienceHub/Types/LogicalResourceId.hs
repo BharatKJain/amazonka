@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ResilienceHub.Types.LogicalResourceId
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ResilienceHub.Types.LogicalResourceId where
@@ -97,7 +97,8 @@ instance Data.FromJSON LogicalResourceId where
 
 instance Prelude.Hashable LogicalResourceId where
   hashWithSalt _salt LogicalResourceId' {..} =
-    _salt `Prelude.hashWithSalt` logicalStackName
+    _salt
+      `Prelude.hashWithSalt` logicalStackName
       `Prelude.hashWithSalt` resourceGroupName
       `Prelude.hashWithSalt` terraformSourceName
       `Prelude.hashWithSalt` identifier

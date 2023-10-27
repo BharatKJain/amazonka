@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.TransactWriteItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.TransactWriteItem where
@@ -90,7 +90,8 @@ transactWriteItem_update = Lens.lens (\TransactWriteItem' {update} -> update) (\
 
 instance Prelude.Hashable TransactWriteItem where
   hashWithSalt _salt TransactWriteItem' {..} =
-    _salt `Prelude.hashWithSalt` conditionCheck
+    _salt
+      `Prelude.hashWithSalt` conditionCheck
       `Prelude.hashWithSalt` delete'
       `Prelude.hashWithSalt` put
       `Prelude.hashWithSalt` update

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.SortDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.SortDefinition where
@@ -67,7 +67,8 @@ sortDefinition_key = Lens.lens (\SortDefinition' {key} -> key) (\s@SortDefinitio
 
 instance Prelude.Hashable SortDefinition where
   hashWithSalt _salt SortDefinition' {..} =
-    _salt `Prelude.hashWithSalt` sortOrder
+    _salt
+      `Prelude.hashWithSalt` sortOrder
       `Prelude.hashWithSalt` key
 
 instance Prelude.NFData SortDefinition where

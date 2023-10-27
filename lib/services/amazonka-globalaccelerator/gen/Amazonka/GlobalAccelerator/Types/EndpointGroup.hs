@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GlobalAccelerator.Types.EndpointGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GlobalAccelerator.Types.EndpointGroup where
@@ -217,7 +217,8 @@ instance Data.FromJSON EndpointGroup where
       "EndpointGroup"
       ( \x ->
           EndpointGroup'
-            Prelude.<$> ( x Data..:? "EndpointDescriptions"
+            Prelude.<$> ( x
+                            Data..:? "EndpointDescriptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "EndpointGroupArn")
@@ -233,7 +234,8 @@ instance Data.FromJSON EndpointGroup where
 
 instance Prelude.Hashable EndpointGroup where
   hashWithSalt _salt EndpointGroup' {..} =
-    _salt `Prelude.hashWithSalt` endpointDescriptions
+    _salt
+      `Prelude.hashWithSalt` endpointDescriptions
       `Prelude.hashWithSalt` endpointGroupArn
       `Prelude.hashWithSalt` endpointGroupRegion
       `Prelude.hashWithSalt` healthCheckIntervalSeconds

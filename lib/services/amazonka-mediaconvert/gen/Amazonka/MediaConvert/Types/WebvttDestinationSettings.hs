@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.WebvttDestinationSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.WebvttDestinationSettings where
@@ -134,7 +134,8 @@ instance Data.FromJSON WebvttDestinationSettings where
 
 instance Prelude.Hashable WebvttDestinationSettings where
   hashWithSalt _salt WebvttDestinationSettings' {..} =
-    _salt `Prelude.hashWithSalt` accessibility
+    _salt
+      `Prelude.hashWithSalt` accessibility
       `Prelude.hashWithSalt` stylePassthrough
 
 instance Prelude.NFData WebvttDestinationSettings where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ScheduledInstancesLaunchSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ScheduledInstancesLaunchSpecification where
@@ -208,7 +208,8 @@ instance
   hashWithSalt
     _salt
     ScheduledInstancesLaunchSpecification' {..} =
-      _salt `Prelude.hashWithSalt` blockDeviceMappings
+      _salt
+        `Prelude.hashWithSalt` blockDeviceMappings
         `Prelude.hashWithSalt` ebsOptimized
         `Prelude.hashWithSalt` iamInstanceProfile
         `Prelude.hashWithSalt` instanceType

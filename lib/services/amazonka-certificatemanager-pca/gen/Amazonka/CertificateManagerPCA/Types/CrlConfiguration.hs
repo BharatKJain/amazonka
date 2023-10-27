@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.CrlConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.CrlConfiguration where
@@ -96,7 +96,7 @@ import qualified Amazonka.Prelude as Prelude
 -- are DER-encoded. You can use the following OpenSSL command to list a
 -- CRL.
 --
--- @openssl crl -inform DER -text -in crl_path -noout@
+-- @openssl crl -inform DER -text -in @/@crl_path@/@ -noout@
 --
 -- For more information, see
 -- <https://docs.aws.amazon.com/privateca/latest/userguide/crl-planning.html Planning a certificate revocation list (CRL)>
@@ -305,7 +305,8 @@ instance Data.FromJSON CrlConfiguration where
 
 instance Prelude.Hashable CrlConfiguration where
   hashWithSalt _salt CrlConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` customCname
+    _salt
+      `Prelude.hashWithSalt` customCname
       `Prelude.hashWithSalt` expirationInDays
       `Prelude.hashWithSalt` s3BucketName
       `Prelude.hashWithSalt` s3ObjectAcl

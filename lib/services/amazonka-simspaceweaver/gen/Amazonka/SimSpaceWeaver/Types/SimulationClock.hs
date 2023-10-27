@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SimSpaceWeaver.Types.SimulationClock
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SimSpaceWeaver.Types.SimulationClock where
@@ -76,7 +76,8 @@ instance Data.FromJSON SimulationClock where
 
 instance Prelude.Hashable SimulationClock where
   hashWithSalt _salt SimulationClock' {..} =
-    _salt `Prelude.hashWithSalt` status
+    _salt
+      `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` targetStatus
 
 instance Prelude.NFData SimulationClock where

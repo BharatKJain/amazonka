@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.ManagedAgent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.ManagedAgent where
@@ -98,7 +98,8 @@ instance Data.FromJSON ManagedAgent where
 
 instance Prelude.Hashable ManagedAgent where
   hashWithSalt _salt ManagedAgent' {..} =
-    _salt `Prelude.hashWithSalt` lastStartedAt
+    _salt
+      `Prelude.hashWithSalt` lastStartedAt
       `Prelude.hashWithSalt` lastStatus
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` reason

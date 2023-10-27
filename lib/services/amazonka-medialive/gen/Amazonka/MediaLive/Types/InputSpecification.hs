@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.InputSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.InputSpecification where
@@ -87,7 +87,8 @@ instance Data.FromJSON InputSpecification where
 
 instance Prelude.Hashable InputSpecification where
   hashWithSalt _salt InputSpecification' {..} =
-    _salt `Prelude.hashWithSalt` codec
+    _salt
+      `Prelude.hashWithSalt` codec
       `Prelude.hashWithSalt` maximumBitrate
       `Prelude.hashWithSalt` resolution
 

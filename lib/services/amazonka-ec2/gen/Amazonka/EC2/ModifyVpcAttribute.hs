@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ModifyVpcAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -159,7 +159,8 @@ instance Core.AWSRequest ModifyVpcAttribute where
 
 instance Prelude.Hashable ModifyVpcAttribute where
   hashWithSalt _salt ModifyVpcAttribute' {..} =
-    _salt `Prelude.hashWithSalt` enableDnsHostnames
+    _salt
+      `Prelude.hashWithSalt` enableDnsHostnames
       `Prelude.hashWithSalt` enableDnsSupport
       `Prelude.hashWithSalt` enableNetworkAddressUsageMetrics
       `Prelude.hashWithSalt` vpcId

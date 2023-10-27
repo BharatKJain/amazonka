@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DataSetConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DataSetConfiguration where
@@ -80,7 +80,8 @@ instance Data.FromJSON DataSetConfiguration where
       "DataSetConfiguration"
       ( \x ->
           DataSetConfiguration'
-            Prelude.<$> ( x Data..:? "ColumnGroupSchemaList"
+            Prelude.<$> ( x
+                            Data..:? "ColumnGroupSchemaList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "DataSetSchema")
@@ -89,7 +90,8 @@ instance Data.FromJSON DataSetConfiguration where
 
 instance Prelude.Hashable DataSetConfiguration where
   hashWithSalt _salt DataSetConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` columnGroupSchemaList
+    _salt
+      `Prelude.hashWithSalt` columnGroupSchemaList
       `Prelude.hashWithSalt` dataSetSchema
       `Prelude.hashWithSalt` placeholder
 

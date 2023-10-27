@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Organizations.Types.Account
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Organizations.Types.Account where
@@ -172,7 +172,8 @@ instance Data.FromJSON Account where
 
 instance Prelude.Hashable Account where
   hashWithSalt _salt Account' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` email
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` joinedMethod

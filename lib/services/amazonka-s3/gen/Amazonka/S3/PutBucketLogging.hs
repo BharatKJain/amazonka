@@ -16,7 +16,7 @@
 -- Module      : Amazonka.S3.PutBucketLogging
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -237,7 +237,8 @@ instance Core.AWSRequest PutBucketLogging where
 
 instance Prelude.Hashable PutBucketLogging where
   hashWithSalt _salt PutBucketLogging' {..} =
-    _salt `Prelude.hashWithSalt` checksumAlgorithm
+    _salt
+      `Prelude.hashWithSalt` checksumAlgorithm
       `Prelude.hashWithSalt` contentMD5
       `Prelude.hashWithSalt` expectedBucketOwner
       `Prelude.hashWithSalt` bucket

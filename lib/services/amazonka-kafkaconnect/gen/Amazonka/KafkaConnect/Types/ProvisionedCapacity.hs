@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.ProvisionedCapacity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.ProvisionedCapacity where
@@ -71,7 +71,8 @@ provisionedCapacity_workerCount = Lens.lens (\ProvisionedCapacity' {workerCount}
 
 instance Prelude.Hashable ProvisionedCapacity where
   hashWithSalt _salt ProvisionedCapacity' {..} =
-    _salt `Prelude.hashWithSalt` mcuCount
+    _salt
+      `Prelude.hashWithSalt` mcuCount
       `Prelude.hashWithSalt` workerCount
 
 instance Prelude.NFData ProvisionedCapacity where

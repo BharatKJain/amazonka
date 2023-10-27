@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.Types.UserAccessLoggingSettingsSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpacesWeb.Types.UserAccessLoggingSettingsSummary where
@@ -84,7 +84,8 @@ instance
   hashWithSalt
     _salt
     UserAccessLoggingSettingsSummary' {..} =
-      _salt `Prelude.hashWithSalt` kinesisStreamArn
+      _salt
+        `Prelude.hashWithSalt` kinesisStreamArn
         `Prelude.hashWithSalt` userAccessLoggingSettingsArn
 
 instance

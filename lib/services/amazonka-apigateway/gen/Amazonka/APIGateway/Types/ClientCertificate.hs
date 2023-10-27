@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.ClientCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.ClientCertificate where
@@ -122,7 +122,8 @@ instance Data.FromJSON ClientCertificate where
 
 instance Prelude.Hashable ClientCertificate where
   hashWithSalt _salt ClientCertificate' {..} =
-    _salt `Prelude.hashWithSalt` clientCertificateId
+    _salt
+      `Prelude.hashWithSalt` clientCertificateId
       `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` expirationDate

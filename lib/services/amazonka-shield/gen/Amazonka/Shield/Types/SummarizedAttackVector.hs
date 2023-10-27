@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Shield.Types.SummarizedAttackVector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Shield.Types.SummarizedAttackVector where
@@ -78,7 +78,8 @@ instance Data.FromJSON SummarizedAttackVector where
 
 instance Prelude.Hashable SummarizedAttackVector where
   hashWithSalt _salt SummarizedAttackVector' {..} =
-    _salt `Prelude.hashWithSalt` vectorCounters
+    _salt
+      `Prelude.hashWithSalt` vectorCounters
       `Prelude.hashWithSalt` vectorType
 
 instance Prelude.NFData SummarizedAttackVector where

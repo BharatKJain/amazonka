@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.AssessmentTemplateFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.AssessmentTemplateFilter where
@@ -99,7 +99,8 @@ assessmentTemplateFilter_rulesPackageArns = Lens.lens (\AssessmentTemplateFilter
 
 instance Prelude.Hashable AssessmentTemplateFilter where
   hashWithSalt _salt AssessmentTemplateFilter' {..} =
-    _salt `Prelude.hashWithSalt` durationRange
+    _salt
+      `Prelude.hashWithSalt` durationRange
       `Prelude.hashWithSalt` namePattern
       `Prelude.hashWithSalt` rulesPackageArns
 

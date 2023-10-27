@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.Types.Portal
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpacesWeb.Types.Portal where
@@ -193,7 +193,8 @@ instance Data.FromJSON Portal where
 
 instance Prelude.Hashable Portal where
   hashWithSalt _salt Portal' {..} =
-    _salt `Prelude.hashWithSalt` browserSettingsArn
+    _salt
+      `Prelude.hashWithSalt` browserSettingsArn
       `Prelude.hashWithSalt` browserType
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` displayName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManager.Types.ResourceRecord
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManager.Types.ResourceRecord where
@@ -98,7 +98,8 @@ instance Data.FromJSON ResourceRecord where
 
 instance Prelude.Hashable ResourceRecord where
   hashWithSalt _salt ResourceRecord' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` value
 

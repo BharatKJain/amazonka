@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.ExternalWorkflowExecutionSignaledEventAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.ExternalWorkflowExecutionSignaledEventAttributes where
@@ -90,7 +90,7 @@ instance
       ( \x ->
           ExternalWorkflowExecutionSignaledEventAttributes'
             Prelude.<$> (x Data..: "workflowExecution")
-              Prelude.<*> (x Data..: "initiatedEventId")
+            Prelude.<*> (x Data..: "initiatedEventId")
       )
 
 instance
@@ -100,7 +100,8 @@ instance
   hashWithSalt
     _salt
     ExternalWorkflowExecutionSignaledEventAttributes' {..} =
-      _salt `Prelude.hashWithSalt` workflowExecution
+      _salt
+        `Prelude.hashWithSalt` workflowExecution
         `Prelude.hashWithSalt` initiatedEventId
 
 instance

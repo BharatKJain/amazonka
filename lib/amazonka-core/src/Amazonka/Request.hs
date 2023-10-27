@@ -1,6 +1,6 @@
 -- |
 -- Module      : Amazonka.Request
--- Copyright   : (c) 2013-2021 Brendan Hay
+-- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
 -- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
 -- Stability   : provisional
@@ -60,7 +60,7 @@ delete :: ToRequest a => Service -> a -> Request a
 delete s x = (get s x) {method = DELETE}
 
 get :: ToRequest a => Service -> a -> Request a
-get s = defaultRequest s
+get = defaultRequest
 
 post :: ToRequest a => Service -> a -> Request a
 post s x = (get s x) {method = POST}

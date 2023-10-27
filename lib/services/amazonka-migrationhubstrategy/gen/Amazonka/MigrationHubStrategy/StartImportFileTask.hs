@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.StartImportFileTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -165,7 +165,8 @@ instance Core.AWSRequest StartImportFileTask where
 
 instance Prelude.Hashable StartImportFileTask where
   hashWithSalt _salt StartImportFileTask' {..} =
-    _salt `Prelude.hashWithSalt` dataSourceType
+    _salt
+      `Prelude.hashWithSalt` dataSourceType
       `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` s3bucketForReportData
       `Prelude.hashWithSalt` s3Bucket

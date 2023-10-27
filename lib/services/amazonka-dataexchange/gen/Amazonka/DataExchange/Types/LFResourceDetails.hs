@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.LFResourceDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.LFResourceDetails where
@@ -83,7 +83,8 @@ instance Data.FromJSON LFResourceDetails where
 
 instance Prelude.Hashable LFResourceDetails where
   hashWithSalt _salt LFResourceDetails' {..} =
-    _salt `Prelude.hashWithSalt` database
+    _salt
+      `Prelude.hashWithSalt` database
       `Prelude.hashWithSalt` table
 
 instance Prelude.NFData LFResourceDetails where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MemoryDb.Types.RecurringCharge
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MemoryDb.Types.RecurringCharge where
@@ -75,7 +75,8 @@ instance Data.FromJSON RecurringCharge where
 
 instance Prelude.Hashable RecurringCharge where
   hashWithSalt _salt RecurringCharge' {..} =
-    _salt `Prelude.hashWithSalt` recurringChargeAmount
+    _salt
+      `Prelude.hashWithSalt` recurringChargeAmount
       `Prelude.hashWithSalt` recurringChargeFrequency
 
 instance Prelude.NFData RecurringCharge where

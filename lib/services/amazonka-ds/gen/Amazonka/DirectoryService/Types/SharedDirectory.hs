@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.SharedDirectory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.SharedDirectory where
@@ -175,7 +175,8 @@ instance Data.FromJSON SharedDirectory where
 
 instance Prelude.Hashable SharedDirectory where
   hashWithSalt _salt SharedDirectory' {..} =
-    _salt `Prelude.hashWithSalt` createdDateTime
+    _salt
+      `Prelude.hashWithSalt` createdDateTime
       `Prelude.hashWithSalt` lastUpdatedDateTime
       `Prelude.hashWithSalt` ownerAccountId
       `Prelude.hashWithSalt` ownerDirectoryId

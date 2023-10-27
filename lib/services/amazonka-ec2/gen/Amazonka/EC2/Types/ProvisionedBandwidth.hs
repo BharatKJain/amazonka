@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ProvisionedBandwidth
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ProvisionedBandwidth where
@@ -150,7 +150,8 @@ instance Data.FromXML ProvisionedBandwidth where
 
 instance Prelude.Hashable ProvisionedBandwidth where
   hashWithSalt _salt ProvisionedBandwidth' {..} =
-    _salt `Prelude.hashWithSalt` provisionTime
+    _salt
+      `Prelude.hashWithSalt` provisionTime
       `Prelude.hashWithSalt` provisioned
       `Prelude.hashWithSalt` requestTime
       `Prelude.hashWithSalt` requested

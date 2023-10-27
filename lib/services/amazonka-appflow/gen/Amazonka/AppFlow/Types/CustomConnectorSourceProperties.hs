@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.CustomConnectorSourceProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.CustomConnectorSourceProperties where
@@ -78,7 +78,8 @@ instance
       "CustomConnectorSourceProperties"
       ( \x ->
           CustomConnectorSourceProperties'
-            Prelude.<$> ( x Data..:? "customProperties"
+            Prelude.<$> ( x
+                            Data..:? "customProperties"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "entityName")
@@ -91,7 +92,8 @@ instance
   hashWithSalt
     _salt
     CustomConnectorSourceProperties' {..} =
-      _salt `Prelude.hashWithSalt` customProperties
+      _salt
+        `Prelude.hashWithSalt` customProperties
         `Prelude.hashWithSalt` entityName
 
 instance

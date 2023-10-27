@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SNS.SetEndpointAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -143,7 +143,8 @@ instance Core.AWSRequest SetEndpointAttributes where
 
 instance Prelude.Hashable SetEndpointAttributes where
   hashWithSalt _salt SetEndpointAttributes' {..} =
-    _salt `Prelude.hashWithSalt` endpointArn
+    _salt
+      `Prelude.hashWithSalt` endpointArn
       `Prelude.hashWithSalt` attributes
 
 instance Prelude.NFData SetEndpointAttributes where

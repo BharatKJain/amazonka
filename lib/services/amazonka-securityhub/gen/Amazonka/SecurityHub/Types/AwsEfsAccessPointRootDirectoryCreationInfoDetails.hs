@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEfsAccessPointRootDirectoryCreationInfoDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEfsAccessPointRootDirectoryCreationInfoDetails where
@@ -88,8 +88,8 @@ instance
       ( \x ->
           AwsEfsAccessPointRootDirectoryCreationInfoDetails'
             Prelude.<$> (x Data..:? "OwnerGid")
-              Prelude.<*> (x Data..:? "OwnerUid")
-              Prelude.<*> (x Data..:? "Permissions")
+            Prelude.<*> (x Data..:? "OwnerUid")
+            Prelude.<*> (x Data..:? "Permissions")
       )
 
 instance
@@ -99,7 +99,8 @@ instance
   hashWithSalt
     _salt
     AwsEfsAccessPointRootDirectoryCreationInfoDetails' {..} =
-      _salt `Prelude.hashWithSalt` ownerGid
+      _salt
+        `Prelude.hashWithSalt` ownerGid
         `Prelude.hashWithSalt` ownerUid
         `Prelude.hashWithSalt` permissions
 

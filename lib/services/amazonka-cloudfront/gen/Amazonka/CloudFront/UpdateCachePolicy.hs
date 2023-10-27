@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFront.UpdateCachePolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,7 +141,8 @@ instance Core.AWSRequest UpdateCachePolicy where
 
 instance Prelude.Hashable UpdateCachePolicy where
   hashWithSalt _salt UpdateCachePolicy' {..} =
-    _salt `Prelude.hashWithSalt` ifMatch
+    _salt
+      `Prelude.hashWithSalt` ifMatch
       `Prelude.hashWithSalt` cachePolicyConfig
       `Prelude.hashWithSalt` id
 

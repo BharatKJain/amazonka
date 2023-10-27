@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.LastError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.LastError where
@@ -71,7 +71,8 @@ instance Data.FromXML LastError where
 
 instance Prelude.Hashable LastError where
   hashWithSalt _salt LastError' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData LastError where

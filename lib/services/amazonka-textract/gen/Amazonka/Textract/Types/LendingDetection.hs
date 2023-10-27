@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.LendingDetection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.LendingDetection where
@@ -101,7 +101,8 @@ instance Data.FromJSON LendingDetection where
 
 instance Prelude.Hashable LendingDetection where
   hashWithSalt _salt LendingDetection' {..} =
-    _salt `Prelude.hashWithSalt` confidence
+    _salt
+      `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` geometry
       `Prelude.hashWithSalt` selectionStatus
       `Prelude.hashWithSalt` text

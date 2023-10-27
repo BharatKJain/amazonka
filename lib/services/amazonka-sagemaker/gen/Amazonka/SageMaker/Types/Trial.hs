@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.Trial
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.Trial where
@@ -179,7 +179,8 @@ instance Data.FromJSON Trial where
             Prelude.<*> (x Data..:? "Source")
             Prelude.<*> (x Data..:? "Tags" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "TrialArn")
-            Prelude.<*> ( x Data..:? "TrialComponentSummaries"
+            Prelude.<*> ( x
+                            Data..:? "TrialComponentSummaries"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "TrialName")
@@ -187,7 +188,8 @@ instance Data.FromJSON Trial where
 
 instance Prelude.Hashable Trial where
   hashWithSalt _salt Trial' {..} =
-    _salt `Prelude.hashWithSalt` createdBy
+    _salt
+      `Prelude.hashWithSalt` createdBy
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` experimentName

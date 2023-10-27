@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IVS.BatchGetStreamKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,11 +158,9 @@ newBatchGetStreamKeyResponse pHttpStatus_ =
       httpStatus = pHttpStatus_
     }
 
--- |
 batchGetStreamKeyResponse_errors :: Lens.Lens' BatchGetStreamKeyResponse (Prelude.Maybe [BatchError])
 batchGetStreamKeyResponse_errors = Lens.lens (\BatchGetStreamKeyResponse' {errors} -> errors) (\s@BatchGetStreamKeyResponse' {} a -> s {errors = a} :: BatchGetStreamKeyResponse) Prelude.. Lens.mapping Lens.coerced
 
--- |
 batchGetStreamKeyResponse_streamKeys :: Lens.Lens' BatchGetStreamKeyResponse (Prelude.Maybe [StreamKey])
 batchGetStreamKeyResponse_streamKeys = Lens.lens (\BatchGetStreamKeyResponse' {streamKeys} -> streamKeys) (\s@BatchGetStreamKeyResponse' {} a -> s {streamKeys = a} :: BatchGetStreamKeyResponse) Prelude.. Lens.mapping Lens.coerced
 

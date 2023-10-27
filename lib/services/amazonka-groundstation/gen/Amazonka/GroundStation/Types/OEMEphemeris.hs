@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.OEMEphemeris
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.OEMEphemeris where
@@ -68,7 +68,8 @@ oEMEphemeris_s3Object = Lens.lens (\OEMEphemeris' {s3Object} -> s3Object) (\s@OE
 
 instance Prelude.Hashable OEMEphemeris where
   hashWithSalt _salt OEMEphemeris' {..} =
-    _salt `Prelude.hashWithSalt` oemData
+    _salt
+      `Prelude.hashWithSalt` oemData
       `Prelude.hashWithSalt` s3Object
 
 instance Prelude.NFData OEMEphemeris where

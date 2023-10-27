@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.InventoryGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.InventoryGroup where
@@ -80,7 +80,8 @@ inventoryGroup_filters = Lens.lens (\InventoryGroup' {filters} -> filters) (\s@I
 
 instance Prelude.Hashable InventoryGroup where
   hashWithSalt _salt InventoryGroup' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` filters
 
 instance Prelude.NFData InventoryGroup where

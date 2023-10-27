@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudSearch.Types.ExpressionStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudSearch.Types.ExpressionStatus where
@@ -78,7 +78,8 @@ instance Data.FromXML ExpressionStatus where
 
 instance Prelude.Hashable ExpressionStatus where
   hashWithSalt _salt ExpressionStatus' {..} =
-    _salt `Prelude.hashWithSalt` options
+    _salt
+      `Prelude.hashWithSalt` options
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData ExpressionStatus where

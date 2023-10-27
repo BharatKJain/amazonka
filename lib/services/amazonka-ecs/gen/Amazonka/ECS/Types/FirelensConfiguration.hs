@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.FirelensConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.FirelensConfiguration where
@@ -110,7 +110,8 @@ instance Data.FromJSON FirelensConfiguration where
 
 instance Prelude.Hashable FirelensConfiguration where
   hashWithSalt _salt FirelensConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` options
+    _salt
+      `Prelude.hashWithSalt` options
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData FirelensConfiguration where

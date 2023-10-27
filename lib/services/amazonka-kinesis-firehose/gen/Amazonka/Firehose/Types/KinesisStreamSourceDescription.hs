@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.KinesisStreamSourceDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.KinesisStreamSourceDescription where
@@ -106,7 +106,8 @@ instance
   hashWithSalt
     _salt
     KinesisStreamSourceDescription' {..} =
-      _salt `Prelude.hashWithSalt` deliveryStartTimestamp
+      _salt
+        `Prelude.hashWithSalt` deliveryStartTimestamp
         `Prelude.hashWithSalt` kinesisStreamARN
         `Prelude.hashWithSalt` roleARN
 

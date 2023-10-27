@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsNetworkFirewallFirewallDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsNetworkFirewallFirewallDetails where
@@ -183,7 +183,8 @@ instance
   hashWithSalt
     _salt
     AwsNetworkFirewallFirewallDetails' {..} =
-      _salt `Prelude.hashWithSalt` deleteProtection
+      _salt
+        `Prelude.hashWithSalt` deleteProtection
         `Prelude.hashWithSalt` description
         `Prelude.hashWithSalt` firewallArn
         `Prelude.hashWithSalt` firewallId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELB.Types.AdditionalAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELB.Types.AdditionalAttribute where
@@ -87,11 +87,13 @@ additionalAttribute_value = Lens.lens (\AdditionalAttribute' {value} -> value) (
 instance Data.FromXML AdditionalAttribute where
   parseXML x =
     AdditionalAttribute'
-      Prelude.<$> (x Data..@? "Key") Prelude.<*> (x Data..@? "Value")
+      Prelude.<$> (x Data..@? "Key")
+      Prelude.<*> (x Data..@? "Value")
 
 instance Prelude.Hashable AdditionalAttribute where
   hashWithSalt _salt AdditionalAttribute' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData AdditionalAttribute where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodePipeline.PutJobFailureResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -101,7 +101,8 @@ instance Core.AWSRequest PutJobFailureResult where
 
 instance Prelude.Hashable PutJobFailureResult where
   hashWithSalt _salt PutJobFailureResult' {..} =
-    _salt `Prelude.hashWithSalt` jobId
+    _salt
+      `Prelude.hashWithSalt` jobId
       `Prelude.hashWithSalt` failureDetails
 
 instance Prelude.NFData PutJobFailureResult where

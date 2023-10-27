@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ELBV2.DescribeTargetGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,22 +130,22 @@ instance Core.AWSPager DescribeTargetGroups where
     | Core.stop
         ( rs
             Lens.^? describeTargetGroupsResponse_nextMarker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeTargetGroupsResponse_targetGroups
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeTargetGroups_marker
           Lens..~ rs
           Lens.^? describeTargetGroupsResponse_nextMarker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeTargetGroups where
   type
@@ -159,7 +159,9 @@ instance Core.AWSRequest DescribeTargetGroups where
       ( \s h x ->
           DescribeTargetGroupsResponse'
             Prelude.<$> (x Data..@? "NextMarker")
-            Prelude.<*> ( x Data..@? "TargetGroups" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "TargetGroups"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -167,7 +169,8 @@ instance Core.AWSRequest DescribeTargetGroups where
 
 instance Prelude.Hashable DescribeTargetGroups where
   hashWithSalt _salt DescribeTargetGroups' {..} =
-    _salt `Prelude.hashWithSalt` loadBalancerArn
+    _salt
+      `Prelude.hashWithSalt` loadBalancerArn
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` names
       `Prelude.hashWithSalt` pageSize

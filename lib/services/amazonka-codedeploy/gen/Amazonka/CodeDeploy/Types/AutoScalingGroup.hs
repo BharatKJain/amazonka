@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.AutoScalingGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.AutoScalingGroup where
@@ -68,12 +68,14 @@ instance Data.FromJSON AutoScalingGroup where
       "AutoScalingGroup"
       ( \x ->
           AutoScalingGroup'
-            Prelude.<$> (x Data..:? "hook") Prelude.<*> (x Data..:? "name")
+            Prelude.<$> (x Data..:? "hook")
+            Prelude.<*> (x Data..:? "name")
       )
 
 instance Prelude.Hashable AutoScalingGroup where
   hashWithSalt _salt AutoScalingGroup' {..} =
-    _salt `Prelude.hashWithSalt` hook
+    _salt
+      `Prelude.hashWithSalt` hook
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData AutoScalingGroup where

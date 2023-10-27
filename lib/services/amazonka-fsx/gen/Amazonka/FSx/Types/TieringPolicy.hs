@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.TieringPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.TieringPolicy where
@@ -143,7 +143,8 @@ instance Data.FromJSON TieringPolicy where
 
 instance Prelude.Hashable TieringPolicy where
   hashWithSalt _salt TieringPolicy' {..} =
-    _salt `Prelude.hashWithSalt` coolingPeriod
+    _salt
+      `Prelude.hashWithSalt` coolingPeriod
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData TieringPolicy where

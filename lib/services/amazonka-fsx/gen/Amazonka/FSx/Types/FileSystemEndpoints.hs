@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.FileSystemEndpoints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.FileSystemEndpoints where
@@ -84,7 +84,8 @@ instance Data.FromJSON FileSystemEndpoints where
 
 instance Prelude.Hashable FileSystemEndpoints where
   hashWithSalt _salt FileSystemEndpoints' {..} =
-    _salt `Prelude.hashWithSalt` intercluster
+    _salt
+      `Prelude.hashWithSalt` intercluster
       `Prelude.hashWithSalt` management
 
 instance Prelude.NFData FileSystemEndpoints where

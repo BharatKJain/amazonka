@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MachineLearning.Types.S3DataSpec
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MachineLearning.Types.S3DataSpec where
@@ -444,7 +444,8 @@ s3DataSpec_dataLocationS3 = Lens.lens (\S3DataSpec' {dataLocationS3} -> dataLoca
 
 instance Prelude.Hashable S3DataSpec where
   hashWithSalt _salt S3DataSpec' {..} =
-    _salt `Prelude.hashWithSalt` dataRearrangement
+    _salt
+      `Prelude.hashWithSalt` dataRearrangement
       `Prelude.hashWithSalt` dataSchema
       `Prelude.hashWithSalt` dataSchemaLocationS3
       `Prelude.hashWithSalt` dataLocationS3

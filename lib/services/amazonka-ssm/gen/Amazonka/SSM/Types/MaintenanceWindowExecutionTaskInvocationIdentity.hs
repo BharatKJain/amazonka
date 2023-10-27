@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.MaintenanceWindowExecutionTaskInvocationIdentity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.MaintenanceWindowExecutionTaskInvocationIdentity where
@@ -198,17 +198,17 @@ instance
       ( \x ->
           MaintenanceWindowExecutionTaskInvocationIdentity'
             Prelude.<$> (x Data..:? "EndTime")
-              Prelude.<*> (x Data..:? "ExecutionId")
-              Prelude.<*> (x Data..:? "InvocationId")
-              Prelude.<*> (x Data..:? "OwnerInformation")
-              Prelude.<*> (x Data..:? "Parameters")
-              Prelude.<*> (x Data..:? "StartTime")
-              Prelude.<*> (x Data..:? "Status")
-              Prelude.<*> (x Data..:? "StatusDetails")
-              Prelude.<*> (x Data..:? "TaskExecutionId")
-              Prelude.<*> (x Data..:? "TaskType")
-              Prelude.<*> (x Data..:? "WindowExecutionId")
-              Prelude.<*> (x Data..:? "WindowTargetId")
+            Prelude.<*> (x Data..:? "ExecutionId")
+            Prelude.<*> (x Data..:? "InvocationId")
+            Prelude.<*> (x Data..:? "OwnerInformation")
+            Prelude.<*> (x Data..:? "Parameters")
+            Prelude.<*> (x Data..:? "StartTime")
+            Prelude.<*> (x Data..:? "Status")
+            Prelude.<*> (x Data..:? "StatusDetails")
+            Prelude.<*> (x Data..:? "TaskExecutionId")
+            Prelude.<*> (x Data..:? "TaskType")
+            Prelude.<*> (x Data..:? "WindowExecutionId")
+            Prelude.<*> (x Data..:? "WindowTargetId")
       )
 
 instance
@@ -218,7 +218,8 @@ instance
   hashWithSalt
     _salt
     MaintenanceWindowExecutionTaskInvocationIdentity' {..} =
-      _salt `Prelude.hashWithSalt` endTime
+      _salt
+        `Prelude.hashWithSalt` endTime
         `Prelude.hashWithSalt` executionId
         `Prelude.hashWithSalt` invocationId
         `Prelude.hashWithSalt` ownerInformation

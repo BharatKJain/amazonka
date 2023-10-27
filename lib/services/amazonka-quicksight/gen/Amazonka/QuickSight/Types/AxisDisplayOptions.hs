@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.AxisDisplayOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.AxisDisplayOptions where
@@ -122,7 +122,8 @@ instance Data.FromJSON AxisDisplayOptions where
 
 instance Prelude.Hashable AxisDisplayOptions where
   hashWithSalt _salt AxisDisplayOptions' {..} =
-    _salt `Prelude.hashWithSalt` axisLineVisibility
+    _salt
+      `Prelude.hashWithSalt` axisLineVisibility
       `Prelude.hashWithSalt` axisOffset
       `Prelude.hashWithSalt` dataOptions
       `Prelude.hashWithSalt` gridLineVisibility

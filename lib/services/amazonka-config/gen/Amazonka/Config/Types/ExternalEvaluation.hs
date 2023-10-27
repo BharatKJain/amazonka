@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.ExternalEvaluation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.ExternalEvaluation where
@@ -118,7 +118,8 @@ externalEvaluation_orderingTimestamp = Lens.lens (\ExternalEvaluation' {ordering
 
 instance Prelude.Hashable ExternalEvaluation where
   hashWithSalt _salt ExternalEvaluation' {..} =
-    _salt `Prelude.hashWithSalt` annotation
+    _salt
+      `Prelude.hashWithSalt` annotation
       `Prelude.hashWithSalt` complianceResourceType
       `Prelude.hashWithSalt` complianceResourceId
       `Prelude.hashWithSalt` complianceType

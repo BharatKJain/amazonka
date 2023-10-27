@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.TestingData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.TestingData where
@@ -86,7 +86,8 @@ instance Data.FromJSON TestingData where
 
 instance Prelude.Hashable TestingData where
   hashWithSalt _salt TestingData' {..} =
-    _salt `Prelude.hashWithSalt` assets
+    _salt
+      `Prelude.hashWithSalt` assets
       `Prelude.hashWithSalt` autoCreate
 
 instance Prelude.NFData TestingData where

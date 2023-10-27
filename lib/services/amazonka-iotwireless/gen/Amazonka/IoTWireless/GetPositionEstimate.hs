@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTWireless.GetPositionEstimate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -159,7 +159,8 @@ instance Core.AWSRequest GetPositionEstimate where
 
 instance Prelude.Hashable GetPositionEstimate where
   hashWithSalt _salt GetPositionEstimate' {..} =
-    _salt `Prelude.hashWithSalt` cellTowers
+    _salt
+      `Prelude.hashWithSalt` cellTowers
       `Prelude.hashWithSalt` gnss
       `Prelude.hashWithSalt` ip
       `Prelude.hashWithSalt` timestamp

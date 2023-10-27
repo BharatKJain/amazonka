@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppRunner.Types.ObservabilityConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppRunner.Types.ObservabilityConfiguration where
@@ -181,7 +181,8 @@ instance Data.FromJSON ObservabilityConfiguration where
 
 instance Prelude.Hashable ObservabilityConfiguration where
   hashWithSalt _salt ObservabilityConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` deletedAt
       `Prelude.hashWithSalt` latest
       `Prelude.hashWithSalt` observabilityConfigurationArn

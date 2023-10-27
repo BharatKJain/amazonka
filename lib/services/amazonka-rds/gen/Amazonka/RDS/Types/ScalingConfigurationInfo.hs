@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.ScalingConfigurationInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.ScalingConfigurationInfo where
@@ -170,7 +170,8 @@ instance Data.FromXML ScalingConfigurationInfo where
 
 instance Prelude.Hashable ScalingConfigurationInfo where
   hashWithSalt _salt ScalingConfigurationInfo' {..} =
-    _salt `Prelude.hashWithSalt` autoPause
+    _salt
+      `Prelude.hashWithSalt` autoPause
       `Prelude.hashWithSalt` maxCapacity
       `Prelude.hashWithSalt` minCapacity
       `Prelude.hashWithSalt` secondsBeforeTimeout

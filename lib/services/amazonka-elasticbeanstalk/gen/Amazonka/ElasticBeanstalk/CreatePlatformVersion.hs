@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.CreatePlatformVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -168,7 +168,8 @@ instance Core.AWSRequest CreatePlatformVersion where
 
 instance Prelude.Hashable CreatePlatformVersion where
   hashWithSalt _salt CreatePlatformVersion' {..} =
-    _salt `Prelude.hashWithSalt` environmentName
+    _salt
+      `Prelude.hashWithSalt` environmentName
       `Prelude.hashWithSalt` optionSettings
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` platformName

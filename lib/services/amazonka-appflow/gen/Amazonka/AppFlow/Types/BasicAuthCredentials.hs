@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.BasicAuthCredentials
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.BasicAuthCredentials where
@@ -68,7 +68,8 @@ basicAuthCredentials_password = Lens.lens (\BasicAuthCredentials' {password} -> 
 
 instance Prelude.Hashable BasicAuthCredentials where
   hashWithSalt _salt BasicAuthCredentials' {..} =
-    _salt `Prelude.hashWithSalt` username
+    _salt
+      `Prelude.hashWithSalt` username
       `Prelude.hashWithSalt` password
 
 instance Prelude.NFData BasicAuthCredentials where

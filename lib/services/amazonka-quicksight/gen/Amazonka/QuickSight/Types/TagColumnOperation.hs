@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TagColumnOperation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TagColumnOperation where
@@ -85,7 +85,8 @@ instance Data.FromJSON TagColumnOperation where
 
 instance Prelude.Hashable TagColumnOperation where
   hashWithSalt _salt TagColumnOperation' {..} =
-    _salt `Prelude.hashWithSalt` columnName
+    _salt
+      `Prelude.hashWithSalt` columnName
       `Prelude.hashWithSalt` tags
 
 instance Prelude.NFData TagColumnOperation where

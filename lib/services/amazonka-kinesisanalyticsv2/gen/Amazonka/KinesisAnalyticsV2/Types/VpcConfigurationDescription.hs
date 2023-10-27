@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.VpcConfigurationDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.VpcConfigurationDescription where
@@ -120,7 +120,8 @@ instance Data.FromJSON VpcConfigurationDescription where
 
 instance Prelude.Hashable VpcConfigurationDescription where
   hashWithSalt _salt VpcConfigurationDescription' {..} =
-    _salt `Prelude.hashWithSalt` vpcConfigurationId
+    _salt
+      `Prelude.hashWithSalt` vpcConfigurationId
       `Prelude.hashWithSalt` vpcId
       `Prelude.hashWithSalt` subnetIds
       `Prelude.hashWithSalt` securityGroupIds

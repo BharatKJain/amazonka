@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Grafana.Types.PermissionEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Grafana.Types.PermissionEntry where
@@ -75,12 +75,14 @@ instance Data.FromJSON PermissionEntry where
       "PermissionEntry"
       ( \x ->
           PermissionEntry'
-            Prelude.<$> (x Data..: "role") Prelude.<*> (x Data..: "user")
+            Prelude.<$> (x Data..: "role")
+            Prelude.<*> (x Data..: "user")
       )
 
 instance Prelude.Hashable PermissionEntry where
   hashWithSalt _salt PermissionEntry' {..} =
-    _salt `Prelude.hashWithSalt` role'
+    _salt
+      `Prelude.hashWithSalt` role'
       `Prelude.hashWithSalt` user
 
 instance Prelude.NFData PermissionEntry where

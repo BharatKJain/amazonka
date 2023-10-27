@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.IPSetReferenceStatement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.IPSetReferenceStatement where
@@ -107,7 +107,8 @@ instance Data.FromJSON IPSetReferenceStatement where
 
 instance Prelude.Hashable IPSetReferenceStatement where
   hashWithSalt _salt IPSetReferenceStatement' {..} =
-    _salt `Prelude.hashWithSalt` iPSetForwardedIPConfig
+    _salt
+      `Prelude.hashWithSalt` iPSetForwardedIPConfig
       `Prelude.hashWithSalt` arn
 
 instance Prelude.NFData IPSetReferenceStatement where

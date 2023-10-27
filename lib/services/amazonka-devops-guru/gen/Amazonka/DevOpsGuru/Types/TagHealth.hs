@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.TagHealth
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.TagHealth where
@@ -171,7 +171,8 @@ instance Data.FromJSON TagHealth where
 
 instance Prelude.Hashable TagHealth where
   hashWithSalt _salt TagHealth' {..} =
-    _salt `Prelude.hashWithSalt` analyzedResourceCount
+    _salt
+      `Prelude.hashWithSalt` analyzedResourceCount
       `Prelude.hashWithSalt` appBoundaryKey
       `Prelude.hashWithSalt` insight
       `Prelude.hashWithSalt` tagValue

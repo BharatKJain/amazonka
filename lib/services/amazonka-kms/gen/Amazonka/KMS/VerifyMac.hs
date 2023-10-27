@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KMS.VerifyMac
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -178,7 +178,8 @@ newVerifyMac pMessage_ pKeyId_ pMacAlgorithm_ pMac_ =
   VerifyMac'
     { grantTokens = Prelude.Nothing,
       message =
-        Data._Sensitive Prelude.. Data._Base64
+        Data._Sensitive
+          Prelude.. Data._Base64
           Lens.# pMessage_,
       keyId = pKeyId_,
       macAlgorithm = pMacAlgorithm_,
@@ -249,7 +250,8 @@ instance Core.AWSRequest VerifyMac where
 
 instance Prelude.Hashable VerifyMac where
   hashWithSalt _salt VerifyMac' {..} =
-    _salt `Prelude.hashWithSalt` grantTokens
+    _salt
+      `Prelude.hashWithSalt` grantTokens
       `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` keyId
       `Prelude.hashWithSalt` macAlgorithm

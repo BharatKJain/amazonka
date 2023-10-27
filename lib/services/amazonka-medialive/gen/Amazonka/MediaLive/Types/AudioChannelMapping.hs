@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.AudioChannelMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.AudioChannelMapping where
@@ -76,14 +76,16 @@ instance Data.FromJSON AudioChannelMapping where
       ( \x ->
           AudioChannelMapping'
             Prelude.<$> (x Data..: "outputChannel")
-            Prelude.<*> ( x Data..:? "inputChannelLevels"
+            Prelude.<*> ( x
+                            Data..:? "inputChannelLevels"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable AudioChannelMapping where
   hashWithSalt _salt AudioChannelMapping' {..} =
-    _salt `Prelude.hashWithSalt` outputChannel
+    _salt
+      `Prelude.hashWithSalt` outputChannel
       `Prelude.hashWithSalt` inputChannelLevels
 
 instance Prelude.NFData AudioChannelMapping where

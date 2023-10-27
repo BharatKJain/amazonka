@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.RequestCancelExternalWorkflowExecutionFailedEventAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.RequestCancelExternalWorkflowExecutionFailedEventAttributes where
@@ -179,11 +179,11 @@ instance
       ( \x ->
           RequestCancelExternalWorkflowExecutionFailedEventAttributes'
             Prelude.<$> (x Data..:? "control")
-              Prelude.<*> (x Data..:? "runId")
-              Prelude.<*> (x Data..: "workflowId")
-              Prelude.<*> (x Data..: "cause")
-              Prelude.<*> (x Data..: "initiatedEventId")
-              Prelude.<*> (x Data..: "decisionTaskCompletedEventId")
+            Prelude.<*> (x Data..:? "runId")
+            Prelude.<*> (x Data..: "workflowId")
+            Prelude.<*> (x Data..: "cause")
+            Prelude.<*> (x Data..: "initiatedEventId")
+            Prelude.<*> (x Data..: "decisionTaskCompletedEventId")
       )
 
 instance
@@ -193,7 +193,8 @@ instance
   hashWithSalt
     _salt
     RequestCancelExternalWorkflowExecutionFailedEventAttributes' {..} =
-      _salt `Prelude.hashWithSalt` control
+      _salt
+        `Prelude.hashWithSalt` control
         `Prelude.hashWithSalt` runId
         `Prelude.hashWithSalt` workflowId
         `Prelude.hashWithSalt` cause

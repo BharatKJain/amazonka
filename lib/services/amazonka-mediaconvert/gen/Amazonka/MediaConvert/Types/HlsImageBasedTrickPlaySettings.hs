@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.HlsImageBasedTrickPlaySettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.HlsImageBasedTrickPlaySettings where
@@ -167,7 +167,8 @@ instance
   hashWithSalt
     _salt
     HlsImageBasedTrickPlaySettings' {..} =
-      _salt `Prelude.hashWithSalt` intervalCadence
+      _salt
+        `Prelude.hashWithSalt` intervalCadence
         `Prelude.hashWithSalt` thumbnailHeight
         `Prelude.hashWithSalt` thumbnailInterval
         `Prelude.hashWithSalt` thumbnailWidth

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.ThreatDetectedByName
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.ThreatDetectedByName where
@@ -101,7 +101,8 @@ instance Data.FromJSON ThreatDetectedByName where
 
 instance Prelude.Hashable ThreatDetectedByName where
   hashWithSalt _salt ThreatDetectedByName' {..} =
-    _salt `Prelude.hashWithSalt` itemCount
+    _salt
+      `Prelude.hashWithSalt` itemCount
       `Prelude.hashWithSalt` shortened
       `Prelude.hashWithSalt` threatNames
       `Prelude.hashWithSalt` uniqueThreatNameCount

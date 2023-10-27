@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MarketplaceCatalog.Types.ChangeSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MarketplaceCatalog.Types.ChangeSummary where
@@ -105,14 +105,16 @@ instance Data.FromJSON ChangeSummary where
             Prelude.<*> (x Data..:? "ChangeType")
             Prelude.<*> (x Data..:? "Details")
             Prelude.<*> (x Data..:? "Entity")
-            Prelude.<*> ( x Data..:? "ErrorDetailList"
+            Prelude.<*> ( x
+                            Data..:? "ErrorDetailList"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ChangeSummary where
   hashWithSalt _salt ChangeSummary' {..} =
-    _salt `Prelude.hashWithSalt` changeName
+    _salt
+      `Prelude.hashWithSalt` changeName
       `Prelude.hashWithSalt` changeType
       `Prelude.hashWithSalt` details
       `Prelude.hashWithSalt` entity

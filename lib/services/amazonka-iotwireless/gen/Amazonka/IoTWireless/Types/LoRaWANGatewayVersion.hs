@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.LoRaWANGatewayVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.LoRaWANGatewayVersion where
@@ -84,7 +84,8 @@ instance Data.FromJSON LoRaWANGatewayVersion where
 
 instance Prelude.Hashable LoRaWANGatewayVersion where
   hashWithSalt _salt LoRaWANGatewayVersion' {..} =
-    _salt `Prelude.hashWithSalt` model
+    _salt
+      `Prelude.hashWithSalt` model
       `Prelude.hashWithSalt` packageVersion
       `Prelude.hashWithSalt` station
 

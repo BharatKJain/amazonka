@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.ServerSideEncryptionByDefault
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.ServerSideEncryptionByDefault where
@@ -147,7 +147,8 @@ instance
     ServerSideEncryptionByDefault
   where
   hashWithSalt _salt ServerSideEncryptionByDefault' {..} =
-    _salt `Prelude.hashWithSalt` kmsMasterKeyID
+    _salt
+      `Prelude.hashWithSalt` kmsMasterKeyID
       `Prelude.hashWithSalt` sSEAlgorithm
 
 instance Prelude.NFData ServerSideEncryptionByDefault where

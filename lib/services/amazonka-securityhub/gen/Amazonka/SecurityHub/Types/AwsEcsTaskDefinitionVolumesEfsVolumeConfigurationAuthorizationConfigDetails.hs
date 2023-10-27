@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationAuthorizationConfigDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationAuthorizationConfigDetails where
@@ -77,7 +77,7 @@ instance
       ( \x ->
           AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationAuthorizationConfigDetails'
             Prelude.<$> (x Data..:? "AccessPointId")
-              Prelude.<*> (x Data..:? "Iam")
+            Prelude.<*> (x Data..:? "Iam")
       )
 
 instance
@@ -87,7 +87,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationAuthorizationConfigDetails' {..} =
-      _salt `Prelude.hashWithSalt` accessPointId
+      _salt
+        `Prelude.hashWithSalt` accessPointId
         `Prelude.hashWithSalt` iam
 
 instance

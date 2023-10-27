@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FinSpaceData.DeleteDataset
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest DeleteDataset where
 
 instance Prelude.Hashable DeleteDataset where
   hashWithSalt _salt DeleteDataset' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` datasetId
 
 instance Prelude.NFData DeleteDataset where

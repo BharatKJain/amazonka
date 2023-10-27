@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.QueryStringObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.QueryStringObject where
@@ -98,14 +98,16 @@ instance Data.FromJSON QueryStringObject where
       ( \x ->
           QueryStringObject'
             Prelude.<$> (x Data..:? "option")
-            Prelude.<*> ( x Data..:? "queryStringsAllowList"
+            Prelude.<*> ( x
+                            Data..:? "queryStringsAllowList"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable QueryStringObject where
   hashWithSalt _salt QueryStringObject' {..} =
-    _salt `Prelude.hashWithSalt` option
+    _salt
+      `Prelude.hashWithSalt` option
       `Prelude.hashWithSalt` queryStringsAllowList
 
 instance Prelude.NFData QueryStringObject where

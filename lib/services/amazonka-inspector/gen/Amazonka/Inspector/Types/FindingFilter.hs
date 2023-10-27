@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.FindingFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.FindingFilter where
@@ -164,7 +164,8 @@ findingFilter_userAttributes = Lens.lens (\FindingFilter' {userAttributes} -> us
 
 instance Prelude.Hashable FindingFilter where
   hashWithSalt _salt FindingFilter' {..} =
-    _salt `Prelude.hashWithSalt` agentIds
+    _salt
+      `Prelude.hashWithSalt` agentIds
       `Prelude.hashWithSalt` attributes
       `Prelude.hashWithSalt` autoScalingGroups
       `Prelude.hashWithSalt` creationTimeRange

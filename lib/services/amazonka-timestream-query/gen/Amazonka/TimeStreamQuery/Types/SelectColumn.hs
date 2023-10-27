@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamQuery.Types.SelectColumn
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamQuery.Types.SelectColumn where
@@ -104,7 +104,8 @@ instance Data.FromJSON SelectColumn where
 
 instance Prelude.Hashable SelectColumn where
   hashWithSalt _salt SelectColumn' {..} =
-    _salt `Prelude.hashWithSalt` aliased
+    _salt
+      `Prelude.hashWithSalt` aliased
       `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` tableName

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Transfer.DescribeExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest DescribeExecution where
 
 instance Prelude.Hashable DescribeExecution where
   hashWithSalt _salt DescribeExecution' {..} =
-    _salt `Prelude.hashWithSalt` executionId
+    _salt
+      `Prelude.hashWithSalt` executionId
       `Prelude.hashWithSalt` workflowId
 
 instance Prelude.NFData DescribeExecution where

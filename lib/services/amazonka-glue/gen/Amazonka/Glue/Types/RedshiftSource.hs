@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.RedshiftSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.RedshiftSource where
@@ -113,7 +113,8 @@ instance Data.FromJSON RedshiftSource where
 
 instance Prelude.Hashable RedshiftSource where
   hashWithSalt _salt RedshiftSource' {..} =
-    _salt `Prelude.hashWithSalt` redshiftTmpDir
+    _salt
+      `Prelude.hashWithSalt` redshiftTmpDir
       `Prelude.hashWithSalt` tmpDirIAMRole
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` database

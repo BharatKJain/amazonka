@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpsWorks.DescribePermissions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest DescribePermissions where
 
 instance Prelude.Hashable DescribePermissions where
   hashWithSalt _salt DescribePermissions' {..} =
-    _salt `Prelude.hashWithSalt` iamUserArn
+    _salt
+      `Prelude.hashWithSalt` iamUserArn
       `Prelude.hashWithSalt` stackId
 
 instance Prelude.NFData DescribePermissions where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.TagValues
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.TagValues where
@@ -98,7 +98,8 @@ instance Data.FromJSON TagValues where
 
 instance Prelude.Hashable TagValues where
   hashWithSalt _salt TagValues' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` matchOptions
       `Prelude.hashWithSalt` values
 

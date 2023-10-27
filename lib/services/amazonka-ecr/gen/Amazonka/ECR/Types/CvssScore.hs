@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECR.Types.CvssScore
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECR.Types.CvssScore where
@@ -94,7 +94,8 @@ instance Data.FromJSON CvssScore where
 
 instance Prelude.Hashable CvssScore where
   hashWithSalt _salt CvssScore' {..} =
-    _salt `Prelude.hashWithSalt` baseScore
+    _salt
+      `Prelude.hashWithSalt` baseScore
       `Prelude.hashWithSalt` scoringVector
       `Prelude.hashWithSalt` source
       `Prelude.hashWithSalt` version

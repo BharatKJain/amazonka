@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.QuipConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.QuipConfiguration where
@@ -284,11 +284,13 @@ instance Data.FromJSON QuipConfiguration where
             Prelude.<*> (x Data..:? "CrawlAttachments")
             Prelude.<*> (x Data..:? "CrawlChatRooms")
             Prelude.<*> (x Data..:? "CrawlFileComments")
-            Prelude.<*> ( x Data..:? "ExclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "ExclusionPatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "FolderIds" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "InclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "InclusionPatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "MessageFieldMappings")

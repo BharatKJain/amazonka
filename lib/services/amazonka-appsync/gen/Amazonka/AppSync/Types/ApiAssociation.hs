@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.ApiAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.ApiAssociation where
@@ -122,7 +122,8 @@ instance Data.FromJSON ApiAssociation where
 
 instance Prelude.Hashable ApiAssociation where
   hashWithSalt _salt ApiAssociation' {..} =
-    _salt `Prelude.hashWithSalt` apiId
+    _salt
+      `Prelude.hashWithSalt` apiId
       `Prelude.hashWithSalt` associationStatus
       `Prelude.hashWithSalt` deploymentDetail
       `Prelude.hashWithSalt` domainName

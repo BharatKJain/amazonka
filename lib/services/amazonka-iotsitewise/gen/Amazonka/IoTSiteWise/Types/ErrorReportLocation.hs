@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.ErrorReportLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.ErrorReportLocation where
@@ -97,7 +97,8 @@ instance Data.FromJSON ErrorReportLocation where
 
 instance Prelude.Hashable ErrorReportLocation where
   hashWithSalt _salt ErrorReportLocation' {..} =
-    _salt `Prelude.hashWithSalt` bucket
+    _salt
+      `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` prefix
 
 instance Prelude.NFData ErrorReportLocation where

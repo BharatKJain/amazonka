@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaLive.DescribeInputDeviceThumbnail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance
     DescribeInputDeviceThumbnail
   where
   hashWithSalt _salt DescribeInputDeviceThumbnail' {..} =
-    _salt `Prelude.hashWithSalt` inputDeviceId
+    _salt
+      `Prelude.hashWithSalt` inputDeviceId
       `Prelude.hashWithSalt` accept
 
 instance Prelude.NFData DescribeInputDeviceThumbnail where

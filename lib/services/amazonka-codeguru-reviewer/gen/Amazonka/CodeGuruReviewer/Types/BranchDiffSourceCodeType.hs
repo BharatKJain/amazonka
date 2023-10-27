@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.BranchDiffSourceCodeType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.BranchDiffSourceCodeType where
@@ -84,7 +84,8 @@ instance Data.FromJSON BranchDiffSourceCodeType where
 
 instance Prelude.Hashable BranchDiffSourceCodeType where
   hashWithSalt _salt BranchDiffSourceCodeType' {..} =
-    _salt `Prelude.hashWithSalt` sourceBranchName
+    _salt
+      `Prelude.hashWithSalt` sourceBranchName
       `Prelude.hashWithSalt` destinationBranchName
 
 instance Prelude.NFData BranchDiffSourceCodeType where

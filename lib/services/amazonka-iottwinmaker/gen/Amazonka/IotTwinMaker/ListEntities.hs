@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IotTwinMaker.ListEntities
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,7 +127,8 @@ instance Core.AWSRequest ListEntities where
     Response.receiveJSON
       ( \s h x ->
           ListEntitiesResponse'
-            Prelude.<$> ( x Data..?> "entitySummaries"
+            Prelude.<$> ( x
+                            Data..?> "entitySummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -136,7 +137,8 @@ instance Core.AWSRequest ListEntities where
 
 instance Prelude.Hashable ListEntities where
   hashWithSalt _salt ListEntities' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` workspaceId

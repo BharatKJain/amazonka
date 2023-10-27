@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.InputCaptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.InputCaptions where
@@ -135,7 +135,8 @@ instance Data.FromJSON InputCaptions where
 
 instance Prelude.Hashable InputCaptions where
   hashWithSalt _salt InputCaptions' {..} =
-    _salt `Prelude.hashWithSalt` captionSources
+    _salt
+      `Prelude.hashWithSalt` captionSources
       `Prelude.hashWithSalt` mergePolicy
 
 instance Prelude.NFData InputCaptions where

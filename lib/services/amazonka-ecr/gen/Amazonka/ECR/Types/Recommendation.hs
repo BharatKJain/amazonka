@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECR.Types.Recommendation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECR.Types.Recommendation where
@@ -68,12 +68,14 @@ instance Data.FromJSON Recommendation where
       "Recommendation"
       ( \x ->
           Recommendation'
-            Prelude.<$> (x Data..:? "text") Prelude.<*> (x Data..:? "url")
+            Prelude.<$> (x Data..:? "text")
+            Prelude.<*> (x Data..:? "url")
       )
 
 instance Prelude.Hashable Recommendation where
   hashWithSalt _salt Recommendation' {..} =
-    _salt `Prelude.hashWithSalt` text
+    _salt
+      `Prelude.hashWithSalt` text
       `Prelude.hashWithSalt` url
 
 instance Prelude.NFData Recommendation where

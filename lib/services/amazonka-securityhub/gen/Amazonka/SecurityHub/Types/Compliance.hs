@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.Compliance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.Compliance where
@@ -143,7 +143,8 @@ instance Data.FromJSON Compliance where
       "Compliance"
       ( \x ->
           Compliance'
-            Prelude.<$> ( x Data..:? "RelatedRequirements"
+            Prelude.<$> ( x
+                            Data..:? "RelatedRequirements"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Status")
@@ -152,7 +153,8 @@ instance Data.FromJSON Compliance where
 
 instance Prelude.Hashable Compliance where
   hashWithSalt _salt Compliance' {..} =
-    _salt `Prelude.hashWithSalt` relatedRequirements
+    _salt
+      `Prelude.hashWithSalt` relatedRequirements
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` statusReasons
 

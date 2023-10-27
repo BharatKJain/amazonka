@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataExchange.ListDataSetRevisions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,22 +108,22 @@ instance Core.AWSPager ListDataSetRevisions where
     | Core.stop
         ( rs
             Lens.^? listDataSetRevisionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listDataSetRevisionsResponse_revisions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listDataSetRevisions_nextToken
           Lens..~ rs
           Lens.^? listDataSetRevisionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListDataSetRevisions where
   type
@@ -142,7 +142,8 @@ instance Core.AWSRequest ListDataSetRevisions where
 
 instance Prelude.Hashable ListDataSetRevisions where
   hashWithSalt _salt ListDataSetRevisions' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` dataSetId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.RecommendationRelatedEventResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.RecommendationRelatedEventResource where
@@ -79,7 +79,8 @@ instance
       "RecommendationRelatedEventResource"
       ( \x ->
           RecommendationRelatedEventResource'
-            Prelude.<$> (x Data..:? "Name") Prelude.<*> (x Data..:? "Type")
+            Prelude.<$> (x Data..:? "Name")
+            Prelude.<*> (x Data..:? "Type")
       )
 
 instance
@@ -89,7 +90,8 @@ instance
   hashWithSalt
     _salt
     RecommendationRelatedEventResource' {..} =
-      _salt `Prelude.hashWithSalt` name
+      _salt
+        `Prelude.hashWithSalt` name
         `Prelude.hashWithSalt` type'
 
 instance

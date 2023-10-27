@@ -16,7 +16,7 @@
 -- Module      : Amazonka.S3.GetObjectTagging
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,7 +98,7 @@ data GetObjectTagging = GetObjectTagging'
     -- When using this action with Amazon S3 on Outposts, you must direct
     -- requests to the S3 on Outposts hostname. The S3 on Outposts hostname
     -- takes the form
-    -- @ AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com@.
+    -- @ @/@AccessPointName@/@-@/@AccountId@/@.@/@outpostID@/@.s3-outposts.@/@Region@/@.amazonaws.com@.
     -- When using this action with S3 on Outposts through the Amazon Web
     -- Services SDKs, you provide the Outposts bucket ARN in place of the
     -- bucket name. For more information about S3 on Outposts ARNs, see
@@ -141,7 +141,7 @@ data GetObjectTagging = GetObjectTagging'
 -- When using this action with Amazon S3 on Outposts, you must direct
 -- requests to the S3 on Outposts hostname. The S3 on Outposts hostname
 -- takes the form
--- @ AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com@.
+-- @ @/@AccessPointName@/@-@/@AccountId@/@.@/@outpostID@/@.s3-outposts.@/@Region@/@.amazonaws.com@.
 -- When using this action with S3 on Outposts through the Amazon Web
 -- Services SDKs, you provide the Outposts bucket ARN in place of the
 -- bucket name. For more information about S3 on Outposts ARNs, see
@@ -194,7 +194,7 @@ getObjectTagging_versionId = Lens.lens (\GetObjectTagging' {versionId} -> versio
 -- When using this action with Amazon S3 on Outposts, you must direct
 -- requests to the S3 on Outposts hostname. The S3 on Outposts hostname
 -- takes the form
--- @ AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com@.
+-- @ @/@AccessPointName@/@-@/@AccountId@/@.@/@outpostID@/@.s3-outposts.@/@Region@/@.amazonaws.com@.
 -- When using this action with S3 on Outposts through the Amazon Web
 -- Services SDKs, you provide the Outposts bucket ARN in place of the
 -- bucket name. For more information about S3 on Outposts ARNs, see
@@ -220,14 +220,17 @@ instance Core.AWSRequest GetObjectTagging where
           GetObjectTaggingResponse'
             Prelude.<$> (h Data..#? "x-amz-version-id")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..@? "TagSet" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "TagSet"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Data.parseXMLList "Tag"
                         )
       )
 
 instance Prelude.Hashable GetObjectTagging where
   hashWithSalt _salt GetObjectTagging' {..} =
-    _salt `Prelude.hashWithSalt` expectedBucketOwner
+    _salt
+      `Prelude.hashWithSalt` expectedBucketOwner
       `Prelude.hashWithSalt` requestPayer
       `Prelude.hashWithSalt` versionId
       `Prelude.hashWithSalt` bucket

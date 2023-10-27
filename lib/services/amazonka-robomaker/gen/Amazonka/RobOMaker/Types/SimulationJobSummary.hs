@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RobOMaker.Types.SimulationJobSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RobOMaker.Types.SimulationJobSummary where
@@ -129,15 +129,18 @@ instance Data.FromJSON SimulationJobSummary where
           SimulationJobSummary'
             Prelude.<$> (x Data..:? "arn")
             Prelude.<*> (x Data..:? "computeType")
-            Prelude.<*> ( x Data..:? "dataSourceNames"
+            Prelude.<*> ( x
+                            Data..:? "dataSourceNames"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "lastUpdatedAt")
             Prelude.<*> (x Data..:? "name")
-            Prelude.<*> ( x Data..:? "robotApplicationNames"
+            Prelude.<*> ( x
+                            Data..:? "robotApplicationNames"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "simulationApplicationNames"
+            Prelude.<*> ( x
+                            Data..:? "simulationApplicationNames"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "status")
@@ -145,7 +148,8 @@ instance Data.FromJSON SimulationJobSummary where
 
 instance Prelude.Hashable SimulationJobSummary where
   hashWithSalt _salt SimulationJobSummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` computeType
       `Prelude.hashWithSalt` dataSourceNames
       `Prelude.hashWithSalt` lastUpdatedAt

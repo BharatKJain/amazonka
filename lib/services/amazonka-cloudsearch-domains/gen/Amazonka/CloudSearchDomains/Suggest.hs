@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudSearchDomains.Suggest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest Suggest where
 
 instance Prelude.Hashable Suggest where
   hashWithSalt _salt Suggest' {..} =
-    _salt `Prelude.hashWithSalt` size
+    _salt
+      `Prelude.hashWithSalt` size
       `Prelude.hashWithSalt` query
       `Prelude.hashWithSalt` suggester
 

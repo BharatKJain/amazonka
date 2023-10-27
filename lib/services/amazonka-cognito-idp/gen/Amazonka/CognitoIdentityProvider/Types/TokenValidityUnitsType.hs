@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.TokenValidityUnitsType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.TokenValidityUnitsType where
@@ -105,7 +105,8 @@ instance Data.FromJSON TokenValidityUnitsType where
 
 instance Prelude.Hashable TokenValidityUnitsType where
   hashWithSalt _salt TokenValidityUnitsType' {..} =
-    _salt `Prelude.hashWithSalt` accessToken
+    _salt
+      `Prelude.hashWithSalt` accessToken
       `Prelude.hashWithSalt` idToken
       `Prelude.hashWithSalt` refreshToken
 

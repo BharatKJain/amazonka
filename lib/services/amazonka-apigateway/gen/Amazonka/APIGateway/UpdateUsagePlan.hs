@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.UpdateUsagePlan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest UpdateUsagePlan where
 
 instance Prelude.Hashable UpdateUsagePlan where
   hashWithSalt _salt UpdateUsagePlan' {..} =
-    _salt `Prelude.hashWithSalt` patchOperations
+    _salt
+      `Prelude.hashWithSalt` patchOperations
       `Prelude.hashWithSalt` usagePlanId
 
 instance Prelude.NFData UpdateUsagePlan where

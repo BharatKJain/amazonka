@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.PersonDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.PersonDetail where
@@ -92,7 +92,8 @@ instance Data.FromJSON PersonDetail where
 
 instance Prelude.Hashable PersonDetail where
   hashWithSalt _salt PersonDetail' {..} =
-    _salt `Prelude.hashWithSalt` boundingBox
+    _salt
+      `Prelude.hashWithSalt` boundingBox
       `Prelude.hashWithSalt` face
       `Prelude.hashWithSalt` index
 

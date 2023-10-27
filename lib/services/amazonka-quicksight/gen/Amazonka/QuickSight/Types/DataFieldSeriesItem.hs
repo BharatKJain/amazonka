@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DataFieldSeriesItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DataFieldSeriesItem where
@@ -103,7 +103,8 @@ instance Data.FromJSON DataFieldSeriesItem where
 
 instance Prelude.Hashable DataFieldSeriesItem where
   hashWithSalt _salt DataFieldSeriesItem' {..} =
-    _salt `Prelude.hashWithSalt` fieldValue
+    _salt
+      `Prelude.hashWithSalt` fieldValue
       `Prelude.hashWithSalt` settings
       `Prelude.hashWithSalt` fieldId
       `Prelude.hashWithSalt` axisBinding

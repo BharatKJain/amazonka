@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.RenderingError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.RenderingError where
@@ -69,12 +69,14 @@ instance Data.FromJSON RenderingError where
       "RenderingError"
       ( \x ->
           RenderingError'
-            Prelude.<$> (x Data..: "Code") Prelude.<*> (x Data..: "Message")
+            Prelude.<$> (x Data..: "Code")
+            Prelude.<*> (x Data..: "Message")
       )
 
 instance Prelude.Hashable RenderingError where
   hashWithSalt _salt RenderingError' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData RenderingError where

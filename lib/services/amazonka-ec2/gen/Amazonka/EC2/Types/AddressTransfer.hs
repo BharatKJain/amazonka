@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.AddressTransfer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.AddressTransfer where
@@ -127,7 +127,8 @@ instance Data.FromXML AddressTransfer where
 
 instance Prelude.Hashable AddressTransfer where
   hashWithSalt _salt AddressTransfer' {..} =
-    _salt `Prelude.hashWithSalt` addressTransferStatus
+    _salt
+      `Prelude.hashWithSalt` addressTransferStatus
       `Prelude.hashWithSalt` allocationId
       `Prelude.hashWithSalt` publicIp
       `Prelude.hashWithSalt` transferAccountId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.AlgorithmValidationProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.AlgorithmValidationProfile where
@@ -106,7 +106,8 @@ instance Data.FromJSON AlgorithmValidationProfile where
 
 instance Prelude.Hashable AlgorithmValidationProfile where
   hashWithSalt _salt AlgorithmValidationProfile' {..} =
-    _salt `Prelude.hashWithSalt` transformJobDefinition
+    _salt
+      `Prelude.hashWithSalt` transformJobDefinition
       `Prelude.hashWithSalt` profileName
       `Prelude.hashWithSalt` trainingJobDefinition
 

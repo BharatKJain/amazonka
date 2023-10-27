@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsRdsDbPendingModifiedValues
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsRdsDbPendingModifiedValues where
@@ -205,7 +205,8 @@ instance Data.FromJSON AwsRdsDbPendingModifiedValues where
             Prelude.<*> (x Data..:? "MultiAZ")
             Prelude.<*> (x Data..:? "PendingCloudWatchLogsExports")
             Prelude.<*> (x Data..:? "Port")
-            Prelude.<*> ( x Data..:? "ProcessorFeatures"
+            Prelude.<*> ( x
+                            Data..:? "ProcessorFeatures"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "StorageType")
@@ -216,7 +217,8 @@ instance
     AwsRdsDbPendingModifiedValues
   where
   hashWithSalt _salt AwsRdsDbPendingModifiedValues' {..} =
-    _salt `Prelude.hashWithSalt` allocatedStorage
+    _salt
+      `Prelude.hashWithSalt` allocatedStorage
       `Prelude.hashWithSalt` backupRetentionPeriod
       `Prelude.hashWithSalt` caCertificateIdentifier
       `Prelude.hashWithSalt` dbInstanceClass

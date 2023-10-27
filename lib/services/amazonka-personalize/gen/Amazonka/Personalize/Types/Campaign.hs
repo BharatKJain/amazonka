@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.Campaign
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.Campaign where
@@ -178,7 +178,8 @@ instance Data.FromJSON Campaign where
 
 instance Prelude.Hashable Campaign where
   hashWithSalt _salt Campaign' {..} =
-    _salt `Prelude.hashWithSalt` campaignArn
+    _salt
+      `Prelude.hashWithSalt` campaignArn
       `Prelude.hashWithSalt` campaignConfig
       `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` failureReason

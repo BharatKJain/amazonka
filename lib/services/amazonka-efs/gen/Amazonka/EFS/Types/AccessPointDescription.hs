@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EFS.Types.AccessPointDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EFS.Types.AccessPointDescription where
@@ -177,7 +177,8 @@ instance Data.FromJSON AccessPointDescription where
 
 instance Prelude.Hashable AccessPointDescription where
   hashWithSalt _salt AccessPointDescription' {..} =
-    _salt `Prelude.hashWithSalt` accessPointArn
+    _salt
+      `Prelude.hashWithSalt` accessPointArn
       `Prelude.hashWithSalt` accessPointId
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` fileSystemId

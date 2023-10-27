@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.JobUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.JobUpdate where
@@ -487,7 +487,8 @@ jobUpdate_workerType = Lens.lens (\JobUpdate' {workerType} -> workerType) (\s@Jo
 
 instance Prelude.Hashable JobUpdate where
   hashWithSalt _salt JobUpdate' {..} =
-    _salt `Prelude.hashWithSalt` allocatedCapacity
+    _salt
+      `Prelude.hashWithSalt` allocatedCapacity
       `Prelude.hashWithSalt` codeGenConfigurationNodes
       `Prelude.hashWithSalt` command
       `Prelude.hashWithSalt` connections

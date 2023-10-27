@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Backup.CreateBackupSelection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,8 @@ instance Core.AWSRequest CreateBackupSelection where
 
 instance Prelude.Hashable CreateBackupSelection where
   hashWithSalt _salt CreateBackupSelection' {..} =
-    _salt `Prelude.hashWithSalt` creatorRequestId
+    _salt
+      `Prelude.hashWithSalt` creatorRequestId
       `Prelude.hashWithSalt` backupPlanId
       `Prelude.hashWithSalt` backupSelection
 

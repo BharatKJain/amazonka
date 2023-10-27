@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SNS.Types.MessageAttributeValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SNS.Types.MessageAttributeValue where
@@ -112,7 +112,8 @@ messageAttributeValue_dataType = Lens.lens (\MessageAttributeValue' {dataType} -
 
 instance Prelude.Hashable MessageAttributeValue where
   hashWithSalt _salt MessageAttributeValue' {..} =
-    _salt `Prelude.hashWithSalt` binaryValue
+    _salt
+      `Prelude.hashWithSalt` binaryValue
       `Prelude.hashWithSalt` stringValue
       `Prelude.hashWithSalt` dataType
 

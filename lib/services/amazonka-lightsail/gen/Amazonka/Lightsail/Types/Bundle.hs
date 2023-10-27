@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.Bundle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.Bundle where
@@ -184,7 +184,8 @@ instance Data.FromJSON Bundle where
             Prelude.<*> (x Data..:? "power")
             Prelude.<*> (x Data..:? "price")
             Prelude.<*> (x Data..:? "ramSizeInGb")
-            Prelude.<*> ( x Data..:? "supportedPlatforms"
+            Prelude.<*> ( x
+                            Data..:? "supportedPlatforms"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "transferPerMonthInGb")
@@ -192,7 +193,8 @@ instance Data.FromJSON Bundle where
 
 instance Prelude.Hashable Bundle where
   hashWithSalt _salt Bundle' {..} =
-    _salt `Prelude.hashWithSalt` bundleId
+    _salt
+      `Prelude.hashWithSalt` bundleId
       `Prelude.hashWithSalt` cpuCount
       `Prelude.hashWithSalt` diskSizeInGb
       `Prelude.hashWithSalt` instanceType

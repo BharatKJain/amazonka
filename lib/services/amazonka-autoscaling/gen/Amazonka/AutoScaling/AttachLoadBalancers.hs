@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.AttachLoadBalancers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest AttachLoadBalancers where
 
 instance Prelude.Hashable AttachLoadBalancers where
   hashWithSalt _salt AttachLoadBalancers' {..} =
-    _salt `Prelude.hashWithSalt` autoScalingGroupName
+    _salt
+      `Prelude.hashWithSalt` autoScalingGroupName
       `Prelude.hashWithSalt` loadBalancerNames
 
 instance Prelude.NFData AttachLoadBalancers where

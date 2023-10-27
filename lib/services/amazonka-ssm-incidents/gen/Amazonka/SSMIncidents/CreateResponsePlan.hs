@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSMIncidents.CreateResponsePlan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -191,7 +191,8 @@ instance Core.AWSRequest CreateResponsePlan where
 
 instance Prelude.Hashable CreateResponsePlan where
   hashWithSalt _salt CreateResponsePlan' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` chatChannel
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` displayName

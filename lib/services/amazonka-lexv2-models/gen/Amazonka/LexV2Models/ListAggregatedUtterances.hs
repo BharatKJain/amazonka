@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexV2Models.ListAggregatedUtterances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -248,7 +248,8 @@ instance Core.AWSRequest ListAggregatedUtterances where
     Response.receiveJSON
       ( \s h x ->
           ListAggregatedUtterancesResponse'
-            Prelude.<$> ( x Data..?> "aggregatedUtterancesSummaries"
+            Prelude.<$> ( x
+                            Data..?> "aggregatedUtterancesSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "aggregationDuration")
@@ -265,7 +266,8 @@ instance Core.AWSRequest ListAggregatedUtterances where
 
 instance Prelude.Hashable ListAggregatedUtterances where
   hashWithSalt _salt ListAggregatedUtterances' {..} =
-    _salt `Prelude.hashWithSalt` botAliasId
+    _salt
+      `Prelude.hashWithSalt` botAliasId
       `Prelude.hashWithSalt` botVersion
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults

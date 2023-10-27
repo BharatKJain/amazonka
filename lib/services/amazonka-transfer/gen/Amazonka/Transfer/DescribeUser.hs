@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Transfer.DescribeUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,7 +117,8 @@ instance Core.AWSRequest DescribeUser where
 
 instance Prelude.Hashable DescribeUser where
   hashWithSalt _salt DescribeUser' {..} =
-    _salt `Prelude.hashWithSalt` serverId
+    _salt
+      `Prelude.hashWithSalt` serverId
       `Prelude.hashWithSalt` userName
 
 instance Prelude.NFData DescribeUser where

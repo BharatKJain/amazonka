@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.DialogAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.DialogAction where
@@ -91,7 +91,8 @@ instance Data.FromJSON DialogAction where
 
 instance Prelude.Hashable DialogAction where
   hashWithSalt _salt DialogAction' {..} =
-    _salt `Prelude.hashWithSalt` slotToElicit
+    _salt
+      `Prelude.hashWithSalt` slotToElicit
       `Prelude.hashWithSalt` suppressNextMessage
       `Prelude.hashWithSalt` type'
 

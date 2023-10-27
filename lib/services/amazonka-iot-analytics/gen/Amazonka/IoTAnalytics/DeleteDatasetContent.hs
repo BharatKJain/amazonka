@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTAnalytics.DeleteDatasetContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,7 +102,8 @@ instance Core.AWSRequest DeleteDatasetContent where
 
 instance Prelude.Hashable DeleteDatasetContent where
   hashWithSalt _salt DeleteDatasetContent' {..} =
-    _salt `Prelude.hashWithSalt` versionId
+    _salt
+      `Prelude.hashWithSalt` versionId
       `Prelude.hashWithSalt` datasetName
 
 instance Prelude.NFData DeleteDatasetContent where

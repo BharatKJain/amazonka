@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSDKMessaging.Types.LambdaConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSDKMessaging.Types.LambdaConfiguration where
@@ -79,7 +79,8 @@ instance Data.FromJSON LambdaConfiguration where
 
 instance Prelude.Hashable LambdaConfiguration where
   hashWithSalt _salt LambdaConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` resourceArn
+    _salt
+      `Prelude.hashWithSalt` resourceArn
       `Prelude.hashWithSalt` invocationType
 
 instance Prelude.NFData LambdaConfiguration where

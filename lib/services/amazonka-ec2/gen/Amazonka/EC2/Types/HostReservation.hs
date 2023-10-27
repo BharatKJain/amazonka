@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.HostReservation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.HostReservation where
@@ -198,7 +198,9 @@ instance Data.FromXML HostReservation where
       Prelude.<*> (x Data..@? "currencyCode")
       Prelude.<*> (x Data..@? "duration")
       Prelude.<*> (x Data..@? "end")
-      Prelude.<*> ( x Data..@? "hostIdSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "hostIdSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "hostReservationId")
@@ -208,14 +210,17 @@ instance Data.FromXML HostReservation where
       Prelude.<*> (x Data..@? "paymentOption")
       Prelude.<*> (x Data..@? "start")
       Prelude.<*> (x Data..@? "state")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "upfrontPrice")
 
 instance Prelude.Hashable HostReservation where
   hashWithSalt _salt HostReservation' {..} =
-    _salt `Prelude.hashWithSalt` count
+    _salt
+      `Prelude.hashWithSalt` count
       `Prelude.hashWithSalt` currencyCode
       `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` end

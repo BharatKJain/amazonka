@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.UpdateMethod
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest UpdateMethod where
 
 instance Prelude.Hashable UpdateMethod where
   hashWithSalt _salt UpdateMethod' {..} =
-    _salt `Prelude.hashWithSalt` patchOperations
+    _salt
+      `Prelude.hashWithSalt` patchOperations
       `Prelude.hashWithSalt` restApiId
       `Prelude.hashWithSalt` resourceId
       `Prelude.hashWithSalt` httpMethod

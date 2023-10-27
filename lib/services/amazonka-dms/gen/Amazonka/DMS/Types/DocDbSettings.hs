@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.DocDbSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.DocDbSettings where
@@ -255,7 +255,8 @@ instance Data.FromJSON DocDbSettings where
 
 instance Prelude.Hashable DocDbSettings where
   hashWithSalt _salt DocDbSettings' {..} =
-    _salt `Prelude.hashWithSalt` databaseName
+    _salt
+      `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` docsToInvestigate
       `Prelude.hashWithSalt` extractDocId
       `Prelude.hashWithSalt` kmsKeyId

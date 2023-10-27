@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.GitHubConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.GitHubConfiguration where
@@ -545,13 +545,16 @@ instance Data.FromJSON GitHubConfiguration where
       "GitHubConfiguration"
       ( \x ->
           GitHubConfiguration'
-            Prelude.<$> ( x Data..:? "ExclusionFileNamePatterns"
+            Prelude.<$> ( x
+                            Data..:? "ExclusionFileNamePatterns"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "ExclusionFileTypePatterns"
+            Prelude.<*> ( x
+                            Data..:? "ExclusionFileTypePatterns"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "ExclusionFolderNamePatterns"
+            Prelude.<*> ( x
+                            Data..:? "ExclusionFolderNamePatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "GitHubCommitConfigurationFieldMappings")
@@ -577,17 +580,21 @@ instance Data.FromJSON GitHubConfiguration where
             Prelude.<*> ( x
                             Data..:? "GitHubRepositoryConfigurationFieldMappings"
                         )
-            Prelude.<*> ( x Data..:? "InclusionFileNamePatterns"
+            Prelude.<*> ( x
+                            Data..:? "InclusionFileNamePatterns"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "InclusionFileTypePatterns"
+            Prelude.<*> ( x
+                            Data..:? "InclusionFileTypePatterns"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "InclusionFolderNamePatterns"
+            Prelude.<*> ( x
+                            Data..:? "InclusionFolderNamePatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "OnPremiseConfiguration")
-            Prelude.<*> ( x Data..:? "RepositoryFilter"
+            Prelude.<*> ( x
+                            Data..:? "RepositoryFilter"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SaaSConfiguration")

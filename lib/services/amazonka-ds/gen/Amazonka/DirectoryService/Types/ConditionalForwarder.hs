@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.ConditionalForwarder
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.ConditionalForwarder where
@@ -102,7 +102,8 @@ instance Data.FromJSON ConditionalForwarder where
 
 instance Prelude.Hashable ConditionalForwarder where
   hashWithSalt _salt ConditionalForwarder' {..} =
-    _salt `Prelude.hashWithSalt` dnsIpAddrs
+    _salt
+      `Prelude.hashWithSalt` dnsIpAddrs
       `Prelude.hashWithSalt` remoteDomainName
       `Prelude.hashWithSalt` replicationScope
 

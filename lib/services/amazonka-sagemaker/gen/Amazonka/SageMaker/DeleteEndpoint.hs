@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.DeleteEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -32,7 +32,8 @@
 -- associated endpoint resources such as KMS key grants. You might still
 -- see these resources in your account for a few minutes after deleting
 -- your endpoint. Do not delete or revoke the permissions for your
--- @ ExecutionRoleArn @, otherwise SageMaker cannot delete these resources.
+-- @ @<https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateModel.html#sagemaker-CreateModel-request-ExecutionRoleArn ExecutionRoleArn>@ @,
+-- otherwise SageMaker cannot delete these resources.
 module Amazonka.SageMaker.DeleteEndpoint
   ( -- * Creating a Request
     DeleteEndpoint (..),

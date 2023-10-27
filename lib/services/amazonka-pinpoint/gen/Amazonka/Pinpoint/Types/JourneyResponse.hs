@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.JourneyResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.JourneyResponse where
@@ -433,7 +433,8 @@ instance Data.FromJSON JourneyResponse where
 
 instance Prelude.Hashable JourneyResponse where
   hashWithSalt _salt JourneyResponse' {..} =
-    _salt `Prelude.hashWithSalt` activities
+    _salt
+      `Prelude.hashWithSalt` activities
       `Prelude.hashWithSalt` closedDays
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` journeyChannelSettings

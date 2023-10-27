@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDBStreams.Types.Identity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDBStreams.Types.Identity where
@@ -78,7 +78,8 @@ instance Data.FromJSON Identity where
 
 instance Prelude.Hashable Identity where
   hashWithSalt _salt Identity' {..} =
-    _salt `Prelude.hashWithSalt` principalId
+    _salt
+      `Prelude.hashWithSalt` principalId
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData Identity where

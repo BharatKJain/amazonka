@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QLDBSession.Types.FetchPageResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QLDBSession.Types.FetchPageResult where
@@ -87,7 +87,8 @@ instance Data.FromJSON FetchPageResult where
 
 instance Prelude.Hashable FetchPageResult where
   hashWithSalt _salt FetchPageResult' {..} =
-    _salt `Prelude.hashWithSalt` consumedIOs
+    _salt
+      `Prelude.hashWithSalt` consumedIOs
       `Prelude.hashWithSalt` page
       `Prelude.hashWithSalt` timingInformation
 

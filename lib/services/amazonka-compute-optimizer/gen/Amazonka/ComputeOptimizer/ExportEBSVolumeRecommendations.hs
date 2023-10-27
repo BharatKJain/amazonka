@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ComputeOptimizer.ExportEBSVolumeRecommendations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -271,7 +271,8 @@ instance
   hashWithSalt
     _salt
     ExportEBSVolumeRecommendations' {..} =
-      _salt `Prelude.hashWithSalt` accountIds
+      _salt
+        `Prelude.hashWithSalt` accountIds
         `Prelude.hashWithSalt` fieldsToExport
         `Prelude.hashWithSalt` fileFormat
         `Prelude.hashWithSalt` filters

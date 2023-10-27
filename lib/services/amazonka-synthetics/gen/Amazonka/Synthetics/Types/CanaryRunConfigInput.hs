@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Synthetics.Types.CanaryRunConfigInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Synthetics.Types.CanaryRunConfigInput where
@@ -161,7 +161,8 @@ canaryRunConfigInput_timeoutInSeconds = Lens.lens (\CanaryRunConfigInput' {timeo
 
 instance Prelude.Hashable CanaryRunConfigInput where
   hashWithSalt _salt CanaryRunConfigInput' {..} =
-    _salt `Prelude.hashWithSalt` activeTracing
+    _salt
+      `Prelude.hashWithSalt` activeTracing
       `Prelude.hashWithSalt` environmentVariables
       `Prelude.hashWithSalt` memoryInMB
       `Prelude.hashWithSalt` timeoutInSeconds

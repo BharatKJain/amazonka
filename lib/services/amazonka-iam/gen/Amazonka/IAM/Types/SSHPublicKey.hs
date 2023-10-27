@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.SSHPublicKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.SSHPublicKey where
@@ -141,7 +141,8 @@ instance Data.FromXML SSHPublicKey where
 
 instance Prelude.Hashable SSHPublicKey where
   hashWithSalt _salt SSHPublicKey' {..} =
-    _salt `Prelude.hashWithSalt` uploadDate
+    _salt
+      `Prelude.hashWithSalt` uploadDate
       `Prelude.hashWithSalt` userName
       `Prelude.hashWithSalt` sSHPublicKeyId
       `Prelude.hashWithSalt` fingerprint

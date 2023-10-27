@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FIS.Types.TargetResourceTypeSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FIS.Types.TargetResourceTypeSummary where
@@ -75,7 +75,8 @@ instance Data.FromJSON TargetResourceTypeSummary where
 
 instance Prelude.Hashable TargetResourceTypeSummary where
   hashWithSalt _salt TargetResourceTypeSummary' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` resourceType
 
 instance Prelude.NFData TargetResourceTypeSummary where

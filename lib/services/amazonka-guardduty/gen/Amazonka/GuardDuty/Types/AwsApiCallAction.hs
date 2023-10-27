@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.AwsApiCallAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.AwsApiCallAction where
@@ -144,7 +144,8 @@ instance Data.FromJSON AwsApiCallAction where
       "AwsApiCallAction"
       ( \x ->
           AwsApiCallAction'
-            Prelude.<$> ( x Data..:? "affectedResources"
+            Prelude.<$> ( x
+                            Data..:? "affectedResources"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "api")
@@ -159,7 +160,8 @@ instance Data.FromJSON AwsApiCallAction where
 
 instance Prelude.Hashable AwsApiCallAction where
   hashWithSalt _salt AwsApiCallAction' {..} =
-    _salt `Prelude.hashWithSalt` affectedResources
+    _salt
+      `Prelude.hashWithSalt` affectedResources
       `Prelude.hashWithSalt` api
       `Prelude.hashWithSalt` callerType
       `Prelude.hashWithSalt` domainDetails

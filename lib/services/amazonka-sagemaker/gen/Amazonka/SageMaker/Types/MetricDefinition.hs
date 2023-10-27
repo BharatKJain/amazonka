@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.MetricDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.MetricDefinition where
@@ -81,12 +81,14 @@ instance Data.FromJSON MetricDefinition where
       "MetricDefinition"
       ( \x ->
           MetricDefinition'
-            Prelude.<$> (x Data..: "Name") Prelude.<*> (x Data..: "Regex")
+            Prelude.<$> (x Data..: "Name")
+            Prelude.<*> (x Data..: "Regex")
       )
 
 instance Prelude.Hashable MetricDefinition where
   hashWithSalt _salt MetricDefinition' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` regex
 
 instance Prelude.NFData MetricDefinition where

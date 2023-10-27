@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PinpointSMSVoice.Types.EventDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PinpointSMSVoice.Types.EventDestination where
@@ -114,7 +114,8 @@ instance Data.FromJSON EventDestination where
             Prelude.<$> (x Data..:? "CloudWatchLogsDestination")
             Prelude.<*> (x Data..:? "Enabled")
             Prelude.<*> (x Data..:? "KinesisFirehoseDestination")
-            Prelude.<*> ( x Data..:? "MatchingEventTypes"
+            Prelude.<*> ( x
+                            Data..:? "MatchingEventTypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Name")

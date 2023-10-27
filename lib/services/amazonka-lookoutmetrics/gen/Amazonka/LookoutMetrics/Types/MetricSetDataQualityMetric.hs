@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.MetricSetDataQualityMetric
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.MetricSetDataQualityMetric where
@@ -74,7 +74,8 @@ instance Data.FromJSON MetricSetDataQualityMetric where
       "MetricSetDataQualityMetric"
       ( \x ->
           MetricSetDataQualityMetric'
-            Prelude.<$> ( x Data..:? "DataQualityMetricList"
+            Prelude.<$> ( x
+                            Data..:? "DataQualityMetricList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "MetricSetArn")
@@ -82,7 +83,8 @@ instance Data.FromJSON MetricSetDataQualityMetric where
 
 instance Prelude.Hashable MetricSetDataQualityMetric where
   hashWithSalt _salt MetricSetDataQualityMetric' {..} =
-    _salt `Prelude.hashWithSalt` dataQualityMetricList
+    _salt
+      `Prelude.hashWithSalt` dataQualityMetricList
       `Prelude.hashWithSalt` metricSetArn
 
 instance Prelude.NFData MetricSetDataQualityMetric where

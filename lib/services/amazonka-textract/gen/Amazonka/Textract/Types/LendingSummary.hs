@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.LendingSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.LendingSummary where
@@ -71,14 +71,16 @@ instance Data.FromJSON LendingSummary where
       ( \x ->
           LendingSummary'
             Prelude.<$> (x Data..:? "DocumentGroups" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "UndetectedDocumentTypes"
+            Prelude.<*> ( x
+                            Data..:? "UndetectedDocumentTypes"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable LendingSummary where
   hashWithSalt _salt LendingSummary' {..} =
-    _salt `Prelude.hashWithSalt` documentGroups
+    _salt
+      `Prelude.hashWithSalt` documentGroups
       `Prelude.hashWithSalt` undetectedDocumentTypes
 
 instance Prelude.NFData LendingSummary where

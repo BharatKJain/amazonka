@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyBackend.Types.BackendAPIAuthType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyBackend.Types.BackendAPIAuthType where
@@ -76,7 +76,8 @@ instance Data.FromJSON BackendAPIAuthType where
 
 instance Prelude.Hashable BackendAPIAuthType where
   hashWithSalt _salt BackendAPIAuthType' {..} =
-    _salt `Prelude.hashWithSalt` mode
+    _salt
+      `Prelude.hashWithSalt` mode
       `Prelude.hashWithSalt` settings
 
 instance Prelude.NFData BackendAPIAuthType where

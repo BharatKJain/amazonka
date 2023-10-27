@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsCloudWatchAlarmDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsCloudWatchAlarmDetails where
@@ -346,7 +346,8 @@ instance Data.FromJSON AwsCloudWatchAlarmDetails where
             Prelude.<*> (x Data..:? "EvaluateLowSampleCountPercentile")
             Prelude.<*> (x Data..:? "EvaluationPeriods")
             Prelude.<*> (x Data..:? "ExtendedStatistic")
-            Prelude.<*> ( x Data..:? "InsufficientDataActions"
+            Prelude.<*> ( x
+                            Data..:? "InsufficientDataActions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "MetricName")
@@ -362,7 +363,8 @@ instance Data.FromJSON AwsCloudWatchAlarmDetails where
 
 instance Prelude.Hashable AwsCloudWatchAlarmDetails where
   hashWithSalt _salt AwsCloudWatchAlarmDetails' {..} =
-    _salt `Prelude.hashWithSalt` actionsEnabled
+    _salt
+      `Prelude.hashWithSalt` actionsEnabled
       `Prelude.hashWithSalt` alarmActions
       `Prelude.hashWithSalt` alarmArn
       `Prelude.hashWithSalt` alarmConfigurationUpdatedTimestamp

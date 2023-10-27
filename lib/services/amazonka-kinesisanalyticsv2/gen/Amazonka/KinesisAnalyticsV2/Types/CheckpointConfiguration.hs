@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.CheckpointConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.CheckpointConfiguration where
@@ -193,7 +193,8 @@ checkpointConfiguration_configurationType = Lens.lens (\CheckpointConfiguration'
 
 instance Prelude.Hashable CheckpointConfiguration where
   hashWithSalt _salt CheckpointConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` checkpointInterval
+    _salt
+      `Prelude.hashWithSalt` checkpointInterval
       `Prelude.hashWithSalt` checkpointingEnabled
       `Prelude.hashWithSalt` minPauseBetweenCheckpoints
       `Prelude.hashWithSalt` configurationType

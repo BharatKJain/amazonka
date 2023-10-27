@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSdkMediaPipelines.Types.CompositedVideoArtifactsConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSdkMediaPipelines.Types.CompositedVideoArtifactsConfiguration where
@@ -103,7 +103,8 @@ instance
   hashWithSalt
     _salt
     CompositedVideoArtifactsConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` layout
+      _salt
+        `Prelude.hashWithSalt` layout
         `Prelude.hashWithSalt` resolution
         `Prelude.hashWithSalt` gridViewConfiguration
 

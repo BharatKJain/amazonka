@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.S3ReferenceDataSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.S3ReferenceDataSource where
@@ -98,7 +98,8 @@ s3ReferenceDataSource_referenceRoleARN = Lens.lens (\S3ReferenceDataSource' {ref
 
 instance Prelude.Hashable S3ReferenceDataSource where
   hashWithSalt _salt S3ReferenceDataSource' {..} =
-    _salt `Prelude.hashWithSalt` bucketARN
+    _salt
+      `Prelude.hashWithSalt` bucketARN
       `Prelude.hashWithSalt` fileKey
       `Prelude.hashWithSalt` referenceRoleARN
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecurityHub.CreateFindingAggregator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -200,7 +200,8 @@ instance Core.AWSRequest CreateFindingAggregator where
 
 instance Prelude.Hashable CreateFindingAggregator where
   hashWithSalt _salt CreateFindingAggregator' {..} =
-    _salt `Prelude.hashWithSalt` regions
+    _salt
+      `Prelude.hashWithSalt` regions
       `Prelude.hashWithSalt` regionLinkingMode
 
 instance Prelude.NFData CreateFindingAggregator where

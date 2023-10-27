@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.NullValueField
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.NullValueField where
@@ -80,7 +80,8 @@ instance Data.FromJSON NullValueField where
 
 instance Prelude.Hashable NullValueField where
   hashWithSalt _salt NullValueField' {..} =
-    _salt `Prelude.hashWithSalt` value
+    _salt
+      `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` datatype
 
 instance Prelude.NFData NullValueField where

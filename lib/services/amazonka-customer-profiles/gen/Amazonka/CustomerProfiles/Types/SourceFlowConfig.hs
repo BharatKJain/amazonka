@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CustomerProfiles.Types.SourceFlowConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CustomerProfiles.Types.SourceFlowConfig where
@@ -106,7 +106,8 @@ sourceFlowConfig_sourceConnectorProperties = Lens.lens (\SourceFlowConfig' {sour
 
 instance Prelude.Hashable SourceFlowConfig where
   hashWithSalt _salt SourceFlowConfig' {..} =
-    _salt `Prelude.hashWithSalt` connectorProfileName
+    _salt
+      `Prelude.hashWithSalt` connectorProfileName
       `Prelude.hashWithSalt` incrementalPullConfig
       `Prelude.hashWithSalt` connectorType
       `Prelude.hashWithSalt` sourceConnectorProperties

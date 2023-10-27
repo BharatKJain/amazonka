@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.HistogramConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.HistogramConfiguration where
@@ -142,7 +142,8 @@ instance Data.FromJSON HistogramConfiguration where
 
 instance Prelude.Hashable HistogramConfiguration where
   hashWithSalt _salt HistogramConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` binOptions
+    _salt
+      `Prelude.hashWithSalt` binOptions
       `Prelude.hashWithSalt` dataLabels
       `Prelude.hashWithSalt` fieldWells
       `Prelude.hashWithSalt` tooltip

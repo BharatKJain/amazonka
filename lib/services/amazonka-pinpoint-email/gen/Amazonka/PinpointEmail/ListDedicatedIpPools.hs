@@ -16,7 +16,7 @@
 -- Module      : Amazonka.PinpointEmail.ListDedicatedIpPools
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,22 +107,22 @@ instance Core.AWSPager ListDedicatedIpPools where
     | Core.stop
         ( rs
             Lens.^? listDedicatedIpPoolsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listDedicatedIpPoolsResponse_dedicatedIpPools
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listDedicatedIpPools_nextToken
           Lens..~ rs
           Lens.^? listDedicatedIpPoolsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListDedicatedIpPools where
   type
@@ -134,7 +134,8 @@ instance Core.AWSRequest ListDedicatedIpPools where
     Response.receiveJSON
       ( \s h x ->
           ListDedicatedIpPoolsResponse'
-            Prelude.<$> ( x Data..?> "DedicatedIpPools"
+            Prelude.<$> ( x
+                            Data..?> "DedicatedIpPools"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -143,7 +144,8 @@ instance Core.AWSRequest ListDedicatedIpPools where
 
 instance Prelude.Hashable ListDedicatedIpPools where
   hashWithSalt _salt ListDedicatedIpPools' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` pageSize
 
 instance Prelude.NFData ListDedicatedIpPools where

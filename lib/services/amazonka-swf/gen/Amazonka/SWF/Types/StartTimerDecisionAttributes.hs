@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.StartTimerDecisionAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.StartTimerDecisionAttributes where
@@ -130,7 +130,8 @@ instance
     StartTimerDecisionAttributes
   where
   hashWithSalt _salt StartTimerDecisionAttributes' {..} =
-    _salt `Prelude.hashWithSalt` control
+    _salt
+      `Prelude.hashWithSalt` control
       `Prelude.hashWithSalt` timerId
       `Prelude.hashWithSalt` startToFireTimeout
 

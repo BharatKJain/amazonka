@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KeySpaces.Types.SchemaDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KeySpaces.Types.SchemaDefinition where
@@ -105,7 +105,8 @@ instance Data.FromJSON SchemaDefinition where
 
 instance Prelude.Hashable SchemaDefinition where
   hashWithSalt _salt SchemaDefinition' {..} =
-    _salt `Prelude.hashWithSalt` clusteringKeys
+    _salt
+      `Prelude.hashWithSalt` clusteringKeys
       `Prelude.hashWithSalt` staticColumns
       `Prelude.hashWithSalt` allColumns
       `Prelude.hashWithSalt` partitionKeys

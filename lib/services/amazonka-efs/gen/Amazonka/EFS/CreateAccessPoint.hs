@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EFS.CreateAccessPoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -206,7 +206,8 @@ instance Core.AWSRequest CreateAccessPoint where
 
 instance Prelude.Hashable CreateAccessPoint where
   hashWithSalt _salt CreateAccessPoint' {..} =
-    _salt `Prelude.hashWithSalt` posixUser
+    _salt
+      `Prelude.hashWithSalt` posixUser
       `Prelude.hashWithSalt` rootDirectory
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` clientToken

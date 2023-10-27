@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.NetworkResourceCount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.NetworkResourceCount where
@@ -74,7 +74,8 @@ instance Data.FromJSON NetworkResourceCount where
 
 instance Prelude.Hashable NetworkResourceCount where
   hashWithSalt _salt NetworkResourceCount' {..} =
-    _salt `Prelude.hashWithSalt` count
+    _salt
+      `Prelude.hashWithSalt` count
       `Prelude.hashWithSalt` resourceType
 
 instance Prelude.NFData NetworkResourceCount where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Evidently.UpdateProject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -146,7 +146,8 @@ instance Core.AWSRequest UpdateProject where
 
 instance Prelude.Hashable UpdateProject where
   hashWithSalt _salt UpdateProject' {..} =
-    _salt `Prelude.hashWithSalt` appConfigResource
+    _salt
+      `Prelude.hashWithSalt` appConfigResource
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` project
 

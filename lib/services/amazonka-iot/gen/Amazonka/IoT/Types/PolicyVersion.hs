@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.PolicyVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.PolicyVersion where
@@ -84,7 +84,8 @@ instance Data.FromJSON PolicyVersion where
 
 instance Prelude.Hashable PolicyVersion where
   hashWithSalt _salt PolicyVersion' {..} =
-    _salt `Prelude.hashWithSalt` createDate
+    _salt
+      `Prelude.hashWithSalt` createDate
       `Prelude.hashWithSalt` isDefaultVersion
       `Prelude.hashWithSalt` versionId
 

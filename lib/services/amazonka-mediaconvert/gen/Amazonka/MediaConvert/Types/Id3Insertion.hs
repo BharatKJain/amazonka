@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.Id3Insertion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.Id3Insertion where
@@ -81,7 +81,8 @@ instance Data.FromJSON Id3Insertion where
 
 instance Prelude.Hashable Id3Insertion where
   hashWithSalt _salt Id3Insertion' {..} =
-    _salt `Prelude.hashWithSalt` id3
+    _salt
+      `Prelude.hashWithSalt` id3
       `Prelude.hashWithSalt` timecode
 
 instance Prelude.NFData Id3Insertion where

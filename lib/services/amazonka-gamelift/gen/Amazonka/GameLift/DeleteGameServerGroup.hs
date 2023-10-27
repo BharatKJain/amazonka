@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.DeleteGameServerGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -169,7 +169,8 @@ instance Core.AWSRequest DeleteGameServerGroup where
 
 instance Prelude.Hashable DeleteGameServerGroup where
   hashWithSalt _salt DeleteGameServerGroup' {..} =
-    _salt `Prelude.hashWithSalt` deleteOption
+    _salt
+      `Prelude.hashWithSalt` deleteOption
       `Prelude.hashWithSalt` gameServerGroupName
 
 instance Prelude.NFData DeleteGameServerGroup where

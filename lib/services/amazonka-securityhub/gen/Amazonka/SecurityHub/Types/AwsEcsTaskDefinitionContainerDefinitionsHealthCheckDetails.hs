@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails where
@@ -120,10 +120,10 @@ instance
       ( \x ->
           AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails'
             Prelude.<$> (x Data..:? "Command" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "Interval")
-              Prelude.<*> (x Data..:? "Retries")
-              Prelude.<*> (x Data..:? "StartPeriod")
-              Prelude.<*> (x Data..:? "Timeout")
+            Prelude.<*> (x Data..:? "Interval")
+            Prelude.<*> (x Data..:? "Retries")
+            Prelude.<*> (x Data..:? "StartPeriod")
+            Prelude.<*> (x Data..:? "Timeout")
       )
 
 instance
@@ -133,7 +133,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails' {..} =
-      _salt `Prelude.hashWithSalt` command
+      _salt
+        `Prelude.hashWithSalt` command
         `Prelude.hashWithSalt` interval
         `Prelude.hashWithSalt` retries
         `Prelude.hashWithSalt` startPeriod

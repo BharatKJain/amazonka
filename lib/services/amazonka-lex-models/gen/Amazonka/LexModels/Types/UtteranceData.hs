@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexModels.Types.UtteranceData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexModels.Types.UtteranceData where
@@ -107,7 +107,8 @@ instance Data.FromJSON UtteranceData where
 
 instance Prelude.Hashable UtteranceData where
   hashWithSalt _salt UtteranceData' {..} =
-    _salt `Prelude.hashWithSalt` count
+    _salt
+      `Prelude.hashWithSalt` count
       `Prelude.hashWithSalt` distinctUsers
       `Prelude.hashWithSalt` firstUtteredDate
       `Prelude.hashWithSalt` lastUtteredDate

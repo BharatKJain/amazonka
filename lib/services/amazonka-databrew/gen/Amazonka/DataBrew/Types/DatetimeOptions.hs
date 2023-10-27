@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.DatetimeOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.DatetimeOptions where
@@ -105,7 +105,8 @@ instance Data.FromJSON DatetimeOptions where
 
 instance Prelude.Hashable DatetimeOptions where
   hashWithSalt _salt DatetimeOptions' {..} =
-    _salt `Prelude.hashWithSalt` localeCode
+    _salt
+      `Prelude.hashWithSalt` localeCode
       `Prelude.hashWithSalt` timezoneOffset
       `Prelude.hashWithSalt` format
 

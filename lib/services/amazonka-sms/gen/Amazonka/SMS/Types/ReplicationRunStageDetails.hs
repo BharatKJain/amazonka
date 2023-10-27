@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SMS.Types.ReplicationRunStageDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SMS.Types.ReplicationRunStageDetails where
@@ -75,7 +75,8 @@ instance Data.FromJSON ReplicationRunStageDetails where
 
 instance Prelude.Hashable ReplicationRunStageDetails where
   hashWithSalt _salt ReplicationRunStageDetails' {..} =
-    _salt `Prelude.hashWithSalt` stage
+    _salt
+      `Prelude.hashWithSalt` stage
       `Prelude.hashWithSalt` stageProgress
 
 instance Prelude.NFData ReplicationRunStageDetails where

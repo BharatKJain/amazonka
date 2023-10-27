@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VCpuCountRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VCpuCountRange where
@@ -72,11 +72,13 @@ vCpuCountRange_min = Lens.lens (\VCpuCountRange' {min} -> min) (\s@VCpuCountRang
 instance Data.FromXML VCpuCountRange where
   parseXML x =
     VCpuCountRange'
-      Prelude.<$> (x Data..@? "max") Prelude.<*> (x Data..@? "min")
+      Prelude.<$> (x Data..@? "max")
+      Prelude.<*> (x Data..@? "min")
 
 instance Prelude.Hashable VCpuCountRange where
   hashWithSalt _salt VCpuCountRange' {..} =
-    _salt `Prelude.hashWithSalt` max
+    _salt
+      `Prelude.hashWithSalt` max
       `Prelude.hashWithSalt` min
 
 instance Prelude.NFData VCpuCountRange where

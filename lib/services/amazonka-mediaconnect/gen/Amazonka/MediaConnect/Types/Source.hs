@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.Source
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.Source where
@@ -220,7 +220,8 @@ instance Data.FromJSON Source where
             Prelude.<*> (x Data..:? "entitlementArn")
             Prelude.<*> (x Data..:? "ingestIp")
             Prelude.<*> (x Data..:? "ingestPort")
-            Prelude.<*> ( x Data..:? "mediaStreamSourceConfigurations"
+            Prelude.<*> ( x
+                            Data..:? "mediaStreamSourceConfigurations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "senderControlPort")

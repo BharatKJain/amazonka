@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.ImportReadSetFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.ImportReadSetFilter where
@@ -75,7 +75,8 @@ importReadSetFilter_status = Lens.lens (\ImportReadSetFilter' {status} -> status
 
 instance Prelude.Hashable ImportReadSetFilter where
   hashWithSalt _salt ImportReadSetFilter' {..} =
-    _salt `Prelude.hashWithSalt` createdAfter
+    _salt
+      `Prelude.hashWithSalt` createdAfter
       `Prelude.hashWithSalt` createdBefore
       `Prelude.hashWithSalt` status
 

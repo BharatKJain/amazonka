@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DLM.Types.CrossRegionCopyRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DLM.Types.CrossRegionCopyRule where
@@ -180,7 +180,8 @@ instance Data.FromJSON CrossRegionCopyRule where
 
 instance Prelude.Hashable CrossRegionCopyRule where
   hashWithSalt _salt CrossRegionCopyRule' {..} =
-    _salt `Prelude.hashWithSalt` cmkArn
+    _salt
+      `Prelude.hashWithSalt` cmkArn
       `Prelude.hashWithSalt` copyTags
       `Prelude.hashWithSalt` deprecateRule
       `Prelude.hashWithSalt` retainRule

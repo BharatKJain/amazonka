@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.FleetAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.FleetAttributes where
@@ -545,7 +545,8 @@ instance Data.FromJSON FleetAttributes where
 
 instance Prelude.Hashable FleetAttributes where
   hashWithSalt _salt FleetAttributes' {..} =
-    _salt `Prelude.hashWithSalt` anywhereConfiguration
+    _salt
+      `Prelude.hashWithSalt` anywhereConfiguration
       `Prelude.hashWithSalt` buildArn
       `Prelude.hashWithSalt` buildId
       `Prelude.hashWithSalt` certificateConfiguration

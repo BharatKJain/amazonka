@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.S3BucketTranscriptSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.S3BucketTranscriptSource where
@@ -145,7 +145,8 @@ instance Data.FromJSON S3BucketTranscriptSource where
 
 instance Prelude.Hashable S3BucketTranscriptSource where
   hashWithSalt _salt S3BucketTranscriptSource' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyArn
+    _salt
+      `Prelude.hashWithSalt` kmsKeyArn
       `Prelude.hashWithSalt` pathFormat
       `Prelude.hashWithSalt` transcriptFilter
       `Prelude.hashWithSalt` s3BucketName

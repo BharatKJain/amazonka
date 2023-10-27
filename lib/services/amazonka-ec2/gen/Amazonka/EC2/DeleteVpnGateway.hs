@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DeleteVpnGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest DeleteVpnGateway where
 
 instance Prelude.Hashable DeleteVpnGateway where
   hashWithSalt _salt DeleteVpnGateway' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` vpnGatewayId
 
 instance Prelude.NFData DeleteVpnGateway where

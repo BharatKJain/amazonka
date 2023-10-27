@@ -16,7 +16,7 @@
 -- Module      : Amazonka.BackupGateway.TestHypervisorConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,7 +127,8 @@ instance Core.AWSRequest TestHypervisorConfiguration where
 
 instance Prelude.Hashable TestHypervisorConfiguration where
   hashWithSalt _salt TestHypervisorConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` password
+    _salt
+      `Prelude.hashWithSalt` password
       `Prelude.hashWithSalt` username
       `Prelude.hashWithSalt` gatewayArn
       `Prelude.hashWithSalt` host

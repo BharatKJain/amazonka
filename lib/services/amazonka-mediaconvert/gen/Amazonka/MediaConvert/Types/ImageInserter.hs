@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.ImageInserter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.ImageInserter where
@@ -88,7 +88,8 @@ instance Data.FromJSON ImageInserter where
       "ImageInserter"
       ( \x ->
           ImageInserter'
-            Prelude.<$> ( x Data..:? "insertableImages"
+            Prelude.<$> ( x
+                            Data..:? "insertableImages"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "sdrReferenceWhiteLevel")
@@ -96,7 +97,8 @@ instance Data.FromJSON ImageInserter where
 
 instance Prelude.Hashable ImageInserter where
   hashWithSalt _salt ImageInserter' {..} =
-    _salt `Prelude.hashWithSalt` insertableImages
+    _salt
+      `Prelude.hashWithSalt` insertableImages
       `Prelude.hashWithSalt` sdrReferenceWhiteLevel
 
 instance Prelude.NFData ImageInserter where

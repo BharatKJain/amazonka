@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpenSearch.ListVpcEndpointAccess
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest ListVpcEndpointAccess where
       ( \s h x ->
           ListVpcEndpointAccessResponse'
             Prelude.<$> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "AuthorizedPrincipalList"
+            Prelude.<*> ( x
+                            Data..?> "AuthorizedPrincipalList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..:> "NextToken")
@@ -120,7 +121,8 @@ instance Core.AWSRequest ListVpcEndpointAccess where
 
 instance Prelude.Hashable ListVpcEndpointAccess where
   hashWithSalt _salt ListVpcEndpointAccess' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` domainName
 
 instance Prelude.NFData ListVpcEndpointAccess where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyBackend.Types.UpdateBackendAuthMFAConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyBackend.Types.UpdateBackendAuthMFAConfig where
@@ -71,7 +71,8 @@ updateBackendAuthMFAConfig_settings = Lens.lens (\UpdateBackendAuthMFAConfig' {s
 
 instance Prelude.Hashable UpdateBackendAuthMFAConfig where
   hashWithSalt _salt UpdateBackendAuthMFAConfig' {..} =
-    _salt `Prelude.hashWithSalt` mfaMode
+    _salt
+      `Prelude.hashWithSalt` mfaMode
       `Prelude.hashWithSalt` settings
 
 instance Prelude.NFData UpdateBackendAuthMFAConfig where

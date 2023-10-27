@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,7 +118,7 @@ instance
             Prelude.<$> ( x
                             Data..@? "localGatewayRouteTableVirtualInterfaceGroupAssociation"
                         )
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -128,7 +128,8 @@ instance
   hashWithSalt
     _salt
     DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation' {..} =
-      _salt `Prelude.hashWithSalt` dryRun
+      _salt
+        `Prelude.hashWithSalt` dryRun
         `Prelude.hashWithSalt` localGatewayRouteTableVirtualInterfaceGroupAssociationId
 
 instance

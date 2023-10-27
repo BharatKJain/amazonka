@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.EmailContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.EmailContent where
@@ -77,7 +77,8 @@ instance Data.FromJSON EmailContent where
 
 instance Prelude.Hashable EmailContent where
   hashWithSalt _salt EmailContent' {..} =
-    _salt `Prelude.hashWithSalt` additionalMessage
+    _salt
+      `Prelude.hashWithSalt` additionalMessage
       `Prelude.hashWithSalt` subject
 
 instance Prelude.NFData EmailContent where

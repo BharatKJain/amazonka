@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.TargetLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.TargetLocation where
@@ -133,7 +133,8 @@ instance Data.FromJSON TargetLocation where
 
 instance Prelude.Hashable TargetLocation where
   hashWithSalt _salt TargetLocation' {..} =
-    _salt `Prelude.hashWithSalt` accounts
+    _salt
+      `Prelude.hashWithSalt` accounts
       `Prelude.hashWithSalt` executionRoleName
       `Prelude.hashWithSalt` regions
       `Prelude.hashWithSalt` targetLocationAlarmConfiguration

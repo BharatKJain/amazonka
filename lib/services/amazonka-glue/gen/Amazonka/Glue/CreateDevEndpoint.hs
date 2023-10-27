@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.CreateDevEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -438,7 +438,8 @@ instance Core.AWSRequest CreateDevEndpoint where
             Prelude.<*> (x Data..?> "NumberOfWorkers")
             Prelude.<*> (x Data..?> "RoleArn")
             Prelude.<*> (x Data..?> "SecurityConfiguration")
-            Prelude.<*> ( x Data..?> "SecurityGroupIds"
+            Prelude.<*> ( x
+                            Data..?> "SecurityGroupIds"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "Status")
@@ -452,7 +453,8 @@ instance Core.AWSRequest CreateDevEndpoint where
 
 instance Prelude.Hashable CreateDevEndpoint where
   hashWithSalt _salt CreateDevEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` arguments
+    _salt
+      `Prelude.hashWithSalt` arguments
       `Prelude.hashWithSalt` extraJarsS3Path
       `Prelude.hashWithSalt` extraPythonLibsS3Path
       `Prelude.hashWithSalt` glueVersion

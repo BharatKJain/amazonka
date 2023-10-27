@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.Destination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.Destination where
@@ -91,7 +91,8 @@ destination_toAddresses = Lens.lens (\Destination' {toAddresses} -> toAddresses)
 
 instance Prelude.Hashable Destination where
   hashWithSalt _salt Destination' {..} =
-    _salt `Prelude.hashWithSalt` bccAddresses
+    _salt
+      `Prelude.hashWithSalt` bccAddresses
       `Prelude.hashWithSalt` ccAddresses
       `Prelude.hashWithSalt` toAddresses
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Proton.Types.S3ObjectSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Proton.Types.S3ObjectSource where
@@ -65,7 +65,8 @@ s3ObjectSource_key = Lens.lens (\S3ObjectSource' {key} -> key) (\s@S3ObjectSourc
 
 instance Prelude.Hashable S3ObjectSource where
   hashWithSalt _salt S3ObjectSource' {..} =
-    _salt `Prelude.hashWithSalt` bucket
+    _salt
+      `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` key
 
 instance Prelude.NFData S3ObjectSource where

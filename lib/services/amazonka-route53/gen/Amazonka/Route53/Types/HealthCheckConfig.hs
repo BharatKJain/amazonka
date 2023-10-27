@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.HealthCheckConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.HealthCheckConfig where
@@ -1043,7 +1043,8 @@ instance Data.FromXML HealthCheckConfig where
   parseXML x =
     HealthCheckConfig'
       Prelude.<$> (x Data..@? "AlarmIdentifier")
-      Prelude.<*> ( x Data..@? "ChildHealthChecks"
+      Prelude.<*> ( x
+                      Data..@? "ChildHealthChecks"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "ChildHealthCheck")
                   )
@@ -1057,7 +1058,9 @@ instance Data.FromXML HealthCheckConfig where
       Prelude.<*> (x Data..@? "Inverted")
       Prelude.<*> (x Data..@? "MeasureLatency")
       Prelude.<*> (x Data..@? "Port")
-      Prelude.<*> ( x Data..@? "Regions" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Regions"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList1 "Region")
                   )
       Prelude.<*> (x Data..@? "RequestInterval")
@@ -1068,7 +1071,8 @@ instance Data.FromXML HealthCheckConfig where
 
 instance Prelude.Hashable HealthCheckConfig where
   hashWithSalt _salt HealthCheckConfig' {..} =
-    _salt `Prelude.hashWithSalt` alarmIdentifier
+    _salt
+      `Prelude.hashWithSalt` alarmIdentifier
       `Prelude.hashWithSalt` childHealthChecks
       `Prelude.hashWithSalt` disabled
       `Prelude.hashWithSalt` enableSNI

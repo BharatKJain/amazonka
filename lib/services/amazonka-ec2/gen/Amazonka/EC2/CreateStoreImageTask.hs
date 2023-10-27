@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.CreateStoreImageTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -154,7 +154,8 @@ instance Core.AWSRequest CreateStoreImageTask where
 
 instance Prelude.Hashable CreateStoreImageTask where
   hashWithSalt _salt CreateStoreImageTask' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` s3ObjectTags
       `Prelude.hashWithSalt` imageId
       `Prelude.hashWithSalt` bucket

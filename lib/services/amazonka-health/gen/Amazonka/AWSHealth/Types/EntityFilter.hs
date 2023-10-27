@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AWSHealth.Types.EntityFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AWSHealth.Types.EntityFilter where
@@ -115,7 +115,8 @@ entityFilter_eventArns = Lens.lens (\EntityFilter' {eventArns} -> eventArns) (\s
 
 instance Prelude.Hashable EntityFilter where
   hashWithSalt _salt EntityFilter' {..} =
-    _salt `Prelude.hashWithSalt` entityArns
+    _salt
+      `Prelude.hashWithSalt` entityArns
       `Prelude.hashWithSalt` entityValues
       `Prelude.hashWithSalt` lastUpdatedTimes
       `Prelude.hashWithSalt` statusCodes

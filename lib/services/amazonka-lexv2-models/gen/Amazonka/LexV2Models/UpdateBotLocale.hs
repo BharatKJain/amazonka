@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexV2Models.UpdateBotLocale
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -186,7 +186,8 @@ instance Core.AWSRequest UpdateBotLocale where
             Prelude.<*> (x Data..?> "localeId")
             Prelude.<*> (x Data..?> "localeName")
             Prelude.<*> (x Data..?> "nluIntentConfidenceThreshold")
-            Prelude.<*> ( x Data..?> "recommendedActions"
+            Prelude.<*> ( x
+                            Data..?> "recommendedActions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "voiceSettings")
@@ -195,7 +196,8 @@ instance Core.AWSRequest UpdateBotLocale where
 
 instance Prelude.Hashable UpdateBotLocale where
   hashWithSalt _salt UpdateBotLocale' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` voiceSettings
       `Prelude.hashWithSalt` botId
       `Prelude.hashWithSalt` botVersion

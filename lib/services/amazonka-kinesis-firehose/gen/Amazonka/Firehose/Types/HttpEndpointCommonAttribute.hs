@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.HttpEndpointCommonAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.HttpEndpointCommonAttribute where
@@ -83,7 +83,8 @@ instance Data.FromJSON HttpEndpointCommonAttribute where
 
 instance Prelude.Hashable HttpEndpointCommonAttribute where
   hashWithSalt _salt HttpEndpointCommonAttribute' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` attributeValue
 
 instance Prelude.NFData HttpEndpointCommonAttribute where

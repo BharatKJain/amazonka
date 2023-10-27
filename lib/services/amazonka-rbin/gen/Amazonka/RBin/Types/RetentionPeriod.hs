@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RBin.Types.RetentionPeriod
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RBin.Types.RetentionPeriod where
@@ -92,7 +92,8 @@ instance Data.FromJSON RetentionPeriod where
 
 instance Prelude.Hashable RetentionPeriod where
   hashWithSalt _salt RetentionPeriod' {..} =
-    _salt `Prelude.hashWithSalt` retentionPeriodValue
+    _salt
+      `Prelude.hashWithSalt` retentionPeriodValue
       `Prelude.hashWithSalt` retentionPeriodUnit
 
 instance Prelude.NFData RetentionPeriod where

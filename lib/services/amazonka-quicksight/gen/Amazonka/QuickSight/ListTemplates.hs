@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.ListTemplates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,21 +110,23 @@ instance Core.AWSPager ListTemplates where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listTemplatesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listTemplatesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listTemplatesResponse_templateSummaryList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listTemplates_nextToken
           Lens..~ rs
-          Lens.^? listTemplatesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listTemplatesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListTemplates where
   type
@@ -138,7 +140,8 @@ instance Core.AWSRequest ListTemplates where
           ListTemplatesResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (x Data..?> "RequestId")
-            Prelude.<*> ( x Data..?> "TemplateSummaryList"
+            Prelude.<*> ( x
+                            Data..?> "TemplateSummaryList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -146,7 +149,8 @@ instance Core.AWSRequest ListTemplates where
 
 instance Prelude.Hashable ListTemplates where
   hashWithSalt _salt ListTemplates' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` awsAccountId
 

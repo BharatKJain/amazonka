@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.ContainerServiceDeployment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.ContainerServiceDeployment where
@@ -160,7 +160,8 @@ instance Data.FromJSON ContainerServiceDeployment where
 
 instance Prelude.Hashable ContainerServiceDeployment where
   hashWithSalt _salt ContainerServiceDeployment' {..} =
-    _salt `Prelude.hashWithSalt` containers
+    _salt
+      `Prelude.hashWithSalt` containers
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` publicEndpoint
       `Prelude.hashWithSalt` state

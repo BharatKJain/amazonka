@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SMS.Types.VmServerAddress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SMS.Types.VmServerAddress where
@@ -74,7 +74,8 @@ instance Data.FromJSON VmServerAddress where
 
 instance Prelude.Hashable VmServerAddress where
   hashWithSalt _salt VmServerAddress' {..} =
-    _salt `Prelude.hashWithSalt` vmId
+    _salt
+      `Prelude.hashWithSalt` vmId
       `Prelude.hashWithSalt` vmManagerId
 
 instance Prelude.NFData VmServerAddress where

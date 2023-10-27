@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.LivePreRollConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.LivePreRollConfiguration where
@@ -96,7 +96,8 @@ instance Data.FromJSON LivePreRollConfiguration where
 
 instance Prelude.Hashable LivePreRollConfiguration where
   hashWithSalt _salt LivePreRollConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` adDecisionServerUrl
+    _salt
+      `Prelude.hashWithSalt` adDecisionServerUrl
       `Prelude.hashWithSalt` maxDurationSeconds
 
 instance Prelude.NFData LivePreRollConfiguration where

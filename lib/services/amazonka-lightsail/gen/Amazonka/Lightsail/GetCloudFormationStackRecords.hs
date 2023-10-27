@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.GetCloudFormationStackRecords
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,22 +102,22 @@ instance Core.AWSPager GetCloudFormationStackRecords where
     | Core.stop
         ( rs
             Lens.^? getCloudFormationStackRecordsResponse_nextPageToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getCloudFormationStackRecordsResponse_cloudFormationStackRecords
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getCloudFormationStackRecords_pageToken
           Lens..~ rs
           Lens.^? getCloudFormationStackRecordsResponse_nextPageToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -132,7 +132,8 @@ instance
     Response.receiveJSON
       ( \s h x ->
           GetCloudFormationStackRecordsResponse'
-            Prelude.<$> ( x Data..?> "cloudFormationStackRecords"
+            Prelude.<$> ( x
+                            Data..?> "cloudFormationStackRecords"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextPageToken")

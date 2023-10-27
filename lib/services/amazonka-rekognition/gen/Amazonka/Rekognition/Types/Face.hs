@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.Face
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.Face where
@@ -122,7 +122,8 @@ instance Data.FromJSON Face where
 
 instance Prelude.Hashable Face where
   hashWithSalt _salt Face' {..} =
-    _salt `Prelude.hashWithSalt` boundingBox
+    _salt
+      `Prelude.hashWithSalt` boundingBox
       `Prelude.hashWithSalt` confidence
       `Prelude.hashWithSalt` externalImageId
       `Prelude.hashWithSalt` faceId

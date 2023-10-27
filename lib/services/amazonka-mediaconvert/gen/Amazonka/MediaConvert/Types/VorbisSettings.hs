@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.VorbisSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.VorbisSettings where
@@ -106,7 +106,8 @@ instance Data.FromJSON VorbisSettings where
 
 instance Prelude.Hashable VorbisSettings where
   hashWithSalt _salt VorbisSettings' {..} =
-    _salt `Prelude.hashWithSalt` channels
+    _salt
+      `Prelude.hashWithSalt` channels
       `Prelude.hashWithSalt` sampleRate
       `Prelude.hashWithSalt` vbrQuality
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pi.ListAvailableResourceDimensions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -169,7 +169,8 @@ instance
     Response.receiveJSON
       ( \s h x ->
           ListAvailableResourceDimensionsResponse'
-            Prelude.<$> ( x Data..?> "MetricDimensions"
+            Prelude.<$> ( x
+                            Data..?> "MetricDimensions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -183,7 +184,8 @@ instance
   hashWithSalt
     _salt
     ListAvailableResourceDimensions' {..} =
-      _salt `Prelude.hashWithSalt` maxResults
+      _salt
+        `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` serviceType
         `Prelude.hashWithSalt` identifier

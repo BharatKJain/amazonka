@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.AutomationExecutionMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.AutomationExecutionMetadata where
@@ -409,7 +409,8 @@ instance Data.FromJSON AutomationExecutionMetadata where
 
 instance Prelude.Hashable AutomationExecutionMetadata where
   hashWithSalt _salt AutomationExecutionMetadata' {..} =
-    _salt `Prelude.hashWithSalt` alarmConfiguration
+    _salt
+      `Prelude.hashWithSalt` alarmConfiguration
       `Prelude.hashWithSalt` associationId
       `Prelude.hashWithSalt` automationExecutionId
       `Prelude.hashWithSalt` automationExecutionStatus

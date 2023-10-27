@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SDB.Types.Attribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SDB.Types.Attribute where
@@ -66,11 +66,9 @@ newAttribute pName_ pValue_ =
       value = pValue_
     }
 
--- |
 attribute_alternateNameEncoding :: Lens.Lens' Attribute (Prelude.Maybe Prelude.Text)
 attribute_alternateNameEncoding = Lens.lens (\Attribute' {alternateNameEncoding} -> alternateNameEncoding) (\s@Attribute' {} a -> s {alternateNameEncoding = a} :: Attribute)
 
--- |
 attribute_alternateValueEncoding :: Lens.Lens' Attribute (Prelude.Maybe Prelude.Text)
 attribute_alternateValueEncoding = Lens.lens (\Attribute' {alternateValueEncoding} -> alternateValueEncoding) (\s@Attribute' {} a -> s {alternateValueEncoding = a} :: Attribute)
 
@@ -92,7 +90,8 @@ instance Data.FromXML Attribute where
 
 instance Prelude.Hashable Attribute where
   hashWithSalt _salt Attribute' {..} =
-    _salt `Prelude.hashWithSalt` alternateNameEncoding
+    _salt
+      `Prelude.hashWithSalt` alternateNameEncoding
       `Prelude.hashWithSalt` alternateValueEncoding
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value

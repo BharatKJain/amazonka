@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.OriginRequestPolicySummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.OriginRequestPolicySummary where
@@ -81,7 +81,8 @@ instance Data.FromXML OriginRequestPolicySummary where
 
 instance Prelude.Hashable OriginRequestPolicySummary where
   hashWithSalt _salt OriginRequestPolicySummary' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` originRequestPolicy
 
 instance Prelude.NFData OriginRequestPolicySummary where

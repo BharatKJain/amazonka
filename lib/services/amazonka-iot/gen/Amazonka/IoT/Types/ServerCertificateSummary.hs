@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.ServerCertificateSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.ServerCertificateSummary where
@@ -86,7 +86,8 @@ instance Data.FromJSON ServerCertificateSummary where
 
 instance Prelude.Hashable ServerCertificateSummary where
   hashWithSalt _salt ServerCertificateSummary' {..} =
-    _salt `Prelude.hashWithSalt` serverCertificateArn
+    _salt
+      `Prelude.hashWithSalt` serverCertificateArn
       `Prelude.hashWithSalt` serverCertificateStatus
       `Prelude.hashWithSalt` serverCertificateStatusDetail
 

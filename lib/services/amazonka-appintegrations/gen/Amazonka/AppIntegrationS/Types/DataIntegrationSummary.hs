@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppIntegrationS.Types.DataIntegrationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppIntegrationS.Types.DataIntegrationSummary where
@@ -84,7 +84,8 @@ instance Data.FromJSON DataIntegrationSummary where
 
 instance Prelude.Hashable DataIntegrationSummary where
   hashWithSalt _salt DataIntegrationSummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` sourceURI
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.CreateVolumePermission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.CreateVolumePermission where
@@ -73,7 +73,8 @@ instance Data.FromXML CreateVolumePermission where
 
 instance Prelude.Hashable CreateVolumePermission where
   hashWithSalt _salt CreateVolumePermission' {..} =
-    _salt `Prelude.hashWithSalt` group'
+    _salt
+      `Prelude.hashWithSalt` group'
       `Prelude.hashWithSalt` userId
 
 instance Prelude.NFData CreateVolumePermission where

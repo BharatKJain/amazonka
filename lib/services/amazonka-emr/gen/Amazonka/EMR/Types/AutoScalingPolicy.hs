@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.AutoScalingPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.AutoScalingPolicy where
@@ -80,7 +80,8 @@ autoScalingPolicy_rules = Lens.lens (\AutoScalingPolicy' {rules} -> rules) (\s@A
 
 instance Prelude.Hashable AutoScalingPolicy where
   hashWithSalt _salt AutoScalingPolicy' {..} =
-    _salt `Prelude.hashWithSalt` constraints
+    _salt
+      `Prelude.hashWithSalt` constraints
       `Prelude.hashWithSalt` rules
 
 instance Prelude.NFData AutoScalingPolicy where

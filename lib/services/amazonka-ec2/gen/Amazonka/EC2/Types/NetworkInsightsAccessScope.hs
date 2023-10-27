@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.NetworkInsightsAccessScope
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.NetworkInsightsAccessScope where
@@ -98,14 +98,17 @@ instance Data.FromXML NetworkInsightsAccessScope where
       Prelude.<$> (x Data..@? "createdDate")
       Prelude.<*> (x Data..@? "networkInsightsAccessScopeArn")
       Prelude.<*> (x Data..@? "networkInsightsAccessScopeId")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "updatedDate")
 
 instance Prelude.Hashable NetworkInsightsAccessScope where
   hashWithSalt _salt NetworkInsightsAccessScope' {..} =
-    _salt `Prelude.hashWithSalt` createdDate
+    _salt
+      `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` networkInsightsAccessScopeArn
       `Prelude.hashWithSalt` networkInsightsAccessScopeId
       `Prelude.hashWithSalt` tags

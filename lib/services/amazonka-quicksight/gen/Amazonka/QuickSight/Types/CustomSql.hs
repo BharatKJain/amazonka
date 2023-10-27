@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.CustomSql
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.CustomSql where
@@ -101,7 +101,8 @@ instance Data.FromJSON CustomSql where
 
 instance Prelude.Hashable CustomSql where
   hashWithSalt _salt CustomSql' {..} =
-    _salt `Prelude.hashWithSalt` columns
+    _salt
+      `Prelude.hashWithSalt` columns
       `Prelude.hashWithSalt` dataSourceArn
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` sqlQuery

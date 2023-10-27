@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceQuotas.Types.ServiceQuota
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceQuotas.Types.ServiceQuota where
@@ -177,7 +177,8 @@ instance Data.FromJSON ServiceQuota where
 
 instance Prelude.Hashable ServiceQuota where
   hashWithSalt _salt ServiceQuota' {..} =
-    _salt `Prelude.hashWithSalt` adjustable
+    _salt
+      `Prelude.hashWithSalt` adjustable
       `Prelude.hashWithSalt` errorReason
       `Prelude.hashWithSalt` globalQuota
       `Prelude.hashWithSalt` period

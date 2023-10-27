@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpaces.Types.WorkspaceDirectory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpaces.Types.WorkspaceDirectory where
@@ -302,7 +302,8 @@ instance Data.FromJSON WorkspaceDirectory where
 
 instance Prelude.Hashable WorkspaceDirectory where
   hashWithSalt _salt WorkspaceDirectory' {..} =
-    _salt `Prelude.hashWithSalt` alias
+    _salt
+      `Prelude.hashWithSalt` alias
       `Prelude.hashWithSalt` certificateBasedAuthProperties
       `Prelude.hashWithSalt` customerUserName
       `Prelude.hashWithSalt` directoryId

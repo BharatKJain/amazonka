@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.SqlInjectionMatchTuple
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.SqlInjectionMatchTuple where
@@ -313,7 +313,8 @@ instance Data.FromJSON SqlInjectionMatchTuple where
 
 instance Prelude.Hashable SqlInjectionMatchTuple where
   hashWithSalt _salt SqlInjectionMatchTuple' {..} =
-    _salt `Prelude.hashWithSalt` fieldToMatch
+    _salt
+      `Prelude.hashWithSalt` fieldToMatch
       `Prelude.hashWithSalt` textTransformation
 
 instance Prelude.NFData SqlInjectionMatchTuple where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsApiGatewayStageDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsApiGatewayStageDetails where
@@ -278,7 +278,8 @@ instance Data.FromJSON AwsApiGatewayStageDetails where
 
 instance Prelude.Hashable AwsApiGatewayStageDetails where
   hashWithSalt _salt AwsApiGatewayStageDetails' {..} =
-    _salt `Prelude.hashWithSalt` accessLogSettings
+    _salt
+      `Prelude.hashWithSalt` accessLogSettings
       `Prelude.hashWithSalt` cacheClusterEnabled
       `Prelude.hashWithSalt` cacheClusterSize
       `Prelude.hashWithSalt` cacheClusterStatus

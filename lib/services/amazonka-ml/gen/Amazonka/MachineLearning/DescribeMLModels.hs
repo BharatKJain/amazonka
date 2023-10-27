@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MachineLearning.DescribeMLModels
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -348,22 +348,22 @@ instance Core.AWSPager DescribeMLModels where
     | Core.stop
         ( rs
             Lens.^? describeMLModelsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeMLModelsResponse_results
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeMLModels_nextToken
           Lens..~ rs
           Lens.^? describeMLModelsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeMLModels where
   type
@@ -382,7 +382,8 @@ instance Core.AWSRequest DescribeMLModels where
 
 instance Prelude.Hashable DescribeMLModels where
   hashWithSalt _salt DescribeMLModels' {..} =
-    _salt `Prelude.hashWithSalt` eq
+    _salt
+      `Prelude.hashWithSalt` eq
       `Prelude.hashWithSalt` filterVariable
       `Prelude.hashWithSalt` ge
       `Prelude.hashWithSalt` gt

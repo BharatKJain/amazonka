@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.FileCache
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.FileCache where
@@ -255,7 +255,8 @@ instance Data.FromJSON FileCache where
           FileCache'
             Prelude.<$> (x Data..:? "CreationTime")
             Prelude.<*> (x Data..:? "DNSName")
-            Prelude.<*> ( x Data..:? "DataRepositoryAssociationIds"
+            Prelude.<*> ( x
+                            Data..:? "DataRepositoryAssociationIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "FailureDetails")
@@ -265,7 +266,8 @@ instance Data.FromJSON FileCache where
             Prelude.<*> (x Data..:? "KmsKeyId")
             Prelude.<*> (x Data..:? "Lifecycle")
             Prelude.<*> (x Data..:? "LustreConfiguration")
-            Prelude.<*> ( x Data..:? "NetworkInterfaceIds"
+            Prelude.<*> ( x
+                            Data..:? "NetworkInterfaceIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "OwnerId")
@@ -277,7 +279,8 @@ instance Data.FromJSON FileCache where
 
 instance Prelude.Hashable FileCache where
   hashWithSalt _salt FileCache' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` dNSName
       `Prelude.hashWithSalt` dataRepositoryAssociationIds
       `Prelude.hashWithSalt` failureDetails

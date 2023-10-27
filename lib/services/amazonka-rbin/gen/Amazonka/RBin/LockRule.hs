@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RBin.LockRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,7 +117,8 @@ instance Core.AWSRequest LockRule where
 
 instance Prelude.Hashable LockRule where
   hashWithSalt _salt LockRule' {..} =
-    _salt `Prelude.hashWithSalt` identifier
+    _salt
+      `Prelude.hashWithSalt` identifier
       `Prelude.hashWithSalt` lockConfiguration
 
 instance Prelude.NFData LockRule where

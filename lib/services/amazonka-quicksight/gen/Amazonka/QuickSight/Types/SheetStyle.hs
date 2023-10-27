@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.SheetStyle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.SheetStyle where
@@ -76,7 +76,8 @@ instance Data.FromJSON SheetStyle where
 
 instance Prelude.Hashable SheetStyle where
   hashWithSalt _salt SheetStyle' {..} =
-    _salt `Prelude.hashWithSalt` tile
+    _salt
+      `Prelude.hashWithSalt` tile
       `Prelude.hashWithSalt` tileLayout
 
 instance Prelude.NFData SheetStyle where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Location.ListDevicePositions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,19 +119,19 @@ instance Core.AWSPager ListDevicePositions where
     | Core.stop
         ( rs
             Lens.^? listDevicePositionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listDevicePositionsResponse_entries) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listDevicePositions_nextToken
           Lens..~ rs
           Lens.^? listDevicePositionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListDevicePositions where
   type
@@ -150,7 +150,8 @@ instance Core.AWSRequest ListDevicePositions where
 
 instance Prelude.Hashable ListDevicePositions where
   hashWithSalt _salt ListDevicePositions' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` trackerName
 

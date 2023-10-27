@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kendra.DescribePrincipalMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -131,7 +131,8 @@ instance Core.AWSRequest DescribePrincipalMapping where
           DescribePrincipalMappingResponse'
             Prelude.<$> (x Data..?> "DataSourceId")
             Prelude.<*> (x Data..?> "GroupId")
-            Prelude.<*> ( x Data..?> "GroupOrderingIdSummaries"
+            Prelude.<*> ( x
+                            Data..?> "GroupOrderingIdSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "IndexId")
@@ -140,7 +141,8 @@ instance Core.AWSRequest DescribePrincipalMapping where
 
 instance Prelude.Hashable DescribePrincipalMapping where
   hashWithSalt _salt DescribePrincipalMapping' {..} =
-    _salt `Prelude.hashWithSalt` dataSourceId
+    _salt
+      `Prelude.hashWithSalt` dataSourceId
       `Prelude.hashWithSalt` indexId
       `Prelude.hashWithSalt` groupId
 

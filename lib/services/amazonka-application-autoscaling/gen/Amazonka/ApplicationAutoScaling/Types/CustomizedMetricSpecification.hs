@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApplicationAutoScaling.Types.CustomizedMetricSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApplicationAutoScaling.Types.CustomizedMetricSpecification where
@@ -180,7 +180,8 @@ instance
     CustomizedMetricSpecification
   where
   hashWithSalt _salt CustomizedMetricSpecification' {..} =
-    _salt `Prelude.hashWithSalt` dimensions
+    _salt
+      `Prelude.hashWithSalt` dimensions
       `Prelude.hashWithSalt` unit
       `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` namespace

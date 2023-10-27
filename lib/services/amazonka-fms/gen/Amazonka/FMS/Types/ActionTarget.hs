@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.ActionTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.ActionTarget where
@@ -74,7 +74,8 @@ instance Data.FromJSON ActionTarget where
 
 instance Prelude.Hashable ActionTarget where
   hashWithSalt _salt ActionTarget' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` resourceId
 
 instance Prelude.NFData ActionTarget where

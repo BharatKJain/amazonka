@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.TemplateVersionResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.TemplateVersionResponse where
@@ -164,7 +164,8 @@ instance Data.FromJSON TemplateVersionResponse where
 
 instance Prelude.Hashable TemplateVersionResponse where
   hashWithSalt _salt TemplateVersionResponse' {..} =
-    _salt `Prelude.hashWithSalt` defaultSubstitutions
+    _salt
+      `Prelude.hashWithSalt` defaultSubstitutions
       `Prelude.hashWithSalt` templateDescription
       `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` lastModifiedDate

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.CapacityUnitsConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.CapacityUnitsConfiguration where
@@ -131,7 +131,8 @@ instance Data.FromJSON CapacityUnitsConfiguration where
 
 instance Prelude.Hashable CapacityUnitsConfiguration where
   hashWithSalt _salt CapacityUnitsConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` storageCapacityUnits
+    _salt
+      `Prelude.hashWithSalt` storageCapacityUnits
       `Prelude.hashWithSalt` queryCapacityUnits
 
 instance Prelude.NFData CapacityUnitsConfiguration where

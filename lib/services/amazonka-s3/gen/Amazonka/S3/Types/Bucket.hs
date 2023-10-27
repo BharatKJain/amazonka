@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.Bucket
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.Bucket where
@@ -81,7 +81,8 @@ instance Data.FromXML Bucket where
 
 instance Prelude.Hashable Bucket where
   hashWithSalt _salt Bucket' {..} =
-    _salt `Prelude.hashWithSalt` creationDate
+    _salt
+      `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData Bucket where

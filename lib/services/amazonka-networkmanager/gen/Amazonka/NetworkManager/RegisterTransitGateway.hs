@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkManager.RegisterTransitGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest RegisterTransitGateway where
 
 instance Prelude.Hashable RegisterTransitGateway where
   hashWithSalt _salt RegisterTransitGateway' {..} =
-    _salt `Prelude.hashWithSalt` globalNetworkId
+    _salt
+      `Prelude.hashWithSalt` globalNetworkId
       `Prelude.hashWithSalt` transitGatewayArn
 
 instance Prelude.NFData RegisterTransitGateway where

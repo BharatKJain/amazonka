@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.Capacity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.Capacity where
@@ -90,7 +90,8 @@ instance Data.FromJSON Capacity where
 
 instance Prelude.Hashable Capacity where
   hashWithSalt _salt Capacity' {..} =
-    _salt `Prelude.hashWithSalt` capacityUnits
+    _salt
+      `Prelude.hashWithSalt` capacityUnits
       `Prelude.hashWithSalt` readCapacityUnits
       `Prelude.hashWithSalt` writeCapacityUnits
 

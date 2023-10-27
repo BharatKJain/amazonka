@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MachineLearning.Predict
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest Predict where
 
 instance Prelude.Hashable Predict where
   hashWithSalt _salt Predict' {..} =
-    _salt `Prelude.hashWithSalt` mLModelId
+    _salt
+      `Prelude.hashWithSalt` mLModelId
       `Prelude.hashWithSalt` record
       `Prelude.hashWithSalt` predictEndpoint
 

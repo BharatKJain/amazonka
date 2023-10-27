@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Evidently.GetLaunch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -101,7 +101,8 @@ instance Core.AWSRequest GetLaunch where
 
 instance Prelude.Hashable GetLaunch where
   hashWithSalt _salt GetLaunch' {..} =
-    _salt `Prelude.hashWithSalt` launch
+    _salt
+      `Prelude.hashWithSalt` launch
       `Prelude.hashWithSalt` project
 
 instance Prelude.NFData GetLaunch where

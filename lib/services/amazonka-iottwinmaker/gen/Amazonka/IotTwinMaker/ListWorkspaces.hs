@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IotTwinMaker.ListWorkspaces
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,7 +102,8 @@ instance Core.AWSRequest ListWorkspaces where
       ( \s h x ->
           ListWorkspacesResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "workspaceSummaries"
+            Prelude.<*> ( x
+                            Data..?> "workspaceSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -110,7 +111,8 @@ instance Core.AWSRequest ListWorkspaces where
 
 instance Prelude.Hashable ListWorkspaces where
   hashWithSalt _salt ListWorkspaces' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListWorkspaces where

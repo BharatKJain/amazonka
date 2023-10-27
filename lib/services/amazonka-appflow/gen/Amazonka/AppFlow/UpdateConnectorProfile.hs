@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppFlow.UpdateConnectorProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest UpdateConnectorProfile where
 
 instance Prelude.Hashable UpdateConnectorProfile where
   hashWithSalt _salt UpdateConnectorProfile' {..} =
-    _salt `Prelude.hashWithSalt` connectorProfileName
+    _salt
+      `Prelude.hashWithSalt` connectorProfileName
       `Prelude.hashWithSalt` connectionMode
       `Prelude.hashWithSalt` connectorProfileConfig
 

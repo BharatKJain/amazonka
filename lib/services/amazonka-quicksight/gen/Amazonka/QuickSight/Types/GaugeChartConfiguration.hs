@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.GaugeChartConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.GaugeChartConfiguration where
@@ -110,7 +110,8 @@ instance Data.FromJSON GaugeChartConfiguration where
 
 instance Prelude.Hashable GaugeChartConfiguration where
   hashWithSalt _salt GaugeChartConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` dataLabels
+    _salt
+      `Prelude.hashWithSalt` dataLabels
       `Prelude.hashWithSalt` fieldWells
       `Prelude.hashWithSalt` gaugeChartOptions
       `Prelude.hashWithSalt` tooltipOptions

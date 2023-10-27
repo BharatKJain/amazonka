@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.StorageConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.StorageConfiguration where
@@ -70,12 +70,14 @@ instance Data.FromJSON StorageConfiguration where
       "StorageConfiguration"
       ( \x ->
           StorageConfiguration'
-            Prelude.<$> (x Data..:? "efs") Prelude.<*> (x Data..:? "fsx")
+            Prelude.<$> (x Data..:? "efs")
+            Prelude.<*> (x Data..:? "fsx")
       )
 
 instance Prelude.Hashable StorageConfiguration where
   hashWithSalt _salt StorageConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` efs
+    _salt
+      `Prelude.hashWithSalt` efs
       `Prelude.hashWithSalt` fsx
 
 instance Prelude.NFData StorageConfiguration where

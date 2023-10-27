@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.PullRequestMergedStateChangedEventMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.PullRequestMergedStateChangedEventMetadata where
@@ -85,8 +85,8 @@ instance
       ( \x ->
           PullRequestMergedStateChangedEventMetadata'
             Prelude.<$> (x Data..:? "destinationReference")
-              Prelude.<*> (x Data..:? "mergeMetadata")
-              Prelude.<*> (x Data..:? "repositoryName")
+            Prelude.<*> (x Data..:? "mergeMetadata")
+            Prelude.<*> (x Data..:? "repositoryName")
       )
 
 instance
@@ -96,7 +96,8 @@ instance
   hashWithSalt
     _salt
     PullRequestMergedStateChangedEventMetadata' {..} =
-      _salt `Prelude.hashWithSalt` destinationReference
+      _salt
+        `Prelude.hashWithSalt` destinationReference
         `Prelude.hashWithSalt` mergeMetadata
         `Prelude.hashWithSalt` repositoryName
 

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.CreateNotebookInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -452,7 +452,8 @@ instance Core.AWSRequest CreateNotebookInstance where
 
 instance Prelude.Hashable CreateNotebookInstance where
   hashWithSalt _salt CreateNotebookInstance' {..} =
-    _salt `Prelude.hashWithSalt` acceleratorTypes
+    _salt
+      `Prelude.hashWithSalt` acceleratorTypes
       `Prelude.hashWithSalt` additionalCodeRepositories
       `Prelude.hashWithSalt` defaultCodeRepository
       `Prelude.hashWithSalt` directInternetAccess

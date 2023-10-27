@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.RetryStrategy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.RetryStrategy where
@@ -91,14 +91,16 @@ instance Data.FromJSON RetryStrategy where
       ( \x ->
           RetryStrategy'
             Prelude.<$> (x Data..:? "attempts")
-            Prelude.<*> ( x Data..:? "evaluateOnExit"
+            Prelude.<*> ( x
+                            Data..:? "evaluateOnExit"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable RetryStrategy where
   hashWithSalt _salt RetryStrategy' {..} =
-    _salt `Prelude.hashWithSalt` attempts
+    _salt
+      `Prelude.hashWithSalt` attempts
       `Prelude.hashWithSalt` evaluateOnExit
 
 instance Prelude.NFData RetryStrategy where

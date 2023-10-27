@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.ReplicaAutoScalingDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.ReplicaAutoScalingDescription where
@@ -125,7 +125,8 @@ instance Data.FromJSON ReplicaAutoScalingDescription where
       "ReplicaAutoScalingDescription"
       ( \x ->
           ReplicaAutoScalingDescription'
-            Prelude.<$> ( x Data..:? "GlobalSecondaryIndexes"
+            Prelude.<$> ( x
+                            Data..:? "GlobalSecondaryIndexes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "RegionName")
@@ -143,7 +144,8 @@ instance
     ReplicaAutoScalingDescription
   where
   hashWithSalt _salt ReplicaAutoScalingDescription' {..} =
-    _salt `Prelude.hashWithSalt` globalSecondaryIndexes
+    _salt
+      `Prelude.hashWithSalt` globalSecondaryIndexes
       `Prelude.hashWithSalt` regionName
       `Prelude.hashWithSalt` replicaProvisionedReadCapacityAutoScalingSettings
       `Prelude.hashWithSalt` replicaProvisionedWriteCapacityAutoScalingSettings

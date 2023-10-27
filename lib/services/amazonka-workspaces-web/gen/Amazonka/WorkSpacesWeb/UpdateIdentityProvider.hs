@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkSpacesWeb.UpdateIdentityProvider
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -337,7 +337,8 @@ instance Core.AWSRequest UpdateIdentityProvider where
 
 instance Prelude.Hashable UpdateIdentityProvider where
   hashWithSalt _salt UpdateIdentityProvider' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` identityProviderDetails
       `Prelude.hashWithSalt` identityProviderName
       `Prelude.hashWithSalt` identityProviderType

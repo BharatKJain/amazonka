@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Shield.Types.AttackDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Shield.Types.AttackDetail where
@@ -149,7 +149,8 @@ instance Data.FromJSON AttackDetail where
           AttackDetail'
             Prelude.<$> (x Data..:? "AttackCounters" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "AttackId")
-            Prelude.<*> ( x Data..:? "AttackProperties"
+            Prelude.<*> ( x
+                            Data..:? "AttackProperties"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "EndTime")
@@ -161,7 +162,8 @@ instance Data.FromJSON AttackDetail where
 
 instance Prelude.Hashable AttackDetail where
   hashWithSalt _salt AttackDetail' {..} =
-    _salt `Prelude.hashWithSalt` attackCounters
+    _salt
+      `Prelude.hashWithSalt` attackCounters
       `Prelude.hashWithSalt` attackId
       `Prelude.hashWithSalt` attackProperties
       `Prelude.hashWithSalt` endTime

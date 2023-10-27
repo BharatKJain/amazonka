@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.DeploymentStyle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.DeploymentStyle where
@@ -82,7 +82,8 @@ instance Data.FromJSON DeploymentStyle where
 
 instance Prelude.Hashable DeploymentStyle where
   hashWithSalt _salt DeploymentStyle' {..} =
-    _salt `Prelude.hashWithSalt` deploymentOption
+    _salt
+      `Prelude.hashWithSalt` deploymentOption
       `Prelude.hashWithSalt` deploymentType
 
 instance Prelude.NFData DeploymentStyle where

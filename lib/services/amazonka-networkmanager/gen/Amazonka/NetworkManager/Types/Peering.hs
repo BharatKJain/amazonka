@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.Peering
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.Peering where
@@ -157,7 +157,8 @@ instance Data.FromJSON Peering where
 
 instance Prelude.Hashable Peering where
   hashWithSalt _salt Peering' {..} =
-    _salt `Prelude.hashWithSalt` coreNetworkArn
+    _salt
+      `Prelude.hashWithSalt` coreNetworkArn
       `Prelude.hashWithSalt` coreNetworkId
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` edgeLocation

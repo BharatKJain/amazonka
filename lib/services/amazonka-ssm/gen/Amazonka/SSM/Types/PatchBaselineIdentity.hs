@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.PatchBaselineIdentity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.PatchBaselineIdentity where
@@ -115,7 +115,8 @@ instance Data.FromJSON PatchBaselineIdentity where
 
 instance Prelude.Hashable PatchBaselineIdentity where
   hashWithSalt _salt PatchBaselineIdentity' {..} =
-    _salt `Prelude.hashWithSalt` baselineDescription
+    _salt
+      `Prelude.hashWithSalt` baselineDescription
       `Prelude.hashWithSalt` baselineId
       `Prelude.hashWithSalt` baselineName
       `Prelude.hashWithSalt` defaultBaseline

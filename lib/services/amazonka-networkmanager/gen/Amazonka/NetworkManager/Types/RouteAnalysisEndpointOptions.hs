@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.RouteAnalysisEndpointOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.RouteAnalysisEndpointOptions where
@@ -88,7 +88,8 @@ instance
     RouteAnalysisEndpointOptions
   where
   hashWithSalt _salt RouteAnalysisEndpointOptions' {..} =
-    _salt `Prelude.hashWithSalt` ipAddress
+    _salt
+      `Prelude.hashWithSalt` ipAddress
       `Prelude.hashWithSalt` transitGatewayArn
       `Prelude.hashWithSalt` transitGatewayAttachmentArn
 

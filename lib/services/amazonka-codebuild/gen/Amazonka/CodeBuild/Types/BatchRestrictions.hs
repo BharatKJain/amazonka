@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.BatchRestrictions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.BatchRestrictions where
@@ -78,7 +78,8 @@ instance Data.FromJSON BatchRestrictions where
       "BatchRestrictions"
       ( \x ->
           BatchRestrictions'
-            Prelude.<$> ( x Data..:? "computeTypesAllowed"
+            Prelude.<$> ( x
+                            Data..:? "computeTypesAllowed"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "maximumBuildsAllowed")
@@ -86,7 +87,8 @@ instance Data.FromJSON BatchRestrictions where
 
 instance Prelude.Hashable BatchRestrictions where
   hashWithSalt _salt BatchRestrictions' {..} =
-    _salt `Prelude.hashWithSalt` computeTypesAllowed
+    _salt
+      `Prelude.hashWithSalt` computeTypesAllowed
       `Prelude.hashWithSalt` maximumBuildsAllowed
 
 instance Prelude.NFData BatchRestrictions where

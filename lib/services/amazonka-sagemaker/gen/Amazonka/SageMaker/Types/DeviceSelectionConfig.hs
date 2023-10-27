@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.DeviceSelectionConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.DeviceSelectionConfig where
@@ -98,7 +98,8 @@ instance Data.FromJSON DeviceSelectionConfig where
 
 instance Prelude.Hashable DeviceSelectionConfig where
   hashWithSalt _salt DeviceSelectionConfig' {..} =
-    _salt `Prelude.hashWithSalt` deviceNameContains
+    _salt
+      `Prelude.hashWithSalt` deviceNameContains
       `Prelude.hashWithSalt` deviceNames
       `Prelude.hashWithSalt` percentage
       `Prelude.hashWithSalt` deviceSubsetType

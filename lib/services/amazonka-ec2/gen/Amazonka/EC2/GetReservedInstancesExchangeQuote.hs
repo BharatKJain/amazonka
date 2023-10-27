@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.GetReservedInstancesExchangeQuote
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,21 +135,23 @@ instance
       ( \s h x ->
           GetReservedInstancesExchangeQuoteResponse'
             Prelude.<$> (x Data..@? "currencyCode")
-              Prelude.<*> (x Data..@? "isValidExchange")
-              Prelude.<*> (x Data..@? "outputReservedInstancesWillExpireAt")
-              Prelude.<*> (x Data..@? "paymentDue")
-              Prelude.<*> (x Data..@? "reservedInstanceValueRollup")
-              Prelude.<*> ( x Data..@? "reservedInstanceValueSet"
-                              Core..!@ Prelude.mempty
-                              Prelude.>>= Core.may (Data.parseXMLList "item")
-                          )
-              Prelude.<*> (x Data..@? "targetConfigurationValueRollup")
-              Prelude.<*> ( x Data..@? "targetConfigurationValueSet"
-                              Core..!@ Prelude.mempty
-                              Prelude.>>= Core.may (Data.parseXMLList "item")
-                          )
-              Prelude.<*> (x Data..@? "validationFailureReason")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..@? "isValidExchange")
+            Prelude.<*> (x Data..@? "outputReservedInstancesWillExpireAt")
+            Prelude.<*> (x Data..@? "paymentDue")
+            Prelude.<*> (x Data..@? "reservedInstanceValueRollup")
+            Prelude.<*> ( x
+                            Data..@? "reservedInstanceValueSet"
+                            Core..!@ Prelude.mempty
+                            Prelude.>>= Core.may (Data.parseXMLList "item")
+                        )
+            Prelude.<*> (x Data..@? "targetConfigurationValueRollup")
+            Prelude.<*> ( x
+                            Data..@? "targetConfigurationValueSet"
+                            Core..!@ Prelude.mempty
+                            Prelude.>>= Core.may (Data.parseXMLList "item")
+                        )
+            Prelude.<*> (x Data..@? "validationFailureReason")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -159,7 +161,8 @@ instance
   hashWithSalt
     _salt
     GetReservedInstancesExchangeQuote' {..} =
-      _salt `Prelude.hashWithSalt` dryRun
+      _salt
+        `Prelude.hashWithSalt` dryRun
         `Prelude.hashWithSalt` targetConfigurations
         `Prelude.hashWithSalt` reservedInstanceIds
 

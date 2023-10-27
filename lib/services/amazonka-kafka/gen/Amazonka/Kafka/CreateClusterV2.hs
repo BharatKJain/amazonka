@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kafka.CreateClusterV2
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,7 +128,8 @@ instance Core.AWSRequest CreateClusterV2 where
 
 instance Prelude.Hashable CreateClusterV2 where
   hashWithSalt _salt CreateClusterV2' {..} =
-    _salt `Prelude.hashWithSalt` provisioned
+    _salt
+      `Prelude.hashWithSalt` provisioned
       `Prelude.hashWithSalt` serverless
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` clusterName

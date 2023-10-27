@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.RecoveryPointCreator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.RecoveryPointCreator where
@@ -108,7 +108,8 @@ instance Data.FromJSON RecoveryPointCreator where
 
 instance Prelude.Hashable RecoveryPointCreator where
   hashWithSalt _salt RecoveryPointCreator' {..} =
-    _salt `Prelude.hashWithSalt` backupPlanArn
+    _salt
+      `Prelude.hashWithSalt` backupPlanArn
       `Prelude.hashWithSalt` backupPlanId
       `Prelude.hashWithSalt` backupPlanVersion
       `Prelude.hashWithSalt` backupRuleId

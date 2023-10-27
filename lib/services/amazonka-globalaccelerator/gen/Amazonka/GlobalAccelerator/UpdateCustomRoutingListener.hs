@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GlobalAccelerator.UpdateCustomRoutingListener
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest UpdateCustomRoutingListener where
 
 instance Prelude.Hashable UpdateCustomRoutingListener where
   hashWithSalt _salt UpdateCustomRoutingListener' {..} =
-    _salt `Prelude.hashWithSalt` listenerArn
+    _salt
+      `Prelude.hashWithSalt` listenerArn
       `Prelude.hashWithSalt` portRanges
 
 instance Prelude.NFData UpdateCustomRoutingListener where

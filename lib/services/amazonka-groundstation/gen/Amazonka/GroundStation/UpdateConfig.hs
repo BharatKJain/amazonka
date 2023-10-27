@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GroundStation.UpdateConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance Core.AWSRequest UpdateConfig where
 
 instance Prelude.Hashable UpdateConfig where
   hashWithSalt _salt UpdateConfig' {..} =
-    _salt `Prelude.hashWithSalt` configData
+    _salt
+      `Prelude.hashWithSalt` configData
       `Prelude.hashWithSalt` configId
       `Prelude.hashWithSalt` configType
       `Prelude.hashWithSalt` name

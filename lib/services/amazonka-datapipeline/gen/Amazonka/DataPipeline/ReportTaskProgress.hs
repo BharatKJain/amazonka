@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataPipeline.ReportTaskProgress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest ReportTaskProgress where
 
 instance Prelude.Hashable ReportTaskProgress where
   hashWithSalt _salt ReportTaskProgress' {..} =
-    _salt `Prelude.hashWithSalt` fields
+    _salt
+      `Prelude.hashWithSalt` fields
       `Prelude.hashWithSalt` taskId
 
 instance Prelude.NFData ReportTaskProgress where

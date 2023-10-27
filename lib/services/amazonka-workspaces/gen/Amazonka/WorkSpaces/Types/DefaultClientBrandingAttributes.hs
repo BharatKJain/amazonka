@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpaces.Types.DefaultClientBrandingAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpaces.Types.DefaultClientBrandingAttributes where
@@ -171,7 +171,8 @@ instance
   hashWithSalt
     _salt
     DefaultClientBrandingAttributes' {..} =
-      _salt `Prelude.hashWithSalt` forgotPasswordLink
+      _salt
+        `Prelude.hashWithSalt` forgotPasswordLink
         `Prelude.hashWithSalt` loginMessage
         `Prelude.hashWithSalt` logoUrl
         `Prelude.hashWithSalt` supportEmail

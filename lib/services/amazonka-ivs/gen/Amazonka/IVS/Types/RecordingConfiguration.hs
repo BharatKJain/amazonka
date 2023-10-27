@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IVS.Types.RecordingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IVS.Types.RecordingConfiguration where
@@ -170,7 +170,8 @@ instance Data.FromJSON RecordingConfiguration where
 
 instance Prelude.Hashable RecordingConfiguration where
   hashWithSalt _salt RecordingConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` recordingReconnectWindowSeconds
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` thumbnailConfiguration

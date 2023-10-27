@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.MetadataCatalogDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.MetadataCatalogDetail where
@@ -137,7 +137,8 @@ instance Data.FromJSON MetadataCatalogDetail where
 
 instance Prelude.Hashable MetadataCatalogDetail where
   hashWithSalt _salt MetadataCatalogDetail' {..} =
-    _salt `Prelude.hashWithSalt` catalogType
+    _salt
+      `Prelude.hashWithSalt` catalogType
       `Prelude.hashWithSalt` partitionRegistrationOutput
       `Prelude.hashWithSalt` tableName
       `Prelude.hashWithSalt` tableRegistrationOutput

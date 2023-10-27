@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.DeployedVersionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.DeployedVersionSummary where
@@ -92,7 +92,8 @@ instance Data.FromJSON DeployedVersionSummary where
 
 instance Prelude.Hashable DeployedVersionSummary where
   hashWithSalt _salt DeployedVersionSummary' {..} =
-    _salt `Prelude.hashWithSalt` statusReason
+    _salt
+      `Prelude.hashWithSalt` statusReason
       `Prelude.hashWithSalt` applicationVersion
       `Prelude.hashWithSalt` status
 

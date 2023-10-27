@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisVideo.Types.ResourceEndpointListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisVideo.Types.ResourceEndpointListItem where
@@ -83,7 +83,8 @@ instance Data.FromJSON ResourceEndpointListItem where
 
 instance Prelude.Hashable ResourceEndpointListItem where
   hashWithSalt _salt ResourceEndpointListItem' {..} =
-    _salt `Prelude.hashWithSalt` protocol
+    _salt
+      `Prelude.hashWithSalt` protocol
       `Prelude.hashWithSalt` resourceEndpoint
 
 instance Prelude.NFData ResourceEndpointListItem where

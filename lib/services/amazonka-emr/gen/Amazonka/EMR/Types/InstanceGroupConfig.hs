@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.InstanceGroupConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.InstanceGroupConfig where
@@ -184,7 +184,8 @@ instanceGroupConfig_instanceCount = Lens.lens (\InstanceGroupConfig' {instanceCo
 
 instance Prelude.Hashable InstanceGroupConfig where
   hashWithSalt _salt InstanceGroupConfig' {..} =
-    _salt `Prelude.hashWithSalt` autoScalingPolicy
+    _salt
+      `Prelude.hashWithSalt` autoScalingPolicy
       `Prelude.hashWithSalt` bidPrice
       `Prelude.hashWithSalt` configurations
       `Prelude.hashWithSalt` customAmiId

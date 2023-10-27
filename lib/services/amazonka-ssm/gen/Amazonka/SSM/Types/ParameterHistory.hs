@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.ParameterHistory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.ParameterHistory where
@@ -208,7 +208,8 @@ instance Data.FromJSON ParameterHistory where
 
 instance Prelude.Hashable ParameterHistory where
   hashWithSalt _salt ParameterHistory' {..} =
-    _salt `Prelude.hashWithSalt` allowedPattern
+    _salt
+      `Prelude.hashWithSalt` allowedPattern
       `Prelude.hashWithSalt` dataType
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` keyId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.StaleSecurityGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.StaleSecurityGroup where
@@ -107,11 +107,13 @@ instance Data.FromXML StaleSecurityGroup where
       Prelude.<$> (x Data..@? "description")
       Prelude.<*> (x Data..@? "groupId")
       Prelude.<*> (x Data..@? "groupName")
-      Prelude.<*> ( x Data..@? "staleIpPermissions"
+      Prelude.<*> ( x
+                      Data..@? "staleIpPermissions"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "staleIpPermissionsEgress"
+      Prelude.<*> ( x
+                      Data..@? "staleIpPermissionsEgress"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
@@ -119,7 +121,8 @@ instance Data.FromXML StaleSecurityGroup where
 
 instance Prelude.Hashable StaleSecurityGroup where
   hashWithSalt _salt StaleSecurityGroup' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` groupName
       `Prelude.hashWithSalt` staleIpPermissions

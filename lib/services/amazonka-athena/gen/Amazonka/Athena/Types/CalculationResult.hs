@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.CalculationResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.CalculationResult where
@@ -97,7 +97,8 @@ instance Data.FromJSON CalculationResult where
 
 instance Prelude.Hashable CalculationResult where
   hashWithSalt _salt CalculationResult' {..} =
-    _salt `Prelude.hashWithSalt` resultS3Uri
+    _salt
+      `Prelude.hashWithSalt` resultS3Uri
       `Prelude.hashWithSalt` resultType
       `Prelude.hashWithSalt` stdErrorS3Uri
       `Prelude.hashWithSalt` stdOutS3Uri

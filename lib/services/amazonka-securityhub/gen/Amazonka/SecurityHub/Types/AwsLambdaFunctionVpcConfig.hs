@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsLambdaFunctionVpcConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsLambdaFunctionVpcConfig where
@@ -79,7 +79,8 @@ instance Data.FromJSON AwsLambdaFunctionVpcConfig where
       "AwsLambdaFunctionVpcConfig"
       ( \x ->
           AwsLambdaFunctionVpcConfig'
-            Prelude.<$> ( x Data..:? "SecurityGroupIds"
+            Prelude.<$> ( x
+                            Data..:? "SecurityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SubnetIds" Data..!= Prelude.mempty)
@@ -88,7 +89,8 @@ instance Data.FromJSON AwsLambdaFunctionVpcConfig where
 
 instance Prelude.Hashable AwsLambdaFunctionVpcConfig where
   hashWithSalt _salt AwsLambdaFunctionVpcConfig' {..} =
-    _salt `Prelude.hashWithSalt` securityGroupIds
+    _salt
+      `Prelude.hashWithSalt` securityGroupIds
       `Prelude.hashWithSalt` subnetIds
       `Prelude.hashWithSalt` vpcId
 

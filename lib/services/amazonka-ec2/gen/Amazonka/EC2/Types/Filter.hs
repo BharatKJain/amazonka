@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.Filter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.Filter where
@@ -76,7 +76,8 @@ filter_name = Lens.lens (\Filter' {name} -> name) (\s@Filter' {} a -> s {name = 
 
 instance Prelude.Hashable Filter where
   hashWithSalt _salt Filter' {..} =
-    _salt `Prelude.hashWithSalt` values
+    _salt
+      `Prelude.hashWithSalt` values
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData Filter where

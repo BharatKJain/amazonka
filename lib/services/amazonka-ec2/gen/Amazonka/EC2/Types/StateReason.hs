@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.StateReason
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.StateReason where
@@ -194,7 +194,8 @@ instance Data.FromXML StateReason where
 
 instance Prelude.Hashable StateReason where
   hashWithSalt _salt StateReason' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData StateReason where

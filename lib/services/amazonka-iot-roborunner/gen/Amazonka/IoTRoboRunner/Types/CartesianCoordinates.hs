@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTRoboRunner.Types.CartesianCoordinates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTRoboRunner.Types.CartesianCoordinates where
@@ -88,7 +88,8 @@ instance Data.FromJSON CartesianCoordinates where
 
 instance Prelude.Hashable CartesianCoordinates where
   hashWithSalt _salt CartesianCoordinates' {..} =
-    _salt `Prelude.hashWithSalt` z
+    _salt
+      `Prelude.hashWithSalt` z
       `Prelude.hashWithSalt` x
       `Prelude.hashWithSalt` y
 

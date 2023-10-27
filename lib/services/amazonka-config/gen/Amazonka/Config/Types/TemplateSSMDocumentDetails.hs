@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.TemplateSSMDocumentDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.TemplateSSMDocumentDetails where
@@ -107,7 +107,8 @@ instance Data.FromJSON TemplateSSMDocumentDetails where
 
 instance Prelude.Hashable TemplateSSMDocumentDetails where
   hashWithSalt _salt TemplateSSMDocumentDetails' {..} =
-    _salt `Prelude.hashWithSalt` documentVersion
+    _salt
+      `Prelude.hashWithSalt` documentVersion
       `Prelude.hashWithSalt` documentName
 
 instance Prelude.NFData TemplateSSMDocumentDetails where

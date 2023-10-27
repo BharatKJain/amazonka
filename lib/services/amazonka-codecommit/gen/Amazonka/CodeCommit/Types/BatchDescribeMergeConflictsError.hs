@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeCommit.Types.BatchDescribeMergeConflictsError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeCommit.Types.BatchDescribeMergeConflictsError where
@@ -103,7 +103,8 @@ instance
   hashWithSalt
     _salt
     BatchDescribeMergeConflictsError' {..} =
-      _salt `Prelude.hashWithSalt` filePath
+      _salt
+        `Prelude.hashWithSalt` filePath
         `Prelude.hashWithSalt` exceptionName
         `Prelude.hashWithSalt` message
 

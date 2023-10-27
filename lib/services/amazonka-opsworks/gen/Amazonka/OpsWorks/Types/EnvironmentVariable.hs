@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.EnvironmentVariable
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.EnvironmentVariable where
@@ -112,7 +112,8 @@ instance Data.FromJSON EnvironmentVariable where
 
 instance Prelude.Hashable EnvironmentVariable where
   hashWithSalt _salt EnvironmentVariable' {..} =
-    _salt `Prelude.hashWithSalt` secure
+    _salt
+      `Prelude.hashWithSalt` secure
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 

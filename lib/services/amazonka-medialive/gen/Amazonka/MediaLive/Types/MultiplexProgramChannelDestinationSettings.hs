@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.MultiplexProgramChannelDestinationSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.MultiplexProgramChannelDestinationSettings where
@@ -89,7 +89,7 @@ instance
       ( \x ->
           MultiplexProgramChannelDestinationSettings'
             Prelude.<$> (x Data..:? "multiplexId")
-              Prelude.<*> (x Data..:? "programName")
+            Prelude.<*> (x Data..:? "programName")
       )
 
 instance
@@ -99,7 +99,8 @@ instance
   hashWithSalt
     _salt
     MultiplexProgramChannelDestinationSettings' {..} =
-      _salt `Prelude.hashWithSalt` multiplexId
+      _salt
+        `Prelude.hashWithSalt` multiplexId
         `Prelude.hashWithSalt` programName
 
 instance

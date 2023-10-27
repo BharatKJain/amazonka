@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.M2tsSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.M2tsSettings where
@@ -803,7 +803,8 @@ instance Data.FromJSON M2tsSettings where
 
 instance Prelude.Hashable M2tsSettings where
   hashWithSalt _salt M2tsSettings' {..} =
-    _salt `Prelude.hashWithSalt` audioBufferModel
+    _salt
+      `Prelude.hashWithSalt` audioBufferModel
       `Prelude.hashWithSalt` audioDuration
       `Prelude.hashWithSalt` audioFramesPerPes
       `Prelude.hashWithSalt` audioPids

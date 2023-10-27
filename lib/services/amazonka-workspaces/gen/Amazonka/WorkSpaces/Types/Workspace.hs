@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpaces.Types.Workspace
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpaces.Types.Workspace where
@@ -243,10 +243,12 @@ instance Data.FromJSON Workspace where
             Prelude.<*> (x Data..:? "ErrorCode")
             Prelude.<*> (x Data..:? "ErrorMessage")
             Prelude.<*> (x Data..:? "IpAddress")
-            Prelude.<*> ( x Data..:? "ModificationStates"
+            Prelude.<*> ( x
+                            Data..:? "ModificationStates"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "RelatedWorkspaces"
+            Prelude.<*> ( x
+                            Data..:? "RelatedWorkspaces"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "RootVolumeEncryptionEnabled")
@@ -261,7 +263,8 @@ instance Data.FromJSON Workspace where
 
 instance Prelude.Hashable Workspace where
   hashWithSalt _salt Workspace' {..} =
-    _salt `Prelude.hashWithSalt` bundleId
+    _salt
+      `Prelude.hashWithSalt` bundleId
       `Prelude.hashWithSalt` computerName
       `Prelude.hashWithSalt` directoryId
       `Prelude.hashWithSalt` errorCode

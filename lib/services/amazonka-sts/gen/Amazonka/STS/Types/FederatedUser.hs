@@ -14,7 +14,7 @@
 -- Module      : Amazonka.STS.Types.FederatedUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.STS.Types.FederatedUser where
@@ -90,7 +90,8 @@ instance Data.FromXML FederatedUser where
 
 instance Prelude.Hashable FederatedUser where
   hashWithSalt _salt FederatedUser' {..} =
-    _salt `Prelude.hashWithSalt` federatedUserId
+    _salt
+      `Prelude.hashWithSalt` federatedUserId
       `Prelude.hashWithSalt` arn
 
 instance Prelude.NFData FederatedUser where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeStarNotifications.Types.Target
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeStarNotifications.Types.Target where
@@ -77,7 +77,8 @@ target_targetType = Lens.lens (\Target' {targetType} -> targetType) (\s@Target' 
 
 instance Prelude.Hashable Target where
   hashWithSalt _salt Target' {..} =
-    _salt `Prelude.hashWithSalt` targetAddress
+    _salt
+      `Prelude.hashWithSalt` targetAddress
       `Prelude.hashWithSalt` targetType
 
 instance Prelude.NFData Target where

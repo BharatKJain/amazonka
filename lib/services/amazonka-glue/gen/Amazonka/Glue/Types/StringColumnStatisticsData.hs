@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.StringColumnStatisticsData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.StringColumnStatisticsData where
@@ -108,7 +108,8 @@ instance Data.FromJSON StringColumnStatisticsData where
 
 instance Prelude.Hashable StringColumnStatisticsData where
   hashWithSalt _salt StringColumnStatisticsData' {..} =
-    _salt `Prelude.hashWithSalt` maximumLength
+    _salt
+      `Prelude.hashWithSalt` maximumLength
       `Prelude.hashWithSalt` averageLength
       `Prelude.hashWithSalt` numberOfNulls
       `Prelude.hashWithSalt` numberOfDistinctValues

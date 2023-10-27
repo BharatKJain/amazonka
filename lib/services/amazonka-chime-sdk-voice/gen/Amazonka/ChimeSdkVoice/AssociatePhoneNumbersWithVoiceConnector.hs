@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSdkVoice.AssociatePhoneNumbersWithVoiceConnector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,10 +110,11 @@ instance
     Response.receiveJSON
       ( \s h x ->
           AssociatePhoneNumbersWithVoiceConnectorResponse'
-            Prelude.<$> ( x Data..?> "PhoneNumberErrors"
+            Prelude.<$> ( x
+                            Data..?> "PhoneNumberErrors"
                             Core..!@ Prelude.mempty
                         )
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -123,7 +124,8 @@ instance
   hashWithSalt
     _salt
     AssociatePhoneNumbersWithVoiceConnector' {..} =
-      _salt `Prelude.hashWithSalt` forceAssociate
+      _salt
+        `Prelude.hashWithSalt` forceAssociate
         `Prelude.hashWithSalt` voiceConnectorId
         `Prelude.hashWithSalt` e164PhoneNumbers
 

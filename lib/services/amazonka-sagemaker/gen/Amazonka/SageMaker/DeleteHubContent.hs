@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.DeleteHubContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest DeleteHubContent where
 
 instance Prelude.Hashable DeleteHubContent where
   hashWithSalt _salt DeleteHubContent' {..} =
-    _salt `Prelude.hashWithSalt` hubName
+    _salt
+      `Prelude.hashWithSalt` hubName
       `Prelude.hashWithSalt` hubContentType
       `Prelude.hashWithSalt` hubContentName
       `Prelude.hashWithSalt` hubContentVersion

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glacier.Types.JobParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glacier.Types.JobParameters where
@@ -220,7 +220,8 @@ jobParameters_type = Lens.lens (\JobParameters' {type'} -> type') (\s@JobParamet
 
 instance Prelude.Hashable JobParameters where
   hashWithSalt _salt JobParameters' {..} =
-    _salt `Prelude.hashWithSalt` archiveId
+    _salt
+      `Prelude.hashWithSalt` archiveId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` format
       `Prelude.hashWithSalt` inventoryRetrievalParameters

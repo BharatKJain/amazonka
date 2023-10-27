@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScaling.Types.LifecycleHookSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScaling.Types.LifecycleHookSpecification where
@@ -193,7 +193,8 @@ lifecycleHookSpecification_lifecycleTransition = Lens.lens (\LifecycleHookSpecif
 
 instance Prelude.Hashable LifecycleHookSpecification where
   hashWithSalt _salt LifecycleHookSpecification' {..} =
-    _salt `Prelude.hashWithSalt` defaultResult
+    _salt
+      `Prelude.hashWithSalt` defaultResult
       `Prelude.hashWithSalt` heartbeatTimeout
       `Prelude.hashWithSalt` notificationMetadata
       `Prelude.hashWithSalt` notificationTargetARN

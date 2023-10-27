@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.MetricAttributionOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.MetricAttributionOutput where
@@ -86,7 +86,8 @@ instance Data.FromJSON MetricAttributionOutput where
 
 instance Prelude.Hashable MetricAttributionOutput where
   hashWithSalt _salt MetricAttributionOutput' {..} =
-    _salt `Prelude.hashWithSalt` s3DataDestination
+    _salt
+      `Prelude.hashWithSalt` s3DataDestination
       `Prelude.hashWithSalt` roleArn
 
 instance Prelude.NFData MetricAttributionOutput where

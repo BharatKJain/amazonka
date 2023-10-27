@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RedshiftServerLess.Types.TableRestoreStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RedshiftServerLess.Types.TableRestoreStatus where
@@ -216,7 +216,8 @@ instance Data.FromJSON TableRestoreStatus where
 
 instance Prelude.Hashable TableRestoreStatus where
   hashWithSalt _salt TableRestoreStatus' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` namespaceName
       `Prelude.hashWithSalt` newTableName'
       `Prelude.hashWithSalt` progressInMegaBytes

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.Limit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.Limit where
@@ -174,11 +174,13 @@ limit_name = Lens.lens (\Limit' {name} -> name) (\s@Limit' {} a -> s {name = a} 
 instance Data.FromXML Limit where
   parseXML x =
     Limit'
-      Prelude.<$> (x Data..@? "Max") Prelude.<*> (x Data..@? "Name")
+      Prelude.<$> (x Data..@? "Max")
+      Prelude.<*> (x Data..@? "Name")
 
 instance Prelude.Hashable Limit where
   hashWithSalt _salt Limit' {..} =
-    _salt `Prelude.hashWithSalt` max
+    _salt
+      `Prelude.hashWithSalt` max
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData Limit where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.AttachTrafficSources
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest AttachTrafficSources where
 
 instance Prelude.Hashable AttachTrafficSources where
   hashWithSalt _salt AttachTrafficSources' {..} =
-    _salt `Prelude.hashWithSalt` autoScalingGroupName
+    _salt
+      `Prelude.hashWithSalt` autoScalingGroupName
       `Prelude.hashWithSalt` trafficSources
 
 instance Prelude.NFData AttachTrafficSources where

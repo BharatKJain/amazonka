@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.ReleaseLabelFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.ReleaseLabelFilter where
@@ -64,7 +64,8 @@ releaseLabelFilter_prefix = Lens.lens (\ReleaseLabelFilter' {prefix} -> prefix) 
 
 instance Prelude.Hashable ReleaseLabelFilter where
   hashWithSalt _salt ReleaseLabelFilter' {..} =
-    _salt `Prelude.hashWithSalt` application
+    _salt
+      `Prelude.hashWithSalt` application
       `Prelude.hashWithSalt` prefix
 
 instance Prelude.NFData ReleaseLabelFilter where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.S3DataSourceConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.S3DataSourceConfiguration where
@@ -213,13 +213,16 @@ instance Data.FromJSON S3DataSourceConfiguration where
           S3DataSourceConfiguration'
             Prelude.<$> (x Data..:? "AccessControlListConfiguration")
             Prelude.<*> (x Data..:? "DocumentsMetadataConfiguration")
-            Prelude.<*> ( x Data..:? "ExclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "ExclusionPatterns"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "InclusionPatterns"
+            Prelude.<*> ( x
+                            Data..:? "InclusionPatterns"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "InclusionPrefixes"
+            Prelude.<*> ( x
+                            Data..:? "InclusionPrefixes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "BucketName")

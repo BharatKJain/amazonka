@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SNS.PutDataProtectionPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,7 +127,8 @@ instance Core.AWSRequest PutDataProtectionPolicy where
 
 instance Prelude.Hashable PutDataProtectionPolicy where
   hashWithSalt _salt PutDataProtectionPolicy' {..} =
-    _salt `Prelude.hashWithSalt` resourceArn
+    _salt
+      `Prelude.hashWithSalt` resourceArn
       `Prelude.hashWithSalt` dataProtectionPolicy
 
 instance Prelude.NFData PutDataProtectionPolicy where

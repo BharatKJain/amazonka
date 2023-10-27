@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.UpdateRequireCheckIn
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.UpdateRequireCheckIn where
@@ -70,7 +70,8 @@ updateRequireCheckIn_releaseAfterMinutes = Lens.lens (\UpdateRequireCheckIn' {re
 
 instance Prelude.Hashable UpdateRequireCheckIn where
   hashWithSalt _salt UpdateRequireCheckIn' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` releaseAfterMinutes
 
 instance Prelude.NFData UpdateRequireCheckIn where

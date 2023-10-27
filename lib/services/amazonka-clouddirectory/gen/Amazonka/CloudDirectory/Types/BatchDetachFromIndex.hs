@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchDetachFromIndex
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchDetachFromIndex where
@@ -74,7 +74,8 @@ batchDetachFromIndex_targetReference = Lens.lens (\BatchDetachFromIndex' {target
 
 instance Prelude.Hashable BatchDetachFromIndex where
   hashWithSalt _salt BatchDetachFromIndex' {..} =
-    _salt `Prelude.hashWithSalt` indexReference
+    _salt
+      `Prelude.hashWithSalt` indexReference
       `Prelude.hashWithSalt` targetReference
 
 instance Prelude.NFData BatchDetachFromIndex where

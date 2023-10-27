@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StorageGateway.UpdateGatewayInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -151,7 +151,8 @@ instance Core.AWSRequest UpdateGatewayInformation where
 
 instance Prelude.Hashable UpdateGatewayInformation where
   hashWithSalt _salt UpdateGatewayInformation' {..} =
-    _salt `Prelude.hashWithSalt` cloudWatchLogGroupARN
+    _salt
+      `Prelude.hashWithSalt` cloudWatchLogGroupARN
       `Prelude.hashWithSalt` gatewayCapacity
       `Prelude.hashWithSalt` gatewayName
       `Prelude.hashWithSalt` gatewayTimezone

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.ValueWithServiceIds
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.ValueWithServiceIds where
@@ -77,7 +77,8 @@ instance Data.FromJSON ValueWithServiceIds where
 
 instance Prelude.Hashable ValueWithServiceIds where
   hashWithSalt _salt ValueWithServiceIds' {..} =
-    _salt `Prelude.hashWithSalt` annotationValue
+    _salt
+      `Prelude.hashWithSalt` annotationValue
       `Prelude.hashWithSalt` serviceIds
 
 instance Prelude.NFData ValueWithServiceIds where

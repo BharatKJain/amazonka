@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.WeeklyAutoScalingSchedule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.WeeklyAutoScalingSchedule where
@@ -143,7 +143,8 @@ instance Data.FromJSON WeeklyAutoScalingSchedule where
 
 instance Prelude.Hashable WeeklyAutoScalingSchedule where
   hashWithSalt _salt WeeklyAutoScalingSchedule' {..} =
-    _salt `Prelude.hashWithSalt` friday
+    _salt
+      `Prelude.hashWithSalt` friday
       `Prelude.hashWithSalt` monday
       `Prelude.hashWithSalt` saturday
       `Prelude.hashWithSalt` sunday

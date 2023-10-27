@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.UpdateWirelessGatewayTaskEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.UpdateWirelessGatewayTaskEntry where
@@ -91,7 +91,8 @@ instance
   hashWithSalt
     _salt
     UpdateWirelessGatewayTaskEntry' {..} =
-      _salt `Prelude.hashWithSalt` arn
+      _salt
+        `Prelude.hashWithSalt` arn
         `Prelude.hashWithSalt` id
         `Prelude.hashWithSalt` loRaWAN
 

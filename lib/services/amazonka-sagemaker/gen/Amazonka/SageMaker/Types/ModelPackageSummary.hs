@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ModelPackageSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ModelPackageSummary where
@@ -176,7 +176,8 @@ instance Data.FromJSON ModelPackageSummary where
 
 instance Prelude.Hashable ModelPackageSummary where
   hashWithSalt _salt ModelPackageSummary' {..} =
-    _salt `Prelude.hashWithSalt` modelApprovalStatus
+    _salt
+      `Prelude.hashWithSalt` modelApprovalStatus
       `Prelude.hashWithSalt` modelPackageDescription
       `Prelude.hashWithSalt` modelPackageGroupName
       `Prelude.hashWithSalt` modelPackageVersion

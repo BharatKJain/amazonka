@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.ListTrials
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -168,21 +168,23 @@ instance Core.AWSPager ListTrials where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listTrialsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listTrialsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listTrialsResponse_trialSummaries
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listTrials_nextToken
           Lens..~ rs
-          Lens.^? listTrialsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listTrialsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListTrials where
   type AWSResponse ListTrials = ListTrialsResponse
@@ -199,7 +201,8 @@ instance Core.AWSRequest ListTrials where
 
 instance Prelude.Hashable ListTrials where
   hashWithSalt _salt ListTrials' {..} =
-    _salt `Prelude.hashWithSalt` createdAfter
+    _salt
+      `Prelude.hashWithSalt` createdAfter
       `Prelude.hashWithSalt` createdBefore
       `Prelude.hashWithSalt` experimentName
       `Prelude.hashWithSalt` maxResults

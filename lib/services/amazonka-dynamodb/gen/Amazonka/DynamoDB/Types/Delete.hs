@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.Delete
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.Delete where
@@ -118,7 +118,8 @@ delete_tableName = Lens.lens (\Delete' {tableName} -> tableName) (\s@Delete' {} 
 
 instance Prelude.Hashable Delete where
   hashWithSalt _salt Delete' {..} =
-    _salt `Prelude.hashWithSalt` conditionExpression
+    _salt
+      `Prelude.hashWithSalt` conditionExpression
       `Prelude.hashWithSalt` expressionAttributeNames
       `Prelude.hashWithSalt` expressionAttributeValues
       `Prelude.hashWithSalt` returnValuesOnConditionCheckFailure

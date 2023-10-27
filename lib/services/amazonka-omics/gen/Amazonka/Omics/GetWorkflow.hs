@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Omics.GetWorkflow
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,7 +127,8 @@ instance Core.AWSRequest GetWorkflow where
             Prelude.<*> (x Data..?> "id")
             Prelude.<*> (x Data..?> "main")
             Prelude.<*> (x Data..?> "name")
-            Prelude.<*> ( x Data..?> "parameterTemplate"
+            Prelude.<*> ( x
+                            Data..?> "parameterTemplate"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "status")
@@ -140,7 +141,8 @@ instance Core.AWSRequest GetWorkflow where
 
 instance Prelude.Hashable GetWorkflow where
   hashWithSalt _salt GetWorkflow' {..} =
-    _salt `Prelude.hashWithSalt` export'
+    _salt
+      `Prelude.hashWithSalt` export'
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` id
 

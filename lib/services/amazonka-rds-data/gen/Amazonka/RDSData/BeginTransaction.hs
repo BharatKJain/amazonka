@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDSData.BeginTransaction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,7 +138,8 @@ instance Core.AWSRequest BeginTransaction where
 
 instance Prelude.Hashable BeginTransaction where
   hashWithSalt _salt BeginTransaction' {..} =
-    _salt `Prelude.hashWithSalt` database
+    _salt
+      `Prelude.hashWithSalt` database
       `Prelude.hashWithSalt` schema
       `Prelude.hashWithSalt` resourceArn
       `Prelude.hashWithSalt` secretArn

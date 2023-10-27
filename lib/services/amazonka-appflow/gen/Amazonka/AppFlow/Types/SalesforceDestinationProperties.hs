@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.SalesforceDestinationProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.SalesforceDestinationProperties where
@@ -257,7 +257,8 @@ instance
   hashWithSalt
     _salt
     SalesforceDestinationProperties' {..} =
-      _salt `Prelude.hashWithSalt` dataTransferApi
+      _salt
+        `Prelude.hashWithSalt` dataTransferApi
         `Prelude.hashWithSalt` errorHandlingConfig
         `Prelude.hashWithSalt` idFieldNames
         `Prelude.hashWithSalt` writeOperationType

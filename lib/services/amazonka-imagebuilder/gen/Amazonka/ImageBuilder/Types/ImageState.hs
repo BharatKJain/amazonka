@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ImageBuilder.Types.ImageState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ImageBuilder.Types.ImageState where
@@ -75,7 +75,8 @@ instance Data.FromJSON ImageState where
 
 instance Prelude.Hashable ImageState where
   hashWithSalt _salt ImageState' {..} =
-    _salt `Prelude.hashWithSalt` reason
+    _salt
+      `Prelude.hashWithSalt` reason
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData ImageState where

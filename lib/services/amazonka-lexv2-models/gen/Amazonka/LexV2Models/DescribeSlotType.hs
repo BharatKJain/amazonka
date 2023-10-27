@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexV2Models.DescribeSlotType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -165,7 +165,8 @@ instance Core.AWSRequest DescribeSlotType where
 
 instance Prelude.Hashable DescribeSlotType where
   hashWithSalt _salt DescribeSlotType' {..} =
-    _salt `Prelude.hashWithSalt` slotTypeId
+    _salt
+      `Prelude.hashWithSalt` slotTypeId
       `Prelude.hashWithSalt` botId
       `Prelude.hashWithSalt` botVersion
       `Prelude.hashWithSalt` localeId

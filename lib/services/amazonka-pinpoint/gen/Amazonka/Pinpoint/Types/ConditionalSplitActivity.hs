@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.ConditionalSplitActivity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.ConditionalSplitActivity where
@@ -121,7 +121,8 @@ instance Data.FromJSON ConditionalSplitActivity where
 
 instance Prelude.Hashable ConditionalSplitActivity where
   hashWithSalt _salt ConditionalSplitActivity' {..} =
-    _salt `Prelude.hashWithSalt` condition
+    _salt
+      `Prelude.hashWithSalt` condition
       `Prelude.hashWithSalt` evaluationWaitTime
       `Prelude.hashWithSalt` falseActivity
       `Prelude.hashWithSalt` trueActivity

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.IndexStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.IndexStatistics where
@@ -83,7 +83,8 @@ instance Data.FromJSON IndexStatistics where
 
 instance Prelude.Hashable IndexStatistics where
   hashWithSalt _salt IndexStatistics' {..} =
-    _salt `Prelude.hashWithSalt` faqStatistics
+    _salt
+      `Prelude.hashWithSalt` faqStatistics
       `Prelude.hashWithSalt` textDocumentStatistics
 
 instance Prelude.NFData IndexStatistics where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceQuotas.Types.ServiceQuotaIncreaseRequestInTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceQuotas.Types.ServiceQuotaIncreaseRequestInTemplate where
@@ -143,7 +143,8 @@ instance
   hashWithSalt
     _salt
     ServiceQuotaIncreaseRequestInTemplate' {..} =
-      _salt `Prelude.hashWithSalt` awsRegion
+      _salt
+        `Prelude.hashWithSalt` awsRegion
         `Prelude.hashWithSalt` desiredValue
         `Prelude.hashWithSalt` globalQuota
         `Prelude.hashWithSalt` quotaCode

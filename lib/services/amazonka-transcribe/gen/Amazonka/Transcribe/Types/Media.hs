@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transcribe.Types.Media
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transcribe.Types.Media where
@@ -147,7 +147,8 @@ instance Data.FromJSON Media where
 
 instance Prelude.Hashable Media where
   hashWithSalt _salt Media' {..} =
-    _salt `Prelude.hashWithSalt` mediaFileUri
+    _salt
+      `Prelude.hashWithSalt` mediaFileUri
       `Prelude.hashWithSalt` redactedMediaFileUri
 
 instance Prelude.NFData Media where

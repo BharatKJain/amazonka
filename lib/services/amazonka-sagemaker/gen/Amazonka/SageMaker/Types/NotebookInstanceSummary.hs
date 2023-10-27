@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.NotebookInstanceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.NotebookInstanceSummary where
@@ -210,7 +210,8 @@ instance Data.FromJSON NotebookInstanceSummary where
       "NotebookInstanceSummary"
       ( \x ->
           NotebookInstanceSummary'
-            Prelude.<$> ( x Data..:? "AdditionalCodeRepositories"
+            Prelude.<$> ( x
+                            Data..:? "AdditionalCodeRepositories"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CreationTime")

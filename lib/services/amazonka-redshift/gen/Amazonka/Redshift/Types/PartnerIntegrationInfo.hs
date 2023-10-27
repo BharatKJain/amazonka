@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.PartnerIntegrationInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.PartnerIntegrationInfo where
@@ -116,7 +116,8 @@ instance Data.FromXML PartnerIntegrationInfo where
 
 instance Prelude.Hashable PartnerIntegrationInfo where
   hashWithSalt _salt PartnerIntegrationInfo' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` partnerName
       `Prelude.hashWithSalt` status

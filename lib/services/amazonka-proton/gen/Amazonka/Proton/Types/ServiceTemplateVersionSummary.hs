@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Proton.Types.ServiceTemplateVersionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Proton.Types.ServiceTemplateVersionSummary where
@@ -184,7 +184,8 @@ instance
     ServiceTemplateVersionSummary
   where
   hashWithSalt _salt ServiceTemplateVersionSummary' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` recommendedMinorVersion
       `Prelude.hashWithSalt` statusMessage
       `Prelude.hashWithSalt` arn

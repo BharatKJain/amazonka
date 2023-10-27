@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SESV2.DeleteEmailIdentityPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance Core.AWSRequest DeleteEmailIdentityPolicy where
 
 instance Prelude.Hashable DeleteEmailIdentityPolicy where
   hashWithSalt _salt DeleteEmailIdentityPolicy' {..} =
-    _salt `Prelude.hashWithSalt` emailIdentity
+    _salt
+      `Prelude.hashWithSalt` emailIdentity
       `Prelude.hashWithSalt` policyName
 
 instance Prelude.NFData DeleteEmailIdentityPolicy where

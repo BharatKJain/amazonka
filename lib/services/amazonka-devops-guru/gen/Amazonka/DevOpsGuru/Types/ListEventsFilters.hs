@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.ListEventsFilters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.ListEventsFilters where
@@ -116,7 +116,8 @@ listEventsFilters_resourceCollection = Lens.lens (\ListEventsFilters' {resourceC
 
 instance Prelude.Hashable ListEventsFilters where
   hashWithSalt _salt ListEventsFilters' {..} =
-    _salt `Prelude.hashWithSalt` dataSource
+    _salt
+      `Prelude.hashWithSalt` dataSource
       `Prelude.hashWithSalt` eventClass
       `Prelude.hashWithSalt` eventSource
       `Prelude.hashWithSalt` eventTimeRange

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.PersonasSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.PersonasSummary where
@@ -116,7 +116,8 @@ instance Data.FromJSON PersonasSummary where
 
 instance Prelude.Hashable PersonasSummary where
   hashWithSalt _salt PersonasSummary' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` entityId
       `Prelude.hashWithSalt` persona
       `Prelude.hashWithSalt` updatedAt

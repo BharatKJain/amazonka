@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTSiteWise.ListAssociatedAssets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -195,21 +195,21 @@ instance Core.AWSPager ListAssociatedAssets where
     | Core.stop
         ( rs
             Lens.^? listAssociatedAssetsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listAssociatedAssetsResponse_assetSummaries
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAssociatedAssets_nextToken
           Lens..~ rs
           Lens.^? listAssociatedAssetsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAssociatedAssets where
   type
@@ -223,14 +223,16 @@ instance Core.AWSRequest ListAssociatedAssets where
           ListAssociatedAssetsResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "assetSummaries"
+            Prelude.<*> ( x
+                            Data..?> "assetSummaries"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListAssociatedAssets where
   hashWithSalt _salt ListAssociatedAssets' {..} =
-    _salt `Prelude.hashWithSalt` hierarchyId
+    _salt
+      `Prelude.hashWithSalt` hierarchyId
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` traversalDirection

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ValidationWarning
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ValidationWarning where
@@ -58,7 +58,9 @@ validationWarning_errors = Lens.lens (\ValidationWarning' {errors} -> errors) (\
 instance Data.FromXML ValidationWarning where
   parseXML x =
     ValidationWarning'
-      Prelude.<$> ( x Data..@? "errorSet" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "errorSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 

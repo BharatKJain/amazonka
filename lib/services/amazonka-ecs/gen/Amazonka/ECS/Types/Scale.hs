@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.Scale
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.Scale where
@@ -73,12 +73,14 @@ instance Data.FromJSON Scale where
       "Scale"
       ( \x ->
           Scale'
-            Prelude.<$> (x Data..:? "unit") Prelude.<*> (x Data..:? "value")
+            Prelude.<$> (x Data..:? "unit")
+            Prelude.<*> (x Data..:? "value")
       )
 
 instance Prelude.Hashable Scale where
   hashWithSalt _salt Scale' {..} =
-    _salt `Prelude.hashWithSalt` unit
+    _salt
+      `Prelude.hashWithSalt` unit
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData Scale where

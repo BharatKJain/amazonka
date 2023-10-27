@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.Permission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.Permission where
@@ -168,7 +168,8 @@ instance Data.FromJSON Permission where
 
 instance Prelude.Hashable Permission where
   hashWithSalt _salt Permission' {..} =
-    _salt `Prelude.hashWithSalt` access
+    _salt
+      `Prelude.hashWithSalt` access
       `Prelude.hashWithSalt` grantee
       `Prelude.hashWithSalt` granteeType
 

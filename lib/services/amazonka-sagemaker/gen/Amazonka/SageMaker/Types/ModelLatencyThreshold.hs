@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ModelLatencyThreshold
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ModelLatencyThreshold where
@@ -75,7 +75,8 @@ instance Data.FromJSON ModelLatencyThreshold where
 
 instance Prelude.Hashable ModelLatencyThreshold where
   hashWithSalt _salt ModelLatencyThreshold' {..} =
-    _salt `Prelude.hashWithSalt` percentile
+    _salt
+      `Prelude.hashWithSalt` percentile
       `Prelude.hashWithSalt` valueInMilliseconds
 
 instance Prelude.NFData ModelLatencyThreshold where

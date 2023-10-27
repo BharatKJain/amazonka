@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkMail.UpdatePrimaryEmailAddress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest UpdatePrimaryEmailAddress where
 
 instance Prelude.Hashable UpdatePrimaryEmailAddress where
   hashWithSalt _salt UpdatePrimaryEmailAddress' {..} =
-    _salt `Prelude.hashWithSalt` organizationId
+    _salt
+      `Prelude.hashWithSalt` organizationId
       `Prelude.hashWithSalt` entityId
       `Prelude.hashWithSalt` email
 

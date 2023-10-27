@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.ConversationLogSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.ConversationLogSettings where
@@ -78,7 +78,8 @@ instance Data.FromJSON ConversationLogSettings where
 
 instance Prelude.Hashable ConversationLogSettings where
   hashWithSalt _salt ConversationLogSettings' {..} =
-    _salt `Prelude.hashWithSalt` audioLogSettings
+    _salt
+      `Prelude.hashWithSalt` audioLogSettings
       `Prelude.hashWithSalt` textLogSettings
 
 instance Prelude.NFData ConversationLogSettings where

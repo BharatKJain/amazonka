@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsLogConfigurationDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsLogConfigurationDetails where
@@ -172,8 +172,8 @@ instance
       ( \x ->
           AwsEcsTaskDefinitionContainerDefinitionsLogConfigurationDetails'
             Prelude.<$> (x Data..:? "LogDriver")
-              Prelude.<*> (x Data..:? "Options" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "SecretOptions" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "Options" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "SecretOptions" Data..!= Prelude.mempty)
       )
 
 instance
@@ -183,7 +183,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsTaskDefinitionContainerDefinitionsLogConfigurationDetails' {..} =
-      _salt `Prelude.hashWithSalt` logDriver
+      _salt
+        `Prelude.hashWithSalt` logDriver
         `Prelude.hashWithSalt` options
         `Prelude.hashWithSalt` secretOptions
 

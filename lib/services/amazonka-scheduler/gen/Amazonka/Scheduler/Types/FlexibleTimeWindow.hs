@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Scheduler.Types.FlexibleTimeWindow
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Scheduler.Types.FlexibleTimeWindow where
@@ -82,7 +82,8 @@ instance Data.FromJSON FlexibleTimeWindow where
 
 instance Prelude.Hashable FlexibleTimeWindow where
   hashWithSalt _salt FlexibleTimeWindow' {..} =
-    _salt `Prelude.hashWithSalt` maximumWindowInMinutes
+    _salt
+      `Prelude.hashWithSalt` maximumWindowInMinutes
       `Prelude.hashWithSalt` mode
 
 instance Prelude.NFData FlexibleTimeWindow where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53AutoNaming.Types.NamespaceFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53AutoNaming.Types.NamespaceFilter where
@@ -153,7 +153,8 @@ namespaceFilter_values = Lens.lens (\NamespaceFilter' {values} -> values) (\s@Na
 
 instance Prelude.Hashable NamespaceFilter where
   hashWithSalt _salt NamespaceFilter' {..} =
-    _salt `Prelude.hashWithSalt` condition
+    _salt
+      `Prelude.hashWithSalt` condition
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
 

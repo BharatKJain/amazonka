@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.ResultReuseByAgeConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.ResultReuseByAgeConfiguration where
@@ -87,7 +87,8 @@ instance
     ResultReuseByAgeConfiguration
   where
   hashWithSalt _salt ResultReuseByAgeConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` maxAgeInMinutes
+    _salt
+      `Prelude.hashWithSalt` maxAgeInMinutes
       `Prelude.hashWithSalt` enabled
 
 instance Prelude.NFData ResultReuseByAgeConfiguration where

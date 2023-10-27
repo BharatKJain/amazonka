@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Nimble.StartStreamingSession
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest StartStreamingSession where
 
 instance Prelude.Hashable StartStreamingSession where
   hashWithSalt _salt StartStreamingSession' {..} =
-    _salt `Prelude.hashWithSalt` backupId
+    _salt
+      `Prelude.hashWithSalt` backupId
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` sessionId
       `Prelude.hashWithSalt` studioId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.SecondaryStatusTransition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.SecondaryStatusTransition where
@@ -339,7 +339,8 @@ instance Data.FromJSON SecondaryStatusTransition where
 
 instance Prelude.Hashable SecondaryStatusTransition where
   hashWithSalt _salt SecondaryStatusTransition' {..} =
-    _salt `Prelude.hashWithSalt` endTime
+    _salt
+      `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` statusMessage
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` startTime

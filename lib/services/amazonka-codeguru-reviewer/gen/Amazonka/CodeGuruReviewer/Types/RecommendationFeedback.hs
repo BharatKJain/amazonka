@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.RecommendationFeedback
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.RecommendationFeedback where
@@ -146,7 +146,8 @@ instance Data.FromJSON RecommendationFeedback where
 
 instance Prelude.Hashable RecommendationFeedback where
   hashWithSalt _salt RecommendationFeedback' {..} =
-    _salt `Prelude.hashWithSalt` codeReviewArn
+    _salt
+      `Prelude.hashWithSalt` codeReviewArn
       `Prelude.hashWithSalt` createdTimeStamp
       `Prelude.hashWithSalt` lastUpdatedTimeStamp
       `Prelude.hashWithSalt` reactions

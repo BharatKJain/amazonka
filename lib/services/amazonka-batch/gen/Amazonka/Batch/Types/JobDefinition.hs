@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.JobDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.JobDefinition where
@@ -318,7 +318,8 @@ instance Data.FromJSON JobDefinition where
             Prelude.<*> (x Data..:? "eksProperties")
             Prelude.<*> (x Data..:? "nodeProperties")
             Prelude.<*> (x Data..:? "parameters" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "platformCapabilities"
+            Prelude.<*> ( x
+                            Data..:? "platformCapabilities"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "propagateTags")

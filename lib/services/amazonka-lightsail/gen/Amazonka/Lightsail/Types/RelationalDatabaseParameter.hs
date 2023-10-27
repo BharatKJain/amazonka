@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.RelationalDatabaseParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.RelationalDatabaseParameter where
@@ -141,7 +141,8 @@ instance Data.FromJSON RelationalDatabaseParameter where
 
 instance Prelude.Hashable RelationalDatabaseParameter where
   hashWithSalt _salt RelationalDatabaseParameter' {..} =
-    _salt `Prelude.hashWithSalt` allowedValues
+    _salt
+      `Prelude.hashWithSalt` allowedValues
       `Prelude.hashWithSalt` applyMethod
       `Prelude.hashWithSalt` applyType
       `Prelude.hashWithSalt` dataType

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.StudioSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.StudioSummary where
@@ -133,7 +133,8 @@ instance Data.FromJSON StudioSummary where
 
 instance Prelude.Hashable StudioSummary where
   hashWithSalt _salt StudioSummary' {..} =
-    _salt `Prelude.hashWithSalt` authMode
+    _salt
+      `Prelude.hashWithSalt` authMode
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name

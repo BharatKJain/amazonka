@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComprehendMedical.Types.SNOMEDCTAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComprehendMedical.Types.SNOMEDCTAttribute where
@@ -198,7 +198,8 @@ instance Data.FromJSON SNOMEDCTAttribute where
             Prelude.<*> (x Data..:? "Id")
             Prelude.<*> (x Data..:? "RelationshipScore")
             Prelude.<*> (x Data..:? "RelationshipType")
-            Prelude.<*> ( x Data..:? "SNOMEDCTConcepts"
+            Prelude.<*> ( x
+                            Data..:? "SNOMEDCTConcepts"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Score")
@@ -209,7 +210,8 @@ instance Data.FromJSON SNOMEDCTAttribute where
 
 instance Prelude.Hashable SNOMEDCTAttribute where
   hashWithSalt _salt SNOMEDCTAttribute' {..} =
-    _salt `Prelude.hashWithSalt` beginOffset
+    _salt
+      `Prelude.hashWithSalt` beginOffset
       `Prelude.hashWithSalt` category
       `Prelude.hashWithSalt` endOffset
       `Prelude.hashWithSalt` id

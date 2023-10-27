@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeStarConnections.Types.Host
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeStarConnections.Types.Host where
@@ -148,7 +148,8 @@ instance Data.FromJSON Host where
 
 instance Prelude.Hashable Host where
   hashWithSalt _salt Host' {..} =
-    _salt `Prelude.hashWithSalt` hostArn
+    _salt
+      `Prelude.hashWithSalt` hostArn
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` providerEndpoint
       `Prelude.hashWithSalt` providerType

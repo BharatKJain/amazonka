@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.ColumnSelector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.ColumnSelector where
@@ -69,12 +69,14 @@ instance Data.FromJSON ColumnSelector where
       "ColumnSelector"
       ( \x ->
           ColumnSelector'
-            Prelude.<$> (x Data..:? "Name") Prelude.<*> (x Data..:? "Regex")
+            Prelude.<$> (x Data..:? "Name")
+            Prelude.<*> (x Data..:? "Regex")
       )
 
 instance Prelude.Hashable ColumnSelector where
   hashWithSalt _salt ColumnSelector' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` regex
 
 instance Prelude.NFData ColumnSelector where

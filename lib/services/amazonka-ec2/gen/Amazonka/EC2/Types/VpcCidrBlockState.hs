@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VpcCidrBlockState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VpcCidrBlockState where
@@ -72,7 +72,8 @@ instance Data.FromXML VpcCidrBlockState where
 
 instance Prelude.Hashable VpcCidrBlockState where
   hashWithSalt _salt VpcCidrBlockState' {..} =
-    _salt `Prelude.hashWithSalt` state
+    _salt
+      `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` statusMessage
 
 instance Prelude.NFData VpcCidrBlockState where

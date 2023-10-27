@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.BoxPlotSortConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.BoxPlotSortConfiguration where
@@ -77,7 +77,8 @@ instance Data.FromJSON BoxPlotSortConfiguration where
 
 instance Prelude.Hashable BoxPlotSortConfiguration where
   hashWithSalt _salt BoxPlotSortConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` categorySort
+    _salt
+      `Prelude.hashWithSalt` categorySort
       `Prelude.hashWithSalt` paginationConfiguration
 
 instance Prelude.NFData BoxPlotSortConfiguration where

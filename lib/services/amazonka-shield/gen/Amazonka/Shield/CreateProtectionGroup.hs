@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Shield.CreateProtectionGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -224,7 +224,8 @@ instance Core.AWSRequest CreateProtectionGroup where
 
 instance Prelude.Hashable CreateProtectionGroup where
   hashWithSalt _salt CreateProtectionGroup' {..} =
-    _salt `Prelude.hashWithSalt` members
+    _salt
+      `Prelude.hashWithSalt` members
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` protectionGroupId

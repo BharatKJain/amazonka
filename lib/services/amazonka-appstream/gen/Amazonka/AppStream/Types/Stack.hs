@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.Stack
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.Stack where
@@ -215,7 +215,8 @@ instance Data.FromJSON Stack where
             Prelude.<*> (x Data..:? "FeedbackURL")
             Prelude.<*> (x Data..:? "RedirectURL")
             Prelude.<*> (x Data..:? "StackErrors" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "StorageConnectors"
+            Prelude.<*> ( x
+                            Data..:? "StorageConnectors"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "StreamingExperienceSettings")
@@ -225,7 +226,8 @@ instance Data.FromJSON Stack where
 
 instance Prelude.Hashable Stack where
   hashWithSalt _salt Stack' {..} =
-    _salt `Prelude.hashWithSalt` accessEndpoints
+    _salt
+      `Prelude.hashWithSalt` accessEndpoints
       `Prelude.hashWithSalt` applicationSettings
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdTime

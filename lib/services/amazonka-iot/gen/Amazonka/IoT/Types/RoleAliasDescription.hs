@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.RoleAliasDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.RoleAliasDescription where
@@ -125,7 +125,8 @@ instance Data.FromJSON RoleAliasDescription where
 
 instance Prelude.Hashable RoleAliasDescription where
   hashWithSalt _salt RoleAliasDescription' {..} =
-    _salt `Prelude.hashWithSalt` creationDate
+    _salt
+      `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` credentialDurationSeconds
       `Prelude.hashWithSalt` lastModifiedDate
       `Prelude.hashWithSalt` owner

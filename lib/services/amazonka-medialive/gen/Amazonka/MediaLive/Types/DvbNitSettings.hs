@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.DvbNitSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.DvbNitSettings where
@@ -94,7 +94,8 @@ instance Data.FromJSON DvbNitSettings where
 
 instance Prelude.Hashable DvbNitSettings where
   hashWithSalt _salt DvbNitSettings' {..} =
-    _salt `Prelude.hashWithSalt` repInterval
+    _salt
+      `Prelude.hashWithSalt` repInterval
       `Prelude.hashWithSalt` networkName
       `Prelude.hashWithSalt` networkId
 

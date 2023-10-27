@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.RecommendationRelatedEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.RecommendationRelatedEvent where
@@ -84,7 +84,8 @@ instance Data.FromJSON RecommendationRelatedEvent where
 
 instance Prelude.Hashable RecommendationRelatedEvent where
   hashWithSalt _salt RecommendationRelatedEvent' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` resources
 
 instance Prelude.NFData RecommendationRelatedEvent where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Support.Types.RecentCaseCommunications
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Support.Types.RecentCaseCommunications where
@@ -76,7 +76,8 @@ instance Data.FromJSON RecentCaseCommunications where
 
 instance Prelude.Hashable RecentCaseCommunications where
   hashWithSalt _salt RecentCaseCommunications' {..} =
-    _salt `Prelude.hashWithSalt` communications
+    _salt
+      `Prelude.hashWithSalt` communications
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData RecentCaseCommunications where

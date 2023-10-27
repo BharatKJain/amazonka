@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTEvents.ListAlarmModelVersions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest ListAlarmModelVersions where
     Response.receiveJSON
       ( \s h x ->
           ListAlarmModelVersionsResponse'
-            Prelude.<$> ( x Data..?> "alarmModelVersionSummaries"
+            Prelude.<$> ( x
+                            Data..?> "alarmModelVersionSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -118,7 +119,8 @@ instance Core.AWSRequest ListAlarmModelVersions where
 
 instance Prelude.Hashable ListAlarmModelVersions where
   hashWithSalt _salt ListAlarmModelVersions' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` alarmModelName
 

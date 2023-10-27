@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.ListArtifacts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -166,21 +166,23 @@ instance Core.AWSPager ListArtifacts where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listArtifactsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listArtifactsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listArtifactsResponse_artifactSummaries
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listArtifacts_nextToken
           Lens..~ rs
-          Lens.^? listArtifactsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listArtifactsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListArtifacts where
   type
@@ -192,7 +194,8 @@ instance Core.AWSRequest ListArtifacts where
     Response.receiveJSON
       ( \s h x ->
           ListArtifactsResponse'
-            Prelude.<$> ( x Data..?> "ArtifactSummaries"
+            Prelude.<$> ( x
+                            Data..?> "ArtifactSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -201,7 +204,8 @@ instance Core.AWSRequest ListArtifacts where
 
 instance Prelude.Hashable ListArtifacts where
   hashWithSalt _salt ListArtifacts' {..} =
-    _salt `Prelude.hashWithSalt` artifactType
+    _salt
+      `Prelude.hashWithSalt` artifactType
       `Prelude.hashWithSalt` createdAfter
       `Prelude.hashWithSalt` createdBefore
       `Prelude.hashWithSalt` maxResults

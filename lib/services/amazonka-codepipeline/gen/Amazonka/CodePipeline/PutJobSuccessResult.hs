@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodePipeline.PutJobSuccessResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -157,7 +157,8 @@ instance Core.AWSRequest PutJobSuccessResult where
 
 instance Prelude.Hashable PutJobSuccessResult where
   hashWithSalt _salt PutJobSuccessResult' {..} =
-    _salt `Prelude.hashWithSalt` continuationToken
+    _salt
+      `Prelude.hashWithSalt` continuationToken
       `Prelude.hashWithSalt` currentRevision
       `Prelude.hashWithSalt` executionDetails
       `Prelude.hashWithSalt` outputVariables

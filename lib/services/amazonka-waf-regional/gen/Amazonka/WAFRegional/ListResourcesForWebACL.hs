@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WAFRegional.ListResourcesForWebACL
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest ListResourcesForWebACL where
 
 instance Prelude.Hashable ListResourcesForWebACL where
   hashWithSalt _salt ListResourcesForWebACL' {..} =
-    _salt `Prelude.hashWithSalt` resourceType
+    _salt
+      `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` webACLId
 
 instance Prelude.NFData ListResourcesForWebACL where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.ModifyUsageLimit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest ModifyUsageLimit where
 
 instance Prelude.Hashable ModifyUsageLimit where
   hashWithSalt _salt ModifyUsageLimit' {..} =
-    _salt `Prelude.hashWithSalt` amount
+    _salt
+      `Prelude.hashWithSalt` amount
       `Prelude.hashWithSalt` breachAction
       `Prelude.hashWithSalt` usageLimitId
 

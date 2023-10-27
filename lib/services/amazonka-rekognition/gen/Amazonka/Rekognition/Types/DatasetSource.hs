@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.DatasetSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.DatasetSource where
@@ -77,7 +77,8 @@ datasetSource_groundTruthManifest = Lens.lens (\DatasetSource' {groundTruthManif
 
 instance Prelude.Hashable DatasetSource where
   hashWithSalt _salt DatasetSource' {..} =
-    _salt `Prelude.hashWithSalt` datasetArn
+    _salt
+      `Prelude.hashWithSalt` datasetArn
       `Prelude.hashWithSalt` groundTruthManifest
 
 instance Prelude.NFData DatasetSource where

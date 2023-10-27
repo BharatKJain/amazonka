@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.SAPODataConnectorProfileCredentials
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.SAPODataConnectorProfileCredentials where
@@ -72,7 +72,8 @@ instance
   hashWithSalt
     _salt
     SAPODataConnectorProfileCredentials' {..} =
-      _salt `Prelude.hashWithSalt` basicAuthCredentials
+      _salt
+        `Prelude.hashWithSalt` basicAuthCredentials
         `Prelude.hashWithSalt` oAuthCredentials
 
 instance

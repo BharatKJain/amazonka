@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsWafRegionalRateBasedRuleMatchPredicate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsWafRegionalRateBasedRuleMatchPredicate where
@@ -138,8 +138,8 @@ instance
       ( \x ->
           AwsWafRegionalRateBasedRuleMatchPredicate'
             Prelude.<$> (x Data..:? "DataId")
-              Prelude.<*> (x Data..:? "Negated")
-              Prelude.<*> (x Data..:? "Type")
+            Prelude.<*> (x Data..:? "Negated")
+            Prelude.<*> (x Data..:? "Type")
       )
 
 instance
@@ -149,7 +149,8 @@ instance
   hashWithSalt
     _salt
     AwsWafRegionalRateBasedRuleMatchPredicate' {..} =
-      _salt `Prelude.hashWithSalt` dataId
+      _salt
+        `Prelude.hashWithSalt` dataId
         `Prelude.hashWithSalt` negated
         `Prelude.hashWithSalt` type'
 

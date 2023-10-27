@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Synthetics.Types.CanaryRunStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Synthetics.Types.CanaryRunStatus where
@@ -95,7 +95,8 @@ instance Data.FromJSON CanaryRunStatus where
 
 instance Prelude.Hashable CanaryRunStatus where
   hashWithSalt _salt CanaryRunStatus' {..} =
-    _salt `Prelude.hashWithSalt` state
+    _salt
+      `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` stateReason
       `Prelude.hashWithSalt` stateReasonCode
 

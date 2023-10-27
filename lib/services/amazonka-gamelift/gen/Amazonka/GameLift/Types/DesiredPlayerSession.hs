@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.DesiredPlayerSession
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.DesiredPlayerSession where
@@ -68,7 +68,8 @@ desiredPlayerSession_playerId = Lens.lens (\DesiredPlayerSession' {playerId} -> 
 
 instance Prelude.Hashable DesiredPlayerSession where
   hashWithSalt _salt DesiredPlayerSession' {..} =
-    _salt `Prelude.hashWithSalt` playerData
+    _salt
+      `Prelude.hashWithSalt` playerData
       `Prelude.hashWithSalt` playerId
 
 instance Prelude.NFData DesiredPlayerSession where

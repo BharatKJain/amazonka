@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.PatchSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.PatchSummary where
@@ -221,7 +221,8 @@ instance Data.FromJSON PatchSummary where
 
 instance Prelude.Hashable PatchSummary where
   hashWithSalt _salt PatchSummary' {..} =
-    _salt `Prelude.hashWithSalt` failedCount
+    _salt
+      `Prelude.hashWithSalt` failedCount
       `Prelude.hashWithSalt` installedCount
       `Prelude.hashWithSalt` installedOtherCount
       `Prelude.hashWithSalt` installedPendingReboot

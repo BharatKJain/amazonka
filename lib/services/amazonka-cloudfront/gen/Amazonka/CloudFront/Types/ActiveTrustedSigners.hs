@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.ActiveTrustedSigners
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.ActiveTrustedSigners where
@@ -96,7 +96,9 @@ activeTrustedSigners_quantity = Lens.lens (\ActiveTrustedSigners' {quantity} -> 
 instance Data.FromXML ActiveTrustedSigners where
   parseXML x =
     ActiveTrustedSigners'
-      Prelude.<$> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "Signer")
                   )
       Prelude.<*> (x Data..@ "Enabled")
@@ -104,7 +106,8 @@ instance Data.FromXML ActiveTrustedSigners where
 
 instance Prelude.Hashable ActiveTrustedSigners where
   hashWithSalt _salt ActiveTrustedSigners' {..} =
-    _salt `Prelude.hashWithSalt` items
+    _salt
+      `Prelude.hashWithSalt` items
       `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` quantity
 

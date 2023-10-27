@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Evidently.DeleteLaunch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest DeleteLaunch where
 
 instance Prelude.Hashable DeleteLaunch where
   hashWithSalt _salt DeleteLaunch' {..} =
-    _salt `Prelude.hashWithSalt` launch
+    _salt
+      `Prelude.hashWithSalt` launch
       `Prelude.hashWithSalt` project
 
 instance Prelude.NFData DeleteLaunch where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.SuggestionTextWithHighlights
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.SuggestionTextWithHighlights where
@@ -83,7 +83,8 @@ instance
     SuggestionTextWithHighlights
   where
   hashWithSalt _salt SuggestionTextWithHighlights' {..} =
-    _salt `Prelude.hashWithSalt` highlights
+    _salt
+      `Prelude.hashWithSalt` highlights
       `Prelude.hashWithSalt` text
 
 instance Prelude.NFData SuggestionTextWithHighlights where

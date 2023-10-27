@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ImageBuilder.ListDistributionConfigurations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance
     Response.receiveJSON
       ( \s h x ->
           ListDistributionConfigurationsResponse'
-            Prelude.<$> ( x Data..?> "distributionConfigurationSummaryList"
+            Prelude.<$> ( x
+                            Data..?> "distributionConfigurationSummaryList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -128,7 +129,8 @@ instance
   hashWithSalt
     _salt
     ListDistributionConfigurations' {..} =
-      _salt `Prelude.hashWithSalt` filters
+      _salt
+        `Prelude.hashWithSalt` filters
         `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken
 

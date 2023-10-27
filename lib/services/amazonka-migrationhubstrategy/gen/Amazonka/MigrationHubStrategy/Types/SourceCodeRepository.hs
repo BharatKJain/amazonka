@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.Types.SourceCodeRepository
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubStrategy.Types.SourceCodeRepository where
@@ -95,7 +95,8 @@ instance Data.FromJSON SourceCodeRepository where
 
 instance Prelude.Hashable SourceCodeRepository where
   hashWithSalt _salt SourceCodeRepository' {..} =
-    _salt `Prelude.hashWithSalt` branch
+    _salt
+      `Prelude.hashWithSalt` branch
       `Prelude.hashWithSalt` projectName
       `Prelude.hashWithSalt` repository
       `Prelude.hashWithSalt` versionControlType

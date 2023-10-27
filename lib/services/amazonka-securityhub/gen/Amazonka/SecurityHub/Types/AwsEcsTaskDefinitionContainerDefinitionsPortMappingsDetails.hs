@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsPortMappingsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsPortMappingsDetails where
@@ -87,8 +87,8 @@ instance
       ( \x ->
           AwsEcsTaskDefinitionContainerDefinitionsPortMappingsDetails'
             Prelude.<$> (x Data..:? "ContainerPort")
-              Prelude.<*> (x Data..:? "HostPort")
-              Prelude.<*> (x Data..:? "Protocol")
+            Prelude.<*> (x Data..:? "HostPort")
+            Prelude.<*> (x Data..:? "Protocol")
       )
 
 instance
@@ -98,7 +98,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsTaskDefinitionContainerDefinitionsPortMappingsDetails' {..} =
-      _salt `Prelude.hashWithSalt` containerPort
+      _salt
+        `Prelude.hashWithSalt` containerPort
         `Prelude.hashWithSalt` hostPort
         `Prelude.hashWithSalt` protocol
 

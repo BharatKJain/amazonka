@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.FreeTrialAccountInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.FreeTrialAccountInfo where
@@ -80,7 +80,8 @@ instance Data.FromJSON FreeTrialAccountInfo where
 
 instance Prelude.Hashable FreeTrialAccountInfo where
   hashWithSalt _salt FreeTrialAccountInfo' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` freeTrialInfo
 
 instance Prelude.NFData FreeTrialAccountInfo where

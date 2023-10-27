@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.LambdaFunctionMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.LambdaFunctionMetadata where
@@ -99,7 +99,8 @@ instance Data.FromJSON LambdaFunctionMetadata where
 
 instance Prelude.Hashable LambdaFunctionMetadata where
   hashWithSalt _salt LambdaFunctionMetadata' {..} =
-    _salt `Prelude.hashWithSalt` functionName
+    _salt
+      `Prelude.hashWithSalt` functionName
       `Prelude.hashWithSalt` functionTags
       `Prelude.hashWithSalt` layers
       `Prelude.hashWithSalt` runtime

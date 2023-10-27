@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectConnect.StartBgpFailoverTest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest StartBgpFailoverTest where
 
 instance Prelude.Hashable StartBgpFailoverTest where
   hashWithSalt _salt StartBgpFailoverTest' {..} =
-    _salt `Prelude.hashWithSalt` bgpPeers
+    _salt
+      `Prelude.hashWithSalt` bgpPeers
       `Prelude.hashWithSalt` testDurationInMinutes
       `Prelude.hashWithSalt` virtualInterfaceId
 

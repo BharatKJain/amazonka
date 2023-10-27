@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Proton.ListServiceInstanceOutputs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,21 +112,21 @@ instance Core.AWSPager ListServiceInstanceOutputs where
     | Core.stop
         ( rs
             Lens.^? listServiceInstanceOutputsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listServiceInstanceOutputsResponse_outputs
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listServiceInstanceOutputs_nextToken
           Lens..~ rs
           Lens.^? listServiceInstanceOutputsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListServiceInstanceOutputs where
   type
@@ -145,7 +145,8 @@ instance Core.AWSRequest ListServiceInstanceOutputs where
 
 instance Prelude.Hashable ListServiceInstanceOutputs where
   hashWithSalt _salt ListServiceInstanceOutputs' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` serviceInstanceName
       `Prelude.hashWithSalt` serviceName
 

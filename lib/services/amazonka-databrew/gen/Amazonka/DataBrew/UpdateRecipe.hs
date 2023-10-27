@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataBrew.UpdateRecipe
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest UpdateRecipe where
 
 instance Prelude.Hashable UpdateRecipe where
   hashWithSalt _salt UpdateRecipe' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` steps
       `Prelude.hashWithSalt` name
 

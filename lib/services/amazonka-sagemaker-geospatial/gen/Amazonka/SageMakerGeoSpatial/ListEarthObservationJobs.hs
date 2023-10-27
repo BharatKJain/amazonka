@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.ListEarthObservationJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,21 +130,21 @@ instance Core.AWSPager ListEarthObservationJobs where
     | Core.stop
         ( rs
             Lens.^? listEarthObservationJobsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listEarthObservationJobsResponse_earthObservationJobSummaries
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listEarthObservationJobs_nextToken
           Lens..~ rs
           Lens.^? listEarthObservationJobsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListEarthObservationJobs where
   type
@@ -158,14 +158,16 @@ instance Core.AWSRequest ListEarthObservationJobs where
           ListEarthObservationJobsResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "EarthObservationJobSummaries"
+            Prelude.<*> ( x
+                            Data..?> "EarthObservationJobSummaries"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListEarthObservationJobs where
   hashWithSalt _salt ListEarthObservationJobs' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` sortBy
       `Prelude.hashWithSalt` sortOrder

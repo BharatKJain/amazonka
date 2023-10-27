@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.ResourceProfileArtifact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.ResourceProfileArtifact where
@@ -126,7 +126,8 @@ instance Data.FromJSON ResourceProfileArtifact where
 
 instance Prelude.Hashable ResourceProfileArtifact where
   hashWithSalt _salt ResourceProfileArtifact' {..} =
-    _salt `Prelude.hashWithSalt` sensitive
+    _salt
+      `Prelude.hashWithSalt` sensitive
       `Prelude.hashWithSalt` classificationResultStatus
       `Prelude.hashWithSalt` arn
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RedshiftServerLess.Types.EndpointAccess
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RedshiftServerLess.Types.EndpointAccess where
@@ -156,7 +156,8 @@ instance Data.FromJSON EndpointAccess where
             Prelude.<*> (x Data..:? "port")
             Prelude.<*> (x Data..:? "subnetIds" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "vpcEndpoint")
-            Prelude.<*> ( x Data..:? "vpcSecurityGroups"
+            Prelude.<*> ( x
+                            Data..:? "vpcSecurityGroups"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "workgroupName")
@@ -164,7 +165,8 @@ instance Data.FromJSON EndpointAccess where
 
 instance Prelude.Hashable EndpointAccess where
   hashWithSalt _salt EndpointAccess' {..} =
-    _salt `Prelude.hashWithSalt` address
+    _salt
+      `Prelude.hashWithSalt` address
       `Prelude.hashWithSalt` endpointArn
       `Prelude.hashWithSalt` endpointCreateTime
       `Prelude.hashWithSalt` endpointName

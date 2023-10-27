@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.MemberGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.MemberGroup where
@@ -69,7 +69,8 @@ memberGroup_groupId = Lens.lens (\MemberGroup' {groupId} -> groupId) (\s@MemberG
 
 instance Prelude.Hashable MemberGroup where
   hashWithSalt _salt MemberGroup' {..} =
-    _salt `Prelude.hashWithSalt` dataSourceId
+    _salt
+      `Prelude.hashWithSalt` dataSourceId
       `Prelude.hashWithSalt` groupId
 
 instance Prelude.NFData MemberGroup where

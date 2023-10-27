@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.ReservationPurchaseRecommendationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.ReservationPurchaseRecommendationSummary where
@@ -105,7 +105,8 @@ instance
   hashWithSalt
     _salt
     ReservationPurchaseRecommendationSummary' {..} =
-      _salt `Prelude.hashWithSalt` currencyCode
+      _salt
+        `Prelude.hashWithSalt` currencyCode
         `Prelude.hashWithSalt` totalEstimatedMonthlySavingsAmount
         `Prelude.hashWithSalt` totalEstimatedMonthlySavingsPercentage
 

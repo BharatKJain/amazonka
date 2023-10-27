@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.Circle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.Circle where
@@ -61,7 +61,8 @@ newCircle ::
 newCircle pCenter_ pRadius_ =
   Circle'
     { center =
-        Data._Sensitive Prelude.. Lens.coerced
+        Data._Sensitive
+          Prelude.. Lens.coerced
           Lens.# pCenter_,
       radius = pRadius_
     }
@@ -89,7 +90,8 @@ instance Data.FromJSON Circle where
 
 instance Prelude.Hashable Circle where
   hashWithSalt _salt Circle' {..} =
-    _salt `Prelude.hashWithSalt` center
+    _salt
+      `Prelude.hashWithSalt` center
       `Prelude.hashWithSalt` radius
 
 instance Prelude.NFData Circle where

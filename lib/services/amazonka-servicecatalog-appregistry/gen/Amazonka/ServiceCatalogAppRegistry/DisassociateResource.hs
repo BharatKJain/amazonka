@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalogAppRegistry.DisassociateResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest DisassociateResource where
 
 instance Prelude.Hashable DisassociateResource where
   hashWithSalt _salt DisassociateResource' {..} =
-    _salt `Prelude.hashWithSalt` application
+    _salt
+      `Prelude.hashWithSalt` application
       `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` resource
 

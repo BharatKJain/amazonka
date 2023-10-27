@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53RecoveryControlConfig.Types.NewGatingRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53RecoveryControlConfig.Types.NewGatingRule where
@@ -161,7 +161,8 @@ newGatingRule_name = Lens.lens (\NewGatingRule' {name} -> name) (\s@NewGatingRul
 
 instance Prelude.Hashable NewGatingRule where
   hashWithSalt _salt NewGatingRule' {..} =
-    _salt `Prelude.hashWithSalt` targetControls
+    _salt
+      `Prelude.hashWithSalt` targetControls
       `Prelude.hashWithSalt` controlPanelArn
       `Prelude.hashWithSalt` gatingControls
       `Prelude.hashWithSalt` ruleConfig

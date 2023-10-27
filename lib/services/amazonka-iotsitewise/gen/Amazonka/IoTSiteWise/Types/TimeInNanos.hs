@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.TimeInNanos
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.TimeInNanos where
@@ -79,7 +79,8 @@ instance Data.FromJSON TimeInNanos where
 
 instance Prelude.Hashable TimeInNanos where
   hashWithSalt _salt TimeInNanos' {..} =
-    _salt `Prelude.hashWithSalt` offsetInNanos
+    _salt
+      `Prelude.hashWithSalt` offsetInNanos
       `Prelude.hashWithSalt` timeInSeconds
 
 instance Prelude.NFData TimeInNanos where

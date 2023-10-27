@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.PatchComplianceData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.PatchComplianceData where
@@ -168,7 +168,8 @@ instance Data.FromJSON PatchComplianceData where
 
 instance Prelude.Hashable PatchComplianceData where
   hashWithSalt _salt PatchComplianceData' {..} =
-    _salt `Prelude.hashWithSalt` cVEIds
+    _salt
+      `Prelude.hashWithSalt` cVEIds
       `Prelude.hashWithSalt` title
       `Prelude.hashWithSalt` kBId
       `Prelude.hashWithSalt` classification

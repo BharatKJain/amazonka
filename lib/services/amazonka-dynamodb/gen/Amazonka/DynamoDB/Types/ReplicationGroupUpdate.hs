@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.ReplicationGroupUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.ReplicationGroupUpdate where
@@ -93,7 +93,8 @@ replicationGroupUpdate_update = Lens.lens (\ReplicationGroupUpdate' {update} -> 
 
 instance Prelude.Hashable ReplicationGroupUpdate where
   hashWithSalt _salt ReplicationGroupUpdate' {..} =
-    _salt `Prelude.hashWithSalt` create
+    _salt
+      `Prelude.hashWithSalt` create
       `Prelude.hashWithSalt` delete'
       `Prelude.hashWithSalt` update
 

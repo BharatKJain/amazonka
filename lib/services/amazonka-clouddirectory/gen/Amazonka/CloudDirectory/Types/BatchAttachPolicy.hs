@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchAttachPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchAttachPolicy where
@@ -77,7 +77,8 @@ batchAttachPolicy_objectReference = Lens.lens (\BatchAttachPolicy' {objectRefere
 
 instance Prelude.Hashable BatchAttachPolicy where
   hashWithSalt _salt BatchAttachPolicy' {..} =
-    _salt `Prelude.hashWithSalt` policyReference
+    _salt
+      `Prelude.hashWithSalt` policyReference
       `Prelude.hashWithSalt` objectReference
 
 instance Prelude.NFData BatchAttachPolicy where

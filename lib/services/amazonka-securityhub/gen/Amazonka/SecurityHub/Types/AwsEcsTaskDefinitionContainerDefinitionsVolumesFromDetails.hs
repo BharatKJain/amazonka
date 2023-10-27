@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsVolumesFromDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsVolumesFromDetails where
@@ -77,7 +77,7 @@ instance
       ( \x ->
           AwsEcsTaskDefinitionContainerDefinitionsVolumesFromDetails'
             Prelude.<$> (x Data..:? "ReadOnly")
-              Prelude.<*> (x Data..:? "SourceContainer")
+            Prelude.<*> (x Data..:? "SourceContainer")
       )
 
 instance
@@ -87,7 +87,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsTaskDefinitionContainerDefinitionsVolumesFromDetails' {..} =
-      _salt `Prelude.hashWithSalt` readOnly
+      _salt
+        `Prelude.hashWithSalt` readOnly
         `Prelude.hashWithSalt` sourceContainer
 
 instance

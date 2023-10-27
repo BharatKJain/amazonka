@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.DockerVolumeConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.DockerVolumeConfiguration where
@@ -199,7 +199,8 @@ instance Data.FromJSON DockerVolumeConfiguration where
 
 instance Prelude.Hashable DockerVolumeConfiguration where
   hashWithSalt _salt DockerVolumeConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` autoprovision
+    _salt
+      `Prelude.hashWithSalt` autoprovision
       `Prelude.hashWithSalt` driver
       `Prelude.hashWithSalt` driverOpts
       `Prelude.hashWithSalt` labels

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.SendNotificationActionDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.SendNotificationActionDefinition where
@@ -146,7 +146,8 @@ instance
   hashWithSalt
     _salt
     SendNotificationActionDefinition' {..} =
-      _salt `Prelude.hashWithSalt` subject
+      _salt
+        `Prelude.hashWithSalt` subject
         `Prelude.hashWithSalt` deliveryMethod
         `Prelude.hashWithSalt` content
         `Prelude.hashWithSalt` contentType

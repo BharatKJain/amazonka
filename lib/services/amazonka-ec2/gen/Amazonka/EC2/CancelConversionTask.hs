@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.CancelConversionTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest CancelConversionTask where
 
 instance Prelude.Hashable CancelConversionTask where
   hashWithSalt _salt CancelConversionTask' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` reasonMessage
       `Prelude.hashWithSalt` conversionTaskId
 

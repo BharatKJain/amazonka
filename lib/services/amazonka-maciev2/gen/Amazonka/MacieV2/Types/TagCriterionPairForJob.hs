@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.TagCriterionPairForJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.TagCriterionPairForJob where
@@ -72,12 +72,14 @@ instance Data.FromJSON TagCriterionPairForJob where
       "TagCriterionPairForJob"
       ( \x ->
           TagCriterionPairForJob'
-            Prelude.<$> (x Data..:? "key") Prelude.<*> (x Data..:? "value")
+            Prelude.<$> (x Data..:? "key")
+            Prelude.<*> (x Data..:? "value")
       )
 
 instance Prelude.Hashable TagCriterionPairForJob where
   hashWithSalt _salt TagCriterionPairForJob' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData TagCriterionPairForJob where

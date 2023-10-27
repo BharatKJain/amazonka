@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SMS.Types.ServerGroupLaunchConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SMS.Types.ServerGroupLaunchConfiguration where
@@ -85,7 +85,8 @@ instance Data.FromJSON ServerGroupLaunchConfiguration where
           ServerGroupLaunchConfiguration'
             Prelude.<$> (x Data..:? "launchOrder")
             Prelude.<*> (x Data..:? "serverGroupId")
-            Prelude.<*> ( x Data..:? "serverLaunchConfigurations"
+            Prelude.<*> ( x
+                            Data..:? "serverLaunchConfigurations"
                             Data..!= Prelude.mempty
                         )
       )
@@ -97,7 +98,8 @@ instance
   hashWithSalt
     _salt
     ServerGroupLaunchConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` launchOrder
+      _salt
+        `Prelude.hashWithSalt` launchOrder
         `Prelude.hashWithSalt` serverGroupId
         `Prelude.hashWithSalt` serverLaunchConfigurations
 

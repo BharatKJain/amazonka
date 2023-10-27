@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.RemoteAccessConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.RemoteAccessConfig where
@@ -109,14 +109,16 @@ instance Data.FromJSON RemoteAccessConfig where
       ( \x ->
           RemoteAccessConfig'
             Prelude.<$> (x Data..:? "ec2SshKey")
-            Prelude.<*> ( x Data..:? "sourceSecurityGroups"
+            Prelude.<*> ( x
+                            Data..:? "sourceSecurityGroups"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable RemoteAccessConfig where
   hashWithSalt _salt RemoteAccessConfig' {..} =
-    _salt `Prelude.hashWithSalt` ec2SshKey
+    _salt
+      `Prelude.hashWithSalt` ec2SshKey
       `Prelude.hashWithSalt` sourceSecurityGroups
 
 instance Prelude.NFData RemoteAccessConfig where

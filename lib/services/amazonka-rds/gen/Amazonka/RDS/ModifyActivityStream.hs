@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.ModifyActivityStream
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,7 +130,8 @@ instance Core.AWSRequest ModifyActivityStream where
 
 instance Prelude.Hashable ModifyActivityStream where
   hashWithSalt _salt ModifyActivityStream' {..} =
-    _salt `Prelude.hashWithSalt` auditPolicyState
+    _salt
+      `Prelude.hashWithSalt` auditPolicyState
       `Prelude.hashWithSalt` resourceArn
 
 instance Prelude.NFData ModifyActivityStream where

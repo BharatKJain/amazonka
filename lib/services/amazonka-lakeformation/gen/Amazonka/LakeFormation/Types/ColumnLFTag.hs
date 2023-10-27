@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LakeFormation.Types.ColumnLFTag
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LakeFormation.Types.ColumnLFTag where
@@ -76,7 +76,8 @@ instance Data.FromJSON ColumnLFTag where
 
 instance Prelude.Hashable ColumnLFTag where
   hashWithSalt _salt ColumnLFTag' {..} =
-    _salt `Prelude.hashWithSalt` lFTags
+    _salt
+      `Prelude.hashWithSalt` lFTags
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData ColumnLFTag where

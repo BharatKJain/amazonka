@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.Denied
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.Denied where
@@ -82,7 +82,8 @@ instance Data.FromJSON Denied where
 
 instance Prelude.Hashable Denied where
   hashWithSalt _salt Denied' {..} =
-    _salt `Prelude.hashWithSalt` explicitDeny
+    _salt
+      `Prelude.hashWithSalt` explicitDeny
       `Prelude.hashWithSalt` implicitDeny
 
 instance Prelude.NFData Denied where

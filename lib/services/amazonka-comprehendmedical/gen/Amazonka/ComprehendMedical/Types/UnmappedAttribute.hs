@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComprehendMedical.Types.UnmappedAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComprehendMedical.Types.UnmappedAttribute where
@@ -86,7 +86,8 @@ instance Data.FromJSON UnmappedAttribute where
 
 instance Prelude.Hashable UnmappedAttribute where
   hashWithSalt _salt UnmappedAttribute' {..} =
-    _salt `Prelude.hashWithSalt` attribute
+    _salt
+      `Prelude.hashWithSalt` attribute
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData UnmappedAttribute where

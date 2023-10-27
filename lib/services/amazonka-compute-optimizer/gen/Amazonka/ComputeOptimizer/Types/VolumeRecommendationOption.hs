@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ComputeOptimizer.Types.VolumeRecommendationOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ComputeOptimizer.Types.VolumeRecommendationOption where
@@ -137,7 +137,8 @@ instance Data.FromJSON VolumeRecommendationOption where
 
 instance Prelude.Hashable VolumeRecommendationOption where
   hashWithSalt _salt VolumeRecommendationOption' {..} =
-    _salt `Prelude.hashWithSalt` configuration
+    _salt
+      `Prelude.hashWithSalt` configuration
       `Prelude.hashWithSalt` performanceRisk
       `Prelude.hashWithSalt` rank
       `Prelude.hashWithSalt` savingsOpportunity

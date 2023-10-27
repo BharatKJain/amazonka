@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.AwsEcrContainerAggregation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.AwsEcrContainerAggregation where
@@ -113,7 +113,8 @@ awsEcrContainerAggregation_sortOrder = Lens.lens (\AwsEcrContainerAggregation' {
 
 instance Prelude.Hashable AwsEcrContainerAggregation where
   hashWithSalt _salt AwsEcrContainerAggregation' {..} =
-    _salt `Prelude.hashWithSalt` architectures
+    _salt
+      `Prelude.hashWithSalt` architectures
       `Prelude.hashWithSalt` imageShas
       `Prelude.hashWithSalt` imageTags
       `Prelude.hashWithSalt` repositories

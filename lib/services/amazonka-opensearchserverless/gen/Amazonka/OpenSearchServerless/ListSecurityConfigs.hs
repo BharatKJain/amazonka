@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpenSearchServerless.ListSecurityConfigs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,8 @@ instance Core.AWSRequest ListSecurityConfigs where
       ( \s h x ->
           ListSecurityConfigsResponse'
             Prelude.<$> (x Data..?> "nextToken")
-            Prelude.<*> ( x Data..?> "securityConfigSummaries"
+            Prelude.<*> ( x
+                            Data..?> "securityConfigSummaries"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -133,7 +134,8 @@ instance Core.AWSRequest ListSecurityConfigs where
 
 instance Prelude.Hashable ListSecurityConfigs where
   hashWithSalt _salt ListSecurityConfigs' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` type'
 

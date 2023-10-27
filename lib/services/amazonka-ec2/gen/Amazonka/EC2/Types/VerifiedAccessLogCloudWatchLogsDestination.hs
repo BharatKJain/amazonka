@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VerifiedAccessLogCloudWatchLogsDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VerifiedAccessLogCloudWatchLogsDestination where
@@ -81,8 +81,8 @@ instance
   parseXML x =
     VerifiedAccessLogCloudWatchLogsDestination'
       Prelude.<$> (x Data..@? "deliveryStatus")
-        Prelude.<*> (x Data..@? "enabled")
-        Prelude.<*> (x Data..@? "logGroup")
+      Prelude.<*> (x Data..@? "enabled")
+      Prelude.<*> (x Data..@? "logGroup")
 
 instance
   Prelude.Hashable
@@ -91,7 +91,8 @@ instance
   hashWithSalt
     _salt
     VerifiedAccessLogCloudWatchLogsDestination' {..} =
-      _salt `Prelude.hashWithSalt` deliveryStatus
+      _salt
+        `Prelude.hashWithSalt` deliveryStatus
         `Prelude.hashWithSalt` enabled
         `Prelude.hashWithSalt` logGroup
 

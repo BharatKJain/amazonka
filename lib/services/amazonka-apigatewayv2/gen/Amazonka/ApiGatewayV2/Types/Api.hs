@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApiGatewayV2.Types.Api
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApiGatewayV2.Types.Api where
@@ -274,7 +274,8 @@ instance Data.FromJSON Api where
 
 instance Prelude.Hashable Api where
   hashWithSalt _salt Api' {..} =
-    _salt `Prelude.hashWithSalt` apiEndpoint
+    _salt
+      `Prelude.hashWithSalt` apiEndpoint
       `Prelude.hashWithSalt` apiGatewayManaged
       `Prelude.hashWithSalt` apiId
       `Prelude.hashWithSalt` apiKeySelectionExpression

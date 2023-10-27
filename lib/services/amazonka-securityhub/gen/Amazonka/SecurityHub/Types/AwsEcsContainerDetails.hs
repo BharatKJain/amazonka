@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsContainerDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsContainerDetails where
@@ -98,7 +98,8 @@ instance Data.FromJSON AwsEcsContainerDetails where
 
 instance Prelude.Hashable AwsEcsContainerDetails where
   hashWithSalt _salt AwsEcsContainerDetails' {..} =
-    _salt `Prelude.hashWithSalt` image
+    _salt
+      `Prelude.hashWithSalt` image
       `Prelude.hashWithSalt` mountPoints
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` privileged

@@ -1,6 +1,6 @@
 -- |
 -- Module      : Test.Amazonka.Data.Time
--- Copyright   : (c) 2013-2021 Brendan Hay
+-- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
 -- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
 -- Stability   : provisional
@@ -169,5 +169,5 @@ time =
     Time.parseTimeM True Time.defaultTimeLocale fmt ts
   where
     msg = "Unable to parse time: " ++ ts
-    fmt = Time.iso8601DateFormat (Just "%H:%M:%S")
+    fmt = "%FT%H:%M:%S"
     ts = "2014-11-07T04:42:13"

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Panorama.Types.NetworkPayload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Panorama.Types.NetworkPayload where
@@ -86,7 +86,8 @@ instance Data.FromJSON NetworkPayload where
 
 instance Prelude.Hashable NetworkPayload where
   hashWithSalt _salt NetworkPayload' {..} =
-    _salt `Prelude.hashWithSalt` ethernet0
+    _salt
+      `Prelude.hashWithSalt` ethernet0
       `Prelude.hashWithSalt` ethernet1
       `Prelude.hashWithSalt` ntp
 

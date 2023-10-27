@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.GetDisks
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -91,20 +91,23 @@ instance Core.AWSPager GetDisks where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? getDisksResponse_nextPageToken Prelude.. Lens._Just
+            Lens.^? getDisksResponse_nextPageToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? getDisksResponse_disks Prelude.. Lens._Just
+            Lens.^? getDisksResponse_disks
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getDisks_pageToken
           Lens..~ rs
-          Lens.^? getDisksResponse_nextPageToken Prelude.. Lens._Just
+          Lens.^? getDisksResponse_nextPageToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetDisks where
   type AWSResponse GetDisks = GetDisksResponse

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.OidcOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.OidcOptions where
@@ -122,7 +122,8 @@ instance Data.FromXML OidcOptions where
 
 instance Prelude.Hashable OidcOptions where
   hashWithSalt _salt OidcOptions' {..} =
-    _salt `Prelude.hashWithSalt` authorizationEndpoint
+    _salt
+      `Prelude.hashWithSalt` authorizationEndpoint
       `Prelude.hashWithSalt` clientId
       `Prelude.hashWithSalt` clientSecret
       `Prelude.hashWithSalt` issuer

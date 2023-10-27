@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.TaskRunSortCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.TaskRunSortCriteria where
@@ -77,7 +77,8 @@ taskRunSortCriteria_sortDirection = Lens.lens (\TaskRunSortCriteria' {sortDirect
 
 instance Prelude.Hashable TaskRunSortCriteria where
   hashWithSalt _salt TaskRunSortCriteria' {..} =
-    _salt `Prelude.hashWithSalt` column
+    _salt
+      `Prelude.hashWithSalt` column
       `Prelude.hashWithSalt` sortDirection
 
 instance Prelude.NFData TaskRunSortCriteria where

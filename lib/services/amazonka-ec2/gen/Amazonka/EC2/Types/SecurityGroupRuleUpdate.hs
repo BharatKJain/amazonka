@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.SecurityGroupRuleUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.SecurityGroupRuleUpdate where
@@ -67,7 +67,8 @@ securityGroupRuleUpdate_securityGroupRuleId = Lens.lens (\SecurityGroupRuleUpdat
 
 instance Prelude.Hashable SecurityGroupRuleUpdate where
   hashWithSalt _salt SecurityGroupRuleUpdate' {..} =
-    _salt `Prelude.hashWithSalt` securityGroupRule
+    _salt
+      `Prelude.hashWithSalt` securityGroupRule
       `Prelude.hashWithSalt` securityGroupRuleId
 
 instance Prelude.NFData SecurityGroupRuleUpdate where

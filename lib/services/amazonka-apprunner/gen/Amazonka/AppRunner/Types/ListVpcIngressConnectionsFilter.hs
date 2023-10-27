@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppRunner.Types.ListVpcIngressConnectionsFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppRunner.Types.ListVpcIngressConnectionsFilter where
@@ -71,7 +71,8 @@ instance
   hashWithSalt
     _salt
     ListVpcIngressConnectionsFilter' {..} =
-      _salt `Prelude.hashWithSalt` serviceArn
+      _salt
+        `Prelude.hashWithSalt` serviceArn
         `Prelude.hashWithSalt` vpcEndpointId
 
 instance

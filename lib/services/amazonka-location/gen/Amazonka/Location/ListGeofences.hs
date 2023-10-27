@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Location.ListGeofences
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,18 +118,20 @@ instance Core.AWSPager ListGeofences where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listGeofencesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listGeofencesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listGeofencesResponse_entries) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listGeofences_nextToken
           Lens..~ rs
-          Lens.^? listGeofencesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listGeofencesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListGeofences where
   type
@@ -148,7 +150,8 @@ instance Core.AWSRequest ListGeofences where
 
 instance Prelude.Hashable ListGeofences where
   hashWithSalt _salt ListGeofences' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` collectionName
 

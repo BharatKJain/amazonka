@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.GitConfigForUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.GitConfigForUpdate where
@@ -34,7 +34,7 @@ data GitConfigForUpdate = GitConfigForUpdate'
     -- repository. The secret must have a staging label of @AWSCURRENT@ and
     -- must be in the following format:
     --
-    -- @{\"username\": UserName, \"password\": Password}@
+    -- @{\"username\": @/@UserName@/@, \"password\": @/@Password@/@}@
     secretArn :: Prelude.Maybe Prelude.Text
   }
   deriving (Prelude.Eq, Prelude.Read, Prelude.Show, Prelude.Generic)
@@ -52,7 +52,7 @@ data GitConfigForUpdate = GitConfigForUpdate'
 -- repository. The secret must have a staging label of @AWSCURRENT@ and
 -- must be in the following format:
 --
--- @{\"username\": UserName, \"password\": Password}@
+-- @{\"username\": @/@UserName@/@, \"password\": @/@Password@/@}@
 newGitConfigForUpdate ::
   GitConfigForUpdate
 newGitConfigForUpdate =
@@ -63,7 +63,7 @@ newGitConfigForUpdate =
 -- repository. The secret must have a staging label of @AWSCURRENT@ and
 -- must be in the following format:
 --
--- @{\"username\": UserName, \"password\": Password}@
+-- @{\"username\": @/@UserName@/@, \"password\": @/@Password@/@}@
 gitConfigForUpdate_secretArn :: Lens.Lens' GitConfigForUpdate (Prelude.Maybe Prelude.Text)
 gitConfigForUpdate_secretArn = Lens.lens (\GitConfigForUpdate' {secretArn} -> secretArn) (\s@GitConfigForUpdate' {} a -> s {secretArn = a} :: GitConfigForUpdate)
 

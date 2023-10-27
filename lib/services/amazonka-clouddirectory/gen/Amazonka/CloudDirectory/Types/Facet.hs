@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.Facet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.Facet where
@@ -26,7 +26,7 @@ import qualified Amazonka.Core.Lens.Internal as Lens
 import qualified Amazonka.Data as Data
 import qualified Amazonka.Prelude as Prelude
 
--- | A structure that contains @Name@, @ARN@, @Attributes@, @ Rules@, and
+-- | A structure that contains @Name@, @ARN@, @Attributes@, @ @@Rule@@s@, and
 -- @ObjectTypes@. See
 -- <https://docs.aws.amazon.com/clouddirectory/latest/developerguide/schemas_whatarefacets.html Facets>
 -- for more information.
@@ -101,7 +101,8 @@ instance Data.FromJSON Facet where
 
 instance Prelude.Hashable Facet where
   hashWithSalt _salt Facet' {..} =
-    _salt `Prelude.hashWithSalt` facetStyle
+    _salt
+      `Prelude.hashWithSalt` facetStyle
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` objectType
 

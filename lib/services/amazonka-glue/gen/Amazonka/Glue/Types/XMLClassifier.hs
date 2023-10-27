@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.XMLClassifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.XMLClassifier where
@@ -133,7 +133,8 @@ instance Data.FromJSON XMLClassifier where
 
 instance Prelude.Hashable XMLClassifier where
   hashWithSalt _salt XMLClassifier' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` lastUpdated
       `Prelude.hashWithSalt` rowTag
       `Prelude.hashWithSalt` version

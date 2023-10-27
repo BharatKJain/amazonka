@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisVideoMedia.Types.StartSelector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisVideoMedia.Types.StartSelector where
@@ -171,7 +171,8 @@ startSelector_startSelectorType = Lens.lens (\StartSelector' {startSelectorType}
 
 instance Prelude.Hashable StartSelector where
   hashWithSalt _salt StartSelector' {..} =
-    _salt `Prelude.hashWithSalt` afterFragmentNumber
+    _salt
+      `Prelude.hashWithSalt` afterFragmentNumber
       `Prelude.hashWithSalt` continuationToken
       `Prelude.hashWithSalt` startTimestamp
       `Prelude.hashWithSalt` startSelectorType

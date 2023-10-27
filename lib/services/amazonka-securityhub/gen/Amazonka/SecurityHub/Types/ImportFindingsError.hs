@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.ImportFindingsError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.ImportFindingsError where
@@ -97,7 +97,8 @@ instance Data.FromJSON ImportFindingsError where
 
 instance Prelude.Hashable ImportFindingsError where
   hashWithSalt _salt ImportFindingsError' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` errorMessage
 

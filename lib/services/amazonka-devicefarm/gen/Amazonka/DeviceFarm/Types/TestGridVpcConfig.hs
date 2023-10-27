@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DeviceFarm.Types.TestGridVpcConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DeviceFarm.Types.TestGridVpcConfig where
@@ -94,7 +94,8 @@ instance Data.FromJSON TestGridVpcConfig where
 
 instance Prelude.Hashable TestGridVpcConfig where
   hashWithSalt _salt TestGridVpcConfig' {..} =
-    _salt `Prelude.hashWithSalt` securityGroupIds
+    _salt
+      `Prelude.hashWithSalt` securityGroupIds
       `Prelude.hashWithSalt` subnetIds
       `Prelude.hashWithSalt` vpcId
 

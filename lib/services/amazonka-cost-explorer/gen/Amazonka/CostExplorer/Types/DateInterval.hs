@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.DateInterval
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.DateInterval where
@@ -87,12 +87,14 @@ instance Data.FromJSON DateInterval where
       "DateInterval"
       ( \x ->
           DateInterval'
-            Prelude.<$> (x Data..: "Start") Prelude.<*> (x Data..: "End")
+            Prelude.<$> (x Data..: "Start")
+            Prelude.<*> (x Data..: "End")
       )
 
 instance Prelude.Hashable DateInterval where
   hashWithSalt _salt DateInterval' {..} =
-    _salt `Prelude.hashWithSalt` start
+    _salt
+      `Prelude.hashWithSalt` start
       `Prelude.hashWithSalt` end
 
 instance Prelude.NFData DateInterval where

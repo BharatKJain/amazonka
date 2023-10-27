@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.UpdateAnalysis
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -198,7 +198,8 @@ instance Core.AWSRequest UpdateAnalysis where
 
 instance Prelude.Hashable UpdateAnalysis where
   hashWithSalt _salt UpdateAnalysis' {..} =
-    _salt `Prelude.hashWithSalt` definition
+    _salt
+      `Prelude.hashWithSalt` definition
       `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` sourceEntity
       `Prelude.hashWithSalt` themeArn

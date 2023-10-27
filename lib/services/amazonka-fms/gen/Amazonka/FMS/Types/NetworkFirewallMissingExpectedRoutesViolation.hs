@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.NetworkFirewallMissingExpectedRoutesViolation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.NetworkFirewallMissingExpectedRoutesViolation where
@@ -84,8 +84,8 @@ instance
       ( \x ->
           NetworkFirewallMissingExpectedRoutesViolation'
             Prelude.<$> (x Data..:? "ExpectedRoutes" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "ViolationTarget")
-              Prelude.<*> (x Data..:? "VpcId")
+            Prelude.<*> (x Data..:? "ViolationTarget")
+            Prelude.<*> (x Data..:? "VpcId")
       )
 
 instance
@@ -95,7 +95,8 @@ instance
   hashWithSalt
     _salt
     NetworkFirewallMissingExpectedRoutesViolation' {..} =
-      _salt `Prelude.hashWithSalt` expectedRoutes
+      _salt
+        `Prelude.hashWithSalt` expectedRoutes
         `Prelude.hashWithSalt` violationTarget
         `Prelude.hashWithSalt` vpcId
 

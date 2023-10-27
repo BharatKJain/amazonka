@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.ListHoursOfOperations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,22 +122,22 @@ instance Core.AWSPager ListHoursOfOperations where
     | Core.stop
         ( rs
             Lens.^? listHoursOfOperationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listHoursOfOperationsResponse_hoursOfOperationSummaryList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listHoursOfOperations_nextToken
           Lens..~ rs
           Lens.^? listHoursOfOperationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListHoursOfOperations where
   type
@@ -149,7 +149,8 @@ instance Core.AWSRequest ListHoursOfOperations where
     Response.receiveJSON
       ( \s h x ->
           ListHoursOfOperationsResponse'
-            Prelude.<$> ( x Data..?> "HoursOfOperationSummaryList"
+            Prelude.<$> ( x
+                            Data..?> "HoursOfOperationSummaryList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -158,7 +159,8 @@ instance Core.AWSRequest ListHoursOfOperations where
 
 instance Prelude.Hashable ListHoursOfOperations where
   hashWithSalt _salt ListHoursOfOperations' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` instanceId
 

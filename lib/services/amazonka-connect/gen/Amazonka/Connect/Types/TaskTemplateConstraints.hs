@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.TaskTemplateConstraints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.TaskTemplateConstraints where
@@ -81,18 +81,21 @@ instance Data.FromJSON TaskTemplateConstraints where
       "TaskTemplateConstraints"
       ( \x ->
           TaskTemplateConstraints'
-            Prelude.<$> ( x Data..:? "InvisibleFields"
+            Prelude.<$> ( x
+                            Data..:? "InvisibleFields"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ReadOnlyFields" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "RequiredFields"
+            Prelude.<*> ( x
+                            Data..:? "RequiredFields"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable TaskTemplateConstraints where
   hashWithSalt _salt TaskTemplateConstraints' {..} =
-    _salt `Prelude.hashWithSalt` invisibleFields
+    _salt
+      `Prelude.hashWithSalt` invisibleFields
       `Prelude.hashWithSalt` readOnlyFields
       `Prelude.hashWithSalt` requiredFields
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpaces.Types.ConnectClientAddIn
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpaces.Types.ConnectClientAddIn where
@@ -94,7 +94,8 @@ instance Data.FromJSON ConnectClientAddIn where
 
 instance Prelude.Hashable ConnectClientAddIn where
   hashWithSalt _salt ConnectClientAddIn' {..} =
-    _salt `Prelude.hashWithSalt` addInId
+    _salt
+      `Prelude.hashWithSalt` addInId
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` resourceId
       `Prelude.hashWithSalt` url

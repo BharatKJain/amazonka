@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.SortProperty
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.SortProperty where
@@ -79,7 +79,8 @@ instance Data.FromJSON SortProperty where
 
 instance Prelude.Hashable SortProperty where
   hashWithSalt _salt SortProperty' {..} =
-    _salt `Prelude.hashWithSalt` direction
+    _salt
+      `Prelude.hashWithSalt` direction
       `Prelude.hashWithSalt` field
 
 instance Prelude.NFData SortProperty where

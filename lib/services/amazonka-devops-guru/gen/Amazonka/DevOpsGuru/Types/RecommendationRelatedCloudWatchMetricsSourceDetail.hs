@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.RecommendationRelatedCloudWatchMetricsSourceDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.RecommendationRelatedCloudWatchMetricsSourceDetail where
@@ -79,7 +79,7 @@ instance
       ( \x ->
           RecommendationRelatedCloudWatchMetricsSourceDetail'
             Prelude.<$> (x Data..:? "MetricName")
-              Prelude.<*> (x Data..:? "Namespace")
+            Prelude.<*> (x Data..:? "Namespace")
       )
 
 instance
@@ -89,7 +89,8 @@ instance
   hashWithSalt
     _salt
     RecommendationRelatedCloudWatchMetricsSourceDetail' {..} =
-      _salt `Prelude.hashWithSalt` metricName
+      _salt
+        `Prelude.hashWithSalt` metricName
         `Prelude.hashWithSalt` namespace
 
 instance

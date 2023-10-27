@@ -14,7 +14,7 @@
 -- Module      : Amazonka.HoneyCode.Types.DataItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.HoneyCode.Types.DataItem where
@@ -91,7 +91,8 @@ instance Data.FromJSON DataItem where
 
 instance Prelude.Hashable DataItem where
   hashWithSalt _salt DataItem' {..} =
-    _salt `Prelude.hashWithSalt` formattedValue
+    _salt
+      `Prelude.hashWithSalt` formattedValue
       `Prelude.hashWithSalt` overrideFormat
       `Prelude.hashWithSalt` rawValue
 

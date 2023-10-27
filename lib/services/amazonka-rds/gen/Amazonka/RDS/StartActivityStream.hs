@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.StartActivityStream
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -178,7 +178,8 @@ instance Core.AWSRequest StartActivityStream where
 
 instance Prelude.Hashable StartActivityStream where
   hashWithSalt _salt StartActivityStream' {..} =
-    _salt `Prelude.hashWithSalt` applyImmediately
+    _salt
+      `Prelude.hashWithSalt` applyImmediately
       `Prelude.hashWithSalt` engineNativeAuditFieldsIncluded
       `Prelude.hashWithSalt` resourceArn
       `Prelude.hashWithSalt` mode

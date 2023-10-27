@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudDirectory.AttachObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,7 +138,8 @@ instance Core.AWSRequest AttachObject where
 
 instance Prelude.Hashable AttachObject where
   hashWithSalt _salt AttachObject' {..} =
-    _salt `Prelude.hashWithSalt` directoryArn
+    _salt
+      `Prelude.hashWithSalt` directoryArn
       `Prelude.hashWithSalt` parentReference
       `Prelude.hashWithSalt` childReference
       `Prelude.hashWithSalt` linkName

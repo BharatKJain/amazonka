@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.SpotProvisioningSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.SpotProvisioningSpecification where
@@ -190,7 +190,8 @@ instance
     SpotProvisioningSpecification
   where
   hashWithSalt _salt SpotProvisioningSpecification' {..} =
-    _salt `Prelude.hashWithSalt` allocationStrategy
+    _salt
+      `Prelude.hashWithSalt` allocationStrategy
       `Prelude.hashWithSalt` blockDurationMinutes
       `Prelude.hashWithSalt` timeoutDurationMinutes
       `Prelude.hashWithSalt` timeoutAction

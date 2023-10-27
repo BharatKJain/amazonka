@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.PipelineExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.PipelineExecution where
@@ -181,14 +181,16 @@ instance Data.FromJSON PipelineExecution where
             Prelude.<*> (x Data..:? "PipelineExecutionDisplayName")
             Prelude.<*> (x Data..:? "PipelineExecutionStatus")
             Prelude.<*> (x Data..:? "PipelineExperimentConfig")
-            Prelude.<*> ( x Data..:? "PipelineParameters"
+            Prelude.<*> ( x
+                            Data..:? "PipelineParameters"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable PipelineExecution where
   hashWithSalt _salt PipelineExecution' {..} =
-    _salt `Prelude.hashWithSalt` createdBy
+    _salt
+      `Prelude.hashWithSalt` createdBy
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` lastModifiedBy

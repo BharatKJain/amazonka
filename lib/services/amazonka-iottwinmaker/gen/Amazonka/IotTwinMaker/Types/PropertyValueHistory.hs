@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.PropertyValueHistory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.PropertyValueHistory where
@@ -81,7 +81,8 @@ instance Data.FromJSON PropertyValueHistory where
 
 instance Prelude.Hashable PropertyValueHistory where
   hashWithSalt _salt PropertyValueHistory' {..} =
-    _salt `Prelude.hashWithSalt` values
+    _salt
+      `Prelude.hashWithSalt` values
       `Prelude.hashWithSalt` entityPropertyReference
 
 instance Prelude.NFData PropertyValueHistory where

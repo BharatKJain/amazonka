@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchLogs.Types.MetricFilterMatchRecord
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchLogs.Types.MetricFilterMatchRecord where
@@ -80,14 +80,16 @@ instance Data.FromJSON MetricFilterMatchRecord where
           MetricFilterMatchRecord'
             Prelude.<$> (x Data..:? "eventMessage")
             Prelude.<*> (x Data..:? "eventNumber")
-            Prelude.<*> ( x Data..:? "extractedValues"
+            Prelude.<*> ( x
+                            Data..:? "extractedValues"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable MetricFilterMatchRecord where
   hashWithSalt _salt MetricFilterMatchRecord' {..} =
-    _salt `Prelude.hashWithSalt` eventMessage
+    _salt
+      `Prelude.hashWithSalt` eventMessage
       `Prelude.hashWithSalt` eventNumber
       `Prelude.hashWithSalt` extractedValues
 

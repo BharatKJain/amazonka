@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsApiGatewayV2ApiDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsApiGatewayV2ApiDetails where
@@ -31,7 +31,8 @@ import Amazonka.SecurityHub.Types.AwsCorsConfiguration
 data AwsApiGatewayV2ApiDetails = AwsApiGatewayV2ApiDetails'
   { -- | The URI of the API.
     --
-    -- Uses the format @ \<api-id>.execute-api.\<region>.amazonaws.com@
+    -- Uses the format
+    -- @ @/@\<api-id>@/@.execute-api.@/@\<region>@/@.amazonaws.com@
     --
     -- The stage name is typically appended to the URI to form a complete path
     -- to a deployed API stage.
@@ -80,7 +81,8 @@ data AwsApiGatewayV2ApiDetails = AwsApiGatewayV2ApiDetails'
 --
 -- 'apiEndpoint', 'awsApiGatewayV2ApiDetails_apiEndpoint' - The URI of the API.
 --
--- Uses the format @ \<api-id>.execute-api.\<region>.amazonaws.com@
+-- Uses the format
+-- @ @/@\<api-id>@/@.execute-api.@/@\<region>@/@.amazonaws.com@
 --
 -- The stage name is typically appended to the URI to form a complete path
 -- to a deployed API stage.
@@ -134,7 +136,8 @@ newAwsApiGatewayV2ApiDetails =
 
 -- | The URI of the API.
 --
--- Uses the format @ \<api-id>.execute-api.\<region>.amazonaws.com@
+-- Uses the format
+-- @ @/@\<api-id>@/@.execute-api.@/@\<region>@/@.amazonaws.com@
 --
 -- The stage name is typically appended to the URI to form a complete path
 -- to a deployed API stage.
@@ -210,7 +213,8 @@ instance Data.FromJSON AwsApiGatewayV2ApiDetails where
 
 instance Prelude.Hashable AwsApiGatewayV2ApiDetails where
   hashWithSalt _salt AwsApiGatewayV2ApiDetails' {..} =
-    _salt `Prelude.hashWithSalt` apiEndpoint
+    _salt
+      `Prelude.hashWithSalt` apiEndpoint
       `Prelude.hashWithSalt` apiId
       `Prelude.hashWithSalt` apiKeySelectionExpression
       `Prelude.hashWithSalt` corsConfiguration

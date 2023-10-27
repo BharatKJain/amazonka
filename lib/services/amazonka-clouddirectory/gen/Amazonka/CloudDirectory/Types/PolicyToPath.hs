@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.PolicyToPath
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.PolicyToPath where
@@ -77,7 +77,8 @@ instance Data.FromJSON PolicyToPath where
 
 instance Prelude.Hashable PolicyToPath where
   hashWithSalt _salt PolicyToPath' {..} =
-    _salt `Prelude.hashWithSalt` path
+    _salt
+      `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` policies
 
 instance Prelude.NFData PolicyToPath where

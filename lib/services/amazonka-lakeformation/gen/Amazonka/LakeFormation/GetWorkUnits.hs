@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LakeFormation.GetWorkUnits
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -117,18 +117,20 @@ instance Core.AWSPager GetWorkUnits where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? getWorkUnitsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? getWorkUnitsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. getWorkUnitsResponse_workUnitRanges) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getWorkUnits_nextToken
           Lens..~ rs
-          Lens.^? getWorkUnitsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? getWorkUnitsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetWorkUnits where
   type AWSResponse GetWorkUnits = GetWorkUnitsResponse
@@ -141,14 +143,16 @@ instance Core.AWSRequest GetWorkUnits where
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
             Prelude.<*> (x Data..:> "QueryId")
-            Prelude.<*> ( x Data..?> "WorkUnitRanges"
+            Prelude.<*> ( x
+                            Data..?> "WorkUnitRanges"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable GetWorkUnits where
   hashWithSalt _salt GetWorkUnits' {..} =
-    _salt `Prelude.hashWithSalt` nextToken
+    _salt
+      `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` pageSize
       `Prelude.hashWithSalt` queryId
 

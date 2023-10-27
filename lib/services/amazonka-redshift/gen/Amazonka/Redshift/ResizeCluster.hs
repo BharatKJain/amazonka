@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.ResizeCluster
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -197,7 +197,8 @@ instance Core.AWSRequest ResizeCluster where
 
 instance Prelude.Hashable ResizeCluster where
   hashWithSalt _salt ResizeCluster' {..} =
-    _salt `Prelude.hashWithSalt` classic
+    _salt
+      `Prelude.hashWithSalt` classic
       `Prelude.hashWithSalt` clusterType
       `Prelude.hashWithSalt` nodeType
       `Prelude.hashWithSalt` numberOfNodes

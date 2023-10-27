@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.ExportErrorDetailsOutput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.ExportErrorDetailsOutput where
@@ -54,11 +54,9 @@ newExportErrorDetailsOutput =
       type' = Prelude.Nothing
     }
 
--- |
 exportErrorDetailsOutput_message :: Lens.Lens' ExportErrorDetailsOutput (Prelude.Maybe Prelude.Text)
 exportErrorDetailsOutput_message = Lens.lens (\ExportErrorDetailsOutput' {message} -> message) (\s@ExportErrorDetailsOutput' {} a -> s {message = a} :: ExportErrorDetailsOutput)
 
--- |
 exportErrorDetailsOutput_type :: Lens.Lens' ExportErrorDetailsOutput (Prelude.Maybe ExportErrorType)
 exportErrorDetailsOutput_type = Lens.lens (\ExportErrorDetailsOutput' {type'} -> type') (\s@ExportErrorDetailsOutput' {} a -> s {type' = a} :: ExportErrorDetailsOutput)
 
@@ -74,7 +72,8 @@ instance Data.FromJSON ExportErrorDetailsOutput where
 
 instance Prelude.Hashable ExportErrorDetailsOutput where
   hashWithSalt _salt ExportErrorDetailsOutput' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData ExportErrorDetailsOutput where

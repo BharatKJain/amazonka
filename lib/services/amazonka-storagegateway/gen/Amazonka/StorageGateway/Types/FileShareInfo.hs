@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StorageGateway.Types.FileShareInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StorageGateway.Types.FileShareInfo where
@@ -100,7 +100,8 @@ instance Data.FromJSON FileShareInfo where
 
 instance Prelude.Hashable FileShareInfo where
   hashWithSalt _salt FileShareInfo' {..} =
-    _salt `Prelude.hashWithSalt` fileShareARN
+    _salt
+      `Prelude.hashWithSalt` fileShareARN
       `Prelude.hashWithSalt` fileShareId
       `Prelude.hashWithSalt` fileShareStatus
       `Prelude.hashWithSalt` fileShareType

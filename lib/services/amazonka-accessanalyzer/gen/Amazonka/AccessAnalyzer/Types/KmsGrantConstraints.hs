@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.KmsGrantConstraints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.KmsGrantConstraints where
@@ -102,10 +102,12 @@ instance Data.FromJSON KmsGrantConstraints where
       "KmsGrantConstraints"
       ( \x ->
           KmsGrantConstraints'
-            Prelude.<$> ( x Data..:? "encryptionContextEquals"
+            Prelude.<$> ( x
+                            Data..:? "encryptionContextEquals"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "encryptionContextSubset"
+            Prelude.<*> ( x
+                            Data..:? "encryptionContextSubset"
                             Data..!= Prelude.mempty
                         )
       )

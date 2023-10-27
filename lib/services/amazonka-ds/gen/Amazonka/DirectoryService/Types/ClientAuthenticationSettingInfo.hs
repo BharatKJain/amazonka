@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectoryService.Types.ClientAuthenticationSettingInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectoryService.Types.ClientAuthenticationSettingInfo where
@@ -108,7 +108,8 @@ instance
   hashWithSalt
     _salt
     ClientAuthenticationSettingInfo' {..} =
-      _salt `Prelude.hashWithSalt` lastUpdatedDateTime
+      _salt
+        `Prelude.hashWithSalt` lastUpdatedDateTime
         `Prelude.hashWithSalt` status
         `Prelude.hashWithSalt` type'
 

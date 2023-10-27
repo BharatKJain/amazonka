@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.Firehose
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.Firehose where
@@ -72,7 +72,8 @@ instance Data.FromJSON Firehose where
 
 instance Prelude.Hashable Firehose where
   hashWithSalt _salt Firehose' {..} =
-    _salt `Prelude.hashWithSalt` deliveryStream
+    _salt
+      `Prelude.hashWithSalt` deliveryStream
       `Prelude.hashWithSalt` enabled
 
 instance Prelude.NFData Firehose where

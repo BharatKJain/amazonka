@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectConnect.AssociateHostedConnection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -130,7 +130,8 @@ instance Core.AWSRequest AssociateHostedConnection where
 
 instance Prelude.Hashable AssociateHostedConnection where
   hashWithSalt _salt AssociateHostedConnection' {..} =
-    _salt `Prelude.hashWithSalt` connectionId
+    _salt
+      `Prelude.hashWithSalt` connectionId
       `Prelude.hashWithSalt` parentConnectionId
 
 instance Prelude.NFData AssociateHostedConnection where

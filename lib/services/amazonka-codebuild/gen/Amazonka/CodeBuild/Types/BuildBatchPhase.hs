@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.BuildBatchPhase
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.BuildBatchPhase where
@@ -243,7 +243,8 @@ instance Data.FromJSON BuildBatchPhase where
 
 instance Prelude.Hashable BuildBatchPhase where
   hashWithSalt _salt BuildBatchPhase' {..} =
-    _salt `Prelude.hashWithSalt` contexts
+    _salt
+      `Prelude.hashWithSalt` contexts
       `Prelude.hashWithSalt` durationInSeconds
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` phaseStatus

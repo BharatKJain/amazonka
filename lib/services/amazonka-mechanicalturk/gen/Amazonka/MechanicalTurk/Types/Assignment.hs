@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MechanicalTurk.Types.Assignment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MechanicalTurk.Types.Assignment where
@@ -234,7 +234,8 @@ instance Data.FromJSON Assignment where
 
 instance Prelude.Hashable Assignment where
   hashWithSalt _salt Assignment' {..} =
-    _salt `Prelude.hashWithSalt` acceptTime
+    _salt
+      `Prelude.hashWithSalt` acceptTime
       `Prelude.hashWithSalt` answer
       `Prelude.hashWithSalt` approvalTime
       `Prelude.hashWithSalt` assignmentId

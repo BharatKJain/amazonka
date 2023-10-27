@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.ExtractedCharactersListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.ExtractedCharactersListItem where
@@ -69,12 +69,14 @@ instance Data.FromJSON ExtractedCharactersListItem where
       "ExtractedCharactersListItem"
       ( \x ->
           ExtractedCharactersListItem'
-            Prelude.<$> (x Data..:? "Count") Prelude.<*> (x Data..:? "Page")
+            Prelude.<$> (x Data..:? "Count")
+            Prelude.<*> (x Data..:? "Page")
       )
 
 instance Prelude.Hashable ExtractedCharactersListItem where
   hashWithSalt _salt ExtractedCharactersListItem' {..} =
-    _salt `Prelude.hashWithSalt` count
+    _salt
+      `Prelude.hashWithSalt` count
       `Prelude.hashWithSalt` page
 
 instance Prelude.NFData ExtractedCharactersListItem where

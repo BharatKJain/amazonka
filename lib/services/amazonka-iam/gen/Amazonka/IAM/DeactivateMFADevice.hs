@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.DeactivateMFADevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -134,7 +134,8 @@ instance Core.AWSRequest DeactivateMFADevice where
 
 instance Prelude.Hashable DeactivateMFADevice where
   hashWithSalt _salt DeactivateMFADevice' {..} =
-    _salt `Prelude.hashWithSalt` userName
+    _salt
+      `Prelude.hashWithSalt` userName
       `Prelude.hashWithSalt` serialNumber
 
 instance Prelude.NFData DeactivateMFADevice where

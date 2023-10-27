@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RedshiftServerLess.UpdateNamespace
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -168,7 +168,8 @@ instance Core.AWSRequest UpdateNamespace where
 
 instance Prelude.Hashable UpdateNamespace where
   hashWithSalt _salt UpdateNamespace' {..} =
-    _salt `Prelude.hashWithSalt` adminUserPassword
+    _salt
+      `Prelude.hashWithSalt` adminUserPassword
       `Prelude.hashWithSalt` adminUsername
       `Prelude.hashWithSalt` defaultIamRoleArn
       `Prelude.hashWithSalt` iamRoles

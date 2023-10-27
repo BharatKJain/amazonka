@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.ElasticsearchClusterConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.ElasticsearchClusterConfig where
@@ -194,7 +194,8 @@ instance Data.FromJSON ElasticsearchClusterConfig where
 
 instance Prelude.Hashable ElasticsearchClusterConfig where
   hashWithSalt _salt ElasticsearchClusterConfig' {..} =
-    _salt `Prelude.hashWithSalt` coldStorageOptions
+    _salt
+      `Prelude.hashWithSalt` coldStorageOptions
       `Prelude.hashWithSalt` dedicatedMasterCount
       `Prelude.hashWithSalt` dedicatedMasterEnabled
       `Prelude.hashWithSalt` dedicatedMasterType

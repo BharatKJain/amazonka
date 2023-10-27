@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.Highlight
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.Highlight where
@@ -106,7 +106,8 @@ instance Data.FromJSON Highlight where
 
 instance Prelude.Hashable Highlight where
   hashWithSalt _salt Highlight' {..} =
-    _salt `Prelude.hashWithSalt` topAnswer
+    _salt
+      `Prelude.hashWithSalt` topAnswer
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` beginOffset
       `Prelude.hashWithSalt` endOffset

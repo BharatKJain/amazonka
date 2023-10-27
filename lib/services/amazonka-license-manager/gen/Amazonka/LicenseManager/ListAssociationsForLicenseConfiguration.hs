@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LicenseManager.ListAssociationsForLicenseConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,22 +114,22 @@ instance
     | Core.stop
         ( rs
             Lens.^? listAssociationsForLicenseConfigurationResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listAssociationsForLicenseConfigurationResponse_licenseConfigurationAssociations
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAssociationsForLicenseConfiguration_nextToken
           Lens..~ rs
-            Lens.^? listAssociationsForLicenseConfigurationResponse_nextToken
-              Prelude.. Lens._Just
+          Lens.^? listAssociationsForLicenseConfigurationResponse_nextToken
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -145,11 +145,12 @@ instance
     Response.receiveJSON
       ( \s h x ->
           ListAssociationsForLicenseConfigurationResponse'
-            Prelude.<$> ( x Data..?> "LicenseConfigurationAssociations"
+            Prelude.<$> ( x
+                            Data..?> "LicenseConfigurationAssociations"
                             Core..!@ Prelude.mempty
                         )
-              Prelude.<*> (x Data..?> "NextToken")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "NextToken")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -159,7 +160,8 @@ instance
   hashWithSalt
     _salt
     ListAssociationsForLicenseConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` maxResults
+      _salt
+        `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` licenseConfigurationArn
 

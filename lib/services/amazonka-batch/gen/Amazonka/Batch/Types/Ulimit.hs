@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.Ulimit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.Ulimit where
@@ -93,7 +93,8 @@ instance Data.FromJSON Ulimit where
 
 instance Prelude.Hashable Ulimit where
   hashWithSalt _salt Ulimit' {..} =
-    _salt `Prelude.hashWithSalt` hardLimit
+    _salt
+      `Prelude.hashWithSalt` hardLimit
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` softLimit
 

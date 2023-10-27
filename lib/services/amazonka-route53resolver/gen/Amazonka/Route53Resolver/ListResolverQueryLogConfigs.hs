@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53Resolver.ListResolverQueryLogConfigs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -343,22 +343,22 @@ instance Core.AWSPager ListResolverQueryLogConfigs where
     | Core.stop
         ( rs
             Lens.^? listResolverQueryLogConfigsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listResolverQueryLogConfigsResponse_resolverQueryLogConfigs
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listResolverQueryLogConfigs_nextToken
           Lens..~ rs
           Lens.^? listResolverQueryLogConfigsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListResolverQueryLogConfigs where
   type
@@ -371,7 +371,8 @@ instance Core.AWSRequest ListResolverQueryLogConfigs where
       ( \s h x ->
           ListResolverQueryLogConfigsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "ResolverQueryLogConfigs"
+            Prelude.<*> ( x
+                            Data..?> "ResolverQueryLogConfigs"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "TotalCount")
@@ -381,7 +382,8 @@ instance Core.AWSRequest ListResolverQueryLogConfigs where
 
 instance Prelude.Hashable ListResolverQueryLogConfigs where
   hashWithSalt _salt ListResolverQueryLogConfigs' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` sortBy

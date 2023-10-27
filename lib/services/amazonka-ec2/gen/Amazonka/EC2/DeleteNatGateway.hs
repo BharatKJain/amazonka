@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DeleteNatGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,7 +114,8 @@ instance Core.AWSRequest DeleteNatGateway where
 
 instance Prelude.Hashable DeleteNatGateway where
   hashWithSalt _salt DeleteNatGateway' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` natGatewayId
 
 instance Prelude.NFData DeleteNatGateway where

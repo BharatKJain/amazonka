@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatchEvents.ListPartnerEventSourceAccounts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,7 +127,8 @@ instance
       ( \s h x ->
           ListPartnerEventSourceAccountsResponse'
             Prelude.<$> (x Data..?> "NextToken")
-            Prelude.<*> ( x Data..?> "PartnerEventSourceAccounts"
+            Prelude.<*> ( x
+                            Data..?> "PartnerEventSourceAccounts"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -140,7 +141,8 @@ instance
   hashWithSalt
     _salt
     ListPartnerEventSourceAccounts' {..} =
-      _salt `Prelude.hashWithSalt` limit
+      _salt
+        `Prelude.hashWithSalt` limit
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` eventSourceName
 

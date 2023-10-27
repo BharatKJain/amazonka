@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KMS.DescribeKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -263,7 +263,8 @@ instance Core.AWSRequest DescribeKey where
 
 instance Prelude.Hashable DescribeKey where
   hashWithSalt _salt DescribeKey' {..} =
-    _salt `Prelude.hashWithSalt` grantTokens
+    _salt
+      `Prelude.hashWithSalt` grantTokens
       `Prelude.hashWithSalt` keyId
 
 instance Prelude.NFData DescribeKey where

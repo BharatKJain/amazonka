@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ParameterConstraints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ParameterConstraints where
@@ -176,7 +176,8 @@ instance Data.FromJSON ParameterConstraints where
 
 instance Prelude.Hashable ParameterConstraints where
   hashWithSalt _salt ParameterConstraints' {..} =
-    _salt `Prelude.hashWithSalt` allowedPattern
+    _salt
+      `Prelude.hashWithSalt` allowedPattern
       `Prelude.hashWithSalt` allowedValues
       `Prelude.hashWithSalt` constraintDescription
       `Prelude.hashWithSalt` maxLength

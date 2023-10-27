@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.BounceAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.BounceAction where
@@ -133,7 +133,8 @@ instance Data.FromXML BounceAction where
 
 instance Prelude.Hashable BounceAction where
   hashWithSalt _salt BounceAction' {..} =
-    _salt `Prelude.hashWithSalt` statusCode
+    _salt
+      `Prelude.hashWithSalt` statusCode
       `Prelude.hashWithSalt` topicArn
       `Prelude.hashWithSalt` smtpReplyCode
       `Prelude.hashWithSalt` message

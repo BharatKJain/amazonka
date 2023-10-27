@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.UpdateVoiceConnectorGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,7 +118,8 @@ instance Core.AWSRequest UpdateVoiceConnectorGroup where
 
 instance Prelude.Hashable UpdateVoiceConnectorGroup where
   hashWithSalt _salt UpdateVoiceConnectorGroup' {..} =
-    _salt `Prelude.hashWithSalt` voiceConnectorGroupId
+    _salt
+      `Prelude.hashWithSalt` voiceConnectorGroupId
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` voiceConnectorItems
 

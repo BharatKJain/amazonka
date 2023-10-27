@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.HierarchyLevel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.HierarchyLevel where
@@ -84,7 +84,8 @@ instance Data.FromJSON HierarchyLevel where
 
 instance Prelude.Hashable HierarchyLevel where
   hashWithSalt _salt HierarchyLevel' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name
 

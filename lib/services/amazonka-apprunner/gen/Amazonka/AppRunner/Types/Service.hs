@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppRunner.Types.Service
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppRunner.Types.Service where
@@ -331,7 +331,8 @@ instance Data.FromJSON Service where
 
 instance Prelude.Hashable Service where
   hashWithSalt _salt Service' {..} =
-    _salt `Prelude.hashWithSalt` deletedAt
+    _salt
+      `Prelude.hashWithSalt` deletedAt
       `Prelude.hashWithSalt` encryptionConfiguration
       `Prelude.hashWithSalt` healthCheckConfiguration
       `Prelude.hashWithSalt` observabilityConfiguration

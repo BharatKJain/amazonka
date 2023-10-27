@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IVS.Types.StreamSession
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IVS.Types.StreamSession where
@@ -143,14 +143,16 @@ instance Data.FromJSON StreamSession where
             Prelude.<*> (x Data..:? "recordingConfiguration")
             Prelude.<*> (x Data..:? "startTime")
             Prelude.<*> (x Data..:? "streamId")
-            Prelude.<*> ( x Data..:? "truncatedEvents"
+            Prelude.<*> ( x
+                            Data..:? "truncatedEvents"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable StreamSession where
   hashWithSalt _salt StreamSession' {..} =
-    _salt `Prelude.hashWithSalt` channel
+    _salt
+      `Prelude.hashWithSalt` channel
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` ingestConfiguration
       `Prelude.hashWithSalt` recordingConfiguration

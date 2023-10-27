@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DecimalParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DecimalParameter where
@@ -66,7 +66,8 @@ decimalParameter_values = Lens.lens (\DecimalParameter' {values} -> values) (\s@
 
 instance Prelude.Hashable DecimalParameter where
   hashWithSalt _salt DecimalParameter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData DecimalParameter where

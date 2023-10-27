@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.ListDevicePositionsResponseEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.ListDevicePositionsResponseEntry where
@@ -81,7 +81,8 @@ newListDevicePositionsResponseEntry
         positionProperties = Prelude.Nothing,
         deviceId = pDeviceId_,
         position =
-          Data._Sensitive Prelude.. Lens.coerced
+          Data._Sensitive
+            Prelude.. Lens.coerced
             Lens.# pPosition_,
         sampleTime =
           Data._Time Lens.# pSampleTime_
@@ -119,7 +120,8 @@ instance
       ( \x ->
           ListDevicePositionsResponseEntry'
             Prelude.<$> (x Data..:? "Accuracy")
-            Prelude.<*> ( x Data..:? "PositionProperties"
+            Prelude.<*> ( x
+                            Data..:? "PositionProperties"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "DeviceId")
@@ -134,7 +136,8 @@ instance
   hashWithSalt
     _salt
     ListDevicePositionsResponseEntry' {..} =
-      _salt `Prelude.hashWithSalt` accuracy
+      _salt
+        `Prelude.hashWithSalt` accuracy
         `Prelude.hashWithSalt` positionProperties
         `Prelude.hashWithSalt` deviceId
         `Prelude.hashWithSalt` position

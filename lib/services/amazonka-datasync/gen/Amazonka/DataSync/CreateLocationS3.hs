@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataSync.CreateLocationS3
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -204,7 +204,8 @@ instance Core.AWSRequest CreateLocationS3 where
 
 instance Prelude.Hashable CreateLocationS3 where
   hashWithSalt _salt CreateLocationS3' {..} =
-    _salt `Prelude.hashWithSalt` agentArns
+    _salt
+      `Prelude.hashWithSalt` agentArns
       `Prelude.hashWithSalt` s3StorageClass
       `Prelude.hashWithSalt` subdirectory
       `Prelude.hashWithSalt` tags

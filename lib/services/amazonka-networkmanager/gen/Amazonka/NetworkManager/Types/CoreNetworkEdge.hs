@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.CoreNetworkEdge
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.CoreNetworkEdge where
@@ -79,14 +79,16 @@ instance Data.FromJSON CoreNetworkEdge where
           CoreNetworkEdge'
             Prelude.<$> (x Data..:? "Asn")
             Prelude.<*> (x Data..:? "EdgeLocation")
-            Prelude.<*> ( x Data..:? "InsideCidrBlocks"
+            Prelude.<*> ( x
+                            Data..:? "InsideCidrBlocks"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable CoreNetworkEdge where
   hashWithSalt _salt CoreNetworkEdge' {..} =
-    _salt `Prelude.hashWithSalt` asn
+    _salt
+      `Prelude.hashWithSalt` asn
       `Prelude.hashWithSalt` edgeLocation
       `Prelude.hashWithSalt` insideCidrBlocks
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppRunner.Types.VpcIngressConnectionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppRunner.Types.VpcIngressConnectionSummary where
@@ -79,7 +79,8 @@ instance Data.FromJSON VpcIngressConnectionSummary where
 
 instance Prelude.Hashable VpcIngressConnectionSummary where
   hashWithSalt _salt VpcIngressConnectionSummary' {..} =
-    _salt `Prelude.hashWithSalt` serviceArn
+    _salt
+      `Prelude.hashWithSalt` serviceArn
       `Prelude.hashWithSalt` vpcIngressConnectionArn
 
 instance Prelude.NFData VpcIngressConnectionSummary where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TransitGatewayVpcAttachment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TransitGatewayVpcAttachment where
@@ -139,10 +139,14 @@ instance Data.FromXML TransitGatewayVpcAttachment where
       Prelude.<$> (x Data..@? "creationTime")
       Prelude.<*> (x Data..@? "options")
       Prelude.<*> (x Data..@? "state")
-      Prelude.<*> ( x Data..@? "subnetIds" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "subnetIds"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "transitGatewayAttachmentId")
@@ -152,7 +156,8 @@ instance Data.FromXML TransitGatewayVpcAttachment where
 
 instance Prelude.Hashable TransitGatewayVpcAttachment where
   hashWithSalt _salt TransitGatewayVpcAttachment' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` options
       `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` subnetIds

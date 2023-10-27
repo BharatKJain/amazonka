@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectConnect.Types.DirectConnectGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectConnect.Types.DirectConnectGateway where
@@ -159,7 +159,8 @@ instance Data.FromJSON DirectConnectGateway where
 
 instance Prelude.Hashable DirectConnectGateway where
   hashWithSalt _salt DirectConnectGateway' {..} =
-    _salt `Prelude.hashWithSalt` amazonSideAsn
+    _salt
+      `Prelude.hashWithSalt` amazonSideAsn
       `Prelude.hashWithSalt` directConnectGatewayId
       `Prelude.hashWithSalt` directConnectGatewayName
       `Prelude.hashWithSalt` directConnectGatewayState

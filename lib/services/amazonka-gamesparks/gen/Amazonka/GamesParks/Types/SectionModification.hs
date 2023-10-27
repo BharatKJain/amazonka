@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GamesParks.Types.SectionModification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GamesParks.Types.SectionModification where
@@ -102,7 +102,8 @@ sectionModification_section = Lens.lens (\SectionModification' {section} -> sect
 
 instance Prelude.Hashable SectionModification where
   hashWithSalt _salt SectionModification' {..} =
-    _salt `Prelude.hashWithSalt` value
+    _salt
+      `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` operation
       `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` section

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.SampleDataS3SourceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.SampleDataS3SourceConfig where
@@ -89,7 +89,8 @@ sampleDataS3SourceConfig_fileFormatDescriptor = Lens.lens (\SampleDataS3SourceCo
 
 instance Prelude.Hashable SampleDataS3SourceConfig where
   hashWithSalt _salt SampleDataS3SourceConfig' {..} =
-    _salt `Prelude.hashWithSalt` historicalDataPathList
+    _salt
+      `Prelude.hashWithSalt` historicalDataPathList
       `Prelude.hashWithSalt` templatedPathList
       `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` fileFormatDescriptor

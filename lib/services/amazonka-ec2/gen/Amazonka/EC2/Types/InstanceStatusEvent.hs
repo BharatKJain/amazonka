@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstanceStatusEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstanceStatusEvent where
@@ -124,7 +124,8 @@ instance Data.FromXML InstanceStatusEvent where
 
 instance Prelude.Hashable InstanceStatusEvent where
   hashWithSalt _salt InstanceStatusEvent' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` instanceEventId
       `Prelude.hashWithSalt` notAfter

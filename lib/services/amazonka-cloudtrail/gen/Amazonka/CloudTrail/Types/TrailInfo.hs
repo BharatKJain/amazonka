@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudTrail.Types.TrailInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudTrail.Types.TrailInfo where
@@ -85,7 +85,8 @@ instance Data.FromJSON TrailInfo where
 
 instance Prelude.Hashable TrailInfo where
   hashWithSalt _salt TrailInfo' {..} =
-    _salt `Prelude.hashWithSalt` homeRegion
+    _salt
+      `Prelude.hashWithSalt` homeRegion
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` trailARN
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.ScheduleAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.ScheduleAction where
@@ -111,7 +111,8 @@ instance Data.FromJSON ScheduleAction where
 
 instance Prelude.Hashable ScheduleAction where
   hashWithSalt _salt ScheduleAction' {..} =
-    _salt `Prelude.hashWithSalt` actionName
+    _salt
+      `Prelude.hashWithSalt` actionName
       `Prelude.hashWithSalt` scheduleActionStartSettings
       `Prelude.hashWithSalt` scheduleActionSettings
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRContainers.Types.ContainerProvider
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRContainers.Types.ContainerProvider where
@@ -93,7 +93,8 @@ instance Data.FromJSON ContainerProvider where
 
 instance Prelude.Hashable ContainerProvider where
   hashWithSalt _salt ContainerProvider' {..} =
-    _salt `Prelude.hashWithSalt` info
+    _salt
+      `Prelude.hashWithSalt` info
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` id
 

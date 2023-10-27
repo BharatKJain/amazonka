@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.ExponentialRolloutRate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.ExponentialRolloutRate where
@@ -110,7 +110,8 @@ instance Data.FromJSON ExponentialRolloutRate where
 
 instance Prelude.Hashable ExponentialRolloutRate where
   hashWithSalt _salt ExponentialRolloutRate' {..} =
-    _salt `Prelude.hashWithSalt` baseRatePerMinute
+    _salt
+      `Prelude.hashWithSalt` baseRatePerMinute
       `Prelude.hashWithSalt` incrementFactor
       `Prelude.hashWithSalt` rateIncreaseCriteria
 

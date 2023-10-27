@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTJobsData.Types.JobExecutionState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTJobsData.Types.JobExecutionState where
@@ -97,7 +97,8 @@ instance Data.FromJSON JobExecutionState where
 
 instance Prelude.Hashable JobExecutionState where
   hashWithSalt _salt JobExecutionState' {..} =
-    _salt `Prelude.hashWithSalt` status
+    _salt
+      `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` statusDetails
       `Prelude.hashWithSalt` versionNumber
 

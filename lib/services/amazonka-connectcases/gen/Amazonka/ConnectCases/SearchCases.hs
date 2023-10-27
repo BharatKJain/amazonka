@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ConnectCases.SearchCases
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -159,17 +159,19 @@ instance Core.AWSPager SearchCases where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? searchCasesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? searchCasesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop (rs Lens.^. searchCasesResponse_cases) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& searchCases_nextToken
           Lens..~ rs
-          Lens.^? searchCasesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? searchCasesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest SearchCases where
   type AWSResponse SearchCases = SearchCasesResponse
@@ -186,7 +188,8 @@ instance Core.AWSRequest SearchCases where
 
 instance Prelude.Hashable SearchCases where
   hashWithSalt _salt SearchCases' {..} =
-    _salt `Prelude.hashWithSalt` fields
+    _salt
+      `Prelude.hashWithSalt` fields
       `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

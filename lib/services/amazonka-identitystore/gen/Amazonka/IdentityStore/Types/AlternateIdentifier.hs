@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IdentityStore.Types.AlternateIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IdentityStore.Types.AlternateIdentifier where
@@ -69,7 +69,8 @@ alternateIdentifier_uniqueAttribute = Lens.lens (\AlternateIdentifier' {uniqueAt
 
 instance Prelude.Hashable AlternateIdentifier where
   hashWithSalt _salt AlternateIdentifier' {..} =
-    _salt `Prelude.hashWithSalt` externalId
+    _salt
+      `Prelude.hashWithSalt` externalId
       `Prelude.hashWithSalt` uniqueAttribute
 
 instance Prelude.NFData AlternateIdentifier where

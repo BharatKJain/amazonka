@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.RuleGroupVariables
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.RuleGroupVariables where
@@ -76,7 +76,8 @@ instance Data.FromJSON RuleGroupVariables where
 
 instance Prelude.Hashable RuleGroupVariables where
   hashWithSalt _salt RuleGroupVariables' {..} =
-    _salt `Prelude.hashWithSalt` ipSets
+    _salt
+      `Prelude.hashWithSalt` ipSets
       `Prelude.hashWithSalt` portSets
 
 instance Prelude.NFData RuleGroupVariables where

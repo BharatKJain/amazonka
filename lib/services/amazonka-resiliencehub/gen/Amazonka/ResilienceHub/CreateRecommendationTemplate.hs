@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ResilienceHub.CreateRecommendationTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -248,7 +248,8 @@ instance
     CreateRecommendationTemplate
   where
   hashWithSalt _salt CreateRecommendationTemplate' {..} =
-    _salt `Prelude.hashWithSalt` bucketName
+    _salt
+      `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` format
       `Prelude.hashWithSalt` recommendationIds

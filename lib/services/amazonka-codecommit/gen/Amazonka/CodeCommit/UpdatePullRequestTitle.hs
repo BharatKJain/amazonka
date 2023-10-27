@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeCommit.UpdatePullRequestTitle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest UpdatePullRequestTitle where
 
 instance Prelude.Hashable UpdatePullRequestTitle where
   hashWithSalt _salt UpdatePullRequestTitle' {..} =
-    _salt `Prelude.hashWithSalt` pullRequestId
+    _salt
+      `Prelude.hashWithSalt` pullRequestId
       `Prelude.hashWithSalt` title
 
 instance Prelude.NFData UpdatePullRequestTitle where

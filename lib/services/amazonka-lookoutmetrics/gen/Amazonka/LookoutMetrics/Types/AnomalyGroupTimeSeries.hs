@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.AnomalyGroupTimeSeries
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.AnomalyGroupTimeSeries where
@@ -67,7 +67,8 @@ anomalyGroupTimeSeries_anomalyGroupId = Lens.lens (\AnomalyGroupTimeSeries' {ano
 
 instance Prelude.Hashable AnomalyGroupTimeSeries where
   hashWithSalt _salt AnomalyGroupTimeSeries' {..} =
-    _salt `Prelude.hashWithSalt` timeSeriesId
+    _salt
+      `Prelude.hashWithSalt` timeSeriesId
       `Prelude.hashWithSalt` anomalyGroupId
 
 instance Prelude.NFData AnomalyGroupTimeSeries where

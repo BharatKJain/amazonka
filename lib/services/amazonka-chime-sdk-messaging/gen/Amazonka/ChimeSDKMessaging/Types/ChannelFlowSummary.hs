@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ChimeSDKMessaging.Types.ChannelFlowSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ChimeSDKMessaging.Types.ChannelFlowSummary where
@@ -86,7 +86,8 @@ instance Data.FromJSON ChannelFlowSummary where
 
 instance Prelude.Hashable ChannelFlowSummary where
   hashWithSalt _salt ChannelFlowSummary' {..} =
-    _salt `Prelude.hashWithSalt` channelFlowArn
+    _salt
+      `Prelude.hashWithSalt` channelFlowArn
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` processors
 

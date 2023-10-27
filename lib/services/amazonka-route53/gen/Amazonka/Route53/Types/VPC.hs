@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.VPC
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.VPC where
@@ -80,7 +80,8 @@ instance Data.FromXML VPC where
 
 instance Prelude.Hashable VPC where
   hashWithSalt _salt VPC' {..} =
-    _salt `Prelude.hashWithSalt` vPCId
+    _salt
+      `Prelude.hashWithSalt` vPCId
       `Prelude.hashWithSalt` vPCRegion
 
 instance Prelude.NFData VPC where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.DescribeNamespace
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest DescribeNamespace where
 
 instance Prelude.Hashable DescribeNamespace where
   hashWithSalt _salt DescribeNamespace' {..} =
-    _salt `Prelude.hashWithSalt` awsAccountId
+    _salt
+      `Prelude.hashWithSalt` awsAccountId
       `Prelude.hashWithSalt` namespace
 
 instance Prelude.NFData DescribeNamespace where

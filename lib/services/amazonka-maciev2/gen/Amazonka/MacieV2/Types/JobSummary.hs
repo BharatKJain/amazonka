@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.JobSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.JobSummary where
@@ -268,7 +268,8 @@ instance Data.FromJSON JobSummary where
       ( \x ->
           JobSummary'
             Prelude.<$> (x Data..:? "bucketCriteria")
-            Prelude.<*> ( x Data..:? "bucketDefinitions"
+            Prelude.<*> ( x
+                            Data..:? "bucketDefinitions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "createdAt")
@@ -282,7 +283,8 @@ instance Data.FromJSON JobSummary where
 
 instance Prelude.Hashable JobSummary where
   hashWithSalt _salt JobSummary' {..} =
-    _salt `Prelude.hashWithSalt` bucketCriteria
+    _salt
+      `Prelude.hashWithSalt` bucketCriteria
       `Prelude.hashWithSalt` bucketDefinitions
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` jobId

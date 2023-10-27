@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AmplifyBackend.GetBackend
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest GetBackend where
             Prelude.<*> (x Data..?> "amplifyMetaConfig")
             Prelude.<*> (x Data..?> "appId")
             Prelude.<*> (x Data..?> "appName")
-            Prelude.<*> ( x Data..?> "backendEnvironmentList"
+            Prelude.<*> ( x
+                            Data..?> "backendEnvironmentList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "backendEnvironmentName")
@@ -117,7 +118,8 @@ instance Core.AWSRequest GetBackend where
 
 instance Prelude.Hashable GetBackend where
   hashWithSalt _salt GetBackend' {..} =
-    _salt `Prelude.hashWithSalt` backendEnvironmentName
+    _salt
+      `Prelude.hashWithSalt` backendEnvironmentName
       `Prelude.hashWithSalt` appId
 
 instance Prelude.NFData GetBackend where

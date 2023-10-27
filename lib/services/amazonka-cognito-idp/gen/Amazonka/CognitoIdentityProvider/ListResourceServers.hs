@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.ListResourceServers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,21 +104,21 @@ instance Core.AWSPager ListResourceServers where
     | Core.stop
         ( rs
             Lens.^? listResourceServersResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listResourceServersResponse_resourceServers
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listResourceServers_nextToken
           Lens..~ rs
           Lens.^? listResourceServersResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListResourceServers where
   type
@@ -132,14 +132,16 @@ instance Core.AWSRequest ListResourceServers where
           ListResourceServersResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "ResourceServers"
+            Prelude.<*> ( x
+                            Data..?> "ResourceServers"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListResourceServers where
   hashWithSalt _salt ListResourceServers' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` userPoolId
 

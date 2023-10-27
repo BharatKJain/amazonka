@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.StringFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.StringFilter where
@@ -79,7 +79,8 @@ instance Data.FromJSON StringFilter where
 
 instance Prelude.Hashable StringFilter where
   hashWithSalt _salt StringFilter' {..} =
-    _salt `Prelude.hashWithSalt` comparison
+    _salt
+      `Prelude.hashWithSalt` comparison
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData StringFilter where

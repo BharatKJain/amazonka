@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ELBV2.ModifyLoadBalancerAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -103,7 +103,9 @@ instance Core.AWSRequest ModifyLoadBalancerAttributes where
       "ModifyLoadBalancerAttributesResult"
       ( \s h x ->
           ModifyLoadBalancerAttributesResponse'
-            Prelude.<$> ( x Data..@? "Attributes" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "Attributes"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -114,7 +116,8 @@ instance
     ModifyLoadBalancerAttributes
   where
   hashWithSalt _salt ModifyLoadBalancerAttributes' {..} =
-    _salt `Prelude.hashWithSalt` loadBalancerArn
+    _salt
+      `Prelude.hashWithSalt` loadBalancerArn
       `Prelude.hashWithSalt` attributes
 
 instance Prelude.NFData ModifyLoadBalancerAttributes where

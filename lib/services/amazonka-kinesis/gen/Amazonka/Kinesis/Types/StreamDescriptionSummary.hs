@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kinesis.Types.StreamDescriptionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kinesis.Types.StreamDescriptionSummary where
@@ -302,7 +302,8 @@ instance Data.FromJSON StreamDescriptionSummary where
             Prelude.<*> (x Data..: "StreamStatus")
             Prelude.<*> (x Data..: "RetentionPeriodHours")
             Prelude.<*> (x Data..: "StreamCreationTimestamp")
-            Prelude.<*> ( x Data..:? "EnhancedMonitoring"
+            Prelude.<*> ( x
+                            Data..:? "EnhancedMonitoring"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "OpenShardCount")
@@ -310,7 +311,8 @@ instance Data.FromJSON StreamDescriptionSummary where
 
 instance Prelude.Hashable StreamDescriptionSummary where
   hashWithSalt _salt StreamDescriptionSummary' {..} =
-    _salt `Prelude.hashWithSalt` consumerCount
+    _salt
+      `Prelude.hashWithSalt` consumerCount
       `Prelude.hashWithSalt` encryptionType
       `Prelude.hashWithSalt` keyId
       `Prelude.hashWithSalt` streamModeDetails

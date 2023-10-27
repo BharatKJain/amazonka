@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.Failure
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.Failure where
@@ -86,7 +86,8 @@ instance Data.FromJSON Failure where
 
 instance Prelude.Hashable Failure where
   hashWithSalt _salt Failure' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` detail
       `Prelude.hashWithSalt` reason
 

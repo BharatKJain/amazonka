@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.AttachSecurityProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest AttachSecurityProfile where
 
 instance Prelude.Hashable AttachSecurityProfile where
   hashWithSalt _salt AttachSecurityProfile' {..} =
-    _salt `Prelude.hashWithSalt` securityProfileName
+    _salt
+      `Prelude.hashWithSalt` securityProfileName
       `Prelude.hashWithSalt` securityProfileTargetArn
 
 instance Prelude.NFData AttachSecurityProfile where

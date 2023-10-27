@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2SecurityGroupDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2SecurityGroupDetails where
@@ -109,7 +109,8 @@ instance Data.FromJSON AwsEc2SecurityGroupDetails where
             Prelude.<$> (x Data..:? "GroupId")
             Prelude.<*> (x Data..:? "GroupName")
             Prelude.<*> (x Data..:? "IpPermissions" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "IpPermissionsEgress"
+            Prelude.<*> ( x
+                            Data..:? "IpPermissionsEgress"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "OwnerId")
@@ -118,7 +119,8 @@ instance Data.FromJSON AwsEc2SecurityGroupDetails where
 
 instance Prelude.Hashable AwsEc2SecurityGroupDetails where
   hashWithSalt _salt AwsEc2SecurityGroupDetails' {..} =
-    _salt `Prelude.hashWithSalt` groupId
+    _salt
+      `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` groupName
       `Prelude.hashWithSalt` ipPermissions
       `Prelude.hashWithSalt` ipPermissionsEgress

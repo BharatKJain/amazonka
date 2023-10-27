@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.ListAgentStatuses
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,22 +127,22 @@ instance Core.AWSPager ListAgentStatuses where
     | Core.stop
         ( rs
             Lens.^? listAgentStatusesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listAgentStatusesResponse_agentStatusSummaryList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listAgentStatuses_nextToken
           Lens..~ rs
           Lens.^? listAgentStatusesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListAgentStatuses where
   type
@@ -154,7 +154,8 @@ instance Core.AWSRequest ListAgentStatuses where
     Response.receiveJSON
       ( \s h x ->
           ListAgentStatusesResponse'
-            Prelude.<$> ( x Data..?> "AgentStatusSummaryList"
+            Prelude.<$> ( x
+                            Data..?> "AgentStatusSummaryList"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -163,7 +164,8 @@ instance Core.AWSRequest ListAgentStatuses where
 
 instance Prelude.Hashable ListAgentStatuses where
   hashWithSalt _salt ListAgentStatuses' {..} =
-    _salt `Prelude.hashWithSalt` agentStatusTypes
+    _salt
+      `Prelude.hashWithSalt` agentStatusTypes
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` instanceId

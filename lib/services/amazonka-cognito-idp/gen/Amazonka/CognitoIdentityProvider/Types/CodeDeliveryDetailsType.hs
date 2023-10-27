@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.CodeDeliveryDetailsType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.CodeDeliveryDetailsType where
@@ -90,7 +90,8 @@ instance Data.FromJSON CodeDeliveryDetailsType where
 
 instance Prelude.Hashable CodeDeliveryDetailsType where
   hashWithSalt _salt CodeDeliveryDetailsType' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` deliveryMedium
       `Prelude.hashWithSalt` destination
 

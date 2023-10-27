@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Schemas.Types.SchemaVersionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Schemas.Types.SchemaVersionSummary where
@@ -93,7 +93,8 @@ instance Data.FromJSON SchemaVersionSummary where
 
 instance Prelude.Hashable SchemaVersionSummary where
   hashWithSalt _salt SchemaVersionSummary' {..} =
-    _salt `Prelude.hashWithSalt` schemaArn
+    _salt
+      `Prelude.hashWithSalt` schemaArn
       `Prelude.hashWithSalt` schemaName
       `Prelude.hashWithSalt` schemaVersion
       `Prelude.hashWithSalt` type'

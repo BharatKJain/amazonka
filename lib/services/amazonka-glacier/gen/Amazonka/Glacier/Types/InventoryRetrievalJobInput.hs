@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glacier.Types.InventoryRetrievalJobInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glacier.Types.InventoryRetrievalJobInput where
@@ -110,7 +110,8 @@ inventoryRetrievalJobInput_startDate = Lens.lens (\InventoryRetrievalJobInput' {
 
 instance Prelude.Hashable InventoryRetrievalJobInput where
   hashWithSalt _salt InventoryRetrievalJobInput' {..} =
-    _salt `Prelude.hashWithSalt` endDate
+    _salt
+      `Prelude.hashWithSalt` endDate
       `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` startDate

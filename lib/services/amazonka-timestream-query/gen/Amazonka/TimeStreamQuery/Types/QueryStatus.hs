@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamQuery.Types.QueryStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamQuery.Types.QueryStatus where
@@ -104,7 +104,8 @@ instance Data.FromJSON QueryStatus where
 
 instance Prelude.Hashable QueryStatus where
   hashWithSalt _salt QueryStatus' {..} =
-    _salt `Prelude.hashWithSalt` cumulativeBytesMetered
+    _salt
+      `Prelude.hashWithSalt` cumulativeBytesMetered
       `Prelude.hashWithSalt` cumulativeBytesScanned
       `Prelude.hashWithSalt` progressPercentage
 

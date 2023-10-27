@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.FileLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.FileLocation where
@@ -76,7 +76,8 @@ instance Data.FromJSON FileLocation where
 
 instance Prelude.Hashable FileLocation where
   hashWithSalt _salt FileLocation' {..} =
-    _salt `Prelude.hashWithSalt` s3Location
+    _salt
+      `Prelude.hashWithSalt` s3Location
       `Prelude.hashWithSalt` stream
 
 instance Prelude.NFData FileLocation where

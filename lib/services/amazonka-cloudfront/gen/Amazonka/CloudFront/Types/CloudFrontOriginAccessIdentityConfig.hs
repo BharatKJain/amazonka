@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.CloudFrontOriginAccessIdentityConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.CloudFrontOriginAccessIdentityConfig where
@@ -25,7 +25,8 @@ import qualified Amazonka.Data as Data
 import qualified Amazonka.Prelude as Prelude
 
 -- | Origin access identity configuration. Send a @GET@ request to the
--- @\/CloudFront API version\/CloudFront\/identity ID\/config@ resource.
+-- @\/@/@CloudFront API version@/@\/CloudFront\/identity ID\/config@
+-- resource.
 --
 -- /See:/ 'newCloudFrontOriginAccessIdentityConfig' smart constructor.
 data CloudFrontOriginAccessIdentityConfig = CloudFrontOriginAccessIdentityConfig'
@@ -137,7 +138,8 @@ instance
   hashWithSalt
     _salt
     CloudFrontOriginAccessIdentityConfig' {..} =
-      _salt `Prelude.hashWithSalt` callerReference
+      _salt
+        `Prelude.hashWithSalt` callerReference
         `Prelude.hashWithSalt` comment
 
 instance

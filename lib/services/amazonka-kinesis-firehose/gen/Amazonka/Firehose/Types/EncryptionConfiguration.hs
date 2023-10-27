@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.EncryptionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.EncryptionConfiguration where
@@ -80,7 +80,8 @@ instance Data.FromJSON EncryptionConfiguration where
 
 instance Prelude.Hashable EncryptionConfiguration where
   hashWithSalt _salt EncryptionConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` kmsEncryptionConfig
+    _salt
+      `Prelude.hashWithSalt` kmsEncryptionConfig
       `Prelude.hashWithSalt` noEncryptionConfig
 
 instance Prelude.NFData EncryptionConfiguration where

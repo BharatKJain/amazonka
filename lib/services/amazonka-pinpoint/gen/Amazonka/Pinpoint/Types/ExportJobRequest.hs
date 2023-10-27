@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.ExportJobRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.ExportJobRequest where
@@ -111,7 +111,8 @@ exportJobRequest_roleArn = Lens.lens (\ExportJobRequest' {roleArn} -> roleArn) (
 
 instance Prelude.Hashable ExportJobRequest where
   hashWithSalt _salt ExportJobRequest' {..} =
-    _salt `Prelude.hashWithSalt` segmentId
+    _salt
+      `Prelude.hashWithSalt` segmentId
       `Prelude.hashWithSalt` segmentVersion
       `Prelude.hashWithSalt` s3UrlPrefix
       `Prelude.hashWithSalt` roleArn

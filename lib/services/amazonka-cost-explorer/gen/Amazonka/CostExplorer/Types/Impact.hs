@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.Impact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.Impact where
@@ -133,7 +133,8 @@ instance Data.FromJSON Impact where
 
 instance Prelude.Hashable Impact where
   hashWithSalt _salt Impact' {..} =
-    _salt `Prelude.hashWithSalt` totalActualSpend
+    _salt
+      `Prelude.hashWithSalt` totalActualSpend
       `Prelude.hashWithSalt` totalExpectedSpend
       `Prelude.hashWithSalt` totalImpact
       `Prelude.hashWithSalt` totalImpactPercentage

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.SAMLOptionsInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.SAMLOptionsInput where
@@ -116,7 +116,8 @@ sAMLOptionsInput_subjectKey = Lens.lens (\SAMLOptionsInput' {subjectKey} -> subj
 
 instance Prelude.Hashable SAMLOptionsInput where
   hashWithSalt _salt SAMLOptionsInput' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` idp
       `Prelude.hashWithSalt` masterBackendRole
       `Prelude.hashWithSalt` masterUserName

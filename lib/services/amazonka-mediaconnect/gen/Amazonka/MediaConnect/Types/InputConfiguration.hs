@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.InputConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.InputConfiguration where
@@ -98,7 +98,8 @@ instance Data.FromJSON InputConfiguration where
 
 instance Prelude.Hashable InputConfiguration where
   hashWithSalt _salt InputConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` inputPort
+    _salt
+      `Prelude.hashWithSalt` inputPort
       `Prelude.hashWithSalt` inputIp
       `Prelude.hashWithSalt` interface
 

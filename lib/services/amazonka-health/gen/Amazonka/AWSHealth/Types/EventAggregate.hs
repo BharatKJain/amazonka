@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AWSHealth.Types.EventAggregate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AWSHealth.Types.EventAggregate where
@@ -76,7 +76,8 @@ instance Data.FromJSON EventAggregate where
 
 instance Prelude.Hashable EventAggregate where
   hashWithSalt _salt EventAggregate' {..} =
-    _salt `Prelude.hashWithSalt` aggregateValue
+    _salt
+      `Prelude.hashWithSalt` aggregateValue
       `Prelude.hashWithSalt` count
 
 instance Prelude.NFData EventAggregate where

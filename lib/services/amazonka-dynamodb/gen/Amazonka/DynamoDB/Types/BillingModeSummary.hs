@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.BillingModeSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.BillingModeSummary where
@@ -110,7 +110,8 @@ instance Data.FromJSON BillingModeSummary where
 
 instance Prelude.Hashable BillingModeSummary where
   hashWithSalt _salt BillingModeSummary' {..} =
-    _salt `Prelude.hashWithSalt` billingMode
+    _salt
+      `Prelude.hashWithSalt` billingMode
       `Prelude.hashWithSalt` lastUpdateToPayPerRequestDateTime
 
 instance Prelude.NFData BillingModeSummary where

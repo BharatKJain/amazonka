@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Location.BatchEvaluateGeofences
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,7 +135,8 @@ instance Core.AWSRequest BatchEvaluateGeofences where
 
 instance Prelude.Hashable BatchEvaluateGeofences where
   hashWithSalt _salt BatchEvaluateGeofences' {..} =
-    _salt `Prelude.hashWithSalt` collectionName
+    _salt
+      `Prelude.hashWithSalt` collectionName
       `Prelude.hashWithSalt` devicePositionUpdates
 
 instance Prelude.NFData BatchEvaluateGeofences where

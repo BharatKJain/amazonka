@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Organizations.Types.PolicyTypeSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Organizations.Types.PolicyTypeSummary where
@@ -86,7 +86,8 @@ instance Data.FromJSON PolicyTypeSummary where
 
 instance Prelude.Hashable PolicyTypeSummary where
   hashWithSalt _salt PolicyTypeSummary' {..} =
-    _salt `Prelude.hashWithSalt` status
+    _salt
+      `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData PolicyTypeSummary where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.FacetResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.FacetResult where
@@ -93,7 +93,8 @@ instance Data.FromJSON FacetResult where
       ( \x ->
           FacetResult'
             Prelude.<$> (x Data..:? "DocumentAttributeKey")
-            Prelude.<*> ( x Data..:? "DocumentAttributeValueCountPairs"
+            Prelude.<*> ( x
+                            Data..:? "DocumentAttributeValueCountPairs"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "DocumentAttributeValueType")
@@ -101,7 +102,8 @@ instance Data.FromJSON FacetResult where
 
 instance Prelude.Hashable FacetResult where
   hashWithSalt _salt FacetResult' {..} =
-    _salt `Prelude.hashWithSalt` documentAttributeKey
+    _salt
+      `Prelude.hashWithSalt` documentAttributeKey
       `Prelude.hashWithSalt` documentAttributeValueCountPairs
       `Prelude.hashWithSalt` documentAttributeValueType
 

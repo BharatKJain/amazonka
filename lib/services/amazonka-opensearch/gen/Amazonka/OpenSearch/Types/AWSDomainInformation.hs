@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpenSearch.Types.AWSDomainInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpenSearch.Types.AWSDomainInformation where
@@ -86,7 +86,8 @@ instance Data.FromJSON AWSDomainInformation where
 
 instance Prelude.Hashable AWSDomainInformation where
   hashWithSalt _salt AWSDomainInformation' {..} =
-    _salt `Prelude.hashWithSalt` ownerId
+    _salt
+      `Prelude.hashWithSalt` ownerId
       `Prelude.hashWithSalt` region
       `Prelude.hashWithSalt` domainName
 

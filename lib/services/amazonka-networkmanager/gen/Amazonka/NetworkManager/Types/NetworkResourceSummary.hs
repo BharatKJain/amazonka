@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.NetworkResourceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.NetworkResourceSummary where
@@ -118,7 +118,8 @@ instance Data.FromJSON NetworkResourceSummary where
 
 instance Prelude.Hashable NetworkResourceSummary where
   hashWithSalt _salt NetworkResourceSummary' {..} =
-    _salt `Prelude.hashWithSalt` definition
+    _salt
+      `Prelude.hashWithSalt` definition
       `Prelude.hashWithSalt` isMiddlebox
       `Prelude.hashWithSalt` nameTag
       `Prelude.hashWithSalt` registeredGatewayArn

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.Option
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.Option where
@@ -138,20 +138,24 @@ option_vpcSecurityGroupMemberships = Lens.lens (\Option' {vpcSecurityGroupMember
 instance Data.FromXML Option where
   parseXML x =
     Option'
-      Prelude.<$> ( x Data..@? "DBSecurityGroupMemberships"
+      Prelude.<$> ( x
+                      Data..@? "DBSecurityGroupMemberships"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "DBSecurityGroup")
                   )
       Prelude.<*> (x Data..@? "OptionDescription")
       Prelude.<*> (x Data..@? "OptionName")
-      Prelude.<*> ( x Data..@? "OptionSettings" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "OptionSettings"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "OptionSetting")
                   )
       Prelude.<*> (x Data..@? "OptionVersion")
       Prelude.<*> (x Data..@? "Permanent")
       Prelude.<*> (x Data..@? "Persistent")
       Prelude.<*> (x Data..@? "Port")
-      Prelude.<*> ( x Data..@? "VpcSecurityGroupMemberships"
+      Prelude.<*> ( x
+                      Data..@? "VpcSecurityGroupMemberships"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may
                         (Data.parseXMLList "VpcSecurityGroupMembership")

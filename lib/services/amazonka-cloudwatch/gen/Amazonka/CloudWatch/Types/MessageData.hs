@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatch.Types.MessageData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatch.Types.MessageData where
@@ -72,11 +72,13 @@ messageData_value = Lens.lens (\MessageData' {value} -> value) (\s@MessageData' 
 instance Data.FromXML MessageData where
   parseXML x =
     MessageData'
-      Prelude.<$> (x Data..@? "Code") Prelude.<*> (x Data..@? "Value")
+      Prelude.<$> (x Data..@? "Code")
+      Prelude.<*> (x Data..@? "Value")
 
 instance Prelude.Hashable MessageData where
   hashWithSalt _salt MessageData' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData MessageData where

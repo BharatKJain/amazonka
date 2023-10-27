@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GamesParks.DisconnectPlayer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -114,10 +114,12 @@ instance Core.AWSRequest DisconnectPlayer where
     Response.receiveJSON
       ( \s h x ->
           DisconnectPlayerResponse'
-            Prelude.<$> ( x Data..?> "DisconnectFailures"
+            Prelude.<$> ( x
+                            Data..?> "DisconnectFailures"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "DisconnectSuccesses"
+            Prelude.<*> ( x
+                            Data..?> "DisconnectSuccesses"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -125,7 +127,8 @@ instance Core.AWSRequest DisconnectPlayer where
 
 instance Prelude.Hashable DisconnectPlayer where
   hashWithSalt _salt DisconnectPlayer' {..} =
-    _salt `Prelude.hashWithSalt` gameName
+    _salt
+      `Prelude.hashWithSalt` gameName
       `Prelude.hashWithSalt` playerId
       `Prelude.hashWithSalt` stageName
 

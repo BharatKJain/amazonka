@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.LogicalTableSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.LogicalTableSource where
@@ -87,7 +87,8 @@ instance Data.FromJSON LogicalTableSource where
 
 instance Prelude.Hashable LogicalTableSource where
   hashWithSalt _salt LogicalTableSource' {..} =
-    _salt `Prelude.hashWithSalt` dataSetArn
+    _salt
+      `Prelude.hashWithSalt` dataSetArn
       `Prelude.hashWithSalt` joinInstruction
       `Prelude.hashWithSalt` physicalTableId
 

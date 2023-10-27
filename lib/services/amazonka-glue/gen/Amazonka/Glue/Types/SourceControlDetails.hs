@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.SourceControlDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.SourceControlDetails where
@@ -141,7 +141,8 @@ instance Data.FromJSON SourceControlDetails where
 
 instance Prelude.Hashable SourceControlDetails where
   hashWithSalt _salt SourceControlDetails' {..} =
-    _salt `Prelude.hashWithSalt` authStrategy
+    _salt
+      `Prelude.hashWithSalt` authStrategy
       `Prelude.hashWithSalt` authToken
       `Prelude.hashWithSalt` branch
       `Prelude.hashWithSalt` folder

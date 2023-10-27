@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.TestReportSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.TestReportSummary where
@@ -97,7 +97,8 @@ instance Data.FromJSON TestReportSummary where
 
 instance Prelude.Hashable TestReportSummary where
   hashWithSalt _salt TestReportSummary' {..} =
-    _salt `Prelude.hashWithSalt` total
+    _salt
+      `Prelude.hashWithSalt` total
       `Prelude.hashWithSalt` statusCounts
       `Prelude.hashWithSalt` durationInNanoSeconds
 

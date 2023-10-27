@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.RuleGroupSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.RuleGroupSource where
@@ -103,7 +103,8 @@ instance Data.FromJSON RuleGroupSource where
 
 instance Prelude.Hashable RuleGroupSource where
   hashWithSalt _salt RuleGroupSource' {..} =
-    _salt `Prelude.hashWithSalt` rulesSourceList
+    _salt
+      `Prelude.hashWithSalt` rulesSourceList
       `Prelude.hashWithSalt` rulesString
       `Prelude.hashWithSalt` statefulRules
       `Prelude.hashWithSalt` statelessRulesAndCustomActions

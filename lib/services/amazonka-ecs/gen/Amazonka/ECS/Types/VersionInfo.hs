@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.VersionInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.VersionInfo where
@@ -91,7 +91,8 @@ instance Data.FromJSON VersionInfo where
 
 instance Prelude.Hashable VersionInfo where
   hashWithSalt _salt VersionInfo' {..} =
-    _salt `Prelude.hashWithSalt` agentHash
+    _salt
+      `Prelude.hashWithSalt` agentHash
       `Prelude.hashWithSalt` agentVersion
       `Prelude.hashWithSalt` dockerVersion
 

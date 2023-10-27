@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.DocumentFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.DocumentFilter where
@@ -66,7 +66,8 @@ documentFilter_value = Lens.lens (\DocumentFilter' {value} -> value) (\s@Documen
 
 instance Prelude.Hashable DocumentFilter where
   hashWithSalt _salt DocumentFilter' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData DocumentFilter where

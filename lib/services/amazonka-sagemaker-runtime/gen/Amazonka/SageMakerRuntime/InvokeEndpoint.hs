@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMakerRuntime.InvokeEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -335,7 +335,8 @@ instance Core.AWSRequest InvokeEndpoint where
 
 instance Prelude.Hashable InvokeEndpoint where
   hashWithSalt _salt InvokeEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` accept
+    _salt
+      `Prelude.hashWithSalt` accept
       `Prelude.hashWithSalt` contentType
       `Prelude.hashWithSalt` customAttributes
       `Prelude.hashWithSalt` enableExplanations

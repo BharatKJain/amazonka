@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kinesis.Types.HashKeyRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kinesis.Types.HashKeyRange where
@@ -79,7 +79,8 @@ instance Data.FromJSON HashKeyRange where
 
 instance Prelude.Hashable HashKeyRange where
   hashWithSalt _salt HashKeyRange' {..} =
-    _salt `Prelude.hashWithSalt` startingHashKey
+    _salt
+      `Prelude.hashWithSalt` startingHashKey
       `Prelude.hashWithSalt` endingHashKey
 
 instance Prelude.NFData HashKeyRange where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.CoipCidr
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.CoipCidr where
@@ -81,7 +81,8 @@ instance Data.FromXML CoipCidr where
 
 instance Prelude.Hashable CoipCidr where
   hashWithSalt _salt CoipCidr' {..} =
-    _salt `Prelude.hashWithSalt` cidr
+    _salt
+      `Prelude.hashWithSalt` cidr
       `Prelude.hashWithSalt` coipPoolId
       `Prelude.hashWithSalt` localGatewayRouteTableId
 

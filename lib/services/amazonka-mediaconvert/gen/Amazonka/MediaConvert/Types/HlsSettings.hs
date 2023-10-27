@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.HlsSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.HlsSettings where
@@ -233,7 +233,8 @@ instance Data.FromJSON HlsSettings where
 
 instance Prelude.Hashable HlsSettings where
   hashWithSalt _salt HlsSettings' {..} =
-    _salt `Prelude.hashWithSalt` audioGroupId
+    _salt
+      `Prelude.hashWithSalt` audioGroupId
       `Prelude.hashWithSalt` audioOnlyContainer
       `Prelude.hashWithSalt` audioRenditionSets
       `Prelude.hashWithSalt` audioTrackType

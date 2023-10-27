@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FraudDetector.SendEvent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -173,7 +173,8 @@ instance Core.AWSRequest SendEvent where
 
 instance Prelude.Hashable SendEvent where
   hashWithSalt _salt SendEvent' {..} =
-    _salt `Prelude.hashWithSalt` assignedLabel
+    _salt
+      `Prelude.hashWithSalt` assignedLabel
       `Prelude.hashWithSalt` labelTimestamp
       `Prelude.hashWithSalt` eventId
       `Prelude.hashWithSalt` eventTypeName

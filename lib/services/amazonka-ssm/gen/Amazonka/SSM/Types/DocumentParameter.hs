@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.DocumentParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.DocumentParameter where
@@ -105,7 +105,8 @@ instance Data.FromJSON DocumentParameter where
 
 instance Prelude.Hashable DocumentParameter where
   hashWithSalt _salt DocumentParameter' {..} =
-    _salt `Prelude.hashWithSalt` defaultValue
+    _salt
+      `Prelude.hashWithSalt` defaultValue
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` type'

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StorageGateway.Types.PoolInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StorageGateway.Types.PoolInfo where
@@ -153,7 +153,8 @@ instance Data.FromJSON PoolInfo where
 
 instance Prelude.Hashable PoolInfo where
   hashWithSalt _salt PoolInfo' {..} =
-    _salt `Prelude.hashWithSalt` poolARN
+    _salt
+      `Prelude.hashWithSalt` poolARN
       `Prelude.hashWithSalt` poolName
       `Prelude.hashWithSalt` poolStatus
       `Prelude.hashWithSalt` retentionLockTimeInDays

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.HostEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.HostEntry where
@@ -80,7 +80,8 @@ instance Data.FromJSON HostEntry where
 
 instance Prelude.Hashable HostEntry where
   hashWithSalt _salt HostEntry' {..} =
-    _salt `Prelude.hashWithSalt` hostname
+    _salt
+      `Prelude.hashWithSalt` hostname
       `Prelude.hashWithSalt` ipAddress
 
 instance Prelude.NFData HostEntry where

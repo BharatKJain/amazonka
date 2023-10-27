@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Batch.CreateComputeEnvironment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -455,7 +455,8 @@ instance Core.AWSRequest CreateComputeEnvironment where
 
 instance Prelude.Hashable CreateComputeEnvironment where
   hashWithSalt _salt CreateComputeEnvironment' {..} =
-    _salt `Prelude.hashWithSalt` computeResources
+    _salt
+      `Prelude.hashWithSalt` computeResources
       `Prelude.hashWithSalt` eksConfiguration
       `Prelude.hashWithSalt` serviceRole
       `Prelude.hashWithSalt` state

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.IndexConfigurationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.IndexConfigurationSummary where
@@ -141,7 +141,8 @@ instance Data.FromJSON IndexConfigurationSummary where
 
 instance Prelude.Hashable IndexConfigurationSummary where
   hashWithSalt _salt IndexConfigurationSummary' {..} =
-    _salt `Prelude.hashWithSalt` edition
+    _salt
+      `Prelude.hashWithSalt` edition
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` createdAt

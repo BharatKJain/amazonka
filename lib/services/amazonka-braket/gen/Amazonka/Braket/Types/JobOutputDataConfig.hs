@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Braket.Types.JobOutputDataConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Braket.Types.JobOutputDataConfig where
@@ -86,7 +86,8 @@ instance Data.FromJSON JobOutputDataConfig where
 
 instance Prelude.Hashable JobOutputDataConfig where
   hashWithSalt _salt JobOutputDataConfig' {..} =
-    _salt `Prelude.hashWithSalt` kmsKeyId
+    _salt
+      `Prelude.hashWithSalt` kmsKeyId
       `Prelude.hashWithSalt` s3Path
 
 instance Prelude.NFData JobOutputDataConfig where

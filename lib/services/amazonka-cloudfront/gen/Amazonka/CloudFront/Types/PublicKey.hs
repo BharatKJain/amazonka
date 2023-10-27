@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.PublicKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.PublicKey where
@@ -99,7 +99,8 @@ instance Data.FromXML PublicKey where
 
 instance Prelude.Hashable PublicKey where
   hashWithSalt _salt PublicKey' {..} =
-    _salt `Prelude.hashWithSalt` id
+    _salt
+      `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` publicKeyConfig
 

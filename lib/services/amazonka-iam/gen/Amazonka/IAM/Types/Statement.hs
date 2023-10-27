@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.Statement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.Statement where
@@ -30,7 +30,7 @@ import qualified Amazonka.Prelude as Prelude
 -- determines the result of the simulation.
 --
 -- This data type is used by the @MatchedStatements@ member of the
--- @ EvaluationResult @ type.
+-- @ @@EvaluationResult@@ @ type.
 --
 -- /See:/ 'newStatement' smart constructor.
 data Statement = Statement'
@@ -96,7 +96,8 @@ instance Data.FromXML Statement where
 
 instance Prelude.Hashable Statement where
   hashWithSalt _salt Statement' {..} =
-    _salt `Prelude.hashWithSalt` endPosition
+    _salt
+      `Prelude.hashWithSalt` endPosition
       `Prelude.hashWithSalt` sourcePolicyId
       `Prelude.hashWithSalt` sourcePolicyType
       `Prelude.hashWithSalt` startPosition

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSdkVoice.CreateSipRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -131,7 +131,8 @@ instance Core.AWSRequest CreateSipRule where
 
 instance Prelude.Hashable CreateSipRule where
   hashWithSalt _salt CreateSipRule' {..} =
-    _salt `Prelude.hashWithSalt` disabled
+    _salt
+      `Prelude.hashWithSalt` disabled
       `Prelude.hashWithSalt` targetApplications
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` triggerType

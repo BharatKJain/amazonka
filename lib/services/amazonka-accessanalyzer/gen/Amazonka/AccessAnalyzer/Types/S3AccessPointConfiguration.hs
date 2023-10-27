@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.S3AccessPointConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.S3AccessPointConfiguration where
@@ -114,7 +114,8 @@ instance Data.FromJSON S3AccessPointConfiguration where
 
 instance Prelude.Hashable S3AccessPointConfiguration where
   hashWithSalt _salt S3AccessPointConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` accessPointPolicy
+    _salt
+      `Prelude.hashWithSalt` accessPointPolicy
       `Prelude.hashWithSalt` networkOrigin
       `Prelude.hashWithSalt` publicAccessBlock
 

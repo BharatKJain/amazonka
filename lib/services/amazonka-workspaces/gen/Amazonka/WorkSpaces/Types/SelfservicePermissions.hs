@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkSpaces.Types.SelfservicePermissions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkSpaces.Types.SelfservicePermissions where
@@ -117,7 +117,8 @@ instance Data.FromJSON SelfservicePermissions where
 
 instance Prelude.Hashable SelfservicePermissions where
   hashWithSalt _salt SelfservicePermissions' {..} =
-    _salt `Prelude.hashWithSalt` changeComputeType
+    _salt
+      `Prelude.hashWithSalt` changeComputeType
       `Prelude.hashWithSalt` increaseVolumeSize
       `Prelude.hashWithSalt` rebuildWorkspace
       `Prelude.hashWithSalt` restartWorkspace

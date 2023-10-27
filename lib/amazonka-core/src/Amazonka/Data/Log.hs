@@ -1,6 +1,6 @@
 -- |
 -- Module      : Amazonka.Data.Log
--- Copyright   : (c) 2013-2021 Brendan Hay
+-- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
 -- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
 -- Stability   : provisional
@@ -17,6 +17,7 @@ import qualified Data.ByteString as BS
 import qualified Data.ByteString.Builder as Build
 import qualified Data.ByteString.Lazy as LBS
 import qualified Data.CaseInsensitive as CI
+import qualified Data.Char as Char
 import qualified Data.List as List
 import qualified Data.Text as Text
 import qualified Data.Text.Encoding as Text
@@ -24,7 +25,7 @@ import qualified Data.Text.Lazy as LText
 import qualified Data.Text.Lazy.Encoding as LText
 import qualified Network.HTTP.Client as Client
 import qualified Network.HTTP.Types as HTTP
-import qualified Numeric as Numeric
+import qualified Numeric
 
 class ToLog a where
   -- | Convert a value to a loggable builder.
@@ -34,10 +35,14 @@ instance ToLog ByteStringBuilder where
   build = id
 
 instance ToLog ByteStringLazy where
-  build = Build.lazyByteString
+  build lbs = case LText.decodeUtf8' lbs of
+    Right lt | LText.all Char.isPrint lt -> Build.lazyByteString lbs
+    _ -> mconcat ["non-printable lazy ByteString (", build (LBS.length lbs), " bytes)"]
 
 instance ToLog ByteString where
-  build = Build.byteString
+  build bs = case Text.decodeUtf8' bs of
+    Right t | Text.all Char.isPrint t -> Build.byteString bs
+    _ -> mconcat ["non-printable strict ByteString (", build (BS.length bs), " bytes)"]
 
 instance ToLog Int where
   build = Build.intDec

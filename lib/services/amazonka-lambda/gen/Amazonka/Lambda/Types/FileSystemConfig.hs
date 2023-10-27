@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.FileSystemConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.FileSystemConfig where
@@ -85,7 +85,8 @@ instance Data.FromJSON FileSystemConfig where
 
 instance Prelude.Hashable FileSystemConfig where
   hashWithSalt _salt FileSystemConfig' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` localMountPath
 
 instance Prelude.NFData FileSystemConfig where

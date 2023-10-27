@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.CaptionDescriptionPreset
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.CaptionDescriptionPreset where
@@ -163,7 +163,8 @@ instance Data.FromJSON CaptionDescriptionPreset where
 
 instance Prelude.Hashable CaptionDescriptionPreset where
   hashWithSalt _salt CaptionDescriptionPreset' {..} =
-    _salt `Prelude.hashWithSalt` customLanguageCode
+    _salt
+      `Prelude.hashWithSalt` customLanguageCode
       `Prelude.hashWithSalt` destinationSettings
       `Prelude.hashWithSalt` languageCode
       `Prelude.hashWithSalt` languageDescription

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.SpotDatafeedSubscription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.SpotDatafeedSubscription where
@@ -106,7 +106,8 @@ instance Data.FromXML SpotDatafeedSubscription where
 
 instance Prelude.Hashable SpotDatafeedSubscription where
   hashWithSalt _salt SpotDatafeedSubscription' {..} =
-    _salt `Prelude.hashWithSalt` bucket
+    _salt
+      `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` fault
       `Prelude.hashWithSalt` ownerId
       `Prelude.hashWithSalt` prefix

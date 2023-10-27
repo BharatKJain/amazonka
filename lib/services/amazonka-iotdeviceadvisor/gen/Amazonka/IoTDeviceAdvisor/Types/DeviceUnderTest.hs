@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTDeviceAdvisor.Types.DeviceUnderTest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTDeviceAdvisor.Types.DeviceUnderTest where
@@ -75,7 +75,8 @@ instance Data.FromJSON DeviceUnderTest where
 
 instance Prelude.Hashable DeviceUnderTest where
   hashWithSalt _salt DeviceUnderTest' {..} =
-    _salt `Prelude.hashWithSalt` certificateArn
+    _salt
+      `Prelude.hashWithSalt` certificateArn
       `Prelude.hashWithSalt` thingArn
 
 instance Prelude.NFData DeviceUnderTest where

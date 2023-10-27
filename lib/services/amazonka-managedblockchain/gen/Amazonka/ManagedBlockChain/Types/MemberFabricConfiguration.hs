@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ManagedBlockChain.Types.MemberFabricConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ManagedBlockChain.Types.MemberFabricConfiguration where
@@ -88,7 +88,8 @@ memberFabricConfiguration_adminPassword = Lens.lens (\MemberFabricConfiguration'
 
 instance Prelude.Hashable MemberFabricConfiguration where
   hashWithSalt _salt MemberFabricConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` adminUsername
+    _salt
+      `Prelude.hashWithSalt` adminUsername
       `Prelude.hashWithSalt` adminPassword
 
 instance Prelude.NFData MemberFabricConfiguration where

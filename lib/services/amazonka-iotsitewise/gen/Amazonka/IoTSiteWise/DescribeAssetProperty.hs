@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTSiteWise.DescribeAssetProperty
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance Core.AWSRequest DescribeAssetProperty where
 
 instance Prelude.Hashable DescribeAssetProperty where
   hashWithSalt _salt DescribeAssetProperty' {..} =
-    _salt `Prelude.hashWithSalt` assetId
+    _salt
+      `Prelude.hashWithSalt` assetId
       `Prelude.hashWithSalt` propertyId
 
 instance Prelude.NFData DescribeAssetProperty where

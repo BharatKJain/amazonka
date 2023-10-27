@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.DocumentGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.DocumentGroup where
@@ -96,19 +96,22 @@ instance Data.FromJSON DocumentGroup where
       "DocumentGroup"
       ( \x ->
           DocumentGroup'
-            Prelude.<$> ( x Data..:? "DetectedSignatures"
+            Prelude.<$> ( x
+                            Data..:? "DetectedSignatures"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "SplitDocuments" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "Type")
-            Prelude.<*> ( x Data..:? "UndetectedSignatures"
+            Prelude.<*> ( x
+                            Data..:? "UndetectedSignatures"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable DocumentGroup where
   hashWithSalt _salt DocumentGroup' {..} =
-    _salt `Prelude.hashWithSalt` detectedSignatures
+    _salt
+      `Prelude.hashWithSalt` detectedSignatures
       `Prelude.hashWithSalt` splitDocuments
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` undetectedSignatures

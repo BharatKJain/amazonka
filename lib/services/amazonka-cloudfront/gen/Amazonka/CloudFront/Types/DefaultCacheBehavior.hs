@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.DefaultCacheBehavior
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.DefaultCacheBehavior where
@@ -681,7 +681,8 @@ instance Data.FromXML DefaultCacheBehavior where
 
 instance Prelude.Hashable DefaultCacheBehavior where
   hashWithSalt _salt DefaultCacheBehavior' {..} =
-    _salt `Prelude.hashWithSalt` allowedMethods
+    _salt
+      `Prelude.hashWithSalt` allowedMethods
       `Prelude.hashWithSalt` cachePolicyId
       `Prelude.hashWithSalt` compress
       `Prelude.hashWithSalt` defaultTTL

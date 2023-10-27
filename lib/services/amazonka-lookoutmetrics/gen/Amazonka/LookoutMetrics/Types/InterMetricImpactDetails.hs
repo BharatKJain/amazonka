@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.InterMetricImpactDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.InterMetricImpactDetails where
@@ -106,7 +106,8 @@ instance Data.FromJSON InterMetricImpactDetails where
 
 instance Prelude.Hashable InterMetricImpactDetails where
   hashWithSalt _salt InterMetricImpactDetails' {..} =
-    _salt `Prelude.hashWithSalt` anomalyGroupId
+    _salt
+      `Prelude.hashWithSalt` anomalyGroupId
       `Prelude.hashWithSalt` contributionPercentage
       `Prelude.hashWithSalt` metricName
       `Prelude.hashWithSalt` relationshipType

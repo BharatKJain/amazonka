@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.ResponseSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.ResponseSpecification where
@@ -85,7 +85,8 @@ instance Data.FromJSON ResponseSpecification where
 
 instance Prelude.Hashable ResponseSpecification where
   hashWithSalt _salt ResponseSpecification' {..} =
-    _salt `Prelude.hashWithSalt` allowInterrupt
+    _salt
+      `Prelude.hashWithSalt` allowInterrupt
       `Prelude.hashWithSalt` messageGroups
 
 instance Prelude.NFData ResponseSpecification where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GroundStation.Types.ConfigTypeData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GroundStation.Types.ConfigTypeData where
@@ -158,7 +158,8 @@ instance Data.FromJSON ConfigTypeData where
 
 instance Prelude.Hashable ConfigTypeData where
   hashWithSalt _salt ConfigTypeData' {..} =
-    _salt `Prelude.hashWithSalt` antennaDownlinkConfig
+    _salt
+      `Prelude.hashWithSalt` antennaDownlinkConfig
       `Prelude.hashWithSalt` antennaDownlinkDemodDecodeConfig
       `Prelude.hashWithSalt` antennaUplinkConfig
       `Prelude.hashWithSalt` dataflowEndpointConfig

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFront.UpdateFieldLevelEncryptionProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,8 +119,9 @@ instance
     Response.receiveXML
       ( \s h x ->
           UpdateFieldLevelEncryptionProfileResponse'
-            Prelude.<$> (h Data..#? "ETag") Prelude.<*> (Data.parseXML x)
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<$> (h Data..#? "ETag")
+            Prelude.<*> (Data.parseXML x)
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -130,7 +131,8 @@ instance
   hashWithSalt
     _salt
     UpdateFieldLevelEncryptionProfile' {..} =
-      _salt `Prelude.hashWithSalt` ifMatch
+      _salt
+        `Prelude.hashWithSalt` ifMatch
         `Prelude.hashWithSalt` fieldLevelEncryptionProfileConfig
         `Prelude.hashWithSalt` id
 

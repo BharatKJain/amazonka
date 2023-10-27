@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EMR.ListNotebookExecutions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -219,22 +219,22 @@ instance Core.AWSPager ListNotebookExecutions where
     | Core.stop
         ( rs
             Lens.^? listNotebookExecutionsResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listNotebookExecutionsResponse_notebookExecutions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listNotebookExecutions_marker
           Lens..~ rs
           Lens.^? listNotebookExecutionsResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListNotebookExecutions where
   type
@@ -247,7 +247,8 @@ instance Core.AWSRequest ListNotebookExecutions where
       ( \s h x ->
           ListNotebookExecutionsResponse'
             Prelude.<$> (x Data..?> "Marker")
-            Prelude.<*> ( x Data..?> "NotebookExecutions"
+            Prelude.<*> ( x
+                            Data..?> "NotebookExecutions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -255,7 +256,8 @@ instance Core.AWSRequest ListNotebookExecutions where
 
 instance Prelude.Hashable ListNotebookExecutions where
   hashWithSalt _salt ListNotebookExecutions' {..} =
-    _salt `Prelude.hashWithSalt` editorId
+    _salt
+      `Prelude.hashWithSalt` editorId
       `Prelude.hashWithSalt` from
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` status

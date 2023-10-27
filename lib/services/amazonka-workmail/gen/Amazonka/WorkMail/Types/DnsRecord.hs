@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkMail.Types.DnsRecord
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkMail.Types.DnsRecord where
@@ -87,7 +87,8 @@ instance Data.FromJSON DnsRecord where
 
 instance Prelude.Hashable DnsRecord where
   hashWithSalt _salt DnsRecord' {..} =
-    _salt `Prelude.hashWithSalt` hostname
+    _salt
+      `Prelude.hashWithSalt` hostname
       `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` value
 

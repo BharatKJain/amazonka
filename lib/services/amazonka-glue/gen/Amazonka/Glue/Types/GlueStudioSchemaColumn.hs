@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.GlueStudioSchemaColumn
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.GlueStudioSchemaColumn where
@@ -70,12 +70,14 @@ instance Data.FromJSON GlueStudioSchemaColumn where
       "GlueStudioSchemaColumn"
       ( \x ->
           GlueStudioSchemaColumn'
-            Prelude.<$> (x Data..:? "Type") Prelude.<*> (x Data..: "Name")
+            Prelude.<$> (x Data..:? "Type")
+            Prelude.<*> (x Data..: "Name")
       )
 
 instance Prelude.Hashable GlueStudioSchemaColumn where
   hashWithSalt _salt GlueStudioSchemaColumn' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData GlueStudioSchemaColumn where

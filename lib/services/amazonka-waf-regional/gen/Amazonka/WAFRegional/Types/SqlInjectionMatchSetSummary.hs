@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFRegional.Types.SqlInjectionMatchSetSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFRegional.Types.SqlInjectionMatchSetSummary where
@@ -117,7 +117,8 @@ instance Data.FromJSON SqlInjectionMatchSetSummary where
 
 instance Prelude.Hashable SqlInjectionMatchSetSummary where
   hashWithSalt _salt SqlInjectionMatchSetSummary' {..} =
-    _salt `Prelude.hashWithSalt` sqlInjectionMatchSetId
+    _salt
+      `Prelude.hashWithSalt` sqlInjectionMatchSetId
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData SqlInjectionMatchSetSummary where

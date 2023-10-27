@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Inspector.ListExclusions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,18 +125,19 @@ instance Core.AWSPager ListExclusions where
     | Core.stop
         ( rs
             Lens.^? listExclusionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listExclusionsResponse_exclusionArns) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listExclusions_nextToken
           Lens..~ rs
-          Lens.^? listExclusionsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listExclusionsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListExclusions where
   type
@@ -155,7 +156,8 @@ instance Core.AWSRequest ListExclusions where
 
 instance Prelude.Hashable ListExclusions where
   hashWithSalt _salt ListExclusions' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` assessmentRunArn
 

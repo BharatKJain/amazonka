@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.VpcConfigResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.VpcConfigResponse where
@@ -186,10 +186,12 @@ instance Data.FromJSON VpcConfigResponse where
             Prelude.<$> (x Data..:? "clusterSecurityGroupId")
             Prelude.<*> (x Data..:? "endpointPrivateAccess")
             Prelude.<*> (x Data..:? "endpointPublicAccess")
-            Prelude.<*> ( x Data..:? "publicAccessCidrs"
+            Prelude.<*> ( x
+                            Data..:? "publicAccessCidrs"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "securityGroupIds"
+            Prelude.<*> ( x
+                            Data..:? "securityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "subnetIds" Data..!= Prelude.mempty)
@@ -198,7 +200,8 @@ instance Data.FromJSON VpcConfigResponse where
 
 instance Prelude.Hashable VpcConfigResponse where
   hashWithSalt _salt VpcConfigResponse' {..} =
-    _salt `Prelude.hashWithSalt` clusterSecurityGroupId
+    _salt
+      `Prelude.hashWithSalt` clusterSecurityGroupId
       `Prelude.hashWithSalt` endpointPrivateAccess
       `Prelude.hashWithSalt` endpointPublicAccess
       `Prelude.hashWithSalt` publicAccessCidrs

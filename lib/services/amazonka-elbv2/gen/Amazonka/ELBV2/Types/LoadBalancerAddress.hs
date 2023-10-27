@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.LoadBalancerAddress
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.LoadBalancerAddress where
@@ -97,7 +97,8 @@ instance Data.FromXML LoadBalancerAddress where
 
 instance Prelude.Hashable LoadBalancerAddress where
   hashWithSalt _salt LoadBalancerAddress' {..} =
-    _salt `Prelude.hashWithSalt` allocationId
+    _salt
+      `Prelude.hashWithSalt` allocationId
       `Prelude.hashWithSalt` iPv6Address
       `Prelude.hashWithSalt` ipAddress
       `Prelude.hashWithSalt` privateIPv4Address

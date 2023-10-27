@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ImageBuilder.Types.ContainerDistributionConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ImageBuilder.Types.ContainerDistributionConfiguration where
@@ -98,7 +98,8 @@ instance
   hashWithSalt
     _salt
     ContainerDistributionConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` containerTags
+      _salt
+        `Prelude.hashWithSalt` containerTags
         `Prelude.hashWithSalt` description
         `Prelude.hashWithSalt` targetRepository
 

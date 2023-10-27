@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ParameterControl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ParameterControl where
@@ -133,7 +133,8 @@ instance Data.FromJSON ParameterControl where
 
 instance Prelude.Hashable ParameterControl where
   hashWithSalt _salt ParameterControl' {..} =
-    _salt `Prelude.hashWithSalt` dateTimePicker
+    _salt
+      `Prelude.hashWithSalt` dateTimePicker
       `Prelude.hashWithSalt` dropdown
       `Prelude.hashWithSalt` list
       `Prelude.hashWithSalt` slider

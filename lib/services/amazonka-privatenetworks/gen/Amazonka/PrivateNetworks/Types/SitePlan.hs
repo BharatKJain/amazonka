@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PrivateNetworks.Types.SitePlan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PrivateNetworks.Types.SitePlan where
@@ -71,14 +71,16 @@ instance Data.FromJSON SitePlan where
       ( \x ->
           SitePlan'
             Prelude.<$> (x Data..:? "options" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "resourceDefinitions"
+            Prelude.<*> ( x
+                            Data..:? "resourceDefinitions"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable SitePlan where
   hashWithSalt _salt SitePlan' {..} =
-    _salt `Prelude.hashWithSalt` options
+    _salt
+      `Prelude.hashWithSalt` options
       `Prelude.hashWithSalt` resourceDefinitions
 
 instance Prelude.NFData SitePlan where

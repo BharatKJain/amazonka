@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTFleetWise.GetCampaign
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,7 +102,8 @@ instance Core.AWSRequest GetCampaign where
             Prelude.<*> (x Data..?> "collectionScheme")
             Prelude.<*> (x Data..?> "compression")
             Prelude.<*> (x Data..?> "creationTime")
-            Prelude.<*> ( x Data..?> "dataExtraDimensions"
+            Prelude.<*> ( x
+                            Data..?> "dataExtraDimensions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "description")
@@ -113,7 +114,8 @@ instance Core.AWSRequest GetCampaign where
             Prelude.<*> (x Data..?> "postTriggerCollectionDuration")
             Prelude.<*> (x Data..?> "priority")
             Prelude.<*> (x Data..?> "signalCatalogArn")
-            Prelude.<*> ( x Data..?> "signalsToCollect"
+            Prelude.<*> ( x
+                            Data..?> "signalsToCollect"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "spoolingMode")

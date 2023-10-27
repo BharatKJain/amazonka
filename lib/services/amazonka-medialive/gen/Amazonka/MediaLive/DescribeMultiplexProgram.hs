@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaLive.DescribeMultiplexProgram
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest DescribeMultiplexProgram where
             Prelude.<$> (x Data..?> "channelId")
             Prelude.<*> (x Data..?> "multiplexProgramSettings")
             Prelude.<*> (x Data..?> "packetIdentifiersMap")
-            Prelude.<*> ( x Data..?> "pipelineDetails"
+            Prelude.<*> ( x
+                            Data..?> "pipelineDetails"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "programName")
@@ -119,7 +120,8 @@ instance Core.AWSRequest DescribeMultiplexProgram where
 
 instance Prelude.Hashable DescribeMultiplexProgram where
   hashWithSalt _salt DescribeMultiplexProgram' {..} =
-    _salt `Prelude.hashWithSalt` multiplexId
+    _salt
+      `Prelude.hashWithSalt` multiplexId
       `Prelude.hashWithSalt` programName
 
 instance Prelude.NFData DescribeMultiplexProgram where

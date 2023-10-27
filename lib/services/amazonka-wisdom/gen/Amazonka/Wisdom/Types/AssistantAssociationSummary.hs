@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Wisdom.Types.AssistantAssociationSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Wisdom.Types.AssistantAssociationSummary where
@@ -147,7 +147,8 @@ instance Data.FromJSON AssistantAssociationSummary where
 
 instance Prelude.Hashable AssistantAssociationSummary where
   hashWithSalt _salt AssistantAssociationSummary' {..} =
-    _salt `Prelude.hashWithSalt` tags
+    _salt
+      `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` assistantArn
       `Prelude.hashWithSalt` assistantAssociationArn
       `Prelude.hashWithSalt` assistantAssociationId

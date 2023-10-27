@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.CreateAnalysis
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -239,7 +239,8 @@ instance Core.AWSRequest CreateAnalysis where
 
 instance Prelude.Hashable CreateAnalysis where
   hashWithSalt _salt CreateAnalysis' {..} =
-    _salt `Prelude.hashWithSalt` definition
+    _salt
+      `Prelude.hashWithSalt` definition
       `Prelude.hashWithSalt` parameters
       `Prelude.hashWithSalt` permissions
       `Prelude.hashWithSalt` sourceEntity

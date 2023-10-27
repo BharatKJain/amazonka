@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.ArchivalSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.ArchivalSummary where
@@ -114,7 +114,8 @@ instance Data.FromJSON ArchivalSummary where
 
 instance Prelude.Hashable ArchivalSummary where
   hashWithSalt _salt ArchivalSummary' {..} =
-    _salt `Prelude.hashWithSalt` archivalBackupArn
+    _salt
+      `Prelude.hashWithSalt` archivalBackupArn
       `Prelude.hashWithSalt` archivalDateTime
       `Prelude.hashWithSalt` archivalReason
 

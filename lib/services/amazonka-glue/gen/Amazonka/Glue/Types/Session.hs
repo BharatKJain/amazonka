@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Session
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Session where
@@ -188,7 +188,8 @@ instance Data.FromJSON Session where
             Prelude.<$> (x Data..:? "Command")
             Prelude.<*> (x Data..:? "Connections")
             Prelude.<*> (x Data..:? "CreatedOn")
-            Prelude.<*> ( x Data..:? "DefaultArguments"
+            Prelude.<*> ( x
+                            Data..:? "DefaultArguments"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Description")
@@ -204,7 +205,8 @@ instance Data.FromJSON Session where
 
 instance Prelude.Hashable Session where
   hashWithSalt _salt Session' {..} =
-    _salt `Prelude.hashWithSalt` command
+    _salt
+      `Prelude.hashWithSalt` command
       `Prelude.hashWithSalt` connections
       `Prelude.hashWithSalt` createdOn
       `Prelude.hashWithSalt` defaultArguments

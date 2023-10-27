@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MigrationHubConfig.DescribeHomeRegionControls
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,7 +141,8 @@ instance Core.AWSRequest DescribeHomeRegionControls where
     Response.receiveJSON
       ( \s h x ->
           DescribeHomeRegionControlsResponse'
-            Prelude.<$> ( x Data..?> "HomeRegionControls"
+            Prelude.<$> ( x
+                            Data..?> "HomeRegionControls"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -150,7 +151,8 @@ instance Core.AWSRequest DescribeHomeRegionControls where
 
 instance Prelude.Hashable DescribeHomeRegionControls where
   hashWithSalt _salt DescribeHomeRegionControls' {..} =
-    _salt `Prelude.hashWithSalt` controlId
+    _salt
+      `Prelude.hashWithSalt` controlId
       `Prelude.hashWithSalt` homeRegion
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Synthetics.Types.S3EncryptionConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Synthetics.Types.S3EncryptionConfig where
@@ -101,7 +101,8 @@ instance Data.FromJSON S3EncryptionConfig where
 
 instance Prelude.Hashable S3EncryptionConfig where
   hashWithSalt _salt S3EncryptionConfig' {..} =
-    _salt `Prelude.hashWithSalt` encryptionMode
+    _salt
+      `Prelude.hashWithSalt` encryptionMode
       `Prelude.hashWithSalt` kmsKeyArn
 
 instance Prelude.NFData S3EncryptionConfig where

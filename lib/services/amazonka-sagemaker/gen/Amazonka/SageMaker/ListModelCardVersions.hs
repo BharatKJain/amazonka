@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.ListModelCardVersions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -167,21 +167,21 @@ instance Core.AWSPager ListModelCardVersions where
     | Core.stop
         ( rs
             Lens.^? listModelCardVersionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listModelCardVersionsResponse_modelCardVersionSummaryList
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listModelCardVersions_nextToken
           Lens..~ rs
           Lens.^? listModelCardVersionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListModelCardVersions where
   type
@@ -195,14 +195,16 @@ instance Core.AWSRequest ListModelCardVersions where
           ListModelCardVersionsResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "ModelCardVersionSummaryList"
+            Prelude.<*> ( x
+                            Data..?> "ModelCardVersionSummaryList"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListModelCardVersions where
   hashWithSalt _salt ListModelCardVersions' {..} =
-    _salt `Prelude.hashWithSalt` creationTimeAfter
+    _salt
+      `Prelude.hashWithSalt` creationTimeAfter
       `Prelude.hashWithSalt` creationTimeBefore
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` modelCardStatus

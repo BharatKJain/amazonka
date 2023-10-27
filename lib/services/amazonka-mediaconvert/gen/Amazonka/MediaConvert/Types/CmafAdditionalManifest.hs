@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.CmafAdditionalManifest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.CmafAdditionalManifest where
@@ -100,14 +100,16 @@ instance Data.FromJSON CmafAdditionalManifest where
       ( \x ->
           CmafAdditionalManifest'
             Prelude.<$> (x Data..:? "manifestNameModifier")
-            Prelude.<*> ( x Data..:? "selectedOutputs"
+            Prelude.<*> ( x
+                            Data..:? "selectedOutputs"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable CmafAdditionalManifest where
   hashWithSalt _salt CmafAdditionalManifest' {..} =
-    _salt `Prelude.hashWithSalt` manifestNameModifier
+    _salt
+      `Prelude.hashWithSalt` manifestNameModifier
       `Prelude.hashWithSalt` selectedOutputs
 
 instance Prelude.NFData CmafAdditionalManifest where

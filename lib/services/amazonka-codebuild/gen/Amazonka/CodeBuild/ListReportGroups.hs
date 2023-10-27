@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeBuild.ListReportGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -164,23 +164,23 @@ instance Core.AWSPager ListReportGroups where
     | Core.stop
         ( rs
             Lens.^? listReportGroupsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listReportGroupsResponse_reportGroups
-              Prelude.. Lens._Just
-              Prelude.. Lens.to Prelude.toList
+            Prelude.. Lens._Just
+            Prelude.. Lens.to Prelude.toList
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listReportGroups_nextToken
           Lens..~ rs
           Lens.^? listReportGroupsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListReportGroups where
   type
@@ -199,7 +199,8 @@ instance Core.AWSRequest ListReportGroups where
 
 instance Prelude.Hashable ListReportGroups where
   hashWithSalt _salt ListReportGroups' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` sortBy
       `Prelude.hashWithSalt` sortOrder

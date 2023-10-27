@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.PossibleRemediationAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.PossibleRemediationAction where
@@ -81,14 +81,16 @@ instance Data.FromJSON PossibleRemediationAction where
           PossibleRemediationAction'
             Prelude.<$> (x Data..:? "Description")
             Prelude.<*> (x Data..:? "IsDefaultAction")
-            Prelude.<*> ( x Data..:? "OrderedRemediationActions"
+            Prelude.<*> ( x
+                            Data..:? "OrderedRemediationActions"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable PossibleRemediationAction where
   hashWithSalt _salt PossibleRemediationAction' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` isDefaultAction
       `Prelude.hashWithSalt` orderedRemediationActions
 

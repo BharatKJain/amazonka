@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FSx.Types.FileSystem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FSx.Types.FileSystem where
@@ -452,7 +452,8 @@ instance Data.FromJSON FileSystem where
       "FileSystem"
       ( \x ->
           FileSystem'
-            Prelude.<$> ( x Data..:? "AdministrativeActions"
+            Prelude.<$> ( x
+                            Data..:? "AdministrativeActions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CreationTime")
@@ -464,7 +465,8 @@ instance Data.FromJSON FileSystem where
             Prelude.<*> (x Data..:? "KmsKeyId")
             Prelude.<*> (x Data..:? "Lifecycle")
             Prelude.<*> (x Data..:? "LustreConfiguration")
-            Prelude.<*> ( x Data..:? "NetworkInterfaceIds"
+            Prelude.<*> ( x
+                            Data..:? "NetworkInterfaceIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "OntapConfiguration")
@@ -481,7 +483,8 @@ instance Data.FromJSON FileSystem where
 
 instance Prelude.Hashable FileSystem where
   hashWithSalt _salt FileSystem' {..} =
-    _salt `Prelude.hashWithSalt` administrativeActions
+    _salt
+      `Prelude.hashWithSalt` administrativeActions
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` dNSName
       `Prelude.hashWithSalt` failureDetails

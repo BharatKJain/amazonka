@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.EntityDetectorConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.EntityDetectorConfiguration where
@@ -209,7 +209,8 @@ instance Data.FromJSON EntityDetectorConfiguration where
 
 instance Prelude.Hashable EntityDetectorConfiguration where
   hashWithSalt _salt EntityDetectorConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` allowedStatistics
+    _salt
+      `Prelude.hashWithSalt` allowedStatistics
       `Prelude.hashWithSalt` entityTypes
 
 instance Prelude.NFData EntityDetectorConfiguration where

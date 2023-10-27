@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.ThirdPartyFirewallMissingExpectedRouteTableViolation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.ThirdPartyFirewallMissingExpectedRouteTableViolation where
@@ -119,10 +119,10 @@ instance
       ( \x ->
           ThirdPartyFirewallMissingExpectedRouteTableViolation'
             Prelude.<$> (x Data..:? "AvailabilityZone")
-              Prelude.<*> (x Data..:? "CurrentRouteTable")
-              Prelude.<*> (x Data..:? "ExpectedRouteTable")
-              Prelude.<*> (x Data..:? "VPC")
-              Prelude.<*> (x Data..:? "ViolationTarget")
+            Prelude.<*> (x Data..:? "CurrentRouteTable")
+            Prelude.<*> (x Data..:? "ExpectedRouteTable")
+            Prelude.<*> (x Data..:? "VPC")
+            Prelude.<*> (x Data..:? "ViolationTarget")
       )
 
 instance
@@ -132,7 +132,8 @@ instance
   hashWithSalt
     _salt
     ThirdPartyFirewallMissingExpectedRouteTableViolation' {..} =
-      _salt `Prelude.hashWithSalt` availabilityZone
+      _salt
+        `Prelude.hashWithSalt` availabilityZone
         `Prelude.hashWithSalt` currentRouteTable
         `Prelude.hashWithSalt` expectedRouteTable
         `Prelude.hashWithSalt` vpc

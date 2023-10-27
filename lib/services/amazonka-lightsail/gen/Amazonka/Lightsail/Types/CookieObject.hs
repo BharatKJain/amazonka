@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.CookieObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.CookieObject where
@@ -80,7 +80,8 @@ instance Data.FromJSON CookieObject where
       "CookieObject"
       ( \x ->
           CookieObject'
-            Prelude.<$> ( x Data..:? "cookiesAllowList"
+            Prelude.<$> ( x
+                            Data..:? "cookiesAllowList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "option")
@@ -88,7 +89,8 @@ instance Data.FromJSON CookieObject where
 
 instance Prelude.Hashable CookieObject where
   hashWithSalt _salt CookieObject' {..} =
-    _salt `Prelude.hashWithSalt` cookiesAllowList
+    _salt
+      `Prelude.hashWithSalt` cookiesAllowList
       `Prelude.hashWithSalt` option
 
 instance Prelude.NFData CookieObject where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WellArchitected.DeleteWorkloadShare
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest DeleteWorkloadShare where
 
 instance Prelude.Hashable DeleteWorkloadShare where
   hashWithSalt _salt DeleteWorkloadShare' {..} =
-    _salt `Prelude.hashWithSalt` shareId
+    _salt
+      `Prelude.hashWithSalt` shareId
       `Prelude.hashWithSalt` workloadId
       `Prelude.hashWithSalt` clientRequestToken
 

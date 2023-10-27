@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.GetInAppMessages
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest GetInAppMessages where
 
 instance Prelude.Hashable GetInAppMessages where
   hashWithSalt _salt GetInAppMessages' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` endpointId
 
 instance Prelude.NFData GetInAppMessages where

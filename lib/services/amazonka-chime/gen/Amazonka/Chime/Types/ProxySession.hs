@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.ProxySession
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.ProxySession where
@@ -196,7 +196,8 @@ instance Data.FromJSON ProxySession where
 
 instance Prelude.Hashable ProxySession where
   hashWithSalt _salt ProxySession' {..} =
-    _salt `Prelude.hashWithSalt` capabilities
+    _salt
+      `Prelude.hashWithSalt` capabilities
       `Prelude.hashWithSalt` createdTimestamp
       `Prelude.hashWithSalt` endedTimestamp
       `Prelude.hashWithSalt` expiryMinutes

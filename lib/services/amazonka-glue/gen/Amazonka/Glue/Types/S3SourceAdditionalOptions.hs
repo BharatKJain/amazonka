@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.S3SourceAdditionalOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.S3SourceAdditionalOptions where
@@ -81,7 +81,8 @@ instance Data.FromJSON S3SourceAdditionalOptions where
 
 instance Prelude.Hashable S3SourceAdditionalOptions where
   hashWithSalt _salt S3SourceAdditionalOptions' {..} =
-    _salt `Prelude.hashWithSalt` boundedFiles
+    _salt
+      `Prelude.hashWithSalt` boundedFiles
       `Prelude.hashWithSalt` boundedSize
 
 instance Prelude.NFData S3SourceAdditionalOptions where

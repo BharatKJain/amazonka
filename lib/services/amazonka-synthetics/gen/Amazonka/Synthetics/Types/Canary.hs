@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Synthetics.Types.Canary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Synthetics.Types.Canary where
@@ -272,7 +272,8 @@ instance Data.FromJSON Canary where
 
 instance Prelude.Hashable Canary where
   hashWithSalt _salt Canary' {..} =
-    _salt `Prelude.hashWithSalt` artifactConfig
+    _salt
+      `Prelude.hashWithSalt` artifactConfig
       `Prelude.hashWithSalt` artifactS3Location
       `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` engineArn

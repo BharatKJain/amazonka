@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ImageBuilder.Types.Container
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ImageBuilder.Types.Container where
@@ -77,7 +77,8 @@ instance Data.FromJSON Container where
 
 instance Prelude.Hashable Container where
   hashWithSalt _salt Container' {..} =
-    _salt `Prelude.hashWithSalt` imageUris
+    _salt
+      `Prelude.hashWithSalt` imageUris
       `Prelude.hashWithSalt` region
 
 instance Prelude.NFData Container where

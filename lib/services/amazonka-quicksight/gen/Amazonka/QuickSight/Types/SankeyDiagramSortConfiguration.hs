@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.SankeyDiagramSortConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.SankeyDiagramSortConfiguration where
@@ -98,7 +98,8 @@ instance
   hashWithSalt
     _salt
     SankeyDiagramSortConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` destinationItemsLimit
+      _salt
+        `Prelude.hashWithSalt` destinationItemsLimit
         `Prelude.hashWithSalt` sourceItemsLimit
         `Prelude.hashWithSalt` weightSort
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.AudioAndDTMFInputSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.AudioAndDTMFInputSpecification where
@@ -100,7 +100,8 @@ instance
   hashWithSalt
     _salt
     AudioAndDTMFInputSpecification' {..} =
-      _salt `Prelude.hashWithSalt` audioSpecification
+      _salt
+        `Prelude.hashWithSalt` audioSpecification
         `Prelude.hashWithSalt` dtmfSpecification
         `Prelude.hashWithSalt` startTimeoutMs
 

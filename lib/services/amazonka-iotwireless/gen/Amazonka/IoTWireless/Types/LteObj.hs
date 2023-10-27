@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.LteObj
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.LteObj where
@@ -156,7 +156,8 @@ lteObj_eutranCid = Lens.lens (\LteObj' {eutranCid} -> eutranCid) (\s@LteObj' {} 
 
 instance Prelude.Hashable LteObj where
   hashWithSalt _salt LteObj' {..} =
-    _salt `Prelude.hashWithSalt` lteLocalId
+    _salt
+      `Prelude.hashWithSalt` lteLocalId
       `Prelude.hashWithSalt` lteNmr
       `Prelude.hashWithSalt` lteTimingAdvance
       `Prelude.hashWithSalt` nrCapable

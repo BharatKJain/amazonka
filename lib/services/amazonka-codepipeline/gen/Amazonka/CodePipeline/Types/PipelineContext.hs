@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.PipelineContext
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.PipelineContext where
@@ -116,7 +116,8 @@ instance Data.FromJSON PipelineContext where
 
 instance Prelude.Hashable PipelineContext where
   hashWithSalt _salt PipelineContext' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` pipelineArn
       `Prelude.hashWithSalt` pipelineExecutionId
       `Prelude.hashWithSalt` pipelineName

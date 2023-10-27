@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CostAndUsageReport.ModifyReportDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,7 +102,8 @@ instance Core.AWSRequest ModifyReportDefinition where
 
 instance Prelude.Hashable ModifyReportDefinition where
   hashWithSalt _salt ModifyReportDefinition' {..} =
-    _salt `Prelude.hashWithSalt` reportName
+    _salt
+      `Prelude.hashWithSalt` reportName
       `Prelude.hashWithSalt` reportDefinition
 
 instance Prelude.NFData ModifyReportDefinition where

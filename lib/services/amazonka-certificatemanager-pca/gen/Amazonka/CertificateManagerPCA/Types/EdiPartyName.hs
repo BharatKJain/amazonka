@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.EdiPartyName
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.EdiPartyName where
@@ -79,7 +79,8 @@ instance Data.FromJSON EdiPartyName where
 
 instance Prelude.Hashable EdiPartyName where
   hashWithSalt _salt EdiPartyName' {..} =
-    _salt `Prelude.hashWithSalt` nameAssigner
+    _salt
+      `Prelude.hashWithSalt` nameAssigner
       `Prelude.hashWithSalt` partyName
 
 instance Prelude.NFData EdiPartyName where

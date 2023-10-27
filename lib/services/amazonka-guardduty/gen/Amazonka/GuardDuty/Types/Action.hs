@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GuardDuty.Types.Action
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GuardDuty.Types.Action where
@@ -125,7 +125,8 @@ instance Data.FromJSON Action where
 
 instance Prelude.Hashable Action where
   hashWithSalt _salt Action' {..} =
-    _salt `Prelude.hashWithSalt` actionType
+    _salt
+      `Prelude.hashWithSalt` actionType
       `Prelude.hashWithSalt` awsApiCallAction
       `Prelude.hashWithSalt` dnsRequestAction
       `Prelude.hashWithSalt` kubernetesApiCallAction

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QLDBSession.Types.CommitTransactionRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QLDBSession.Types.CommitTransactionRequest where
@@ -103,7 +103,8 @@ commitTransactionRequest_commitDigest = Lens.lens (\CommitTransactionRequest' {c
 
 instance Prelude.Hashable CommitTransactionRequest where
   hashWithSalt _salt CommitTransactionRequest' {..} =
-    _salt `Prelude.hashWithSalt` transactionId
+    _salt
+      `Prelude.hashWithSalt` transactionId
       `Prelude.hashWithSalt` commitDigest
 
 instance Prelude.NFData CommitTransactionRequest where

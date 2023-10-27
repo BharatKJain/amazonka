@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IAM.Types.GroupDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IAM.Types.GroupDetail where
@@ -137,21 +137,25 @@ instance Data.FromXML GroupDetail where
   parseXML x =
     GroupDetail'
       Prelude.<$> (x Data..@? "Arn")
-      Prelude.<*> ( x Data..@? "AttachedManagedPolicies"
+      Prelude.<*> ( x
+                      Data..@? "AttachedManagedPolicies"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "CreateDate")
       Prelude.<*> (x Data..@? "GroupId")
       Prelude.<*> (x Data..@? "GroupName")
-      Prelude.<*> ( x Data..@? "GroupPolicyList" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "GroupPolicyList"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "Path")
 
 instance Prelude.Hashable GroupDetail where
   hashWithSalt _salt GroupDetail' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` attachedManagedPolicies
       `Prelude.hashWithSalt` createDate
       `Prelude.hashWithSalt` groupId

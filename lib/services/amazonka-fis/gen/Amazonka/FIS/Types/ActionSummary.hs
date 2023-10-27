@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FIS.Types.ActionSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FIS.Types.ActionSummary where
@@ -95,7 +95,8 @@ instance Data.FromJSON ActionSummary where
 
 instance Prelude.Hashable ActionSummary where
   hashWithSalt _salt ActionSummary' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` targets

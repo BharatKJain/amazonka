@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.PricingDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.PricingDetail where
@@ -66,11 +66,13 @@ pricingDetail_price = Lens.lens (\PricingDetail' {price} -> price) (\s@PricingDe
 instance Data.FromXML PricingDetail where
   parseXML x =
     PricingDetail'
-      Prelude.<$> (x Data..@? "count") Prelude.<*> (x Data..@? "price")
+      Prelude.<$> (x Data..@? "count")
+      Prelude.<*> (x Data..@? "price")
 
 instance Prelude.Hashable PricingDetail where
   hashWithSalt _salt PricingDetail' {..} =
-    _salt `Prelude.hashWithSalt` count
+    _salt
+      `Prelude.hashWithSalt` count
       `Prelude.hashWithSalt` price
 
 instance Prelude.NFData PricingDetail where

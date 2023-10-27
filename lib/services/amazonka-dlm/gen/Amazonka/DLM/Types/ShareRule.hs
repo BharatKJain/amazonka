@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DLM.Types.ShareRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DLM.Types.ShareRule where
@@ -95,7 +95,8 @@ instance Data.FromJSON ShareRule where
 
 instance Prelude.Hashable ShareRule where
   hashWithSalt _salt ShareRule' {..} =
-    _salt `Prelude.hashWithSalt` unshareInterval
+    _salt
+      `Prelude.hashWithSalt` unshareInterval
       `Prelude.hashWithSalt` unshareIntervalUnit
       `Prelude.hashWithSalt` targetAccounts
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.Permission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.Permission where
@@ -84,7 +84,8 @@ instance Data.FromJSON Permission where
 
 instance Prelude.Hashable Permission where
   hashWithSalt _salt Permission' {..} =
-    _salt `Prelude.hashWithSalt` operation
+    _salt
+      `Prelude.hashWithSalt` operation
       `Prelude.hashWithSalt` service
 
 instance Prelude.NFData Permission where

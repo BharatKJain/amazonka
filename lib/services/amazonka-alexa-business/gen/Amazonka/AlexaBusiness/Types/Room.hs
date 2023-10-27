@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.Room
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.Room where
@@ -104,7 +104,8 @@ instance Data.FromJSON Room where
 
 instance Prelude.Hashable Room where
   hashWithSalt _salt Room' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` profileArn
       `Prelude.hashWithSalt` providerCalendarId
       `Prelude.hashWithSalt` roomArn

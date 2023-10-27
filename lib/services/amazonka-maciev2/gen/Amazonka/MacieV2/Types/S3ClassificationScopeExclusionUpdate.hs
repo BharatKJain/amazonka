@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.S3ClassificationScopeExclusionUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.S3ClassificationScopeExclusionUpdate where
@@ -116,7 +116,8 @@ instance
   hashWithSalt
     _salt
     S3ClassificationScopeExclusionUpdate' {..} =
-      _salt `Prelude.hashWithSalt` bucketNames
+      _salt
+        `Prelude.hashWithSalt` bucketNames
         `Prelude.hashWithSalt` operation
 
 instance

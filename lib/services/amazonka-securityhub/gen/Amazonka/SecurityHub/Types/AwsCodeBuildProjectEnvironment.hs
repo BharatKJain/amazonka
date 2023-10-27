@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsCodeBuildProjectEnvironment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsCodeBuildProjectEnvironment where
@@ -216,7 +216,8 @@ instance Data.FromJSON AwsCodeBuildProjectEnvironment where
       ( \x ->
           AwsCodeBuildProjectEnvironment'
             Prelude.<$> (x Data..:? "Certificate")
-            Prelude.<*> ( x Data..:? "EnvironmentVariables"
+            Prelude.<*> ( x
+                            Data..:? "EnvironmentVariables"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ImagePullCredentialsType")
@@ -232,7 +233,8 @@ instance
   hashWithSalt
     _salt
     AwsCodeBuildProjectEnvironment' {..} =
-      _salt `Prelude.hashWithSalt` certificate
+      _salt
+        `Prelude.hashWithSalt` certificate
         `Prelude.hashWithSalt` environmentVariables
         `Prelude.hashWithSalt` imagePullCredentialsType
         `Prelude.hashWithSalt` privilegedMode

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.Query
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.Query where
@@ -138,7 +138,8 @@ instance Data.FromJSON Query where
 
 instance Prelude.Hashable Query where
   hashWithSalt _salt Query' {..} =
-    _salt `Prelude.hashWithSalt` alias
+    _salt
+      `Prelude.hashWithSalt` alias
       `Prelude.hashWithSalt` pages
       `Prelude.hashWithSalt` text
 

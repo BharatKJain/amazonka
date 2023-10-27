@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DateTimeHierarchy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DateTimeHierarchy where
@@ -75,7 +75,8 @@ instance Data.FromJSON DateTimeHierarchy where
       "DateTimeHierarchy"
       ( \x ->
           DateTimeHierarchy'
-            Prelude.<$> ( x Data..:? "DrillDownFilters"
+            Prelude.<$> ( x
+                            Data..:? "DrillDownFilters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "HierarchyId")
@@ -83,7 +84,8 @@ instance Data.FromJSON DateTimeHierarchy where
 
 instance Prelude.Hashable DateTimeHierarchy where
   hashWithSalt _salt DateTimeHierarchy' {..} =
-    _salt `Prelude.hashWithSalt` drillDownFilters
+    _salt
+      `Prelude.hashWithSalt` drillDownFilters
       `Prelude.hashWithSalt` hierarchyId
 
 instance Prelude.NFData DateTimeHierarchy where

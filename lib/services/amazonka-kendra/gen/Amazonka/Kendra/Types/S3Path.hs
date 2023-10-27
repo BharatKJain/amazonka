@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.S3Path
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.S3Path where
@@ -69,12 +69,14 @@ instance Data.FromJSON S3Path where
       "S3Path"
       ( \x ->
           S3Path'
-            Prelude.<$> (x Data..: "Bucket") Prelude.<*> (x Data..: "Key")
+            Prelude.<$> (x Data..: "Bucket")
+            Prelude.<*> (x Data..: "Key")
       )
 
 instance Prelude.Hashable S3Path where
   hashWithSalt _salt S3Path' {..} =
-    _salt `Prelude.hashWithSalt` bucket
+    _salt
+      `Prelude.hashWithSalt` bucket
       `Prelude.hashWithSalt` key
 
 instance Prelude.NFData S3Path where

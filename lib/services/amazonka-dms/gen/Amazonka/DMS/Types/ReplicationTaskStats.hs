@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.ReplicationTaskStats
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.ReplicationTaskStats where
@@ -176,7 +176,8 @@ instance Data.FromJSON ReplicationTaskStats where
 
 instance Prelude.Hashable ReplicationTaskStats where
   hashWithSalt _salt ReplicationTaskStats' {..} =
-    _salt `Prelude.hashWithSalt` elapsedTimeMillis
+    _salt
+      `Prelude.hashWithSalt` elapsedTimeMillis
       `Prelude.hashWithSalt` freshStartDate
       `Prelude.hashWithSalt` fullLoadFinishDate
       `Prelude.hashWithSalt` fullLoadProgressPercent

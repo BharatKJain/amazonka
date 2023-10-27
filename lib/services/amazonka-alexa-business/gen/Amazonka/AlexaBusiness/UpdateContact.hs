@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AlexaBusiness.UpdateContact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -159,7 +159,8 @@ instance Core.AWSRequest UpdateContact where
 
 instance Prelude.Hashable UpdateContact where
   hashWithSalt _salt UpdateContact' {..} =
-    _salt `Prelude.hashWithSalt` displayName
+    _salt
+      `Prelude.hashWithSalt` displayName
       `Prelude.hashWithSalt` firstName
       `Prelude.hashWithSalt` lastName
       `Prelude.hashWithSalt` phoneNumber

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IdentityStore.GetGroupId
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,7 +113,8 @@ instance Core.AWSRequest GetGroupId where
 
 instance Prelude.Hashable GetGroupId where
   hashWithSalt _salt GetGroupId' {..} =
-    _salt `Prelude.hashWithSalt` identityStoreId
+    _salt
+      `Prelude.hashWithSalt` identityStoreId
       `Prelude.hashWithSalt` alternateIdentifier
 
 instance Prelude.NFData GetGroupId where

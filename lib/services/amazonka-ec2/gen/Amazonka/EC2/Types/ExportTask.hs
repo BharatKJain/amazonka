@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ExportTask
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ExportTask where
@@ -133,7 +133,9 @@ exportTask_statusMessage = Lens.lens (\ExportTask' {statusMessage} -> statusMess
 instance Data.FromXML ExportTask where
   parseXML x =
     ExportTask'
-      Prelude.<$> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@ "description")
@@ -145,7 +147,8 @@ instance Data.FromXML ExportTask where
 
 instance Prelude.Hashable ExportTask where
   hashWithSalt _salt ExportTask' {..} =
-    _salt `Prelude.hashWithSalt` tags
+    _salt
+      `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` exportTaskId
       `Prelude.hashWithSalt` exportToS3Task

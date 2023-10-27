@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.FleetCapacity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.FleetCapacity where
@@ -142,7 +142,8 @@ instance Data.FromJSON FleetCapacity where
 
 instance Prelude.Hashable FleetCapacity where
   hashWithSalt _salt FleetCapacity' {..} =
-    _salt `Prelude.hashWithSalt` fleetArn
+    _salt
+      `Prelude.hashWithSalt` fleetArn
       `Prelude.hashWithSalt` fleetId
       `Prelude.hashWithSalt` instanceCounts
       `Prelude.hashWithSalt` instanceType

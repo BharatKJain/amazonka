@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.FleetLaunchTemplateSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.FleetLaunchTemplateSpecification where
@@ -135,7 +135,8 @@ instance
   hashWithSalt
     _salt
     FleetLaunchTemplateSpecification' {..} =
-      _salt `Prelude.hashWithSalt` launchTemplateId
+      _salt
+        `Prelude.hashWithSalt` launchTemplateId
         `Prelude.hashWithSalt` launchTemplateName
         `Prelude.hashWithSalt` version
 

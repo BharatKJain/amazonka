@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.DiskInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.DiskInfo where
@@ -97,7 +97,8 @@ instance Data.FromJSON DiskInfo where
 
 instance Prelude.Hashable DiskInfo where
   hashWithSalt _salt DiskInfo' {..} =
-    _salt `Prelude.hashWithSalt` isSystemDisk
+    _salt
+      `Prelude.hashWithSalt` isSystemDisk
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` sizeInGb

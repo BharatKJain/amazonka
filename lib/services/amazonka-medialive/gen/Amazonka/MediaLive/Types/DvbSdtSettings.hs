@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.DvbSdtSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.DvbSdtSettings where
@@ -122,7 +122,8 @@ instance Data.FromJSON DvbSdtSettings where
 
 instance Prelude.Hashable DvbSdtSettings where
   hashWithSalt _salt DvbSdtSettings' {..} =
-    _salt `Prelude.hashWithSalt` outputSdt
+    _salt
+      `Prelude.hashWithSalt` outputSdt
       `Prelude.hashWithSalt` repInterval
       `Prelude.hashWithSalt` serviceName
       `Prelude.hashWithSalt` serviceProviderName

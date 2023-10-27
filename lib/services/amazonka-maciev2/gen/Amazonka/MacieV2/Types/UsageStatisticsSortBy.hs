@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.UsageStatisticsSortBy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.UsageStatisticsSortBy where
@@ -73,7 +73,8 @@ usageStatisticsSortBy_orderBy = Lens.lens (\UsageStatisticsSortBy' {orderBy} -> 
 
 instance Prelude.Hashable UsageStatisticsSortBy where
   hashWithSalt _salt UsageStatisticsSortBy' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` orderBy
 
 instance Prelude.NFData UsageStatisticsSortBy where

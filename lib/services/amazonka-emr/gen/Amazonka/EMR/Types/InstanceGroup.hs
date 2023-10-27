@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.InstanceGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.InstanceGroup where
@@ -276,14 +276,16 @@ instance Data.FromJSON InstanceGroup where
             Prelude.<*> (x Data..:? "Configurations" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "ConfigurationsVersion")
             Prelude.<*> (x Data..:? "CustomAmiId")
-            Prelude.<*> ( x Data..:? "EbsBlockDevices"
+            Prelude.<*> ( x
+                            Data..:? "EbsBlockDevices"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "EbsOptimized")
             Prelude.<*> (x Data..:? "Id")
             Prelude.<*> (x Data..:? "InstanceGroupType")
             Prelude.<*> (x Data..:? "InstanceType")
-            Prelude.<*> ( x Data..:? "LastSuccessfullyAppliedConfigurations"
+            Prelude.<*> ( x
+                            Data..:? "LastSuccessfullyAppliedConfigurations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> ( x
@@ -299,7 +301,8 @@ instance Data.FromJSON InstanceGroup where
 
 instance Prelude.Hashable InstanceGroup where
   hashWithSalt _salt InstanceGroup' {..} =
-    _salt `Prelude.hashWithSalt` autoScalingPolicy
+    _salt
+      `Prelude.hashWithSalt` autoScalingPolicy
       `Prelude.hashWithSalt` bidPrice
       `Prelude.hashWithSalt` configurations
       `Prelude.hashWithSalt` configurationsVersion

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppStream.Types.ScriptDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppStream.Types.ScriptDetails where
@@ -105,7 +105,8 @@ instance Data.FromJSON ScriptDetails where
 
 instance Prelude.Hashable ScriptDetails where
   hashWithSalt _salt ScriptDetails' {..} =
-    _salt `Prelude.hashWithSalt` executableParameters
+    _salt
+      `Prelude.hashWithSalt` executableParameters
       `Prelude.hashWithSalt` scriptS3Location
       `Prelude.hashWithSalt` executablePath
       `Prelude.hashWithSalt` timeoutInSeconds

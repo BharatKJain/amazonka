@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.LogGroupSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.LogGroupSummary where
@@ -80,7 +80,8 @@ instance Data.FromJSON LogGroupSummary where
 
 instance Prelude.Hashable LogGroupSummary where
   hashWithSalt _salt LogGroupSummary' {..} =
-    _salt `Prelude.hashWithSalt` logGroupName
+    _salt
+      `Prelude.hashWithSalt` logGroupName
       `Prelude.hashWithSalt` logType
 
 instance Prelude.NFData LogGroupSummary where

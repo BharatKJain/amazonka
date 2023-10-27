@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatchEvents.Types.EcsParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatchEvents.Types.EcsParameters where
@@ -312,7 +312,8 @@ instance Data.FromJSON EcsParameters where
       "EcsParameters"
       ( \x ->
           EcsParameters'
-            Prelude.<$> ( x Data..:? "CapacityProviderStrategy"
+            Prelude.<$> ( x
+                            Data..:? "CapacityProviderStrategy"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "EnableECSManagedTags")
@@ -320,10 +321,12 @@ instance Data.FromJSON EcsParameters where
             Prelude.<*> (x Data..:? "Group")
             Prelude.<*> (x Data..:? "LaunchType")
             Prelude.<*> (x Data..:? "NetworkConfiguration")
-            Prelude.<*> ( x Data..:? "PlacementConstraints"
+            Prelude.<*> ( x
+                            Data..:? "PlacementConstraints"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "PlacementStrategy"
+            Prelude.<*> ( x
+                            Data..:? "PlacementStrategy"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "PlatformVersion")

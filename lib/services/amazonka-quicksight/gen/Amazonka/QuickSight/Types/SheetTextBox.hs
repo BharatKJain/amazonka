@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.SheetTextBox
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.SheetTextBox where
@@ -85,7 +85,8 @@ instance Data.FromJSON SheetTextBox where
 
 instance Prelude.Hashable SheetTextBox where
   hashWithSalt _salt SheetTextBox' {..} =
-    _salt `Prelude.hashWithSalt` content
+    _salt
+      `Prelude.hashWithSalt` content
       `Prelude.hashWithSalt` sheetTextBoxId
 
 instance Prelude.NFData SheetTextBox where

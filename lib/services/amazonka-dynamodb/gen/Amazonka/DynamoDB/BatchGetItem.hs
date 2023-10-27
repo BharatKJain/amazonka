@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.BatchGetItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -365,19 +365,22 @@ instance Core.AWSRequest BatchGetItem where
     Response.receiveJSON
       ( \s h x ->
           BatchGetItemResponse'
-            Prelude.<$> ( x Data..?> "ConsumedCapacity"
+            Prelude.<$> ( x
+                            Data..?> "ConsumedCapacity"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
             Prelude.<*> (x Data..?> "Responses" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "UnprocessedKeys"
+            Prelude.<*> ( x
+                            Data..?> "UnprocessedKeys"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable BatchGetItem where
   hashWithSalt _salt BatchGetItem' {..} =
-    _salt `Prelude.hashWithSalt` returnConsumedCapacity
+    _salt
+      `Prelude.hashWithSalt` returnConsumedCapacity
       `Prelude.hashWithSalt` requestItems
 
 instance Prelude.NFData BatchGetItem where

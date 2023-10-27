@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ELBV2.Types.TargetGroupTuple
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ELBV2.Types.TargetGroupTuple where
@@ -71,7 +71,8 @@ instance Data.FromXML TargetGroupTuple where
 
 instance Prelude.Hashable TargetGroupTuple where
   hashWithSalt _salt TargetGroupTuple' {..} =
-    _salt `Prelude.hashWithSalt` targetGroupArn
+    _salt
+      `Prelude.hashWithSalt` targetGroupArn
       `Prelude.hashWithSalt` weight
 
 instance Prelude.NFData TargetGroupTuple where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubOrchestrator.Types.WorkflowStepSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubOrchestrator.Types.WorkflowStepSummary where
@@ -193,7 +193,8 @@ instance Data.FromJSON WorkflowStepSummary where
 
 instance Prelude.Hashable WorkflowStepSummary where
   hashWithSalt _salt WorkflowStepSummary' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` next
       `Prelude.hashWithSalt` noOfSrvCompleted

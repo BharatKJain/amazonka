@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutVision.Types.ModelDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutVision.Types.ModelDescription where
@@ -220,7 +220,8 @@ instance Data.FromJSON ModelDescription where
 
 instance Prelude.Hashable ModelDescription where
   hashWithSalt _salt ModelDescription' {..} =
-    _salt `Prelude.hashWithSalt` creationTimestamp
+    _salt
+      `Prelude.hashWithSalt` creationTimestamp
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` evaluationEndTimestamp
       `Prelude.hashWithSalt` evaluationManifest

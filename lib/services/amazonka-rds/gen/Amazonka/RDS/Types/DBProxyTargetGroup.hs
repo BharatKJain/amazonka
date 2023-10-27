@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.DBProxyTargetGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.DBProxyTargetGroup where
@@ -161,7 +161,8 @@ instance Data.FromXML DBProxyTargetGroup where
 
 instance Prelude.Hashable DBProxyTargetGroup where
   hashWithSalt _salt DBProxyTargetGroup' {..} =
-    _salt `Prelude.hashWithSalt` connectionPoolConfig
+    _salt
+      `Prelude.hashWithSalt` connectionPoolConfig
       `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` dbProxyName
       `Prelude.hashWithSalt` isDefault

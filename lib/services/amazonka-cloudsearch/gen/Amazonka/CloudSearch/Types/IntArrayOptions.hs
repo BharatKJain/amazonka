@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudSearch.Types.IntArrayOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudSearch.Types.IntArrayOptions where
@@ -105,7 +105,8 @@ instance Data.FromXML IntArrayOptions where
 
 instance Prelude.Hashable IntArrayOptions where
   hashWithSalt _salt IntArrayOptions' {..} =
-    _salt `Prelude.hashWithSalt` defaultValue
+    _salt
+      `Prelude.hashWithSalt` defaultValue
       `Prelude.hashWithSalt` facetEnabled
       `Prelude.hashWithSalt` returnEnabled
       `Prelude.hashWithSalt` searchEnabled

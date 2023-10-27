@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchCreateIndex
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchCreateIndex where
@@ -109,7 +109,8 @@ batchCreateIndex_isUnique = Lens.lens (\BatchCreateIndex' {isUnique} -> isUnique
 
 instance Prelude.Hashable BatchCreateIndex where
   hashWithSalt _salt BatchCreateIndex' {..} =
-    _salt `Prelude.hashWithSalt` batchReferenceName
+    _salt
+      `Prelude.hashWithSalt` batchReferenceName
       `Prelude.hashWithSalt` linkName
       `Prelude.hashWithSalt` parentReference
       `Prelude.hashWithSalt` orderedIndexedAttributeList

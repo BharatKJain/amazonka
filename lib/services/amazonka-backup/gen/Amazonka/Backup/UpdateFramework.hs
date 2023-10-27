@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Backup.UpdateFramework
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -149,7 +149,8 @@ instance Core.AWSRequest UpdateFramework where
 
 instance Prelude.Hashable UpdateFramework where
   hashWithSalt _salt UpdateFramework' {..} =
-    _salt `Prelude.hashWithSalt` frameworkControls
+    _salt
+      `Prelude.hashWithSalt` frameworkControls
       `Prelude.hashWithSalt` frameworkDescription
       `Prelude.hashWithSalt` idempotencyToken
       `Prelude.hashWithSalt` frameworkName

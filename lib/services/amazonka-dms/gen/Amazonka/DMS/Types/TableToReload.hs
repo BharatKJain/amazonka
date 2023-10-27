@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.TableToReload
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.TableToReload where
@@ -68,7 +68,8 @@ tableToReload_tableName = Lens.lens (\TableToReload' {tableName} -> tableName) (
 
 instance Prelude.Hashable TableToReload where
   hashWithSalt _salt TableToReload' {..} =
-    _salt `Prelude.hashWithSalt` schemaName
+    _salt
+      `Prelude.hashWithSalt` schemaName
       `Prelude.hashWithSalt` tableName
 
 instance Prelude.NFData TableToReload where

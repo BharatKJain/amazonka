@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.DescribeVpnConnections
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -245,7 +245,8 @@ instance Core.AWSRequest DescribeVpnConnections where
     Response.receiveXML
       ( \s h x ->
           DescribeVpnConnectionsResponse'
-            Prelude.<$> ( x Data..@? "vpnConnectionSet"
+            Prelude.<$> ( x
+                            Data..@? "vpnConnectionSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -254,7 +255,8 @@ instance Core.AWSRequest DescribeVpnConnections where
 
 instance Prelude.Hashable DescribeVpnConnections where
   hashWithSalt _salt DescribeVpnConnections' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` vpnConnectionIds
 

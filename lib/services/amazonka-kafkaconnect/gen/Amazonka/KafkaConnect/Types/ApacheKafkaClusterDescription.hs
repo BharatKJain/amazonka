@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KafkaConnect.Types.ApacheKafkaClusterDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KafkaConnect.Types.ApacheKafkaClusterDescription where
@@ -83,7 +83,8 @@ instance
     ApacheKafkaClusterDescription
   where
   hashWithSalt _salt ApacheKafkaClusterDescription' {..} =
-    _salt `Prelude.hashWithSalt` bootstrapServers
+    _salt
+      `Prelude.hashWithSalt` bootstrapServers
       `Prelude.hashWithSalt` vpc
 
 instance Prelude.NFData ApacheKafkaClusterDescription where

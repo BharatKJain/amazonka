@@ -1,6 +1,6 @@
 -- |
 -- Module      : Amazonka.Types
--- Copyright   : (c) 2013-2021 Brendan Hay
+-- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
 -- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
 -- Stability   : provisional
@@ -132,7 +132,6 @@ module Amazonka.Types
         Jakarta,
         Melbourne,
         Mumbai,
-        Hyderabad,
         Osaka,
         Seoul,
         Singapore,
@@ -519,10 +518,10 @@ data Service = Service
     -- ignored otherwise.
     s3AddressingStyle :: S3AddressingStyle,
     endpointPrefix :: ByteString,
-    endpoint :: (Region -> Endpoint),
-    timeout :: (Maybe Seconds),
-    check :: (Status -> Bool),
-    error :: (Status -> [Header] -> ByteStringLazy -> Error),
+    endpoint :: Region -> Endpoint,
+    timeout :: Maybe Seconds,
+    check :: Status -> Bool,
+    error :: Status -> [Header] -> ByteStringLazy -> Error,
     retry :: Retry
   }
   deriving stock (Generic)
@@ -756,7 +755,7 @@ _SessionToken = Lens.coerced
 -- | The AuthN/AuthZ credential environment.
 data AuthEnv = AuthEnv
   { accessKeyId :: AccessKey,
-    secretAccessKey :: (Sensitive SecretKey),
+    secretAccessKey :: Sensitive SecretKey,
     sessionToken :: Maybe (Sensitive SessionToken),
     expiration :: Maybe ISO8601
   }
@@ -881,9 +880,6 @@ pattern Melbourne = Region' "ap-southeast-4"
 pattern Mumbai :: Region
 pattern Mumbai = Region' "ap-south-1"
 
-pattern Hyderabad :: Region
-pattern Hyderabad = Region' "ap-south-2"
-
 pattern Osaka :: Region
 pattern Osaka = Region' "ap-northeast-3"
 
@@ -970,7 +966,6 @@ pattern Ningxia = Region' "cn-northwest-1"
   Jakarta,
   Melbourne,
   Mumbai,
-  Hyderabad,
   Osaka,
   Seoul,
   Singapore,

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.OtaaV1_1
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.OtaaV1_1 where
@@ -84,7 +84,8 @@ instance Data.FromJSON OtaaV1_1 where
 
 instance Prelude.Hashable OtaaV1_1 where
   hashWithSalt _salt OtaaV1_1' {..} =
-    _salt `Prelude.hashWithSalt` appKey
+    _salt
+      `Prelude.hashWithSalt` appKey
       `Prelude.hashWithSalt` joinEui
       `Prelude.hashWithSalt` nwkKey
 

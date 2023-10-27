@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.IPRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.IPRange where
@@ -74,7 +74,8 @@ instance Data.FromXML IPRange where
 
 instance Prelude.Hashable IPRange where
   hashWithSalt _salt IPRange' {..} =
-    _salt `Prelude.hashWithSalt` cidrip
+    _salt
+      `Prelude.hashWithSalt` cidrip
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData IPRange where

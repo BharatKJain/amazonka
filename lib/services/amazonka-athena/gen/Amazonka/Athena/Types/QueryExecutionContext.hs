@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.QueryExecutionContext
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.QueryExecutionContext where
@@ -78,7 +78,8 @@ instance Data.FromJSON QueryExecutionContext where
 
 instance Prelude.Hashable QueryExecutionContext where
   hashWithSalt _salt QueryExecutionContext' {..} =
-    _salt `Prelude.hashWithSalt` catalog
+    _salt
+      `Prelude.hashWithSalt` catalog
       `Prelude.hashWithSalt` database
 
 instance Prelude.NFData QueryExecutionContext where

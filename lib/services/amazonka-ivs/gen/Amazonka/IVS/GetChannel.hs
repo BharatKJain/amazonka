@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IVS.GetChannel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -146,7 +146,6 @@ newGetChannelResponse pHttpStatus_ =
       httpStatus = pHttpStatus_
     }
 
--- |
 getChannelResponse_channel :: Lens.Lens' GetChannelResponse (Prelude.Maybe Channel)
 getChannelResponse_channel = Lens.lens (\GetChannelResponse' {channel} -> channel) (\s@GetChannelResponse' {} a -> s {channel = a} :: GetChannelResponse)
 

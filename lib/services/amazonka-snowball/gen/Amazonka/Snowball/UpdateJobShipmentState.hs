@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Snowball.UpdateJobShipmentState
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,7 +120,8 @@ instance Core.AWSRequest UpdateJobShipmentState where
 
 instance Prelude.Hashable UpdateJobShipmentState where
   hashWithSalt _salt UpdateJobShipmentState' {..} =
-    _salt `Prelude.hashWithSalt` jobId
+    _salt
+      `Prelude.hashWithSalt` jobId
       `Prelude.hashWithSalt` shipmentState
 
 instance Prelude.NFData UpdateJobShipmentState where

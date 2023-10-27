@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.KeyUsage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.KeyUsage where
@@ -145,7 +145,8 @@ instance Data.FromJSON KeyUsage where
 
 instance Prelude.Hashable KeyUsage where
   hashWithSalt _salt KeyUsage' {..} =
-    _salt `Prelude.hashWithSalt` cRLSign
+    _salt
+      `Prelude.hashWithSalt` cRLSign
       `Prelude.hashWithSalt` dataEncipherment
       `Prelude.hashWithSalt` decipherOnly
       `Prelude.hashWithSalt` digitalSignature

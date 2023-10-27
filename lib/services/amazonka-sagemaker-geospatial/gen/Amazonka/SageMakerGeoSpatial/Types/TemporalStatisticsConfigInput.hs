@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.TemporalStatisticsConfigInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.TemporalStatisticsConfigInput where
@@ -62,15 +62,12 @@ newTemporalStatisticsConfigInput pStatistics_ =
         Lens.coerced Lens.# pStatistics_
     }
 
--- |
 temporalStatisticsConfigInput_groupBy :: Lens.Lens' TemporalStatisticsConfigInput (Prelude.Maybe GroupBy)
 temporalStatisticsConfigInput_groupBy = Lens.lens (\TemporalStatisticsConfigInput' {groupBy} -> groupBy) (\s@TemporalStatisticsConfigInput' {} a -> s {groupBy = a} :: TemporalStatisticsConfigInput)
 
--- |
 temporalStatisticsConfigInput_targetBands :: Lens.Lens' TemporalStatisticsConfigInput (Prelude.Maybe (Prelude.NonEmpty Prelude.Text))
 temporalStatisticsConfigInput_targetBands = Lens.lens (\TemporalStatisticsConfigInput' {targetBands} -> targetBands) (\s@TemporalStatisticsConfigInput' {} a -> s {targetBands = a} :: TemporalStatisticsConfigInput) Prelude.. Lens.mapping Lens.coerced
 
--- |
 temporalStatisticsConfigInput_statistics :: Lens.Lens' TemporalStatisticsConfigInput (Prelude.NonEmpty TemporalStatistics)
 temporalStatisticsConfigInput_statistics = Lens.lens (\TemporalStatisticsConfigInput' {statistics} -> statistics) (\s@TemporalStatisticsConfigInput' {} a -> s {statistics = a} :: TemporalStatisticsConfigInput) Prelude.. Lens.coerced
 
@@ -90,7 +87,8 @@ instance
     TemporalStatisticsConfigInput
   where
   hashWithSalt _salt TemporalStatisticsConfigInput' {..} =
-    _salt `Prelude.hashWithSalt` groupBy
+    _salt
+      `Prelude.hashWithSalt` groupBy
       `Prelude.hashWithSalt` targetBands
       `Prelude.hashWithSalt` statistics
 

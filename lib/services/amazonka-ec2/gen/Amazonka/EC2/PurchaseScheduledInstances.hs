@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.PurchaseScheduledInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,7 +137,8 @@ instance Core.AWSRequest PurchaseScheduledInstances where
     Response.receiveXML
       ( \s h x ->
           PurchaseScheduledInstancesResponse'
-            Prelude.<$> ( x Data..@? "scheduledInstanceSet"
+            Prelude.<$> ( x
+                            Data..@? "scheduledInstanceSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -146,7 +147,8 @@ instance Core.AWSRequest PurchaseScheduledInstances where
 
 instance Prelude.Hashable PurchaseScheduledInstances where
   hashWithSalt _salt PurchaseScheduledInstances' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` purchaseRequests
 

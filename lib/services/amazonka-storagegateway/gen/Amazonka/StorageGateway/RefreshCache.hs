@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StorageGateway.RefreshCache
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -192,7 +192,8 @@ instance Core.AWSRequest RefreshCache where
 
 instance Prelude.Hashable RefreshCache where
   hashWithSalt _salt RefreshCache' {..} =
-    _salt `Prelude.hashWithSalt` folderList
+    _salt
+      `Prelude.hashWithSalt` folderList
       `Prelude.hashWithSalt` recursive
       `Prelude.hashWithSalt` fileShareARN
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.DocumentationPartLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.DocumentationPartLocation where
@@ -189,7 +189,8 @@ instance Data.FromJSON DocumentationPartLocation where
 
 instance Prelude.Hashable DocumentationPartLocation where
   hashWithSalt _salt DocumentationPartLocation' {..} =
-    _salt `Prelude.hashWithSalt` method
+    _salt
+      `Prelude.hashWithSalt` method
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` statusCode

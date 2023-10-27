@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeCommit.PutCommentReaction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest PutCommentReaction where
 
 instance Prelude.Hashable PutCommentReaction where
   hashWithSalt _salt PutCommentReaction' {..} =
-    _salt `Prelude.hashWithSalt` commentId
+    _salt
+      `Prelude.hashWithSalt` commentId
       `Prelude.hashWithSalt` reactionValue
 
 instance Prelude.NFData PutCommentReaction where

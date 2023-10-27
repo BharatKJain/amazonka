@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WorkDocs.Types.UploadMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WorkDocs.Types.UploadMetadata where
@@ -74,7 +74,8 @@ instance Data.FromJSON UploadMetadata where
 
 instance Prelude.Hashable UploadMetadata where
   hashWithSalt _salt UploadMetadata' {..} =
-    _salt `Prelude.hashWithSalt` signedHeaders
+    _salt
+      `Prelude.hashWithSalt` signedHeaders
       `Prelude.hashWithSalt` uploadUrl
 
 instance Prelude.NFData UploadMetadata where

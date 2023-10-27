@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SMS.Types.Connector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SMS.Types.Connector where
@@ -157,7 +157,8 @@ instance Data.FromJSON Connector where
 
 instance Prelude.Hashable Connector where
   hashWithSalt _salt Connector' {..} =
-    _salt `Prelude.hashWithSalt` associatedOn
+    _salt
+      `Prelude.hashWithSalt` associatedOn
       `Prelude.hashWithSalt` capabilityList
       `Prelude.hashWithSalt` connectorId
       `Prelude.hashWithSalt` ipAddress

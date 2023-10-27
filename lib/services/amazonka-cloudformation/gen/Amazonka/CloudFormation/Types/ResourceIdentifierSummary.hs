@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.ResourceIdentifierSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.ResourceIdentifierSummary where
@@ -90,11 +90,13 @@ resourceIdentifierSummary_resourceType = Lens.lens (\ResourceIdentifierSummary' 
 instance Data.FromXML ResourceIdentifierSummary where
   parseXML x =
     ResourceIdentifierSummary'
-      Prelude.<$> ( x Data..@? "LogicalResourceIds"
+      Prelude.<$> ( x
+                      Data..@? "LogicalResourceIds"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList1 "member")
                   )
-      Prelude.<*> ( x Data..@? "ResourceIdentifiers"
+      Prelude.<*> ( x
+                      Data..@? "ResourceIdentifiers"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
@@ -102,7 +104,8 @@ instance Data.FromXML ResourceIdentifierSummary where
 
 instance Prelude.Hashable ResourceIdentifierSummary where
   hashWithSalt _salt ResourceIdentifierSummary' {..} =
-    _salt `Prelude.hashWithSalt` logicalResourceIds
+    _salt
+      `Prelude.hashWithSalt` logicalResourceIds
       `Prelude.hashWithSalt` resourceIdentifiers
       `Prelude.hashWithSalt` resourceType
 

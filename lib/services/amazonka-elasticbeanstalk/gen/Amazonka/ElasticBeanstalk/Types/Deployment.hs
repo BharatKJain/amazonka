@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.Deployment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.Deployment where
@@ -117,7 +117,8 @@ instance Data.FromXML Deployment where
 
 instance Prelude.Hashable Deployment where
   hashWithSalt _salt Deployment' {..} =
-    _salt `Prelude.hashWithSalt` deploymentId
+    _salt
+      `Prelude.hashWithSalt` deploymentId
       `Prelude.hashWithSalt` deploymentTime
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` versionLabel

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.RecommendationJobContainerConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.RecommendationJobContainerConfig where
@@ -171,7 +171,8 @@ instance
             Prelude.<*> (x Data..:? "FrameworkVersion")
             Prelude.<*> (x Data..:? "NearestModelName")
             Prelude.<*> (x Data..:? "PayloadConfig")
-            Prelude.<*> ( x Data..:? "SupportedInstanceTypes"
+            Prelude.<*> ( x
+                            Data..:? "SupportedInstanceTypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Task")
@@ -184,7 +185,8 @@ instance
   hashWithSalt
     _salt
     RecommendationJobContainerConfig' {..} =
-      _salt `Prelude.hashWithSalt` domain
+      _salt
+        `Prelude.hashWithSalt` domain
         `Prelude.hashWithSalt` framework
         `Prelude.hashWithSalt` frameworkVersion
         `Prelude.hashWithSalt` nearestModelName

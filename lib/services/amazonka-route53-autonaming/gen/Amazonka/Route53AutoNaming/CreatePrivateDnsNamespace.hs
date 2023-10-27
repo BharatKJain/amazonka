@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53AutoNaming.CreatePrivateDnsNamespace
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -176,7 +176,8 @@ instance Core.AWSRequest CreatePrivateDnsNamespace where
 
 instance Prelude.Hashable CreatePrivateDnsNamespace where
   hashWithSalt _salt CreatePrivateDnsNamespace' {..} =
-    _salt `Prelude.hashWithSalt` creatorRequestId
+    _salt
+      `Prelude.hashWithSalt` creatorRequestId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` properties
       `Prelude.hashWithSalt` tags

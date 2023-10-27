@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.LendingDocument
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.LendingDocument where
@@ -72,14 +72,16 @@ instance Data.FromJSON LendingDocument where
       ( \x ->
           LendingDocument'
             Prelude.<$> (x Data..:? "LendingFields" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "SignatureDetections"
+            Prelude.<*> ( x
+                            Data..:? "SignatureDetections"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable LendingDocument where
   hashWithSalt _salt LendingDocument' {..} =
-    _salt `Prelude.hashWithSalt` lendingFields
+    _salt
+      `Prelude.hashWithSalt` lendingFields
       `Prelude.hashWithSalt` signatureDetections
 
 instance Prelude.NFData LendingDocument where

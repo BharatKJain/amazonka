@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DMS.DescribeFleetAdvisorLsaAnalysis
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -121,7 +121,8 @@ instance
   hashWithSalt
     _salt
     DescribeFleetAdvisorLsaAnalysis' {..} =
-      _salt `Prelude.hashWithSalt` maxRecords
+      _salt
+        `Prelude.hashWithSalt` maxRecords
         `Prelude.hashWithSalt` nextToken
 
 instance

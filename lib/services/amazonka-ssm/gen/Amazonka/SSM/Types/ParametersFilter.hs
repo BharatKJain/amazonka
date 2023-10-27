@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.ParametersFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.ParametersFilter where
@@ -69,7 +69,8 @@ parametersFilter_values = Lens.lens (\ParametersFilter' {values} -> values) (\s@
 
 instance Prelude.Hashable ParametersFilter where
   hashWithSalt _salt ParametersFilter' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData ParametersFilter where

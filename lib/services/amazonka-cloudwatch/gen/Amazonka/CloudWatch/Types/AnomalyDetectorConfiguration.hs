@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudWatch.Types.AnomalyDetectorConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudWatch.Types.AnomalyDetectorConfiguration where
@@ -96,7 +96,8 @@ anomalyDetectorConfiguration_metricTimezone = Lens.lens (\AnomalyDetectorConfigu
 instance Data.FromXML AnomalyDetectorConfiguration where
   parseXML x =
     AnomalyDetectorConfiguration'
-      Prelude.<$> ( x Data..@? "ExcludedTimeRanges"
+      Prelude.<$> ( x
+                      Data..@? "ExcludedTimeRanges"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
@@ -107,7 +108,8 @@ instance
     AnomalyDetectorConfiguration
   where
   hashWithSalt _salt AnomalyDetectorConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` excludedTimeRanges
+    _salt
+      `Prelude.hashWithSalt` excludedTimeRanges
       `Prelude.hashWithSalt` metricTimezone
 
 instance Prelude.NFData AnomalyDetectorConfiguration where

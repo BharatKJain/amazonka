@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.AgeRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.AgeRange where
@@ -73,12 +73,14 @@ instance Data.FromJSON AgeRange where
       "AgeRange"
       ( \x ->
           AgeRange'
-            Prelude.<$> (x Data..:? "High") Prelude.<*> (x Data..:? "Low")
+            Prelude.<$> (x Data..:? "High")
+            Prelude.<*> (x Data..:? "Low")
       )
 
 instance Prelude.Hashable AgeRange where
   hashWithSalt _salt AgeRange' {..} =
-    _salt `Prelude.hashWithSalt` high
+    _salt
+      `Prelude.hashWithSalt` high
       `Prelude.hashWithSalt` low
 
 instance Prelude.NFData AgeRange where

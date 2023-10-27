@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.UpdateEnvironment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -321,7 +321,8 @@ instance Core.AWSRequest UpdateEnvironment where
 
 instance Prelude.Hashable UpdateEnvironment where
   hashWithSalt _salt UpdateEnvironment' {..} =
-    _salt `Prelude.hashWithSalt` applicationName
+    _salt
+      `Prelude.hashWithSalt` applicationName
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` environmentId
       `Prelude.hashWithSalt` environmentName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.GaugeChartPrimaryValueConditionalFormatting
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.GaugeChartPrimaryValueConditionalFormatting where
@@ -76,7 +76,7 @@ instance
       ( \x ->
           GaugeChartPrimaryValueConditionalFormatting'
             Prelude.<$> (x Data..:? "Icon")
-              Prelude.<*> (x Data..:? "TextColor")
+            Prelude.<*> (x Data..:? "TextColor")
       )
 
 instance
@@ -86,7 +86,8 @@ instance
   hashWithSalt
     _salt
     GaugeChartPrimaryValueConditionalFormatting' {..} =
-      _salt `Prelude.hashWithSalt` icon
+      _salt
+        `Prelude.hashWithSalt` icon
         `Prelude.hashWithSalt` textColor
 
 instance

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.LifeCycleLastTest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.LifeCycleLastTest where
@@ -87,7 +87,8 @@ instance Data.FromJSON LifeCycleLastTest where
 
 instance Prelude.Hashable LifeCycleLastTest where
   hashWithSalt _salt LifeCycleLastTest' {..} =
-    _salt `Prelude.hashWithSalt` finalized
+    _salt
+      `Prelude.hashWithSalt` finalized
       `Prelude.hashWithSalt` initiated
       `Prelude.hashWithSalt` reverted
 

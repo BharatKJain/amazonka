@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Translate.Types.InputDataConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Translate.Types.InputDataConfig where
@@ -178,7 +178,8 @@ instance Data.FromJSON InputDataConfig where
 
 instance Prelude.Hashable InputDataConfig where
   hashWithSalt _salt InputDataConfig' {..} =
-    _salt `Prelude.hashWithSalt` s3Uri
+    _salt
+      `Prelude.hashWithSalt` s3Uri
       `Prelude.hashWithSalt` contentType
 
 instance Prelude.NFData InputDataConfig where

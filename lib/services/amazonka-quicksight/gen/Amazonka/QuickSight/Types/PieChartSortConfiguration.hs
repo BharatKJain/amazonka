@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.PieChartSortConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.PieChartSortConfiguration where
@@ -93,14 +93,16 @@ instance Data.FromJSON PieChartSortConfiguration where
             Prelude.<$> (x Data..:? "CategoryItemsLimit")
             Prelude.<*> (x Data..:? "CategorySort" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "SmallMultiplesLimitConfiguration")
-            Prelude.<*> ( x Data..:? "SmallMultiplesSort"
+            Prelude.<*> ( x
+                            Data..:? "SmallMultiplesSort"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable PieChartSortConfiguration where
   hashWithSalt _salt PieChartSortConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` categoryItemsLimit
+    _salt
+      `Prelude.hashWithSalt` categoryItemsLimit
       `Prelude.hashWithSalt` categorySort
       `Prelude.hashWithSalt` smallMultiplesLimitConfiguration
       `Prelude.hashWithSalt` smallMultiplesSort

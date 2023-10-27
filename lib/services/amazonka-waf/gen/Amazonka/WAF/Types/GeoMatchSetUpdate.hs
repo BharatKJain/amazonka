@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAF.Types.GeoMatchSetUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAF.Types.GeoMatchSetUpdate where
@@ -83,7 +83,8 @@ geoMatchSetUpdate_geoMatchConstraint = Lens.lens (\GeoMatchSetUpdate' {geoMatchC
 
 instance Prelude.Hashable GeoMatchSetUpdate where
   hashWithSalt _salt GeoMatchSetUpdate' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` geoMatchConstraint
 
 instance Prelude.NFData GeoMatchSetUpdate where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.Trace
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.Trace where
@@ -113,7 +113,8 @@ instance Data.FromJSON Trace where
 
 instance Prelude.Hashable Trace where
   hashWithSalt _salt Trace' {..} =
-    _salt `Prelude.hashWithSalt` duration
+    _salt
+      `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` limitExceeded
       `Prelude.hashWithSalt` segments

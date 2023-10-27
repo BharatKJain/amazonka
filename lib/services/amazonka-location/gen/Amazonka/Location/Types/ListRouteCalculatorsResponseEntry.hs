@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.ListRouteCalculatorsResponseEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.ListRouteCalculatorsResponseEntry where
@@ -189,7 +189,8 @@ instance
   hashWithSalt
     _salt
     ListRouteCalculatorsResponseEntry' {..} =
-      _salt `Prelude.hashWithSalt` pricingPlan
+      _salt
+        `Prelude.hashWithSalt` pricingPlan
         `Prelude.hashWithSalt` calculatorName
         `Prelude.hashWithSalt` createTime
         `Prelude.hashWithSalt` dataSource

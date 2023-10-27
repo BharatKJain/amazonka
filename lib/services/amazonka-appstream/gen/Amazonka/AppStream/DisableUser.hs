@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppStream.DisableUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest DisableUser where
 
 instance Prelude.Hashable DisableUser where
   hashWithSalt _salt DisableUser' {..} =
-    _salt `Prelude.hashWithSalt` userName
+    _salt
+      `Prelude.hashWithSalt` userName
       `Prelude.hashWithSalt` authenticationType
 
 instance Prelude.NFData DisableUser where

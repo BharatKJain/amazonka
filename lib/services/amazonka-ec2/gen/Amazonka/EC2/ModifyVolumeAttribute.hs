@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ModifyVolumeAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest ModifyVolumeAttribute where
 
 instance Prelude.Hashable ModifyVolumeAttribute where
   hashWithSalt _salt ModifyVolumeAttribute' {..} =
-    _salt `Prelude.hashWithSalt` autoEnableIO
+    _salt
+      `Prelude.hashWithSalt` autoEnableIO
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` volumeId
 

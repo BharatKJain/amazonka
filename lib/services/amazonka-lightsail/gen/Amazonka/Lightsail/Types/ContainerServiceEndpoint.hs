@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.ContainerServiceEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.ContainerServiceEndpoint where
@@ -93,7 +93,8 @@ instance Data.FromJSON ContainerServiceEndpoint where
 
 instance Prelude.Hashable ContainerServiceEndpoint where
   hashWithSalt _salt ContainerServiceEndpoint' {..} =
-    _salt `Prelude.hashWithSalt` containerName
+    _salt
+      `Prelude.hashWithSalt` containerName
       `Prelude.hashWithSalt` containerPort
       `Prelude.hashWithSalt` healthCheck
 

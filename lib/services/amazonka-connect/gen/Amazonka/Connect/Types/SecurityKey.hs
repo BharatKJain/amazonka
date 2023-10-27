@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.SecurityKey
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.SecurityKey where
@@ -87,7 +87,8 @@ instance Data.FromJSON SecurityKey where
 
 instance Prelude.Hashable SecurityKey where
   hashWithSalt _salt SecurityKey' {..} =
-    _salt `Prelude.hashWithSalt` associationId
+    _salt
+      `Prelude.hashWithSalt` associationId
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` key
 

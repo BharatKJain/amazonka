@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.RouteData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.RouteData where
@@ -135,7 +135,8 @@ instance Data.FromJSON RouteData where
 
 instance Prelude.Hashable RouteData where
   hashWithSalt _salt RouteData' {..} =
-    _salt `Prelude.hashWithSalt` meshName
+    _salt
+      `Prelude.hashWithSalt` meshName
       `Prelude.hashWithSalt` metadata
       `Prelude.hashWithSalt` routeName
       `Prelude.hashWithSalt` spec

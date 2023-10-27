@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DynamoDB.GetItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -331,7 +331,8 @@ instance Core.AWSRequest GetItem where
 
 instance Prelude.Hashable GetItem where
   hashWithSalt _salt GetItem' {..} =
-    _salt `Prelude.hashWithSalt` attributesToGet
+    _salt
+      `Prelude.hashWithSalt` attributesToGet
       `Prelude.hashWithSalt` consistentRead
       `Prelude.hashWithSalt` expressionAttributeNames
       `Prelude.hashWithSalt` projectionExpression

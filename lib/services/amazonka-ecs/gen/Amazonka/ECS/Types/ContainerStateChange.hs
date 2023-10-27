@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.ContainerStateChange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.ContainerStateChange where
@@ -114,7 +114,8 @@ containerStateChange_status = Lens.lens (\ContainerStateChange' {status} -> stat
 
 instance Prelude.Hashable ContainerStateChange where
   hashWithSalt _salt ContainerStateChange' {..} =
-    _salt `Prelude.hashWithSalt` containerName
+    _salt
+      `Prelude.hashWithSalt` containerName
       `Prelude.hashWithSalt` exitCode
       `Prelude.hashWithSalt` imageDigest
       `Prelude.hashWithSalt` networkBindings

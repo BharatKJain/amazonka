@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.ConnectorOperator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.ConnectorOperator where
@@ -233,7 +233,8 @@ instance Data.FromJSON ConnectorOperator where
 
 instance Prelude.Hashable ConnectorOperator where
   hashWithSalt _salt ConnectorOperator' {..} =
-    _salt `Prelude.hashWithSalt` amplitude
+    _salt
+      `Prelude.hashWithSalt` amplitude
       `Prelude.hashWithSalt` customConnector
       `Prelude.hashWithSalt` datadog
       `Prelude.hashWithSalt` dynatrace

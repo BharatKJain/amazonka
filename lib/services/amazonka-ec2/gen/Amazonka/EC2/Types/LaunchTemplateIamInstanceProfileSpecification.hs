@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.LaunchTemplateIamInstanceProfileSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.LaunchTemplateIamInstanceProfileSpecification where
@@ -70,7 +70,8 @@ instance
   where
   parseXML x =
     LaunchTemplateIamInstanceProfileSpecification'
-      Prelude.<$> (x Data..@? "arn") Prelude.<*> (x Data..@? "name")
+      Prelude.<$> (x Data..@? "arn")
+      Prelude.<*> (x Data..@? "name")
 
 instance
   Prelude.Hashable
@@ -79,7 +80,8 @@ instance
   hashWithSalt
     _salt
     LaunchTemplateIamInstanceProfileSpecification' {..} =
-      _salt `Prelude.hashWithSalt` arn
+      _salt
+        `Prelude.hashWithSalt` arn
         `Prelude.hashWithSalt` name
 
 instance

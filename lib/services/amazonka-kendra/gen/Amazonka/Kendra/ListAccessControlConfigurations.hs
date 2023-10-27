@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kendra.ListAccessControlConfigurations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,8 @@ instance
           ListAccessControlConfigurationsResponse'
             Prelude.<$> (x Data..?> "NextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "AccessControlConfigurations"
+            Prelude.<*> ( x
+                            Data..?> "AccessControlConfigurations"
                             Core..!@ Prelude.mempty
                         )
       )
@@ -137,7 +138,8 @@ instance
   hashWithSalt
     _salt
     ListAccessControlConfigurations' {..} =
-      _salt `Prelude.hashWithSalt` maxResults
+      _salt
+        `Prelude.hashWithSalt` maxResults
         `Prelude.hashWithSalt` nextToken
         `Prelude.hashWithSalt` indexId
 

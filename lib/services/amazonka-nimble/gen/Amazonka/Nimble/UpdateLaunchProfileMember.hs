@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Nimble.UpdateLaunchProfileMember
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -155,7 +155,8 @@ instance Core.AWSRequest UpdateLaunchProfileMember where
 
 instance Prelude.Hashable UpdateLaunchProfileMember where
   hashWithSalt _salt UpdateLaunchProfileMember' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` launchProfileId
       `Prelude.hashWithSalt` persona
       `Prelude.hashWithSalt` principalId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruProfiler.Types.FrameMetricDatum
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruProfiler.Types.FrameMetricDatum where
@@ -76,7 +76,8 @@ instance Data.FromJSON FrameMetricDatum where
 
 instance Prelude.Hashable FrameMetricDatum where
   hashWithSalt _salt FrameMetricDatum' {..} =
-    _salt `Prelude.hashWithSalt` frameMetric
+    _salt
+      `Prelude.hashWithSalt` frameMetric
       `Prelude.hashWithSalt` values
 
 instance Prelude.NFData FrameMetricDatum where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.TableStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.TableStatistics where
@@ -411,7 +411,8 @@ instance Data.FromJSON TableStatistics where
 
 instance Prelude.Hashable TableStatistics where
   hashWithSalt _salt TableStatistics' {..} =
-    _salt `Prelude.hashWithSalt` appliedDdls
+    _salt
+      `Prelude.hashWithSalt` appliedDdls
       `Prelude.hashWithSalt` appliedDeletes
       `Prelude.hashWithSalt` appliedInserts
       `Prelude.hashWithSalt` appliedUpdates

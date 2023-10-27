@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DataSync.CreateLocationHdfs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -343,7 +343,8 @@ instance Core.AWSRequest CreateLocationHdfs where
 
 instance Prelude.Hashable CreateLocationHdfs where
   hashWithSalt _salt CreateLocationHdfs' {..} =
-    _salt `Prelude.hashWithSalt` blockSize
+    _salt
+      `Prelude.hashWithSalt` blockSize
       `Prelude.hashWithSalt` kerberosKeytab
       `Prelude.hashWithSalt` kerberosKrb5Conf
       `Prelude.hashWithSalt` kerberosPrincipal

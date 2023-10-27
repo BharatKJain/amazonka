@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.DescribeFleetPortSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -131,7 +131,8 @@ instance Core.AWSRequest DescribeFleetPortSettings where
           DescribeFleetPortSettingsResponse'
             Prelude.<$> (x Data..?> "FleetArn")
             Prelude.<*> (x Data..?> "FleetId")
-            Prelude.<*> ( x Data..?> "InboundPermissions"
+            Prelude.<*> ( x
+                            Data..?> "InboundPermissions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "Location")
@@ -141,7 +142,8 @@ instance Core.AWSRequest DescribeFleetPortSettings where
 
 instance Prelude.Hashable DescribeFleetPortSettings where
   hashWithSalt _salt DescribeFleetPortSettings' {..} =
-    _salt `Prelude.hashWithSalt` location
+    _salt
+      `Prelude.hashWithSalt` location
       `Prelude.hashWithSalt` fleetId
 
 instance Prelude.NFData DescribeFleetPortSettings where

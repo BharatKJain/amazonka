@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.ReadOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.ReadOptions where
@@ -144,7 +144,8 @@ instance Data.FromJSON ReadOptions where
 
 instance Prelude.Hashable ReadOptions where
   hashWithSalt _salt ReadOptions' {..} =
-    _salt `Prelude.hashWithSalt` comment
+    _salt
+      `Prelude.hashWithSalt` comment
       `Prelude.hashWithSalt` encoding
       `Prelude.hashWithSalt` escape
       `Prelude.hashWithSalt` escapeQuotes

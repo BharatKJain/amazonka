@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Discovery.Types.NeighborConnectionDetail
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Discovery.Types.NeighborConnectionDetail where
@@ -114,7 +114,8 @@ instance Data.FromJSON NeighborConnectionDetail where
 
 instance Prelude.Hashable NeighborConnectionDetail where
   hashWithSalt _salt NeighborConnectionDetail' {..} =
-    _salt `Prelude.hashWithSalt` destinationPort
+    _salt
+      `Prelude.hashWithSalt` destinationPort
       `Prelude.hashWithSalt` transportProtocol
       `Prelude.hashWithSalt` sourceServerId
       `Prelude.hashWithSalt` destinationServerId

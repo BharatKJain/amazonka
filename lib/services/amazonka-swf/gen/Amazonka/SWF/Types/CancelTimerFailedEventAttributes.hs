@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.CancelTimerFailedEventAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.CancelTimerFailedEventAttributes where
@@ -134,7 +134,8 @@ instance
   hashWithSalt
     _salt
     CancelTimerFailedEventAttributes' {..} =
-      _salt `Prelude.hashWithSalt` timerId
+      _salt
+        `Prelude.hashWithSalt` timerId
         `Prelude.hashWithSalt` cause
         `Prelude.hashWithSalt` decisionTaskCompletedEventId
 

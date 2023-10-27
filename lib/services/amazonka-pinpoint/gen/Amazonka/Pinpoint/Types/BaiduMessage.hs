@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.BaiduMessage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.BaiduMessage where
@@ -261,7 +261,8 @@ baiduMessage_url = Lens.lens (\BaiduMessage' {url} -> url) (\s@BaiduMessage' {} 
 
 instance Prelude.Hashable BaiduMessage where
   hashWithSalt _salt BaiduMessage' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` body
       `Prelude.hashWithSalt` data'
       `Prelude.hashWithSalt` iconReference

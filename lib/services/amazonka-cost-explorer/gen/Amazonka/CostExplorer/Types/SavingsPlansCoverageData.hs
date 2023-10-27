@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.SavingsPlansCoverageData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.SavingsPlansCoverageData where
@@ -108,7 +108,8 @@ instance Data.FromJSON SavingsPlansCoverageData where
 
 instance Prelude.Hashable SavingsPlansCoverageData where
   hashWithSalt _salt SavingsPlansCoverageData' {..} =
-    _salt `Prelude.hashWithSalt` coveragePercentage
+    _salt
+      `Prelude.hashWithSalt` coveragePercentage
       `Prelude.hashWithSalt` onDemandCost
       `Prelude.hashWithSalt` spendCoveredBySavingsPlans
       `Prelude.hashWithSalt` totalCost

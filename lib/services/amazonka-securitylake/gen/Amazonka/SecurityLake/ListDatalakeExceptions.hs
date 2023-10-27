@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecurityLake.ListDatalakeExceptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,21 +125,21 @@ instance Core.AWSPager ListDatalakeExceptions where
     | Core.stop
         ( rs
             Lens.^? listDatalakeExceptionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^. listDatalakeExceptionsResponse_nonRetryableFailures
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listDatalakeExceptions_nextToken
           Lens..~ rs
           Lens.^? listDatalakeExceptionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListDatalakeExceptions where
   type
@@ -153,14 +153,16 @@ instance Core.AWSRequest ListDatalakeExceptions where
           ListDatalakeExceptionsResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "nonRetryableFailures"
+            Prelude.<*> ( x
+                            Data..?> "nonRetryableFailures"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListDatalakeExceptions where
   hashWithSalt _salt ListDatalakeExceptions' {..} =
-    _salt `Prelude.hashWithSalt` maxFailures
+    _salt
+      `Prelude.hashWithSalt` maxFailures
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` regionSet
 

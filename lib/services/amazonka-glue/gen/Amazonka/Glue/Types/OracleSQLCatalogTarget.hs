@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.OracleSQLCatalogTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.OracleSQLCatalogTarget where
@@ -106,7 +106,8 @@ instance Data.FromJSON OracleSQLCatalogTarget where
 
 instance Prelude.Hashable OracleSQLCatalogTarget where
   hashWithSalt _salt OracleSQLCatalogTarget' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inputs
       `Prelude.hashWithSalt` database
       `Prelude.hashWithSalt` table

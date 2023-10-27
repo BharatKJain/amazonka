@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.StatusCodes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.StatusCodes where
@@ -104,7 +104,8 @@ instance Data.FromXML StatusCodes where
 
 instance Prelude.Hashable StatusCodes where
   hashWithSalt _salt StatusCodes' {..} =
-    _salt `Prelude.hashWithSalt` status2xx
+    _salt
+      `Prelude.hashWithSalt` status2xx
       `Prelude.hashWithSalt` status3xx
       `Prelude.hashWithSalt` status4xx
       `Prelude.hashWithSalt` status5xx

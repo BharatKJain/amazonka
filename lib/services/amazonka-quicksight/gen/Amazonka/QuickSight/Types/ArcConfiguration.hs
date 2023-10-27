@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ArcConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ArcConfiguration where
@@ -75,7 +75,8 @@ instance Data.FromJSON ArcConfiguration where
 
 instance Prelude.Hashable ArcConfiguration where
   hashWithSalt _salt ArcConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` arcAngle
+    _salt
+      `Prelude.hashWithSalt` arcAngle
       `Prelude.hashWithSalt` arcThickness
 
 instance Prelude.NFData ArcConfiguration where

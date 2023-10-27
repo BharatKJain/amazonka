@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsLambdaFunctionLayer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsLambdaFunctionLayer where
@@ -74,7 +74,8 @@ instance Data.FromJSON AwsLambdaFunctionLayer where
 
 instance Prelude.Hashable AwsLambdaFunctionLayer where
   hashWithSalt _salt AwsLambdaFunctionLayer' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` codeSize
 
 instance Prelude.NFData AwsLambdaFunctionLayer where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.TypedAttributeValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.TypedAttributeValue where
@@ -114,7 +114,8 @@ instance Data.FromJSON TypedAttributeValue where
 
 instance Prelude.Hashable TypedAttributeValue where
   hashWithSalt _salt TypedAttributeValue' {..} =
-    _salt `Prelude.hashWithSalt` binaryValue
+    _salt
+      `Prelude.hashWithSalt` binaryValue
       `Prelude.hashWithSalt` booleanValue
       `Prelude.hashWithSalt` datetimeValue
       `Prelude.hashWithSalt` numberValue

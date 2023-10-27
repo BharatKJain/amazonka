@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.DetachInstances
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -131,7 +131,9 @@ instance Core.AWSRequest DetachInstances where
       "DetachInstancesResult"
       ( \s h x ->
           DetachInstancesResponse'
-            Prelude.<$> ( x Data..@? "Activities" Core..!@ Prelude.mempty
+            Prelude.<$> ( x
+                            Data..@? "Activities"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -139,7 +141,8 @@ instance Core.AWSRequest DetachInstances where
 
 instance Prelude.Hashable DetachInstances where
   hashWithSalt _salt DetachInstances' {..} =
-    _salt `Prelude.hashWithSalt` instanceIds
+    _salt
+      `Prelude.hashWithSalt` instanceIds
       `Prelude.hashWithSalt` autoScalingGroupName
       `Prelude.hashWithSalt` shouldDecrementDesiredCapacity
 

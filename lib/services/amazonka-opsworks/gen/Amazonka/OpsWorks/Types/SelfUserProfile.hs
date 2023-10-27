@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.SelfUserProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.SelfUserProfile where
@@ -94,7 +94,8 @@ instance Data.FromJSON SelfUserProfile where
 
 instance Prelude.Hashable SelfUserProfile where
   hashWithSalt _salt SelfUserProfile' {..} =
-    _salt `Prelude.hashWithSalt` iamUserArn
+    _salt
+      `Prelude.hashWithSalt` iamUserArn
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` sshPublicKey
       `Prelude.hashWithSalt` sshUsername

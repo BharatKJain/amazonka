@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.DataValidationMetrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.DataValidationMetrics where
@@ -71,17 +71,20 @@ instance Data.FromJSON DataValidationMetrics where
       "DataValidationMetrics"
       ( \x ->
           DataValidationMetrics'
-            Prelude.<$> ( x Data..:? "fieldLevelMessages"
+            Prelude.<$> ( x
+                            Data..:? "fieldLevelMessages"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "fileLevelMessages"
+            Prelude.<*> ( x
+                            Data..:? "fileLevelMessages"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable DataValidationMetrics where
   hashWithSalt _salt DataValidationMetrics' {..} =
-    _salt `Prelude.hashWithSalt` fieldLevelMessages
+    _salt
+      `Prelude.hashWithSalt` fieldLevelMessages
       `Prelude.hashWithSalt` fileLevelMessages
 
 instance Prelude.NFData DataValidationMetrics where

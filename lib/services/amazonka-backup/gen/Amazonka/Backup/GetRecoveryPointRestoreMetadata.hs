@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Backup.GetRecoveryPointRestoreMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -124,7 +124,8 @@ instance
           GetRecoveryPointRestoreMetadataResponse'
             Prelude.<$> (x Data..?> "BackupVaultArn")
             Prelude.<*> (x Data..?> "RecoveryPointArn")
-            Prelude.<*> ( x Data..?> "RestoreMetadata"
+            Prelude.<*> ( x
+                            Data..?> "RestoreMetadata"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -137,7 +138,8 @@ instance
   hashWithSalt
     _salt
     GetRecoveryPointRestoreMetadata' {..} =
-      _salt `Prelude.hashWithSalt` backupVaultName
+      _salt
+        `Prelude.hashWithSalt` backupVaultName
         `Prelude.hashWithSalt` recoveryPointArn
 
 instance

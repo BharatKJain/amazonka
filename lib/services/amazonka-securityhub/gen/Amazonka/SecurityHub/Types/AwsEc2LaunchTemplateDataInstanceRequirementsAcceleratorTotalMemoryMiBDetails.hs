@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiBDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiBDetails where
@@ -80,7 +80,8 @@ instance
       "AwsEc2LaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiBDetails"
       ( \x ->
           AwsEc2LaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiBDetails'
-            Prelude.<$> (x Data..:? "Max") Prelude.<*> (x Data..:? "Min")
+            Prelude.<$> (x Data..:? "Max")
+            Prelude.<*> (x Data..:? "Min")
       )
 
 instance
@@ -90,7 +91,8 @@ instance
   hashWithSalt
     _salt
     AwsEc2LaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiBDetails' {..} =
-      _salt `Prelude.hashWithSalt` max
+      _salt
+        `Prelude.hashWithSalt` max
         `Prelude.hashWithSalt` min
 
 instance

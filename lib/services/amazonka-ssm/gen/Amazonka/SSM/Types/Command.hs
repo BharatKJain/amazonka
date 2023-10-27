@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.Command
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.Command where
@@ -539,7 +539,8 @@ instance Data.FromJSON Command where
 
 instance Prelude.Hashable Command where
   hashWithSalt _salt Command' {..} =
-    _salt `Prelude.hashWithSalt` alarmConfiguration
+    _salt
+      `Prelude.hashWithSalt` alarmConfiguration
       `Prelude.hashWithSalt` cloudWatchOutputConfig
       `Prelude.hashWithSalt` commandId
       `Prelude.hashWithSalt` comment

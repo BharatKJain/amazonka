@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.DocumentClassifierInputDataConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.DocumentClassifierInputDataConfig where
@@ -222,7 +222,8 @@ instance
       "DocumentClassifierInputDataConfig"
       ( \x ->
           DocumentClassifierInputDataConfig'
-            Prelude.<$> ( x Data..:? "AugmentedManifests"
+            Prelude.<$> ( x
+                            Data..:? "AugmentedManifests"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "DataFormat")
@@ -238,7 +239,8 @@ instance
   hashWithSalt
     _salt
     DocumentClassifierInputDataConfig' {..} =
-      _salt `Prelude.hashWithSalt` augmentedManifests
+      _salt
+        `Prelude.hashWithSalt` augmentedManifests
         `Prelude.hashWithSalt` dataFormat
         `Prelude.hashWithSalt` labelDelimiter
         `Prelude.hashWithSalt` s3Uri

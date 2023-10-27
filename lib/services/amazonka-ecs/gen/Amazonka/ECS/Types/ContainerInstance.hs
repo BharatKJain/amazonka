@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.ContainerInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.ContainerInstance where
@@ -480,10 +480,12 @@ instance Data.FromJSON ContainerInstance where
             Prelude.<*> (x Data..:? "healthStatus")
             Prelude.<*> (x Data..:? "pendingTasksCount")
             Prelude.<*> (x Data..:? "registeredAt")
-            Prelude.<*> ( x Data..:? "registeredResources"
+            Prelude.<*> ( x
+                            Data..:? "registeredResources"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "remainingResources"
+            Prelude.<*> ( x
+                            Data..:? "remainingResources"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "runningTasksCount")
@@ -496,7 +498,8 @@ instance Data.FromJSON ContainerInstance where
 
 instance Prelude.Hashable ContainerInstance where
   hashWithSalt _salt ContainerInstance' {..} =
-    _salt `Prelude.hashWithSalt` agentConnected
+    _salt
+      `Prelude.hashWithSalt` agentConnected
       `Prelude.hashWithSalt` agentUpdateStatus
       `Prelude.hashWithSalt` attachments
       `Prelude.hashWithSalt` attributes

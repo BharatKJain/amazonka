@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MachineLearning.Types.RedshiftMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MachineLearning.Types.RedshiftMetadata where
@@ -87,7 +87,8 @@ instance Data.FromJSON RedshiftMetadata where
 
 instance Prelude.Hashable RedshiftMetadata where
   hashWithSalt _salt RedshiftMetadata' {..} =
-    _salt `Prelude.hashWithSalt` databaseUserName
+    _salt
+      `Prelude.hashWithSalt` databaseUserName
       `Prelude.hashWithSalt` redshiftDatabase
       `Prelude.hashWithSalt` selectSqlQuery
 

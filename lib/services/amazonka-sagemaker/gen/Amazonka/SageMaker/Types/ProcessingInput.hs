@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ProcessingInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ProcessingInput where
@@ -108,7 +108,8 @@ instance Data.FromJSON ProcessingInput where
 
 instance Prelude.Hashable ProcessingInput where
   hashWithSalt _salt ProcessingInput' {..} =
-    _salt `Prelude.hashWithSalt` appManaged
+    _salt
+      `Prelude.hashWithSalt` appManaged
       `Prelude.hashWithSalt` datasetDefinition
       `Prelude.hashWithSalt` s3Input
       `Prelude.hashWithSalt` inputName

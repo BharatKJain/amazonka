@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.ThingGroupMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.ThingGroupMetadata where
@@ -80,14 +80,16 @@ instance Data.FromJSON ThingGroupMetadata where
           ThingGroupMetadata'
             Prelude.<$> (x Data..:? "creationDate")
             Prelude.<*> (x Data..:? "parentGroupName")
-            Prelude.<*> ( x Data..:? "rootToParentThingGroups"
+            Prelude.<*> ( x
+                            Data..:? "rootToParentThingGroups"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ThingGroupMetadata where
   hashWithSalt _salt ThingGroupMetadata' {..} =
-    _salt `Prelude.hashWithSalt` creationDate
+    _salt
+      `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` parentGroupName
       `Prelude.hashWithSalt` rootToParentThingGroups
 

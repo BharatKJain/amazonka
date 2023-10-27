@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.RenderUiTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -142,7 +142,8 @@ instance Core.AWSRequest RenderUiTemplate where
 
 instance Prelude.Hashable RenderUiTemplate where
   hashWithSalt _salt RenderUiTemplate' {..} =
-    _salt `Prelude.hashWithSalt` humanTaskUiArn
+    _salt
+      `Prelude.hashWithSalt` humanTaskUiArn
       `Prelude.hashWithSalt` uiTemplate
       `Prelude.hashWithSalt` task
       `Prelude.hashWithSalt` roleArn

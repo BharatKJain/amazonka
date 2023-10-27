@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.SegmentDemographics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.SegmentDemographics where
@@ -117,7 +117,8 @@ instance Data.FromJSON SegmentDemographics where
 
 instance Prelude.Hashable SegmentDemographics where
   hashWithSalt _salt SegmentDemographics' {..} =
-    _salt `Prelude.hashWithSalt` appVersion
+    _salt
+      `Prelude.hashWithSalt` appVersion
       `Prelude.hashWithSalt` channel
       `Prelude.hashWithSalt` deviceType
       `Prelude.hashWithSalt` make

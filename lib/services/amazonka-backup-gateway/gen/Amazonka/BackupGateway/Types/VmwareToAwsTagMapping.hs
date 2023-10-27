@@ -14,7 +14,7 @@
 -- Module      : Amazonka.BackupGateway.Types.VmwareToAwsTagMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.BackupGateway.Types.VmwareToAwsTagMapping where
@@ -107,7 +107,8 @@ instance Data.FromJSON VmwareToAwsTagMapping where
 
 instance Prelude.Hashable VmwareToAwsTagMapping where
   hashWithSalt _salt VmwareToAwsTagMapping' {..} =
-    _salt `Prelude.hashWithSalt` awsTagKey
+    _salt
+      `Prelude.hashWithSalt` awsTagKey
       `Prelude.hashWithSalt` awsTagValue
       `Prelude.hashWithSalt` vmwareCategory
       `Prelude.hashWithSalt` vmwareTagName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.Origins
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.Origins where
@@ -71,13 +71,16 @@ instance Data.FromXML Origins where
   parseXML x =
     Origins'
       Prelude.<$> (x Data..@ "Quantity")
-      Prelude.<*> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Data.parseXMLList1 "Origin"
                   )
 
 instance Prelude.Hashable Origins where
   hashWithSalt _salt Origins' {..} =
-    _salt `Prelude.hashWithSalt` quantity
+    _salt
+      `Prelude.hashWithSalt` quantity
       `Prelude.hashWithSalt` items
 
 instance Prelude.NFData Origins where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.LastUpdateStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.LastUpdateStatus where
@@ -77,7 +77,8 @@ instance Data.FromJSON LastUpdateStatus where
 
 instance Prelude.Hashable LastUpdateStatus where
   hashWithSalt _salt LastUpdateStatus' {..} =
-    _salt `Prelude.hashWithSalt` failureReason
+    _salt
+      `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` status
 
 instance Prelude.NFData LastUpdateStatus where

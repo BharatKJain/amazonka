@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.StartDataQualityRuleRecommendationRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -161,7 +161,7 @@ instance
       ( \s h x ->
           StartDataQualityRuleRecommendationRunResponse'
             Prelude.<$> (x Data..?> "RunId")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -171,7 +171,8 @@ instance
   hashWithSalt
     _salt
     StartDataQualityRuleRecommendationRun' {..} =
-      _salt `Prelude.hashWithSalt` clientToken
+      _salt
+        `Prelude.hashWithSalt` clientToken
         `Prelude.hashWithSalt` createdRulesetName
         `Prelude.hashWithSalt` numberOfWorkers
         `Prelude.hashWithSalt` timeout

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.LambdaContainerParams
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.LambdaContainerParams where
@@ -100,7 +100,8 @@ lambdaContainerParams_volumes = Lens.lens (\LambdaContainerParams' {volumes} -> 
 
 instance Prelude.Hashable LambdaContainerParams where
   hashWithSalt _salt LambdaContainerParams' {..} =
-    _salt `Prelude.hashWithSalt` devices
+    _salt
+      `Prelude.hashWithSalt` devices
       `Prelude.hashWithSalt` memorySizeInKB
       `Prelude.hashWithSalt` mountROSysfs
       `Prelude.hashWithSalt` volumes

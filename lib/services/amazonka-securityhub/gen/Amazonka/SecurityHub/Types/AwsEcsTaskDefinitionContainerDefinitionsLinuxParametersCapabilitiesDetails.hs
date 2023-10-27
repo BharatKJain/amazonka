@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersCapabilitiesDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersCapabilitiesDetails where
@@ -153,7 +153,7 @@ instance
       ( \x ->
           AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersCapabilitiesDetails'
             Prelude.<$> (x Data..:? "Add" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "Drop" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "Drop" Data..!= Prelude.mempty)
       )
 
 instance
@@ -163,7 +163,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersCapabilitiesDetails' {..} =
-      _salt `Prelude.hashWithSalt` add
+      _salt
+        `Prelude.hashWithSalt` add
         `Prelude.hashWithSalt` drop
 
 instance

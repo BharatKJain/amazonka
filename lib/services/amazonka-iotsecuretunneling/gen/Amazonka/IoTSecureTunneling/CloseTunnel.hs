@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTSecureTunneling.CloseTunnel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest CloseTunnel where
 
 instance Prelude.Hashable CloseTunnel where
   hashWithSalt _salt CloseTunnel' {..} =
-    _salt `Prelude.hashWithSalt` delete'
+    _salt
+      `Prelude.hashWithSalt` delete'
       `Prelude.hashWithSalt` tunnelId
 
 instance Prelude.NFData CloseTunnel where

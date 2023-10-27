@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.KPIConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.KPIConfiguration where
@@ -87,7 +87,8 @@ instance Data.FromJSON KPIConfiguration where
 
 instance Prelude.Hashable KPIConfiguration where
   hashWithSalt _salt KPIConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` fieldWells
+    _salt
+      `Prelude.hashWithSalt` fieldWells
       `Prelude.hashWithSalt` kPIOptions
       `Prelude.hashWithSalt` sortConfiguration
 

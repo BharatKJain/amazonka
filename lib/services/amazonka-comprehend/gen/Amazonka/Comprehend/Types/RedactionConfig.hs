@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.RedactionConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.RedactionConfig where
@@ -87,14 +87,16 @@ instance Data.FromJSON RedactionConfig where
           RedactionConfig'
             Prelude.<$> (x Data..:? "MaskCharacter")
             Prelude.<*> (x Data..:? "MaskMode")
-            Prelude.<*> ( x Data..:? "PiiEntityTypes"
+            Prelude.<*> ( x
+                            Data..:? "PiiEntityTypes"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable RedactionConfig where
   hashWithSalt _salt RedactionConfig' {..} =
-    _salt `Prelude.hashWithSalt` maskCharacter
+    _salt
+      `Prelude.hashWithSalt` maskCharacter
       `Prelude.hashWithSalt` maskMode
       `Prelude.hashWithSalt` piiEntityTypes
 

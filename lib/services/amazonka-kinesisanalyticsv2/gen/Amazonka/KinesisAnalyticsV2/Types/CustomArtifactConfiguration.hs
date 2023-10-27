@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalyticsV2.Types.CustomArtifactConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalyticsV2.Types.CustomArtifactConfiguration where
@@ -85,7 +85,8 @@ customArtifactConfiguration_artifactType = Lens.lens (\CustomArtifactConfigurati
 
 instance Prelude.Hashable CustomArtifactConfiguration where
   hashWithSalt _salt CustomArtifactConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` mavenReference
+    _salt
+      `Prelude.hashWithSalt` mavenReference
       `Prelude.hashWithSalt` s3ContentLocation
       `Prelude.hashWithSalt` artifactType
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.FacetAttributeReference
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.FacetAttributeReference where
@@ -97,7 +97,8 @@ instance Data.FromJSON FacetAttributeReference where
 
 instance Prelude.Hashable FacetAttributeReference where
   hashWithSalt _salt FacetAttributeReference' {..} =
-    _salt `Prelude.hashWithSalt` targetFacetName
+    _salt
+      `Prelude.hashWithSalt` targetFacetName
       `Prelude.hashWithSalt` targetAttributeName
 
 instance Prelude.NFData FacetAttributeReference where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ComprehendMedical.DetectEntitiesV2
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest DetectEntitiesV2 where
       ( \s h x ->
           DetectEntitiesV2Response'
             Prelude.<$> (x Data..?> "PaginationToken")
-            Prelude.<*> ( x Data..?> "UnmappedAttributes"
+            Prelude.<*> ( x
+                            Data..?> "UnmappedAttributes"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

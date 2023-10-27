@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Snowball.Types.CompatibleImage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Snowball.Types.CompatibleImage where
@@ -71,12 +71,14 @@ instance Data.FromJSON CompatibleImage where
       "CompatibleImage"
       ( \x ->
           CompatibleImage'
-            Prelude.<$> (x Data..:? "AmiId") Prelude.<*> (x Data..:? "Name")
+            Prelude.<$> (x Data..:? "AmiId")
+            Prelude.<*> (x Data..:? "Name")
       )
 
 instance Prelude.Hashable CompatibleImage where
   hashWithSalt _salt CompatibleImage' {..} =
-    _salt `Prelude.hashWithSalt` amiId
+    _salt
+      `Prelude.hashWithSalt` amiId
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData CompatibleImage where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.MatchedPlayerSession
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.MatchedPlayerSession where
@@ -80,7 +80,8 @@ instance Data.FromJSON MatchedPlayerSession where
 
 instance Prelude.Hashable MatchedPlayerSession where
   hashWithSalt _salt MatchedPlayerSession' {..} =
-    _salt `Prelude.hashWithSalt` playerId
+    _salt
+      `Prelude.hashWithSalt` playerId
       `Prelude.hashWithSalt` playerSessionId
 
 instance Prelude.NFData MatchedPlayerSession where

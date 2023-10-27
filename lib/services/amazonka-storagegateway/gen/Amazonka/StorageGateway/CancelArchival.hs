@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StorageGateway.CancelArchival
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest CancelArchival where
 
 instance Prelude.Hashable CancelArchival where
   hashWithSalt _salt CancelArchival' {..} =
-    _salt `Prelude.hashWithSalt` gatewayARN
+    _salt
+      `Prelude.hashWithSalt` gatewayARN
       `Prelude.hashWithSalt` tapeARN
 
 instance Prelude.NFData CancelArchival where

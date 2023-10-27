@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.MetricValue
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.MetricValue where
@@ -74,7 +74,8 @@ instance Data.FromJSON MetricValue where
 
 instance Prelude.Hashable MetricValue where
   hashWithSalt _salt MetricValue' {..} =
-    _salt `Prelude.hashWithSalt` amount
+    _salt
+      `Prelude.hashWithSalt` amount
       `Prelude.hashWithSalt` unit
 
 instance Prelude.NFData MetricValue where

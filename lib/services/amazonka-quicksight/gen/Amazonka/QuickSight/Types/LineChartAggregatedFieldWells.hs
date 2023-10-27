@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.LineChartAggregatedFieldWells
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.LineChartAggregatedFieldWells where
@@ -109,7 +109,8 @@ instance
     LineChartAggregatedFieldWells
   where
   hashWithSalt _salt LineChartAggregatedFieldWells' {..} =
-    _salt `Prelude.hashWithSalt` category
+    _salt
+      `Prelude.hashWithSalt` category
       `Prelude.hashWithSalt` colors
       `Prelude.hashWithSalt` smallMultiples
       `Prelude.hashWithSalt` values

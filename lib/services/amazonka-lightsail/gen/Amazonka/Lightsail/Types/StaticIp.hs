@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.StaticIp
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.StaticIp where
@@ -161,7 +161,8 @@ instance Data.FromJSON StaticIp where
 
 instance Prelude.Hashable StaticIp where
   hashWithSalt _salt StaticIp' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` attachedTo
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` ipAddress

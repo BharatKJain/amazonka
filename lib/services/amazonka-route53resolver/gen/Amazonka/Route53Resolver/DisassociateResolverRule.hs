@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53Resolver.DisassociateResolverRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -112,7 +112,8 @@ instance Core.AWSRequest DisassociateResolverRule where
 
 instance Prelude.Hashable DisassociateResolverRule where
   hashWithSalt _salt DisassociateResolverRule' {..} =
-    _salt `Prelude.hashWithSalt` vPCId
+    _salt
+      `Prelude.hashWithSalt` vPCId
       `Prelude.hashWithSalt` resolverRuleId
 
 instance Prelude.NFData DisassociateResolverRule where

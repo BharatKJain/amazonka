@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.HttpDataSourceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.HttpDataSourceConfig where
@@ -88,7 +88,8 @@ instance Data.FromJSON HttpDataSourceConfig where
 
 instance Prelude.Hashable HttpDataSourceConfig where
   hashWithSalt _salt HttpDataSourceConfig' {..} =
-    _salt `Prelude.hashWithSalt` authorizationConfig
+    _salt
+      `Prelude.hashWithSalt` authorizationConfig
       `Prelude.hashWithSalt` endpoint
 
 instance Prelude.NFData HttpDataSourceConfig where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.SearchOrganizationInsightsFilters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.SearchOrganizationInsightsFilters where
@@ -91,7 +91,8 @@ instance
   hashWithSalt
     _salt
     SearchOrganizationInsightsFilters' {..} =
-      _salt `Prelude.hashWithSalt` resourceCollection
+      _salt
+        `Prelude.hashWithSalt` resourceCollection
         `Prelude.hashWithSalt` serviceCollection
         `Prelude.hashWithSalt` severities
         `Prelude.hashWithSalt` statuses

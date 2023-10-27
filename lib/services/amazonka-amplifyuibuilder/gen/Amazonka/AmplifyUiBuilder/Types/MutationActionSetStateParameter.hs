@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.MutationActionSetStateParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.MutationActionSetStateParameter where
@@ -104,7 +104,8 @@ instance
   hashWithSalt
     _salt
     MutationActionSetStateParameter' {..} =
-      _salt `Prelude.hashWithSalt` componentName
+      _salt
+        `Prelude.hashWithSalt` componentName
         `Prelude.hashWithSalt` property
         `Prelude.hashWithSalt` set
 

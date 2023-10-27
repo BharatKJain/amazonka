@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Polly.Types.Voice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Polly.Types.Voice where
@@ -144,7 +144,8 @@ instance Data.FromJSON Voice where
       "Voice"
       ( \x ->
           Voice'
-            Prelude.<$> ( x Data..:? "AdditionalLanguageCodes"
+            Prelude.<$> ( x
+                            Data..:? "AdditionalLanguageCodes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Gender")
@@ -152,7 +153,8 @@ instance Data.FromJSON Voice where
             Prelude.<*> (x Data..:? "LanguageCode")
             Prelude.<*> (x Data..:? "LanguageName")
             Prelude.<*> (x Data..:? "Name")
-            Prelude.<*> ( x Data..:? "SupportedEngines"
+            Prelude.<*> ( x
+                            Data..:? "SupportedEngines"
                             Data..!= Prelude.mempty
                         )
       )

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DrS.Types.ConversionProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DrS.Types.ConversionProperties where
@@ -102,17 +102,20 @@ instance Data.FromJSON ConversionProperties where
             Prelude.<$> (x Data..:? "dataTimestamp")
             Prelude.<*> (x Data..:? "forceUefi")
             Prelude.<*> (x Data..:? "rootVolumeName")
-            Prelude.<*> ( x Data..:? "volumeToConversionMap"
+            Prelude.<*> ( x
+                            Data..:? "volumeToConversionMap"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "volumeToVolumeSize"
+            Prelude.<*> ( x
+                            Data..:? "volumeToVolumeSize"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ConversionProperties where
   hashWithSalt _salt ConversionProperties' {..} =
-    _salt `Prelude.hashWithSalt` dataTimestamp
+    _salt
+      `Prelude.hashWithSalt` dataTimestamp
       `Prelude.hashWithSalt` forceUefi
       `Prelude.hashWithSalt` rootVolumeName
       `Prelude.hashWithSalt` volumeToConversionMap

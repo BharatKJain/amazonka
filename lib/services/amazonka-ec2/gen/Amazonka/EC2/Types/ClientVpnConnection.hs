@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ClientVpnConnection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ClientVpnConnection where
@@ -197,7 +197,8 @@ instance Data.FromXML ClientVpnConnection where
       Prelude.<*> (x Data..@? "egressPackets")
       Prelude.<*> (x Data..@? "ingressBytes")
       Prelude.<*> (x Data..@? "ingressPackets")
-      Prelude.<*> ( x Data..@? "postureComplianceStatusSet"
+      Prelude.<*> ( x
+                      Data..@? "postureComplianceStatusSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
@@ -207,7 +208,8 @@ instance Data.FromXML ClientVpnConnection where
 
 instance Prelude.Hashable ClientVpnConnection where
   hashWithSalt _salt ClientVpnConnection' {..} =
-    _salt `Prelude.hashWithSalt` clientIp
+    _salt
+      `Prelude.hashWithSalt` clientIp
       `Prelude.hashWithSalt` clientVpnEndpointId
       `Prelude.hashWithSalt` commonName
       `Prelude.hashWithSalt` connectionEndTime

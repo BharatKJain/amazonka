@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsIamUserDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsIamUserDetails where
@@ -141,7 +141,8 @@ instance Data.FromJSON AwsIamUserDetails where
       "AwsIamUserDetails"
       ( \x ->
           AwsIamUserDetails'
-            Prelude.<$> ( x Data..:? "AttachedManagedPolicies"
+            Prelude.<$> ( x
+                            Data..:? "AttachedManagedPolicies"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CreateDate")
@@ -150,7 +151,8 @@ instance Data.FromJSON AwsIamUserDetails where
             Prelude.<*> (x Data..:? "PermissionsBoundary")
             Prelude.<*> (x Data..:? "UserId")
             Prelude.<*> (x Data..:? "UserName")
-            Prelude.<*> ( x Data..:? "UserPolicyList"
+            Prelude.<*> ( x
+                            Data..:? "UserPolicyList"
                             Data..!= Prelude.mempty
                         )
       )

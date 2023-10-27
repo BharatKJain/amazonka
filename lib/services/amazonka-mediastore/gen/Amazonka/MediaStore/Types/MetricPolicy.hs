@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaStore.Types.MetricPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaStore.Types.MetricPolicy where
@@ -101,7 +101,8 @@ instance Data.FromJSON MetricPolicy where
 
 instance Prelude.Hashable MetricPolicy where
   hashWithSalt _salt MetricPolicy' {..} =
-    _salt `Prelude.hashWithSalt` metricPolicyRules
+    _salt
+      `Prelude.hashWithSalt` metricPolicyRules
       `Prelude.hashWithSalt` containerLevelMetrics
 
 instance Prelude.NFData MetricPolicy where

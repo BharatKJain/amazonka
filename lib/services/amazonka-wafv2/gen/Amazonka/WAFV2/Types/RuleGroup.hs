@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.RuleGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.RuleGroup where
@@ -325,11 +325,13 @@ instance Data.FromJSON RuleGroup where
       "RuleGroup"
       ( \x ->
           RuleGroup'
-            Prelude.<$> ( x Data..:? "AvailableLabels"
+            Prelude.<$> ( x
+                            Data..:? "AvailableLabels"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ConsumedLabels" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "CustomResponseBodies"
+            Prelude.<*> ( x
+                            Data..:? "CustomResponseBodies"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Description")
@@ -344,7 +346,8 @@ instance Data.FromJSON RuleGroup where
 
 instance Prelude.Hashable RuleGroup where
   hashWithSalt _salt RuleGroup' {..} =
-    _salt `Prelude.hashWithSalt` availableLabels
+    _salt
+      `Prelude.hashWithSalt` availableLabels
       `Prelude.hashWithSalt` consumedLabels
       `Prelude.hashWithSalt` customResponseBodies
       `Prelude.hashWithSalt` description

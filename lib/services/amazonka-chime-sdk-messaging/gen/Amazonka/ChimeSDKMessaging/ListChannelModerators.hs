@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ChimeSDKMessaging.ListChannelModerators
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,7 +129,8 @@ instance Core.AWSRequest ListChannelModerators where
       ( \s h x ->
           ListChannelModeratorsResponse'
             Prelude.<$> (x Data..?> "ChannelArn")
-            Prelude.<*> ( x Data..?> "ChannelModerators"
+            Prelude.<*> ( x
+                            Data..?> "ChannelModerators"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -138,7 +139,8 @@ instance Core.AWSRequest ListChannelModerators where
 
 instance Prelude.Hashable ListChannelModerators where
   hashWithSalt _salt ListChannelModerators' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` channelArn
       `Prelude.hashWithSalt` chimeBearer

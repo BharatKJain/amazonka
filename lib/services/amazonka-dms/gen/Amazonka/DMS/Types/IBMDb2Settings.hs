@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.IBMDb2Settings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.IBMDb2Settings where
@@ -208,7 +208,8 @@ instance Data.FromJSON IBMDb2Settings where
 
 instance Prelude.Hashable IBMDb2Settings where
   hashWithSalt _salt IBMDb2Settings' {..} =
-    _salt `Prelude.hashWithSalt` currentLsn
+    _salt
+      `Prelude.hashWithSalt` currentLsn
       `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` maxKBytesPerRead
       `Prelude.hashWithSalt` password

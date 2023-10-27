@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstanceMarketOptionsRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstanceMarketOptionsRequest where
@@ -71,7 +71,8 @@ instance
     InstanceMarketOptionsRequest
   where
   hashWithSalt _salt InstanceMarketOptionsRequest' {..} =
-    _salt `Prelude.hashWithSalt` marketType
+    _salt
+      `Prelude.hashWithSalt` marketType
       `Prelude.hashWithSalt` spotOptions
 
 instance Prelude.NFData InstanceMarketOptionsRequest where

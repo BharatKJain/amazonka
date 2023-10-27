@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.KerberosAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.KerberosAttributes where
@@ -129,7 +129,8 @@ instance Data.FromJSON KerberosAttributes where
 
 instance Prelude.Hashable KerberosAttributes where
   hashWithSalt _salt KerberosAttributes' {..} =
-    _salt `Prelude.hashWithSalt` aDDomainJoinPassword
+    _salt
+      `Prelude.hashWithSalt` aDDomainJoinPassword
       `Prelude.hashWithSalt` aDDomainJoinUser
       `Prelude.hashWithSalt` crossRealmTrustPrincipalPassword
       `Prelude.hashWithSalt` kdcAdminPassword

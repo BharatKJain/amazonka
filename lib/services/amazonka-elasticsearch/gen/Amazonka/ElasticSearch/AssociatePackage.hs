@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticSearch.AssociatePackage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -48,7 +48,7 @@ import qualified Amazonka.Prelude as Prelude
 import qualified Amazonka.Request as Request
 import qualified Amazonka.Response as Response
 
--- | Container for request parameters to @ AssociatePackage @ operation.
+-- | Container for request parameters to @ @@AssociatePackage@@ @ operation.
 --
 -- /See:/ 'newAssociatePackage' smart constructor.
 data AssociatePackage = AssociatePackage'
@@ -109,7 +109,8 @@ instance Core.AWSRequest AssociatePackage where
 
 instance Prelude.Hashable AssociatePackage where
   hashWithSalt _salt AssociatePackage' {..} =
-    _salt `Prelude.hashWithSalt` packageID
+    _salt
+      `Prelude.hashWithSalt` packageID
       `Prelude.hashWithSalt` domainName
 
 instance Prelude.NFData AssociatePackage where
@@ -135,7 +136,7 @@ instance Data.ToPath AssociatePackage where
 instance Data.ToQuery AssociatePackage where
   toQuery = Prelude.const Prelude.mempty
 
--- | Container for response returned by @ AssociatePackage @ operation.
+-- | Container for response returned by @ @@AssociatePackage@@ @ operation.
 --
 -- /See:/ 'newAssociatePackageResponse' smart constructor.
 data AssociatePackageResponse = AssociatePackageResponse'

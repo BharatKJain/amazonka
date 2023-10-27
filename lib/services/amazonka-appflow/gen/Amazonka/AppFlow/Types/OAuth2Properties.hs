@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.OAuth2Properties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.OAuth2Properties where
@@ -89,7 +89,8 @@ instance Data.FromJSON OAuth2Properties where
       "OAuth2Properties"
       ( \x ->
           OAuth2Properties'
-            Prelude.<$> ( x Data..:? "tokenUrlCustomProperties"
+            Prelude.<$> ( x
+                            Data..:? "tokenUrlCustomProperties"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "tokenUrl")

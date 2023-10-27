@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.ExportDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.ExportDescription where
@@ -286,7 +286,8 @@ instance Data.FromJSON ExportDescription where
 
 instance Prelude.Hashable ExportDescription where
   hashWithSalt _salt ExportDescription' {..} =
-    _salt `Prelude.hashWithSalt` billedSizeBytes
+    _salt
+      `Prelude.hashWithSalt` billedSizeBytes
       `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` exportArn

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MacieV2.Types.IpGeoLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MacieV2.Types.IpGeoLocation where
@@ -72,12 +72,14 @@ instance Data.FromJSON IpGeoLocation where
       "IpGeoLocation"
       ( \x ->
           IpGeoLocation'
-            Prelude.<$> (x Data..:? "lat") Prelude.<*> (x Data..:? "lon")
+            Prelude.<$> (x Data..:? "lat")
+            Prelude.<*> (x Data..:? "lon")
       )
 
 instance Prelude.Hashable IpGeoLocation where
   hashWithSalt _salt IpGeoLocation' {..} =
-    _salt `Prelude.hashWithSalt` lat
+    _salt
+      `Prelude.hashWithSalt` lat
       `Prelude.hashWithSalt` lon
 
 instance Prelude.NFData IpGeoLocation where

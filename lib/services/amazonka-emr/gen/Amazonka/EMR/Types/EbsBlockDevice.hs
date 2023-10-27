@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.EbsBlockDevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.EbsBlockDevice where
@@ -82,7 +82,8 @@ instance Data.FromJSON EbsBlockDevice where
 
 instance Prelude.Hashable EbsBlockDevice where
   hashWithSalt _salt EbsBlockDevice' {..} =
-    _salt `Prelude.hashWithSalt` device
+    _salt
+      `Prelude.hashWithSalt` device
       `Prelude.hashWithSalt` volumeSpecification
 
 instance Prelude.NFData EbsBlockDevice where

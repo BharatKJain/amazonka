@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RAM.DisassociateResourceSharePermission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -161,8 +161,8 @@ instance
       ( \s h x ->
           DisassociateResourceSharePermissionResponse'
             Prelude.<$> (x Data..?> "clientToken")
-              Prelude.<*> (x Data..?> "returnValue")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "returnValue")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -172,7 +172,8 @@ instance
   hashWithSalt
     _salt
     DisassociateResourceSharePermission' {..} =
-      _salt `Prelude.hashWithSalt` clientToken
+      _salt
+        `Prelude.hashWithSalt` clientToken
         `Prelude.hashWithSalt` resourceShareArn
         `Prelude.hashWithSalt` permissionArn
 

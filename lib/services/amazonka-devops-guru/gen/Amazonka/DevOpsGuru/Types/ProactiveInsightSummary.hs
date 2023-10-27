@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.ProactiveInsightSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.ProactiveInsightSummary where
@@ -145,7 +145,8 @@ instance Data.FromJSON ProactiveInsightSummary where
       "ProactiveInsightSummary"
       ( \x ->
           ProactiveInsightSummary'
-            Prelude.<$> ( x Data..:? "AssociatedResourceArns"
+            Prelude.<$> ( x
+                            Data..:? "AssociatedResourceArns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Id")
@@ -160,7 +161,8 @@ instance Data.FromJSON ProactiveInsightSummary where
 
 instance Prelude.Hashable ProactiveInsightSummary where
   hashWithSalt _salt ProactiveInsightSummary' {..} =
-    _salt `Prelude.hashWithSalt` associatedResourceArns
+    _salt
+      `Prelude.hashWithSalt` associatedResourceArns
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` insightTimeRange
       `Prelude.hashWithSalt` name

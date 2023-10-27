@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMRServerless.Types.NetworkConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMRServerless.Types.NetworkConfiguration where
@@ -69,7 +69,8 @@ instance Data.FromJSON NetworkConfiguration where
       "NetworkConfiguration"
       ( \x ->
           NetworkConfiguration'
-            Prelude.<$> ( x Data..:? "securityGroupIds"
+            Prelude.<$> ( x
+                            Data..:? "securityGroupIds"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "subnetIds" Data..!= Prelude.mempty)
@@ -77,7 +78,8 @@ instance Data.FromJSON NetworkConfiguration where
 
 instance Prelude.Hashable NetworkConfiguration where
   hashWithSalt _salt NetworkConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` securityGroupIds
+    _salt
+      `Prelude.hashWithSalt` securityGroupIds
       `Prelude.hashWithSalt` subnetIds
 
 instance Prelude.NFData NetworkConfiguration where

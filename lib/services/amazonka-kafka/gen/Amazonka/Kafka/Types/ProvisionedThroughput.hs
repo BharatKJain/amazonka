@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.ProvisionedThroughput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.ProvisionedThroughput where
@@ -78,7 +78,8 @@ instance Data.FromJSON ProvisionedThroughput where
 
 instance Prelude.Hashable ProvisionedThroughput where
   hashWithSalt _salt ProvisionedThroughput' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` volumeThroughput
 
 instance Prelude.NFData ProvisionedThroughput where

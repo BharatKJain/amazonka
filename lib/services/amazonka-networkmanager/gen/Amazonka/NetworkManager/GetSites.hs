@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkManager.GetSites
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,20 +113,23 @@ instance Core.AWSPager GetSites where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? getSitesResponse_nextToken Prelude.. Lens._Just
+            Lens.^? getSitesResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? getSitesResponse_sites Prelude.. Lens._Just
+            Lens.^? getSitesResponse_sites
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getSites_nextToken
           Lens..~ rs
-          Lens.^? getSitesResponse_nextToken Prelude.. Lens._Just
+          Lens.^? getSitesResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetSites where
   type AWSResponse GetSites = GetSitesResponse
@@ -143,7 +146,8 @@ instance Core.AWSRequest GetSites where
 
 instance Prelude.Hashable GetSites where
   hashWithSalt _salt GetSites' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` siteIds
       `Prelude.hashWithSalt` globalNetworkId

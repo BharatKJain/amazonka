@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.NumberValidateRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.NumberValidateRequest where
@@ -74,7 +74,8 @@ numberValidateRequest_phoneNumber = Lens.lens (\NumberValidateRequest' {phoneNum
 
 instance Prelude.Hashable NumberValidateRequest where
   hashWithSalt _salt NumberValidateRequest' {..} =
-    _salt `Prelude.hashWithSalt` isoCountryCode
+    _salt
+      `Prelude.hashWithSalt` isoCountryCode
       `Prelude.hashWithSalt` phoneNumber
 
 instance Prelude.NFData NumberValidateRequest where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.AccountAttribute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.AccountAttribute where
@@ -68,13 +68,16 @@ instance Data.FromXML AccountAttribute where
   parseXML x =
     AccountAttribute'
       Prelude.<$> (x Data..@? "AttributeName")
-      Prelude.<*> ( x Data..@? "AttributeValues" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "AttributeValues"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "AttributeValueTarget")
                   )
 
 instance Prelude.Hashable AccountAttribute where
   hashWithSalt _salt AccountAttribute' {..} =
-    _salt `Prelude.hashWithSalt` attributeName
+    _salt
+      `Prelude.hashWithSalt` attributeName
       `Prelude.hashWithSalt` attributeValues
 
 instance Prelude.NFData AccountAttribute where

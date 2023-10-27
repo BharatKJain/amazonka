@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Nimble.Types.LaunchProfileMembership
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Nimble.Types.LaunchProfileMembership where
@@ -115,7 +115,8 @@ instance Data.FromJSON LaunchProfileMembership where
 
 instance Prelude.Hashable LaunchProfileMembership where
   hashWithSalt _salt LaunchProfileMembership' {..} =
-    _salt `Prelude.hashWithSalt` identityStoreId
+    _salt
+      `Prelude.hashWithSalt` identityStoreId
       `Prelude.hashWithSalt` persona
       `Prelude.hashWithSalt` principalId
       `Prelude.hashWithSalt` sid

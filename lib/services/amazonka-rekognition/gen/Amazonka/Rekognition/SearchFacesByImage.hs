@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Rekognition.SearchFacesByImage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -248,7 +248,8 @@ instance Core.AWSRequest SearchFacesByImage where
 
 instance Prelude.Hashable SearchFacesByImage where
   hashWithSalt _salt SearchFacesByImage' {..} =
-    _salt `Prelude.hashWithSalt` faceMatchThreshold
+    _salt
+      `Prelude.hashWithSalt` faceMatchThreshold
       `Prelude.hashWithSalt` maxFaces
       `Prelude.hashWithSalt` qualityFilter
       `Prelude.hashWithSalt` collectionId

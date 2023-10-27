@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53Domains.TransferDomain
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -419,7 +419,8 @@ instance Core.AWSRequest TransferDomain where
 
 instance Prelude.Hashable TransferDomain where
   hashWithSalt _salt TransferDomain' {..} =
-    _salt `Prelude.hashWithSalt` authCode
+    _salt
+      `Prelude.hashWithSalt` authCode
       `Prelude.hashWithSalt` autoRenew
       `Prelude.hashWithSalt` idnLangCode
       `Prelude.hashWithSalt` nameservers

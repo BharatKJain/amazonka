@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsApiGatewayMethodSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsApiGatewayMethodSettings where
@@ -254,7 +254,8 @@ instance Data.FromJSON AwsApiGatewayMethodSettings where
 
 instance Prelude.Hashable AwsApiGatewayMethodSettings where
   hashWithSalt _salt AwsApiGatewayMethodSettings' {..} =
-    _salt `Prelude.hashWithSalt` cacheDataEncrypted
+    _salt
+      `Prelude.hashWithSalt` cacheDataEncrypted
       `Prelude.hashWithSalt` cacheTtlInSeconds
       `Prelude.hashWithSalt` cachingEnabled
       `Prelude.hashWithSalt` dataTraceEnabled

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.DistributionConfigWithTags
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.DistributionConfigWithTags where
@@ -74,7 +74,8 @@ distributionConfigWithTags_tags = Lens.lens (\DistributionConfigWithTags' {tags}
 
 instance Prelude.Hashable DistributionConfigWithTags where
   hashWithSalt _salt DistributionConfigWithTags' {..} =
-    _salt `Prelude.hashWithSalt` distributionConfig
+    _salt
+      `Prelude.hashWithSalt` distributionConfig
       `Prelude.hashWithSalt` tags
 
 instance Prelude.NFData DistributionConfigWithTags where

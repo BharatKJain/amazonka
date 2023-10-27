@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECR.Types.RepositoryFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECR.Types.RepositoryFilter where
@@ -91,7 +91,8 @@ instance Data.FromJSON RepositoryFilter where
 
 instance Prelude.Hashable RepositoryFilter where
   hashWithSalt _salt RepositoryFilter' {..} =
-    _salt `Prelude.hashWithSalt` filter'
+    _salt
+      `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` filterType
 
 instance Prelude.NFData RepositoryFilter where

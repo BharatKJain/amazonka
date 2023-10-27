@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ColumnTooltipItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ColumnTooltipItem where
@@ -99,7 +99,8 @@ instance Data.FromJSON ColumnTooltipItem where
 
 instance Prelude.Hashable ColumnTooltipItem where
   hashWithSalt _salt ColumnTooltipItem' {..} =
-    _salt `Prelude.hashWithSalt` aggregation
+    _salt
+      `Prelude.hashWithSalt` aggregation
       `Prelude.hashWithSalt` label
       `Prelude.hashWithSalt` visibility
       `Prelude.hashWithSalt` column

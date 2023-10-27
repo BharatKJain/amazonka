@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MechanicalTurk.Types.QualificationRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MechanicalTurk.Types.QualificationRequest where
@@ -148,7 +148,8 @@ instance Data.FromJSON QualificationRequest where
 
 instance Prelude.Hashable QualificationRequest where
   hashWithSalt _salt QualificationRequest' {..} =
-    _salt `Prelude.hashWithSalt` answer
+    _salt
+      `Prelude.hashWithSalt` answer
       `Prelude.hashWithSalt` qualificationRequestId
       `Prelude.hashWithSalt` qualificationTypeId
       `Prelude.hashWithSalt` submitTime

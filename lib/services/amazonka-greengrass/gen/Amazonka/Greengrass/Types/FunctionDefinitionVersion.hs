@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Greengrass.Types.FunctionDefinitionVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Greengrass.Types.FunctionDefinitionVersion where
@@ -83,7 +83,8 @@ instance Data.FromJSON FunctionDefinitionVersion where
 
 instance Prelude.Hashable FunctionDefinitionVersion where
   hashWithSalt _salt FunctionDefinitionVersion' {..} =
-    _salt `Prelude.hashWithSalt` defaultConfig
+    _salt
+      `Prelude.hashWithSalt` defaultConfig
       `Prelude.hashWithSalt` functions
 
 instance Prelude.NFData FunctionDefinitionVersion where

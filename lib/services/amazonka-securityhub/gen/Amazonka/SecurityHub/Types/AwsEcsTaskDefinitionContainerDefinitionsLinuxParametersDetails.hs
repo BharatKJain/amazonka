@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails where
@@ -140,12 +140,12 @@ instance
       ( \x ->
           AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails'
             Prelude.<$> (x Data..:? "Capabilities")
-              Prelude.<*> (x Data..:? "Devices" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "InitProcessEnabled")
-              Prelude.<*> (x Data..:? "MaxSwap")
-              Prelude.<*> (x Data..:? "SharedMemorySize")
-              Prelude.<*> (x Data..:? "Swappiness")
-              Prelude.<*> (x Data..:? "Tmpfs" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "Devices" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "InitProcessEnabled")
+            Prelude.<*> (x Data..:? "MaxSwap")
+            Prelude.<*> (x Data..:? "SharedMemorySize")
+            Prelude.<*> (x Data..:? "Swappiness")
+            Prelude.<*> (x Data..:? "Tmpfs" Data..!= Prelude.mempty)
       )
 
 instance
@@ -155,7 +155,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails' {..} =
-      _salt `Prelude.hashWithSalt` capabilities
+      _salt
+        `Prelude.hashWithSalt` capabilities
         `Prelude.hashWithSalt` devices
         `Prelude.hashWithSalt` initProcessEnabled
         `Prelude.hashWithSalt` maxSwap

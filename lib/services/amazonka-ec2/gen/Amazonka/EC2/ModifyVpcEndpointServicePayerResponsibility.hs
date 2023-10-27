@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.ModifyVpcEndpointServicePayerResponsibility
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,7 @@ instance
       ( \s h x ->
           ModifyVpcEndpointServicePayerResponsibilityResponse'
             Prelude.<$> (x Data..@? "return")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance
@@ -142,7 +142,8 @@ instance
   hashWithSalt
     _salt
     ModifyVpcEndpointServicePayerResponsibility' {..} =
-      _salt `Prelude.hashWithSalt` dryRun
+      _salt
+        `Prelude.hashWithSalt` dryRun
         `Prelude.hashWithSalt` serviceId
         `Prelude.hashWithSalt` payerResponsibility
 

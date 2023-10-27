@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Personalize.Types.SolutionConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Personalize.Types.SolutionConfig where
@@ -123,12 +123,14 @@ instance Data.FromJSON SolutionConfig where
       "SolutionConfig"
       ( \x ->
           SolutionConfig'
-            Prelude.<$> ( x Data..:? "algorithmHyperParameters"
+            Prelude.<$> ( x
+                            Data..:? "algorithmHyperParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "autoMLConfig")
             Prelude.<*> (x Data..:? "eventValueThreshold")
-            Prelude.<*> ( x Data..:? "featureTransformationParameters"
+            Prelude.<*> ( x
+                            Data..:? "featureTransformationParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "hpoConfig")

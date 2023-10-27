@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.TaskListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.TaskListItem where
@@ -135,7 +135,8 @@ instance Data.FromJSON TaskListItem where
 
 instance Prelude.Hashable TaskListItem where
   hashWithSalt _salt TaskListItem' {..} =
-    _salt `Prelude.hashWithSalt` cpus
+    _salt
+      `Prelude.hashWithSalt` cpus
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` memory
       `Prelude.hashWithSalt` name

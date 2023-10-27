@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AutoScalingPlans.Types.ScalingInstruction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AutoScalingPlans.Types.ScalingInstruction where
@@ -585,7 +585,8 @@ instance Data.FromJSON ScalingInstruction where
             Prelude.<*> (x Data..: "ScalableDimension")
             Prelude.<*> (x Data..: "MinCapacity")
             Prelude.<*> (x Data..: "MaxCapacity")
-            Prelude.<*> ( x Data..:? "TargetTrackingConfigurations"
+            Prelude.<*> ( x
+                            Data..:? "TargetTrackingConfigurations"
                             Data..!= Prelude.mempty
                         )
       )

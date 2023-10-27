@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.CachePolicyConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.CachePolicyConfig where
@@ -222,7 +222,8 @@ instance Data.FromXML CachePolicyConfig where
 
 instance Prelude.Hashable CachePolicyConfig where
   hashWithSalt _salt CachePolicyConfig' {..} =
-    _salt `Prelude.hashWithSalt` comment
+    _salt
+      `Prelude.hashWithSalt` comment
       `Prelude.hashWithSalt` defaultTTL
       `Prelude.hashWithSalt` maxTTL
       `Prelude.hashWithSalt` parametersInCacheKeyAndForwardedToOrigin

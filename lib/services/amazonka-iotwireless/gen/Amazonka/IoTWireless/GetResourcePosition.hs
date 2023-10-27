@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTWireless.GetResourcePosition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -118,7 +118,8 @@ instance Core.AWSRequest GetResourcePosition where
 
 instance Prelude.Hashable GetResourcePosition where
   hashWithSalt _salt GetResourcePosition' {..} =
-    _salt `Prelude.hashWithSalt` resourceIdentifier
+    _salt
+      `Prelude.hashWithSalt` resourceIdentifier
       `Prelude.hashWithSalt` resourceType
 
 instance Prelude.NFData GetResourcePosition where

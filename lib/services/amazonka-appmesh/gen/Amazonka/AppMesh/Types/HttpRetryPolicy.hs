@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.HttpRetryPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.HttpRetryPolicy where
@@ -138,7 +138,8 @@ instance Data.FromJSON HttpRetryPolicy where
 
 instance Prelude.Hashable HttpRetryPolicy where
   hashWithSalt _salt HttpRetryPolicy' {..} =
-    _salt `Prelude.hashWithSalt` httpRetryEvents
+    _salt
+      `Prelude.hashWithSalt` httpRetryEvents
       `Prelude.hashWithSalt` tcpRetryEvents
       `Prelude.hashWithSalt` maxRetries
       `Prelude.hashWithSalt` perRetryTimeout

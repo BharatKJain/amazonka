@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StorageGateway.Types.TapeRecoveryPointInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StorageGateway.Types.TapeRecoveryPointInfo where
@@ -106,7 +106,8 @@ instance Data.FromJSON TapeRecoveryPointInfo where
 
 instance Prelude.Hashable TapeRecoveryPointInfo where
   hashWithSalt _salt TapeRecoveryPointInfo' {..} =
-    _salt `Prelude.hashWithSalt` tapeARN
+    _salt
+      `Prelude.hashWithSalt` tapeARN
       `Prelude.hashWithSalt` tapeRecoveryPointTime
       `Prelude.hashWithSalt` tapeSizeInBytes
       `Prelude.hashWithSalt` tapeStatus

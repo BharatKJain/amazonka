@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.PortMapping
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.PortMapping where
@@ -531,7 +531,8 @@ instance Data.FromJSON PortMapping where
 
 instance Prelude.Hashable PortMapping where
   hashWithSalt _salt PortMapping' {..} =
-    _salt `Prelude.hashWithSalt` appProtocol
+    _salt
+      `Prelude.hashWithSalt` appProtocol
       `Prelude.hashWithSalt` containerPort
       `Prelude.hashWithSalt` containerPortRange
       `Prelude.hashWithSalt` hostPort

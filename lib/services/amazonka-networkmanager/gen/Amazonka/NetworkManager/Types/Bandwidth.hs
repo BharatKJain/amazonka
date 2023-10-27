@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.Bandwidth
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.Bandwidth where
@@ -74,7 +74,8 @@ instance Data.FromJSON Bandwidth where
 
 instance Prelude.Hashable Bandwidth where
   hashWithSalt _salt Bandwidth' {..} =
-    _salt `Prelude.hashWithSalt` downloadSpeed
+    _salt
+      `Prelude.hashWithSalt` downloadSpeed
       `Prelude.hashWithSalt` uploadSpeed
 
 instance Prelude.NFData Bandwidth where

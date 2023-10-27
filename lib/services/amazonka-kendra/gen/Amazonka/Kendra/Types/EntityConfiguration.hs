@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.EntityConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.EntityConfiguration where
@@ -74,7 +74,8 @@ entityConfiguration_entityType = Lens.lens (\EntityConfiguration' {entityType} -
 
 instance Prelude.Hashable EntityConfiguration where
   hashWithSalt _salt EntityConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` entityId
+    _salt
+      `Prelude.hashWithSalt` entityId
       `Prelude.hashWithSalt` entityType
 
 instance Prelude.NFData EntityConfiguration where

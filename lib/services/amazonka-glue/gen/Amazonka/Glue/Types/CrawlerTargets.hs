@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.CrawlerTargets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.CrawlerTargets where
@@ -112,7 +112,8 @@ instance Data.FromJSON CrawlerTargets where
           CrawlerTargets'
             Prelude.<$> (x Data..:? "CatalogTargets" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "DeltaTargets" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "DynamoDBTargets"
+            Prelude.<*> ( x
+                            Data..:? "DynamoDBTargets"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "JdbcTargets" Data..!= Prelude.mempty)
@@ -122,7 +123,8 @@ instance Data.FromJSON CrawlerTargets where
 
 instance Prelude.Hashable CrawlerTargets where
   hashWithSalt _salt CrawlerTargets' {..} =
-    _salt `Prelude.hashWithSalt` catalogTargets
+    _salt
+      `Prelude.hashWithSalt` catalogTargets
       `Prelude.hashWithSalt` deltaTargets
       `Prelude.hashWithSalt` dynamoDBTargets
       `Prelude.hashWithSalt` jdbcTargets

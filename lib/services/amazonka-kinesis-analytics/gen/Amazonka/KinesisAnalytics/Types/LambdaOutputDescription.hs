@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.LambdaOutputDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.LambdaOutputDescription where
@@ -79,7 +79,8 @@ instance Data.FromJSON LambdaOutputDescription where
 
 instance Prelude.Hashable LambdaOutputDescription where
   hashWithSalt _salt LambdaOutputDescription' {..} =
-    _salt `Prelude.hashWithSalt` resourceARN
+    _salt
+      `Prelude.hashWithSalt` resourceARN
       `Prelude.hashWithSalt` roleARN
 
 instance Prelude.NFData LambdaOutputDescription where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.TransformJobDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.TransformJobDefinition where
@@ -169,7 +169,8 @@ instance Data.FromJSON TransformJobDefinition where
 
 instance Prelude.Hashable TransformJobDefinition where
   hashWithSalt _salt TransformJobDefinition' {..} =
-    _salt `Prelude.hashWithSalt` batchStrategy
+    _salt
+      `Prelude.hashWithSalt` batchStrategy
       `Prelude.hashWithSalt` environment
       `Prelude.hashWithSalt` maxConcurrentTransforms
       `Prelude.hashWithSalt` maxPayloadInMB

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsTaskVolumeDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsTaskVolumeDetails where
@@ -82,12 +82,14 @@ instance Data.FromJSON AwsEcsTaskVolumeDetails where
       "AwsEcsTaskVolumeDetails"
       ( \x ->
           AwsEcsTaskVolumeDetails'
-            Prelude.<$> (x Data..:? "Host") Prelude.<*> (x Data..:? "Name")
+            Prelude.<$> (x Data..:? "Host")
+            Prelude.<*> (x Data..:? "Name")
       )
 
 instance Prelude.Hashable AwsEcsTaskVolumeDetails where
   hashWithSalt _salt AwsEcsTaskVolumeDetails' {..} =
-    _salt `Prelude.hashWithSalt` host
+    _salt
+      `Prelude.hashWithSalt` host
       `Prelude.hashWithSalt` name
 
 instance Prelude.NFData AwsEcsTaskVolumeDetails where

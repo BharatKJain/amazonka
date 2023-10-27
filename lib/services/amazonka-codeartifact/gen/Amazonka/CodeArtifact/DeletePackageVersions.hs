@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeArtifact.DeletePackageVersions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -209,7 +209,8 @@ instance Core.AWSRequest DeletePackageVersions where
       ( \s h x ->
           DeletePackageVersionsResponse'
             Prelude.<$> (x Data..?> "failedVersions" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "successfulVersions"
+            Prelude.<*> ( x
+                            Data..?> "successfulVersions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -217,7 +218,8 @@ instance Core.AWSRequest DeletePackageVersions where
 
 instance Prelude.Hashable DeletePackageVersions where
   hashWithSalt _salt DeletePackageVersions' {..} =
-    _salt `Prelude.hashWithSalt` domainOwner
+    _salt
+      `Prelude.hashWithSalt` domainOwner
       `Prelude.hashWithSalt` expectedStatus
       `Prelude.hashWithSalt` namespace
       `Prelude.hashWithSalt` domain

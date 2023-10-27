@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.ClusterSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.ClusterSummary where
@@ -133,7 +133,8 @@ instance Data.FromJSON ClusterSummary where
 
 instance Prelude.Hashable ClusterSummary where
   hashWithSalt _salt ClusterSummary' {..} =
-    _salt `Prelude.hashWithSalt` clusterArn
+    _salt
+      `Prelude.hashWithSalt` clusterArn
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` normalizedInstanceHours

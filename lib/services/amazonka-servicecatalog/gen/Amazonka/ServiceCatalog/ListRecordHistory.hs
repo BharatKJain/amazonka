@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.ListRecordHistory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,22 +144,22 @@ instance Core.AWSPager ListRecordHistory where
     | Core.stop
         ( rs
             Lens.^? listRecordHistoryResponse_nextPageToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listRecordHistoryResponse_recordDetails
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listRecordHistory_pageToken
           Lens..~ rs
           Lens.^? listRecordHistoryResponse_nextPageToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListRecordHistory where
   type
@@ -178,7 +178,8 @@ instance Core.AWSRequest ListRecordHistory where
 
 instance Prelude.Hashable ListRecordHistory where
   hashWithSalt _salt ListRecordHistory' {..} =
-    _salt `Prelude.hashWithSalt` acceptLanguage
+    _salt
+      `Prelude.hashWithSalt` acceptLanguage
       `Prelude.hashWithSalt` accessLevelFilter
       `Prelude.hashWithSalt` pageSize
       `Prelude.hashWithSalt` pageToken

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.HierarchyStructureUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.HierarchyStructureUpdate where
@@ -93,7 +93,8 @@ hierarchyStructureUpdate_levelTwo = Lens.lens (\HierarchyStructureUpdate' {level
 
 instance Prelude.Hashable HierarchyStructureUpdate where
   hashWithSalt _salt HierarchyStructureUpdate' {..} =
-    _salt `Prelude.hashWithSalt` levelFive
+    _salt
+      `Prelude.hashWithSalt` levelFive
       `Prelude.hashWithSalt` levelFour
       `Prelude.hashWithSalt` levelOne
       `Prelude.hashWithSalt` levelThree

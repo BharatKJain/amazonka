@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCases.Types.FieldOption
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCases.Types.FieldOption where
@@ -93,7 +93,8 @@ instance Data.FromJSON FieldOption where
 
 instance Prelude.Hashable FieldOption where
   hashWithSalt _salt FieldOption' {..} =
-    _salt `Prelude.hashWithSalt` active
+    _salt
+      `Prelude.hashWithSalt` active
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 

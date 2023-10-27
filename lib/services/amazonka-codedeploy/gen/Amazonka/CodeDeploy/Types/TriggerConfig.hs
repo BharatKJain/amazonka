@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeDeploy.Types.TriggerConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeDeploy.Types.TriggerConfig where
@@ -91,7 +91,8 @@ instance Data.FromJSON TriggerConfig where
 
 instance Prelude.Hashable TriggerConfig where
   hashWithSalt _salt TriggerConfig' {..} =
-    _salt `Prelude.hashWithSalt` triggerEvents
+    _salt
+      `Prelude.hashWithSalt` triggerEvents
       `Prelude.hashWithSalt` triggerName
       `Prelude.hashWithSalt` triggerTargetArn
 

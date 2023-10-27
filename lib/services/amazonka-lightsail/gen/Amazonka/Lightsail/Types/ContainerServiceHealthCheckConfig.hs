@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.ContainerServiceHealthCheckConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.ContainerServiceHealthCheckConfig where
@@ -154,7 +154,8 @@ instance
   hashWithSalt
     _salt
     ContainerServiceHealthCheckConfig' {..} =
-      _salt `Prelude.hashWithSalt` healthyThreshold
+      _salt
+        `Prelude.hashWithSalt` healthyThreshold
         `Prelude.hashWithSalt` intervalSeconds
         `Prelude.hashWithSalt` path
         `Prelude.hashWithSalt` successCodes

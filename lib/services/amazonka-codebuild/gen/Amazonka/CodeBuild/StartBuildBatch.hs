@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeBuild.StartBuildBatch
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -690,7 +690,8 @@ instance Core.AWSRequest StartBuildBatch where
 
 instance Prelude.Hashable StartBuildBatch where
   hashWithSalt _salt StartBuildBatch' {..} =
-    _salt `Prelude.hashWithSalt` artifactsOverride
+    _salt
+      `Prelude.hashWithSalt` artifactsOverride
       `Prelude.hashWithSalt` buildBatchConfigOverride
       `Prelude.hashWithSalt` buildTimeoutInMinutesOverride
       `Prelude.hashWithSalt` buildspecOverride

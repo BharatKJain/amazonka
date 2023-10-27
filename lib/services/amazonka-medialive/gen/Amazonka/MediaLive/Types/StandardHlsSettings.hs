@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.StandardHlsSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.StandardHlsSettings where
@@ -83,7 +83,8 @@ instance Data.FromJSON StandardHlsSettings where
 
 instance Prelude.Hashable StandardHlsSettings where
   hashWithSalt _salt StandardHlsSettings' {..} =
-    _salt `Prelude.hashWithSalt` audioRenditionSets
+    _salt
+      `Prelude.hashWithSalt` audioRenditionSets
       `Prelude.hashWithSalt` m3u8Settings
 
 instance Prelude.NFData StandardHlsSettings where

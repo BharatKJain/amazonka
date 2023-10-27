@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Inspector.DescribeExclusions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest DescribeExclusions where
 
 instance Prelude.Hashable DescribeExclusions where
   hashWithSalt _salt DescribeExclusions' {..} =
-    _salt `Prelude.hashWithSalt` locale
+    _salt
+      `Prelude.hashWithSalt` locale
       `Prelude.hashWithSalt` exclusionArns
 
 instance Prelude.NFData DescribeExclusions where

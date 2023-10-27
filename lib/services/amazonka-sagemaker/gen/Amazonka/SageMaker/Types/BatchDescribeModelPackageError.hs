@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.BatchDescribeModelPackageError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.BatchDescribeModelPackageError where
@@ -59,11 +59,9 @@ newBatchDescribeModelPackageError
         errorResponse = pErrorResponse_
       }
 
--- |
 batchDescribeModelPackageError_errorCode :: Lens.Lens' BatchDescribeModelPackageError Prelude.Text
 batchDescribeModelPackageError_errorCode = Lens.lens (\BatchDescribeModelPackageError' {errorCode} -> errorCode) (\s@BatchDescribeModelPackageError' {} a -> s {errorCode = a} :: BatchDescribeModelPackageError)
 
--- |
 batchDescribeModelPackageError_errorResponse :: Lens.Lens' BatchDescribeModelPackageError Prelude.Text
 batchDescribeModelPackageError_errorResponse = Lens.lens (\BatchDescribeModelPackageError' {errorResponse} -> errorResponse) (\s@BatchDescribeModelPackageError' {} a -> s {errorResponse = a} :: BatchDescribeModelPackageError)
 
@@ -84,7 +82,8 @@ instance
   hashWithSalt
     _salt
     BatchDescribeModelPackageError' {..} =
-      _salt `Prelude.hashWithSalt` errorCode
+      _salt
+        `Prelude.hashWithSalt` errorCode
         `Prelude.hashWithSalt` errorResponse
 
 instance

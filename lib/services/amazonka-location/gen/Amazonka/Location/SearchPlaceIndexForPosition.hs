@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Location.SearchPlaceIndexForPosition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,7 +148,8 @@ newSearchPlaceIndexForPosition pIndexName_ pPosition_ =
       maxResults = Prelude.Nothing,
       indexName = pIndexName_,
       position =
-        Data._Sensitive Prelude.. Lens.coerced
+        Data._Sensitive
+          Prelude.. Lens.coerced
           Lens.# pPosition_
     }
 
@@ -212,7 +213,8 @@ instance Core.AWSRequest SearchPlaceIndexForPosition where
 
 instance Prelude.Hashable SearchPlaceIndexForPosition where
   hashWithSalt _salt SearchPlaceIndexForPosition' {..} =
-    _salt `Prelude.hashWithSalt` language
+    _salt
+      `Prelude.hashWithSalt` language
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` indexName
       `Prelude.hashWithSalt` position

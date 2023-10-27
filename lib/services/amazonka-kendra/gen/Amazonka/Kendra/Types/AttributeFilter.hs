@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.AttributeFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.AttributeFilter where
@@ -186,7 +186,8 @@ attributeFilter_orAllFilters = Lens.lens (\AttributeFilter' {orAllFilters} -> or
 
 instance Prelude.Hashable AttributeFilter where
   hashWithSalt _salt AttributeFilter' {..} =
-    _salt `Prelude.hashWithSalt` andAllFilters
+    _salt
+      `Prelude.hashWithSalt` andAllFilters
       `Prelude.hashWithSalt` containsAll
       `Prelude.hashWithSalt` containsAny
       `Prelude.hashWithSalt` equalsTo

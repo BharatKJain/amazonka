@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VerifiedAccessInstanceLoggingConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VerifiedAccessInstanceLoggingConfiguration where
@@ -74,7 +74,7 @@ instance
   parseXML x =
     VerifiedAccessInstanceLoggingConfiguration'
       Prelude.<$> (x Data..@? "accessLogs")
-        Prelude.<*> (x Data..@? "verifiedAccessInstanceId")
+      Prelude.<*> (x Data..@? "verifiedAccessInstanceId")
 
 instance
   Prelude.Hashable
@@ -83,7 +83,8 @@ instance
   hashWithSalt
     _salt
     VerifiedAccessInstanceLoggingConfiguration' {..} =
-      _salt `Prelude.hashWithSalt` accessLogs
+      _salt
+        `Prelude.hashWithSalt` accessLogs
         `Prelude.hashWithSalt` verifiedAccessInstanceId
 
 instance

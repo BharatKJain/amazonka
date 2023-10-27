@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.Behavior
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.Behavior where
@@ -120,7 +120,8 @@ instance Data.FromJSON Behavior where
 
 instance Prelude.Hashable Behavior where
   hashWithSalt _salt Behavior' {..} =
-    _salt `Prelude.hashWithSalt` criteria
+    _salt
+      `Prelude.hashWithSalt` criteria
       `Prelude.hashWithSalt` metric
       `Prelude.hashWithSalt` metricDimension
       `Prelude.hashWithSalt` suppressAlerts

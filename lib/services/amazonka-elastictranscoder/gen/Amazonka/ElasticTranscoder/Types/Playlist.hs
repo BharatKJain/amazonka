@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.Playlist
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.Playlist where
@@ -284,7 +284,8 @@ instance Data.FromJSON Playlist where
 
 instance Prelude.Hashable Playlist where
   hashWithSalt _salt Playlist' {..} =
-    _salt `Prelude.hashWithSalt` format
+    _salt
+      `Prelude.hashWithSalt` format
       `Prelude.hashWithSalt` hlsContentProtection
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` outputKeys

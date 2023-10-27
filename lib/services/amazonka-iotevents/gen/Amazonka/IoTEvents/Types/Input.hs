@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.Input
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.Input where
@@ -76,7 +76,8 @@ instance Data.FromJSON Input where
 
 instance Prelude.Hashable Input where
   hashWithSalt _salt Input' {..} =
-    _salt `Prelude.hashWithSalt` inputConfiguration
+    _salt
+      `Prelude.hashWithSalt` inputConfiguration
       `Prelude.hashWithSalt` inputDefinition
 
 instance Prelude.NFData Input where

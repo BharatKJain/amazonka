@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.RequestOutputItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.RequestOutputItem where
@@ -95,7 +95,8 @@ requestOutputItem_sourceGroup = Lens.lens (\RequestOutputItem' {sourceGroup} -> 
 
 instance Prelude.Hashable RequestOutputItem where
   hashWithSalt _salt RequestOutputItem' {..} =
-    _salt `Prelude.hashWithSalt` dashPlaylistSettings
+    _salt
+      `Prelude.hashWithSalt` dashPlaylistSettings
       `Prelude.hashWithSalt` hlsPlaylistSettings
       `Prelude.hashWithSalt` manifestName
       `Prelude.hashWithSalt` sourceGroup

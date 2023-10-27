@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StorageGateway.DescribeBandwidthRateLimitSchedule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,11 +109,12 @@ instance
     Response.receiveJSON
       ( \s h x ->
           DescribeBandwidthRateLimitScheduleResponse'
-            Prelude.<$> ( x Data..?> "BandwidthRateLimitIntervals"
+            Prelude.<$> ( x
+                            Data..?> "BandwidthRateLimitIntervals"
                             Core..!@ Prelude.mempty
                         )
-              Prelude.<*> (x Data..?> "GatewayARN")
-              Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
+            Prelude.<*> (x Data..?> "GatewayARN")
+            Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
       )
 
 instance

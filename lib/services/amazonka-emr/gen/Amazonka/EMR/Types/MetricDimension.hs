@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EMR.Types.MetricDimension
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EMR.Types.MetricDimension where
@@ -72,12 +72,14 @@ instance Data.FromJSON MetricDimension where
       "MetricDimension"
       ( \x ->
           MetricDimension'
-            Prelude.<$> (x Data..:? "Key") Prelude.<*> (x Data..:? "Value")
+            Prelude.<$> (x Data..:? "Key")
+            Prelude.<*> (x Data..:? "Value")
       )
 
 instance Prelude.Hashable MetricDimension where
   hashWithSalt _salt MetricDimension' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData MetricDimension where

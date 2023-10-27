@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManager.Types.ExtendedKeyUsage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManager.Types.ExtendedKeyUsage where
@@ -131,12 +131,14 @@ instance Data.FromJSON ExtendedKeyUsage where
       "ExtendedKeyUsage"
       ( \x ->
           ExtendedKeyUsage'
-            Prelude.<$> (x Data..:? "Name") Prelude.<*> (x Data..:? "OID")
+            Prelude.<$> (x Data..:? "Name")
+            Prelude.<*> (x Data..:? "OID")
       )
 
 instance Prelude.Hashable ExtendedKeyUsage where
   hashWithSalt _salt ExtendedKeyUsage' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` oid
 
 instance Prelude.NFData ExtendedKeyUsage where

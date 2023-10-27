@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubReFactorSpaces.Types.ApiGatewayProxySummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubReFactorSpaces.Types.ApiGatewayProxySummary where
@@ -132,7 +132,8 @@ instance Data.FromJSON ApiGatewayProxySummary where
 
 instance Prelude.Hashable ApiGatewayProxySummary where
   hashWithSalt _salt ApiGatewayProxySummary' {..} =
-    _salt `Prelude.hashWithSalt` apiGatewayId
+    _salt
+      `Prelude.hashWithSalt` apiGatewayId
       `Prelude.hashWithSalt` endpointType
       `Prelude.hashWithSalt` nlbArn
       `Prelude.hashWithSalt` nlbName

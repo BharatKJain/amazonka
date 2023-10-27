@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Wisdom.NotifyRecommendationsReceived
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,7 +127,8 @@ instance
       ( \s h x ->
           NotifyRecommendationsReceivedResponse'
             Prelude.<$> (x Data..?> "errors" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "recommendationIds"
+            Prelude.<*> ( x
+                            Data..?> "recommendationIds"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -138,7 +139,8 @@ instance
     NotifyRecommendationsReceived
   where
   hashWithSalt _salt NotifyRecommendationsReceived' {..} =
-    _salt `Prelude.hashWithSalt` assistantId
+    _salt
+      `Prelude.hashWithSalt` assistantId
       `Prelude.hashWithSalt` recommendationIds
       `Prelude.hashWithSalt` sessionId
 

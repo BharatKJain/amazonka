@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.DeviceDeploymentSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.DeviceDeploymentSummary where
@@ -181,7 +181,8 @@ instance Data.FromJSON DeviceDeploymentSummary where
 
 instance Prelude.Hashable DeviceDeploymentSummary where
   hashWithSalt _salt DeviceDeploymentSummary' {..} =
-    _salt `Prelude.hashWithSalt` deployedStageName
+    _salt
+      `Prelude.hashWithSalt` deployedStageName
       `Prelude.hashWithSalt` deploymentStartTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` deviceDeploymentStatus

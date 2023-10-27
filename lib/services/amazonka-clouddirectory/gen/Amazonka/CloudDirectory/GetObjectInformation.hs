@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudDirectory.GetObjectInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest GetObjectInformation where
 
 instance Prelude.Hashable GetObjectInformation where
   hashWithSalt _salt GetObjectInformation' {..} =
-    _salt `Prelude.hashWithSalt` consistencyLevel
+    _salt
+      `Prelude.hashWithSalt` consistencyLevel
       `Prelude.hashWithSalt` directoryArn
       `Prelude.hashWithSalt` objectReference
 

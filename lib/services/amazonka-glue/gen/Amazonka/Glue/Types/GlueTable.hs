@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.GlueTable
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.GlueTable where
@@ -121,7 +121,8 @@ instance Data.FromJSON GlueTable where
       "GlueTable"
       ( \x ->
           GlueTable'
-            Prelude.<$> ( x Data..:? "AdditionalOptions"
+            Prelude.<$> ( x
+                            Data..:? "AdditionalOptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CatalogId")
@@ -132,7 +133,8 @@ instance Data.FromJSON GlueTable where
 
 instance Prelude.Hashable GlueTable where
   hashWithSalt _salt GlueTable' {..} =
-    _salt `Prelude.hashWithSalt` additionalOptions
+    _salt
+      `Prelude.hashWithSalt` additionalOptions
       `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` connectionName
       `Prelude.hashWithSalt` databaseName

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkManager.UpdateConnection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -142,7 +142,8 @@ instance Core.AWSRequest UpdateConnection where
 
 instance Prelude.Hashable UpdateConnection where
   hashWithSalt _salt UpdateConnection' {..} =
-    _salt `Prelude.hashWithSalt` connectedLinkId
+    _salt
+      `Prelude.hashWithSalt` connectedLinkId
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` linkId
       `Prelude.hashWithSalt` globalNetworkId

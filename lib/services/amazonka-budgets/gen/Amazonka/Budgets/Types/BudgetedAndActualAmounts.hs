@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Budgets.Types.BudgetedAndActualAmounts
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Budgets.Types.BudgetedAndActualAmounts where
@@ -88,7 +88,8 @@ instance Data.FromJSON BudgetedAndActualAmounts where
 
 instance Prelude.Hashable BudgetedAndActualAmounts where
   hashWithSalt _salt BudgetedAndActualAmounts' {..} =
-    _salt `Prelude.hashWithSalt` actualAmount
+    _salt
+      `Prelude.hashWithSalt` actualAmount
       `Prelude.hashWithSalt` budgetedAmount
       `Prelude.hashWithSalt` timePeriod
 

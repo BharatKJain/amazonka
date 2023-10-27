@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Kafka.UpdateBrokerStorage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest UpdateBrokerStorage where
 
 instance Prelude.Hashable UpdateBrokerStorage where
   hashWithSalt _salt UpdateBrokerStorage' {..} =
-    _salt `Prelude.hashWithSalt` clusterArn
+    _salt
+      `Prelude.hashWithSalt` clusterArn
       `Prelude.hashWithSalt` targetBrokerEBSVolumeInfo
       `Prelude.hashWithSalt` currentVersion
 

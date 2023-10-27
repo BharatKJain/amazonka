@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaPackageVOD.Types.HlsPackage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaPackageVOD.Types.HlsPackage where
@@ -114,7 +114,8 @@ instance Data.FromJSON HlsPackage where
 
 instance Prelude.Hashable HlsPackage where
   hashWithSalt _salt HlsPackage' {..} =
-    _salt `Prelude.hashWithSalt` encryption
+    _salt
+      `Prelude.hashWithSalt` encryption
       `Prelude.hashWithSalt` includeDvbSubtitles
       `Prelude.hashWithSalt` segmentDurationSeconds
       `Prelude.hashWithSalt` useAudioRenditionGroup

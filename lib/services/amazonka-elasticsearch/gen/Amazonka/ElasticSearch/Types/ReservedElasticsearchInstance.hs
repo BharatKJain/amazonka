@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.ReservedElasticsearchInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.ReservedElasticsearchInstance where
@@ -197,7 +197,8 @@ instance Data.FromJSON ReservedElasticsearchInstance where
             Prelude.<*> (x Data..:? "ElasticsearchInstanceType")
             Prelude.<*> (x Data..:? "FixedPrice")
             Prelude.<*> (x Data..:? "PaymentOption")
-            Prelude.<*> ( x Data..:? "RecurringCharges"
+            Prelude.<*> ( x
+                            Data..:? "RecurringCharges"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ReservationName")
@@ -215,7 +216,8 @@ instance
     ReservedElasticsearchInstance
   where
   hashWithSalt _salt ReservedElasticsearchInstance' {..} =
-    _salt `Prelude.hashWithSalt` currencyCode
+    _salt
+      `Prelude.hashWithSalt` currencyCode
       `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` elasticsearchInstanceCount
       `Prelude.hashWithSalt` elasticsearchInstanceType

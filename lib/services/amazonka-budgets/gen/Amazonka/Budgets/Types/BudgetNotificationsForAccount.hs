@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Budgets.Types.BudgetNotificationsForAccount
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Budgets.Types.BudgetNotificationsForAccount where
@@ -77,7 +77,8 @@ instance
     BudgetNotificationsForAccount
   where
   hashWithSalt _salt BudgetNotificationsForAccount' {..} =
-    _salt `Prelude.hashWithSalt` budgetName
+    _salt
+      `Prelude.hashWithSalt` budgetName
       `Prelude.hashWithSalt` notifications
 
 instance Prelude.NFData BudgetNotificationsForAccount where

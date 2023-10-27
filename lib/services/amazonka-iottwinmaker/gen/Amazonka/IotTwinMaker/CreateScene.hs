@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IotTwinMaker.CreateScene
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -152,7 +152,8 @@ instance Core.AWSRequest CreateScene where
 
 instance Prelude.Hashable CreateScene where
   hashWithSalt _salt CreateScene' {..} =
-    _salt `Prelude.hashWithSalt` capabilities
+    _salt
+      `Prelude.hashWithSalt` capabilities
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` workspaceId

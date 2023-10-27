@@ -14,7 +14,7 @@
 -- Module      : Amazonka.TimeStreamQuery.Types.Datum
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.TimeStreamQuery.Types.Datum where
@@ -104,14 +104,16 @@ instance Data.FromJSON Datum where
             Prelude.<*> (x Data..:? "NullValue")
             Prelude.<*> (x Data..:? "RowValue")
             Prelude.<*> (x Data..:? "ScalarValue")
-            Prelude.<*> ( x Data..:? "TimeSeriesValue"
+            Prelude.<*> ( x
+                            Data..:? "TimeSeriesValue"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable Datum where
   hashWithSalt _salt Datum' {..} =
-    _salt `Prelude.hashWithSalt` arrayValue
+    _salt
+      `Prelude.hashWithSalt` arrayValue
       `Prelude.hashWithSalt` nullValue
       `Prelude.hashWithSalt` rowValue
       `Prelude.hashWithSalt` scalarValue

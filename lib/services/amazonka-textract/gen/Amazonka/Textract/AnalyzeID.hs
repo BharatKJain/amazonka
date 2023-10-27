@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Textract.AnalyzeID
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -93,7 +93,8 @@ instance Core.AWSRequest AnalyzeID where
           AnalyzeIDResponse'
             Prelude.<$> (x Data..?> "AnalyzeIDModelVersion")
             Prelude.<*> (x Data..?> "DocumentMetadata")
-            Prelude.<*> ( x Data..?> "IdentityDocuments"
+            Prelude.<*> ( x
+                            Data..?> "IdentityDocuments"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

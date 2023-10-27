@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.JobError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.JobError where
@@ -73,12 +73,14 @@ instance Data.FromJSON JobError where
       "JobError"
       ( \x ->
           JobError'
-            Prelude.<$> (x Data..: "code") Prelude.<*> (x Data..: "message")
+            Prelude.<$> (x Data..: "code")
+            Prelude.<*> (x Data..: "message")
       )
 
 instance Prelude.Hashable JobError where
   hashWithSalt _salt JobError' {..} =
-    _salt `Prelude.hashWithSalt` code
+    _salt
+      `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message
 
 instance Prelude.NFData JobError where

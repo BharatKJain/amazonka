@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.GrpcRouteMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.GrpcRouteMetadata where
@@ -90,7 +90,8 @@ instance Data.FromJSON GrpcRouteMetadata where
 
 instance Prelude.Hashable GrpcRouteMetadata where
   hashWithSalt _salt GrpcRouteMetadata' {..} =
-    _salt `Prelude.hashWithSalt` invert
+    _salt
+      `Prelude.hashWithSalt` invert
       `Prelude.hashWithSalt` match
       `Prelude.hashWithSalt` name
 

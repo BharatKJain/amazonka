@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CustomerProfiles.Types.FieldSourceProfileIds
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CustomerProfiles.Types.FieldSourceProfileIds where
@@ -236,7 +236,8 @@ fieldSourceProfileIds_shippingAddress = Lens.lens (\FieldSourceProfileIds' {ship
 
 instance Prelude.Hashable FieldSourceProfileIds where
   hashWithSalt _salt FieldSourceProfileIds' {..} =
-    _salt `Prelude.hashWithSalt` accountNumber
+    _salt
+      `Prelude.hashWithSalt` accountNumber
       `Prelude.hashWithSalt` additionalInformation
       `Prelude.hashWithSalt` address
       `Prelude.hashWithSalt` attributes

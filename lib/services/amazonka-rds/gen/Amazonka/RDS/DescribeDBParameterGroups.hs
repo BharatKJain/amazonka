@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.DescribeDBParameterGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -162,22 +162,22 @@ instance Core.AWSPager DescribeDBParameterGroups where
     | Core.stop
         ( rs
             Lens.^? describeDBParameterGroupsResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeDBParameterGroupsResponse_dbParameterGroups
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeDBParameterGroups_marker
           Lens..~ rs
           Lens.^? describeDBParameterGroupsResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeDBParameterGroups where
   type
@@ -190,7 +190,8 @@ instance Core.AWSRequest DescribeDBParameterGroups where
       "DescribeDBParameterGroupsResult"
       ( \s h x ->
           DescribeDBParameterGroupsResponse'
-            Prelude.<$> ( x Data..@? "DBParameterGroups"
+            Prelude.<$> ( x
+                            Data..@? "DBParameterGroups"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "DBParameterGroup")
                         )
@@ -200,7 +201,8 @@ instance Core.AWSRequest DescribeDBParameterGroups where
 
 instance Prelude.Hashable DescribeDBParameterGroups where
   hashWithSalt _salt DescribeDBParameterGroups' {..} =
-    _salt `Prelude.hashWithSalt` dbParameterGroupName
+    _salt
+      `Prelude.hashWithSalt` dbParameterGroupName
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxRecords

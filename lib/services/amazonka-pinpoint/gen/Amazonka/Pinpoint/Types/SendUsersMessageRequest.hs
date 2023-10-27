@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.SendUsersMessageRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.SendUsersMessageRequest where
@@ -130,7 +130,8 @@ sendUsersMessageRequest_users = Lens.lens (\SendUsersMessageRequest' {users} -> 
 
 instance Prelude.Hashable SendUsersMessageRequest where
   hashWithSalt _salt SendUsersMessageRequest' {..} =
-    _salt `Prelude.hashWithSalt` context
+    _salt
+      `Prelude.hashWithSalt` context
       `Prelude.hashWithSalt` templateConfiguration
       `Prelude.hashWithSalt` traceId
       `Prelude.hashWithSalt` messageConfiguration

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.ParentEntityUpdateRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.ParentEntityUpdateRequest where
@@ -68,7 +68,8 @@ parentEntityUpdateRequest_updateType = Lens.lens (\ParentEntityUpdateRequest' {u
 
 instance Prelude.Hashable ParentEntityUpdateRequest where
   hashWithSalt _salt ParentEntityUpdateRequest' {..} =
-    _salt `Prelude.hashWithSalt` parentEntityId
+    _salt
+      `Prelude.hashWithSalt` parentEntityId
       `Prelude.hashWithSalt` updateType
 
 instance Prelude.NFData ParentEntityUpdateRequest where

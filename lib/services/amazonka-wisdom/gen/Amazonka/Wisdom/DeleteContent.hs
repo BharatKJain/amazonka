@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Wisdom.DeleteContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest DeleteContent where
 
 instance Prelude.Hashable DeleteContent where
   hashWithSalt _salt DeleteContent' {..} =
-    _salt `Prelude.hashWithSalt` contentId
+    _salt
+      `Prelude.hashWithSalt` contentId
       `Prelude.hashWithSalt` knowledgeBaseId
 
 instance Prelude.NFData DeleteContent where

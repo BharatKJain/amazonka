@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CustomerProfiles.Types.IdentityResolutionJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CustomerProfiles.Types.IdentityResolutionJob where
@@ -207,7 +207,8 @@ instance Data.FromJSON IdentityResolutionJob where
 
 instance Prelude.Hashable IdentityResolutionJob where
   hashWithSalt _salt IdentityResolutionJob' {..} =
-    _salt `Prelude.hashWithSalt` domainName
+    _salt
+      `Prelude.hashWithSalt` domainName
       `Prelude.hashWithSalt` exportingLocation
       `Prelude.hashWithSalt` jobEndTime
       `Prelude.hashWithSalt` jobId

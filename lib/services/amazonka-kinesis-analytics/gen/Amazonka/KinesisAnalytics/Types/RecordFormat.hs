@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.RecordFormat
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.RecordFormat where
@@ -88,7 +88,8 @@ instance Data.FromJSON RecordFormat where
 
 instance Prelude.Hashable RecordFormat where
   hashWithSalt _salt RecordFormat' {..} =
-    _salt `Prelude.hashWithSalt` mappingParameters
+    _salt
+      `Prelude.hashWithSalt` mappingParameters
       `Prelude.hashWithSalt` recordFormatType
 
 instance Prelude.NFData RecordFormat where

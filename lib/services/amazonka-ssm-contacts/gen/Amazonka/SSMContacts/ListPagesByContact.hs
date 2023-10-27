@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSMContacts.ListPagesByContact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,19 +110,19 @@ instance Core.AWSPager ListPagesByContact where
     | Core.stop
         ( rs
             Lens.^? listPagesByContactResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listPagesByContactResponse_pages) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listPagesByContact_nextToken
           Lens..~ rs
           Lens.^? listPagesByContactResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListPagesByContact where
   type
@@ -141,7 +141,8 @@ instance Core.AWSRequest ListPagesByContact where
 
 instance Prelude.Hashable ListPagesByContact where
   hashWithSalt _salt ListPagesByContact' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` contactId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsApiGatewayV2RouteSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsApiGatewayV2RouteSettings where
@@ -141,7 +141,8 @@ instance
     AwsApiGatewayV2RouteSettings
   where
   hashWithSalt _salt AwsApiGatewayV2RouteSettings' {..} =
-    _salt `Prelude.hashWithSalt` dataTraceEnabled
+    _salt
+      `Prelude.hashWithSalt` dataTraceEnabled
       `Prelude.hashWithSalt` detailedMetricsEnabled
       `Prelude.hashWithSalt` loggingLevel
       `Prelude.hashWithSalt` throttlingBurstLimit

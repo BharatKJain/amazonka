@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.ActivityTypeInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.ActivityTypeInfo where
@@ -119,7 +119,8 @@ instance Data.FromJSON ActivityTypeInfo where
 
 instance Prelude.Hashable ActivityTypeInfo where
   hashWithSalt _salt ActivityTypeInfo' {..} =
-    _salt `Prelude.hashWithSalt` deprecationDate
+    _salt
+      `Prelude.hashWithSalt` deprecationDate
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` activityType
       `Prelude.hashWithSalt` status

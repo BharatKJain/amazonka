@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeStar.Types.CodeDestination
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeStar.Types.CodeDestination where
@@ -81,7 +81,8 @@ codeDestination_gitHub = Lens.lens (\CodeDestination' {gitHub} -> gitHub) (\s@Co
 
 instance Prelude.Hashable CodeDestination where
   hashWithSalt _salt CodeDestination' {..} =
-    _salt `Prelude.hashWithSalt` codeCommit
+    _salt
+      `Prelude.hashWithSalt` codeCommit
       `Prelude.hashWithSalt` gitHub
 
 instance Prelude.NFData CodeDestination where

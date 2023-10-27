@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SnowDeviceManagement.Types.InstanceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SnowDeviceManagement.Types.InstanceSummary where
@@ -75,7 +75,8 @@ instance Data.FromJSON InstanceSummary where
 
 instance Prelude.Hashable InstanceSummary where
   hashWithSalt _salt InstanceSummary' {..} =
-    _salt `Prelude.hashWithSalt` instance'
+    _salt
+      `Prelude.hashWithSalt` instance'
       `Prelude.hashWithSalt` lastUpdatedAt
 
 instance Prelude.NFData InstanceSummary where

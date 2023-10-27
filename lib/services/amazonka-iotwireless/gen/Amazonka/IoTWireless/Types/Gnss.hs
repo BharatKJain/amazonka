@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTWireless.Types.Gnss
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTWireless.Types.Gnss where
@@ -132,7 +132,8 @@ gnss_payload = Lens.lens (\Gnss' {payload} -> payload) (\s@Gnss' {} a -> s {payl
 
 instance Prelude.Hashable Gnss where
   hashWithSalt _salt Gnss' {..} =
-    _salt `Prelude.hashWithSalt` assistAltitude
+    _salt
+      `Prelude.hashWithSalt` assistAltitude
       `Prelude.hashWithSalt` assistPosition
       `Prelude.hashWithSalt` captureTime
       `Prelude.hashWithSalt` captureTimeAccuracy

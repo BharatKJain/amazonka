@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RobOMaker.UpdateRobotApplication
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -157,7 +157,8 @@ instance Core.AWSRequest UpdateRobotApplication where
 
 instance Prelude.Hashable UpdateRobotApplication where
   hashWithSalt _salt UpdateRobotApplication' {..} =
-    _salt `Prelude.hashWithSalt` currentRevisionId
+    _salt
+      `Prelude.hashWithSalt` currentRevisionId
       `Prelude.hashWithSalt` environment
       `Prelude.hashWithSalt` sources
       `Prelude.hashWithSalt` application

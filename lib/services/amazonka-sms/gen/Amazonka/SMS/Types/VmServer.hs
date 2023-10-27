@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SMS.Types.VmServer
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SMS.Types.VmServer where
@@ -106,7 +106,8 @@ instance Data.FromJSON VmServer where
 
 instance Prelude.Hashable VmServer where
   hashWithSalt _salt VmServer' {..} =
-    _salt `Prelude.hashWithSalt` vmManagerName
+    _salt
+      `Prelude.hashWithSalt` vmManagerName
       `Prelude.hashWithSalt` vmManagerType
       `Prelude.hashWithSalt` vmName
       `Prelude.hashWithSalt` vmPath

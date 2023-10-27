@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Forecast.Types.SupplementaryFeature
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Forecast.Types.SupplementaryFeature where
@@ -513,12 +513,14 @@ instance Data.FromJSON SupplementaryFeature where
       "SupplementaryFeature"
       ( \x ->
           SupplementaryFeature'
-            Prelude.<$> (x Data..: "Name") Prelude.<*> (x Data..: "Value")
+            Prelude.<$> (x Data..: "Name")
+            Prelude.<*> (x Data..: "Value")
       )
 
 instance Prelude.Hashable SupplementaryFeature where
   hashWithSalt _salt SupplementaryFeature' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData SupplementaryFeature where

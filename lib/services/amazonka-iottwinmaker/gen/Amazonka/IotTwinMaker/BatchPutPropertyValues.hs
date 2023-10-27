@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IotTwinMaker.BatchPutPropertyValues
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest BatchPutPropertyValues where
 
 instance Prelude.Hashable BatchPutPropertyValues where
   hashWithSalt _salt BatchPutPropertyValues' {..} =
-    _salt `Prelude.hashWithSalt` workspaceId
+    _salt
+      `Prelude.hashWithSalt` workspaceId
       `Prelude.hashWithSalt` entries
 
 instance Prelude.NFData BatchPutPropertyValues where

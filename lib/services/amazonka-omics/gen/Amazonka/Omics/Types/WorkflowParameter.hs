@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Omics.Types.WorkflowParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Omics.Types.WorkflowParameter where
@@ -74,7 +74,8 @@ instance Data.FromJSON WorkflowParameter where
 
 instance Prelude.Hashable WorkflowParameter where
   hashWithSalt _salt WorkflowParameter' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` optional
 
 instance Prelude.NFData WorkflowParameter where

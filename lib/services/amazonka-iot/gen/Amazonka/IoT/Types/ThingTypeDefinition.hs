@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.ThingTypeDefinition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.ThingTypeDefinition where
@@ -104,7 +104,8 @@ instance Data.FromJSON ThingTypeDefinition where
 
 instance Prelude.Hashable ThingTypeDefinition where
   hashWithSalt _salt ThingTypeDefinition' {..} =
-    _salt `Prelude.hashWithSalt` thingTypeArn
+    _salt
+      `Prelude.hashWithSalt` thingTypeArn
       `Prelude.hashWithSalt` thingTypeMetadata
       `Prelude.hashWithSalt` thingTypeName
       `Prelude.hashWithSalt` thingTypeProperties

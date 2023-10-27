@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.OAuthProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.OAuthProperties where
@@ -97,7 +97,8 @@ instance Data.FromJSON OAuthProperties where
 
 instance Prelude.Hashable OAuthProperties where
   hashWithSalt _salt OAuthProperties' {..} =
-    _salt `Prelude.hashWithSalt` tokenUrl
+    _salt
+      `Prelude.hashWithSalt` tokenUrl
       `Prelude.hashWithSalt` authCodeUrl
       `Prelude.hashWithSalt` oAuthScopes
 

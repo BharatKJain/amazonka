@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.Maintenance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.Maintenance where
@@ -107,7 +107,8 @@ instance Data.FromJSON Maintenance where
 
 instance Prelude.Hashable Maintenance where
   hashWithSalt _salt Maintenance' {..} =
-    _salt `Prelude.hashWithSalt` maintenanceDay
+    _salt
+      `Prelude.hashWithSalt` maintenanceDay
       `Prelude.hashWithSalt` maintenanceDeadline
       `Prelude.hashWithSalt` maintenanceScheduledDate
       `Prelude.hashWithSalt` maintenanceStartHour

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.CapacityProviderStrategyItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.CapacityProviderStrategyItem where
@@ -111,7 +111,8 @@ instance
     CapacityProviderStrategyItem
   where
   hashWithSalt _salt CapacityProviderStrategyItem' {..} =
-    _salt `Prelude.hashWithSalt` base
+    _salt
+      `Prelude.hashWithSalt` base
       `Prelude.hashWithSalt` weight
       `Prelude.hashWithSalt` capacityProvider
 

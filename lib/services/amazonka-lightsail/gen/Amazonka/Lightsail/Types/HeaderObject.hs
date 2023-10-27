@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.HeaderObject
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.HeaderObject where
@@ -110,7 +110,8 @@ instance Data.FromJSON HeaderObject where
       "HeaderObject"
       ( \x ->
           HeaderObject'
-            Prelude.<$> ( x Data..:? "headersAllowList"
+            Prelude.<$> ( x
+                            Data..:? "headersAllowList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "option")
@@ -118,7 +119,8 @@ instance Data.FromJSON HeaderObject where
 
 instance Prelude.Hashable HeaderObject where
   hashWithSalt _salt HeaderObject' {..} =
-    _salt `Prelude.hashWithSalt` headersAllowList
+    _salt
+      `Prelude.hashWithSalt` headersAllowList
       `Prelude.hashWithSalt` option
 
 instance Prelude.NFData HeaderObject where

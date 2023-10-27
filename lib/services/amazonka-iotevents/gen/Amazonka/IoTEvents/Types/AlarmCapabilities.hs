@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.AlarmCapabilities
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.AlarmCapabilities where
@@ -80,7 +80,8 @@ instance Data.FromJSON AlarmCapabilities where
 
 instance Prelude.Hashable AlarmCapabilities where
   hashWithSalt _salt AlarmCapabilities' {..} =
-    _salt `Prelude.hashWithSalt` acknowledgeFlow
+    _salt
+      `Prelude.hashWithSalt` acknowledgeFlow
       `Prelude.hashWithSalt` initializationConfiguration
 
 instance Prelude.NFData AlarmCapabilities where

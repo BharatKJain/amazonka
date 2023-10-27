@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.ThirdPartyFirewallFirewallPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.ThirdPartyFirewallFirewallPolicy where
@@ -83,7 +83,8 @@ instance
   hashWithSalt
     _salt
     ThirdPartyFirewallFirewallPolicy' {..} =
-      _salt `Prelude.hashWithSalt` firewallPolicyId
+      _salt
+        `Prelude.hashWithSalt` firewallPolicyId
         `Prelude.hashWithSalt` firewallPolicyName
 
 instance

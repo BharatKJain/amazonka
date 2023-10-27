@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DrillDownFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DrillDownFilter where
@@ -99,7 +99,8 @@ instance Data.FromJSON DrillDownFilter where
 
 instance Prelude.Hashable DrillDownFilter where
   hashWithSalt _salt DrillDownFilter' {..} =
-    _salt `Prelude.hashWithSalt` categoryFilter
+    _salt
+      `Prelude.hashWithSalt` categoryFilter
       `Prelude.hashWithSalt` numericEqualityFilter
       `Prelude.hashWithSalt` timeRangeFilter
 

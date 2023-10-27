@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.TableExcerpt
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.TableExcerpt where
@@ -79,7 +79,8 @@ instance Data.FromJSON TableExcerpt where
 
 instance Prelude.Hashable TableExcerpt where
   hashWithSalt _salt TableExcerpt' {..} =
-    _salt `Prelude.hashWithSalt` rows
+    _salt
+      `Prelude.hashWithSalt` rows
       `Prelude.hashWithSalt` totalNumberOfRows
 
 instance Prelude.NFData TableExcerpt where

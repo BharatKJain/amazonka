@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeStarNotifications.Types.ListTargetsFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeStarNotifications.Types.ListTargetsFilter where
@@ -79,7 +79,8 @@ listTargetsFilter_value = Lens.lens (\ListTargetsFilter' {value} -> value) (\s@L
 
 instance Prelude.Hashable ListTargetsFilter where
   hashWithSalt _salt ListTargetsFilter' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData ListTargetsFilter where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Wisdom.UpdateContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -200,7 +200,8 @@ instance Core.AWSRequest UpdateContent where
 
 instance Prelude.Hashable UpdateContent where
   hashWithSalt _salt UpdateContent' {..} =
-    _salt `Prelude.hashWithSalt` metadata
+    _salt
+      `Prelude.hashWithSalt` metadata
       `Prelude.hashWithSalt` overrideLinkOutUri
       `Prelude.hashWithSalt` removeOverrideLinkOutUri
       `Prelude.hashWithSalt` revisionId

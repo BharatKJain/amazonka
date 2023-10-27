@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Outposts.Types.OrderSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Outposts.Types.OrderSummary where
@@ -159,7 +159,8 @@ instance Data.FromJSON OrderSummary where
       "OrderSummary"
       ( \x ->
           OrderSummary'
-            Prelude.<$> ( x Data..:? "LineItemCountsByStatus"
+            Prelude.<$> ( x
+                            Data..:? "LineItemCountsByStatus"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "OrderFulfilledDate")
@@ -172,7 +173,8 @@ instance Data.FromJSON OrderSummary where
 
 instance Prelude.Hashable OrderSummary where
   hashWithSalt _salt OrderSummary' {..} =
-    _salt `Prelude.hashWithSalt` lineItemCountsByStatus
+    _salt
+      `Prelude.hashWithSalt` lineItemCountsByStatus
       `Prelude.hashWithSalt` orderFulfilledDate
       `Prelude.hashWithSalt` orderId
       `Prelude.hashWithSalt` orderSubmissionDate

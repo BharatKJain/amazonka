@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Personalize.CreateBatchSegmentJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -208,7 +208,8 @@ instance Core.AWSRequest CreateBatchSegmentJob where
 
 instance Prelude.Hashable CreateBatchSegmentJob where
   hashWithSalt _salt CreateBatchSegmentJob' {..} =
-    _salt `Prelude.hashWithSalt` filterArn
+    _salt
+      `Prelude.hashWithSalt` filterArn
       `Prelude.hashWithSalt` numResults
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` jobName

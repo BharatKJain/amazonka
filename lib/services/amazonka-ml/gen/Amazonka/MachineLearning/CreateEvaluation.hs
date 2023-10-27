@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MachineLearning.CreateEvaluation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,7 +158,8 @@ instance Core.AWSRequest CreateEvaluation where
 
 instance Prelude.Hashable CreateEvaluation where
   hashWithSalt _salt CreateEvaluation' {..} =
-    _salt `Prelude.hashWithSalt` evaluationName
+    _salt
+      `Prelude.hashWithSalt` evaluationName
       `Prelude.hashWithSalt` evaluationId
       `Prelude.hashWithSalt` mLModelId
       `Prelude.hashWithSalt` evaluationDataSourceId

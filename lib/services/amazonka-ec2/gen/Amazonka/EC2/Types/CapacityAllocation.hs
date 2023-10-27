@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.CapacityAllocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.CapacityAllocation where
@@ -82,7 +82,8 @@ instance Data.FromXML CapacityAllocation where
 
 instance Prelude.Hashable CapacityAllocation where
   hashWithSalt _salt CapacityAllocation' {..} =
-    _salt `Prelude.hashWithSalt` allocationType
+    _salt
+      `Prelude.hashWithSalt` allocationType
       `Prelude.hashWithSalt` count
 
 instance Prelude.NFData CapacityAllocation where

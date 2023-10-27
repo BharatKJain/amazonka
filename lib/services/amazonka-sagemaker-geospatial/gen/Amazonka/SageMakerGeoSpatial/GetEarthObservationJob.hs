@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.GetEarthObservationJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -284,7 +284,6 @@ getEarthObservationJobResponse_exportStatus = Lens.lens (\GetEarthObservationJob
 getEarthObservationJobResponse_kmsKeyId :: Lens.Lens' GetEarthObservationJobResponse (Prelude.Maybe Prelude.Text)
 getEarthObservationJobResponse_kmsKeyId = Lens.lens (\GetEarthObservationJobResponse' {kmsKeyId} -> kmsKeyId) (\s@GetEarthObservationJobResponse' {} a -> s {kmsKeyId = a} :: GetEarthObservationJobResponse)
 
--- |
 getEarthObservationJobResponse_outputBands :: Lens.Lens' GetEarthObservationJobResponse (Prelude.Maybe [OutputBand])
 getEarthObservationJobResponse_outputBands = Lens.lens (\GetEarthObservationJobResponse' {outputBands} -> outputBands) (\s@GetEarthObservationJobResponse' {} a -> s {outputBands = a} :: GetEarthObservationJobResponse) Prelude.. Lens.mapping Lens.coerced
 

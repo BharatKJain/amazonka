@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.OrganizationConformancePackStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.OrganizationConformancePackStatus where
@@ -242,7 +242,8 @@ instance
   hashWithSalt
     _salt
     OrganizationConformancePackStatus' {..} =
-      _salt `Prelude.hashWithSalt` errorCode
+      _salt
+        `Prelude.hashWithSalt` errorCode
         `Prelude.hashWithSalt` errorMessage
         `Prelude.hashWithSalt` lastUpdateTime
         `Prelude.hashWithSalt` organizationConformancePackName

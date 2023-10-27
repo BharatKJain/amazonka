@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.CreateRoutingProfile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -180,7 +180,8 @@ instance Core.AWSRequest CreateRoutingProfile where
 
 instance Prelude.Hashable CreateRoutingProfile where
   hashWithSalt _salt CreateRoutingProfile' {..} =
-    _salt `Prelude.hashWithSalt` queueConfigs
+    _salt
+      `Prelude.hashWithSalt` queueConfigs
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` instanceId
       `Prelude.hashWithSalt` name

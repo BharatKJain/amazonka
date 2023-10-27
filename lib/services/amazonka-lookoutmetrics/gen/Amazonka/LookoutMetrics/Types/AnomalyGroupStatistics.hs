@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.AnomalyGroupStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.AnomalyGroupStatistics where
@@ -80,7 +80,8 @@ instance Data.FromJSON AnomalyGroupStatistics where
       ( \x ->
           AnomalyGroupStatistics'
             Prelude.<$> (x Data..:? "EvaluationStartDate")
-            Prelude.<*> ( x Data..:? "ItemizedMetricStatsList"
+            Prelude.<*> ( x
+                            Data..:? "ItemizedMetricStatsList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "TotalCount")
@@ -88,7 +89,8 @@ instance Data.FromJSON AnomalyGroupStatistics where
 
 instance Prelude.Hashable AnomalyGroupStatistics where
   hashWithSalt _salt AnomalyGroupStatistics' {..} =
-    _salt `Prelude.hashWithSalt` evaluationStartDate
+    _salt
+      `Prelude.hashWithSalt` evaluationStartDate
       `Prelude.hashWithSalt` itemizedMetricStatsList
       `Prelude.hashWithSalt` totalCount
 

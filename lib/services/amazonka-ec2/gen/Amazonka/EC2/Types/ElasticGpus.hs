@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.ElasticGpus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.ElasticGpus where
@@ -126,13 +126,16 @@ instance Data.FromXML ElasticGpus where
       Prelude.<*> (x Data..@? "elasticGpuState")
       Prelude.<*> (x Data..@? "elasticGpuType")
       Prelude.<*> (x Data..@? "instanceId")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable ElasticGpus where
   hashWithSalt _salt ElasticGpus' {..} =
-    _salt `Prelude.hashWithSalt` availabilityZone
+    _salt
+      `Prelude.hashWithSalt` availabilityZone
       `Prelude.hashWithSalt` elasticGpuHealth
       `Prelude.hashWithSalt` elasticGpuId
       `Prelude.hashWithSalt` elasticGpuState

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCampaigns.Types.InstanceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCampaigns.Types.InstanceConfig where
@@ -92,7 +92,8 @@ instance Data.FromJSON InstanceConfig where
 
 instance Prelude.Hashable InstanceConfig where
   hashWithSalt _salt InstanceConfig' {..} =
-    _salt `Prelude.hashWithSalt` connectInstanceId
+    _salt
+      `Prelude.hashWithSalt` connectInstanceId
       `Prelude.hashWithSalt` encryptionConfig
       `Prelude.hashWithSalt` serviceLinkedRoleArn
 

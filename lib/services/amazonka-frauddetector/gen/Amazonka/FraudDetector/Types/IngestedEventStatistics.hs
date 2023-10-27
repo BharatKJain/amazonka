@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.IngestedEventStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.IngestedEventStatistics where
@@ -105,7 +105,8 @@ instance Data.FromJSON IngestedEventStatistics where
 
 instance Prelude.Hashable IngestedEventStatistics where
   hashWithSalt _salt IngestedEventStatistics' {..} =
-    _salt `Prelude.hashWithSalt` eventDataSizeInBytes
+    _salt
+      `Prelude.hashWithSalt` eventDataSizeInBytes
       `Prelude.hashWithSalt` lastUpdatedTime
       `Prelude.hashWithSalt` leastRecentEvent
       `Prelude.hashWithSalt` mostRecentEvent

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudFront.ListDistributionsByKeyGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,7 +136,8 @@ instance Core.AWSRequest ListDistributionsByKeyGroup where
 
 instance Prelude.Hashable ListDistributionsByKeyGroup where
   hashWithSalt _salt ListDistributionsByKeyGroup' {..} =
-    _salt `Prelude.hashWithSalt` marker
+    _salt
+      `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxItems
       `Prelude.hashWithSalt` keyGroupId
 

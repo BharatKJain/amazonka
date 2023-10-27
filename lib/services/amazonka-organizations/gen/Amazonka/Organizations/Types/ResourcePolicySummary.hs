@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Organizations.Types.ResourcePolicySummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Organizations.Types.ResourcePolicySummary where
@@ -69,12 +69,14 @@ instance Data.FromJSON ResourcePolicySummary where
       "ResourcePolicySummary"
       ( \x ->
           ResourcePolicySummary'
-            Prelude.<$> (x Data..:? "Arn") Prelude.<*> (x Data..:? "Id")
+            Prelude.<$> (x Data..:? "Arn")
+            Prelude.<*> (x Data..:? "Id")
       )
 
 instance Prelude.Hashable ResourcePolicySummary where
   hashWithSalt _salt ResourcePolicySummary' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` id
 
 instance Prelude.NFData ResourcePolicySummary where

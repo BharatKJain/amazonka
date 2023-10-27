@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsRedshiftClusterClusterSnapshotCopyStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsRedshiftClusterClusterSnapshotCopyStatus where
@@ -115,9 +115,9 @@ instance
       ( \x ->
           AwsRedshiftClusterClusterSnapshotCopyStatus'
             Prelude.<$> (x Data..:? "DestinationRegion")
-              Prelude.<*> (x Data..:? "ManualSnapshotRetentionPeriod")
-              Prelude.<*> (x Data..:? "RetentionPeriod")
-              Prelude.<*> (x Data..:? "SnapshotCopyGrantName")
+            Prelude.<*> (x Data..:? "ManualSnapshotRetentionPeriod")
+            Prelude.<*> (x Data..:? "RetentionPeriod")
+            Prelude.<*> (x Data..:? "SnapshotCopyGrantName")
       )
 
 instance
@@ -127,7 +127,8 @@ instance
   hashWithSalt
     _salt
     AwsRedshiftClusterClusterSnapshotCopyStatus' {..} =
-      _salt `Prelude.hashWithSalt` destinationRegion
+      _salt
+        `Prelude.hashWithSalt` destinationRegion
         `Prelude.hashWithSalt` manualSnapshotRetentionPeriod
         `Prelude.hashWithSalt` retentionPeriod
         `Prelude.hashWithSalt` snapshotCopyGrantName

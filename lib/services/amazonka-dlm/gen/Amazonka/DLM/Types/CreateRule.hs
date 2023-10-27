@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DLM.Types.CreateRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DLM.Types.CreateRule where
@@ -167,7 +167,8 @@ instance Data.FromJSON CreateRule where
 
 instance Prelude.Hashable CreateRule where
   hashWithSalt _salt CreateRule' {..} =
-    _salt `Prelude.hashWithSalt` cronExpression
+    _salt
+      `Prelude.hashWithSalt` cronExpression
       `Prelude.hashWithSalt` interval
       `Prelude.hashWithSalt` intervalUnit
       `Prelude.hashWithSalt` location

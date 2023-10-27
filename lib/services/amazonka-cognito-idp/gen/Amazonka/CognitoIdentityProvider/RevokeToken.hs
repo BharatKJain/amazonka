@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.RevokeToken
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -116,7 +116,8 @@ instance Core.AWSRequest RevokeToken where
 
 instance Prelude.Hashable RevokeToken where
   hashWithSalt _salt RevokeToken' {..} =
-    _salt `Prelude.hashWithSalt` clientSecret
+    _salt
+      `Prelude.hashWithSalt` clientSecret
       `Prelude.hashWithSalt` token
       `Prelude.hashWithSalt` clientId
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.FailureDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.FailureDescription where
@@ -75,12 +75,14 @@ instance Data.FromJSON FailureDescription where
       "FailureDescription"
       ( \x ->
           FailureDescription'
-            Prelude.<$> (x Data..: "Type") Prelude.<*> (x Data..: "Details")
+            Prelude.<$> (x Data..: "Type")
+            Prelude.<*> (x Data..: "Details")
       )
 
 instance Prelude.Hashable FailureDescription where
   hashWithSalt _salt FailureDescription' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` details
 
 instance Prelude.NFData FailureDescription where

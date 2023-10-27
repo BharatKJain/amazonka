@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.PrefetchRetrieval
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.PrefetchRetrieval where
@@ -115,7 +115,8 @@ instance Data.FromJSON PrefetchRetrieval where
       "PrefetchRetrieval"
       ( \x ->
           PrefetchRetrieval'
-            Prelude.<$> ( x Data..:? "DynamicVariables"
+            Prelude.<$> ( x
+                            Data..:? "DynamicVariables"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "StartTime")
@@ -124,7 +125,8 @@ instance Data.FromJSON PrefetchRetrieval where
 
 instance Prelude.Hashable PrefetchRetrieval where
   hashWithSalt _salt PrefetchRetrieval' {..} =
-    _salt `Prelude.hashWithSalt` dynamicVariables
+    _salt
+      `Prelude.hashWithSalt` dynamicVariables
       `Prelude.hashWithSalt` startTime
       `Prelude.hashWithSalt` endTime
 

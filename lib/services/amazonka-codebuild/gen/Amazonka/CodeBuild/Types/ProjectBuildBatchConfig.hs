@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.ProjectBuildBatchConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.ProjectBuildBatchConfig where
@@ -146,7 +146,8 @@ instance Data.FromJSON ProjectBuildBatchConfig where
 
 instance Prelude.Hashable ProjectBuildBatchConfig where
   hashWithSalt _salt ProjectBuildBatchConfig' {..} =
-    _salt `Prelude.hashWithSalt` batchReportMode
+    _salt
+      `Prelude.hashWithSalt` batchReportMode
       `Prelude.hashWithSalt` combineArtifacts
       `Prelude.hashWithSalt` restrictions
       `Prelude.hashWithSalt` serviceRole

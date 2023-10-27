@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.OrcSerDe
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.OrcSerDe where
@@ -227,7 +227,8 @@ instance Data.FromJSON OrcSerDe where
       ( \x ->
           OrcSerDe'
             Prelude.<$> (x Data..:? "BlockSizeBytes")
-            Prelude.<*> ( x Data..:? "BloomFilterColumns"
+            Prelude.<*> ( x
+                            Data..:? "BloomFilterColumns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "BloomFilterFalsePositiveProbability")
@@ -242,7 +243,8 @@ instance Data.FromJSON OrcSerDe where
 
 instance Prelude.Hashable OrcSerDe where
   hashWithSalt _salt OrcSerDe' {..} =
-    _salt `Prelude.hashWithSalt` blockSizeBytes
+    _salt
+      `Prelude.hashWithSalt` blockSizeBytes
       `Prelude.hashWithSalt` bloomFilterColumns
       `Prelude.hashWithSalt` bloomFilterFalsePositiveProbability
       `Prelude.hashWithSalt` compression

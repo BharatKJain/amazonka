@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.GameProperty
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.GameProperty where
@@ -75,12 +75,14 @@ instance Data.FromJSON GameProperty where
       "GameProperty"
       ( \x ->
           GameProperty'
-            Prelude.<$> (x Data..: "Key") Prelude.<*> (x Data..: "Value")
+            Prelude.<$> (x Data..: "Key")
+            Prelude.<*> (x Data..: "Value")
       )
 
 instance Prelude.Hashable GameProperty where
   hashWithSalt _salt GameProperty' {..} =
-    _salt `Prelude.hashWithSalt` key
+    _salt
+      `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData GameProperty where

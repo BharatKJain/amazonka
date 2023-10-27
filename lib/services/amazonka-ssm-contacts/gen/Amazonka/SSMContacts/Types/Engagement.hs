@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSMContacts.Types.Engagement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSMContacts.Types.Engagement where
@@ -124,7 +124,8 @@ instance Data.FromJSON Engagement where
 
 instance Prelude.Hashable Engagement where
   hashWithSalt _salt Engagement' {..} =
-    _salt `Prelude.hashWithSalt` incidentId
+    _salt
+      `Prelude.hashWithSalt` incidentId
       `Prelude.hashWithSalt` startTime
       `Prelude.hashWithSalt` stopTime
       `Prelude.hashWithSalt` engagementArn

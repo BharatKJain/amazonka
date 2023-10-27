@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.Resource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.Resource where
@@ -171,7 +171,8 @@ instance Data.FromJSON Resource where
 
 instance Prelude.Hashable Resource where
   hashWithSalt _salt Resource' {..} =
-    _salt `Prelude.hashWithSalt` dataClassification
+    _salt
+      `Prelude.hashWithSalt` dataClassification
       `Prelude.hashWithSalt` details
       `Prelude.hashWithSalt` partition
       `Prelude.hashWithSalt` region

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Signer.DescribeSigningJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -119,7 +119,8 @@ instance Core.AWSRequest DescribeSigningJob where
             Prelude.<*> (x Data..?> "signatureExpiresAt")
             Prelude.<*> (x Data..?> "signedObject")
             Prelude.<*> (x Data..?> "signingMaterial")
-            Prelude.<*> ( x Data..?> "signingParameters"
+            Prelude.<*> ( x
+                            Data..?> "signingParameters"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "source")

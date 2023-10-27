@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentity.UnlinkDeveloperIdentity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,7 +136,8 @@ instance Core.AWSRequest UnlinkDeveloperIdentity where
 
 instance Prelude.Hashable UnlinkDeveloperIdentity where
   hashWithSalt _salt UnlinkDeveloperIdentity' {..} =
-    _salt `Prelude.hashWithSalt` identityId
+    _salt
+      `Prelude.hashWithSalt` identityId
       `Prelude.hashWithSalt` identityPoolId
       `Prelude.hashWithSalt` developerProviderName
       `Prelude.hashWithSalt` developerUserIdentifier

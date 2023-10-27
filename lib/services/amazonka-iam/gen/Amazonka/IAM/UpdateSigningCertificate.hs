@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IAM.UpdateSigningCertificate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -149,7 +149,8 @@ instance Core.AWSRequest UpdateSigningCertificate where
 
 instance Prelude.Hashable UpdateSigningCertificate where
   hashWithSalt _salt UpdateSigningCertificate' {..} =
-    _salt `Prelude.hashWithSalt` userName
+    _salt
+      `Prelude.hashWithSalt` userName
       `Prelude.hashWithSalt` certificateId
       `Prelude.hashWithSalt` status
 

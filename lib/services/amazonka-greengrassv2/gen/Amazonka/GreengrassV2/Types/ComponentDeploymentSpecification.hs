@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.ComponentDeploymentSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.ComponentDeploymentSpecification where
@@ -131,7 +131,8 @@ instance
   hashWithSalt
     _salt
     ComponentDeploymentSpecification' {..} =
-      _salt `Prelude.hashWithSalt` componentVersion
+      _salt
+        `Prelude.hashWithSalt` componentVersion
         `Prelude.hashWithSalt` configurationUpdate
         `Prelude.hashWithSalt` runWith
 

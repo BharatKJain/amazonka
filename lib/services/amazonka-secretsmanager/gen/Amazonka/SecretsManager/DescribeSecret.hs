@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecretsManager.DescribeSecret
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,14 +138,16 @@ instance Core.AWSRequest DescribeSecret where
             Prelude.<*> (x Data..?> "NextRotationDate")
             Prelude.<*> (x Data..?> "OwningService")
             Prelude.<*> (x Data..?> "PrimaryRegion")
-            Prelude.<*> ( x Data..?> "ReplicationStatus"
+            Prelude.<*> ( x
+                            Data..?> "ReplicationStatus"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "RotationEnabled")
             Prelude.<*> (x Data..?> "RotationLambdaARN")
             Prelude.<*> (x Data..?> "RotationRules")
             Prelude.<*> (x Data..?> "Tags" Core..!@ Prelude.mempty)
-            Prelude.<*> ( x Data..?> "VersionIdsToStages"
+            Prelude.<*> ( x
+                            Data..?> "VersionIdsToStages"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

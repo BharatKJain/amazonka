@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElastiCache.Types.Snapshot
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElastiCache.Types.Snapshot where
@@ -771,7 +771,9 @@ instance Data.FromXML Snapshot where
       Prelude.<*> (x Data..@? "Engine")
       Prelude.<*> (x Data..@? "EngineVersion")
       Prelude.<*> (x Data..@? "KmsKeyId")
-      Prelude.<*> ( x Data..@? "NodeSnapshots" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "NodeSnapshots"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "NodeSnapshot")
                   )
       Prelude.<*> (x Data..@? "NumCacheNodes")
@@ -792,7 +794,8 @@ instance Data.FromXML Snapshot where
 
 instance Prelude.Hashable Snapshot where
   hashWithSalt _salt Snapshot' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` autoMinorVersionUpgrade
       `Prelude.hashWithSalt` automaticFailover
       `Prelude.hashWithSalt` cacheClusterCreateTime

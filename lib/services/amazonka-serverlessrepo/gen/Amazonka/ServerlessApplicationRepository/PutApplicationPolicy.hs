@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServerlessApplicationRepository.PutApplicationPolicy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest PutApplicationPolicy where
 
 instance Prelude.Hashable PutApplicationPolicy where
   hashWithSalt _salt PutApplicationPolicy' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` statements
 
 instance Prelude.NFData PutApplicationPolicy where

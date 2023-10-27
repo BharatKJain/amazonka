@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstanceRequirementsRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstanceRequirementsRequest where
@@ -933,7 +933,8 @@ instanceRequirementsRequest_memoryMiB = Lens.lens (\InstanceRequirementsRequest'
 
 instance Prelude.Hashable InstanceRequirementsRequest where
   hashWithSalt _salt InstanceRequirementsRequest' {..} =
-    _salt `Prelude.hashWithSalt` acceleratorCount
+    _salt
+      `Prelude.hashWithSalt` acceleratorCount
       `Prelude.hashWithSalt` acceleratorManufacturers
       `Prelude.hashWithSalt` acceleratorNames
       `Prelude.hashWithSalt` acceleratorTotalMemoryMiB

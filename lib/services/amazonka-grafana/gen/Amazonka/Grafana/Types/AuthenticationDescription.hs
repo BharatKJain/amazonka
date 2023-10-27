@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Grafana.Types.AuthenticationDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Grafana.Types.AuthenticationDescription where
@@ -104,7 +104,8 @@ instance Data.FromJSON AuthenticationDescription where
 
 instance Prelude.Hashable AuthenticationDescription where
   hashWithSalt _salt AuthenticationDescription' {..} =
-    _salt `Prelude.hashWithSalt` awsSso
+    _salt
+      `Prelude.hashWithSalt` awsSso
       `Prelude.hashWithSalt` saml
       `Prelude.hashWithSalt` providers
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53AutoNaming.Types.OperationFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53AutoNaming.Types.OperationFilter where
@@ -207,7 +207,8 @@ operationFilter_values = Lens.lens (\OperationFilter' {values} -> values) (\s@Op
 
 instance Prelude.Hashable OperationFilter where
   hashWithSalt _salt OperationFilter' {..} =
-    _salt `Prelude.hashWithSalt` condition
+    _salt
+      `Prelude.hashWithSalt` condition
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` values
 

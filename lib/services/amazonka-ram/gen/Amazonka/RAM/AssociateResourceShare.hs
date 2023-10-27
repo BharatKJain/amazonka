@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RAM.AssociateResourceShare
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -249,7 +249,8 @@ instance Core.AWSRequest AssociateResourceShare where
       ( \s h x ->
           AssociateResourceShareResponse'
             Prelude.<$> (x Data..?> "clientToken")
-            Prelude.<*> ( x Data..?> "resourceShareAssociations"
+            Prelude.<*> ( x
+                            Data..?> "resourceShareAssociations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -257,7 +258,8 @@ instance Core.AWSRequest AssociateResourceShare where
 
 instance Prelude.Hashable AssociateResourceShare where
   hashWithSalt _salt AssociateResourceShare' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` principals
       `Prelude.hashWithSalt` resourceArns
       `Prelude.hashWithSalt` resourceShareArn

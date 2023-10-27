@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppRunner.Types.VpcIngressConnection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppRunner.Types.VpcIngressConnection where
@@ -200,7 +200,8 @@ instance Data.FromJSON VpcIngressConnection where
 
 instance Prelude.Hashable VpcIngressConnection where
   hashWithSalt _salt VpcIngressConnection' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` deletedAt
       `Prelude.hashWithSalt` domainName

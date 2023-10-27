@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LookoutMetrics.UpdateAnomalyDetector
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,7 +127,8 @@ instance Core.AWSRequest UpdateAnomalyDetector where
 
 instance Prelude.Hashable UpdateAnomalyDetector where
   hashWithSalt _salt UpdateAnomalyDetector' {..} =
-    _salt `Prelude.hashWithSalt` anomalyDetectorConfig
+    _salt
+      `Prelude.hashWithSalt` anomalyDetectorConfig
       `Prelude.hashWithSalt` anomalyDetectorDescription
       `Prelude.hashWithSalt` kmsKeyArn
       `Prelude.hashWithSalt` anomalyDetectorArn

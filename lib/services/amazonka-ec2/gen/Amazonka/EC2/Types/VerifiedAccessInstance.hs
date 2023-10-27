@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.VerifiedAccessInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.VerifiedAccessInstance where
@@ -108,18 +108,22 @@ instance Data.FromXML VerifiedAccessInstance where
       Prelude.<$> (x Data..@? "creationTime")
       Prelude.<*> (x Data..@? "description")
       Prelude.<*> (x Data..@? "lastUpdatedTime")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "verifiedAccessInstanceId")
-      Prelude.<*> ( x Data..@? "verifiedAccessTrustProviderSet"
+      Prelude.<*> ( x
+                      Data..@? "verifiedAccessTrustProviderSet"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 
 instance Prelude.Hashable VerifiedAccessInstance where
   hashWithSalt _salt VerifiedAccessInstance' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` lastUpdatedTime
       `Prelude.hashWithSalt` tags

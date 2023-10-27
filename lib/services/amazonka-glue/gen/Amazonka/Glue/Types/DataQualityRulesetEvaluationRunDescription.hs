@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.DataQualityRulesetEvaluationRunDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.DataQualityRulesetEvaluationRunDescription where
@@ -93,9 +93,9 @@ instance
       ( \x ->
           DataQualityRulesetEvaluationRunDescription'
             Prelude.<$> (x Data..:? "DataSource")
-              Prelude.<*> (x Data..:? "RunId")
-              Prelude.<*> (x Data..:? "StartedOn")
-              Prelude.<*> (x Data..:? "Status")
+            Prelude.<*> (x Data..:? "RunId")
+            Prelude.<*> (x Data..:? "StartedOn")
+            Prelude.<*> (x Data..:? "Status")
       )
 
 instance
@@ -105,7 +105,8 @@ instance
   hashWithSalt
     _salt
     DataQualityRulesetEvaluationRunDescription' {..} =
-      _salt `Prelude.hashWithSalt` dataSource
+      _salt
+        `Prelude.hashWithSalt` dataSource
         `Prelude.hashWithSalt` runId
         `Prelude.hashWithSalt` startedOn
         `Prelude.hashWithSalt` status

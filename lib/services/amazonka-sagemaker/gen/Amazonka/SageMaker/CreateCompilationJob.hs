@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.CreateCompilationJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -294,7 +294,8 @@ instance Core.AWSRequest CreateCompilationJob where
 
 instance Prelude.Hashable CreateCompilationJob where
   hashWithSalt _salt CreateCompilationJob' {..} =
-    _salt `Prelude.hashWithSalt` inputConfig
+    _salt
+      `Prelude.hashWithSalt` inputConfig
       `Prelude.hashWithSalt` modelPackageVersionArn
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` vpcConfig

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StepFunctions.UpdateStateMachine
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -157,7 +157,8 @@ instance Core.AWSRequest UpdateStateMachine where
 
 instance Prelude.Hashable UpdateStateMachine where
   hashWithSalt _salt UpdateStateMachine' {..} =
-    _salt `Prelude.hashWithSalt` definition
+    _salt
+      `Prelude.hashWithSalt` definition
       `Prelude.hashWithSalt` loggingConfiguration
       `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` tracingConfiguration

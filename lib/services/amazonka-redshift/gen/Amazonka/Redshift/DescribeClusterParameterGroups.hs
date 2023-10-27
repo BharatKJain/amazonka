@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.DescribeClusterParameterGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -227,22 +227,22 @@ instance Core.AWSPager DescribeClusterParameterGroups where
     | Core.stop
         ( rs
             Lens.^? describeClusterParameterGroupsResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeClusterParameterGroupsResponse_parameterGroups
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeClusterParameterGroups_marker
           Lens..~ rs
           Lens.^? describeClusterParameterGroupsResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance
   Core.AWSRequest
@@ -259,7 +259,9 @@ instance
       ( \s h x ->
           DescribeClusterParameterGroupsResponse'
             Prelude.<$> (x Data..@? "Marker")
-            Prelude.<*> ( x Data..@? "ParameterGroups" Core..!@ Prelude.mempty
+            Prelude.<*> ( x
+                            Data..@? "ParameterGroups"
+                            Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "ClusterParameterGroup")
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -272,7 +274,8 @@ instance
   hashWithSalt
     _salt
     DescribeClusterParameterGroups' {..} =
-      _salt `Prelude.hashWithSalt` marker
+      _salt
+        `Prelude.hashWithSalt` marker
         `Prelude.hashWithSalt` maxRecords
         `Prelude.hashWithSalt` parameterGroupName
         `Prelude.hashWithSalt` tagKeys

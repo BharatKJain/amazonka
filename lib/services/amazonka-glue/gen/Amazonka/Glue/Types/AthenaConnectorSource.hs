@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.AthenaConnectorSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.AthenaConnectorSource where
@@ -150,7 +150,8 @@ instance Data.FromJSON AthenaConnectorSource where
 
 instance Prelude.Hashable AthenaConnectorSource where
   hashWithSalt _salt AthenaConnectorSource' {..} =
-    _salt `Prelude.hashWithSalt` connectionTable
+    _salt
+      `Prelude.hashWithSalt` connectionTable
       `Prelude.hashWithSalt` outputSchemas
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` connectionName

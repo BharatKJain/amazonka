@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AutoScaling.SuspendProcesses
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -164,7 +164,8 @@ instance Core.AWSRequest SuspendProcesses where
 
 instance Prelude.Hashable SuspendProcesses where
   hashWithSalt _salt SuspendProcesses' {..} =
-    _salt `Prelude.hashWithSalt` scalingProcesses
+    _salt
+      `Prelude.hashWithSalt` scalingProcesses
       `Prelude.hashWithSalt` autoScalingGroupName
 
 instance Prelude.NFData SuspendProcesses where

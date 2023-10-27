@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.EntityRecognizerMetadataEntityTypesListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.EntityRecognizerMetadataEntityTypesListItem where
@@ -94,8 +94,8 @@ instance
       ( \x ->
           EntityRecognizerMetadataEntityTypesListItem'
             Prelude.<$> (x Data..:? "EvaluationMetrics")
-              Prelude.<*> (x Data..:? "NumberOfTrainMentions")
-              Prelude.<*> (x Data..:? "Type")
+            Prelude.<*> (x Data..:? "NumberOfTrainMentions")
+            Prelude.<*> (x Data..:? "Type")
       )
 
 instance
@@ -105,7 +105,8 @@ instance
   hashWithSalt
     _salt
     EntityRecognizerMetadataEntityTypesListItem' {..} =
-      _salt `Prelude.hashWithSalt` evaluationMetrics
+      _salt
+        `Prelude.hashWithSalt` evaluationMetrics
         `Prelude.hashWithSalt` numberOfTrainMentions
         `Prelude.hashWithSalt` type'
 

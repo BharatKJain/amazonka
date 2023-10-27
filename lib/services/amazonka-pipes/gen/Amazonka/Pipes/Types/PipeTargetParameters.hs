@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.PipeTargetParameters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.PipeTargetParameters where
@@ -201,7 +201,8 @@ instance Data.FromJSON PipeTargetParameters where
 
 instance Prelude.Hashable PipeTargetParameters where
   hashWithSalt _salt PipeTargetParameters' {..} =
-    _salt `Prelude.hashWithSalt` batchJobParameters
+    _salt
+      `Prelude.hashWithSalt` batchJobParameters
       `Prelude.hashWithSalt` cloudWatchLogsParameters
       `Prelude.hashWithSalt` ecsTaskParameters
       `Prelude.hashWithSalt` eventBridgeEventBusParameters

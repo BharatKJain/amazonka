@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.DescribeHubContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -140,13 +140,15 @@ instance Core.AWSRequest DescribeHubContent where
       ( \s h x ->
           DescribeHubContentResponse'
             Prelude.<$> (x Data..?> "FailureReason")
-            Prelude.<*> ( x Data..?> "HubContentDependencies"
+            Prelude.<*> ( x
+                            Data..?> "HubContentDependencies"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "HubContentDescription")
             Prelude.<*> (x Data..?> "HubContentDisplayName")
             Prelude.<*> (x Data..?> "HubContentMarkdown")
-            Prelude.<*> ( x Data..?> "HubContentSearchKeywords"
+            Prelude.<*> ( x
+                            Data..?> "HubContentSearchKeywords"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -164,7 +166,8 @@ instance Core.AWSRequest DescribeHubContent where
 
 instance Prelude.Hashable DescribeHubContent where
   hashWithSalt _salt DescribeHubContent' {..} =
-    _salt `Prelude.hashWithSalt` hubContentVersion
+    _salt
+      `Prelude.hashWithSalt` hubContentVersion
       `Prelude.hashWithSalt` hubName
       `Prelude.hashWithSalt` hubContentType
       `Prelude.hashWithSalt` hubContentName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kendra.Types.ServiceNowConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kendra.Types.ServiceNowConfiguration where
@@ -183,7 +183,8 @@ instance Data.FromJSON ServiceNowConfiguration where
 
 instance Prelude.Hashable ServiceNowConfiguration where
   hashWithSalt _salt ServiceNowConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` authenticationType
+    _salt
+      `Prelude.hashWithSalt` authenticationType
       `Prelude.hashWithSalt` knowledgeArticleConfiguration
       `Prelude.hashWithSalt` serviceCatalogConfiguration
       `Prelude.hashWithSalt` hostUrl

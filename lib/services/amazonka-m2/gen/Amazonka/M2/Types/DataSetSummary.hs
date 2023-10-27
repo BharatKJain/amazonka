@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.DataSetSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.DataSetSummary where
@@ -116,7 +116,8 @@ instance Data.FromJSON DataSetSummary where
 
 instance Prelude.Hashable DataSetSummary where
   hashWithSalt _salt DataSetSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` dataSetOrg
       `Prelude.hashWithSalt` format
       `Prelude.hashWithSalt` lastReferencedTime

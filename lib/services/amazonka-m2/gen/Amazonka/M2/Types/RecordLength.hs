@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.RecordLength
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.RecordLength where
@@ -68,7 +68,8 @@ recordLength_min = Lens.lens (\RecordLength' {min} -> min) (\s@RecordLength' {} 
 
 instance Prelude.Hashable RecordLength where
   hashWithSalt _salt RecordLength' {..} =
-    _salt `Prelude.hashWithSalt` max
+    _salt
+      `Prelude.hashWithSalt` max
       `Prelude.hashWithSalt` min
 
 instance Prelude.NFData RecordLength where

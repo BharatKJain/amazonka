@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECS.GetTaskProtection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -107,7 +107,8 @@ instance Core.AWSRequest GetTaskProtection where
 
 instance Prelude.Hashable GetTaskProtection where
   hashWithSalt _salt GetTaskProtection' {..} =
-    _salt `Prelude.hashWithSalt` tasks
+    _salt
+      `Prelude.hashWithSalt` tasks
       `Prelude.hashWithSalt` cluster
 
 instance Prelude.NFData GetTaskProtection where

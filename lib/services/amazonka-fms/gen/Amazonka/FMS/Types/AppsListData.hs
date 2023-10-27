@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FMS.Types.AppsListData
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FMS.Types.AppsListData where
@@ -132,7 +132,8 @@ instance Data.FromJSON AppsListData where
             Prelude.<*> (x Data..:? "LastUpdateTime")
             Prelude.<*> (x Data..:? "ListId")
             Prelude.<*> (x Data..:? "ListUpdateToken")
-            Prelude.<*> ( x Data..:? "PreviousAppsList"
+            Prelude.<*> ( x
+                            Data..:? "PreviousAppsList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "ListName")
@@ -141,7 +142,8 @@ instance Data.FromJSON AppsListData where
 
 instance Prelude.Hashable AppsListData where
   hashWithSalt _salt AppsListData' {..} =
-    _salt `Prelude.hashWithSalt` createTime
+    _salt
+      `Prelude.hashWithSalt` createTime
       `Prelude.hashWithSalt` lastUpdateTime
       `Prelude.hashWithSalt` listId
       `Prelude.hashWithSalt` listUpdateToken

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.SMSMfaSettingsType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.SMSMfaSettingsType where
@@ -80,7 +80,8 @@ sMSMfaSettingsType_preferredMfa = Lens.lens (\SMSMfaSettingsType' {preferredMfa}
 
 instance Prelude.Hashable SMSMfaSettingsType where
   hashWithSalt _salt SMSMfaSettingsType' {..} =
-    _salt `Prelude.hashWithSalt` enabled
+    _salt
+      `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` preferredMfa
 
 instance Prelude.NFData SMSMfaSettingsType where

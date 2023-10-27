@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.ResourceDataSyncSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.ResourceDataSyncSource where
@@ -132,7 +132,8 @@ resourceDataSyncSource_sourceRegions = Lens.lens (\ResourceDataSyncSource' {sour
 
 instance Prelude.Hashable ResourceDataSyncSource where
   hashWithSalt _salt ResourceDataSyncSource' {..} =
-    _salt `Prelude.hashWithSalt` awsOrganizationsSource
+    _salt
+      `Prelude.hashWithSalt` awsOrganizationsSource
       `Prelude.hashWithSalt` enableAllOpsDataSources
       `Prelude.hashWithSalt` includeFutureRegions
       `Prelude.hashWithSalt` sourceType

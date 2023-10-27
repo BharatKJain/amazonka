@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Chime.Types.RoomMembership
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Chime.Types.RoomMembership where
@@ -105,7 +105,8 @@ instance Data.FromJSON RoomMembership where
 
 instance Prelude.Hashable RoomMembership where
   hashWithSalt _salt RoomMembership' {..} =
-    _salt `Prelude.hashWithSalt` invitedBy
+    _salt
+      `Prelude.hashWithSalt` invitedBy
       `Prelude.hashWithSalt` member
       `Prelude.hashWithSalt` role'
       `Prelude.hashWithSalt` roomId

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AuditManager.UpdateAssessmentControlSetStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,7 +141,8 @@ instance
   hashWithSalt
     _salt
     UpdateAssessmentControlSetStatus' {..} =
-      _salt `Prelude.hashWithSalt` assessmentId
+      _salt
+        `Prelude.hashWithSalt` assessmentId
         `Prelude.hashWithSalt` controlSetId
         `Prelude.hashWithSalt` status
         `Prelude.hashWithSalt` comment

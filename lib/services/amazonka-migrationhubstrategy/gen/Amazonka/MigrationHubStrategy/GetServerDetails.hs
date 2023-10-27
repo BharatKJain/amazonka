@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MigrationHubStrategy.GetServerDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -120,22 +120,22 @@ instance Core.AWSPager GetServerDetails where
     | Core.stop
         ( rs
             Lens.^? getServerDetailsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getServerDetailsResponse_associatedApplications
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getServerDetails_nextToken
           Lens..~ rs
           Lens.^? getServerDetailsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetServerDetails where
   type
@@ -147,7 +147,8 @@ instance Core.AWSRequest GetServerDetails where
     Response.receiveJSON
       ( \s h x ->
           GetServerDetailsResponse'
-            Prelude.<$> ( x Data..?> "associatedApplications"
+            Prelude.<$> ( x
+                            Data..?> "associatedApplications"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -157,7 +158,8 @@ instance Core.AWSRequest GetServerDetails where
 
 instance Prelude.Hashable GetServerDetails where
   hashWithSalt _salt GetServerDetails' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` serverId
 

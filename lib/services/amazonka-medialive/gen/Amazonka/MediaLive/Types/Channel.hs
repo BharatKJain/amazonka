@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.Channel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.Channel where
@@ -238,19 +238,22 @@ instance Data.FromJSON Channel where
             Prelude.<*> (x Data..:? "cdiInputSpecification")
             Prelude.<*> (x Data..:? "channelClass")
             Prelude.<*> (x Data..:? "destinations" Data..!= Prelude.mempty)
-            Prelude.<*> ( x Data..:? "egressEndpoints"
+            Prelude.<*> ( x
+                            Data..:? "egressEndpoints"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "encoderSettings")
             Prelude.<*> (x Data..:? "id")
-            Prelude.<*> ( x Data..:? "inputAttachments"
+            Prelude.<*> ( x
+                            Data..:? "inputAttachments"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "inputSpecification")
             Prelude.<*> (x Data..:? "logLevel")
             Prelude.<*> (x Data..:? "maintenance")
             Prelude.<*> (x Data..:? "name")
-            Prelude.<*> ( x Data..:? "pipelineDetails"
+            Prelude.<*> ( x
+                            Data..:? "pipelineDetails"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "pipelinesRunningCount")
@@ -262,7 +265,8 @@ instance Data.FromJSON Channel where
 
 instance Prelude.Hashable Channel where
   hashWithSalt _salt Channel' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` cdiInputSpecification
       `Prelude.hashWithSalt` channelClass
       `Prelude.hashWithSalt` destinations

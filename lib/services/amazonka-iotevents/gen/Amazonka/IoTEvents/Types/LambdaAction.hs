@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTEvents.Types.LambdaAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTEvents.Types.LambdaAction where
@@ -81,7 +81,8 @@ instance Data.FromJSON LambdaAction where
 
 instance Prelude.Hashable LambdaAction where
   hashWithSalt _salt LambdaAction' {..} =
-    _salt `Prelude.hashWithSalt` payload
+    _salt
+      `Prelude.hashWithSalt` payload
       `Prelude.hashWithSalt` functionArn
 
 instance Prelude.NFData LambdaAction where

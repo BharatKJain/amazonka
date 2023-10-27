@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsDetails where
@@ -114,8 +114,8 @@ instance
       ( \x ->
           AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsDetails'
             Prelude.<$> (x Data..:? "ContainerPath")
-              Prelude.<*> (x Data..:? "MountOptions" Data..!= Prelude.mempty)
-              Prelude.<*> (x Data..:? "Size")
+            Prelude.<*> (x Data..:? "MountOptions" Data..!= Prelude.mempty)
+            Prelude.<*> (x Data..:? "Size")
       )
 
 instance
@@ -125,7 +125,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsDetails' {..} =
-      _salt `Prelude.hashWithSalt` containerPath
+      _salt
+        `Prelude.hashWithSalt` containerPath
         `Prelude.hashWithSalt` mountOptions
         `Prelude.hashWithSalt` size
 

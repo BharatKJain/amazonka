@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeBuild.Types.Build
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeBuild.Types.Build where
@@ -600,10 +600,12 @@ instance Data.FromJSON Build where
             Prelude.<*> (x Data..:? "encryptionKey")
             Prelude.<*> (x Data..:? "endTime")
             Prelude.<*> (x Data..:? "environment")
-            Prelude.<*> ( x Data..:? "exportedEnvironmentVariables"
+            Prelude.<*> ( x
+                            Data..:? "exportedEnvironmentVariables"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "fileSystemLocations"
+            Prelude.<*> ( x
+                            Data..:? "fileSystemLocations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "id")
@@ -615,13 +617,16 @@ instance Data.FromJSON Build where
             Prelude.<*> (x Data..:? "queuedTimeoutInMinutes")
             Prelude.<*> (x Data..:? "reportArns" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "resolvedSourceVersion")
-            Prelude.<*> ( x Data..:? "secondaryArtifacts"
+            Prelude.<*> ( x
+                            Data..:? "secondaryArtifacts"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "secondarySourceVersions"
+            Prelude.<*> ( x
+                            Data..:? "secondarySourceVersions"
                             Data..!= Prelude.mempty
                         )
-            Prelude.<*> ( x Data..:? "secondarySources"
+            Prelude.<*> ( x
+                            Data..:? "secondarySources"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "serviceRole")
@@ -634,7 +639,8 @@ instance Data.FromJSON Build where
 
 instance Prelude.Hashable Build where
   hashWithSalt _salt Build' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` artifacts
       `Prelude.hashWithSalt` buildBatchArn
       `Prelude.hashWithSalt` buildComplete

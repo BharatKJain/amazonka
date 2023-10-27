@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.ImageFile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.ImageFile where
@@ -80,7 +80,8 @@ imageFile_type = Lens.lens (\ImageFile' {type'} -> type') (\s@ImageFile' {} a ->
 
 instance Prelude.Hashable ImageFile where
   hashWithSalt _salt ImageFile' {..} =
-    _salt `Prelude.hashWithSalt` data'
+    _salt
+      `Prelude.hashWithSalt` data'
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData ImageFile where

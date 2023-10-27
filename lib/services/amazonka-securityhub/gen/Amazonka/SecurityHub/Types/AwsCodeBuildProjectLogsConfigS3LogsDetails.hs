@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsCodeBuildProjectLogsConfigS3LogsDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsCodeBuildProjectLogsConfigS3LogsDetails where
@@ -82,8 +82,8 @@ instance
       ( \x ->
           AwsCodeBuildProjectLogsConfigS3LogsDetails'
             Prelude.<$> (x Data..:? "EncryptionDisabled")
-              Prelude.<*> (x Data..:? "Location")
-              Prelude.<*> (x Data..:? "Status")
+            Prelude.<*> (x Data..:? "Location")
+            Prelude.<*> (x Data..:? "Status")
       )
 
 instance
@@ -93,7 +93,8 @@ instance
   hashWithSalt
     _salt
     AwsCodeBuildProjectLogsConfigS3LogsDetails' {..} =
-      _salt `Prelude.hashWithSalt` encryptionDisabled
+      _salt
+        `Prelude.hashWithSalt` encryptionDisabled
         `Prelude.hashWithSalt` location
         `Prelude.hashWithSalt` status
 

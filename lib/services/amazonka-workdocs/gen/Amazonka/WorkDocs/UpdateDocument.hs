@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkDocs.UpdateDocument
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -131,7 +131,8 @@ instance Core.AWSRequest UpdateDocument where
 
 instance Prelude.Hashable UpdateDocument where
   hashWithSalt _salt UpdateDocument' {..} =
-    _salt `Prelude.hashWithSalt` authenticationToken
+    _salt
+      `Prelude.hashWithSalt` authenticationToken
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` parentFolderId
       `Prelude.hashWithSalt` resourceState

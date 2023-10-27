@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataExchange.Types.AssetEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataExchange.Types.AssetEntry where
@@ -219,7 +219,8 @@ instance Data.FromJSON AssetEntry where
 
 instance Prelude.Hashable AssetEntry where
   hashWithSalt _salt AssetEntry' {..} =
-    _salt `Prelude.hashWithSalt` sourceId
+    _salt
+      `Prelude.hashWithSalt` sourceId
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` assetDetails
       `Prelude.hashWithSalt` assetType

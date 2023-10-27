@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.Parent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.Parent where
@@ -76,7 +76,8 @@ instance Data.FromJSON Parent where
 
 instance Prelude.Hashable Parent where
   hashWithSalt _salt Parent' {..} =
-    _salt `Prelude.hashWithSalt` experimentName
+    _salt
+      `Prelude.hashWithSalt` experimentName
       `Prelude.hashWithSalt` trialName
 
 instance Prelude.NFData Parent where

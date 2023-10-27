@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.Reservation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.Reservation where
@@ -278,7 +278,8 @@ instance Data.FromJSON Reservation where
 
 instance Prelude.Hashable Reservation where
   hashWithSalt _salt Reservation' {..} =
-    _salt `Prelude.hashWithSalt` currencyCode
+    _salt
+      `Prelude.hashWithSalt` currencyCode
       `Prelude.hashWithSalt` reservationState
       `Prelude.hashWithSalt` offeringArn
       `Prelude.hashWithSalt` reservationArn

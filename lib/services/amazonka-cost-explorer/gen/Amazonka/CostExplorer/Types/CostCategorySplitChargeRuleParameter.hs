@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.CostCategorySplitChargeRuleParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.CostCategorySplitChargeRuleParameter where
@@ -79,7 +79,8 @@ instance
       "CostCategorySplitChargeRuleParameter"
       ( \x ->
           CostCategorySplitChargeRuleParameter'
-            Prelude.<$> (x Data..: "Type") Prelude.<*> (x Data..: "Values")
+            Prelude.<$> (x Data..: "Type")
+            Prelude.<*> (x Data..: "Values")
       )
 
 instance
@@ -89,7 +90,8 @@ instance
   hashWithSalt
     _salt
     CostCategorySplitChargeRuleParameter' {..} =
-      _salt `Prelude.hashWithSalt` type'
+      _salt
+        `Prelude.hashWithSalt` type'
         `Prelude.hashWithSalt` values
 
 instance

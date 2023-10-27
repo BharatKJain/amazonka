@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MwAA.Types.LastUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MwAA.Types.LastUpdate where
@@ -103,7 +103,8 @@ instance Data.FromJSON LastUpdate where
 
 instance Prelude.Hashable LastUpdate where
   hashWithSalt _salt LastUpdate' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` source
       `Prelude.hashWithSalt` status

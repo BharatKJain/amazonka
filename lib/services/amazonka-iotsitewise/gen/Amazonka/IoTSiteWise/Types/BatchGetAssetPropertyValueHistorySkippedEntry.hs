@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTSiteWise.Types.BatchGetAssetPropertyValueHistorySkippedEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTSiteWise.Types.BatchGetAssetPropertyValueHistorySkippedEntry where
@@ -100,8 +100,8 @@ instance
       ( \x ->
           BatchGetAssetPropertyValueHistorySkippedEntry'
             Prelude.<$> (x Data..:? "errorInfo")
-              Prelude.<*> (x Data..: "entryId")
-              Prelude.<*> (x Data..: "completionStatus")
+            Prelude.<*> (x Data..: "entryId")
+            Prelude.<*> (x Data..: "completionStatus")
       )
 
 instance
@@ -111,7 +111,8 @@ instance
   hashWithSalt
     _salt
     BatchGetAssetPropertyValueHistorySkippedEntry' {..} =
-      _salt `Prelude.hashWithSalt` errorInfo
+      _salt
+        `Prelude.hashWithSalt` errorInfo
         `Prelude.hashWithSalt` entryId
         `Prelude.hashWithSalt` completionStatus
 

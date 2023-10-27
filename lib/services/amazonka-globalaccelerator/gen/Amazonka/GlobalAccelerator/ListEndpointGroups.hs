@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GlobalAccelerator.ListEndpointGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,22 +110,22 @@ instance Core.AWSPager ListEndpointGroups where
     | Core.stop
         ( rs
             Lens.^? listEndpointGroupsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listEndpointGroupsResponse_endpointGroups
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listEndpointGroups_nextToken
           Lens..~ rs
           Lens.^? listEndpointGroupsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListEndpointGroups where
   type
@@ -144,7 +144,8 @@ instance Core.AWSRequest ListEndpointGroups where
 
 instance Prelude.Hashable ListEndpointGroups where
   hashWithSalt _salt ListEndpointGroups' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` listenerArn
 

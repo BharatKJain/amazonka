@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CertificateManagerPCA.Types.RevocationConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CertificateManagerPCA.Types.RevocationConfiguration where
@@ -108,7 +108,8 @@ instance Data.FromJSON RevocationConfiguration where
 
 instance Prelude.Hashable RevocationConfiguration where
   hashWithSalt _salt RevocationConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` crlConfiguration
+    _salt
+      `Prelude.hashWithSalt` crlConfiguration
       `Prelude.hashWithSalt` ocspConfiguration
 
 instance Prelude.NFData RevocationConfiguration where

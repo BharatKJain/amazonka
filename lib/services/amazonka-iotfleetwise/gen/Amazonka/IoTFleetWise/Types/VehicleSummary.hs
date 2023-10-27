@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTFleetWise.Types.VehicleSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTFleetWise.Types.VehicleSummary where
@@ -142,7 +142,8 @@ instance Data.FromJSON VehicleSummary where
 
 instance Prelude.Hashable VehicleSummary where
   hashWithSalt _salt VehicleSummary' {..} =
-    _salt `Prelude.hashWithSalt` vehicleName
+    _salt
+      `Prelude.hashWithSalt` vehicleName
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` modelManifestArn
       `Prelude.hashWithSalt` decoderManifestArn

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ServiceCatalog.UpdateProvisioningArtifact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -220,7 +220,8 @@ instance Core.AWSRequest UpdateProvisioningArtifact where
 
 instance Prelude.Hashable UpdateProvisioningArtifact where
   hashWithSalt _salt UpdateProvisioningArtifact' {..} =
-    _salt `Prelude.hashWithSalt` acceptLanguage
+    _salt
+      `Prelude.hashWithSalt` acceptLanguage
       `Prelude.hashWithSalt` active
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` guidance

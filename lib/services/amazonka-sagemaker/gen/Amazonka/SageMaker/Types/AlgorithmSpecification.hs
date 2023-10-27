@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.AlgorithmSpecification
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.AlgorithmSpecification where
@@ -288,7 +288,8 @@ instance Data.FromJSON AlgorithmSpecification where
             Prelude.<*> (x Data..:? "ContainerArguments")
             Prelude.<*> (x Data..:? "ContainerEntrypoint")
             Prelude.<*> (x Data..:? "EnableSageMakerMetricsTimeSeries")
-            Prelude.<*> ( x Data..:? "MetricDefinitions"
+            Prelude.<*> ( x
+                            Data..:? "MetricDefinitions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "TrainingImage")
@@ -297,7 +298,8 @@ instance Data.FromJSON AlgorithmSpecification where
 
 instance Prelude.Hashable AlgorithmSpecification where
   hashWithSalt _salt AlgorithmSpecification' {..} =
-    _salt `Prelude.hashWithSalt` algorithmName
+    _salt
+      `Prelude.hashWithSalt` algorithmName
       `Prelude.hashWithSalt` containerArguments
       `Prelude.hashWithSalt` containerEntrypoint
       `Prelude.hashWithSalt` enableSageMakerMetricsTimeSeries

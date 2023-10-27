@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.StartChangeRequestExecution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -310,7 +310,8 @@ instance Core.AWSRequest StartChangeRequestExecution where
 
 instance Prelude.Hashable StartChangeRequestExecution where
   hashWithSalt _salt StartChangeRequestExecution' {..} =
-    _salt `Prelude.hashWithSalt` autoApprove
+    _salt
+      `Prelude.hashWithSalt` autoApprove
       `Prelude.hashWithSalt` changeDetails
       `Prelude.hashWithSalt` changeRequestName
       `Prelude.hashWithSalt` clientToken

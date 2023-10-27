@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector.Types.ResourceGroupTag
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector.Types.ResourceGroupTag where
@@ -71,12 +71,14 @@ instance Data.FromJSON ResourceGroupTag where
       "ResourceGroupTag"
       ( \x ->
           ResourceGroupTag'
-            Prelude.<$> (x Data..:? "value") Prelude.<*> (x Data..: "key")
+            Prelude.<$> (x Data..:? "value")
+            Prelude.<*> (x Data..: "key")
       )
 
 instance Prelude.Hashable ResourceGroupTag where
   hashWithSalt _salt ResourceGroupTag' {..} =
-    _salt `Prelude.hashWithSalt` value
+    _salt
+      `Prelude.hashWithSalt` value
       `Prelude.hashWithSalt` key
 
 instance Prelude.NFData ResourceGroupTag where

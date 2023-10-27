@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.DescribePatchGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -135,22 +135,22 @@ instance Core.AWSPager DescribePatchGroups where
     | Core.stop
         ( rs
             Lens.^? describePatchGroupsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describePatchGroupsResponse_mappings
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describePatchGroups_nextToken
           Lens..~ rs
           Lens.^? describePatchGroupsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribePatchGroups where
   type
@@ -169,7 +169,8 @@ instance Core.AWSRequest DescribePatchGroups where
 
 instance Prelude.Hashable DescribePatchGroups where
   hashWithSalt _salt DescribePatchGroups' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

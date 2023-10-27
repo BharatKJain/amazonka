@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SQS.GetQueueAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -542,7 +542,8 @@ instance Core.AWSRequest GetQueueAttributes where
 
 instance Prelude.Hashable GetQueueAttributes where
   hashWithSalt _salt GetQueueAttributes' {..} =
-    _salt `Prelude.hashWithSalt` attributeNames
+    _salt
+      `Prelude.hashWithSalt` attributeNames
       `Prelude.hashWithSalt` queueUrl
 
 instance Prelude.NFData GetQueueAttributes where

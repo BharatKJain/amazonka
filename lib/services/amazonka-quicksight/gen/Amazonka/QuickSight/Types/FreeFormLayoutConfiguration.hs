@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.FreeFormLayoutConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.FreeFormLayoutConfiguration where
@@ -76,7 +76,8 @@ instance Data.FromJSON FreeFormLayoutConfiguration where
 
 instance Prelude.Hashable FreeFormLayoutConfiguration where
   hashWithSalt _salt FreeFormLayoutConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` canvasSizeOptions
+    _salt
+      `Prelude.hashWithSalt` canvasSizeOptions
       `Prelude.hashWithSalt` elements
 
 instance Prelude.NFData FreeFormLayoutConfiguration where

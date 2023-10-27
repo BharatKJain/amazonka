@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.S3DestinationSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.S3DestinationSettings where
@@ -86,7 +86,8 @@ instance Data.FromJSON S3DestinationSettings where
 
 instance Prelude.Hashable S3DestinationSettings where
   hashWithSalt _salt S3DestinationSettings' {..} =
-    _salt `Prelude.hashWithSalt` accessControl
+    _salt
+      `Prelude.hashWithSalt` accessControl
       `Prelude.hashWithSalt` encryption
 
 instance Prelude.NFData S3DestinationSettings where

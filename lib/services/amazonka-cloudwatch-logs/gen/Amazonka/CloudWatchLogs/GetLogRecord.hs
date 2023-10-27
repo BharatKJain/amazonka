@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudWatchLogs.GetLogRecord
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -126,7 +126,8 @@ instance Core.AWSRequest GetLogRecord where
 
 instance Prelude.Hashable GetLogRecord where
   hashWithSalt _salt GetLogRecord' {..} =
-    _salt `Prelude.hashWithSalt` unmask
+    _salt
+      `Prelude.hashWithSalt` unmask
       `Prelude.hashWithSalt` logRecordPointer
 
 instance Prelude.NFData GetLogRecord where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.MaintenanceUpdateSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.MaintenanceUpdateSettings where
@@ -84,7 +84,8 @@ maintenanceUpdateSettings_maintenanceStartTime = Lens.lens (\MaintenanceUpdateSe
 
 instance Prelude.Hashable MaintenanceUpdateSettings where
   hashWithSalt _salt MaintenanceUpdateSettings' {..} =
-    _salt `Prelude.hashWithSalt` maintenanceDay
+    _salt
+      `Prelude.hashWithSalt` maintenanceDay
       `Prelude.hashWithSalt` maintenanceScheduledDate
       `Prelude.hashWithSalt` maintenanceStartTime
 

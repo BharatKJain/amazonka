@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Chime.DeleteChannel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,7 +98,8 @@ instance Core.AWSRequest DeleteChannel where
 
 instance Prelude.Hashable DeleteChannel where
   hashWithSalt _salt DeleteChannel' {..} =
-    _salt `Prelude.hashWithSalt` chimeBearer
+    _salt
+      `Prelude.hashWithSalt` chimeBearer
       `Prelude.hashWithSalt` channelArn
 
 instance Prelude.NFData DeleteChannel where

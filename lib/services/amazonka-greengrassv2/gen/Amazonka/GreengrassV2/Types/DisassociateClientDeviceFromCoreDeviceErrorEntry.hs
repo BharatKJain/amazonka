@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GreengrassV2.Types.DisassociateClientDeviceFromCoreDeviceErrorEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GreengrassV2.Types.DisassociateClientDeviceFromCoreDeviceErrorEntry where
@@ -86,8 +86,8 @@ instance
       ( \x ->
           DisassociateClientDeviceFromCoreDeviceErrorEntry'
             Prelude.<$> (x Data..:? "code")
-              Prelude.<*> (x Data..:? "message")
-              Prelude.<*> (x Data..:? "thingName")
+            Prelude.<*> (x Data..:? "message")
+            Prelude.<*> (x Data..:? "thingName")
       )
 
 instance
@@ -97,7 +97,8 @@ instance
   hashWithSalt
     _salt
     DisassociateClientDeviceFromCoreDeviceErrorEntry' {..} =
-      _salt `Prelude.hashWithSalt` code
+      _salt
+        `Prelude.hashWithSalt` code
         `Prelude.hashWithSalt` message
         `Prelude.hashWithSalt` thingName
 

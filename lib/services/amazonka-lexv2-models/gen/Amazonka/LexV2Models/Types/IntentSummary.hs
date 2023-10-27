@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LexV2Models.Types.IntentSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LexV2Models.Types.IntentSummary where
@@ -139,7 +139,8 @@ instance Data.FromJSON IntentSummary where
 
 instance Prelude.Hashable IntentSummary where
   hashWithSalt _salt IntentSummary' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` inputContexts
       `Prelude.hashWithSalt` intentId
       `Prelude.hashWithSalt` intentName

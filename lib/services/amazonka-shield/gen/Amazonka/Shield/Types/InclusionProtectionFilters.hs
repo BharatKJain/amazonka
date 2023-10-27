@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Shield.Types.InclusionProtectionFilters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Shield.Types.InclusionProtectionFilters where
@@ -83,7 +83,8 @@ inclusionProtectionFilters_resourceTypes = Lens.lens (\InclusionProtectionFilter
 
 instance Prelude.Hashable InclusionProtectionFilters where
   hashWithSalt _salt InclusionProtectionFilters' {..} =
-    _salt `Prelude.hashWithSalt` protectionNames
+    _salt
+      `Prelude.hashWithSalt` protectionNames
       `Prelude.hashWithSalt` resourceArns
       `Prelude.hashWithSalt` resourceTypes
 

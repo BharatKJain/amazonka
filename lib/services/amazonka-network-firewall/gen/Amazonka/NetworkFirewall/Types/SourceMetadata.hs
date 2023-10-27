@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.SourceMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.SourceMetadata where
@@ -90,7 +90,8 @@ instance Data.FromJSON SourceMetadata where
 
 instance Prelude.Hashable SourceMetadata where
   hashWithSalt _salt SourceMetadata' {..} =
-    _salt `Prelude.hashWithSalt` sourceArn
+    _salt
+      `Prelude.hashWithSalt` sourceArn
       `Prelude.hashWithSalt` sourceUpdateToken
 
 instance Prelude.NFData SourceMetadata where

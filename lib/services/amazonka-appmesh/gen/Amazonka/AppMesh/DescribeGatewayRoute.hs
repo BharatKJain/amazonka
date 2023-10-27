@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AppMesh.DescribeGatewayRoute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,7 +141,8 @@ instance Core.AWSRequest DescribeGatewayRoute where
 
 instance Prelude.Hashable DescribeGatewayRoute where
   hashWithSalt _salt DescribeGatewayRoute' {..} =
-    _salt `Prelude.hashWithSalt` meshOwner
+    _salt
+      `Prelude.hashWithSalt` meshOwner
       `Prelude.hashWithSalt` gatewayRouteName
       `Prelude.hashWithSalt` meshName
       `Prelude.hashWithSalt` virtualGatewayName

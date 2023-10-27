@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.BlackFrame
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.BlackFrame where
@@ -123,7 +123,8 @@ blackFrame_minCoveragePercentage = Lens.lens (\BlackFrame' {minCoveragePercentag
 
 instance Prelude.Hashable BlackFrame where
   hashWithSalt _salt BlackFrame' {..} =
-    _salt `Prelude.hashWithSalt` maxPixelThreshold
+    _salt
+      `Prelude.hashWithSalt` maxPixelThreshold
       `Prelude.hashWithSalt` minCoveragePercentage
 
 instance Prelude.NFData BlackFrame where

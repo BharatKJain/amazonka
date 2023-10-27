@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MQ.DescribeBrokerInstanceOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,7 +136,8 @@ instance
     Response.receiveJSON
       ( \s h x ->
           DescribeBrokerInstanceOptionsResponse'
-            Prelude.<$> ( x Data..?> "brokerInstanceOptions"
+            Prelude.<$> ( x
+                            Data..?> "brokerInstanceOptions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "maxResults")
@@ -149,7 +150,8 @@ instance
     DescribeBrokerInstanceOptions
   where
   hashWithSalt _salt DescribeBrokerInstanceOptions' {..} =
-    _salt `Prelude.hashWithSalt` engineType
+    _salt
+      `Prelude.hashWithSalt` engineType
       `Prelude.hashWithSalt` hostInstanceType
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

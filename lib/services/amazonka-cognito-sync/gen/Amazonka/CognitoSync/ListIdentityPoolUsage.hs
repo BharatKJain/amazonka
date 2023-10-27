@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoSync.ListIdentityPoolUsage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -105,7 +105,8 @@ instance Core.AWSRequest ListIdentityPoolUsage where
       ( \s h x ->
           ListIdentityPoolUsageResponse'
             Prelude.<$> (x Data..?> "Count")
-            Prelude.<*> ( x Data..?> "IdentityPoolUsages"
+            Prelude.<*> ( x
+                            Data..?> "IdentityPoolUsages"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "MaxResults")
@@ -115,7 +116,8 @@ instance Core.AWSRequest ListIdentityPoolUsage where
 
 instance Prelude.Hashable ListIdentityPoolUsage where
   hashWithSalt _salt ListIdentityPoolUsage' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListIdentityPoolUsage where

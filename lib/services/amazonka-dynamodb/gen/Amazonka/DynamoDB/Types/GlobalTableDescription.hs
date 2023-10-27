@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.GlobalTableDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.GlobalTableDescription where
@@ -128,14 +128,16 @@ instance Data.FromJSON GlobalTableDescription where
             Prelude.<*> (x Data..:? "GlobalTableArn")
             Prelude.<*> (x Data..:? "GlobalTableName")
             Prelude.<*> (x Data..:? "GlobalTableStatus")
-            Prelude.<*> ( x Data..:? "ReplicationGroup"
+            Prelude.<*> ( x
+                            Data..:? "ReplicationGroup"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable GlobalTableDescription where
   hashWithSalt _salt GlobalTableDescription' {..} =
-    _salt `Prelude.hashWithSalt` creationDateTime
+    _salt
+      `Prelude.hashWithSalt` creationDateTime
       `Prelude.hashWithSalt` globalTableArn
       `Prelude.hashWithSalt` globalTableName
       `Prelude.hashWithSalt` globalTableStatus

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.FeatureSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.FeatureSummary where
@@ -176,7 +176,8 @@ instance Data.FromJSON FeatureSummary where
       ( \x ->
           FeatureSummary'
             Prelude.<$> (x Data..:? "defaultVariation")
-            Prelude.<*> ( x Data..:? "evaluationRules"
+            Prelude.<*> ( x
+                            Data..:? "evaluationRules"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "project")
@@ -191,7 +192,8 @@ instance Data.FromJSON FeatureSummary where
 
 instance Prelude.Hashable FeatureSummary where
   hashWithSalt _salt FeatureSummary' {..} =
-    _salt `Prelude.hashWithSalt` defaultVariation
+    _salt
+      `Prelude.hashWithSalt` defaultVariation
       `Prelude.hashWithSalt` evaluationRules
       `Prelude.hashWithSalt` project
       `Prelude.hashWithSalt` tags

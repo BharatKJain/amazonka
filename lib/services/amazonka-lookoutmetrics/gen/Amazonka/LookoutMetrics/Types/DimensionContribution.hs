@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.DimensionContribution
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.DimensionContribution where
@@ -71,14 +71,16 @@ instance Data.FromJSON DimensionContribution where
       ( \x ->
           DimensionContribution'
             Prelude.<$> (x Data..:? "DimensionName")
-            Prelude.<*> ( x Data..:? "DimensionValueContributionList"
+            Prelude.<*> ( x
+                            Data..:? "DimensionValueContributionList"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable DimensionContribution where
   hashWithSalt _salt DimensionContribution' {..} =
-    _salt `Prelude.hashWithSalt` dimensionName
+    _salt
+      `Prelude.hashWithSalt` dimensionName
       `Prelude.hashWithSalt` dimensionValueContributionList
 
 instance Prelude.NFData DimensionContribution where

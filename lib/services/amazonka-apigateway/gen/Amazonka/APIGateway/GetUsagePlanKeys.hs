@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.GetUsagePlanKeys
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,21 +127,22 @@ instance Core.AWSPager GetUsagePlanKeys where
     | Core.stop
         ( rs
             Lens.^? getUsagePlanKeysResponse_position
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? getUsagePlanKeysResponse_items Prelude.. Lens._Just
+            Lens.^? getUsagePlanKeysResponse_items
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getUsagePlanKeys_position
           Lens..~ rs
           Lens.^? getUsagePlanKeysResponse_position
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetUsagePlanKeys where
   type
@@ -160,7 +161,8 @@ instance Core.AWSRequest GetUsagePlanKeys where
 
 instance Prelude.Hashable GetUsagePlanKeys where
   hashWithSalt _salt GetUsagePlanKeys' {..} =
-    _salt `Prelude.hashWithSalt` limit
+    _salt
+      `Prelude.hashWithSalt` limit
       `Prelude.hashWithSalt` nameQuery
       `Prelude.hashWithSalt` position
       `Prelude.hashWithSalt` usagePlanId

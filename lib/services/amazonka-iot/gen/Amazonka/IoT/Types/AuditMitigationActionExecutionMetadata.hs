@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.AuditMitigationActionExecutionMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.AuditMitigationActionExecutionMetadata where
@@ -167,7 +167,8 @@ instance
   hashWithSalt
     _salt
     AuditMitigationActionExecutionMetadata' {..} =
-      _salt `Prelude.hashWithSalt` actionId
+      _salt
+        `Prelude.hashWithSalt` actionId
         `Prelude.hashWithSalt` actionName
         `Prelude.hashWithSalt` endTime
         `Prelude.hashWithSalt` errorCode

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.TileLayoutStyle
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.TileLayoutStyle where
@@ -76,7 +76,8 @@ instance Data.FromJSON TileLayoutStyle where
 
 instance Prelude.Hashable TileLayoutStyle where
   hashWithSalt _salt TileLayoutStyle' {..} =
-    _salt `Prelude.hashWithSalt` gutter
+    _salt
+      `Prelude.hashWithSalt` gutter
       `Prelude.hashWithSalt` margin
 
 instance Prelude.NFData TileLayoutStyle where

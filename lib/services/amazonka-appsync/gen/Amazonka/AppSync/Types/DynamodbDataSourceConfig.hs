@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.DynamodbDataSourceConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.DynamodbDataSourceConfig where
@@ -113,7 +113,8 @@ instance Data.FromJSON DynamodbDataSourceConfig where
 
 instance Prelude.Hashable DynamodbDataSourceConfig where
   hashWithSalt _salt DynamodbDataSourceConfig' {..} =
-    _salt `Prelude.hashWithSalt` deltaSyncConfig
+    _salt
+      `Prelude.hashWithSalt` deltaSyncConfig
       `Prelude.hashWithSalt` useCallerCredentials
       `Prelude.hashWithSalt` versioned
       `Prelude.hashWithSalt` tableName

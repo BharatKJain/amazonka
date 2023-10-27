@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.RightsizingRecommendation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.RightsizingRecommendation where
@@ -118,7 +118,8 @@ instance Data.FromJSON RightsizingRecommendation where
           RightsizingRecommendation'
             Prelude.<$> (x Data..:? "AccountId")
             Prelude.<*> (x Data..:? "CurrentInstance")
-            Prelude.<*> ( x Data..:? "FindingReasonCodes"
+            Prelude.<*> ( x
+                            Data..:? "FindingReasonCodes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ModifyRecommendationDetail")
@@ -128,7 +129,8 @@ instance Data.FromJSON RightsizingRecommendation where
 
 instance Prelude.Hashable RightsizingRecommendation where
   hashWithSalt _salt RightsizingRecommendation' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` currentInstance
       `Prelude.hashWithSalt` findingReasonCodes
       `Prelude.hashWithSalt` modifyRecommendationDetail

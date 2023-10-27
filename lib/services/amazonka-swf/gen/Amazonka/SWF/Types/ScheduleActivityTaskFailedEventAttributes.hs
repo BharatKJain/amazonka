@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SWF.Types.ScheduleActivityTaskFailedEventAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SWF.Types.ScheduleActivityTaskFailedEventAttributes where
@@ -142,9 +142,9 @@ instance
       ( \x ->
           ScheduleActivityTaskFailedEventAttributes'
             Prelude.<$> (x Data..: "activityType")
-              Prelude.<*> (x Data..: "activityId")
-              Prelude.<*> (x Data..: "cause")
-              Prelude.<*> (x Data..: "decisionTaskCompletedEventId")
+            Prelude.<*> (x Data..: "activityId")
+            Prelude.<*> (x Data..: "cause")
+            Prelude.<*> (x Data..: "decisionTaskCompletedEventId")
       )
 
 instance
@@ -154,7 +154,8 @@ instance
   hashWithSalt
     _salt
     ScheduleActivityTaskFailedEventAttributes' {..} =
-      _salt `Prelude.hashWithSalt` activityType
+      _salt
+        `Prelude.hashWithSalt` activityType
         `Prelude.hashWithSalt` activityId
         `Prelude.hashWithSalt` cause
         `Prelude.hashWithSalt` decisionTaskCompletedEventId

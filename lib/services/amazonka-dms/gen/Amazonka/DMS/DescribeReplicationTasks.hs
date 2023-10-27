@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DMS.DescribeReplicationTasks
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -158,22 +158,22 @@ instance Core.AWSPager DescribeReplicationTasks where
     | Core.stop
         ( rs
             Lens.^? describeReplicationTasksResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeReplicationTasksResponse_replicationTasks
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeReplicationTasks_marker
           Lens..~ rs
           Lens.^? describeReplicationTasksResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeReplicationTasks where
   type
@@ -186,7 +186,8 @@ instance Core.AWSRequest DescribeReplicationTasks where
       ( \s h x ->
           DescribeReplicationTasksResponse'
             Prelude.<$> (x Data..?> "Marker")
-            Prelude.<*> ( x Data..?> "ReplicationTasks"
+            Prelude.<*> ( x
+                            Data..?> "ReplicationTasks"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -194,7 +195,8 @@ instance Core.AWSRequest DescribeReplicationTasks where
 
 instance Prelude.Hashable DescribeReplicationTasks where
   hashWithSalt _salt DescribeReplicationTasks' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` marker
       `Prelude.hashWithSalt` maxRecords
       `Prelude.hashWithSalt` withoutSettings

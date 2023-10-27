@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.EmptyVisual
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.EmptyVisual where
@@ -102,7 +102,8 @@ instance Data.FromJSON EmptyVisual where
 
 instance Prelude.Hashable EmptyVisual where
   hashWithSalt _salt EmptyVisual' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` visualId
       `Prelude.hashWithSalt` dataSetIdentifier
 

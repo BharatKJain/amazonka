@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Athena.CreateNotebook
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -144,7 +144,8 @@ instance Core.AWSRequest CreateNotebook where
 
 instance Prelude.Hashable CreateNotebook where
   hashWithSalt _salt CreateNotebook' {..} =
-    _salt `Prelude.hashWithSalt` clientRequestToken
+    _salt
+      `Prelude.hashWithSalt` clientRequestToken
       `Prelude.hashWithSalt` workGroup
       `Prelude.hashWithSalt` name
 

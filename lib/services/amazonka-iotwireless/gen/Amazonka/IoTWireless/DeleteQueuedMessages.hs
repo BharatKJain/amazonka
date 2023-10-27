@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTWireless.DeleteQueuedMessages
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -122,7 +122,8 @@ instance Core.AWSRequest DeleteQueuedMessages where
 
 instance Prelude.Hashable DeleteQueuedMessages where
   hashWithSalt _salt DeleteQueuedMessages' {..} =
-    _salt `Prelude.hashWithSalt` wirelessDeviceType
+    _salt
+      `Prelude.hashWithSalt` wirelessDeviceType
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` messageId
 

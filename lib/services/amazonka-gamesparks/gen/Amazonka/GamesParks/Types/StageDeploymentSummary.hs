@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GamesParks.Types.StageDeploymentSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GamesParks.Types.StageDeploymentSummary where
@@ -118,7 +118,8 @@ instance Data.FromJSON StageDeploymentSummary where
 
 instance Prelude.Hashable StageDeploymentSummary where
   hashWithSalt _salt StageDeploymentSummary' {..} =
-    _salt `Prelude.hashWithSalt` deploymentAction
+    _salt
+      `Prelude.hashWithSalt` deploymentAction
       `Prelude.hashWithSalt` deploymentId
       `Prelude.hashWithSalt` deploymentResult
       `Prelude.hashWithSalt` deploymentState

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MachineLearning.Types.RedshiftDatabase
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MachineLearning.Types.RedshiftDatabase where
@@ -79,7 +79,8 @@ instance Data.FromJSON RedshiftDatabase where
 
 instance Prelude.Hashable RedshiftDatabase where
   hashWithSalt _salt RedshiftDatabase' {..} =
-    _salt `Prelude.hashWithSalt` databaseName
+    _salt
+      `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` clusterIdentifier
 
 instance Prelude.NFData RedshiftDatabase where

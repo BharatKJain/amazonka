@@ -14,7 +14,7 @@
 -- Module      : Amazonka.BillingConductor.Types.ListBillingGroupsFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.BillingConductor.Types.ListBillingGroupsFilter where
@@ -68,7 +68,8 @@ listBillingGroupsFilter_pricingPlan = Lens.lens (\ListBillingGroupsFilter' {pric
 
 instance Prelude.Hashable ListBillingGroupsFilter where
   hashWithSalt _salt ListBillingGroupsFilter' {..} =
-    _salt `Prelude.hashWithSalt` arns
+    _salt
+      `Prelude.hashWithSalt` arns
       `Prelude.hashWithSalt` pricingPlan
 
 instance Prelude.NFData ListBillingGroupsFilter where

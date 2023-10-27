@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.DeploymentTargets
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.DeploymentTargets where
@@ -162,18 +162,22 @@ instance Data.FromXML DeploymentTargets where
   parseXML x =
     DeploymentTargets'
       Prelude.<$> (x Data..@? "AccountFilterType")
-      Prelude.<*> ( x Data..@? "Accounts" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Accounts"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "AccountsUrl")
-      Prelude.<*> ( x Data..@? "OrganizationalUnitIds"
+      Prelude.<*> ( x
+                      Data..@? "OrganizationalUnitIds"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
 
 instance Prelude.Hashable DeploymentTargets where
   hashWithSalt _salt DeploymentTargets' {..} =
-    _salt `Prelude.hashWithSalt` accountFilterType
+    _salt
+      `Prelude.hashWithSalt` accountFilterType
       `Prelude.hashWithSalt` accounts
       `Prelude.hashWithSalt` accountsUrl
       `Prelude.hashWithSalt` organizationalUnitIds

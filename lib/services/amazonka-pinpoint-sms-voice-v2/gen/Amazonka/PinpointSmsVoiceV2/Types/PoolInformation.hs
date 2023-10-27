@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PinpointSmsVoiceV2.Types.PoolInformation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PinpointSmsVoiceV2.Types.PoolInformation where
@@ -248,7 +248,8 @@ instance Data.FromJSON PoolInformation where
 
 instance Prelude.Hashable PoolInformation where
   hashWithSalt _salt PoolInformation' {..} =
-    _salt `Prelude.hashWithSalt` twoWayChannelArn
+    _salt
+      `Prelude.hashWithSalt` twoWayChannelArn
       `Prelude.hashWithSalt` poolArn
       `Prelude.hashWithSalt` poolId
       `Prelude.hashWithSalt` status

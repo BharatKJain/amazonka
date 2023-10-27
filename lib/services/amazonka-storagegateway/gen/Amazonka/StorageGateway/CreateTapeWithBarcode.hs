@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StorageGateway.CreateTapeWithBarcode
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -255,7 +255,8 @@ instance Core.AWSRequest CreateTapeWithBarcode where
 
 instance Prelude.Hashable CreateTapeWithBarcode where
   hashWithSalt _salt CreateTapeWithBarcode' {..} =
-    _salt `Prelude.hashWithSalt` kmsEncrypted
+    _salt
+      `Prelude.hashWithSalt` kmsEncrypted
       `Prelude.hashWithSalt` kmsKey
       `Prelude.hashWithSalt` poolId
       `Prelude.hashWithSalt` tags

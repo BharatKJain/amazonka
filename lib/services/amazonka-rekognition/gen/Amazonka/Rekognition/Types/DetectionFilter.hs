@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.DetectionFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.DetectionFilter where
@@ -93,7 +93,8 @@ detectionFilter_minConfidence = Lens.lens (\DetectionFilter' {minConfidence} -> 
 
 instance Prelude.Hashable DetectionFilter where
   hashWithSalt _salt DetectionFilter' {..} =
-    _salt `Prelude.hashWithSalt` minBoundingBoxHeight
+    _salt
+      `Prelude.hashWithSalt` minBoundingBoxHeight
       `Prelude.hashWithSalt` minBoundingBoxWidth
       `Prelude.hashWithSalt` minConfidence
 

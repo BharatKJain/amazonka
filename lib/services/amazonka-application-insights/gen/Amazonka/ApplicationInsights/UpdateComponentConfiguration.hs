@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ApplicationInsights.UpdateComponentConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -175,7 +175,8 @@ instance
     UpdateComponentConfiguration
   where
   hashWithSalt _salt UpdateComponentConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` autoConfigEnabled
+    _salt
+      `Prelude.hashWithSalt` autoConfigEnabled
       `Prelude.hashWithSalt` componentConfiguration
       `Prelude.hashWithSalt` monitor
       `Prelude.hashWithSalt` tier

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.CustomSMSLambdaVersionConfigType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.CustomSMSLambdaVersionConfigType where
@@ -99,7 +99,8 @@ instance
   hashWithSalt
     _salt
     CustomSMSLambdaVersionConfigType' {..} =
-      _salt `Prelude.hashWithSalt` lambdaVersion
+      _salt
+        `Prelude.hashWithSalt` lambdaVersion
         `Prelude.hashWithSalt` lambdaArn
 
 instance

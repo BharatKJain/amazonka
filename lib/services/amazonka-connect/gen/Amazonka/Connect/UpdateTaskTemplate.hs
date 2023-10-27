@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Connect.UpdateTaskTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -216,7 +216,8 @@ instance Core.AWSRequest UpdateTaskTemplate where
 
 instance Prelude.Hashable UpdateTaskTemplate where
   hashWithSalt _salt UpdateTaskTemplate' {..} =
-    _salt `Prelude.hashWithSalt` constraints
+    _salt
+      `Prelude.hashWithSalt` constraints
       `Prelude.hashWithSalt` contactFlowId
       `Prelude.hashWithSalt` defaults
       `Prelude.hashWithSalt` description

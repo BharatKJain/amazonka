@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectConnect.CreateInterconnect
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -179,7 +179,8 @@ instance Core.AWSRequest CreateInterconnect where
 
 instance Prelude.Hashable CreateInterconnect where
   hashWithSalt _salt CreateInterconnect' {..} =
-    _salt `Prelude.hashWithSalt` lagId
+    _salt
+      `Prelude.hashWithSalt` lagId
       `Prelude.hashWithSalt` providerName
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` interconnectName

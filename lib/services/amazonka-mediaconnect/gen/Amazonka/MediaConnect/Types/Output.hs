@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConnect.Types.Output
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConnect.Types.Output where
@@ -216,7 +216,8 @@ instance Data.FromJSON Output where
             Prelude.<*> (x Data..:? "entitlementArn")
             Prelude.<*> (x Data..:? "listenerAddress")
             Prelude.<*> (x Data..:? "mediaLiveInputArn")
-            Prelude.<*> ( x Data..:? "mediaStreamOutputConfigurations"
+            Prelude.<*> ( x
+                            Data..:? "mediaStreamOutputConfigurations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "port")

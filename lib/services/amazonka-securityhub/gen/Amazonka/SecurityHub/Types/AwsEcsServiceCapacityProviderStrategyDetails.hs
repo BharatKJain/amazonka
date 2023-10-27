@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEcsServiceCapacityProviderStrategyDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEcsServiceCapacityProviderStrategyDetails where
@@ -110,8 +110,8 @@ instance
       ( \x ->
           AwsEcsServiceCapacityProviderStrategyDetails'
             Prelude.<$> (x Data..:? "Base")
-              Prelude.<*> (x Data..:? "CapacityProvider")
-              Prelude.<*> (x Data..:? "Weight")
+            Prelude.<*> (x Data..:? "CapacityProvider")
+            Prelude.<*> (x Data..:? "Weight")
       )
 
 instance
@@ -121,7 +121,8 @@ instance
   hashWithSalt
     _salt
     AwsEcsServiceCapacityProviderStrategyDetails' {..} =
-      _salt `Prelude.hashWithSalt` base
+      _salt
+        `Prelude.hashWithSalt` base
         `Prelude.hashWithSalt` capacityProvider
         `Prelude.hashWithSalt` weight
 

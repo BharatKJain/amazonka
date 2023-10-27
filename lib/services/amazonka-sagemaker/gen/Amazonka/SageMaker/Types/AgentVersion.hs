@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.AgentVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.AgentVersion where
@@ -78,7 +78,8 @@ instance Data.FromJSON AgentVersion where
 
 instance Prelude.Hashable AgentVersion where
   hashWithSalt _salt AgentVersion' {..} =
-    _salt `Prelude.hashWithSalt` version
+    _salt
+      `Prelude.hashWithSalt` version
       `Prelude.hashWithSalt` agentCount
 
 instance Prelude.NFData AgentVersion where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Amplify.Types.App
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Amplify.Types.App where
@@ -354,7 +354,8 @@ instance Data.FromJSON App where
       ( \x ->
           App'
             Prelude.<$> (x Data..:? "autoBranchCreationConfig")
-            Prelude.<*> ( x Data..:? "autoBranchCreationPatterns"
+            Prelude.<*> ( x
+                            Data..:? "autoBranchCreationPatterns"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "basicAuthCredentials")
@@ -375,7 +376,8 @@ instance Data.FromJSON App where
             Prelude.<*> (x Data..: "platform")
             Prelude.<*> (x Data..: "createTime")
             Prelude.<*> (x Data..: "updateTime")
-            Prelude.<*> ( x Data..:? "environmentVariables"
+            Prelude.<*> ( x
+                            Data..:? "environmentVariables"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "defaultDomain")

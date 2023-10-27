@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerEdge.Types.DeploymentModel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerEdge.Types.DeploymentModel where
@@ -120,7 +120,8 @@ deploymentModel_statusReason = Lens.lens (\DeploymentModel' {statusReason} -> st
 
 instance Prelude.Hashable DeploymentModel where
   hashWithSalt _salt DeploymentModel' {..} =
-    _salt `Prelude.hashWithSalt` desiredState
+    _salt
+      `Prelude.hashWithSalt` desiredState
       `Prelude.hashWithSalt` modelHandle
       `Prelude.hashWithSalt` modelName
       `Prelude.hashWithSalt` modelVersion

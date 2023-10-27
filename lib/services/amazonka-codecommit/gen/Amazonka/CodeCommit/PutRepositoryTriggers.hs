@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeCommit.PutRepositoryTriggers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -109,7 +109,8 @@ instance Core.AWSRequest PutRepositoryTriggers where
 
 instance Prelude.Hashable PutRepositoryTriggers where
   hashWithSalt _salt PutRepositoryTriggers' {..} =
-    _salt `Prelude.hashWithSalt` repositoryName
+    _salt
+      `Prelude.hashWithSalt` repositoryName
       `Prelude.hashWithSalt` triggers
 
 instance Prelude.NFData PutRepositoryTriggers where

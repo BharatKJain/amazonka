@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaPackage.ListChannels
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -91,20 +91,23 @@ instance Core.AWSPager ListChannels where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listChannelsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listChannelsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
-            Lens.^? listChannelsResponse_channels Prelude.. Lens._Just
+            Lens.^? listChannelsResponse_channels
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listChannels_nextToken
           Lens..~ rs
-          Lens.^? listChannelsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listChannelsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListChannels where
   type AWSResponse ListChannels = ListChannelsResponse
@@ -121,7 +124,8 @@ instance Core.AWSRequest ListChannels where
 
 instance Prelude.Hashable ListChannels where
   hashWithSalt _salt ListChannels' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 
 instance Prelude.NFData ListChannels where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.TimeSpan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.TimeSpan where
@@ -104,7 +104,8 @@ instance Data.FromJSON TimeSpan where
 
 instance Prelude.Hashable TimeSpan where
   hashWithSalt _salt TimeSpan' {..} =
-    _salt `Prelude.hashWithSalt` duration
+    _salt
+      `Prelude.hashWithSalt` duration
       `Prelude.hashWithSalt` startTime
 
 instance Prelude.NFData TimeSpan where

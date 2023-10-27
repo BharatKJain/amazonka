@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Route53Resolver.AssociateResolverRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -128,7 +128,8 @@ instance Core.AWSRequest AssociateResolverRule where
 
 instance Prelude.Hashable AssociateResolverRule where
   hashWithSalt _salt AssociateResolverRule' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` resolverRuleId
       `Prelude.hashWithSalt` vPCId
 

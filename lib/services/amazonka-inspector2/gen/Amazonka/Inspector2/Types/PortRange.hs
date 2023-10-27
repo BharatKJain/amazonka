@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.PortRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.PortRange where
@@ -69,12 +69,14 @@ instance Data.FromJSON PortRange where
       "PortRange"
       ( \x ->
           PortRange'
-            Prelude.<$> (x Data..: "begin") Prelude.<*> (x Data..: "end")
+            Prelude.<$> (x Data..: "begin")
+            Prelude.<*> (x Data..: "end")
       )
 
 instance Prelude.Hashable PortRange where
   hashWithSalt _salt PortRange' {..} =
-    _salt `Prelude.hashWithSalt` begin
+    _salt
+      `Prelude.hashWithSalt` begin
       `Prelude.hashWithSalt` end
 
 instance Prelude.NFData PortRange where

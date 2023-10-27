@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.PatchSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.PatchSource where
@@ -138,7 +138,8 @@ instance Data.FromJSON PatchSource where
 
 instance Prelude.Hashable PatchSource where
   hashWithSalt _salt PatchSource' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` products
       `Prelude.hashWithSalt` configuration
 

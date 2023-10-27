@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECRPublic.Types.RepositoryCatalogDataInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECRPublic.Types.RepositoryCatalogDataInput where
@@ -218,7 +218,8 @@ repositoryCatalogDataInput_usageText = Lens.lens (\RepositoryCatalogDataInput' {
 
 instance Prelude.Hashable RepositoryCatalogDataInput where
   hashWithSalt _salt RepositoryCatalogDataInput' {..} =
-    _salt `Prelude.hashWithSalt` aboutText
+    _salt
+      `Prelude.hashWithSalt` aboutText
       `Prelude.hashWithSalt` architectures
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` logoImageBlob

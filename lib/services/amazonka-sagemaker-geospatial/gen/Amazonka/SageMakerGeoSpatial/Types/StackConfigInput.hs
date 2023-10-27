@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.StackConfigInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.StackConfigInput where
@@ -54,11 +54,9 @@ newStackConfigInput =
       targetBands = Prelude.Nothing
     }
 
--- |
 stackConfigInput_outputResolution :: Lens.Lens' StackConfigInput (Prelude.Maybe OutputResolutionStackInput)
 stackConfigInput_outputResolution = Lens.lens (\StackConfigInput' {outputResolution} -> outputResolution) (\s@StackConfigInput' {} a -> s {outputResolution = a} :: StackConfigInput)
 
--- |
 stackConfigInput_targetBands :: Lens.Lens' StackConfigInput (Prelude.Maybe (Prelude.NonEmpty Prelude.Text))
 stackConfigInput_targetBands = Lens.lens (\StackConfigInput' {targetBands} -> targetBands) (\s@StackConfigInput' {} a -> s {targetBands = a} :: StackConfigInput) Prelude.. Lens.mapping Lens.coerced
 
@@ -74,7 +72,8 @@ instance Data.FromJSON StackConfigInput where
 
 instance Prelude.Hashable StackConfigInput where
   hashWithSalt _salt StackConfigInput' {..} =
-    _salt `Prelude.hashWithSalt` outputResolution
+    _salt
+      `Prelude.hashWithSalt` outputResolution
       `Prelude.hashWithSalt` targetBands
 
 instance Prelude.NFData StackConfigInput where

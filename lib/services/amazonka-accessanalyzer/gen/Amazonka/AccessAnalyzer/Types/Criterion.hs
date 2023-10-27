@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AccessAnalyzer.Types.Criterion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AccessAnalyzer.Types.Criterion where
@@ -99,7 +99,8 @@ instance Data.FromJSON Criterion where
 
 instance Prelude.Hashable Criterion where
   hashWithSalt _salt Criterion' {..} =
-    _salt `Prelude.hashWithSalt` contains
+    _salt
+      `Prelude.hashWithSalt` contains
       `Prelude.hashWithSalt` eq
       `Prelude.hashWithSalt` exists
       `Prelude.hashWithSalt` neq

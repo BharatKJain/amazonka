@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodePipeline.Types.ActionTypeIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodePipeline.Types.ActionTypeIdentifier where
@@ -149,7 +149,8 @@ instance Data.FromJSON ActionTypeIdentifier where
 
 instance Prelude.Hashable ActionTypeIdentifier where
   hashWithSalt _salt ActionTypeIdentifier' {..} =
-    _salt `Prelude.hashWithSalt` category
+    _salt
+      `Prelude.hashWithSalt` category
       `Prelude.hashWithSalt` owner
       `Prelude.hashWithSalt` provider
       `Prelude.hashWithSalt` version

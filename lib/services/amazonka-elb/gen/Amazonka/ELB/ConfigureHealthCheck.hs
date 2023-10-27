@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ELB.ConfigureHealthCheck
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -115,7 +115,8 @@ instance Core.AWSRequest ConfigureHealthCheck where
 
 instance Prelude.Hashable ConfigureHealthCheck where
   hashWithSalt _salt ConfigureHealthCheck' {..} =
-    _salt `Prelude.hashWithSalt` loadBalancerName
+    _salt
+      `Prelude.hashWithSalt` loadBalancerName
       `Prelude.hashWithSalt` healthCheck
 
 instance Prelude.NFData ConfigureHealthCheck where

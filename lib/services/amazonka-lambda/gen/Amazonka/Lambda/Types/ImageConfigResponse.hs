@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lambda.Types.ImageConfigResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lambda.Types.ImageConfigResponse where
@@ -76,7 +76,8 @@ instance Data.FromJSON ImageConfigResponse where
 
 instance Prelude.Hashable ImageConfigResponse where
   hashWithSalt _salt ImageConfigResponse' {..} =
-    _salt `Prelude.hashWithSalt` error
+    _salt
+      `Prelude.hashWithSalt` error
       `Prelude.hashWithSalt` imageConfig
 
 instance Prelude.NFData ImageConfigResponse where

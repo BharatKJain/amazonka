@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Proton.GetServiceInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest GetServiceInstance where
 
 instance Prelude.Hashable GetServiceInstance where
   hashWithSalt _salt GetServiceInstance' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` serviceName
 
 instance Prelude.NFData GetServiceInstance where

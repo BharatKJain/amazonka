@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53RecoveryControlConfig.Types.Cluster
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53RecoveryControlConfig.Types.Cluster where
@@ -106,7 +106,8 @@ instance Data.FromJSON Cluster where
       ( \x ->
           Cluster'
             Prelude.<$> (x Data..:? "ClusterArn")
-            Prelude.<*> ( x Data..:? "ClusterEndpoints"
+            Prelude.<*> ( x
+                            Data..:? "ClusterEndpoints"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Name")
@@ -115,7 +116,8 @@ instance Data.FromJSON Cluster where
 
 instance Prelude.Hashable Cluster where
   hashWithSalt _salt Cluster' {..} =
-    _salt `Prelude.hashWithSalt` clusterArn
+    _salt
+      `Prelude.hashWithSalt` clusterArn
       `Prelude.hashWithSalt` clusterEndpoints
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` status

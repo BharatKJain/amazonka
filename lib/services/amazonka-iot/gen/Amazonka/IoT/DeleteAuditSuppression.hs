@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoT.DeleteAuditSuppression
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest DeleteAuditSuppression where
 
 instance Prelude.Hashable DeleteAuditSuppression where
   hashWithSalt _salt DeleteAuditSuppression' {..} =
-    _salt `Prelude.hashWithSalt` checkName
+    _salt
+      `Prelude.hashWithSalt` checkName
       `Prelude.hashWithSalt` resourceIdentifier
 
 instance Prelude.NFData DeleteAuditSuppression where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectParticipant.Types.MessageMetadata
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectParticipant.Types.MessageMetadata where
@@ -75,7 +75,8 @@ instance Data.FromJSON MessageMetadata where
 
 instance Prelude.Hashable MessageMetadata where
   hashWithSalt _salt MessageMetadata' {..} =
-    _salt `Prelude.hashWithSalt` messageId
+    _salt
+      `Prelude.hashWithSalt` messageId
       `Prelude.hashWithSalt` receipts
 
 instance Prelude.NFData MessageMetadata where

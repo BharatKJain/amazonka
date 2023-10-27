@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.InputDeviceHdSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.InputDeviceHdSettings where
@@ -162,7 +162,8 @@ instance Data.FromJSON InputDeviceHdSettings where
 
 instance Prelude.Hashable InputDeviceHdSettings where
   hashWithSalt _salt InputDeviceHdSettings' {..} =
-    _salt `Prelude.hashWithSalt` activeInput
+    _salt
+      `Prelude.hashWithSalt` activeInput
       `Prelude.hashWithSalt` configuredInput
       `Prelude.hashWithSalt` deviceState
       `Prelude.hashWithSalt` framerate

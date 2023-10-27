@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.ColumnImportance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.ColumnImportance where
@@ -79,7 +79,8 @@ instance Data.FromJSON ColumnImportance where
 
 instance Prelude.Hashable ColumnImportance where
   hashWithSalt _salt ColumnImportance' {..} =
-    _salt `Prelude.hashWithSalt` columnName
+    _salt
+      `Prelude.hashWithSalt` columnName
       `Prelude.hashWithSalt` importance
 
 instance Prelude.NFData ColumnImportance where

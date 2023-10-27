@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.HttpRoute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.HttpRoute where
@@ -102,7 +102,8 @@ instance Data.FromJSON HttpRoute where
 
 instance Prelude.Hashable HttpRoute where
   hashWithSalt _salt HttpRoute' {..} =
-    _salt `Prelude.hashWithSalt` retryPolicy
+    _salt
+      `Prelude.hashWithSalt` retryPolicy
       `Prelude.hashWithSalt` timeout
       `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` match

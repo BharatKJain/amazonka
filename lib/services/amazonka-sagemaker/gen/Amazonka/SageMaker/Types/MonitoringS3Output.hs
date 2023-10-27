@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.MonitoringS3Output
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.MonitoringS3Output where
@@ -102,7 +102,8 @@ instance Data.FromJSON MonitoringS3Output where
 
 instance Prelude.Hashable MonitoringS3Output where
   hashWithSalt _salt MonitoringS3Output' {..} =
-    _salt `Prelude.hashWithSalt` s3UploadMode
+    _salt
+      `Prelude.hashWithSalt` s3UploadMode
       `Prelude.hashWithSalt` s3Uri
       `Prelude.hashWithSalt` localPath
 

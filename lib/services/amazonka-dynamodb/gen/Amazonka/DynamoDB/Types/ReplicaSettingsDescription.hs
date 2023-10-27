@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.ReplicaSettingsDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.ReplicaSettingsDescription where
@@ -194,7 +194,8 @@ instance Data.FromJSON ReplicaSettingsDescription where
       ( \x ->
           ReplicaSettingsDescription'
             Prelude.<$> (x Data..:? "ReplicaBillingModeSummary")
-            Prelude.<*> ( x Data..:? "ReplicaGlobalSecondaryIndexSettings"
+            Prelude.<*> ( x
+                            Data..:? "ReplicaGlobalSecondaryIndexSettings"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> ( x

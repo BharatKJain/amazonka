@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SES.Types.ReceiptRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SES.Types.ReceiptRule where
@@ -160,11 +160,15 @@ receiptRule_name = Lens.lens (\ReceiptRule' {name} -> name) (\s@ReceiptRule' {} 
 instance Data.FromXML ReceiptRule where
   parseXML x =
     ReceiptRule'
-      Prelude.<$> ( x Data..@? "Actions" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Actions"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "Enabled")
-      Prelude.<*> ( x Data..@? "Recipients" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "Recipients"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "member")
                   )
       Prelude.<*> (x Data..@? "ScanEnabled")
@@ -173,7 +177,8 @@ instance Data.FromXML ReceiptRule where
 
 instance Prelude.Hashable ReceiptRule where
   hashWithSalt _salt ReceiptRule' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` recipients
       `Prelude.hashWithSalt` scanEnabled

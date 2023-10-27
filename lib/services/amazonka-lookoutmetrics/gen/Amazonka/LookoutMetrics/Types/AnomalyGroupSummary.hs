@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutMetrics.Types.AnomalyGroupSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutMetrics.Types.AnomalyGroupSummary where
@@ -105,7 +105,8 @@ instance Data.FromJSON AnomalyGroupSummary where
 
 instance Prelude.Hashable AnomalyGroupSummary where
   hashWithSalt _salt AnomalyGroupSummary' {..} =
-    _salt `Prelude.hashWithSalt` anomalyGroupId
+    _salt
+      `Prelude.hashWithSalt` anomalyGroupId
       `Prelude.hashWithSalt` anomalyGroupScore
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` primaryMetricName

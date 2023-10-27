@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Inspector2.Types.FilterCriteria
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Inspector2.Types.FilterCriteria where
@@ -482,7 +482,8 @@ instance Data.FromJSON FilterCriteria where
 
 instance Prelude.Hashable FilterCriteria where
   hashWithSalt _salt FilterCriteria' {..} =
-    _salt `Prelude.hashWithSalt` awsAccountId
+    _salt
+      `Prelude.hashWithSalt` awsAccountId
       `Prelude.hashWithSalt` componentId
       `Prelude.hashWithSalt` componentType
       `Prelude.hashWithSalt` ec2InstanceImageId

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Evidently.Types.PutProjectEventsResultEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Evidently.Types.PutProjectEventsResultEntry where
@@ -92,7 +92,8 @@ instance Data.FromJSON PutProjectEventsResultEntry where
 
 instance Prelude.Hashable PutProjectEventsResultEntry where
   hashWithSalt _salt PutProjectEventsResultEntry' {..} =
-    _salt `Prelude.hashWithSalt` errorCode
+    _salt
+      `Prelude.hashWithSalt` errorCode
       `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` eventId
 

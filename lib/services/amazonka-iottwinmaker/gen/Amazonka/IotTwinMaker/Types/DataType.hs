@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IotTwinMaker.Types.DataType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IotTwinMaker.Types.DataType where
@@ -109,7 +109,8 @@ instance Data.FromJSON DataType where
 
 instance Prelude.Hashable DataType where
   hashWithSalt _salt DataType' {..} =
-    _salt `Prelude.hashWithSalt` allowedValues
+    _salt
+      `Prelude.hashWithSalt` allowedValues
       `Prelude.hashWithSalt` nestedType
       `Prelude.hashWithSalt` relationship
       `Prelude.hashWithSalt` unitOfMeasure

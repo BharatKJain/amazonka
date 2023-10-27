@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pipes.Types.EcsEnvironmentFile
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pipes.Types.EcsEnvironmentFile where
@@ -98,12 +98,14 @@ instance Data.FromJSON EcsEnvironmentFile where
       "EcsEnvironmentFile"
       ( \x ->
           EcsEnvironmentFile'
-            Prelude.<$> (x Data..: "type") Prelude.<*> (x Data..: "value")
+            Prelude.<$> (x Data..: "type")
+            Prelude.<*> (x Data..: "value")
       )
 
 instance Prelude.Hashable EcsEnvironmentFile where
   hashWithSalt _salt EcsEnvironmentFile' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData EcsEnvironmentFile where

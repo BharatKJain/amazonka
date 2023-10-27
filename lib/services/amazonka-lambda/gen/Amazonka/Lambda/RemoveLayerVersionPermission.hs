@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lambda.RemoveLayerVersionPermission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -133,7 +133,8 @@ instance
     RemoveLayerVersionPermission
   where
   hashWithSalt _salt RemoveLayerVersionPermission' {..} =
-    _salt `Prelude.hashWithSalt` revisionId
+    _salt
+      `Prelude.hashWithSalt` revisionId
       `Prelude.hashWithSalt` layerName
       `Prelude.hashWithSalt` versionNumber
       `Prelude.hashWithSalt` statementId

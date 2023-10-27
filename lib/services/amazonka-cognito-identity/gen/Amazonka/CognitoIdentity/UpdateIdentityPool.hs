@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentity.UpdateIdentityPool
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -218,7 +218,8 @@ instance Core.AWSRequest UpdateIdentityPool where
 
 instance Prelude.Hashable UpdateIdentityPool where
   hashWithSalt _salt UpdateIdentityPool' {..} =
-    _salt `Prelude.hashWithSalt` allowClassicFlow
+    _salt
+      `Prelude.hashWithSalt` allowClassicFlow
       `Prelude.hashWithSalt` cognitoIdentityProviders
       `Prelude.hashWithSalt` developerProviderName
       `Prelude.hashWithSalt` identityPoolTags

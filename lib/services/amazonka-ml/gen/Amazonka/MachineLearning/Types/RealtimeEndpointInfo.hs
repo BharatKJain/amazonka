@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MachineLearning.Types.RealtimeEndpointInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MachineLearning.Types.RealtimeEndpointInfo where
@@ -134,7 +134,8 @@ instance Data.FromJSON RealtimeEndpointInfo where
 
 instance Prelude.Hashable RealtimeEndpointInfo where
   hashWithSalt _salt RealtimeEndpointInfo' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` endpointStatus
       `Prelude.hashWithSalt` endpointUrl
       `Prelude.hashWithSalt` peakRequestsPerSecond

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Forecast.ListExplainabilities
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -154,22 +154,22 @@ instance Core.AWSPager ListExplainabilities where
     | Core.stop
         ( rs
             Lens.^? listExplainabilitiesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listExplainabilitiesResponse_explainabilities
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listExplainabilities_nextToken
           Lens..~ rs
           Lens.^? listExplainabilitiesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListExplainabilities where
   type
@@ -181,7 +181,8 @@ instance Core.AWSRequest ListExplainabilities where
     Response.receiveJSON
       ( \s h x ->
           ListExplainabilitiesResponse'
-            Prelude.<$> ( x Data..?> "Explainabilities"
+            Prelude.<$> ( x
+                            Data..?> "Explainabilities"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -190,7 +191,8 @@ instance Core.AWSRequest ListExplainabilities where
 
 instance Prelude.Hashable ListExplainabilities where
   hashWithSalt _salt ListExplainabilities' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
 

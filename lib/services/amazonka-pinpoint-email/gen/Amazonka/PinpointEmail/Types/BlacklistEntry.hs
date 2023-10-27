@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PinpointEmail.Types.BlacklistEntry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PinpointEmail.Types.BlacklistEntry where
@@ -92,7 +92,8 @@ instance Data.FromJSON BlacklistEntry where
 
 instance Prelude.Hashable BlacklistEntry where
   hashWithSalt _salt BlacklistEntry' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` listingTime
       `Prelude.hashWithSalt` rblName
 

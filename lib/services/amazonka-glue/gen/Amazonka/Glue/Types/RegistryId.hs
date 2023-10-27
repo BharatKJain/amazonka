@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.RegistryId
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.RegistryId where
@@ -71,7 +71,8 @@ registryId_registryName = Lens.lens (\RegistryId' {registryName} -> registryName
 
 instance Prelude.Hashable RegistryId where
   hashWithSalt _salt RegistryId' {..} =
-    _salt `Prelude.hashWithSalt` registryArn
+    _salt
+      `Prelude.hashWithSalt` registryArn
       `Prelude.hashWithSalt` registryName
 
 instance Prelude.NFData RegistryId where

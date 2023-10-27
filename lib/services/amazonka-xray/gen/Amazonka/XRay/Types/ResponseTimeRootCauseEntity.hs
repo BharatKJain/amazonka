@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.ResponseTimeRootCauseEntity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.ResponseTimeRootCauseEntity where
@@ -86,7 +86,8 @@ instance Data.FromJSON ResponseTimeRootCauseEntity where
 
 instance Prelude.Hashable ResponseTimeRootCauseEntity where
   hashWithSalt _salt ResponseTimeRootCauseEntity' {..} =
-    _salt `Prelude.hashWithSalt` coverage
+    _salt
+      `Prelude.hashWithSalt` coverage
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` remote
 

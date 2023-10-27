@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.DescribeDashboard
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -132,7 +132,8 @@ instance Core.AWSRequest DescribeDashboard where
 
 instance Prelude.Hashable DescribeDashboard where
   hashWithSalt _salt DescribeDashboard' {..} =
-    _salt `Prelude.hashWithSalt` aliasName
+    _salt
+      `Prelude.hashWithSalt` aliasName
       `Prelude.hashWithSalt` versionNumber
       `Prelude.hashWithSalt` awsAccountId
       `Prelude.hashWithSalt` dashboardId

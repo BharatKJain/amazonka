@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectConnect.CreateConnection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -207,7 +207,8 @@ instance Core.AWSRequest CreateConnection where
 
 instance Prelude.Hashable CreateConnection where
   hashWithSalt _salt CreateConnection' {..} =
-    _salt `Prelude.hashWithSalt` lagId
+    _salt
+      `Prelude.hashWithSalt` lagId
       `Prelude.hashWithSalt` providerName
       `Prelude.hashWithSalt` requestMACSec
       `Prelude.hashWithSalt` tags

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ImageBuilder.Types.ImagePackage
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ImageBuilder.Types.ImagePackage where
@@ -80,7 +80,8 @@ instance Data.FromJSON ImagePackage where
 
 instance Prelude.Hashable ImagePackage where
   hashWithSalt _salt ImagePackage' {..} =
-    _salt `Prelude.hashWithSalt` packageName
+    _salt
+      `Prelude.hashWithSalt` packageName
       `Prelude.hashWithSalt` packageVersion
 
 instance Prelude.NFData ImagePackage where

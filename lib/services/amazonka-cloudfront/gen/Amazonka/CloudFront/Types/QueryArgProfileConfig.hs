@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.QueryArgProfileConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.QueryArgProfileConfig where
@@ -86,7 +86,8 @@ instance Data.FromXML QueryArgProfileConfig where
 
 instance Prelude.Hashable QueryArgProfileConfig where
   hashWithSalt _salt QueryArgProfileConfig' {..} =
-    _salt `Prelude.hashWithSalt` queryArgProfiles
+    _salt
+      `Prelude.hashWithSalt` queryArgProfiles
       `Prelude.hashWithSalt` forwardWhenQueryArgProfileIsUnknown
 
 instance Prelude.NFData QueryArgProfileConfig where

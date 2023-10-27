@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.ThemeError
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.ThemeError where
@@ -75,7 +75,8 @@ instance Data.FromJSON ThemeError where
 
 instance Prelude.Hashable ThemeError where
   hashWithSalt _salt ThemeError' {..} =
-    _salt `Prelude.hashWithSalt` message
+    _salt
+      `Prelude.hashWithSalt` message
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData ThemeError where

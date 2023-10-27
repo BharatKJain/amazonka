@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53Domains.Types.PriceWithCurrency
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53Domains.Types.PriceWithCurrency where
@@ -78,7 +78,8 @@ instance Data.FromJSON PriceWithCurrency where
 
 instance Prelude.Hashable PriceWithCurrency where
   hashWithSalt _salt PriceWithCurrency' {..} =
-    _salt `Prelude.hashWithSalt` price
+    _salt
+      `Prelude.hashWithSalt` price
       `Prelude.hashWithSalt` currency
 
 instance Prelude.NFData PriceWithCurrency where

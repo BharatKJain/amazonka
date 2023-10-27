@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.WorkflowRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.WorkflowRun where
@@ -173,14 +173,16 @@ instance Data.FromJSON WorkflowRun where
             Prelude.<*> (x Data..:? "Statistics")
             Prelude.<*> (x Data..:? "Status")
             Prelude.<*> (x Data..:? "WorkflowRunId")
-            Prelude.<*> ( x Data..:? "WorkflowRunProperties"
+            Prelude.<*> ( x
+                            Data..:? "WorkflowRunProperties"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable WorkflowRun where
   hashWithSalt _salt WorkflowRun' {..} =
-    _salt `Prelude.hashWithSalt` completedOn
+    _salt
+      `Prelude.hashWithSalt` completedOn
       `Prelude.hashWithSalt` errorMessage
       `Prelude.hashWithSalt` graph
       `Prelude.hashWithSalt` name

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IdentityStore.Types.GroupMembership
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IdentityStore.Types.GroupMembership where
@@ -104,7 +104,8 @@ instance Data.FromJSON GroupMembership where
 
 instance Prelude.Hashable GroupMembership where
   hashWithSalt _salt GroupMembership' {..} =
-    _salt `Prelude.hashWithSalt` groupId
+    _salt
+      `Prelude.hashWithSalt` groupId
       `Prelude.hashWithSalt` memberId
       `Prelude.hashWithSalt` membershipId
       `Prelude.hashWithSalt` identityStoreId

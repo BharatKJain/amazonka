@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EKS.ListFargateProfiles
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -138,22 +138,22 @@ instance Core.AWSPager ListFargateProfiles where
     | Core.stop
         ( rs
             Lens.^? listFargateProfilesResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listFargateProfilesResponse_fargateProfileNames
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listFargateProfiles_nextToken
           Lens..~ rs
           Lens.^? listFargateProfilesResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListFargateProfiles where
   type
@@ -165,7 +165,8 @@ instance Core.AWSRequest ListFargateProfiles where
     Response.receiveJSON
       ( \s h x ->
           ListFargateProfilesResponse'
-            Prelude.<$> ( x Data..?> "fargateProfileNames"
+            Prelude.<$> ( x
+                            Data..?> "fargateProfileNames"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "nextToken")
@@ -174,7 +175,8 @@ instance Core.AWSRequest ListFargateProfiles where
 
 instance Prelude.Hashable ListFargateProfiles where
   hashWithSalt _salt ListFargateProfiles' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` clusterName
 

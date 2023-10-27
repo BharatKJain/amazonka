@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Synthetics.Types.CanaryRun
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Synthetics.Types.CanaryRun where
@@ -109,7 +109,8 @@ instance Data.FromJSON CanaryRun where
 
 instance Prelude.Hashable CanaryRun where
   hashWithSalt _salt CanaryRun' {..} =
-    _salt `Prelude.hashWithSalt` artifactS3Location
+    _salt
+      `Prelude.hashWithSalt` artifactS3Location
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` status

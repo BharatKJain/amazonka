@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.NeptuneSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.NeptuneSettings where
@@ -183,7 +183,8 @@ instance Data.FromJSON NeptuneSettings where
 
 instance Prelude.Hashable NeptuneSettings where
   hashWithSalt _salt NeptuneSettings' {..} =
-    _salt `Prelude.hashWithSalt` errorRetryDuration
+    _salt
+      `Prelude.hashWithSalt` errorRetryDuration
       `Prelude.hashWithSalt` iamAuthEnabled
       `Prelude.hashWithSalt` maxFileSize
       `Prelude.hashWithSalt` maxRetryCount

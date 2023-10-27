@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SSM.Types.MaintenanceWindowExecutionTaskIdentity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SSM.Types.MaintenanceWindowExecutionTaskIdentity where
@@ -177,7 +177,8 @@ instance
   hashWithSalt
     _salt
     MaintenanceWindowExecutionTaskIdentity' {..} =
-      _salt `Prelude.hashWithSalt` alarmConfiguration
+      _salt
+        `Prelude.hashWithSalt` alarmConfiguration
         `Prelude.hashWithSalt` endTime
         `Prelude.hashWithSalt` startTime
         `Prelude.hashWithSalt` status

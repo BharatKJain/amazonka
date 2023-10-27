@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Account.Types.AlternateContact
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Account.Types.AlternateContact where
@@ -107,7 +107,8 @@ instance Data.FromJSON AlternateContact where
 
 instance Prelude.Hashable AlternateContact where
   hashWithSalt _salt AlternateContact' {..} =
-    _salt `Prelude.hashWithSalt` alternateContactType
+    _salt
+      `Prelude.hashWithSalt` alternateContactType
       `Prelude.hashWithSalt` emailAddress
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` phoneNumber

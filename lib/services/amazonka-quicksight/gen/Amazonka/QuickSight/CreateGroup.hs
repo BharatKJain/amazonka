@@ -16,7 +16,7 @@
 -- Module      : Amazonka.QuickSight.CreateGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -25,7 +25,7 @@
 -- more than 10,000 groups in a namespace, contact AWS Support.
 --
 -- The permissions resource is
--- @arn:aws:quicksight:\<your-region>:\<relevant-aws-account-id>:group\/default\/\<group-name> @.
+-- @arn:aws:quicksight:\<your-region>:@/@\<relevant-aws-account-id>@/@:group\/default\/@/@\<group-name>@/@ @.
 --
 -- The response is a group object.
 module Amazonka.QuickSight.CreateGroup
@@ -141,7 +141,8 @@ instance Core.AWSRequest CreateGroup where
 
 instance Prelude.Hashable CreateGroup where
   hashWithSalt _salt CreateGroup' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` groupName
       `Prelude.hashWithSalt` awsAccountId
       `Prelude.hashWithSalt` namespace

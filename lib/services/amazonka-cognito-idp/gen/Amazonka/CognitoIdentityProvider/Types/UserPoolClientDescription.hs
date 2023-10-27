@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.UserPoolClientDescription
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.UserPoolClientDescription where
@@ -88,7 +88,8 @@ instance Data.FromJSON UserPoolClientDescription where
 
 instance Prelude.Hashable UserPoolClientDescription where
   hashWithSalt _salt UserPoolClientDescription' {..} =
-    _salt `Prelude.hashWithSalt` clientId
+    _salt
+      `Prelude.hashWithSalt` clientId
       `Prelude.hashWithSalt` clientName
       `Prelude.hashWithSalt` userPoolId
 

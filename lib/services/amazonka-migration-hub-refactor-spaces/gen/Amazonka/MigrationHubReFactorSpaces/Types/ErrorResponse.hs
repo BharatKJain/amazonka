@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubReFactorSpaces.Types.ErrorResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubReFactorSpaces.Types.ErrorResponse where
@@ -108,7 +108,8 @@ instance Data.FromJSON ErrorResponse where
       ( \x ->
           ErrorResponse'
             Prelude.<$> (x Data..:? "AccountId")
-            Prelude.<*> ( x Data..:? "AdditionalDetails"
+            Prelude.<*> ( x
+                            Data..:? "AdditionalDetails"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "Code")
@@ -119,7 +120,8 @@ instance Data.FromJSON ErrorResponse where
 
 instance Prelude.Hashable ErrorResponse where
   hashWithSalt _salt ErrorResponse' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` additionalDetails
       `Prelude.hashWithSalt` code
       `Prelude.hashWithSalt` message

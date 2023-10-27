@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.VisualCustomActionOperation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.VisualCustomActionOperation where
@@ -108,7 +108,8 @@ instance Data.FromJSON VisualCustomActionOperation where
 
 instance Prelude.Hashable VisualCustomActionOperation where
   hashWithSalt _salt VisualCustomActionOperation' {..} =
-    _salt `Prelude.hashWithSalt` filterOperation
+    _salt
+      `Prelude.hashWithSalt` filterOperation
       `Prelude.hashWithSalt` navigationOperation
       `Prelude.hashWithSalt` setParametersOperation
       `Prelude.hashWithSalt` uRLOperation

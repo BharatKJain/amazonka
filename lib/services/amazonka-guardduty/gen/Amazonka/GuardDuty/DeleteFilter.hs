@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GuardDuty.DeleteFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -100,7 +100,8 @@ instance Core.AWSRequest DeleteFilter where
 
 instance Prelude.Hashable DeleteFilter where
   hashWithSalt _salt DeleteFilter' {..} =
-    _salt `Prelude.hashWithSalt` detectorId
+    _salt
+      `Prelude.hashWithSalt` detectorId
       `Prelude.hashWithSalt` filterName
 
 instance Prelude.NFData DeleteFilter where

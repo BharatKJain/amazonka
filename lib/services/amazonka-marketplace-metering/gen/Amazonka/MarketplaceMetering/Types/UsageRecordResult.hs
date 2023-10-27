@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MarketplaceMetering.Types.UsageRecordResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MarketplaceMetering.Types.UsageRecordResult where
@@ -151,7 +151,8 @@ instance Data.FromJSON UsageRecordResult where
 
 instance Prelude.Hashable UsageRecordResult where
   hashWithSalt _salt UsageRecordResult' {..} =
-    _salt `Prelude.hashWithSalt` meteringRecordId
+    _salt
+      `Prelude.hashWithSalt` meteringRecordId
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` usageRecord
 

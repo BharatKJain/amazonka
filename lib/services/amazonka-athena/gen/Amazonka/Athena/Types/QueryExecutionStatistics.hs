@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.QueryExecutionStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.QueryExecutionStatistics where
@@ -179,7 +179,8 @@ instance Data.FromJSON QueryExecutionStatistics where
 
 instance Prelude.Hashable QueryExecutionStatistics where
   hashWithSalt _salt QueryExecutionStatistics' {..} =
-    _salt `Prelude.hashWithSalt` dataManifestLocation
+    _salt
+      `Prelude.hashWithSalt` dataManifestLocation
       `Prelude.hashWithSalt` dataScannedInBytes
       `Prelude.hashWithSalt` engineExecutionTimeInMillis
       `Prelude.hashWithSalt` queryPlanningTimeInMillis

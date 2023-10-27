@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.SimpleEmailPart
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.SimpleEmailPart where
@@ -65,7 +65,8 @@ simpleEmailPart_data = Lens.lens (\SimpleEmailPart' {data'} -> data') (\s@Simple
 
 instance Prelude.Hashable SimpleEmailPart where
   hashWithSalt _salt SimpleEmailPart' {..} =
-    _salt `Prelude.hashWithSalt` charset
+    _salt
+      `Prelude.hashWithSalt` charset
       `Prelude.hashWithSalt` data'
 
 instance Prelude.NFData SimpleEmailPart where

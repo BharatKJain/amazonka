@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.PivotTableTotalOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.PivotTableTotalOptions where
@@ -97,7 +97,8 @@ instance Data.FromJSON PivotTableTotalOptions where
 
 instance Prelude.Hashable PivotTableTotalOptions where
   hashWithSalt _salt PivotTableTotalOptions' {..} =
-    _salt `Prelude.hashWithSalt` columnSubtotalOptions
+    _salt
+      `Prelude.hashWithSalt` columnSubtotalOptions
       `Prelude.hashWithSalt` columnTotalOptions
       `Prelude.hashWithSalt` rowSubtotalOptions
       `Prelude.hashWithSalt` rowTotalOptions

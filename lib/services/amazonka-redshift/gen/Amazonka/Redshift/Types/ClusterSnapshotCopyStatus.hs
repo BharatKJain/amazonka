@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.ClusterSnapshotCopyStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.ClusterSnapshotCopyStatus where
@@ -111,7 +111,8 @@ instance Data.FromXML ClusterSnapshotCopyStatus where
 
 instance Prelude.Hashable ClusterSnapshotCopyStatus where
   hashWithSalt _salt ClusterSnapshotCopyStatus' {..} =
-    _salt `Prelude.hashWithSalt` destinationRegion
+    _salt
+      `Prelude.hashWithSalt` destinationRegion
       `Prelude.hashWithSalt` manualSnapshotRetentionPeriod
       `Prelude.hashWithSalt` retentionPeriod
       `Prelude.hashWithSalt` snapshotCopyGrantName

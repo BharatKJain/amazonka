@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Connect.Types.TagCondition
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Connect.Types.TagCondition where
@@ -65,7 +65,8 @@ tagCondition_tagValue = Lens.lens (\TagCondition' {tagValue} -> tagValue) (\s@Ta
 
 instance Prelude.Hashable TagCondition where
   hashWithSalt _salt TagCondition' {..} =
-    _salt `Prelude.hashWithSalt` tagKey
+    _salt
+      `Prelude.hashWithSalt` tagKey
       `Prelude.hashWithSalt` tagValue
 
 instance Prelude.NFData TagCondition where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Athena.GetDatabase
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -102,7 +102,8 @@ instance Core.AWSRequest GetDatabase where
 
 instance Prelude.Hashable GetDatabase where
   hashWithSalt _salt GetDatabase' {..} =
-    _salt `Prelude.hashWithSalt` catalogName
+    _salt
+      `Prelude.hashWithSalt` catalogName
       `Prelude.hashWithSalt` databaseName
 
 instance Prelude.NFData GetDatabase where

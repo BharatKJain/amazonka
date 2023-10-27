@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DirectConnect.Types.VirtualGateway
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DirectConnect.Types.VirtualGateway where
@@ -108,7 +108,8 @@ instance Data.FromJSON VirtualGateway where
 
 instance Prelude.Hashable VirtualGateway where
   hashWithSalt _salt VirtualGateway' {..} =
-    _salt `Prelude.hashWithSalt` virtualGatewayId
+    _salt
+      `Prelude.hashWithSalt` virtualGatewayId
       `Prelude.hashWithSalt` virtualGatewayState
 
 instance Prelude.NFData VirtualGateway where

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Lightsail.UpdateContainerService
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -258,7 +258,8 @@ instance Core.AWSRequest UpdateContainerService where
 
 instance Prelude.Hashable UpdateContainerService where
   hashWithSalt _salt UpdateContainerService' {..} =
-    _salt `Prelude.hashWithSalt` isDisabled
+    _salt
+      `Prelude.hashWithSalt` isDisabled
       `Prelude.hashWithSalt` power
       `Prelude.hashWithSalt` privateRegistryAccess
       `Prelude.hashWithSalt` publicDomainNames

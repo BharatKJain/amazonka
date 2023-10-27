@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Transfer.Types.TagStepDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Transfer.Types.TagStepDetails where
@@ -115,7 +115,8 @@ instance Data.FromJSON TagStepDetails where
 
 instance Prelude.Hashable TagStepDetails where
   hashWithSalt _salt TagStepDetails' {..} =
-    _salt `Prelude.hashWithSalt` name
+    _salt
+      `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` sourceFileLocation
       `Prelude.hashWithSalt` tags
 

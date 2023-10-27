@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.InstanceStatusDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.InstanceStatusDetails where
@@ -87,7 +87,8 @@ instance Data.FromXML InstanceStatusDetails where
 
 instance Prelude.Hashable InstanceStatusDetails where
   hashWithSalt _salt InstanceStatusDetails' {..} =
-    _salt `Prelude.hashWithSalt` impairedSince
+    _salt
+      `Prelude.hashWithSalt` impairedSince
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` status
 

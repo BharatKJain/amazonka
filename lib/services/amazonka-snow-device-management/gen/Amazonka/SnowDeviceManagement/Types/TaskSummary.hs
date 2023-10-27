@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SnowDeviceManagement.Types.TaskSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SnowDeviceManagement.Types.TaskSummary where
@@ -103,7 +103,8 @@ instance Data.FromJSON TaskSummary where
 
 instance Prelude.Hashable TaskSummary where
   hashWithSalt _salt TaskSummary' {..} =
-    _salt `Prelude.hashWithSalt` state
+    _salt
+      `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` taskArn
       `Prelude.hashWithSalt` taskId

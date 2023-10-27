@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.EstimatedResourceSize
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.EstimatedResourceSize where
@@ -75,7 +75,8 @@ instance Data.FromJSON EstimatedResourceSize where
 
 instance Prelude.Hashable EstimatedResourceSize where
   hashWithSalt _salt EstimatedResourceSize' {..} =
-    _salt `Prelude.hashWithSalt` estimatedOn
+    _salt
+      `Prelude.hashWithSalt` estimatedOn
       `Prelude.hashWithSalt` estimatedSizeInBytes
 
 instance Prelude.NFData EstimatedResourceSize where

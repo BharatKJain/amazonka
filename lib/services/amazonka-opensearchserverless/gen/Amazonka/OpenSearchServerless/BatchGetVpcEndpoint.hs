@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpenSearchServerless.BatchGetVpcEndpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -90,10 +90,12 @@ instance Core.AWSRequest BatchGetVpcEndpoint where
     Response.receiveJSON
       ( \s h x ->
           BatchGetVpcEndpointResponse'
-            Prelude.<$> ( x Data..?> "vpcEndpointDetails"
+            Prelude.<$> ( x
+                            Data..?> "vpcEndpointDetails"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "vpcEndpointErrorDetails"
+            Prelude.<*> ( x
+                            Data..?> "vpcEndpointErrorDetails"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkManager.UpdateVpcAttachment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -123,7 +123,8 @@ instance Core.AWSRequest UpdateVpcAttachment where
 
 instance Prelude.Hashable UpdateVpcAttachment where
   hashWithSalt _salt UpdateVpcAttachment' {..} =
-    _salt `Prelude.hashWithSalt` addSubnetArns
+    _salt
+      `Prelude.hashWithSalt` addSubnetArns
       `Prelude.hashWithSalt` options
       `Prelude.hashWithSalt` removeSubnetArns
       `Prelude.hashWithSalt` attachmentId

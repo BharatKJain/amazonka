@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Config.Types.ComplianceByConfigRule
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Config.Types.ComplianceByConfigRule where
@@ -78,7 +78,8 @@ instance Data.FromJSON ComplianceByConfigRule where
 
 instance Prelude.Hashable ComplianceByConfigRule where
   hashWithSalt _salt ComplianceByConfigRule' {..} =
-    _salt `Prelude.hashWithSalt` compliance
+    _salt
+      `Prelude.hashWithSalt` compliance
       `Prelude.hashWithSalt` configRuleName
 
 instance Prelude.NFData ComplianceByConfigRule where

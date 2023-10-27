@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.InputConfigInput
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.InputConfigInput where
@@ -69,13 +69,13 @@ inputConfigInput_dataSourceConfig = Lens.lens (\InputConfigInput' {dataSourceCon
 inputConfigInput_previousEarthObservationJobArn :: Lens.Lens' InputConfigInput (Prelude.Maybe Prelude.Text)
 inputConfigInput_previousEarthObservationJobArn = Lens.lens (\InputConfigInput' {previousEarthObservationJobArn} -> previousEarthObservationJobArn) (\s@InputConfigInput' {} a -> s {previousEarthObservationJobArn = a} :: InputConfigInput)
 
--- |
 inputConfigInput_rasterDataCollectionQuery :: Lens.Lens' InputConfigInput (Prelude.Maybe RasterDataCollectionQueryInput)
 inputConfigInput_rasterDataCollectionQuery = Lens.lens (\InputConfigInput' {rasterDataCollectionQuery} -> rasterDataCollectionQuery) (\s@InputConfigInput' {} a -> s {rasterDataCollectionQuery = a} :: InputConfigInput)
 
 instance Prelude.Hashable InputConfigInput where
   hashWithSalt _salt InputConfigInput' {..} =
-    _salt `Prelude.hashWithSalt` dataSourceConfig
+    _salt
+      `Prelude.hashWithSalt` dataSourceConfig
       `Prelude.hashWithSalt` previousEarthObservationJobArn
       `Prelude.hashWithSalt` rasterDataCollectionQuery
 

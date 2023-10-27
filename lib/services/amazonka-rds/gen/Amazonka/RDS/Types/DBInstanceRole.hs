@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.DBInstanceRole
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.DBInstanceRole where
@@ -126,7 +126,8 @@ instance Data.FromXML DBInstanceRole where
 
 instance Prelude.Hashable DBInstanceRole where
   hashWithSalt _salt DBInstanceRole' {..} =
-    _salt `Prelude.hashWithSalt` featureName
+    _salt
+      `Prelude.hashWithSalt` featureName
       `Prelude.hashWithSalt` roleArn
       `Prelude.hashWithSalt` status
 

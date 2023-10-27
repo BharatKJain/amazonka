@@ -16,7 +16,7 @@
 -- Module      : Amazonka.KMS.ScheduleKeyDeletion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -228,7 +228,8 @@ instance Core.AWSRequest ScheduleKeyDeletion where
 
 instance Prelude.Hashable ScheduleKeyDeletion where
   hashWithSalt _salt ScheduleKeyDeletion' {..} =
-    _salt `Prelude.hashWithSalt` pendingWindowInDays
+    _salt
+      `Prelude.hashWithSalt` pendingWindowInDays
       `Prelude.hashWithSalt` keyId
 
 instance Prelude.NFData ScheduleKeyDeletion where

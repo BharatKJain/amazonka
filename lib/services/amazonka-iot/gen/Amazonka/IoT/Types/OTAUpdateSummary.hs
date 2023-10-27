@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.OTAUpdateSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.OTAUpdateSummary where
@@ -84,7 +84,8 @@ instance Data.FromJSON OTAUpdateSummary where
 
 instance Prelude.Hashable OTAUpdateSummary where
   hashWithSalt _salt OTAUpdateSummary' {..} =
-    _salt `Prelude.hashWithSalt` creationDate
+    _salt
+      `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` otaUpdateArn
       `Prelude.hashWithSalt` otaUpdateId
 

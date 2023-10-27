@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FraudDetector.Types.IngestedEventsTimeWindow
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FraudDetector.Types.IngestedEventsTimeWindow where
@@ -78,7 +78,8 @@ instance Data.FromJSON IngestedEventsTimeWindow where
 
 instance Prelude.Hashable IngestedEventsTimeWindow where
   hashWithSalt _salt IngestedEventsTimeWindow' {..} =
-    _salt `Prelude.hashWithSalt` startTime
+    _salt
+      `Prelude.hashWithSalt` startTime
       `Prelude.hashWithSalt` endTime
 
 instance Prelude.NFData IngestedEventsTimeWindow where

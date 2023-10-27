@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RAM.Types.ResourceShareInvitation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RAM.Types.ResourceShareInvitation where
@@ -160,7 +160,8 @@ instance Data.FromJSON ResourceShareInvitation where
             Prelude.<*> (x Data..:? "receiverAccountId")
             Prelude.<*> (x Data..:? "receiverArn")
             Prelude.<*> (x Data..:? "resourceShareArn")
-            Prelude.<*> ( x Data..:? "resourceShareAssociations"
+            Prelude.<*> ( x
+                            Data..:? "resourceShareAssociations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "resourceShareInvitationArn")
@@ -171,7 +172,8 @@ instance Data.FromJSON ResourceShareInvitation where
 
 instance Prelude.Hashable ResourceShareInvitation where
   hashWithSalt _salt ResourceShareInvitation' {..} =
-    _salt `Prelude.hashWithSalt` invitationTimestamp
+    _salt
+      `Prelude.hashWithSalt` invitationTimestamp
       `Prelude.hashWithSalt` receiverAccountId
       `Prelude.hashWithSalt` receiverArn
       `Prelude.hashWithSalt` resourceShareArn

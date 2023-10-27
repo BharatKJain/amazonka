@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CodeGuruProfiler.ConfigureAgent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -207,7 +207,8 @@ instance Core.AWSRequest ConfigureAgent where
 
 instance Prelude.Hashable ConfigureAgent where
   hashWithSalt _salt ConfigureAgent' {..} =
-    _salt `Prelude.hashWithSalt` fleetInstanceId
+    _salt
+      `Prelude.hashWithSalt` fleetInstanceId
       `Prelude.hashWithSalt` metadata
       `Prelude.hashWithSalt` profilingGroupName
 

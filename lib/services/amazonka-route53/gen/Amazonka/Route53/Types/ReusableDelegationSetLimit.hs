@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.ReusableDelegationSetLimit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.ReusableDelegationSetLimit where
@@ -78,11 +78,13 @@ reusableDelegationSetLimit_value = Lens.lens (\ReusableDelegationSetLimit' {valu
 instance Data.FromXML ReusableDelegationSetLimit where
   parseXML x =
     ReusableDelegationSetLimit'
-      Prelude.<$> (x Data..@ "Type") Prelude.<*> (x Data..@ "Value")
+      Prelude.<$> (x Data..@ "Type")
+      Prelude.<*> (x Data..@ "Value")
 
 instance Prelude.Hashable ReusableDelegationSetLimit where
   hashWithSalt _salt ReusableDelegationSetLimit' {..} =
-    _salt `Prelude.hashWithSalt` type'
+    _salt
+      `Prelude.hashWithSalt` type'
       `Prelude.hashWithSalt` value
 
 instance Prelude.NFData ReusableDelegationSetLimit where

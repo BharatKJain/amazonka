@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.GraphqlApi
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.GraphqlApi where
@@ -177,7 +177,8 @@ instance Data.FromJSON GraphqlApi where
       "GraphqlApi"
       ( \x ->
           GraphqlApi'
-            Prelude.<$> ( x Data..:? "additionalAuthenticationProviders"
+            Prelude.<$> ( x
+                            Data..:? "additionalAuthenticationProviders"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "apiId")

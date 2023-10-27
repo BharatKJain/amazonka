@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IVSChat.Types.MessageReviewHandler
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IVSChat.Types.MessageReviewHandler where
@@ -97,7 +97,8 @@ instance Data.FromJSON MessageReviewHandler where
 
 instance Prelude.Hashable MessageReviewHandler where
   hashWithSalt _salt MessageReviewHandler' {..} =
-    _salt `Prelude.hashWithSalt` fallbackResult
+    _salt
+      `Prelude.hashWithSalt` fallbackResult
       `Prelude.hashWithSalt` uri
 
 instance Prelude.NFData MessageReviewHandler where

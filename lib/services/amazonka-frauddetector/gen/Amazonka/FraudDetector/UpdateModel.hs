@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FraudDetector.UpdateModel
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -110,7 +110,8 @@ instance Core.AWSRequest UpdateModel where
 
 instance Prelude.Hashable UpdateModel where
   hashWithSalt _salt UpdateModel' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` modelId
       `Prelude.hashWithSalt` modelType
 

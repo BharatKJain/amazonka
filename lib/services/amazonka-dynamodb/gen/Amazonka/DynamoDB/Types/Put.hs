@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DynamoDB.Types.Put
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DynamoDB.Types.Put where
@@ -130,7 +130,8 @@ put_tableName = Lens.lens (\Put' {tableName} -> tableName) (\s@Put' {} a -> s {t
 
 instance Prelude.Hashable Put where
   hashWithSalt _salt Put' {..} =
-    _salt `Prelude.hashWithSalt` conditionExpression
+    _salt
+      `Prelude.hashWithSalt` conditionExpression
       `Prelude.hashWithSalt` expressionAttributeNames
       `Prelude.hashWithSalt` expressionAttributeValues
       `Prelude.hashWithSalt` returnValuesOnConditionCheckFailure

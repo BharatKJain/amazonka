@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Synthetics.ListTagsForResource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -52,10 +52,10 @@ data ListTagsForResource = ListTagsForResource'
   { -- | The ARN of the canary or group that you want to view tags for.
     --
     -- The ARN format of a canary is
-    -- @arn:aws:synthetics:Region:account-id:canary:canary-name @.
+    -- @arn:aws:synthetics:@/@Region@/@:@/@account-id@/@:canary:@/@canary-name@/@ @.
     --
     -- The ARN format of a group is
-    -- @arn:aws:synthetics:Region:account-id:group:group-name @
+    -- @arn:aws:synthetics:@/@Region@/@:@/@account-id@/@:group:@/@group-name@/@ @
     resourceArn :: Prelude.Text
   }
   deriving (Prelude.Eq, Prelude.Read, Prelude.Show, Prelude.Generic)
@@ -71,10 +71,10 @@ data ListTagsForResource = ListTagsForResource'
 -- 'resourceArn', 'listTagsForResource_resourceArn' - The ARN of the canary or group that you want to view tags for.
 --
 -- The ARN format of a canary is
--- @arn:aws:synthetics:Region:account-id:canary:canary-name @.
+-- @arn:aws:synthetics:@/@Region@/@:@/@account-id@/@:canary:@/@canary-name@/@ @.
 --
 -- The ARN format of a group is
--- @arn:aws:synthetics:Region:account-id:group:group-name @
+-- @arn:aws:synthetics:@/@Region@/@:@/@account-id@/@:group:@/@group-name@/@ @
 newListTagsForResource ::
   -- | 'resourceArn'
   Prelude.Text ->
@@ -85,10 +85,10 @@ newListTagsForResource pResourceArn_ =
 -- | The ARN of the canary or group that you want to view tags for.
 --
 -- The ARN format of a canary is
--- @arn:aws:synthetics:Region:account-id:canary:canary-name @.
+-- @arn:aws:synthetics:@/@Region@/@:@/@account-id@/@:canary:@/@canary-name@/@ @.
 --
 -- The ARN format of a group is
--- @arn:aws:synthetics:Region:account-id:group:group-name @
+-- @arn:aws:synthetics:@/@Region@/@:@/@account-id@/@:group:@/@group-name@/@ @
 listTagsForResource_resourceArn :: Lens.Lens' ListTagsForResource Prelude.Text
 listTagsForResource_resourceArn = Lens.lens (\ListTagsForResource' {resourceArn} -> resourceArn) (\s@ListTagsForResource' {} a -> s {resourceArn = a} :: ListTagsForResource)
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CustomerProfiles.Types.ConnectorOperator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CustomerProfiles.Types.ConnectorOperator where
@@ -96,7 +96,8 @@ connectorOperator_zendesk = Lens.lens (\ConnectorOperator' {zendesk} -> zendesk)
 
 instance Prelude.Hashable ConnectorOperator where
   hashWithSalt _salt ConnectorOperator' {..} =
-    _salt `Prelude.hashWithSalt` marketo
+    _salt
+      `Prelude.hashWithSalt` marketo
       `Prelude.hashWithSalt` s3
       `Prelude.hashWithSalt` salesforce
       `Prelude.hashWithSalt` serviceNow

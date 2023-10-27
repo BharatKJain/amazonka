@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFront.Types.TrustedKeyGroups
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFront.Types.TrustedKeyGroups where
@@ -85,7 +85,9 @@ trustedKeyGroups_quantity = Lens.lens (\TrustedKeyGroups' {quantity} -> quantity
 instance Data.FromXML TrustedKeyGroups where
   parseXML x =
     TrustedKeyGroups'
-      Prelude.<$> ( x Data..@? "Items" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "Items"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "KeyGroup")
                   )
       Prelude.<*> (x Data..@ "Enabled")
@@ -93,7 +95,8 @@ instance Data.FromXML TrustedKeyGroups where
 
 instance Prelude.Hashable TrustedKeyGroups where
   hashWithSalt _salt TrustedKeyGroups' {..} =
-    _salt `Prelude.hashWithSalt` items
+    _salt
+      `Prelude.hashWithSalt` items
       `Prelude.hashWithSalt` enabled
       `Prelude.hashWithSalt` quantity
 

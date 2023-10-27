@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.LaunchedInstance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.LaunchedInstance where
@@ -85,7 +85,8 @@ instance Data.FromJSON LaunchedInstance where
 
 instance Prelude.Hashable LaunchedInstance where
   hashWithSalt _salt LaunchedInstance' {..} =
-    _salt `Prelude.hashWithSalt` ec2InstanceID
+    _salt
+      `Prelude.hashWithSalt` ec2InstanceID
       `Prelude.hashWithSalt` firstBoot
       `Prelude.hashWithSalt` jobID
 

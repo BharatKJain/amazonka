@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.AnalyticsConfigurationType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.AnalyticsConfigurationType where
@@ -126,7 +126,8 @@ instance Data.FromJSON AnalyticsConfigurationType where
 
 instance Prelude.Hashable AnalyticsConfigurationType where
   hashWithSalt _salt AnalyticsConfigurationType' {..} =
-    _salt `Prelude.hashWithSalt` applicationArn
+    _salt
+      `Prelude.hashWithSalt` applicationArn
       `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` externalId
       `Prelude.hashWithSalt` roleArn

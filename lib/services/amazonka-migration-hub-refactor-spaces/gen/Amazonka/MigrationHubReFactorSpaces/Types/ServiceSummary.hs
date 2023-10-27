@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubReFactorSpaces.Types.ServiceSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubReFactorSpaces.Types.ServiceSummary where
@@ -229,7 +229,8 @@ instance Data.FromJSON ServiceSummary where
 
 instance Prelude.Hashable ServiceSummary where
   hashWithSalt _salt ServiceSummary' {..} =
-    _salt `Prelude.hashWithSalt` applicationId
+    _salt
+      `Prelude.hashWithSalt` applicationId
       `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` createdByAccountId
       `Prelude.hashWithSalt` createdTime

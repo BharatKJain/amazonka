@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudControl.Types.ResourceRequestStatusFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudControl.Types.ResourceRequestStatusFilter where
@@ -106,7 +106,8 @@ resourceRequestStatusFilter_operations = Lens.lens (\ResourceRequestStatusFilter
 
 instance Prelude.Hashable ResourceRequestStatusFilter where
   hashWithSalt _salt ResourceRequestStatusFilter' {..} =
-    _salt `Prelude.hashWithSalt` operationStatuses
+    _salt
+      `Prelude.hashWithSalt` operationStatuses
       `Prelude.hashWithSalt` operations
 
 instance Prelude.NFData ResourceRequestStatusFilter where

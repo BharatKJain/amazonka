@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.EndpointFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.EndpointFilter where
@@ -98,7 +98,8 @@ endpointFilter_status = Lens.lens (\EndpointFilter' {status} -> status) (\s@Endp
 
 instance Prelude.Hashable EndpointFilter where
   hashWithSalt _salt EndpointFilter' {..} =
-    _salt `Prelude.hashWithSalt` creationTimeAfter
+    _salt
+      `Prelude.hashWithSalt` creationTimeAfter
       `Prelude.hashWithSalt` creationTimeBefore
       `Prelude.hashWithSalt` modelArn
       `Prelude.hashWithSalt` status

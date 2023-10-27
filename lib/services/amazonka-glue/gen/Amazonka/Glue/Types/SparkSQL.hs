@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.SparkSQL
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.SparkSQL where
@@ -140,7 +140,8 @@ instance Data.FromJSON SparkSQL where
 
 instance Prelude.Hashable SparkSQL where
   hashWithSalt _salt SparkSQL' {..} =
-    _salt `Prelude.hashWithSalt` outputSchemas
+    _salt
+      `Prelude.hashWithSalt` outputSchemas
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` inputs
       `Prelude.hashWithSalt` sqlQuery

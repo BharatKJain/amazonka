@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.DataQualityEvaluationRunAdditionalRunOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.DataQualityEvaluationRunAdditionalRunOptions where
@@ -74,7 +74,7 @@ instance
       ( \x ->
           DataQualityEvaluationRunAdditionalRunOptions'
             Prelude.<$> (x Data..:? "CloudWatchMetricsEnabled")
-              Prelude.<*> (x Data..:? "ResultsS3Prefix")
+            Prelude.<*> (x Data..:? "ResultsS3Prefix")
       )
 
 instance

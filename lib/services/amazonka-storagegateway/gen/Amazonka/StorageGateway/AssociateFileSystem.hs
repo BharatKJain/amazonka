@@ -16,7 +16,7 @@
 -- Module      : Amazonka.StorageGateway.AssociateFileSystem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -214,7 +214,8 @@ instance Core.AWSRequest AssociateFileSystem where
 
 instance Prelude.Hashable AssociateFileSystem where
   hashWithSalt _salt AssociateFileSystem' {..} =
-    _salt `Prelude.hashWithSalt` auditDestinationARN
+    _salt
+      `Prelude.hashWithSalt` auditDestinationARN
       `Prelude.hashWithSalt` cacheAttributes
       `Prelude.hashWithSalt` endpointNetworkConfiguration
       `Prelude.hashWithSalt` tags

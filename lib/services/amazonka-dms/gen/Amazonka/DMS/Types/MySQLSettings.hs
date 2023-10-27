@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DMS.Types.MySQLSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DMS.Types.MySQLSettings where
@@ -355,7 +355,8 @@ instance Data.FromJSON MySQLSettings where
 
 instance Prelude.Hashable MySQLSettings where
   hashWithSalt _salt MySQLSettings' {..} =
-    _salt `Prelude.hashWithSalt` afterConnectScript
+    _salt
+      `Prelude.hashWithSalt` afterConnectScript
       `Prelude.hashWithSalt` cleanSourceMetadataOnMismatch
       `Prelude.hashWithSalt` databaseName
       `Prelude.hashWithSalt` eventsPollInterval

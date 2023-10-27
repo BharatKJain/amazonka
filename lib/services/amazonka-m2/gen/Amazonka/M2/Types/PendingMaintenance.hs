@@ -14,7 +14,7 @@
 -- Module      : Amazonka.M2.Types.PendingMaintenance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.M2.Types.PendingMaintenance where
@@ -76,7 +76,8 @@ instance Data.FromJSON PendingMaintenance where
 
 instance Prelude.Hashable PendingMaintenance where
   hashWithSalt _salt PendingMaintenance' {..} =
-    _salt `Prelude.hashWithSalt` engineVersion
+    _salt
+      `Prelude.hashWithSalt` engineVersion
       `Prelude.hashWithSalt` schedule
 
 instance Prelude.NFData PendingMaintenance where

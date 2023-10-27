@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.Message
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.Message where
@@ -80,7 +80,8 @@ message_body = Lens.lens (\Message' {body} -> body) (\s@Message' {} a -> s {body
 
 instance Prelude.Hashable Message where
   hashWithSalt _salt Message' {..} =
-    _salt `Prelude.hashWithSalt` subject
+    _salt
+      `Prelude.hashWithSalt` subject
       `Prelude.hashWithSalt` body
 
 instance Prelude.NFData Message where

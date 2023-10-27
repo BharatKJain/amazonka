@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WAFV2.Types.Headers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WAFV2.Types.Headers where
@@ -176,7 +176,8 @@ instance Data.FromJSON Headers where
 
 instance Prelude.Hashable Headers where
   hashWithSalt _salt Headers' {..} =
-    _salt `Prelude.hashWithSalt` matchPattern
+    _salt
+      `Prelude.hashWithSalt` matchPattern
       `Prelude.hashWithSalt` matchScope
       `Prelude.hashWithSalt` oversizeHandling
 

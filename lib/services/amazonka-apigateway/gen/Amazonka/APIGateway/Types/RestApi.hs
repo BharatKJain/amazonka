@@ -14,7 +14,7 @@
 -- Module      : Amazonka.APIGateway.Types.RestApi
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.APIGateway.Types.RestApi where
@@ -224,7 +224,8 @@ instance Data.FromJSON RestApi where
       ( \x ->
           RestApi'
             Prelude.<$> (x Data..:? "apiKeySource")
-            Prelude.<*> ( x Data..:? "binaryMediaTypes"
+            Prelude.<*> ( x
+                            Data..:? "binaryMediaTypes"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "createdDate")
@@ -242,7 +243,8 @@ instance Data.FromJSON RestApi where
 
 instance Prelude.Hashable RestApi where
   hashWithSalt _salt RestApi' {..} =
-    _salt `Prelude.hashWithSalt` apiKeySource
+    _salt
+      `Prelude.hashWithSalt` apiKeySource
       `Prelude.hashWithSalt` binaryMediaTypes
       `Prelude.hashWithSalt` createdDate
       `Prelude.hashWithSalt` description

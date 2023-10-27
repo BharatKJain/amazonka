@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.GlobalNetwork
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.GlobalNetwork where
@@ -118,7 +118,8 @@ instance Data.FromJSON GlobalNetwork where
 
 instance Prelude.Hashable GlobalNetwork where
   hashWithSalt _salt GlobalNetwork' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` globalNetworkArn
       `Prelude.hashWithSalt` globalNetworkId

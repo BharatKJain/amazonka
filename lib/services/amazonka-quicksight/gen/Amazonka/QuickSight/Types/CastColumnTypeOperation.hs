@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.CastColumnTypeOperation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.CastColumnTypeOperation where
@@ -97,7 +97,8 @@ instance Data.FromJSON CastColumnTypeOperation where
 
 instance Prelude.Hashable CastColumnTypeOperation where
   hashWithSalt _salt CastColumnTypeOperation' {..} =
-    _salt `Prelude.hashWithSalt` format
+    _salt
+      `Prelude.hashWithSalt` format
       `Prelude.hashWithSalt` columnName
       `Prelude.hashWithSalt` newColumnType'
 

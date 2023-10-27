@@ -14,7 +14,7 @@
 -- Module      : Amazonka.PinpointSmsVoiceV2.Types.SenderIdAndCountry
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.PinpointSmsVoiceV2.Types.SenderIdAndCountry where
@@ -74,7 +74,8 @@ senderIdAndCountry_isoCountryCode = Lens.lens (\SenderIdAndCountry' {isoCountryC
 
 instance Prelude.Hashable SenderIdAndCountry where
   hashWithSalt _salt SenderIdAndCountry' {..} =
-    _salt `Prelude.hashWithSalt` senderId
+    _salt
+      `Prelude.hashWithSalt` senderId
       `Prelude.hashWithSalt` isoCountryCode
 
 instance Prelude.NFData SenderIdAndCountry where

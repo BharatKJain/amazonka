@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DataBrew.Types.DatasetParameter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DataBrew.Types.DatasetParameter where
@@ -124,7 +124,8 @@ instance Data.FromJSON DatasetParameter where
 
 instance Prelude.Hashable DatasetParameter where
   hashWithSalt _salt DatasetParameter' {..} =
-    _salt `Prelude.hashWithSalt` createColumn
+    _salt
+      `Prelude.hashWithSalt` createColumn
       `Prelude.hashWithSalt` datetimeOptions
       `Prelude.hashWithSalt` filter'
       `Prelude.hashWithSalt` name

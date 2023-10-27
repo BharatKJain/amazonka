@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.AdBreak
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.AdBreak where
@@ -144,7 +144,8 @@ instance Data.FromJSON AdBreak where
 
 instance Prelude.Hashable AdBreak where
   hashWithSalt _salt AdBreak' {..} =
-    _salt `Prelude.hashWithSalt` messageType
+    _salt
+      `Prelude.hashWithSalt` messageType
       `Prelude.hashWithSalt` offsetMillis
       `Prelude.hashWithSalt` slate
       `Prelude.hashWithSalt` spliceInsertMessage

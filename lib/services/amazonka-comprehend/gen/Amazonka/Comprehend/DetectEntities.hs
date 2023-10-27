@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Comprehend.DetectEntities
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -282,7 +282,8 @@ instance Core.AWSRequest DetectEntities where
 
 instance Prelude.Hashable DetectEntities where
   hashWithSalt _salt DetectEntities' {..} =
-    _salt `Prelude.hashWithSalt` bytes
+    _salt
+      `Prelude.hashWithSalt` bytes
       `Prelude.hashWithSalt` documentReaderConfig
       `Prelude.hashWithSalt` endpointArn
       `Prelude.hashWithSalt` languageCode

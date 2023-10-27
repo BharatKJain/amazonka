@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaTailor.Types.LiveSource
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaTailor.Types.LiveSource where
@@ -136,7 +136,8 @@ instance Data.FromJSON LiveSource where
             Prelude.<*> (x Data..:? "LastModifiedTime")
             Prelude.<*> (x Data..:? "tags" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..: "Arn")
-            Prelude.<*> ( x Data..:? "HttpPackageConfigurations"
+            Prelude.<*> ( x
+                            Data..:? "HttpPackageConfigurations"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "LiveSourceName")
@@ -145,7 +146,8 @@ instance Data.FromJSON LiveSource where
 
 instance Prelude.Hashable LiveSource where
   hashWithSalt _salt LiveSource' {..} =
-    _salt `Prelude.hashWithSalt` creationTime
+    _salt
+      `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` lastModifiedTime
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` arn

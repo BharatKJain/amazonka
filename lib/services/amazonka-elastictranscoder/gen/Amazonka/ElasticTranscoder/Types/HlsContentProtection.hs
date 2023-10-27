@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticTranscoder.Types.HlsContentProtection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticTranscoder.Types.HlsContentProtection where
@@ -206,7 +206,8 @@ instance Data.FromJSON HlsContentProtection where
 
 instance Prelude.Hashable HlsContentProtection where
   hashWithSalt _salt HlsContentProtection' {..} =
-    _salt `Prelude.hashWithSalt` initializationVector
+    _salt
+      `Prelude.hashWithSalt` initializationVector
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` keyMd5
       `Prelude.hashWithSalt` keyStoragePolicy

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.CodeSigningCertificateChain
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.CodeSigningCertificateChain where
@@ -78,7 +78,8 @@ instance Data.FromJSON CodeSigningCertificateChain where
 
 instance Prelude.Hashable CodeSigningCertificateChain where
   hashWithSalt _salt CodeSigningCertificateChain' {..} =
-    _salt `Prelude.hashWithSalt` certificateName
+    _salt
+      `Prelude.hashWithSalt` certificateName
       `Prelude.hashWithSalt` inlineDocument
 
 instance Prelude.NFData CodeSigningCertificateChain where

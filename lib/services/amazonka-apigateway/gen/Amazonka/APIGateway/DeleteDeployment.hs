@@ -16,7 +16,7 @@
 -- Module      : Amazonka.APIGateway.DeleteDeployment
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -98,7 +98,8 @@ instance Core.AWSRequest DeleteDeployment where
 
 instance Prelude.Hashable DeleteDeployment where
   hashWithSalt _salt DeleteDeployment' {..} =
-    _salt `Prelude.hashWithSalt` restApiId
+    _salt
+      `Prelude.hashWithSalt` restApiId
       `Prelude.hashWithSalt` deploymentId
 
 instance Prelude.NFData DeleteDeployment where

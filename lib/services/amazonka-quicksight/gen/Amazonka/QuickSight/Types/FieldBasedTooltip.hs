@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.FieldBasedTooltip
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.FieldBasedTooltip where
@@ -100,7 +100,8 @@ instance Data.FromJSON FieldBasedTooltip where
 
 instance Prelude.Hashable FieldBasedTooltip where
   hashWithSalt _salt FieldBasedTooltip' {..} =
-    _salt `Prelude.hashWithSalt` aggregationVisibility
+    _salt
+      `Prelude.hashWithSalt` aggregationVisibility
       `Prelude.hashWithSalt` tooltipFields
       `Prelude.hashWithSalt` tooltipTitleType
 

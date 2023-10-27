@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.MutableClusterInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.MutableClusterInfo where
@@ -181,7 +181,8 @@ instance Data.FromJSON MutableClusterInfo where
       "MutableClusterInfo"
       ( \x ->
           MutableClusterInfo'
-            Prelude.<$> ( x Data..:? "brokerEBSVolumeInfo"
+            Prelude.<$> ( x
+                            Data..:? "brokerEBSVolumeInfo"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "clientAuthentication")
@@ -199,7 +200,8 @@ instance Data.FromJSON MutableClusterInfo where
 
 instance Prelude.Hashable MutableClusterInfo where
   hashWithSalt _salt MutableClusterInfo' {..} =
-    _salt `Prelude.hashWithSalt` brokerEBSVolumeInfo
+    _salt
+      `Prelude.hashWithSalt` brokerEBSVolumeInfo
       `Prelude.hashWithSalt` clientAuthentication
       `Prelude.hashWithSalt` configurationInfo
       `Prelude.hashWithSalt` connectivityInfo

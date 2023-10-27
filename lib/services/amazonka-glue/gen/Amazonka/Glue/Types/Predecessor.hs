@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.Predecessor
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.Predecessor where
@@ -75,7 +75,8 @@ instance Data.FromJSON Predecessor where
 
 instance Prelude.Hashable Predecessor where
   hashWithSalt _salt Predecessor' {..} =
-    _salt `Prelude.hashWithSalt` jobName
+    _salt
+      `Prelude.hashWithSalt` jobName
       `Prelude.hashWithSalt` runId
 
 instance Prelude.NFData Predecessor where

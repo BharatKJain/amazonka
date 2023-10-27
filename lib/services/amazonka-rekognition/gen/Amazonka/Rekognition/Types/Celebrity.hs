@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.Celebrity
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.Celebrity where
@@ -128,7 +128,8 @@ instance Data.FromJSON Celebrity where
 
 instance Prelude.Hashable Celebrity where
   hashWithSalt _salt Celebrity' {..} =
-    _salt `Prelude.hashWithSalt` face
+    _salt
+      `Prelude.hashWithSalt` face
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` knownGender
       `Prelude.hashWithSalt` matchConfidence

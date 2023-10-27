@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53RecoveryControlConfig.Types.GatingRuleUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53RecoveryControlConfig.Types.GatingRuleUpdate where
@@ -96,7 +96,8 @@ gatingRuleUpdate_name = Lens.lens (\GatingRuleUpdate' {name} -> name) (\s@Gating
 
 instance Prelude.Hashable GatingRuleUpdate where
   hashWithSalt _salt GatingRuleUpdate' {..} =
-    _salt `Prelude.hashWithSalt` safetyRuleArn
+    _salt
+      `Prelude.hashWithSalt` safetyRuleArn
       `Prelude.hashWithSalt` waitPeriodMs
       `Prelude.hashWithSalt` name
 

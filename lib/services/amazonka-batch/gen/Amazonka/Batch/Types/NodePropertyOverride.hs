@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Batch.Types.NodePropertyOverride
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Batch.Types.NodePropertyOverride where
@@ -81,7 +81,8 @@ nodePropertyOverride_targetNodes = Lens.lens (\NodePropertyOverride' {targetNode
 
 instance Prelude.Hashable NodePropertyOverride where
   hashWithSalt _salt NodePropertyOverride' {..} =
-    _salt `Prelude.hashWithSalt` containerOverrides
+    _salt
+      `Prelude.hashWithSalt` containerOverrides
       `Prelude.hashWithSalt` targetNodes
 
 instance Prelude.NFData NodePropertyOverride where

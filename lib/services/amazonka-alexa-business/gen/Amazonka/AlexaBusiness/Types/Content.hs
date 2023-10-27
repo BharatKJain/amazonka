@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.Content
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.Content where
@@ -77,7 +77,8 @@ content_textList = Lens.lens (\Content' {textList} -> textList) (\s@Content' {} 
 
 instance Prelude.Hashable Content where
   hashWithSalt _salt Content' {..} =
-    _salt `Prelude.hashWithSalt` audioList
+    _salt
+      `Prelude.hashWithSalt` audioList
       `Prelude.hashWithSalt` ssmlList
       `Prelude.hashWithSalt` textList
 

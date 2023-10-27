@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ECS.Types.PlacementConstraint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ECS.Types.PlacementConstraint where
@@ -102,7 +102,8 @@ instance Data.FromJSON PlacementConstraint where
 
 instance Prelude.Hashable PlacementConstraint where
   hashWithSalt _salt PlacementConstraint' {..} =
-    _salt `Prelude.hashWithSalt` expression
+    _salt
+      `Prelude.hashWithSalt` expression
       `Prelude.hashWithSalt` type'
 
 instance Prelude.NFData PlacementConstraint where

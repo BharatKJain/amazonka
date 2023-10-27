@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.AndroidPushNotificationTemplate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.AndroidPushNotificationTemplate where
@@ -232,7 +232,8 @@ instance
   hashWithSalt
     _salt
     AndroidPushNotificationTemplate' {..} =
-      _salt `Prelude.hashWithSalt` action
+      _salt
+        `Prelude.hashWithSalt` action
         `Prelude.hashWithSalt` body
         `Prelude.hashWithSalt` imageIconUrl
         `Prelude.hashWithSalt` imageUrl

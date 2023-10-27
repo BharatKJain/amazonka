@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EFS.CreateMountTarget
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -99,8 +99,9 @@
 --         to the default security group for the subnet\'s VPC.
 --
 --     -   Assigns the description
---         @Mount target fsmt-id for file system fs-id @ where @ fsmt-id @
---         is the mount target ID, and @ fs-id @ is the @FileSystemId@.
+--         @Mount target @/@fsmt-id@/@ for file system @/@fs-id@/@ @ where
+--         @ @/@fsmt-id@/@ @ is the mount target ID, and @ @/@fs-id@/@ @ is
+--         the @FileSystemId@.
 --
 --     -   Sets the @requesterManaged@ property of the network interface to
 --         @true@, and the @requesterId@ value to @EFS@.
@@ -258,7 +259,8 @@ instance Core.AWSRequest CreateMountTarget where
 
 instance Prelude.Hashable CreateMountTarget where
   hashWithSalt _salt CreateMountTarget' {..} =
-    _salt `Prelude.hashWithSalt` ipAddress
+    _salt
+      `Prelude.hashWithSalt` ipAddress
       `Prelude.hashWithSalt` securityGroups
       `Prelude.hashWithSalt` fileSystemId
       `Prelude.hashWithSalt` subnetId

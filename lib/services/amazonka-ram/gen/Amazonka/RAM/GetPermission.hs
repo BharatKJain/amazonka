@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RAM.GetPermission
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -126,7 +126,8 @@ instance Core.AWSRequest GetPermission where
 
 instance Prelude.Hashable GetPermission where
   hashWithSalt _salt GetPermission' {..} =
-    _salt `Prelude.hashWithSalt` permissionVersion
+    _salt
+      `Prelude.hashWithSalt` permissionVersion
       `Prelude.hashWithSalt` permissionArn
 
 instance Prelude.NFData GetPermission where

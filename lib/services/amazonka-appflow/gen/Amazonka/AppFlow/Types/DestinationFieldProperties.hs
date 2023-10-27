@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.DestinationFieldProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.DestinationFieldProperties where
@@ -127,14 +127,16 @@ instance Data.FromJSON DestinationFieldProperties where
             Prelude.<*> (x Data..:? "isNullable")
             Prelude.<*> (x Data..:? "isUpdatable")
             Prelude.<*> (x Data..:? "isUpsertable")
-            Prelude.<*> ( x Data..:? "supportedWriteOperations"
+            Prelude.<*> ( x
+                            Data..:? "supportedWriteOperations"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable DestinationFieldProperties where
   hashWithSalt _salt DestinationFieldProperties' {..} =
-    _salt `Prelude.hashWithSalt` isCreatable
+    _salt
+      `Prelude.hashWithSalt` isCreatable
       `Prelude.hashWithSalt` isDefaultedOnCreate
       `Prelude.hashWithSalt` isNullable
       `Prelude.hashWithSalt` isUpdatable

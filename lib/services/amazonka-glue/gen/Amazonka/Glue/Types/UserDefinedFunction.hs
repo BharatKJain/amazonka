@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.UserDefinedFunction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.UserDefinedFunction where
@@ -137,7 +137,8 @@ instance Data.FromJSON UserDefinedFunction where
 
 instance Prelude.Hashable UserDefinedFunction where
   hashWithSalt _salt UserDefinedFunction' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` className
       `Prelude.hashWithSalt` createTime
       `Prelude.hashWithSalt` databaseName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchListIndex
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchListIndex where
@@ -88,7 +88,8 @@ batchListIndex_indexReference = Lens.lens (\BatchListIndex' {indexReference} -> 
 
 instance Prelude.Hashable BatchListIndex where
   hashWithSalt _salt BatchListIndex' {..} =
-    _salt `Prelude.hashWithSalt` maxResults
+    _salt
+      `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` rangesOnIndexedValues
       `Prelude.hashWithSalt` indexReference

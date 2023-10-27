@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Organizations.Types.Policy
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Organizations.Types.Policy where
@@ -77,7 +77,8 @@ instance Data.FromJSON Policy where
 
 instance Prelude.Hashable Policy where
   hashWithSalt _salt Policy' {..} =
-    _salt `Prelude.hashWithSalt` content
+    _salt
+      `Prelude.hashWithSalt` content
       `Prelude.hashWithSalt` policySummary
 
 instance Prelude.NFData Policy where

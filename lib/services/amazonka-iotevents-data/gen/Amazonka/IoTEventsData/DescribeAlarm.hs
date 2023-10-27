@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTEventsData.DescribeAlarm
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -108,7 +108,8 @@ instance Core.AWSRequest DescribeAlarm where
 
 instance Prelude.Hashable DescribeAlarm where
   hashWithSalt _salt DescribeAlarm' {..} =
-    _salt `Prelude.hashWithSalt` keyValue
+    _salt
+      `Prelude.hashWithSalt` keyValue
       `Prelude.hashWithSalt` alarmModelName
 
 instance Prelude.NFData DescribeAlarm where

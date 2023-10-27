@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.LabelParameterVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -153,7 +153,8 @@ instance Core.AWSRequest LabelParameterVersion where
 
 instance Prelude.Hashable LabelParameterVersion where
   hashWithSalt _salt LabelParameterVersion' {..} =
-    _salt `Prelude.hashWithSalt` parameterVersion
+    _salt
+      `Prelude.hashWithSalt` parameterVersion
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` labels
 

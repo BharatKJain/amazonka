@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppFlow.Types.SourceFieldProperties
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppFlow.Types.SourceFieldProperties where
@@ -87,7 +87,8 @@ instance Data.FromJSON SourceFieldProperties where
 
 instance Prelude.Hashable SourceFieldProperties where
   hashWithSalt _salt SourceFieldProperties' {..} =
-    _salt `Prelude.hashWithSalt` isQueryable
+    _salt
+      `Prelude.hashWithSalt` isQueryable
       `Prelude.hashWithSalt` isRetrievable
       `Prelude.hashWithSalt` isTimestampFieldForIncrementalQueries
 

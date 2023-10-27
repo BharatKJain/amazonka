@@ -16,7 +16,7 @@
 -- Module      : Amazonka.FMS.ListProtocolsLists
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -137,22 +137,22 @@ instance Core.AWSPager ListProtocolsLists where
     | Core.stop
         ( rs
             Lens.^? listProtocolsListsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listProtocolsListsResponse_protocolsLists
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listProtocolsLists_nextToken
           Lens..~ rs
           Lens.^? listProtocolsListsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListProtocolsLists where
   type
@@ -171,7 +171,8 @@ instance Core.AWSRequest ListProtocolsLists where
 
 instance Prelude.Hashable ListProtocolsLists where
   hashWithSalt _salt ListProtocolsLists' {..} =
-    _salt `Prelude.hashWithSalt` defaultLists
+    _salt
+      `Prelude.hashWithSalt` defaultLists
       `Prelude.hashWithSalt` nextToken
       `Prelude.hashWithSalt` maxResults
 

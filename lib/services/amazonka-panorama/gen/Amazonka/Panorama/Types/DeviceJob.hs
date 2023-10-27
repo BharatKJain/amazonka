@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Panorama.Types.DeviceJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Panorama.Types.DeviceJob where
@@ -105,7 +105,8 @@ instance Data.FromJSON DeviceJob where
 
 instance Prelude.Hashable DeviceJob where
   hashWithSalt _salt DeviceJob' {..} =
-    _salt `Prelude.hashWithSalt` createdTime
+    _salt
+      `Prelude.hashWithSalt` createdTime
       `Prelude.hashWithSalt` deviceId
       `Prelude.hashWithSalt` deviceName
       `Prelude.hashWithSalt` jobId

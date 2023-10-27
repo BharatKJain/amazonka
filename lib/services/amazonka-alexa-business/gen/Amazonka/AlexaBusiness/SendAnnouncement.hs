@@ -16,7 +16,7 @@
 -- Module      : Amazonka.AlexaBusiness.SendAnnouncement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,7 +141,8 @@ instance Core.AWSRequest SendAnnouncement where
 
 instance Prelude.Hashable SendAnnouncement where
   hashWithSalt _salt SendAnnouncement' {..} =
-    _salt `Prelude.hashWithSalt` timeToLiveInSeconds
+    _salt
+      `Prelude.hashWithSalt` timeToLiveInSeconds
       `Prelude.hashWithSalt` roomFilters
       `Prelude.hashWithSalt` content
       `Prelude.hashWithSalt` clientRequestToken

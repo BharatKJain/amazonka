@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.OTAUpdateInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.OTAUpdateInfo where
@@ -229,7 +229,8 @@ instance Data.FromJSON OTAUpdateInfo where
       "OTAUpdateInfo"
       ( \x ->
           OTAUpdateInfo'
-            Prelude.<$> ( x Data..:? "additionalParameters"
+            Prelude.<$> ( x
+                            Data..:? "additionalParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "awsIotJobArn")
@@ -251,7 +252,8 @@ instance Data.FromJSON OTAUpdateInfo where
 
 instance Prelude.Hashable OTAUpdateInfo where
   hashWithSalt _salt OTAUpdateInfo' {..} =
-    _salt `Prelude.hashWithSalt` additionalParameters
+    _salt
+      `Prelude.hashWithSalt` additionalParameters
       `Prelude.hashWithSalt` awsIotJobArn
       `Prelude.hashWithSalt` awsIotJobId
       `Prelude.hashWithSalt` awsJobExecutionsRolloutConfig

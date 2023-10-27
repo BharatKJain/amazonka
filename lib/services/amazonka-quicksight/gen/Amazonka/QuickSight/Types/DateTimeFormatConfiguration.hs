@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DateTimeFormatConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DateTimeFormatConfiguration where
@@ -87,7 +87,8 @@ instance Data.FromJSON DateTimeFormatConfiguration where
 
 instance Prelude.Hashable DateTimeFormatConfiguration where
   hashWithSalt _salt DateTimeFormatConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` dateTimeFormat
+    _salt
+      `Prelude.hashWithSalt` dateTimeFormat
       `Prelude.hashWithSalt` nullValueFormatConfiguration
       `Prelude.hashWithSalt` numericFormatConfiguration
 

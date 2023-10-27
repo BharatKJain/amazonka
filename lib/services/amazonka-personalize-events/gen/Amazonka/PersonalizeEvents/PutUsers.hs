@@ -16,7 +16,7 @@
 -- Module      : Amazonka.PersonalizeEvents.PutUsers
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -96,7 +96,8 @@ instance Core.AWSRequest PutUsers where
 
 instance Prelude.Hashable PutUsers where
   hashWithSalt _salt PutUsers' {..} =
-    _salt `Prelude.hashWithSalt` datasetArn
+    _salt
+      `Prelude.hashWithSalt` datasetArn
       `Prelude.hashWithSalt` users
 
 instance Prelude.NFData PutUsers where

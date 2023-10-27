@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Backup.Types.CopyAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Backup.Types.CopyAction where
@@ -83,7 +83,8 @@ instance Data.FromJSON CopyAction where
 
 instance Prelude.Hashable CopyAction where
   hashWithSalt _salt CopyAction' {..} =
-    _salt `Prelude.hashWithSalt` lifecycle
+    _salt
+      `Prelude.hashWithSalt` lifecycle
       `Prelude.hashWithSalt` destinationBackupVaultArn
 
 instance Prelude.NFData CopyAction where

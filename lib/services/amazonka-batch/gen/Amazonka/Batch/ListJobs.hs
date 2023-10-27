@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Batch.ListJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -340,18 +340,20 @@ instance Core.AWSPager ListJobs where
   page rq rs
     | Core.stop
         ( rs
-            Lens.^? listJobsResponse_nextToken Prelude.. Lens._Just
+            Lens.^? listJobsResponse_nextToken
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         (rs Lens.^. listJobsResponse_jobSummaryList) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listJobs_nextToken
           Lens..~ rs
-          Lens.^? listJobsResponse_nextToken Prelude.. Lens._Just
+          Lens.^? listJobsResponse_nextToken
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListJobs where
   type AWSResponse ListJobs = ListJobsResponse
@@ -363,14 +365,16 @@ instance Core.AWSRequest ListJobs where
           ListJobsResponse'
             Prelude.<$> (x Data..?> "nextToken")
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
-            Prelude.<*> ( x Data..?> "jobSummaryList"
+            Prelude.<*> ( x
+                            Data..?> "jobSummaryList"
                             Core..!@ Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable ListJobs where
   hashWithSalt _salt ListJobs' {..} =
-    _salt `Prelude.hashWithSalt` arrayJobId
+    _salt
+      `Prelude.hashWithSalt` arrayJobId
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` jobQueue
       `Prelude.hashWithSalt` jobStatus

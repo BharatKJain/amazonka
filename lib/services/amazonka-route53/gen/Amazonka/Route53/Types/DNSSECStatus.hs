@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.DNSSECStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.DNSSECStatus where
@@ -149,7 +149,8 @@ instance Data.FromXML DNSSECStatus where
 
 instance Prelude.Hashable DNSSECStatus where
   hashWithSalt _salt DNSSECStatus' {..} =
-    _salt `Prelude.hashWithSalt` serveSignature
+    _salt
+      `Prelude.hashWithSalt` serveSignature
       `Prelude.hashWithSalt` statusMessage
 
 instance Prelude.NFData DNSSECStatus where

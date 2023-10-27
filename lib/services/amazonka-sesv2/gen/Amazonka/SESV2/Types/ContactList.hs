@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SESV2.Types.ContactList
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SESV2.Types.ContactList where
@@ -75,7 +75,8 @@ instance Data.FromJSON ContactList where
 
 instance Prelude.Hashable ContactList where
   hashWithSalt _salt ContactList' {..} =
-    _salt `Prelude.hashWithSalt` contactListName
+    _salt
+      `Prelude.hashWithSalt` contactListName
       `Prelude.hashWithSalt` lastUpdatedTimestamp
 
 instance Prelude.NFData ContactList where

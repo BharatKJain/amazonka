@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Budgets.Types.TimePeriod
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Budgets.Types.TimePeriod where
@@ -115,12 +115,14 @@ instance Data.FromJSON TimePeriod where
       "TimePeriod"
       ( \x ->
           TimePeriod'
-            Prelude.<$> (x Data..:? "End") Prelude.<*> (x Data..:? "Start")
+            Prelude.<$> (x Data..:? "End")
+            Prelude.<*> (x Data..:? "Start")
       )
 
 instance Prelude.Hashable TimePeriod where
   hashWithSalt _salt TimePeriod' {..} =
-    _salt `Prelude.hashWithSalt` end
+    _salt
+      `Prelude.hashWithSalt` end
       `Prelude.hashWithSalt` start
 
 instance Prelude.NFData TimePeriod where

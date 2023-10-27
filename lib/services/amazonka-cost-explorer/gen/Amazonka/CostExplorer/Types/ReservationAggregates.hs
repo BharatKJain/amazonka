@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CostExplorer.Types.ReservationAggregates
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CostExplorer.Types.ReservationAggregates where
@@ -264,7 +264,8 @@ instance Data.FromJSON ReservationAggregates where
 
 instance Prelude.Hashable ReservationAggregates where
   hashWithSalt _salt ReservationAggregates' {..} =
-    _salt `Prelude.hashWithSalt` amortizedRecurringFee
+    _salt
+      `Prelude.hashWithSalt` amortizedRecurringFee
       `Prelude.hashWithSalt` amortizedUpfrontFee
       `Prelude.hashWithSalt` netRISavings
       `Prelude.hashWithSalt` onDemandCostOfRIHoursUsed

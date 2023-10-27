@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.SubtotalOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.SubtotalOptions where
@@ -119,7 +119,8 @@ instance Data.FromJSON SubtotalOptions where
           SubtotalOptions'
             Prelude.<$> (x Data..:? "CustomLabel")
             Prelude.<*> (x Data..:? "FieldLevel")
-            Prelude.<*> ( x Data..:? "FieldLevelOptions"
+            Prelude.<*> ( x
+                            Data..:? "FieldLevelOptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "MetricHeaderCellStyle")
@@ -130,7 +131,8 @@ instance Data.FromJSON SubtotalOptions where
 
 instance Prelude.Hashable SubtotalOptions where
   hashWithSalt _salt SubtotalOptions' {..} =
-    _salt `Prelude.hashWithSalt` customLabel
+    _salt
+      `Prelude.hashWithSalt` customLabel
       `Prelude.hashWithSalt` fieldLevel
       `Prelude.hashWithSalt` fieldLevelOptions
       `Prelude.hashWithSalt` metricHeaderCellStyle

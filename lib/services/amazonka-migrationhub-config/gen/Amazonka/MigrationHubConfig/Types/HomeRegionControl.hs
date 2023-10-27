@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MigrationHubConfig.Types.HomeRegionControl
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MigrationHubConfig.Types.HomeRegionControl where
@@ -115,7 +115,8 @@ instance Data.FromJSON HomeRegionControl where
 
 instance Prelude.Hashable HomeRegionControl where
   hashWithSalt _salt HomeRegionControl' {..} =
-    _salt `Prelude.hashWithSalt` controlId
+    _salt
+      `Prelude.hashWithSalt` controlId
       `Prelude.hashWithSalt` homeRegion
       `Prelude.hashWithSalt` requestedTime
       `Prelude.hashWithSalt` target

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.S3.Types.IntelligentTieringFilter
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.S3.Types.IntelligentTieringFilter where
@@ -110,7 +110,8 @@ instance Data.FromXML IntelligentTieringFilter where
 
 instance Prelude.Hashable IntelligentTieringFilter where
   hashWithSalt _salt IntelligentTieringFilter' {..} =
-    _salt `Prelude.hashWithSalt` and
+    _salt
+      `Prelude.hashWithSalt` and
       `Prelude.hashWithSalt` prefix
       `Prelude.hashWithSalt` tag
 

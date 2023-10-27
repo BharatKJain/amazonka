@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DrS.Types.RecoveryInstanceDataReplicationInfoReplicatedDisk
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DrS.Types.RecoveryInstanceDataReplicationInfoReplicatedDisk where
@@ -104,10 +104,10 @@ instance
       ( \x ->
           RecoveryInstanceDataReplicationInfoReplicatedDisk'
             Prelude.<$> (x Data..:? "backloggedStorageBytes")
-              Prelude.<*> (x Data..:? "deviceName")
-              Prelude.<*> (x Data..:? "replicatedStorageBytes")
-              Prelude.<*> (x Data..:? "rescannedStorageBytes")
-              Prelude.<*> (x Data..:? "totalStorageBytes")
+            Prelude.<*> (x Data..:? "deviceName")
+            Prelude.<*> (x Data..:? "replicatedStorageBytes")
+            Prelude.<*> (x Data..:? "rescannedStorageBytes")
+            Prelude.<*> (x Data..:? "totalStorageBytes")
       )
 
 instance
@@ -117,7 +117,8 @@ instance
   hashWithSalt
     _salt
     RecoveryInstanceDataReplicationInfoReplicatedDisk' {..} =
-      _salt `Prelude.hashWithSalt` backloggedStorageBytes
+      _salt
+        `Prelude.hashWithSalt` backloggedStorageBytes
         `Prelude.hashWithSalt` deviceName
         `Prelude.hashWithSalt` replicatedStorageBytes
         `Prelude.hashWithSalt` rescannedStorageBytes

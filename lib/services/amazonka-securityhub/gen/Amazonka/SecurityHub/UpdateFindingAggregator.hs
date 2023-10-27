@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SecurityHub.UpdateFindingAggregator
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -217,7 +217,8 @@ instance Core.AWSRequest UpdateFindingAggregator where
 
 instance Prelude.Hashable UpdateFindingAggregator where
   hashWithSalt _salt UpdateFindingAggregator' {..} =
-    _salt `Prelude.hashWithSalt` regions
+    _salt
+      `Prelude.hashWithSalt` regions
       `Prelude.hashWithSalt` findingAggregatorArn
       `Prelude.hashWithSalt` regionLinkingMode
 

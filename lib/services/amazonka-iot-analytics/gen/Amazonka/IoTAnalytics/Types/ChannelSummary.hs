@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoTAnalytics.Types.ChannelSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoTAnalytics.Types.ChannelSummary where
@@ -134,7 +134,8 @@ instance Data.FromJSON ChannelSummary where
 
 instance Prelude.Hashable ChannelSummary where
   hashWithSalt _salt ChannelSummary' {..} =
-    _salt `Prelude.hashWithSalt` channelName
+    _salt
+      `Prelude.hashWithSalt` channelName
       `Prelude.hashWithSalt` channelStorage
       `Prelude.hashWithSalt` creationTime
       `Prelude.hashWithSalt` lastMessageArrivalTime

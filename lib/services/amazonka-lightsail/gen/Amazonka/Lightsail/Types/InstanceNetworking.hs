@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.InstanceNetworking
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.InstanceNetworking where
@@ -81,7 +81,8 @@ instance Data.FromJSON InstanceNetworking where
 
 instance Prelude.Hashable InstanceNetworking where
   hashWithSalt _salt InstanceNetworking' {..} =
-    _salt `Prelude.hashWithSalt` monthlyTransfer
+    _salt
+      `Prelude.hashWithSalt` monthlyTransfer
       `Prelude.hashWithSalt` ports
 
 instance Prelude.NFData InstanceNetworking where

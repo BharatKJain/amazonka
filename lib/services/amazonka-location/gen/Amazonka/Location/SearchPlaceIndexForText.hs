@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Location.SearchPlaceIndexForText
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -329,7 +329,8 @@ instance Core.AWSRequest SearchPlaceIndexForText where
 
 instance Prelude.Hashable SearchPlaceIndexForText where
   hashWithSalt _salt SearchPlaceIndexForText' {..} =
-    _salt `Prelude.hashWithSalt` biasPosition
+    _salt
+      `Prelude.hashWithSalt` biasPosition
       `Prelude.hashWithSalt` filterBBox
       `Prelude.hashWithSalt` filterCountries
       `Prelude.hashWithSalt` language

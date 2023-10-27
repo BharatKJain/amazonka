@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.Types.BuildConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticBeanstalk.Types.BuildConfiguration where
@@ -141,7 +141,8 @@ buildConfiguration_image = Lens.lens (\BuildConfiguration' {image} -> image) (\s
 
 instance Prelude.Hashable BuildConfiguration where
   hashWithSalt _salt BuildConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` artifactName
+    _salt
+      `Prelude.hashWithSalt` artifactName
       `Prelude.hashWithSalt` computeType
       `Prelude.hashWithSalt` timeoutInMinutes
       `Prelude.hashWithSalt` codeBuildServiceRole

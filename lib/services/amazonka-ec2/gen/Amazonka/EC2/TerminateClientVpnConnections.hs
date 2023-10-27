@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.TerminateClientVpnConnections
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -141,7 +141,8 @@ instance
       ( \s h x ->
           TerminateClientVpnConnectionsResponse'
             Prelude.<$> (x Data..@? "clientVpnEndpointId")
-            Prelude.<*> ( x Data..@? "connectionStatuses"
+            Prelude.<*> ( x
+                            Data..@? "connectionStatuses"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -154,7 +155,8 @@ instance
     TerminateClientVpnConnections
   where
   hashWithSalt _salt TerminateClientVpnConnections' {..} =
-    _salt `Prelude.hashWithSalt` connectionId
+    _salt
+      `Prelude.hashWithSalt` connectionId
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` username
       `Prelude.hashWithSalt` clientVpnEndpointId

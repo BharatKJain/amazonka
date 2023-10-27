@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaLive.Types.MaintenanceStatus
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaLive.Types.MaintenanceStatus where
@@ -102,7 +102,8 @@ instance Data.FromJSON MaintenanceStatus where
 
 instance Prelude.Hashable MaintenanceStatus where
   hashWithSalt _salt MaintenanceStatus' {..} =
-    _salt `Prelude.hashWithSalt` maintenanceDay
+    _salt
+      `Prelude.hashWithSalt` maintenanceDay
       `Prelude.hashWithSalt` maintenanceDeadline
       `Prelude.hashWithSalt` maintenanceScheduledDate
       `Prelude.hashWithSalt` maintenanceStartTime

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AlexaBusiness.Types.DeveloperInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AlexaBusiness.Types.DeveloperInfo where
@@ -94,7 +94,8 @@ instance Data.FromJSON DeveloperInfo where
 
 instance Prelude.Hashable DeveloperInfo where
   hashWithSalt _salt DeveloperInfo' {..} =
-    _salt `Prelude.hashWithSalt` developerName
+    _salt
+      `Prelude.hashWithSalt` developerName
       `Prelude.hashWithSalt` email
       `Prelude.hashWithSalt` privacyPolicy
       `Prelude.hashWithSalt` url

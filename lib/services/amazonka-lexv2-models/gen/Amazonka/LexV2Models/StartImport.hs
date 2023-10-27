@@ -16,7 +16,7 @@
 -- Module      : Amazonka.LexV2Models.StartImport
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -160,7 +160,8 @@ instance Core.AWSRequest StartImport where
 
 instance Prelude.Hashable StartImport where
   hashWithSalt _salt StartImport' {..} =
-    _salt `Prelude.hashWithSalt` filePassword
+    _salt
+      `Prelude.hashWithSalt` filePassword
       `Prelude.hashWithSalt` importId
       `Prelude.hashWithSalt` resourceSpecification
       `Prelude.hashWithSalt` mergeStrategy

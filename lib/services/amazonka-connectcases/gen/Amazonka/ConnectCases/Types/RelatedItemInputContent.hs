@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ConnectCases.Types.RelatedItemInputContent
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ConnectCases.Types.RelatedItemInputContent where
@@ -66,7 +66,8 @@ relatedItemInputContent_contact = Lens.lens (\RelatedItemInputContent' {contact}
 
 instance Prelude.Hashable RelatedItemInputContent where
   hashWithSalt _salt RelatedItemInputContent' {..} =
-    _salt `Prelude.hashWithSalt` comment
+    _salt
+      `Prelude.hashWithSalt` comment
       `Prelude.hashWithSalt` contact
 
 instance Prelude.NFData RelatedItemInputContent where

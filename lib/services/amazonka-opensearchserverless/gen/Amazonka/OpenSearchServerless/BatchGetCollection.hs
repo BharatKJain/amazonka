@@ -16,7 +16,7 @@
 -- Module      : Amazonka.OpenSearchServerless.BatchGetCollection
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -113,10 +113,12 @@ instance Core.AWSRequest BatchGetCollection where
     Response.receiveJSON
       ( \s h x ->
           BatchGetCollectionResponse'
-            Prelude.<$> ( x Data..?> "collectionDetails"
+            Prelude.<$> ( x
+                            Data..?> "collectionDetails"
                             Core..!@ Prelude.mempty
                         )
-            Prelude.<*> ( x Data..?> "collectionErrorDetails"
+            Prelude.<*> ( x
+                            Data..?> "collectionErrorDetails"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))
@@ -124,7 +126,8 @@ instance Core.AWSRequest BatchGetCollection where
 
 instance Prelude.Hashable BatchGetCollection where
   hashWithSalt _salt BatchGetCollection' {..} =
-    _salt `Prelude.hashWithSalt` ids
+    _salt
+      `Prelude.hashWithSalt` ids
       `Prelude.hashWithSalt` names
 
 instance Prelude.NFData BatchGetCollection where

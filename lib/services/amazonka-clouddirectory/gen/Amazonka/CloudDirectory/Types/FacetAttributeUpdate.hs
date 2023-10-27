@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.FacetAttributeUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.FacetAttributeUpdate where
@@ -66,7 +66,8 @@ facetAttributeUpdate_attribute = Lens.lens (\FacetAttributeUpdate' {attribute} -
 
 instance Prelude.Hashable FacetAttributeUpdate where
   hashWithSalt _salt FacetAttributeUpdate' {..} =
-    _salt `Prelude.hashWithSalt` action
+    _salt
+      `Prelude.hashWithSalt` action
       `Prelude.hashWithSalt` attribute
 
 instance Prelude.NFData FacetAttributeUpdate where

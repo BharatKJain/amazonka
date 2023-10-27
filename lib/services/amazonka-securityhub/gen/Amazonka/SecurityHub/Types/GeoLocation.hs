@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.GeoLocation
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.GeoLocation where
@@ -68,12 +68,14 @@ instance Data.FromJSON GeoLocation where
       "GeoLocation"
       ( \x ->
           GeoLocation'
-            Prelude.<$> (x Data..:? "Lat") Prelude.<*> (x Data..:? "Lon")
+            Prelude.<$> (x Data..:? "Lat")
+            Prelude.<*> (x Data..:? "Lon")
       )
 
 instance Prelude.Hashable GeoLocation where
   hashWithSalt _salt GeoLocation' {..} =
-    _salt `Prelude.hashWithSalt` lat
+    _salt
+      `Prelude.hashWithSalt` lat
       `Prelude.hashWithSalt` lon
 
 instance Prelude.NFData GeoLocation where

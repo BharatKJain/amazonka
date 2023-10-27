@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Pinpoint.Types.TemplateResponse
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Pinpoint.Types.TemplateResponse where
@@ -221,7 +221,8 @@ instance Data.FromJSON TemplateResponse where
 
 instance Prelude.Hashable TemplateResponse where
   hashWithSalt _salt TemplateResponse' {..} =
-    _salt `Prelude.hashWithSalt` arn
+    _salt
+      `Prelude.hashWithSalt` arn
       `Prelude.hashWithSalt` defaultSubstitutions
       `Prelude.hashWithSalt` templateDescription
       `Prelude.hashWithSalt` version

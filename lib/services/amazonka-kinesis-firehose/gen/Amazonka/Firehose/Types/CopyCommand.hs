@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.CopyCommand
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.CopyCommand where
@@ -155,7 +155,8 @@ instance Data.FromJSON CopyCommand where
 
 instance Prelude.Hashable CopyCommand where
   hashWithSalt _salt CopyCommand' {..} =
-    _salt `Prelude.hashWithSalt` copyOptions
+    _salt
+      `Prelude.hashWithSalt` copyOptions
       `Prelude.hashWithSalt` dataTableColumns
       `Prelude.hashWithSalt` dataTableName
 

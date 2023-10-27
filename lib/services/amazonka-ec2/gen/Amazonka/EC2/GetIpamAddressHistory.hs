@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.GetIpamAddressHistory
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -186,22 +186,22 @@ instance Core.AWSPager GetIpamAddressHistory where
     | Core.stop
         ( rs
             Lens.^? getIpamAddressHistoryResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getIpamAddressHistoryResponse_historyRecords
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getIpamAddressHistory_nextToken
           Lens..~ rs
           Lens.^? getIpamAddressHistoryResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetIpamAddressHistory where
   type
@@ -213,7 +213,8 @@ instance Core.AWSRequest GetIpamAddressHistory where
     Response.receiveXML
       ( \s h x ->
           GetIpamAddressHistoryResponse'
-            Prelude.<$> ( x Data..@? "historyRecordSet"
+            Prelude.<$> ( x
+                            Data..@? "historyRecordSet"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "item")
                         )
@@ -223,7 +224,8 @@ instance Core.AWSRequest GetIpamAddressHistory where
 
 instance Prelude.Hashable GetIpamAddressHistory where
   hashWithSalt _salt GetIpamAddressHistory' {..} =
-    _salt `Prelude.hashWithSalt` dryRun
+    _salt
+      `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` endTime
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

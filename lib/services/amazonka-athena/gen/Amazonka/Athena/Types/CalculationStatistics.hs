@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Athena.Types.CalculationStatistics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Athena.Types.CalculationStatistics where
@@ -78,7 +78,8 @@ instance Data.FromJSON CalculationStatistics where
 
 instance Prelude.Hashable CalculationStatistics where
   hashWithSalt _salt CalculationStatistics' {..} =
-    _salt `Prelude.hashWithSalt` dpuExecutionInMillis
+    _salt
+      `Prelude.hashWithSalt` dpuExecutionInMillis
       `Prelude.hashWithSalt` progress
 
 instance Prelude.NFData CalculationStatistics where

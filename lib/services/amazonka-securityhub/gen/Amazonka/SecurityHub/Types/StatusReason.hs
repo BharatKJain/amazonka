@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.StatusReason
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.StatusReason where
@@ -85,7 +85,8 @@ instance Data.FromJSON StatusReason where
 
 instance Prelude.Hashable StatusReason where
   hashWithSalt _salt StatusReason' {..} =
-    _salt `Prelude.hashWithSalt` description
+    _salt
+      `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` reasonCode
 
 instance Prelude.NFData StatusReason where

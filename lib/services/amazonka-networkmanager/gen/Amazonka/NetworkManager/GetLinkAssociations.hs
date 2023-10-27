@@ -16,7 +16,7 @@
 -- Module      : Amazonka.NetworkManager.GetLinkAssociations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,22 +125,22 @@ instance Core.AWSPager GetLinkAssociations where
     | Core.stop
         ( rs
             Lens.^? getLinkAssociationsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? getLinkAssociationsResponse_linkAssociations
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& getLinkAssociations_nextToken
           Lens..~ rs
           Lens.^? getLinkAssociationsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest GetLinkAssociations where
   type
@@ -152,7 +152,8 @@ instance Core.AWSRequest GetLinkAssociations where
     Response.receiveJSON
       ( \s h x ->
           GetLinkAssociationsResponse'
-            Prelude.<$> ( x Data..?> "LinkAssociations"
+            Prelude.<$> ( x
+                            Data..?> "LinkAssociations"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "NextToken")
@@ -161,7 +162,8 @@ instance Core.AWSRequest GetLinkAssociations where
 
 instance Prelude.Hashable GetLinkAssociations where
   hashWithSalt _salt GetLinkAssociations' {..} =
-    _salt `Prelude.hashWithSalt` deviceId
+    _salt
+      `Prelude.hashWithSalt` deviceId
       `Prelude.hashWithSalt` linkId
       `Prelude.hashWithSalt` maxResults
       `Prelude.hashWithSalt` nextToken

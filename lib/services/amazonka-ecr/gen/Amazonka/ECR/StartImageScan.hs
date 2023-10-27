@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ECR.StartImageScan
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,7 +129,8 @@ instance Core.AWSRequest StartImageScan where
 
 instance Prelude.Hashable StartImageScan where
   hashWithSalt _salt StartImageScan' {..} =
-    _salt `Prelude.hashWithSalt` registryId
+    _salt
+      `Prelude.hashWithSalt` registryId
       `Prelude.hashWithSalt` repositoryName
       `Prelude.hashWithSalt` imageId
 

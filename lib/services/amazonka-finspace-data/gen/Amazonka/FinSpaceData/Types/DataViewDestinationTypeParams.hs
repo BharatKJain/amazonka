@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FinSpaceData.Types.DataViewDestinationTypeParams
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FinSpaceData.Types.DataViewDestinationTypeParams where
@@ -122,7 +122,8 @@ instance Data.FromJSON DataViewDestinationTypeParams where
       ( \x ->
           DataViewDestinationTypeParams'
             Prelude.<$> (x Data..:? "s3DestinationExportFileFormat")
-            Prelude.<*> ( x Data..:? "s3DestinationExportFileFormatOptions"
+            Prelude.<*> ( x
+                            Data..:? "s3DestinationExportFileFormatOptions"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..: "destinationType")

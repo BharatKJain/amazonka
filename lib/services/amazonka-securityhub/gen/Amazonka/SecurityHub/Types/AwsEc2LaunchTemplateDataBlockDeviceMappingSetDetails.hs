@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataBlockDeviceMappingSetDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SecurityHub.Types.AwsEc2LaunchTemplateDataBlockDeviceMappingSetDetails where
@@ -113,9 +113,9 @@ instance
       ( \x ->
           AwsEc2LaunchTemplateDataBlockDeviceMappingSetDetails'
             Prelude.<$> (x Data..:? "DeviceName")
-              Prelude.<*> (x Data..:? "Ebs")
-              Prelude.<*> (x Data..:? "NoDevice")
-              Prelude.<*> (x Data..:? "VirtualName")
+            Prelude.<*> (x Data..:? "Ebs")
+            Prelude.<*> (x Data..:? "NoDevice")
+            Prelude.<*> (x Data..:? "VirtualName")
       )
 
 instance
@@ -125,7 +125,8 @@ instance
   hashWithSalt
     _salt
     AwsEc2LaunchTemplateDataBlockDeviceMappingSetDetails' {..} =
-      _salt `Prelude.hashWithSalt` deviceName
+      _salt
+        `Prelude.hashWithSalt` deviceName
         `Prelude.hashWithSalt` ebs
         `Prelude.hashWithSalt` noDevice
         `Prelude.hashWithSalt` virtualName

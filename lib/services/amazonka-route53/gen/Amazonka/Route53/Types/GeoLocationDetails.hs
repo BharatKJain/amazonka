@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53.Types.GeoLocationDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53.Types.GeoLocationDetails where
@@ -134,7 +134,8 @@ instance Data.FromXML GeoLocationDetails where
 
 instance Prelude.Hashable GeoLocationDetails where
   hashWithSalt _salt GeoLocationDetails' {..} =
-    _salt `Prelude.hashWithSalt` continentCode
+    _salt
+      `Prelude.hashWithSalt` continentCode
       `Prelude.hashWithSalt` continentName
       `Prelude.hashWithSalt` countryCode
       `Prelude.hashWithSalt` countryName

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerGeoSpatial.Types.VectorEnrichmentJobInputConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerGeoSpatial.Types.VectorEnrichmentJobInputConfig where
@@ -61,11 +61,9 @@ newVectorEnrichmentJobInputConfig
         documentType = pDocumentType_
       }
 
--- |
 vectorEnrichmentJobInputConfig_dataSourceConfig :: Lens.Lens' VectorEnrichmentJobInputConfig VectorEnrichmentJobDataSourceConfigInput
 vectorEnrichmentJobInputConfig_dataSourceConfig = Lens.lens (\VectorEnrichmentJobInputConfig' {dataSourceConfig} -> dataSourceConfig) (\s@VectorEnrichmentJobInputConfig' {} a -> s {dataSourceConfig = a} :: VectorEnrichmentJobInputConfig)
 
--- |
 vectorEnrichmentJobInputConfig_documentType :: Lens.Lens' VectorEnrichmentJobInputConfig VectorEnrichmentJobDocumentType
 vectorEnrichmentJobInputConfig_documentType = Lens.lens (\VectorEnrichmentJobInputConfig' {documentType} -> documentType) (\s@VectorEnrichmentJobInputConfig' {} a -> s {documentType = a} :: VectorEnrichmentJobInputConfig)
 
@@ -86,7 +84,8 @@ instance
   hashWithSalt
     _salt
     VectorEnrichmentJobInputConfig' {..} =
-      _salt `Prelude.hashWithSalt` dataSourceConfig
+      _salt
+        `Prelude.hashWithSalt` dataSourceConfig
         `Prelude.hashWithSalt` documentType
 
 instance

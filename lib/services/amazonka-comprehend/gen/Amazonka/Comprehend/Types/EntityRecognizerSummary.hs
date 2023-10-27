@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.EntityRecognizerSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.EntityRecognizerSummary where
@@ -109,7 +109,8 @@ instance Data.FromJSON EntityRecognizerSummary where
 
 instance Prelude.Hashable EntityRecognizerSummary where
   hashWithSalt _salt EntityRecognizerSummary' {..} =
-    _salt `Prelude.hashWithSalt` latestVersionCreatedAt
+    _salt
+      `Prelude.hashWithSalt` latestVersionCreatedAt
       `Prelude.hashWithSalt` latestVersionName
       `Prelude.hashWithSalt` latestVersionStatus
       `Prelude.hashWithSalt` numberOfVersions

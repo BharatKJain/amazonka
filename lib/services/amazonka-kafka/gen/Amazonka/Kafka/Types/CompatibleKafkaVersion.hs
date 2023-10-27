@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.CompatibleKafkaVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.CompatibleKafkaVersion where
@@ -71,14 +71,16 @@ instance Data.FromJSON CompatibleKafkaVersion where
       ( \x ->
           CompatibleKafkaVersion'
             Prelude.<$> (x Data..:? "sourceVersion")
-            Prelude.<*> ( x Data..:? "targetVersions"
+            Prelude.<*> ( x
+                            Data..:? "targetVersions"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable CompatibleKafkaVersion where
   hashWithSalt _salt CompatibleKafkaVersion' {..} =
-    _salt `Prelude.hashWithSalt` sourceVersion
+    _salt
+      `Prelude.hashWithSalt` sourceVersion
       `Prelude.hashWithSalt` targetVersions
 
 instance Prelude.NFData CompatibleKafkaVersion where

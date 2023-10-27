@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.TcpRoute
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.TcpRoute where
@@ -89,7 +89,8 @@ instance Data.FromJSON TcpRoute where
 
 instance Prelude.Hashable TcpRoute where
   hashWithSalt _salt TcpRoute' {..} =
-    _salt `Prelude.hashWithSalt` match
+    _salt
+      `Prelude.hashWithSalt` match
       `Prelude.hashWithSalt` timeout
       `Prelude.hashWithSalt` action
 

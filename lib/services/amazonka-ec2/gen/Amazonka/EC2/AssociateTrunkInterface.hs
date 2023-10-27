@@ -16,7 +16,7 @@
 -- Module      : Amazonka.EC2.AssociateTrunkInterface
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -173,7 +173,8 @@ instance Core.AWSRequest AssociateTrunkInterface where
 
 instance Prelude.Hashable AssociateTrunkInterface where
   hashWithSalt _salt AssociateTrunkInterface' {..} =
-    _salt `Prelude.hashWithSalt` clientToken
+    _salt
+      `Prelude.hashWithSalt` clientToken
       `Prelude.hashWithSalt` dryRun
       `Prelude.hashWithSalt` greKey
       `Prelude.hashWithSalt` vlanId

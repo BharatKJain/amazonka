@@ -14,7 +14,7 @@
 -- Module      : Amazonka.GameLift.Types.EC2InstanceLimit
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.GameLift.Types.EC2InstanceLimit where
@@ -113,7 +113,8 @@ instance Data.FromJSON EC2InstanceLimit where
 
 instance Prelude.Hashable EC2InstanceLimit where
   hashWithSalt _salt EC2InstanceLimit' {..} =
-    _salt `Prelude.hashWithSalt` currentInstances
+    _salt
+      `Prelude.hashWithSalt` currentInstances
       `Prelude.hashWithSalt` eC2InstanceType
       `Prelude.hashWithSalt` instanceLimit
       `Prelude.hashWithSalt` location

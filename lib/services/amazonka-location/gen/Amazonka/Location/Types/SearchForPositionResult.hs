@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Location.Types.SearchForPositionResult
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Location.Types.SearchForPositionResult where
@@ -114,7 +114,8 @@ instance Data.FromJSON SearchForPositionResult where
 
 instance Prelude.Hashable SearchForPositionResult where
   hashWithSalt _salt SearchForPositionResult' {..} =
-    _salt `Prelude.hashWithSalt` placeId
+    _salt
+      `Prelude.hashWithSalt` placeId
       `Prelude.hashWithSalt` distance
       `Prelude.hashWithSalt` place
 

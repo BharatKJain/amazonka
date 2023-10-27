@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudDirectory.Types.BatchAttachTypedLink
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudDirectory.Types.BatchAttachTypedLink where
@@ -97,7 +97,8 @@ batchAttachTypedLink_attributes = Lens.lens (\BatchAttachTypedLink' {attributes}
 
 instance Prelude.Hashable BatchAttachTypedLink where
   hashWithSalt _salt BatchAttachTypedLink' {..} =
-    _salt `Prelude.hashWithSalt` sourceObjectReference
+    _salt
+      `Prelude.hashWithSalt` sourceObjectReference
       `Prelude.hashWithSalt` targetObjectReference
       `Prelude.hashWithSalt` typedLinkFacet
       `Prelude.hashWithSalt` attributes

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LookoutEquipment.Types.LabelsInputConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LookoutEquipment.Types.LabelsInputConfiguration where
@@ -80,7 +80,8 @@ instance Data.FromJSON LabelsInputConfiguration where
 
 instance Prelude.Hashable LabelsInputConfiguration where
   hashWithSalt _salt LabelsInputConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` labelGroupName
+    _salt
+      `Prelude.hashWithSalt` labelGroupName
       `Prelude.hashWithSalt` s3InputConfiguration
 
 instance Prelude.NFData LabelsInputConfiguration where

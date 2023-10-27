@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.Types.IdentityProviderType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CognitoIdentityProvider.Types.IdentityProviderType where
@@ -328,13 +328,15 @@ instance Data.FromJSON IdentityProviderType where
       "IdentityProviderType"
       ( \x ->
           IdentityProviderType'
-            Prelude.<$> ( x Data..:? "AttributeMapping"
+            Prelude.<$> ( x
+                            Data..:? "AttributeMapping"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "CreationDate")
             Prelude.<*> (x Data..:? "IdpIdentifiers" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "LastModifiedDate")
-            Prelude.<*> ( x Data..:? "ProviderDetails"
+            Prelude.<*> ( x
+                            Data..:? "ProviderDetails"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ProviderName")
@@ -344,7 +346,8 @@ instance Data.FromJSON IdentityProviderType where
 
 instance Prelude.Hashable IdentityProviderType where
   hashWithSalt _salt IdentityProviderType' {..} =
-    _salt `Prelude.hashWithSalt` attributeMapping
+    _salt
+      `Prelude.hashWithSalt` attributeMapping
       `Prelude.hashWithSalt` creationDate
       `Prelude.hashWithSalt` idpIdentifiers
       `Prelude.hashWithSalt` lastModifiedDate

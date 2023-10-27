@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppSync.Types.CognitoUserPoolConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppSync.Types.CognitoUserPoolConfig where
@@ -92,7 +92,8 @@ instance Data.FromJSON CognitoUserPoolConfig where
 
 instance Prelude.Hashable CognitoUserPoolConfig where
   hashWithSalt _salt CognitoUserPoolConfig' {..} =
-    _salt `Prelude.hashWithSalt` appIdClientRegex
+    _salt
+      `Prelude.hashWithSalt` appIdClientRegex
       `Prelude.hashWithSalt` userPoolId
       `Prelude.hashWithSalt` awsRegion
 

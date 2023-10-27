@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Firehose.Types.HttpEndpointConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Firehose.Types.HttpEndpointConfiguration where
@@ -92,7 +92,8 @@ httpEndpointConfiguration_url = Lens.lens (\HttpEndpointConfiguration' {url} -> 
 
 instance Prelude.Hashable HttpEndpointConfiguration where
   hashWithSalt _salt HttpEndpointConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` accessKey
+    _salt
+      `Prelude.hashWithSalt` accessKey
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` url
 

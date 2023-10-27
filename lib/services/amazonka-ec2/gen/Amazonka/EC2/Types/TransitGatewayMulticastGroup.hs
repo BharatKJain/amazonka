@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TransitGatewayMulticastGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TransitGatewayMulticastGroup where
@@ -170,7 +170,8 @@ instance
     TransitGatewayMulticastGroup
   where
   hashWithSalt _salt TransitGatewayMulticastGroup' {..} =
-    _salt `Prelude.hashWithSalt` groupIpAddress
+    _salt
+      `Prelude.hashWithSalt` groupIpAddress
       `Prelude.hashWithSalt` groupMember
       `Prelude.hashWithSalt` groupSource
       `Prelude.hashWithSalt` memberType

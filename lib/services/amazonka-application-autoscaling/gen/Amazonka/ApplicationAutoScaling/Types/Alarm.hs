@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ApplicationAutoScaling.Types.Alarm
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ApplicationAutoScaling.Types.Alarm where
@@ -78,7 +78,8 @@ instance Data.FromJSON Alarm where
 
 instance Prelude.Hashable Alarm where
   hashWithSalt _salt Alarm' {..} =
-    _salt `Prelude.hashWithSalt` alarmName
+    _salt
+      `Prelude.hashWithSalt` alarmName
       `Prelude.hashWithSalt` alarmARN
 
 instance Prelude.NFData Alarm where

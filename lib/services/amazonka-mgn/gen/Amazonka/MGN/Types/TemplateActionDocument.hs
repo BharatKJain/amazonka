@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MGN.Types.TemplateActionDocument
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MGN.Types.TemplateActionDocument where
@@ -156,7 +156,8 @@ instance Data.FromJSON TemplateActionDocument where
 
 instance Prelude.Hashable TemplateActionDocument where
   hashWithSalt _salt TemplateActionDocument' {..} =
-    _salt `Prelude.hashWithSalt` actionID
+    _salt
+      `Prelude.hashWithSalt` actionID
       `Prelude.hashWithSalt` actionName
       `Prelude.hashWithSalt` active
       `Prelude.hashWithSalt` documentIdentifier

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.BarChartSortConfiguration
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.BarChartSortConfiguration where
@@ -113,14 +113,16 @@ instance Data.FromJSON BarChartSortConfiguration where
             Prelude.<*> (x Data..:? "ColorItemsLimit")
             Prelude.<*> (x Data..:? "ColorSort" Data..!= Prelude.mempty)
             Prelude.<*> (x Data..:? "SmallMultiplesLimitConfiguration")
-            Prelude.<*> ( x Data..:? "SmallMultiplesSort"
+            Prelude.<*> ( x
+                            Data..:? "SmallMultiplesSort"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable BarChartSortConfiguration where
   hashWithSalt _salt BarChartSortConfiguration' {..} =
-    _salt `Prelude.hashWithSalt` categoryItemsLimit
+    _salt
+      `Prelude.hashWithSalt` categoryItemsLimit
       `Prelude.hashWithSalt` categorySort
       `Prelude.hashWithSalt` colorItemsLimit
       `Prelude.hashWithSalt` colorSort

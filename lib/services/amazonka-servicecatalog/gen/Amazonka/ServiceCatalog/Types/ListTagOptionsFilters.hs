@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ServiceCatalog.Types.ListTagOptionsFilters
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ServiceCatalog.Types.ListTagOptionsFilters where
@@ -73,7 +73,8 @@ listTagOptionsFilters_value = Lens.lens (\ListTagOptionsFilters' {value} -> valu
 
 instance Prelude.Hashable ListTagOptionsFilters where
   hashWithSalt _salt ListTagOptionsFilters' {..} =
-    _salt `Prelude.hashWithSalt` active
+    _salt
+      `Prelude.hashWithSalt` active
       `Prelude.hashWithSalt` key
       `Prelude.hashWithSalt` value
 

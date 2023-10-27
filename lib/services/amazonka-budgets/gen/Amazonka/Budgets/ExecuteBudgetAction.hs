@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Budgets.ExecuteBudgetAction
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,7 +136,8 @@ instance Core.AWSRequest ExecuteBudgetAction where
 
 instance Prelude.Hashable ExecuteBudgetAction where
   hashWithSalt _salt ExecuteBudgetAction' {..} =
-    _salt `Prelude.hashWithSalt` accountId
+    _salt
+      `Prelude.hashWithSalt` accountId
       `Prelude.hashWithSalt` budgetName
       `Prelude.hashWithSalt` actionId
       `Prelude.hashWithSalt` executionType

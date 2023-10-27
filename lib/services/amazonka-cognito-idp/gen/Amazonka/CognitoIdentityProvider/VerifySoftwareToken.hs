@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CognitoIdentityProvider.VerifySoftwareToken
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,7 +136,8 @@ instance Core.AWSRequest VerifySoftwareToken where
 
 instance Prelude.Hashable VerifySoftwareToken where
   hashWithSalt _salt VerifySoftwareToken' {..} =
-    _salt `Prelude.hashWithSalt` accessToken
+    _salt
+      `Prelude.hashWithSalt` accessToken
       `Prelude.hashWithSalt` friendlyDeviceName
       `Prelude.hashWithSalt` session
       `Prelude.hashWithSalt` userCode

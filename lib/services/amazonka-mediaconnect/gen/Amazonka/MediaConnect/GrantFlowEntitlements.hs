@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaConnect.GrantFlowEntitlements
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest GrantFlowEntitlements where
 
 instance Prelude.Hashable GrantFlowEntitlements where
   hashWithSalt _salt GrantFlowEntitlements' {..} =
-    _salt `Prelude.hashWithSalt` flowArn
+    _salt
+      `Prelude.hashWithSalt` flowArn
       `Prelude.hashWithSalt` entitlements
 
 instance Prelude.NFData GrantFlowEntitlements where

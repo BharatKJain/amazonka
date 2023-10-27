@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AppMesh.Types.VirtualNodeSpec
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AppMesh.Types.VirtualNodeSpec where
@@ -127,7 +127,8 @@ instance Data.FromJSON VirtualNodeSpec where
 
 instance Prelude.Hashable VirtualNodeSpec where
   hashWithSalt _salt VirtualNodeSpec' {..} =
-    _salt `Prelude.hashWithSalt` backendDefaults
+    _salt
+      `Prelude.hashWithSalt` backendDefaults
       `Prelude.hashWithSalt` backends
       `Prelude.hashWithSalt` listeners
       `Prelude.hashWithSalt` logging

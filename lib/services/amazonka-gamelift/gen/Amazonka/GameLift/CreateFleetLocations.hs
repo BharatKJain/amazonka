@@ -16,7 +16,7 @@
 -- Module      : Amazonka.GameLift.CreateFleetLocations
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -142,7 +142,8 @@ instance Core.AWSRequest CreateFleetLocations where
 
 instance Prelude.Hashable CreateFleetLocations where
   hashWithSalt _salt CreateFleetLocations' {..} =
-    _salt `Prelude.hashWithSalt` fleetId
+    _salt
+      `Prelude.hashWithSalt` fleetId
       `Prelude.hashWithSalt` locations
 
 instance Prelude.NFData CreateFleetLocations where

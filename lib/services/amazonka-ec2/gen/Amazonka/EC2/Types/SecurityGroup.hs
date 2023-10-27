@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.SecurityGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.SecurityGroup where
@@ -134,14 +134,19 @@ securityGroup_description = Lens.lens (\SecurityGroup' {description} -> descript
 instance Data.FromXML SecurityGroup where
   parseXML x =
     SecurityGroup'
-      Prelude.<$> ( x Data..@? "ipPermissions" Core..!@ Prelude.mempty
-                      Prelude.>>= Core.may (Data.parseXMLList "item")
-                  )
-      Prelude.<*> ( x Data..@? "ipPermissionsEgress"
+      Prelude.<$> ( x
+                      Data..@? "ipPermissions"
                       Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "ipPermissionsEgress"
+                      Core..!@ Prelude.mempty
+                      Prelude.>>= Core.may (Data.parseXMLList "item")
+                  )
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "vpcId")
@@ -152,7 +157,8 @@ instance Data.FromXML SecurityGroup where
 
 instance Prelude.Hashable SecurityGroup where
   hashWithSalt _salt SecurityGroup' {..} =
-    _salt `Prelude.hashWithSalt` ipPermissions
+    _salt
+      `Prelude.hashWithSalt` ipPermissions
       `Prelude.hashWithSalt` ipPermissionsEgress
       `Prelude.hashWithSalt` tags
       `Prelude.hashWithSalt` vpcId

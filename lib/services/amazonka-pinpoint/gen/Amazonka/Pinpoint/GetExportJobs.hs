@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Pinpoint.GetExportJobs
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -125,7 +125,8 @@ instance Core.AWSRequest GetExportJobs where
 
 instance Prelude.Hashable GetExportJobs where
   hashWithSalt _salt GetExportJobs' {..} =
-    _salt `Prelude.hashWithSalt` pageSize
+    _salt
+      `Prelude.hashWithSalt` pageSize
       `Prelude.hashWithSalt` token
       `Prelude.hashWithSalt` applicationId
 

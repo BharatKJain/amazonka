@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ApplicationInsights.UpdateApplication
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -161,7 +161,8 @@ instance Core.AWSRequest UpdateApplication where
 
 instance Prelude.Hashable UpdateApplication where
   hashWithSalt _salt UpdateApplication' {..} =
-    _salt `Prelude.hashWithSalt` autoConfigEnabled
+    _salt
+      `Prelude.hashWithSalt` autoConfigEnabled
       `Prelude.hashWithSalt` cWEMonitorEnabled
       `Prelude.hashWithSalt` opsCenterEnabled
       `Prelude.hashWithSalt` opsItemSNSTopicArn

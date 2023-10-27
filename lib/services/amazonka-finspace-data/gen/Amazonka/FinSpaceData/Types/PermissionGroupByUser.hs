@@ -14,7 +14,7 @@
 -- Module      : Amazonka.FinSpaceData.Types.PermissionGroupByUser
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.FinSpaceData.Types.PermissionGroupByUser where
@@ -113,7 +113,8 @@ instance Data.FromJSON PermissionGroupByUser where
 
 instance Prelude.Hashable PermissionGroupByUser where
   hashWithSalt _salt PermissionGroupByUser' {..} =
-    _salt `Prelude.hashWithSalt` membershipStatus
+    _salt
+      `Prelude.hashWithSalt` membershipStatus
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` permissionGroupId
 

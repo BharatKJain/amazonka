@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMakerFeatureStoreRuntime.Types.BatchGetRecordIdentifier
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMakerFeatureStoreRuntime.Types.BatchGetRecordIdentifier where
@@ -97,7 +97,8 @@ instance Data.FromJSON BatchGetRecordIdentifier where
 
 instance Prelude.Hashable BatchGetRecordIdentifier where
   hashWithSalt _salt BatchGetRecordIdentifier' {..} =
-    _salt `Prelude.hashWithSalt` featureNames
+    _salt
+      `Prelude.hashWithSalt` featureNames
       `Prelude.hashWithSalt` featureGroupName
       `Prelude.hashWithSalt` recordIdentifiersValueAsString
 

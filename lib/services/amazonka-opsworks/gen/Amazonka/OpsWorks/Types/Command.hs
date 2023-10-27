@@ -14,7 +14,7 @@
 -- Module      : Amazonka.OpsWorks.Types.Command
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.OpsWorks.Types.Command where
@@ -250,7 +250,8 @@ instance Data.FromJSON Command where
 
 instance Prelude.Hashable Command where
   hashWithSalt _salt Command' {..} =
-    _salt `Prelude.hashWithSalt` acknowledgedAt
+    _salt
+      `Prelude.hashWithSalt` acknowledgedAt
       `Prelude.hashWithSalt` commandId
       `Prelude.hashWithSalt` completedAt
       `Prelude.hashWithSalt` createdAt

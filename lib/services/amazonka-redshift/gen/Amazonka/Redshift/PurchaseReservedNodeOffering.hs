@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Redshift.PurchaseReservedNodeOffering
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -129,7 +129,8 @@ instance
     PurchaseReservedNodeOffering
   where
   hashWithSalt _salt PurchaseReservedNodeOffering' {..} =
-    _salt `Prelude.hashWithSalt` nodeCount
+    _salt
+      `Prelude.hashWithSalt` nodeCount
       `Prelude.hashWithSalt` reservedNodeOfferingId
 
 instance Prelude.NFData PurchaseReservedNodeOffering where

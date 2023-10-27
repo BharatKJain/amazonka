@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Panorama.DescribePackageVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -145,7 +145,8 @@ instance Core.AWSRequest DescribePackageVersion where
 
 instance Prelude.Hashable DescribePackageVersion where
   hashWithSalt _salt DescribePackageVersion' {..} =
-    _salt `Prelude.hashWithSalt` ownerAccount
+    _salt
+      `Prelude.hashWithSalt` ownerAccount
       `Prelude.hashWithSalt` patchVersion
       `Prelude.hashWithSalt` packageId
       `Prelude.hashWithSalt` packageVersion

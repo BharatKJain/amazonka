@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DLM.GetLifecyclePolicies
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -154,7 +154,8 @@ instance Core.AWSRequest GetLifecyclePolicies where
 
 instance Prelude.Hashable GetLifecyclePolicies where
   hashWithSalt _salt GetLifecyclePolicies' {..} =
-    _salt `Prelude.hashWithSalt` policyIds
+    _salt
+      `Prelude.hashWithSalt` policyIds
       `Prelude.hashWithSalt` resourceTypes
       `Prelude.hashWithSalt` state
       `Prelude.hashWithSalt` tagsToAdd

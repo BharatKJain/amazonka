@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SageMaker.CreateModelCardExportJob
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,7 +136,8 @@ instance Core.AWSRequest CreateModelCardExportJob where
 
 instance Prelude.Hashable CreateModelCardExportJob where
   hashWithSalt _salt CreateModelCardExportJob' {..} =
-    _salt `Prelude.hashWithSalt` modelCardVersion
+    _salt
+      `Prelude.hashWithSalt` modelCardVersion
       `Prelude.hashWithSalt` modelCardName
       `Prelude.hashWithSalt` modelCardExportJobName
       `Prelude.hashWithSalt` outputConfig

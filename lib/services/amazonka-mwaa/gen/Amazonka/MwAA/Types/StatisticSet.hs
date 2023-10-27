@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MwAA.Types.StatisticSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MwAA.Types.StatisticSet where
@@ -85,7 +85,8 @@ statisticSet_sum = Lens.lens (\StatisticSet' {sum} -> sum) (\s@StatisticSet' {} 
 
 instance Prelude.Hashable StatisticSet where
   hashWithSalt _salt StatisticSet' {..} =
-    _salt `Prelude.hashWithSalt` maximum
+    _salt
+      `Prelude.hashWithSalt` maximum
       `Prelude.hashWithSalt` minimum
       `Prelude.hashWithSalt` sampleCount
       `Prelude.hashWithSalt` sum

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glacier.Types.S3Location
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glacier.Types.S3Location where
@@ -130,7 +130,8 @@ instance Data.FromJSON S3Location where
       "S3Location"
       ( \x ->
           S3Location'
-            Prelude.<$> ( x Data..:? "AccessControlList"
+            Prelude.<$> ( x
+                            Data..:? "AccessControlList"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "BucketName")
@@ -144,7 +145,8 @@ instance Data.FromJSON S3Location where
 
 instance Prelude.Hashable S3Location where
   hashWithSalt _salt S3Location' {..} =
-    _salt `Prelude.hashWithSalt` accessControlList
+    _salt
+      `Prelude.hashWithSalt` accessControlList
       `Prelude.hashWithSalt` bucketName
       `Prelude.hashWithSalt` cannedACL
       `Prelude.hashWithSalt` encryption

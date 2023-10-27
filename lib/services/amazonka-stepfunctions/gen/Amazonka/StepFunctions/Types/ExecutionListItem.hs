@@ -14,7 +14,7 @@
 -- Module      : Amazonka.StepFunctions.Types.ExecutionListItem
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.StepFunctions.Types.ExecutionListItem where
@@ -213,7 +213,8 @@ instance Data.FromJSON ExecutionListItem where
 
 instance Prelude.Hashable ExecutionListItem where
   hashWithSalt _salt ExecutionListItem' {..} =
-    _salt `Prelude.hashWithSalt` itemCount
+    _salt
+      `Prelude.hashWithSalt` itemCount
       `Prelude.hashWithSalt` mapRunArn
       `Prelude.hashWithSalt` stopDate
       `Prelude.hashWithSalt` executionArn

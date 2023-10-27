@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Lightsail.Types.AttachedDisk
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Lightsail.Types.AttachedDisk where
@@ -75,7 +75,8 @@ instance Data.FromJSON AttachedDisk where
 
 instance Prelude.Hashable AttachedDisk where
   hashWithSalt _salt AttachedDisk' {..} =
-    _salt `Prelude.hashWithSalt` path
+    _salt
+      `Prelude.hashWithSalt` path
       `Prelude.hashWithSalt` sizeInGb
 
 instance Prelude.NFData AttachedDisk where

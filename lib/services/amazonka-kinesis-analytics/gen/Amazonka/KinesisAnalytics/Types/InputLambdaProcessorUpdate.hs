@@ -14,7 +14,7 @@
 -- Module      : Amazonka.KinesisAnalytics.Types.InputLambdaProcessorUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.KinesisAnalytics.Types.InputLambdaProcessorUpdate where
@@ -91,7 +91,8 @@ inputLambdaProcessorUpdate_roleARNUpdate = Lens.lens (\InputLambdaProcessorUpdat
 
 instance Prelude.Hashable InputLambdaProcessorUpdate where
   hashWithSalt _salt InputLambdaProcessorUpdate' {..} =
-    _salt `Prelude.hashWithSalt` resourceARNUpdate
+    _salt
+      `Prelude.hashWithSalt` resourceARNUpdate
       `Prelude.hashWithSalt` roleARNUpdate
 
 instance Prelude.NFData InputLambdaProcessorUpdate where

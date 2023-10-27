@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MediaConvert.Types.TimecodeConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MediaConvert.Types.TimecodeConfig where
@@ -192,7 +192,8 @@ instance Data.FromJSON TimecodeConfig where
 
 instance Prelude.Hashable TimecodeConfig where
   hashWithSalt _salt TimecodeConfig' {..} =
-    _salt `Prelude.hashWithSalt` anchor
+    _salt
+      `Prelude.hashWithSalt` anchor
       `Prelude.hashWithSalt` source
       `Prelude.hashWithSalt` start
       `Prelude.hashWithSalt` timestampOffset

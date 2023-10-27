@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Route53Domains.Types.DnssecSigningAttributes
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Route53Domains.Types.DnssecSigningAttributes where
@@ -100,7 +100,8 @@ dnssecSigningAttributes_publicKey = Lens.lens (\DnssecSigningAttributes' {public
 
 instance Prelude.Hashable DnssecSigningAttributes where
   hashWithSalt _salt DnssecSigningAttributes' {..} =
-    _salt `Prelude.hashWithSalt` algorithm
+    _salt
+      `Prelude.hashWithSalt` algorithm
       `Prelude.hashWithSalt` flags
       `Prelude.hashWithSalt` publicKey
 

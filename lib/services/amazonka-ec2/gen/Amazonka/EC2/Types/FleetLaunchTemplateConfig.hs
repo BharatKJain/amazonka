@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.FleetLaunchTemplateConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.FleetLaunchTemplateConfig where
@@ -73,7 +73,9 @@ instance Data.FromXML FleetLaunchTemplateConfig where
   parseXML x =
     FleetLaunchTemplateConfig'
       Prelude.<$> (x Data..@? "launchTemplateSpecification")
-      Prelude.<*> ( x Data..@? "overrides" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "overrides"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
 

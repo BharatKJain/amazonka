@@ -14,7 +14,7 @@
 -- Module      : Amazonka.ElasticSearch.Types.AutoTune
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.ElasticSearch.Types.AutoTune where
@@ -82,7 +82,8 @@ instance Data.FromJSON AutoTune where
 
 instance Prelude.Hashable AutoTune where
   hashWithSalt _salt AutoTune' {..} =
-    _salt `Prelude.hashWithSalt` autoTuneDetails
+    _salt
+      `Prelude.hashWithSalt` autoTuneDetails
       `Prelude.hashWithSalt` autoTuneType
 
 instance Prelude.NFData AutoTune where

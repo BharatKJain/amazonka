@@ -14,7 +14,7 @@
 -- Module      : Amazonka.MachineLearning.Types.RDSDatabase
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.MachineLearning.Types.RDSDatabase where
@@ -78,7 +78,8 @@ instance Data.FromJSON RDSDatabase where
 
 instance Prelude.Hashable RDSDatabase where
   hashWithSalt _salt RDSDatabase' {..} =
-    _salt `Prelude.hashWithSalt` instanceIdentifier
+    _salt
+      `Prelude.hashWithSalt` instanceIdentifier
       `Prelude.hashWithSalt` databaseName
 
 instance Prelude.NFData RDSDatabase where

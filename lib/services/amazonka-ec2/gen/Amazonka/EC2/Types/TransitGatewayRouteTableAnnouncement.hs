@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EC2.Types.TransitGatewayRouteTableAnnouncement
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EC2.Types.TransitGatewayRouteTableAnnouncement where
@@ -170,7 +170,9 @@ instance
       Prelude.<*> (x Data..@? "peerTransitGatewayId")
       Prelude.<*> (x Data..@? "peeringAttachmentId")
       Prelude.<*> (x Data..@? "state")
-      Prelude.<*> ( x Data..@? "tagSet" Core..!@ Prelude.mempty
+      Prelude.<*> ( x
+                      Data..@? "tagSet"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "item")
                   )
       Prelude.<*> (x Data..@? "transitGatewayId")
@@ -184,7 +186,8 @@ instance
   hashWithSalt
     _salt
     TransitGatewayRouteTableAnnouncement' {..} =
-      _salt `Prelude.hashWithSalt` announcementDirection
+      _salt
+        `Prelude.hashWithSalt` announcementDirection
         `Prelude.hashWithSalt` coreNetworkId
         `Prelude.hashWithSalt` creationTime
         `Prelude.hashWithSalt` peerCoreNetworkId

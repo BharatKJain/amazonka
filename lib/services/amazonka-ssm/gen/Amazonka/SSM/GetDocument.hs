@@ -16,7 +16,7 @@
 -- Module      : Amazonka.SSM.GetDocument
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -136,7 +136,8 @@ instance Core.AWSRequest GetDocument where
     Response.receiveJSON
       ( \s h x ->
           GetDocumentResponse'
-            Prelude.<$> ( x Data..?> "AttachmentsContent"
+            Prelude.<$> ( x
+                            Data..?> "AttachmentsContent"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "Content")
@@ -156,7 +157,8 @@ instance Core.AWSRequest GetDocument where
 
 instance Prelude.Hashable GetDocument where
   hashWithSalt _salt GetDocument' {..} =
-    _salt `Prelude.hashWithSalt` documentFormat
+    _salt
+      `Prelude.hashWithSalt` documentFormat
       `Prelude.hashWithSalt` documentVersion
       `Prelude.hashWithSalt` versionName
       `Prelude.hashWithSalt` name

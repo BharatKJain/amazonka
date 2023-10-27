@@ -14,7 +14,7 @@
 -- Module      : Amazonka.XRay.Types.SamplingRuleRecord
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.XRay.Types.SamplingRuleRecord where
@@ -87,7 +87,8 @@ instance Data.FromJSON SamplingRuleRecord where
 
 instance Prelude.Hashable SamplingRuleRecord where
   hashWithSalt _salt SamplingRuleRecord' {..} =
-    _salt `Prelude.hashWithSalt` createdAt
+    _salt
+      `Prelude.hashWithSalt` createdAt
       `Prelude.hashWithSalt` modifiedAt
       `Prelude.hashWithSalt` samplingRule
 

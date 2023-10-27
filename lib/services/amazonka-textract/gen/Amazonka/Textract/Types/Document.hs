@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Textract.Types.Document
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Textract.Types.Document where
@@ -113,7 +113,8 @@ document_s3Object = Lens.lens (\Document' {s3Object} -> s3Object) (\s@Document' 
 
 instance Prelude.Hashable Document where
   hashWithSalt _salt Document' {..} =
-    _salt `Prelude.hashWithSalt` bytes
+    _salt
+      `Prelude.hashWithSalt` bytes
       `Prelude.hashWithSalt` s3Object
 
 instance Prelude.NFData Document where

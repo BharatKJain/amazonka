@@ -14,7 +14,7 @@
 -- Module      : Amazonka.WellArchitected.Types.PillarReviewSummary
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.WellArchitected.Types.PillarReviewSummary where
@@ -91,7 +91,8 @@ instance Data.FromJSON PillarReviewSummary where
 
 instance Prelude.Hashable PillarReviewSummary where
   hashWithSalt _salt PillarReviewSummary' {..} =
-    _salt `Prelude.hashWithSalt` notes
+    _salt
+      `Prelude.hashWithSalt` notes
       `Prelude.hashWithSalt` pillarId
       `Prelude.hashWithSalt` pillarName
       `Prelude.hashWithSalt` riskCounts

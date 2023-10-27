@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CloudFormation.Types.ResourceToImport
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CloudFormation.Types.ResourceToImport where
@@ -97,7 +97,8 @@ resourceToImport_resourceIdentifier = Lens.lens (\ResourceToImport' {resourceIde
 
 instance Prelude.Hashable ResourceToImport where
   hashWithSalt _salt ResourceToImport' {..} =
-    _salt `Prelude.hashWithSalt` resourceType
+    _salt
+      `Prelude.hashWithSalt` resourceType
       `Prelude.hashWithSalt` logicalResourceId
       `Prelude.hashWithSalt` resourceIdentifier
 

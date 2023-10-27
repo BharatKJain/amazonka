@@ -14,7 +14,7 @@
 -- Module      : Amazonka.EKS.Types.VpcConfigRequest
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.EKS.Types.VpcConfigRequest where
@@ -189,7 +189,8 @@ vpcConfigRequest_subnetIds = Lens.lens (\VpcConfigRequest' {subnetIds} -> subnet
 
 instance Prelude.Hashable VpcConfigRequest where
   hashWithSalt _salt VpcConfigRequest' {..} =
-    _salt `Prelude.hashWithSalt` endpointPrivateAccess
+    _salt
+      `Prelude.hashWithSalt` endpointPrivateAccess
       `Prelude.hashWithSalt` endpointPublicAccess
       `Prelude.hashWithSalt` publicAccessCidrs
       `Prelude.hashWithSalt` securityGroupIds

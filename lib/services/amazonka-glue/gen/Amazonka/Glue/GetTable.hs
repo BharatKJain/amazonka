@@ -16,7 +16,7 @@
 -- Module      : Amazonka.Glue.GetTable
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -148,7 +148,8 @@ instance Core.AWSRequest GetTable where
 
 instance Prelude.Hashable GetTable where
   hashWithSalt _salt GetTable' {..} =
-    _salt `Prelude.hashWithSalt` catalogId
+    _salt
+      `Prelude.hashWithSalt` catalogId
       `Prelude.hashWithSalt` queryAsOfTime
       `Prelude.hashWithSalt` transactionId
       `Prelude.hashWithSalt` databaseName

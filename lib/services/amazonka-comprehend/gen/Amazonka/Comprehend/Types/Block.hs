@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Comprehend.Types.Block
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Comprehend.Types.Block where
@@ -145,7 +145,8 @@ instance Data.FromJSON Block where
 
 instance Prelude.Hashable Block where
   hashWithSalt _salt Block' {..} =
-    _salt `Prelude.hashWithSalt` blockType
+    _salt
+      `Prelude.hashWithSalt` blockType
       `Prelude.hashWithSalt` geometry
       `Prelude.hashWithSalt` id
       `Prelude.hashWithSalt` page

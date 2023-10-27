@@ -16,7 +16,7 @@
 -- Module      : Amazonka.MediaLive.UpdateInputDevice
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -147,7 +147,8 @@ instance Core.AWSRequest UpdateInputDevice' where
 
 instance Prelude.Hashable UpdateInputDevice' where
   hashWithSalt _salt UpdateInputDevice'' {..} =
-    _salt `Prelude.hashWithSalt` hdDeviceSettings
+    _salt
+      `Prelude.hashWithSalt` hdDeviceSettings
       `Prelude.hashWithSalt` name
       `Prelude.hashWithSalt` uhdDeviceSettings
       `Prelude.hashWithSalt` inputDeviceId

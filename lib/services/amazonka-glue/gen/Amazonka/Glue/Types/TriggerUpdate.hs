@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Glue.Types.TriggerUpdate
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Glue.Types.TriggerUpdate where
@@ -117,7 +117,8 @@ triggerUpdate_schedule = Lens.lens (\TriggerUpdate' {schedule} -> schedule) (\s@
 
 instance Prelude.Hashable TriggerUpdate where
   hashWithSalt _salt TriggerUpdate' {..} =
-    _salt `Prelude.hashWithSalt` actions
+    _salt
+      `Prelude.hashWithSalt` actions
       `Prelude.hashWithSalt` description
       `Prelude.hashWithSalt` eventBatchingCondition
       `Prelude.hashWithSalt` name

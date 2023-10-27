@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ElasticBeanstalk.ListPlatformVersions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -127,22 +127,22 @@ instance Core.AWSPager ListPlatformVersions where
     | Core.stop
         ( rs
             Lens.^? listPlatformVersionsResponse_nextToken
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? listPlatformVersionsResponse_platformSummaryList
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& listPlatformVersions_nextToken
           Lens..~ rs
           Lens.^? listPlatformVersionsResponse_nextToken
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest ListPlatformVersions where
   type
@@ -156,7 +156,8 @@ instance Core.AWSRequest ListPlatformVersions where
       ( \s h x ->
           ListPlatformVersionsResponse'
             Prelude.<$> (x Data..@? "NextToken")
-            Prelude.<*> ( x Data..@? "PlatformSummaryList"
+            Prelude.<*> ( x
+                            Data..@? "PlatformSummaryList"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
@@ -165,7 +166,8 @@ instance Core.AWSRequest ListPlatformVersions where
 
 instance Prelude.Hashable ListPlatformVersions where
   hashWithSalt _salt ListPlatformVersions' {..} =
-    _salt `Prelude.hashWithSalt` filters
+    _salt
+      `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` maxRecords
       `Prelude.hashWithSalt` nextToken
 

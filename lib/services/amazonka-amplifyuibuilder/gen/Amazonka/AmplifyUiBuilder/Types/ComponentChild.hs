@@ -14,7 +14,7 @@
 -- Module      : Amazonka.AmplifyUiBuilder.Types.ComponentChild
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.AmplifyUiBuilder.Types.ComponentChild where
@@ -132,7 +132,8 @@ instance Data.FromJSON ComponentChild where
 
 instance Prelude.Hashable ComponentChild where
   hashWithSalt _salt ComponentChild' {..} =
-    _salt `Prelude.hashWithSalt` children
+    _salt
+      `Prelude.hashWithSalt` children
       `Prelude.hashWithSalt` events
       `Prelude.hashWithSalt` sourceId
       `Prelude.hashWithSalt` componentType

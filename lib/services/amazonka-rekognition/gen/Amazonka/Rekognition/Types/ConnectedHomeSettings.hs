@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Rekognition.Types.ConnectedHomeSettings
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Rekognition.Types.ConnectedHomeSettings where
@@ -92,7 +92,8 @@ instance Data.FromJSON ConnectedHomeSettings where
 
 instance Prelude.Hashable ConnectedHomeSettings where
   hashWithSalt _salt ConnectedHomeSettings' {..} =
-    _salt `Prelude.hashWithSalt` minConfidence
+    _salt
+      `Prelude.hashWithSalt` minConfidence
       `Prelude.hashWithSalt` labels
 
 instance Prelude.NFData ConnectedHomeSettings where

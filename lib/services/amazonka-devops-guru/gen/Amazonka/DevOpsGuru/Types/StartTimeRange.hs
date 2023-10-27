@@ -14,7 +14,7 @@
 -- Module      : Amazonka.DevOpsGuru.Types.StartTimeRange
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.DevOpsGuru.Types.StartTimeRange where
@@ -65,7 +65,8 @@ startTimeRange_toTime = Lens.lens (\StartTimeRange' {toTime} -> toTime) (\s@Star
 
 instance Prelude.Hashable StartTimeRange where
   hashWithSalt _salt StartTimeRange' {..} =
-    _salt `Prelude.hashWithSalt` fromTime
+    _salt
+      `Prelude.hashWithSalt` fromTime
       `Prelude.hashWithSalt` toTime
 
 instance Prelude.NFData StartTimeRange where

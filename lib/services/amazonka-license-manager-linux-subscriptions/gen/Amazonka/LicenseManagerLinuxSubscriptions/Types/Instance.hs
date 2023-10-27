@@ -14,7 +14,7 @@
 -- Module      : Amazonka.LicenseManagerLinuxSubscriptions.Types.Instance
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.LicenseManagerLinuxSubscriptions.Types.Instance where
@@ -170,7 +170,8 @@ instance Data.FromJSON Instance where
 
 instance Prelude.Hashable Instance where
   hashWithSalt _salt Instance' {..} =
-    _salt `Prelude.hashWithSalt` accountID
+    _salt
+      `Prelude.hashWithSalt` accountID
       `Prelude.hashWithSalt` amiId
       `Prelude.hashWithSalt` instanceID
       `Prelude.hashWithSalt` instanceType

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Redshift.Types.SupportedPlatform
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Redshift.Types.SupportedPlatform where
@@ -47,7 +47,6 @@ newSupportedPlatform ::
 newSupportedPlatform =
   SupportedPlatform' {name = Prelude.Nothing}
 
--- |
 supportedPlatform_name :: Lens.Lens' SupportedPlatform (Prelude.Maybe Prelude.Text)
 supportedPlatform_name = Lens.lens (\SupportedPlatform' {name} -> name) (\s@SupportedPlatform' {} a -> s {name = a} :: SupportedPlatform)
 

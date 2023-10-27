@@ -16,7 +16,7 @@
 -- Module      : Amazonka.DirectConnect.DescribeVirtualGateways
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -72,7 +72,8 @@ instance Core.AWSRequest DescribeVirtualGateways where
     Response.receiveJSON
       ( \s h x ->
           DescribeVirtualGatewaysResponse'
-            Prelude.<$> ( x Data..?> "virtualGateways"
+            Prelude.<$> ( x
+                            Data..?> "virtualGateways"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (Prelude.pure (Prelude.fromEnum s))

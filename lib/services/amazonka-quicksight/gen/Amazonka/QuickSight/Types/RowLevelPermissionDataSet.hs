@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.RowLevelPermissionDataSet
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.RowLevelPermissionDataSet where
@@ -149,7 +149,8 @@ instance Data.FromJSON RowLevelPermissionDataSet where
 
 instance Prelude.Hashable RowLevelPermissionDataSet where
   hashWithSalt _salt RowLevelPermissionDataSet' {..} =
-    _salt `Prelude.hashWithSalt` formatVersion
+    _salt
+      `Prelude.hashWithSalt` formatVersion
       `Prelude.hashWithSalt` namespace
       `Prelude.hashWithSalt` status
       `Prelude.hashWithSalt` arn

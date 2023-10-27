@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkFirewall.Types.RulesSourceList
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkFirewall.Types.RulesSourceList where
@@ -133,7 +133,8 @@ instance Data.FromJSON RulesSourceList where
 
 instance Prelude.Hashable RulesSourceList where
   hashWithSalt _salt RulesSourceList' {..} =
-    _salt `Prelude.hashWithSalt` targets
+    _salt
+      `Prelude.hashWithSalt` targets
       `Prelude.hashWithSalt` targetTypes
       `Prelude.hashWithSalt` generatedRulesType
 

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.Endpoint
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.Endpoint where
@@ -207,7 +207,8 @@ instance Data.FromJSON Endpoint where
           Endpoint'
             Prelude.<$> (x Data..:? "DataCaptureConfig")
             Prelude.<*> (x Data..:? "FailureReason")
-            Prelude.<*> ( x Data..:? "MonitoringSchedules"
+            Prelude.<*> ( x
+                            Data..:? "MonitoringSchedules"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "ProductionVariants")
@@ -223,7 +224,8 @@ instance Data.FromJSON Endpoint where
 
 instance Prelude.Hashable Endpoint where
   hashWithSalt _salt Endpoint' {..} =
-    _salt `Prelude.hashWithSalt` dataCaptureConfig
+    _salt
+      `Prelude.hashWithSalt` dataCaptureConfig
       `Prelude.hashWithSalt` failureReason
       `Prelude.hashWithSalt` monitoringSchedules
       `Prelude.hashWithSalt` productionVariants

@@ -16,7 +16,7 @@
 -- Module      : Amazonka.ResourceGroups.DeleteGroup
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -106,7 +106,8 @@ instance Core.AWSRequest DeleteGroup where
 
 instance Prelude.Hashable DeleteGroup where
   hashWithSalt _salt DeleteGroup' {..} =
-    _salt `Prelude.hashWithSalt` group'
+    _salt
+      `Prelude.hashWithSalt` group'
       `Prelude.hashWithSalt` groupName
 
 instance Prelude.NFData DeleteGroup where

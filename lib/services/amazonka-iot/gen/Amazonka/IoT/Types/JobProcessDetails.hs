@@ -14,7 +14,7 @@
 -- Module      : Amazonka.IoT.Types.JobProcessDetails
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.IoT.Types.JobProcessDetails where
@@ -152,14 +152,16 @@ instance Data.FromJSON JobProcessDetails where
             Prelude.<*> (x Data..:? "numberOfRemovedThings")
             Prelude.<*> (x Data..:? "numberOfSucceededThings")
             Prelude.<*> (x Data..:? "numberOfTimedOutThings")
-            Prelude.<*> ( x Data..:? "processingTargets"
+            Prelude.<*> ( x
+                            Data..:? "processingTargets"
                             Data..!= Prelude.mempty
                         )
       )
 
 instance Prelude.Hashable JobProcessDetails where
   hashWithSalt _salt JobProcessDetails' {..} =
-    _salt `Prelude.hashWithSalt` numberOfCanceledThings
+    _salt
+      `Prelude.hashWithSalt` numberOfCanceledThings
       `Prelude.hashWithSalt` numberOfFailedThings
       `Prelude.hashWithSalt` numberOfInProgressThings
       `Prelude.hashWithSalt` numberOfQueuedThings

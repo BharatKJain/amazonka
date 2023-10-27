@@ -16,7 +16,7 @@
 -- Module      : Amazonka.RDS.DescribeDBProxyEndpoints
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -162,22 +162,22 @@ instance Core.AWSPager DescribeDBProxyEndpoints where
     | Core.stop
         ( rs
             Lens.^? describeDBProxyEndpointsResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeDBProxyEndpointsResponse_dbProxyEndpoints
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeDBProxyEndpoints_marker
           Lens..~ rs
           Lens.^? describeDBProxyEndpointsResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeDBProxyEndpoints where
   type
@@ -190,7 +190,8 @@ instance Core.AWSRequest DescribeDBProxyEndpoints where
       "DescribeDBProxyEndpointsResult"
       ( \s h x ->
           DescribeDBProxyEndpointsResponse'
-            Prelude.<$> ( x Data..@? "DBProxyEndpoints"
+            Prelude.<$> ( x
+                            Data..@? "DBProxyEndpoints"
                             Core..!@ Prelude.mempty
                             Prelude.>>= Core.may (Data.parseXMLList "member")
                         )
@@ -200,7 +201,8 @@ instance Core.AWSRequest DescribeDBProxyEndpoints where
 
 instance Prelude.Hashable DescribeDBProxyEndpoints where
   hashWithSalt _salt DescribeDBProxyEndpoints' {..} =
-    _salt `Prelude.hashWithSalt` dbProxyEndpointName
+    _salt
+      `Prelude.hashWithSalt` dbProxyEndpointName
       `Prelude.hashWithSalt` dbProxyName
       `Prelude.hashWithSalt` filters
       `Prelude.hashWithSalt` marker

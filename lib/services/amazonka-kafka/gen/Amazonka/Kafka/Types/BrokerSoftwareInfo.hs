@@ -14,7 +14,7 @@
 -- Module      : Amazonka.Kafka.Types.BrokerSoftwareInfo
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.Kafka.Types.BrokerSoftwareInfo where
@@ -91,7 +91,8 @@ instance Data.FromJSON BrokerSoftwareInfo where
 
 instance Prelude.Hashable BrokerSoftwareInfo where
   hashWithSalt _salt BrokerSoftwareInfo' {..} =
-    _salt `Prelude.hashWithSalt` configurationArn
+    _salt
+      `Prelude.hashWithSalt` configurationArn
       `Prelude.hashWithSalt` configurationRevision
       `Prelude.hashWithSalt` kafkaVersion
 

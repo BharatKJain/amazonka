@@ -14,7 +14,7 @@
 -- Module      : Amazonka.NetworkManager.Types.CoreNetworkPolicyVersion
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.NetworkManager.Types.CoreNetworkPolicyVersion where
@@ -119,7 +119,8 @@ instance Data.FromJSON CoreNetworkPolicyVersion where
 
 instance Prelude.Hashable CoreNetworkPolicyVersion where
   hashWithSalt _salt CoreNetworkPolicyVersion' {..} =
-    _salt `Prelude.hashWithSalt` alias
+    _salt
+      `Prelude.hashWithSalt` alias
       `Prelude.hashWithSalt` changeSetState
       `Prelude.hashWithSalt` coreNetworkId
       `Prelude.hashWithSalt` createdAt

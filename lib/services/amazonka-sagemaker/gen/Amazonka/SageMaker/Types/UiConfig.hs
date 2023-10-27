@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.UiConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.UiConfig where
@@ -229,7 +229,8 @@ instance Data.FromJSON UiConfig where
 
 instance Prelude.Hashable UiConfig where
   hashWithSalt _salt UiConfig' {..} =
-    _salt `Prelude.hashWithSalt` humanTaskUiArn
+    _salt
+      `Prelude.hashWithSalt` humanTaskUiArn
       `Prelude.hashWithSalt` uiTemplateS3Uri
 
 instance Prelude.NFData UiConfig where

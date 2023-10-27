@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ProfilerConfig
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ProfilerConfig where
@@ -116,7 +116,8 @@ instance Data.FromJSON ProfilerConfig where
           ProfilerConfig'
             Prelude.<$> (x Data..:? "DisableProfiler")
             Prelude.<*> (x Data..:? "ProfilingIntervalInMilliseconds")
-            Prelude.<*> ( x Data..:? "ProfilingParameters"
+            Prelude.<*> ( x
+                            Data..:? "ProfilingParameters"
                             Data..!= Prelude.mempty
                         )
             Prelude.<*> (x Data..:? "S3OutputPath")
@@ -124,7 +125,8 @@ instance Data.FromJSON ProfilerConfig where
 
 instance Prelude.Hashable ProfilerConfig where
   hashWithSalt _salt ProfilerConfig' {..} =
-    _salt `Prelude.hashWithSalt` disableProfiler
+    _salt
+      `Prelude.hashWithSalt` disableProfiler
       `Prelude.hashWithSalt` profilingIntervalInMilliseconds
       `Prelude.hashWithSalt` profilingParameters
       `Prelude.hashWithSalt` s3OutputPath

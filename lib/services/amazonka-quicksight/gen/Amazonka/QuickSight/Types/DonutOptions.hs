@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DonutOptions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DonutOptions where
@@ -106,7 +106,8 @@ instance Data.FromJSON DonutOptions where
 
 instance Prelude.Hashable DonutOptions where
   hashWithSalt _salt DonutOptions' {..} =
-    _salt `Prelude.hashWithSalt` arcOptions
+    _salt
+      `Prelude.hashWithSalt` arcOptions
       `Prelude.hashWithSalt` donutCenterOptions
 
 instance Prelude.NFData DonutOptions where

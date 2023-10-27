@@ -14,7 +14,7 @@
 -- Module      : Amazonka.RDS.Types.EventCategoriesMap
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.RDS.Types.EventCategoriesMap where
@@ -68,14 +68,17 @@ eventCategoriesMap_sourceType = Lens.lens (\EventCategoriesMap' {sourceType} -> 
 instance Data.FromXML EventCategoriesMap where
   parseXML x =
     EventCategoriesMap'
-      Prelude.<$> ( x Data..@? "EventCategories" Core..!@ Prelude.mempty
+      Prelude.<$> ( x
+                      Data..@? "EventCategories"
+                      Core..!@ Prelude.mempty
                       Prelude.>>= Core.may (Data.parseXMLList "EventCategory")
                   )
       Prelude.<*> (x Data..@? "SourceType")
 
 instance Prelude.Hashable EventCategoriesMap where
   hashWithSalt _salt EventCategoriesMap' {..} =
-    _salt `Prelude.hashWithSalt` eventCategories
+    _salt
+      `Prelude.hashWithSalt` eventCategories
       `Prelude.hashWithSalt` sourceType
 
 instance Prelude.NFData EventCategoriesMap where

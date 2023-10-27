@@ -14,7 +14,7 @@
 -- Module      : Amazonka.QuickSight.Types.DataPathLabelType
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.QuickSight.Types.DataPathLabelType where
@@ -85,7 +85,8 @@ instance Data.FromJSON DataPathLabelType where
 
 instance Prelude.Hashable DataPathLabelType where
   hashWithSalt _salt DataPathLabelType' {..} =
-    _salt `Prelude.hashWithSalt` fieldId
+    _salt
+      `Prelude.hashWithSalt` fieldId
       `Prelude.hashWithSalt` fieldValue
       `Prelude.hashWithSalt` visibility
 

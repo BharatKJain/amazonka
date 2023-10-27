@@ -16,7 +16,7 @@
 -- Module      : Amazonka.CloudDirectory.BatchWrite
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -104,7 +104,8 @@ instance Core.AWSRequest BatchWrite where
 
 instance Prelude.Hashable BatchWrite where
   hashWithSalt _salt BatchWrite' {..} =
-    _salt `Prelude.hashWithSalt` directoryArn
+    _salt
+      `Prelude.hashWithSalt` directoryArn
       `Prelude.hashWithSalt` operations
 
 instance Prelude.NFData BatchWrite where

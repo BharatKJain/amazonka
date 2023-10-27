@@ -14,7 +14,7 @@
 -- Module      : Amazonka.SageMaker.Types.ModelMetrics
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.SageMaker.Types.ModelMetrics where
@@ -98,7 +98,8 @@ instance Data.FromJSON ModelMetrics where
 
 instance Prelude.Hashable ModelMetrics where
   hashWithSalt _salt ModelMetrics' {..} =
-    _salt `Prelude.hashWithSalt` bias
+    _salt
+      `Prelude.hashWithSalt` bias
       `Prelude.hashWithSalt` explainability
       `Prelude.hashWithSalt` modelDataQuality
       `Prelude.hashWithSalt` modelQuality

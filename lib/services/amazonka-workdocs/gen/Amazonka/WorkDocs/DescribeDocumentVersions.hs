@@ -16,7 +16,7 @@
 -- Module      : Amazonka.WorkDocs.DescribeDocumentVersions
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -149,22 +149,22 @@ instance Core.AWSPager DescribeDocumentVersions where
     | Core.stop
         ( rs
             Lens.^? describeDocumentVersionsResponse_marker
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Core.stop
         ( rs
             Lens.^? describeDocumentVersionsResponse_documentVersions
-              Prelude.. Lens._Just
+            Prelude.. Lens._Just
         ) =
-      Prelude.Nothing
+        Prelude.Nothing
     | Prelude.otherwise =
-      Prelude.Just Prelude.$
-        rq
+        Prelude.Just
+          Prelude.$ rq
           Prelude.& describeDocumentVersions_marker
           Lens..~ rs
           Lens.^? describeDocumentVersionsResponse_marker
-            Prelude.. Lens._Just
+          Prelude.. Lens._Just
 
 instance Core.AWSRequest DescribeDocumentVersions where
   type
@@ -176,7 +176,8 @@ instance Core.AWSRequest DescribeDocumentVersions where
     Response.receiveJSON
       ( \s h x ->
           DescribeDocumentVersionsResponse'
-            Prelude.<$> ( x Data..?> "DocumentVersions"
+            Prelude.<$> ( x
+                            Data..?> "DocumentVersions"
                             Core..!@ Prelude.mempty
                         )
             Prelude.<*> (x Data..?> "Marker")
@@ -185,7 +186,8 @@ instance Core.AWSRequest DescribeDocumentVersions where
 
 instance Prelude.Hashable DescribeDocumentVersions where
   hashWithSalt _salt DescribeDocumentVersions' {..} =
-    _salt `Prelude.hashWithSalt` authenticationToken
+    _salt
+      `Prelude.hashWithSalt` authenticationToken
       `Prelude.hashWithSalt` fields
       `Prelude.hashWithSalt` include
       `Prelude.hashWithSalt` limit

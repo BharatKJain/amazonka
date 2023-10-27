@@ -16,7 +16,7 @@
 -- Module      : Amazonka.IoTAnalytics.DescribeDatastore
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 --
@@ -111,7 +111,8 @@ instance Core.AWSRequest DescribeDatastore where
 
 instance Prelude.Hashable DescribeDatastore where
   hashWithSalt _salt DescribeDatastore' {..} =
-    _salt `Prelude.hashWithSalt` includeStatistics
+    _salt
+      `Prelude.hashWithSalt` includeStatistics
       `Prelude.hashWithSalt` datastoreName
 
 instance Prelude.NFData DescribeDatastore where

@@ -14,7 +14,7 @@
 -- Module      : Amazonka.CodeGuruReviewer.Types.CodeReview
 -- Copyright   : (c) 2013-2023 Brendan Hay
 -- License     : Mozilla Public License, v. 2.0.
--- Maintainer  : Brendan Hay <brendan.g.hay+amazonka@gmail.com>
+-- Maintainer  : Brendan Hay
 -- Stability   : auto-generated
 -- Portability : non-portable (GHC extensions)
 module Amazonka.CodeGuruReviewer.Types.CodeReview where
@@ -303,7 +303,8 @@ instance Data.FromJSON CodeReview where
 
 instance Prelude.Hashable CodeReview where
   hashWithSalt _salt CodeReview' {..} =
-    _salt `Prelude.hashWithSalt` analysisTypes
+    _salt
+      `Prelude.hashWithSalt` analysisTypes
       `Prelude.hashWithSalt` associationArn
       `Prelude.hashWithSalt` codeReviewArn
       `Prelude.hashWithSalt` configFileState
